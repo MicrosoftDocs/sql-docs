@@ -1,17 +1,15 @@
 ---
 title: Automatic registration with SQL IaaS Agent extension
-description: Learn how to enable the automatic registration feature to automatically register all past and future SQL Server VMs with the SQL IaaS Agent extension using the Azure portal. 
+description: Learn how to enable the automatic registration feature to automatically register all past and future SQL Server VMs with the SQL IaaS Agent extension using the Azure portal.
 author: adbadram
 ms.author: adbadram
-tags: azure-service-management
+ms.reviewer: mathoma
+ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021 
 ms.custom: devx-track-azurepowershell
-ms.reviewer: mathoma
+tags: azure-service-management
 ---
 # Automatic registration with SQL IaaS Agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -27,7 +25,7 @@ This article teaches you to enable the automatic registration feature. Alternati
 
 Registering your SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) to unlock a full feature set of benefits. 
 
-When automatic registration is enabled, a job runs daily to detect whether or not SQL Server is installed on all the unregistered VMs in the subscription. This is done by copying the SQL IaaS agent extension binaries to the VM, then running a one-time utility that checks for the SQL Server registry hive. If the SQL Server hive is detected, the virtual machine is registered with the  extension in lightweight mode. If no SQL Server hive exists in the registry, the binaries are removed. Automatic registration can take up to 4 days to detect newly created SQL Server VMs.
+When automatic registration is enabled, a job runs monthly to detect whether or not SQL Server is installed on all the unregistered VMs in the subscription. This is done by copying the SQL IaaS agent extension binaries to the VM, then running a one-time utility that checks for the SQL Server registry hive. If the SQL Server hive is detected, the virtual machine is registered with the  extension in lightweight mode. If no SQL Server hive exists in the registry, the binaries are removed. 
 
 > [!CAUTION]
 > If the SQL Server hive is not present in the registry, removing the binaries might be impacted if there are [resource locks](/azure/governance/blueprints/concepts/resource-locking#locking-modes-and-states) in place. 

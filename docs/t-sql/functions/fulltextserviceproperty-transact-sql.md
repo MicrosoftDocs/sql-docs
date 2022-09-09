@@ -3,13 +3,10 @@ title: "FULLTEXTSERVICEPROPERTY (Transact-SQL)"
 description: "FULLTEXTSERVICEPROPERTY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "FULLTEXTSERVICEPROPERTY_TSQL"
   - "FULLTEXTSERVICEPROPERTY"
@@ -41,7 +38,7 @@ FULLTEXTSERVICEPROPERTY ('property')
  Is an expression containing the name of the full-text service-level property. The table lists the properties and provides descriptions of the information returned.  
   
 > [!NOTE]
->  The following properties will be removed in a future release of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage**. Avoid using these properties in new development work, and plan to modify applications that currently use any of them.  
+>  The following properties will be removed in a future release of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage**. Avoid using these properties in new development work, and plan to modify applications that currently use any of them.  
   
 |Property|Value|  
 |--------------|-----------|  

@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 # Change Data Capture - sys.dm_cdc_errors
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each error encountered during the change data capture log scan session.  
  

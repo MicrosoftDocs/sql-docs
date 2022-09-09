@@ -1,27 +1,23 @@
 ---
+title: "datetime2 (Transact-SQL)"
 description: "datetime2 (Transact-SQL)"
-title: "datetime2 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "datetime2"
   - "datetime2_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time [SQL Server], data types"
   - "dates [SQL Server], data types"
   - "date and time [SQL Server], datetime2"
   - "data types [SQL Server], date and time"
   - "datetime2 data type [SQL Server]"
-ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime2 (Transact-SQL)

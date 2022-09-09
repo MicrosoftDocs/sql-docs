@@ -1,8 +1,8 @@
 ---
 title: "sys.pdw_replicated_table_cache_state (Transact-SQL)"
 description: sys.pdw_replicated_table_cache_state (Transact-SQL)
-author: "ronortloff"
-ms.author: "rortloff"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse

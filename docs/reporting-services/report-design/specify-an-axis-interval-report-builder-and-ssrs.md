@@ -45,7 +45,7 @@ In this column chart, the horizontal label interval is set to Auto.
 
      ![Screenshot of a report builder column chart showing how to set the x-axis interval to one.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+3.  Select **OK**.
      
      Now the column chart displays all its horizontal axis labels.
      
@@ -80,7 +80,7 @@ By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sets t
   
 2.  In the **Horizontal Axis Properties** dialog box > **Axis Options** tab, set **Interval** to **Auto**. The chart will display the optimal number of category labels that can fit along the axis.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## See Also  
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

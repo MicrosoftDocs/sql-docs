@@ -36,7 +36,7 @@ Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached 
 For more information, guidance, and tools to plan and automate your upgrade or migration, see:
 
 - [SQL Server 2008 end of support](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support)
-- [SQL Server 2012 end of support](https://docs.microsoft.com/lifecycle/products/microsoft-sql-server-2012)
+- [SQL Server 2012 end of support](/lifecycle/products/microsoft-sql-server-2012)
 
 :::image type="content" source="media/sql-server-end-of-support-overview/sql-server-upgrade-paths.png" alt-text="Diagram showing end of support options.":::
 

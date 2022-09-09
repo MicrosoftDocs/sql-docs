@@ -1,17 +1,17 @@
 ---
 title: Azure Private Link
+titleSuffix: Azure SQL Database and Azure Synapse Analytics
 description: Overview of Private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
-titleSuffix: Azure SQL Database and Azure Synapse Analytics
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 07/14/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
 ms.custom:
   - "sqldbrb=1"
   - "fasttrack-edit"
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 01/20/2022
 ---
 
 # Azure Private Link for Azure SQL Database and Azure Synapse Analytics
@@ -59,20 +59,21 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
    ![Screenshot of Private IP][9]
 
 > [!IMPORTANT]
-> When you add a private endpoint connection, public routing to your Azure SQL logical server isn't blocked by default. In the **Firewall and virtual networks** pane, the setting **Deny public network access** is not selected by default. To disable public network access, ensure that you select **Deny public network access**.
+> When you add a private endpoint connection, public routing to your logical server isn't blocked by default. In the **Firewall and virtual networks** pane, the setting **Deny public network access** is not selected by default. To disable public network access, ensure that you select **Deny public network access**.
 
-## Disable public access to your Azure SQL logical server
+## Disable public access to your logical server
 
-For this scenario, assume you want to disable all public access to your Azure SQL logical server and allow connections only from your virtual network.
+For this scenario, assume you want to disable all public access to your logical server and allow connections only from your virtual network.
 
 First, ensure that your private endpoint connections are enabled and configured. Then, to disable public access to your logical server:
 
-1. Go to the **Firewalls and virtual network** pane of your Azure SQL logical server.    
+1. Go to the **Networking** page of your logical server.
 1. Select the **Deny public network access** checkbox.
 
 ![Screenshot that shows selecting the Deny public network access option.](./media/private-endpoint/pec-deny-public-access.png)
 
 ## Test connectivity to SQL Database from an Azure VM in same virtual network
+
 For this scenario, assume you've created an Azure Virtual Machine (VM) running a recent version of Windows in the same virtual network as the private endpoint.
 
 1. [Start a Remote Desktop (RDP) session and connect to the virtual machine](/azure/virtual-machines/windows/connect-logon#connect-to-the-virtual-machine). 
@@ -97,7 +98,7 @@ When Telnet connects successfully, you'll see a blank screen at the command wind
 
  ![Diagram of telnet][2]
 
-Use Powershell command to check the connectivity
+Use PowerShell command to check the connectivity
 ```
 Test-NetConnection -computer myserver.database.windows.net -port 1433
 ```

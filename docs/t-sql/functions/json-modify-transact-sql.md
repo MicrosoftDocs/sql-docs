@@ -7,7 +7,6 @@ ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 dev_langs:
   - "TSQL"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
@@ -274,7 +273,7 @@ PRINT @info
 }
 ```  
   
- To avoid automatic escaping, provide *newValue* by using the JSON_QUERY function. JSON_MODIFY knows that the value returned by JSON_MODIFY is properly formatted JSON, so it doesn't escape the value.  
+ To avoid automatic escaping, provide *newValue* by using the JSON_QUERY function. JSON_MODIFY knows that the value returned by JSON_QUERY is properly formatted JSON, so it doesn't escape the value.  
   
  **Query**  
   

@@ -1,16 +1,12 @@
 ---
 title: Performing batch operations
 description: Learn how to use batch operations to improve performance using the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Performing batch operations
 
@@ -25,7 +21,7 @@ The executeBatch method returns an array of **int** values that correspond to th
 > [!NOTE]
 > If you do not have to use update counts, you can first issue a SET NOCOUNT ON statement to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This will reduce network traffic and additionally enhance the performance of your application.
 
-As an example, create the following table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
+As an example, create the following table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database:
 
 ```sql
 CREATE TABLE TestTable
@@ -34,7 +30,7 @@ CREATE TABLE TestTable
     Col3 int);
 ```
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, the addBatch method is used to create the statements to be executed, and the executeBatch method is called to submit the batch to the database.
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, the addBatch method is used to create the statements to be executed, and the executeBatch method is called to submit the batch to the database.
 
 ```java
 public static void executeBatchUpdate(Connection con) {

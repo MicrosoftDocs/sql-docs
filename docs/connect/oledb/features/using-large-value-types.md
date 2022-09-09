@@ -1,21 +1,18 @@
 ---
 title: Using large value types
 description: Learn how the OLE DB Driver for SQL Server supports large value data types with the varchar(max), varbinary(max), and nvarchar(max) types.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "large value data types"
   - "MSOLEDBSQL, large value types"
   - "OLE DB Driver for SQL Server, large value types"
   - "data access [OLE DB Driver for SQL Server], large value types"
   - "OLE DB Driver for SQL Server, large value data types"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using large value types
 

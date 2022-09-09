@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "ALTER SERVER AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 ---
 # ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

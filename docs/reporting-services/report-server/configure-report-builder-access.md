@@ -40,7 +40,7 @@ Downloading Report Builder via the portal is enabled by default. Report server a
 
 On a native mode report server, create user role assignments that include tasks for using Report Builder. You must be a Content Manager and System Administrator to create or modify role definitions and role assignments on items and at the site level.  
 
-The following instructions assume that you are using predefined roles. If you modified the role definitions, check the roles to verify they contain the necessary tasks. For more information about creating role assignments, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).
+The following instructions assume that you're using predefined roles. If you modified the role definitions, check the roles to verify they contain the necessary tasks. For more information about creating role assignments, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 After you create the role assignments, users will have permission to do the following:  
 
@@ -100,13 +100,13 @@ After you create the role assignments, users will have permission to do the foll
 
 1. Start the web portal.  
 
-2. Click the gear icon on the top right of the web portal home page and select **Site Settings** from the drop down menu.  
+2. Click the gear icon on the top right of the web portal home page and select **Site Settings** from the drop-down menu.  
 ![the web portal gear icon and menu](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Click **Security**.  
 
 4. If a role assignment already exists for the user or group for which you want to configure Report Builder access, click **Edit**.  
-Otherwise, click **New Role Assignment**. In Group or user, enter a Windows domain user or group account in this format: \<domain>\\<account\>. If you are using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.  
+Otherwise, click **New Role Assignment**. In Group or user, enter a Windows domain user or group account in this format: \<domain>\\<account\>. If you're using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.  
 
 5. Select **System User**, and then click **OK**.  
 
@@ -118,7 +118,7 @@ Otherwise, click **New Role Assignment**. In Group or user, enter a Windows doma
 
 9. If a role assignment already exists for the user or group for which you want to configure Report Builder access, click **Edit**.  
 
-    Otherwise, click **New Role Assignment**. In Group or user, enter a Windows domain user or group account in this format: \<domain>\\<account\>. If you are using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.  
+    Otherwise, click **New Role Assignment**. In Group or user, enter a Windows domain user or group account in this format: \<domain>\\<account\>. If you're using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.  
 
 10. Select **Report Builder**, and then click **Apply**.  
 
@@ -132,12 +132,12 @@ If you use custom permission levels, you must include Add Items and Edit Items i
 
 ## Authentication considerations and credential reuse  
 
-- Report Builder opens its own connection to a report server. If you are not using Windows integrated security with single sign on, users must re-type their credentials for the Report Builder connection to the report server.  
+- Report Builder opens its own connection to a report server. If you're not using Windows integrated security with single sign-on, users must re-type their credentials for the Report Builder connection to the report server.  
 
 ## See also  
 
 - [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)
-- [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Browser Support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
 - [The web portal of a report server (SSRS Native Mode)](../web-portal-ssrs-native-mode.md)
 - [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)

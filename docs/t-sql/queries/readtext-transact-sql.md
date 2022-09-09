@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # READTEXT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **image** column. Starts reading from a specified offset and reading the specified number of bytes.  
   

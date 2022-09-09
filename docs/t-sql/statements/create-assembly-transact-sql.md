@@ -1,8 +1,8 @@
 ---
 title: "CREATE ASSEMBLY (Transact-SQL)"
 description: CREATE ASSEMBLY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -20,11 +20,10 @@ helpviewer_keywords:
   - "assemblies [CLR integration], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   Creates a managed application module that contains class metadata and managed code as an object in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By referencing this module, common language runtime (CLR) functions, stored procedures, triggers, user-defined aggregates, and user-defined types can be created in the database.  
   
@@ -135,7 +134,7 @@ When attempting to access the assembly specified in \<client_assembly_specifier>
   
  Besides the previous checks that are performed when CREATE ASSEMBLY executes, there are additional checks that are performed at execution time of the code in the assembly:  
   
--   Calling certain [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] APIs that require a specific Code Access Permission may fail if the permission set of the assembly does not include that permission.  
+-   Calling certain [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] APIs that require a specific Code Access Permission may fail if the permission set of the assembly does not include that permission.  
   
 -   For SAFE and EXTERNAL_ACCESS assemblies, any attempt to call [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] APIs that are annotated with certain HostProtectionAttributes will fail.  
   

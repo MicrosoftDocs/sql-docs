@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "Row-Level Security"
 dev_langs:
   - "TSQL"
-ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
 

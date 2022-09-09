@@ -14,10 +14,9 @@ helpviewer_keywords:
   - "full-text stoplist [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 ---
 # REVOKE Full-Text Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on a full-text catalog or full-text stoplist.  
   

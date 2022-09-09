@@ -54,7 +54,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  In the **Schema owner** box, enter the name of a database user or role to own the schema. Alternately, click **Search** to open the **Search Roles and Users** dialog box.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
 
 > [!NOTE]
 > A dialog box will not appear if you are creating a Schema using SSMS against an **Azure SQL Database** or an **Azure Synapse Analytics**. You will need to run the Create Schema Template T-SQL Statement that is generated.

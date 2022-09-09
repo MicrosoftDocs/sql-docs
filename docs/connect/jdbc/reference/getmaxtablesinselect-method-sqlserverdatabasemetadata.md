@@ -1,21 +1,15 @@
 ---
+title: "getMaxTablesInSelect Method (SQLServerDatabaseMetaData)"
 description: "getMaxTablesInSelect Method (SQLServerDatabaseMetaData)"
-title: "getMaxTablesInSelect Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getMaxTablesInSelect"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getMaxTablesInSelect"
+apitype: "Assembly"
 ---
 # getMaxTablesInSelect Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

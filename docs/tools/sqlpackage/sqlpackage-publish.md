@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 1/25/2022
+ms.date: 7/29/2022
 ---
 
 # SqlPackage Publish parameters, properties, and SQLCMD variables
@@ -20,11 +20,55 @@ The SqlPackage.exe publish operation incrementally updates the schema of a targe
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
 ```bash
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+SqlPackage /Action:Publish {parameters} {properties} {sqlcmd variables}
 ```
 
 > [!NOTE]
 > When a database with SQL authentication user credentials is extracted, the password is replaced with a different password of suitable complexity. It is assumed that after the dacpac is published that the user password is changed.
+
+### Examples
+
+```bash
+# example publish from Azure SQL Database using SQL authentication and a connection string
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example publish using short form parameter names, skips schema validation
+SqlPackage /a:Publish /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
+    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyDeployment=False
+
+# example publish using Azure Active Directory Service Principal
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example publish connecting using Azure Active Directory username and password
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
+
+# example publish connecting using Azure Active Directory universal authentication
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" /UniversalAuthentication=True \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example publish with 2 SQLCMD variables
+# as seen in a post deployment script for user passwords
+# https://github.com/Azure-Samples/app-sql-devops-demo-project/blob/main/sql/wwi-dw-ssdt/PostDeploymentScripts/AddUsers.sql
+SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" \
+    /v:ETLUserPassword="asecurestringaddedhere" /v:AppUserPassword="asecurestringaddedhere"
+```
+
+```powershell
+# example publish connecting using an access token associated with a service principal
+$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
+$AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
+$AccessToken = $AccessToken_Object.Token
+
+sqlpackage.exe /at:$AccessToken /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+# OR
+sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+```
 
 
 ## Parameters for the Publish action
@@ -51,7 +95,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|Specifies if SQL encryption should be used for the source database connection. |
-|**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action instead of a database. If this parameter is used, no other source parameter shall be valid. |
+|**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action instead of a database from local storage. If this parameter is used, no other source parameter shall be valid. |
 |**/SourcePassword:**|**/sp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the source database. |
 |**/SourceServerName:**|**/ssn**|{string}|Defines the name of the server hosting the source database. |
 |**/SourceTimeout:**|**/st**|{int}|Specifies the timeout for establishing a connection to the source database in seconds. |
@@ -87,7 +131,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AzureStorageContainer=(STRING)|Azure blob storage container, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
 |**/p:**|AzureStorageKey=(STRING)|Azure storage account key, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
 |**/p:**|AzureStorageRootPath=(STRING)|Storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
-|**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Backups the database before deploying any changes.|
+|**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Backups the database before deploying any changes. This property is not applicable to Azure SQL Database.|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Specifies that the operation will be terminated during the schema validation step if the resulting schema changes could incur a loss of data, including due to data precision reduction or a data type change that requires a cast operation. The default (`True`) value causes the operation to terminate regardless if the target database contains data.  An execution with a `False` value for BlockOnPossibleDataLoss can still fail during deployment plan execution if data is present on the target that cannot be converted to the new column type. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Specifies whether to block updating a database whose schema no longer matches its registration or is unregistered.|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
@@ -166,7 +210,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|Include all composite elements with the same database as part of a single publish operation.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Specifies whether transactional statements should be used where possible when you publish to a database.|
 |**/p:**|IsAlwaysEncryptedParameterizationEnabled=(BOOLEAN 'False')|Enables variable parameterization on Always Encrypted columns in pre/post deployment scripts.|
-|**/p:**|LongRunningCommandTimeout=(INT32)|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
+|**/p:**|LongRunningCommandTimeout=(INT32 '0')|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Specifies that publish should always drop and re-create an assembly if there is a difference instead of issuing an ALTER ASSEMBLY statement.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Specifies whether a new file is also created when a new FileGroup is created in the target database.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN)|Specifies whether last values for identity columns should be preserved during deployment.|
@@ -199,3 +243,4 @@ The following table describes the format of the option that you can use to overr
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

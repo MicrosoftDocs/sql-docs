@@ -22,6 +22,8 @@ ms.author: maggies
  You can publish rectangles with the items that they contain separately from the report as report parts. Report parts are self-contained report items that are stored on the report server and can be included in other reports.  
   
  You cannot publish the report items within a rectangle as report parts. When people add the rectangle to a report, they get the rectangle and the items it contains.  Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+
+[!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 ##  <a name="RectangleAsContainer"></a> Using a Rectangle as a Container  
  You can use a rectangle as a container for other items. When you move the rectangle, the items that are contained within the rectangle move along with it. An item within the rectangle shows the name of the rectangle in its **Parent** property. For more information about using a rectangle as a container, see [Add a Rectangle or Container &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md) and [Display the Same Data on a Matrix and a Chart &#40;Report Builder&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  

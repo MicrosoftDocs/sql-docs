@@ -1,19 +1,16 @@
 ---
 title: SSVARIANT structure (OLE DB driver)
 description: "SSVARIANT structure in OLE DB Driver for SQL Server"
-ms.custom: ""
-ms.date: "06/15/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-f1_keywords: 
-  - "SSVARIANT"
-helpviewer_keywords: 
-  - "SSVARIANT struct"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/15/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+f1_keywords:
+  - "SSVARIANT"
+helpviewer_keywords:
+  - "SSVARIANT struct"
 ---
 # SSVARIANT Structure
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

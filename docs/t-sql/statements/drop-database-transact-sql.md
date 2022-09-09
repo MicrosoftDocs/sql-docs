@@ -1,9 +1,10 @@
 ---
 title: "DROP DATABASE (Transact-SQL)"
 description: DROP DATABASE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.date: "06/25/2021"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.technology: t-sql
@@ -100,6 +101,9 @@ The DROP DATABASE statement must run in autocommit mode and is not allowed in an
 Any database snapshots on a database must be dropped before the database can be dropped.
 
 Dropping a database enable for Stretch Database does not remove the remote data. If you want to delete the remote data, you have to remove it manually.
+
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 

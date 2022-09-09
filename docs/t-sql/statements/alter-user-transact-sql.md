@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "modifying default schemas"
 dev_langs:
   - "TSQL"
-ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER USER (Transact-SQL)
@@ -405,7 +404,7 @@ GO
 
 ```sql
 ALTER USER Philip
-WITHNAME = Philipe
+WITH NAME = Philipe
 , DEFAULT_SCHEMA = Development
 , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per';
 GO

@@ -3,13 +3,10 @@ title: "LOGINPROPERTY (Transact-SQL)"
 description: "LOGINPROPERTY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "BadPasswordCount_TSQL"
   - "BadPasswordTime_TSQL"
@@ -108,7 +105,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 -   NULL if the login is not a valid SQL Server login  
   
 ## Remarks  
- This built-in function returns information about the password policy settings of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The names of the properties are not case sensitive, so property names such as **BadPasswordCount** and **badpasswordcount** are equivalent. The values of the **PasswordHash, PasswordHashAlgorithm**, and **PasswordLastSetTime** properties are available on all supported configurations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the other properties are only available when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] and both CHECK_POLICY and CHECK_EXPIRATION are enabled. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
+ This built-in function returns information about the password policy settings of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The names of the properties are not case sensitive, so property names such as **BadPasswordCount** and **badpasswordcount** are equivalent. The values of the **PasswordHash, PasswordHashAlgorithm**, and **PasswordLastSetTime** properties are available on all supported configurations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the other properties are only available when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on [!INCLUDE[winserver2003](../../includes/winserver2003-md.md)] and both CHECK_POLICY and CHECK_EXPIRATION are enabled. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## Permissions  
  Requires VIEW permission on the login. When requesting the password hash, also requires CONTROL SERVER permission.  

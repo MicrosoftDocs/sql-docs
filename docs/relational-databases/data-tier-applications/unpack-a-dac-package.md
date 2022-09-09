@@ -57,7 +57,8 @@ ms.author: wiassaf
 ###  <a name="Browse"></a> Browse for Folder  
  Use this page to choose the destination folder for the unpack operation. Optionally, you can also create a new folder.  
   
- **Folder list** - Displays the file hierarchy for your computer. Expand the nodes to navigate to the folder in which to unpack the DAC package. Click on the folder and then click **OK**.  
+ **Folder list** - Displays the file hierarchy for your computer. Expand the nodes to navigate to the folder in which to unpack the DAC package. Select the folder and then select **OK**.  
+
   
  **Make New Folder** - Opens a dialog in which you can specify the name for a new folder to be created in the folder you have currently selected in the folder hierarchy.  
   

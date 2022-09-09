@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "FIPS_FLAGGER option"
 dev_langs:
   - "TSQL"
-ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 ---
 # SET FIPS_FLAGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies checking for compliance with the FIPS 127-2 standard. This is based on the ISO standard. For information about SQL Server FIPS compliance, see [How to use SQL Server 2016 in FIPS 140-2-compliant mode](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
   

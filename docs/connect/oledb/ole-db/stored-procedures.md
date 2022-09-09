@@ -1,20 +1,17 @@
 ---
-title: "Stored Procedures | Microsoft Docs"
+title: "Stored Procedures"
 description: Learn how you can run stored procedures in a SQL database using the OLE DB Driver for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, stored procedures"
   - "stored procedures [OLE DB]"
   - "OLE DB Driver for SQL Server, stored procedures"
   - "stored procedures [OLE DB], about OLE DB stored procedures"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Stored Procedures
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,19 +1,15 @@
 ---
-title: Manage SQL Server virtual machines in Azure by using the Azure portal | Microsoft Docs
+title: Manage SQL Server virtual machines in Azure by using the Azure portal
 description: Learn how to access the SQL virtual machine resource in the Azure portal for a SQL Server VM hosted on Azure to modify SQL Server settings.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 12/21/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 12/21/2021
-ms.author: pamela
-ms.reviewer: mathoma
 ms.custom: ignite-fall-2021
+tags: azure-resource-manager
 ---
 # Manage SQL Server VMs by using the Azure portal
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -71,7 +67,18 @@ Changing the license and edition metadata in the Azure portal is only supported 
 
 Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and tempdb drives. Review [storage configuration](storage-configuration.md) to learn more. 
 
+For example, you can extend your storage: 
+
 ![Extend storage in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-storage-configuration.png)
+
+It's also possible to modify your tempdb settings using the **Storage configuration** page, such as the number of tempdb files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page. 
+
+Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your tempdb configuration and implement your settings the next time your SQL Server service starts: 
+
+:::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page. ":::
+
+
+Restart your SQL Server service to apply your changes. 
 
 ## Patching
 

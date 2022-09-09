@@ -1,15 +1,13 @@
 ---
 title: "SQL Server data types and ADO.NET"
 description: "Describes how to work with SQL Server data types and how they interact with .NET data types."
-ms.date: "08/15/2019"
-ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SQL Server data types and ADO.NET
 

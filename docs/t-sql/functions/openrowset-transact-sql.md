@@ -3,13 +3,10 @@ title: "OPENROWSET (Transact-SQL)"
 description: "OPENROWSET (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "09/30/2019"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OPENROWSET_TSQL"
   - "OPENROWSET"

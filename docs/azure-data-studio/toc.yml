@@ -86,8 +86,6 @@
         href: extensions/sql-database-project-extension.md
       - name: Getting Started with the SQL Database Projects extension
         href: extensions/sql-database-project-extension-getting-started.md
-      - name: SDK-style projects
-        href: extensions/sql-database-project-extension-sdk-style-projects.md
       - name: Build and Publish a Project
         href: extensions/sql-database-project-extension-build.md
       - name: Build a Project from the Command Line
@@ -168,6 +166,8 @@
       href: deploy-azure-sql-edge.md
     - name: Deploy SQL Server on Azure Virtual Machines
       href: deploy-azure-sql-server-vm.md
+    - name: Deploy SQL Server in a container
+      href: deploy-sql-container.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

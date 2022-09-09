@@ -1,24 +1,20 @@
 ---
+title: "hierarchyid (Transact-SQL)"
 description: "hierarchyid data type method reference"
-title: "hierarchyid (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "hierarchyid"
-  - "hierarchyid_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Hierarchy data type"
-  - "hierarchyid data type"
-ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "hierarchyid"
+  - "hierarchyid_TSQL"
+helpviewer_keywords:
+  - "Hierarchy data type"
+  - "hierarchyid data type"
+dev_langs:
+  - "TSQL"
 ---
 # hierarchyid data type method reference
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

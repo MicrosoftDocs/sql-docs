@@ -2,14 +2,14 @@
 title: "DENY XML Schema Collection Permissions"
 titleSuffix: SQL Server (Transact-SQL)
 description: Deny permissions on an XML schema collection.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "denying permissions [SQL Server], XML schema collections"
   - "XML schema collections [SQL Server], permissions"
@@ -17,10 +17,9 @@ helpviewer_keywords:
   - "schema collections [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 ---
 # DENY XML Schema Collection Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on an XML schema collection.  
   

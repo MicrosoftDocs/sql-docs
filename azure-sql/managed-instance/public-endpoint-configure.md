@@ -1,15 +1,16 @@
 ---
 title: Configure public endpoint - Azure SQL Managed Instance
 description: "Learn how to configure a public endpoint for Azure SQL Managed Instance"
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.reviewer: vanto, sstein
+ms.reviewer: vanto
 ms.date: 02/08/2021
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: how-to
+ms.custom:
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ---
 # Configure public endpoint in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

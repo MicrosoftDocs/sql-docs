@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_pdw_request_steps (Transact-SQL)"
 description: sys.dm_pdw_request_steps (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/28/2020"
 ms.prod: sql
 ms.technology: data-warehouse

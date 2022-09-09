@@ -1,17 +1,14 @@
 ---
 title: Manage historical data in temporal tables
 description: Learn how to use temporal retention policy to keep historical data under your control.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: how-to
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/18/2021
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Manage historical data in Temporal tables with retention policy
@@ -97,7 +94,7 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
 
-## How ages rows are deleted
+## How aged rows are deleted
 
 The cleanup process depends on the index layout of the history table. It is important to notice that *only history tables with a clustered index (B-tree or columnstore) can have finite retention policy configured*. A background task is created to perform aged data cleanup for all temporal tables with finite retention period.
 Cleanup logic for the rowstore (B-tree) clustered index deletes aged row in smaller chunks (up to 10K) minimizing pressure on database log and IO subsystem. Although cleanup logic utilizes required B-tree index, order of deletions for the rows older than retention period cannot be firmly guaranteed. Hence, *do not take any dependency on the cleanup order in your applications*.

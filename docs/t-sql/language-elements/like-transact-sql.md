@@ -69,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
 |%|Any string of zero or more characters.|WHERE title LIKE '%computer%' finds all book titles with the word 'computer' anywhere in the book title.|  
 |_ (underscore)|Any single character.|WHERE au_fname LIKE '_ean' finds all four-letter first names that end with ean (Dean, Sean, and so on).|  
 |[ ]|Any single character within the specified range ([a-f]) or set ([abcdef]).|WHERE au_lname LIKE '[C-P]arsen' finds author last names ending with arsen and starting with any single character between C and P, for example Carsen, Larsen, Karsen, and so on. In range searches, the characters included in the range may vary depending on the sorting rules of the collation.|  
-|[^]|Any single character not within the specified range ([^a-f]) or set ([^abcdef]).|WHERE au_lname LIKE 'de[^l]%' all author last names starting with de and where the following letter isn't l.|  
+|[^]|Any single character not within the specified range ([^a-f]) or set ([^abcdef]).|WHERE au_lname LIKE 'de[^l]%' finds all author last names starting with de and where the following letter isn't l.|  
   
  *escape_character*  
  Is a character put in front of a wildcard character to indicate that the wildcard is interpreted as a regular character and not as a wildcard. *escape_character* is a character expression that has no default and must evaluate to only one character.  

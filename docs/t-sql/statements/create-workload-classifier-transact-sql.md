@@ -1,8 +1,8 @@
 ---
 title: "CREATE WORKLOAD Classifier (Transact-SQL)"
 description: CREATE WORKLOAD Classifier (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: markingmyname
+ms.author: maghan
 ms.reviewer: "wiassaf"
 ms.date: 01/24/2022
 ms.prod: sql

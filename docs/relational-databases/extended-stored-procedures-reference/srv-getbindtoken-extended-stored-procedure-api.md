@@ -21,7 +21,7 @@ ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Obtains a bind token of the transaction in the current client session that invokes the extended stored procedure.  
   

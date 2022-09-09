@@ -1,16 +1,16 @@
 ---
 title: Appliance management tasks for APS
 description: This guide describes how to perform appliance administration tasks for the Analytics Platform System (APS).
-author: ronortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: martinle
+ms.date: 06/23/2022
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 06/23/2022
-ms.author: rortloff
-ms.reviewer: martinle
 ms.custom:
-- seo-dt-2019
-- kr2b-contr-experiment
+  - seo-dt-2019
+  - kr2b-contr-experiment
 ---
 
 # Appliance management tasks for Analytics Platform System

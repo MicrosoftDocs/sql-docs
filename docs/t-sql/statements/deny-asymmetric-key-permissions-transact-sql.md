@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

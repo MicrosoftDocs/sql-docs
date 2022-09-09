@@ -75,7 +75,7 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
   
      The **netsh.exe** is an Administrator tool to configure and monitor Windows-based computers at a command prompt or using a batch file**.** By using the **netsh** tool, you can direct the context commands you enter to the appropriate helper, and the helper does the command. A helper is a Dynamic Link Library (.dll) file that extends the functionality. The helper provides: configuration, monitoring, and support for one or more services, utilities, or protocols for the **netsh** tool.
 
-     All operating systems that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have a firewall helper. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] also has an advanced firewall helper called **advfirewall**. Many of the configuration options described can be configured by using **netsh**. For example, run the following script at a command prompt to open TCP port 1433:  
+     All operating systems that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have a firewall helper. [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] also has an advanced firewall helper called **advfirewall**. Many of the configuration options described can be configured by using **netsh**. For example, run the following script at a command prompt to open TCP port 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  

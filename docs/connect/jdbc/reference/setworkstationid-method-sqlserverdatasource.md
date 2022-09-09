@@ -1,21 +1,15 @@
 ---
+title: "setWorkstationID Method (SQLServerDataSource)"
 description: "setWorkstationID Method (SQLServerDataSource)"
-title: "setWorkstationID Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.setWorkstationID"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDataSource.setWorkstationID"
+apitype: "Assembly"
 ---
 # setWorkstationID Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

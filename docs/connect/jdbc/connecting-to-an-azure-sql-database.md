@@ -1,16 +1,12 @@
 ---
 title: Connect to an Azure SQL database
 description: This article discusses issues when you use the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database.
-ms.custom: ""
-ms.date: 01/31/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 07/26/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Connect to an Azure SQL database
 
@@ -29,6 +25,10 @@ This article discusses issues when you use the [!INCLUDE[jdbcNoVersion](../../in
 To connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
+## Login timeout
+
+When connecting to Azure SQL databases, the recommended default `loginTimeout` is 30 seconds. If you're connecting to a serverless instance, it's recommended to use an even longer `loginTimeout` of 60 seconds or more. If the serverless instance has been idle, it can take some time to wake up on an initial connection. For more information on how to set the `loginTimeout`, see [Setting the connection properties](setting-the-connection-properties.md).
+
 ## Connections dropped
 
 When you connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  

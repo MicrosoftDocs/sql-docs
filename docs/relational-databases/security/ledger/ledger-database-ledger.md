@@ -24,21 +24,21 @@ Any operations that update a ledger table need to perform some additional tasks 
 - Assign the transaction ID and generate a new sequence number, persisting them in the appropriate system columns. 
 - Serialize the row content and include it when computing the hash for all rows updated by this transaction.
 
-Ledger achieves that by extending the [Data Manipulation Language](/sql/t-sql/queries/queries) (DML) query plans of all insert, update and delete operations targeting ledger tables. The transaction ID and newly generated sequence number are set for the new version of the row. Then, the query plan operator executes a special expression that serializes the row content and computes its hash, appending it to a Merkle Tree that is stored at the transaction level and contains the hashes of all row versions updated by this transaction for this ledger table. The root of the tree represents all the updates and deletes performed by this transaction in this ledger table. If the transaction updates multiple tables, a separate Merkle Tree is maintained for each table. The figure below shows an example of a Merkle Tree storing the updated row versions of a ledger table and the format used to serialize the rows. Other than the serialized value of each column, we include metadata regarding the number of columns in the row, the ordinal of individual columns, the data types, lengths and other information that affects how the values are interpreted. 
+Ledger achieves that by extending the [Data Manipulation Language](../../../t-sql/queries/queries.md) (DML) query plans of all insert, update and delete operations targeting ledger tables. The transaction ID and newly generated sequence number are set for the new version of the row. Then, the query plan operator executes a special expression that serializes the row content and computes its hash, appending it to a Merkle Tree that is stored at the transaction level and contains the hashes of all row versions updated by this transaction for this ledger table. The root of the tree represents all the updates and deletes performed by this transaction in this ledger table. If the transaction updates multiple tables, a separate Merkle Tree is maintained for each table. The figure below shows an example of a Merkle Tree storing the updated row versions of a ledger table and the format used to serialize the rows. Other than the serialized value of each column, we include metadata regarding the number of columns in the row, the ordinal of individual columns, the data types, lengths and other information that affects how the values are interpreted. 
 
 :::image type="content" source="media/ledger/merkle-tree-rows.png" alt-text="Diagram that shows a Merkle Tree storing the updated row versions of a ledger table and the format used to serialize the rows":::
 
 To capture the state of the database, the database ledger stores an entry for every transaction. It captures metadata about the transaction, such as its commit timestamp and the identity of the user who executed it. It also captures the Merkle tree root of the rows updated in each ledger table (see above). These entries are then appended to a tamper-evident data structure to allow verification of integrity in the future. A block is closed:
 
 - Approximately every 30 seconds, when your database is configured for [automatic database digest storage](ledger-how-to-enable-automatic-digest-storage.md)
-- When the user manually generates a database digest by running the [sys.sp_generate_database_ledger_digest](/sql/relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql) stored procedure
+- When the user manually generates a database digest by running the [sys.sp_generate_database_ledger_digest](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md) stored procedure
 - When it contains 100K transactions.
 
 When a block is closed, new transactions will be inserted in a new block. The block generation process then:
 
-1. Retrieves all transactions that belong to the *closed* block from both the in-memory queue and the [sys.database_ledger_transactions](/sql/relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql) system catalog view.
+1. Retrieves all transactions that belong to the *closed* block from both the in-memory queue and the [sys.database_ledger_transactions](../../system-catalog-views/sys-database-ledger-transactions-transact-sql.md) system catalog view.
 1. Computes the Merkle tree root over these transactions and the hash of the previous block.
-1. Persists the closed block in the [sys.database_ledger_blocks](/sql/relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql) system catalog view. 
+1. Persists the closed block in the [sys.database_ledger_blocks](../../system-catalog-views/sys-database-ledger-blocks-transact-sql.md) system catalog view. 
 
 Because this is a regular table update, the system automatically guarantees its durability. To maintain the single chain of blocks, this operation is single-threaded. But it's also efficient, because it only computes the hashes over the transaction information and happens asynchronously. It doesn't affect the transaction performance. 
 
@@ -50,13 +50,13 @@ For more information on how ledger provides data integrity, see the articles, [D
 
 The data for transactions and blocks is physically stored as rows in two system catalog views:
 
-- [sys.database_ledger_transactions](/sql/relational-databases/system-catalog-views/sys-database-ledger-transactions-transact-sql): Maintains a row with the information of each transaction in the database ledger. The information includes the ID of the block where this transaction belongs and the ordinal of the transaction within the block. 
-- [sys.database_ledger_blocks](/sql/relational-databases/system-catalog-views/sys-database-ledger-blocks-transact-sql): Maintains a row for every block in the ledger, including the root of the Merkle tree over the transactions within the block and the hash of the previous block to form a blockchain.
+- [sys.database_ledger_transactions](../../system-catalog-views/sys-database-ledger-transactions-transact-sql.md): Maintains a row with the information of each transaction in the database ledger. The information includes the ID of the block where this transaction belongs and the ordinal of the transaction within the block. 
+- [sys.database_ledger_blocks](../../system-catalog-views/sys-database-ledger-blocks-transact-sql.md): Maintains a row for every block in the ledger, including the root of the Merkle tree over the transactions within the block and the hash of the previous block to form a blockchain.
 
-To view the database ledger, run the following T-SQL statements in [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+To view the database ledger, run the following T-SQL statements in [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 > [!IMPORTANT]
-> Viewing the database ledger requires the **VIEW LEDGER CONTENT** permission. For details on permissions related to ledger tables, see [Permissions](/sql/relational-databases/security/permissions-database-engine#asdbpermissions). 
+> Viewing the database ledger requires the **VIEW LEDGER CONTENT** permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions). 
 
 ```sql
 SELECT * FROM sys.database_ledger_transactions;
@@ -73,5 +73,5 @@ The following example of a ledger table consists of four transactions that made 
 ## See also
 
 - [Ledger overview](ledger-overview.md)
-- [Data Manipulation Language (DML)](/sql/t-sql/queries/queries)
-- [Ledger views](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql#ledger-views)
+- [Data Manipulation Language (DML)](../../../t-sql/queries/queries.md)
+- [Ledger views](../../system-catalog-views/security-catalog-views-transact-sql.md#ledger-views)

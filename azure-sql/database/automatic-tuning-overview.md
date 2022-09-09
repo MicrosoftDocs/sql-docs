@@ -1,17 +1,14 @@
 ---
 title: Automatic tuning overview
 description: Azure SQL Database and Azure SQL Managed Instance analyzes SQL query and automatically adapts to user workload.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: conceptual
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: wiassaf, mathoma
 ms.date: 6/6/2022
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Automatic tuning in Azure SQL Database and Azure SQL Managed Instance
@@ -35,7 +32,7 @@ Azure SQL Database and Azure SQL Managed Instance automatic tuning might be one 
 
 ## Safe, reliable, and proven
 
-Tuning operations applied to databases are fully safe for performance of your most intense workloads. The system has been designed with care not to interfere with user workloads. Automated tuning recommendations are applied only at the times of a low utilization of CPU, Data IO, and Log IO. The system can also temporarily disable automatic tuning operations to protect workload performance. In such case, "Disabled by the system" message will be shown in Azure portal and in [sys.database_automatic_tuning_options](/relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md) DMV. Automatic tuning is designed to give user workloads the highest resource priority.
+Tuning operations applied to databases are fully safe for performance of your most intense workloads. The system has been designed with care not to interfere with user workloads. Automated tuning recommendations are applied only at the times of a low utilization of CPU, Data IO, and Log IO. The system can also temporarily disable automatic tuning operations to protect workload performance. In such case, "Disabled by the system" message will be shown in Azure portal and in [sys.database_automatic_tuning_options](/sql/relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql) DMV. Automatic tuning is designed to give user workloads the highest resource priority.
 
 Automatic tuning mechanisms are mature and have been perfected on several million databases running on Azure. Automated tuning operations applied are verified automatically to ensure there is a notable positive improvement to workload performance. If there is no improvement, or in the unlikely case performance regresses, changes made by automatic tuning are promptly reverted. Through the [tuning history](#automatic-tuning-history) recorded, there exists a clear trace of tuning improvements made to each database in Azure SQL Database.
 
@@ -79,7 +76,7 @@ Automatic tuning for SQL Managed Instance only supports **FORCE LAST GOOD PLAN**
 
 ## Automatic tuning history
 
-For Azure SQL Database, the history of changes made by automatic tuning is retained for 21 days. It can be viewed in Azure portal on the Performance recommendations page for a database, or using PowerShell with the [Get-AzSqlDatabaseRecommendedAction](/powershell/module/az.sql/get-azsqldatabaserecommendedaction.md) cmdlet. For longer retention, history data can also be streamed to several types of destinations by enabling the **AutomaticTuning** [diagnostic setting](metrics-diagnostic-telemetry-logging-streaming-export-configure.md).
+For Azure SQL Database, the history of changes made by automatic tuning is retained for 21 days. It can be viewed in Azure portal on the Performance recommendations page for a database, or using PowerShell with the [Get-AzSqlDatabaseRecommendedAction](/powershell/module/az.sql/get-azsqldatabaserecommendedaction) cmdlet. For longer retention, history data can also be streamed to several types of destinations by enabling the **AutomaticTuning** [diagnostic setting](metrics-diagnostic-telemetry-logging-streaming-export-configure.md).
 
 ## Next steps
 

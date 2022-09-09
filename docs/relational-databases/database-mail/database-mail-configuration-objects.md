@@ -1,8 +1,8 @@
 ---
-description: "Database Mail Configuration Objects"
-title: "Database Mail Configuration Objects | Microsoft Docs"
+description: "Describes the Database Mail configuration objects for configuration of the settings that Database mail should use when sending an email from your database application or SQL Agent."
+title: "Database Mail Configuration Objects"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/26/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -30,7 +30,6 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], profiles"
   - "profiles [SQL Server], Database Mail"
   - "accounts [Database Mail]"
-ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -56,11 +55,13 @@ ms.author: wiassaf
   
 -   Windows Authentication: Database Mail uses the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows service account for authentication on the SMTP server.  
   
--   Basic Authentication:  Database Mail uses the username and password specified to authenticate on the SMTP server.  
+-   Basic Authentication:  Database Mail uses the username and password specified to authenticate on the SMTP server. 
+
+  -   Note that basic authentication for Exchange Online is being deprecated. For more information, see [Basic Authentication and Exchange Online](/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online#re-enabling-and-opting-out-of-proactive-protection).
   
 -   Anonymous Authentication:  The SMTP server does not require any authentication.  Database Mail will not use any credentials to authenticate on the SMTP server.  
   
- Account information is stored in the **msdb** database. Each account consists of the following information:  
+ Account information is stored in the `msdb` database. Each account consists of the following information:  
   
 -   The name of the account.  
   
@@ -86,7 +87,7 @@ ms.author: wiassaf
   
 -   The password to use for authentication to the e-mail server, if the e-mail server requires authentication.  
   
- The Database Mail Configuration Wizard provides a convenient way to create and manage accounts. You can also use the configuration stored procedures in **msdb** to create and manage accounts.  
+ The Database Mail Configuration Wizard provides a convenient way to create and manage accounts. You can also use the configuration stored procedures in `msdb` to create and manage accounts.  
   
   
 ##  <a name="DBProfile"></a> Database Mail Profile  
@@ -96,9 +97,9 @@ ms.author: wiassaf
   
  A profile may be public or private.  
   
- **Public profiles** are available for all members of the **DatabaseMailUserRole** database role in the **msdb** database. They allow all members of the **DatabaseMailUserRole** role to send e-mail using the profile.  
+ **Public profiles** are available for all members of the **DatabaseMailUserRole** database role in the `msdb` database. They allow all members of the **DatabaseMailUserRole** role to send e-mail using the profile.  
   
- **Private profiles** are defined for security principals in the **msdb** database. They allow only specified database users, roles, and members of the **sysadmin** fixed server role to send e-mail using the profile. By default, a profile is private, and allows access only to members of the **sysadmin** fixed server role. To use a private profile, **sysadmin** must grant users permission to use the profile. Additionally, EXECUTE permission on the **sp_send_dbmail** stored procedure is only granted to members of the **DatabaseMailUserRole**. A system administrator must add the user to the **DatabaseMailUserRole** database role for the user to send e-mail messages.  
+ **Private profiles** are defined for security principals in the `msdb` database. They allow only specified database users, roles, and members of the **sysadmin** fixed server role to send e-mail using the profile. By default, a profile is private, and allows access only to members of the **sysadmin** fixed server role. To use a private profile, **sysadmin** must grant users permission to use the profile. Additionally, EXECUTE permission on the **sp_send_dbmail** stored procedure is only granted to members of the **DatabaseMailUserRole**. A system administrator must add the user to the **DatabaseMailUserRole** database role for the user to send e-mail messages.  
   
  Profiles improve reliability in cases where an e-mail server becomes unreachable or unable to process messages. Each account in the profile has a sequence number. The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail uses the last account that sent a message successfully, or the account that has the lowest sequence number if no message has yet been sent. Should that account fail, Database Mail uses the account with the next highest sequence number, and so on until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the Database Mail pauses attempts to send the mail for the amount of time configured in the **AccountRetryDelay** parameter of **sysmail_configure_sp**, then starts the process of attempting to send the mail again, starting with the lowest sequence number. Use the **AccountRetryAttempts** parameter of **sysmail_configure_sp**, to configure the number of times that the external mail process attempts to send the e-mail message using each account in the specified profile.  
   
@@ -117,7 +118,7 @@ ms.author: wiassaf
   
   
 ##  <a name="Add_Tasks"></a> Additional Database Configuration Tasks (System Stored Procedures)  
- Database Mail configuration stored procedures are located in the **msdb** database.  
+ Database Mail configuration stored procedures are located in the `msdb` database.  
   
  The following tables list the stored procedures used for configuring and managing Database Mail.  
   

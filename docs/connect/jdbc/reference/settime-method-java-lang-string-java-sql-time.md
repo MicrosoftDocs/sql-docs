@@ -1,21 +1,15 @@
 ---
+title: "setTime Method to time value"
 description: "setTime Method (java.lang.String, java.sql.Time)"
-title: "setTime Method to time value | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.setTime (java.lang.String, java.lang.Time)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 49301bec-6cf2-43fb-9d4e-e3986164a208
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.setTime (java.lang.String, java.lang.Time)"
+apitype: "Assembly"
 ---
 # setTime Method (java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "GRANT statement, asymmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # GRANT Asymmetric Key Permissions (Transact-SQL)

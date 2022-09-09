@@ -34,7 +34,10 @@ When you manipulate SPNs with the setspn, the SPN must be entered in the correct
 Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
- **SetSPN** is available with Windows Server. The **-s** argument adds a SPN after validating no duplicate exists. **NOTE:-s** is available in Windows Server starting with Windows Server 2008.  
+ **SetSPN** is available with Windows Server. The **-s** argument adds a SPN after validating no duplicate exists.
+
+ > [!NOTE]  
+ > **-s** is available in Windows Server starting with Windows Server 2008.  
   
  **HTTP** is the service class. The Report Server Web service runs in HTTP.SYS. A by-product of creating an SPN for HTTP is that all Web applications on the same computer that run in HTTP.SYS (including applications hosted in IIS) will be granted tickets based on the domain user account. If those services run under a different account, the authentication requests will fail. To avoid this problem, be sure to configure all HTTP applications to run under the same account, or consider creating host headers for each application and then creating separate SPNs for each host header. When you configure host headers, DNS changes are required regardless of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration.  
   

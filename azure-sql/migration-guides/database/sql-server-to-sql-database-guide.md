@@ -1,15 +1,13 @@
 ---
 title: "SQL Server to Azure SQL Database: Migration guide"
-description: Follow this guide to migrate your SQL Server databases to Azure SQL Database. 
-ms.service: sql-database
-ms.subservice: migration-guide
-ms.custom: 
-ms.devlang: 
-ms.topic: how-to
+description: Follow this guide to migrate your SQL Server databases to Azure SQL Database.
 author: mokabiru
 ms.author: mokabiru
 ms.reviewer: mathoma, kendralittle
 ms.date: 03/19/2021
+ms.service: sql-database
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 # Migration guide: SQL Server to Azure SQL Database
 [!INCLUDE[appliesto--sqldb](../../includes/appliesto-sqldb.md)]
@@ -84,7 +82,7 @@ To learn more, see [Perform a SQL Server migration assessment with Data Migratio
 If the assessment encounters multiple blockers to confirm that your database it not ready for an Azure SQL Database migration, then alternatively consider:
 
 - [Azure SQL Managed Instance](../managed-instance/sql-server-to-managed-instance-overview.md) if there are multiple instance-scoped dependencies
-- [SQL Server on Azure Virtual Machines](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview) if both SQL Database and SQL Managed Instance fail to be suitable targets. 
+- [SQL Server on Azure Virtual Machines](../virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md) if both SQL Database and SQL Managed Instance fail to be suitable targets. 
 
 
 

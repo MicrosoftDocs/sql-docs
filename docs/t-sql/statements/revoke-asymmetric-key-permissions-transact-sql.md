@@ -14,10 +14,9 @@ helpviewer_keywords:
   - "REVOKE statement, asymmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on an asymmetric key.  
   

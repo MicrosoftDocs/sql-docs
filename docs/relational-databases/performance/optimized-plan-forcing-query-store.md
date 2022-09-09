@@ -3,7 +3,7 @@ title: "Optimized plan forcing with Query Store"
 description: Learn about optimized plan forcing and optimization replay scripts in Query Store.
 ms.custom:
 - event-tier1-build-2022
-ms.date: 05/03/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -14,6 +14,7 @@ dev_langs:
  - "TSQL"
 author: thesqlsith
 ms.author: derekw 
+ms.reviewer: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
@@ -21,11 +22,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Query optimization is a multi-phased process of generating a "good-enough" query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the intelligent query processing family of features. Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
+Query optimization is a multi-phased process of generating a "good-enough" query execution plan. In some cases, query compilation, a part of query optimization, can represent a large percentage of overall query execution time and consume significant system resources. Optimized plan forcing is part of the [intelligent query processing family of features](intelligent-query-processing.md). Optimized plan forcing reduces compilation overhead for repeating *forced* queries and requires the Query Store to be enabled and in "read write" mode. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute.
 
 ## Optimized plan forcing implementation
 
-When a query first goes through the compilation process, a threshold based on estimation of the time spent in optimization (based on the query optimizer input tree) will determine whether an optimization replay script is created. This threshold is not documented.
+When a query first goes through the compilation process, a threshold based on estimation of the time spent in optimization (based on the query optimizer input tree) will determine whether an optimization replay script is created.
 
 After compilation completes, several runtime metrics become available to assess whether the previous estimation was correct. If it's confirmed the threshold was crossed, the optimization replay script is eligible for persistence. These runtime metrics include the number of objects accessed, the number of joins, the number of optimization tasks executed during optimization, and the actual optimization time.
 
@@ -48,7 +49,7 @@ You can enable or disable optimized plan forcing for a database. When optimized 
 
 ### Enable or disable optimized plan forcing for a database
 
-Optimized plan forcing is enabled by default for new databases created in SQL Server 2022 and higher. The Query Store must be enabled for every database where optimized plan forcing is used. Upgraded instances with existing databases or databases restored from a lower version of SQL Server will not have optimized plan forcing enabled by default.
+Optimized plan forcing is enabled by default for new databases created in SQL Server 2022 and higher. The Query Store must be enabled for every database where optimized plan forcing is used. Upgraded instances with existing databases or databases restored from a lower version of SQL Server will have optimized plan forcing enabled by default.
 
 To enable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON` database scoped configuration. You must enable Query Store if it isn't already enabled. Find example code in [Example A](#a-enable-query-store-and-optimized-plan-forcing-for-a-database), or learn more about Query Store in [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 
@@ -110,10 +111,10 @@ GO
 
 ### C. Force a plan and disable optimized plan forcing in Query Store
 
-The following code forces a plan in Query Store, but disables optimized plan forcing. Before running the following code, replace `@query_id` and `@plan_id` with a combination appropriate for your instance. 
+The following code forces a plan in Query Store, but disables optimized plan forcing. Before running the following code, replace `@query_id` and `@plan_id` with a combination appropriate for your instance.  The sp_query_store_force_plan stored procedure will also accept an optional third `@replica_group_id` parameter.  This can be used to force a plan on a specific replica.  A value of 0 - `@replica_group_id=0` will be used if this parameter is omitted.
 
 ```sql
-EXEC sp_query_store_force_plan @query_id=148, @plan_id=4, @disable_optimized_plan_forcing=1;
+EXEC sp_query_store_force_plan @query_id=148, @plan_id=4, @disable_optimized_plan_forcing=0;
 GO
 ```
 
@@ -144,8 +145,8 @@ SELECT ProductID, OrderQty, SUM(LineTotal) AS Total
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
 GROUP BY ProductID, OrderQty  
-ORDER BY ProductID, OrderQty  
-OPTION (DISABLE_OPTIMIZED_PLAN_FORCING);
+ORDER BY ProductID, OrderQty
+OPTION(USE HINT('DISABLE_OPTIMIZED_PLAN_FORCING');
 GO 
 ```
 
@@ -156,3 +157,4 @@ Learn more about Query Store and optimized plan forcing in the following article
 - [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md)
 - [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
 - [sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [Intelligent query processing in SQL databases](intelligent-query-processing.md)

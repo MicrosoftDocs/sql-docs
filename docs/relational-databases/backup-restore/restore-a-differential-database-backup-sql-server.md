@@ -128,7 +128,7 @@ ms.author: mathoma
   
 11. Optionally, use the **Files** page to restore the database to a new location. For help with moving a database, see [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md).  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

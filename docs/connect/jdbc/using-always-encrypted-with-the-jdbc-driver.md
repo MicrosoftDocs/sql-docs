@@ -1,16 +1,12 @@
 ---
 title: Use Always Encrypted with the JDBC driver
 description: Learn how to use Always Encrypted with the JDBC driver to encrypt sensitive data on the server.
-ms.custom: ""
-ms.date: 04/21/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Use Always Encrypted with the JDBC driver
@@ -818,6 +814,10 @@ catch (SQLException e) {
 }
 ```
 
+### Query parameter metadata caching
+
+To reduce the number of round trips to the database, the Microsoft JDBC Driver for SQL Server can cache encryption-related information for query parameters. As of version 11.2.0, encryption-related information for parameters returned from [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) calls will be cached by the driver if the associated SQL Server process doesn't use secure enclaves. For caching with the use of secure enclaves, the server must support re-establishing of the enclave session in cases where the session is no longer valid.
+
 ### Column encryption key caching
 
 To reduce the number of calls to a column master key store to decrypt column encryption keys, the Microsoft JDBC Driver for SQL Server caches the plaintext column encryption keys in memory. After the driver receives the encrypted column encryption key value from the database metadata, the driver first tries to find the plaintext column encryption key corresponding to the encrypted key value. The driver calls the keystore containing the column master key only if it can't find the encrypted column encryption key value in the cache.
@@ -845,7 +845,7 @@ With `SQLServerBulkCopy`, you can copy data that is already encrypted and stored
 - Set the `allowEncryptedValueModifications` option. For more information, see [Using bulk copy with the JDBC driver](using-bulk-copy-with-the-jdbc-driver.md).
 
 > [!NOTE]
-> Use caution when specifying `AllowEncryptedValueModifications` as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted with the same encryption type, algorithm, and key as the target column.
+> Use caution when specifying `AllowEncryptedValueModifications` as this option may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server doesn't check if the data is indeed encrypted or if it is correctly encrypted with the same encryption type, algorithm, and key as the target column.
 
 ## See also
 

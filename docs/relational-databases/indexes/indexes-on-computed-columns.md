@@ -27,6 +27,9 @@ You can define indexes on computed columns as long as the following requirements
 -   Precision requirements  
 -   Data type requirements  
 -   SET option requirements  
+
+> [!NOTE]
+> `SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
   
 #### Ownership Requirements
   

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "column_constraint"
 dev_langs:
   - "TSQL"
-ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 ---
 # ALTER TABLE column_constraint (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies the properties of a PRIMARY KEY, FOREIGN KEY, UNIQUE, or CHECK constraint that is part of a new column definition added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   

@@ -6,6 +6,8 @@
     href: azure-sql-iaas-vs-paas-what-is-overview.md
   - name: Migrate to Azure SQL 
     href: migration-guides/index.yml
+  - name: Migrating SQL Server Workloads FAQ
+    href: migration-guides/modernization.md
 
 - name: Shared SQL DB & SQL MI docs
   items:
@@ -125,12 +127,8 @@
           href: database/high-availability-sla.md
         - name: Backup and recovery 
           items:
-          - name: Automated backups
-            href: database/automated-backups-overview.md
           - name: Accelerated database recovery
             href: accelerated-database-recovery.md
-          - name: Recovery using backups
-            href: database/recovery-using-backups.md
           - name: Long-term backup retention
             href: database/long-term-retention-overview.md
 
@@ -143,7 +141,7 @@
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
       - name: SQL Analytics
-        href: /azure/azure-monitor/insights/azure-sql?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/azure-monitor/insights/azure-sql?toc=/azure/azure-sql/toc.json
       - name: SQL Insights (preview)
         items:
         - name: Overview
@@ -173,7 +171,7 @@
       items:
       - name: .NET with Visual Studio
         href: database/connect-query-dotnet-visual-studio.md
-      - name: .NET Core
+      - name: .NET with Windows, Linux, and macOS
         href: database/connect-query-dotnet-core.md
       - name: Go
         href: database/connect-query-go.md
@@ -191,7 +189,7 @@
       items: 
       - name: Configure temporal retention policy
         href: database/temporal-tables-retention-policy.md
-      - name: Configure backup retention using Azure Blob storage
+      - name: Configure long-term backup retention
         href: database/long-term-backup-retention-configure.md
 
     - name: Security  
@@ -232,14 +230,8 @@
         href: load-from-csv-with-bcp.md
       - name: Application and database tuning guidance
         href: database/performance-guidance.md
-      - name: Use DMVs to monitor performance
-        href: database/monitoring-with-dmvs.md
       - name: Log diagnostic telemetry
         href: database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md
-      - name: Azure Monitor for SQL Database
-        href: database/monitoring-sql-database-azure-monitor.md 
-      - name: Azure Monitor for SQL Database reference 
-        href: database/monitoring-sql-database-azure-monitor-reference.md        
       - name: In-memory OLTP
         items:
         - name: Configure In-Memory OLTP
@@ -268,13 +260,13 @@
       - name: Use Spark Connector
         href: database/spark-connector.md
       - name: Use ASP.NET App Service
-        href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase?toc=/azure/azure-sql/toc.json
       - name: Use Azure Functions
-        href: /azure/azure-functions/functions-scenario-database-table-cleanup?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/azure-functions/functions-scenario-database-table-cleanup?toc=/azure/azure-sql/toc.json
       - name: Use Azure Logic Apps
-        href: /azure/connectors/connectors-create-api-sqlazure?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/connectors/connectors-create-api-sqlazure?toc=/azure/azure-sql/toc.json
       - name: Index with Azure Cognitive Search
-        href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=%2fazure%2fazure-sql%2ftoc.json
+        href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=/azure/azure-sql/toc.json
       - name: Server-side CLR/.NET integration
         href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview?toc=/azure/azure-sql/toc.json
       - name: Java
@@ -395,16 +387,14 @@
         href: database/service-tier-hyperscale.md
       - name: Hyperscale architecture
         href: database/hyperscale-architecture.md
-      - name: FAQ
-        displayName: Hyperscale frequently asked questions
-        href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
+      - name: Hyperscale backups 
+        href: database/hyperscale-automated-backups-overview.md
       - name: Replicas
         displayName: Hyperscale replicas
         href: database/service-tier-hyperscale-replicas.md
-      - name: Replicas FAQ
-        displayName: Hyperscale replicas frequently asked questions
-        href: database/service-tier-hyperscale-named-replicas-faq.yml
-
+      - name: FAQ
+        displayName: Hyperscale frequently asked questions
+        href: database/service-tier-hyperscale-frequently-asked-questions-faq.yml
     - name: Purchasing models
       items: 
       - name: Overview
@@ -469,6 +459,10 @@
             href: /sql/relational-databases/security/ledger/ledger-digest-management
           - name: Database verification
             href: /sql/relational-databases/security/ledger/ledger-database-verification
+          - name: Monitor digest uploads
+            href: /sql/relational-databases/security/ledger/ledger-monitor-digest-uploads
+          - name: Recover ledger database after tampering
+            href: /sql/relational-databases/security/ledger/ledger-how-to-recover-after-tampering
           - name: Ledger limitations
             href: /sql/relational-databases/security/ledger/ledger-limits
         - name: Network access controls
@@ -485,6 +479,8 @@
 
     - name: Business continuity
       items: 
+      - name: Automated backups
+        href: database/automated-backups-overview.md
       - name: Active geo-replication
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
@@ -493,6 +489,7 @@
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills
         href: database/disaster-recovery-drills.md
+
 
     - name: SQL Data Sync
       items:
@@ -574,7 +571,7 @@
       href: database/transact-sql-tsql-differences-sql-server.md
 
     - name: Plan and manage costs 
-      href: database/cost-management.md
+      href: database/cost-management.md      
     - name: Connect and query
       href: database/connect-query-content-reference-guide.md
       items:
@@ -608,7 +605,16 @@
         href: database/local-dev-experience-create-database-project.md
       - name: Publish a database project to the local emulator
         href: database/local-dev-experience-publish-emulator.md
-
+    - name: Monitor & Tune
+      items:
+        - name: Identify query performance bottlenecks
+          href: database/identify-query-performance-issues.md
+        - name: Use DMVs to monitor performance
+          href: database/monitoring-with-dmvs.md
+        - name: Azure Monitor for SQL Database
+          href: database/monitoring-sql-database-azure-monitor.md 
+        - name: Azure Monitor for SQL Database reference 
+          href: database/monitoring-sql-database-azure-monitor-reference.md              
     - name: Manage
       items:
       - name: Management API reference
@@ -680,8 +686,12 @@
 
     - name: Business continuity
       items: 
+      - name: Change automated backup settings
+        href: database/automated-backups-change-settings.md
       - name: Configure backup retention using Azure Blob storage
         href: database/long-term-backup-retention-configure.md
+      - name: Recover using backups
+        href: database/recovery-using-backups.md
       - name: Create auto-failover group
         href: database/auto-failover-group-configure-sql-db.md
       - name: Configure geo-replication - Portal
@@ -900,13 +910,13 @@
     - name: Azure Resource Graph queries
       href: database/resource-graph-samples.md
 
-- name: SQL Managed Instance (SQL MI)
+- name: Azure SQL Managed Instance (SQL MI)
   items:
   - name: Documentation
     href: managed-instance/index.yml
   - name: Overview
     items:
-    - name: What is SQL Managed Instance? 
+    - name: What is Azure SQL Managed Instance? 
       href: managed-instance/sql-managed-instance-paas-overview.md
     - name: What's new?
       href: managed-instance/doc-changes-updates-release-notes-whats-new.md
@@ -921,7 +931,7 @@
   - name: Quickstarts
     href: managed-instance/quickstart-content-reference-guide.md
     items:
-    - name: Create SQL Managed Instance
+    - name: Create Azure SQL Managed Instance
       items:
       - name: Azure portal
         href: managed-instance/instance-create-quickstart.md
@@ -996,6 +1006,8 @@
     items:
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
+    - name: Automated backups
+      href: managed-instance/automated-backups-overview.md 
     - name: Auto-failover groups
       href: managed-instance/auto-failover-group-sql-mi.md
     - name: T-SQL differences
@@ -1030,25 +1042,25 @@
         - name: Python
           items:
           - name: Run Python scripts
-            href: /sql/machine-learning/tutorials/quickstart-python-create-script?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-create-script?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Data structures and objects
-            href: /sql/machine-learning/tutorials/quickstart-python-data-structures?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-data-structures?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Python functions
-            href: /sql/machine-learning/tutorials/quickstart-python-functions?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-functions?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Train and score a model
-            href: /sql/machine-learning/tutorials/quickstart-python-train-score-model?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-python-train-score-model?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Deploy ONNX models
-            href: /azure/azure-sql-edge/deploy-onnx?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
         - name: R
           items:
           - name: Run R scripts
-            href: /sql/machine-learning/tutorials/quickstart-r-create-script?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-create-script?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Data types and objects
-            href: /sql/machine-learning/tutorials/quickstart-r-data-types-and-objects?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-data-types-and-objects?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: R functions
-            href: /sql/machine-learning/tutorials/quickstart-r-functions?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-functions?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
           - name: Train and score a model
-            href: /sql/machine-learning/tutorials/quickstart-r-train-score-model?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
+            href: /sql/machine-learning/tutorials/quickstart-r-train-score-model?context=/azure/azure-sql/managed-instance/context/ml-context&preserve-view=true&view=azuresqldb-mi-current
       - name: Tutorials
         items:
         - name: Python
@@ -1184,8 +1196,7 @@
         - name: Security
           items:
           - name: Give users permission
-            href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current
-
+            href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current   
     - name: Features
       items:
       - name: Linked servers
@@ -1238,6 +1249,16 @@
       href: managed-instance/connect-application-instance.md
     - name: Job automation with SQL Agent 
       href: managed-instance/job-automation-managed-instance.md
+    - name: Monitor & Tune
+      items:
+        - name: Identify query performance bottlenecks
+          href: managed-instance/identify-query-performance-issues.md
+        - name: Use DMVs to monitor performance
+          href: managed-instance/monitoring-with-dmvs.md
+        - name: Azure Monitor for Azure SQL Managed Instance
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
+        - name: Azure Monitor for Azure SQL Managed Instance reference 
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md           
     - name: Configure settings
       items: 
       - name: Customize time zone
@@ -1298,9 +1319,13 @@
 
     - name: Configure business continuity 
       items: 
+      - name: Change backup settings
+        href: managed-instance/automated-backups-change-settings.md
+      - name: Recover using backups
+        href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
-      - name: Monitor back up
+      - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
       - name: Auto-failover groups
         items: 
@@ -1314,7 +1339,7 @@
       items:
       - name: Samples overview
         href: database/az-cli-script-samples-content-guide.md?tabs=managed-instance
-      - name: Create SQL Managed Instance
+      - name: Create Azure SQL Managed Instance
         href: managed-instance/scripts/create-configure-managed-instance-cli.md
       - name: Configure transparent data encryption (TDE)
         href: managed-instance/scripts/transparent-data-encryption-byok-sql-managed-instance-cli.md
@@ -1714,7 +1739,7 @@
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
   - name: Troubleshoot
     items:
-    - name: Known issues with SQL Managed Instance 
+    - name: Known issues with Azure SQL Managed Instance 
       href: managed-instance/doc-changes-updates-known-issues.md
     - name: Capacity errors during deployment
       href: capacity-errors-troubleshoot.md

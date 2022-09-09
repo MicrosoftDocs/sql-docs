@@ -35,5 +35,5 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [What is the database ledger?](/sql/relational-databases/security/ledger/ledger-database-ledger)
-- [Ledger overview](/sql/relational-databases/security/ledger/ledger-overview)
+- [What is the database ledger?](../security/ledger/ledger-database-ledger.md)
+- [Ledger overview](../security/ledger/ledger-overview.md)

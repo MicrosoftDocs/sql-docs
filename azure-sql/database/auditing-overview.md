@@ -1,15 +1,13 @@
 ---
 title: Azure SQL Auditing for Azure SQL Database and Azure Synapse Analytics
 description: Use Azure SQL Database auditing to track database events into an audit log.
-services:
-  - "sql-database"
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: "03/23/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
-author: sravanisaluru
-ms.author: srsaluru
-ms.date: "03/23/2022"
-ms.reviewer: wiassaf, vanto, mathoma
 ms.custom:
   - "azure-synapse"
   - "sqldbrb=1"
@@ -41,12 +39,10 @@ You can use SQL Database auditing to:
 
 ### Auditing limitations
 
-- **Premium storage** is currently **not supported**.
-- **Hierarchical namespace** for **Azure Data Lake Storage Gen2 storage account** is currently **not supported**.
+- **User managed identity** authentication type for enabling auditing to **storage behind firewall** is not currently supported.
 - Enabling auditing on a paused **Azure Synapse** is not supported. To enable auditing, resume Azure Synapse.
 - Auditing for **Azure Synapse SQL pools** supports default audit action groups **only**.
-- When you configure the auditing in Azure SQL Server or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - https://docs.microsoft.com/rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->
-
+- When you configure the auditing for your [logical server in Azure](logical-servers.md) or Azure SQL Database with log destination as the storage account, the target storage account must be enabled with access to storage account keys. If the storage account is configured to use Azure AD authentication only and not configured for access key usage, the auditing cannot be configured. <!-- REST API reference: - /rest/api/sql/2021-08-01-preview/server-blob-auditing-policies/create-or-update -->
 
 #### <a id="server-vs-database-level"></a>Define server-level vs. database-level auditing policy
 
@@ -56,7 +52,7 @@ An auditing policy can be defined for a specific database or as a default [serve
 
 - If *server auditing is enabled*, it *always applies to the database*. The database will be audited, regardless of the database auditing settings.
 
-- When auditing policy is defined at the database-level to a Log Analytics workspace or an Event Hub destination, the following operations will not keep the source database-level auditing policy:
+- When auditing policy is defined at the database-level to a Log Analytics workspace or an Event Hubs destination, the following operations will not keep the source database-level auditing policy:
     - [Database copy](database-copy.md)
     - [Point-in-time restore](recovery-using-backups.md)
     - [Geo-replication](active-geo-replication-overview.md) (Secondary database will not have database-level auditing)
@@ -73,16 +69,18 @@ An auditing policy can be defined for a specific database or as a default [serve
 
 #### Remarks
 
+- **Premium storage** with **BlockBlobStorage** is supported. Standard storage is supported. However, for audit to write to a storage account behind a VNet or firewall, you must have a **general-purpose v2 storage account**. If you have a general-purpose v1 or blob storage account, [upgrade to a general-purpose v2 storage account](/azure/storage/common/storage-account-upgrade). For specific instructions see, [Write audit to a storage account behind VNet and firewall](audit-write-storage-account-behind-vnet-firewall.md). For more information, see [Types of storage accounts](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+- **Hierarchical namespace** for all types of **standard storage account** and **premium storage account with BlockBlobStorage** is supported.
 - Audit logs are written to **Append Blobs** in an Azure Blob storage on your Azure subscription
 - Audit logs are in .xel format and can be opened by using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 - To configure an immutable log store for the server or database-level audit events, follow the [instructions provided by Azure Storage](/azure/storage/blobs/immutable-time-based-retention-policy-overview#allow-protected-append-blobs-writes). Make sure you have selected **Allow additional appends** when you configure the immutable blob storage.
-- You can write audit logs to a an Azure Storage account behind a VNet or firewall. For specific instructions see, [Write audit to a storage account behind VNet and firewall](audit-write-storage-account-behind-vnet-firewall.md).
+- You can write audit logs to an Azure Storage account behind a VNet or firewall. 
 - For details about the log format, hierarchy of the storage folder and naming conventions, see the [Blob Audit Log Format Reference](./audit-log-format.md).
 - Auditing on [Read-Only Replicas](read-scale-out.md) is automatically enabled. For further details about the hierarchy of the storage folders, naming conventions, and log format, see the [SQL Database Audit Log Format](audit-log-format.md).
 - When using Azure AD Authentication, failed logins records will *not* appear in the SQL audit log. To view failed login audit records, you need to visit the [Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins), which logs details of these events.
-- Logins are routed by the gateway to the specific instance where the database is located.  In the case of AAD logins, the credentials are verified before attempting to use that user to login into the requested database.  In the case of failure, the requested database is never accessed, so no auditing occurs.  In the case of SQL logins, the credentials are verified on the requested data, so in this case they can be audited.  Successful logins, which obviously reach the database, are audited in both cases.
+- Logins are routed by the gateway to the specific instance where the database is located.  In the case of Azure AD logins, the credentials are verified before attempting to use that user to login into the requested database.  In the case of failure, the requested database is never accessed, so no auditing occurs.  In the case of SQL logins, the credentials are verified on the requested data, so in this case they can be audited.  Successful logins, which obviously reach the database, are audited in both cases.
 - After you've configured your auditing settings, you can turn on the new threat detection feature and configure emails to receive security alerts. When you use threat detection, you receive proactive alerts on anomalous database activities that can indicate potential security threats. For more information, see [Getting started with threat detection](threat-detection-overview.md).
-- After a database with auditing enabled is copied to another Azure SQL logical server, you may receive an email notifying you that the audit failed. This is a known issue and auditing should work as expected on the newly copied database.
+- After a database with auditing enabled is copied to another [logical server](logical-servers.md), you may receive an email notifying you that the audit failed. This is a known issue and auditing should work as expected on the newly copied database.
 
 ## <a id="setup-auditing"></a>Set up auditing for your server
 
@@ -99,7 +97,7 @@ The following section describes the configuration of auditing using the Azure po
 
   > [!NOTE]
   > - Enabling auditing on a paused dedicated SQL pool is not possible. To enable auditing, un-pause the dedicated SQL pool. Learn more about [dedicated SQL pool](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool).
-  > - When auditing is configured to a Log Analytics workspace or to an Event Hub destination via the Azure portal or PowerShell cmdlet, a [Diagnostic Setting](/azure/azure-monitor/essentials/diagnostic-settings) is created with "SQLSecurityAuditEvents" category enabled.
+  > - When auditing is configured to a Log Analytics workspace or to an Event Hubs destination via the Azure portal or PowerShell cmdlet, a [Diagnostic Setting](/azure/azure-monitor/essentials/diagnostic-settings) is created with "SQLSecurityAuditEvents" category enabled.
 
 1. Go to the [Azure portal](https://portal.azure.com).
 2. Navigate to **Auditing** under the Security heading in your **SQL database** or **SQL server** pane.
@@ -115,7 +113,7 @@ The following section describes the configuration of auditing using the Azure po
 
 ### <a id="auditing-of-microsoft-support-operations"></a>Auditing of Microsoft Support operations
 
-Auditing of Microsoft Support operations for Azure SQL Server allows you to audit Microsoft support engineers' operations when they need to access your server during a support request. The use of this capability, along with your auditing, enables more transparency into your workforce and allows for anomaly detection, trend visualization, and data loss prevention.
+Auditing of Microsoft Support operations for your [logical server](logical-servers.md) allows you to audit Microsoft support engineers' operations when they need to access your server during a support request. The use of this capability, along with your auditing, enables more transparency into your workforce and allows for anomaly detection, trend visualization, and data loss prevention.
 
 To enable auditing of Microsoft Support operations navigate to **Auditing** under the Security heading in your Azure **SQL server** pane, and switch **Enable Auditing of Microsoft support operations** to **ON**.
 
@@ -134,8 +132,9 @@ You have the option of choosing a different storage destination for this auditin
 
 ### <a id="audit-storage-destination"></a>Audit to storage destination
 
-To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where logs will be saved, and then select the retention period by opening **Advanced properties**. Then click **Save**. Logs older than the retention period are deleted.
+To configure writing audit logs to a storage account, select **Storage** when you get to the **Auditing** section. Select the Azure storage account where you want to save your logs. You can use the following two storage authentication types:  managed identity and storage access keys. For managed identity, system and user managed identity is supported. By default, the primary user identity assigned to the server is selected. If there is no user identity, then a system assigned identity is created and used for authentication purposes. After you have chosen an authentication type, select a retention period by opening **Advanced properties* and selecting **Save**. Logs older than the retention period are deleted.
 
+ 
 > [!NOTE] 
 > If you are deploying from the Azure portal, be sure that the storage account is in the same region as your database and server. If you are deploying through other methods, the storage account can be in any region.
 
@@ -152,7 +151,7 @@ To configure writing audit logs to a Log Analytics workspace, select **Log Analy
 
 For more details about Azure Monitor Log Analytics workspace, see [Designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment)
    
-### <a id="audit-event-hub-destination"></a>Audit to Event Hub destination
+### <a id="audit-event-hub-destination"></a>Audit to Event Hubs destination
 
 To configure writing audit logs to an event hub, select **Event Hub**. Select the event hub where logs will be written and then click **Save**. Be sure that the event hub is in the same region as your database and server.
 
@@ -201,7 +200,7 @@ If you chose to write audit logs to an Azure storage account, there are several 
   - You can view specific dates by clicking **Filter** at the top of the **Audit records** page.
   - You can switch between audit records that were created by the *server audit policy* and the *database audit policy* by toggling **Audit Source**.
 
-       ![Screenshot that shows the options for viewing the audit records.]( ./media/auditing-overview/8_auditing_get_started_blob_audit_records.png)
+       ![Screenshot that shows the options for viewing the audit records.](./media/auditing-overview/8_auditing_get_started_blob_audit_records.png)
 
 - Use the system function **sys.fn_get_audit_file** (T-SQL) to return the audit log data in tabular format. For more information on using this function, see [sys.fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql).
 

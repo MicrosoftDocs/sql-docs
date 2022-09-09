@@ -1,13 +1,12 @@
 ---
 title: SQL Server on Azure Arc-enabled servers
-titleSuffix:
 description: Manage instances of SQL Server on Azure Arc-enabled servers
 author: anosov1960
-ms.author: sashan 
-ms.reviewer: mikeray
-ms.date: 07/30/2021
-ms.topic: conceptual
+ms.author: sashan
+ms.reviewer: mikeray, randolphwest
+ms.date: 08/25/2022
 ms.prod: sql
+ms.topic: conceptual
 ms.custom: references_regions
 ---
 
@@ -17,11 +16,11 @@ You can manage your instances of SQL Server from Azure with SQL Server on Azure 
 
 You can enable SQL Server on [Azure Arc-enabled servers](/azure/azure-arc/servers/overview). It extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multi-cloud environment.
 
-To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install a SQL Arc extension to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will show a __SQL Server – Azure Arc__ resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
+To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install an extension to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will show a **SQL Server – Azure Arc** resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
 
 ## Architecture
 
-The SQL Server instance can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the [Connected Machine agent](/azure/azure-arc/servers/agent-overview). When you register the SQL Server instance, the agent is installed and the machine is registered automatically.
+The SQL Server instance can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the [Connected Machine agent](/azure/azure-arc/servers/agent-overview). When you register the SQL Server instance, the agent is installed, and the machine is registered automatically.
 
 The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or an HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](/azure/azure-arc/servers/agent-overview#prerequisites).
 
@@ -29,7 +28,7 @@ SQL Server on Azure Arc-enabled servers supports a set of solutions that require
 
 The following diagram illustrates the architecture of SQL Server on Azure Arc enable servers.
 
-![Customer infrastructure hosts virtualization and persistent storage. Use the Azure portal or the appropriate CLI to manage the SQL Server instance.](media/overview/architecture.png)
+:::image type="content" source="media/overview/architecture.png" alt-text="Diagram showing customer infrastructure hosts virtualization and persistent storage. Use the Azure portal or the appropriate CLI to manage the SQL Server instance.":::
 
 To learn more about these capabilities, you can also refer to this Data Exposed episode.
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Understanding-Azure-Arc-Enabled-SQL-Server/player?format=ny]
@@ -46,7 +45,7 @@ SQL Server on Azure Arc-enabled servers supports SQL Server 2012 or higher runni
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 > [!NOTE]
-> SQL Server on Azure Arc-enabled servers does not support container images with SQL Server.  
+> SQL Server on Azure Arc-enabled servers does not support container images with SQL Server.
 
 ### Required permissions
 

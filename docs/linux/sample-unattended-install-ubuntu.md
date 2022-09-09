@@ -33,6 +33,9 @@ Save the sample script to a file and then to customize it. You'll need to replac
 
 The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line may resolve this issue.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
 #!/bin/bash -e
 

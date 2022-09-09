@@ -1,21 +1,15 @@
 ---
+title: "getIndexInfo Method (SQLServerDatabaseMetaData)"
 description: "getIndexInfo Method (SQLServerDatabaseMetaData)"
-title: "getIndexInfo Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getIndexInfo"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getIndexInfo"
+apitype: "Assembly"
 ---
 # getIndexInfo Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -85,7 +79,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 >  For more information about the data returned by the getIndexInfo method, see "sp_indexes (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getIndexInfo method to return information about the indexes and statistics of the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  
+ The following example demonstrates how to use the getIndexInfo method to return information about the indexes and statistics of the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```  
 public static void executeGetIndexInfo(Connection con) {  

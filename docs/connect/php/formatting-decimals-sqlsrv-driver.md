@@ -1,16 +1,14 @@
 ---
 title: "Formatting decimal strings and money values (SQLSRV driver)"
 description: "Learn how to use FormatDecimals and DecimalPlaces options to format decimal or money values when using the Microsoft SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "08/10/2020"
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "formatting, decimal types, money values"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Formatting Decimal Strings and Money Values (SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

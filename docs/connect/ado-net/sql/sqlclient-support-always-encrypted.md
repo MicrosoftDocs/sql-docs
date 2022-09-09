@@ -1,14 +1,12 @@
 ---
 title: Using Always Encrypted with SqlClient
 description: Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure.
-ms.date: 02/08/2022
-ms.assetid: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 02/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server
@@ -78,7 +76,7 @@ To enable enclave computations for a database connection, you must set the follo
   - If this keyword isn't specified, secure enclaves are disabled on the connection.
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keyword should be `HGS`.
   - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keyword should be `AAS`.
-  - If you're using Virtualization-based security (VBS) enclaves and want to forgo attestation, the value of this keyword should be `None`. This option is less secure than the others and should only be used when attestation isn't possible in your environment and you trust the server. Skipping attestation opens the application up to the possibility of a malicious server making claims that results in exposure of column encryption keys to the server.
+  - If you're using Virtualization-based security (VBS) enclaves and want to forgo attestation, the value of this keyword should be `None`.
 
 - `Enclave Attestation URL` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 

@@ -21,7 +21,7 @@ ms.author: mathoma
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a new version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update  separately on all failover cluster nodes, with downtime limited to a single manual failover (or two manual failovers if failing back to the original primary).  
 
   
- Upgrading the Windows Server operating system of a node containing a failover cluster instance is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a Windows Server failover cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
+ Upgrading the Windows Server operating system of a node containing a failover cluster instance is not supported for operating systems before [!INCLUDE[winserver2012r2-md](../../../includes/winserver2012r2-md.md)]. To upgrade a Windows Server failover cluster node running on [!INCLUDE[winserver2012r2-md](../../../includes/winserver2012r2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
   
  Support details are as follows:  
   
@@ -45,7 +45,7 @@ ms.author: mathoma
 ## Prerequisites  
  Before you begin, review the following important information:  
   
--   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to your desired version of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] from your version of the Windows operating system and version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For example, you cannot upgrade directly from a SQL Server 2005 failover clustering instance to [!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] or upgrade a failover cluster instance running on [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to your desired version of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] from your version of the Windows operating system and version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For example, you cannot upgrade directly from a SQL Server 2005 failover clustering instance to [!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] or upgrade a failover cluster instance running on [!INCLUDE[winserver2003-md](../../../includes/winserver2003-md.md)].  
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment to upgrade components in the correct order.  
   
@@ -70,7 +70,7 @@ ms.author: mathoma
   
 3.  If [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup support files are required, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs them. If you are instructed to restart your computer, restart before you continue.  
   
-4.  The System Configuration Checker runs a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+4.  The System Configuration Checker runs a discovery operation on your computer. To continue, select **OK**.
   
 5.  On the Product Key page, enter the PID key for the new version edition that matches the edition of the old product version. For example, to upgrade an Enterprise failover cluster, you must supply a PID key for [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Click **Next** to continue. Be aware that the PID key that you use for a failover cluster upgrade must be consistent across all failover cluster nodes in the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.  
   

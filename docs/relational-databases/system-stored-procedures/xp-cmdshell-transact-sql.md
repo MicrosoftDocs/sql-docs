@@ -66,7 +66,7 @@ The command(s) completed successfully.
  **xp_cmdshell** operates synchronously. Control is not returned to the caller until the command-shell command is completed. 
  
 > [!IMPORTANT]
->  If **xp_cmdshell** is executed within a batch and returns an error, the batch will fail. This is a change of behavior. In earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the batch would continue to execute.  
+>  If **xp_cmdshell** is executed within a batch and returns an error, the batch will fail. This is a change of behavior. In earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the batch would continue to execute.  
  
 ## xp_cmdshell Proxy Account  
  When it is called by a user that is not a member of the **sysadmin** fixed server role, **xp_cmdshell** connects to Windows by using the account name and password stored in the credential named **##xp_cmdshell_proxy_account##**. If this proxy credential does not exist, **xp_cmdshell** will fail.  

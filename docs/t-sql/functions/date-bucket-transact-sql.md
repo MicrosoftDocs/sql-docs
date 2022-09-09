@@ -6,11 +6,9 @@ ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 05/09/2022
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "DATE_BUCKET"
   - "DATE_BUCKET_TSQL"
@@ -33,7 +31,7 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions
 ## Syntax
 
 ```syntaxsql
-DATE_BUCKET (datepart, number, date, origin)
+DATE_BUCKET (datepart, number, date [, origin ] )
 ```
 
 ## Arguments

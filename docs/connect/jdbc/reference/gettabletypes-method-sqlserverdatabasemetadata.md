@@ -1,21 +1,15 @@
 ---
+title: "getTableTypes Method (SQLServerDatabaseMetaData)"
 description: "getTableTypes Method (SQLServerDatabaseMetaData)"
-title: "getTableTypes Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getTableTypes"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getTableTypes"
+apitype: "Assembly"
 ---
 # getTableTypes Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +42,7 @@ public java.sql.ResultSet getTableTypes()
 >  For more information about the data returned by the getTableTypes method, see "sp_tables (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getTableTypes method to return the table type information in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database, given that the database is specified in the connection String.  
+ The following example demonstrates how to use the getTableTypes method to return the table type information in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database, given that the database is specified in the connection String.  
   
 ```  
 public static void executeGetTableTypes(Connection con) {  

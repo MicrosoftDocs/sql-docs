@@ -1,12 +1,12 @@
 ---
 title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
-ms.date: 05/24/2022
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 08/25/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: rwestMSFT
-ms.author: randolphwest
 ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
 ---
@@ -15,6 +15,9 @@ monikerRange: ">=sql-server-2016"
 [!INCLUDE [SQL Server end of support](../../includes/applies-to-version/sql-migration-end-of-support.md)]
 
 This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
+
+> [!WARNING]  
+> Effective July 12, 2022, the SQL Registry portal will be retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
@@ -29,7 +32,7 @@ You can receive Extended Security Updates in several ways:
 
 - **Azure Arc**. Purchased for your on-premises or hosted environment. You'll download updates when they're available. There are two ways to use Azure Arc:
 
-  - **Connected**. Install the Azure Connected Machine agent with direct connectivity to Azure. You'll benefit from the features that [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) provide.
+  - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [SQL Server on Azure Arc-enabled servers](../azure-arc/overview.md) provides.
 
   - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state.
 
@@ -86,9 +89,7 @@ ESUs are available to customers running their workload in Azure, on-premises, or
 
 If you migrate your workloads to an Azure service (see the [Overview](#overview) for more information), you'll have access to ESUs for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] for up to three years after the End of Support, at **no additional charges** above the cost of running the Azure service. You don't need Software Assurance to receive ESUs in Azure.
 
-Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels, when the service is configured to use [automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching).
-
-Azure services that have ***not* been configured for [automated patching](/azure/azure-sql/virtual-machines/windows/automated-patching)** will need to manually download and deploy ESU patches as described in the [on-premises or hosted environments](#on-premises-or-hosted-environments) section.
+Azure services running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive ESUs automatically through existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update channels or Windows Update. You don't need to install the SQL Server IaaS Agent extension to download ESU patches on an Azure SQL Virtual Machine.
 
 ### On-premises or hosted environments
 
@@ -183,6 +184,9 @@ Now you can continue to the [Confirmation](#confirmation) section.
 ### Confirmation
 
 1. We recommend using the `Year1OrderID` tag to link your SQL Server instances to your ESU invoice number for easy reference. The `Year1EntitlementConfirmed` tag is automatically filled in.
+
+    > [!NOTE]
+    > If you use Azure services such as Azure Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set the ESU invoice number to `InvoiceNotNeeded`.
 
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot of confirmation tags.":::
 

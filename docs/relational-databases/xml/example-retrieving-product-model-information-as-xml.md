@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Example: Retrieve product model information as XML
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following query returns product model information. `RAW` mode is specified in the `FOR XML` clause.
 

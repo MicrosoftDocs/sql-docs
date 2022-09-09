@@ -1,8 +1,8 @@
 ---
 title: "ALTER SEQUENCE (Transact-SQL)"
 description: ALTER SEQUENCE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/08/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "ALTER SEQUENCE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 ---
 # ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Modifies the arguments of an existing sequence object. If the sequence was created with the **CACHE** option, altering the sequence will recreate the cache.  
   

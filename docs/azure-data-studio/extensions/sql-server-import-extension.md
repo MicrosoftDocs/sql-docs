@@ -1,14 +1,12 @@
 ---
 title: SQL Server Import Extension
 description: Learn how to install and use the SQL Server Import extension for Azure Data Studio, a wizard that converts .txt and .csv files into a SQL table.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
-ms.custom: 
 ms.date: 10/28/2021
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # SQL Server Import extension

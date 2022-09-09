@@ -1,19 +1,15 @@
 ---
 title: Extend support for SQL Server
 description: Extend support for SQL Server 2008, 2008 R2, and 2012 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
-services: virtual-machines-windows
-documentationcenter: ''
 author: bluefooted
-tags: azure-service-management
+ms.author: pamela
+ms.reviewer: mathoma, randolphwest
+ms.date: 05/24/2022
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/24/2022
-ms.author: pamela
-ms.reviewer: mathoma, randolphwest
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
+tags: azure-service-management
 ---
 # Extend support for SQL Server with Azure
 
@@ -77,6 +73,10 @@ Disaster recovery solutions for EOS SQL Server on an Azure VM are as follows:
 ## Security patching
 
 Extended security updates for SQL Server VMs are delivered through the Microsoft Update channels after the SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Patches can be downloaded manually or automatically.
+
+> [!NOTE]
+>
+> Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for manual installation of extended security updates on Azure virtual machines. Microsoft Update will automatically detect that the VM is running in Azure and present the relevant updates for download even if the extension is not present.
 
 *Automated patching* is enabled by default. Automated patching allows Azure to automatically patch SQL Server and the operating system. You can specify a day of the week, time, and duration for a maintenance window if the SQL Server IaaS extension is installed. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale for time. For more information, see [Automated patching for SQL Server on Azure Virtual Machines](automated-patching.md).
 

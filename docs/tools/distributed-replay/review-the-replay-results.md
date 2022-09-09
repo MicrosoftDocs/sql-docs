@@ -83,6 +83,6 @@ The following table describes the columns of the result trace data.
 ## See also
 
 - [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
-- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Distributed Replay Requirements](./sql-server-distributed-replay.md)
 - [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
 - [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

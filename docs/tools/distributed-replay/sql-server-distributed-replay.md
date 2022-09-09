@@ -224,5 +224,5 @@ Replaying events associated with missing or incorrect logins results in replay e
 
 ## See also
 
-- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)
+- [Install Distributed Replay - Overview](./install-distributed-replay.md)
 - [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)

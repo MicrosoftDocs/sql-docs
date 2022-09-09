@@ -67,8 +67,8 @@ Here's a list of algorithms and ciphers removed in TLS 1.3:
 
 To leverage TDS 8.0, SQL Server 2022 added `strict` as an additional connection encryption type to SQL Server drivers (`Encrypt=strict`). Download the latest version of the ODBC or OLE DB drivers to use the `strict` connection encryption type.
 
-- [ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) version 18.0.1.1 or higher
-- [OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server) version 19.0.0 or higher
+- [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.0.1.1 or higher
+- [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.0.0 or higher
 
 In order to prevent a man-in-the-middle attack with `strict` connection encryption, users won't be able to set the `TrustServerCertificate` option to **true** and trust any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate that should be trusted. The certificate supplied by the server would need to pass the certificate validation.
 

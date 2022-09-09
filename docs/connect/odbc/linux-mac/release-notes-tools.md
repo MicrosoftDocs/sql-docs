@@ -1,22 +1,39 @@
 ---
 title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
-ms.custom: ""
-ms.date: 02/17/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 manager: kenvh
+ms.reviewer: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Release notes for the Microsoft SQL Server tools on Linux and macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server Tools on Linux and macOS.
+This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server Tools on Linux and macOS.
+
+## 18.1.1.1, August 2022
+
+| New item | Details |
+| :------- | :------ |
+| Sqlcmd Bugfix | Fixed issue where -M option required an argument. |
+| Sqlcmd Bugfix | Fixed issue where nohup and SIGHUP can cause it to hang in certain situations. |
+| Sqlcmd Bugfix | Fixed specifying input codepage with -f option. |
+| Sqlcmd Bugfix | Fixed detection of current character encoding. |
+| Sqlcmd Bugfix | Fixed input file codepage option. |
+| &nbsp; | &nbsp; |
+
+## 17.10.1.1, June 2022
+
+| New item | Details |
+| :------- | :------ |
+| Sqlcmd Bugfix | Fixed issue where -M option required an argument. |
+| Sqlcmd Bugfix | Fixed issue where nohup and SIGHUP can cause it to hang in certain situations. |
+| &nbsp; | &nbsp; |
 
 ## 18.0.1.1, February 2022
 

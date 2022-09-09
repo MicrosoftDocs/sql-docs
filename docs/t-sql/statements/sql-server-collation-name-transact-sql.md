@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "names [SQL Server], collations"
 dev_langs:
   - "TSQL"
-ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Collation Name (Transact-SQL)

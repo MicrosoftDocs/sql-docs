@@ -1,21 +1,18 @@
 ---
-description: "DBCC UPDATEUSAGE (Transact-SQL)"
 title: DBCC UPDATEUSAGE (Transact-SQL)
-ms.custom: ""
+description: "DBCC UPDATEUSAGE (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "UPDATEUSAGE"
   - "UPDATEUSAGE_TSQL"
   - "DBCC_UPDATEUSAGE_TSQL"
   - "DBCC UPDATEUSAGE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inaccurate page or row counts [SQL Server]"
   - "space [SQL Server], usage reports"
   - "updating space usage information"
@@ -31,9 +28,8 @@ helpviewer_keywords:
   - "counting rows"
   - "row count accuracy [SQL Server]"
   - "page count accuracy [SQL Server]"
-ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC UPDATEUSAGE (Transact-SQL)
@@ -82,7 +78,7 @@ DBCC CHECKDB has been enhanced to detect when page or row counts become negative
   
 ## Best Practices  
 We recommend the following:
--   Do not run DBCC UPDATEUSAGE routinely. Because DBCC UPDATEUSAGE can take some time to run on large tables or databases, it should not be used only unless you suspect incorrect values are being returned by sp_spaceused.
+-   Do not run DBCC UPDATEUSAGE routinely, as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains the metadata under most circumstances. DBCC UPDATEUSAGE should be run on an as-needed basis, for example, when you suspect incorrect values are being returned by sp_spaceused. DBCC UPDATEUSAGE can take some time to run on large tables or databases.
 -   Consider running DBCC UPDATEUSAGE routinely (for example, weekly) only if the database undergoes frequent Data Definition Language (DDL) modifications, such as CREATE, ALTER, or DROP statements.  
   
 ## Result Sets  

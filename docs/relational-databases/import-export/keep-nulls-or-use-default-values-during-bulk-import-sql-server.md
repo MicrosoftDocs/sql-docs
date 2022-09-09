@@ -1,13 +1,15 @@
 ---
 title: "Keep nulls or default values during bulk import"
-description: For bulk import in SQL Server, both bcp and BULK INSERT load default values to replace null values. For both, you can choose to retain null values. 
+description: For bulk import in SQL Server, both bcp and BULK INSERT load default values to replace null values. For both, you can choose to retain null values.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/20/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "bulk importing [SQL Server], null values"
   - "bulk importing [SQL Server], default values"
   - "data formats [SQL Server], null values"
@@ -17,11 +19,7 @@ helpviewer_keywords:
   - "default values"
   - "OPENROWSET function, bulk importing"
   - "data formats [SQL Server], default values"
-ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Keep nulls or default values during bulk import (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

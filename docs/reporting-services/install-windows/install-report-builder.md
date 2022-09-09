@@ -1,7 +1,7 @@
 ---
-title: "Install Report Builder | Microsoft Docs"
+title: "Install Microsoft Report Builder | Microsoft Docs"
 description: Report Builder is stand-alone app, installed on your computer by you or an administrator.
-ms.date: 01/31/2020
+ms.date: 08/15/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
@@ -11,22 +11,44 @@ ms.author: maggies
 ms.custom:
   - intro-installation
 ---
-# Install Report Builder
+# Install Microsoft Report Builder
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone app, installed on your computer by you or an administrator. You can install it from the Microsoft Download Center, from a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, or from a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+Microsoft [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone app for authoring paginated reports, installed on your computer by you or an administrator.  An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], grants permission to download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal, and manages folders and permissions to reports and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md). 
+
+There are different ways to install Report Builder.
+
+Your administrator can install Report Builder with [Microsoft Endpoint Configuration Manager](#install-report-builder-with-microsoft-endpoint-configuration-manager).
+
+And you can install it from several places:
+
+- The [Microsoft Download Center](#download).
+- The [web portal of a report server](#install-report-builder-from--the--web-portal).
+- A [share](#install-report-builder-from-a-share).
+- The [command line](#install-report-builder-from-the-command-line).
 
 > [!NOTE]
-> Looking for installation information for Power BI Report Builder instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) page on the Download Center. 
+> Are you looking for *Power BI Report Builder* instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) page on the Download Center.
 
- An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], grants permission to download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal, and manages folders and permissions to reports, report parts, and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+## System requirements
   
-## Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from  a  web portal or SharePoint library 
+ See the **System requirements** section of the [Report Builder download page](https://go.microsoft.com/fwlink/?LinkID=734968) on the Microsoft Download Center.
 
+## Install Report Builder with Microsoft Endpoint Configuration Manager
+  
+ An administrator can use software such as Microsoft Endpoint Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see [Microsoft Endpoint Configuration Manager documentation](/configmgr/).  
+  
+> [!IMPORTANT]  
+>  Windows Vista and Windows 7 security features require elevated permissions to run command line operations and will prompt for permission to run the command line. The installation is not silent. To make the installation silent, you need to run the command line as an administrator.  
+   
+## Install Report Builder from  the  web portal
+
+::: moniker range=">=sql-server-2016 <=sql-server-2016"
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
-  
+> You can install Report Builder from a SharePoint library integrated with Reporting Services through SQL Server 2016.
+::: moniker-end
+
  You can start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For information, see [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md).  
 
 ::: moniker range="=sql-server-2016"
@@ -37,18 +59,8 @@ ms.custom:
 
 ::: moniker-end
  
-## Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] with Microsoft Endpoint Configuration Manager 
-  
- An administrator can also use software such as Microsoft Endpoint Configuration Manager to push the program to your computer. To learn how to use specific software to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consult the documentation for the software. For more information, see [Microsoft Endpoint Configuration Manager documentation](/configmgr/).  
-  
-> [!IMPORTANT]  
->  Windows Vista and Windows 7 security features require elevated permissions to run command line operations and will prompt for permission to run the command line. The installation is not silent. To make the installation silent, you need to run the command line as an administrator.  
-  
-## System Requirements
-  
- See the **System Requirements** section of the [Report Builder download page](https://go.microsoft.com/fwlink/?LinkID=734968) on the Microsoft Download Center.
-  
-##  <a name="download"></a> To install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the download site  
+ 
+##  <a name="download"></a> Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the download site  
   
 1.  On  the [Report Builder page of the Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=734968) , click **Download**.  
   
@@ -65,7 +77,7 @@ ms.custom:
   
 5.  Click **Install** to complete the installation of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
-## To install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from a share  
+## Install Report Builder from a share  
   
 1.  Contact your administrator for the location of ReportBuilder.msi that you run to install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] on your local computer.  
   
@@ -75,7 +87,7 @@ ms.custom:
   
 3.  Complete rest of the steps in [To install Report Builder from the download site](#download).  
   
-## To install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the command line 
+## Install Report Builder from the command line 
 
  You can also perform a command line installation of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] provides: RBINSTALLDIR and RBSERVERURL. RBINSTALLDIR specifies the root installation folder for [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. RBSERVERURL specifies the default report server that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] uses to save reports on the server.  
   

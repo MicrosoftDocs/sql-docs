@@ -1,8 +1,8 @@
 ---
 title: "CREATE FULLTEXT INDEX (Transact-SQL)"
 description: CREATE FULLTEXT INDEX (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "04/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "CREATE FULLTEXT INDEX statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 ---
 # CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
   Creates a full-text index on a table or indexed view in a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Only one full-text index is allowed per table or indexed view, and each full-text index applies to a single table or indexed view. A full-text index can contain up to 1024 columns.  
   

@@ -12,7 +12,7 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing Memory-Optimized Tables Using Interpreted Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  With only a few exceptions, you can access memory-optimized tables using any [!INCLUDE[tsql](../../includes/tsql-md.md)] query or DML operation (select, insert, update, or delete), ad hoc batches, and SQL modules such as stored procedures, table-value functions, triggers, and views.  
   
@@ -41,7 +41,7 @@ However, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs ar
   
 ## Table Hints
 
-For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md). The SNAPSHOT was added to support [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md). The SNAPSHOT was added to support [!INCLUDE[inmemory](../../includes/inmemory-md.md)].  
   
 The following table hints are not supported when accessing a memory-optimized table using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 

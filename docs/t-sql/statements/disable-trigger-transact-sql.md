@@ -1,8 +1,8 @@
 ---
 title: "DISABLE TRIGGER (Transact-SQL)"
 description: DISABLE TRIGGER (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "disabling triggers"
 dev_langs:
   - "TSQL"
-ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 ---
 # DISABLE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Disables a trigger.  
   

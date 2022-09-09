@@ -1,17 +1,15 @@
 ---
-title: The link feature
+title: Link feature for Azure SQL Managed Instance (preview)
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the link feature for Azure SQL Managed Instance to continuously replicate data from SQL Server to the cloud, or migrate your SQL Server databases with the best possible minimum downtime.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.custom: ignite-fall-2021
-ms.devlang: 
-ms.topic: conceptual
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 06/09/2022
+ms.date: 09/07/2022
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: conceptual
+ms.custom: ignite-fall-2021
 ---
 # Link feature for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -29,7 +27,7 @@ To use the link feature, you'll need a supported version of SQL Server. The foll
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 In addition to the supported version, you'll need:
@@ -41,13 +39,12 @@ You'll also need the following tooling:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 18.12](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup and failover for SQL Servers 2016, 2019 and 2022. |
+| [SSMS 18.12.1](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup and failover for SQL Servers 2016, 2019 and 2022. |
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]
-> SQL Managed Instance link feature is available in all public Azure regions. 
->
-> National clouds are currently not supported.
+> SQL Managed Instance link feature is available in all public Azure regions.
+> National cloud support is provided for Azure for US Government only, and no other national clouds at this time.
 
 ## Overview
 
@@ -135,6 +132,8 @@ Managed Instance link has a set of general limitations, and those are listed in 
 - If transactional replication is used with a database on SQL Server in the case of a migration scenario, during failover to Azure, transactional replication on SQL Managed Instance will fail and should be manually reconfigured. 
 - In case distributed transactions are used with database replicated from the SQL Server, and in case of migration scenario, on the cutover to the cloud, the DTC capabilities won't be transferred. There will be no possibility for migrated database to get involved in distributed transactions with SQL Server, as SQL Managed Instance doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other SQL Managed Instances, see [this article](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 - Managed Instance link can replicate database of any size if it fits into chosen storage size of target SQL Managed Instance.
+- Client Windows OS 10 and 11 cannot be used to host your SQL Server, as it will not be possible to enable Always On required for the link. SQL Server must be hosted on Windows Server 2012 or higher.
+- SQL Server 2008, 2012 and 2014 cannot be supported for the link feature, as SQL engines of these releases do not have built-in support for Distributed Availability Groups, required for the link. Upgrade to a newer version of SQL Server is required to be able to use the link.
 
 ### Preview limitations
 
@@ -145,6 +144,7 @@ Some Managed Instance link features and capabilities are limited **at this time*
 - Managed Instance link authentication between SQL Server instance and SQL Managed Instance is certificate-based, available only through exchange of certificates. Windows authentication between SQL Server and managed instance isn't supported.
 - Replication of user databases from SQL Server to SQL Managed Instance is one-way. User databases from SQL Managed Instance can't be replicated back to SQL Server.
 - [Auto failover groups](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance can't be used in parallel while operating the Managed Instance link with SQL Server.
+- The link can be used with only a single SQL Server instance installed on the OS. Using the link with SQL Server named instances (multiple SQL Servers installed on the same OS) is not supported.
 - Replicated R/O databases aren't part of auto-backup process on SQL Managed Instance.
 
 ## Next steps

@@ -47,7 +47,7 @@ The classification includes two metadata attributes:
 
 3. The classification engine scans your database for columns containing potentially sensitive data and provides a list of **recommended column classifications**:
 
-    * To view the list of recommended column classifications, select on the recommendations notification box at the top or the recommendations panel at the bottom of the window:
+    * To view the list of recommended column classifications, select the recommendations notification box at the top or the recommendations panel at the bottom of the window:
 
         ![Screenshot showing the notification that says We have found 39 columns with classification recommendations. Click here to view them.][2]
 
@@ -70,7 +70,7 @@ The classification includes two metadata attributes:
 
 5. You can also **manually classify** columns as an alternative, or in addition, to the recommendation-based classification:
 
-    * Select on **Add classification** in the top menu of the window.
+    * Select **Add classification** in the top menu of the window.
 
         ![Screenshot showing the top menu with the Add classification option called out.][6]
 

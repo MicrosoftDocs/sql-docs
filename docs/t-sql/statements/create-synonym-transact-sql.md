@@ -1,8 +1,8 @@
 ---
 title: CREATE SYNONYM (Transact-SQL)
 description: CREATE SYNONYM (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "02/01/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -24,7 +24,7 @@ dev_langs:
 
 # CREATE SYNONYM (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a new synonym.  
   

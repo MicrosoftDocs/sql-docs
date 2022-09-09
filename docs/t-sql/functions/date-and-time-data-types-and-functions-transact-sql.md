@@ -5,9 +5,8 @@ description: Links to Date and Time data types and functions articles.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/09/2022
+ms.date: 07/26/2022
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
 ms.custom:
@@ -91,6 +90,7 @@ The following tables list the [!INCLUDE[tsql](../../includes/tsql-md.md)] date a
 |[DATE_BUCKET](../../t-sql/functions/date-bucket-transact-sql.md)|DATE_BUCKET ( *datepart*, *number*, *date*, *origin* )|Returns a value corresponding to the start of each date-time bucket from the timestamp defined by the *origin* parameter, or the default origin value of `1900-01-01 00:00:00.000` if the origin parameter isn't specified.|The return type depends on the argument supplied for *date*.|Nondeterministic|
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart*, *date* )|Returns a character string representing the specified *datepart* of the specified date.|**nvarchar**|Nondeterministic|
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart*, *date* )|Returns an integer representing the specified *datepart* of the specified *date*.|**int**|Nondeterministic|
+|[DATETRUNC](../../t-sql/functions/datetrunc-transact-sql.md)|DATETRUNC ( *datepart*, *date* )|Returns an input *date* truncated to a specified *datepart*.|The return type depends on the argument supplied for *date*.|Nondeterministic|
 |[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Returns an integer representing the day part of the specified *date*.|**int**|Deterministic|
 |[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Returns an integer representing the month part of a specified *date*.|**int**|Deterministic|
 |[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Returns an integer representing the year part of a specified *date*.|**int**|Deterministic|

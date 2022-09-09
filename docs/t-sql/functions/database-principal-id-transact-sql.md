@@ -3,13 +3,10 @@ title: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
 description: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "05/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "DATABASE_PRINCIPAL_ID_TSQL"
   - "DATABASE_PRINCIPAL_ID"

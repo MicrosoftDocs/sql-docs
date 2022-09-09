@@ -1,21 +1,15 @@
 ---
+title: "supportsFullOuterJoins Method (SQLServerDatabaseMetaData)"
 description: "supportsFullOuterJoins Method (SQLServerDatabaseMetaData)"
-title: "supportsFullOuterJoins Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsFullOuterJoins"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsFullOuterJoins"
+apitype: "Assembly"
 ---
 # supportsFullOuterJoins Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

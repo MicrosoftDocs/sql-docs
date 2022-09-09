@@ -118,7 +118,7 @@ By default, only some of the values on the vertical axis appear. You can change 
   
 3.  Under **Axis range and interval**, in the **Interval** box, type **1**.  
   
-4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  Click **Run** to preview the report.  
   
@@ -140,9 +140,9 @@ You can change the category expression to include last name followed by first na
   
     This expression concatenates the last name, a comma, and the first name.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 8.  Click **Run** to preview the report.  
   
@@ -166,7 +166,7 @@ When you sort the data on a chart, you are changing the order of values on the c
   
 6.  in the **Order** list, select **A to Z** so that the names appear in order from largest to smallest 2015 sales.
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 10. Click **Run** to preview the report.  
   
@@ -187,7 +187,7 @@ To improve the readability of the chart values, you might want to move the chart
   
     When the legend is placed at the top or bottom of a chart, the layout of the legend changes from vertical to horizontal. You can select a different layout from the **Layout** drop-down list.  
   
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 6.  Click **Run** to preview the report.  
   
@@ -216,13 +216,14 @@ By default, the horizontal axis displays values in a general format that is auto
   
 5.  On the **Number** tab, select **Show values in Thousands**.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Select **OK**.
 
 8.  Right-click the horizontal axis, and select **Show Axis Title**.
   
 7.  In the **Axis Title** box, type **Sales in thousands** and press Enter.  
 
-    >**Note:** While you're typing, the Axis Title box appears to be on the vertical axis. But when you press Enter, it goes to the horizontal axis.
+    > [!NOTE]  
+    > While you're typing, the Axis Title box appears to be on the vertical axis. But when you press Enter, it goes to the horizontal axis.
   
 9. Click **Run** to preview the report.  
   
@@ -249,7 +250,7 @@ You can add a filter to the chart to specify which data from the dataset to incl
   
 9. In **Value**, type the following expression: **=5**  
   
-10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+10. Select **OK**.
   
 11. Click **Run** to preview the report.  
   

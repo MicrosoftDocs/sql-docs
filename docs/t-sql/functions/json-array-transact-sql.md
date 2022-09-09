@@ -7,8 +7,7 @@ ms.date: 05/24/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "JSON_ARRAY"
   - "JSON_ARRAY_TSQL"

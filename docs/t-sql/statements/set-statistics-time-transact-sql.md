@@ -22,10 +22,9 @@ helpviewer_keywords:
   - "execution processing time [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 ---
 # SET STATISTICS TIME (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
   Displays the number of milliseconds required to parse, compile, and execute each statement.  
   

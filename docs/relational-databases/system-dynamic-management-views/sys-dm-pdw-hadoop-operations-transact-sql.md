@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_pdw_hadoop_operations (Transact-SQL)"
 description: sys.dm_pdw_hadoop_operations (Transact-SQL)
-author: ronortloff
-ms.author: rortloff
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.technology: data-warehouse

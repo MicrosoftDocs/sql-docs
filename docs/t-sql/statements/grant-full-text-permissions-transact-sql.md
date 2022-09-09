@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "GRANT statement, full-text permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 ---
 # GRANT Full-Text Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Grants permissions on a full-text catalog or full-text stoplist.  
   

@@ -1,14 +1,13 @@
 ---
 title: "Columnstore indexes - Query performance"
-description: Columnstore indexes - Query performance
+description: "Columnstore index query performance recommendations for achieving the very fast query performance."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 01/11/2019
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: table-view-index
 ms.topic: conceptual
-ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Query performance
@@ -17,18 +16,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Recommendations for achieving the very fast query performance that columnstore indexes are designed to provide.    
     
- Columnstore indexes can achieve up to 100x better performance on analytics and data warehousing workloads and up to 10x better data compression than traditional rowstore indexes. These recommendations help your queries achieve the very fast query performance that columnstore indexes are designed to provide. Further explanations about columnstore performance are at the end.    
+ Columnstore indexes can achieve up to 100x better performance on analytics and data warehousing workloads and up to ten times better data compression than traditional rowstore indexes. These recommendations help your queries achieve the very fast query performance that columnstore indexes are designed to provide. Further explanations about columnstore performance are at the end.    
     
 ## Recommendations for improving query performance    
  Here are some recommendations for achieving the high-performance columnstore indexes are designed to provide.    
     
 ### 1. Organize data to eliminate more rowgroups from a full table scan    
     
--   **Leverage insert order.** In common case in traditional data warehouse, the data is indeed inserted in time order and analytics is done in time dimension. For example,  analyzing sales by quarter. For this kind of  workload, the rowgroup elimination happens automatically. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can find out number rowgroups skipped as part of query processing.    
+-   **Leverage insert order.** In common case in traditional data warehouse, the data is indeed inserted in time order and analytics is done in time dimension. For example,  analyzing sales by quarter. For this kind of workload, the rowgroup elimination happens automatically. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can find out number rowgroups skipped as part of query processing.    
     
 -   **Leverage the rowstore clustered index.** If the common query predicate is on a column (for example, C1) that is unrelated to the insert order of the row, you can create a rowstore clustered index on columns C1 and then create clustered columnstore index by dropping the rowstore clustered index. if you create the clustered columnstore index explicitly using `MAXDOP = 1`, the resulting clustered columnstore index is perfectly ordered on column C1. If you specify `MAXDOP = 8`, then you will see overlap of values across eight rowgroups. A common case of this strategy when you initially create columnstore index with large set of data. Note, for nonclustered columnstore index (NCCI), if the base rowstore table has a clustered index, the rows are already ordered. In this case, the resultant nonclustered columnstore index will automatically be ordered. One important point to note is that columnstore index does not inherently maintain the order of rows. As new rows are inserted or older rows are updated, you may need to repeat the process as the analytics query performance may deteriorate    
     
--   **Leverage table partitioning.** You can partition the columnstore index and then use partition elimination to reduce number of rowgroups to scan. For example, a fact table stores purchases made by customers and a common query pattern is to find quarterly purchases done by a specific customer, you can combine the insert order with partitioning on customer column. Each partition will contain rows in time order for specific customer. Also, consider using table partitioning if there's a need to remove data from the columnstore. Switching out and truncating partitions that are not needed anymore is an efficient strategy to delete data without generating fragmentation introduced by having smaller rowgroups.    
+-   **Leverage table partitioning.** You can partition the columnstore index and then use partition elimination to reduce number of rowgroups to scan. For example, a fact table stores purchases made by customers. A common query pattern is to find quarterly purchases done by a specific customer, you can combine the insert order with partitioning on customer column. Each partition will contain rows in time order for specific customer. Also, consider using table partitioning if there's a need to remove data from the columnstore. Switching out and truncating partitions that are not needed anymore is an efficient strategy to delete data without generating fragmentation introduced by having smaller rowgroups.    
 
 -   **Avoid deleting large amounts of data**. Removing compressed rows from a rowgroup is not a synchronous operation. It would be expensive to uncompress a rowgroup, delete the row, and then recompress it. Therefore, if you delete data from compressed rowgroups, these rowgroups will still be scanned even though they return fewer rows. If the number of deleted rows for several rowgroups is large enough for these to be merged into fewer rowgroups, then reorganizing the columnstore increases the quality of the index and query performance improves. If your data deletion process usually empties entire rowgroups, consider using table partitioning, switch out partitions that are not needed anymore, and truncate them instead of deleting rows. 
 
@@ -40,9 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### 2. Plan for enough memory to create columnstore indexes in parallel    
  Creating a columnstore index is by default a parallel operation unless memory is constrained. Creating the index in parallel requires more memory than creating the index serially. When there is ample memory, creating a columnstore index takes on the order of 1.5 times as long as building a B-tree on the same columns.    
     
- The memory required for creating a columnstore index depends on the number of columns, the number of string columns, the degree of parallelism (DOP), and the characteristics of the data. For example, if your table has fewer than one million rows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use only one thread to create the columnstore index.    
+ The memory required for creating a columnstore index depends on the number of columns, the number of string columns, the degree of parallelism (DOP), and the characteristics of the data. For example, if your table has fewer than 1 million rows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use only one thread to create the columnstore index.    
     
- If your table has more than one million rows, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot get a large enough memory grant to create the index using MAXDOP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will automatically decrease `MAXDOP` as needed to fit into the available memory grant.  In some cases, DOP must be decreased to one in order to build the index under constrained memory.    
+ If your table has more than 1 million rows, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot get a large enough memory grant to create the index using MAXDOP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will automatically decrease `MAXDOP` as needed to fit into the available memory grant.  In some cases, DOP must be decreased to one in order to build the index under constrained memory.    
     
  Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the query will always operate in batch mode. In previous releases, batch execution is only used when DOP is greater than one.    
     
@@ -84,7 +83,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
  To determine which rows groups to eliminate, the columnstore index uses metadata to store the minimum and maximum values of each column segment for each rowgroup. When none of the column segment ranges meet the query predicate criteria, the entire rowgroup is skipped without doing any actual IO. This works because the data is usually loaded in a sorted order and although rows are not guaranteed to be sorted, similar data values are often located within the same rowgroup or a neighboring rowgroup.    
     
- For more details about rowgroups, see [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
+ For more information about rowgroups, see [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### Batch Mode Execution    
  [Batch mode execution](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) refers to processing a set of rows, typically up to 900 rows, together for execution efficiency. For example, the query `SELECT SUM (Sales) FROM SalesData` aggregates the total sales from the table SalesData. In batch mode execution, the query execution engine computes the aggregate in group of 900 values. This spreads metadata  the access costs and other types of overhead over all the rows in a batch, rather than paying the cost for each row thereby significantly reducing the code path. Batch mode processing operates on compressed data when possible and eliminates some of the exchange operators used by row mode processing. This speeds up execution of analytics queries by orders of magnitude.    
@@ -94,9 +93,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Batch Mode Operators|When is this used?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Comments|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML operations (insert, delete, update, merge)||no|no|no|DML is not a batch mode operation because it is not parallel. Even when we enable serial mode batch processing, we don't see significant gains by allowing DML to be processed in batch mode.|    
-|columnstore index scan|SCAN|NA|yes|yes|For columnstore indexes, we can push the predicate to the SCAN node.|    
-|columnstore Index Scan (nonclustered)|SCAN|yes|yes|yes|yes|    
-|index seek||NA|NA|no|We perform a seek operation through a nonclustered B-tree index in rowmode.|    
+|columnstore index scan|SCAN|Not available|yes|yes|For columnstore indexes, we can push the predicate to the SCAN node.|    
+|columnstore index Scan (nonclustered)|SCAN|yes|yes|yes|yes|    
+|index seek||Not available|Not available|no|We perform a seek operation through a nonclustered B-tree index in row mode.|    
 |compute scalar|Expression that evaluates to a scalar value.|yes|yes|yes|There are some restrictions on data type. This is true for all batch mode operators.|    
 |concatenation|UNION and UNION ALL|no|yes|yes||    
 |filter|Applying predicates|yes|yes|yes||    
@@ -108,26 +107,24 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |single-threaded queries with a serial query plan||no|no|yes||    
 |sort|Order by clause on SCAN with columnstore index.|no|no|yes||    
 |top sort||no|no|yes||    
-|window aggregates||NA|NA|yes|New operator in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].|    
+|window aggregates||Not available|Not available|yes|New operator in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].|    
     
 <sup>1</sup> Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
 
 For more information, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
-    
+
 ### Aggregate Pushdown    
  A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 
  
--	 The aggregates are `MIN`, `MAX`, `SUM`, `COUNT` and `COUNT(*)`. 
--  Aggregate operator must be on top of SCAN node or SCAN node with `GROUP BY`.
--  This aggregate is not a distinct aggregate.
--  The aggregate column is not a string column.
--  The aggregate column is not a virtual column. 
--  The input and output datatype must be one of the following and must fit within 64 bits.
-    -  `tinyint`, `int`, `bigint`, `smallint`, `bit`
-    -  `smallmoney`, `money`, `decimal` and `numeric` with precision <= 18
-    -  `smalldate`, `date`, `datetime`, `datetime2`, `time`
-    
- Aggregate push down is further accelerated by efficient Aggregation on compressed/encoded data in cache-friendly execution and by leveraging SIMD    
+- The aggregates are `MIN`, `MAX`, `SUM`, `COUNT` and `COUNT(*)`. 
+- Aggregate operator must be on top of SCAN node or SCAN node with `GROUP BY`.
+- This aggregate is not a distinct aggregate.
+- The aggregate column is not a string column.
+- The aggregate column is not a virtual column. 
+- The input and output datatype must be one of the following and must fit within 64 bits:
+    - `tinyint`, `int`, `bigint`, `smallint`, `bit`
+    - `smallmoney`, `money`, `decimal` and `numeric` with precision <= 18
+    - `smalldate`, `date`, `datetime`, `datetime2`, `time`
     
  ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
     
@@ -158,10 +155,23 @@ With string predicate pushdown, the query execution computes the predicate again
 2.  The number of string comparisons are significantly reduced. In this example, only 100 string comparisons are required as against 1 million comparisons. There are some limitations as described below:    
 
     -   No string predicate pushdown for delta rowgroups. There is no dictionary for columns in delta rowgroups.    
-    -   No string predicate pushdown if dictionary exceeds 64 KB entries.    
+    -   No string predicate pushdown if dictionary exceeds 64-KB entries.    
     -   Expression evaluating NULLs are not supported.    
+
+## Segment elimination
+
+Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index.
+
+There is metadata with each segment to allow for fast elimination of segments without reading them. This segment elimination applies to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. 
+
+After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), the columnstore index will not benefit until it is rebuilt for the first time using a REBUILD or DROP/CREATE. You can see segment elimination boundaries in [sys.column_store_segments](../system-catalog-views/sys-column-store-segments-transact-sql.md). 
+
+Segment elimination does not apply to LOB data types, such as the (max) data type lengths.
+
+Currently, only [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later supports clustered columnstore rowgroup elimination for the prefix of `LIKE` predicates.
     
-## See Also    
+## Next steps
+
  [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)
  [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     

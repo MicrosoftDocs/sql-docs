@@ -1,7 +1,7 @@
 ---
 description: "Editions and supported features of SQL Server 2022 Preview on Linux"
 title: "Editions and supported features of SQL Server 2022 Preview - Linux"
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -35,7 +35,7 @@ This article provides details of features supported by the various editions of [
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]  
-> SUSE Linux Enterprise Server **is not supported** for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux CTP 2.0, and will follow in a later release.
+> SUSE Linux Enterprise Server **is not supported** for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux CTP 2.1, and will follow in a later release.
 
 For the latest release notes and what's new information, see [SQL Server 2022 Preview on Linux release notes](sql-server-linux-release-notes-2022.md)
 
@@ -208,8 +208,6 @@ The following features and services are not available for [!INCLUDE[sssql22](../
 
 | Area | Unsupported feature or service |
 |-----|-----|
-| **Azure support** | Azure Arc agent |
-| | Azure Synapse Link |
 | **Data governance** | Microsoft Purview integration |
 | **Database engine** | Merge replication |
 | | Stretch DB |
@@ -224,12 +222,10 @@ The following features and services are not available for [!INCLUDE[sssql22](../
 | | Alerts |
 | | Managed Backup |
 | **High Availability** | Database mirroring |
-| | Distributed availability groups: changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` |
 | | Distributed availability groups: multiple TCP connections |
 | **Security** | Extensible Key Management (EKM) |
 | | Windows integrated authentication for linked servers |
 | | Windows integrated authentication for availability group (AG) endpoints |
-| | Azure Active Directory authentication |
 | | Always Encrypted with secure enclaves |
 | | TLS 1.3 |
 | **Services** | SQL Server Browser |

@@ -1,14 +1,12 @@
 ---
 title: Creating and managing tables in Azure Data Studio
 description: How to use the Table Designer to manage tables and relationships in Azure Data Studio.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.custom: 
 ms.date: 05/05/2022
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Table Designer in Azure Data Studio (Preview)
@@ -29,8 +27,8 @@ The Table Designer consists of a window split into three separate panes. The fir
 
 #### Creating a table
 
-> [!Note]
-> We will be using the "AdventureWorks2019" sample database throughout this tutorial. If you haven't already, please refer to the [AdventureWorks sample databases article](/sql/samples/adv ' entureworks-install-configure) to download this sample database.
+> [!NOTE]
+> We will be using the "AdventureWorks2019" sample database throughout this tutorial. If you haven't already, please refer to [AdventureWorks sample databases](../samples/adventureworks-install-configure.md) to download this sample database.
 
 Before creating a table, you need to ensure that you have an active connection where your database is located. For a tutorial on connecting to the SQL Server, check out the [Use Azure Data Studio to connect and query SQL Server tutorial](quickstart-sql-server.md) article. To locate the Tables folder, click the drop-down menu of the databases folder in your active local connection and locate the AdventureWorks2019 database. Then, click the drop-down of this database to view the Tables folder.
 
@@ -41,7 +39,7 @@ Before creating a table, you need to ensure that you have an active connection w
 
 To create a table, right-click the Tables folder in the connection pane and select "New Table". This opens up the Table Designer view seen below.
 
-A default table is created with the default name of "NewTable", which has one column by default. You can edit the name of your table and add new columns to it. Let us update our table name to “Cities”. We do this by selecting inside this name field, typing the new table name (Cities) and pressing "Enter" to save the change. Lets add a new column by selecting the "New Column" button above the columns grid. In the Columns grid, select the name value "column 1", replace with "CityName", and select the Primary Key column checkbox to make this the primary key for the table. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](/sql/relational-databases/tables/primary-and-foreign-key-constraints).
+A default table is created with the default name of "NewTable", which has one column by default. You can edit the name of your table and add new columns to it. Let us update our table name to “Cities”. We do this by selecting inside this name field, typing the new table name (Cities) and pressing "Enter" to save the change. Lets add a new column by selecting the "New Column" button above the columns grid. In the Columns grid, select the name value "column 1", replace with "CityName", and select the Primary Key column checkbox to make this the primary key for the table. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](../relational-databases/tables/primary-and-foreign-key-constraints.md).
 
 Select the "column 2", replace with "Population"
 
@@ -93,7 +91,7 @@ The script pane will update to display the read-only Transact-SQL version of you
 
 #### Deleting columns
 
-To delete a column, simply select on the trash icon at the end of the column as highlighted below.
+To delete a column, simply select the trash icon at the end of the column as highlighted below.
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-deleting-column.png" alt-text="Screenshot of Table Designer showing how to delete a column.":::
 
@@ -112,7 +110,7 @@ The Table Designer supports different table types and properties that dictate re
 
 ### Graph Tables
 
-Graph tables are used to establish relationships between entities in your database using node and edge table relationships. In Azure Data Studio, you can easily create these relationships directly on the GUI without having to manually type out long T-SQL statements. To read more on graph tables, check out [this documentation on SQL Graph Architecture](/sql/relational-databases/graphs/sql-graph-architecture). The table type can be seen in the Connections Pane by the icon shown to the left of the table name A single dot represents a node table, while the two unshaded dots represent edge tables as shown below
+Graph tables are used to establish relationships between entities in your database using node and edge table relationships. In Azure Data Studio, you can easily create these relationships directly on the GUI without having to manually type out long T-SQL statements. To read more on graph tables, check out [this documentation on SQL Graph Architecture](../relational-databases/graphs/sql-graph-architecture.md). The table type can be seen in the Connections Pane by the icon shown to the left of the table name A single dot represents a node table, while the two unshaded dots represent edge tables as shown below
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-node-vs-edge.png" alt-text="Screenshot of Table Designer showing node and edge graph table types.":::
 
@@ -123,7 +121,7 @@ Creating a graph table is simplified in Azure Data Studio. This can be done dire
 > [!Note]
 > That to create graph tables, a new table has to be created. Graph tables can't be implemented for existing tables. 
 
-In this example below, we will use the GUI to create two node tables; Person, City and an edge table called "lives" with an edge constraint to establish the relationship between the two aforementioned node tables, that is "Person **lives in** City". For a T-SQL script version of this example, see [Create a graph database and run some pattern matching queries using T-SQL](/sql/relational-databases/graphs/sql-graph-sample).
+In this example below, we will use the GUI to create two node tables; Person, City and an edge table called "lives" with an edge constraint to establish the relationship between the two aforementioned node tables, that is "Person **lives in** City". For a T-SQL script version of this example, see [Create a graph database and run some pattern matching queries using T-SQL](../relational-databases/graphs/sql-graph-sample.md).
 
 ##### Create the node tables
 
@@ -167,11 +165,11 @@ Creating Memory-Optimized Tables can be done directly in Azure Data Studio. All 
 > [!Note]
 > That to create Memory-Optimized tables, a new table has to be created. Memory-Optimized tables can't be implemented on existing tables.
 
- Memory-Optimized tables must have non-clustered primary key. For an introduction to Memory-Optimized Tables, check out the [Introduction to Memory-Optimized Tables](/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) article.
+ Memory-Optimized tables must have non-clustered primary key. For an introduction to Memory-Optimized Tables, check out the [Introduction to Memory-Optimized Tables](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md) article.
 
 #### Create a Memory-Optimized Table
 
-To create a Memory-Optimized Table, we need to ensure that a filegroup has been created for our database. To read more on this, check out this documentation on [the memory optimized filegroup](/sql/relational-databases/in-memory-oltp/the-memory-optimized-filegroup).
+To create a Memory-Optimized Table, we need to ensure that a filegroup has been created for our database. To read more on this, check out this documentation on [the memory optimized filegroup](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
 
 Next, create your table by right-clicking on the "Tables" folder and selecting "New Table". This will bring up the main pane and Table Properties pane where you can opt to have your table Memory Optimized. Be sure to assign a non-clustered primary key like shown below.
 
@@ -187,7 +185,7 @@ Choosing "Schema and Data" saves both the schema and Data to memory if there's a
 
 ### System-Versioned Tables
 
-System-versioned Tables, also known as Temporal Tables can also be configured directly on Azure Data Studio. If you're new to system versioning, check out [Temporal Tables on SQL Server ](/sql/relational-databases/tables/creating-a-system-versioned-temporal-table). System-versioning tables must have the period columns defined.
+System-versioned Tables, also known as Temporal Tables can also be configured directly on Azure Data Studio. If you're new to system versioning, check out [Temporal Tables on SQL Server ](../relational-databases/tables/creating-a-system-versioned-temporal-table.md). System-versioning tables must have the period columns defined.
 
 #### Creating a System-Versioned Table
 
@@ -202,4 +200,4 @@ Next, we need to define the period columns and indicate the table is system-vers
 
 ## Next steps
 
-- [Download Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio)
+- [Download Azure Data Studio](./download-azure-data-studio.md)

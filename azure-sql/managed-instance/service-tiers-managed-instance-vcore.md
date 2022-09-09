@@ -1,14 +1,13 @@
 ---
 title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: performance
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake
 ms.date: 06/02/2022
+ms.service: sql-managed-instance
+ms.subservice: performance
+ms.topic: conceptual
 ms.custom: ignite-fall-2021
 ---
 # vCore purchasing model - Azure SQL Managed Instance
@@ -126,13 +125,11 @@ When specifying hardware parameter in templates or scripts, hardware is provided
 
 [!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
-Gen5 hardware is available in all public regions worldwide.
-
 #### Standard-series (Gen5) and premium-series
 
-Standard-series (Gen5) hardware is available in all public regions worldwide.
+Standard-series (Gen5) and premium-series hardware is available in all public regions worldwide.
   
-Premium-series and memory optimized premium-series hardware is in preview, and has limited regional availability. For more details, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
+Memory optimized premium-series hardware is in preview, and has limited regional availability. For more details, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
 
 ## Next steps
 

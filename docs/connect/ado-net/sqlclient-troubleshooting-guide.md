@@ -1,17 +1,15 @@
 ---
 title: "SqlClient troubleshooting guide"
 description: "Page that provides resolutions to commonly observed problems."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "03/03/2021"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 dev_langs:
   - "csharp"
   - "vb"
-ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SqlClient troubleshooting guide
 
@@ -158,7 +156,7 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
   **Recommended Solution:** There are two available options to fix this issue:
 
     1. Install the target SQL Server's TLS/SSL certificate in the client environment. It will be validated if encryption is needed.
-    2. Set the "Trust Server Certificate = true" property in the connection string.
+    2. Set the "TrustServerCertificate=true" property in the connection string.
 
   **Insecure solution:** Disable the "Force Encryption" setting on SQL Server.
 

@@ -1,16 +1,12 @@
 ---
 title: "Using a stored procedure with a return status"
 description: "Learn how to call a stored procedure that returns a result and read the result using the Microsoft JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using a stored procedure with a return status

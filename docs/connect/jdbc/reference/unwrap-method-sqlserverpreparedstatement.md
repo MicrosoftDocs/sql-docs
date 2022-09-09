@@ -1,16 +1,12 @@
 ---
+title: "unwrap Method (SQLServerPreparedStatement)"
 description: "unwrap Method (SQLServerPreparedStatement)"
-title: "unwrap Method (SQLServerPreparedStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # unwrap Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

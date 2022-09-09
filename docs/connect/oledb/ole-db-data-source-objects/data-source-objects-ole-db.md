@@ -1,23 +1,19 @@
 ---
 title: Data source objects (OLE DB driver)
 description: Learn how an OLE DB Driver for SQL Server consumer creates an instance of a data source object for a provider.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 04/20/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], data source objects"
   - "OLE DB Driver for SQL Server, data source objects"
   - "MSOLEDBSQL, data source objects"
-  - "OLE DB Driver for SQL Server, data source objects"
   - "OLE DB data source objects [OLE DB Driver for SQL Server]"
   - "data source objects [OLE DB]"
   - "CLSID"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Data Source Objects (OLE DB)
 

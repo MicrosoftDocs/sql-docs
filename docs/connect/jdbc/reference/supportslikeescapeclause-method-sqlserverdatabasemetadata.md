@@ -1,21 +1,15 @@
 ---
+title: "supportsLikeEscapeClause Method (SQLServerDatabaseMetaData)"
 description: "supportsLikeEscapeClause Method (SQLServerDatabaseMetaData)"
-title: "supportsLikeEscapeClause Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsLikeEscapeClause"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: cfb43430-88bf-4386-847a-10ea1e5ce7db
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsLikeEscapeClause"
+apitype: "Assembly"
 ---
 # supportsLikeEscapeClause Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

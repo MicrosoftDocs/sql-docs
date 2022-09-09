@@ -1,14 +1,13 @@
 ---
-title: "Working with Snapshot Isolation | Microsoft Docs"
+title: "Working with Snapshot Isolation"
 description: Learn how OLE DB Driver for SQL Server enhancements use snapshot isolation, which enhances concurrency for online transaction processing applications.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], snapshot isolation"
   - "MSOLEDBSQL, snapshot isolation"
   - "isolation levels [SQL Server], snapshot"
@@ -19,8 +18,6 @@ helpviewer_keywords:
   - "SQLGetInfo function"
   - "concurrency [OLE DB Driver for SQL Server]"
   - "SQLSetConnectAttr function"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Working with Snapshot Isolation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,21 +1,15 @@
 ---
+title: "updateBlob Method (int, java.sql.Blob)"
 description: "updateBlob Method (int, java.sql.Blob)"
-title: "updateBlob Method (int, java.sql.Blob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateBlob (int, java.sql.Blob)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateBlob (int, java.sql.Blob)"
+apitype: "Assembly"
 ---
 # updateBlob Method (int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

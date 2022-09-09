@@ -1,16 +1,12 @@
 ---
 title: "Programming Guide for the Microsoft Drivers for PHP for SQL Server"
 description: "Learn how to get started with PHP programming using the Microsoft Drivers for PHP for SQL Server."
-ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Programming Guide for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

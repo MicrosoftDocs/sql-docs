@@ -1,14 +1,13 @@
 ---
-title: "Changing Passwords Programmatically | Microsoft Docs"
+title: "Changing Passwords Programmatically"
 description: OLE DB Driver for SQL Server supports handling password expiration programmatically through OLE DB Driver and SQL Server sign in dialog boxes.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], password expiration"
   - "OLE DB Driver for SQL Server, passwords"
   - "passwords [SQL Server], expiration"
@@ -18,8 +17,6 @@ helpviewer_keywords:
   - "expired passwords [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, password expiration"
   - "modifying passwords"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Changing Passwords Programmatically
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

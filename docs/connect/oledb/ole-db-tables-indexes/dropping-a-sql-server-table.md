@@ -1,21 +1,18 @@
 ---
-title: "Drop SQL Server table (OLE DB driver) | Microsoft Docs"
-description: Learn how to remove a SQL Server table from a database by using the ITableDefinition::DropTable function in the OLE DB Driver for SQL Server.
-ms.custom: ""
+title: "Drop SQL Server table (OLE DB driver)"
+description: "Learn how to remove a SQL Server table from a database by using the ITableDefinition::DropTable function in the OLE DB Driver for SQL Server."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tables [OLE DB]"
   - "deleting tables"
   - "OLE DB Driver for SQL Server, tables"
   - "removing tables"
   - "dropping tables"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Dropping a SQL Server Table
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

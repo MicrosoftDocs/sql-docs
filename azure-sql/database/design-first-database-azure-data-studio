@@ -144,7 +144,7 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to 
 
 ## Create tables in your database
 
-Create a database schema with four tables that model a student management system for universities using [Transact-SQL](/sql/t-sql/language-reference):
+Create a database schema with four tables that model a student management system for universities using [the Table Designer](docs\azure-data-studio\table-designer-azure-data-studio.md):
 
 - Person
 - Course
@@ -153,12 +153,9 @@ Create a database schema with four tables that model a student management system
 
 The following diagram shows how these tables are related to each other. Some of these tables reference columns in other tables. For example, the *Student* table references the *PersonId* column of the *Person* table. Study the diagram to understand how the tables in this tutorial are related to one another. For an in-depth look at how to create effective database tables, see [Create effective database tables](/previous-versions/tn-archive/cc505842(v=technet.10)). For information about choosing data types, see [Data types](/sql/t-sql/data-types/data-types-transact-sql).
 
-> [!NOTE]
-> You can also use the [table designer in SQL Server Management Studio](/sql/ssms/visual-db-tools/design-database-diagrams-visual-database-tools) to create and design your tables.
-
 ![Table relationships](./media/design-first-database-tutorial/tutorial-database-tables.png)
 
-1. In **Object Explorer**, right-click *yourDatabase* and select **New Query**. A blank query window opens that is connected to your database.
+1. In **Object Explorer**, click *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
 
 2. In the query window, execute the following query to create four tables in your database:
 
@@ -203,7 +200,7 @@ The following diagram shows how these tables are related to each other. Some of 
    )
    ```
 
-   ![Create tables](./media/design-first-database-tutorial/create-tables.png)
+   ![Create tables](./media/design-first-database-tutorial/ads-tables-created.png)
 
 3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
 

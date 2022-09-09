@@ -8,7 +8,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.prod_service: "database-engine"
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 author: WilliamDAssafMSFT
 ---
 # SQL Server 2019 Big Data Clusters partners

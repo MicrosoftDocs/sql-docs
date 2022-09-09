@@ -45,14 +45,14 @@ The following table contains the tested configuration matrix for each release of
 Restrictions:
 
 * SQL Server 2019 Big Data Clusters is supported as a *workload*. Microsoft provides support for the software components on the containers installed and configured by SQL Server 2019 Big Data Clusters only. Kubernetes itself, and other containers that may influence SQL Server 2019 Big Data Clusters behavior, are not supported by the support team. For Kubernetes support, contact your certified Kubernetes distribution provider.
-* SQL Server 2019 Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by a big data cluster is a capability that depends on the storage provider including, for example, operations to expand persistent volumes (PVs). Reference your specific CSI storage provider documentation or the [partner reference architecture and white papers](../sql-server/partner-big-data-cluster.md).
+* SQL Server 2019 Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by a big data cluster is a capability that depends on the storage provider including, for example, operations to expand persistent volumes (PVs). Reference your specific CSI storage provider documentation or the [partner reference architecture and white papers](partner-big-data-cluster.md).
 * The open-source components included by SQL Server 2019 Big Data Clusters are fixed for that particular release and must not be updated or modified.
 * Container images are provided "as-is". Composability features of Kubernetes aren't supported. Changing the set of container images in a SQL Server 2019 Big Data Cluster release, or to customize the containers, is not supported.
 
 Reference architecture and white papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
 * [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-* [SQL Server 2019 Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters partners](partner-big-data-cluster.md)
 
 ## Release history
 

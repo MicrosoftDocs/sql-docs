@@ -49,7 +49,7 @@ items:
     href: big-data-cluster/index.yml
   - name: Overview
     items:
-    - name: Introducing SQL Server Big Data Clusters
+    - name: SQL Server 2019 Big Data Clusters
       href: big-data-cluster/big-data-cluster-overview.md
     - name: Big data options on the Microsoft SQL Server platform
       href: big-data-cluster/big-data-options.md
@@ -83,22 +83,6 @@ items:
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install Azure Data CLI
-        items:
-        - name: Install
-          href: azdata/install/deploy-install-azdata.md
-        - name: macOS
-          href: azdata/install/deploy-install-azdata-macos.md
-        - name: Windows
-          href: azdata/install/deploy-install-azdata-installer.md
-        - name: Linux with apt
-          href: azdata/install/deploy-install-azdata-linux-package.md
-        - name: Linux with yum
-          href: azdata/install/deploy-install-azdata-yum.md
-        - name: Linux with zypper
-          href: azdata/install/deploy-install-azdata-zypper.md
-        - name: With pip
-          href: azdata/install/deploy-install-azdata-pip.md
     - name: Deploy
       items:
       - name: Deployment guidance
@@ -203,8 +187,6 @@ items:
       items:
       - name: Relational data
         items:
-        - name: Virtualize relational data
-          href: relational-databases/polybase/data-virtualization.md
         - name: Query Oracle data
           href: big-data-cluster/tutorial-query-oracle.md
       - name: HDFS data
@@ -253,162 +235,6 @@ items:
         items:
         - name: Use SQL Server Machine Learning Services
           href: big-data-cluster/machine-learning-services.md
-        - name: Machine learning quickstarts
-          items:
-          - name: Python
-            items:
-            - name: Run Python scripts
-              href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Data structures and objects
-              href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Python functions
-              href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Train and score a model
-              href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: R
-            items:
-            - name: Run R scripts
-              href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Data types and objects
-              href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: R functions
-              href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Train and score a model
-              href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Machine learning tutorials
-          items:
-          - name: Python
-            items:
-            - name: Ski rental (linear regression)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare data
-                href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Train model
-                href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy model
-                href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Categorize customers (k-means clustering)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare the data
-                href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Create the model
-                href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy the model
-                href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: NYC taxi tips (classification)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Data exploration
-                href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Feature engineering
-                href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Train and deploy
-                href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 5 - Predictions
-                href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: R
-            items:
-            - name: Ski rental (decision tree)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare data
-                href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Train model
-                href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy model
-                href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Categorize customers (k-means clustering)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare the data
-                href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Create the model
-                href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy the model
-                href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: NYC taxi tips (classification)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Data exploration
-                href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Feature engineering
-                href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Train and deploy
-                href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 5 - Predictions
-                href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Machine learning how-to guides
-          items:
-          - name: Data exploration and modeling
-            items:
-            - name: Python
-              items:
-              - name: Plot Histogram in Python
-                href: machine-learning/data-exploration/python-plot-histogram.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Import data into pandas dataframe
-                href: machine-learning/data-exploration/python-dataframe-pandas.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Insert dataframe into SQL
-                href: machine-learning/data-exploration/python-dataframe-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Data type conversions
-            items:
-            - name: Python to SQL
-              href: machine-learning/python/python-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: R to SQL
-              href: machine-learning/r/r-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Deploy
-            items:
-            - name: Operationalize using stored procedures
-              href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=/sql/toc.json&view=sql-server-ver15
-            - name: Convert R code for SQL Server
-              href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=/sql/toc.json&view=sql-server-ver15
-          - name: Predictions
-            items:
-            - name: Native scoring with PREDICT T-SQL
-              href: machine-learning/predictions/native-scoring-predict-transact-sql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Package management
-            items:
-            - name: Install new Python packages
-              items:
-              - name: Get Python package information
-                href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Install with sqlmlutils
-                href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Install new R packages
-              items:
-              - name: Get R package information
-                href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Install with sqlmlutils
-                href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Create a miniCRAN repo
-                href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Tips for using R packages
-                href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Administration
-            items:
-            - name: Monitor
-              items:
-              - name: Monitor using SSMS reports
-                href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Monitor using DMVs
-                href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Extended events
-                items:
-                - name: Monitor using extended events
-                  href: machine-learning/administration/extended-events.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-                - name: Monitor PREDICT T-SQL
-                  href: machine-learning/administration/extended-events-predict-tsql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Security
-            items:
-            - name: Give users permission
-              href: machine-learning/security/user-permission.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
       - name: Spark Machine Learning
         items:
         - name: Use Spark Machine Learning
@@ -529,8 +355,8 @@ items:
         href: big-data-cluster/reference-open-source-software.md
       - name: Deployed resources
         href: big-data-cluster/concept-architecture-pods.md
-      - name: BDC partners
-        href: sql-server/partner-big-data-cluster.md
+      - name: Big Data Clusters partners
+        href: big-data-cluster/partner-big-data-cluster.md
     - name: Deployment reference
       items:
       - name: Deployment configuration file

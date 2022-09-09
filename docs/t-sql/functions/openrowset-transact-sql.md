@@ -537,7 +537,7 @@ SELECT * FROM OPENROWSET(
 
 The following examples shows use to create a credential by using a managed identity and then creating an external source and loading data from a CSV file. 
 
-First, create the credential and external sorce:
+First, create the credential and external source:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL sampletestcred WITH IDENTITY = 'MANAGED IDENTITY';

@@ -539,7 +539,7 @@ The following examples shows use to create a credential by using a managed ident
 
 First, create the credential and external sorce:
 
-``sql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL sampletestcred WITH IDENTITY = 'MANAGED IDENTITY';
 
 CREATE EXTERNAL DATA SOURCE SampleSource
@@ -557,6 +557,9 @@ DATA_SOURCE = 'SampleSource',
 SINGLE_CLOB
 ) as test
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 
 ### Additional Examples

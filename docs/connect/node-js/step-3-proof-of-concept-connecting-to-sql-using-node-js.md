@@ -1,16 +1,12 @@
 ---
 title: "Step 3: Connecting to SQL using Node.js"
 description: "This example should be considered a proof of concept showing how to connect to SQL using Node.js and is simplified for clarity."
-ms.custom: ""
-ms.date: "07/23/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/23/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
 

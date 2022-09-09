@@ -1,21 +1,15 @@
 ---
+title: "supportsSubqueriesInIns Method (SQLServerDatabaseMetaData)"
 description: "supportsSubqueriesInIns Method (SQLServerDatabaseMetaData)"
-title: "supportsSubqueriesInIns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsSubqueriesInIns"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 77a0b5c0-0d8e-4e08-975f-4eeabb108ab1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsSubqueriesInIns"
+apitype: "Assembly"
 ---
 # supportsSubqueriesInIns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

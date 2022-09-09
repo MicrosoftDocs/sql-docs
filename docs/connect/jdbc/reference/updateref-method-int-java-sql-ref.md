@@ -1,21 +1,15 @@
 ---
+title: "updateRef Method (int, java.sql.Ref)"
 description: "updateRef Method (int, java.sql.Ref)"
-title: "updateRef Method (int, java.sql.Ref) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateRef (int, java.sql.Ref)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateRef (int, java.sql.Ref)"
+apitype: "Assembly"
 ---
 # updateRef Method (int, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "setObject Method (int, java.lang.Object, int, int)"
 description: "setObject Method (int, java.lang.Object, int, int)"
-title: "setObject Method (int, java.lang.Object, int, int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPreparedStatement.setObject (int, java.lang.Object, int, int)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: d190ee20-d669-4c6f-a081-d5cfec2f72ca
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPreparedStatement.setObject (int, java.lang.Object, int, int)"
+apitype: "Assembly"
 ---
 # setObject Method (int, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

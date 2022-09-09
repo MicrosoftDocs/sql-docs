@@ -1,16 +1,12 @@
 ---
+title: "updateNClob Method (int, java.sql.NClob)"
 description: "updateNClob Method (int, java.sql.NClob)"
-title: "updateNClob Method (int, java.sql.NClob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 6e9bca18-f64e-46a4-8541-2c9c39b393b5
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateNClob Method (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "setTrustStorePassword Method (SQLServerDataSource)"
 description: "setTrustStorePassword Method (SQLServerDataSource)"
-title: "setTrustStorePassword Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "setTrustStorePassword Method (SQLServerDataSource)"
-apilocation: 
-  - "setTrustStorePassword Method (SQLServerDataSource)"
-apitype: "Assembly"
-ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "setTrustStorePassword Method (SQLServerDataSource)"
+apiname: "setTrustStorePassword Method (SQLServerDataSource)"
+apitype: "Assembly"
 ---
 # setTrustStorePassword Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

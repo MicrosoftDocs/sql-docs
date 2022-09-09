@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Connect and query SQL Server"
 description: Do a quickstart in which you use Azure Data Studio to connect to SQL Server and then use Transact-SQL (T-SQL) statements to create a database.
-author: "yualan"
-ms.author: "alayu"
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: "maghan"
 ms.date: 07/11/2022
 ms.prod: azure-data-studio

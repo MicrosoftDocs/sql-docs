@@ -44,7 +44,7 @@ If you need to download the installer in a language other than the one detected 
 | :-------- | :------ |
 | Fixed an issue where the `SSPROP_INIT_AUTOTRANSLATE` property was ignored for `SSVARIANT` narrow string values. | Fixed a bug where setting `SSPROP_INIT_AUTOTRANSLATE` to `VARIANT_FALSE` would result in character translations for `SSVARIANT` narrow string values. |
 | Fixed an issue with missing digital signatures. | Added digital signatures for the installer custom action dynamic-link libraries. |
-| Fixed an issue with HostnameInCertificate property being passed through the SNI layer. | The HostnameInCertificate value is no longer in the Server Name Indication. |
+| Fixed an issue with HostnameInCertificate property being passed through the Server Name Indication (SNI) TLS extension. | The HostnameInCertificate value is no longer present in the Server Name Indication (SNI) TLS extension. |
 | Restored the functionality of the Protocol Order and the TCP Keep-Alive registry properties. | The driver now adjusts the TCP Keep-Alive and the Protocol Order properties based on the values set for the corresponding [registry entries](features/registry-settings.md#tcp-keep-alive-and-protocol-order-registry-properties). |
 
 ## Previous releases

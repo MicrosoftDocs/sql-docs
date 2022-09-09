@@ -530,7 +530,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database only supports reading from Azure Blob Storage using SAS token.
+> Azure SQL Database only supports reading from Azure Blob Storage.
 
 ### Additional Examples
 

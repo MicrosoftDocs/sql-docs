@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: markingmyname
 ms.author: maghan
-ms.date: 06/30/2022
+ms.date: 09/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -186,11 +186,13 @@ Requires these user permissions:
 
 - **CREATE TABLE**
 - **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+- **ALTER ANY EXTERNAL DATA SOURCE** 
+- **ALTER ANY EXTERNAL FILE FORMAT** (only applies to Hadoop and Azure Blob Storage external data sources in SQL Server 2019 and later)
+- **CONTROL DATABASE** (only applies to Hadoop and Azure Blob Storage external data sources in SQL Server 2019 and later)
 
-Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
+Note, the remote login specified in the DATABASE SCOPED CREDENTIAL used in the CREATE EXTERNAL TABLE command must have read permission for the path/table/collection on the external data source specified in the LOCATION parameter. If you're planning to use this EXTERNAL TABLE to export data to a Hadoop or Azure Blob Storage external data source, then the login specified must have write permission on the path specified in LOCATION. Note that Hadoop is not currently supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+
+For Azure Blob Storage, when configuring the access keys and shared access signature (SAS) in the Azure portal, the Azure Blob Storage or ADLS Gen2 storage accounts, configure the **Allowed permissions** to grant at least **Read** and **Write** permissions. You must also select both **Container** and **Object** as the allowed resource types.
 
 > [!IMPORTANT]
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.

@@ -1,20 +1,14 @@
 ---
-description: When retrieving ParameterMetaData, learn about the useFmtOnly option to change the way the driver queries underlying metadata from the server.
 title: Retrieving ParameterMetaData via useFmtOnly
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.suite: "sql"
-ms.technology: connectivity
-ms.tgt_pltfrm: ""
-ms.topic: conceptual
-ms.assetid: ""
-caps.latest.revision: ""
+description: When retrieving ParameterMetaData, learn about the useFmtOnly option to change the way the driver queries underlying metadata from the server.
 author: DavidEngel
 ms.author: v-davidengel
 manager: kenvh
+ms.reviewer: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Retrieving ParameterMetaData via useFmtOnly
 

@@ -1,21 +1,15 @@
 ---
+title: "setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar)"
 description: "setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar)"
-title: "setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPreparedStatement.setTimestamp (int, java.sql.Timestamp, java.util.Calendar))"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPreparedStatement.setTimestamp (int, java.sql.Timestamp, java.util.Calendar))"
+apitype: "Assembly"
 ---
 # setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

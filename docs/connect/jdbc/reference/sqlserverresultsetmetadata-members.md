@@ -1,16 +1,12 @@
 ---
+title: "SQLServerResultSetMetaData Members"
 description: "SQLServerResultSetMetaData Members"
-title: "SQLServerResultSetMetaData Members | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerResultSetMetaData Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

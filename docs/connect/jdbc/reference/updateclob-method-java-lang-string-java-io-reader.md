@@ -1,16 +1,12 @@
 ---
+title: "updateClob Method (java.lang.String, java.io.Reader)"
 description: "updateClob Method (java.lang.String, java.io.Reader)"
-title: "updateClob Method (java.lang.String, java.io.Reader) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 338a2bf2-b110-469d-ad08-a0f2bbefcb88
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateClob Method (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "supportsCatalogsInPrivilegeDefinitions Method"
 description: "supportsCatalogsInPrivilegeDefinitions Method (SQLServerDatabaseMetaData)"
-title: "supportsCatalogsInPrivilegeDefinitions Method | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsCatalogsInPrivilegeDefinitions"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsCatalogsInPrivilegeDefinitions"
+apitype: "Assembly"
 ---
 # supportsCatalogsInPrivilegeDefinitions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

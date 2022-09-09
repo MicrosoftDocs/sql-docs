@@ -1,21 +1,15 @@
 ---
+title: "updateTimestamp Method (int, java.sql.Timestamp)"
 description: "updateTimestamp Method (int, java.sql.Timestamp)"
-title: "updateTimestamp Method (int, java.sql.Timestamp) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateTimestamp (int, java.sql.Timestamp)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: db83d9d7-137b-4a28-a2ca-d4782e0a256e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateTimestamp (int, java.sql.Timestamp)"
+apitype: "Assembly"
 ---
 # updateTimestamp Method (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

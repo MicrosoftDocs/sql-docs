@@ -1,20 +1,17 @@
 ---
-title: "Row bookmarks (OLE DB driver) | Microsoft Docs"
+title: "Row bookmarks (OLE DB driver)"
 description: Learn how bookmarks let consumers quickly return to a row by accessing rows randomly based on the bookmark value in OLE DB Driver for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bookmarks [OLE DB]"
   - "OLE DB Driver for SQL Server, bookmarks"
   - "rowsets [OLE DB], bookmarks"
   - "OLE DB rowsets, bookmarks"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Bookmarks
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

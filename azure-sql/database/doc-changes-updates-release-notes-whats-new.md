@@ -33,6 +33,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
+| [Hyperscale long-term retention](long-term-retention-overview.md) | Retain your Hyperscale database backups up to 10 days with the ong-term retention (LTR) capability. | 
 | [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Retain backups from 1 up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured retention period. |
 | [JavaScript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use JavaScript or Python SQL bindings with Azure Functions. | 
 | [Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
@@ -42,7 +43,8 @@ The following table lists the features of Azure SQL Database that are currently 
 | [SQL Database emulator](local-dev-experience-sql-database-emulator.md) | The Azure SQL Database emulator provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. | 
 | [SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) | An extension to develop databases for Azure SQL Database with Azure Data Studio and VS Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. | 
 | [SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) | SQL Insights (preview) is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights (preview) uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance.|
-| [Azure SQL Database Hyperscale tier long-term retention](long-term-retention-overview.md) | Long-term retention (LTR) capability for Hyperscale databases is now in preview. | 
+| [UMI for auditing](auditing-overview.md) | Configure the storage account for your SQL auditing logs by using User Managed Identity (UMI). | 
+
 
 
 ## General availability (GA)
@@ -73,7 +75,8 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
-| [Azure SQL Database Hyperscale tier long-term retention](long-term-retention-overview.md) | Long-term retention (LTR) capability for Hyperscale databases is now in preview. | 
+| **LTR for Hyperscale databases preview** | It's now possible to configure long-term retention for your Hyperscale database backups, saving your backups for up to 10 years. This feature is currently in preview. Review [Long-term retention for Hyperscale databases](long-term-retention-overview.md) to learn more.  | 
+| **UMI support for auditing previerw** | It's now possible to configure the storage account used for SQL auditing logs by using User Managed Identity (UMI). This feature is currently in preview. Review [auditing](auditing-overview.md) to learn more. |
 
 ### August 2022
 

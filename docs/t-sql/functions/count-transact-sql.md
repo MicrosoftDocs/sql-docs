@@ -58,20 +58,26 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 The *partition_by_clause* divides the result set produced by the `FROM` clause into partitions to which the `COUNT` function is applied. If not specified, the function treats all rows of the query result set as a single group. The *order_by_clause* determines the logical order of the operation. See [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) for more information. 
 
 ## Return types
- **int**  
+ 
+ * **int NOT NULL** when `ANSI_WARNINGS` is `ON`, however SQL Server will always treat `COUNT` expressions as `int NULL` in metadata, unless wrapped in `ISNULL`.
+ * **int NULL** when `ANSI_WARNINGS` is `OFF`.
   
 ## Remarks  
-COUNT(\*) returns the number of items in a group. This includes NULL values and duplicates.
-  
-COUNT(ALL *expression*) evaluates *expression* for each row in a group, and returns the number of nonnull values.
-  
-COUNT(DISTINCT *expression*) evaluates *expression* for each row in a group, and returns the number of unique, nonnull values.
-  
-For return values exceeding 2^31-1, `COUNT` returns an error. For these cases, use `COUNT_BIG` instead.
+
+* `COUNT(\*)` without `GROUP BY` returns the cardinality (number of rows) in the resultset. This includes rows comprised of all-`NULL` values and duplicates.
+* `COUNT(\*)` with `GROUP BY` returns the number of rows in each group. This includes `NULL` values and duplicates.
+* `COUNT(ALL *expression*)` evaluates *expression* for each row in a group, and returns the number of nonnull values.
+* `COUNT(DISTINCT *expression*)` evaluates *expression* for each row in a group, and returns the number of unique, nonnull values.
   
 `COUNT` is a deterministic function when used ***without*** the OVER and ORDER BY clauses. It is nondeterministic when used ***with*** the OVER and ORDER BY clauses. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
+
+### `ANSI_WARNINGS`
+
+When `COUNT` will have a return value exceeding the maximum value of `int` (i.e. 2<sup>31</sup>-1 or 2,147,483,647) and when `ANSI_WARNINGS` is `ON` then SQL Server will raise a arithmetic overflow error. When  `ANSI_WARNINGS` is `OFF` then `COUNT` will return `NULL` instead of raising an error. To correctly handle these large results use `COUNT_BIG`, which returns `bigint`, instead.
+
+When `ANSI_WARNINGS` is `ON` you can safely wrap `COUNT` call-sites in `ISNULL( <count-expr>, 0 )` to coerce the expression's type to `int NOT NULL` instead of `int NULL`. When `ANSI_WARNINGS` is `OFF` then wrapping `COUNT` is `ISNULL` means any overflow error will be silently suppressed which should be carefully considered for appropriateness or correctness.
   
-## Examples  
+## Examples
   
 ### A. Using COUNT and DISTINCT  
 This example returns the number of different titles that an [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] employee can hold.

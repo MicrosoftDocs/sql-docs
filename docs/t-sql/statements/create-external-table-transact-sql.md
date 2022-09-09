@@ -944,7 +944,7 @@ If you specify LOCATION to be a folder, a PolyBase query that selects from the e
 
 In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return _hidden.txt because it's a hidden file.
 
-:::image type="content" source="../../t-sql/statements/media/aps-polybase-folder-traversal.png" alt-text="Recursive data for external tables.":::
+:::image type="content" source="../../t-sql/statements/media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="Recursive data for external tables.":::
 
 #### DATA_SOURCE = *external_data_source_name*
 
@@ -1224,11 +1224,11 @@ In Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-exter
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return _hidden.txt because it's a hidden file.
+In this example, if `LOCATION='/webdata/'`, a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
-:::image type="content" source="../../t-sql/statements/media/aps-polybase-folder-traversal.png" alt-text="Recursive data for external tables.":::
+:::image type="content" source="../../t-sql/statements/media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="Recursive data for external tables.":::
 
-To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the `core-site.xml` configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 #### DATA_SOURCE = *external_data_source_name*
 

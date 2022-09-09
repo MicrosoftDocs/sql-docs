@@ -5283,7 +5283,7 @@
       href: ../connect/oledb/features/performing-asynchronous-operations.md
     - name: Performing Bulk Copy Operations
       href: ../connect/oledb/features/performing-bulk-copy-operations.md
-    - name: Registry Settings
+    - name: Registry settings
       href: ../connect/oledb/features/registry-settings.md
     - name: Service Principal Name (SPN) Support in Client Connections
       href: ../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md

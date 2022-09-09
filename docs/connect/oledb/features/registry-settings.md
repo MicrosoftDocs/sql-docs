@@ -36,11 +36,15 @@ Valid values are `0` or `1`. The OLE DB driver chooses the most secure option be
 
 ## TCP Keep-Alive and Protocol Order registry properties
 
-For MSOLEDBSQL driver versions 19.1 and above, TCP Keep-Alive, Keep-Alive Interval, and Protocol Order can be adjusted in the following registry entries:
+For MSOLEDBSQL driver versions 19.1 and above, Protocol Order, TCP Keep-Alive, and Keep-Alive Interval can be adjusted in the following registry entries:
 
 - `{base_registry_key} : ProtocolOrder`
-- `{base_registry_key}\tcp\Property2 : TCPKeepAlive`
-- `{base_registry_key}\tcp\Property3 : KeepALiveInterval`
+- `{base_registry_key}\tcp\Property2 : Value` (KEEPALIVE)
+- `{base_registry_key}\tcp\Property3 : Value` (KEEPALIVEINTERVAL)
+
+The Protocol Order property is an ordered sequence of null-terminated strings that represent supported protocols. The default Protocol Order value is `sm tcp np`.
+
+The TCP Keep-Alive and Keep-Alive Interval registry properties are 32-bit numbers that represent their corresponding values in milliseconds. The default values for TCP Keep-Alive and Keep-Alive Interval properties are 30 seconds and 1 second, respectively. 
 
 ## See Also 
 [Encryption and certificate validation](./encryption-and-certificate-validation.md)  

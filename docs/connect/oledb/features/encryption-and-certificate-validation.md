@@ -32,7 +32,7 @@ Applications may also request encryption of all network traffic by using connect
 
 For information about connection string keywords, see [Using connection string keywords with OLE DB driver for SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
 
-To enable encryption to be used when a certificate hasn't been provisioned on the server, the **`Force Protocol Encryption`** and the **`Trust Server Certificate`** client [registry settings](./registry-settings.md) can be set. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
+To enable encryption to be used when a certificate hasn't been provisioned on the server, the **`Force Protocol Encryption`** and the **`Trust Server Certificate`** client [registry settings](./registry-settings.md#encryption-and-certificate-validation) can be set. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
 
 ## Encryption and certificate validation behavior
 

@@ -535,9 +535,9 @@ SELECT * FROM OPENROWSET(
 
 ### K. Use a managed identity for an external source 
 
-The following examples shows use to create a credential by using a managed identity and then creating an external source and loading data from a CSV file. 
+The following example creates a credential by using a managed identity, creates an external source and then loads data from a CSV hosted on the external source. 
 
-First, create the credential and external source:
+First, create the credential and specify blob storage as the external source:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL sampletestcred WITH IDENTITY = 'MANAGED IDENTITY';
@@ -548,7 +548,7 @@ LOCATION = 'https://****************.blob.core.windows.net/curriculum',
 CREDENTIAL = sampletestcred
 ```
 
-Next, use the following query to laod data from the CSV file: 
+Next, load data from the CSV file hosted on blob storage: 
 
 ```sql
 SELECT * FROM OPENROWSET(

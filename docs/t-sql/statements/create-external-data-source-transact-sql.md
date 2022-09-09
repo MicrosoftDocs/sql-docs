@@ -1307,7 +1307,7 @@ For additional examples to other data sources such as MongoDB, see [Configure Po
 
 ### B. Create external data source to access data in Azure Storage using the abs:// interface
 
-Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `abs` for Azure Storage Account v2. The `abs` prefix also supports authentication using Shared Access Signature. This prefix replaces `wasb` used in previous versions. Since HADOOP is not longer supporter, there is no more need to use TYPE = BLOB_STORAGE.
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `abs` for Azure Storage Account v2. The `abs` prefix also supports authentication using Shared Access Signature. This prefix replaces `wasb` used in previous versions. Since HADOOP is not longer supported, there is no more need to use `TYPE = BLOB_STORAGE`.
 
 The Azure storage account key is no longer needed, instead using SAS Token as we can see in the following example:
 

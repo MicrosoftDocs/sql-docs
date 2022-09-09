@@ -1,23 +1,18 @@
 ---
+title: "sqlsrv_fetch_object"
 description: "sqlsrv_fetch_object"
-title: "sqlsrv_fetch_object | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_fetch_object"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sqlsrv_fetch_object"
   - "API Reference, sqlsrv_fetch_object"
   - "retrieving data, as an object"
-ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-author: David-Engel
-ms.author: v-davidengel
+apiname: "sqlsrv_fetch_object"
+apitype: "NA"
 ---
 # sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

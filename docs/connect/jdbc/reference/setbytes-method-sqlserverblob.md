@@ -1,21 +1,15 @@
 ---
+title: "setBytes Method (SQLServerBlob)"
 description: "setBytes Method (SQLServerBlob)"
-title: "setBytes Method (SQLServerBlob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerBlob.setBytes"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerBlob.setBytes"
+apitype: "Assembly"
 ---
 # setBytes Method (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

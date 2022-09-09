@@ -1,15 +1,13 @@
 ---
-description: "Learn about how the driver uses idle connection resiliency to automatically detect and restore connections that have been broken due to network issues."
 title: "Idle Connection Resiliency"
-ms.custom: ""
-ms.date: "06/04/2021"
-ms.prod: sql
-ms.prod_service:  connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: "reference"
+description: "Learn about how the driver uses idle connection resiliency to automatically detect and restore connections that have been broken due to network issues."
 author: a-gazin
 ms.author: v-angazi
+ms.reviewer: v-davidengel
+ms.date: "06/04/2021"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # Idle connection resiliency in the OLE DB Driver
 [!INCLUDE[SQL Server Azure SQL Database](../../../includes/applies-to-version/sqlserver2014-asdb.md)]

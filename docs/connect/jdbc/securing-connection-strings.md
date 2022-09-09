@@ -1,16 +1,12 @@
 ---
 title: Securing connection strings
 description: Learn how to secure connection string information when using the JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 03/31/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 03/31/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Securing connection strings

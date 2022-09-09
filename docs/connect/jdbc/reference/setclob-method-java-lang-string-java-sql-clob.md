@@ -1,16 +1,12 @@
 ---
+title: "setClob Method (java.lang.String, java.sql.Clob)"
 description: "setClob Method (java.lang.String, java.sql.Clob)"
-title: "setClob Method (java.lang.String, java.sql.Clob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 256b5f55-7a6d-44fb-9a09-19fa39f19c35
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setClob Method (java.lang.String, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,19 +1,15 @@
 ---
 title: Specifying a cursor type and selecting rows
 description: Learn how to specify a cursor type and select rows using the Microsoft Drivers for PHP for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "cursor types"
   - "scrollable cursors"
-ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Specifying a cursor type and selecting rows
 

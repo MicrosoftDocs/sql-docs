@@ -1,21 +1,15 @@
 ---
+title: "getServerName Method (SQLServerDataSource)"
 description: "getServerName Method (SQLServerDataSource)"
-title: "getServerName Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.getServerName"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDataSource.getServerName"
+apitype: "Assembly"
 ---
 # getServerName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,16 +1,12 @@
 ---
 title: "Asynchronous Execution (Notification Method) Sample"
 description: "Example code demonstrating how to use asynchronous execution (using the notification method) in the Microsoft ODBC Driver for SQL Server."
-ms.custom: ""
-ms.date: 09/01/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 09/01/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Asynchronous Execution (Notification Method) Sample
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

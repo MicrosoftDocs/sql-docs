@@ -1,18 +1,15 @@
 ---
-title: "Schema Rowsets Changed for OLE DB Table-Valued Parameters | Microsoft Docs"
+title: "Schema Rowsets Changed for OLE DB Table-Valued Parameters"
 description: Learn about the schema rowsets that have been changed or added to support table-valued parameters in OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "schema rowsets [OLE DB]"
-  - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "schema rowsets [OLE DB]"
+  - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

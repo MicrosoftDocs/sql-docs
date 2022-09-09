@@ -1,21 +1,15 @@
 ---
+title: "getTime Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)"
 description: "getTime Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)"
-title: "getTime Method (java.lang.String, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getTime (java.lang.String, java.util.Calendar)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getTime (java.lang.String, java.util.Calendar)"
+apitype: "Assembly"
 ---
 # getTime Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

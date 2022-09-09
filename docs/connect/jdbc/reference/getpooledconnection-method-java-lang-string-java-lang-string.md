@@ -1,21 +1,15 @@
 ---
+title: "getPooledConnection Method (java.lang.String, java.lang.String)"
 description: "getPooledConnection Method (java.lang.String, java.lang.String)"
-title: "getPooledConnection Method (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)"
+apitype: "Assembly"
 ---
 # getPooledConnection Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

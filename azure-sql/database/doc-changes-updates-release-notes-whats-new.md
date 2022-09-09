@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 08/01/2022
+ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -42,6 +42,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [SQL Database emulator](local-dev-experience-sql-database-emulator.md) | The Azure SQL Database emulator provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. | 
 | [SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) | An extension to develop databases for Azure SQL Database with Azure Data Studio and VS Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. | 
 | [SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) | SQL Insights (preview) is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights (preview) uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance.|
+| [Azure SQL Database Hyperscale tier long-term retention](long-term-retention-overview.md) | Long-term retention (LTR) capability for Hyperscale databases is now in preview. | 
 
 
 ## General availability (GA)
@@ -67,6 +68,12 @@ The following table lists the features of Azure SQL Database that have transitio
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation.
+
+### September 2022
+
+| Changes | Details |
+| --- | --- |
+| [Azure SQL Database Hyperscale tier long-term retention](long-term-retention-overview.md) | Long-term retention (LTR) capability for Hyperscale databases is now in preview. | 
 
 ### August 2022
 

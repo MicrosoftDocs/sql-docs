@@ -1,7 +1,7 @@
 ---
-title: "Support Policies"
+title: Support Policies
 description: Learn about SQL Server Native Client supported SQL Server versions, operating systems, and support policies for ADO, BCP, ODBC, and OLE DB.
-ms.date: "04/06/2022"
+ms.date: 09/06/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -19,8 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Server Support  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supports connections to, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
-  
-  SQL Server Native Client 13.0 supports connections to, SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016,  SQL Server 2017, SQL Server 2019, and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
   
 ## Supported Operating System Versions  
  The following table lists which operating systems support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  

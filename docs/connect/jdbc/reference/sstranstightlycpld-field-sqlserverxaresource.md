@@ -1,21 +1,15 @@
 ---
+title: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
 description: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
-title: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
-apilocation: 
-  - "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
-apitype: "Assembly"
-ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
+apiname: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
+apitype: "Assembly"
 ---
 # SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

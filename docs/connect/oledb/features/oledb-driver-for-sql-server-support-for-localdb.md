@@ -1,15 +1,12 @@
 ---
 title: OLE DB Driver for SQL Server Support for LocalDB
 description: Learn how to connect to a lightweight version of SQL Server, called LocalDB, using OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # OLE DB Driver for SQL Server Support for LocalDB
 

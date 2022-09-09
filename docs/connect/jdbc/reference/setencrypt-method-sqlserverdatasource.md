@@ -1,21 +1,15 @@
 ---
+title: "setEncrypt Method (SQLServerDataSource)"
 description: "setEncrypt Method (SQLServerDataSource)"
-title: "setEncrypt Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "setEncrypt Method (SQLServerDataSource)"
-apilocation: 
-  - "setEncrypt Method (SQLServerDataSource)"
-apitype: "Assembly"
-ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "setEncrypt Method (SQLServerDataSource)"
+apiname: "setEncrypt Method (SQLServerDataSource)"
+apitype: "Assembly"
 ---
 # setEncrypt Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

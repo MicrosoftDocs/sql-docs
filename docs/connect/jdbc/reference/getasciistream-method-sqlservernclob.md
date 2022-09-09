@@ -1,16 +1,12 @@
 ---
+title: "getAsciiStream Method (SQLServerNClob)"
 description: "getAsciiStream Method (SQLServerNClob)"
-title: "getAsciiStream Method (SQLServerNClob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: ff1d47e4-572a-4169-a631-ac261f7642b3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getAsciiStream Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

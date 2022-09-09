@@ -1,21 +1,15 @@
 ---
+title: "getDatabaseProductVersion Method (SQLServerDatabaseMetaData)"
 description: "getDatabaseProductVersion Method (SQLServerDatabaseMetaData)"
-title: "getDatabaseProductVersion Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getDatabaseProductVersion"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getDatabaseProductVersion"
+apitype: "Assembly"
 ---
 # getDatabaseProductVersion Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

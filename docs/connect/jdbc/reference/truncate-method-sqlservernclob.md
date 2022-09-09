@@ -1,16 +1,12 @@
 ---
+title: "truncate Method (SQLServerNClob)"
 description: "truncate Method (SQLServerNClob)"
-title: "truncate Method (SQLServerNClob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # truncate Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

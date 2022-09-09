@@ -1,16 +1,12 @@
 ---
 title: Securing applications
 description: These articles describe some common security concerns including connection strings, validating user input, and general application security.
-ms.custom: ""
-ms.date: 03/31/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 03/31/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Securing JDBC driver applications
 

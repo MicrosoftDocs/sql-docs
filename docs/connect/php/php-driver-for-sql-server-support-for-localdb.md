@@ -1,15 +1,12 @@
 ---
 title: "PHP Driver Support for LocalDB"
 description: "Learn how the Microsoft Drivers for PHP for SQL Server support connections to LocalDB database instances."
-ms.custom: ""
-ms.date: "05/06/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "05/06/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Support for LocalDB
 

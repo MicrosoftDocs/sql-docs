@@ -1,16 +1,12 @@
 ---
+title: "getDateTimeOffset Method (int)"
 description: "getDateTimeOffset Method (int)"
-title: "getDateTimeOffset Method (int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getDateTimeOffset Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

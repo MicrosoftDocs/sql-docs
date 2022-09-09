@@ -1,16 +1,12 @@
 ---
+title: "setAsciiStream Method (SQLServerNClob)"
 description: "setAsciiStream Method (SQLServerNClob)"
-title: "setAsciiStream Method (SQLServerNClob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setAsciiStream Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,14 +1,14 @@
 ---
 title: Create an Azure SQL Managed Instance using a user-assigned managed identity
-description: This article guides you through creating an Azure SQL Managed Instance using a user-assigned managed identity
 titleSuffix: Azure SQL Managed Instance
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.topic: conceptual
+description: This article guides you through creating an Azure SQL Managed Instance using a user-assigned managed identity
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 06/30/2022
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: conceptual
 ---
 
 # Create an Azure SQL Managed Instance with a user-assigned managed identity

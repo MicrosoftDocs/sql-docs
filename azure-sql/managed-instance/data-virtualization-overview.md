@@ -1,17 +1,14 @@
 ---
 title: Data virtualization
-titleSuffix: Azure SQL Managed Instance 
+titleSuffix: Azure SQL Managed Instance
 description: Learn about data virtualization capabilities of Azure SQL Managed Instance
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: 
-ms.devlang: 
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, MashaMSFT
 ms.date: 06/16/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: conceptual
 ---
 
 # Data virtualization with Azure SQL Managed Instance (Preview)

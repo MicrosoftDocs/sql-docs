@@ -1,15 +1,16 @@
 ---
 title: Migrate databases to SQL Managed Instance using Log Replay Service
-description: Learn how to migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service (LRS). 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: migration
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
-ms.topic: how-to
+description: Learn how to migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service (LRS).
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 07/15/2022
+ms.service: sql-managed-instance
+ms.subservice: migration
+ms.topic: how-to
+ms.custom:
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
 
 # Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service (Preview)

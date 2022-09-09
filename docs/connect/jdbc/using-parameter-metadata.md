@@ -1,16 +1,12 @@
 ---
+title: "Using parameter metadata"
 description: "Using parameter metadata"
-title: "Using parameter metadata | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using parameter metadata

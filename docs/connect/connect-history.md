@@ -1,13 +1,12 @@
 ---
-title: "Driver history for Microsoft SQL Server | Microsoft Docs"
+title: "Driver history for Microsoft SQL Server"
 description: "This page describes Microsoft's historical data connection technologies for connecting to SQL Server."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 12/08/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Driver history for Microsoft SQL Server
 

@@ -1,17 +1,15 @@
 ---
 title: Configure replication between managed instances
 titleSuffix: Azure SQL Managed Instance
-description: This tutorial teaches you to configure transactional replication between an Azure SQL Managed Instance publisher/distributor and a SQL Managed Instance subscriber. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: replication
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: tutorial
+description: This tutorial teaches you to configure transactional replication between an Azure SQL Managed Instance publisher/distributor and a SQL Managed Instance subscriber.
 author: ferno-ms
 ms.author: ferno
 ms.reviewer: mathoma
 ms.date: 04/28/2020
+ms.service: sql-managed-instance
+ms.subservice: replication
+ms.topic: tutorial
+ms.custom: sqldbrb=1
 ---
 # Tutorial: Configure replication between two managed instances
 

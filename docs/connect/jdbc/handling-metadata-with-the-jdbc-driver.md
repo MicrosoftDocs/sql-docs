@@ -1,16 +1,12 @@
 ---
 title: Handling metadata
 description: Learn what metadata is available in the different JDBC objects when using the JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Handling metadata with the JDBC driver
 

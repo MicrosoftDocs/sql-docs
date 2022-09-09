@@ -1,21 +1,15 @@
 ---
+title: "SQLServerBlob Constructor (SQLServerConnection, byte)"
 description: "SQLServerBlob Constructor (SQLServerConnection, byte)"
-title: "SQLServerBlob Constructor (SQLServerConnection, byte) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection, byte[].SQLServerBlob"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection, byte[].SQLServerBlob"
+apitype: "Assembly"
 ---
 # SQLServerBlob Constructor (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

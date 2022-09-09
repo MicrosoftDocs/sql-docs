@@ -1,16 +1,15 @@
 ---
 title: Accelerated database recovery
-titleSuffix: Azure SQL 
-description: Accelerated database recovery provides fast and consistent database recovery, instantaneous transaction rollback, and aggressive log truncation for databases in the Azure SQL portfolio. 
-ms.service: sql-database
-ms.subservice: backup-restore
-ms.custom: sqldbrb=4
-ms.devlang: 
-ms.topic: conceptual
+titleSuffix: Azure SQL
+description: Accelerated database recovery provides fast and consistent database recovery, instantaneous transaction rollback, and aggressive log truncation for databases in the Azure SQL portfolio.
 author: kfarlee
 ms.author: kfarlee
 ms.reviewer: mathoma, kendralittle, nvraparl, wiassaf
 ms.date: 02/18/2022
+ms.service: sql-database
+ms.subservice: backup-restore
+ms.topic: conceptual
+ms.custom: sqldbrb=4
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Accelerated Database Recovery in Azure SQL 

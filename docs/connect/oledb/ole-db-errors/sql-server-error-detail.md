@@ -1,22 +1,19 @@
 ---
 title: SQL Server error detail (OLE DB driver)
 description: Learn about the provider-specific error interface ISQLServerErrorInfo in OLE DB Driver for SQL Server, which returns details about a SQL Server error.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, errors"
   - "errors [OLE DB], error details"
   - "IErrorRecords interface"
   - "IErrorInfo interface"
   - "OLE DB error handling, error details"
   - "ISQLServerErrorInfo interface"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL Server Error Detail
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

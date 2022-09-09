@@ -12,7 +12,7 @@ ms.topic: faq
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqlserver-sqldb-sqlmi-asvm.md)]
 
-Migrating on-premise SQL Server workloads and associated applications to the cloud usually brings a wide range of questions which go beyond mere product feature information.
+Migrating on-premises SQL Server workloads and associated applications to the cloud usually brings a wide range of questions which go beyond mere product feature information.
 
 This article provides a holistic view and helps understand how to fully unlock the value when migrating to Azure SQL. The **[Modernize applications and SQL](#modernize-applications-and-sql)** section covers questions about Azure SQL in general as well as common application and SQL modernization scenarios. The **[Business and technical evaluation](#business-and-technical-evaluation)** section covers cost saving, licensing, minimizing migration risk, business continuity, security, workloads and architecture, performance and similar business and technical evaluation questions. The last section covers the actual **[Migration and modernization process](#migration-and-modernization-process)**, including guidance on migration tools.
 

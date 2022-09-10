@@ -71,11 +71,11 @@ The *partition_by_clause* divides the result set produced by the `FROM` clause i
   
 `COUNT` is a deterministic function when used ***without*** the OVER and ORDER BY clauses. It is nondeterministic when used ***with*** the OVER and ORDER BY clauses. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.
 
-### `ANSI_WARNINGS`
+### `ARITHABORT` and `ANSI_WARNINGS`
 
-When `COUNT` will have a return value exceeding the maximum value of `int` (i.e. 2<sup>31</sup>-1 or 2,147,483,647) and when `ANSI_WARNINGS` is `ON` then SQL Server will raise a arithmetic overflow error. When  `ANSI_WARNINGS` is `OFF` then `COUNT` will return `NULL` instead of raising an error. To correctly handle these large results use `COUNT_BIG`, which returns `bigint`, instead.
+When `COUNT` will have a return value exceeding the maximum value of `int` (i.e. 2<sup>31</sup>-1 or 2,147,483,647) then the `COUNT` function will fail due to integer overflow. When `COUNT` overflows and _both_ the `ARITHABORT` and `ANSI_WARNINGS` options are `OFF` then `COUNT` will return `NULL`; otherwise (when _either_ of `ARITHABORT` or `ANSI_WARNINGS` are `ON`) then the query will be aborted and the arithmetic overflow error "Msg 8115, Level 16, State 2; Arithmetic overflow error converting expression to data type int." will be raised. To correctly handle these large results instead use `COUNT_BIG` which returns `bigint`.
 
-When `ANSI_WARNINGS` is `ON` you can safely wrap `COUNT` call-sites in `ISNULL( <count-expr>, 0 )` to coerce the expression's type to `int NOT NULL` instead of `int NULL`. When `ANSI_WARNINGS` is `OFF` then wrapping `COUNT` is `ISNULL` means any overflow error will be silently suppressed which should be carefully considered for appropriateness or correctness.
+When both ``ARITHABORT`` and `ANSI_WARNINGS` are `ON` you can safely wrap `COUNT` call-sites in `ISNULL( <count-expr>, 0 )` to coerce the expression's type to `int NOT NULL` instead of `int NULL`; otherwise then wrapping `COUNT` is `ISNULL` means any overflow error will be silently suppressed which should be carefully considered for correctness.
   
 ## Examples
   

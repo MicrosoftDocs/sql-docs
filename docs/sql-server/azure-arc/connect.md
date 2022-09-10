@@ -37,6 +37,7 @@ Run:
 
 ```powershell
 Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData
+Register-AzResourceProvider -ProviderNamespace Microsoft.HybridCompute
 ```
 
 # [Azure CLI](#tab/az)
@@ -45,6 +46,7 @@ Run:
 
 ```azurecli
 az provider register --namespace 'Microsoft.AzureArcData'
+az provider register --namespace 'Microsoft.HybridCompute'
 ```
 ---
 

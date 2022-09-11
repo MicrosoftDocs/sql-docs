@@ -91,7 +91,7 @@ WITH IDENTITY = 'Managed Identity'
 
 ### [Shared access signature](#tab/shared-access-signature)
 
-**[Shared access signature](../../rest/api/storageservices/delegate-access-with-shared-access-signature.md) (SAS)** provides delegated access to files in a storage account. SAS gives you a granular control over the type of access you grant, including validity interval, granted permissions, and acceptable IP address range. Note though that once created SAS token cannot be revoked or deleted and it allows access until its validity period expires. To learn more about recommendations for using shared access signatures, read [best practices when using SAS](../../storage/common/storage-sas-overview#best-practices-when-using-sas.md) .
+**Shared access signature (SAS)** provides delegated access to files in a storage account. SAS gives you a granular control over the type of access you grant, including validity interval, granted permissions, and acceptable IP address range. Note though that once created SAS token cannot be revoked or deleted and it allows access until its validity period expires.
 
 You can get an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. To use the token, you must remove the question mark ('?') when creating a credential. For example:
 

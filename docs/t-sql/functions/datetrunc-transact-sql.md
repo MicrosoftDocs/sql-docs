@@ -1,6 +1,6 @@
 ---
 title: "DATETRUNC (Transact-SQL)"
-description: "Transact-SQL reference for the DATETRUNC function. This function returns an input date truncated to a specified datepart."
+description: "Transact-SQL reference for the DATETRUNC function. This function returns an input date-related value truncated to a specified datepart."
 author: aashnabafna-ms
 ms.author: aashnabafna
 ms.reviewer: derekw, maghan, randolphwest
@@ -25,7 +25,7 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], this functi
 ## Syntax
 
 ```syntaxsql
-DATETRUNC ( datepart, date )
+DATETRUNC ( datepart, daterelatedvalue )
 ```
 
 ## Arguments
@@ -52,9 +52,9 @@ The datepart specifies the precision for truncation. This table lists all the va
 > [!NOTE]  
 > The *weekday*, *timezoneoffset*, and *nanosecond* T-SQL dateparts are not supported for DATETRUNC.
 
-#### *date*
+#### *daterelatedvalue*
 
-The date parameter accepts any expression, column, or user-defined variable that can resolve to any valid T-SQL date or time type. These are:
+The date-related value parameter accepts any expression, column, or user-defined variable that can resolve to any valid T-SQL date or time type. These are:
 
 - **smalldatetime**
 
@@ -144,7 +144,7 @@ Week-3  2021-11-10 00:00:00.0000000
 
 ### C. Date literals
 
-The following examples illustrate the use of date `literals`:
+The following examples illustrate the use of date-related `literals`:
 
 ```sql
 SELECT DATETRUNC(month, '1998-03-04');
@@ -167,9 +167,9 @@ Here's the result set (all the results are of type **datetime2(7)**):
 1998-03-04 10:10:00.0000000
 ```
 
-### D. Date variables
+### D. Date-related variables
 
-The following example illustrates the use of a date `variable`:
+The following example illustrates the use of a date-related `variable`:
 
 ```sql
 DECLARE @d datetime2 = '1998-12-11 02:03:04.1234567';
@@ -184,7 +184,7 @@ Here's the result:
 
 ### E. Date columns
 
-The `TransactionDate` column from the `Sales.CustomerTransactions` table serves as an example *column* argument for the date parameter:
+The `TransactionDate` column from the `Sales.CustomerTransactions` table serves as an example *column* argument for the date-related value parameter:
 
 ```sql
 USE WideWorldImporters;
@@ -204,9 +204,9 @@ WHERE InvoiceID IS NOT NULL
     AND DATETRUNC(month, TransactionDate) >= '2015-12-01';
 ```
 
-### F. Date expressions
+### F. Date-related expressions
 
-The date argument accepts any expression that can resolve to a T-SQL date type or any string literal that can resolve to a **datetime2(7)**. The `TransactionDate` column from the `Sales.CustomerTransactions` table serves as an artificial argument to exemplify the use of an *expression* for the date parameter:
+The date-related value parameter accepts any expression that can resolve to a T-SQL date type or any string literal that can resolve to a **datetime2(7)**. The `TransactionDate` column from the `Sales.CustomerTransactions` table serves as an artificial argument to exemplify the use of an *expression* for the date-related value parameter:
 
 ```sql
 SELECT DATETRUNC(m, SYSDATETIME());
@@ -220,7 +220,7 @@ FROM Sales.CustomerTransactions;
 GO
 ```
 
-### G. Truncate a date to a datepart representing its maximum precision
+### G. Truncate a date-related value to a datepart representing its maximum precision
 
 If the datepart has the same unit maximum precision as the input date type, truncating the input date to this datepart would have no effect.
 
@@ -232,7 +232,7 @@ SELECT 'Input', @d;
 SELECT 'Truncated', DATETRUNC(millisecond, @d);
 ```
 
-Here's the result set, which illustrates that the input date and the truncated date are the same:
+Here's the result set, which illustrates that the input datetime and the truncated datetime values are the same:
 
 ```output
 Input     2015-04-29 05:06:07.123
@@ -265,7 +265,7 @@ SELECT 'Truncated to minute', DATETRUNC(minute, @d)
 SELECT 'Truncated to second', DATETRUNC(second, @d);
 ```
 
-The result set illustrates that the input date is the same as both the truncated values:
+The result set illustrates that the input smalldatetime value is the same as both the truncated values:
 
 ```output
 Input                2009-09-11 12:42:00

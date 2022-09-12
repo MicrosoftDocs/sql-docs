@@ -127,7 +127,7 @@ Select the UMI, and go to the **Permissions** settings under **Security**.
 
 ## Managing a managed identity for a server or instance
 
-To create an Azure SQL logical server by using a UMI, see the following guide: [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md).
+To create a server by using a UMI, see the following guide: [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md).
 
 ### Set a managed identity in the Azure portal
 

@@ -32,7 +32,7 @@ There are several benefits of using a UMI as a server identity:
 - In the past, you needed the Azure AD [Directory Readers](authentication-aad-directory-readers-role.md) role when using an SMI as the server or instance identity. With the introduction of accessing Azure AD through [Microsoft Graph](/graph/api/resources/azure-ad-overview), users who are concerned with giving high-level permissions such as the Directory Readers role to the SMI or UMI can alternatively give lower-level permissions so that the server or instance identity can access Microsoft Graph. 
 
   For more information on providing Directory Readers permissions and its function, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
-- Users can choose a specific UMI to be the server or instance identity for all SQL databases or managed instances in the tenant. Or they can have multiple UMIs assigned to different servers or instances. 
+- Users can choose a specific UMI to be the server or instance identity for all databases or managed instances in the tenant. Or they can have multiple UMIs assigned to different servers or instances. 
 
   UMIs can be used in different servers to represent different features. For example, a UMI can serve transparent data encryption (TDE) in one server, and a UMI can serve Azure AD authentication in another server.
 - You need a UMI to create an Azure SQL logical server configured with TDE with customer-managed keys (CMKs). For more information, see [Customer-managed transparent data encryption using user-assigned managed identity](transparent-data-encryption-byok-identity.md).

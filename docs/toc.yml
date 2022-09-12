@@ -10856,10 +10856,10 @@ items:
     href: sql-server/sql-server-offline-documentation.md
   - name: Learn
     items:
-    - name: Educational resources 
+    - name: Educational resources
       href: sql-server/educational-sql-resources.yml
-    - name: Microsoft Learn >>
-      href: /learn/
+    - name: Microsoft training >>
+      href: /training/
   - name: Help
     items:
     - name: Get help

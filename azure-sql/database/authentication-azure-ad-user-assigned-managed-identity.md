@@ -194,4 +194,4 @@ To update the UMI settings for the server, you can also use the Azure Resource M
 > [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md)
 
 > [!div class="nextstepaction"]
-> [Create an Azure SQL managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
+> [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)

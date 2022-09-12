@@ -108,12 +108,12 @@ If your application experiences issues retrieving data from a `sql_variant` colu
         Schema is named [dbo].
         The corrupted value is stored in a column of type sql_variant named [YourColumn].
         The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
-            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
+            https://learn.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
 */
 
 -- Base type in sql_variant can hold a maximum of 8000 bytes
 -- For details see: 
---  https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
+--  https://learn.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
 DECLARE @bin VARBINARY(8000)
 
 -- In the following lines we convert the sql_variant base type to binary.

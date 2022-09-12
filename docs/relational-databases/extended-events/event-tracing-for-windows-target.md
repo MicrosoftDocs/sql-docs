@@ -75,7 +75,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Managed Object Format (MOF) files are in *\<your install path>*\Microsoft SQL Server\Shared. For more information, see [Managed Object Format](/windows/win32/wmisdk/managed-object-format--mof-) on MSDN.
 
-<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+<!-- ?LinkId=92851  ==  https://learn.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->
 
 ## Adding the Target to a Session  

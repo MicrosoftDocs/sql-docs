@@ -85,7 +85,7 @@ public class AKV {
             statement.execute("DBCC FREEPROCCACHE");
             System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'token credential'");
             /* see Azure Identity client library for Java 
-             * https://docs.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable */
+             * https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable */
             ClientSecretCredential tokenCredential = new ClientSecretCredentialBuilder().tenantId(tenantID)
                 .clientId(applicationClientID).clientSecret(applicationKey).build();
             /* Constructor added in 9.2.0 driver version */

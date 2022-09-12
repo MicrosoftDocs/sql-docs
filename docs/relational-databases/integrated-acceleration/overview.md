@@ -30,7 +30,7 @@ Backup compression is enabled by including the COMPRESSION keyword for BACKUP T-
 
 Integrated acceleration and offloading are supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
 
-Preview software is only available as :
+Preview software is Evaluation Edition. It supports:
 
 - Hardware offloading - can use a physical device. If no device is available, it falls back to software based compression.
 - Software compression.

@@ -19,7 +19,7 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
   > [!NOTE]
   > On-demand SQL Assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
-- The Microsoft Monitoring Agent (MMA) must be installed and configured on the machine. View the [Install MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma) article for instructions. You can also get more information on the [Log Analytics Agent](/azure/azure-monitor/platform/log-analytics-agent) article.
+- The Microsoft Monitoring Agent (MMA) must be installed and configured on the machine. View the [Install MMA](configure-advanced-data-security.md#install-log-analytics-agent) article for instructions. You can also get more information on the [Log Analytics Agent](/azure/azure-monitor/platform/log-analytics-agent) article.
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 

@@ -17,7 +17,7 @@ This release is published September 13, 2022
 
 ### Image tag
 
-`v1.1.2074.2`
+`1.1.2077.4`
 
 ### Azure extension for SQL Server
 

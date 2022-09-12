@@ -31,8 +31,6 @@ You can configure your instance connected to Azure with Microsoft Defender for C
 
 1. Go to __Agents management > Log Analytics agent instructions__  and copy Workspace ID and Primary key for later use.
 
-   :::image type="content" source="media/configure-advanced-data-security/log-analytics-agents-management.png" alt-text="Screenshot showing how to copy the Workspace ID and Primary key.":::
-
 ## Install Log Analytics Agent
 
 The next step is needed only if you haven't yet configured MMA on the remote machine.

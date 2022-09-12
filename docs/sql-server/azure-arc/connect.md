@@ -5,7 +5,7 @@ description: Connect an instance of SQL Server to Azure Arc
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/06/2021
+ms.date: 09/12/2021
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
@@ -13,7 +13,7 @@ ms.prod: sql
 ---
 # Connect your SQL Server to Azure Arc
 
-Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you connect a new SQL Server instance to Azure Arc when you are installing it on Windows Operating System. See [Install SQL Server 2022](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup#install-sql-server-2022).
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you connect a new SQL Server instance to Azure Arc when you are installing it on Windows Operating System. See [Install SQL Server 2022](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup##install-sql-server-2022).
 
 You can connect your existing SQL Server instance to Azure Arc by following these steps.
 

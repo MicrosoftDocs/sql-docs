@@ -159,61 +159,47 @@ The following diagram shows how these tables are related to each other. Some of 
 
 2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](docs\azure-data-studio\table-designer-azure-data-studio.md) :
 
-   ```sql
-   -- Create Person table
-   CREATE TABLE Person
-   (
-       PersonId INT IDENTITY PRIMARY KEY,
-       FirstName NVARCHAR(128) NOT NULL,
-       MiddelInitial NVARCHAR(10),
-       LastName NVARCHAR(128) NOT NULL,
-       DateOfBirth DATE NOT NULL
-   )
+- Person Table
 
 ![Person Table in Table Designer](./media/design-first-database-tutorial/person-table-ads.png)
 
-```sql
--- Create Student table
-   CREATE TABLE Student
-   (
-       StudentId INT IDENTITY PRIMARY KEY,
-       PersonId INT REFERENCES Person (PersonId),
-       Email NVARCHAR(256)
-   )
-```
+Be sure to configure the Primary Key settings for the **Person** Table as shown below:
+
+![Person Table in Table Designer showing the Primary Key settings](./media/design-first-database-tutorial/person-table-primary-key-ads.png)
+
+- Student Table
 
 ![Student Table in Table Designer](./media/design-first-database-tutorial/student-table-ads.png)
 
-```sql
- -- Create Course table
-   CREATE TABLE Course
-   (
-       CourseId INT IDENTITY PRIMARY KEY,
-       Name NVARCHAR(50) NOT NULL,
-       Teacher NVARCHAR(256) NOT NULL
-   )
-```
+Be sure to configure the Primary Key settings for the **Student** Table as shown below:
+
+![Student Table in Table Designer showing Primary Key settings](./media/design-first-database-tutorial/student-table-primary-key-ads.png)
+
+Be sure to configure the Foreign Key settings for the **Student** Table as shown below:
+
+![Student Table in Table Designer showing Foreign Key settings](./media/design-first-database-tutorial/student-table-foreign-key-ads.png)
+
+- Course Table
 
 ![Course Table in Table Designer](./media/design-first-database-tutorial/course-table-ads.png)
 
-```sql
-   -- Create Credit table
-   CREATE TABLE Credit
-   (
-       StudentId INT REFERENCES Student (StudentId),
-       CourseId INT REFERENCES Course (CourseId),
-       Grade DECIMAL(5,2) CHECK (Grade <= 100.00),
-       Attempt TINYINT,
-       CONSTRAINT [UQ_studentgrades] UNIQUE CLUSTERED
-       (
-           StudentId, CourseId, Grade, Attempt
-       )
-   )
-```
+Be sure to configure the Primary Key settings for the **Course** Table as shown below:
+
+![Course Table in Table Designer showing Primary Key settings](./media/design-first-database-tutorial/course-table-primary-key-ads.png)
+
+- Credit Table
 
 ![Credit Table in Table Designer](./media/design-first-database-tutorial/credit-table-ads.png)
 
-3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
+Be sure to configure the Foreign Key settings for the **Credit** Table as shown below:
+
+![Credit Table in Table Designer showing Foreign Key settings](./media/design-first-database-tutorial/credit-table-foreign-key-ads.png)
+
+Be sure to configure the Check Constraint settings for the **Credit** Table as shown below:
+
+![Credit Table in Table Designer showing Check Constraint settings](./media/design-first-database-tutorial/credit-table-check-constraint-ads.png)
+
+1. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
 
    ![Create tables](./media/design-first-database-tutorial/ads-tables-created.png)
 
@@ -245,7 +231,7 @@ You have now loaded sample data into the tables you created earlier.
 
 Execute the following queries to retrieve information from the database tables. See [Write SQL queries](/previous-versions/sql/sql-server-2005/express-administrator/bb264565(v=sql.90)) to learn more about writing SQL queries. The first query joins all four tables to find the students taught by 'Dominick Pope' who have a grade higher than 75%. The second query joins all four tables and finds the courses in which 'Noe Coleman' has ever enrolled.
 
-1. In a SQL Server Management Studio query window, execute the following query:
+1. In the Azure Data Studio Object Explorer, right-click on your server connection, then select *New Query* to open up the Query Window. Then, execute the queries below:
 
    ```sql
    -- Find the students taught by Dominick Pope who have a grade higher than 75%
@@ -279,10 +265,10 @@ In this tutorial, you learned many basic database tasks. You learned how to:
 >
 > - Create a database using the Azure portal*
 > - Set up a server-level IP firewall rule using the Azure portal
-> - Connect to the database with SSMS
-> - Create tables with SSMS
+> - Connect to the database with Azure Data Studio
+> - Create tables with Azure Data Studio
 > - Bulk load data with BCP
-> - Query data with SSMS
+> - Query data with Azure Data Studio
 
 Advance to the next tutorial to learn about designing a database using Visual Studio and C#.
 

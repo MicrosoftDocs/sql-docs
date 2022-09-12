@@ -38,7 +38,7 @@ In this article you can find a content reference to various guides, scripts, and
 - [Configure service endpoint policies for Azure Storage (Preview)](service-endpoint-policies-configure.md):
   Secure your subnet against erroneous or malicious data exfiltration into unauthorized Azure Storage accounts.
 - [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md):
-  Configure custom DNS servers to establish access from SQL Managed Instance to an external resource, e.g. in scenarios involving Linked Server or Database Mail. 
+  Configure custom DNS servers to establish access from SQL Managed Instance to an external resource, such as scenarios involving linked servers or database mail.
 - [Find the management endpoint IP address](management-endpoint-find-ip-address.md): 
   Determine the public endpoint that SQL Managed Instance is using for management purposes. 
 - [Verify built-in firewall protection](management-endpoint-verify-built-in-firewall.md):

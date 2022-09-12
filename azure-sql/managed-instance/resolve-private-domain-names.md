@@ -5,13 +5,13 @@ description: This article describes how to get Azure SQL Managed Instance to res
 services: sql-database
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
-ms.custom: sqldbrb=1
+ms.custom: 
 ms.devlang: 
 ms.topic: conceptual
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, srbozovi
-ms.date: 08/25/2022
+ms.date: 09/16/2022
 ---
 # Resolve private domain names in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

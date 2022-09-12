@@ -104,6 +104,8 @@ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-04-18T20:42:12Z&st=2019-04-18T12:42:12Z&spr=https&sig=lQHczNvrk1KoYLCpFdSsMANd0ef9BrIPBNJ3VYEIq78%3D'
 ```
 
+---
+
 ## External data source
 
 External data source is an abstraction that enables easy referencing of a file location across multiple queries. To query public locations, all you need to specify while creating an external data source is the file location: 
@@ -384,7 +386,7 @@ Collecting statistics on your external data is one of the most important things 
 
 ### Automatic creation of statistics
 
-Managed Instance analyzes incoming user queries for missing statistics. If statistics are missing, the query optimizer automatically creates statistics on individual columns in the query predicate or join condition to improve cardinality estimates for the query plan. Automatic creation of statistics is done synchronously so you may incur slightly degraded query performance if your columns are missing statistics. The time to create statistics for a single column depends on the size of the files targeted.
+Azure SQL Managed Instance analyzes incoming user queries for missing statistics. If statistics are missing, the query optimizer automatically creates statistics on individual columns in the query predicate or join condition to improve cardinality estimates for the query plan. Automatic creation of statistics is done synchronously so you may incur slightly degraded query performance if your columns are missing statistics. The time to create statistics for a single column depends on the size of the files targeted.
 
 ### OPENROWSET manual statistics
 
@@ -430,10 +432,10 @@ Issues with query execution are typically caused by managed instance not being a
 
 - Wrong or mistyped location path.
 - SAS key validity: it could be expired i.e. out of its validity period, containing a typo, starting with a question mark.
-- SAS key persmissions allowed: Read at minimum, and List if wildcards are used
+- SAS key permissions allowed: Read at minimum, and List if wildcards are used
 - Blocked inbound traffic on the storage account. Check [Managing virtual network rules for Azure Storage](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-virtual-network-rules) for more details and make sure that access from managed instance VNet is allowed.
 - Outbound traffic blocked on the managed instance using [storage endpoint policy](service-endpoint-policies-configure.md#configure-policies). Allow outbound traffic to the storage account.
-- Managed Identity access rights: make sure the Azure AD service principa representing managed identity of the instance has access rights granted on the storage account.  
+- Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.  
 
 ## Next steps
 

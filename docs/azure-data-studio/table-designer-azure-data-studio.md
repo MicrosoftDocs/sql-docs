@@ -1,4 +1,4 @@
----
+git ---
 title: Creating and managing tables in Azure Data Studio
 description: How to use the Table Designer to manage tables and relationships in Azure Data Studio.
 author: tdoshin

@@ -224,7 +224,7 @@ SQL MI tier choice is guided by availability, performance (for example, throughp
 
 #### Can I move only a specific workload out of an on-premises cluster and what will be the impact to licensing and cost?
 
-It's possible to only migrate the databases related to one workload towards an Azure SQL MI. Creating and operating an Azure SQL MI will require SQL Server licenses. [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit) will provide you with the ability to reuse your licenses. Reach out to your licensing partner to review what possibilities can be used with [license mobility](/licensing/licensing-programs/software-assurance-license-mobility) and restructuring your current licenses.
+It's possible to only migrate the databases related to one workload towards an Azure SQL MI. Creating and operating an Azure SQL MI will require SQL Server licenses. [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit) will provide you with the ability to reuse your licenses. Reach out to your licensing partner to review what possibilities can be used with [license mobility](https://www.microsoft.com/licensing/licensing-programs/software-assurance-license-mobility) and restructuring your current licenses.
 
 #### I maintain a highly consolidated SQL Server with multiple applications running against it. Can I move it to SQL MI?
 

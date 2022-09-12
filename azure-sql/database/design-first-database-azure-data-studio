@@ -199,7 +199,7 @@ Be sure to configure the Check Constraint settings for the **Credit** Table as s
 
 ![Credit Table in Table Designer showing Check Constraint settings](./media/design-first-database-tutorial/credit-table-check-constraint-ads.png)
 
-1. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
+3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
 
    ![Create tables](./media/design-first-database-tutorial/ads-tables-created.png)
 

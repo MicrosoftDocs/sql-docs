@@ -81,8 +81,6 @@ After the drivers are installed, configure the server instance.
    SET HARDWARE_OFFLOAD = ON (ACCELERATOR = QAT, MODE = SOFTWARE)
    ```
 
-   Standard edition only supports SOFTWARE mode. For more information on edition specifics, see [Edition specific capabilities](intel-quickassist.md#edition-specific-capabilities).
-
    > [!IMPORTANT]
    > The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode compared to MS_XPRESS varies based on several factors. The workload pressure the host system may be under during backup execution and the available memory and processing power of the Intel® QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
 

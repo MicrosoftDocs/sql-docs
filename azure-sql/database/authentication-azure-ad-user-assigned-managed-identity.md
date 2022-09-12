@@ -136,7 +136,7 @@ To set the identity for the logical server or managed instance in the [Azure por
 1. Go to your **SQL server** or **SQL managed instance** resource. 
 1. Under **Security**, select the **Identity** setting. 
 1. Under **User assigned managed identity**, select **Add**. 
-1. Select a subscription, and then for **Primary identity**, select a UMI for the subscription. Then click the **Select** button. 
+1. Select a subscription, and then for **Primary identity**, select a UMI for the subscription. Then choose the **Select** button. 
 
 :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/existing-server-select-managed-identity.png" alt-text="Azure portal screenshot of selecting a user-assigned managed identity when configuring an existing server identity.":::
 

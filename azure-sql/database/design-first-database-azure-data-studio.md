@@ -20,10 +20,10 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 >
 > - Create a database using the Azure portal*
 > - Configure a server-level IP firewall rule using the Azure portal
-> - Connect to the database with ADS
-> - Create tables with ADS
+> - Connect to the database with Azure Data Studio
+> - Create tables with Azure Data Studio
 > - Bulk load data with BCP
-> - Query data with ADS
+> - Query data with Azure Data Studio
 
 *If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
 

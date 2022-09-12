@@ -495,7 +495,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |vCores|24|32|40|80|128<sup>3</sup>|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|25.25|37.94|52.23|131.64|331|
+|In-memory OLTP storage (GB)|25.25|37.94|52.23|131.64|227.02|
 |Max data size (GB)|4096|4096|4096|4096|4096|
 |Max log size (GB) <sup>1</sup>|1024|1024|1024|1024|1024|
 |Tempdb max data size (GB)|768|1024|1280|2560|2560|

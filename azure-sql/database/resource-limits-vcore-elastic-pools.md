@@ -359,7 +359,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Memory (GB)|166.1|207.6|415.2|625|
 |Max number DBs per pool <sup>1</sup>|100|100|100|100|
 |Columnstore support|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|37.94|52.23|131.68|331|
+|In-memory OLTP storage (GB)|37.94|52.23|131.68|227.02|
 |Max data size (GB)|4096|4096|4096|4096|
 |Max log size (GB) <sup>2</sup>|1229|1229|1229|1229|
 |TempDB max data size (GB)|1024|1280|2560|2560|

@@ -20,7 +20,7 @@ There are two types of architectures for AGs. An architecture for *high availabi
 
 An availability group with `CLUSTER_TYPE = NONE` can include replicas hosted on different operating system platforms. It can't support high availability.
 
-[!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
+[!INCLUDE [Create prerequisites](../includes/linux/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the availability group
 
@@ -60,7 +60,7 @@ ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-[!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
+[!INCLUDE [Create post](../includes/linux/ss-linux-cluster-availability-group-create-post.md)]
 
 This AG isn't a high-availability configuration. If you need high availability, follow the instructions at [Configure an Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the AG with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux). You can then integrate with a cluster manager, by using either Windows Server failover clustering on Windows, or Pacemaker on Linux.
 

@@ -1,16 +1,12 @@
 ---
 title: "Using multiple result sets"
 description: "Learn how to query and retrieve multiple result sets from a single execute using the JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using multiple result sets
@@ -26,7 +22,7 @@ If the execute method returns **false**, the statement that was run has returned
 > [!NOTE]  
 > For more information about update counts, see [Using a stored procedure with an update count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and an SQL statement is constructed that, when run, returns two result sets:
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, and an SQL statement is constructed that, when run, returns two result sets:
 
 [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
 

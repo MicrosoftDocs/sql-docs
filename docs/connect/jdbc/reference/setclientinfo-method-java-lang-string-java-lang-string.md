@@ -1,16 +1,12 @@
 ---
+title: "setClientInfo Method (java.lang.String, java.lang.String)"
 description: "setClientInfo Method (java.lang.String, java.lang.String)"
-title: "setClientInfo Method (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 8d050831-8305-48a8-bd22-207932111040
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setClientInfo Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

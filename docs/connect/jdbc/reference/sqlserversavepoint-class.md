@@ -1,16 +1,12 @@
 ---
+title: "SQLServerSavepoint Class"
 description: "SQLServerSavepoint Class"
-title: "SQLServerSavepoint Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 1ae7db7b-959f-4142-8d9f-aa427869c6ac
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerSavepoint Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

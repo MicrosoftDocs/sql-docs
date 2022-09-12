@@ -1,15 +1,13 @@
 ---
 title: "Oracle to Azure SQL Managed Instance: Migration guide"
 description: In this guide, you learn how to migrate your Oracle schemas to Azure SQL Managed Instance by using SQL Server Migration Assistant for Oracle.
-ms.service: sql-managed-instance
-ms.subservice: migration-guide
-ms.custom: 
-ms.devlang: 
-ms.topic: how-to
 author: mokabiru
 ms.author: mokabiru
 ms.reviewer: mathoma
 ms.date: 11/06/2020
+ms.service: sql-managed-instance
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 # Migration guide: Oracle to Azure SQL Managed Instance
 

@@ -1,15 +1,13 @@
 ---
-title: "SQL Server Login Dialog Box (OLE DB) | Microsoft Docs"
+title: "SQL Server Login Dialog Box (OLE DB)"
 description: When you attempt to connect without specifying enough information, the OLE DB Driver for SQL Server prompts you with the SQL Server Login dialog box.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ms.date: "02/18/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
-ms.author: v-davidengel
-author: David-Engel
 ---
 # SQL Server Login dialog box
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

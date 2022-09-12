@@ -1,15 +1,13 @@
 ---
+title: "Using Transparent Network IP Resolution"
 description: "Using Transparent Network IP Resolution"
-title: "Using Transparent Network IP Resolution | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/02/2020"
-ms.prod: sql
-ms.prod_service:  connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: "reference"
 author: chris-rossi
 ms.author: v-chross
+ms.reviewer: v-davidengel
+ms.date: "01/02/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # Using Transparent Network IP Resolution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,13 +1,13 @@
 ---
 title: Create and utilize Azure Active Directory server logins
 description: This article guides you through creating and utilizing Azure Active Directory logins in the virtual master database of Azure SQL
-ms.service: sql-db-mi
-ms.subservice: security
-ms.topic: tutorial
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 03/14/2022
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: tutorial
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

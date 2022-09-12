@@ -1,21 +1,15 @@
 ---
+title: "getTime Method (int, java.util.Calendar)"
 description: "getTime Method (int, java.util.Calendar)"
-title: "getTime Method (int, java.util.Calendar) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.getTime (int, java.util.Calendar)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.getTime (int, java.util.Calendar)"
+apitype: "Assembly"
 ---
 # getTime Method (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

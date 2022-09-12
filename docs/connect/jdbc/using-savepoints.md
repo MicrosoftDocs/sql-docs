@@ -1,16 +1,12 @@
 ---
 title: "Using savepoints"
 description: "Learn how to use savepoints as part of transaction management in your application when using the Microsoft JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using savepoints
@@ -23,7 +19,7 @@ Savepoints are useful in situations where errors are unlikely to occur. The use 
 
 The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of savepoints through the [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) method of the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class. By using the setSavepoint method, you can create a named or unnamed savepoint within the current transaction, and the method will return a [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md) object. Multiple savepoints can be created within a transaction. To roll back a transaction to a given savepoint, you can pass the SQLServerSavepoint object to the [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md) method.
 
-In the following example, a savepoint is used while performing a local transaction consisting of two separate statements in the `try` block. The statements are run against the Production.ScrapReason table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database, and a savepoint is used to roll back the second statement. This results in only the first statement being committed to the database.
+In the following example, a savepoint is used while performing a local transaction consisting of two separate statements in the `try` block. The statements are run against the Production.ScrapReason table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database, and a savepoint is used to roll back the second statement. This results in only the first statement being committed to the database.
 
 [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
 

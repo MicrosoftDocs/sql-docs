@@ -1,15 +1,13 @@
 ---
 title: How to manage a Hyperscale database
 description: How to manage a Hyperscale database, including migrating to Hyperscale, restoring to a different region, and reverse migration.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 2/17/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: conceptual
 ---
 
 # How to manage a Hyperscale database
@@ -32,7 +30,7 @@ You will only experience a short period of downtime, generally a few minutes, du
 
 To move a database that is a part of a [geo-replication](active-geo-replication-overview.md) relationship, either as the primary or as a secondary, to Hyperscale, you need to first terminate data replication between the primary and secondary replica. Databases in a [failover group](auto-failover-group-sql-db.md) must be removed from the group first.
 
-Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database. Geo-replication for Hyperscale is in preview with certain [limitations](active-geo-replication-overview.md).
+Once a database has been moved to Hyperscale, you can create a new Hyperscale geo-replica for that database. 
 
 ### How to migrate a database to the Hyperscale service tier
 
@@ -126,6 +124,7 @@ Reverse migration is available under the following conditions:
 - Reverse migration is only available within 45 days of the original migration to Hyperscale.
 - Databases originally created in the Hyperscale service tier are not eligible for reverse migration.
 - You may reverse migrate to the [General Purpose](service-tier-general-purpose.md) service tier only. Your migration from Hyperscale to General Purpose can target either the serverless or provisioned compute tiers. If you wish to migrate the database to another service tier, such as [Business Critical](service-tier-business-critical.md) or a [DTU based service tier](service-tiers-dtu.md), first reverse migrate to the General Purpose service tier, then change the service tier.
+- Direct reverse migration to an elastic pool is not supported. If you wish to migrate your Hyperscale database to an elastic pool, first migrate it to a General Purpose single database, and then move this database to the target elastic pool.
 
 ### Duration and downtime
 

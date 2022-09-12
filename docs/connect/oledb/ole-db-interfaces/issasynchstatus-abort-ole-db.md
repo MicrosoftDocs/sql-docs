@@ -1,20 +1,16 @@
 ---
-title: "ISSAsynchStatus::Abort (OLE DB driver) | Microsoft Docs"
-description: Learn how the ISSAsynchStatus::Abort method cancels an asynchronously executing operation in OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "ISSAsynchStatus::Abort (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "Abort method"
+title: "ISSAsynchStatus::Abort (OLE DB driver)"
+description: "Learn how the ISSAsynchStatus::Abort method cancels an asynchronously executing operation in OLE DB Driver for SQL Server."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "Abort method"
+apiname: "ISSAsynchStatus::Abort (OLE DB)"
+apitype: "COM"
 ---
 # ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,8 +1,8 @@
 ---
 title: "BEGIN DIALOG CONVERSATION (Transact-SQL)"
 description: BEGIN DIALOG CONVERSATION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -28,7 +28,6 @@ helpviewer_keywords:
   - "starting conversations"
 dev_langs:
   - "TSQL"
-ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

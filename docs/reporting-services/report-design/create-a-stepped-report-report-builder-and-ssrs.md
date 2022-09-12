@@ -42,7 +42,7 @@ A stepped report is a type of paginated report that shows detail rows or child g
   
     3.  In the **Tablix Group** dialog box, provide a name for the group and type or select a group expression from the drop-down list. The drop-down list displays the simple field expressions that are available in the Report Data pane. For example, [PostalCode] is a simple field expression for the PostalCode field in a dataset.  
   
-    4.  Select **Add group header**. This option adds a static row above the group for the group label and group totals. Likewise, you can select **Add group footer** to add a static row below the group. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    4.  Select **Add group header**. This option adds a static row above the group for the group label and group totals. Likewise, you can select **Add group footer** to add a static row below the group. Select **OK**.
   
      You now have a basic tabular report. When it is rendered, you see one column with the group instance value, and one or more columns with grouped detail data. The following figure shows what the data region might look like on the design surface.  
   
@@ -97,7 +97,7 @@ A stepped report is a type of paginated report that shows detail rows or child g
   
     3.  In **Group expression**, type an expression or select a dataset field to group on. To create an expression, click the expression (**fx**) button to open the **Expression** dialog box.  
   
-    4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    4.  Select **OK**.
   
 3.  Change the padding for the cell that displays the group data.  
   

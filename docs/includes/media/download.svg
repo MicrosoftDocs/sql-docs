@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16">
+  <g id="canvas">
+    <path d="M16,16H0V0H16Z" fill="none" opacity="0" />
+    <path d="M16,16H0V0H16Z" fill="none" opacity="0" />
+  </g>
+  <g id="level-1">
+    <path d="M4.854,8.146,8,11.293V1H9L9,11.293l3.148-3.147.708.708-4,4H8.146l-4-4Z" fill="#212121" />
+    <path d="M13,14v1H4V14Z" fill="#212121" />
+  </g>
+</svg>

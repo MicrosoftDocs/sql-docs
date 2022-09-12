@@ -35,7 +35,8 @@ In this topic, you'll learn how to modify the Distributed Replay controller and 
 
 3. In the **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller Properties** window, on the **Log On** tab, select **This account**, type or select **Browse** to enter the new logon account, and then select **OK**.
 
-     **Important**: When you configure Distributed Replay Controller, you can specify one or more user accounts that will be used to run the Distributed Replay Client services. The following is the list of supported accounts:
+     > [!IMPORTANT]  
+     > When you configure Distributed Replay Controller, you can specify one or more user accounts that will be used to run the Distributed Replay Client services. The following is the list of supported accounts:
 
     - Domain user account
 

@@ -1,13 +1,12 @@
 ---
 title: Common schema collections
 description: Describes all of the common schema collections supported by all of the .NET managed providers.
-ms.date: 11/30/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 11/30/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Common schema collections
 

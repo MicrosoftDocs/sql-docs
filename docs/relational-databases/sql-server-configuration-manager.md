@@ -28,7 +28,7 @@ ms.date: 07/25/2022
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a tool to manage the services associated with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], to configure the network protocols used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and to manage the network connectivity configuration from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client computers. Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)],  can use Configuration Manager to manage the Azure Arc SQL Extension.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a tool to manage the services associated with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], to configure the network protocols used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and to manage the network connectivity configuration from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client computers. Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)],  can use Configuration Manager to manage the Azure extension for SQL Server.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is installed with your SQL Server installation. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console snap-in that is available from the Start menu, or can be added to any other [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console display. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) uses the **SQLServerManager\<version>.msc** file (such as **SQLServerManager13.msc** for [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]) to open Configuration Manager. You will need the corresponding [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager version to manage that particular version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Here are the paths to the last five versions when Windows is installed on the C drive.  
   
@@ -60,7 +60,7 @@ Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager
   
 Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] using startup parameters.  For more information, see [Configure Server Startup Options &#40;SQL Server Configuration Manager&#41;](../database-engine/configure-windows/scm-services-configure-server-startup-options.md).
 
-Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start, pause, resume, or stop Azure Arc SQL Extension.
+Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start, pause, resume, or stop Azure extension for SQL Server.
   
 ## Changing the Accounts Used by the Services
 

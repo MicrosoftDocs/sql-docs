@@ -181,7 +181,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
     -   To export to the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package store, select the **SSIS Package Store** option, and specify the server.  
   
-         Click the browse button **(...)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Click the browse button **(...)**, expand the **SSIS Packages** folder, and select the folder to which you want to save the package. Optionally, enter a new name for the package in the **Package Name** text box. Select **OK**.
   
 7.  To update the protection level of the package, click the browse button **(...)** and choose a different protection level by using the **Package Protection Level** dialog box. If the **Encrypt sensitive data with password** or the **Encrypt all data with password** option is selected, type and confirm a password.  
   

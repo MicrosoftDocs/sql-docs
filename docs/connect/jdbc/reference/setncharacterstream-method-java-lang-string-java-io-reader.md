@@ -1,16 +1,12 @@
 ---
+title: "setNCharacterStream Method to Reader object - string"
 description: "setNCharacterStream Method (java.lang.String, java.io.Reader)"
-title: "setNCharacterStream Method to Reader object - string | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setNCharacterStream Method (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

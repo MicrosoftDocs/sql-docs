@@ -3,13 +3,10 @@ title: "GROUPING (Transact-SQL)"
 description: "GROUPING (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "12/03/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "GROUPING"
   - "GROUPING_TSQL"

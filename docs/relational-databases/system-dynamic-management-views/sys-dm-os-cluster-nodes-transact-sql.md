@@ -24,7 +24,8 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 
 Returns one row for each node in the failover cluster instance configuration. If the current instance is a failover clustered instance, it returns a list of nodes on which this failover cluster instance (formerly "virtual server") has been defined. If the current server instance is not a failover clustered instance, it returns an empty rowset.  
   
-> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_cluster_nodes**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+> [!NOTE]  
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_cluster_nodes**. [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +38,8 @@ Returns one row for each node in the failover cluster instance configuration. If
 ## Remarks  
  When failover clustering is enabled, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance can run on any of the nodes of the failover cluster that are designated as part of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance (virtual server) configuration.  
   
-> **NOTE:** This view replaces the fn_virtualservernodes function, which will be deprecated in a future release.  
+> [!NOTE]  
+> This view replaces the fn_virtualservernodes function, which will be deprecated in a future release.  
   
 ## Permissions  
  Requires VIEW SERVER STATE permission on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

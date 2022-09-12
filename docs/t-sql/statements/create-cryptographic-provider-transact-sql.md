@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "33032 (Database Engine error)"
 dev_langs:
   - "TSQL"
-ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

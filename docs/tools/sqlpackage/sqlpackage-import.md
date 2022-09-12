@@ -30,13 +30,34 @@ SqlPackage /Action:Import {parameters} {properties}
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
-# example import using short form parameter names, skips schema validation
+# example import using short form parameter names
 SqlPackage /a:Import /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
-    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.bacpac" /p:VerifyExtraction=False
+    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.bacpac"
 
 # example import using Azure Active Directory Service Principal
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example import connecting using Azure Active Directory username and password
+SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
+
+# example import connecting using Azure Active Directory universal authentication
+SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication=True \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+```
+
+```powershell
+# example import connecting using an access token associated with a service principal
+$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
+$AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
+$AccessToken = $AccessToken_Object.Token
+
+sqlpackage.exe /at:$AccessToken /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+# OR
+sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
 ## Parameters for the Import action
@@ -80,7 +101,7 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
 |**/p:**|ImportContributorArguments=(STRING)|Specifies deployment contributor arguments for the deployment contributors. This property should be a semi-colon delimited list of values.|
 |**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional deployment contributors. This property should be a semi-colon delimited list of values.|
 |**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors, which should run when the bacpac is imported. This property should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
-|**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
+|**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|PreserveIdentityLastValues=(BOOLEAN)|Specifies whether last values for identity columns should be preserved during deployment.|
 |**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|When true, rebuilds indexes offline after importing data into SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. For performance reasons the default is InMemory. For large databases, File backed storage is required.|
@@ -88,4 +109,4 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
-- [Troubleshooting Import/Export with SqlPackage](./troubleshooting-import-export-sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

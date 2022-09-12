@@ -55,7 +55,8 @@ ms.author: vanto
 ## Additional function information  
  The following sections provide additional information about the functions you can use to create complex expressions for Policy-Based Management conditions.  
   
-> **IMPORTANT!** The functions that you can use to create Policy-Based Management conditions do not always use [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax. Make sure that you follow the example syntax. For example, when you use the **DateAdd** or **DatePart** functions, you must enclose the *datepart* argument in single quotes.  
+> [!IMPORTANT]  
+> The functions that you can use to create Policy-Based Management conditions do not always use [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax. Make sure that you follow the example syntax. For example, when you use the **DateAdd** or **DatePart** functions, you must enclose the *datepart* argument in single quotes.  
   
 |Function|Signature|Description|Arguments|Return value|Example|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  

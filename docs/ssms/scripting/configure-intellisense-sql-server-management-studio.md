@@ -49,6 +49,6 @@ Most [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options ar
   
 5.  To change the casing applied to function names in completion lists, select a casing specification from the **Casing for built-in function names** list.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
   

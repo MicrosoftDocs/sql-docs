@@ -1,20 +1,17 @@
 ---
-title: "Data source properties (OLE DB driver) | Microsoft Docs"
+title: "Data source properties (OLE DB driver)"
 description: Learn how OLE DB Driver for SQL Server implements data source properties, including a provider-specific property set with additional data source properties.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, data source properties"
   - "properties [OLE DB]"
   - "data source properties [OLE DB]"
   - "OLE DB data source properties [OLE DB Driver for SQL Server]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Data Source Properties (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

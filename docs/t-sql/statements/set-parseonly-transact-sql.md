@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "SET PARSEONLY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 514ab042-c53e-4d96-be71-fb08fcc6ef3c
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET PARSEONLY (Transact-SQL)

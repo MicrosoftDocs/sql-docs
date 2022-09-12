@@ -60,7 +60,7 @@ To save [!INCLUDE[tsql](../../includes/tsql-md.md)] definitions of the converted
   
     You can also script individual objects or categories of objects by right-clicking the object or its parent folder, and then clicking **Save as Script**.  
   
-2.  In the **Save As** dialog box, locate the folder where you want to save the script, enter a file name in the **File name** box, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)]. SSMA will append the .sql file name extension.  
+2.  In the **Save As** dialog box, locate the folder where you want to save the script, enter a file name in the **File name** box, and then select **OK**. SSMA will append the .sql file name extension.  
   
 ### Modifying Scripts  
 After you have saved the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object definitions as one or more scripts, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view and modify the scripts.  
@@ -84,7 +84,7 @@ You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](..
   
 1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File** menu, point to **Open**, and then click **File**.  
   
-2.  In the **Open** dialog box, select your script file, and then [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  In the **Open** dialog box, select your script file, and then select **OK**.
   
 3.  To run the complete script, press the **F5** key.  
   

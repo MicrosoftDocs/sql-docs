@@ -1,16 +1,14 @@
 ---
 title: "DataAdapter, DataTable, and DataColumn mappings"
 description: Describes how to set up DataTableMappings and ColumnMappings for a DataAdapter.
-ms.date: "11/30/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "11/30/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # DataAdapter, DataTable, and DataColumn mappings
 

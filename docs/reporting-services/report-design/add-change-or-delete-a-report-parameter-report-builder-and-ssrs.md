@@ -51,7 +51,7 @@ ms.author: maggies
   
     -   To hide the parameter and protect it from being modified on the report server after the report is published, select **Internal**. The report parameter can then only be viewed in the report definition. For this option, you must set a default value or allow the parameter to accept a null value.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. Select **OK**.
   
 ### To delete a report parameter  
   

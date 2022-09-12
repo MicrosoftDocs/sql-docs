@@ -1,14 +1,13 @@
 ---
 title: "Optimistic concurrency"
 description: "Describes optimistic and pessimistic concurrency, and how you can test for concurrency violations."
-ms.date: "11/25/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Optimistic concurrency
 

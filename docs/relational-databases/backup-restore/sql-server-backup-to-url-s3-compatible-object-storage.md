@@ -3,7 +3,7 @@ title: "SQL Server backup to URL for S3-compatible object storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the S3-compatible object storage as a backup destination.
 ms.custom:
 - event-tier1-build-2022
-ms.date: 07/22/2022
+ms.date: 08/26/2022
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -57,7 +57,7 @@ To connect SQL Server to an S3-compatible object storage, two sets of permission
 
 On SQL Server the user account that is used to issue BACKUP or RESTORE commands should be in the **db_backupoperator** database role with **Alter any credential** permissions.
 
-On the storage layer the user (`Access Key ID`) must have both **ListBucket** and **WriteOnly** permissions.
+On the storage layer, the user (`Access Key ID`) must have both **ListBucket** and **WriteOnly** permissions.
 
 ### Restore Permissions
 
@@ -65,7 +65,7 @@ If the database being restored does not exist, the user must have `CREATE DATABA
 
 RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the `db_owner` fixed database role do not have RESTORE permissions.
 
-On the storage layer the user (`Access Key ID`) must have both **ListBucket** and **ReadOnly** permissions.
+On the storage layer, the user (`Access Key ID`) must have both **ListBucket** and **ReadOnly** permissions.
 
 ## Supported features
 
@@ -73,10 +73,11 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`
 
 1. A single backup file can be up to 200,000 MiB per URL (with `MAXTRANSFERSIZE` set to 20 MB).
 2. Backups can be striped across a maximum of 64 URLs.
-3. Mirroring is supported.
+3. Mirroring is supported, but only across URLs. Mirroring using both URL and DISK is not supported.
 4. Compression is supported and recommended.
 5. Encryption is supported.
 6. Restore from URL with S3-compatible object storage has no size limitation.
+7. When restoring a database the `MAXTRANSFERSIZE` is determined by value assigned during the backup phase.
 7. URLs can be specified either in virtual host or path style format.
 8. `WITH CREDENTIAL` is supported.
 9. `REGION` is supported and the default value is `us-east-1` .
@@ -98,7 +99,7 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`
 | MAXTRANSFERSIZE | Y | From 5 MB (5,242,880 Bytes) to 20 MB (20,971,520 Bytes), default value is 10 MB (10,485,760 Bytes)|
 | MEDIADESCRIPTION | Y |  |
 | MEDIANAME | Y |  |
-| MIRROR TO | Y |  |
+| MIRROR TO | Y | Only works with another URL, MIRROR with URL and DISK is not supported |
 | NAME | Y |  |
 | NOFORMAT/FORMAT |  Y |  |
 | NOINIT/INIT | N | Appending is not supported. To overwrite a backup use `WITH FORMAT`. |
@@ -246,7 +247,7 @@ Virtual host example:
 
 <!-- The name of the credential must include the bucket name. -->
 - The IDENTITY should always be `'S3 Access Key'` when using the S3 connector.
-- The Access Key ID and Secret Key ID must not contain a colon. Access Key Id and Secret Key ID is the user and password created on the S3-compliant object storage.
+- The Access Key ID and Secret Key ID must not contain a colon. Access Key ID and Secret Key ID is the user and password created on the S3-compliant object storage.
 - Only alphanumeric values are allowed.
 - The Access Key ID must have proper permissions on the S3-compatible object storage.
 
@@ -292,7 +293,7 @@ WITH    REPLACE -- overwrite
 
 ### Options for encryption and compression
 
-The following example shows how to backup and restore the `AdventureWorks2019` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
+The following example shows how to back up and restore the `AdventureWorks2019` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = <password>;
@@ -316,7 +317,7 @@ WITH REPLACE
 
 ### Using region for backup and restore
 
-The following example shows how to backup and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
+The following example shows how to back up and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
 
 ```sql
 -- Backup Database
@@ -342,7 +343,7 @@ WITH MOVE 'AdventureWorks2019' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16
 <!-- Internal LInks -->
 
 <!-- Public Links -->
-[docs_backup_best]: (https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service)
-[MAXTRANSFERSIZE]: (https://docs.microsoft.com/sql/t-sql/statements/backup-transact-sql?view=sql-server-ver15#with-options)
+[docs_backup_best]: ./sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+[MAXTRANSFERSIZE]: ../../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15#with-options
 
-[Azure block blobs]: (https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)
+[Azure block blobs]: /rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs

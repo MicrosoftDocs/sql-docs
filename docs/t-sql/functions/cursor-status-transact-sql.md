@@ -3,13 +3,10 @@ title: "CURSOR_STATUS (Transact-SQL)"
 description: "CURSOR_STATUS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "CURSOR_STATUS"
   - "CURSOR_STATUS_TSQL"

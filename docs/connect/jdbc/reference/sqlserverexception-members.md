@@ -1,16 +1,12 @@
 ---
+title: "SQLServerException Members"
 description: "SQLServerException Members"
-title: "SQLServerException Members | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerException Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

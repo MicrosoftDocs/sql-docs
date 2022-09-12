@@ -1,11 +1,11 @@
 ---
 title: Auto-failover group overview
-description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for auto-failover groups that overlap between both products. 
-ms.topic: include
+description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for auto-failover groups that overlap between both products.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: kendralittle, emlisa, mlandzic
 ms.date: 03/01/2022
+ms.topic: include
 ---
 
 - **Automatic failover policy**

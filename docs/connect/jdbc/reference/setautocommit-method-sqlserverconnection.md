@@ -1,21 +1,15 @@
 ---
 title: "setAutoCommit Method (SQLServerConnection)"
 description: "Learn the public API details for the setAutoCommit method in the SQLServerConnection class of the JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.setAutoCommit"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.setAutoCommit"
+apitype: "Assembly"
 ---
 # setAutoCommit Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

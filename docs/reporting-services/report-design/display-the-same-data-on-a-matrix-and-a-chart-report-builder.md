@@ -47,13 +47,13 @@ ms.author: maggies
   
 6.  In the matrix, right-click the cell with data, click **Text Box Properties**, and then click **Number**. Choose an appropriate format for the dataset field value.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 8.  Drag the same dataset field you chose in step 3 to the **Values** area on the chart.  
   
 9. In the chart, right-click the Y axis, click **Axis Properties**, and then click **Number**. Choose the same format for the data that you chose in step 4.  
   
-10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+10. Select **OK**.
   
      In the next few steps, you will set the matrix row group and the chart series group to the same expression, and also set the sort order for the chart series group.  
   
@@ -71,7 +71,7 @@ ms.author: maggies
   
 16. In **Sort by**, from the drop-down list, choose the dataset field that you chose to group by in step 9.  
   
-17. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+17. Select **OK**.
   
      In the next few steps, you will set the matrix column group and the chart category group to the same expression, and also set the sort order for the chart category group.  
   
@@ -89,7 +89,7 @@ ms.author: maggies
   
 23. In **Sort by**, from the drop-down list, choose the dataset field that you chose to group by in step 16.  
   
-24. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+24. Select **OK**.
   
 25. Preview the result. The matrix row and column groups display the same data as the chart series and category groups.  
   

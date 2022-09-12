@@ -1,16 +1,12 @@
 ---
+title: "SQLServerDataSource Constructor ()"
 description: "SQLServerDataSource Constructor ()"
-title: "SQLServerDataSource Constructor () | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 23c8012f-9642-42c4-be76-c1c6563e8912
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerDataSource Constructor ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

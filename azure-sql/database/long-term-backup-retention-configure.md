@@ -1,18 +1,16 @@
 ---
 title: "Azure SQL Database: Manage long-term backup retention"
 description: Learn how to store and restore automated backups for Azure SQL Database in Azure storage (for up to 10 years) using the Azure portal, Azure CLI, and PowerShell.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: backup-restore
-ms.custom:
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
-ms.topic: how-to
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/20/2022
+ms.service: sql-database
+ms.subservice: backup-restore
+ms.topic: how-to
+ms.custom:
+  - "devx-track-azurepowershell"
+  - "devx-track-azurecli"
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
@@ -89,7 +87,8 @@ You can configure SQL Database to [retain automated backups](long-term-retention
 4. Select **Apply** to apply the chosen retention settings to all selected databases.
 
 > [!IMPORTANT]
-> When you enable a long-term backup retention policy, it may take up to 7 days for the first backup to become visible and available to restore. For details of the LTR backup cadence, see [long-term backup retention](long-term-retention-overview.md).
+> When you enable a long-term backup retention policy, it may take up to 7 days for the first backup to become visible and available to restore. For details of the LTR backup cadence, see [long-term backup retention](long-term-retention-overview.md). 
+
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -317,7 +316,8 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 
 > [!NOTE]
 > From here, you can connect to the restored database using SQL Server Management Studio to perform needed tasks, such as to extract a bit of data from the restored database to copy into the existing database or to delete the existing database and rename the restored database to the existing database name. See [point in time restore](recovery-using-backups.md#point-in-time-restore).
-
+>
+> If you are using LTR backups to meet compliance or other mission-critical requirements, consider conducting periodic recovery drills to verify that LTR backups can be restored, and that the restore results in expected database state.
 ---
 
 ## Limitations

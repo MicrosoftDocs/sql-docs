@@ -1,16 +1,12 @@
 ---
+title: "DateTimeOffset Members"
 description: "DateTimeOffset Members"
-title: "DateTimeOffset Members | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # DateTimeOffset Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

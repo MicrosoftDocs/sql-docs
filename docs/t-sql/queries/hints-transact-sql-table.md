@@ -138,7 +138,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 We recommend using commas between table hints.  
   
 > [!IMPORTANT]  
-> Separating hints by spaces rather than commas is a deprecated feature: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> Separating hints by spaces rather than commas is a deprecated feature: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOEXPAND  
 Specifies that any indexed views are not expanded to access underlying tables when the query optimizer processes the query. The query optimizer treats the view like a table with clustered index. NOEXPAND applies only to indexed views. For more information, see [Using NOEXPAND](#using-noexpand).  

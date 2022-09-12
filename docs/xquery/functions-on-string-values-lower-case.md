@@ -40,7 +40,7 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 ## Examples  
   
-### A. Changing a string to upper case  
+### A. Changing a string to lower case  
  The following example changes the input string 'abcDEF!@4' to lower case.  
   
 ```  

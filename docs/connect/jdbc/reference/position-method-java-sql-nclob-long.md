@@ -1,16 +1,12 @@
 ---
+title: "position Method (java.sql.NClob, long)"
 description: "position Method (java.sql.NClob, long)"
-title: "position Method (java.sql.NClob, long) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # position Method (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

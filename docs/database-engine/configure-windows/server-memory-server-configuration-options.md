@@ -4,7 +4,7 @@ description: Learn how to configure the amount of memory the SQL Server Memory M
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 06/06/2022
+ms.date: 08/01/2022
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
@@ -29,7 +29,7 @@ helpviewer_keywords:
 Memory utilization for the [!INCLUDE [ssdenoversion-md](../../includes/ssdenoversion-md.md)] is bounded by a pair of configuration settings, **min server memory (MB)** and **max server memory (MB)**. Over time and under normal circumstances, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will attempt claim memory up to the limit set by **max server memory (MB)**.
 
 > [!NOTE]  
-> [Columnstore indexes](../../relational-databases/indexes/columnstore-indexes-overview.md) and [In-Memory OLTP](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) don't use memory allocated by the [!INCLUDE [ssde-md](../../includes/ssde-md.md)].
+> [Columnstore indexes](../../relational-databases/indexes/columnstore-indexes-overview.md) and [In-Memory OLTP](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) objects have their own memory clerks, which makes it easier to monitor their buffer pool usage. For more information, see [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md#types).
 
 In older versions of SQL Server, memory utilization was virtually uncapped, indicating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that all system memory was available for use. It is recommended in all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to configure an upper limit for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory utilization by configuring the **max server memory (MB)**.
 
@@ -46,7 +46,7 @@ The default settings and minimum allowable values for these options are:
 |Option  |  Default | Minimum allowable  | Recommended |
 |---------|---------|---------|---------|
 |**min server memory (MB)**     |    0     |    0     | 0 |
-|**max server memory (MB)**     |     2,147,483,647 megabytes (MB)     |  128 MB       | 75% of available system memory not consumed by other processes, including in-memory OLTP, columnstore indexes, and [other instances](#multiple-instances-of-). For more detailed recommendations, see [max server memory](#max_server_memory). |
+|**max server memory (MB)**     |     2,147,483,647 megabytes (MB)     |  128 MB       | 75% of available system memory not consumed by other processes, including [other instances](#multiple-instances-of-). For more detailed recommendations, see [max server memory](#max_server_memory). |
 
 Within these bounds, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources. For more information, see [dynamic memory management](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management).
 
@@ -54,6 +54,9 @@ Within these bounds, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] c
 - However, setting **max server memory (MB)** too low is a lost performance opportunity, and could cause memory pressure and performance problems in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 - Setting **max server memory (MB)** to the minimum value can even prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from starting. If you can't start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the `-f` startup option and reset **max server memory (MB)** to its previous value. For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 - It isn't recommended to set **max server memory (MB)** and **min server memory (MB)** to be the same value, or near the same values.
+
+> [!NOTE]  
+> The max server memory option only limits the size of the SQL Server buffer pool. The max server memory option does not limit a remaining unreserved memory area that SQL Server leaves for allocations of other components such as extended stored procedures, COM objects, non-shared DLLs and EXEs. 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use memory dynamically. However, you can set the memory options manually and restrict the amount of memory that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access. Before you set the amount of memory for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine the appropriate memory setting by subtracting, from the total physical memory, the memory required for the operating system (OS), memory allocations not controlled by the **max server memory (MB)** setting, and any other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (and other system uses, if the server is home to other applications that consume memory, including other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). This difference is the maximum amount of memory you can assign to the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
@@ -75,7 +78,7 @@ Use **max server memory (MB)** to guarantee the OS and other applications don't 
 
 - Before you set the **max server memory (MB)** configuration, monitor overall memory consumption of the server hosting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, during normal operation, to determine memory availability and requirements. For an initial configuration or when there was no opportunity to collect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process memory usage over time, use the following generalized best practice approach to configure **max server memory (MB)** for a single instance:
   - From the total OS memory, subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thread memory allocations outside **max server memory (MB)** control, which is the **stack size**<sup>1</sup> multiplied by **calculated max worker threads**<sup>2</sup>.
-  - Then subtract 25% for other memory allocations outside **max server memory (MB)** control, such as backup buffers, extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), allocations from linked server providers, columnstore indexes, and allocations for in-memory objects. This is a generic approximation, and your mileage may vary.
+  - Then subtract 25% for other memory allocations outside **max server memory (MB)** control, such as backup buffers, extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers. This is a generic approximation, and your mileage may vary.
   - What remains should be the **max server memory (MB)** setting for a single instance setup.
 
 <sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stack sizes per architecture.
@@ -127,7 +130,7 @@ The following screenshot demonstrates all three steps:
 
 ## Lock pages in memory (LPIM)
 
-This Windows policy determines which accounts can access the API to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock pages in memory** option is **enabled** in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run `sqlservr.exe` has been granted the Windows *Lock pages in memory* (LPIM) user right.
+Windows-based applications can use Windows Address Windowing Extensions (AWE) APIs to allocate and map physical memory into the process address space. The LPIM Windows policy determines which accounts can access the API to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. The memory allocated using AWE is locked until the application explicitly frees it or exits. Using the AWE APIs for memory management in 64-bit SQL Server is also frequently referred to as *locked pages*. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock pages in memory** option is **enabled** in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run `sqlservr.exe` has been granted the Windows *Lock pages in memory* (LPIM) user right.
 
 To disable the **Lock pages in memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the *Lock pages in memory* user right for the account with privileges to run `sqlservr.exe` (the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup account) startup account.
 
@@ -163,6 +166,21 @@ The following values of `sql_memory_model_desc` indicate the status of LPIM:
 - `CONVENTIONAL`. Lock pages in memory privilege isn't granted.
 - `LOCK_PAGES`. Lock pages in memory privilege is granted.
 - `LARGE_PAGES`. Lock pages in memory privilege is granted in Enterprise mode with Trace Flag 834 enabled. This is an advanced configuration and not recommended for most environments. For more information and important caveats, see [Trace Flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf834).
+
+Use the following methods to determine whether the SQL Server instance is using locked pages:
+
+- The output of the following Transact-SQL query will indicate nonzero values for `locked_page_allocations_kb`:
+
+    ```sql
+    SELECT osn.node_id, osn.memory_node_id, osn.node_state_desc, omn.locked_page_allocations_kb 
+    FROM sys.dm_os_memory_nodes omn 
+    INNER JOIN sys.dm_os_nodes osn ON (omn.memory_node_id = osn.memory_node_id) 
+    WHERE osn.node_state_desc <> 'ONLINE DAC';
+    ```
+
+- The current SQL Server error log will report the message, "Using locked pages in the memory manager" during server startup.
+
+- The Memory Manager section of the [DBCC MEMORYSTATUS](/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage#memory-manager) output will show a nonzero value for the `AWE Allocated` item.
 
 ## Multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -234,4 +252,3 @@ FROM sys.configurations WHERE [name] = 'max server memory (MB)';
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
 - [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases)
-

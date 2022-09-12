@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "locking [SQL Server], SET statements"
 dev_langs:
   - "TSQL"
-ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 monikerRange: "=azure-sqldw-latest||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # SET Statements (Transact-SQL)

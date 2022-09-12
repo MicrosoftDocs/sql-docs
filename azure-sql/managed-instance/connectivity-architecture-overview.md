@@ -152,7 +152,7 @@ These routes are necessary to ensure that management traffic is routed directly 
 
 In addition, you can add entries to the route table to route traffic that has on-premises private IP ranges as a destination through the virtual network gateway or virtual network appliance (NVA).
 
-If the virtual network includes a custom DNS, the custom DNS server must be able to resolve public DNS records. Using additional features like Azure AD Authentication might require resolving additional FQDNs. For more information, see [Set up a custom DNS](custom-dns-configure.md).
+If the virtual network includes a custom DNS, the custom DNS server must be able to resolve public DNS records. Using additional features like Azure AD Authentication might require resolving additional FQDNs. For more information, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
 
 ### Networking constraints
 

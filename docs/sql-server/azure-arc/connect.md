@@ -187,7 +187,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ---
 
-## Validate the Arc-enabled SQL Server resources
+## Validate your Arc-enabled SQL Server resources
 
 Go __Azure Arc > SQL Server__ and open the newly registered Arc-enabled SQL Server resource  to validate.
 

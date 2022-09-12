@@ -69,13 +69,13 @@ Follow these steps to create a blank database.
     | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: upper case characters, lower case characters, numbers, and non-alphanumeric characters. |
     | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
 
-5. Choose whether or not you want to use SQL elastic pool. For more details, visit [the SQL elastic pools documentation](https://docs.microsoft.com/azure/azure-sql/database/elastic-pool-overview?view=azuresql)
+5. Choose whether or not you want to use SQL elastic pool. For more details, visit [the SQL elastic pools documentation](\sql-docs-pr\azure-sql\database\elastic-pool-overview.md)
 
 6. Choose the type of environment you would like your workload to be on. This will determine the compute + storage as well as backup redundancy recommendations for your workload.
 
 7. Select the **Networking** tab to configure your Networking settings
 
-    ![create database-server](./media/setting-database-details-in-resource-subscription.png)
+![create database-server](./media/design-first-database-tutorial/setting-database-details-in-resource-subscription.png)
 
 8. In the **Networking** tab, select your connectivity method, connection policy, and encrypted connection settings. Then, hit the **Next** tab to configure your security and other additional settings. 
 
@@ -144,7 +144,7 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to 
 
 ## Create tables in your database
 
-Create a database schema with four tables that model a student management system for universities using [the Table Designer](docs\azure-data-studio\table-designer-azure-data-studio.md):
+Create a database schema with four tables that model a student management system for universities using [the Table Designer](\sql-docs-pr\docs\azure-data-studio\table-designer-azure-data-studio.md):
 
 - Person
 - Course
@@ -157,7 +157,7 @@ The following diagram shows how these tables are related to each other. Some of 
 
 1. In **Object Explorer**, click *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
 
-2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](docs\azure-data-studio\table-designer-azure-data-studio.md) :
+2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](\sql-docs-pr\docs\azure-data-studio\table-designer-azure-data-studio.md) :
 
 - Person Table
 

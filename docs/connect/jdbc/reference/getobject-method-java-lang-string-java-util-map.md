@@ -1,21 +1,15 @@
 ---
+title: "getObject Method (java.lang.String, java.util.Map)"
 description: "getObject Method (java.lang.String, java.util.Map)"
-title: "getObject Method (java.lang.String, java.util.Map) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.getObject (java.lang.String, Java.util.Map)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.getObject (java.lang.String, Java.util.Map)"
+apitype: "Assembly"
 ---
 # getObject Method (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

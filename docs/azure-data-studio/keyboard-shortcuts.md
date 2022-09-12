@@ -1,14 +1,13 @@
 ---
 title: Create and customize keyboard shortcuts
-description: Learn how to view, edit, and create keyboard shortcuts in Azure Data Studio, using a capability based on the one in Visual Studio Code. 
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: how-to
+description: Learn how to view, edit, and create keyboard shortcuts in Azure Data Studio, using a capability based on the one in Visual Studio Code.
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu"
-ms.custom: "seodec18"
+ms.reviewer: erinstellato
 ms.date: "09/24/2018"
+ms.prod: azure-data-studio
+ms.topic: how-to
+ms.custom: seodec18
 ---
 
 # Keyboard shortcuts in Azure Data Studio

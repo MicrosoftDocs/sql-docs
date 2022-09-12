@@ -1,16 +1,14 @@
 ---
 title: In-Memory sample
-description: Try Azure SQL Database In-Memory technologies with OLTP and columnstore sample. 
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: sample
+description: Try Azure SQL Database In-Memory technologies with OLTP and columnstore sample.
 author: srinia
 ms.author: srinia
 ms.reviewer: mathoma, kendralittle
 ms.date: 12/18/2018
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: sample
+ms.custom: sqldbrb=1
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # In-Memory sample
@@ -149,7 +147,7 @@ To make the *_ondisk* version of the preceding T-SQL script for ostress.exe, you
 
 #### Install RML utilities and `ostress`
 
-Ideally, you would plan to run ostress.exe on an Azure virtual machine (VM). You would create an [Azure VM](https://azure.microsoft.com/documentation/services/virtual-machines/) in the same Azure geographic region where your AdventureWorksLT database resides. But you can run ostress.exe on your laptop instead.
+Ideally, you would plan to run ostress.exe on an Azure virtual machine (VM). You would create an [Azure VM](/azure/virtual-machines/) in the same Azure geographic region where your AdventureWorksLT database resides. But you can run ostress.exe on your laptop instead.
 
 On the VM, or on whatever host you choose, install the Replay Markup Language (RML) utilities. The utilities include ostress.exe.
 

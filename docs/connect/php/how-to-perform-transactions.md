@@ -1,18 +1,14 @@
 ---
 title: "How to: perform transactions"
 description: "This topic explains and demonstrates how to perform transactions when using the Microsoft Drivers for PHP for SQL Server"
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "transaction support"
-ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "transaction support"
 ---
 # How to: Perform Transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "setNull Method (java.lang.String, int, java.lang.String)"
 description: "setNull Method (java.lang.String, int, java.lang.String)"
-title: "setNull Method (java.lang.String, int, java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.setNull (java.lang.String, int, java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.setNull (java.lang.String, int, java.lang.String)"
+apitype: "Assembly"
 ---
 # setNull Method (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,17 +1,15 @@
 ---
 title: "Generating commands with CommandBuilders"
 description: Explains how to use command builders to automatically generate INSERT, UPDATE, and DELETE commands for a `DataAdapter` that has a single-table SELECT command.
-ms.date: "11/25/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Generating commands with CommandBuilders
 

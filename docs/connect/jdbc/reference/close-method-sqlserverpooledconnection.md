@@ -1,21 +1,15 @@
 ---
+title: "close Method (SQLServerPooledConnection)"
 description: "close Method (SQLServerPooledConnection)"
-title: "close Method (SQLServerPooledConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPooledConnection.close"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPooledConnection.close"
+apitype: "Assembly"
 ---
 # close Method (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

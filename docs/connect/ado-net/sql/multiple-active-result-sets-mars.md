@@ -1,15 +1,13 @@
 ---
 title: "Multiple Active Result Sets (MARS)"
 description: "Describes how to have more than one SqlDataReader open on a connection when each instance of SqlDataReader is started from a separate command."
-ms.date: "08/15/2019"
-ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Multiple Active Result Sets (MARS)
 

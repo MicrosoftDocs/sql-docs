@@ -8,8 +8,8 @@ ms.date: 6/21/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
-ms.metadata: seo-lt-2019
 ms.custom: kr2b-contr-experiment
+ms.metadata: seo-lt-2019
 ---
 
 # An Index of Management notebooks for SQL Server Big Data Clusters

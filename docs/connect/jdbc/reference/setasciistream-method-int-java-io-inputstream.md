@@ -1,16 +1,12 @@
 ---
+title: "setAsciiStream Method (int, java.io.InputStream)"
 description: "setAsciiStream Method (int, java.io.InputStream)"
-title: "setAsciiStream Method (int, java.io.InputStream) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 02c2443d-44e1-4f16-a0d5-08d197838214
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setAsciiStream Method (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

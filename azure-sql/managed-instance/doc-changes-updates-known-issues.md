@@ -1,16 +1,14 @@
 ---
 title: Known issues
 titleSuffix: Azure SQL Managed Instance
-description: Learn about the currently known issues with Azure SQL Managed Instance, and their possible workarounds or resolutions. 
-services: sql-database
+description: Learn about the currently known issues with Azure SQL Managed Instance, and their possible workarounds or resolutions.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 03/17/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
-ms.custom: references_regions
-ms.devlang: 
 ms.topic: conceptual
-ms.date: 03/17/2022
+ms.custom: references_regions
 ---
 # Known issues with Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -22,6 +20,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 |Issue  |Date discovered  |Status  |Date resolved  |
 |---------|---------|---------|---------|
+|[Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile)|Aug 2022|Has Workaround||
 |[Querying external table fails with 'not supported' error message](#querying-external-table-fails-with-not-supported-error-message)|Jan 2022|Has Workaround||
 |[When using SQL Server authentication, usernames with '@' are not supported](#when-using-sql-server-authentication-usernames-with--are-not-supported)|Oct 2021|Resolved|Feb 2022|
 |[Misleading error message on Azure portal suggesting recreation of the Service Principal](#misleading-error-message-on-azure-portal-suggesting-recreation-of-the-service-principal)|Sep 2021||Oct 2021|
@@ -59,6 +58,12 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 |Contained databases not supported in SQL Managed Instance||Resolved|Aug 2019|
 
 ## Has workaround
+
+### Interim guidance on 2022 time zone updates for Chile
+
+On August 8, 2022, the Chilean government made an official announcement about a Daylight-Saving Time (DST) [time zone change](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290). Starting at 12:00 a.m. Saturday, September 10, 2022, until 12:00 a.m. Saturday, April 1, 2023, the official time will advance 60 minutes. The change affects the following three time zones:  **Pacific SA Standard Time**, **Easter Island Standard Time** and **Magallanes Standard Time**. Azure SQL Managed Instances using affected time zones will not reflect the changes [until Microsoft releases an OS update](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290) to support this and Azure SQL Managed Instance service absorbs the update on the OS level.
+
+**Workaround**: If you need to alter affected time zones for your managed instances, please be aware of the [limitations](timezones-overview.md#limitations) and follow the guidance from the documentation.
 
 ### Querying external table fails with not supported error message
 Querying external table may fail with generic error message "_Queries over external tables are not supported with the current service tier or performance level of this database. Consider upgrading the service tier or performance level of the database_". The only type of external table supported in Azure SQL Managed Instance are PolyBase external tables (in preview). To allow queries on PolyBase external tables, you need to enable PolyBase on managed instance by running sp_configure command. 

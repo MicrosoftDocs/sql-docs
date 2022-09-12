@@ -1,21 +1,15 @@
 ---
+title: "updateBinaryStream Method (java.io.InputStream, int)"
 description: "updateBinaryStream Method (java.lang.String, java.io.InputStream, int)"
-title: "updateBinaryStream Method (java.io.InputStream, int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateBinaryStream (java.lang.String, java.io.InputStream, int)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 9be246a7-85fa-49fc-ad79-aabe97f5b280
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateBinaryStream (java.lang.String, java.io.InputStream, int)"
+apitype: "Assembly"
 ---
 # updateBinaryStream Method (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

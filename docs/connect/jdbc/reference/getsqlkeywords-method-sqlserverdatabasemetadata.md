@@ -1,21 +1,15 @@
 ---
+title: "getSQLKeywords Method (SQLServerDatabaseMetaData)"
 description: "getSQLKeywords Method (SQLServerDatabaseMetaData)"
-title: "getSQLKeywords Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getSQLKeywords"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getSQLKeywords"
+apitype: "Assembly"
 ---
 # getSQLKeywords Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

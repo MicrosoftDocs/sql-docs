@@ -1,14 +1,11 @@
 ---
 title: Monitor your SQL deployments with SQL Insights (preview)
 description: Overview of SQL Insights (preview) in Azure Monitor
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 07/29/2022
-services:
-  - "sql-database"
 ms.service: sql-db-mi
+ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

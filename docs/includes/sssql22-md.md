@@ -1,1 +1,1 @@
- SQL Server 2022 (16.x)
+ SQL Server 2022 (16.x) Preview 

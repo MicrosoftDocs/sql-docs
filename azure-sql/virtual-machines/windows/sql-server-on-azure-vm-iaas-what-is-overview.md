@@ -1,18 +1,13 @@
 ---
 title: Overview of SQL Server on Azure Windows Virtual Machines
 description: Learn how to run full editions of SQL Server on Azure Virtual Machines in the cloud without having to manage any on-premises hardware.
-services: virtual-machines-windows
-documentationcenter: ''
 author: MashaMSFT
-tags: azure-service-management
-ms.assetid: c505089e-6bbf-4d14-af0e-dd39a1872767
+ms.author: mathoma
+ms.date: 03/10/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: overview
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 03/10/2022
-ms.author: mathoma
+tags: azure-service-management
 ---
 # What is SQL Server on Windows Azure Virtual Machines?
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

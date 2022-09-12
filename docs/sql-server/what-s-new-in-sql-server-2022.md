@@ -40,7 +40,7 @@ This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
 - On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For SQL Server 2022 Preview on Linux, packages are coming soon. For information about Community Technology Preview (CTP) packages, you can see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
+- For SQL Server 2022 Preview on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
 - Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
@@ -51,12 +51,12 @@ This is release candidate (RC) 0.
 
 SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
 
-- [Query Store](#query-store-and-intelligent-query-processing)
+- [Intelligent query processing](#query-store-and-intelligent-query-processing)
   - Degree of parallelism (DOP) feedback - improved comparison algorithm.
 - [Management](#management)
-  - Snapshot backups
+  - Improved snapshot backup support
 - [Platform](#platform)
-  - Integrated offloading & acceleration
+  - Integrated acceleration & offloading
 - [Language](#language)
   - APPROX_PERCENTILE_DISC()
   - APPROX_PERCENTILE_CONT()
@@ -130,7 +130,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | New feature or update | Details |
 |:---|:---|
 | Integrated setup experience for the Azure extension for SQL Server | Install the Azure extension for SQL Server at setup. Required for Azure integration features. For more information, see:</br>- [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt) <br/>- [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true).|
-| Manage Azure Arc SQL Extension | Use SQL Server Configuration Manager to manage Azure Arc SQL Extension service. See [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
+| Manage Azure extension for SQL Server | Use SQL Server Configuration Manager to manage Azure extension for SQL Server service. Required to create Azure Arc-enabled SQL Server instance, and for other Azure connected features.  See [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
 | Max server memory calculations | During setup, SQL Setup recommends a value for max server memory to align with documented recommendations. The underlying calculation is different in SQL Server 2022 to reflect recommended [server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
 | Accelerated Database Recovery (ADR) improvements | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking.<br/><br/>See [ADR improvements in SQL Server 2022 (16.x) Preview](../relational-databases/accelerated-database-recovery-concepts.md#adr-improvements-in-).|
 | Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client. [Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).|
@@ -143,7 +143,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
-|Integrated offloading & acceleration | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated offloading & acceleration](../relational-databases/integrated-acceleration/overview.md). |
+|Integrated acceleration & offloading | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated acceleration & offloading](../relational-databases/integrated-acceleration/overview.md). |
 | Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. |
 
 ## Language

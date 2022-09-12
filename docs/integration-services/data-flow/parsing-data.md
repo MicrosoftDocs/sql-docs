@@ -197,6 +197,7 @@ The fast parse property must be set for each column of the source or transformat
 5.  Click **OK**.  
 
 ## Standard Parse
-Standard parse is a locale-sensitive set of parsing routines that support all the data type conversions provided by the Automation data type conversion APIs that are available in Oleaut32.dll and Ole2dsip.dll. Standard parse is equivalent to the OLE DB parsing APIs.  
-  
- Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse. For more information about the Automation data type conversion API, see "Data Type Conversion APIs" in the [MSDN Library](/documentation/). 
+
+Standard parse is a locale-sensitive set of parsing routines that support all the data type conversions provided by the Automation data type conversion APIs that are available in Oleaut32.dll and Ole2dsip.dll. Standard parse is equivalent to the OLE DB parsing APIs.
+
+Standard parse provides support for data type conversion of international data, and it should be used if the data format is not supported by Fast parse.

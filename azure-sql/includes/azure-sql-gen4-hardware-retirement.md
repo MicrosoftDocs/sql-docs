@@ -1,10 +1,10 @@
 ---
-title: Inform customers of impending Gen4 hardware retirement and recommendations. 
+title: Inform customers of impending Gen4 hardware retirement and recommendations.
 description: Inform customers of impending Gen4 hardware retirement and recommendations. Should no longer be necessary after Jan 2023.
-ms.topic: include
-ms.date: 06/13/2022
 author: WilliamDAssaf
 ms.author: wiassaf
+ms.date: 06/13/2022
+ms.topic: include
 ---
 
 > [!IMPORTANT]

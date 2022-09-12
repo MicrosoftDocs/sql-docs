@@ -1,20 +1,16 @@
 ---
-title: "IBCPSession::BCPWriteFmt (OLE DB driver) | Microsoft Docs"
+title: "IBCPSession::BCPWriteFmt (OLE DB driver)"
 description: "Using IBCPSession::BCPWriteFmt to save the format files in either xml or text format (OLE DB)"
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "IBCPSession::BCPWriteFmt (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPWriteFmt method"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "BCPWriteFmt method"
+apiname: "IBCPSession::BCPWriteFmt (OLE DB)"
+apitype: "COM"
 ---
 # IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

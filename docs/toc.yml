@@ -366,9 +366,9 @@ items:
           - name: Deploy
             items:
             - name: Operationalize using stored procedures
-              href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
+              href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=/sql/toc.json&view=sql-server-ver15
             - name: Convert R code for SQL Server
-              href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
+              href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=/sql/toc.json&view=sql-server-ver15
           - name: Predictions
             items:
             - name: Native scoring with PREDICT T-SQL
@@ -4993,7 +4993,9 @@ items:
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default
         href: database-engine/configure-windows/backup-checksum-default.md
-      - name: View or Configure the backup compression default
+      - name: backup compression algorithm
+        href: database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md
+      - name: backup compression default
         href: database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md
       - name: blocked process threshold
         href: database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md
@@ -6635,12 +6637,12 @@ items:
         href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
       - name: Disable
         href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
-    - name: Integrated offloading & acceleration
+    - name: Integrated acceleration & offloading
       items:
       - name: Overview
         href: relational-databases/integrated-acceleration/overview.md
-      - name: Intel® QuickAssist Technology (QAT)
-        href: relational-databases/integrated-acceleration/intel-quickassist.md
+      - name: Configure Integrated Acceleration
+        href: relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md
     - name: Maintenance plans
       items:
       - name: Overview
@@ -11208,6 +11210,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
         - name: 3023
           href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
+        - name: 3056
+          href: relational-databases/errors-events/mssqlserver-3056-database-engine-error.md
         - name: 3151
           href: relational-databases/errors-events/mssqlserver-3151-database-engine-error.md
         - name: 3156

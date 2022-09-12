@@ -1,17 +1,15 @@
 ---
 title: "Handling null values"
 description: "Demonstrates how to work with null values in SQL Server and .NET and how they differ from empty values."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Handling null values
 

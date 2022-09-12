@@ -138,12 +138,23 @@ For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage acc
 
 #### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only.
+Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
 
 When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
 
-If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries.
+If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries. [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
+The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
+
+In order for PolyBase to function correctly with a Hadoop external data source, the ports for the following Hadoop cluster components must be open:
+
+- HDFS ports
+    - Namenode
+    - Datanode
+- Resource manager
+    - Job submission
+    - Job history
+ 
 If the port isn't specified, the default value is chosen using the current setting for 'hadoop connectivity' configuration.
 
 | Hadoop Connectivity | Default Resource Manager Port |
@@ -157,12 +168,19 @@ If the port isn't specified, the default value is chosen using the current setti
 | 7                   | 8050                          |
 | 8                   | 8032                          |
 
-For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
+The following table shows the default ports for these components. Note that there is Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
 
-> [!IMPORTANT]  
-> The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
+| **Hadoop cluster component** | **Default Port** | 
+| :-- | :-- |
+| NameNode | 8020 |
+| DataNode (Data transfer, non-privilege IPC port) | 50010 |
+| DataNode (Data transfer, privilege IPC port) | 1019 |
+| Resource Manager Job Submission (Hortonworks 1.3)| 50300| 
+| Resource Manager Job Submission (Cloudera 4.3)|8021|
+| Resource Manager Job Submission (Hortonworks 2.0 on Windows, Cloudera 5.x on Linux) | 8032 |
+| Resource Manager Job Submission (Hortonworks 2.x, 3.0 on Linux, Hortonworks 2.1-3 on Windows) | 8050|
+| Resource Manager Job History | 10020|
 
-[Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
 ## Permissions
 
@@ -408,12 +426,23 @@ For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage acc
 
 #### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only.
+Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
 
-When the `RESOURCE_MANAGER_LOCATION` is defined, the Query Optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
+When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
 
-If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries.
+If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries. [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
+The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
+
+In order for PolyBase to function correctly with a Hadoop external data source, the ports for the following Hadoop cluster components must be open:
+
+- HDFS ports
+    - Namenode
+    - Datanode
+- Resource manager
+    - Job submission
+    - Job history
+ 
 If the port isn't specified, the default value is chosen using the current setting for 'hadoop connectivity' configuration.
 
 | Hadoop Connectivity | Default Resource Manager Port |
@@ -427,12 +456,19 @@ If the port isn't specified, the default value is chosen using the current setti
 | 7                   | 8050                          |
 | 8                   | 8032                          |
 
-For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
+The following table shows the default ports for these components. Note that there is Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
 
-> [!IMPORTANT]  
-> The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
+| **Hadoop cluster component** | **Default Port** | 
+| :-- | :-- |
+| NameNode | 8020 |
+| DataNode (Data transfer, non-privilege IPC port) | 50010 |
+| DataNode (Data transfer, privilege IPC port) | 1019 |
+| Resource Manager Job Submission (Hortonworks 1.3)| 50300| 
+| Resource Manager Job Submission (Cloudera 4.3)|8021|
+| Resource Manager Job Submission (Hortonworks 2.0 on Windows, Cloudera 5.x on Linux) | 8032 |
+| Resource Manager Job Submission (Hortonworks 2.x, 3.0 on Linux, Hortonworks 2.1-3 on Windows) | 8050|
+| Resource Manager Job History | 10020|
 
-[Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
 ## Permissions
 
@@ -741,12 +777,25 @@ For an example of using `TYPE` = `HADOOP` to load data from an Azure Storage acc
 
 #### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], do not specify RESOURCE_MANAGER_LOCATION unless connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account.
+In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], do not specify RESOURCE_MANAGER_LOCATION unless connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account.
 
-When the `RESOURCE_MANAGER_LOCATION` is defined, the Query Optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
+Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb]. 
 
-If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries.
+When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
 
+If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries. [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
+
+The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
+
+In order for PolyBase to function correctly with a Hadoop external data source, the ports for the following Hadoop cluster components must be open:
+
+- HDFS ports
+    - Namenode
+    - Datanode
+- Resource manager
+    - Job submission
+    - Job history
+ 
 If the port isn't specified, the default value is chosen using the current setting for 'hadoop connectivity' configuration.
 
 | Hadoop Connectivity | Default Resource Manager Port |
@@ -760,12 +809,18 @@ If the port isn't specified, the default value is chosen using the current setti
 | 7                   | 8050                          |
 | 8                   | 8032                          |
 
-For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
+The following table shows the default ports for these components. Note that there is Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
 
-> [!IMPORTANT]  
-> The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
-
-[Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
+| **Hadoop cluster component** | **Default Port** | 
+| :-- | :-- |
+| NameNode | 8020 |
+| DataNode (Data transfer, non-privilege IPC port) | 50010 |
+| DataNode (Data transfer, privilege IPC port) | 1019 |
+| Resource Manager Job Submission (Hortonworks 1.3)| 50300| 
+| Resource Manager Job Submission (Cloudera 4.3)|8021|
+| Resource Manager Job Submission (Hortonworks 2.0 on Windows, Cloudera 5.x on Linux) | 8032 |
+| Resource Manager Job Submission (Hortonworks 2.x, 3.0 on Linux, Hortonworks 2.1-3 on Windows) | 8050|
+| Resource Manager Job History | 10020|
 
 ## Permissions
 
@@ -1215,12 +1270,23 @@ Specifies the type of the external data source being configured. This parameter 
 
 #### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], do not specify RESOURCE_MANAGER_LOCATION unless connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account.
+Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb]. 
 
-When the `RESOURCE_MANAGER_LOCATION` is defined, the Query Optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
+When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which can lead to improved query performance.
 
-If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries.
+If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries. [Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
+The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
+
+In order for PolyBase to function correctly with a Hadoop external data source, the ports for the following Hadoop cluster components must be open:
+
+- HDFS ports
+    - Namenode
+    - Datanode
+- Resource manager
+    - Job submission
+    - Job history
+ 
 If the port isn't specified, the default value is chosen using the current setting for 'hadoop connectivity' configuration.
 
 | Hadoop Connectivity | Default Resource Manager Port |
@@ -1234,7 +1300,18 @@ If the port isn't specified, the default value is chosen using the current setti
 | 7                   | 8050                          |
 | 8                   | 8032                          |
 
-For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
+The following table shows the default ports for these components. Note that there is Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
+
+| **Hadoop cluster component** | **Default Port** | 
+| :-- | :-- |
+| NameNode | 8020 |
+| DataNode (Data transfer, non-privilege IPC port) | 50010 |
+| DataNode (Data transfer, privilege IPC port) | 1019 |
+| Resource Manager Job Submission (Hortonworks 1.3)| 50300| 
+| Resource Manager Job Submission (Cloudera 4.3)|8021|
+| Resource Manager Job Submission (Hortonworks 2.0 on Windows, Cloudera 5.x on Linux) | 8032 |
+| Resource Manager Job Submission (Hortonworks 2.x, 3.0 on Linux, Hortonworks 2.1-3 on Windows) | 8050|
+| Resource Manager Job History | 10020|
 
 > [!IMPORTANT]  
 > The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
@@ -2224,12 +2301,25 @@ For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [
 
 #### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
-Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only.
+In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], do not specify RESOURCE_MANAGER_LOCATION unless connecting to Cloudera CDH, Hortonworks HDP, an Azure Storage account.
+
+Configure this optional value when connecting to Cloudera CDH, Hortonworks HDP, or an Azure Storage account only. For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb]. 
 
 When the `RESOURCE_MANAGER_LOCATION` is defined, the query optimizer will make a cost-based decision to improve performance. A MapReduce job can be used to push down the computation to Hadoop. Specifying the `RESOURCE_MANAGER_LOCATION` can significantly reduce the volume of data transferred between Hadoop and SQL, which can lead to improved query performance.
 
-If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries.
+If the Resource Manager isn't specified, pushing compute to Hadoop is disabled for PolyBase queries. [Create external data source to reference Hadoop with push-down enabled](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
+The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
+
+In order for PolyBase to function correctly with a Hadoop external data source, the ports for the following Hadoop cluster components must be open:
+
+- HDFS ports
+    - Namenode
+    - Datanode
+- Resource manager
+    - Job submission
+    - Job history
+ 
 If the port isn't specified, the default value is chosen using the current setting for 'hadoop connectivity' configuration.
 
 | Hadoop Connectivity | Default Resource Manager Port |
@@ -2242,12 +2332,18 @@ If the port isn't specified, the default value is chosen using the current setti
 | 6                   | 8032                          |
 | 7                   | 8050                          |
 
-For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
+The following table shows the default ports for these components. Note that there is Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
 
-> [!IMPORTANT]
-> The `RESOURCE_MANAGER_LOCATION` value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
-
-[Create external data source to reference Hadoop with push-down enabled](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
+| **Hadoop cluster component** | **Default Port** | 
+| :-- | :-- |
+| NameNode | 8020 |
+| DataNode (Data transfer, non-privilege IPC port) | 50010 |
+| DataNode (Data transfer, privilege IPC port) | 1019 |
+| Resource Manager Job Submission (Hortonworks 1.3)| 50300| 
+| Resource Manager Job Submission (Cloudera 4.3)|8021|
+| Resource Manager Job Submission (Hortonworks 2.0 on Windows, Cloudera 5.x on Linux) | 8032 |
+| Resource Manager Job Submission (Hortonworks 2.x, 3.0 on Linux, Hortonworks 2.1-3 on Windows) | 8050|
+| Resource Manager Job History | 10020|
 
 ## Permissions
 

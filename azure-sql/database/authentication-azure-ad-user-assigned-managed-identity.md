@@ -35,7 +35,7 @@ There are several benefits of using a UMI as a server identity:
 - Users can choose a specific UMI to be the server or instance identity for all databases or managed instances in the tenant. Or they can have multiple UMIs assigned to different servers or instances. 
 
   UMIs can be used in different servers to represent different features. For example, a UMI can serve transparent data encryption (TDE) in one server, and a UMI can serve Azure AD authentication in another server.
-- You need a UMI to create an Azure SQL logical server configured with TDE with customer-managed keys (CMKs). For more information, see [Customer-managed transparent data encryption using user-assigned managed identity](transparent-data-encryption-byok-identity.md).
+- You need a UMI to create a [logical server in Azure](logical-server.md) configured with TDE with customer-managed keys (CMKs). For more information, see [Customer-managed transparent data encryption using user-assigned managed identity](transparent-data-encryption-byok-identity.md).
 - UMIs are independent from logical servers or managed instances. When a logical server or instance is deleted, the SMI is also deleted. UMIs aren't deleted with the server.
 
 > [!NOTE]

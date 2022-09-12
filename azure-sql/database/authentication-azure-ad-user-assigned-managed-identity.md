@@ -131,7 +131,7 @@ To create a server by using a UMI, see the following guide: [Create an Azure SQL
 
 ### Set a managed identity in the Azure portal
 
-To set the identity for the Azure SQL logical server or managed instance in the [Azure portal](https://portal.azure.com):
+To set the identity for the logical server or managed instance in the [Azure portal](https://portal.azure.com):
 
 1. Go to your **SQL server** or **SQL managed instance** resource. 
 1. Under **Security**, select the **Identity** setting. 

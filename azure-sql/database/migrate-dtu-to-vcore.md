@@ -4,7 +4,7 @@ description: Migrate a database in Azure SQL Database from the DTU model to the 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, moslake
-ms.date: 05/10/2022
+ms.date: 09/13/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual

@@ -23,7 +23,7 @@ In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a
 Security permissions vary depending on the type of replica being initialized:
 
 * For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* For a distributed availability group where the replica's databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
+* For a distributed availability group where the replica's databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary. (if there is only one replica on the [<2ndAGName>], we need to grant `CREATE ANY DATABASE permission to [<2ndAGName>] or automatic seeding will fail.
 * For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica is seeded from the primary of the second availability group.
 
 ## Performance and transaction log impact on the primary replica

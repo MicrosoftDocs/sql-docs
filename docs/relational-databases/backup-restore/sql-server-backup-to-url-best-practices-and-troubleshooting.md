@@ -60,7 +60,7 @@ Parallel backups to the same blob cause one of the backups to fail with an **Ini
 
 If you're using page blobs, for example, `BACKUP... TO URL... WITH CREDENTIAL`, use the following error logs to help with troubleshooting backup errors:  
   
-Set trace flag 3051 to turn on logging to a specific error log with the following format in:  
+Set trace flag 3051 (only applicable to page blobs, not block blobs) to turn on logging to a specific error log with the following format in:  
   
 `BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` Where `\<action>` is one of the following:  
   

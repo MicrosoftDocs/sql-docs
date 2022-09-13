@@ -2,7 +2,7 @@
 description: "systranschemas (Transact-SQL)"
 title: "systranschemas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "09/13/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

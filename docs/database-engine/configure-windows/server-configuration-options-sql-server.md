@@ -115,7 +115,7 @@ The following table lists all available configuration options, the range of poss
 | [c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [clr enabled](clr-enabled-server-configuration-option.md) | 0 | 1 | 0 |
 | [clr strict security](clr-strict-security.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 0 | 1 | 0 |
-| [column encryption enclave type ](configure-column-encryption-enclave-type.md) (A, RR) | 0 | 1 | 0 |
+| [column encryption enclave type ](configure-column-encryption-enclave-type.md) (A, RR) | 0 | 2 | 0 |
 | [common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [contained database authentication](contained-database-authentication-server-configuration-option.md) | 0 | 1 | 0 |
 | [cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A) | 0 | 32767 | 5 |

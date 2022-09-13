@@ -127,11 +127,22 @@ In the `response` section, aside the HTTP status code and description, the entir
 
 ### Limits
 
-WIP
+#### Payload size
+Payload size, both received and sent, is limited to 100 MB (UTF-8 encoded) 
+
+#### URL length
+The maximum URL length (generated after using the @url parameter and adding all the query string provided as credentials, if any) is 8192 bytes; the maximum query string length (query string + credential query string) is 4096 bytes 
+
+#### Headers size
+The maximum request and response header size (all header fields - headers parameter + credential secret + system defined) is 8Kb
 
 ### Throttling
 
 WIP
+
+## Wait Type
+
+When sp_invoke_external_rest_endpoint is waiting for the call to the invoked service to complete, it will report a HTTP_EXTERNAL_CONNECTION wait type.
 
 ### HTTPS and TLS
 
@@ -149,9 +160,9 @@ sp_invoke_external_rest_endpoint will automatically inject the following headers
 -	*accept*: set to `application/json`
 -	*user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
 
-If the same headers are also specied via the @headers parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
+If the same headers are also specified via the @headers parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
 
-> [!WARNING]
+> [!NOTE]
 > If you are testing invocation of the REST endpoint also with other tools, like [curl](https://curl.se/) or any modern REST client, like [Postman](https://www.postman.com/) or [Innsomnia](http://insomnia.rest/), make sure to include the same headers that are automatically injected by sp_invoke_external_rest_endpoint to have the same behavior and results.
 
 ### Allow-Listed Endpoints
@@ -181,7 +192,7 @@ API Management| *.azure-api.net
 
 ## Credentials
 
-Some REST endpoints requires authentication in order to be properly invoked. Authentication can be done by passing some specific key-value pairs in the querystring or in the HTTP headers set with the request.
+Some REST endpoints requires authentication in order to be properly invoked. Authentication can usually be done by passing some specific key-value pairs in the querystring or in the HTTP headers set with the request.
 
 It is possible to use DATABASE SCOPED CREDENTIALS to securely store authentication data (like a Bearer token for example) to be used by sp_invoke_external_rest_endpoint to call a protected endpoint. When creating the DATABASE SCOPED CREDENTIAL you used the IDENTITY parameter to specify what authentication data will be passed to the invoked endpoint and how. IDENTITY supports three options:
 
@@ -228,7 +239,25 @@ WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 
 ### Credential name rules
 
-WIP
+The created DATABASE SCOPED CREDENTIAL must adhered to specific rules in order to be used with sp_invoke_external_rest_endpoint. The rules are the following:
+
+1. Must be a valid URL
+1. The URL domain must be one of those included in the allow list
+1. The URL must not contain a query string
+1. Protocol + Fully Qualified Domain Name (FQDN) of the called URL must match Protocol + FQDN of the credential name
+1. Each part of the called URL path must match completely with the respective part of URL path in the credential name
+1. The credential must point to a path that is more generic than the request URL. For example a credential created for path `https://northwind.azurewebsite.net/customers` cannot be used for the URL `https://northwind.azurewebsite.net`
+
+**Notes on Collation and Credential name rules**
+
+The [RFC 3986 Section 6.2.2.1](https://www.rfc-editor.org/rfc/rfc3986#section-6.2.2.1) states that "When a URI uses components of the generic syntax, the component syntax equivalence rules always apply; namely, that the scheme and host are case-insensitive" and [RFC 7230 Section 2.7.3](https://www.rfc-editor.org/rfc/rfc7230#section-2.7.3) mention that "all other are compared in a case-sensitive manner". 
+
+As there is a collation rule set at the database level, the following logic will be applied, to be coherent with the database collation rule and the RFC mentioned above. (Please note that the described rule could potentially be more restrictive than the RFC rules, for example if database is set to use a case-sensitive collation):
+
+1.	Check if URL and Credential matches using the database collation rules (and without doing any URL encoding). If yes move to the next point.
+1.	Check if URL and Credential matches using the RFC which means
+    -	Check that the scheme and host using a case-insensitive logic (Latin1_General_100_CI_AS_KS_WS_SC)
+    -	Check all other segments of the URL are compared in a case-sensitive manner (Latin1_General_100_BIN2)
 
 ### Grant permissions to use credential
 

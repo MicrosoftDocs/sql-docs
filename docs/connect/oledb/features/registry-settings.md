@@ -11,7 +11,7 @@ ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
 ---
-# Registry Settings
+# Registry settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -38,13 +38,15 @@ Valid values are `0` or `1`. The OLE DB driver chooses the most secure option be
 
 For MSOLEDBSQL driver versions 19.1 and above, Protocol Order, TCP Keep-Alive, and Keep-Alive Interval can be adjusted in the following registry entries:
 
-- `{base_registry_key} : ProtocolOrder`
-- `{base_registry_key}\tcp\Property2 : Value` (KEEPALIVE)
-- `{base_registry_key}\tcp\Property3 : Value` (KEEPALIVEINTERVAL)
+- Protocol Order: `{base_registry_key}\ProtocolOrder`
+- TCP Keep-Alive: `{base_registry_key}\tcp\Property2\Value`
+- TCP Keep-Alive Interval: `{base_registry_key}\tcp\Property3\Value`
 
 The Protocol Order property is an ordered sequence of null-terminated strings that represent supported protocols. The default Protocol Order value is `sm tcp np`.
 
-The TCP Keep-Alive and Keep-Alive Interval registry properties are 32-bit numbers that represent their corresponding values in milliseconds. The default values for TCP Keep-Alive and Keep-Alive Interval properties are 30 seconds and 1 second, respectively. 
+The TCP Keep-Alive parameter (in milliseconds) controls how often TCP attempts to verify that an idle connection is still intact by sending a KEEPALIVE packet. The default is 30,000 milliseconds.
+
+The Keep-Alive Interval parameter (in milliseconds) determines the interval separating KEEPALIVE retransmissions until a response is received. The default is 1000 milliseconds.
 
 ## See Also 
 [Encryption and certificate validation](./encryption-and-certificate-validation.md)  

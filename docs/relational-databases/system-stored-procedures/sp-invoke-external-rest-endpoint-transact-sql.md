@@ -79,6 +79,16 @@ Allow the response received from the called endpoint to be passed into the speci
 
 Execution will return 0 if the HTTP call was done and the HTTP status code received is a 2xx status code (Success). If the HTTP Status code received is not in the 2xx range, the return value will be the HTTP Status code received. If the HTTP cannot be done at all an exception will be thrown. 
 
+## Permissions  
+   
+Requires **EXECUTE ANY EXTERNAL ENDPOINT** database permission.  
+
+For example:
+
+```sql
+GRANT EXECUTE ANY EXTERNAL ENDPOINT TO [<PRINCIPAL>];
+```
+
 ## Response format
 
 Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the @response output parameter. @response contains a JSON document with the following schema: 
@@ -162,7 +172,18 @@ The maximum request and response header size (all header fields - headers parame
 
 ## Throttling
 
-WIP
+Number of concurrent connections to external endpoints done via sp_invoke_external_rest_endpoint are capped to 10% of worker threads, with a hard cap of max 150 workers. To check how many concurrent connections a database can sustain, you can run the following query on the database:
+
+```sql
+select databasepropertyex(db_name(), 'ServiceObjective') as slo_namne, primary_group_max_outbound_connection_workers as max_outbound_connection  from sys.dm_user_db_resource_governance
+```
+
+If a new connection to an external endpoints using sp_invoke_external_rest_endpoint is tried, but the number of maximum concurrent connections is already reached, error 10928 will be raised. For example:
+
+```
+Msg 10928, Level 16, State 4, Procedure sys.sp_invoke_external_rest_endpoint_internal, Line 1 [Batch Start Line 0]
+Resource ID : 1. The outbound connections limit for the database is 20 and has been reached. See 'https://docs.microsoft.com/azure/azure-sql/database/resource-limits-logical-server' for assistance.
+```
 
 ## Credentials
 
@@ -243,16 +264,6 @@ To use the credential, a database user must have `REFERENCES` permission on a sp
 GRANT REFERENCES ON CREDENTIAL::[<CREDENTIAL_NAME>] TO [<PRINCIPAL>];
 ```
 
-## Permissions  
-   
-Requires **EXECUTE ANY EXTERNAL ENDPOINT** database permission.  
-
-For example:
-
-```sql
-GRANT EXECUTE ANY EXTERNAL ENDPOINT TO [<PRINCIPAL>];
-```
-
 ## Remarks  
 
 ### Wait Type
@@ -322,4 +333,5 @@ SELECT @ret AS ReturnCode, @response AS Response;
 ## See Also  
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [API Management](https://docs.microsoft.com/azure/api-management/)
+- [API Management](/azure/api-management/)
+- [Resource management in Azure SQL Database](../../../azure-sql/database/resource-limits-logical-server.md)

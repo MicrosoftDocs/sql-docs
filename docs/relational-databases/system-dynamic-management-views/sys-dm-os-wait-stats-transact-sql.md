@@ -361,6 +361,7 @@ GO
 |HTTP_ENUMERATION |Occurs at startup to enumerate the HTTP endpoints to start HTTP.| 
 |HTTP_START |Occurs when a connection is waiting for HTTP to complete initialization.| 
 |HTTP_STORAGE_CONNECTION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|HTTP_EXTERNAL_CONNECTION |Occurs when waiting for the invocation of an external HTTP connection to complete. <br /><br /> **Applies to**: [!INCLUDE[sssds](../../includes/sssds-md.md)].| 
 |IMPPROV_IOWAIT |Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] waits for a bulkload I/O to finish.| 
 |INSTANCE_LOG_RATE_GOVERNOR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |INTERNAL_TESTING |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 

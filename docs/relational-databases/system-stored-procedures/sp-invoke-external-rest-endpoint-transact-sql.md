@@ -79,9 +79,7 @@ Allow the response received from the called endpoint to be passed into the speci
 
 Execution will return 0 if the HTTP call was done and the HTTP status code received is a 2xx status code (Success). If the HTTP Status code received is not in the 2xx range, the return value will be the HTTP Status code received. If the HTTP cannot be done at all an exception will be thrown. 
 
-## Remarks  
-
-### Response format
+## Response format
 
 Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the @response output parameter. @response contains a JSON document with the following schema: 
 
@@ -125,47 +123,8 @@ In the `response` section, aside the HTTP status code and description, the entir
   }
 ```
 
-### Limits
 
-#### Payload size
-Payload size, both received and sent, is limited to 100 MB (UTF-8 encoded) 
-
-#### URL length
-The maximum URL length (generated after using the @url parameter and adding all the query string provided as credentials, if any) is 8192 bytes; the maximum query string length (query string + credential query string) is 4096 bytes 
-
-#### Headers size
-The maximum request and response header size (all header fields - headers parameter + credential secret + system defined) is 8Kb
-
-### Throttling
-
-WIP
-
-## Wait Type
-
-When sp_invoke_external_rest_endpoint is waiting for the call to the invoked service to complete, it will report a HTTP_EXTERNAL_CONNECTION wait type.
-
-### HTTPS and TLS
-
-Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption protocol are supported. 
-
-### HTTP Redirects
-
-sp_invoke_external_rest_endpoint will not automatically follow any HTTP redirect received as a response from the invoked endpoint.
-
-### HTTP Headers
-
-sp_invoke_external_rest_endpoint will automatically inject the following headers in the HTTP request
-
--	*content-type*: set to `application/json; charset=utf-8`
--	*accept*: set to `application/json`
--	*user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
-
-If the same headers are also specified via the @headers parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
-
-> [!NOTE]
-> If you are testing invocation of the REST endpoint also with other tools, like [curl](https://curl.se/) or any modern REST client, like [Postman](https://www.postman.com/) or [Innsomnia](http://insomnia.rest/), make sure to include the same headers that are automatically injected by sp_invoke_external_rest_endpoint to have the same behavior and results.
-
-### Allow-Listed Endpoints
+## Allow-Listed Endpoints
 
 Only calls to endpoints in the following services are allowed:
 
@@ -189,6 +148,21 @@ API Management| *.azure-api.net
 
 > [!NOTE]
 > If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make ti available to sp_invoke_external_rest_endpoint
+
+## Limits
+
+#### Payload size
+Payload size, both received and sent, is limited to 100 MB (UTF-8 encoded) 
+
+#### URL length
+The maximum URL length (generated after using the @url parameter and adding all the query string provided as credentials, if any) is 8192 bytes; the maximum query string length (query string + credential query string) is 4096 bytes 
+
+#### Headers size
+The maximum request and response header size (all header fields - headers parameter + credential secret + system defined) is 8Kb
+
+## Throttling
+
+WIP
 
 ## Credentials
 
@@ -278,6 +252,33 @@ For example:
 ```sql
 GRANT EXECUTE ANY EXTERNAL ENDPOINT TO [<PRINCIPAL>];
 ```
+
+## Remarks  
+
+### Wait Type
+
+When sp_invoke_external_rest_endpoint is waiting for the call to the invoked service to complete, it will report a HTTP_EXTERNAL_CONNECTION wait type.
+
+### HTTPS and TLS
+
+Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption protocol are supported. 
+
+### HTTP Redirects
+
+sp_invoke_external_rest_endpoint will not automatically follow any HTTP redirect received as a response from the invoked endpoint.
+
+### HTTP Headers
+
+sp_invoke_external_rest_endpoint will automatically inject the following headers in the HTTP request
+
+-	*content-type*: set to `application/json; charset=utf-8`
+-	*accept*: set to `application/json`
+-	*user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
+
+If the same headers are also specified via the @headers parameter, the system-supplied values will take precedence and overwrite any user-specified values. 
+
+> [!NOTE]
+> If you are testing invocation of the REST endpoint also with other tools, like [curl](https://curl.se/) or any modern REST client, like [Postman](https://www.postman.com/) or [Innsomnia](http://insomnia.rest/), make sure to include the same headers that are automatically injected by sp_invoke_external_rest_endpoint to have the same behavior and results.
 
 ## Examples  
   

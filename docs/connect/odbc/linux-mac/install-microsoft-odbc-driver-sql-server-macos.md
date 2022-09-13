@@ -30,7 +30,7 @@ To install Microsoft ODBC driver 18 for SQL Server on macOS, run the following c
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
+brew install msodbcsql18 mssql-tools18
 ```
 
 ## Previous versions
@@ -45,7 +45,7 @@ To install Microsoft ODBC driver 17 for SQL Server on macOS, run the following c
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 > [!IMPORTANT]

@@ -41,10 +41,10 @@ TRIM ( [ characters FROM ] string )
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
+Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
+
 > [!IMPORTANT]
 > You will need your database compatibility level set to 160 to use the LEADING, TRAILING, or BOTH keywords.
-
-Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
 
 ```syntaxsql
 TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )

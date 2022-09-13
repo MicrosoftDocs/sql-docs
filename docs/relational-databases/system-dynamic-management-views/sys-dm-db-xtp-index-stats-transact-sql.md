@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
   Contains statistics collected since the last database restart.  
   
- For more information, see [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
+ For more information, see [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
 
   
 |Column name|Data type|Description|  
@@ -32,7 +32,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |object_id|**bigint**|ID of the object to which this index belongs.|  
 |xtp_object_id|**bigint**|Internal ID corresponding to the current version of the object.<br /><br /> Note: Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].|  
 |index_id|**bigint**|ID of the index. The index_id is unique only within the object.|  
-|scans_started|**bigint**|Number of [!INCLUDE[hek_2](../../includes/hek-2-md.md)] index scans performed. Every select, insert, update, or delete requires an index scan.|  
+|scans_started|**bigint**|Number of [!INCLUDE[inmemory](../../includes/inmemory-md.md)] index scans performed. Every select, insert, update, or delete requires an index scan.|  
 |scans_retries|**bigint**|Number of index scans that needed to be retried,|  
 |rows_returned|**bigint**|Cumulative number of rows returned since the table was created or the start of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |rows_touched|**bigint**|Cumulative number of rows accessed since the table was created or the start of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -58,5 +58,5 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

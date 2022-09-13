@@ -35,7 +35,7 @@ In paginated reports, click in the chart data region to display the **Chart Data
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## To edit a series group on a chart  
   
@@ -45,7 +45,7 @@ In paginated reports, click in the chart data region to display the **Chart Data
   
 3.  Add or remove group expressions, filters, sort expressions, and group variables.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## To delete a group from a chart  
   

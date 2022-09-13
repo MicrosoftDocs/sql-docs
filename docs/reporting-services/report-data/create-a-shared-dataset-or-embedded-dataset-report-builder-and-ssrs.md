@@ -81,7 +81,7 @@ Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
   
 7.  Click **Parameters**. On this page, set a default value to a constant or an expression, mark the parameter as read-only, nullable, or **Omit From Query**. For more information, see [Report Parameters](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Select **OK**.
 
   
 ## To create a dataset from a SQL Server relational database  
@@ -109,7 +109,7 @@ Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
   
 6.  In **Timeout**, type the number of seconds that the report server waits for a response from the database. The default value is 0 seconds. When the time out value is 0 seconds, the query does not time out.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
      The dataset and its field collection appear in the Report Data pane under the data source node.  
   

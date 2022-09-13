@@ -1,21 +1,15 @@
 ---
+title: "TYPE_SS_SERVER_CURSOR_FORWARD_ONLY Field (SQLServerResultSet)"
 description: "TYPE_SS_SERVER_CURSOR_FORWARD_ONLY Field (SQLServerResultSet)"
-title: "TYPE_SS_SERVER_CURSOR_FORWARD_ONLY Field (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.TYPE_SS_SERVER_CURSOR_FORWARD_ONLY"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.TYPE_SS_SERVER_CURSOR_FORWARD_ONLY"
+apitype: "Assembly"
 ---
 # TYPE_SS_SERVER_CURSOR_FORWARD_ONLY Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

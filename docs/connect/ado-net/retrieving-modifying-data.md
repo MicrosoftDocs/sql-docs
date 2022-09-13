@@ -1,15 +1,13 @@
 ---
 title: Retrieving and modifying data
 description: In .NET, Microsoft SqlClient Data Provider for SQL Server serves as a bridge between an application and a data source to read and update data.
-ms.date: 03/24/2021
-ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: 03/24/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Retrieving and modifying data in ADO.NET
 

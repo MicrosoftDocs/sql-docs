@@ -1,16 +1,13 @@
 ---
 title: Setup alerts and notifications for Managed Instance (Azure portal)
 description: Use the Azure portal to create SQL Managed Instance alerts, which can trigger notifications or automation when the conditions you specify are met.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: performance
-ms.custom: 
-ms.devlang: 
-ms.topic: how-to
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, wiassaf
 ms.date: 05/04/2020
+ms.service: sql-managed-instance
+ms.subservice: performance
+ms.topic: how-to
 ---
 # Create alerts for Azure SQL Managed Instance using the Azure portal
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

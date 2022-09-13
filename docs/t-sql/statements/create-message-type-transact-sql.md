@@ -1,8 +1,8 @@
 ---
 title: "CREATE MESSAGE TYPE (Transact-SQL)"
 description: CREATE MESSAGE TYPE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -26,7 +26,6 @@ helpviewer_keywords:
   - "CREATE MESSAGE TYPE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

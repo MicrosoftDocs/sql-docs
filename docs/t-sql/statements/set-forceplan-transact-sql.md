@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "overriding query optimizer process"
 dev_langs:
   - "TSQL"
-ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 ---
 # SET FORCEPLAN (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

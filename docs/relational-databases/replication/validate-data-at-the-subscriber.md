@@ -93,7 +93,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
     -   Select **Validate all SQL Server subscriptions**.    
     -   Select **Validate the following subscriptions**, and then select one or more subscriptions.    
 5.  To specify the type of validation to perform (row count, or row count and checksum) click **Validation Options**, and then specify options in the **Subscription Validation Options** dialog box.  
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
+6.  Select **OK**.
 7.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box. For each subscription:   
     1.  Expand the publication, right-click the subscription, and then click **View Synchronization Status**.    
     2.  If the agent is not running click **Start** in the **View Synchronization Status** dialog box. The dialog box will display informational messages regarding validation.    
@@ -154,7 +154,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
     -   Select **Validate all SQL Server subscriptions**.    
     -   Select **Validate the following subscriptions**, and then select one or more subscriptions.    
 4.  To specify the type of validation to perform (row count, or row count and checksum) click **Validation Options**, and then specify options in the **Subscription Validation Options** dialog box.    
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+5.  Select **OK**.
 6.  Click the **All Subscriptions** tab.  
 7.  View validation results. For each push subscription:    
     1.  If the agent is not running, right-click the subscription, and then click **Start Synchronizing**.    
@@ -170,7 +170,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 3.  Expand the publication for which you want to validate subscriptions, right-click the subscription, and then click **Validate Subscription**.    
 4.  In the **Validate Subscription** dialog box, select **Validate this subscription**.    
 5.  To specify the type of validation to perform (row count, or row count and checksum) click **Options**, and then specify options in the **Subscription Validation Options** dialog box.    
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+6.  Select **OK**.
 7.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box:  
   
     1.  Expand the publication, right-click the subscription, and then click **View Synchronization Status**.    
@@ -185,7 +185,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 2.  Expand the **Replication** folder, and then expand the **Local Publications** folder.   
 3.  Right-click the publication for which you want to validate subscriptions, and then click **Validate All Subscriptions**.    
 4.  In the **Validate All Subscriptions** dialog box, specify the type of validation to perform (row count, or row count and checksum).   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+5.  Select **OK**.
 6.  View validation results in Replication Monitor or the **View Synchronization Status** dialog box. For each subscription:    
     1.  Expand the publication, right-click the subscription, and then click **View Synchronization Status**.    
     2.  If the agent is not running, click **Start** in the **View Synchronization Status** dialog box. The dialog box will display informational messages regarding validation.  
@@ -201,7 +201,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 3.  Right-click the subscription you want to validate, and then click **Validate Subscription**.    
 4.  In the **Validate Subscription** dialog box, select **Validate this subscription**.    
 5.  To specify the type of validation to perform (row count, or row count and checksum) click **Options**, and then specify options in the **Subscription Validation Options** dialog box.    
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+6.  Select **OK**.
 7.  Click the **All Subscriptions** tab.    
 8.  View validation results:    
     1.  If the agent is not running, right-click the subscription, and then click **Start Synchronizing**.    
@@ -228,7 +228,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
 1.  In Replication Monitor, expand a Publisher group in the left pane, and then expand a Publisher.    
 2.  Right-click the publication for which you want to validate subscriptions, and then click **Validate All Subscriptions**.    
 3.  In the **Validate All Subscriptions** dialog box, specify the type of validation to perform (row count, or row count and checksum).    
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
+4.  Select **OK**.
 5.  Click the **All Subscriptions** tab.    
 6.  View validation results. For each push subscription:    
     1.  If the agent is not running, right-click the subscription, and then click **Start Synchronizing**.    

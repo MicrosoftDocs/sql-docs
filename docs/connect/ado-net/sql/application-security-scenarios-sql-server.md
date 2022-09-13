@@ -1,15 +1,13 @@
 ---
 title: "Application security scenarios in SQL Server"
 description: "Contains topics discussing various application security scenarios for ADO.NET and SQL Server applications."
-ms.date: "09/26/2019"
-ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/26/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Application security scenarios in SQL Server
 

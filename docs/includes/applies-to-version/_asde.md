@@ -6,4 +6,4 @@ ms.date: 05/09/2022
 ms.author: randolphwest
 ---
 
-![Yes](../media/yes-icon.png)[!INCLUDE [ssazurede-md](../ssazurede-md.md)]
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: [!INCLUDE [ssazurede-md](../ssazurede-md.md)]

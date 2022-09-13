@@ -1,16 +1,12 @@
 ---
 title: "Using a stored procedure with a return status"
 description: "Learn how to call a stored procedure that returns a result and read the result using the Microsoft JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using a stored procedure with a return status
@@ -33,7 +29,7 @@ When you construct the `call` escape sequence, specify the return status paramet
 
 In addition, when you pass a value to the registerOutParameter method for a return status parameter, you must specify not only the data type to be used for the parameter, but also the parameter's ordinal placement in the stored procedure call. In the case of the return status parameter, its ordinal position will always be 1 because it is always the first parameter in the call to the stored procedure. Although the SQLServerCallableStatement class provides support for using the parameter's name to indicate the specific parameter, you can use only a parameter's ordinal position number for return status parameters.
 
-As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
+As an example, create the following stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database:
 
 ```sql
 CREATE PROCEDURE CheckContactCity  
@@ -51,7 +47,7 @@ END
 
 This stored procedure returns a status value of 1 or 0, depending on whether the city that is specified in the cityName parameter is found in the Person.Address table.
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and the [execute](reference/execute-method-sqlserverstatement.md) method is used to call the CheckContactCity stored procedure:
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, and the [execute](reference/execute-method-sqlserverstatement.md) method is used to call the CheckContactCity stored procedure:
 
 [!code[JDBC#UsingSprocWithReturnStatus1](codesnippet/Java/using-a-stored-procedure_1_1.java)]
 

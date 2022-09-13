@@ -1,16 +1,12 @@
 ---
+title: "getCharacterStream Method (long, long) (SQLServerNClob)"
 description: "getCharacterStream Method (long, long) (SQLServerNClob)"
-title: "getCharacterStream Method (long, long) (SQLServerNClob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getCharacterStream Method (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

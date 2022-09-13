@@ -1,8 +1,8 @@
 ---
 title: "CREATE SPATIAL INDEX (Transact-SQL)"
 description: CREATE SPATIAL INDEX (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "04/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "CREATE INDEX statement"
 dev_langs:
   - "TSQL"
-ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 ---
 # CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

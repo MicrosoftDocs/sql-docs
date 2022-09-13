@@ -1,16 +1,12 @@
 ---
 title: Sample applications
 description: The JDBC Driver for SQL Server sample applications demonstrate various features and good programming practices that you can follow when using the JDBC driver.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Sample JDBC driver applications
 

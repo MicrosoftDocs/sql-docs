@@ -1,21 +1,15 @@
 ---
+title: "setSavepoint Method (java.lang.String)"
 description: "setSavepoint Method (java.lang.String)"
-title: "setSavepoint Method (java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.setSavepoint (java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.setSavepoint (java.lang.String)"
+apitype: "Assembly"
 ---
 # setSavepoint Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

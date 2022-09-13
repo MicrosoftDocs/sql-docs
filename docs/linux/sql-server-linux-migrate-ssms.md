@@ -22,7 +22,7 @@ You should always install and use the most recent version of SQL Server Manageme
 
 ## Export a database with SSMS
 
-1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then click the desktop app.
+1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then select the desktop app.
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
@@ -30,17 +30,17 @@ You should always install and use the most recent version of SQL Server Manageme
 
 3. Right-click the source database in the Object Explorer, point to **Tasks**, and click **Export Data-Tier Application...**
 
-4. In the export wizard, click **Next**, and then on the **Settings** tab, configure the export to save the BACPAC file to either a local disk location or to an Azure blob.
+4. In the export wizard, select **Next**, and then on the **Settings** tab, configure the export to save the BACPAC file to either a local disk location or to an Azure blob.
 
-5. By default, all objects in the database are exported. Click the **Advanced tab** and choose the database objects that you wish to export.
+5. By default, all objects in the database are exported. Select the **Advanced tab** and choose the database objects that you wish to export.
 
-6. Click **Next** and then click **Finish**.
+6. Select **Next** and then select **Finish**.
 
 The *.BACPAC file is successfully created at the location you chose and you are ready to import it into a target database.
 
 ## Import a database with SSMS
 
-1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then click the desktop app.
+1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then select the desktop app.
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
@@ -52,7 +52,7 @@ The *.BACPAC file is successfully created at the location you chose and you are 
 
 5. Provide the New database name for the database. If you are importing a database on Azure SQL Database, set the Edition of Microsoft Azure SQL Database (service tier), Maximum database size, and Service Objective (performance level).
 
-6. Click **Next** and then click **Finish** to import the BACPAC file into a new database in your target server.
+6. Select **Next** and then select **Finish** to import the BACPAC file into a new database in your target server.
 
 The *.BACPAC file is imported to create a new database in the target server you specified.
 

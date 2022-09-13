@@ -1,7 +1,7 @@
 ---
 title: "Ledger overview"
 description: Learn the basics of the ledger feature.
-ms.date: 07/25/2022
+ms.date: "07/25/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.reviewer: kendralittle, mathoma
@@ -44,6 +44,11 @@ In some systems, such as supply-chain management systems, multiple organizations
 Blockchain is a great solution for multiple-party networks where trust is low between parties that participate on the network. Many of these networks are fundamentally centralized solutions where trust is important, but a fully decentralized infrastructure is a heavyweight solution. 
 
 Ledger provides a solution for these networks. Participants can verify the integrity of the centrally housed data, without the complexity and performance implications that network consensus introduces in a blockchain network.
+
+#### Customer success
+
+- Learn how [Lenovo is reinforcing customer trust using ledger in Azure SQL Database](https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger) by watching this [video](https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi).
+- [RTGS.global using ledger in Azure SQL Database to establish trust with banks around the world](https://customers.microsoft.com/story/1379614319255768839-rtgs-partner-professional-services-azure-sql).
 
 ### Trusted off-chain storage for blockchain
 
@@ -121,7 +126,3 @@ The [ledger verification](ledger-database-verification.md) process takes as inpu
 ## See also
 
 - [Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed](/shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed)
-
-### Customer success
-
-Learn how [Lenovo is reinforcing customer trust using ledger in Azure SQL Database](https://customers.microsoft.com/story/1497685499820529889-lenovo-manufacturing-azure-SQL-database-ledger) by watching this [video](https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi).

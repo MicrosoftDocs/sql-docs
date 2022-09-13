@@ -1,14 +1,12 @@
 ---
 title: "Connection string syntax"
 description: Learn about syntax of connection strings in the Microsoft SqlClient Data Provider for SQL Server. The syntax for each provider is documented in its ConnectionString property.
-ms.date: "11/13/2020"
-ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "11/13/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Connection string syntax
 
@@ -16,7 +14,7 @@ ms.author: v-davidengel
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-The <xref:Microsoft.Data.SqlClient> has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property. The specific connection string syntax for the SqlClient provider is documented in its `ConnectionString` property. For more information on connection string syntax, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+The <xref:Microsoft.Data.SqlClient> has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> and a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property. The specific connection string syntax for the SqlClient provider is documented in its `ConnectionString` property. For more information on connection string syntax, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
 ## Connection string builders
 
@@ -24,7 +22,7 @@ The <xref:Microsoft.Data.SqlClient> has a `Connection` object that inherits from
 
 - <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>
 
-The connection string builders allow you to construct syntactically valid connection strings at run time, so you do not have to manually concatenate connection string values in your code. For more information, see [Connection String Builders](connection-string-builders.md).
+The connection string builders allow you to construct syntactically valid connection strings at run time, so you don't have to manually concatenate connection string values in your code. For more information, see [Connection String Builders](connection-string-builders.md).
 
 ## Windows authentication
 
@@ -62,7 +60,7 @@ Windows Authentication is preferred for connecting to SQL Server. However, if SQ
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-When you connect to Azure SQL Database or to Azure Synapse Analytics and provide a login in the format `user@servername`, make sure that the `servername` value in the login matches the value provided for `Server=`.
+When you connect to Azure SQL Database or to Azure Synapse Analytics and provide a username in the format `user@servername`, make sure that the `servername` value in the username matches the value provided for `Server=`.
 
 > [!NOTE]
 > Windows authentication takes precedence over SQL Server logins. If you specify both Integrated Security=true as well as a user name and password, the user name and password will be ignored and Windows authentication will be used.
@@ -79,7 +77,7 @@ You can also set the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.D
 
 ### Type system version changes
 
-The `Type System Version` keyword in a <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> specifies the client-side representation of SQL Server types. See <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> for more information about the `Type System Version` keyword.
+The `Type System Version` keyword in a <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> specifies the client-side representation of SQL Server types. For more information about the `Type System Version` keyword, see <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>.
 
 ## Connect and Attach to SQL Server Express user instances
 
@@ -91,6 +89,8 @@ For more information on working with user instances, see [SQL Server Express Use
 
 The `TrustServerCertificate` keyword is valid only when connecting to a SQL Server instance with a valid certificate. When `TrustServerCertificate` is set to `true`, the transport layer will use TLS/SSL to encrypt the channel and bypass walking the certificate chain to validate trust.
 
+This setting is ignored when `Encrypt` is set to `Strict`. The server certificate is always validated in `Strict` mode.
+
 ```csharp  
 "TrustServerCertificate=true;"
 ```  
@@ -98,21 +98,31 @@ The `TrustServerCertificate` keyword is valid only when connecting to a SQL Serv
 > [!NOTE]
 > If `TrustServerCertificate` is set to `true` and encryption is turned on, the encryption level specified on the server will be used even if `Encrypt` is set to `false` in the connection string. The connection will fail otherwise.
 
+## HostNameInCertificate
+
+Starting in version 5.0 of Microsoft.Data.SqlClient, HostNameInCertificate is a new connection option. When the driver validates server certificates, it ensures that the Common Name (CN) or Subject Alternate Name (SAN) in the certificate matches the server name being connected to. In some cases, like DNS aliases, the server name might not match the CN or SAN. The HostNameInCertificate value can be used to specify a different, expected CN or SAN in the server certificate.
+
+```csharp
+"HostNameInCertificate=myserver.example.com"
+```
+
 ### Enable encryption
 
-To enable encryption when a certificate has not been provisioned on the server, the **Trust Server Certificate** connection property must be set. In this case, encryption will use a self-signed server certificate without validation since no verifiable certificate has been provisioned on the server.
+To enable encryption when a certificate hasn't been provisioned on the server, the **Trust Server Certificate** connection property must be set. In this case, encryption will use a self-signed server certificate without validation since no verifiable certificate has been provisioned on the server.
 
-Application settings cannot reduce the level of security configured in SQL Server, but can optionally strengthen it. An application can request encryption by setting the `TrustServerCertificate` and `Encrypt` keywords to `true`, guaranteeing that encryption takes place even when a server certificate has not been provisioned. However, if `TrustServerCertificate` is not enabled in the client configuration, a provisioned server certificate is still required.
+Application settings can't reduce the level of security configured in SQL Server, but can optionally strengthen it. An application can request encryption by setting the `TrustServerCertificate` and `Encrypt` keywords to `true`, guaranteeing that encryption takes place even when a server certificate hasn't been provisioned. However, if `TrustServerCertificate` isn't enabled in the client configuration, a provisioned server certificate is still required.
 
 The following table describes all cases.
 
 | Encrypt connection string/attribute | Trust Server Certificate connection string/attribute | Result |
 |--|--|--|
-| No | Ignored | No encryption occurs. |
-| Yes | No | Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails. |
-| Yes | Yes | Encryption always occurs, but may use a self-signed server certificate. |
+| No/Optional | Ignored | No encryption occurs. |
+| Yes/Mandatory | No | Encryption occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
+| Yes/Mandatory | Yes | Encryption always occurs, but may use a self-signed server certificate. |
+| Yes/Mandatory | Yes | Encryption always occurs, but may use a self-signed server certificate. |
+| Strict<sup>1</sup> | Ignored | Encryption always occurs and must use a verifiable server certificate, otherwise the connection attempt fails. |
 
-For more information, see [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md).
+<sup>1</sup> Strict encryption is only available starting with Microsoft.Data.SqlClient version 5.0.
 
 ## See also
 

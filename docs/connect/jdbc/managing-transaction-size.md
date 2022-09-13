@@ -1,16 +1,12 @@
 ---
-description: Learn how to manage transaction size to ensure you don't introduce locks in your application that would block other users.
 title: Managing transaction size
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
+description: Learn how to manage transaction size to ensure you don't introduce locks in your application that would block other users.
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Managing transaction size
 

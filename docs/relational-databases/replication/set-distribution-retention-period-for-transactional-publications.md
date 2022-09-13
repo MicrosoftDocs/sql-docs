@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  To specify the minimum distribution retention period, enter a value in the **At least** box; to specify the maximum distribution retention period, enter a value in the **But not more than** box.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
 
 ## See Also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   

@@ -1,19 +1,16 @@
 ---
-title: "Bindings and Conversions (OLE DB) | Microsoft Docs"
+title: "Bindings and Conversions (OLE DB)"
 description: Learn how OLE DB Driver for SQL Server converts between datetime and datetimeoffset values. There are several general conversion rules.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "conversions [OLE DB]"
   - "bindings [OLE DB]"
   - "OLE DB, bindings and conversions"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Conversions (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

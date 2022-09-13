@@ -49,7 +49,7 @@ ms.author: mathoma
   
 2.  The Installation Wizard will launch the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To add a node to an existing failover cluster instance, click **Installation** in the left-hand pane. Then, select **Add node to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster**.  
   
-3.  The System Configuration Checker will run a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+3.  The System Configuration Checker will run a discovery operation on your computer. To continue, select **OK**.
   
 4.  On the Language Selection page, you can specify the language for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] if you are installing on a localized operating system and the installation media includes language packs for both English and the language corresponding to the operating system. For more information about cross-language support and installation considerations, see [Local Language Versions in SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
@@ -89,7 +89,7 @@ ms.author: mathoma
   
 2.  The Installation Wizard launches the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center. To remove a node to an existing failover cluster instance, click **Maintenance** in the left-hand pane, and then select **Remove node from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster**.  
   
-3.  The System Configuration Checker will run a discovery operation on your computer. To continue, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
+3.  The System Configuration Checker will run a discovery operation on your computer. To continue, select **OK**.
   
 4.  After you click install on the Setup Support Files page, the System Configuration Checker verifies the system state of your computer before Setup continues. After the check is complete, click **Next** to continue.  
   

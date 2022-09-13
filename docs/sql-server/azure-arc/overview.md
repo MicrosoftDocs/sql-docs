@@ -4,7 +4,7 @@ description: Manage instances of SQL Server on Azure Arc-enabled servers
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/25/2022
+ms.date: 08/25/2022
 ms.prod: sql
 ms.topic: conceptual
 ms.custom: references_regions
@@ -16,7 +16,7 @@ You can manage your instances of SQL Server from Azure with SQL Server on Azure 
 
 You can enable SQL Server on [Azure Arc-enabled servers](/azure/azure-arc/servers/overview). It extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multi-cloud environment.
 
-To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install a SQL Arc extension to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will show a **SQL Server – Azure Arc** resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
+To enable Azure services, register a running SQL Server instance with Azure Arc using the Azure portal and a registration script. The registration will install an extension to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will show a **SQL Server – Azure Arc** resource representing each SQL Server instance installed on that machine. The properties of this resource reflect a subset of the SQL Server configuration settings.
 
 ## Architecture
 

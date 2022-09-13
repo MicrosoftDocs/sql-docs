@@ -1,16 +1,12 @@
 ---
+title: "getSQLXML Method (int) (SQLServerResultSet)"
 description: "getSQLXML Method (int) (SQLServerResultSet)"
-title: "getSQLXML Method (int) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: faa35676-573d-48d5-afd9-850134735728
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getSQLXML Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

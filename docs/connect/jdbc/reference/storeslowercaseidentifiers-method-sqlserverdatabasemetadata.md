@@ -1,21 +1,15 @@
 ---
+title: "storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData)"
 description: "storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData)"
-title: "storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.storesLowerCaseIdentifiers"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.storesLowerCaseIdentifiers"
+apitype: "Assembly"
 ---
 # storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

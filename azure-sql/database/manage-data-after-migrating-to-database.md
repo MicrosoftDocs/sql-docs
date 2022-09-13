@@ -2,17 +2,14 @@
 title: Manage after migration
 titleSuffix: Azure SQL Database
 description: Learn how to manage your single and pooled databases after migration to Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: migration
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
 author: mokabiru
 ms.author: mokabiru
 ms.reviewer: wiassaf, mathoma
 ms.date: 02/13/2019
+ms.service: sql-database
+ms.subservice: migration
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # New DBA in the cloud – Managing Azure SQL Database after migration
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -44,7 +41,7 @@ Once you've added these metrics, you can continue to view them in the **Monitori
 
 ![Service tier monitoring of database performance.](./media/manage-data-after-migrating-to-database/sqldb_service_tier_monitoring.png)
 
-You can also configure alerts on the performance metrics. Click the **Add alert** button in the **Metric** window. Follow the wizard to configure your alert. You have the option to alert if the metrics exceed a certain threshold or if the metric falls below a certain threshold.
+You can also configure alerts on the performance metrics. Select the **Add alert** button in the **Metric** window. Follow the wizard to configure your alert. You have the option to alert if the metrics exceed a certain threshold or if the metric falls below a certain threshold.
 
 For example, if you expect the workload on your database to grow, you can choose to configure an email alert whenever your database reaches 80% on any of the performance metrics. You can use this as an early warning to figure out when you might have to switch to the next highest compute size.
 
@@ -56,7 +53,7 @@ Business continuity and disaster recovery abilities enable you to continue your 
 
 ### How do I create and manage backups on SQL Database
 
-You don’t create backups on Azure SQL Database and that is because you don’t have to. SQL Database automatically backs up databases for you, so you no longer must worry about scheduling, taking and managing backups. The platform takes a full backup every week, differential backup every few hours and a log backup every 5 minutes to ensure the disaster recovery is efficient, and the data loss minimal. The first full backup happens as soon as you create a database. These backups are available to you for a certain period called the “Retention Period” and varies according to the service tier you choose. SQL Database provides you the ability to restore to any point in time within this retention period using [Point in Time Recovery (PITR)](recovery-using-backups.md#point-in-time-restore).
+You don't create backups on Azure SQL Database and that is because you don't have to. SQL Database automatically backs up databases for you, so you no longer must worry about scheduling, taking and managing backups. The platform takes a full backup every week, differential backup every few hours and a log backup every 5 minutes to ensure the disaster recovery is efficient, and the data loss minimal. The first full backup happens as soon as you create a database. These backups are available to you for a certain period called the "Retention Period" and varies according to the service tier you choose. SQL Database provides you the ability to restore to any point in time within this retention period using [Point in Time Recovery (PITR)](recovery-using-backups.md#point-in-time-restore).
 
 |Service tier|Retention period in days|
 |---|:---:|
@@ -71,7 +68,7 @@ In addition, the [Long-Term Retention (LTR)](long-term-retention-overview.md) fe
 
 Because your database backups are stored in geo-replicated storage to ensure that in case of a regional disaster, you can restore the backup to another Azure region. This is called geo-restore. The RPO (Recovery Point Objective) for this is generally < 1 hour and the ERT (Estimated Recovery Time – few minutes to hours).
 
-For mission-critical databases, Azure SQL Database offers, active geo-replication. What this essentially does is that it creates a geo-replicated secondary copy of your original database in another region. For example, if your database is initially hosted in Azure West US region and you want regional disaster resilience. You’d create an active geo replica of the database in West US to say East US. When the calamity strikes on West US, you can fail over to the East US region. Configuring them in an auto-failover Group is even better because this ensures that the database automatically fails over to the secondary in East US in case of a disaster. The RPO for this is < 5 seconds and the ERT < 30 seconds.
+For mission-critical databases, Azure SQL Database offers, active geo-replication. What this essentially does is that it creates a geo-replicated secondary copy of your original database in another region. For example, if your database is initially hosted in Azure West US region and you want regional disaster resilience. You'd create an active geo replica of the database in West US to say East US. When the calamity strikes on West US, you can fail over to the East US region. Configuring them in an auto-failover Group is even better because this ensures that the database automatically fails over to the secondary in East US in case of a disaster. The RPO for this is < 5 seconds and the ERT < 30 seconds.
 
 If an auto-failover group is not configured, then your application needs to actively monitor for a disaster and initiate a failover to the secondary. You can create up to 4 such active geo-replicas in different Azure regions. It gets even better. You can also access these secondary active geo-replicas for read-only access. This comes in very handy to reduce latency for a geo-distributed application scenario.
 
@@ -83,7 +80,7 @@ To learn more about Disaster recovery, see: [Azure SQL Database Disaster Recover
 
 ## Security and compliance
 
-SQL Database takes Security and Privacy very seriously. Security within SQL Database is available at the database level and at the platform level and is best understood when categorized into several layers. At each layer you get to control and provide optimal security for your application. The layers are:
+SQL Database takes Security and privacy very seriously. Security within SQL Database is available at the database level and at the platform level and is best understood when categorized into several layers. At each layer you get to control and provide optimal security for your application. The layers are:
 
 - Identity & authentication ([SQL authentication and Azure Active Directory [Azure AD] authentication](logins-create-manage.md)).
 - Monitoring activity ([Auditing](./auditing-overview.md) and [threat detection](threat-detection-configure.md)).
@@ -101,14 +98,14 @@ There are two authentication methods offered in SQL Database:
 
 Traditional Windows authentication is not supported. Azure Active Directory (Azure AD) is a centralized identity and access management service. With this you can very conveniently provide single sign-on (SSO) access to the personnel in your organization. What this means is that the credentials are shared across Azure services for simpler authentication.
 
-Azure AD supports [Azure AD Multi-Factor Authentication](authentication-mfa-ssms-overview.md) and with a [few clicks](/azure/active-directory/hybrid/how-to-connect-install-express) Azure AD can be integrated with Windows Server Active Directory. SQL Authentication works exactly like you’ve been using it in the past. You provide a username/password and you can authenticate users to any database on a given server. This also allows SQL Database and Azure Synapse Analytics to offer Multi-Factor Authentication and guest user accounts within an Azure AD domain. If you already have an Active Directory on-premises, you can federate the directory with Azure Active Directory to extend your directory to Azure.
+Azure AD supports [Azure AD Multi-Factor Authentication](authentication-mfa-ssms-overview.md) and [Azure AD can easily be integrated with Windows Server Active Directory](/azure/active-directory/hybrid/how-to-connect-install-express). SQL Authentication works exactly like you've been using it in the past. You provide a username/password and you can authenticate users to any database on a given server. This also allows SQL Database and Azure Synapse Analytics to offer Multi-Factor Authentication and guest user accounts within an Azure AD domain. If you already have an Active Directory on-premises, you can federate the directory with Azure Active Directory to extend your directory to Azure.
 
 |**If you...**|**SQL Database / Azure Synapse Analytics**|
 |---|---|
 |Prefer not to use Azure Active Directory (Azure AD) in Azure|Use [SQL authentication](security-overview.md)|
-|Used AD on SQL Server on-premises|[Federate AD with Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity), and use Azure AD authentication. With this, you can use Single Sign-On.|
+|Used AD on SQL Server on-premises|[Federate AD with Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity), and use Azure AD authentication. With this, you can use single sign-on.|
 |Need to enforce Multi-Factor Authentication|Require Multi-Factor Authentication as a policy through [Microsoft Conditional Access](conditional-access-configure.md), and use [Azure AD Universal authentication with Multi-Factor Authentication support](authentication-mfa-ssms-overview.md).|
-|Have guest accounts from Microsoft accounts (live.com, outlook.com) or other domains (gmail.com)|Use [Azure AD Universal authentication](authentication-mfa-ssms-overview.md) in SQL Database/Data Warehouse, which leverages [Azure AD B2B Collaboration](/azure/active-directory/external-identities/what-is-b2b).|
+|Have guest accounts from Microsoft accounts (live.com, outlook.com) or other domains (gmail.com)|Use [Azure AD Universal authentication](authentication-mfa-ssms-overview.md) in SQL Database or dedicated SQL pool, which leverages [Azure AD B2B Collaboration](/azure/active-directory/external-identities/what-is-b2b).|
 |Are logged in to Windows using your Azure AD credentials from a federated domain|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
 |Are logged in to Windows using credentials from a domain not federated with Azure|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
 |Have middle-tier services which need to connect to SQL Database or Azure Synapse Analytics|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
@@ -124,13 +121,13 @@ There are multiple techniques at your disposal that you could use to attain opti
 
 #### Firewall
 
-A firewall prevents access to your server from an external entity by allowing only specific entities access to your server. By default, all connections to databases inside the server are disallowed, except (optionally7) connections coming in from other Azure Services. With a firewall rule you can open access to your server only to entities (for example, a developer machine) that you approve of, by allowing that computer’s IP address through the firewall. It also allows you to specify a range of IPs that you would want to allow access to the server. For example, developer machine IP addresses in your organization can be added at once by specifying a range in the Firewall settings page.
+A firewall prevents access to your server from an external entity by allowing only specific entities access to your server. By default, all connections to databases inside the server are disallowed, except (optionally7) connections coming in from other Azure Services. With a firewall rule you can open access to your server only to entities (for example, a developer machine) that you approve of, by allowing that computer's IP address through the firewall. It also allows you to specify a range of IPs that you would want to allow access to the server. For example, developer machine IP addresses in your organization can be added at once by specifying a range in the Firewall settings page.
 
 You can create firewall rules at the server level or at the database level. Server level IP firewall rules can either be created using the Azure portal or with SSMS. For learning more about how to set a server-level and database-level firewall rule, see: [Create IP firewall rules in SQL Database](secure-database-tutorial.md#create-firewall-rules).
 
 #### Service endpoints
 
-By default, your database is configured to “Allow Azure services to access server” – which means any Virtual Machine in Azure may attempt to connect to your database. These attempts still do have to get authenticated. However, if you would not like your database to be accessible by any Azure IPs, you can disable “Allow Azure services to access server”. Additionally, you can configure [VNet Service Endpoints](vnet-service-endpoint-rule-overview.md).
+By default, your database is configured to "Allow Azure services to access server" – which means any Virtual Machine in Azure may attempt to connect to your database. These attempts still do have to get authenticated. However, if you would not like your database to be accessible by any Azure IPs, you can disable "Allow Azure services to access server". Additionally, you can configure [VNet Service Endpoints](vnet-service-endpoint-rule-overview.md).
 
 Service endpoints (SE) allow you to expose your critical Azure resources only to your own private virtual network in Azure. By doing so, you essentially eliminate public access to your resources. The traffic between your virtual network to Azure stays on the Azure backbone network. Without SE you get forced-tunneling packet routing. Your virtual network forces the internet traffic to your organization and the Azure Service traffic to go over the same route. With Service Endpoints, you can optimize this since the packets flow straight from your virtual network to the service on Azure backbone network.
 
@@ -152,7 +149,7 @@ With SQL Database, you can turn ON Auditing to track database events. [SQL Datab
 
 #### Threat detection
 
-With [threat detection](threat-detection-configure.md), you get the ability to act upon security or policy violations discovered by Auditing very easily. You don’t need to be a security expert to address potential threats or violations in your system. Threat detection also has some built-in capabilities like SQL Injection detection. SQL Injection is an attempt to alter or compromise the data and a quite common way of attacking a database application in general. Threat detection runs multiple sets of algorithms which detect potential vulnerabilities and SQL injection attacks, as well as anomalous database access patterns (such as access from an unusual location or by an unfamiliar principal). Security officers or other designated administrators receive an email notification if a threat is detected on the database. Each notification provides details of the suspicious activity and recommendations on how to further investigate and mitigate the threat. To learn how to turn on Threat detection, see: [Enable threat detection](secure-database-tutorial.md#enable-security-features).
+With [threat detection](threat-detection-configure.md), you get the ability to act upon security or policy violations discovered by Auditing very easily. You don't need to be a security expert to address potential threats or violations in your system. Threat detection also has some built-in capabilities like SQL Injection detection. SQL Injection is an attempt to alter or compromise the data and a quite common way of attacking a database application in general. Threat detection runs multiple sets of algorithms which detect potential vulnerabilities and SQL injection attacks, as well as anomalous database access patterns (such as access from an unusual location or by an unfamiliar principal). Security officers or other designated administrators receive an email notification if a threat is detected on the database. Each notification provides details of the suspicious activity and recommendations on how to further investigate and mitigate the threat. To learn how to turn on Threat detection, see: [Enable threat detection](secure-database-tutorial.md#enable-security-features).
 
 ### How do I protect my data in general on SQL Database
 
@@ -174,15 +171,15 @@ For protecting your sensitive data in-flight and at rest, SQL Database provides 
 
 ### How can I limit access to sensitive data in my database
 
-Every application has a certain bit of sensitive data in the database that needs to be protected from being visible to everyone. Certain personnel within the organization need to view this data, however others shouldn’t be able to view this data. One example is employee wages. A manager would need access to the wage information for their direct reports however, the individual team members shouldn’t have access to the wage information of their peers. Another scenario is data developers who might be interacting with sensitive data during development stages or testing, for example, SSNs of customers. This information again doesn’t need to be exposed to the developer. In such cases, your sensitive data either needs to be masked or not be exposed at all. SQL Database offers two such approaches to prevent unauthorized users from being able to view sensitive data:
+Every application has a certain bit of sensitive data in the database that needs to be protected from being visible to everyone. Certain personnel within the organization need to view this data, however others shouldn't be able to view this data. One example is employee wages. A manager would need access to the wage information for their direct reports however, the individual team members shouldn't have access to the wage information of their peers. Another scenario is data developers who might be interacting with sensitive data during development stages or testing, for example, SSNs of customers. This information again doesn't need to be exposed to the developer. In such cases, your sensitive data either needs to be masked or not be exposed at all. SQL Database offers two such approaches to prevent unauthorized users from being able to view sensitive data:
 
 [Dynamic Data Masking](dynamic-data-masking-overview.md) is a data masking feature that enables you to limit sensitive data exposure by masking it to non-privileged users on the application layer. You define a masking rule that can create a masking pattern (for example, to only show last four digits of a national ID SSN: XXX-XX-0000 and mark most of it as Xs) and identify which users are to be excluded from the masking rule. The masking happens on-the-fly and there are various masking functions available for various data categories. Dynamic data masking allows you to automatically detect sensitive data in your database and apply masking to it.
 
-[Row Level security](/sql/relational-databases/security/row-level-security) enables you to control access at the row level. Meaning, certain rows in a database table based on the user executing the query (group membership or execution context) are hidden. The access restriction is done on the database tier instead of in an application tier, to simplify your app logic. You start by creating a filter predicate, filtering out rows that are not be exposed and the security policy next defining who has access to these rows. Finally, the end user runs their query and, depending on the user’s privilege, they either view those restricted rows or are unable to see them at all.
+[Row Level security](/sql/relational-databases/security/row-level-security) enables you to control access at the row level. Meaning, certain rows in a database table based on the user executing the query (group membership or execution context) are hidden. The access restriction is done on the database tier instead of in an application tier, to simplify your app logic. You start by creating a filter predicate, filtering out rows that are not be exposed and the security policy next defining who has access to these rows. Finally, the end user runs their query and, depending on the user's privilege, they either view those restricted rows or are unable to see them at all.
 
 ### How do I manage encryption keys in the cloud
 
-There are key management options for both Always Encrypted (client-side encryption) and Transparent Data Encryption (encryption at rest). It’s recommended that you regularly rotate encryption keys. The rotation frequency should align with both your internal organization regulations and compliance requirements.
+There are key management options for both Always Encrypted (client-side encryption) and Transparent Data Encryption (encryption at rest). It's recommended that you regularly rotate encryption keys. The rotation frequency should align with both your internal organization regulations and compliance requirements.
 
 #### Transparent Data Encryption (TDE)
 
@@ -221,11 +218,11 @@ ExpressRoute also allows you to burst up to 2x the bandwidth limit you purchase 
 
 ### Is SQL Database compliant with any regulatory requirements, and how does that help with my own organization's compliance
 
-SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. It is important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization’s service but does not automatically guarantee it.
+SQL Database is compliant with a range of regulatory compliancies. To view the latest set of compliancies that have been met by SQL Database, visit the [Microsoft Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942) and drill down on the compliancies that are important to your organization to see if SQL Database is included under the compliant Azure services. It is important to note that although SQL Database may be certified as a compliant service, it aids in the compliance of your organization's service but does not automatically guarantee it.
 
 ## Intelligent database monitoring and maintenance after migration
 
-Once you’ve migrated your database to SQL Database, you are going to want to monitor your database (for example, check how the resource utilization is like or DBCC checks) and perform regular maintenance (for example, rebuild or reorganize indexes, statistics etc.). Fortunately, SQL Database is Intelligent in the sense that it uses the historical trends and recorded metrics and statistics to proactively help you monitor and maintain your database, so that your application runs optimally always. In some cases, Azure SQL Database can automatically perform maintenance tasks depending on your configuration setup. There are three facets to monitoring your database in SQL Database:
+Once you've migrated your database to SQL Database, you are going to want to monitor your database (for example, check how the resource utilization is like or DBCC checks) and perform regular maintenance (for example, rebuild or reorganize indexes, statistics etc.). Fortunately, SQL Database is Intelligent in the sense that it uses the historical trends and recorded metrics and statistics to proactively help you monitor and maintain your database, so that your application runs optimally always. In some cases, Azure SQL Database can automatically perform maintenance tasks depending on your configuration setup. There are three facets to monitoring your database in SQL Database:
 
 - Performance monitoring and optimization.
 - Security optimization.
@@ -239,7 +236,7 @@ With Query Performance Insights, you can get tailored recommendations for your d
 
 SQL Database provides actionable security recommendations to help you secure your data and threat detection for identifying and investigating suspicious database activities that may pose a potential thread to the database. [Vulnerability assessment](sql-vulnerability-assessment.md) is a database scanning and reporting service that allows you to monitor the security state of your databases at scale and identify security risks and drift from a security baseline defined by you. After every scan, a customized list of actionable steps and remediation scripts is provided, as well as an assessment report that can be used to help meet compliance requirements.
 
-With Microsoft Defender for Cloud, you identify the security recommendations across the board and apply them with a single click.
+With Microsoft Defender for Cloud, you identify the security recommendations across the board and quickly apply them.
 
 ### Cost optimization
 
@@ -247,7 +244,7 @@ Azure SQL platform analyzes the utilization history across the databases in a se
 
 ![elastic pool recommendations](./media/manage-data-after-migrating-to-database/elastic-pool-recommendations.png)
 
-You can also view this analysis under the “Advisor” section:
+You can also view this analysis under the "Advisor" section:
 
 ![elastic pool recommendations-advisor](./media/manage-data-after-migrating-to-database/advisor-section.png)
 
@@ -257,7 +254,7 @@ In SQL Database you can leverage the intelligent insights of the platform to mon
 
 #### Azure portal
 
-The Azure portal shows a database’s utilization by selecting the database and clicking the chart in the Overview pane. You can modify the chart to show multiple metrics, including CPU percentage, DTU percentage, Data IO percentage, Sessions percentage, and Database size percentage.
+The Azure portal shows a database's utilization by selecting the database and clicking the chart in the Overview pane. You can modify the chart to show multiple metrics, including CPU percentage, DTU percentage, Data IO percentage, Sessions percentage, and Database size percentage.
 
 ![Monitoring chart](./media/manage-data-after-migrating-to-database/monitoring-chart.png)
 
@@ -281,11 +278,11 @@ You can query the [sys.dm_db_resource_stats](/sql/relational-databases/system-dy
 
 ### I am noticing performance issues: How does my SQL Database troubleshooting methodology differ from SQL Server
 
-A major portion of the troubleshooting techniques you would use for diagnosing query and database performance issues remain the same. After all the same database engine powers the cloud. However, the platform - Azure SQL Database has built in ‘intelligence’. It can help you troubleshoot and diagnose performance issues even more easily. It can also perform some of these corrective actions on your behalf and in some cases, proactively fix them - automatically.
+A major portion of the troubleshooting techniques you would use for diagnosing query and database performance issues remain the same. After all the same database engine powers the cloud. However, the platform - Azure SQL Database has built in 'intelligence'. It can help you troubleshoot and diagnose performance issues even more easily. It can also perform some of these corrective actions on your behalf and in some cases, proactively fix them - automatically.
 
 Your approach towards troubleshooting performance issues can significantly benefit by using intelligent features such as [Query Performance Insight(QPI)](query-performance-insight-use.md) and [Database Advisor](database-advisor-implement-performance-recommendations.md) in conjunction and so the difference in methodology differs in that respect – you no longer need to do the manual work of grinding out the essential details that might help you troubleshoot the issue at hand. The platform does the hard work for you. One example of that is QPI. With QPI, you can drill all the way down to the query level and look at the historical trends and figure out when exactly the query regressed. The Database Advisor gives you recommendations on things that might help you improve your overall performance in general like - missing indexes, dropping indexes, parameterizing your queries etc.
 
-With performance troubleshooting, it is important to identify whether it is just the application or the database backing it, that’s impacting your application performance. Often the performance problem lies in the application layer. It could be the architecture or the data access pattern. For example, consider you have a chatty application that is sensitive to network latency. In this case, your application suffers because there would be many short requests going back and forth ("chatty") between the application and the server and on a congested network, these roundtrips add up fast. To improve the performance in this case, you can use [Batch Queries](performance-guidance.md#batch-queries). Using batches helps you tremendously because now your requests get processed in a batch; thus, helping you cut down on the roundtrip latency and improve your application performance.
+With performance troubleshooting, it is important to identify whether it is just the application or the database backing it, that's impacting your application performance. Often the performance problem lies in the application layer. It could be the architecture or the data access pattern. For example, consider you have a chatty application that is sensitive to network latency. In this case, your application suffers because there would be many short requests going back and forth ("chatty") between the application and the server and on a congested network, these roundtrips add up fast. To improve the performance in this case, you can use [Batch Queries](performance-guidance.md#batch-queries). Using batches helps you tremendously because now your requests get processed in a batch; thus, helping you cut down on the roundtrip latency and improve your application performance.
 
 Additionally, if you notice a degradation in the overall performance of your database, you can monitor the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) dynamic management views in order to understand CPU, IO, and memory consumption. Your performance maybe impacted because your database is starved of resources. It could be that you may need to change the compute size and/or service tier based on the growing and shrinking workload demands.
 
@@ -297,12 +294,12 @@ SQL Database offers various service tiers Basic, Standard, and Premium. Each ser
 
 |**Service tier**|**Common Use Case Scenarios**|
 |---|---|
-|**Basic**|Applications with a handful users and a database that doesn’t have high concurrency, scale, and performance requirements. |
+|**Basic**|Applications with a handful users and a database that doesn't have high concurrency, scale, and performance requirements. |
 |**Standard**|Applications with a considerable concurrency, scale, and performance requirements coupled with low to medium IO demands. |
 |**Premium**|Applications with lots of concurrent users, high CPU/memory, and high IO demands. High concurrency, high throughput, and latency sensitive apps can leverage the Premium level. |
 
 
-For making sure you’re on the right compute size, you can monitor your query and database resource consumption through one of the above-mentioned ways in “How do I monitor the performance and resource utilization in SQL Database”. Should you find that your queries/databases are consistently running hot on CPU/Memory etc. you can consider scaling up to a higher compute size. Similarly, if you note that even during your peak hours, you don’t seem to use the resources as much; consider scaling down from the current compute size.
+For making sure you're on the right compute size, you can monitor your query and database resource consumption through one of the above-mentioned ways in "How do I monitor the performance and resource utilization in SQL Database". Should you find that your queries/databases are consistently running hot on CPU/Memory etc. you can consider scaling up to a higher compute size. Similarly, if you note that even during your peak hours, you don't seem to use the resources as much; consider scaling down from the current compute size.
 
 If you have a SaaS app pattern or a database consolidation scenario, consider using an Elastic pool for cost optimization. Elastic pool is a great way to achieve database consolidation and cost-optimization. To read more about managing multiple databases using elastic pool, see: [Manage pools and databases](elastic-pool-manage.md#azure-portal).
 

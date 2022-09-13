@@ -36,7 +36,7 @@ ms.author: maggies
   
      Optionally, click the **Expression** (*fx*) button to edit an expression that sets the scope.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

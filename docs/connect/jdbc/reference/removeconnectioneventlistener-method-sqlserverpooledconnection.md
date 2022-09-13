@@ -1,21 +1,15 @@
 ---
+title: "removeConnectionEventListener Method (SQLServerPooledConnection)"
 description: "removeConnectionEventListener Method (SQLServerPooledConnection)"
-title: "removeConnectionEventListener Method (SQLServerPooledConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPooledConnection.removeConnectionEventListener"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPooledConnection.removeConnectionEventListener"
+apitype: "Assembly"
 ---
 # removeConnectionEventListener Method (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

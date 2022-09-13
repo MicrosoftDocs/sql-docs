@@ -1,21 +1,15 @@
 ---
+title: "setTime Method (int, java.sql.Time)"
 description: "setTime Method (int, java.sql.Time)"
-title: "setTime Method (int, java.sql.Time) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPreparedStatement.setTime (int, java.sql.Time)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 1e3878dc-42fe-4fac-8fe3-22a7bd70c6da
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPreparedStatement.setTime (int, java.sql.Time)"
+apitype: "Assembly"
 ---
 # setTime Method (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

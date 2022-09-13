@@ -29,6 +29,7 @@ monikerRange: ">=sql-server-2016"
 ##  <a name="Prerequisites"></a> Prerequisites  
   
 -   Before adding a database that uses FILESTREAM, with or without FileTable, to an availability group, ensure that FILESTREAM is enabled on every server instance that hosts an availability replica for the availability group. For more information, see [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
+-   On a Windows Server 2012-based failover cluster, you should apply hotfix discussed in [Can't access VNN FILESTREAM share when you use the FILESTREAM and FileTable features on a Windows Server 2012-based failover cluster](https://support.microsoft.com/topic/can-t-access-vnn-filestream-share-when-you-use-the-filestream-and-filetable-features-on-a-windows-server-2012-based-failover-cluster-55e0d990-33ec-5097-5e95-4afa145a1bfa) to access file share using Virtual Network Name (VNN). This hotfix is also available at [Microsoft Update Catalog](https://catalog.update.microsoft.com/search.aspx?q=2835620)
   
 ##  <a name="vnn"></a> Using Virtual Network Names (VNNs) for FILESTREAM and FileTable Access  
  When you enable FILESTREAM on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], an instance-level share is created to provide access to the FILESTREAM data. You access this share by using the computer name in the following format:  

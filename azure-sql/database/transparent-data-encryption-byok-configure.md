@@ -2,19 +2,17 @@
 title: Enable SQL TDE with Azure Key Vault
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to configure an Azure SQL Database and Azure Synapse Analytics to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell or Azure CLI.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom:
-  - "seo-lt-2019 sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
-ms.topic: how-to
 author: shohamMSFT
 ms.author: shohamd
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 06/23/2021
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: how-to
+ms.custom:
+  - "seo-lt-2019 sqldbrb=1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

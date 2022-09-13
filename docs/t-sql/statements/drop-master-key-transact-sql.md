@@ -21,11 +21,10 @@ helpviewer_keywords:
   - "deleting Database Master Keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 5ccef797-408f-4964-80da-965d8e1ccba7
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
   Removes the master key from the current database.  
   

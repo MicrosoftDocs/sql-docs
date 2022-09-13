@@ -27,7 +27,7 @@ ms.author: maggies
   
 3.  Right-click the item, and click **Delete**.  
   
-4.  When prompted, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  When prompted, select **OK**.
   
 ## See Also  
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

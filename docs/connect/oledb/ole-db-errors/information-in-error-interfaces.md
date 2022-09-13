@@ -1,22 +1,19 @@
 ---
 title: "Information in Error Interfaces"
 description: "The OLE DB Driver for SQL Server reports some error and status information in the OLE DB-defined error interfaces IErrorInfo, IErrorRecords, and ISQLErrorInfo."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "05/06/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, errors"
   - "IErrorRecords interface"
   - "IErrorInfo interface"
   - "OLE DB error handling, error interfaces"
   - "ISQLErrorInfo interface"
   - "errors [OLE DB], error interfaces"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Information in Error Interfaces
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

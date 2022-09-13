@@ -1,22 +1,17 @@
 ---
+title: "sqlsrv_cancel"
 description: "sqlsrv_cancel"
-title: "sqlsrv_cancel | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "sqlsrv_cancel"
-apitype: "NA"
-helpviewer_keywords: 
-  - "sqlsrv_cancel"
-  - "API Reference, sqlsrv_cancel"
-ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "sqlsrv_cancel"
+  - "API Reference, sqlsrv_cancel"
+apiname: "sqlsrv_cancel"
+apitype: "NA"
 ---
 # sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

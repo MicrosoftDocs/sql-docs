@@ -1,21 +1,15 @@
 ---
+title: "getTransactionTimeout Method (SQLServerXAResource)"
 description: "getTransactionTimeout Method (SQLServerXAResource)"
-title: "getTransactionTimeout Method (SQLServerXAResource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerXAResource.getTransactionTimeout"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerXAResource.getTransactionTimeout"
+apitype: "Assembly"
 ---
 # getTransactionTimeout Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

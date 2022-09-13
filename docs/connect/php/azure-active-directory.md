@@ -1,16 +1,14 @@
 ---
 title: Azure Active Directory
 description: Learn how to use Azure Active Directory authentication with the Microsoft Drivers for PHP for SQL Server.
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 12/14/2021
 ms.prod: sql
-ms.prod_service: connectivity
-ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "azure active directory, authentication, access token"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Connect Using Azure Active Directory Authentication
 

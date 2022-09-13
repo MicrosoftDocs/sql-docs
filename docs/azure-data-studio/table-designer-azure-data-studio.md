@@ -1,14 +1,12 @@
 ---
 title: Creating and managing tables in Azure Data Studio
 description: How to use the Table Designer to manage tables and relationships in Azure Data Studio.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.custom: 
 ms.date: 05/05/2022
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Table Designer in Azure Data Studio (Preview)
@@ -29,8 +27,8 @@ The Table Designer consists of a window split into three separate panes. The fir
 
 #### Creating a table
 
-> [!Note]
-> We will be using the "AdventureWorks2019" sample database throughout this tutorial. If you haven't already, please refer to the [AdventureWorks sample databases article](/sql/samples/adv ' entureworks-install-configure) to download this sample database.
+> [!NOTE]
+> We will be using the "AdventureWorks2019" sample database throughout this tutorial. If you haven't already, please refer to [AdventureWorks sample databases](../samples/adventureworks-install-configure.md) to download this sample database.
 
 Before creating a table, you need to ensure that you have an active connection where your database is located. For a tutorial on connecting to the SQL Server, check out the [Use Azure Data Studio to connect and query SQL Server tutorial](quickstart-sql-server.md) article. To locate the Tables folder, click the drop-down menu of the databases folder in your active local connection and locate the AdventureWorks2019 database. Then, click the drop-down of this database to view the Tables folder.
 
@@ -93,7 +91,7 @@ The script pane will update to display the read-only Transact-SQL version of you
 
 #### Deleting columns
 
-To delete a column, simply select on the trash icon at the end of the column as highlighted below.
+To delete a column, simply select the trash icon at the end of the column as highlighted below.
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-deleting-column.png" alt-text="Screenshot of Table Designer showing how to delete a column.":::
 

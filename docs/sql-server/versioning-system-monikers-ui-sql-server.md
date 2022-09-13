@@ -16,11 +16,11 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest|
 
 This article explains our _versioning system_ for SQL documentation. The versioning system knows about products and their versions. The system enables you to choose the product and version you are interested in. The system then displays the appropriate documentation.
 
-## APPLIES TO products
+## _Applies to_ products
 
-Most of the SQL Server articles have the words **APPLIES TO** under their title. On the same line, there follows a handy listing of SQL _products_ with indicators of whether the article is relevant to the product. For example, the product SQL Server could be indicated as relevant, while Azure SQL Database could be indicated as irrelevant to the article.
+Most of the SQL Server articles have the words **Applies to** under their title. On the same line, there follows a handy listing of SQL _products_ with indicators of whether the article is relevant to the product. For example, the product SQL Server could be indicated as relevant, while Azure SQL Database could be indicated as irrelevant to the article.
 
-The **APPLIES TO** line does not know about _versions_ of products. We strive to avoid discrepancies between the **APPLIES TO** line and the products aspect of our versioning system configurations.
+The **Applies to** line does not know about _versions_ of products. We strive to avoid discrepancies between the **Applies to** line and the products aspect of our versioning system configurations.
 
 ## History of separate file sets
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "logins [SQL Server], denying access"
 dev_langs:
   - "TSQL"
-ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 ---
 # DENY Server Principal Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

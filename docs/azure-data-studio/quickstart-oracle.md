@@ -1,14 +1,12 @@
 ---
 title: "Quickstart: Connect and explore Oracle databases"
 description: Do a quickstart in which you use Azure Data Studio to connect to Oracle database and explore the objects.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.topic: "quickstart"
-ms.custom:
 ms.date: 10/4/2021
+ms.prod: azure-data-studio
+ms.topic: "quickstart"
 ---
 
 # Quickstart: Use Azure Data Studio to connect and explore Oracle databases

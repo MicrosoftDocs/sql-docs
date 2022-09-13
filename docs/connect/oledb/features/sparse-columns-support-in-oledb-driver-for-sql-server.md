@@ -1,18 +1,15 @@
 ---
-title: "Sparse Columns Support in OLE DB Driver for SQL Server | Microsoft Docs"
+title: "Sparse Columns Support in OLE DB Driver for SQL Server"
 description: Learn how OLE DB Driver for SQL Server supports sparse columns and see information about sparse columns in SQL Server.
-ms.custom: ""
-ms.date: "06/12/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "sparse columns, OLE DB Driver for SQL Server"
-  - "sparse columns, OLE DB"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/12/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "sparse columns, OLE DB Driver for SQL Server"
+  - "sparse columns, OLE DB"
 ---
 # Sparse Columns Support in OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

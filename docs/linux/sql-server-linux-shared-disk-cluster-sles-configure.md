@@ -242,7 +242,7 @@ Full list of resources:
 ## Managing cluster resources
 
 To manage your cluster resources,see the following SUSE topic:
-[Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+[Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm)
 
 ### Manual failover
 

@@ -2,18 +2,16 @@
 title: Monitor performance using DMVs
 titleSuffix: Azure SQL Database
 description: Learn how to detect and diagnose common performance problems by using dynamic management views to monitor Microsoft Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: 
-  - "azure-sql-split"
-  - "sqldbrb=2"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 08/03/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom:
+  - "azure-sql-split"
+  - "sqldbrb=2"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Database performance using dynamic management views
@@ -338,11 +336,11 @@ ORDER BY start_time ASC;
 
 ## Identify memory grant wait performance issues
 
-If your top wait type is `RESOURCE_SEMAHPORE` and you don't have a high CPU usage issue, you may have a memory grant waiting issue.
+If your top wait type is `RESOURCE_SEMAPHORE` and you don't have a high CPU usage issue, you may have a memory grant waiting issue.
 
-### Determine if a `RESOURCE_SEMAHPORE` wait is a top wait
+### Determine if a `RESOURCE_SEMAPHORE` wait is a top wait
 
-Use the following query to determine if a `RESOURCE_SEMAHPORE` wait is a top wait
+Use the following query to determine if a `RESOURCE_SEMAPHORE` wait is a top wait
 
 ```sql
 SELECT wait_type,

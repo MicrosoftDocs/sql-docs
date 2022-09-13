@@ -112,6 +112,10 @@ Find worker and session limits for Azure SQL Database by service tier and comput
 
 Learn more about troubleshooting specific errors for session or worker limits in [Resource governance errors](troubleshoot-common-errors-issues.md#resource-governance-errors).
 
+### External connections
+
+Number of concurrent connections to external endpoints done via [sp_invoke_external_rest_endpoint](../../docs/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md) are capped to 10% of worker threads, with a hard cap of max 150 workers. 
+
 ### Memory
 
 Unlike other resources (CPU, workers, storage), reaching the memory limit does not negatively impact query performance, and does not cause errors and failures. As described in detail in [Memory Management Architecture Guide](/sql/relational-databases/memory-management-architecture-guide), the database engine often uses all available memory, by design. Memory is used primarily for caching data, to avoid slower storage access. Thus, higher memory utilization usually improves query performance due to faster reads from memory, rather than slower reads from storage.

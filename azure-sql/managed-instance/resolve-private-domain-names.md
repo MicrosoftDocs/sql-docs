@@ -16,7 +16,8 @@ ms.date: 09/16/2022
 # Resolve private domain names in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-In certain situations, it's necessary for a SQL Server to resolve domain names that don't exist in public DNS records. Some scenarios that are likely to involve private domain names include:
+In certain situations, it's necessary for the SQL Server database engine to resolve domain names that don't exist in public DNS records. Some scenarios that are likely to involve private domain names include:
+
 * Sending emails via [Database Mail](/../sql/relational-databases/database-mail/database-mail.md)
 * Accessing remote data sources via [Linked Servers](/../sql/relational-databases/linked-servers/linked-servers-database-engine.md)
 * Replicating data to the cloud via [Managed Instance Link feature](managed-instance-link-feature-overview.md).

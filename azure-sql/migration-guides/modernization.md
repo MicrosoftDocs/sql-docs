@@ -4,7 +4,7 @@ description: Frequently Asked Questions about migrating from SQL Server to Azure
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: dmarinkovic, randolphwest
-ms.date: 09/08/2022
+ms.date: 09/13/2022
 ms.service: sql-database
 ms.topic: faq
 ---
@@ -26,7 +26,7 @@ A [migration to Azure](https://azure.microsoft.com/overview/cloud-migration-bene
 
 #### What is Azure SQL?
 
-[Azure SQL](../azure-sql-iaas-vs-paas-what-is-overview.md) is a family of services that use the SQL Server database engine in the Azure Cloud. The following services belong to Azure SQL: [Azure SQL Database](../database/sql-database-paas-overview.md) (SQL DB), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) (SQL MI) and [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/).
+[Azure SQL](../azure-sql-iaas-vs-paas-what-is-overview.md) is a family of services that use the SQL Server database engine in the Azure Cloud. The following services belong to Azure SQL: [Azure SQL Database](../database/sql-database-paas-overview.md) (SQL Database), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) (SQL Managed Instance) and [SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/).
 
 #### What is the difference between migration and modernization to Azure SQL?
 
@@ -40,7 +40,7 @@ A [migration to Azure](https://azure.microsoft.com/overview/cloud-migration-bene
 
 **[Platform as a service](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-is-paas/)** (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications.
 
-PaaS provides additional advantages over IaaS, such as shorter development cycles, extra development capabilities without adding staff, affordable access to sophisticated tools, to mention a few. Azure SQL provides both PaaS (SQL MI, SQL DB) and IaaS (SQL VM) services.
+PaaS provides additional advantages over IaaS, such as shorter development cycles, extra development capabilities without adding staff, affordable access to sophisticated tools, to mention a few. Azure SQL provides both PaaS (SQL Managed Instance, SQL Database) and IaaS (SQL VM) services.
 
 #### How do I decide if I should move my SQL Server to a Virtual Machine, SQL Managed Instance or SQL Database?
 
@@ -52,9 +52,9 @@ PaaS provides additional advantages over IaaS, such as shorter development cycle
 
 #### How can I reduce costs by moving to Azure SQL?
 
-Moving to Azure brings savings in resource, maintenance, and real estate costs, in addition to the ability to optimize workloads so that they cost less to run. Azure SQL MI and SQL DB bring all the advantages of PaaS services, providing automated performance tuning, backups, software patching and high-availability, all of which entails enormous effort and cost when performing manually.
+Moving to Azure brings savings in resource, maintenance, and real estate costs, in addition to the ability to optimize workloads so that they cost less to run. Azure SQL Managed Instance and SQL Database bring all the advantages of PaaS services, providing automated performance tuning, backups, software patching and high-availability, all of which entails enormous effort and cost when performing manually.
 
-For example, SQL MI and SQL DB (single database and elastic pool) come with built-in HA. Also, Business Critical (SQL MI) and Premium (SQL DB) tiers provide read-only replicas at no additional cost, while SQL DB Hyperscale tier allows HA and named [secondary replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas) for [read scale-out](/azure/azure-sql/database/read-scale-out) at no license cost. Additionally, [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) customers can use their on-premises SQL Server license on Azure by applying [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) (AHB). Software Assurance also lets you implement [free passive HA and DR secondaries using SQL VM](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview#free-dr-replica-in-azure).
+For example, SQL Managed Instance and SQL Database (single database and elastic pool) come with built-in HA. Also, Business Critical (SQL Managed Instance) and Premium (SQL Database) tiers provide read-only replicas at no additional cost, while SQL Database Hyperscale tier allows HA and named [secondary replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas) for [read scale-out](/azure/azure-sql/database/read-scale-out) at no license cost. Additionally, [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) customers can use their on-premises SQL Server license on Azure by applying [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) (AHB). Software Assurance also lets you implement [free passive HA and DR secondaries using SQL VM](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview#free-dr-replica-in-azure).
 
 In addition, every Azure SQL service provides you the option to reserve instances in advance (1-3 years) and obtain significant additional savings. [Dev/Test pricing plans](https://azure.microsoft.com/pricing/dev-test/#devtest) provide a way to further reduce development costs. Finally, check the following article on how you can [Optimize your Azure SQL Managed Instance cost with Microsoft Azure Well-Architected Framework](https://techcommunity.microsoft.com/t5/azure-sql-blog/optimize-your-azure-sql-managed-instance-cost-with-microsoft/ba-p/2235216).
 
@@ -66,13 +66,13 @@ Unique to Azure, Azure Hybrid Benefit (AHB) is a licensing benefit that allows y
 
 #### Scenario 1: Data center move to the cloud: what is the modernization path for applications and SQL Server databases?
 
-Updating an organization's existing apps to a cloud first model can be achieved by using fully managed application and data services including [Azure App Service](https://azure.microsoft.com/services/app-service/), [Azure Spring Apps](https://azure.microsoft.com/services/spring-cloud/), [Azure SQL Database](/azure/azure-sql/database/service-tier-hyperscale), [Azure SQL MI](/azure/azure-sql/managed-instance/) and other PaaS services. [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/) (AKS) provides a managed container-based approach within Azure. [Application and Data Modernization](https://azure.microsoft.com/solutions/application-and-database-modernization/#overview) in Azure is achieved through several [stages](https://azure.microsoft.com/migration/migration-journey/#how-to-migrate), with the most common scenario [examples](/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-overview) described within the [Cloud Adoption Framework](/azure/cloud-adoption-framework/).
+Updating an organization's existing apps to a cloud first model can be achieved by using fully managed application and data services including [Azure App Service](https://azure.microsoft.com/services/app-service/), [Azure Spring Apps](https://azure.microsoft.com/services/spring-cloud/), [Azure SQL Database](/azure/azure-sql/database/service-tier-hyperscale), [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/) and other PaaS services. [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/) (AKS) provides a managed container-based approach within Azure. [Application and Data Modernization](https://azure.microsoft.com/solutions/application-and-database-modernization/#overview) in Azure is achieved through several [stages](https://azure.microsoft.com/migration/migration-journey/#how-to-migrate), with the most common scenario [examples](/azure/cloud-adoption-framework/migrate/azure-best-practices/contoso-migration-overview) described within the [Cloud Adoption Framework](/azure/cloud-adoption-framework/).
 
 #### Scenario 2: Reducing SQL Server costs: How can I reduce the cost for my existing SQL Server fleet?
 
-Moving to Azure SQL VMs, SQL MI or SQL DB brings savings in resource, maintenance, and real estate costs. Using your SQL Server on-premises licenses in Azure via [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit), using [Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) for SQL VM, SQL MI and SQL DB vCores, and using [constrained vCPU capable Virtual Machines](/azure/virtual-machines/constrained-vcpu) will give you a wide variety of options to build a cost-effective solution.
+Moving to Azure SQL VMs, SQL Managed Instance or SQL Database brings savings in resource, maintenance, and real estate costs. Using your SQL Server on-premises licenses in Azure via [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit), using [Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) for SQL VM, SQL Managed Instance and SQL Database vCores, and using [constrained vCPU capable Virtual Machines](/azure/virtual-machines/constrained-vcpu) will give you a wide variety of options to build a cost-effective solution.
 
-For implementing BCDR solutions in Azure SQL, you benefit from built-in HA replicas of SQL MI and SQL DB or [free passive HA and DR secondaries using SQL VM](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview#free-dr-replica-in-azure). Also, Business Critical (SQL MI) and Premium (SQL DB) tiers provide read-only replicas at no additional cost, while SQL DB Hyperscale tier allows HA and named [secondary replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas) for [read scale-out](/azure/azure-sql/database/read-scale-out) at no license cost. In addition, make sure to check different [Dev/Test pricing plans](https://azure.microsoft.com/pricing/dev-test/#devtest).
+For implementing BCDR solutions in Azure SQL, you benefit from built-in HA replicas of SQL Managed Instance and SQL Database or [free passive HA and DR secondaries using SQL VM](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview#free-dr-replica-in-azure). Also, Business Critical (SQL Managed Instance) and Premium (SQL Database) tiers provide read-only replicas at no additional cost, while SQL Database Hyperscale tier allows HA and named [secondary replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas) for [read scale-out](/azure/azure-sql/database/read-scale-out) at no license cost. In addition, make sure to check different [Dev/Test pricing plans](https://azure.microsoft.com/pricing/dev-test/#devtest).
 
 If you're interested to understand how you can save up to 64% by moving to Azure SQL please check ESG report on [The Economic Value of Migrating On-Premises SQL Server Instances to Microsoft Azure SQL Solutions](https://azure.microsoft.com/resources/the-economic-value-of-migrating-on-premises-sql-server-instances-to-microsoft-azure-sql-solutions/). Finally, check the following article on how you can [Optimize your Azure SQL Managed Instance cost with Microsoft Azure Well-Architected Framework](https://techcommunity.microsoft.com/t5/azure-sql-blog/optimize-your-azure-sql-managed-instance-cost-with-microsoft/ba-p/2235216).
 
@@ -82,7 +82,7 @@ If you're interested to understand how you can save up to 64% by moving to Azure
 
 #### Scenario 4: SQL Server end of support: Which options do I have to move to Azure SQL?
 
-Once your SQL Server has reached the end of support stage, you have several [modernization options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview) towards Azure SQL. One of the options is to migrate your workload to an Azure SQL Managed Instance, which provides high feature parity with the on-premises SQL Server product. Alternatively, with some additional effort, you can move the workload to Azure SQL DB. These services run on SQL Server evergreen features, effectively granting you *"the end of End of Support"*.
+Once your SQL Server has reached the end of support stage, you have several [modernization options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview) towards Azure SQL. One of the options is to migrate your workload to an Azure SQL Managed Instance, which provides high feature parity with the on-premises SQL Server product. Alternatively, with some additional effort, you can move the workload to Azure SQL Database. These services run on SQL Server evergreen features, effectively granting you *"the end of End of Support"*.
 
 Backward compatibility is provided via [compatibility levels](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server#compatibility-levels) and [database compatibility level](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) settings. Tools like [Azure SQL Migration extension](/sql/azure-data-studio/extensions/azure-sql-migration-extension) in Azure Data Studio or [Data Migration Assistant](/sql/dma/dma-overview) will help you identify possible incompatibilities.
 
@@ -100,13 +100,13 @@ The Microsoft [Cloud Adoption Framework for Azure](https://azure.microsoft.com/c
 
 #### Where can I find migration guides for Azure SQL?
 
-The following guides help you discover, assess, and migrate from SQL Server to [SQL VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide), [SQL MI](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview) and [SQL DB](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview).
+The following guides help you discover, assess, and migrate from SQL Server to [SQL VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide), [SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview) and [SQL Database](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview).
 
 #### Do I have to modernize applications and SQL at the same time? What are my options?
 
 No. Feel free to take an iterative approach to modernizing each workload and component.
 
-#### Can I modernize SQL Server to SQL MI and just lift and shift my application to a VM?
+#### Can I modernize SQL Server to SQL Managed Instance and just lift and shift my application to a VM?
 
 Yes. You can [Connect your application to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/connect-application-instance) through different scenarios, including when hosting it on a VM.
 
@@ -118,23 +118,23 @@ Yes. You can [Connect your application to Azure SQL Managed Instance](/azure/azu
 
 Moving to Azure SQL brings significant TCO savings by improving operational efficiency and business agility, as well as eliminating the need for on-premises hardware and software. According to ESG report on [The Economic Value of Migrating On-Premises SQL Server Instances to Microsoft Azure SQL Solutions](https://azure.microsoft.com/resources/the-economic-value-of-migrating-on-premises-sql-server-instances-to-microsoft-azure-sql-solutions/), you can save up to 47% when migrating from on-premises to Azure SQL Virtual Machines (IaaS), and up to 64% when migrating to Azure SQL Managed Instance or Azure SQL Database (PaaS).
 
-#### What is the licensing model for SQL MI?
+#### What is the licensing model for SQL Managed Instance?
 
-[SQL MI licensing](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore) follows vCore-based licensing model, where you pay for compute, storage, and backup storage resources. You can choose between several service tiers (General Purpose, Business Critical) and hardware generations. The [SQL MI pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/) provides a full overview of possible SKUs and prices.
+[SQL Managed Instance licensing](/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore) follows vCore-based licensing model, where you pay for compute, storage, and backup storage resources. You can choose between several service tiers (general purpose, Business Critical) and hardware generations. The [SQL Managed Instance pricing page](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/) provides a full overview of possible SKUs and prices.
 
-#### What is the licensing model for SQL DB?
+#### What is the licensing model for SQL Database?
 
-SQL DB provides a choice between the [vCore-based purchasing model](/azure/azure-sql/database/service-tiers-sql-database-vcore) and [Database transaction unit purchasing model](/azure/azure-sql/database/service-tiers-dtu). You can explore [Pricing - Azure SQL Database Single Database](https://azure.microsoft.com/pricing/details/azure-sql-database/single/) and learn about pricing options.
+SQL Database provides a choice between the [vCore-based purchasing model](/azure/azure-sql/database/service-tiers-sql-database-vcore) and [Database transaction unit purchasing model](/azure/azure-sql/database/service-tiers-dtu). You can explore [Pricing - Azure SQL Database Single Database](https://azure.microsoft.com/pricing/details/azure-sql-database/single/) and learn about pricing options.
 
-#### What subscription types are supported in SQL MI?
+#### What subscription types are supported in SQL Managed Instance?
 
-Check [Supported subscription types](/azure/azure-sql/managed-instance/resource-limits#supported-subscription-types) for SQL MI.
+Check [Supported subscription types](/azure/azure-sql/managed-instance/resource-limits#supported-subscription-types) for SQL Managed Instance.
 
 #### Can I use my on-premises SQL Server license when moving to Azure SQL?
 
-If you own Software Assurance for core-based or qualifying subscription licenses for SQL Server Standard Edition or SQL Server Enterprise Edition, you can use your existing SQL Server license when moving to SQL MI, SQL DB or Azure VM by applying Azure Hybrid Benefit (AHB). You can also simultaneously use these licenses both in on-premises and Azure environments (dual use rights) for up to 180 days.
+If you own Software Assurance for core-based or qualifying subscription licenses for SQL Server Standard Edition or SQL Server Enterprise Edition, you can use your existing SQL Server license when moving to SQL Managed Instance, SQL Database or Azure VM by applying Azure Hybrid Benefit (AHB). You can also simultaneously use these licenses both in on-premises and Azure environments (dual use rights) for up to 180 days.
 
-#### How do I move from SQL VM to SQL MI?
+#### How do I move from SQL VM to SQL Managed Instance?
 
 You can follow the same [migration guide](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview) as for the on-premises SQL Server.
 
@@ -150,11 +150,11 @@ SQL Server CAL licenses with appropriate license mobility rights can be used on 
 
 Unique to Azure, Azure Hybrid Benefit (AHB) is a licensing benefit that allows you bringing your existing Windows Server and SQL Server licenses with Software Assurance (SA) to Azure. AHB can bring you up to 85% savings compared to pay-as-you-go pricing in Azure SQL, when combined with reservations savings and extended security updates.
 
-#### How do I translate my SQL Server on-premises license to vCore license in SQL MI, SQL DB, and SQL VM?
+#### How do I translate my SQL Server on-premises license to vCore license in SQL Managed Instance, SQL Database, and SQL VM?
 
-For every one (1) core of SQL Server Enterprise Edition, you get four (4) vCores of SQL MI General Purpose tier or one (1) vCore of SQL MI Business Critical tier. Similarly, one (1) core of SQL Server Standard Edition translates to one (1) vCore of SQL MI General Purpose tier, while four (4) vCores of SQL Server Standard Edition translate to one (1) vCore of SQL MI Business Critical.
+For every one (1) core of SQL Server Enterprise Edition, you get four (4) vCores of SQL Managed Instance general purpose tier or one (1) vCore of SQL Managed Instance Business Critical tier. Similarly, one (1) core of SQL Server Standard Edition translates to one (1) vCore of SQL Managed Instance general purpose tier, while four (4) vCores of SQL Server Standard Edition translate to one (1) vCore of SQL Managed Instance Business Critical.
 
-The [Azure Hybrid Benefit August 2020 update](https://www.microsoft.com/licensing/news/expanded-ahb-rights-for-microsoft-sql-server) provides an overview of possible core-to-vCore conversions for SQL MI, SQL DB and SQL VM. Applicable AHB rights are also described in the [Product Terms](https://www.microsoft.com/licensing/terms/welcome/welcomepage). You can also use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) to calculate the exact savings for your SQL Server estate.
+The [Azure Hybrid Benefit August 2020 update](https://www.microsoft.com/licensing/news/expanded-ahb-rights-for-microsoft-sql-server) provides an overview of possible core-to-vCore conversions for SQL Managed Instance, SQL Database and SQL VM. Applicable AHB rights are also described in the [Product Terms](https://www.microsoft.com/licensing/terms/welcome/welcomepage). You can also use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/#calculator) to calculate the exact savings for your SQL Server estate.
 
 #### Is Software Assurance (SA) required for using SQL Server license on Azure SQL?
 
@@ -162,15 +162,15 @@ The [Azure Hybrid Benefit August 2020 update](https://www.microsoft.com/licensin
 
 Alternatively, the outsourcing software management terms applicable to SQL server licenses acquired prior to October 1, 2019 permit you to allocate your existing licenses to Azure Dedicated Host just as you would license a server in your own data center: see [Pricing - Dedicated Host Virtual Machines](https://azure.microsoft.com/pricing/details/virtual-machines/dedicated-host/).
 
-#### Do I have to pay for high availability (HA) in SQL MI and SQL DB?
+#### Do I have to pay for high availability (HA) in SQL Managed Instance and SQL Database?
 
-Both General Purpose and Business Critical tiers of SQL MI and SQL DB are built on top of inherent [high availability architecture](/azure/azure-sql/database/high-availability-sla). This way, there's no extra charge for HA. For SQL DB Hyperscale tier HA replica is charged.
+Both general purpose and Business Critical tiers of SQL Managed Instance and SQL Database are built on top of inherent [high availability architecture](/azure/azure-sql/database/high-availability-sla). This way, there's no extra charge for HA. For SQL Database Hyperscale tier HA replica is charged.
 
 #### Do I have to pay for HA and DR replicas for Azure SQL?
 
 If you have Software Assurance, on Azure SQL VM you can implement high availability (HA) and disaster recovery (DR) plans with SQL Server without incurring additional licensing costs for the passive disaster recovery instance. See the [SQL VM documentation](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview#free-dr-replica-in-azure) for more details.
 
-#### Do I have to pay for disaster recovery (DR) in SQL MI and SQL DB?
+#### Do I have to pay for disaster recovery (DR) in SQL Managed Instance and SQL Database?
 
 Yes. These are separate costs.
 
@@ -178,7 +178,7 @@ Yes. These are separate costs.
 
 Yes. You can [centrally manage your Azure Hybrid Benefit](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope) for SQL Server across the scope of an entire Azure subscription or overall billing account. This feature is currently in preview.
 
-#### If I move some of SQL Servers, my workloads to SQL MI and leave some workloads on-premises, can I manage all my SQL licenses in one place?
+#### If I move some of SQL Servers, my workloads to SQL Managed Instance and leave some workloads on-premises, can I manage all my SQL licenses in one place?
 
 You can [centrally manage your licenses](/azure/cost-management-billing/scope-level/overview-azure-hybrid-benefit-scope) that are covered by Azure Hybrid Benefit for SQL Server across the scope of an entire Azure subscription or overall billing account. This data can be combined with an overview maintained by your licensing partner/procurement department or obtaining licensing information by creating your own [custom licensing overview](https://techcommunity.microsoft.com/t5/azure-sql-blog/getting-insights-into-the-utilization-of-sql-server-licenses-on/ba-p/2051320). Your licenses must be used either on-premises or in the cloud, but you'll have 180 days of concurrent use rights while migrating servers.
 
@@ -206,17 +206,17 @@ With SQL Server 2022, we offer the best possible solution to seamlessly move dat
 
 ### Workloads and architecture
 
-#### How do I determine which SQL Server workloads should be moved to SQL MI?
+#### How do I determine which SQL Server workloads should be moved to SQL Managed Instance?
 
-When migrating SQL Server workloads to Azure SQL MI is normally the first option, as most databases are "as-is" ready to migrate to SQL MI. There are several tools available to help you assess your workload for compatibility with Azure SQL MI.
+When migrating SQL Server workloads to Azure SQL Managed Instance is normally the first option, as most databases are "as-is" ready to migrate to SQL Managed Instance. There are several tools available to help you assess your workload for compatibility with Azure SQL Managed Instance.
 
-You can use the [Azure SQL Migration extension](/sql/azure-data-studio/extensions/azure-sql-migration-extension) in Azure Data Studio or [Data Migration Assistant](/sql/dma/dma-overview). Both tools provide help to detect issues that can affect the Azure SQL MI migration and provide guidance on how to resolve them. After verifying compatibility, you can run the [SKU recommendation tool](/sql/dma/dma-sku-recommend-sql-db) to analyze performance data and recommend a minimal Azure SQL MI SKU. Make sure to visit [Azure Migrate](/azure/migrate/) which is a centralized hub to assess and migrate on-premises servers, infrastructure, applications, and data to Azure.
+You can use the [Azure SQL Migration extension](/sql/azure-data-studio/extensions/azure-sql-migration-extension) in Azure Data Studio or [Data Migration Assistant](/sql/dma/dma-overview). Both tools provide help to detect issues that can affect the Azure SQL Managed Instance migration and provide guidance on how to resolve them. After verifying compatibility, you can run the [SKU recommendation tool](/sql/dma/dma-sku-recommend-sql-db) to analyze performance data and recommend a minimal Azure SQL Managed Instance SKU. Make sure to visit [Azure Migrate](/azure/migrate/) which is a centralized hub to assess and migrate on-premises servers, infrastructure, applications, and data to Azure.
 
-#### How do I determine the appropriate SQL MI target for a particular SQL Server on-premises workload: SQL MI General Purpose or Business Critical Tier?
+#### How do I determine the appropriate SQL Managed Instance target for a particular SQL Server on-premises workload: SQL Managed Instance general purpose or Business Critical tier?
 
-SQL MI tier choice is guided by availability, performance (for example, throughput, OIPS, latency) and feature (for example, in-memory OLTP) requirements. The [General Purpose tier](/azure/azure-sql/database/service-tier-general-purpose) is suitable for most generic workloads, as it already provides HA architecture and a fully managed database engine with a storage latency between 5 ms and 10 ms. The [Business Critical tier](/azure/azure-sql/database/service-tier-business-critical/) is designed for applications that require low-latency (1-2 ms) responses from the storage layer, fast recovery, strict availability requirements, and the ability to off-load analytics workloads.
+SQL Managed Instance tier choice is guided by availability, performance (for example, throughput, OIPS, latency) and feature (for example, in-memory OLTP) requirements. The [general purpose tier](/azure/azure-sql/database/service-tier-general-purpose) is suitable for most generic workloads, as it already provides HA architecture and a fully managed database engine with a storage latency between 5 ms and 10 ms. The [Business Critical tier](/azure/azure-sql/database/service-tier-business-critical/) is designed for applications that require low-latency (1-2 ms) responses from the storage layer, fast recovery, strict availability requirements, and the ability to off-load analytics workloads.
 
-#### How can I move a highly automated SQL Server to SQL MI?
+#### How can I move a highly automated SQL Server to SQL Managed Instance?
 
 **Infrastructure deployment automation** of Azure SQL can be done with [PowerShell](/powershell/module/az.sql) and [CLI](/cli/azure/sql/db). Useful examples can be found in the [Azure PowerShell samples for Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/powershell-script-content-guide) article. You can use [Azure DevOps Continuous Integration (CI) and Deployment (CD) Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) to fully embed automation within your Infrastructure-as-Code practices.
 
@@ -224,57 +224,57 @@ SQL MI tier choice is guided by availability, performance (for example, throughp
 
 #### Can I move only a specific workload out of an on-premises cluster and what will be the impact to licensing and cost?
 
-It's possible to only migrate the databases related to one workload towards an Azure SQL MI. Creating and operating an Azure SQL MI will require SQL Server licenses. [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit) will provide you with the ability to reuse your licenses. Reach out to your licensing partner to review what possibilities can be used with [license mobility](/licensing/licensing-programs/software-assurance-license-mobility) and restructuring your current licenses.
+It's possible to only migrate the databases related to one workload towards an Azure SQL Managed Instance. Creating and operating an Azure SQL Managed Instance will require SQL Server licenses. [Azure Hybrid Benefit](/azure/azure-sql/azure-hybrid-benefit) will provide you with the ability to reuse your licenses. Reach out to your licensing partner to review what possibilities can be used with [license mobility](https://www.microsoft.com/licensing/licensing-programs/software-assurance-license-mobility) and restructuring your current licenses.
 
-#### I maintain a highly consolidated SQL Server with multiple applications running against it. Can I move it to SQL MI?
+#### I maintain a highly consolidated SQL Server with multiple applications running against it. Can I move it to SQL Managed Instance?
 
-Similarly as with on-premises SQL Server, you can consolidate and run multiple databases on a single SQL MI instance, at the same time benefiting from inherent high-availability architecture as well as shared security and management. SQL MI also supports cross database queries.
+Similarly as with on-premises SQL Server, you can consolidate and run multiple databases on a single SQL Managed Instance instance, at the same time benefiting from inherent high-availability architecture as well as shared security and management. SQL Managed Instance also supports cross database queries.
 
-#### How do I migrate SQL Server Business Intelligence workloads (including Reporting Services and Analysis Services) that aren't compatible with SQL MI?
+#### How do I migrate SQL Server Business Intelligence workloads (including Reporting Services and Analysis Services) that aren't compatible with SQL Managed Instance?
 
-Least effort migration path will be to move as-is and host the Business Intelligence components on an Azure VM. The `Reporting Services` database can be [hosted on Azure SQL MI](https://techcommunity.microsoft.com/t5/azure-sql-blog/modernizing-ssrs-and-a-step-by-step-guide-to-bringing/ba-p/2483050) and Azure Data Factory provides the capability to [lift and shift SSIS solutions](/sql/integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview) to the cloud. When building a modern solution is part of the migration effort, Azure is providing a wide variety of services to build an [Enterprise data warehouse](/azure/architecture/solution-ideas/articles/enterprise-data-warehouse) solution.
+Least effort migration path will be to move as-is and host the Business Intelligence components on an Azure VM. The `Reporting Services` database can be [hosted on Azure SQL Managed Instance](https://techcommunity.microsoft.com/t5/azure-sql-blog/modernizing-ssrs-and-a-step-by-step-guide-to-bringing/ba-p/2483050) and Azure Data Factory provides the capability to [lift and shift SSIS solutions](/sql/integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview) to the cloud. When building a modern solution is part of the migration effort, Azure is providing a wide variety of services to build an [Enterprise data warehouse](/azure/architecture/solution-ideas/articles/enterprise-data-warehouse) solution.
 
-#### I'm using an application from an ISV that doesn't support SQL MI / Azure. What are my options to move my App to Azure and SQL Server to Azure SQL?
+#### I'm using an application from an ISV that doesn't support SQL Managed Instance / Azure. What are my options to move my application to Azure and SQL Server to Azure SQL?
 
 Migrating your environment as-is to an Azure Virtual Machine will be the safest option when the ISV or vendor isn't providing any options. However, we [encourage](https://azure.microsoft.com/partners/isv/#get-started) ISVs and vendors that are working closely with Microsoft to review the options with Azure SQL Managed Instance. Azure SQL Managed Instance provides backward compatibility options through [database compatibility level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level), guidance for [Transact-SQL differences](/azure/azure-sql/managed-instance/transact-sql-tsql-differences-sql-server) and has implemented [major features](/azure/azure-sql/database/features-comparison) to Azure SQL Managed instance.
 
-#### How do I keep the compatibility of my current SQL Server database version in SQL MI?
+#### How do I keep the compatibility of my current SQL Server database version in SQL Managed Instance?
 
-Database compatibility level can be set in MI, as described on the [Azure SQL Blog](https://techcommunity.microsoft.com/t5/azure-sql-blog/sql-managed-instance-closing-the-gap-on-sql-server-application/ba-p/3214460).
+Database compatibility level can be set in Managed Instance, as described on the [Azure SQL Blog](https://techcommunity.microsoft.com/t5/azure-sql-blog/sql-managed-instance-closing-the-gap-on-sql-server-application/ba-p/3214460).
 
 ### Security
 
 #### How does Azure SQL help in enhancing the database security posture?
 
-The security strategy follows the layered defense-in-depth approach: Network security + Access management + Threat protection + Information Protection. You can read more about [SQL DB and SQL MI security capabilities](/azure/azure-sql/database/security-overview). Azure-wide, [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides a solution for Cloud Security Posture Management (SCPM) and Cloud Workload Protection (CWP).
+The security strategy follows the layered defense-in-depth approach: Network security + Access management + Threat protection + Information Protection. You can read more about [SQL Database and SQL Managed Instance security capabilities](/azure/azure-sql/database/security-overview). Azure-wide, [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides a solution for Cloud Security Posture Management (SCPM) and Cloud Workload Protection (CWP).
 
 ### Business continuity
 
-#### How can I adapt on-premises business continuity and disaster recovery (BCDR) concepts into Azure SQL MI concepts?
+#### How can I adapt on-premises business continuity and disaster recovery (BCDR) concepts into Azure SQL Managed Instance concepts?
 
-Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implementations. For example, the inherent [high availability](/azure/azure-sql/database/high-availability-sla) of SQL MI [General Purpose tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977) can be seen as a cloud equivalent for SQL Server FCI. Similarly, SQL MI [Business Critical tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212) can be seen as a cloud equivalent for an Always On Availability Group with synchronous commit to a minimum number of replicas. As a Disaster Recovery concept, an [Auto-failover Group](/azure/azure-sql/managed-instance/auto-failover-group-sql-mi) on SQL MI is comparable to an Asynchronous Always On Availability Group with asynchronous commit. SQL DB and SQL MI HA are backed by [Service-Level Agreements](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). You can find more on SQL DB and SQL MI Business Continuity in the [official documentation](/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview).
+Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implementations. For example, the inherent [high availability](/azure/azure-sql/database/high-availability-sla) of SQL Managed Instance [general purpose tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977) can be seen as a cloud equivalent for SQL Server FCI. Similarly, SQL Managed Instance [Business Critical tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212) can be seen as a cloud equivalent for an Always On Availability Group with synchronous commit to a minimum number of replicas. As a Disaster Recovery concept, an [Auto-failover Group](/azure/azure-sql/managed-instance/auto-failover-group-sql-mi) on SQL Managed Instance is comparable to an Asynchronous Always On Availability Group with asynchronous commit. SQL Database and SQL Managed Instance HA are backed by [Service-Level Agreements](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). You can find more on SQL Database and SQL Managed Instance Business Continuity in the [official documentation](/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview).
 
 #### How are backups handled in Azure SQL PaaS services?
 
-You can check documentation for automated backups in [SQL MI](/azure/azure-sql/managed-instance/automated-backups-overview) and [SQL DB](/azure/azure-sql/database/automated-backups-overview) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
+You can check documentation for automated backups in [SQL Managed Instance](/azure/azure-sql/managed-instance/automated-backups-overview) and [SQL Database](/azure/azure-sql/database/automated-backups-overview) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
 
-#### How is high availability (HA) achieved in SQL MI and SQL DB?
+#### How is high availability (HA) achieved in SQL Managed Instance and SQL Database?
 
-SQL MI and DB are built on top of inherent [high availability](/azure/azure-sql/database/high-availability-sla) (HA) architecture. This includes support for auto-failover groups and various other features. You can choose between two HA architecture models: [Standard availability model in General Purpose service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977), or [Premium availability model in Business Critical service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212).
+SQL Managed Instance and Database are built on top of inherent [high availability](/azure/azure-sql/database/high-availability-sla) (HA) architecture. This includes support for auto-failover groups and various other features. You can choose between two HA architecture models: [Standard availability model in general purpose service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-general-purpose-service-tier/ba-p/3298977), or [Premium availability model in Business Critical service tier](https://techcommunity.microsoft.com/t5/azure-sql-blog/high-availability-in-azure-sql-mi-business-critical-service-tier/ba-p/3521212).
 
-#### How does disaster recovery work in SQL MI and SQL DB?
+#### How does disaster recovery work in SQL Managed Instance and SQL Database?
 
-See the [SQL DB and SQL MI](/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview) documentation. The [SQL MI Frequently Asked Questions](/azure/azure-sql/managed-instance/frequently-asked-questions-faq#business-continuity) provide information on DR options.
+See the [SQL Database and SQL Managed Instance](/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview) documentation. The [SQL Managed Instance Frequently Asked Questions](/azure/azure-sql/managed-instance/frequently-asked-questions-faq#business-continuity) provide information on DR options.
 
 ### Performance and scale
 
-#### How do I obtain better performance by moving on-premises SQL Server to SQL MI, SQL DB or SQL VM?
+#### How do I obtain better performance by moving on-premises SQL Server to SQL Managed Instance, SQL Database or SQL VM?
 
-Moving from on-premises will provide you with performance benefits due to the latest SQL Server database engine features, cloud scaling flexibility and the newest generation of underlying hardware. [Find out why your SQL Server data belongs on Azure](https://azure.microsoft.com/blog/find-out-why-your-sql-server-data-belongs-on-azure/). You can also read a recently published [study by Principled Technologies](https://facts.pt/GZUp6xk) benchmarking SQL MI and SQL Server on Amazon Web Services (AWS) RDS. It's important to ensure a [proper sizing based on your requirements](/sql/dma/dma-sku-recommend-sql-db) for CPU, memory and [storage](/azure/azure-sql/managed-instance/resource-limits#data-and-log-storage) (IOPS, latency, transaction log throughput and size). SQL MI and SQL DB also provide a choice between different [hardware configurations](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview#vcore-based-purchasing-model) and [service tiers](/azure/azure-sql/managed-instance/resource-limits#service-tier-characteristics) that provide additional means to reach target performance. Applications can also take advantage of [read scale-out](/azure/azure-sql/database/read-scale-out) abilities including with [named replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas) and [geo-replicas](/azure/azure-sql/database/active-geo-replication-overview), and techniques such as [database sharding](/azure/azure-sql/database/elastic-scale-introduction).
+Moving from on-premises will provide you with performance benefits due to the latest SQL Server database engine features, cloud scaling flexibility and the newest generation of underlying hardware. [Find out why your SQL Server data belongs on Azure](https://azure.microsoft.com/blog/find-out-why-your-sql-server-data-belongs-on-azure/). You can also read a recently published [study by Principled Technologies](https://facts.pt/GZUp6xk) benchmarking SQL Managed Instance and SQL Server on Amazon Web Services (AWS) RDS. It's important to ensure a [proper sizing based on your requirements](/sql/dma/dma-sku-recommend-sql-db) for CPU, memory and [storage](/azure/azure-sql/managed-instance/resource-limits#data-and-log-storage) (IOPS, latency, transaction log throughput and size). SQL Managed Instance and SQL Database also provide a choice between different [hardware configurations](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview#vcore-based-purchasing-model) and [service tiers](/azure/azure-sql/managed-instance/resource-limits#service-tier-characteristics) that provide additional means to reach target performance. Applications can also take advantage of [read scale-out](/azure/azure-sql/database/read-scale-out) abilities including with [named replicas](/azure/azure-sql/database/service-tier-hyperscale-replicas) and [geo-replicas](/azure/azure-sql/database/active-geo-replication-overview), and techniques such as [database sharding](/azure/azure-sql/database/elastic-scale-introduction).
 
 #### How can I compare SQL Managed Instance performance to SQL Server performance?
 
-See the [Performance](/azure/azure-sql/managed-instance/frequently-asked-questions-faq#performance-) section of the [SQL MI FAQ](/azure/azure-sql/managed-instance/frequently-asked-questions-faq) for guidance on performance comparison and tuning.
+See the [Performance](/azure/azure-sql/managed-instance/frequently-asked-questions-faq#performance-) section of the [SQL Managed Instance FAQ](/azure/azure-sql/managed-instance/frequently-asked-questions-faq) for guidance on performance comparison and tuning.
 
 ## Migration and modernization process
 
@@ -284,7 +284,7 @@ A great place to start is joining the [Azure Migration and Modernization Program
 
 #### Where can I find migration guides to Azure SQL?
 
-The following guides help you discover, assess, and migrate from SQL Server to [SQL VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide), [SQL MI](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview) and [SQL DB](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview). You can consult [Azure Database Migration Guides](/data-migration/) that also contains guides for migrating to another database targets.
+The following guides help you discover, assess, and migrate from SQL Server to [SQL VM](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide), [SQL Managed Instance](/azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview) and [SQL Database](/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview). You can consult [Azure Database Migration Guides](/data-migration/) that also contains guides for migrating to another database targets.
 
 #### Which migration tools can I use?
 
@@ -296,7 +296,7 @@ The [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-insta
 
 #### How can I optimize the costs once I migrate to Azure SQL?
 
-[Cost Optimization](/azure/architecture/framework/cost/) guidelines of Microsoft Azure Well-Architected Framework (WAF) provide methodology to optimize costs for every Azure SQL service. You can also find out more about [WAF cost optimization highlights](https://techcommunity.microsoft.com/t5/azure-sql-blog/optimize-your-azure-sql-managed-instance-cost-with-microsoft/ba-p/2235216) for SQL MI.
+[Cost Optimization](/azure/architecture/framework/cost/) guidelines of Microsoft Azure Well-Architected Framework (WAF) provide methodology to optimize costs for every Azure SQL service. You can also find out more about [WAF cost optimization highlights](https://techcommunity.microsoft.com/t5/azure-sql-blog/optimize-your-azure-sql-managed-instance-cost-with-microsoft/ba-p/2235216) for SQL Managed Instance.
 
 ## See also
 

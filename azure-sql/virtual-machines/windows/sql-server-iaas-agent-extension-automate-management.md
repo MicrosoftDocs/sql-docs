@@ -57,8 +57,10 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
    $ az sql vm list --query "[?sqlServerLicenseType=='AHUB']"
    ```
    ---
+> [!NOTE]
 
-
+Once you delete the IAAS VM where the sql extension is installed, the sql server also gets deleted. Because the SQL server works with the extension installed on IAAS VM.
+>
 
 ## Feature benefits 
 

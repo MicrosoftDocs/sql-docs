@@ -89,6 +89,9 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL Database|
 |**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
+|**active_outbound_connection_worker_count**|int|Total outbound connection workers in current snapshot.|
+|**max_outbound_connection_worker**|int|Outbound connection worker limit for the pool.|
+|**max_outbound_connection_worker_percent**|decimal(5,2)|Maximum concurrent outbound connection workers (requests) in percentage based on the limit of the pool.|
 |||
 
 ## Permissions

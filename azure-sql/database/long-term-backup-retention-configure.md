@@ -312,7 +312,7 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 ```
 
 > [!IMPORTANT]
-> - To restore from an LTR backup after the server or resource group has been deleted, you must have permissions scoped to the server's subscription and that subscription must be active. You must also omit the optional -ResourceGroupName parameter.
+> - To restore from an LTR backup after the server or resource group has been deleted, you must have permissions scoped to the server's subscription and that subscription must be active. You must also omit the optional `-ResourceGroupName` parameter.
 > - If you are using LTR backups to meet compliance or other mission-critical requirements, consider conducting periodic recovery drills to verify that LTR backups can be restored, and that the restore results in expected database state.
 
 > [!NOTE]

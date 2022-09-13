@@ -1,5 +1,5 @@
 ---
-title: Connect to Azure Arc
+title: Connect your SQL Server to Azure Arc
 titleSuffix:
 description: Connect an instance of SQL Server to Azure Arc
 author: anosov1960

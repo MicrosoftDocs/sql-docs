@@ -1,16 +1,12 @@
 ---
 title: "PDOStatement::fetchColumn"
 description: "API reference for the PDOStatement::fetchColumn function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

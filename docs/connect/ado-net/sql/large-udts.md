@@ -1,17 +1,15 @@
 ---
 title: "Large UDTs"
 description: "Demonstrates how to retrieve data from large value UDTs introduced in SQL Server 2008."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Large UDTs
 

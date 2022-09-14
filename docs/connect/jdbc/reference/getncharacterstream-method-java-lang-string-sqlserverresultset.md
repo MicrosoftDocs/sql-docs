@@ -1,16 +1,12 @@
 ---
+title: "getNCharacterStream Method (java.lang.String) (SQLServerResultSet)"
 description: "getNCharacterStream Method (java.lang.String) (SQLServerResultSet)"
-title: "getNCharacterStream Method (java.lang.String) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getNCharacterStream Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

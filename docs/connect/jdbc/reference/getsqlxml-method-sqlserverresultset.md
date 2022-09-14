@@ -1,16 +1,12 @@
 ---
+title: "getSQLXML Method (SQLServerResultSet)"
 description: "getSQLXML Method (SQLServerResultSet)"
-title: "getSQLXML Method (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: a07e0f30-cbc6-4ad7-b931-c30cad382e64
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getSQLXML Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

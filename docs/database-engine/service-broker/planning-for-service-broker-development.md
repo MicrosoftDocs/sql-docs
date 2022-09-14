@@ -1,13 +1,13 @@
 ---
 title: Planning for Service Broker Development
 description: "Review the following as you design a Service Broker application."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Planning for Service Broker Development

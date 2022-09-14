@@ -1,17 +1,15 @@
 ---
 title: "Handle DataAdapter events"
 description: Describes DataAdapter events and how to use them.
-ms.date: "11/30/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/30/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Handle DataAdapter events
 

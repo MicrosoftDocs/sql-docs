@@ -1,19 +1,15 @@
 ---
 title: "How to: retrieve binary data as a stream using the SQLSRV driver"
 description: "This topic describes how to retrieve binary data as a stream when using the Microsoft SQLSRV Driver for PHP for SQL Server"
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "retrieving data, as a binary stream"
-  - "streaming data"
-ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "retrieving data, as a binary stream"
+  - "streaming data"
 ---
 # How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

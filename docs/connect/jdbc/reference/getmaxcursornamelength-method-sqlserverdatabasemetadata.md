@@ -1,21 +1,15 @@
 ---
+title: "getMaxCursorNameLength Method (SQLServerDatabaseMetaData)"
 description: "getMaxCursorNameLength Method (SQLServerDatabaseMetaData)"
-title: "getMaxCursorNameLength Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getMaxCursorNameLength"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getMaxCursorNameLength"
+apitype: "Assembly"
 ---
 # getMaxCursorNameLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

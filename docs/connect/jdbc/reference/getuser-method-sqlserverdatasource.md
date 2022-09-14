@@ -1,21 +1,15 @@
 ---
+title: "getUser Method (SQLServerDataSource)"
 description: "getUser Method (SQLServerDataSource)"
-title: "getUser Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.getUser"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 3513dd7f-6ae5-4010-bde0-454ac4365bce
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDataSource.getUser"
+apitype: "Assembly"
 ---
 # getUser Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

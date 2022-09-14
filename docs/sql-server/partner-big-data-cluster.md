@@ -87,7 +87,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Blog-->
 [hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE
 [delltech_blog]:https://infocus.delltechnologies.com/robert_sonders/why-canonicalization-should-be-a-core-component-of-your-sql-server-modernization-part-1/?linkId=96637990
-[azuredatalake_blog]:https://azureinfohub.azurewebsites.net/Service?serviceTitle=Azure%20Data%20Lake%20Analytics
+[azuredatalake_blog]:https://azure.microsoft.com/blog/azure-data-lake-analytics-now-generally-available/
 [streamsets_blog]:https://streamsets.com/blog/sentiment-analysis-microsoft-sql-server-2019-big-data-cluster-and-streamsets-dataops-platform/
 [purestorage_blog]:https://blog.purestorage.com/storage-as-a-service-for-sql-server-2019-big-data-clusters/
 [vmware_blog]:https://blogs.vmware.com/virtualblocks/2021/08/18/microsoft-sql-server-big-data-clusters-on-vmware-tkg/

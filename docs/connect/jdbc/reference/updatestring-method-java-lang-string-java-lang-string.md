@@ -1,21 +1,15 @@
 ---
+title: "updateString Method (java.lang.String, java.lang.String)"
 description: "updateString Method (java.lang.String, java.lang.String)"
-title: "updateString Method (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateString (java.lang.String, java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateString (java.lang.String, java.lang.String)"
+apitype: "Assembly"
 ---
 # updateString Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

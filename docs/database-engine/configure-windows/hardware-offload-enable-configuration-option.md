@@ -1,28 +1,24 @@
 ---
-title: "Hardware offload enable server configuration option | Microsoft Docs"
-description: 'Learn about the "hardware offload enabled" option. '
-ms.custom: ""
-ms.date: 08/17/2022
-ms.prod: sql
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "hardware offload enable"
-  - "HARDWARE_OFFLOAD"
-ms.reviewer: david.pless, wiassaf
-ms.technology: configuration
-ms.topic: conceptual
+title: "Hardware offload enabled server configuration option"
+description: "Learn about the hardware offload enabled option."
 author: MikeRayMSFT
 ms.author: mikeray
-
+ms.reviewer: david.pless, wiassaf
+ms.date: 08/17/2022
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "hardware offload enable"
+  - "HARDWARE_OFFLOAD"
+dev_langs:
+  - "TSQL"
 ---
 # Hardware offload enabled configuration option
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-The `hardware offload enabled` configuration option allows integrated offloading and acceleration with validated solutions from partners. For more information, see [Integrated offloading and acceleration](../../relational-databases/integrated-acceleration/overview.md).
-
-This is an advanced option.
+The `hardware offload enabled` configuration option allows integrated acceleration and offloading with validated solutions from partners. For more information, see [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md).
 
 Changing option requires a restart.
 

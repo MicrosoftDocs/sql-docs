@@ -1,16 +1,12 @@
 ---
 title: Driver-Aware Connection Pooling in the ODBC Driver
 description: Learn about enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for SQL Server on Windows.
-ms.custom: ""
-ms.date: 02/15/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 02/15/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
 

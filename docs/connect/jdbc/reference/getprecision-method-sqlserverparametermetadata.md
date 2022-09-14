@@ -1,21 +1,15 @@
 ---
+title: "getPrecision Method (SQLServerParameterMetaData)"
 description: "getPrecision Method (SQLServerParameterMetaData)"
-title: "getPrecision Method (SQLServerParameterMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerParameterMetaData.getPrecision"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerParameterMetaData.getPrecision"
+apitype: "Assembly"
 ---
 # getPrecision Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,16 +1,12 @@
 ---
 title: Building the connection URL
 description: Learn the format of the connection string used by the Microsoft JDBC Driver for SQL Server. Samples of connection strings are included in the examples section.
-ms.custom: ""
-ms.date: 08/06/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/06/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Building the connection URL
 

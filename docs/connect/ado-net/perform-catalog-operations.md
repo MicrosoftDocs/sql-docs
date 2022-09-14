@@ -1,17 +1,15 @@
 ---
 title: "Performing catalog operations"
 description: Describes how to execute commands that modify database schema.
-ms.date: "11/25/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Performing catalog operations
 

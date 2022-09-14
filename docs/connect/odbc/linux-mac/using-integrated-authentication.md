@@ -1,18 +1,14 @@
 ---
 title: "Using Integrated Authentication"
 description: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
-ms.custom: ""
-ms.date: 09/01/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "integrated authentication"
-ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 09/01/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "integrated authentication"
 ---
 # Using Integrated Authentication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

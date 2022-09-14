@@ -1,17 +1,15 @@
 ---
 title: "Establishing connection"
 description: Guideline for connecting to a SQL Server by SqlClient provider.
-ms.date: "11/13/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/13/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Establishing connection
 

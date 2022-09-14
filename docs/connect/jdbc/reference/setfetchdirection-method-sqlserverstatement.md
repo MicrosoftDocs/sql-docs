@@ -1,21 +1,15 @@
 ---
+title: "setFetchDirection Method (SQLServerStatement)"
 description: "setFetchDirection Method (SQLServerStatement)"
-title: "setFetchDirection Method (SQLServerStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerStatement.setFetchDirection"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerStatement.setFetchDirection"
+apitype: "Assembly"
 ---
 # setFetchDirection Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

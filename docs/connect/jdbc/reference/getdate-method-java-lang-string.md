@@ -1,21 +1,15 @@
 ---
+title: "getDate Method (java.lang.String) parameter"
 description: "getDate Method (java.lang.String) parameter"
-title: "getDate Method (java.lang.String) parameter | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.getDate (java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.getDate (java.lang.String)"
+apitype: "Assembly"
 ---
 # getDate Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

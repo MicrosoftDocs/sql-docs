@@ -1,8 +1,8 @@
 ---
 title: Use Jupyter Notebooks in Azure Data Studio
 description: Learn how to get started using Jupyter Notebooks in Azure Data Studio.
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: achatter, maghan, mikeray
 ms.date: 07/01/2020
 ms.prod: azure-data-studio

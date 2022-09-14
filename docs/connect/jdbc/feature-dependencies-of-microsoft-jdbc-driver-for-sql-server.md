@@ -1,16 +1,12 @@
 ---
 title: Feature dependencies
 description: Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them.
-ms.custom: ""
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Feature dependencies of the Microsoft JDBC Driver for SQL Server
 

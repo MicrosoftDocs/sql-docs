@@ -1,16 +1,12 @@
 ---
 title: "PDO::getAvailableDrivers"
 description: "API reference for the PDO::getAvailableDrivers function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,16 +1,12 @@
 ---
 title: Handling complex statements
 description: Learn about handling complex statements when using the JDBC driver. Different methods can be used in different scenarios.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Handling complex statements
 

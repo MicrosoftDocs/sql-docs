@@ -1,23 +1,20 @@
 ---
 title: "Configure alerts for database mirroring performance metrics"
 description: "Guidance for configuring warning thresholds and alerts for performance metrics used by database mirroring. "
-ms.custom: "seo-lt-2019"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "monitoring database mirroring [SQL Server]"
   - "thresholds [SQL Server]"
   - "database mirroring [SQL Server], managing in SQL Server Management Studio"
   - "alerts [SQL Server], database mirroring"
   - "database mirroring [SQL Server], monitoring"
   - "warnings [database mirroring]"
-ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use Warning Thresholds and Alerts on Mirroring Performance Metrics (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

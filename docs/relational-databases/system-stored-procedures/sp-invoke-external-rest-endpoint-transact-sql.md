@@ -29,7 +29,7 @@ The **sp_invoke_external_rest_endpoint** stored procedure invokes an HTTPS REST 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]
-> The feature is in public preview. Make sure you read the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/) document before using it.
+> The feature is in public preview. Make sure you read the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) document before using it.
 
 
 ## Syntax  
@@ -228,7 +228,7 @@ WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key
 
 ### [Managed Identity](#tab/managed-identity)
 
-With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Azure AD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad))
+With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Azure AD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](/azure/app-service/configure-authentication-provider-aad))
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
@@ -316,7 +316,7 @@ SELECT @ret AS ReturnCode, @response AS Response;
 
 ### A. Call an Azure Function using an HTTP Trigger binding with an authorization key
 
-The following example calls an Azure Function using an HTTP trigger binding configured to require an authorization key. The authorization key will be passed in the `x-function-key` header as required by Azure Functions. More info here: [Azure Functions - API key authorization](https://docs.microsoft.com/azure/azure-functions/functions-bindings-http-webhook-trigger#api-key-authorization)
+The following example calls an Azure Function using an HTTP trigger binding configured to require an authorization key. The authorization key will be passed in the `x-function-key` header as required by Azure Functions. More info here: [Azure Functions - API key authorization](/azure/azure-functions/functions-bindings-http-webhook-trigger#api-key-authorization)
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]

@@ -1,15 +1,13 @@
 ---
 title: "Resource DLL health diagnostic logs for availability groups"
 description: "Describes how the SQL Server resource DLL monitors the health of the Always On availability group."
-ms.custom: "seo-lt-2019"
-ms.date: "06/13/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/13/2017"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seo-lt-2019
 ---
 # SQL Server resource DLL health diagnostic logs for availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

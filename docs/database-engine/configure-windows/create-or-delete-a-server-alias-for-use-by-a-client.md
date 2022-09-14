@@ -1,20 +1,17 @@
 ---
 title: Create or delete a server alias for use by a client
 description: Find out how to create and delete an alias, an alternate name you can use when you connect to an instance of SQL Server. Learn about the benefits of aliases.
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "server alias"
-helpviewer_keywords: 
-  - "aliases [SQL Server], deleting"
-  - "aliases [SQL Server], creating"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "07/14/2021"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "server alias"
+helpviewer_keywords:
+  - "aliases [SQL Server], deleting"
+  - "aliases [SQL Server], creating"
 ---
 
 # Create or delete a server alias for use by a client

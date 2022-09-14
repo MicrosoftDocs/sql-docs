@@ -1,19 +1,17 @@
 ---
 title: "Availability Group Wizard: Specify Replicas Page"
 description: Describes the options of the Specify Replicas page of the New Availability Group Wizard in SQL Server Management Studio (SSMS).
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.newagwizard.listeners.f1"
   - "sql13.swb.addreplicawizard.specifyreplicas.f1"
   - "sql13.swb.newagwizard.specifyreplicas.f1"
-ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

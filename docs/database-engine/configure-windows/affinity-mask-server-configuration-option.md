@@ -1,11 +1,14 @@
 ---
 title: affinity mask Server Configuration Option
 description: Learn about the affinity mask option in SQL Server. View an example that uses it to bind processors to specific threads.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
+ms.date: 06/11/2020
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default affinity mask option"
   - "reloading processor cache"
   - "processor cache [SQL Server]"
@@ -15,12 +18,6 @@ helpviewer_keywords:
   - "processor affinity [SQL Server]"
   - "SMP"
   - "DPC"
-ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
-ms.custom: ""
-ms.date: 06/11/2020
 ---
 
 # affinity mask Server Configuration Option

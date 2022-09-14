@@ -1,16 +1,12 @@
 ---
 title: "Step 3: Connecting to SQL using PHP"
 description: Step 3 is a proof of concept, which shows how you can connect to SQL Server using PHP. The basic examples demonstrate selecting and inserting data.
-ms.custom: ""
-ms.date: 05/05/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 05/05/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
 

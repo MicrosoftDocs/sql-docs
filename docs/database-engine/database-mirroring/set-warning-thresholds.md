@@ -1,18 +1,14 @@
 ---
-title: "Set Warning Thresholds | Microsoft Docs"
+title: "Set Warning Thresholds"
 description: Learn how to use the Set Warning Thresholds dialog box to enable and configure warning thresholds for selected mirrored databases in SQL Server.
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.setwarningthreshold.f1"
-ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/07/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dbmmonitor.setwarningthreshold.f1"
 ---
 # Set Warning Thresholds
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

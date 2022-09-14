@@ -1,14 +1,13 @@
 ---
 title: "Availability group system object reference"
-description: "A reference of various system objects that can be used when working with Always On availability groups." 
-ms.custom: "seo-lt-2019"
-ms.date: "04/03/2010"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: reference
+description: "A reference of various system objects that can be used when working with Always On availability groups."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/03/2010"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: reference
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # Always On availability group system object reference

@@ -1,19 +1,17 @@
 ---
 title: "Some synchronous replicas are not synchronized"
 description: Describes some possible causes and solutions for when a synchronous replica is not synchronized for an Always On availability group.
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp5synchronized.issues.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.agdashboard.agp5synchronized.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Some synchronous replicas are not synchronized
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

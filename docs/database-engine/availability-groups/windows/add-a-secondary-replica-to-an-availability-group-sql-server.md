@@ -1,18 +1,16 @@
 ---
 title: "Add a secondary replica to an availability group"
 description: "Learn how to add a secondary replica to an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or the Availability Group Wizard in SQL Server Management Studio (SSMS)."
-ms.custom: "seodec18"
-ms.date: "05/18/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], availability replicas"
-  - "Availability Groups [SQL Server], configuring"
-ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/18/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seodec18
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], availability replicas"
+  - "Availability Groups [SQL Server], configuring"
 ---
 # Add a secondary replica to an Always On Availability Group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

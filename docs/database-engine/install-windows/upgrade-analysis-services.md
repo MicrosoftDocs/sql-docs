@@ -1,14 +1,13 @@
 ---
+title: "Upgrade Analysis Services"
 description: "Upgrade Analysis Services"
-title: "Upgrade Analysis Services | Microsoft Docs"
-ms.custom: ""
+author: "Minewiskan"
+ms.author: "owend"
+manager: erikre
 ms.date: "12/09/2020"
 ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
-  
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "upgrading databases"
   - "databases [Analysis Services], upgrading"
   - "installing Analysis Services, side-by-side installations"
@@ -18,11 +17,7 @@ helpviewer_keywords:
   - "upgrading Analysis Services"
   - "installing Analysis Services, upgrading"
   - "SSAS, upgrading"
-ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-author: "Minewiskan"
-ms.author: "owend"
 monikerRange: ">=sql-server-2016"
-manager: erikre
 ---
 # Upgrade Analysis Services
 

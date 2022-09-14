@@ -6,7 +6,6 @@ ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: 09/14/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,7 +25,7 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], configuration options"
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
-keywords: "server configuration (SQL Server)"
+keywords: server configuration (SQL Server)
 ---
 
 # Server configuration options (SQL Server)

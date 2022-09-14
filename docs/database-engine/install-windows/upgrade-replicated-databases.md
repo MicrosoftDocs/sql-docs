@@ -1,21 +1,18 @@
 ---
-title: "Upgrade or patch replicated databases | Microsoft Docs"
+title: "Upgrade or patch replicated databases"
 description: SQL Server supports upgrading replicated databases from previous versions of SQL Server without stopping activity on other nodes.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/24/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "merge replication database upgrades [SQL Server replication]"
   - "replication [SQL Server], upgrading"
   - "transactional replication, upgrading databases"
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
-ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade or patch replicated databases

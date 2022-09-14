@@ -1,14 +1,13 @@
 ---
-title: "Using XML Data Types | Microsoft Docs"
+title: "Using XML Data Types"
 description: Learn about XML Data Types with OLE DB Driver for SQL Server, which allow you to store XML documents and fragments in a SQL Server database.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IRowsetChange interface"
   - "IRowsetUpdate interface"
   - "data access [OLE DB Driver for SQL Server], xml data type"
@@ -28,8 +27,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server OLE DB interfaces"
   - "XML [SQL Server], OLE DB Driver for SQL Server"
   - "COLUMNS rowset"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using XML Data Types
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,22 +1,19 @@
 ---
-title: "Commands generating multiple-rowset results (OLE DB driver) | Microsoft Docs"
+title: "Commands generating multiple-rowset results (OLE DB driver)"
 description: Learn how OLE DB Driver for SQL Server returns multiple rowsets for batched SQL statements and when stored procedures implement batched SQL statements.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiple rowsets"
   - "rowsets [OLE DB], multiple"
   - "OLE DB Driver for SQL Server, commands"
   - "OLE DB Driver for SQL Server, multiple rowsets"
   - "commands [OLE DB]"
   - "multiple-rowset results"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Commands Generating Multiple-Rowset Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

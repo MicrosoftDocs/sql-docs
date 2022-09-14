@@ -1,21 +1,19 @@
 ---
 title: "Database-level health detection"
 description: Learn about the database-level health detection feature available for SQL Server Always On availability groups.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 01/19/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "AlwaysOn"
   - "DB_FAILOVER"
   - "Always On"
   - "High Availability"
   - "SQL Server"
-ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Availability group database level health detection failover option
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

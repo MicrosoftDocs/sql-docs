@@ -1,19 +1,16 @@
 ---
-description: "Import Values from an Excel File into a Domain"
 title: "Import Values from an Excel File into a Domain"
+description: "Import Values from an Excel File into a Domain"
+author: swinarko
+ms.author: sawinark
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dqs.kb.importfailing.f1"
   - "sql13.dqs.kb.importselect.f1"
   - "sql13.dqs.kb.failingvalues.f1"
-ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: swinarko
-ms.author: sawinark
 ---
 # Import Values from an Excel File into a Domain
 

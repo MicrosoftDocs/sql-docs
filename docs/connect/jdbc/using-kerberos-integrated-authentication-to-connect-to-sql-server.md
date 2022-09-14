@@ -1,16 +1,12 @@
 ---
+title: "Using Kerberos integrated authentication to connect to SQL Server"
 description: "Using Kerberos integrated authentication to connect to SQL Server"
-title: "Using Kerberos integrated authentication to connect to SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: 07/30/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 07/30/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using Kerberos integrated authentication to connect to SQL Server

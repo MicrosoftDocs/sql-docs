@@ -1,20 +1,16 @@
 ---
-title: "disallow results from triggers Server Configuration Option | Microsoft Docs"
+title: "disallow results from triggers Server Configuration Option"
 description: "Learn about the 'disallow results from triggers' option. See how it can prevent problems in applications that aren't designed to work with result sets."
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "triggers [SQL Server], result sets"
   - "result sets [SQL Server], triggers"
   - "disallow results from triggers option"
-ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # disallow results from triggers Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

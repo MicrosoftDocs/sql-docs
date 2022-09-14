@@ -1,8 +1,8 @@
 ---
 title: Schema Compare extension
 description: Learn how to install and use the Azure Data Studio Schema Compare extension to easily compare two databases and selectively change one to match the other.
-author: "yualan"
-ms.author: "alayu"
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: "maghan"
 ms.date: 5/24/2022
 ms.prod: azure-data-studio

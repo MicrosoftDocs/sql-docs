@@ -1,13 +1,14 @@
 ---
 title: "Availability group: Prerequisites, restrictions, & recommendations"
 description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group to SQL Server."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 07/22/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Failover Cluster Instances"
   - "Availability Groups [SQL Server], databases"
   - "Availability Groups [SQL Server]"
-ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Prerequisites, Restrictions, and Recommendations for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

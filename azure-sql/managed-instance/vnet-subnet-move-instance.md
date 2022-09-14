@@ -67,7 +67,7 @@ Depending on the subnet state and designation, the following adjustments may be 
 Consider the following limitations when choosing a destination subnet for an existing instance:
 - SQL Managed Instance can be moved to the subnet that is either:
  1. Empty
- 2. In a peered vNet (if you are moving to a subnet in another vNet you must [establish the peering](/azure/virtual-network/tutorial-connect-virtual-networks-portal.md))
+ 2. In a peered vNet (if you are moving to a subnet in another vNet you must [establish the peering](/azure/virtual-network/tutorial-connect-virtual-networks-portal))
  3. Specially prepared subnet that retains the DNS zone of SQL Managed Instance that is being moved. This can be done by populating an empty subnet with new SQL Managed Instances that are created with populated dnsZonePartner parameter. This parameter as a value accepts the id of SQL Managed Instance [see docs](api-references-create-manage-instance.md)and in this case you can use the instance that would later be moved to the new subnet.
 (Please note that apart from this approach there is no other way for you to dictate the DNS zone of SQL Managed Instance since it is randomly generated. There also, as of now, doesn't exist a way to update the DNS zone of an existing SQL Managed Instance.)
 

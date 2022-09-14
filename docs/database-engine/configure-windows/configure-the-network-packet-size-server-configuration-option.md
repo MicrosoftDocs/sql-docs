@@ -1,21 +1,17 @@
 ---
-title: "Configure the network packet size Server Configuration Option | Microsoft Docs"
+title: "Configure the network packet size Server Configuration Option"
 description: Learn how to use the network packet size option to set the packet size that SQL Server uses when transferring requests and results between clients and servers.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default packet size"
   - "size [SQL Server], packets"
   - "packets [SQL Server], size"
   - "network packet size option"
-ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure the network packet size Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

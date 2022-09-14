@@ -1,22 +1,19 @@
 ---
 title: Retrieving error information (OLE DB driver)
 description: This example obtains information from the various error interfaces exposed by the OLE DB Driver for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, errors"
   - "retrieving error information"
   - "errors [OLE DB], examples"
   - "OLE DB error handling, retrieving information"
   - "errors [OLE DB], retrieving information"
   - "OLE DB error handling, examples"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Retrieving Error Information
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

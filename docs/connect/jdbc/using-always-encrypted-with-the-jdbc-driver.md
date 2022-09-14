@@ -1,16 +1,12 @@
 ---
 title: Use Always Encrypted with the JDBC driver
 description: Learn how to use Always Encrypted with the JDBC driver to encrypt sensitive data on the server.
-ms.custom: ""
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Use Always Encrypted with the JDBC driver

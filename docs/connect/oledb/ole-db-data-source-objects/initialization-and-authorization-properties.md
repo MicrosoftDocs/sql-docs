@@ -1,21 +1,18 @@
 ---
-title: "Initialization and authorization properties (OLE DB driver) | Microsoft Docs"
+title: "Initialization and authorization properties (OLE DB driver)"
 description: Learn how the OLE DB Driver for SQL Server interprets OLE DB initialization and authorization properties.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "02/18/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "authorization [OLE DB]"
   - "properties [OLE DB]"
   - "OLE DB Driver for SQL Server, initialization properties"
   - "OLE DB Driver for SQL Server, authorization properties"
   - "initialization properties [OLE DB]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Initialization and Authorization Properties
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

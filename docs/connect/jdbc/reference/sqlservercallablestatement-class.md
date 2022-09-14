@@ -1,16 +1,12 @@
 ---
+title: "SQLServerCallableStatement Class"
 description: "SQLServerCallableStatement Class"
-title: "SQLServerCallableStatement Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerCallableStatement Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

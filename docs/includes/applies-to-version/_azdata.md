@@ -6,5 +6,5 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-![yes](../media/yes-icon.png) `azdata`
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: `azdata`
 

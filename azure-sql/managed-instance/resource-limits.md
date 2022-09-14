@@ -2,16 +2,16 @@
 title: Resource limits
 titleSuffix: Azure SQL Managed Instance
 description: This article provides an overview of the resource limits for Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: references_regions, ignite-fall-2021
-ms.devlang: 
-ms.topic: reference
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
 ms.date: 06/02/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom:
+  - references_regions
+  - ignite-fall-2021
 ---
 # Overview of Azure SQL Managed Instance resource limits
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -52,7 +52,7 @@ Hardware configurations have different characteristics, as described in the foll
 ### Regional support for memory optimized premium-series hardware (preview)
 
 Support for the memory optimized premium-series hardware (preview) is currently available only in these specific regions:
-Australia East, Australia Southeast, Brazil South, Canada Central, Central US, East US, East US 2, France Central, Germany West Central, India Central, Japan East, North Central US, North Europe, South Central US, Sweden Central, UK South, West Europe, West US, West US 2, West US 3
+Australia East, Australia Southeast, Brazil South, Canada Central, Central India, Central US, East Asia, East US, East US 2, France Central, Germany West Central, Japan East, North Central US, North Europe, South Central US, Southeast Asia, Sweden Central, UK South, West Europe, West US, West US 2, West US 3
 
 ### In-memory OLTP available space
 
@@ -174,7 +174,7 @@ Supported subscription types can contain a limited number of resources per regio
 
 The following table shows the **default regional limits** for supported subscription types (default limits can be extended using support request described below):
 
-|Subscription type| Max number of SQL Managed Instance subnets | Max number of vCore units* |
+|Subscription type| Default limit for SQL Managed Instance subnets | Default limit for vCore units* |
 | :---| :--- | :--- |
 |CSP |16 (30 in some regions**)|960 (1440 in some regions**)|
 |EA|16 (30 in some regions**)|960 (1440 in some regions**)|

@@ -37,7 +37,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Server option (**-S**) identifies the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which **sqlcmd** connects.  
   
--   Authentication options (**-E**, **-U**, and **-P**) specify the credentials that **sqlcmd** uses to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTE:** The option **-E** is the default and does not need to be specified.  
+-   Authentication options (**-E**, **-U**, and **-P**) specify the credentials that **sqlcmd** uses to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+    > [!NOTE]  
+    > The option **-E** is the default and does not need to be specified.  
   
 -   Input options (**-Q**, **-q**, and **-i**) identify the location of the input to **sqlcmd**.  
   
@@ -51,7 +53,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **NOTE:** In the previous example, **-E** is not specified because it is the default and **sqlcmd** connects to the default instance by using Windows Authentication.  
+    > [!NOTE]  
+    > In the previous example, **-E** is not specified because it is the default and **sqlcmd** connects to the default instance by using Windows Authentication.  
   
 -   Connecting to a named instance by using Windows Authentication to interactively run [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   

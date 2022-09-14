@@ -3,13 +3,10 @@ title: COLUMNS_UPDATED (Transact-SQL)
 description: "COLUMNS_UPDATED (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/25/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "COLUMNS_UPDATED_TSQL"
   - "COLUMNS_UPDATED"

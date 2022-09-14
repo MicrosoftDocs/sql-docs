@@ -1,21 +1,15 @@
 ---
+title: "isCatalogAtStart Method (SQLServerDatabaseMetaData)"
 description: "isCatalogAtStart Method (SQLServerDatabaseMetaData)"
-title: "isCatalogAtStart Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.isCatalogAtStart"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.isCatalogAtStart"
+apitype: "Assembly"
 ---
 # isCatalogAtStart Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

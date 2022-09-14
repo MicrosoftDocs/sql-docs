@@ -1,16 +1,14 @@
 ---
 title: Connection string builders
 description: Learn about the connection string builder classes used for different providers in ADO.NET. These classes all inherit from DbConnectionStringBuilder.
-ms.date: 11/13/2020
-dev_langs: 
-  - "csharp"
-ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 11/13/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Connection string builders
 

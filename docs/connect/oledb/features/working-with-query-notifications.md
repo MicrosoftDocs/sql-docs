@@ -1,14 +1,13 @@
 ---
 title: Working with query notifications
 description: Learn how query notifications allow applications to be notified when data has changed in the OLE DB Driver for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 04/20/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], query notifications"
   - "rowsets [SQL Server], notifications"
   - "OLE DB Driver for SQL Server, query notifications"
@@ -17,10 +16,7 @@ helpviewer_keywords:
   - "canceling rowset changes"
   - "IRowsetNotify interface"
   - "MSOLEDBSQL, query notifications"
-  - "OLE DB Driver for SQL Server, query notifications"
   - "consumer notification for rowset changes [OLE DB Driver for SQL Server]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Working with query notifications
 

@@ -41,7 +41,7 @@ ms.author: maggies
     > [!NOTE]  
     >  The values in the **Start** and **End** text boxes must be numeric.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.
   
 ## To use the percentage measurement unit  
   
@@ -67,7 +67,7 @@ ms.author: maggies
     > [!NOTE]  
     >  The values in the **Start** and **End** text boxes must be numeric.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

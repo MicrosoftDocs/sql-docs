@@ -49,7 +49,7 @@ ms.author: chugu
 
 You have to use the 32-bit or 64-bit version of the Oracle client software according to the version of the Oracle CDC Designer console installed.
 
-The Oracle CDC Designer Console uses [Microsoft OLE DB Provider for Oracle](/sql/ado/guide/appendixes/microsoft-ole-db-provider-for-oracle) to communicate with the source Oracle database.  
+The Oracle CDC Designer Console uses [Microsoft OLE DB Provider for Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) to communicate with the source Oracle database.  
   
 ## Running the Installation Program  
  This section describes how to install the CDC Designer Console.  
@@ -60,5 +60,4 @@ The Oracle CDC Designer Console uses [Microsoft OLE DB Provider for Oracle](/sql
   
 ## Uninstalling the CDC Designer Console  
  Uninstall the CDC Designer Console by using Control Panel, Programs, and Features.  
-  
   

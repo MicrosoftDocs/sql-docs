@@ -1,23 +1,19 @@
 ---
+title: "GetAncestor (Database Engine)"
 description: "GetAncestor (Database Engine)"
-title: "GetAncestor (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "GetAncestor_TSQL"
-  - "GetAncestor"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "GetAncestor [Database Engine]"
-ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "GetAncestor_TSQL"
+  - "GetAncestor"
+helpviewer_keywords:
+  - "GetAncestor [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 # GetAncestor (Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

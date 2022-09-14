@@ -1,17 +1,15 @@
 ---
 title: "ASP.NET applications using wait handles"
 description: "Provides an example demonstrating how to execute multiple concurrent commands from an ASP.NET page, using Wait handles to manage the operation at completion of all the commands."
-ms.date: "09/30/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/30/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # ASP.NET applications using wait handles
 

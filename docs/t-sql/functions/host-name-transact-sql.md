@@ -3,13 +3,10 @@ title: "HOST_NAME (Transact-SQL)"
 description: "HOST_NAME (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "09/21/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "HOST_NAME_TSQL"
   - "HOST_NAME"

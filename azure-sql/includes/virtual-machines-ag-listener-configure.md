@@ -1,9 +1,9 @@
 ---
 author: cynthn
+ms.author: cynthn
+ms.date: 10/26/2018
 ms.service: virtual-machines
 ms.topic: include
-ms.date: 10/26/2018
-ms.author: cynthn
 ---
 The availability group listener is an IP address and network name that the SQL Server availability group listens on. To create the availability group listener, do the following:
 

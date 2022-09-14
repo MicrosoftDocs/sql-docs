@@ -1,20 +1,18 @@
 ---
 title: "Data formats for bulk import & bulk export"
 description: SQL Server accepts data in character or native binary format. Use character format between SQL Server and other apps and native between instances of SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "data formats [SQL Server], choosing"
   - "bulk importing [SQL Server], data formats"
-ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Data formats for bulk import or bulk export (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

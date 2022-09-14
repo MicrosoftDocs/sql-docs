@@ -2,7 +2,7 @@
 title: "Password Policy | Microsoft Docs"
 description: Windows password policy mechanisms apply to a login that uses SQL Server authentication and to a contained database user with a password.
 ms.custom: ""
-ms.date: "01/16/2019"
+ms.date: "08/15/2022"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -42,7 +42,7 @@ ms.author: vanto
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can apply the same complexity and expiration policies used in Windows to passwords used inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This functionality depends on the `NetValidatePasswordPolicy` API.  
   
 > [!NOTE]
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] enforces password complexity. The password expiration and  policy enforcement sections do not apply to [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+> Azure SQL Database enforces password complexity. The password expiration and  policy enforcement sections do not apply to Azure SQL Database.  
   
 ## Password Complexity  
 

@@ -41281,6 +41281,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/integrated-acceleration/intel-quickassist.md",
+      "redirect_url": "/sql/relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
       "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
       "redirect_document_id": false
@@ -59443,6 +59448,11 @@
     {
       "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
       "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
       "redirect_document_id": false
     }
   ]

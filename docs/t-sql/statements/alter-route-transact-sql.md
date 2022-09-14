@@ -1,8 +1,8 @@
 ---
 title: "ALTER ROUTE (Transact-SQL)"
 description: ALTER ROUTE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "routes [Service Broker], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER ROUTE (Transact-SQL)

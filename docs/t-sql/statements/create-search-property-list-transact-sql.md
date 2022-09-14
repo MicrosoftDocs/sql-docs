@@ -1,8 +1,8 @@
 ---
 title: "CREATE SEARCH PROPERTY LIST (Transact-SQL)"
 description: CREATE SEARCH PROPERTY LIST (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "CREATE SEARCH PROPERTY LIST statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

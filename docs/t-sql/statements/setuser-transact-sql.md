@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "user impersonation [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 ---
 # SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

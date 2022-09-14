@@ -31,7 +31,7 @@ You need to complete the following tasks to implement a table-based filter.
   
 2.  Select a column heading in the tablix, right-click the gray cell that appears above the column heading, and then select **Tablix Properties**.  
   
-3.  Select on the **Filters** page, and then select **Add**.  
+3.  Select the **Filters** page, and then select **Add**.  
   
 4.  In the **Expression** filed, select **ProductID** from the drop-down list. This is the column to which you apply the filter.  
   

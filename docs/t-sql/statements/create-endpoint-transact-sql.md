@@ -1,8 +1,8 @@
 ---
 title: CREATE ENDPOINT (Transact-SQL)
 description: CREATE ENDPOINT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -29,7 +29,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
 dev_langs:
   - "TSQL"
-ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 ---
 
 # CREATE ENDPOINT (Transact-SQL)
@@ -48,7 +47,8 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
   
      In this part, you define the payload that is supported on the endpoint. The payload can be one of several supported types: [!INCLUDE[tsql](../../includes/tsql-md.md)], service broker, database mirroring. In this part, you also include language-specific information.  
   
-> **NOTE:** Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> [!NOTE]  
+> Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -210,7 +210,7 @@ FOR DATABASE_MIRRORING (
  Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the RC4 algorithm.  
   
 > [!NOTE]  
->  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
+>  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.  
   
  If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins.  
   

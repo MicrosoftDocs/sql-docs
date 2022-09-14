@@ -1,16 +1,12 @@
 ---
 title: Prepared statement metadata caching
 description: Learn how the JDBC Driver for SQL Server caches prepared statements to improve performance by minimizing calls to the database and how you can control its behavior.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid:
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Prepared statement metadata caching for the JDBC driver
 
@@ -28,6 +24,8 @@ Since version 6.1.6-preview, an improvement in performance was implemented throu
 
 One more change introduced from 6.1.6-preview is that before this version, the driver would always call `sp_prepexec`. Now, for the first execution of a prepared statement, driver calls `sp_executesql` and for the rest it executes `sp_prepexec` and assigns a handle to it. More details can be found [here](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching).
 
+Starting from the 11.2 release, following the initial `sp_executesql` call, the driver can execute either `sp_prepare` or `sp_prepexec` for additional calls, depending on the value specified in the `prepareMethod` connection string property. For more information, see [Setting the connection properties](setting-the-connection-properties.md).
+
 > [!NOTE]
 > Users can change the default behavior to the previous versions of always calling `sp_prepexec` by setting enablePrepareOnFirstPreparedStatementCall to **true** using the following method:
 > setEnablePrepareOnFirstPreparedStatementCall(boolean value)
@@ -40,8 +38,8 @@ One more change introduced from 6.1.6-preview is that before this version, the d
 |-----------|-----------------|
 |int getDiscardedServerPreparedStatementCount()|Returns the number of currently outstanding unprepare actions.|
 |void closeUnreferencedPreparedStatementHandles()|Forces the unprepare requests for any outstanding discarded prepared statements to be executed.|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|Returns the behavior for a specific connection instance. If false, the first execution calls `sp_executesql` and doesn't prepare a statement. If a second execution happens, it calls `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once. The default for this option can be changed by calling setDefaultEnablePrepareOnFirstPreparedStatementCall().|
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Specifies the behavior for a specific connection instance. If the value is false, the first execution calls `sp_executesql` and doesn't prepare a statement. If a second execution happens, it calls `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once.|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|Returns the behavior for a specific connection instance. If false, the first execution calls `sp_executesql` and doesn't prepare a statement. If a second execution happens, it calls `sp_prepare` or `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once. The default for this option can be changed by calling setDefaultEnablePrepareOnFirstPreparedStatementCall().|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Specifies the behavior for a specific connection instance. If the value is false, the first execution calls `sp_executesql` and doesn't prepare a statement. If a second execution happens, it calls `sp_prepare` or `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once.|
 |int getServerPreparedStatementDiscardThreshold()|Returns the behavior for a specific connection instance. This setting controls how many outstanding discard actions (`sp_unprepare`) there can be per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1, unprepare actions are executed immediately on prepared statement close. If it's set to {@literal >} 1, these calls are batched together to avoid the overhead of calling `sp_unprepare` too often. The default for this option can be changed by calling getDefaultServerPreparedStatementDiscardThreshold().|
 |void setServerPreparedStatementDiscardThreshold(int value)|Specifies the behavior for a specific connection instance. This setting controls how many outstanding discard actions (`sp_unprepare`) there can be per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1, unprepare actions are executed immediately on prepared statement close. If it is set to > 1, these calls are batched together to avoid overhead of calling `sp_unprepare` too often.|
 
@@ -49,8 +47,8 @@ One more change introduced from 6.1.6-preview is that before this version, the d
 
 |New Method|Description|
 |-----------|-----------------|
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|If this configuration is false, the first execution of a prepared statement calls `sp_executesql` and doesn't prepare a statement. If a second execution happens it calls `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once.|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|If this configuration returns false, the first execution of a prepared statement calls `sp_executesql` and doesn't prepare a statement. If a second execution happens, it calls `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once.|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|If this configuration is false, the first execution of a prepared statement calls `sp_executesql` and doesn't prepare a statement. If a second execution happens it calls `sp_prepare` or `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once.|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|If this configuration returns false, the first execution of a prepared statement calls `sp_executesql` and doesn't prepare a statement. If a second execution happens, it calls `sp_prepare` or `sp_prepexec` and actually sets up a prepared statement handle. Later executions call `sp_execute`. This behavior relieves the need for `sp_unprepare` on prepared statement close if the statement is only executed once.|
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|This setting controls how many outstanding discard actions (`sp_unprepare`) there can be per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1, unprepare actions are executed immediately on prepared statement close. If it's set to {@literal >} 1, these calls are batched together to avoid the overhead of calling `sp_unprepare` too often|
 |int getServerPreparedStatementDiscardThreshold()|This setting controls how many outstanding discard actions (`sp_unprepare`) there can be per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1, unprepare actions are executed immediately on prepared statement close. If it's set to {@literal >} 1, these calls are batched together to avoid the overhead of calling `sp_unprepare` too often.|
 

@@ -1,16 +1,12 @@
 ---
 title: Supporting XML data
 description: Learn about supporting XML data and the built-in types you can use with the JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Supporting XML data
 

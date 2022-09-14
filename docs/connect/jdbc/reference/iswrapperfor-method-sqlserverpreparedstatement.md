@@ -1,16 +1,12 @@
 ---
+title: "isWrapperFor Method (SQLServerPreparedStatement)"
 description: "isWrapperFor Method (SQLServerPreparedStatement)"
-title: "isWrapperFor Method (SQLServerPreparedStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: b0e591b1-73e2-4f90-967f-5555eadfc3f1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # isWrapperFor Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

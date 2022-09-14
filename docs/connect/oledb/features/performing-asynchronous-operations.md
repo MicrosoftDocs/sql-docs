@@ -1,14 +1,13 @@
 ---
-title: "Performing Asynchronous Operations | Microsoft Docs"
+title: "Performing Asynchronous Operations"
 description: OLE DB Driver for SQL Server supports asynchronous database operations, which enables methods to return without blocking on the calling thread.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "initialization [OLE DB Driver for SQL Server]"
   - "database connections [OLE DB Driver for SQL Server]"
   - "data access [OLE DB Driver for SQL Server], asynchronous operations"
@@ -17,8 +16,6 @@ helpviewer_keywords:
   - "rowsets [SQL Server], initializing"
   - "MSOLEDBSQL, asynchronous operations"
   - "OLE DB Driver for SQL Server, asynchronous operations"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Performing Asynchronous Operations
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

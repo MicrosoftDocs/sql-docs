@@ -37,6 +37,27 @@ SqlPackage /a:Export /ssn:"{yourserver}.database.windows.net,1433" /sdn:"Adventu
 # example export using Azure Active Directory Service Principal
 SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+# example export connecting using Azure Active Directory username and password
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User ID={yourusername};Password={yourpassword}"
+
+# example export connecting using Azure Active Directory universal authentication
+SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" /UniversalAuthentication=True \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+```
+
+```powershell
+# example export connecting using an access token associated with a service principal
+$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
+$AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
+$AccessToken = $AccessToken_Object.Token
+
+sqlpackage.exe /at:$AccessToken /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+# OR
+sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
+    /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
 ## Parameters for the Export action
@@ -74,7 +95,7 @@ SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
 |**/p:**|HashObjectNamesInLogs=(BOOLEAN)|Specifies whether to replace all object names in logs with a random hash value.|
 |**/p:**|IgnoreIndexesStatisticsOnEnclaveEnabledColumns=(BOOLEAN)|Specifies whether indexes or statistics on columns encrypted using randomized encryption and enclave-enabled column encryption keys should be ignored (not included in the generated bacpac). By default (false) any index or a statistic on a column encrypted using randomized encryption and an enclave-enabled column encryption key will block the export action.|
-|**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
+|**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|Storage=({File&#124;Memory} )| Specifies the type of backing storage for the schema model used during extraction. 'Memory' is default for .NET Core version of SqlPackage. 'File' is only available and default for .NET Framework version of SqlPackage. |
 |**/p:**|TableData=(STRING[])|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This option may be specified multiple times.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|This property is deprecated and use is not recommended. Specifies the version the target engine for Azure SQL Database is expected to be.|
@@ -85,4 +106,4 @@ SqlPackage /Action:Export /TargetFile:"C:\AdventureWorksLT.bacpac" \
 ## Next Steps
 
 - Learn more about [SqlPackage](sqlpackage.md)
-- [Troubleshooting Import/Export with SqlPackage](./troubleshooting-import-export-sqlpackage.md)
+- [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md)

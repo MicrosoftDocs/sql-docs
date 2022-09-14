@@ -1,17 +1,15 @@
 ---
 title: "Manipulating data"
 description: "Provides examples of coding MARS applications."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Manipulating data
 

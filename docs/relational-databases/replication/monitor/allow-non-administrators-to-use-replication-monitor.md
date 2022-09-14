@@ -62,7 +62,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 6.  Select the **replmonitor** check box in the **Database role membership** grid.  
   
-7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+7.  Select **OK**.
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

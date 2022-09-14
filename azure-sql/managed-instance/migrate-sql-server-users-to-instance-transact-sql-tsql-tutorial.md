@@ -1,15 +1,16 @@
 ---
 title: Migrate SQL Server Windows users and groups to SQL Managed Instance using T-SQL
 description: Learn about how to migrate Windows users and groups in a SQL Server instance to Azure SQL Managed Instance
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: seo-lt-2019, sqldbrb=1
-ms.topic: tutorial
 author: GitHubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 05/10/2021
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: tutorial
+ms.custom:
+  - seo-lt-2019
+  - sqldbrb=1
 ---
 
 # Tutorial: Migrate Windows users and groups in a SQL Server instance to Azure SQL Managed Instance using T-SQL DDL syntax

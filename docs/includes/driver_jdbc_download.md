@@ -1,1 +1,1 @@
-![Download](../ssms/media/download-icon.png)[Download JDBC Driver](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)
+:::image type="icon" source="media/download.svg" border="false"::: [Download JDBC driver](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)

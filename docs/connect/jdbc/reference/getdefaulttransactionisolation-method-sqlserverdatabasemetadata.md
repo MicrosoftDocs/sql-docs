@@ -1,21 +1,15 @@
 ---
+title: "getDefaultTransactionIsolation Method (SQLServerDatabaseMetaData)"
 description: "getDefaultTransactionIsolation Method (SQLServerDatabaseMetaData)"
-title: "getDefaultTransactionIsolation Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getDefaultTransactionIsolation"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getDefaultTransactionIsolation"
+apitype: "Assembly"
 ---
 # getDefaultTransactionIsolation Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,8 +1,8 @@
 ---
 title: "ALTER SCHEMA (Transact-SQL)"
 description: ALTER SCHEMA (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "modifying schemas"
 dev_langs:
   - "TSQL"
-ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SCHEMA (Transact-SQL)

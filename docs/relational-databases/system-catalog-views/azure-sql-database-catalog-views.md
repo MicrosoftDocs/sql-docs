@@ -15,7 +15,7 @@ ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
 monikerRange: "=azuresqldb-current"
 ---
 # Azure SQL Database Catalog Views
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 The following catalog views are available in this section.  
 

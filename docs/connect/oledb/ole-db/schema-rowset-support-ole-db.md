@@ -1,21 +1,18 @@
 ---
-title: "Schema Rowset Support (OLE DB) | Microsoft Docs"
+title: "Schema Rowset Support (OLE DB)"
 description: The OLE DB Driver for SQL Server supports returning schema information from a linked server when processing Transact-SQL distributed queries.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "schema rowsets [OLE DB]"
   - "OLE DB, schema rowsets"
   - "OLE DB rowsets, schema"
   - "OLE DB Driver for SQL Server, schema rowsets"
   - "rowsets [OLE DB], schema"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Schema Rowset Support (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

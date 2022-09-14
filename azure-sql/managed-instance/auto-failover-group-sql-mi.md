@@ -1,15 +1,14 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of all user databases on a managed instance in Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: sql-db-mi-split
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 07/08/2022
+ms.date: 09/09/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Managed Instance)
@@ -130,6 +129,9 @@ When establishing a failover group between managed instances, there's an initial
 
 If the speed of the link between the two instances is slower than what is necessary, the time to seed is likely to be noticeably impacted. You can use the stated seeding speed, number of databases, total size of data, and the link speed to estimate how long the initial seeding phase will take before data replication starts. For example, for a single 100 GB database, the initial seed phase would take about 1.2 hours if the link is capable of pushing 84 GB per hour, and if there are no other databases being seeded. If the link can only transfer 10 GB per hour, then seeding a 100-GB database will take about 10 hours. If there are multiple databases to replicate, seeding will be executed in parallel, and, when combined with a slow link speed, the initial seeding phase may take considerably longer, especially if the parallel seeding of data from all databases exceeds the available link bandwidth.
 
+> [!IMPORTANT]
+> In case of an extremely low-speed or busy link causing the initial seeding phase to take days the creation of a failover group can time out. The creation process will be automatically canceled after 6 days.
+
 ## <a name="managing-failover-to-secondary-instance"></a> Manage geo-failover to a geo-secondary instance
 
 The failover group will manage geo-failover of all databases on the primary managed instance. When a group is created, each database in the instance will be automatically geo-replicated to the geo-secondary instance. You can't use failover groups to initiate a partial failover of a subset of databases.
@@ -213,7 +215,7 @@ Due to the high latency of wide area networks, geo-replication uses an asynchron
 Auto-failover group reports its status describing the current state of the data replication:
 
 - Seeding - [Initial seeding](auto-failover-group-sql-mi.md#initial-seeding) is taking place after creation of the failover group, until all user databases are initialized on the secondary instance. Failover process cannot be initiated while auto-failover group is in the Seeding status, since user databases aren't copied to secondary instance yet.
-- Synchronizing - the usual status of auto-failover group. It means that data changes on the primary instance are being replicated asynchronously to the secondary instance. This status doesn't guarantee that the data is fully synchronized at every moment. There may be data changes from primary still to be replicated to the secondary due to asynchronous nature of the replication process between instances in the auto-failover group. Both automatic and manual failovers can be initiated while the auto-failover group is in the Seeding status.
+- Synchronizing - the usual status of auto-failover group. It means that data changes on the primary instance are being replicated asynchronously to the secondary instance. This status doesn't guarantee that the data is fully synchronized at every moment. There may be data changes from primary still to be replicated to the secondary due to asynchronous nature of the replication process between instances in the auto-failover group. Both automatic and manual failovers can be initiated while the auto-failover group is in the Synchronizing status.
 - Failover in progress - this status indicates that either automatically or manually initiated failover process is in progress. No changes to the failover group or additional failovers can be initiated while the auto-failover group is in this status.
 
 ## Permissions

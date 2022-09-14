@@ -57,6 +57,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 17
+          href: big-data-cluster/release-notes-cumulative-update-17.md
         - name: Cumulative Update 16
           href: big-data-cluster/release-notes-cumulative-update-16.md
         - name: Cumulative Update 15
@@ -364,9 +366,9 @@ items:
           - name: Deploy
             items:
             - name: Operationalize using stored procedures
-              href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
+              href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=/sql/toc.json&view=sql-server-ver15
             - name: Convert R code for SQL Server
-              href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
+              href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=/sql/toc.json&view=sql-server-ver15
           - name: Predictions
             items:
             - name: Native scoring with PREDICT T-SQL
@@ -4991,7 +4993,9 @@ items:
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default
         href: database-engine/configure-windows/backup-checksum-default.md
-      - name: View or Configure the backup compression default
+      - name: backup compression algorithm
+        href: database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md
+      - name: backup compression default
         href: database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md
       - name: blocked process threshold
         href: database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md
@@ -5029,6 +5033,8 @@ items:
         href: database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md
       - name: filestream access level
         href: database-engine/configure-windows/filestream-access-level-server-configuration-option.md
+      - name: Enable hardware offload
+        href: database-engine/configure-windows/hardware-offload-enable-configuration-option.md
       - name: Configure the fill factor
         href: database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md
       - name: ft crawl bandwidth
@@ -6414,7 +6420,7 @@ items:
       - name: Get Started
         items:
         - name: Identify databases & tables
-          href: sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md
+          href: ./sql-server/stretch-database/stretch-database.md
         - name: Run the wizard
           href: sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md
         - name: Configure compatible features
@@ -6582,8 +6588,9 @@ items:
     - name: Database Lifecycle Management
       href: relational-databases/database-lifecycle-management.md
     - name: Database mail
-      href: relational-databases/database-mail/database-mail.md
       items:
+      - name: Overview
+        href: relational-databases/database-mail/database-mail.md
       - name: Database Mail Configuration Objects
         href: relational-databases/database-mail/database-mail-configuration-objects.md
       - name: Create a Profile
@@ -6598,16 +6605,18 @@ items:
         href: relational-databases/database-mail/database-mail-external-program.md
       - name: Configure SQL Server Agent Mail to Use Database Mail
         href: relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md
-      - name: Log & Audits
-        href: relational-databases/database-mail/database-mail-log-and-audits.md
+      - name: Log & audits
         items:
+        - name: Overview
+          href: relational-databases/database-mail/database-mail-log-and-audits.md
         - name: SQL Agent Job to archive events
           href: relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
         - name: Check the Status of E-Mail Messages Sent With Database Mail
           href: relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
       - name: Troubleshooting
-        href: relational-databases/database-mail/database-mail-general-troubleshooting.md
         items:
+        - name: Overview
+          href: relational-databases/database-mail/database-mail-general-troubleshooting.md
         - name: Sending test email
           href: relational-databases/database-mail/database-mail-sending-test-email.md
         - name: Common errors
@@ -6615,8 +6624,9 @@ items:
         - name: Mail queued, not delivered 
           href: relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
     - name: Data compression
-      href: relational-databases/data-compression/data-compression.md
       items:
+      - name: Overview
+        href: relational-databases/data-compression/data-compression.md
       - name: Row Compression
         href: relational-databases/data-compression/row-compression-implementation.md
       - name: Page Compression
@@ -6627,9 +6637,16 @@ items:
         href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
       - name: Disable
         href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
-    - name: Maintenance Plans
-      href: relational-databases/maintenance-plans/maintenance-plans.md
+    - name: Integrated acceleration & offloading
       items:
+      - name: Overview
+        href: relational-databases/integrated-acceleration/overview.md
+      - name: Configure Integrated Acceleration
+        href: relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md
+    - name: Maintenance plans
+      items:
+      - name: Overview
+        href: relational-databases/maintenance-plans/maintenance-plans.md
       - name: Create
         href: relational-databases/maintenance-plans/create-a-maintenance-plan.md
       - name: Maintenance Plan Wizard
@@ -6724,7 +6741,7 @@ items:
           href: relational-databases/policy-based-management/view-the-properties-of-a-policy-based-management-facet.md
         - name: Copy a Facet State to an XML File
           href: relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md
-      - name: Monitor & Enforce Best Practices by using Policy-Based Management
+      - name: Monitor & enforce best practices by using policy-based management
         href: relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md
         items:
         - name: Asymmetric Keys Encryption Strength
@@ -7219,6 +7236,8 @@ items:
         href: relational-databases/performance/intelligent-query-processing.md
       - name: Intelligent Query Processing details
         href: relational-databases/performance/intelligent-query-processing-details.md
+      - name: Query Processing feedback features
+        href: relational-databases/performance/intelligent-query-processing-feedback.md
       - name: Parameter Sensitivity Plan Optimization
         href: relational-databases/performance/parameter-sensitivity-plan-optimization.md
       - name: Performance Center
@@ -8880,8 +8899,6 @@ items:
       href: ssdt/sql-server-data-tools.md
     - name: Download SSDT
       href: ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Release notes for SSDT in VS2019
-      href: ssdt/release-notes-ssdt-2019.md
     - name: Release notes for SSDT in VS2017
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
@@ -9064,6 +9081,8 @@ items:
         href: ssdt/dac-framework-compatibility.md
     - name: Alter DacFx Used by SSDT
       href: ssdt/alter-dacfx-used-by-ssdt.md
+    - name: SSIS Projects extension for VS2019 troubleshooting guide
+      href: ssdt/release-notes-ssdt-2019.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS
@@ -10335,8 +10354,8 @@ items:
       href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SqlPackage for Azure Synapse Analytics
       href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
-    - name: Troubleshooting Import/Export
-      href: tools/sqlpackage/troubleshooting-import-export-sqlpackage.md
+    - name: Troubleshooting SqlPackage
+      href: tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -10548,6 +10567,8 @@ items:
       href: linux/quickstart-install-connect-docker.md
     - name: Deploy SQL Server container - Kubernetes
       href: linux/quickstart-sql-server-containers-kubernetes.md
+    - name: Deploy to Azure VMs with Ansible playbook
+      href: linux/sql-server-linux-deploy-ansible.md
     - name: Provision a SQL VM in Azure >
       href: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - name: Run & Connect - Cloud
@@ -10627,6 +10648,8 @@ items:
         href: linux/sql-server-linux-configure-msdtc.md
       - name: Configure persistent memory PMEM
         href: linux/sql-server-linux-configure-pmem.md
+      - name: Configure the time zone
+        href: linux/sql-server-linux-configure-time-zone.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers
@@ -10791,6 +10814,8 @@ items:
     items:
     - name: Troubleshoot
       href: linux/sql-server-linux-troubleshooting-guide.md
+    - name: Restore the master database
+      href: linux/sql-server-linux-restore-master-database-in-single-user-mode.md
     - name: How to License >>
       href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
     - name: DBA Stack Exchange >>
@@ -11185,6 +11210,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
         - name: 3023
           href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
+        - name: 3056
+          href: relational-databases/errors-events/mssqlserver-3056-database-engine-error.md
         - name: 3151
           href: relational-databases/errors-events/mssqlserver-3151-database-engine-error.md
         - name: 3156
@@ -11199,6 +11226,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3176-database-engine-error.md
         - name: 3181
           href: relational-databases/errors-events/mssqlserver-3181-database-engine-error.md
+        - name: 3201
+          href: relational-databases/errors-events/mssqlserver-3201-database-engine-error.md
         - name: 3260
           href: relational-databases/errors-events/mssqlserver-3260-database-engine-error.md
         - name: 3271
@@ -11357,6 +11386,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-8601-database-engine-error.md
         - name: 8621
           href: relational-databases/errors-events/mssqlserver-8621-database-engine-error.md
+        - name: 8623
+          href: relational-databases/errors-events/mssqlserver-8623-database-engine-error.md  
         - name: 8630
           href: relational-databases/errors-events/mssqlserver-8630-database-engine-error.md
         - name: 8632
@@ -11397,6 +11428,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-9003-database-engine-error.md
         - name: 9004
           href: relational-databases/errors-events/mssqlserver-9004-database-engine-error.md
+        - name: 9017
+          href: relational-databases/errors-events/mssqlserver-9017-database-engine-error.md  
         - name: 9524
           href: relational-databases/errors-events/mssqlserver-9524-database-engine-error.md
         - name: 9532
@@ -13350,6 +13383,8 @@ items:
     - name: Server-Related
       href: relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md
       items:
+      - name: sys.dm_server_accelerator_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md
       - name: sys.dm_server_memory_dumps
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services
@@ -13748,7 +13783,7 @@ items:
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md
       - name: sp_help_spatial_geography_index_xml
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md
-      - name: sp_help_spatial_geometry_histogram (Trasnact-SQL)
+      - name: sp_help_spatial_geometry_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
       - name: sp_help_spatial_geography_histogram
         href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
@@ -16482,7 +16517,7 @@ items:
           href: t-sql/functions/datetimefromparts-transact-sql.md
         - name: DATETIMEOFFSETFROMPARTS
           href: t-sql/functions/datetimeoffsetfromparts-transact-sql.md
-        - name: DATETTRUNC
+        - name: DATETRUNC
           href: t-sql/functions/datetrunc-transact-sql.md
         - name: DAY
           href: t-sql/functions/day-transact-sql.md
@@ -16512,6 +16547,21 @@ items:
           href: t-sql/functions/todatetimeoffset-transact-sql.md
         - name: YEAR
           href: t-sql/functions/year-transact-sql.md
+      - name: Graph
+        href: t-sql/functions/graph-functions-transact-sql.md
+        items:
+        - name: EDGE_ID_FROM_PARTS
+          href: t-sql/functions/edge-id-from-parts-transact-sql.md
+        - name: GRAPH_ID_FROM_EDGE_ID
+          href: t-sql/functions/graph-id-from-edge-id-transact-sql.md
+        - name: GRAPH_ID_FROM_NODE_ID
+          href: t-sql/functions/graph-id-from-node-id-transact-sql.md
+        - name: NODE_ID_FROM_PARTS
+          href: t-sql/functions/node-id-from-parts-transact-sql.md
+        - name: OBJECT_ID_FROM_EDGE_ID
+          href: t-sql/functions/object-id-from-edge-id-transact-sql.md
+        - name: OBJECT_ID_FROM_NODE_ID
+          href: t-sql/functions/object-id-from-node-id-transact-sql.md
       - name: JSON
         href: t-sql/functions/json-functions-transact-sql.md
         items:

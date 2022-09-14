@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
 
 ### To enable a Publisher in the Distributor Properties dialog box  
   
@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 5.  To view and modify settings for a Publisher, click the properties button (**...**).  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ## See Also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   

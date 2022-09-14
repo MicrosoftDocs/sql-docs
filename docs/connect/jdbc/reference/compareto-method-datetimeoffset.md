@@ -1,16 +1,12 @@
 ---
+title: "compareTo Method (DateTimeOffset)"
 description: "compareTo Method (DateTimeOffset)"
-title: "compareTo Method (DateTimeOffset) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # compareTo Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

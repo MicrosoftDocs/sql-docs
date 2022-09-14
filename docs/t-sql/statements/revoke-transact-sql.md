@@ -26,7 +26,6 @@ helpviewer_keywords:
   - "dropping permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE (Transact-SQL)
@@ -196,7 +195,7 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 ## Examples  
   
 ### A. Grant and revoke
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 The following example creates a schema, a contained database user, and a new role on a user database. It adds the user to the role, grants SELECT permission on the schema to the role, and then removes (`REVOKE`) that permission to the role.
 

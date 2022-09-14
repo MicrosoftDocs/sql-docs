@@ -65,17 +65,17 @@ ms.author: maggies
   
  URL reservations include a port number. The following operating systems will allow multiple Web applications to share a port:  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)] R2  
   
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)]  
+-   [!INCLUDE[winserver2012](../../includes/winserver2012-md.md)]  
   
 -   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]  
   
--   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]  
+-   [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)]  
   
 -   [!INCLUDE[win7](../../includes/win7-md.md)]  
   
--   [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]  
+-   [!INCLUDE[winvista](../../includes/winvista-md.md)]  
   
 |Instance Type|Application|Default URL|Actual URL reservation in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
@@ -97,7 +97,7 @@ ms.author: maggies
   
  The `https://localhost` URL is interpreted as `https://127.0.0.1`. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## See also  
  [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

@@ -1,9 +1,9 @@
 ---
 author: rothja
+ms.author: jroth
+ms.date: 10/26/2018
 ms.service: virtual-machines-sql
 ms.topic: include
-ms.date: 10/26/2018
-ms.author: jroth
 ---
 1. While connected to the virtual machine with remote desktop, search for **Configuration Manager**:
 

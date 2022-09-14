@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 ---
 # REVOKE Server Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

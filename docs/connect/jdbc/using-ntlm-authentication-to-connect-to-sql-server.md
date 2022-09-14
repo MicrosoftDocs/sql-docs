@@ -1,18 +1,14 @@
 ---
 title: Using NTLM authentication to connect to SQL Server
 description: Learn how to establish a SQL database connection using NTLM authentication with the JDBC driver.
-ms.custom: ""
-ms.date: 03/31/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.suite: "sql"
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: ""
 author: lilgreenbird
 ms.author: "v-susanh"
 manager: kenvh
+ms.reviewer: v-davidengel
+ms.date: 03/31/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using NTLM Authentication to connect to SQL Server
@@ -83,7 +79,7 @@ For more information about service principal names (SPNs), see:
 
 ## Security risks
 
-The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a weak cryptographic scheme and is vulnerable to attacks. NTLM has been replaced by Kerberos, which much more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.
+The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a weak cryptographic scheme and is vulnerable to attacks. NTLM has been replaced by Kerberos, which is much more secure and recommended. NTLM authentication should only be used in a secure, trusted environment or when Kerberos can't be used.
 
 The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2, which has some security improvements over the original v1 protocol. It's also recommended to enable Extended Protection, or use TLS Encryption for increased security.
 

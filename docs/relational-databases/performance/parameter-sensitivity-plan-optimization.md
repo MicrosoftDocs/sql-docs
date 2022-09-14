@@ -14,18 +14,21 @@ ms.author: derekw
 ms.reviewer: maghan
 ms.custom:
 - event-tier1-build-2022
-ms.date: 07/25/2022
+ms.date: 07/29/2022
 monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 
 # Parameter Sensitive Plan optimization
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Parameter Sensitive Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see
 [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
-For more information on existing workarounds for this problem scenario, see [Queries that have parameter sensitive plan (PSP) problems](/azure/azure-sql/identify-query-performance-issues#parameter-sensitivity).
+For more information on existing workarounds for this problem scenario, see:
+- [Investigate and resolve parameter-sensitive issues](/troubleshoot/sql/performance/troubleshoot-high-cpu-usage-issues#step-5-investigate-and-resolve-parameter-sensitive-issues)
+- [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse)
+- [Queries that have parameter sensitive plan (PSP) problems](/azure/azure-sql/database/identify-query-performance-issues#parameter-sensitivity).
 
 PSP optimization automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans will accommodate different data sizes based on the customer-provided runtime parameter value(s).
 

@@ -1,19 +1,17 @@
 ---
 title: "Availability replica is disconnected in an availability group"
 description: "Identify possible causes for why a replica is disconnected within an Always On availability group."
-ms.custom: "seodec18"
-ms.date: "07/28/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: troubleshooting
-f1_keywords: 
-  - "sql13.swb.agdashboard.arp2connected.issues.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "07/28/2022"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: troubleshooting
+ms.custom: seodec18
+f1_keywords:
+  - "sql13.swb.agdashboard.arp2connected.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 
 # Availability replica is disconnected within an Always On availability group

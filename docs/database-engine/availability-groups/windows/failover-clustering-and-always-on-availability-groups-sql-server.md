@@ -1,13 +1,14 @@
 ---
 title: "Failover cluster instance with availability groups"
 description: "Enhance your high availability and disaster recoverability by combining the features of a SQL Server failover cluster instance and an Always On availability group."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "07/02/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "clustering [SQL Server]"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "Failover Cluster Instances [SQL Server], see failover clustering [SQL Server]"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
   - "failover clustering [SQL Server], Always On Availability Groups"
   - "Availability Groups [SQL Server], Failover Cluster Instances"
-ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=sql-server-2016"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)

@@ -1,18 +1,16 @@
 ---
 title: "Transact-SQL statements for availability groups"
-description: Introduces Transact-SQL (T-SQL) statements that support deploying, creating, and managing Always On availability groups. 
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], about"
-  - "Availability Groups [SQL Server], Transact-SQL statements"
-ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
+description: Introduces Transact-SQL (T-SQL) statements that support deploying, creating, and managing Always On availability groups.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], about"
+  - "Availability Groups [SQL Server], Transact-SQL statements"
 ---
 # Transact-SQL statements for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

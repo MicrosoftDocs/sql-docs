@@ -51,44 +51,34 @@ Follow these steps to create a blank database.
 
 1. On the Azure portal menu or from the **Home** page, select **Create a resource**.
 2. On the **Create a resource** page, select **SQL Database** or **Create** under **SQL Database**.
-   ![create empty-database](./media/design-first-database-tutorial/create-a-resource.png)
+   ![Screenshot showing how to create a database from a resource.](./media/design-first-database-tutorial/create-a-resource.png)
 
 3. Fill out the **SQL Database** form with the following information, as shown on the preceding image:
 
-    | Setting       | Suggested value | Description |
-    | ------------ | ------------------ | ------------------------------------------------- |
+    |Setting   |Suggested value | Description |
+    |:-------- |:-------------: | :---------: |
     | **Subscription** | *yourSubscription* | For details about your subscriptions, see [Subscriptions](https://account.windowsazure.com/Subscriptions). |
     | **Resource group** | *yourResourceGroup* | For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
-    | **Database name** | Blank database | Specifies that a blank database should be created. |
+    | **Database name** | *yourDatabase* | For valid database names, see [Database identifiers](/sql/relational-databases/databases/database-identifiers). |
 
-4. If creating a new server, select **Create new** and fill out the **New server** form wih the following information:
-    | Setting       | Suggested value | Description |
-    | ------------ | ------------------ | ------------------------------------------------- |
-    | **Server name** | Any globally unique name | For valid server names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
-    | **Server admin login** | Any valid name | For valid login names, see [Database identifiers](/sql/relational-databases/databases/database-identifiers). |
-    | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: upper case characters, lower case characters, numbers, and non-alphanumeric characters. |
-    | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
+4. Choose whether or not you want to use SQL elastic pool. For more details, visit [the SQL elastic pools documentation](\sql-docs-pr\azure-sql\database\elastic-pool-overview.md)
 
-5. Choose whether or not you want to use SQL elastic pool. For more details, visit [the SQL elastic pools documentation](\sql-docs-pr\azure-sql\database\elastic-pool-overview.md)
+5. Choose the type of environment you would like your workload to be on. This will determine the compute + storage as well as backup redundancy recommendations for your workload.
 
-6. Choose the type of environment you would like your workload to be on. This will determine the compute + storage as well as backup redundancy recommendations for your workload.
+6. Select the **Networking** tab to configure your Networking settings
+    ![Screenshot showing how to create a server for your database.](./media/design-first-database-tutorial/setting-database-details-in-resource-subscription.png)
 
-7. Select the **Networking** tab to configure your Networking settings
+7. In the **Networking** tab, select your connectivity method, connection policy, and encrypted connection settings. Then, hit the **Next** tab to configure your security and other additional settings.
 
-![create database-server](./media/design-first-database-tutorial/setting-database-details-in-resource-subscription.png)
+8. In the **Additional settings** tab, you can choose where you want your data to be sourced from or start with a blank database. For the purposes of this demo, we will be starting with a blank database.
 
-8. In the **Networking** tab, select your connectivity method, connection policy, and encrypted connection settings. Then, hit the **Next** tab to configure your security and other additional settings. 
+9. Enter a **Collation** for the blank database (for this tutorial, use the default value). For more information about collations, see [Collations](/sql/t-sql/statements/collations)
 
-9. In the **Additional settings** tab, you can choose where you want your data to be sourced from or start with a blank database. For the purposes of this demo, we will be starting with a blank database. 
+10. Click **Next** to assign Tags for categorizing and consolidating billing for your resource groups. This is optional but recommended if you are working with multiple resources and resource groups.
 
-10. Enter a **Collation** for the blank database (for this tutorial, use the default value). For more information about collations, see [Collations](/sql/t-sql/statements/collations)
+11. Now that you've completed the **SQL Database** form, click **Next** to review and create the database. After review, click **Create**. This step may take a few minutes.
 
-11. Click **Next** to assign Tags for categorizing and consolidating billing for your resource groups. This is optional but recommended if you are working with multiple resources and resource groups.
-
-12. Now that you've completed the **SQL Database** form, click **Next** to review and create the database. After review, click **Create**. This step may take a few minutes.
-
-13. On the toolbar, click **Notifications** to monitor the deployment process. 
-
+12. On the toolbar, click **Notifications** to monitor the deployment process.
    ![Screenshot shows the Notifications menu with Deployment in progress.](./media/design-first-database-tutorial/deployment-in-progress-notification.png)
 
 ## Create a server-level IP firewall rule
@@ -102,11 +92,11 @@ Azure SQL Database creates an IP firewall at the server-level. This firewall pre
 
 2. Select **Set server firewall** from the top menu. The overview page for your database opens, showing you the fully qualified **Server name** (such as `contosodatabaseserver01.database.windows.net`) and provides options for further configuration.
 
-   ![server name](./media/design-first-database-tutorial/server-name.png)
+   ![Screenshot of server name.](./media/design-first-database-tutorial/server-name.png)
 
 3. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
-   ![server-level IP firewall rule](./media/design-first-database-tutorial/server-firewall-rule.png)
+   ![Screenshot of server-level IP firewall rule.](./media/design-first-database-tutorial/server-firewall-rule.png)
 
 4. Click **Add your current client IPv4 address** under **Firewall rules** to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses. Then enable Azure services and resources to access this server by checking the checkbox.
 
@@ -134,13 +124,13 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to 
    | **Login** | The server admin account | The account that you specified when you created the server. |
    | **Password** | The password for your server admin account | The password that you specified when you created the server. |
 
-   ![connect to server](./media/design-first-database-tutorial/connect-with-ads.png)
+   ![Screenshot of connection dialog box in ADS.](./media/design-first-database-tutorial/connect-with-ads.png)
 
 3. Click **Connect**. The **Object Explorer** window opens in ADS.
 
 4. In **Object Explorer**, expand **Databases** and then expand *yourDatabase* to view the objects in the sample database.
 
-   ![database objects](./media/design-first-database-tutorial/connected-with-ads.png)  
+   ![Screenshot of Object Explorer in ADS.](./media/design-first-database-tutorial/connected-with-ads.png)  
 
 ## Create tables in your database
 
@@ -153,7 +143,7 @@ Create a database schema with four tables that model a student management system
 
 The following diagram shows how these tables are related to each other. Some of these tables reference columns in other tables. For example, the *Student* table references the *PersonId* column of the *Person* table. Study the diagram to understand how the tables in this tutorial are related to one another. For an in-depth look at how to create effective database tables, see [Create effective database tables](/previous-versions/tn-archive/cc505842(v=technet.10)). For information about choosing data types, see [Data types](/sql/t-sql/data-types/data-types-transact-sql).
 
-![Table relationships](./media/design-first-database-tutorial/tutorial-database-tables.png)
+![Screenshot of Table relationships.](./media/design-first-database-tutorial/tutorial-database-tables.png)
 
 1. In **Object Explorer**, click *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
 
@@ -161,47 +151,37 @@ The following diagram shows how these tables are related to each other. Some of 
 
 - Person Table
 
-![Person Table in Table Designer](./media/design-first-database-tutorial/person-table-ads.png)
+    ![Screenshot of Person Table in Table Designer.](./media/design-first-database-tutorial/person-table-ads.png)
 
-Be sure to configure the Primary Key settings for the **Person** Table as shown below:
-
-![Person Table in Table Designer showing the Primary Key settings](./media/design-first-database-tutorial/person-table-primary-key-ads.png)
+   Be sure to configure the Primary Key settings for the **Person** Table as shown below:
+      ![Screenshot of Person Table in Table Designer showing the Primary Key settings.](./media/design-first-database-tutorial/person-table-primary-key-ads.png)
 
 - Student Table
+    ![Screenshot of Student Table in Table Designer.](./media/design-first-database-tutorial/student-table-ads.png)
 
-![Student Table in Table Designer](./media/design-first-database-tutorial/student-table-ads.png)
+   Be sure to configure the Primary Key settings for the **Student** Table as shown below:
+       ![Screenshot of Student Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/student-table-primary-key-ads.png)
 
-Be sure to configure the Primary Key settings for the **Student** Table as shown below:
-
-![Student Table in Table Designer showing Primary Key settings](./media/design-first-database-tutorial/student-table-primary-key-ads.png)
-
-Be sure to configure the Foreign Key settings for the **Student** Table as shown below:
-
-![Student Table in Table Designer showing Foreign Key settings](./media/design-first-database-tutorial/student-table-foreign-key-ads.png)
+   Be sure to configure the Foreign Key settings for the **Student** Table as shown below:
+       ![Screenshot Student Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/student-table-foreign-key-ads.png)
 
 - Course Table
+    ![Screenshot of Course Table in Table Designer.](./media/design-first-database-tutorial/course-table-ads.png)
 
-![Course Table in Table Designer](./media/design-first-database-tutorial/course-table-ads.png)
-
-Be sure to configure the Primary Key settings for the **Course** Table as shown below:
-
-![Course Table in Table Designer showing Primary Key settings](./media/design-first-database-tutorial/course-table-primary-key-ads.png)
+   Be sure to configure the Primary Key settings for the **Course** Table as shown below:
+      ![Screenshot of Course Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/course-table-primary-key-ads.png)
 
 - Credit Table
+    ![Screenshot of Credit Table in Table Designer.](./media/design-first-database-tutorial/credit-table-ads.png)
 
-![Credit Table in Table Designer](./media/design-first-database-tutorial/credit-table-ads.png)
+   Be sure to configure the Foreign Key settings for the **Credit** Table as shown below:
+    ![Screenshot of Credit Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/credit-table-foreign-key-ads.png)
 
-Be sure to configure the Foreign Key settings for the **Credit** Table as shown below:
-
-![Credit Table in Table Designer showing Foreign Key settings](./media/design-first-database-tutorial/credit-table-foreign-key-ads.png)
-
-Be sure to configure the Check Constraint settings for the **Credit** Table as shown below:
-
-![Credit Table in Table Designer showing Check Constraint settings](./media/design-first-database-tutorial/credit-table-check-constraint-ads.png)
+   Be sure to configure the Check Constraint settings for the **Credit** Table as shown below:
+    ![Screenshot of Credit Table in Table Designer showing Check Constraint settings.](./media/design-first-database-tutorial/credit-table-check-constraint-ads.png)
 
 3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
-
-   ![Create tables](./media/design-first-database-tutorial/ads-tables-created.png)
+   ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/ads-tables-created.png)
 
 ## Load data into the tables
 
@@ -273,4 +253,4 @@ In this tutorial, you learned many basic database tasks. You learned how to:
 Advance to the next tutorial to learn about designing a database using Visual Studio and C#.
 
 > [!div class="nextstepaction"]
-> [Design a relational database within Azure SQL Database C# and ADO.NET](design-first-database-csharp-tutorial.md)
+> [Design a relational database within Azure SQL Database C# and ADO.NET.](design-first-database-csharp-tutorial.md)

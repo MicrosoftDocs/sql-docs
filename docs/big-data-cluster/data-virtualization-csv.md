@@ -10,7 +10,6 @@ ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 ms.metadata: seo-lt-2019
-monikerRange: ">= sql-server-ver15"
 ---
 
 # Virtualize CSV data from storage pool (Big Data Clusters)

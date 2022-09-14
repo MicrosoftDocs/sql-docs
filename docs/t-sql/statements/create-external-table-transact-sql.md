@@ -699,7 +699,7 @@ Specifies the external data source (a non-SQL Server data source) and a distribu
 The DATA_SOURCE clause defines the external data source (a shard map) that is used for the external table. For an example, see [Create external tables](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 > [!IMPORTANT]
-> Azure SQL Database supports creating external tables to EXTERNAL DATA SOURCE types RDMS and SHARD_MAP_MANAGER. Azure SQL Database does not support creating external tables to Azure blob storage.
+> Azure SQL Database supports creating external tables to EXTERNAL DATA SOURCE types RDBMS and SHARD_MAP_MANAGER. Azure SQL Database does not support creating external tables to Azure blob storage.
 
 #### SCHEMA_NAME and OBJECT_NAME
 The SCHEMA_NAME and OBJECT_NAME clauses map the external table definition to a table in a different schema. If omitted, the schema of the remote object is assumed to be "dbo" and its name is assumed to be identical to the external table name being defined. This is useful if the name of your remote table is already taken in the database where you want to create the external table. For example, you want to define an external table to get an aggregate view of catalog views or DMVs on your scaled out data tier. Since catalog views and DMVs already exist locally, you cannot use their names for the external table definition. Instead, use a different name and use the catalog view's or the DMV's name in the SCHEMA_NAME and/or OBJECT_NAME clauses. For an example, see [Create external tables](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).

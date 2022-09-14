@@ -530,7 +530,37 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database only supports reading from Azure Blob Storage using SAS token.
+> Azure SQL Database only supports reading from Azure Blob Storage.
+
+
+### K. Use a managed identity for an external source 
+
+The following example creates a credential by using a managed identity, creates an external source and then loads data from a CSV hosted on the external source. 
+
+First, create the credential and specify blob storage as the external source:
+
+```sql
+CREATE DATABASE SCOPED CREDENTIAL sampletestcred WITH IDENTITY = 'MANAGED IDENTITY';
+
+CREATE EXTERNAL DATA SOURCE SampleSource
+WITH (TYPE = BLOB_STORAGE,
+LOCATION = 'https://****************.blob.core.windows.net/curriculum',
+CREDENTIAL = sampletestcred
+```
+
+Next, load data from the CSV file hosted on blob storage: 
+
+```sql
+SELECT * FROM OPENROWSET(
+BULK 'Test - Copy.csv',
+DATA_SOURCE = 'SampleSource',
+SINGLE_CLOB
+) as test
+```
+
+> [!IMPORTANT]
+> Azure SQL Database only supports reading from Azure Blob Storage.
+
 
 ### Additional Examples
 

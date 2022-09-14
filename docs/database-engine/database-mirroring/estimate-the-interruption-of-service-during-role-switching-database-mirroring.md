@@ -1,23 +1,20 @@
 ---
 title: "Estimate service interruption during mirror failover"
-description: Estimate the interruption of service when failover a database mirror from the primary to the secondary role. 
-ms.custom: seo-lt-2019
+description: Estimate the interruption of service when failover a database mirror from the primary to the secondary role.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "parallel redo [SQL Server]"
   - "role switching [SQL Server]"
   - "database mirroring [SQL Server], queues"
   - "failover [SQL Server], database mirroring"
   - "redo [database mirroring]"
   - "database mirroring [SQL Server], failover"
-ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Estimate the Interruption of Service During Role Switching (Database Mirroring)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,7 +14,7 @@ ms.topic: conceptual
 # Data virtualization with Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data while keeping it in its original format and location - also known as data virtualization. 
+The data virtualization feature of Azure SQL Managed Instance allows you to execute Transact-SQL (T-SQL) queries on files storing data in common data formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. This way you can transparently access external data while keeping it in its original format and location - also known as data virtualization. 
 
 ## Overview
 
@@ -24,10 +24,12 @@ Data virtualization provides two ways of querying files intended for different s
 - External tables – optimized for repetitive querying of files using identical syntax as if data were stored locally in the database. External tables require several preparation steps compared to the OPENROWSET syntax, but allow for more control over data access. External tables are typically used for analytical workloads and reporting.
 
 ### File formats
+
 Parquet and delimited text (CSV) file formats are directly supported. The JSON file format is indirectly supported by specifying the CSV file format where queries return every document as a separate row. You can parse rows further using `JSON_VALUE` and `OPENJSON`.
 
 ### Storage types
-Files can be stored in Azure Data Lake Storage Gen2 or Azure Blob Storage. To query files, you need to provide the location in a specific format and using the location type prefix corresponding to the type of external source and endpoint/protocol, such as the following examples: 
+
+Files can be stored in Azure Data Lake Storage Gen2 or Azure Blob Storage. To query files, you need to provide the location in a specific format and use the location type prefix corresponding to the type of external source and endpoint/protocol, such as the following examples: 
 
 ```sql
 --Blob Storage endpoint
@@ -39,7 +41,7 @@ adls://<container>@<storage_account>.dfs.core.windows.net/<path>/<file_name>.par
 ```
 
 > [!IMPORTANT]
-> Location type prefix provided is used for choosing the optimal protocol for communication and for leveraging any advanced capabilities offered by the particular storage type.
+> The provided Location type prefix is used to choose the optimal protocol for communication and to leverage any advanced capabilities offered by the particular storage type.
 > Using the generic `https://` prefix is disabled. Always use endpoint-specific prefixes.
 
 ## Getting started 
@@ -62,22 +64,22 @@ FROM OPENROWSET(
 ) AS filerows
 ```
 
-You can continue the data set exploration by appending WHERE, GROUP BY and other clauses based on the result set of the first query.
+You can continue data set exploration by appending WHERE, GROUP BY and other clauses based on the result set of the first query.
 
-If the first query is failing on your managed instance, it probably means that instance has access to Azure storage accounts restricted and you should talk to your networking expert to enable the access before you can proceed with querying.
+If the first query fails on your managed instance, that instance likely has access to Azure storage accounts restricted and you should talk to your networking expert to enable access before you can proceed with querying.
 
 Once you get familiar with querying public data sets, consider switching to non-public data sets that require providing credentials, granting access rights and configuring firewall rules. In many real-world scenarios you will operate primarily with private data sets.
 
 ## Access to non-public storage accounts
 
-A user that is logged into a managed instance must be authorized to access and query the files stored in a non-public storage account. Authorization steps depend on how managed instance authenticates to the storage. The type of authentication and any related parameters are not provided directly with each query. They are encapsulated in the database scoped credential object stored in the user database. The credential is used by the database to access to the storage account anytime the query is executed.  Azure SQL Managed Instance supports the following authentication types:
+A user that is logged into a managed instance must be authorized to access and query files stored in a non-public storage account. Authorization steps depend on how the managed instance authenticates to the storage. The type of authentication and any related parameters are not provided directly with each query. They are encapsulated in the database scoped credential object stored in the user database. The credential is used by the database to access the storage account anytime the query executes.  Azure SQL Managed Instance supports the following authentication types:
 
 
 ### [Managed Identity](#tab/managed-identity)
 
-**Managed Identity** also known as MSI is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services - like Azure SQL managed instance - with an automatically managed identity in Azure AD. This identity can be used to authorize the request for data access in non-public storage accounts.
+**Managed Identity**, also known as MSI, is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services - like Azure SQL Managed Instance - with an automatically managed identity in Azure AD. This identity can be used to authorize requests for data access in non-public storage accounts.
 
-Before accessing the data, the Azure storage administrator must grant permissions to Managed Identity for accessing the data. Granting permissions to Managed Identity of managed instance is done the same way as granting permission to any other Azure AD user.
+Before accessing the data, the Azure storage administrator must grant permissions to Managed Identity to access the data. Granting permissions to Managed Identity of the managed instance is done the same way as granting permission to any other Azure AD user.
 
 Creating database scoped credential for managed identity authentication is very simple:  
 
@@ -91,7 +93,7 @@ WITH IDENTITY = 'Managed Identity'
 
 ### [Shared access signature](#tab/shared-access-signature)
 
-**Shared access signature (SAS)** provides delegated access to files in a storage account. SAS gives you a granular control over the type of access you grant, including validity interval, granted permissions, and acceptable IP address range. Note though that once created SAS token cannot be revoked or deleted and it allows access until its validity period expires.
+**Shared access signature (SAS)** provides delegated access to files in a storage account. SAS gives you granular control over the type of access you grant, including validity interval, granted permissions, and acceptable IP address range. Be aware that once the SAS token is created, it cannot be revoked or deleted and it allows access until its validity period expires.
 
 You can get an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. To use the token, you must remove the question mark ('?') when creating a credential. For example:
 
@@ -108,7 +110,7 @@ SECRET = 'sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-04-18T20:42:12Z&st=2
 
 ## External data source
 
-External data source is an abstraction that enables easy referencing of a file location across multiple queries. To query public locations, all you need to specify while creating an external data source is the file location: 
+An external data source is an abstraction that enables easy referencing of a file location across multiple queries. To query public locations, all you need to specify while creating an external data source is the file location: 
 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyExternalDataSource
@@ -117,7 +119,7 @@ WITH (
 )
 ```
 
-When accessing non-public storage accounts, beside location you need to reference a database scoped credential with authentication parameters encapsulated. 
+When accessing non-public storage accounts, along with the location, you also need to reference a database scoped credential with encapsulated authentication parameters: 
 
 ```sql
 --Create external data source pointing to the file path, and referencing database-scoped credential:
@@ -347,10 +349,13 @@ Just like `OPENROWSET`, external tables allow querying multiple files and folder
 
 ## Performance considerations
 
-There's no hard limit in terms of number of files or amount of data that can be queried, but query performance depends on the amount of data, data format, the way data is organized, and complexity of queries and joins.
+There's no hard limit to the number of files or the amount of data that can be queried, but query performance depends on the amount of data, data format, the way data is organized, and complexity of queries and joins.
 
 ### Querying partitioned data
-Data is often organized in subfolders also called partitions. You can instruct managed instance to query only particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process, resulting in a better performance. This type of query optimization is known as partition pruning or partition elimination. You can eliminate partitions from query execution by using metadata function filepath() in WHERE clause of the query. The following sample query reads NYC Yellow Taxi data files only for the last three months of 2017.
+
+Data is often organized in subfolders also called partitions. You can instruct managed instance to query only particular folders and files. Doing so reduces the number of files and the amount of data the query needs to read and process, resulting in better performance. This type of query optimization is known as partition pruning or partition elimination. You can eliminate partitions from query execution by using metadata function filepath() in the WHERE clause of the query. 
+
+The following sample query reads NYC Yellow Taxi data files only for the last three months of 2017:
 
 ```sql
 SELECT
@@ -382,6 +387,7 @@ ORDER BY
 If your stored data isn't partitioned, consider partitioning it to improve query performance.
 
 ### Statistics
+
 Collecting statistics on your external data is one of the most important things you can do for query optimization. The more the instance knows about your data, the faster it can execute queries. The SQL engine query optimizer is a cost-based optimizer. It compares the cost of various query plans, and then chooses the plan with the lowest cost. In most cases, it chooses the plan that will execute the fastest.
 
 ### Automatic creation of statistics

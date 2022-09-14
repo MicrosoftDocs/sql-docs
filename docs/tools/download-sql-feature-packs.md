@@ -60,7 +60,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [Integration Services Feature Pack for Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md) | The Microsoft Integration Services Feature Pack for Azure provides tools for using IS to connect to the Azure Stack. |
-| [Integration Services Feature Pack for latest SQL Server](https://www.microsoft.com/download/details.aspx?id=100303) | These stand-alone packages provide additional value for the latest Microsoft SQL Server Integration Services. |
+| [Integration Services Feature Pack for latest SQL Server](https://www.microsoft.com/download/details.aspx?id=100430) | These stand-alone packages provide additional value for the latest Microsoft SQL Server Integration Services. |
 |||
 
 ## Kerberos

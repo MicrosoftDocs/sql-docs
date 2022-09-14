@@ -1,20 +1,18 @@
 ---
 title: "Change replica failover mode for an availability group"
 description: "Describes how to change the failover mode for a replica within an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 06/30/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "failover modes [SQL Server]"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], failover modes"
   - "Availability Groups [SQL Server], configuring"
-ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Change the failover mode for a replica within an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

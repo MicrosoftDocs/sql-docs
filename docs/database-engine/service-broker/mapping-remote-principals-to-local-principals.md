@@ -1,13 +1,13 @@
-﻿---
+---
 title: Mapping Remote Principals to Local Principals
 description: "Service Broker dialog security uses certificates to map remote operations to a local security principal."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Mapping Remote Principals to Local Principals

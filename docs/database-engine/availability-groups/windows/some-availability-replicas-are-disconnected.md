@@ -1,19 +1,17 @@
 ---
 title: "Some availability replicas are disconnected"
-description: Possible causes and solutions for when your availability group replica is disconnected for an Always On SQL Server availability group. 
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp7allconnected.issues.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
+description: Possible causes and solutions for when your availability group replica is disconnected for an Always On SQL Server availability group.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.agdashboard.agp7allconnected.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Some availability replicas are disconnected
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

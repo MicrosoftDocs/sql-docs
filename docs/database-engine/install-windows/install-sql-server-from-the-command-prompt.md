@@ -1,9 +1,15 @@
 ---
 title: "SQL Server installation - Command Prompt parameters"
 description: This article describes command parameters for SQL Server installation. You can specify features to install and configure.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
+ms.custom:
+  - intro-installation
+  - event-tier1-build-2022
 helpviewer_keywords:
   - "installing SQL Server, command prompt"
   - "installation scripts [SQL Server]"
@@ -78,14 +84,6 @@ helpviewer_keywords:
   - "INSTALLSQLDIR parameter"
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
-ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom:
-- intro-installation
-- event-tier1-build-2022
-ms.date: 07/25/2022
 monikerRange: ">=sql-server-2016"
 ---
 

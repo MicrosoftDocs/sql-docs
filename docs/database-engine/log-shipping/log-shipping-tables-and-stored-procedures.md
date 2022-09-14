@@ -1,21 +1,18 @@
 ---
-title: "Log Shipping Tables and Stored Procedures | Microsoft Docs"
+title: "Log Shipping Tables and Stored Procedures"
 description: Review all the tables and stored procedures associated with a log shipping configuration. Each server stores log shipping tables in msdb.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: log-shipping
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "secondary servers [SQL Server]"
   - "monitor servers [SQL Server]"
   - "log shipping [SQL Server], system tables"
   - "log shipping [SQL Server], stored procedures"
   - "primary servers [SQL Server]"
-ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Log Shipping Tables and Stored Procedures
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

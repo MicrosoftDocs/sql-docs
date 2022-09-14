@@ -1,19 +1,16 @@
 ---
 title: "Database Mirroring: Interoperability & Coexistence"
 description: Learn about interoperability and coexistence of SQL Server database mirroring and other SQL Server features, such as full-text catalogs and database snapshots.
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "high availability [SQL Server], interoperability and coexistence"
-  - "Database Engine [SQL Server], high availability"
-ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "high availability [SQL Server], interoperability and coexistence"
+  - "Database Engine [SQL Server], high availability"
 ---
 # Database Mirroring: Interoperability and Coexistence (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

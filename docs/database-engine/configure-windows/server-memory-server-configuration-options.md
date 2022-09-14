@@ -6,7 +6,6 @@ ms.author: randolphwest
 ms.reviewer: wiassaf
 ms.date: 08/01/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
 ms.custom: contperf-fy20q4

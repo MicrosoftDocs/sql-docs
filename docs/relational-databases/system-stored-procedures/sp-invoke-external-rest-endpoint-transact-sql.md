@@ -228,7 +228,7 @@ WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key
 
 ### [Managed Identity](#tab/managed-identity)
 
-With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure AAD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad))
+With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Azure AD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad))
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
@@ -242,7 +242,7 @@ WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 The created DATABASE SCOPED CREDENTIAL must adhere to specific rules in order to be used with sp_invoke_external_rest_endpoint. The rules are the following:
 
 1. Must be a valid URL
-1. The URL domain must be one of those domains included in the allow list
+1. The URL domain must be one of those domains included in the allow-list
 1. The URL must not contain a query string
 1. Protocol + Fully Qualified Domain Name (FQDN) of the called URL must match Protocol + FQDN of the credential name
 1. Each part of the called URL path must match completely with the respective part of URL path in the credential name
@@ -252,10 +252,10 @@ The created DATABASE SCOPED CREDENTIAL must adhere to specific rules in order to
 
 The [RFC 3986 Section 6.2.2.1](https://www.rfc-editor.org/rfc/rfc3986#section-6.2.2.1) states that "When a URI uses components of the generic syntax, the component syntax equivalence rules always apply; namely, that the scheme and host are case-insensitive" and [RFC 7230 Section 2.7.3](https://www.rfc-editor.org/rfc/rfc7230#section-2.7.3) mention that "all other are compared in a case-sensitive manner". 
 
-As there's a collation rule set at the database level, the following logic will be applied, to be coherent with the database collation rule and the RFC mentioned above. (Note that the described rule could potentially be more restrictive than the RFC rules, for example if database is set to use a case-sensitive collation):
+As there's a collation rule set at the database level, the following logic will be applied, to be coherent with the database collation rule and the RFC mentioned above. (The described rule could potentially be more restrictive than the RFC rules, for example if database is set to use a case-sensitive collation):
 
 1.	Check if URL and Credential match using the database collation rules (and without doing any URL encoding). If yes move to the next point.
-1.	Check if URL and Credential match using the RFC which means
+1.	Check if URL and Credential match using the RFC, which means
     -	Check the scheme and host using a case-insensitive logic (Latin1_General_100_CI_AS_KS_WS_SC)
     -	Check all other segments of the URL are compared in a case-sensitive manner (Latin1_General_100_BIN2)
 

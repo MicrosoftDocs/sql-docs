@@ -149,36 +149,35 @@ The following diagram shows how these tables are related to each other. Some of 
 
 2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](\sql-docs-pr\docs\azure-data-studio\table-designer-azure-data-studio.md) :
 
-- Person Table
+    - Person Table
+        ![Screenshot of Person Table in Table Designer.](./media/design-first-database-tutorial/person-table-ads.png)
 
-    ![Screenshot of Person Table in Table Designer.](./media/design-first-database-tutorial/person-table-ads.png)
+       Be sure to configure the Primary Key settings for the **Person** Table as shown below:
+          ![Screenshot of Person Table in Table Designer showing the Primary Key settings.](./media/design-first-database-tutorial/person-table-primary-key-ads.png)
 
-   Be sure to configure the Primary Key settings for the **Person** Table as shown below:
-      ![Screenshot of Person Table in Table Designer showing the Primary Key settings.](./media/design-first-database-tutorial/person-table-primary-key-ads.png)
+    - Student Table
+        ![Screenshot of Student Table in Table Designer.](./media/design-first-database-tutorial/student-table-ads.png)
 
-- Student Table
-    ![Screenshot of Student Table in Table Designer.](./media/design-first-database-tutorial/student-table-ads.png)
+       Be sure to configure the Primary Key settings for the **Student** Table as shown below:
+           ![Screenshot of Student Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/student-table-primary-key-ads.png)
 
-   Be sure to configure the Primary Key settings for the **Student** Table as shown below:
-       ![Screenshot of Student Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/student-table-primary-key-ads.png)
+       Be sure to configure the Foreign Key settings for the **Student** Table as shown below:
+           ![Screenshot Student Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/student-table-foreign-key-ads.png)
 
-   Be sure to configure the Foreign Key settings for the **Student** Table as shown below:
-       ![Screenshot Student Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/student-table-foreign-key-ads.png)
+    - Course Table
+        ![Screenshot of Course Table in Table Designer.](./media/design-first-database-tutorial/course-table-ads.png)
 
-- Course Table
-    ![Screenshot of Course Table in Table Designer.](./media/design-first-database-tutorial/course-table-ads.png)
+       Be sure to configure the Primary Key settings for the **Course** Table as shown below:
+          ![Screenshot of Course Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/course-table-primary-key-ads.png)
 
-   Be sure to configure the Primary Key settings for the **Course** Table as shown below:
-      ![Screenshot of Course Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/course-table-primary-key-ads.png)
+    - Credit Table
+        ![Screenshot of Credit Table in Table Designer.](./media/design-first-database-tutorial/credit-table-ads.png)
 
-- Credit Table
-    ![Screenshot of Credit Table in Table Designer.](./media/design-first-database-tutorial/credit-table-ads.png)
+       Be sure to configure the Foreign Key settings for the **Credit** Table as shown below:
+        ![Screenshot of Credit Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/credit-table-foreign-key-ads.png)
 
-   Be sure to configure the Foreign Key settings for the **Credit** Table as shown below:
-    ![Screenshot of Credit Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/credit-table-foreign-key-ads.png)
-
-   Be sure to configure the Check Constraint settings for the **Credit** Table as shown below:
-    ![Screenshot of Credit Table in Table Designer showing Check Constraint settings.](./media/design-first-database-tutorial/credit-table-check-constraint-ads.png)
+       Be sure to configure the Check Constraint settings for the **Credit** Table as shown below:
+        ![Screenshot of Credit Table in Table Designer showing Check Constraint settings.](./media/design-first-database-tutorial/credit-table-check-constraint-ads.png)
 
 3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
    ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/ads-tables-created.png)

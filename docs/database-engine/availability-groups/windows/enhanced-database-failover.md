@@ -1,18 +1,17 @@
 ---
 title: "Enhanced failover for an availability group"
 description: "Steps to enable enhanced database failover, which triggers a failover if a database in an Always On availability group is no longer able to write transactions."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: "mikeray"
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
-- "Availability Groups [SQL Server], enhanced database failover"
-- "Availability Groups [SQL Server], failover"
-ms.assetid: 
-author: MashaMSFT
-ms.reviewer: "mikeray"
-ms.author: mathoma
+ms.custom: seodec18
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], enhanced database failover"
+  - "Availability Groups [SQL Server], failover"
 ---
 # Enable enhanced database failover to a database in an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

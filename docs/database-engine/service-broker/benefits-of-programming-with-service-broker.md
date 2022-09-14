@@ -1,13 +1,13 @@
 ---
 title: Benefits of Programming with Service Broker
 description: "Queuing and asynchronous messaging are needed for many database applications today."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Benefits of Programming with Service Broker

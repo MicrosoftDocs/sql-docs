@@ -1,14 +1,12 @@
 ---
-title: "Choose a database engine upgrade method | Microsoft Docs"
+title: "Choose a database engine upgrade method"
 description: This article describes upgrade paths for the Database Engine in SQL Server, including upgrade in-place, migrate to a new installation, and a rolling upgrade.
-ms.custom: ""
-ms.date: 04/08/2022
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: 04/08/2022
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # Choose a database engine upgrade method

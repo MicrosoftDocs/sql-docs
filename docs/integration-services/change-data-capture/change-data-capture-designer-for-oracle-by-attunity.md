@@ -32,7 +32,7 @@ ms.author: chugu
 - [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
-- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303) 
+- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100430) 
   
 ## In This Documentation  
   
@@ -60,6 +60,4 @@ ms.author: chugu
   
 -   [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [SQL Server Connection Required Permissions for the CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
-  
-  
+-   [SQL Server Connection Required Permissions for the CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)

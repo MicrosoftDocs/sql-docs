@@ -1,17 +1,14 @@
 ---
 title: Replay a trace for SQL Server upgrades
 description: Learn how to replay a captured trace with Database Experimentation Assistant for SQL Server upgrades.
-ms.custom: "seo-lt-2019"
-ms.date: 12/12/2019
-ms.prod: sql
-ms.prod_service: dea
-ms.suite: sql
-ms.technology: dea
-ms.tgt_pltfrm: ""
-ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
+ms.date: 12/12/2019
+ms.prod: sql
+ms.technology: dea
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 
 # Replay a trace in Database Experimentation Assistant

@@ -1,21 +1,18 @@
 ---
 title: "Connect clients to a database mirror"
-description: Configure clients to connect to a database mirror using Native Client or the .NET Framework Provider for SQL Server. 
-ms.custom: seo-lt-2019
+description: Configure clients to connect to a database mirror using Native Client or the .NET Framework Provider for SQL Server.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "partners [SQL Server], connecting clients to"
   - "database mirroring [SQL Server], connecting clients to"
   - "client connections [SQL Server], database mirroring"
   - "connections [SQL Server], database mirroring"
-ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Connect Clients to a Database Mirroring Session (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

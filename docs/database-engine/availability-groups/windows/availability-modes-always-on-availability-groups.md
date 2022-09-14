@@ -1,22 +1,20 @@
 ---
 title: "Availability modes for an availability group"
 description: "Learn the three different availability modes for an Always On availability group: asynchronous-commit mode, synchronous-commit mode, and configuration only mode."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "10/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], asynchronous commit"
   - "synchronous-commit availability mode"
   - "Availability Groups [SQL Server], synchronous commit"
   - "asynchronous-commit availability mode"
   - "Availability Groups [SQL Server], availability modes"
-ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Differences between availability modes for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

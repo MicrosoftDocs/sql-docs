@@ -1,20 +1,16 @@
 ---
-title: "Database Mirroring Witness | Microsoft Docs"
+title: "Database Mirroring Witness"
 description: Learn about the function of a witness in automatic failover in SQL Server database mirroring. Unlike the partners, the witness does not serve the database.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "witness [SQL Server], about witness"
   - "witness [SQL Server]"
   - "database mirroring [SQL Server], witness"
-ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Database Mirroring Witness
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

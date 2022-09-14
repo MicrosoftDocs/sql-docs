@@ -1,13 +1,13 @@
 ---
 title: Starting and Stopping the Queue
 description: "Use the ALTER QUEUE statement to start and stop a queue."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Starting and Stopping the Queue

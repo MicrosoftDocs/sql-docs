@@ -1,18 +1,15 @@
 ---
 title: "Configure Security Wizard: Choose Servers"
-description: "Describes the properties found on the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'." 
-ms.custom: "seo-lt-2019"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.choosesrvrs.f1"
-ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
+description: "Describes the properties found on the 'Choose Servers' page of the 'Configure Database Mirroring Security Wizard'."
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.configdbmsecurwiz.choosesrvrs.f1"
 ---
 # Configure Database Mirroring Wizard: Choose Servers to Configure 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

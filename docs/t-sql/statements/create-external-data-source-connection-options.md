@@ -147,6 +147,7 @@ You can only specify the key-value pairs that have an entry in the Oracle wire p
 | Truststore (TS) | None |
 | TruststorePassword (TSP) | None |
 | UseCurrentSchema (UCS) | 1 (Enabled) |
+| UseDefaultEncryptionOptions | 1 (Enabled) |
 | ValidateServerCertificate (VSC) | 1 (Enabled) |
 | WireProtocolMode (WPM) | 2 |
 
@@ -160,10 +161,12 @@ You can only specify the key-value pairs that have an entry in the driver config
 
 | Key name | Default | Required | Description |
 |:--|:--|:--|:--|
-| SSL | Clear (0) | No | This option specifies whether the driver uses SSL to connect to the server. Enabled (1): The driver uses SSL to connect to the server.Disabled (0): The driver does not use SSL to connect to the server. |
 |DefaultStringColumnLength|255|No| The maximum number of characters that can be contained in STRING columns. The maximum value that you can set for this option is 2147483647.|
+|noCursorTimeout|False | No | This option specifies whether the driver allows active cursors on the data source server to expire. When FALSE, the data source server will time out idle cursors after the threshold inactivity period set on the server. When set to TRUE, the driver prevents the data source server from timing out idle cursors, and there is a risk that if the driver should quit or lose the connection to the server unexpectedly, the cursor will remain open on the server indefinitely. You can adjust the threshold for idle cursor timeouts on the MongoDB server, see https://docs.mongodb.com/v3.0/reference/parameters/ for details.|
 |SamplingLimit|100|No|The maximum number of records that the driver can sample to generate a temporary schema definition. When this option is set to 0, the driver samples every document in the database.<br /><br />Make sure to configure the driver to sample all the necessary data. Documents that are not sampled do not get included in the schema definition, and consequently do not become available in ODBC applications.<br /><br />Typically, sampling a large number of documents results in a schema definition that is more accurate and better able to represent all the data in the database. However, the sampling process may take longer than expected when many documents are sampled, especially if the database contains complex, nested data structures.|
 |SamplingStrategy|Forward|No|This option specifies how the driver samples data when generating a temporary schema definition.<br /><br />**Forward**: The driver samples data starting from the first record in the database, then samples the next record, and so on.<br />**Backward**: The driver samples data starting from the last record in the database, then samples the preceding record, and so on.<br />**Random**: The driver selects sample records from the data source at random until the SamplingLimit is reached.|
+| SSL | Clear (0) | No | This option specifies whether the driver uses SSL to connect to the server. Enabled (1): The driver uses SSL to connect to the server.Disabled (0): The driver does not use SSL to connect to the server. |
+
 
 ## Generic ODBC
 

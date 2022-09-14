@@ -982,8 +982,6 @@ items:
         href: relational-databases/databases/log-shipping-monitor-settings.md
 - name: Database design
   items:
-  - name: Big data options on the Microsoft SQL Server platform
-    href: big-data-cluster/big-data-options.md
   - name: Hierarchical Data
     href: relational-databases/hierarchical-data-sql-server.md
   - name: Collation
@@ -4751,6 +4749,8 @@ items:
     href: ./integration-services/sql-server-integration-services.md
   - name: Bulk Copy Utility (bcp)
     href: tools/bcp-utility.md
+  - name: Big data options on the Microsoft SQL Server platform
+    href: big-data-cluster/big-data-options.md
   - name: Azure Migration Services >
     displayName: DMS, Data Migration Service, Azure Data Migration Service
     href: /azure/dms/dms-overview

@@ -437,7 +437,7 @@ In order for PolyBase to function correctly with a Hadoop external data source, 
 - HDFS ports
     - Namenode
     - Datanode
-- Resource manager
+- Resource Manager
     - Job submission
     - Job history
  

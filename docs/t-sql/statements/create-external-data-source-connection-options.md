@@ -1,6 +1,6 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS argument"
-description: The CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS argument can vary depending on the external data provider. This article provides additional detail for CONNECTION_OPTIONS depending on the provider.
+description: The CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS argument can vary depending on the external data provider. This article provides additional detail for connection options depending on the provider.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/14/2022
@@ -163,7 +163,7 @@ You can only specify the key-value pairs that have an entry in the driver config
 | SSL | Clear (0) | No | This option specifies whether the driver uses SSL to connect to the server. Enabled (1): The driver uses SSL to connect to the server.Disabled (0): The driver does not use SSL to connect to the server. |
 |DefaultStringColumnLength|255|No| The maximum number of characters that can be contained in STRING columns. The maximum value that you can set for this option is 2147483647.|
 |SamplingLimit|100|No|The maximum number of records that the driver can sample to generate a temporary schema definition. When this option is set to 0, the driver samples every document in the database.<br /><br />Make sure to configure the driver to sample all the necessary data. Documents that are not sampled do not get included in the schema definition, and consequently do not become available in ODBC applications.<br /><br />Typically, sampling a large number of documents results in a schema definition that is more accurate and better able to represent all the data in the database. However, the sampling process may take longer than expected when many documents are sampled, especially if the database contains complex, nested data structures.|
-|SamplingStrategy|Forward|No|This options specifies how the driver samples data when generating a temporary schema definition.<br /><br />**Forward**: The driver samples data starting from the first record in the database, then samples the next record, and so on.<br />**Backward**: The driver samples data starting from the last record in the database, then samples the preceding record, and so on.<br />**Random**: The driver selects sample records from the data source at random until the SamplingLimit is reached.|
+|SamplingStrategy|Forward|No|This option specifies how the driver samples data when generating a temporary schema definition.<br /><br />**Forward**: The driver samples data starting from the first record in the database, then samples the next record, and so on.<br />**Backward**: The driver samples data starting from the last record in the database, then samples the preceding record, and so on.<br />**Random**: The driver selects sample records from the data source at random until the SamplingLimit is reached.|
 
 ## Generic ODBC
 
@@ -173,10 +173,10 @@ There are some valid key-value pairs in PolyBase that are available to all gener
 
 | Key | Possible values | Description |  
 |:--|:--|:--|
-| PolyBaseOdbcSupportsRowCount | true , FALSE |Indicates whether or not the driver supports the SQLRowCount function being called on ODBC catalog functions. Default is false. For example: `CONNECTION_OPTIONS='PolyBaseOdbcSupportsRowCount=TRUE'`.|
-| PolyBaseOdbcSupportsMetadataIdAttributes | true , FALSE | Indicates whether or not the driver supports setting the METADATA_ID statement attribute. Default is false. For example: `CONNECTION_OPTIONS='PolyBaseOdbcSupportsMetadataIdAttributes=TRUE'`.|
-| PolyBaseOdbcSupportsBindOffset | true , FALSE | Indicates whether or not the driver supports bind offsets for row-wise binding of result sets. If not, use column binding. Default is false. For example: `CONNECTION_OPTIONS='PolyBaseOdbcSupportsBindOffset=TRUE'`.|
-| PolyBaseQoTopPushdownSyntax | TOP , LIMIT | Contains information specifying how to push down the TOP operator to the backend. Default is empty string, indicating a lack of support for TOP pushdown. If the user specifies TOP, `top {0}` is used as the format string. If the user specifies LIMIT, `limit {0}` is used as the format string. This implementation is driver-specific, consult the external data source and/or driver documentation. For example: `CONNECTION_OPTIONS= PolyBaseQoTopPushdownSyntax=TOP'`.|
+| PolyBaseOdbcSupportsRowCount | true, FALSE |Indicates whether or not the driver supports the SQLRowCount function being called on ODBC catalog functions. Default is false. For example: `CONNECTION_OPTIONS='PolyBaseOdbcSupportsRowCount=TRUE'`.|
+| PolyBaseOdbcSupportsMetadataIdAttributes | true, FALSE | Indicates whether or not the driver supports setting the METADATA_ID statement attribute. Default is false. For example: `CONNECTION_OPTIONS='PolyBaseOdbcSupportsMetadataIdAttributes=TRUE'`.|
+| PolyBaseOdbcSupportsBindOffset | true, FALSE | Indicates whether or not the driver supports bind offsets for row-wise binding of result sets. If not, use column binding. Default is false. For example: `CONNECTION_OPTIONS='PolyBaseOdbcSupportsBindOffset=TRUE'`.|
+| PolyBaseQoTopPushdownSyntax | TOP, LIMIT | Contains information specifying how to push down the TOP operator to the backend. Default is empty string, indicating a lack of support for TOP pushdown. If the user specifies TOP, `top {0}` is used as the format string. If the user specifies LIMIT, `limit {0}` is used as the format string. This implementation is driver-specific, consult the external data source and/or driver documentation. For example: `CONNECTION_OPTIONS= PolyBaseQoTopPushdownSyntax=TOP'`.|
 
 ## Next steps
 

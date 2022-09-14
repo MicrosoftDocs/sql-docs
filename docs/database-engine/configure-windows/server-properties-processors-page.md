@@ -1,18 +1,15 @@
 ---
 title: Server properties (processors page)
 description: Get acquainted with processor settings in SQL Server. Learn which options control the number of worker threads, the processor assignment, and other properties.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: drskwier, matteot
+ms.date: 12/17/2020
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.serverproperties.processor.f1"
-ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: drskwier, matteot
-ms.custom: ""
-ms.date: 12/17/2020
 ---
 
 # Server Properties (Processors Page)

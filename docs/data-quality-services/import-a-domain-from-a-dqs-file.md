@@ -1,15 +1,12 @@
 ---
-description: "Import a Domain from a .dqs File"
 title: "Import a Domain from a .dqs File"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
+description: "Import a Domain from a .dqs File"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
 ---
 # Import a Domain from a .dqs File
 

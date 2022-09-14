@@ -1,13 +1,13 @@
-﻿---
+---
 title: Determining the Dialog Security Type
 description: "The type of dialog security that is used for a conversation depends on the options in the BEGIN DIALOG CONVERSATION statement, the settings on the remote service binding for the service, and whether the owner of the initiating service owns a certificate."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Determining the Dialog Security Type

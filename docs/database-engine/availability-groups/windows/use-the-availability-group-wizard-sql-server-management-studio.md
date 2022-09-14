@@ -1,22 +1,20 @@
 ---
 title: "Configure availability group in SSMS"
-description: Create and configure an Always On availability group with the 'New Availability Group Wizard' in SQL Server Management Studio (SSMS).  
-ms.custom: "seo-lt-2019"
+description: Create and configure an Always On availability group with the 'New Availability Group Wizard' in SQL Server Management Studio (SSMS).
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.newagwizard.f1"
   - "sql13.swb.newavgroupwiz.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "New Availability Group Wizard, availability replicas"
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], creating"
-ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Use the Availability Group Wizard (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -63,8 +63,6 @@ For a single subscription, you have the following limitations on the number of c
 |Single database (per subscription)|30|100|
 |Elastic pool (per pool)|4|2,000|
 
-There's no built-in method to restore the entire server. For an example of how to accomplish this task, see [Azure SQL Database: Full server recovery](https://gallery.technet.microsoft.com/Azure-SQL-Database-Full-82941666).
-
 ## Permissions
 
 To recover by using automated backups, you must be either:

@@ -1,24 +1,21 @@
 ---
 title: View or Change Server Properties (SQL Server)
 description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: contperf-fy20q4
+f1_keywords:
   - "sql13.swb.connectionproperties.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing server properties"
   - "server properties [SQL Server]"
   - "displaying server properties"
   - "servers [SQL Server], viewing"
   - "Connection Properties dialog box"
-ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: contperf-fy20q4
-ms.date: 03/14/2017
 ---
 
 # View or Change Server Properties (SQL Server)

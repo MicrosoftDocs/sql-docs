@@ -1,22 +1,20 @@
 ---
 title: "Remove database from an availability group"
 description: "Steps to remove a primary database from an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.availabilitygroup.removeprimarydb.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], removing"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
-ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Remove a primary database from an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

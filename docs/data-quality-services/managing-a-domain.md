@@ -1,15 +1,12 @@
 ---
-description: "Managing a Domain"
 title: "Managing a Domain"
-ms.date: "07/31/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
+description: "Managing a Domain"
 author: swinarko
 ms.author: sawinark
+ms.date: "07/31/2012"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
 ---
 # Managing a Domain
 

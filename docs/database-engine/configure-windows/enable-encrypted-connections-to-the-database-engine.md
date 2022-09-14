@@ -1,14 +1,14 @@
 ---
-title: "Enable encrypted connections | Microsoft Docs"
-ms.custom: contperf-fy20q4
+title: "Enable encrypted connections"
+description: Encrypt data across communication channels. Enable encrypted connections for an instance of the SQL Server Database Engine by using SQL Server Configuration Manager.
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/31/2022"
 ms.prod: sql
-ms.prod_service: security
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-description: Encrypt data across communication channels. Enable encrypted connections for an instance of the SQL Server Database Engine by using SQL Server Configuration Manager.
-helpviewer_keywords: 
+ms.custom: contperf-fy20q4
+helpviewer_keywords:
   - "connections [SQL Server], encrypted"
   - "SSL [SQL Server]"
   - "Secure Sockets Layer (SSL)"
@@ -21,9 +21,6 @@ helpviewer_keywords:
   - "installing certificates"
   - "security [SQL Server], encryption"
   - "TLS certificates"
-ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-author: VanMSFT
-ms.author: vanto
 ---
 # Enable encrypted connections to the Database Engine
 

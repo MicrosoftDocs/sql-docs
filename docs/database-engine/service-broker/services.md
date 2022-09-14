@@ -1,13 +1,13 @@
-﻿---
+---
 title: Services
 description: "A Service Broker service is a name for a specific business task or set of business tasks."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Services

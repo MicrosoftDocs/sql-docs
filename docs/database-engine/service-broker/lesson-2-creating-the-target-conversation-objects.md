@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 2: Creating the Target Conversation Objects'
+title: "Lesson 2: Creating the Target Conversation Objects"
 description: "In this lesson, you will learn to build all the objects that enable a database to be the target of a conversation from another database."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 2: Creating the Target Conversation Objects

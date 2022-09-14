@@ -1,14 +1,14 @@
 ---
+title: "Understanding the DMX Select Statement"
 description: "Understanding the DMX Select Statement"
-title: "Understanding the DMX Select Statement | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
-ms.custom: dmx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: dmx
 ---
 # Understanding the DMX Select Statement
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

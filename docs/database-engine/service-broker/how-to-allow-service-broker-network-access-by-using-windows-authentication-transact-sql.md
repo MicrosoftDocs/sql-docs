@@ -1,13 +1,13 @@
 ---
-title: 'How to: Allow Service Broker Network Access by Using Windows Authentication (Transact-SQL)'
+title: "How to: Allow Service Broker Network Access by Using Windows Authentication (Transact-SQL)"
 description: "To allow another instance to send messages using Windows Authentication for transport security, you create a user in the master database for the startup service account for the other instance."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # How to: Allow Service Broker Network Access by Using Windows Authentication (Transact-SQL)

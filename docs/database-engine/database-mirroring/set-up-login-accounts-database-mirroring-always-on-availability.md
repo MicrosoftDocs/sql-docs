@@ -1,19 +1,16 @@
 ---
 title: "Set up login accounts (mirroring & availability groups)"
-description: Configure login accounts to access the database mirroring endpoint of a database mirror or an Always On availability group. 
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database mirroring [SQL Server], deployment"
-  - "logins [SQL Server], database mirroring"
-ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
+description: Configure login accounts to access the database mirroring endpoint of a database mirror or an Always On availability group.
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "database mirroring [SQL Server], deployment"
+  - "logins [SQL Server], database mirroring"
 ---
 # Set Up Login Accounts - Database Mirroring Always On Availability
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

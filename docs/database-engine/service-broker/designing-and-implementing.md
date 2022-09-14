@@ -1,13 +1,13 @@
-﻿---
+---
 title: Designing and Implementing (Service Broker)
 description: "This section provides high-level information that can help when you design and implement your Service Broker applications."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Designing and Implementing (Service Broker)

@@ -1,22 +1,18 @@
 ---
-title: "Log In to an Instance of SQL Server (Command Prompt) | Microsoft Docs"
-description: 'Learn about the "sqlcmd" utility. See how to use it in a command prompt to test connectivity to an instance of SQL Server.'
-ms.custom: ""
+title: "Log In to an Instance of SQL Server (Command Prompt)"
+description: "Learn about the sqlcmd utility. See how to use it in a command prompt to test connectivity to an instance of SQL Server."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logins [SQL Server], named instance of SQL Server"
   - "log ins [SQL Server]"
   - "logins [SQL Server], default instance of SQL Server"
   - "command prompt [SQL Server], logins"
   - "logging in [SQL Server]"
-ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Log In to an Instance of SQL Server (Command Prompt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

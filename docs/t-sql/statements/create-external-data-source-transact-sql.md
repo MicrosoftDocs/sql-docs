@@ -1,12 +1,11 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 description: CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms.
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
+ms.date: 08/31/2022
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
@@ -305,7 +304,6 @@ WITH
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]: ../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
 <!-- Azure Docs -->
@@ -469,7 +467,6 @@ The following table shows the default ports for these components. Note that ther
 | Resource Manager Job Submission (Hortonworks 2.x, 3.0 on Linux, Hortonworks 2.1-3 on Windows) | 8050|
 | Resource Manager Job History | 10020|
 
-
 ## Permissions
 
 Requires `CONTROL` permission on database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -624,7 +621,6 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]: ../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
 <!-- Azure Docs -->
@@ -725,17 +721,15 @@ Additional notes and guidance when setting the location:
 - [!INCLUDE[polybase-java-connector-banner-retirement](../../includes/polybase-java-connector-banner-retirement.md)]
 
 #### CONNECTION_OPTIONS = *key_value_pair*
+<!-- See also docs\t-sql\statements\create-external-data-source-connection-options.md -->
 
 Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
 
-Applies to generic `ODBC` connections, as well as built-in `ODBC` connectors for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, and Azure Cosmos DB API for MongoDB.
+Applies to generic `ODBC` connections, as well as built-in `ODBC` connectors for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, and Azure Cosmos DB API for MongoDB. 
 
 The `key_value_pair` is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type. The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
-For more information, see:
-
-- [Using connection string keywords][connection_options]
-- [ODBC Driver connection string keywords][connection_option_keyword]
+Possible key value pairs are specific to the provider for the external data source vendor. For more information for each provider, consult [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
 #### Pushdown = ON | OFF
 
@@ -1133,7 +1127,6 @@ WITH
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]: ../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
 <!-- Azure Docs -->
@@ -1215,6 +1208,7 @@ Additional notes and guidance when setting the location:
 
 
 #### CONNECTION_OPTIONS = *key_value_pair*
+<!-- See also docs\t-sql\statements\create-external-data-source-connection-options.md -->
 
 Specified for [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
 
@@ -1222,10 +1216,7 @@ Applies to generic `ODBC` connections, as well as built-in `ODBC` connectors for
 
 The `key_value_pair` is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type. The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
-For more information, see:
-
-- [Using connection string keywords][connection_options]
-- [ODBC Driver connection string keywords][connection_option_keyword]
+Possible key value pairs are specific to the driver. For more information for each provider, consult [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
 <!---
 #### PUSHDOWN = **ON** | OFF
@@ -1649,7 +1640,6 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]: ../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
 <!-- Azure Docs -->
@@ -1916,7 +1906,6 @@ go
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: /azure/azure-sql/database/elastic-query-overview
@@ -2196,7 +2185,6 @@ WITH
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: /azure/azure-sql/database/elastic-query-overview
@@ -2467,8 +2455,6 @@ WITH
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
-[connection_option_keyword]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md#odbc-driver-connection-string-keywords
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: /azure/azure-sql/database/elastic-query-overview
@@ -2625,7 +2611,6 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 [intro_pb]: ../../relational-databases/polybase/polybase-guide.md
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 
 <!-- Azure Docs -->

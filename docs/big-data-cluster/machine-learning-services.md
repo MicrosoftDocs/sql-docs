@@ -239,7 +239,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
  - [Create a miniCRAN repo](../machine-learning/package-management/create-a-local-package-repository-using-minicran.md?view=sql-server-ver15&preserve-view=true)
  - [Tips for using R packages](../machine-learning/package-management/tips-for-using-r-packages.md?view=sql-server-ver15&preserve-view=true)
 
-### Monitore
+### Monitor
 
  - [Monitor using SSMS reports](../machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md?view=sql-server-ver15&preserve-view=true)
  - [Monitor using DMVs](../machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md?view=sql-server-ver15&preserve-view=true)

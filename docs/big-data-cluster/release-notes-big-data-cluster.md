@@ -104,7 +104,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Issue and customer effect**: After a thorough assessment of the SQL Server 2019 Big Data Clusters codebase, no risk associated with the log4j vulnerability reported in December was identified. CU15 includes an updated version of log4j (2.17) for the ElasticSearch instance in the control plane to ensure that image scan alerts are not triggered by static code analysis of Big Data Cluster containers.
 
-- **Solution**: Always keep your big data cluster updated to the lastest release.
+- **Solution**: Always keep your big data cluster updated to the latest release.
 
 ### Cluster upgrade from a CU8 and previous release to a post-CU9 release is not supported
 

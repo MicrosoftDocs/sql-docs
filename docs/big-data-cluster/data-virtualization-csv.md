@@ -30,15 +30,15 @@ In Azure Data Studio (ADS) [connect to the SQL Server master instance](connect-t
 For the purposes of this tutorial, create a new directory named **Data**.
 
 1. Right-click on the HDFS root directory context menu.
-2. Click **New directory**.
+2. Select **New directory**.
 3. Name the new directory *Data*.
 
-Upload sample data. For a simple walk through, you can use a sample csv data file. This article uses airline delay cause data from the [US Department of Transportation](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1). Download the raw data, and extract the data to your computer. Name the file *airline_delay_causes.csv*.
+Upload sample data. For a simple walk-through, you can use a sample csv data file. This article uses airline delay cause data from the [US Department of Transportation](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1). Download the raw data, and extract the data to your computer. Name the file *airline_delay_causes.csv*.
 
 To upload the sample file after you extract it:
 
 1. In Azure Data Studio, *right-click* the new directory you created. 
-2. Click **Upload files**.
+2. Select **Upload files**.
 
 ![example csv file in HDFS](media/data-virtualization/100-csv-sample-file-hdfs.png)
 
@@ -57,11 +57,11 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePo
 
 ## Create the external table
 
-From ADS, right-click on the CSV file and select **Create External Table From CSV File** from the context menu. You can also create external tables from CSV files from a directory in HDFS if the files under the directory follow the same schema. This would allow the virtualization of the data at a directory level without the need to process individual files and get a joined result set over the combined data.Azure data studio guides you through the steps to create the external table.
+From ADS, right-click on the CSV file and select **Create External Table From CSV File** from the context menu. You can also create external tables from CSV files from a directory in HDFS if the files under the directory follow the same schema. This would allow the virtualization of the data at a directory level without the need to process individual files and get a joined result set over the combined data. Azure Data Studio guides you through the steps to create the external table.
 
 Specify the database, the data source, a table name, the schema, and the name for the table's external file format.
 
-Click **Next**.
+Select **Next**.
 
 ## Preview Data
 
@@ -69,7 +69,7 @@ Azure Data Studio provides a preview of the imported data.
 
 ![Screenshot showing the Create External Table From CSV window with a preview of imported data.](media/data-virtualization/130-csv-preview-data.png)
 
-Once done viewing the preview, click **Next** to continue
+Once done viewing the preview, select **Next** to continue
 
 ## Modify Columns
 
@@ -77,7 +77,7 @@ In the next window, you may modify the columns of the external table you intend 
 
 ![Screenshot of the Create External Table From CSV window showing Step 3 Modify Columns.](media/data-virtualization/140-csv-modify-columns.png)
 
-After you verify the destination columns, click **Next**.
+After you verify the destination columns, select **Next**.
 
 ## Summary
 
@@ -85,9 +85,9 @@ This step provides a summary of your selections. It provides the SQL Server name
 
 ![Summary screen](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
-If you click **Create Table**, SQL Server creates the external table in the destination database.
+If you select **Create Table**, SQL Server creates the external table in the destination database.
 
-If you click, **Generate Script**, you Azure Data Studio creates the T-SQL query for creating the external table.
+If you select, **Generate Script**, your Azure Data Studio creates the T-SQL query for creating the external table.
 
 Once created the table can now be queried directly using T-SQL from the SQL Server instance.
 

@@ -36,7 +36,7 @@ To change the default name resolution behavior and enable the resolution of priv
 ## Considerations
 
 * Be careful not to override or disable the resolution of domain names that Azure SQL Managed Instance uses internally. Always configure your custom DNS server so that it can resolve public domain names.
-* When you update the DNS servers for a virtual network, SQL Managed Instances in that network must also be notified of this change, as described in the [Update SQL Managed Instances](#update-sql-managed-instance-dns-server-setting) section in this article. 
+* When you update the DNS servers for a virtual network, SQL Managed Instances in that network must also be notified of this change, as described in the [Update SQL Managed Instances](#update-sql-managed-instances) section in this article. 
 * Always use a fully qualified domain name (FQDN) for the services that you want Azure SQL Managed Instance to resolve, such as your mail server or an on-premises SQL Server instance. Use FQDNs even if those services are within your private DNS zone. For example, use `smtp.contoso.com`. Creating a linked server or configuring replication that reference SQL Server VMs inside the same virtual network also requires a FQDN and a default DNS suffix; for example, `SQLVM.internal.cloudapp.net`.
 
 ## Update SQL Managed Instances

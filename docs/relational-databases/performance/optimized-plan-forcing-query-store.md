@@ -49,7 +49,7 @@ You can enable or disable optimized plan forcing for a database. When optimized 
 
 ### Enable or disable optimized plan forcing for a database
 
-Optimized plan forcing is enabled by default for new databases created in SQL Server 2022 and higher. The Query Store must be enabled for every database where optimized plan forcing is used. Upgraded instances with existing databases or databases restored from a lower version of SQL Server will have optimized plan forcing enabled by default.
+Optimized plan forcing is enabled by default for new databases created in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and higher. The Query Store must be enabled for every database where optimized plan forcing is used. Upgraded instances with existing databases or databases restored from a lower version of SQL Server will have optimized plan forcing enabled by default.
 
 To enable optimized plan forcing at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_PLAN_FORCING = ON` database scoped configuration. You must enable Query Store if it isn't already enabled. Find example code in [Example A](#a-enable-query-store-and-optimized-plan-forcing-for-a-database), or learn more about Query Store in [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 

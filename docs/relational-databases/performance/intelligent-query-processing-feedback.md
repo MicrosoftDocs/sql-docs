@@ -37,7 +37,7 @@ The feedback features discussed in this article are:
 
 ## Memory grant feedback
 
-Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in SQL Server 2022, multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in SQL Server 2022, we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
+Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
 
 ### Batch mode memory grant feedback
 
@@ -158,7 +158,7 @@ ALTER DATABASE [<database name>] SET COMPATIBILITY_LEVEL = 150;
 
 As with batch mode memory grant feedback, row mode memory grant feedback activity is visible via the `memory_grant_updated_by_feedback` XEvent. We're also introducing two new query execution plan attributes for better visibility into the current state of a memory grant feedback operation for both row and batch mode.
 
-Memory grant feedback doesn't require the Query Store, however, the persistence improvements introduced in SQL Server 2022 (16.x) Preview require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
+Memory grant feedback doesn't require the Query Store, however, the persistence improvements introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
 
 Row mode memory grant feedback activity is visible via the `memory_grant_updated_by_feedback` extended event.
 
@@ -284,7 +284,7 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the `sys.query_store_plan_feedback` catalog view when we reach a stable degree of parallelism feedback value.
 
-- DOP feedback is available for queries that operate in the database compatibility level 160 (introduced with SQL Server 2022) or higher.
+- DOP feedback is available for queries that operate in the database compatibility level 160 (introduced with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]) or higher.
 
 - Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression. The DOP feedback doesn't recompile plans.
 

@@ -93,7 +93,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | New Item | Details |
 |----------|---------|
-| Deployment Wizard | Azure Data Studio now supports SQL Server 2022 (Preview) in the Deployment Wizard for both local and container installation. |
+| Deployment Wizard | Azure Data Studio now supports [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] in the Deployment Wizard for both local and container installation. |
 | Object Explorer | Added Ledger icons and scripting support to Object Explorer for Ledger objects. |
 | Dashboard | Added hexadecimal values to support color detection. |
 | Query Plan Viewer | Added the ability to copy text from cells in the Properties Pane of a query plan. |

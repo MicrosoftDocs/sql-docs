@@ -1023,7 +1023,7 @@ Requires **ALTER ANY CONNECTION** permission.
 Conditionally drops the column or constraint only if it already exists.
 
 #### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
-**Applies to**: SQL Server 2022 and later.
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
 Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
 

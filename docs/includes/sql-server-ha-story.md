@@ -1,4 +1,4 @@
-﻿This article provides an overview of business continuity solutions for high availability and disaster recovery in SQL Server. 
+This article provides an overview of business continuity solutions for high availability and disaster recovery in SQL Server. 
 
 One common task everyone deploying SQL Server has to account for is making sure that all mission critical SQL Server instances and the databases within them are available when the business and end users need them, whether that is 9 to 5 or around the clock. The goal is to keep the business up and running with minimal or no interruption. This concept is also known as business continuity.
 

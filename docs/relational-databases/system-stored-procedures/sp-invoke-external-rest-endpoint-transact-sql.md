@@ -155,7 +155,7 @@ IoT Central	| *.azureiotcentral.com
 API Management| *.azure-api.net
 
 > [!NOTE]
-> If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make ii available to `sp_invoke_external_rest_endpoint`.
+> If you want to invoke a REST service that is not within the allowed list, you can use API Management to securely expose the desired service and make it available to `sp_invoke_external_rest_endpoint`.
 
 ## Limits
 

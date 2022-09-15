@@ -1,16 +1,12 @@
 ---
 title: "Using multiple result sets"
 description: "Learn how to query and retrieve multiple result sets from a single execute using the JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using multiple result sets

@@ -1,15 +1,13 @@
 ---
 title: "Configure a distributed availability group"
-description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups." 
-ms.custom: "seodec18"
-ms.date: "01/28/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
+description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "01/28/2020"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seodec18
 ---
 # Configure an Always On distributed availability group  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

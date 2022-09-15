@@ -42,7 +42,7 @@ SHUTDOWN [ WITH NOWAIT ]
  Optional. Shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without performing checkpoints in every database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exits after attempting to terminate all user processes. When the server restarts, a rollback operation occurs for uncompleted transactions.  
   
 ## Remarks  
- Unless the WITHNOWAIT option is used, SHUTDOWN shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by:  
+ Unless the WITH NOWAIT option is used, SHUTDOWN shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by:  
   
 1.  Disabling logins (except for members of the **sysadmin** and **serveradmin** fixed server roles).  
   

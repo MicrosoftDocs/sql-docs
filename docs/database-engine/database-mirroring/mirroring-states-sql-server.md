@@ -1,14 +1,13 @@
 ---
-title: "Mirroring States (SQL Server) | Microsoft Docs"
+title: "Mirroring States (SQL Server)"
 description: Learn about the database states in a database mirroring session in SQL Server. The state reflects communication status, data flow, and the difference in data.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "states [SQL Server], database mirroring"
   - "PENDING_FAILOVER state"
   - "mirroring states [SQL Server]"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "SYNCHRONIZED state"
   - "SUSPENDED state"
   - "database mirroring [SQL Server], states"
-ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Mirroring States (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

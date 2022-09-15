@@ -1,19 +1,16 @@
 ---
-description: "Create a Matching Policy"
 title: "Create a Matching Policy"
+description: "Create a Matching Policy"
+author: swinarko
+ms.author: sawinark
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dqs.kb.kbmatchingmap.f1"
   - "sql13.dqs.kb.kbmatchingpolicy.f1"
   - "sql13.dqs.kb.kbmatchingresults.f1"
-ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: swinarko
-ms.author: sawinark
 ---
 # Create a Matching Policy
 

@@ -55,6 +55,8 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
+      - text: Migrating SQL Server Workloads FAQ
+        url: /azure/azure-sql/migration-guides/modernization
       - text: Azure SQL Database
         url: /azure/sql-database/sql-database-technical-overview
       - text: Azure SQL Server virtual machine

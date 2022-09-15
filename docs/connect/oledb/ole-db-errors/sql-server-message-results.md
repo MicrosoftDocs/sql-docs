@@ -1,19 +1,16 @@
 ---
 title: SQL Server message results (OLE DB driver)
 description: Learn about Transact-SQL statements that don't generate OLE DB Driver for SQL Server rowsets or a count, and their expected return values.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, errors"
   - "errors [OLE DB], SQL Server message results"
   - "OLE DB error handling, SQL Server message results"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL Server Message Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

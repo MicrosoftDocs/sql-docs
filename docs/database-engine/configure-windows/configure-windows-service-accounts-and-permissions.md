@@ -5,7 +5,6 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/10/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: reference
 ms.custom: contperf-fy20q4

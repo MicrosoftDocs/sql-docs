@@ -1,18 +1,14 @@
 ---
 title: "Connection Pooling (Microsoft Drivers for PHP for SQL Server)"
 description: "Learn the details of connection pooling when using the Microsoft Drivers for PHP for SQL Server and how the experience may differ depending on your operating system."
-ms.custom: ""
-ms.date: "08/01/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connection pooling support"
-ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/01/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connection pooling support"
 ---
 # Connection Pooling (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

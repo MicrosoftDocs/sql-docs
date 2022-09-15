@@ -1,13 +1,13 @@
-﻿---
+---
 title: Creating Service Broker Services
 description: "The definition of a Service Broker service includes the names of the contracts for which the service is a target."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Creating Service Broker Services

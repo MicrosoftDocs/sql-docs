@@ -1,21 +1,15 @@
 ---
+title: "supportsMultipleTransactions Method (SQLServerDatabaseMetaData)"
 description: "supportsMultipleTransactions Method (SQLServerDatabaseMetaData)"
-title: "supportsMultipleTransactions Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsMultipleTransactions"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsMultipleTransactions"
+apitype: "Assembly"
 ---
 # supportsMultipleTransactions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

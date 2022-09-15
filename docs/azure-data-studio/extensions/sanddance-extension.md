@@ -1,8 +1,8 @@
 ---
 title: SandDance for Azure Data Studio
 description: Learn how to use an Azure Data Studio extension to quickly create visualizations of your data—visualizations that provide insight.
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 07/03/2019
 ms.prod: azure-data-studio

@@ -1,20 +1,17 @@
 ---
-title: "Getting large data (OLE DB driver) | Microsoft Docs"
+title: "Getting large data (OLE DB driver)"
 description: Learn how an OLE DB Driver for SQL Server consumer can retrieve a large data value from a single column in this example.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "BLOBs, OLE objects"
   - "DBPROP_ACCESSORDER property"
   - "OLE DB Driver for SQL Server, BLOBs"
   - "large data, OLE objects"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Getting Large Data
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

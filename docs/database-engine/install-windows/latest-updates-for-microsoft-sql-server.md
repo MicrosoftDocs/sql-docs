@@ -1,13 +1,13 @@
 ---
-description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
 title: Latest updates for SQL Server
+description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
+author: SrinivasSQLMS
+ms.author: skandi
+ms.reviewer: hristins
 ms.date: 06/14/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: SrinivasSQLMS
-ms.author: skandi
-ms.reviewer: hristins
 ---
 
 # Latest updates for Microsoft SQL Server

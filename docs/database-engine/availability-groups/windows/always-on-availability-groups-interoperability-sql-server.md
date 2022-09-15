@@ -1,18 +1,16 @@
 ---
 title: "Always On availability groups: interoperability"
 description: "Describes the different features that can and cannot function alongside an Always On availability group."
-ms.custom: "seodec18"
-ms.date: "09/15/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: reference
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], about"
-  - "Availability Groups [SQL Server], interoperability"
-ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "09/15/2021"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: reference
+ms.custom: seodec18
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], about"
+  - "Availability Groups [SQL Server], interoperability"
 ---
 # Always On availability groups: interoperability (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

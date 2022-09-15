@@ -1,20 +1,17 @@
 ---
-title: "Create rowset with ICommand::Execute (OLE DB driver) | Microsoft Docs"
-description: Learn about creating rowsets with ICommand::Execute in OLE DB Driver for SQL Server. The properties that you want in the rowset can constrain the command text.
-ms.custom: ""
+title: "Create rowset with ICommand::Execute (OLE DB driver)"
+description: "Learn about creating rowsets with ICommand::Execute in OLE DB Driver for SQL Server. The properties that you want in the rowset can constrain the command text."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rowsets [OLE DB], creating"
   - "OLE DB Driver for SQL Server, rowsets"
   - "OLE DB rowsets, creating"
   - "Execute method"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Creating Rowsets with ICommand::Execute
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

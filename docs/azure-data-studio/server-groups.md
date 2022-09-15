@@ -3,7 +3,7 @@ title: Server groups
 description: Learn how to group servers and databases into server groups and assign colors to the groups. You can drag and drop servers into the proper groups.
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu"
+ms.reviewer: erinstellato
 ms.date: "09/24/2018"
 ms.prod: azure-data-studio
 ms.topic: conceptual

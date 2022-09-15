@@ -109,7 +109,6 @@ ms.custom: "seo-lt-2019"
 | :----- | :---------- |
 |**Non-cached. Collection and data upload on the same schedule.**|When selected, specify one of the following:<br /><br /> **Schedule**. Data is collected and uploaded according to a schedule. Click **Pick** to select from a predefined list of schedules, or click **New** to create a new schedule.<br /><br /> **On-demand**. Data is collected and uploaded on demand.|  
 |**Cached. Collect and cache data at a set of collection frequencies. Upload cached data on a separate schedule.**|Collect and cache data for a specified collection frequency. Upload the collected data on a separate schedule.|  
-|||
   
  **Collection items**  
  Displays the collection items in the collection set. The following information is provided for each collection item:  
@@ -133,7 +132,6 @@ ms.custom: "seo-lt-2019"
 | :----- | :---------- |
 |**Retain data for**|This option is selected by default, and the default retention period is 14 days.|  
 |**Retain data indefinitely**|There is no time limit on the length of time that data is retained.|  
-|||
 
  **Uploads Page**  
   

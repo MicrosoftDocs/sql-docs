@@ -34,7 +34,6 @@ The most significant difference is the separation of storage from runtime. Azure
 |---|---|---|---|
 | On premises | SQL Server | SSIS runtime hosted by SQL Server | SSIS Scale Out (in SQL Server 2017 and later)<br/><br/>Custom solutions (in prior versions of SQL Server) |
 | On Azure | SQL Database or SQL Managed Instance | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
-| | | | |
 
 ## Provision SSIS on Azure
 

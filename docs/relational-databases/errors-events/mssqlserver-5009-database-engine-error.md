@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|ALT_BADDISKS|
 |Message Text|One or more files listed in the statement could not be found or could not be initialized|
-||
 
 ## Explanation
 

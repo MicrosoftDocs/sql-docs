@@ -106,7 +106,6 @@ You can retrieve information about missing indexes by querying the dynamic manag
 |[sys.dm_db_missing_index_groups (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)| Returns information about a specific group of missing indexes, such as the group identifier and the identifiers of all missing indexes that are contained in that group.|
 |[sys.dm_db_missing_index_details (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) | Returns detailed information about a missing index; for example, it returns the name and identifier of the table where the index is missing, and the columns and column types that should make up the missing index. |
 |[sys.dm_db_missing_index_columns (Transact-SQL)](../system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md) |Returns information about the database table columns that are missing an index. |
-| | |
 
 The following query uses the missing index DMVs to generate CREATE INDEX statements. The index creation statements here are intended to assist you in crafting your own DDL after examining all of the requests for the table along with existing indexes on the table. 
 

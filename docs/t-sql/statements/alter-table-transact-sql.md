@@ -1150,7 +1150,6 @@ Adding or altering a column that updates the rows of the table requires **UPDATE
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 |[Online operations](#online)|ONLINE|
 |[System versioning](#system_versioning)|SYSTEM_VERSIONING|
-| &nbsp; | &nbsp; |
 
 ### <a name="add"></a>Adding columns and constraints
 

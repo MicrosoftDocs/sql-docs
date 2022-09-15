@@ -4,7 +4,7 @@ description: "A distributed availability group is a special type of availability
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 09/08/2022
+ms.date: 09/15/2022
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
@@ -53,7 +53,7 @@ Distributed availability groups in SQL Server 2017 or later can mix major versio
 Because the distributed availability groups feature didn't exist in SQL Server 2012 or 2014, availability groups that were created with these versions can't participate in distributed availability groups.
 
 > [!NOTE]  
-> Prior to [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] with CU 17, distributed availability groups can't be configured with Standard edition or mix of Standard and Enterprise editions.
+> Prior to [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] with CU 17, distributed availability groups can't be configured with Standard edition, or a mix of Standard and Enterprise editions.
 
 Because there are two separate availability groups, the process of installing a service pack or cumulative update on a replica that's participating in a distributed availability group is slightly different from that of a traditional availability group:
 
@@ -194,7 +194,6 @@ New_RoR                         DENNIS                Online
 Old_RoR                         DENNIS                Online
 SeedingAG                       DENNIS                Online
 
-
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_B
 
 Name                            OwnerNode             State
@@ -309,34 +308,34 @@ SELECT * FROM sys.dm_os_performance_counters WHERE instance_name LIKE '%distribu
 The below query displays a wealth of information about the health of both the availability group, and the distributed availability group. *(Reproduced with permission from [Tracy Boggiano](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/).)*
 
 ```sql
--- displays sync status, send rate, and redo rate of availability groups, including distributed AG
-SELECT
-      ag.name AS 'AG Name',
-      ag.is_distributed,
-      ar.replica_server_name AS 'AG',
-      dbs.name AS 'Database',
-ars.role_desc,
-drs.synchronization_health_desc,
-drs.log_send_queue_size,
-drs.log_send_rate,
-drs.redo_queue_size,
-drs.redo_rate,
-drs.suspend_reason_desc,
-drs.last_sent_time,
-drs.last_received_time,
-drs.last_hardened_time,
-drs.last_redone_time,
-drs.last_commit_time,
-drs.secondary_lag_seconds
+-- displays sync status, send rate, and redo rate of availability groups,
+-- including distributed AG
+SELECT ag.name AS [AG Name],
+    ag.is_distributed,
+    ar.replica_server_name AS [AG],
+    dbs.name AS [Database],
+    ars.role_desc,
+    drs.synchronization_health_desc,
+    drs.log_send_queue_size,
+    drs.log_send_rate,
+    drs.redo_queue_size,
+    drs.redo_rate,
+    drs.suspend_reason_desc,
+    drs.last_sent_time,
+    drs.last_received_time,
+    drs.last_hardened_time,
+    drs.last_redone_time,
+    drs.last_commit_time,
+    drs.secondary_lag_seconds
 FROM sys.databases dbs
 INNER JOIN sys.dm_hadr_database_replica_states drs
-   ON dbs.database_id = drs.database_id
+    ON dbs.database_id = drs.database_id
 INNER JOIN sys.availability_groups ag
-   ON drs.group_id = ag.group_id
+    ON drs.group_id = ag.group_id
 INNER JOIN sys.dm_hadr_availability_replica_states ars
-   ON ars.replica_id = drs.replica_id
+    ON ars.replica_id = drs.replica_id
 INNER JOIN sys.availability_replicas ar
-   ON ar.replica_id =  ars.replica_id
+    ON ar.replica_id = ars.replica_id
 --WHERE ag.is_distributed = 1
 GO
 ```
@@ -371,10 +370,9 @@ GO
 
 The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. *(Reproduced with permission from [David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/).)*
 
- ```sql
- -- shows current_state of seeding
- SELECT
-    ag.name AS aag_name,
+```sql
+-- shows current_state of seeding
+SELECT ag.name AS aag_name,
     ar.replica_server_name,
     d.name AS database_name,
     has.current_state,
@@ -384,15 +382,15 @@ The below query displays information about the current state of seeding. This is
     has.start_time,
     has.completion_time,
     has.number_of_attempts
- FROM sys.dm_hadr_automatic_seeding AS has
- JOIN sys.availability_groups AS ag
+FROM sys.dm_hadr_automatic_seeding AS has
+INNER JOIN sys.availability_groups AS ag
     ON ag.group_id = has.ag_id
- JOIN sys.availability_replicas AS ar
+INNER JOIN sys.availability_replicas AS ar
     ON ar.replica_id = has.ag_remote_replica_id
- JOIN sys.databases AS d
+INNER JOIN sys.databases AS d
     ON d.group_database_id = has.ag_db_id;
- GO
- ```
+GO
+```
 
 :::image type="content" source="./media/distributed-availability-group/dmv-seeding.png" alt-text="Screenshot showing the current state of seeding.":::
 

@@ -18,7 +18,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 Azure Active Directory (Azure AD) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
 
-An SMI is automatically assigned to SQL Managed Instance when it's created. When you're using Azure AD authentication with Azure SQL Database, you must assign an SMI when Azure service principals are used to create Azure AD users in SQL Database.
+An SMI is automatically assigned to Azure SQL Managed Instance when it's created. When you're using Azure AD authentication with Azure SQL Database, you must assign an SMI when Azure service principals are used to create Azure AD users in SQL Database.
 
 Previously, only an SMI could be assigned to the SQL Managed Instance or SQL Database server identity. Now, a UMI can be assigned to SQL Managed Instance or SQL Database as the instance or server identity.
 

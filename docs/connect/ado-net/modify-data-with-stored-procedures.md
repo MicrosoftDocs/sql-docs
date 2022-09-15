@@ -1,17 +1,15 @@
 ---
 title: "Modify data with stored procedures"
 description: Describes how to use stored procedure input parameters and output parameters to insert a row in a database, returning a new identity value.
-ms.date: "12/04/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "12/04/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Modify data with stored procedures
 

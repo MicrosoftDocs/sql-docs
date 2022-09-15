@@ -1,14 +1,12 @@
 ---
 title: "Data type mappings"
 description: "Describes the data types are used by Microsoft SqlClient Data Provider for SQL Server."
-ms.date: "11/13/2020"
-ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "11/13/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Data type mappings in ADO.NET
 

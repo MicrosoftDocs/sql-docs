@@ -9,7 +9,7 @@ ms.date: 05/29/2020
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # Connect Excel to a database in Azure SQL Database or Azure SQL Managed Instance, and create a report

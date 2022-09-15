@@ -8,7 +8,6 @@ ms.date: 07/09/2020
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-documentationCenter: na
 tags: azure-service-management
 ---
 # Migrate log disk to Ultra disk

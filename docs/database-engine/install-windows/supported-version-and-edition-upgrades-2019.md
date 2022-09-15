@@ -1,10 +1,10 @@
 ---
 title: "Supported version and edition upgrades (SQL Server 2019)"
 description: The supported version and edition upgrades for SQL Server 2019.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/24/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,8 +12,6 @@ helpviewer_keywords:
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2017"
 ---
 # Supported version and edition upgrades (SQL Server 2019)

@@ -7,7 +7,7 @@ ms.date: 04/23/2020
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 keywords:
   - "encrypt data"
   - "sql encryption"

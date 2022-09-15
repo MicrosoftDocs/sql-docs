@@ -1,15 +1,12 @@
 ---
-title: "Database mirroring system object reference | Microsoft Docs"
+title: "Database mirroring system object reference"
 description: "See information about database mirroring system objects: system catalog views, system dynamic management views, and system tables."
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
 ---
 # Database mirroring system object reference
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

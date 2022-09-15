@@ -1,21 +1,15 @@
 ---
+title: "getLoginTimeout Method (SQLServerDataSource)"
 description: "getLoginTimeout Method (SQLServerDataSource)"
-title: "getLoginTimeout Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.getLoginTimeout"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDataSource.getLoginTimeout"
+apitype: "Assembly"
 ---
 # getLoginTimeout Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

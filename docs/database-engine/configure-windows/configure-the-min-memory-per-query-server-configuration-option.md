@@ -1,22 +1,18 @@
 ---
-title: "Configure the min memory per query Server Configuration Option | Microsoft Docs"
+title: "Configure the min memory per query Server Configuration Option"
 description: Learn how to use the min memory per query option to specify the minimum memory grant, or the minimum number of kilobytes that SQL Server allocates for a query.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/24/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "memory [SQL Server], queries"
   - "minimum query memory"
   - "queries [SQL Server], memory"
   - "min memory per query option"
   - "min memory grant"
-ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure the min memory per query Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

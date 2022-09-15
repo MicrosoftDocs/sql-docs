@@ -6,9 +6,9 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
 ms.date: 10/05/2021
-ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: reference
 ---
 
 # azdata bdc settings

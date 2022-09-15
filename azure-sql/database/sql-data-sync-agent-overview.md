@@ -8,7 +8,7 @@ ms.date: 12/20/2018
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Data Sync Agent for SQL Data Sync
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

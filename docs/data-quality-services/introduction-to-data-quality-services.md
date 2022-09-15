@@ -1,17 +1,14 @@
 ---
-description: "Introduction to Data Quality Services"
 title: "Introduction to Data Quality Services"
-ms.date: "03/05/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Domains"
-ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
+description: "Introduction to Data Quality Services"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/05/2012"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Domains"
 ---
 # Introduction to Data Quality Services
 

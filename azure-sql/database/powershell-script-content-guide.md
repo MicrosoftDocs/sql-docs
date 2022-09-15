@@ -8,8 +8,8 @@ ms.date: 03/25/2019
 ms.service: sql-db-mi
 ms.subservice: development
 ms.topic: sample
-ms.custom: "sqldbrb=2"
-ms.devlang: "PowerShell"
+ms.custom: sqldbrb=2
+ms.devlang: PowerShell
 ---
 
 # Azure PowerShell samples for Azure SQL Database and Azure SQL Managed Instance

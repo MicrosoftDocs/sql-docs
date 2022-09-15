@@ -1,15 +1,12 @@
 ---
-title: "Date and Time Improvements | Microsoft Docs"
+title: "Date and Time Improvements"
 description: Learn about the OLE DB Driver for SQL Server support for the date and time data types that were added in SQL Server 2008.
-ms.custom: ""
-ms.date: "06/12/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/12/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # Date and Time Improvements
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

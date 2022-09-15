@@ -8,7 +8,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.prod_service: "database-engine"
 ms.author: wiassaf
-ms.reviewer: dacoelho
+ms.reviewer: hudequei
 author: WilliamDAssafMSFT
 ---
 # SQL Server 2019 Big Data Clusters partners
@@ -31,18 +31,18 @@ For support implementing solutions with SQL Server 2019 Big Data Clusters, you c
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [monitoring partners][monitor_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/dell-tech-logo-stk-blue-gry-rgb.png
-[2]: ./media/partner-hadr-sql-server/hpe.png
-[3]: ./media/partner-hadr-sql-server/netapp-logo.png
-[4]: ./media/partner-hadr-sql-server/streamsets-logo.png
-[5]: ./media/partner-hadr-sql-server/purestorage-logo.png
-[6]: ./media/partner-hadr-sql-server/azure-datalake-analytics.png
-[7]: ./media/partner-hadr-sql-server/vmware-logo.png
+[1]: ../sql-server/media/partner-hadr-sql-server/dell-tech-logo-stk-blue-gry-rgb.png
+[2]: ../sql-server/media/partner-hadr-sql-server/hpe.png
+[3]: ../sql-server/media/partner-hadr-sql-server/netapp-logo.png
+[4]: ../sql-server/media/partner-hadr-sql-server/streamsets-logo.png
+[5]: ../sql-server/media/partner-hadr-sql-server/purestorage-logo.png
+[6]: ../sql-server/media/partner-hadr-sql-server/azure-datalake-analytics.png
+[7]: ../sql-server/media/partner-hadr-sql-server/vmware-logo.png
 
 <!--Article links-->
-[hadr_partners]: ./partner-hadr-sql-server.md
-[management_partners]: ./partner-management-sql-server.md
-[monitor_partners]: ./partner-monitor-sql-server.md
+[hadr_partners]: ../sql-server/partner-hadr-sql-server.md
+[management_partners]: ../sql-server/partner-management-sql-server.md
+[monitor_partners]: ../sql-server/partner-monitor-sql-server.md
 
 <!--Website links -->
 [delltech_website]:https://www.delltechnologies.com/en-us/solutions/microsoft/index.htm
@@ -87,7 +87,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Blog-->
 [hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE
 [delltech_blog]:https://infocus.delltechnologies.com/robert_sonders/why-canonicalization-should-be-a-core-component-of-your-sql-server-modernization-part-1/?linkId=96637990
-[azuredatalake_blog]:https://azureinfohub.azurewebsites.net/Service?serviceTitle=Azure%20Data%20Lake%20Analytics
+[azuredatalake_blog]:https://azure.microsoft.com/blog/azure-data-lake-analytics-now-generally-available/
 [streamsets_blog]:https://streamsets.com/blog/sentiment-analysis-microsoft-sql-server-2019-big-data-cluster-and-streamsets-dataops-platform/
 [purestorage_blog]:https://blog.purestorage.com/storage-as-a-service-for-sql-server-2019-big-data-clusters/
 [vmware_blog]:https://blogs.vmware.com/virtualblocks/2021/08/18/microsoft-sql-server-big-data-clusters-on-vmware-tkg/

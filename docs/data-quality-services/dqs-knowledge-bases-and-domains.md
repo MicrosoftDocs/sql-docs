@@ -1,15 +1,12 @@
 ---
-description: "DQS Knowledge Bases and Domains"
 title: "DQS Knowledge Bases and Domains"
-ms.date: "10/01/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
+description: "DQS Knowledge Bases and Domains"
 author: swinarko
 ms.author: sawinark
+ms.date: "10/01/2012"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
 ---
 # DQS Knowledge Bases and Domains
 

@@ -1,22 +1,18 @@
 ---
-title: "Using Multiple Active Result Sets (MARS) | Microsoft Docs"
+title: "Using Multiple Active Result Sets (MARS)"
 description: Learn how support for multiple active result sets simplifies application design in SQL Server for In-Memory OLTP and OLE DB Driver.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, MARS"
   - "MSOLEDBSQL, MARS"
   - "data access [OLE DB Driver for SQL Server], MARS"
   - "Multiple Active Result Sets"
-  - "OLE DB Driver for SQL Server, MARS"
   - "MARS [SQL Server]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using Multiple Active Result Sets (MARS)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,14 +1,13 @@
 ---
 title: Extensibility APIs
 description: Learn about Azure Data Studio extensibility APIs, which enable extensions to interact with other parts of Azure Data Studio (such as Object Explorer).
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu"
-ms.custom: "seodec18"
+ms.reviewer: erinstellato
 ms.date: "09/24/2018"
+ms.prod: azure-data-studio
+ms.topic: conceptual
+ms.custom: seodec18
 ---
 
 # Azure Data Studio extensibility APIs

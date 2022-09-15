@@ -8,7 +8,7 @@ ms.date: 10/18/2021
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Manage historical data in Temporal tables with retention policy

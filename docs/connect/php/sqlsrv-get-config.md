@@ -1,22 +1,17 @@
 ---
+title: "sqlsrv_get_config"
 description: "sqlsrv_get_config"
-title: "sqlsrv_get_config | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "sqlsrv_get_config"
-apitype: "NA"
-helpviewer_keywords: 
-  - "API Reference, sqlsrv_get_config"
-  - "sqlsrv_get_config"
-ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "API Reference, sqlsrv_get_config"
+  - "sqlsrv_get_config"
+apiname: "sqlsrv_get_config"
+apitype: "NA"
 ---
 # sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

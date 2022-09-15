@@ -1,16 +1,12 @@
 ---
 title: "Step 3: Connecting to SQL using pyodbc"
 description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pyODBC. The basic examples demonstrate selecting and inserting data."
-ms.custom: ""
-ms.date: "03/24/2022"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/24/2022"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
 

@@ -1,16 +1,16 @@
 ---
 title: Antivirus software for APS
-description: Use these guidelines to install antivirus software on Analytics Platform System. We recommend not installing antivirus software unless the software is required. 
+description: Use these guidelines to install antivirus software on Analytics Platform System. We recommend not installing antivirus software unless the software is required.
 author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: martinle
+ms.date: 06/23/2022
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: how-to
-ms.date: 06/23/2022
-ms.author: wiassaf
-ms.reviewer: martinle
 ms.custom:
-- seo-dt-2019
-- kr2b-contr-experiment
+  - seo-dt-2019
+  - kr2b-contr-experiment
 ---
 
 # Antivirus software for Analytics Platform System

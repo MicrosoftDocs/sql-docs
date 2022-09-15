@@ -27,6 +27,9 @@ ms.author: chugu
   
 > [!NOTE]
 > If you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that is running [!INCLUDE[winserver2003](../../includes/winserver2003-md.md)], and then upgrade that computer to [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)], the upgrade process removes the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] performance counters from the computer. To restore the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] performance counters on the computer, run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup in repair mode.  
+
+> [!NOTE]
+> Performance counters are not supported in SSIS Scale Out scenarios.
   
  The following table describes the performance counters.  
   

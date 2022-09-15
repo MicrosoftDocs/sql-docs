@@ -8,7 +8,7 @@ ms.date: 4/14/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 
 # Active geo-replication

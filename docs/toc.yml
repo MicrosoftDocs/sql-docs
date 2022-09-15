@@ -43,506 +43,6 @@ items:
       href: sql-server/sql-server-2012-release-notes.md
     - name: SQL Server 2008 R2 SP2
       href: sql-server/sql-server-2008-r2-sp2-release-notes.md
-- name: Big Data Clusters
-  items:
-  - name: Big Data Clusters
-    href: big-data-cluster/index.yml
-  - name: Overview
-    items:
-    - name: Introducing SQL Server Big Data Clusters
-      href: big-data-cluster/big-data-cluster-overview.md
-    - name: Big data options on the Microsoft SQL Server platform
-      href: big-data-cluster/big-data-options.md
-    - name: Release notes
-      items:
-        - name: Platform release notes
-          href: big-data-cluster/release-notes-big-data-cluster.md
-        - name: Cumulative Update 17
-          href: big-data-cluster/release-notes-cumulative-update-17.md
-        - name: Cumulative Update 16
-          href: big-data-cluster/release-notes-cumulative-update-16.md
-        - name: Cumulative Update 15
-          href: big-data-cluster/release-notes-cumulative-update-15.md
-        - name: Cumulative Update 14
-          href: big-data-cluster/release-notes-cumulative-update-14.md
-        - name: Cumulative Update 13
-          href: big-data-cluster/release-notes-cumulative-update-13.md
-        - name: Cumulative Update 12
-          href: big-data-cluster/release-notes-cumulative-update-12.md
-        - name: Cumulative Update history
-          href: big-data-cluster/release-notes-cumulative-updates-history.md
-  - name: Install
-    items:
-    - name: Get Started
-      items:
-      - name: Deploy
-        href: big-data-cluster/deploy-get-started.md
-      - name: Load sample data
-        href: big-data-cluster/tutorial-load-sample-data.md
-    - name: Install Tools
-      items:
-      - name: Install big data tools
-        href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install Azure Data CLI
-        items:
-        - name: Install
-          href: azdata/install/deploy-install-azdata.md
-        - name: macOS
-          href: azdata/install/deploy-install-azdata-macos.md
-        - name: Windows
-          href: azdata/install/deploy-install-azdata-installer.md
-        - name: Linux with apt
-          href: azdata/install/deploy-install-azdata-linux-package.md
-        - name: Linux with yum
-          href: azdata/install/deploy-install-azdata-yum.md
-        - name: Linux with zypper
-          href: azdata/install/deploy-install-azdata-zypper.md
-        - name: With pip
-          href: azdata/install/deploy-install-azdata-pip.md
-    - name: Deploy
-      items:
-      - name: Deployment guidance
-        href: big-data-cluster/deployment-guidance.md
-      - name: Upgrade to a new release
-        href: big-data-cluster/deployment-upgrade.md
-      - name: Customize deployments
-        href: big-data-cluster/deployment-custom-configuration.md
-      - name: Configure storage
-        href: big-data-cluster/concept-data-persistence.md
-      - name: Offline deployments
-        href: big-data-cluster/deploy-offline.md
-      - name: Deploy with high availability
-        items:
-        - name: Master instance
-          href: big-data-cluster/deployment-high-availability.md
-        - name: HDFS name node and Spark
-          href: big-data-cluster/deployment-high-availability-hdfs-spark.md
-      - name: Kubernetes clusters
-        items:
-        - name: Azure Kubernetes Service
-          href: big-data-cluster/deploy-on-aks.md
-        - name: Kubeadm
-          href: big-data-cluster/deploy-with-kubeadm.md
-        - name: OpenShift
-          href: big-data-cluster/deploy-openshift.md
-      - name: Deployment scripts
-        items:
-        - name: AKS python script
-          href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: ARO python script
-          href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
-        - name: Single node kubeadm script
-          href: big-data-cluster/deployment-script-single-node-kubeadm.md
-        - name: Deploy with notebooks
-          href: big-data-cluster/notebooks-deploy.md
-  - name: Concepts
-    items:
-    - name: Controller
-      href: big-data-cluster/concept-controller.md
-    - name: Master instance
-      href: big-data-cluster/concept-master-instance.md
-    - name: Data pool
-      href: big-data-cluster/concept-data-pool.md
-    - name: Storage pool
-      href: big-data-cluster/concept-storage-pool.md
-    - name: Compute pool
-      href: big-data-cluster/concept-compute-pool.md
-    - name: App Pool
-      href: big-data-cluster/concept-application-deployment.md
-    - name: Security
-      href: big-data-cluster/concept-security.md
-    - name: Administration resources
-      href: big-data-cluster/view-cluster-status.md
-    - name: Key Versions
-      href: big-data-cluster/big-data-cluster-key-versions.md       
-    - name: Active Directory mode
-      items:
-      - name: Prerequisites
-        href: big-data-cluster/active-directory-prerequisites.md
-      - name: Deploy
-        items:
-          - name: Simple AD deployment
-            href: big-data-cluster/active-directory-deploy.md
-          - name: Plan AD on AKS
-            href: big-data-cluster/active-directory-deployment-aks.md
-          - name: Tutorial - AD on AKS
-            href: big-data-cluster/active-directory-deployment-aks-tutorial.md
-      - name: Connect
-        href: big-data-cluster/active-directory-connect.md
-      - name: Multiple BDCs in the same AD domain
-        href: big-data-cluster/active-directory-deployment-background.md
-      - name: Auto-generated AD objects
-        href: big-data-cluster/active-directory-objects.md
-      - name: AD DNS reconciliation
-        href: big-data-cluster/active-directory-dns-reconciliation.md
-      - name: Manage user access
-        href: big-data-cluster/manage-user-access.md
-    - name: Private cluster
-      items:
-      - name: Deploy
-        href: big-data-cluster/private-deploy.md
-      - name: Manage
-        href: big-data-cluster/private-manage.md
-      - name: Restrict traffic
-        href: big-data-cluster/private-restrict-egress-traffic.md
-  - name: How-to guides
-    items:
-    - name: Configure
-      items:
-      - name: Overview
-        href: big-data-cluster/configure-bdc-overview.md
-      - name: Upgrade to configuration management enabled cluster (CU9+)
-        href: big-data-cluster/bdc-upgrade-configuration.md
-      - name: Post-deployment configuration
-        href: big-data-cluster/configure-bdc-postdeployment.md
-      - name: Configure SQL Server master instance
-        href: big-data-cluster/configure-sql-server-master-instance.md
-      - name: Overview - (pre CU9)
-        href: big-data-cluster/configure-bdc-pre-configuration.md
-    - name: Data virtualization
-      items:
-      - name: Relational data
-        items:
-        - name: Virtualize relational data
-          href: relational-databases/polybase/data-virtualization.md
-        - name: Query Oracle data
-          href: big-data-cluster/tutorial-query-oracle.md
-      - name: HDFS data
-        items:
-        - name: Virtualize CSV data
-          href: big-data-cluster/data-virtualization-csv.md
-        - name: Query HDFS data
-          href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
-        - name: HDFS tiering
-          href: big-data-cluster/hdfs-tiering.md
-        - name: Mount ADLS Gen2 for HDFS tiering
-          href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
-        - name: Mount S3 for HDFS tiering
-          href: big-data-cluster/hdfs-tiering-mount-s3.md
-        - name: Manage HDFS permissions
-          href: big-data-cluster/hdfs-tiering-manage-permissions.md
-    - name: Data movement
-      items:
-      - name: Load data with curl
-        href: big-data-cluster/data-ingestion-curl.md
-      - name: Load data with SQL
-        href: big-data-cluster/tutorial-data-pool-ingest-sql.md
-      - name: Load data with Spark
-        href: big-data-cluster/tutorial-data-pool-ingest-spark.md
-      - name: HDFS distributed data copy (distcp)
-        href: big-data-cluster/distributed-data-copy-hdfs.md
-      - name: Restore a database
-        href: big-data-cluster/data-ingestion-restore-database.md
-    - name: Deploy and consume apps
-      items:
-      - name: Deploy with Azure Data CLI
-        href: big-data-cluster/app-create.md
-      - name: Deploy with VS Code
-        href: big-data-cluster/app-deployment-extension.md
-      - name: Consume apps
-        href: big-data-cluster/app-consume.md
-      - name: Run apps
-        href: big-data-cluster/app-run.md
-      - name: Monitor apps
-        href: big-data-cluster/app-monitor.md
-    - name: Machine Learning
-      items:
-      - name: Machine Learning on SQL Server Big Data Clusters
-        href: big-data-cluster/machine-learning-on-bdc.md
-      - name: SQL Server Machine Learning Services
-        items:
-        - name: Use SQL Server Machine Learning Services
-          href: big-data-cluster/machine-learning-services.md
-        - name: Machine learning quickstarts
-          items:
-          - name: Python
-            items:
-            - name: Run Python scripts
-              href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Data structures and objects
-              href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Python functions
-              href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Train and score a model
-              href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: R
-            items:
-            - name: Run R scripts
-              href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Data types and objects
-              href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: R functions
-              href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Train and score a model
-              href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Machine learning tutorials
-          items:
-          - name: Python
-            items:
-            - name: Ski rental (linear regression)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare data
-                href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Train model
-                href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy model
-                href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Categorize customers (k-means clustering)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare the data
-                href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Create the model
-                href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy the model
-                href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: NYC taxi tips (classification)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Data exploration
-                href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Feature engineering
-                href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Train and deploy
-                href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 5 - Predictions
-                href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: R
-            items:
-            - name: Ski rental (decision tree)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare data
-                href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Train model
-                href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy model
-                href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Categorize customers (k-means clustering)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Prepare the data
-                href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Create the model
-                href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Deploy the model
-                href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: NYC taxi tips (classification)
-              items:
-              - name: 1 - Introduction
-                href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 2 - Data exploration
-                href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 3 - Feature engineering
-                href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 4 - Train and deploy
-                href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: 5 - Predictions
-                href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-        - name: Machine learning how-to guides
-          items:
-          - name: Data exploration and modeling
-            items:
-            - name: Python
-              items:
-              - name: Plot Histogram in Python
-                href: machine-learning/data-exploration/python-plot-histogram.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Import data into pandas dataframe
-                href: machine-learning/data-exploration/python-dataframe-pandas.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Insert dataframe into SQL
-                href: machine-learning/data-exploration/python-dataframe-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Data type conversions
-            items:
-            - name: Python to SQL
-              href: machine-learning/python/python-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: R to SQL
-              href: machine-learning/r/r-libraries-and-data-types.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Deploy
-            items:
-            - name: Operationalize using stored procedures
-              href: ./machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
-            - name: Convert R code for SQL Server
-              href: ./machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
-          - name: Predictions
-            items:
-            - name: Native scoring with PREDICT T-SQL
-              href: machine-learning/predictions/native-scoring-predict-transact-sql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Package management
-            items:
-            - name: Install new Python packages
-              items:
-              - name: Get Python package information
-                href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Install with sqlmlutils
-                href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-            - name: Install new R packages
-              items:
-              - name: Get R package information
-                href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Install with sqlmlutils
-                href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Create a miniCRAN repo
-                href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Tips for using R packages
-                href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Administration
-            items:
-            - name: Monitor
-              items:
-              - name: Monitor using SSMS reports
-                href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Monitor using DMVs
-                href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-              - name: Extended events
-                items:
-                - name: Monitor using extended events
-                  href: machine-learning/administration/extended-events.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-                - name: Monitor PREDICT T-SQL
-                  href: machine-learning/administration/extended-events-predict-tsql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Security
-            items:
-            - name: Give users permission
-              href: machine-learning/security/user-permission.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-      - name: Spark Machine Learning
-        items:
-        - name: Use Spark Machine Learning
-          href: big-data-cluster/spark-machine-learning.md
-        - name: Data wrangling using PROSE Code Accelerator
-          href: big-data-cluster/use-prose-for-big-data-automation.md
-        - name: Spark machine learning models with MLeap
-          href: big-data-cluster/spark-create-machine-learning-model.md
-    - name: Manage
-      items:
-      - name: Connect
-        href: big-data-cluster/connect-to-big-data-cluster.md
-      - name: Manage with controller dashboard
-        href: big-data-cluster/manage-with-controller-dashboard.md
-      - name: Manage existing notebooks
-        href: big-data-cluster/notebooks-manage-bdc.md
-      - name: Run a notebook with Spark
-        href: big-data-cluster/notebooks-tutorial-spark.md
-      - name: Operational notebooks
-        href: big-data-cluster/cluster-manage-notebooks.md
-    - name: Monitor
-      items:
-      - name: Monitor with Azure Data Studio
-        href: big-data-cluster/cluster-monitor-ads.md
-      - name: Monitor with cmdlet
-        href: big-data-cluster/cluster-monitor-cmdlet.md
-      - name: Monitor with notebooks
-        href: big-data-cluster/cluster-common-notebooks.md
-      - name: Monitor - Grafana
-        href: big-data-cluster/cluster-monitor-grafana.md
-      - name: Logging - Kibana
-        href: big-data-cluster/cluster-logging-kibana.md
-      - name: List monitoring notebooks
-        href: big-data-cluster/cluster-monitor-notebooks.md
-      - name: List logging notebooks
-        href: big-data-cluster/cluster-logging-notebooks.md
-    - name: Performance
-      items:
-      - name: Tuning guide
-        href: big-data-cluster/performance-guidelines-tuned.md
-      - name: Spark workloads and YARN queues
-        href: big-data-cluster/spark-yarn-capacity-scheduler.md
-    - name: Secure
-      items:
-      - name: Kubernetes RBAC for BDC
-        href: big-data-cluster/kubernetes-rbac.md
-      - name: Update AZDATA_PASSWORD
-        href: big-data-cluster/change-azdata-password.md
-      - name: Non root containers
-        href: big-data-cluster/non-root-containers.md
-      - name: Password rotation for auto generated AD service accounts
-        href: big-data-cluster/active-directory-password-rotation.md
-      - name: Encryption at rest
-        items:
-          - name: Concepts and configuration
-            href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
-          - name: External Key Providers
-            href: big-data-cluster/encryption-at-rest-external-provider.md
-          - name: SQL Server TDE
-            href: big-data-cluster/encryption-at-rest-sql-server-tde.md
-          - name: HDFS encryption zones
-            href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
-    - name: Spark
-      items:
-      - name: runtime for Apache Spark
-        href: big-data-cluster/runtime-for-apache-spark.md
-      - name: Spark 3 upgrade guide
-        href: big-data-cluster/spark-3-upgrade.md
-      - name: Submit Spark jobs in Azure Data Studio
-        href: big-data-cluster/spark-submit-job.md
-      - name: Submit Spark jobs using the command line
-        href: big-data-cluster/spark-submit-job-command-line.md
-      - name: Submit Spark jobs in Visual Studio Code
-        href: big-data-cluster/spark-hive-tools-vscode.md
-      - name: Submit Spark jobs in IntelliJ
-        href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
-      - name: Use Sparklyr from RStudio
-        href: big-data-cluster/sparklyr-from-RStudio.md
-      - name: Integrate Spark with SQL Server
-        href: big-data-cluster/spark-mssql-connector.md
-      - name: Manage libraries
-        href: big-data-cluster/spark-install-packages.md
-      - name: Delta Lake
-        href: big-data-cluster/package-management-delta-lake.md
-      - name: Spark streaming guide
-        href: big-data-cluster/spark-streaming-guide.md
-      - name: Use extended Spark History Server
-        href: big-data-cluster/spark-history-server.md
-    - name: Troubleshoot
-      items:
-      - name: Troubleshoot Kubernetes
-        href: big-data-cluster/cluster-troubleshooting-commands.md
-      - name: Troubleshoot pyspark notebook
-        href: big-data-cluster/troubleshoot-pyspark-notebook.md
-      - name: Troubleshoot Active Directory
-        items:
-        - name: AD deployment stops
-          href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
-        - name: AD domain group scope
-          href: big-data-cluster/troubleshoot-active-directory.md
-        - name: AD DNS
-          href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-        - name: AD login fails
-          href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-      - name: Troubleshoot HDFS 
-        href: big-data-cluster/troubleshoot-hdfs.md
-      - name: Troubleshoot HDFS admin permissions
-        href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
-      - name: Cluster troubleshooting notebooks
-        href: big-data-cluster/cluster-troubleshooter-notebooks.md
-      - name: Big Data Clusters FAQ
-        href: big-data-cluster/big-data-cluster-faq.yml
-  - name: Reference
-    items:
-    - name: Deployment
-      items:
-      - name: Open-source software
-        href: big-data-cluster/reference-open-source-software.md
-      - name: Deployed resources
-        href: big-data-cluster/concept-architecture-pods.md
-      - name: BDC partners
-        href: sql-server/partner-big-data-cluster.md
-    - name: Deployment reference
-      items:
-      - name: Deployment configuration file
-        href: big-data-cluster/reference-deployment-config.md
-    - name: Configuration
-      items:
-      - name: Overview
-        href: big-data-cluster/reference-config-bdc-overview.md
-      - name: Master instance (pre CU9)
-        href: big-data-cluster/reference-config-master-instance.md
-      - name: Apache Spark & Apache Hadoop
-        href: big-data-cluster/reference-config-spark-hadoop.md
 - name: Business continuity
   items:
   - name: Overview
@@ -4993,7 +4493,9 @@ items:
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default
         href: database-engine/configure-windows/backup-checksum-default.md
-      - name: View or Configure the backup compression default
+      - name: backup compression algorithm
+        href: database-engine/configure-windows/view-or-configure-the-backup-compression-algorithm-server-configuration-option.md
+      - name: backup compression default
         href: database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md
       - name: blocked process threshold
         href: database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md
@@ -5247,6 +4749,8 @@ items:
     href: ./integration-services/sql-server-integration-services.md
   - name: Bulk Copy Utility (bcp)
     href: tools/bcp-utility.md
+  - name: Big data options on the Microsoft SQL Server platform
+    href: big-data-cluster/big-data-options.md
   - name: Azure Migration Services >
     displayName: DMS, Data Migration Service, Azure Data Migration Service
     href: /azure/dms/dms-overview
@@ -6635,12 +6139,12 @@ items:
         href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
       - name: Disable
         href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
-    - name: Integrated offloading & acceleration
+    - name: Integrated acceleration & offloading
       items:
       - name: Overview
         href: relational-databases/integrated-acceleration/overview.md
-      - name: Intel® QuickAssist Technology (QAT)
-        href: relational-databases/integrated-acceleration/intel-quickassist.md
+      - name: Configure Integrated Acceleration
+        href: relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md
     - name: Maintenance plans
       items:
       - name: Overview
@@ -10848,6 +10352,330 @@ items:
       href: sql-server/azure-arc/assess.md
     - name: Configure advanced data Security
       href: sql-server/azure-arc/configure-advanced-data-security.md
+- name: Big Data Clusters
+  items:
+  - name: Big Data Clusters
+    href: big-data-cluster/index.yml
+  - name: Overview
+    items:
+    - name: SQL Server 2019 Big Data Clusters
+      href: big-data-cluster/big-data-cluster-overview.md
+    - name: Release notes
+      items:
+        - name: Platform release notes
+          href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 17
+          href: big-data-cluster/release-notes-cumulative-update-17.md
+        - name: Cumulative Update 16
+          href: big-data-cluster/release-notes-cumulative-update-16.md
+        - name: Cumulative Update 15
+          href: big-data-cluster/release-notes-cumulative-update-15.md
+        - name: Cumulative Update 14
+          href: big-data-cluster/release-notes-cumulative-update-14.md
+        - name: Cumulative Update 13
+          href: big-data-cluster/release-notes-cumulative-update-13.md
+        - name: Cumulative Update 12
+          href: big-data-cluster/release-notes-cumulative-update-12.md
+        - name: Cumulative Update history
+          href: big-data-cluster/release-notes-cumulative-updates-history.md
+  - name: Install
+    items:
+    - name: Get Started
+      items:
+      - name: Deploy
+        href: big-data-cluster/deploy-get-started.md
+      - name: Load sample data
+        href: big-data-cluster/tutorial-load-sample-data.md
+    - name: Install Tools
+      items:
+      - name: Install big data tools
+        href: big-data-cluster/deploy-big-data-tools.md
+    - name: Deploy
+      items:
+      - name: Deployment guidance
+        href: big-data-cluster/deployment-guidance.md
+      - name: Upgrade to a new release
+        href: big-data-cluster/deployment-upgrade.md
+      - name: Customize deployments
+        href: big-data-cluster/deployment-custom-configuration.md
+      - name: Configure storage
+        href: big-data-cluster/concept-data-persistence.md
+      - name: Offline deployments
+        href: big-data-cluster/deploy-offline.md
+      - name: Deploy with high availability
+        items:
+        - name: Master instance
+          href: big-data-cluster/deployment-high-availability.md
+        - name: HDFS name node and Spark
+          href: big-data-cluster/deployment-high-availability-hdfs-spark.md
+      - name: Kubernetes clusters
+        items:
+        - name: Azure Kubernetes Service
+          href: big-data-cluster/deploy-on-aks.md
+        - name: Kubeadm
+          href: big-data-cluster/deploy-with-kubeadm.md
+        - name: OpenShift
+          href: big-data-cluster/deploy-openshift.md
+      - name: Deployment scripts
+        items:
+        - name: AKS python script
+          href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: ARO python script
+          href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
+        - name: Single node kubeadm script
+          href: big-data-cluster/deployment-script-single-node-kubeadm.md
+        - name: Deploy with notebooks
+          href: big-data-cluster/notebooks-deploy.md
+  - name: Concepts
+    items:
+    - name: Controller
+      href: big-data-cluster/concept-controller.md
+    - name: Master instance
+      href: big-data-cluster/concept-master-instance.md
+    - name: Data pool
+      href: big-data-cluster/concept-data-pool.md
+    - name: Storage pool
+      href: big-data-cluster/concept-storage-pool.md
+    - name: Compute pool
+      href: big-data-cluster/concept-compute-pool.md
+    - name: App Pool
+      href: big-data-cluster/concept-application-deployment.md
+    - name: Security
+      href: big-data-cluster/concept-security.md
+    - name: Administration resources
+      href: big-data-cluster/view-cluster-status.md
+    - name: Key Versions
+      href: big-data-cluster/big-data-cluster-key-versions.md       
+    - name: Active Directory mode
+      items:
+      - name: Prerequisites
+        href: big-data-cluster/active-directory-prerequisites.md
+      - name: Deploy
+        items:
+          - name: Simple AD deployment
+            href: big-data-cluster/active-directory-deploy.md
+          - name: Plan AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks.md
+          - name: Tutorial - AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks-tutorial.md
+      - name: Connect
+        href: big-data-cluster/active-directory-connect.md
+      - name: Multiple BDCs in the same AD domain
+        href: big-data-cluster/active-directory-deployment-background.md
+      - name: Auto-generated AD objects
+        href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
+      - name: Manage user access
+        href: big-data-cluster/manage-user-access.md
+    - name: Private cluster
+      items:
+      - name: Deploy
+        href: big-data-cluster/private-deploy.md
+      - name: Manage
+        href: big-data-cluster/private-manage.md
+      - name: Restrict traffic
+        href: big-data-cluster/private-restrict-egress-traffic.md
+  - name: How-to guides
+    items:
+    - name: Configure
+      items:
+      - name: Overview
+        href: big-data-cluster/configure-bdc-overview.md
+      - name: Upgrade to configuration management enabled cluster (CU9+)
+        href: big-data-cluster/bdc-upgrade-configuration.md
+      - name: Post-deployment configuration
+        href: big-data-cluster/configure-bdc-postdeployment.md
+      - name: Configure SQL Server master instance
+        href: big-data-cluster/configure-sql-server-master-instance.md
+      - name: Overview - (pre CU9)
+        href: big-data-cluster/configure-bdc-pre-configuration.md
+    - name: Data virtualization
+      items:
+      - name: Relational data
+        items:
+        - name: Query Oracle data
+          href: big-data-cluster/tutorial-query-oracle.md
+      - name: HDFS data
+        items:
+        - name: Virtualize CSV data
+          href: big-data-cluster/data-virtualization-csv.md
+        - name: Query HDFS data
+          href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
+        - name: HDFS tiering
+          href: big-data-cluster/hdfs-tiering.md
+        - name: Mount ADLS Gen2 for HDFS tiering
+          href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+        - name: Mount S3 for HDFS tiering
+          href: big-data-cluster/hdfs-tiering-mount-s3.md
+        - name: Manage HDFS permissions
+          href: big-data-cluster/hdfs-tiering-manage-permissions.md
+    - name: Data movement
+      items:
+      - name: Load data with curl
+        href: big-data-cluster/data-ingestion-curl.md
+      - name: Load data with SQL
+        href: big-data-cluster/tutorial-data-pool-ingest-sql.md
+      - name: Load data with Spark
+        href: big-data-cluster/tutorial-data-pool-ingest-spark.md
+      - name: HDFS distributed data copy (distcp)
+        href: big-data-cluster/distributed-data-copy-hdfs.md
+      - name: Restore a database
+        href: big-data-cluster/data-ingestion-restore-database.md
+    - name: Deploy and consume apps
+      items:
+      - name: Deploy with Azure Data CLI
+        href: big-data-cluster/app-create.md
+      - name: Deploy with VS Code
+        href: big-data-cluster/app-deployment-extension.md
+      - name: Consume apps
+        href: big-data-cluster/app-consume.md
+      - name: Run apps
+        href: big-data-cluster/app-run.md
+      - name: Monitor apps
+        href: big-data-cluster/app-monitor.md
+    - name: Machine Learning
+      items:
+      - name: Machine Learning on SQL Server Big Data Clusters
+        href: big-data-cluster/machine-learning-on-bdc.md
+      - name: SQL Server Machine Learning Services
+        items:
+        - name: Use SQL Server Machine Learning Services
+          href: big-data-cluster/machine-learning-services.md
+      - name: Spark Machine Learning
+        items:
+        - name: Use Spark Machine Learning
+          href: big-data-cluster/spark-machine-learning.md
+        - name: Data wrangling using PROSE Code Accelerator
+          href: big-data-cluster/use-prose-for-big-data-automation.md
+        - name: Spark machine learning models with MLeap
+          href: big-data-cluster/spark-create-machine-learning-model.md
+    - name: Manage
+      items:
+      - name: Connect
+        href: big-data-cluster/connect-to-big-data-cluster.md
+      - name: Manage with controller dashboard
+        href: big-data-cluster/manage-with-controller-dashboard.md
+      - name: Manage existing notebooks
+        href: big-data-cluster/notebooks-manage-bdc.md
+      - name: Run a notebook with Spark
+        href: big-data-cluster/notebooks-tutorial-spark.md
+      - name: Operational notebooks
+        href: big-data-cluster/cluster-manage-notebooks.md
+    - name: Monitor
+      items:
+      - name: Monitor with Azure Data Studio
+        href: big-data-cluster/cluster-monitor-ads.md
+      - name: Monitor with cmdlet
+        href: big-data-cluster/cluster-monitor-cmdlet.md
+      - name: Monitor with notebooks
+        href: big-data-cluster/cluster-common-notebooks.md
+      - name: Monitor - Grafana
+        href: big-data-cluster/cluster-monitor-grafana.md
+      - name: Logging - Kibana
+        href: big-data-cluster/cluster-logging-kibana.md
+      - name: List monitoring notebooks
+        href: big-data-cluster/cluster-monitor-notebooks.md
+      - name: List logging notebooks
+        href: big-data-cluster/cluster-logging-notebooks.md
+    - name: Performance
+      items:
+      - name: Tuning guide
+        href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Spark workloads and YARN queues
+        href: big-data-cluster/spark-yarn-capacity-scheduler.md
+    - name: Secure
+      items:
+      - name: Kubernetes RBAC for BDC
+        href: big-data-cluster/kubernetes-rbac.md
+      - name: Update AZDATA_PASSWORD
+        href: big-data-cluster/change-azdata-password.md
+      - name: Non root containers
+        href: big-data-cluster/non-root-containers.md
+      - name: Password rotation for auto generated AD service accounts
+        href: big-data-cluster/active-directory-password-rotation.md
+      - name: Encryption at rest
+        items:
+          - name: Concepts and configuration
+            href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+          - name: External Key Providers
+            href: big-data-cluster/encryption-at-rest-external-provider.md
+          - name: SQL Server TDE
+            href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+          - name: HDFS encryption zones
+            href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
+    - name: Spark
+      items:
+      - name: runtime for Apache Spark
+        href: big-data-cluster/runtime-for-apache-spark.md
+      - name: Spark 3 upgrade guide
+        href: big-data-cluster/spark-3-upgrade.md
+      - name: Submit Spark jobs in Azure Data Studio
+        href: big-data-cluster/spark-submit-job.md
+      - name: Submit Spark jobs using the command line
+        href: big-data-cluster/spark-submit-job-command-line.md
+      - name: Submit Spark jobs in Visual Studio Code
+        href: big-data-cluster/spark-hive-tools-vscode.md
+      - name: Submit Spark jobs in IntelliJ
+        href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Use Sparklyr from RStudio
+        href: big-data-cluster/sparklyr-from-RStudio.md
+      - name: Integrate Spark with SQL Server
+        href: big-data-cluster/spark-mssql-connector.md
+      - name: Manage libraries
+        href: big-data-cluster/spark-install-packages.md
+      - name: Delta Lake
+        href: big-data-cluster/package-management-delta-lake.md
+      - name: Spark streaming guide
+        href: big-data-cluster/spark-streaming-guide.md
+      - name: Use extended Spark History Server
+        href: big-data-cluster/spark-history-server.md
+    - name: Troubleshoot
+      items:
+      - name: Troubleshoot Kubernetes
+        href: big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Troubleshoot pyspark notebook
+        href: big-data-cluster/troubleshoot-pyspark-notebook.md
+      - name: Troubleshoot Active Directory
+        items:
+        - name: AD deployment stops
+          href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+        - name: AD domain group scope
+          href: big-data-cluster/troubleshoot-active-directory.md
+        - name: AD DNS
+          href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+        - name: AD login fails
+          href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: Troubleshoot HDFS 
+        href: big-data-cluster/troubleshoot-hdfs.md
+      - name: Troubleshoot HDFS admin permissions
+        href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+      - name: Cluster troubleshooting notebooks
+        href: big-data-cluster/cluster-troubleshooter-notebooks.md
+      - name: Big Data Clusters FAQ
+        href: big-data-cluster/big-data-cluster-faq.yml
+  - name: Reference
+    items:
+    - name: Deployment
+      items:
+      - name: Open-source software
+        href: big-data-cluster/reference-open-source-software.md
+      - name: Deployed resources
+        href: big-data-cluster/concept-architecture-pods.md
+      - name: Big Data Clusters partners
+        href: big-data-cluster/partner-big-data-cluster.md
+    - name: Deployment reference
+      items:
+      - name: Deployment configuration file
+        href: big-data-cluster/reference-deployment-config.md
+    - name: Configuration
+      items:
+      - name: Overview
+        href: big-data-cluster/reference-config-bdc-overview.md
+      - name: Master instance (pre CU9)
+        href: big-data-cluster/reference-config-master-instance.md
+      - name: Apache Spark & Apache Hadoop
+        href: big-data-cluster/reference-config-spark-hadoop.md
 - name: Resources
   items:
   - name: Offline SQL Server documentation
@@ -16515,7 +16343,7 @@ items:
           href: t-sql/functions/datetimefromparts-transact-sql.md
         - name: DATETIMEOFFSETFROMPARTS
           href: t-sql/functions/datetimeoffsetfromparts-transact-sql.md
-        - name: DATETTRUNC
+        - name: DATETRUNC
           href: t-sql/functions/datetrunc-transact-sql.md
         - name: DAY
           href: t-sql/functions/day-transact-sql.md
@@ -17646,6 +17474,9 @@ items:
         - name: EXTERNAL DATA SOURCE
           displayName: CREATE EXTERNAL DATA SOURCE
           href: t-sql/statements/create-external-data-source-transact-sql.md
+        - name: EXTERNAL DATA SOURCE CONNECTION_OPTIONS
+          displayName: CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS
+          href: t-sql/statements/create-external-data-source-connection-options.md          
         - name: EXTERNAL LANGUAGE
           displayName: CREATE EXTERNAL LANGUAGE
           href: t-sql/statements/create-external-language-transact-sql.md

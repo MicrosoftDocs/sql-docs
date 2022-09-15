@@ -1,15 +1,12 @@
 ---
-title: "Allow PolyBase export configuration option | Microsoft Docs"
+title: "Allow PolyBase export configuration option"
 description: Set `allow polybase export` configuration option in SQL Server settings
-ms.custom: ""
-ms.date: "07/10/2020"
-ms.prod: sql
-ms.prod_service: 
-ms.reviewer: ""
-ms.technology: polybase
-ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/10/2020"
+ms.prod: sql
+ms.technology: polybase
+ms.topic: conceptual
 ---
 
 # Set `allow polybase export` configuration option

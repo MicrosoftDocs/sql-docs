@@ -8,7 +8,7 @@ ms.date: 01/31/2022
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Intelligent Insights using AI to monitor and troubleshoot database performance (preview)

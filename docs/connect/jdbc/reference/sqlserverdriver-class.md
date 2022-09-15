@@ -1,16 +1,12 @@
 ---
+title: "SQLServerDriver Class"
 description: "SQLServerDriver Class"
-title: "SQLServerDriver Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: fbdceae5-7e7b-4edb-8c33-c701ca6b2d53
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerDriver Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

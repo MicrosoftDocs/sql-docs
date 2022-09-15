@@ -4,11 +4,11 @@ description: Migrate a database in Azure SQL Database from the DTU model to the 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, moslake
-ms.date: 05/10/2022
+ms.date: 09/13/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Migrate Azure SQL Database from the DTU-based model to the vCore-based model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -88,10 +88,10 @@ SELECT dtu_logical_cpus,
             WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.8
        END AS Fsv2_vcores,
        1.89 AS Fsv2_memory_per_core_gb,
-       CASE WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus * 1.4
-            WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.9
-       END AS M_vcores,
-       29.4 AS M_memory_per_core_gb
+       CASE WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.7
+             WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus
+       END AS DC_vcores,
+       4.5 AS DC_memory_per_core_gb
 FROM dtu_vcore_map;
 ```
 

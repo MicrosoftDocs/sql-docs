@@ -1,26 +1,24 @@
 ---
 title: SQL Server Service Broker
 description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL Managed Instance.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "06/07/2021"
 ms.prod: sql
 ms.technology: configuration
 ms.topic: conceptual
-f1_keywords: 
-  - SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBCONTRACTPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBQUEUEPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBREMSVCBINDPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBROUTEPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBPRIORITYPROPERTIES.GENERAL.F1
-  - SQL13.SWB.SSBSERVICEPROPERTIES.GENERAL.F1
-helpviewer_keywords: 
+f1_keywords:
+  - "SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBCONTRACTPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBQUEUEPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBREMSVCBINDPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBROUTEPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBPRIORITYPROPERTIES.GENERAL.F1"
+  - "SQL13.SWB.SSBSERVICEPROPERTIES.GENERAL.F1"
+helpviewer_keywords:
   - "Broker See Service Broker"
   - "SQL Server Service Broker"
   - "Service Broker"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "06/07/2021"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

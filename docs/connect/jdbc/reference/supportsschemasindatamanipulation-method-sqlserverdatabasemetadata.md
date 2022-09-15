@@ -1,21 +1,15 @@
 ---
+title: "supportsSchemasInDataManipulation Method"
 description: "supportsSchemasInDataManipulation Method (SQLServerDatabaseMetaData)"
-title: "supportsSchemasInDataManipulation Method | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsSchemasInDataManipulation"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 812dc551-c718-494e-80d9-75732464c8ba
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsSchemasInDataManipulation"
+apitype: "Assembly"
 ---
 # supportsSchemasInDataManipulation Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

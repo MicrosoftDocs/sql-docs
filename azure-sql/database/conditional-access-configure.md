@@ -9,7 +9,7 @@ ms.date: 04/28/2020
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
-ms.custom: "sqldbrb=1"
+ms.custom: sqldbrb=1
 tag: azure-synpase
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

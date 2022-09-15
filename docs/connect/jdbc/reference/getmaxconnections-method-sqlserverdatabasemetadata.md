@@ -1,21 +1,15 @@
 ---
+title: "getMaxConnections Method (SQLServerDatabaseMetaData)"
 description: "getMaxConnections Method (SQLServerDatabaseMetaData)"
-title: "getMaxConnections Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getMaxConnections"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getMaxConnections"
+apitype: "Assembly"
 ---
 # getMaxConnections Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

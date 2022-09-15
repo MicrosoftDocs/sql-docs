@@ -8,7 +8,7 @@ ms.date: 08/03/2022
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: "subject-monitoring"
+ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 

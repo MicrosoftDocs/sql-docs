@@ -147,7 +147,7 @@ To make the *_ondisk* version of the preceding T-SQL script for ostress.exe, you
 
 #### Install RML utilities and `ostress`
 
-Ideally, you would plan to run ostress.exe on an Azure virtual machine (VM). You would create an [Azure VM](https://azure.microsoft.com/documentation/services/virtual-machines/) in the same Azure geographic region where your AdventureWorksLT database resides. But you can run ostress.exe on your laptop instead.
+Ideally, you would plan to run ostress.exe on an Azure virtual machine (VM). You would create an [Azure VM](/azure/virtual-machines/) in the same Azure geographic region where your AdventureWorksLT database resides. But you can run ostress.exe on your laptop instead.
 
 On the VM, or on whatever host you choose, install the Replay Markup Language (RML) utilities. The utilities include ostress.exe.
 

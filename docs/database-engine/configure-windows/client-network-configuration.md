@@ -1,14 +1,13 @@
 ---
-title: "Client Network Configuration | Microsoft Docs"
+title: "Client Network Configuration"
 description: Find out how client computers connect to an instance of SQL Server on a network. Learn about the tools that you can use to manage clients.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "client configuration [SQL Server], connections"
   - "Database Engine [SQL Server], network configurations"
   - "connections [SQL Server], client configuration"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "client computers [SQL Server]"
   - "client connections [SQL Server]"
   - "network connections [SQL Server], client configuration"
-ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Client Network Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

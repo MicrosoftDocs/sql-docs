@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2022 Release Notes | Microsoft Docs"
+title: "SQL Server 2022 Release Notes"
 description: Find information about SQL Server 2019 (16.x) limitations, known issues, help resources, and other release notes.
 ms.date: 08/23/2022
 ms.prod: sql

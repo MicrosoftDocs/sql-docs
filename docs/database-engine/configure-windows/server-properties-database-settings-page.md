@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (Database Settings Page) | Microsoft Docs"
+title: "Server Properties (Database Settings Page)"
 description: Become familiar with database settings in SQL Server. Learn about options that control backup behavior, fill factors, file locations, and other properties.
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.databasesettings.f1"
-ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: rwestMSFT
 ms.author: randolphwest
-ms.custom: ""
 ms.date: 05/23/2019
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.databasesettings.f1"
 ---
 
 # Server Properties - Database Settings Page

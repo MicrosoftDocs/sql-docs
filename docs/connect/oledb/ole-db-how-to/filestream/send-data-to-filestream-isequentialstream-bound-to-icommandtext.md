@@ -1,15 +1,12 @@
 ---
-title: "Send Data to FILESTREAM - ISequentialStream Bound to ICommandText | Microsoft Docs"
+title: "Send Data to FILESTREAM - ISequentialStream Bound to ICommandText"
 description: Learn how to use the ISequentialStream interface bound to an ICommandText parameter to send from 4 MB to 4 GB of data to a filestream column with this example.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # Send Data to FILESTREAM - ISequentialStream Bound to ICommandText
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

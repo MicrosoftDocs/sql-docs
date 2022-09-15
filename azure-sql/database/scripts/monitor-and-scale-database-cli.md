@@ -11,7 +11,7 @@ ms.topic: sample
 ms.custom:
   - "sqldbrb=1"
   - "devx-track-azurecli"
-ms.devlang: "azurecli"
+ms.devlang: azurecli
 ---
 
 # Monitor and scale a single database in Azure SQL Database using the Azure CLI

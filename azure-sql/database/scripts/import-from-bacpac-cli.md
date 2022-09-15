@@ -11,7 +11,7 @@ ms.topic: sample
 ms.custom:
   - "load & move data"
   - "devx-track-azurecli"
-ms.devlang: "azurecli"
+ms.devlang: azurecli
 ---
 
 # Import a BACPAC file into a database in SQL Database using the Azure CLI

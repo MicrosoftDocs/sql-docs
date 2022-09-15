@@ -8,7 +8,6 @@ ms.date: 03/25/2021
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-documentationCenter: na
 tags: azure-service-management
 ---
 # Collect baseline: Performance best practices for SQL Server on Azure VM

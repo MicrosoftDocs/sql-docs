@@ -1,21 +1,15 @@
 ---
+title: "getResponseBuffering Method (SQLServerDataSource)"
 description: "getResponseBuffering Method (SQLServerDataSource)"
-title: "getResponseBuffering Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.getResponseBuffering()"
-apilocation: 
-  - "SQLServerDataSource.getResponseBuffering()"
-apitype: "Assembly"
-ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "SQLServerDataSource.getResponseBuffering()"
+apiname: "SQLServerDataSource.getResponseBuffering()"
+apitype: "Assembly"
 ---
 # getResponseBuffering Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

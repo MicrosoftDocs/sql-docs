@@ -7,7 +7,7 @@ ms.date: 03/08/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: sample
-ms.custom: "subject-resourcegraph-sample"
+ms.custom: subject-resourcegraph-sample
 ---
 # Azure Resource Graph sample queries for Azure SQL Database
 

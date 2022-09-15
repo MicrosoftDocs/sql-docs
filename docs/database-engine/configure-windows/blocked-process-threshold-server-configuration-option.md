@@ -1,19 +1,15 @@
 ---
-title: "blocked process threshold Server Configuration Option | Microsoft Docs"
+title: "blocked process threshold Server Configuration Option"
 description: Learn how to use the blocked process threshold option to specify the interval at which SQL Server generates blocked process reports and issues alerts.
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "thresholds [SQL Server]"
-  - "blocked process threshold option"
-ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "thresholds [SQL Server]"
+  - "blocked process threshold option"
 ---
 # blocked process threshold Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

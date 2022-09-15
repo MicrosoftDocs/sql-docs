@@ -8,8 +8,8 @@ ms.date: 01/26/2022
 ms.service: sql-database
 ms.subservice: data-movement
 ms.topic: sample
-ms.custom: "devx-track-azurecli"
-ms.devlang: "azurecli"
+ms.custom: devx-track-azurecli
+ms.devlang: azurecli
 ---
 
 # Copy a database in Azure SQL Database to a new server using the Azure CLI

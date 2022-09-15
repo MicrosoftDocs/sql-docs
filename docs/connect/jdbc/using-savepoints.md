@@ -1,16 +1,12 @@
 ---
 title: "Using savepoints"
 description: "Learn how to use savepoints as part of transaction management in your application when using the Microsoft JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using savepoints

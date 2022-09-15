@@ -7,7 +7,7 @@ ms.date: 09/02/2020
 ms.service: sql-db-mi
 ms.subservice: development
 ms.topic: conceptual
-ms.custom: "sqldbrb=2"
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Accelerate real-time big data analytics using the Spark connector

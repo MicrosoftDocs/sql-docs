@@ -418,13 +418,13 @@ sections:
       - question: |
           DNS
         answer: |
-          ### Can I configure a custom DNS for SQL Managed Instance?
+          ### Can I configure a custom DNS resolver for SQL Managed Instance?
           
-          Yes. See [How to configure a Custom DNS for Azure SQL Managed Instance](./custom-dns-configure.md).
+          Yes. See [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
           
-          ### Can I do DNS refresh?
+          ### Can I do a DNS refresh?
           
-          Yes. See [Synchronize virtual network DNS servers setting on SQL Managed Instance virtual cluster](./synchronize-vnet-dns-servers-setting-on-virtual-cluster.md).
+          Yes. See [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
           
       - question: |
           Change time zone

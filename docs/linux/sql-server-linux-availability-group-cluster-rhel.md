@@ -97,8 +97,8 @@ After you have configured the subscription, complete the following steps to conf
 ### Configure Pacemaker
 
 After you register the subscription, complete the following steps to configure Pacemaker:
-   
-[!INCLUDE [RHEL-Configure-Pacemaker](../includes/linux/ss-linux-cluster-pacemaker-configure-rhel.md)]
+
+[!INCLUDE [RHEL-Configure-Pacemaker](includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
 After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster. 
 
@@ -158,7 +158,7 @@ For information on Pacemaker cluster properties, see [Pacemaker Clusters Propert
 
 ## Create a SQL Server login for Pacemaker
 
-[!INCLUDE [SQL-Create-SQL-Login](../includes/linux/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [SQL-Create-SQL-Login](includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Create availability group resource
 
@@ -178,7 +178,7 @@ With the availability of **RHEL 8**, the create syntax has changed. If you are u
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
 ```
 
-[!INCLUDE [required-synchronized-secondaries-default](../includes/linux/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
 <a name="createIP"></a>
 

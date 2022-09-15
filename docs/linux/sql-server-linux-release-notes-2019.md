@@ -20,7 +20,7 @@ The following release notes apply to [!INCLUDE [sssql19-md](../includes/sssql19-
 
 ## Supported platforms
 
-[!INCLUDE [linux-supported-platforms-2019](../includes/linux/linux-supported-platforms-2019.md)]
+[!INCLUDE [linux-supported-platforms-2019](includes/linux-supported-platforms-2019.md)]
 
 ## Tools
 
@@ -362,7 +362,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## Known issues
 
-[!INCLUDE [linux-known-issues-2019](../includes/linux/linux-known-issues-2019.md)]
+[!INCLUDE [linux-known-issues-2019](includes/linux-known-issues-2019.md)]
 
 ## See also
 

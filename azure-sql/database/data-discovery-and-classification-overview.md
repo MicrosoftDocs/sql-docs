@@ -117,7 +117,7 @@ Microsoft Information Protection (MIP) labels provide a simple and uniform way f
 #### Prerequisites to switch to MIP policy
 
 - The current user has tenant wide **Security Admin** permissions to apply policy at the tenant root management group level. For more information, see [Grant tenant-wide permissions to yourself](/azure/defender-for-cloud/tenant-wide-permissions-management#grant-tenant-wide-permissions-to-yourself).
-  :::image type="content" source="media/data-discovery-and-classification-overview/request-security-admin-permissions.png" alt-text="Azure portal request for tenant level Security Admin permissions":::
+  :::image type="content" source="media/data-discovery-and-classification-overview/request-security-admin-permissions.png" alt-text="Screenshot of Azure portal request for tenant level Security Admin permissions":::
 - Your tenant has an active Microsoft 365 subscription and you have labels published for the current user. For more information, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
 
 ### Classify database in Microsoft Information Protection policy mode

@@ -1,4 +1,4 @@
-﻿---
+---
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/15/2022

@@ -28,7 +28,7 @@ To create an Azure Function from a specific `Table` or `View` in object explorer
 **View OE Command**:
 :::image type="content" alt-text="Screenshot of object explorer context menu to add a SQL binding from View." source="./media/create-azure-function-with-mssql/create-function-view-object-explorer.png":::
 
-See further documentation to create an Azure function with SQL bindings from the SQL Server object explorer [here](create-azure-function-with-mssql-OE.md).
+See further documentation to create an Azure function with SQL bindings from the SQL Server object explorer [here](create-azure-function-with-mssql-object-explorer.md).
 
 ## From the Command Palette 
 Run the `MS SQL: Create Azure Function with SQL Binding` command from the command palette to create a new function with a SQL binding. 
@@ -125,7 +125,8 @@ namespace Company.Function
 
 ## Next steps
 
+- [Install the VS Code extension here](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode).
 - [Use the mssql extension to query a SQL instance](mssql-extensions.md).
 - [Learn more about SQL bindings for Azure Functions](https://aka.ms/sqlbindings).
-- [Create Azure Function with SQL binding through the object explorer tutorial](create-azure-function-with-mssql-OE.md).
+- [Create Azure Function with SQL binding through the object explorer tutorial](create-azure-function-with-mssql-object-explorer.md).
 - [Create Azure Function with SQL binding through the command palette tutorial](create-azure-function-with-mssql-command-palette.md).

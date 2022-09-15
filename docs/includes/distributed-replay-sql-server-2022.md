@@ -7,4 +7,4 @@ ms.topic: include
 ---
 
 > [!IMPORTANT]
-> SQL Server Distributed Replay is not available with SQL Server 2022 (16.x) Preview.
+> SQL Server Distributed Replay is not available with [!INCLUDE [sssql22-md](sssql22-md.md)].

@@ -82,7 +82,7 @@ ms.topic: conceptual
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
 
 |Parameter|Description|
 |---|---|

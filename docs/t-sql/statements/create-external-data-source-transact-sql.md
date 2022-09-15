@@ -27,7 +27,7 @@ Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 <!-- In addition to moniker ranges for SQL Server, SQL DB, APS, Synapse, and SQL MI, 
      this article has version moniker ranges for SQL Server 2016, 2017 (Windows and Linux), 2019, and 2022 due to the syntax differences between each. 
@@ -1323,7 +1323,7 @@ PolyBase supports proxy based authentication for most external data sources. Cre
 
 ## Upgrading to SQL Server 2022
 
-Starting in SQL Server 2022 Hadoop is no longer supported. It is required to manually recreate external data sources previously created with TYPE = HADOOP, and any external table that uses this external data source.
+Starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Hadoop is no longer supported. It is required to manually recreate external data sources previously created with TYPE = HADOOP, and any external table that uses this external data source.
 
 Users will also need to configure their external data sources to use new connectors when connecting to Azure Storage.
 

@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -41,8 +41,8 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
-  
+[!INCLUDE [create-workload-group](../includes/create-workload-group.md)]
+
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 
@@ -62,7 +62,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
+[!INCLUDE [create-workload-group](../includes/create-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"

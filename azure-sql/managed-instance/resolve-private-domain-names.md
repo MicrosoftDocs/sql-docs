@@ -20,7 +20,7 @@ In this article, learn how Azure SQL Managed Instance resolves private domain na
 
 ## Overview
 
-In certain situations, it's necessary for the SQL Server database engine to resolve domain names that don't exist in public DNS records. For example, the following scenarios that are likely to involve private domain names:
+In certain situations, it's necessary for the SQL Server database engine to resolve domain names that don't exist in public DNS records. For example, the following scenarios are likely to involve private domain names:
 
 * Sending emails by using [database mail](/../sql/relational-databases/database-mail/database-mail.md)
 * Accessing remote data sources by using [linked servers](/../sql/relational-databases/linked-servers/linked-servers-database-engine.md)
@@ -33,13 +33,18 @@ To change the default name resolution behavior and enable the resolution of priv
 - Use Azure private DNS zones: [What is Azure Private DNS?](/azure/dns/private-dns-overview)
 - Use a custom DNS server: [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances.md#name-resolution-that-uses-your-own-dns-server)
 
+## Considerations
 
-## Update SQL Managed Instance DNS server setting
+* Be careful not to override or disable the resolution of domain names that Azure SQL Managed Instance uses internally. Always configure your custom DNS server so that it can resolve public domain names.
+* When you update the DNS servers for a virtual network, SQL Managed Instances in that network must also be notified of this change, as described in the [Update SQL Managed Instances](#update-sql-managed-instance-dns-server-setting) section in this article. 
+* Always use a fully qualified domain name (FQDN) for the services that you want Azure SQL Managed Instance to resolve, such as your mail server or an on-premises SQL Server instance. Use FQDNs even if those services are within your private DNS zone. For example, use `smtp.contoso.com`. Creating a linked server or configuring replication that reference SQL Server VMs inside the same virtual network also requires a FQDN and a default DNS suffix; for example, `SQLVM.internal.cloudapp.net`.
 
-If the DNS server setting for a virtual network changes after the cluster that hosts the SQL Managed Instance is created, then the DNS server configuration of the virtual cluster needs to synchronize with the new configuration of the virtual network. You can update the DNS server settings by using Azure PowerShell or the Azure CLI. 
+## Update SQL Managed Instances
+
+If the DNS server setting is changed in a virtual network which already hosts SQL Managed Instances, then their virtual clusters need to synchronize with the changes in the DNS configuration. You can do so by using Azure PowerShell or the Azure CLI. 
 
 > [!NOTE]
-> Updating a single cluster affects all managed instances hosted in it.
+> Updating a single virtual cluster affects all SQL Managed Instances hosted in it.
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
@@ -82,14 +87,7 @@ az sql virtual-cluster list --query "[? contains(subnetId,'$virtualNetwork')].id
 A user that is synchronizing DNS server configurations across a virtual network:
 
 - Should be a member of the **Subscription Contributor role**, or
-- Have a custom role with the `Microsoft.Sql/virtualClusters/updateManagedInstanceDnsServers/action` permission
-
-## Considerations
-
-* Always use a fully qualified domain name (FQDN) for the services that you want Azure SQL Managed Instance to resolve, such as your mail server or an on-premises SQL Server instance. Use FQDNs even if those services are within your private DNS zone. For example, use `smtp.contoso.com`. Creating a linked server or configuring replication that reference SQL Server VMs inside the same virtual network also requires a FQDN and a default DNS suffix; for example, `SQLVM.internal.cloudapp.net`.
-* When you configure a custom DNS server, be careful not to override or disable the resolution of domain names that Azure SQL Managed Instance uses internally. For this reason, always configure your custom DNS server so that it can resolve public domain names.
-* When you update the DNS servers for a virtual network, the DNS server configuration doesn't automatically update for the virtual cluster hosting an existing SQL Managed Instance, and must be updated manually, as described in the [Update settings](#update-sql-managed-instance-dns-server-setting) section in this article. 
-
+- Have a custom role with the `Microsoft.Sql/virtualClusters/updateManagedInstanceDnsServers/action` permission.
 
 ## Next steps
 

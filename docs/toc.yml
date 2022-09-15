@@ -17474,6 +17474,9 @@ items:
         - name: EXTERNAL DATA SOURCE
           displayName: CREATE EXTERNAL DATA SOURCE
           href: t-sql/statements/create-external-data-source-transact-sql.md
+        - name: EXTERNAL DATA SOURCE CONNECTION_OPTIONS
+          displayName: CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS
+          href: t-sql/statements/create-external-data-source-connection-options.md          
         - name: EXTERNAL LANGUAGE
           displayName: CREATE EXTERNAL LANGUAGE
           href: t-sql/statements/create-external-language-transact-sql.md

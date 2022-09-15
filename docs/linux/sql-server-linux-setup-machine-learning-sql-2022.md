@@ -44,7 +44,7 @@ For more information, see [the Supported platforms section in the installation g
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for R and Python, you specify packages that provide either the full feature installation or the minimum feature installation.
 
-Available installation packages for SQL Server 2022 on Linux:
+Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux:
 
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
@@ -55,7 +55,7 @@ Available installation packages for SQL Server 2022 on Linux:
 
 ## Install on Ubuntu
 
-Refer to [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md) for SQL Server 2022 on Linux installation. Then, use the following steps to install SQL Server Machine Learning Services on Ubuntu:
+Refer to [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md) for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux installation. Then, use the following steps to install SQL Server Machine Learning Services on Ubuntu:
 
  - [Install R on Ubuntu](#install-r-on-ubuntu)
  - [Install Python on Ubuntu](#install-python-on-ubuntu)
@@ -236,13 +236,13 @@ The following commands register the repository providing the R language platform
 
 ## Install on RHEL
 
-Installation for SQL Server 2022 (Preview) Machine Learning Services for Red Hat Enterprise Linux (RHEL) is currently not supported.
+Installation for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Machine Learning Services for Red Hat Enterprise Linux (RHEL) is currently not supported.
 
 <a name="SLES"></a>
 
 ## Install on SUSE Linux
 
-Installation for SQL Server 2022 (Preview) Machine Learning Services for SUSE Linux Enterprise Server (SLES) v15 is currently not supported.
+Installation for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Machine Learning Services for SUSE Linux Enterprise Server (SLES) v15 is currently not supported.
 
 ## Install Java
 

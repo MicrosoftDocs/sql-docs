@@ -20,7 +20,7 @@ The following release notes apply to the release candidate (RC) 0 of [!INCLUDE[s
 
 ## Supported platforms
 
-[!INCLUDE [linux-supported-platforms-2022](../includes/linux/linux-supported-platforms-2022.md)]
+[!INCLUDE [linux-supported-platforms-2022](includes/linux-supported-platforms-2022.md)]
 
 ## Tools
 
@@ -57,7 +57,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## Known issues
 
-[!INCLUDE [linux-known-issues-2022](../includes/linux/linux-known-issues-2022.md)]
+[!INCLUDE [linux-known-issues-2022](includes/linux-known-issues-2022.md)]
 
 ## See also
 

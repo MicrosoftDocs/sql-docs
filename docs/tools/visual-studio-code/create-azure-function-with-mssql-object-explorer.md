@@ -51,7 +51,7 @@ If you already have connection strings stored in the local.settings.json, then t
 
 If you select `Create new local app setting`, then the extension will prompt you to enter the connection string name and value.
 
-:::image type="content" alt-text=Screenshot of a pPrompt to enter connection string" source="./media/create-azure-function-with-mssql/enter-connection-string-setting-name.png":::
+:::image type="content" alt-text="Screenshot of a pPrompt to enter connection string" source="./media/create-azure-function-with-mssql/enter-connection-string-setting-name.png":::
 
 If you're creating the `Azure Function with SQL Binding` to an existing Azure Function project, then the extension will prompt you whether you would like to include the password for the connection string in the local.settings.json file.
 

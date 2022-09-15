@@ -18,9 +18,9 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 Azure Active Directory (Azure AD) supports two types of managed identities: system-assigned managed identity (SMI) and user-assigned managed identity (UMI). For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types).
 
-An SMI is automatically assigned to a managed instance when it's created. When you're using Azure AD authentication with Azure SQL Managed Instance, you must assign a managed identity to the server identity. 
+An SMI is automatically assigned to SQL Managed Instance when it's created. When you're using Azure AD authentication with Azure SQL Database, you must assign an SMI when Azure service principals are used to create Azure AD users in SQL Database.
 
-Previously, only an SMI could be assigned to the SQL Managed Instance or SQL Database server identity. Now, a UMI can be assigned to SQL Managed Instance or Azure SQL Database as the instance or server identity.
+Previously, only an SMI could be assigned to the SQL Managed Instance or SQL Database server identity. Now, a UMI can be assigned to SQL Managed Instance or SQL Database as the instance or server identity.
 
 In addition to using a UMI and an SMI as the instance or server identity, you can use them to access the database by using the SQL connection string option `Authentication=Active Directory Managed Identity`. You need to map a SQL user to the managed identity in the target database. For more information, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 
@@ -62,7 +62,9 @@ These permissions should be granted before you provision a logical server or man
 
 The following sample PowerShell script grants the necessary permissions for a UMI or an SMI. This sample assigns permissions to the UMI `umiservertest`. 
 
-To run the script, you must sign in as a user with a Global Administrator or Privileged Role Administrator role. You must also have the User.Read.All, GroupMember.Read.All, and Application.Read.ALL [Microsoft Graph permissions](/graph/auth/auth-concepts#microsoft-graph-permissions). 
+To run the script, you must sign in as a user with a Global Administrator or Privileged Role Administrator role.
+
+The script grants the User.Read.All, GroupMember.Read.All, and Application.Read.ALL permissions to a UMI or an SMI to access [Microsoft Graph](/graph/auth/auth-concepts#microsoft-graph-permissions).
 
 ```powershell
 # Script to assign permissions to the UMI "umiservertest"
@@ -184,7 +186,7 @@ To update the UMI settings for the server, you can also use the Azure Resource M
 
 ## Limitations and known issues
 
-- After you create a managed instance, the **Active Directory admin** pane in the Azure portal shows a warning: `Managed Instance needs permissions to access Azure Active Directory. Click here to grant "Read" permissions to your Managed Instance.` If you gave the UMI the appropriate permissions [discussed earlier in this article](#permissions), you can ignore this warning.
+- After you create a managed instance, the **Azure Active Directory** pane in the Azure portal shows a warning: `Managed Instance needs permissions to access Azure Active Directory. Click here to grant "Read" permissions to your Managed Instance.` If you gave the UMI the appropriate permissions [discussed earlier in this article](#permissions), you can ignore this warning.
 - If you use an SMI or a UMI as the server or instance identity, deleting the identity will make the server or instance unable to access Microsoft Graph. Azure AD authentication and other functions will fail. To restore Azure AD functionality, assign a new SMI or UMI to the server with appropriate permissions.
 - To grant permissions to access Microsoft Graph through an SMI or a UMI, you need to use PowerShell. You can't grant these permissions by using the Azure portal.
 

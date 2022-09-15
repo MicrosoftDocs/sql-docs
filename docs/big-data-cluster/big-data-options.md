@@ -56,7 +56,6 @@ This architecture provides the following functionality mapping:
 |Data Pool | Provides data persistence for the cluster. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs.|
 |Storage Pool | The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a big data cluster are members of an HDFS cluster.|
 | App Pool | Enables the deployment of applications on a big data cluster by providing interfaces to create, manage, and run applications.|
-|||
 
 For more information on these functions, see [Introducing [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 

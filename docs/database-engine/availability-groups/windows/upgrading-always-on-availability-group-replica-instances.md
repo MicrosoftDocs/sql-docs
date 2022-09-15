@@ -204,7 +204,6 @@ To perform a rolling upgrade of a distributed availability group, first upgrade 
 | AG1 | NODE1\SQLAG | NODE2\SQLAG|
 | AG2 | NODE3\SQLAG | NODE4\SQLAG|
 | Distributedag| AG1 (global) | AG2 (forwarder) |
-| &nbsp; | &nbsp; | &nbsp; |
 
 ![Example diagram for distributed AG](media/upgrading-always-on-availability-group-replica-instances/rolling-upgrade-dag-diagram.png)
 

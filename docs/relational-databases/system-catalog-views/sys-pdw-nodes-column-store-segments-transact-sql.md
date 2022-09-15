@@ -39,7 +39,6 @@ Contains a row for each column in a columnstore index.
 | **null_value**              | **bigint** | Value used to represent nulls.                               |
 | **on_disk_size**            | **bigint** | Size of segment in bytes.                                    |
 | **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node. |
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

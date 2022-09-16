@@ -14,7 +14,7 @@ ms.date: 8/24/2022
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Azure Functions support for [SQL bindings](https://aka.ms/sqlbindings) is available in preview for input and output bindings, making connecting to an Azure SQL database or SQL Server database to Azure Functions easier. The SQL bindings extension for Visual Studio Code (VS Code) facilitates the process of developing Azure Functions with SQL bindings and is automatically installed with the [mssql extension for VS Code](https://aka.ms/mssql-marketplace) extension pack.  This article shows how the [SQL bindings extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode) for Visual Studio Code can be used to create Azure Functions with SQL bindings.
+Azure Functions support for [SQL bindings](/azure/azure-functions/functions-bindings-azure-sql) is available in preview for input and output bindings, making connecting to an Azure SQL database or SQL Server database to Azure Functions easier. The SQL bindings extension for Visual Studio Code (VS Code) facilitates the process of developing Azure Functions with SQL bindings and is automatically installed with the [mssql extension for VS Code](https://aka.ms/mssql-marketplace) extension pack.  This article shows how the [SQL bindings extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode) for Visual Studio Code can be used to create Azure Functions with SQL bindings.
 
 > [!NOTE]
 > Currently, the SQL bindings extension only supports C# Azure Functions. JavaScript and Python Azure Functions support SQL bindings but are not supported by the SQL bindings extension at this time.
@@ -127,6 +127,6 @@ namespace Company.Function
 
 - [Install the VS Code extension here](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode).
 - [Use the mssql extension to query a SQL instance](mssql-extensions.md).
-- [Learn more about SQL bindings for Azure Functions](https://aka.ms/sqlbindings).
+- [Learn more about SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql).
 - [Create Azure Function with SQL binding through the object explorer tutorial](create-azure-function-with-mssql-object-explorer.md).
 - [Create Azure Function with SQL binding through the command palette tutorial](create-azure-function-with-mssql-command-palette.md).

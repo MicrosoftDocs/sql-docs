@@ -31,7 +31,6 @@ After you select **.NET Framework Data Provider for Oracle** on the **Choose a D
 |---|---|
 |Server name|**Data Source**|
 |Authentication (login) info|**User ID** and **Password**; or, **Integrated Security**|
-|||
 
 You don't have to enter the connection string in the **ConnectionString** field of the list. After you enter individual values for the Oracle server name (**Data Source**) and login info, the wizard assembles the connection string from the individual properties and their values. 
 

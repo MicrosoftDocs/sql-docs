@@ -92,7 +92,6 @@ SELECT * FROM OpenJson(@json);
 | Null_value                         | NULL                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
 | Object_value                       | {"obj":"ect"}         | 5 |
-| &nbsp; | &nbsp; | &nbsp; |
 
 - The DoublePrecisionFloatingPoint_value conforms to IEEE-754.
 

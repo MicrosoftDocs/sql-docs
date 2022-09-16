@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SRV_LOGON_FAILED_BY_TRIGGER|
 |Message Text|Logon failed for login \<Login Name> due to trigger execution.|
-||
 
 ## Explanation
 

@@ -28,7 +28,6 @@ name|**sysname**|Name of the classifier. Must be unique to the instance. Is not 
 |create_time|**datetime**|Time the classifier was created. Is not nullable.||
 modify_time|**datetime**|Time the classifier was last modified. Is not nullable.||
 is_enabled|**bit**|INTERNAL||
-|&nbsp;||||
   
 ## Permissions
 

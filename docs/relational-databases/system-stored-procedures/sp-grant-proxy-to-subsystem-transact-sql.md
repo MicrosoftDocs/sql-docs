@@ -58,7 +58,6 @@ sp_grant_proxy_to_subsystem
 |**10**|Analysis Services Command|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution|  
 |**12**|PowerShell Script|  
-| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to grant access to. The **subsystem_name** is **sysname**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
@@ -76,7 +75,6 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services Command|  
 |**Dts**|SSIS package execution|  
 |**PowerShell**|PowerShell Script|  
-| &nbsp; | &nbsp; |
   
 ## Remarks  
  Granting a proxy access to a subsystem does not change the permissions for the principal specified in the proxy.  

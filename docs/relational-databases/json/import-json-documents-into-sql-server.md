@@ -149,7 +149,6 @@ In this example, OPENROWSET(BULK) reads the content of the file and passes that 
 |978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
 |978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
-||||||
 
 Now you can return this table to the user, or load the data into another table.
 

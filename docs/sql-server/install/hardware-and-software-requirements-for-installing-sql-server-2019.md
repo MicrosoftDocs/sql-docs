@@ -117,7 +117,6 @@ The following table shows which editions of [!INCLUDE [sssql19-md](../../include
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
-| &nbsp; | &nbsp; |
 
 ### Server core support
 

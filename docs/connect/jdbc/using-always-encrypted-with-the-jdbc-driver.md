@@ -44,7 +44,6 @@ The Microsoft JDBC Driver for SQL Server comes with the following built-in colum
 | **`SQLServerColumnEncryptionAzureKeyVaultProvider`**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ as of JDBC driver version 7.4.1. | Windows, Linux, macOS |
 | **`SQLServerColumnEncryptionCertificateStoreProvider`** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                | Windows |
 | **`SQLServerColumnEncryptionJavaKeyStoreProvider`**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                | Windows, Linux, macOS |
-|||||
 
 For the pre-registered keystore providers, you don't need any application code changes to use these providers but note the following items:
 

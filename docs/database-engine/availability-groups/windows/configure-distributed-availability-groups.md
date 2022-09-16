@@ -1,15 +1,13 @@
 ---
 title: "Configure a distributed availability group"
-description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups." 
-ms.custom: "seodec18"
-ms.date: "01/28/2020"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
+description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "01/28/2020"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seodec18
 ---
 # Configure an Always On distributed availability group  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -23,10 +21,6 @@ For a technical overview of distributed availability groups, see [Distributed av
 ### Set the endpoint listeners to listen to all IP addresses
 
 Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, set the listener to listen on all IP addresses (`LISTENER_IP = ALL`).
-
-> [!NOTE]
-> Distributed Network Names (DNNs) are not currently supported with distributed availability groups. To learn more, see [Feature interoperability with AG and DNN listener](/azure/azure-sql/virtual-machines/windows/availability-group-dnn-interoperability). 
-
 
 #### Create an endpoint to listen to all IP addresses
 

@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "web configuration file [Master Data Services]"
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Web Configuration Reference (Master Data Services)
 

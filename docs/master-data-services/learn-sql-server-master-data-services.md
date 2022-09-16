@@ -12,8 +12,8 @@ ms.topic: quickstart
 keywords:
   - "learn sql"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-author: chugugrace
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Learn SQL Server Master Data Services
 

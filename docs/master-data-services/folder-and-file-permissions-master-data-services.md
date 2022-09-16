@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "folders [Master Data Services]"
   - "files [Master Data Services]"
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Folder and File Permissions (Master Data Services)
 

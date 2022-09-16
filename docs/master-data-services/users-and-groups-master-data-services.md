@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "users [Master Data Services], about users"
   - "groups [Master Data Services], about groups"
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Users and Groups (Master Data Services)
 

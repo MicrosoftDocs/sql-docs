@@ -1,18 +1,14 @@
 ---
 title: "Comparing execution functions"
 description: "This topic lists the different query execution functions when using the Microsoft Drivers for PHP for SQL Server"
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "executing queries"
-ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "executing queries"
 ---
 # Comparing Execution Functions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

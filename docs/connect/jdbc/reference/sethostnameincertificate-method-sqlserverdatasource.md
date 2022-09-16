@@ -1,21 +1,15 @@
 ---
+title: "setHostNameInCertificate Method (SQLServerDataSource)"
 description: "setHostNameInCertificate Method (SQLServerDataSource)"
-title: "setHostNameInCertificate Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "setHostNameInCertificate Method (SQLServerDataSource)"
-apilocation: 
-  - "setHostNameInCertificate Method (SQLServerDataSource)"
-apitype: "Assembly"
-ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "setHostNameInCertificate Method (SQLServerDataSource)"
+apiname: "setHostNameInCertificate Method (SQLServerDataSource)"
+apitype: "Assembly"
 ---
 # setHostNameInCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

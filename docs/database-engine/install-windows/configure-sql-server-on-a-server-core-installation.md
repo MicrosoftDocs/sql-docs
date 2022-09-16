@@ -1,17 +1,16 @@
 ---
 title: "Configure Server Core Installation"
 description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
-ms.custom: "seo-lt-2019"
-ms.date: "09/15/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "IsHadrEnabled server property"
-  - "Server Core Installation [SQL Server]"
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "09/15/2021"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "IsHadrEnabled server property"
+  - "Server Core Installation [SQL Server]"
 monikerRange: ">=sql-server-2016"
 ---
 # Configure SQL Server on a Server Core Installation

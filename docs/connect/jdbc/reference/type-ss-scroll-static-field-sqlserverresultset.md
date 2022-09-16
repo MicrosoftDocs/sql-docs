@@ -1,21 +1,15 @@
 ---
+title: "TYPE_SS_SCROLL_STATIC Field (SQLServerResultSet)"
 description: "TYPE_SS_SCROLL_STATIC Field (SQLServerResultSet)"
-title: "TYPE_SS_SCROLL_STATIC Field (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.TYPE_SS_SCROLL_STATIC"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 179551a0-3ca4-4816-8098-8195898c997f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.TYPE_SS_SCROLL_STATIC"
+apitype: "Assembly"
 ---
 # TYPE_SS_SCROLL_STATIC Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

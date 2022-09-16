@@ -1,16 +1,12 @@
 ---
-description: "setNCharacterStream Method (SQLServerCallableStatement)"
 title: "setNCharacterStream Method to Reader object| Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 77905630-0135-46ad-a419-215e648996e2
+description: "setNCharacterStream Method (SQLServerCallableStatement)"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setNCharacterStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

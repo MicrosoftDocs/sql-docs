@@ -1,21 +1,15 @@
 ---
+title: "updateClob Method (int, java.sql.Clob)"
 description: "updateClob Method (int, java.sql.Clob)"
-title: "updateClob Method (int, java.sql.Clob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateClob (int, java.sql.Clob)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: d2a5e9cb-2631-4f6e-a90c-4bee58e2f7b8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateClob (int, java.sql.Clob)"
+apitype: "Assembly"
 ---
 # updateClob Method (int, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Managed Instance
 description: Learn about the link feature for Azure SQL Managed Instance to continuously replicate data from SQL Server to the cloud, or migrate your SQL Server databases with the best possible minimum downtime.
 author: danimir
 ms.author: danil
-ms.reviewer: mathoma, danil, randolphwest
-ms.date: 09/01/2022
+ms.reviewer: mathoma, danil
+ms.date: 09/07/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
@@ -43,9 +43,8 @@ You'll also need the following tooling:
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]
-> SQL Managed Instance link feature is available in all public Azure regions. 
->
-> National clouds are currently not supported.
+> SQL Managed Instance link feature is available in all public Azure regions.
+> National cloud support is provided for Azure for US Government only, and no other national clouds at this time.
 
 ## Overview
 
@@ -145,6 +144,7 @@ Some Managed Instance link features and capabilities are limited **at this time*
 - Managed Instance link authentication between SQL Server instance and SQL Managed Instance is certificate-based, available only through exchange of certificates. Windows authentication between SQL Server and managed instance isn't supported.
 - Replication of user databases from SQL Server to SQL Managed Instance is one-way. User databases from SQL Managed Instance can't be replicated back to SQL Server.
 - [Auto failover groups](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance can't be used in parallel while operating the Managed Instance link with SQL Server.
+- The link can be used with only a single SQL Server instance installed on the OS. Using the link with SQL Server named instances (multiple SQL Servers installed on the same OS) is not supported.
 - Replicated R/O databases aren't part of auto-backup process on SQL Managed Instance.
 
 ## Next steps

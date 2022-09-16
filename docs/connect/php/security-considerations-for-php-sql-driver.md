@@ -1,18 +1,14 @@
 ---
+title: "Security Considerations for the Microsoft Drivers for PHP for SQL Server"
 description: "Security Considerations for the Microsoft Drivers for PHP for SQL Server"
-title: "Security Considerations for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "security considerations"
-ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "security considerations"
 ---
 # Security Considerations for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

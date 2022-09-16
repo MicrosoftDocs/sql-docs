@@ -1,23 +1,20 @@
 ---
 title: "Configure a Server to Listen on a Specific TCP Port"
 description: Learn how to use SQL Server Configuration Manager to configure the Database Engine to listen on a specific fixed port other than the default port, 1433.
-ms.custom: FY22Q2Fresh
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/17/2021
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: FY22Q2Fresh
+helpviewer_keywords:
   - "fixed port"
   - "static ports"
   - "ports [SQL Server], assigning numbers"
   - "assigning port numbers"
   - "dynamic ports [SQL Server]"
   - "TCP/IP [SQL Server], port numbers"
-ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure a Server to Listen on a Specific TCP Port
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

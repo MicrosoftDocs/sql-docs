@@ -1,16 +1,12 @@
 ---
 title: "Troubleshooting connectivity"
 description: "Learn about JDBC connectivity and how to troubleshoot potential connection issues when using the Microsoft JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Troubleshooting connectivity
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

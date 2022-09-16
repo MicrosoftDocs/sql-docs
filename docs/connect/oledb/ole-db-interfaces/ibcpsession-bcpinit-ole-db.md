@@ -1,20 +1,16 @@
 ---
-title: "IBCPSession::BCPInit (OLE DB driver) | Microsoft Docs"
-description: Learn how the IBCPSession::BCPInit method performs the necessary initializations for a bulk copy of data between the workstation and SQL Server. 
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "IBCPSession::BCPInit (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPInit method"
+title: "IBCPSession::BCPInit (OLE DB driver)"
+description: "Learn how the IBCPSession::BCPInit method performs the necessary initializations for a bulk copy of data between the workstation and SQL Server."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "BCPInit method"
+apiname: "IBCPSession::BCPInit (OLE DB)"
+apitype: "COM"
 ---
 # IBCPSession::BCPInit (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

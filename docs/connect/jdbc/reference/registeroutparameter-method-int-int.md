@@ -1,21 +1,15 @@
 ---
+title: "registerOutParameter Method (int, int)"
 description: "registerOutParameter Method (int, int)"
-title: "registerOutParameter Method (int, int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.registerOutParameter (int, int)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 169229c7-b75d-498b-a5ac-df300424c909
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.registerOutParameter (int, int)"
+apitype: "Assembly"
 ---
 # registerOutParameter Method (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

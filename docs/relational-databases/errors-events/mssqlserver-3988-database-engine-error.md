@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|XACT_UNSUPPORT_PARALLEL_TRAN2|
 |Message Text|New transaction is not allowed because there are other threads running in the session.|
-||
 
 ## Explanation
 

@@ -1,20 +1,16 @@
 ---
-title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB driver) | Microsoft Docs"
-description: Learn how the ISQLServerErrorInfo::GetErrorInfo method returns a pointer to an OLE DB Driver for SQL Server SSERRORINFO structure with SQL Server error details.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "GetErrorInfo method"
+title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB driver)"
+description: "Learn how the ISQLServerErrorInfo::GetErrorInfo method returns a pointer to an OLE DB Driver for SQL Server SSERRORINFO structure with SQL Server error details."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "GetErrorInfo method"
+apiname: "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
+apitype: "COM"
 ---
 # ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

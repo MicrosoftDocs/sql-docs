@@ -227,10 +227,10 @@ Azure Data Studio supports connecting to the following versions of SQL Server:
 
 - Azure SQL Database
 - Azure SQL Managed Instance
-- SQL Server 2022 (Preview)
-- SQL Server 2019
-- SQL Server 2017
-- SQL Server 2016
+- [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
+- [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]
+- [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
+- [!INCLUDE [sssql16-md](../includes/sssql16-md.md)]
 
 ## System requirements
 

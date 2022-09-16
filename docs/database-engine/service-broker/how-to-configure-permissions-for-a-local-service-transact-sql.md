@@ -1,13 +1,13 @@
 ---
-title: 'How to: Configure Permissions for a Local Service (Transact-SQL)'
+title: "How to: Configure Permissions for a Local Service (Transact-SQL)"
 description: "SQL Server enforces SEND permission for each service and RECEIVE permissions for each queue."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # How to: Configure Permissions for a Local Service (Transact-SQL)

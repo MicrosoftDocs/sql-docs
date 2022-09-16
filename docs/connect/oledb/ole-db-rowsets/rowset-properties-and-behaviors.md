@@ -1,20 +1,17 @@
 ---
 title: Rowset properties and behaviors (OLE DB driver)
 description: These are the OLE DB Driver for SQL Server rowset properties, including property name and description.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "09/30/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "rowsets [OLE DB], properties"
   - "OLE DB Driver for SQL Server, rowsets"
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Rowset Properties and Behaviors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,16 +1,12 @@
 ---
 title: "Step 3: Connecting to SQL using pyodbc"
 description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pyODBC. The basic examples demonstrate selecting and inserting data."
-ms.custom: ""
-ms.date: "03/24/2022"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 09/16/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
 
@@ -33,7 +29,8 @@ server = 'tcp:myserver.database.windows.net'
 database = 'mydb' 
 username = 'myusername' 
 password = 'mypassword' 
-cnxn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+# ENCRYPT defaults to yes starting in ODBC Driver 18. It's good to always specify ENCRYPT=yes on the client side to avoid MITM attacks.
+cnxn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER='+server+';DATABASE='+database+';ENCRYPT=yes;UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
 ```  

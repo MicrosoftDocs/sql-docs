@@ -1,17 +1,14 @@
 ---
-title: "Date and Time and Schema Rowsets | Microsoft Docs"
+title: "Date and Time and Schema Rowsets"
 description: Learn about the OLE DB date and time enhancements in relation to COLUMNS rowset and PROCEDURE_PARAMETERS rowset in OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "date/time [OLE DB], schema rowsets"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "date/time [OLE DB], schema rowsets"
 ---
 # Metadata - Date and Time and Schema Rowsets
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

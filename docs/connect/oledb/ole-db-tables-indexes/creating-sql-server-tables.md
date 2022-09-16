@@ -1,21 +1,18 @@
 ---
-title: "Create SQL Server tables (OLE DB driver) | Microsoft Docs"
-description: Learn how the ITableDefinition::CreateTable function in the OLE DB Driver for SQL Server allows consumers to create SQL Server tables.
-ms.custom: ""
+title: "Create SQL Server tables (OLE DB driver)"
+description: "Learn how the ITableDefinition::CreateTable function in the OLE DB Driver for SQL Server allows consumers to create SQL Server tables."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "tables [OLE DB]"
   - "OLE DB Driver for SQL Server, tables"
   - "DBCOLUMNDESC usage"
   - "adding tables"
   - "CreateTable function"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Creating SQL Server Tables
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,22 +1,22 @@
 ---
 title: "What is an Always On availability group?"
 description: "An introduction to the concepts that are central for configuring and managing Always On availability groups."
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: randolphwest
+ms.date: 07/04/2022
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
   - intro-overview
-ms.date: 07/04/2022
-ms.prod: sql
-ms.reviewer: randolphwest
-ms.technology: availability-groups
-ms.topic: conceptual
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], data movement"
   - "Availability Groups [SQL Server]"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # What is an Always On availability group?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.author: mathoma
 > [!NOTE]  
 >  For information about the relationship of SQL Server Always On components to the WSFC cluster, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
- The following illustration shows an availability group that contains one primary replica and four secondary replicas. Up to eight secondary replicas are supported, including one primary replica and two synchronous-commit secondary replicas.  
+ The following illustration shows an availability group that contains one primary replica and four secondary replicas. Up to eight secondary replicas are supported, including one primary replica and four synchronous-commit secondary replicas.  
   
  ![Availability group with five replicas](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Availability group with five replicas")  
   

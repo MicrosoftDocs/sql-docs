@@ -1,19 +1,17 @@
 ---
 title: "What is a contained availability group?"
 description: "An overview of the contained availability group feature of Always On availability groups within SQL Server."
+author: kfarlee
+ms.author: kfarlee
+ms.reviewer: mathoma
 ms.date: "05/11/2020"
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords: 
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
   - "availability groups [SQL Server], contained availability groups"
   - "availability groups [SQL Server], configuring"
-ms.assetid: 
-author: kfarlee
-ms.author: kfarlee
-ms.reviewer: mathoma
 monikerRange: ">=sql-server-ver16"
 ---
 

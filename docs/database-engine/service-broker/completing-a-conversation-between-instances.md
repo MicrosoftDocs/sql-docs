@@ -1,13 +1,13 @@
-﻿---
+---
 title: Completing a Conversation Between Instances
 description: "It will help new users get started by showing them how to build and run a simple conversation between two databases on separate instances of the Database Engine."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Completing a Conversation Between Instances

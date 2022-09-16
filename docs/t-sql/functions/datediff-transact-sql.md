@@ -70,7 +70,6 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.

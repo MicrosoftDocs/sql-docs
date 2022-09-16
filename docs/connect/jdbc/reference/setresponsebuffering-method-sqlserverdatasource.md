@@ -1,21 +1,15 @@
 ---
+title: "setResponseBuffering Method (SQLServerDataSource)"
 description: "setResponseBuffering Method (SQLServerDataSource)"
-title: "setResponseBuffering Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.setResponseBuffering(String responseBufferingValue)"
-apilocation: 
-  - "SQLServerDataSource.setResponseBuffering(String responseBufferingValue)"
-apitype: "Assembly"
-ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "SQLServerDataSource.setResponseBuffering(String responseBufferingValue)"
+apiname: "SQLServerDataSource.setResponseBuffering(String responseBufferingValue)"
+apitype: "Assembly"
 ---
 # setResponseBuffering Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

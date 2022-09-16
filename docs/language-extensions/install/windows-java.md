@@ -32,7 +32,7 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 
 + SQL Server Setup is required if you want to install support for the Java Language Extension.
 
-+ You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with SQL Server 2022, no Java runtime is installed by SQL Setup.
++ You can download and install any Java runtime as desired, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], no Java runtime is installed by SQL Setup.
 
 + A database engine instance is required. You cannot install just the Java Language Extension features, although you can add them incrementally to an existing instance.
 
@@ -54,7 +54,7 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 
 ::: moniker range=">=sql-server-ver16"
 
-With SQL Server 2022, you can download and install any Java runtime, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime.
+With [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can download and install any Java runtime, including the latest [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) or officially licensed Java runtime.
 
 Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 

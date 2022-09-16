@@ -1,19 +1,17 @@
 ---
 title: "Select Initial Data Sync Page (Availability Group Wizard)"
 description: A description of the 'Select Initial Data Sync Page' of the Always On Availability Group Wizard in SQL Server Management Studio (SSMS).
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.adddatabasewizard.selectinitialdatasync.f1"
   - "sql13.swb.newagwizard.selectinitialdatasync.f1"
   - "sql13.swb.addreplicawizard.selectinitialdatasync.f1"
-ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Select Initial Data Synchronization Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

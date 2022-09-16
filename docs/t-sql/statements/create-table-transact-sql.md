@@ -1130,7 +1130,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
 
 #### <a id="generate-always-columns"></a> LEDGER = ON ( <ledger_option> [ ,... *n* ] ) | OFF
 
-**Applies to:** SQL Server 2022, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]  
 > If the statement creates a ledger table, the `ENABLE LEDGER` permission is required.

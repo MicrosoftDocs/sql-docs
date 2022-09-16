@@ -55,7 +55,6 @@ The following table shows the permissions set on the database and log files afte
 |Detach|No|The SQL Server (MSSQLSERVER) service account and members of the local Windows Administrators group.|
 |Attach|Yes|The SQL Server (MSSQLSERVER) service account and members of the local Windows Administrators group.|
 |Attach|No|The SQL Server (MSSQLSERVER) service account.|
-||||
 
 For more information on file system permissions granted to the per-service SIDs for the SQL Server service, see [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
 

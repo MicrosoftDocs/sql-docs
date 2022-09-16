@@ -52,7 +52,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |default_etw_session_logfile_size_mb|Any unsigned integer. This value is optional.|The log file size, in megabytes (MB), for the Extended Events session. The default is 20 MB.|  
 |default_etw_session_buffer_size_kb|Any unsigned integer. This value is optional.|The in-memory buffer size, in kilobytes (KB), for the Extended Events session. The default is 128 KB.|  
 |retries|Any unsigned integer.|The number of times to retry publishing the event to the ETW subsystem before dropping the event. The default is 0.|  
-| &nbsp; | &nbsp; | &nbsp; |
 
  Configuring these settings is optional. The ETW target uses default values for these settings.  
   

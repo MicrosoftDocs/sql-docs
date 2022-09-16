@@ -58,7 +58,6 @@ Credential-related information used to secure logins, users, or accounts within 
 |These credentials never leave the user machine via Usage and Diagnostics Data. |- |- |
 |Crash Dumps may contain Access Control Data. |- |Crash Dumps: Maximum 30 days. |
 |These credentials never leave the user machine via User Feedback unless customer injects it manually |Limit to Microsoft internal use with no third-party access. |User Feedback: Max 1 year|
-|&nbsp;|&nbsp;|&nbsp;|
 
 ## Customer data
 

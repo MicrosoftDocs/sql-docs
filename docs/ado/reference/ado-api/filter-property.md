@@ -86,7 +86,6 @@ The following table summarizes the effects of **adFilterPendingRecords** in diff
 |**Non keys**|+|+|+|
 |**Single Key**|+|-|N/A|
 |**Multiple Keys**|+|N/A|+|
-|||||
   
 ## Applies To
 

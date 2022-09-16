@@ -42,7 +42,6 @@ For information about connection string keywords, see [Using Connection String K
 |Yes|Yes|No (default)|Ignored|Encryption always occurs, but may use a self-signed server certificate.|  
 |Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate, otherwise the connection attempt fails.|  
 |Yes|Yes|Yes|Yes|Encryption always occurs, but might use a self-signed server certificate.|  
-||||||
 
 > [!CAUTION]
 > The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption. Also ensure that the server has a verifiable certificate, and that the **TrustServerCertificate** setting on the client is set to FALSE.

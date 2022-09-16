@@ -45,7 +45,7 @@ This article describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features tha
 
 ## Discontinued features in [!INCLUDE[sssql22](../includes/sssql22-md.md)]
 
-- The following Machine Learning Services packages are no longer included with installation of SQL Server 2022. Instead, you can install any custom packages as desired. For more information, see [What's new in SQL Server Machine Learning Services?](../machine-learning/what-s-new-in-sql-server-machine-learning-services.md)
+- The following Machine Learning Services packages are no longer included with installation of [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Instead, you can install any custom packages as desired. For more information, see [What's new in SQL Server Machine Learning Services?](../machine-learning/what-s-new-in-sql-server-machine-learning-services.md)
 
     | **Language** | **Package** |
     | :-- | :-- |
@@ -56,7 +56,7 @@ This article describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features tha
 
 - SQL Server Big Data Clusters will be retired. See information in [[!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] overview](../big-data-cluster/big-data-cluster-overview.md).
 
-- SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in SQL Server 2022. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
+- SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
 
 ## Discontinued features in [!INCLUDE[sssql19](../includes/sssql19-md.md)]
 

@@ -1,16 +1,12 @@
 ---
 title: "PDOStatement::execute"
 description: "API reference for the PDOStatement::execute function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -33,7 +33,6 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 |state|**int**|The state of the buffer pool extension feature. Is not nullable.<br /><br /> 0 - Buffer pool extension disabled<br /><br /> 1 - Buffer pool extension disabling<br /><br /> 2 - Reserved for the future use<br /><br /> 3 - Buffer pool extension enabling<br /><br /> 4 - Reserved for the future use<br /><br /> 5 - Buffer pool extension enabled|  
 |state_description|**nvarchar**(60)|Describes the state of the buffer pool extension feature. Is nullable.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = BUFFER POOL EXTENSION ENABLED|
 |current_size_in_kb|**bigint**|Current size of the buffer pool extension file. Is not nullable.|
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  

@@ -29,7 +29,6 @@ ms.author: mikeray
 | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
 | [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] RBS download page](https://go.microsoft.com/fwlink/?linkid=2109005) |
-| &nbsp; | &nbsp; |
   
  
   

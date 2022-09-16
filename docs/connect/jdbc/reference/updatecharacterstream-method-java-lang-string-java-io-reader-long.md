@@ -1,16 +1,12 @@
 ---
-description: "updateCharacterStream Method (java.lang.String, java.io.Reader, long)"
 title: updateCharacterStream method (java.lang.String, java.io.Reader, long)
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
+description: "updateCharacterStream Method (java.lang.String, java.io.Reader, long)"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateCharacterStream Method (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

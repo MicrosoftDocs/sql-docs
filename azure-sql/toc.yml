@@ -6,6 +6,8 @@
     href: azure-sql-iaas-vs-paas-what-is-overview.md
   - name: Migrate to Azure SQL 
     href: migration-guides/index.yml
+  - name: Migrating SQL Server Workloads FAQ
+    href: migration-guides/modernization.md
 
 - name: Shared SQL DB & SQL MI docs
   items:
@@ -1282,10 +1284,8 @@
         href: managed-instance/vnet-subnet-move-instance.md
       - name: Delete subnet after deleting SQL MI
         href: managed-instance/virtual-cluster-delete.md
-      - name: Configure custom DNS
-        href: managed-instance/custom-dns-configure.md
-      - name: Sync DNS configuration
-        href: managed-instance/synchronize-vnet-dns-servers-setting-on-virtual-cluster.md
+      - name: Resolve private domain names
+        href: managed-instance/resolve-private-domain-names.md
       - name: Find management endpoint IP address
         href: managed-instance/management-endpoint-find-ip-address.md
       - name: Verify built-in firewall protection

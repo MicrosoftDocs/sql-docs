@@ -1,16 +1,12 @@
 ---
+title: "updateCharacterStream Method (int, java.io.Reader)"
 description: "updateCharacterStream Method (int, java.io.Reader)"
-title: "updateCharacterStream Method (int, java.io.Reader) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateCharacterStream Method (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

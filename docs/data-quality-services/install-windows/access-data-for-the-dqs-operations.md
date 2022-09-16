@@ -1,15 +1,12 @@
 ---
-description: "Access Data for the DQS Operations"
 title: "Access Data for the DQS Operations"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
+description: "Access Data for the DQS Operations"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
 ---
 # Access Data for the DQS Operations
 

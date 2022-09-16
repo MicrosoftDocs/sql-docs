@@ -1,21 +1,15 @@
 ---
+title: "SQLServerResource Constructor ()"
 description: "SQLServerResource Constructor ()"
-title: "SQLServerResource Constructor () | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResource"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: e9761462-b580-41cc-b326-a47ff78e6965
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResource"
+apitype: "Assembly"
 ---
 # SQLServerResource Constructor ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

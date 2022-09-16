@@ -1,23 +1,18 @@
 ---
+title: "sqlsrv_fetch"
 description: "sqlsrv_fetch"
-title: "sqlsrv_fetch | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_fetch"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sqlsrv_fetch"
   - "API Reference, sqlsrv_fetch"
   - "retrieving data, as a single field"
-ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-author: David-Engel
-ms.author: v-davidengel
+apiname: "sqlsrv_fetch"
+apitype: "NA"
 ---
 # sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

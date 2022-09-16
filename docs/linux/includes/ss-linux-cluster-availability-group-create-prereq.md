@@ -1,4 +1,12 @@
-﻿## Prerequisites
+---
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 09/15/2022
+ms.prod: sql
+ms.technology: linux
+ms.topic: include
+---
+## Prerequisites
 
 Before you create the availability group, you need to:
 
@@ -56,9 +64,9 @@ Before you create the availability group, you need to:
 
 Install SQL Server. The following links point to SQL Server installation instructions for various distributions:
 
-- [Red Hat Enterprise Linux](../../linux/quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server](../../linux/quickstart-install-connect-suse.md)
-- [Ubuntu](../../linux/quickstart-install-connect-ubuntu.md)
+- [Red Hat Enterprise Linux](../quickstart-install-connect-red-hat.md)
+- [SUSE Linux Enterprise Server](../quickstart-install-connect-suse.md)
+- [Ubuntu](../quickstart-install-connect-ubuntu.md)
 
 ## Enable Always On availability groups
 

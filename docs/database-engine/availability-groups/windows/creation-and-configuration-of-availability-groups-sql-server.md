@@ -1,19 +1,17 @@
 ---
 title: "Create & configure availability groups (content index)"
 description: "Learn about references you can use to create and configure Always On availability groups for SQL Server."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], creating"
-ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Reference for the creation and configuration of Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

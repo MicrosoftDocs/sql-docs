@@ -1,16 +1,12 @@
 ---
 title: "Using statements with the JDBC driver"
 description: "Learn how the Microsoft JDBC Driver for SQL Server can be used to execute SQL statements and stored procedures to perform database operations."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using statements with the JDBC driver
 

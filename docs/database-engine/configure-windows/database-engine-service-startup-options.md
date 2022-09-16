@@ -1,21 +1,20 @@
 ---
-title: "Database Engine Service Startup Options | Microsoft Docs"
+title: "Database Engine Service Startup Options"
 description: Become familiar with SQL Server Database Engine startup options. View tips on how to use them, and learn about the purpose of each option.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/01/2019"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "single-user mode [SQL Server], startup option"
   - "overriding default startup options"
   - "minimal configuration mode [SQL Server], startup option"
   - "default startup options"
   - "temporarily override default startup options [SQL Server]"
   - "startup options [SQL Server]"
-  - "starting SQL Server, options"  
+  - "starting SQL Server, options"
   - "single-user mode [SQL Server], startup parameter"
   - "overriding default startup parameters"
   - "minimal configuration mode [SQL Server], startup parameter"
@@ -23,9 +22,6 @@ helpviewer_keywords:
   - "temporarily override default startup parameters [SQL Server]"
   - "startup parameters [SQL Server]"
   - "starting SQL Server, parameters"
-ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: rwestMSFT
-ms.author: randolphwest
 ---
 
 # Database Engine Service Startup Options

@@ -1,16 +1,12 @@
 ---
+title: "Using a stored procedure with output parameters"
 description: "Using a stored procedure with output parameters"
-title: "Using a stored procedure with output parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using a stored procedure with output parameters

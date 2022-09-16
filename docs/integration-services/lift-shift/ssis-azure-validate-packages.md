@@ -54,7 +54,6 @@ The wizard does the following validation checks for the connection managers in t
 | Smtp               | âœ“        |           |     | âœ“         |                   |
 | SqlMobile          |          | âœ“         | âœ“   |           |                   |
 | Wmi                | âœ“        |           |     |           |                   |
-|||||||
 
 ## Validate sources and destinations
 The following third-party sources and destinations are not supported:

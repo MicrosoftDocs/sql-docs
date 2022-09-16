@@ -1,19 +1,17 @@
 ---
 title: "Powershell: Availability group database mirroring endpoint"
 description: "Describes how to create a database mirroring endpoint for an Always On availability group using PowerShell."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], endpoint"
-ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Create a database mirroring endpoint for an availability group using PowerShell
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

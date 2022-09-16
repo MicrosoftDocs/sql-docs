@@ -1,20 +1,16 @@
 ---
-title: "Configure the user options Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "user options" option. See how it changes the default values of the query processing options that SQL Server establishes for user work sessions.'
-ms.custom: ""
+title: "Configure the user options Server Configuration Option"
+description: "Learn about the user options option. See how it changes the default values of the query processing options that SQL Server establishes for user work sessions."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "global default for all users [SQL Server]"
   - "users [SQL Server], global defaults"
   - "user options option [SQL Server]"
-ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure the user options Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

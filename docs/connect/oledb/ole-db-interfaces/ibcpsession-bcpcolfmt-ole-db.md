@@ -1,20 +1,16 @@
 ---
-title: "IBCPSession::BCPColFmt (OLE DB driver) | Microsoft Docs"
-description: Learn how the IBCPSession::BCPColFmt method creates a binding between program variables and SQL Server columns in OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "05/25/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "IBCPSession::BCPColFmt (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPColFmt method"
+title: "IBCPSession::BCPColFmt (OLE DB driver)"
+description: "Learn how the IBCPSession::BCPColFmt method creates a binding between program variables and SQL Server columns in OLE DB Driver for SQL Server."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "05/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "BCPColFmt method"
+apiname: "IBCPSession::BCPColFmt (OLE DB)"
+apitype: "COM"
 ---
 # IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

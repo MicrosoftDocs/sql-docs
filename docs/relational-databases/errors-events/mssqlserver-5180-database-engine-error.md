@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DSK_BAD_FCB_FILEID|
 |Message Text|Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.|
-||
 
 ## Explanation
 

@@ -4,9 +4,8 @@ description: Find out how to manage and optimize SQL Server resources. View avai
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: 08/25/2022
+ms.date: 09/14/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,7 +25,7 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], configuration options"
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
-keywords: "server configuration (SQL Server)"
+keywords: server configuration (SQL Server)
 ---
 
 # Server configuration options (SQL Server)
@@ -109,13 +108,13 @@ The following table lists all available configuration options, the range of poss
 | [allow updates](allow-updates-server-configuration-option.md) (Obsolete. Don't use. Will cause an error during reconfigure.) | 0 | 1 | 0 |
 | [automatic soft-NUMA disabled](soft-numa-sql-server.md) | 0 | 1 | 0 |
 | [backup checksum default](backup-checksum-default.md) | 0 | 1 | 0 |
-| [backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md) | 0 | 1 | 0 |
+| [backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md) | 0 | 1 - versions prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]<br /><br />2 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later | 0 |
 | [backup compression algorithm](view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later. | 0 | 1 | 0 |
 | [blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A) | 5 | 86400 | 0 |
 | [c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [clr enabled](clr-enabled-server-configuration-option.md) | 0 | 1 | 0 |
 | [clr strict security](clr-strict-security.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 0 | 1 | 0 |
-| [column encryption enclave type ](configure-column-encryption-enclave-type.md) (A, RR) | 0 | 1 | 0 |
+| [column encryption enclave type](configure-column-encryption-enclave-type.md) (A, RR) | 0 | 2 | 0 |
 | [common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [contained database authentication](contained-database-authentication-server-configuration-option.md) | 0 | 1 | 0 |
 | [cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A) | 0 | 32767 | 5 |

@@ -174,7 +174,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]
 
     > [!NOTE]  
-    > Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
+    > With [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
 
 1. Use the **Server Configuration - Collation** page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 

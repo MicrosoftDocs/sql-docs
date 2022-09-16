@@ -58,7 +58,10 @@ To connect the SQL Server instances and the hosting machine to Azure Arc, you mu
 - Microsoft.Authorization/roleAssignments/write
 - Microsoft.Authorization/roleAssignments/read
 
-For optimal security, create a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
+For optimal security, create a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see the appropriate article from the following list:
+
+- [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal)
+- [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli)
 
 ### Azure subscription and service limits
 

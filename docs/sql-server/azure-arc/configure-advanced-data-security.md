@@ -29,17 +29,17 @@ You can configure your instance connected to Azure with Microsoft Defender for C
    > [!NOTE]
    > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your Azure Arc-enabled SQL Server resource is created.
 
-1. Go to __Agents management > Log Analytics agent instructions__  and copy Workspace ID and Primary key for later use.
+1. Go to **Agents management > Log Analytics agent instructions**  and copy Workspace ID and Primary key for later use.
 
 ## Install Log Analytics Agent
 
 The next step is needed only if you haven't yet configured MMA on the remote machine.
 
-1. Go to __Azuree Arc > Servers__ and open  the Azure Arc-enabled server resource for the machine where the SQL Server instance is installed. 
+1. Go to **Azure Arc > Servers** and open  the Azure Arc-enabled server resource for the machine where the SQL Server instance is installed. 
 
-1. Open the **Extensions** blade and click __+ Add__. 
+1. Open the **Extensions** blade and click **+ Add**. 
 
-1. Select __Log Analytics Agent - Azure Arc__ and click __Next__. 
+1. Select **Log Analytics Agent - Azure Arc** and click **Next**. 
 
 1. Set the Workspace ID and Workspace key using the values you saved in the previous step.
 
@@ -49,11 +49,11 @@ For more information, see [Extension management with Azure Arc](/azure/azure-arc
 
 ## Enable Microsoft Defender for Cloud
 
-1. Go to __Azuree Arc > SQL Servers__ and open  the Azure Arc-enabled SQL server resource for the instance that you want to protect. 
+1. Go to **Azure Arc > SQL Servers** and open  the Azure Arc-enabled SQL server resource for the instance that you want to protect. 
 
-1. Click on the __Microsoft Defender for Cloud__ tile and then on __Enable Microsoft Defender for Cloud__.
+1. Click on the **Microsoft Defender for Cloud** tile and then on **Enable Microsoft Defender for Cloud**.
 
-1. Follow the steps documented in [Enable Microsoft Defender for SQL servers on machines](/azure/defender-for-cloud/defender-for-sql-usage#set-up-microsoft-defender-for-sql-servers-on-machines)..
+1. Follow the steps documented in [Enable Microsoft Defender for SQL servers on machines](/azure/defender-for-cloud/defender-for-sql-usage#set-up-microsoft-defender-for-sql-servers-on-machines).
  
 > [!NOTE]
    > The first scan to generate the vulnerability assessment happens within 24 hours after enabling Microsoft Defender for Cloud. After that, auto scans are be performed every week on Sunday.

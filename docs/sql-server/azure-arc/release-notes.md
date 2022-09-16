@@ -27,8 +27,7 @@ This release is published September 13, 2022
 
 ### Azure Active Directory authentication 
 
-- Azure extesnion for SQL Server has been enhanced to support configuring Active Directory authentication using mssql-conf. For more details, see [Azure Active Directory authentication for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/07/28/azure-active-directory-authentication-for-sql-server-2022/).
-
+- Azure extension for SQL Server has been enhanced to support configuring Active Directory authentication using mssql-conf. For more details, see [Azure Active Directory authentication for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/07/28/azure-active-directory-authentication-for-sql-server-2022/).
 
 ## July 2022
 
@@ -40,7 +39,7 @@ This release is published July 26, 2022
 
 ### Azure extension for SQL Server
 
-- Preview support for Azure extesnion for SQL Server on Linux operating system
+- Preview support for Azure extension for SQL Server on Linux operating system
 
 ### Azure Active Directory authentication 
 

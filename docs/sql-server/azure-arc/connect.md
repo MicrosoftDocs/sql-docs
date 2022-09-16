@@ -60,7 +60,7 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 
 To assign the *Azure Connected SQL Server Onboarding* role the Managed System Identity, use the following steps:
 
-1. Select the resource group that contains the Arce-enabled Server resource
+1. Select the resource group that contains the Arc-enabled Server resource
 1. Select **Access control (IAM)** on the left side of the resource group page
 1. Click **+ Add** and select **Add role assignment**
 1. For **Role**, select `Azure Connected SQL Server Onboarding` and click __Next__.
@@ -130,14 +130,14 @@ To install *Azure extension for SQL Server* for Linux operating system, run:
 
 If the server that runs your SQL Server instance is not yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script will connect the server to Azure and will install Azure extension for SQL Server.
 
-### Generate a onboarding script for SQL Server
+### Generate an onboarding script for SQL Server
 
 1. Go to __Azure Arc > SQL Server__ and click __+ Add__
    ![Start creation](media/join/start-creation-of-sql-server-azure-arc-resource.png)
 
 1. Select __Connect SQL Server to Azure Arc__  
 
-1. Review the prerequisits and click __Next: Server details__
+1. Review the prerequisites and click __Next: Server details__
 
 1. Select the subscription, resource group, Azure region, and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
 
@@ -156,7 +156,7 @@ If the server that runs your SQL Server instance is not yet connected to Azure, 
 
 ### Connect SQL Server instances to Azure Arc
 
-In this step you will take the script you downloaded from Azure portal and execute it on the target machine. The script installs Azure extension for SQL Server. If the machine itself does not have the Azure connected machine agent installed, the script will install it first then install Azure extension for SQL Server. Azure connected machine agent will register the connected server as a Azure resource of type `Server - Azure Arc`, and Azure extension for SQL Server will register the SQL Server instances as Azure resources of type `SQL Server - Azure Arc`.
+In this step, you will take the script you downloaded from Azure portal and execute it on the target machine. The script installs Azure extension for SQL Server. If the machine itself does not have the Azure connected machine agent installed, the script will install it first, then install Azure extension for SQL Server. Azure connected machine agent will register the connected server as an Azure resource of type `Server - Azure Arc`, and Azure extension for SQL Server will register the SQL Server instances as Azure resources of type `SQL Server - Azure Arc`.
 
 > [!IMPORTANT]
 > Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](overview.md#prerequisites).
@@ -204,7 +204,7 @@ To delete your Arc-enabled SQL Server resource, go to __Azure Arc > SQL Server__
 
 If you deleted your Arc-enabled SQL Server resource by mistake, you can restore it with the following steps.
 
-1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Please make sure to select the correct vesion for your OS.
+1. If you also uninstalled the SQL Server extension by mistake, reinstall it. Select the correct version for your OS.
 
 ```azurecli
    az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "{OS}Agent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'

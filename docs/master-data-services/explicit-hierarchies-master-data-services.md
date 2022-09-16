@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "hierarchies [Master Data Services], explicit hierarchies"
   - "explicit hierarchies"
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Explicit Hierarchies (Master Data Services)
 

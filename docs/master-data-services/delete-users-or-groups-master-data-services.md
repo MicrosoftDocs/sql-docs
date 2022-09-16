@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "users [Master Data Services], deleting"
   - "deleting users [Master Data Services]"
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Delete Users or Groups (Master Data Services)
 

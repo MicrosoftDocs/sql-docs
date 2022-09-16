@@ -6,8 +6,8 @@ ms.prod: sql
 ms.prod_service: "mds"
 ms.technology: master-data-services
 ms.topic: quickstart
-author: chugugrace
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ms.custom:
   - intro-quickstart
 ---

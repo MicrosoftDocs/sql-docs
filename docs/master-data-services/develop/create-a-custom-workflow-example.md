@@ -10,8 +10,8 @@ ms.technology: master-data-services
 
 ms.topic: "reference"
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Custom Workflow - Example
 

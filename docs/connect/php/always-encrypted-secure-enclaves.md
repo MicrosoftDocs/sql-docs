@@ -237,7 +237,7 @@ function getResults($stmt)
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
 // Otherwise, the local Windows Certificate Store will be used
-$options = "sqlsrv:server=$myServer;database=$myDatabase;driver={ODBC Driver 17 for SQL Server};";
+$options = "sqlsrv:server=$myServer;database=$myDatabase;driver={ODBC Driver 18 for SQL Server};";
 $options .= "ColumnEncryption=VBS-HGS,http://myattestationserver.mydomain/Attestation",
 
 $conn = new PDO($options, $myUsername, $myPassword);

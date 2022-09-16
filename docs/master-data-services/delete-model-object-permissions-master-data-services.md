@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], deleting model object permissions"
   - "models [Master Data Services], deleting object permissions"
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Delete Model Object Permissions (Master Data Services)
 

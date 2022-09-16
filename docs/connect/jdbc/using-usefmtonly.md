@@ -42,7 +42,7 @@ SET FMTONLY OFF;
 
 ## Turning the feature on/off
 
-The feature **useFmtOnly** is off by default. Users can enable this feature through the connection string by specifying `useFmtOnly=true`. For example: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`.
+The feature **useFmtOnly** is off by default. Users can enable this feature through the connection string by specifying `useFmtOnly=true`. For example: `jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`.
 
 The feature is also available through `SQLServerDataSource`.
 

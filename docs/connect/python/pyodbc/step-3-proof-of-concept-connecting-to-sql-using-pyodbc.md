@@ -74,7 +74,7 @@ This interactive option works if Python and pyODBC permit the ODBC driver to dis
 
 The following example provides an ODBC connection string that specifies Azure Active Directory interactive authentication:
 
-`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`
 
 For more information about the authentication options of the ODBC driver, see [Using Azure Active Directory with the ODBC Driver](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords).
 

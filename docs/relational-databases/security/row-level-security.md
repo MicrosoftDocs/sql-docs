@@ -3,7 +3,7 @@ title: "Row-Level Security"
 description: Learn how Row-Level Security uses group membership or execution context to control access to rows in a database table in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/14/2022
+ms.date: 09/16/2022
 ms.prod: sql
 ms.reviewer: wiassaf
 ms.technology: "security"
@@ -31,7 +31,7 @@ The access restriction logic is located in the database tier rather than away fr
 
 Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+Row-level security was first introduced to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].
 
 > [!NOTE]  
 > Azure Synapse supports filter predicates only. Block predicates aren't currently supported in Azure Synapse.

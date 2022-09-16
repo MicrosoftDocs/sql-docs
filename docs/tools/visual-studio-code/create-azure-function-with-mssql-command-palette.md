@@ -32,7 +32,7 @@ Then the extension will prompt you to select a connection profile to use for the
 
 Once you either select a connection profile or create a new connection profile, the extension will prompt you to select the database from the selected connection to use for the Azure Function.
 
-:::image type="content" alt-text="Screenshot of a prompt for database" source.="./media/create-azure-function-with-mssql/select-database.png":::
+:::image type="content" alt-text="Screenshot of a prompt for database" source="./media/create-azure-function-with-mssql/select-database.png":::
 
 Once you select a database, the extension will prompt you to select a table, or view to use or to enter a table or view to query or upsert into. This prompt is based on the object type you selected earlier.
 

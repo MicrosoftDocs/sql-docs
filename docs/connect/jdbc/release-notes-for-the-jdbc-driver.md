@@ -780,7 +780,7 @@ Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specificat
 To ensure that you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 6.0.7507.100", you have the JDBC Driver 6.0 package.
 
 ```java
-Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
+Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;encrypt=true;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
 
@@ -827,7 +827,7 @@ Microsoft JDBC Driver 4.2 for SQL Server is fully compliant with JDBC specificat
 To ensure you have the right sqljdbc42.jar or sqljdbc41.jar file, run the following lines of code. If the output is "Driver version: 4.2.6420.100", you have the JDBC Driver 4.2 package.
 
 ```java
-Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
+Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;encrypt=true;user=<user>;password=<password>;");
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
 

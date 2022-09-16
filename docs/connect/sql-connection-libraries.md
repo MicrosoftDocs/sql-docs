@@ -37,7 +37,6 @@ The present article devotes separate sections to these two kinds of connection d
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, install instructions](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Download ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby driver, install instructions](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
-| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -53,7 +52,6 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | Node.js | [Sequelize ORM](https://sequelize.org/)<br/>[Prisma](https://www.prisma.io/) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 

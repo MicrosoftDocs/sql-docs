@@ -11,8 +11,8 @@ ms.topic: conceptual
 keywords: 
   - "master data services"
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Web Application Requirements (Master Data Services)
 

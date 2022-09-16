@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "members [Master Data Services], creating consolidated members"
   - "consolidated members [Master Data Services], creating"
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Consolidated Member (Master Data Services)
 

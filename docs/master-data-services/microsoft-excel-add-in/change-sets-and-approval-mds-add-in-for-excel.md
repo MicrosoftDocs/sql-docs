@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Change Sets and Approval (MDS Add-in for Excel)
 

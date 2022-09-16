@@ -94,7 +94,6 @@ The XML elements that are passed to DMACMD are defined in the following table:
 |`AzureAuthenticationInteractiveAuthentication`|Set to `true` to pop up the authentication window.|
 |`AzureAuthenticationTenantId`|Azure Active Directory tenant ID. </br></br>Obtain this from the **Overview** blade of Azure Active Directory in the [Azure portal](https://portal.azure.com). |
 |`EnableAssessmentUploadToAzureMigrate`| Set to `true` to upload and publish assessment results to Azure Migrate hub.|
-|   |   |
 
 
 ## Results 

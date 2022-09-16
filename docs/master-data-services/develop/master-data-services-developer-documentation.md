@@ -10,8 +10,8 @@ ms.technology: master-data-services
 
 ms.topic: "reference"
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Master Data Services Developer Documentation
 

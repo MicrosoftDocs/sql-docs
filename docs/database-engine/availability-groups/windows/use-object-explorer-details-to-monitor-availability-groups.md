@@ -107,7 +107,6 @@ helpviewer_keywords:
 |Value|Description|  
 |-----------|-----------------|  
 |Synchronizing|The secondary database has received the transaction log records for the primary database that are not yet written to disk (hardened).<br /><br /> Note: In asynchronous-commit mode, the synchronization state is always **Synchronizing**.|  
-|||  
   
  **Suspended**  
  Indicates whether the availability database is currently online. The possible values are as follows:  

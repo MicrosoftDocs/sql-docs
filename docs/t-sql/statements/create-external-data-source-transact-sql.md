@@ -2528,7 +2528,6 @@ Provides the connectivity protocol and path to the external data source.
 | External Data Source   | Location prefix | Location path                                         | Availability | 
 | ---------------------- | --------------- | ----------------------------------------------------- | ------------ |
 | Bulk Operations        | `https`         | `<storage_account>.blob.core.windows.net/<container>` | |
-||||
 
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 

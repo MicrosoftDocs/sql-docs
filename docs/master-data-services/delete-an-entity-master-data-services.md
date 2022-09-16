@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "entities [Master Data Services], deleting"
   - "deleting entities [Master Data Services]"
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Delete an Entity (Master Data Services)
 

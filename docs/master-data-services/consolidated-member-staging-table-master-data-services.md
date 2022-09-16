@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database [Master Data Services], attributes staging table"
   - "attributes staging table [Master Data Services]"
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Consolidated Member Staging Table (Master Data Services)
 

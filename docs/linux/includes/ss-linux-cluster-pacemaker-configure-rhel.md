@@ -1,3 +1,11 @@
+---
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 09/15/2022
+ms.prod: sql
+ms.technology: linux
+ms.topic: include
+---
 1. On all cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
 
    ```bash
@@ -16,7 +24,7 @@
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-1. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
+1. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes.
 
    ```bash
    sudo passwd hacluster
@@ -32,11 +40,11 @@
 
 1. Create the Cluster. To create the cluster, run the following command:
 
-   **RHEL 7** 
+   **RHEL 7**
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2> <node3> 
+   sudo pcs cluster setup --name <clusterName> <node1> <node2> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```
@@ -51,11 +59,11 @@
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```
-   
-   >[!NOTE]
-   >If you previously configured a cluster on the same nodes, you need to use `--force` option when running `pcs cluster setup`. This option is equivalent to running `pcs cluster destroy`. To re-enable pacemaker, run `sudo systemctl enable pacemaker`.
 
-1. Install SQL Server resource agent for SQL Server. Run the following commands on all nodes. 
+   > [!NOTE]  
+   > If you previously configured a cluster on the same nodes, you need to use `--force` option when running `pcs cluster setup`. This option is equivalent to running `pcs cluster destroy`. To re-enable Pacemaker, run `sudo systemctl enable pacemaker`.
+
+1. Install SQL Server resource agent for SQL Server. Run the following commands on all nodes.
 
    ```bash
    sudo yum install mssql-server-ha

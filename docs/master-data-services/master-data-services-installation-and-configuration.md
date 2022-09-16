@@ -6,8 +6,8 @@ ms.prod: sql
 ms.prod_service: "mds"
 ms.technology: master-data-services
 ms.topic: quickstart
-author: chugugrace
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ms.custom:
   - intro-quickstart
 ---
@@ -98,7 +98,6 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
     |-----------------------------|-----------------------------|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_PerformSecurity](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-performsecurity.png)|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage_AppDevsection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-appdevsection.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_ManageToolssection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-managetoolssection.png)|  
-    |||  
   
      For a list of the required features and roles services on other operating systems, see [Web Application Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md) .   
   

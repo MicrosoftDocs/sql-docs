@@ -3,7 +3,7 @@ title: "Create an SSIS migration assessment with the Data Migration Assistant"
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server Integration Service (SSIS) before migrating to Azure SQL Database or Azure SQL Managed Instance
 author: chugugrace
 ms.author: chugu
-ms.date: "08/23/2019"
+ms.date: "09/16/2022"
 ms.prod: sql
 ms.technology: dma
 ms.topic: conceptual
@@ -22,6 +22,9 @@ To assess SQL Server Integration Service(SSIS) packages, below components need t
 - Azure Feature Pack or other third party components if SSIS packages to assess have these components.  
 
 DMA needs to run with **administrator** access to assess SSIS packages in Package Store.
+
+> [!NOTE]
+> Source to SQL Server version 2019 and above are not supported.
 
 ## Performance assessments
 

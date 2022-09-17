@@ -36,9 +36,10 @@ DSNs are optional. You can use a DSN to define connection string keywords under 
 ```ini
 # [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 17 for SQL Server  
+Driver = ODBC Driver 18 for SQL Server  
 # Server = [protocol:]server[,port]  
 Server = tcp:localhost,1433
+Encrypt = yes
 #
 # Note:  
 # Port isn't a valid keyword in the odbc.ini file  
@@ -47,7 +48,7 @@ Server = tcp:localhost,1433
 ```  
 
 To connect using the above DSN in a connection string, you would specify the `DSN` keyword like: `DSN=MSSQLTest;UID=my_username;PWD=my_password`  
-The above connection string would be the equivalent of specifying a connection string without the `DSN` keyword like: `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
+The above connection string would be the equivalent of specifying a connection string without the `DSN` keyword like: `Driver=ODBC Driver 18 for SQL Server;Server=tcp:localhost,1433;Encrypt=yes;UID=my_username;PWD=my_password`
 
 You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:**_servername_**,12345**. The only protocol supported by the Linux and macOS drivers is `tcp`.
 
@@ -112,7 +113,7 @@ When using connection encryption, the name (or IP address) in a Subject Common N
 By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, and aren't using strict encryption mode, you can add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
 
 ```ini
-Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
+Driver={ODBC Driver 18 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```
 
 In strict encryption mode, the certificate is always verified. As an option to standard certificate validation, the `ServerCertificate` keyword (v18.1+) can be used to specify the path to a certificate file to match against the SQL Server certificate. This option is only available when using strict encryption. The accepted certificate formats are PEM, DER, and CER. If specified, the SQL Server certificate is checked by seeing if the `ServerCertificate` provided is an exact match.<br/><br/>

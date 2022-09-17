@@ -46,6 +46,8 @@ For a detailed walkthrough of provisioning, see [Provision a SQL virtual machine
 
 For existing SQL virtual machines, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and select **Security** under **Settings**. Select **Enable** to enable Azure Key Vault integration. 
 
+The following screenshot shows how to enable Azure Key Vault in the portal for an existing SQL Server VM (this SQL Server instance uses a non-default port 1401): 
+
 ![SQL Key Vault integration for existing VMs](./media/azure-key-vault-integration-configure/azure-sql-rm-akv-existing-vms.png)
 
 When you're finished, select the **Apply** button on the bottom of the **Security** page to save your changes.
@@ -54,3 +56,7 @@ When you're finished, select the **Apply** button on the bottom of the **Securit
 > The credential name we created here will be mapped to a SQL login later. This allows the SQL login to access the key vault. 
 
 [!INCLUDE [Key Vault integration next steps](../../includes/virtual-machines-sql-server-akv-next-steps.md)]
+
+## Next steps
+
+For more security information, review [Security considerations for SQL Server on Azure VMs](security-considerations-best-practices.md). 

@@ -539,6 +539,16 @@
       "source_path_from_root": "/azure-sql/database/predictive-model-build-compare-tutorial.md",
       "redirect_url": "/sql/machine-learning/tutorials/r-predictive-model-train?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/custom-dns-configure.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/resolve-private-domain-names",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/synchronize-vnet-dns-servers-setting-on-virtual-cluster.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/resolve-private-domain-names",
+      "redirect_document_id": false
     }
   ]
 }

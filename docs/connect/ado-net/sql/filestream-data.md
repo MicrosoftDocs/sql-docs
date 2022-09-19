@@ -64,7 +64,7 @@ namespace FileStreamTest
     {
         static void Main(string[] args)
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;database=myDB");
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;Encrypt=True;database=myDB");
             ReadFileStream(builder);
             OverwriteFileStream(builder);
             InsertFileStream(builder);

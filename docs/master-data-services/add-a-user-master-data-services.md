@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "users [Master Data Services], adding"
   - "adding users [Master Data Services]"
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Add a User (Master Data Services)
 

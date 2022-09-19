@@ -114,7 +114,6 @@ The following table lists all the currently available connection string properti
 | userName,<br/>user<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | The database user, if connection with SQL user and password.<br/><br/>For Kerberos connection with principal name and password, this property is set to Kerberos Principal name.<br/><br/>(Version 10.2+) When **authentication=ActiveDirectoryServicePrincipal**, the **userName** property specifies a valid Azure Active Directory secure client ID.  |
 | workstationID<br/><br/>String<br/>[&lt;=128 char]<br/><br/>&lt;empty string&gt; | The workstation ID. Used to identify the specific workstation in various profiling and logging tools. <br/><br/>If none is specified, the &lt;empty string&gt; is used. |
 | xopenStates<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | Set to "true" to specify that the driver returns XOPEN-compliant state codes in exceptions. <br/><br/>The default is to return SQL 99 state codes. |
-| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] takes the server default values for connection properties except for ANSI_DEFAULTS and IMPLICIT_TRANSACTIONS. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] automatically sets ANSI_DEFAULTS to ON and IMPLICIT_TRANSACTIONS to OFF.

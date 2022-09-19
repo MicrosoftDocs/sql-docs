@@ -37,7 +37,6 @@ The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 | Fiber mode | Fiber mode is not supported with memory-optimized tables:<br /><br />If fiber mode is active, you cannot create databases with memory-optimized filegroups, nor can you add memory-optimized filegroups to existing databases.<br /><br />You can enable fiber mode if there are databases with memory-optimized filegroups. However, enabling fiber mode requires a server restart. In that situation, databases with memory-optimized filegroups would fail to recover. Then you would see an error message suggesting that you disable fiber mode to use databases with memory-optimized filegroups.<br /><br />If fiber mode is active, attaching and restoring a database that has a memory-optimized filegroup fails. The databases would be marked as suspect.<br /><br />For more information, see [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Service Broker limitation|Cannot access a queue from a natively compiled stored procedure.<br /><br /> Cannot access a queue in a remote database in a transaction that accesses memory-optimized tables.|  
 |Replication on subscribers|Transactional replication to memory-optimized tables on subscribers is supported, but with some restrictions. For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  
-|||
 
 #### Cross-database queries and transactions
 
@@ -48,7 +47,6 @@ With a few exceptions, cross-database transactions aren't supported. The followi
 |---------------|-------------|-----------------|  
 | User databases, **model**, and **msdb**. | No | In most cases, cross-database queries and transactions are *not* supported.<br /><br />A query cannot access other databases if the query uses either a memory-optimized table or a natively compiled stored procedure. This restriction applies to transactions and queries.<br /><br />The exceptions are the system databases **tempdb** and **master**. Here the **master** database is available for read-only access. |
 | **Resource** database, **tempdb** | Yes | In a transaction that touches In-Memory OLTP objects, the **Resource** and **tempdb** system databases can be used without added restriction.
-||||
 
 ## Scenarios Not Supported  
   
@@ -82,7 +80,6 @@ In the following table, _version_ values such as `(15.x)` refer to the value tha
 | Feature name | Version of SQL Server | Comments |
 | :----------- | :-------------------- | :------- |
 | Database snapshots | 2019 (15.x) | Database snapshots are now supported for databases that have a MEMORY_OPTIMIZED_DATA filegroup. |
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## See Also
 

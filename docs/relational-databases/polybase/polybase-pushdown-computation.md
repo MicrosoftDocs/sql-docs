@@ -43,7 +43,6 @@ This table summarizes pushdown computation support on different external data so
 | **MongoDB\***  | **No** | Yes         | No          | No       | Yes        |
 | **Hadoop**     | **No** | Yes         | Some\*\*      | Some\*\*  | Yes        |  
 | **Azure Blob Storage** | No | No | No | No | Yes |
-|                  |
 
 \* Azure Cosmos DB pushdown support is enabled via the Azure Cosmos DB API for MongoDB. 
 
@@ -71,7 +70,6 @@ Hadoop providers support the following aggregations and filters.
 | Min                               | GreaterThan                     | 
 | Approx_Count_Distinct             | Is                              | 
 |                                   | IsNot                           | 
-|                                   |                                 | 
 
 ## Key beneficial scenarios of pushdown computation
 

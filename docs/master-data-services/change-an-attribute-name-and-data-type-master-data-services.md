@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], changing name"
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 manager: erikre
 ---
 # Change an Attribute Name and Data Type (Master Data Services)

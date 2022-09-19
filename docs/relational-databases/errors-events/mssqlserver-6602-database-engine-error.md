@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|XMLERR_PARSEERR2|
 |Message Text|The error description is '%.*ls'.|
-||
 
 ## Explanation
 

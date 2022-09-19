@@ -3,7 +3,7 @@ title: "PolyBase Connectivity Configuration (Transact-SQL)"
 description: Find out how to use sp_configure to display or change global configuration settings for PolyBase Hadoop and Azure Blob Storage connectivity.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "06/10/2021"
+ms.date: "09/18/2022"
 ms.prod: sql
 ms.technology: polybase
 ms.topic: reference
@@ -103,6 +103,8 @@ RECONFIGURE
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], after running `RECONFIGURE`, for the run value of the 'hadoop connectivity' to take effect, you need to restart the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] region.  
+
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop is no longer supported in PolyBase.
   
 ## Limitations and restrictions  
  RECONFIGURE is not allowed in an explicit or implicit transaction.  
@@ -142,7 +144,9 @@ RECONFIGURE
 GO  
 ```  
   
-## See also  
+## Next steps 
+
+ - [What is PolyBase?](../../relational-databases/polybase/polybase-guide.md)
  - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  - [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  - [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

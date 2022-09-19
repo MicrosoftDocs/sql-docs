@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Starting with SQL Server 2022, resumable operations for online index creation and rebuild are supported. The resumable operations allow index operations to be executed while the table is [online](../../t-sql/statements/alter-table-transact-sql.md#with--online--on--off-as-applies-to-altering-a-column) (`ONLINE=ON`) and also:
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], resumable operations for online index creation and rebuild are supported. The resumable operations allow index operations to be executed while the table is [online](../../t-sql/statements/alter-table-transact-sql.md#with--online--on--off-as-applies-to-altering-a-column) (`ONLINE=ON`) and also:
 
 - Pause and restart an index create or rebuild operation multiple times to fit a maintenance window
 

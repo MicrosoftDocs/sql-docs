@@ -28,7 +28,7 @@ SQL Server Big Data Clusters CU12 was tested on the following environment combin
 Reference Architecture White Papers for SQL Server Big Data Clusters can be found on the following pages:
 
 * https://www.microsoft.com/sql-server/sql-server-2019
-* [SQL Server Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server Big Data Clusters partners](partner-big-data-cluster.md)
 
 ## System environment
 

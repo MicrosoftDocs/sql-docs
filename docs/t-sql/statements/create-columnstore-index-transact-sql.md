@@ -83,7 +83,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics, Parallel Data Warehouse, SQL Server 2022 (16.0) and later
+-- Syntax for Azure Synapse Analytics, Parallel Data Warehouse, [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 

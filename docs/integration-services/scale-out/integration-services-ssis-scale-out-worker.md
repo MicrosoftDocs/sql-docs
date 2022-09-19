@@ -48,7 +48,6 @@ You can configure the Scale Out Worker service by using the `\<drive\>:\Program 
 |ExecutionLogRetryCount|The retry count if execution logging fails.|3|
 |ExecutionLogRetryTimeout|The retry timeout if execution logging fails. i\If ExecutionLogRetryTimeout is reached, ExecutionLogRetryCount is ignored. |7.00:00:00 (7 days)|
 |AgentId|Worker agent ID of the Scale Out Worker|Generated automatically|
-||||    
 
 ## View the Scale Out Worker log
 The log file of the Scale Out Worker service is in the `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` folder.

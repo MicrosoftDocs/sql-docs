@@ -10,7 +10,7 @@ ms.reviewer: wiassaf
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/23/2022
+ms.date: 09/22/2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -45,26 +45,20 @@ This release:
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
-## Release candidate
+This is release candidate (RC) 1 (16.0.xxx.x).
 
-This is release candidate (RC) 0.
+## Feature highlights
 
-SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
+The following sections identify features that are improved our introduced in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
-- [Intelligent query processing](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism (DOP) feedback - improved comparison algorithm.
+- [Analytics](#analytics)
+- [Availability](#availability)
+- [Security](#security)
+- [Performance](#performance)
+- [Query Store and intelligent query processing](#query-store-and-intelligent-query-processing)
 - [Management](#management)
-  - Improved snapshot backup support
 - [Platform](#platform)
-  - Integrated acceleration & offloading
 - [Language](#language)
-  - APPROX_PERCENTILE_DISC()
-  - APPROX_PERCENTILE_CONT()
-  - TRIM scalar function extensions
-
-For details, see the feature descriptions in the sections below.
-
-The following sections provide an overview of these features.
 
 ## Analytics
 

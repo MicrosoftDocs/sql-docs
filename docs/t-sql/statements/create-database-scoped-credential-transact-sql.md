@@ -73,7 +73,8 @@ Before creating a database scoped credential, the database must have a master ke
 
 When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.
 
-When granting permissions for a shared access signature (SAS) key for use with a PolyBase external table, select both Container and Object as allowed resource types. If not granted, you may receive error 16535 or 16561 when attempting to access the external table.
+When granting permissions for a shared access signatures (SAS) for use with a PolyBase external table, select both **Container** and **Object** as allowed resource types. If not granted, you may receive error 16535 or 16561 when attempting to access the external table.
+
 
 Information about database scoped credentials is visible in the [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) catalog view.
 

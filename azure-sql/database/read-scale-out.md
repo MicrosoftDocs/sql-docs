@@ -131,11 +131,13 @@ If a long-running query on a read-only replica directly or indirectly causes thi
 > In Premium and Business Critical service tiers, when connected to a read-only replica, the `redo_queue_size` and `redo_rate` columns in the [sys.dm_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database) DMV may be used to monitor data synchronization process, serving as indicators of data propagation latency on the read-only replica.
 > 
 
-## Enable and disable read scale-out
+## Enable and disable read scale-out for SQL Database
 
-Read scale-out is enabled by default on Premium, Business Critical, and Hyperscale service tiers. Read scale-out cannot be enabled in Basic, Standard, or General Purpose service tiers. Read scale-out is automatically disabled on Hyperscale databases configured with zero secondary replicas.
+For SQL Managed Instance, read-scale out is automatically enabled on the Business Critical service tier, and is not available in the General Purpose service tier. 
 
-You can disable and re-enable read scale-out on single databases and elastic pool databases in the Premium or Business Critical service tiers using the following methods.
+For SQL Database, read scale-out is enabled by default on Premium, Business Critical, and Hyperscale service tiers. Read scale-out cannot be enabled in Basic, Standard, or General Purpose service tiers. Read scale-out is automatically disabled on Hyperscale databases configured with zero secondary replicas.
+
+For single and pooled databases, you can disable and re-enable read scale-out in the Premium or Business Critical service tiers by using the Azure portal, and Azure PowerShell. These options are not available for SQL Managed Instance as read-scale out cannot be disabled. 
 
 > [!NOTE]
 > For single databases and elastic pool databases, the ability to disable read scale-out is provided for backward compatibility. Read scale-out cannot be disabled on Business Critical managed instances.

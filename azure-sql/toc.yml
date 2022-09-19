@@ -1721,7 +1721,7 @@
 
 - name: Resources
   items:
-  - name: Build your skills with Microsoft training
+  - name: Build your skills with Microsoft Learn training
     href: /training/browse/?products=azure-sql-database
   - name: SQL Server Blog
     href: https://cloudblogs.microsoft.com/sqlserver/?product=azure-sql-database

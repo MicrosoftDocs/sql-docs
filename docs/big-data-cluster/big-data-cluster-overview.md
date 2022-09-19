@@ -135,6 +135,6 @@ In [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], Kube
 
 Learn modules for related technologies:
 
-* [Introduction to Kubernetes](/learn/modules/intro-to-kubernetes/)
-* [Distributed file systems](/learn/modules/cmu-case-study-distributed-file-systems/)
-* [Introduction to Python](/learn/modules/intro-to-python/)
+* [Introduction to Kubernetes](/training/modules/intro-to-kubernetes/)
+* [Distributed file systems](/training/modules/cmu-case-study-distributed-file-systems/)
+* [Introduction to Python](/training/modules/intro-to-python/)

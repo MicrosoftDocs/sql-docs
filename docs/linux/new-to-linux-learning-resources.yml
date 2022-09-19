@@ -20,7 +20,7 @@ landingContent:
       - text: Introduction to Linux
         url: new-to-linux-resources.md
       - text: "Learn: SQL Server on Linux"
-        url: /learn/modules/introduction-sql-server-linux/
+        url: /training/modules/introduction-sql-server-linux/
 
 
   - title: "Module 2: Planning SQL Server on Linux"

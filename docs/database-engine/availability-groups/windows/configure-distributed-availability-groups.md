@@ -18,6 +18,8 @@ For a technical overview of distributed availability groups, see [Distributed av
 
 ## Prerequisites
 
+If you configured the listener for your availability group on your SQL Server on Azure VM by using a distributed network name (DNN), then configuring a distributed availability group on top of your availability group is not supported. To learn more, see [SQL Server on Azure VM feature interoperability with AG and DNN listener](/azure/azure-sql/virtual-machines/windows/availability-group-dnn-interoperability). 
+
 ### Set the endpoint listeners to listen to all IP addresses
 
 Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, set the listener to listen on all IP addresses (`LISTENER_IP = ALL`).

@@ -180,6 +180,7 @@ The following diagram shows how these tables are related to each other. Some of 
         ![Screenshot of Credit Table in Table Designer showing Check Constraint settings.](./media/design-first-database-tutorial/credit-table-check-constraint-azure-data-studio.png)
 
 3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
+
    ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/azure-data-studio-tables-created.png)
 
 ## Load data into the tables

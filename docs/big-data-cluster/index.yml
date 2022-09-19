@@ -245,10 +245,10 @@ landingContent:
       - linkListType: learn
         links:
           - text: Introduction to Kubernetes
-            url: /learn/modules/intro-to-kubernetes/
+            url: /training/modules/intro-to-kubernetes/
           - text: Distributed file systems
-            url: /learn/modules/cmu-case-study-distributed-file-systems/
+            url: /training/modules/cmu-case-study-distributed-file-systems/
           - text: Introduction to Python
-            url: /learn/modules/intro-to-python/
+            url: /training/modules/intro-to-python/
           - text: Big Data Clusters Architecture Workshop
             url: https://github.com/microsoft/sqlworkshops-bdc

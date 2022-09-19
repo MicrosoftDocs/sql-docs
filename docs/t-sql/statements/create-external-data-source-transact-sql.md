@@ -1124,7 +1124,8 @@ Provides the connectivity protocol and path to the external data source.
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- | --: |
 | Azure Storage Account(V2) | `abs`       | `abs://<storage_account_name>.blob.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<BR>Hierarchical Namespace is supported | Shared access signature (SAS) key |
 | Azure Data Lake Storage Gen2 | `adls`   | `adls://<storage_account_name>.dfs.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<BR> | Shared access signature (SAS) key |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | `sqlserver`|`<server_name>[\<instance_name>][:port]`| Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   | Basic authentication only |
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | `sqlserver`|`<server_name>[\<instance_name>][:port]`| Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   | SQL authentication only |
+
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
 | MongoDB or Cosmos DB API for MongoDB     | `mongodb`       | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]  | Basic authentication only |

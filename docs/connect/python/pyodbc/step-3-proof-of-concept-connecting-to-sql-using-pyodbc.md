@@ -37,7 +37,7 @@ cursor = cnxn.cursor()
 
 ## Run query  
   
-The cursor.executefunction can be used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set, which can be iterated over with the use of cursor.fetchone().
+The cursor.execute function can be used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set, which can be iterated over with the use of cursor.fetchone().
 
 ```python
 #Sample select query

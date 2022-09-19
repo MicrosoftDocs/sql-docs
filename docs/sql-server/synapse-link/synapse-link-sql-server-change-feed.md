@@ -54,7 +54,7 @@ Capturing changes for Azure Synapse Link is similar to the existing Change Data 
 CDC works by harvesting the transaction log to capture all modifications performed on the source table(s). 
 
 - In CDC, the change data is populated internally to a sibling table in the database.
-- In Azure Synapse Link, the data will read directly from the database transaction log, cached in memory, and eventually written to the landing zone in Azure Storage. 
+- In Azure Synapse Link, the data will be read directly from the database transaction log, cached in memory, and eventually written to the landing zone in Azure Storage. 
 
 If a storage outage occurs, it can cause the landing zone to become unavailable, which will block publications to that landing zone. Similar to the behavior if the SQL Server CDC log reader agent fails or is not running, the source database transaction log cannot be truncated. In the case of a prolonged storage outage or storage configuration change that causes it to become inaccessible, stop the Synapse Link through the Synapse Studio.
 

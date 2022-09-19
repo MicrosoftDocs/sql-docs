@@ -29,15 +29,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |type|**tinyint**|Data source type displayed as a number.|0 - HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - REMOTE_DATA_ARCHIVE<br /><br /> 4 - *internal use only*<br /><br /> 5 - BLOB_STORAGE<br /><br /> 6 - NONE |  
 |resource_manager_location|**nvarchar(4000)**|For type HADOOP, the IP and port location of the Hadoop resource manager. The `resource_manager_location` is used for submitting a job on a Hadoop data source.<br /><br /> `NULL` for other types of external data sources.||  
 |credential_id|**int**|The object ID of the database scoped credential used to connect to the external data source.||  
-|database_name|**sysname**|For type RDBMS, the name of the remote database. For type, SHARD_MAP_MANAGER, the name of the shard map manager database. NULL for other types of external data sources.||  
+|database_name|**sysname**|For type RDBMS, the name of the remote database. For type SHARD_MAP_MANAGER, the name of the shard map manager database. NULL for other types of external data sources.||  
 |shard_map_name|**sysname**|For type SHARD_MAP_MANAGER, the name of the shard map. NULL for other types of external data sources.||  
   
 ## Permissions  
  The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+## Remarks
+
+SQL Server support for HDFS Cloudera (CDP) and Hortonworks (HDP) external data sources are retired and not included in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. There is no need to use the CREATE EXTERNAL DATA SOURCE ... TYPE argument in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+
   
-## See Also  
+## Next steps
   - [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
   - [sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
   - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-  
-  

@@ -330,6 +330,8 @@
       items:
       - name: Design database using SSMS
         href: database/design-first-database-tutorial.md
+      - name: Design database using ADS
+        href: database/design-first-database-azure-data-studio.md
       - name: Design database using .NET
         href: database/design-first-database-csharp-tutorial.md
     - name: Business continuity

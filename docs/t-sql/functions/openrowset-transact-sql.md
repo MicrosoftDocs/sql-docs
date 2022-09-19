@@ -3,7 +3,7 @@ title: "OPENROWSET (Transact-SQL)"
 description: "OPENROWSET (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "09/30/2019"
+ms.date: "09/19/2022"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -30,6 +30,12 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-li
 Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). The `OPENROWSET` function can be referenced in the FROM clause of a query as if it were a table name. The `OPENROWSET` function can also be referenced as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
 
 `OPENROWSET` also supports bulk operations through a built-in BULK provider that enables data from a file to be read and returned as a rowset.
+
+> [!NOTE]
+> This article does not apply to Azure Synapse Analytics.
+> 
+> - For information on how to use OPENROWSET with serverless SQL pools in Azure Synapse, see [How to use OPENROWSET using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/develop-openrowset).
+> - The OPENROWSET function is not supported in dedicated SQL pools in Azure Synapse.
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

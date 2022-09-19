@@ -2,17 +2,15 @@
 title: "General page (New Availability Group & Properties dialog box)"
 titleSuffix: SQL Server
 description: "A description of the various properties found on the 'General' page of the 'New Availability Group' and 'Availability Group Properties' dialog boxes in SQL Server Management Studio (SSMS)."
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: end-user-help
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.general.f1"
-ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: end-user-help
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.availabilitygroupproperties.general.f1"
 ---
 # Availability Group Properties: New Availability Group (General Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

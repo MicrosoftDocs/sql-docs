@@ -1,14 +1,13 @@
 ---
-title: "lightweight pooling Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "lightweight pooling" option. See how it can provide better throughput in symmetric multiprocessing environments with excessive context switching.'
-ms.custom: ""
+title: "lightweight pooling Server Configuration Option"
+description: "Learn about the lightweight pooling option. See how it can provide better throughput in symmetric multiprocessing environments with excessive context switching."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "default lightweight pooling"
   - "decreasing overhead"
   - "lightweight pooling option"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "excessive context switching [SQL Server]"
   - "reducing overhead"
   - "overhead [SQL Server]"
-ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # lightweight pooling Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

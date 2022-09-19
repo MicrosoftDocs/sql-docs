@@ -18,11 +18,11 @@ monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
 
 Strict connection encryption enforces good security practices and makes SQL Server traffic manageable by standard network appliances.
 
-In this article, we'll show you how to connect to SQL Server 2022 using the strict connection type.
+In this article, we'll show you how to connect to [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] using the strict connection type.
 
 ## Prerequisite
 
-- SQL Server 2022
+- [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
 - ODBC or OLE DB Driver for SQL Server
   - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.0.1.1 or higher
   - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.0.0 or higher
@@ -46,7 +46,7 @@ You can test a connection with the `Strict` connection encryption type using an 
 
 1. In the **System DSN** tab, select **Add** to create a DSN. Then select the **ODBC Driver 18 for SQL Server**. Select **Finish**. We're going to use this to test our connection.
 
-1. In the **Create a New Data Source to SQL Server** window, provide a name for this data source, and add your SQL Server 2022 server name to **Server**. Select **Next**.
+1. In the **Create a New Data Source to SQL Server** window, provide a name for this data source, and add your [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] server name to **Server**. Select **Next**.
 
    :::image type="content" source="media/create-data-source.png" alt-text="Screenshot of creating a data source using the O D B C driver.":::
 
@@ -91,7 +91,7 @@ If you see `SSL certificate validation failed`, validate that:
   - `HostNameInCertificate` connection string property matches CA name or one of the DNS names in the certificate.
 
 > [!IMPORTANT]
-> Although TLS 1.3 is supported for SQL Server 2022, client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
+> Although TLS 1.3 is supported for [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
 
 ## See also
 

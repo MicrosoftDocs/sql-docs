@@ -214,7 +214,6 @@ Initial release.
 | Certain paginated reports with nested tablix controls have incorrect fonts. | &nbsp; |
 | Whitespace is incorrectly added to certain paginated reports that contain tablix data regions. | &nbsp; |
 | Header rows disappear when expanding the simple data grids of a mobile report. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 14.0.600.906, 2018/09/12
 
@@ -223,7 +222,6 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Custom Authentication isn't returning correct cookie information. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 14.0.600.892, 2018/08/31
 
@@ -239,7 +237,6 @@ The following issue has been fixed:
 | rc:Toolbar=false doesn't work in Express edition. | &nbsp; |
 | Missing the vertical scrollbar in the parameter prompt area. | &nbsp; |
 | Updated Mobile Report Runtime. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 14.0.600.744, 2018/04/25
 
@@ -249,7 +246,6 @@ The following issue has been fixed:
 | Upgrading SSRS 2012 to SSRS 2017 results in RSManagement throwing an exception every few seconds. | &nbsp; |
 | Cannot change defaults values for multi-value parameters in IE11. | &nbsp; |
 | Schedules are empty whenever shared schedule is executed. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 14.0.600.689, 2018/02/28
 
@@ -261,7 +257,6 @@ The following issue has been fixed:
 | Added _Learn more_ link for product key in setup. | &nbsp; |
 | Web portal with custom forms authentication ignores sliding expiration cookie. | &nbsp; |
 | Export to Word creates unequal row height if row content is empty. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 14.0.600.594, 2018/01/09
 

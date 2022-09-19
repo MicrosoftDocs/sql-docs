@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], changing name"
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Edit Model (Master Data Services)
 

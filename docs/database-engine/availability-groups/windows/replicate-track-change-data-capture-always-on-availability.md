@@ -1,13 +1,14 @@
 ---
 title: "Replication, change tracking, change data capture & availability groups"
-description: Learn about the interoperability of replication, change tracking, and change data capture when used with SQL Server Always On availability groups. 
-ms.custom: seo-lt-2019
+description: Learn about the interoperability of replication, change tracking, and change data capture when used with SQL Server Always On availability groups.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 10/05/2021
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change tracking [SQL Server], Always On Availability Groups"
   - "change data capture [SQL Server], AlwaysOn Availability Groups"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
   - "replication [SQL Server], Always On Availability Groups"
-ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Replication, change tracking, & change data capture - Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

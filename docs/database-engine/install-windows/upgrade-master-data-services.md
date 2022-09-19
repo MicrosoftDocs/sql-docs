@@ -1,15 +1,12 @@
 ---
-title: "Upgrade Master Data Services | Microsoft Docs"
+title: "Upgrade Master Data Services"
 description: Discover the four scenarios for upgrading Microsoft SQL Server Master Data Services. Learn about file locations and troubleshooting for upgrades.
-ms.custom: ""
-ms.date: "07/21/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "07/21/2017"
+ms.prod: sql
+ms.technology: master-data-services
+ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade Master Data Services

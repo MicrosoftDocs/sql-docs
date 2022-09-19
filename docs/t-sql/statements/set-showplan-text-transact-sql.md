@@ -55,7 +55,6 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |Column name|Description|  
 |-----------------|-----------------|  
 |**StmtText**|For rows which are not of type PLAN_ROW, this column contains the text of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For rows of type PLAN_ROW, this column contains a description of the operation. This column contains the physical operator and may optionally also contain the logical operator. This column may also be followed by a description which is determined by the physical operator. For more information about physical operators, see the **Argument** column in [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
-|||
 
  For more information about the physical and logical operators that can be seen in Showplan output, see [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   

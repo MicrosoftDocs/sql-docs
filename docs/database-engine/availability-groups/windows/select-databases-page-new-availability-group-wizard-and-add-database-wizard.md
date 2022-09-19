@@ -1,18 +1,16 @@
 ---
 title: "Select Databases Page (New Availability Group & Add Database Wizard)"
-description: Describes the "Select Databases" page for both the New Availability Group and Add Database Wizards found in SQL Server Management Studio GUI. 
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.adddatabasewizard.selectdatabases.f1"
-  - "sql13.swb.newagwizard.selectdatabases.f1"
-ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
+description: Describes the Select Databases page for both the New Availability Group and Add Database Wizards found in SQL Server Management Studio GUI.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.adddatabasewizard.selectdatabases.f1"
+  - "sql13.swb.newagwizard.selectdatabases.f1"
 ---
 # Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

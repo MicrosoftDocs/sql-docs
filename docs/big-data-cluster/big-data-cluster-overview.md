@@ -118,7 +118,6 @@ Kubernetes is an open source container orchestrator, which can scale container d
 | **Cluster** | A Kubernetes cluster is a set of machines, known as nodes. One node controls the cluster and is designated the master node; the remaining nodes are worker nodes. The Kubernetes master is responsible for distributing work between the workers, and for monitoring the health of the cluster. |
 | **Node** | A node runs containerized applications. It can be either a physical machine or a virtual machine. A Kubernetes cluster can contain a mixture of physical machine and virtual machine nodes. |
 | **Pod** | A pod is the atomic deployment unit of Kubernetes. A pod is a logical group of one or more containers-and associated resources-needed to run an application. Each pod runs on a node; a node can run one or more pods. The Kubernetes master automatically assigns pods to nodes in the cluster. |
-| &nbsp; ||
 
 In [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], Kubernetes is responsible for the state of the cluster. Kubernetes builds and configures the cluster nodes, assigns pods to nodes, and monitors the health of the cluster.
 
@@ -136,6 +135,6 @@ In [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)], Kube
 
 Learn modules for related technologies:
 
-* [Introduction to Kubernetes](/learn/modules/intro-to-kubernetes/)
-* [Distributed file systems](/learn/modules/cmu-case-study-distributed-file-systems/)
-* [Introduction to Python](/learn/modules/intro-to-python/)
+* [Introduction to Kubernetes](/training/modules/intro-to-kubernetes/)
+* [Distributed file systems](/training/modules/cmu-case-study-distributed-file-systems/)
+* [Introduction to Python](/training/modules/intro-to-python/)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "business rules [Master Data Services], creating"
   - "creating business rules [Master Data Services]"
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create and Publish a Business Rule (Master Data Services)
 

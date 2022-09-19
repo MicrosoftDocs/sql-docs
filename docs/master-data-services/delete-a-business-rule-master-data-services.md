@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "deleting business rules [Master Data Services]"
   - "business rules [Master Data Services], deleting"
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Delete a Business Rule (Master Data Services)
 

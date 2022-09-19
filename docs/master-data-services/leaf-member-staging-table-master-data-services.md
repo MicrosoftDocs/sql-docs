@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "members staging table [Master Data Services]"
   - "database [Master Data Services], members staging table"
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Leaf Member Staging Table (Master Data Services)
 

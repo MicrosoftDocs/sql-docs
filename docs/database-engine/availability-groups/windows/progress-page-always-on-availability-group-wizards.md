@@ -1,19 +1,18 @@
 ---
 title: "Progress Page (Always On Availability Group Wizards)"
 description: "A description of the options found on the 'Progress Page' of the Always On Availability Group Wizard' within SQL Server Management Studio."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seodec18
+f1_keywords:
   - "sql13.swb.failoverwizard.progress.f1"
   - "sql13.swb.adddatabasewizard.progress.f1"
   - "sql13.swb.addreplicawizard.progress.f1"
   - "sql13.swb.newagwizard.progress.f1"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Progress Page (Always On Availability Group Wizards)
 

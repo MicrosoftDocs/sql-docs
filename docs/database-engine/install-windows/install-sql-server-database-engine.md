@@ -1,18 +1,15 @@
 ---
-title: "Install SQL Server Database Engine | Microsoft Docs"
+title: "Install SQL Server Database Engine"
 description: Learn about features that can be installed when you select SQL Server Database Engine from Components to Install of the SQL Server Installation Wizard.
-ms.custom:
-  - intro-installation
-ms.date: 07/26/2019
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-helpviewer_keywords:
-  - "Database Engine [SQL Server], installing"
-ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: 07/26/2019
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
+ms.custom: intro-installation
+helpviewer_keywords:
+  - "Database Engine [SQL Server], installing"
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server Database Engine

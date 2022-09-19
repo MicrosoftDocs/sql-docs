@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "entities [Master Data Services], about entities"
   - "entities [Master Data Services]"
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Entities (Master Data Services)
 

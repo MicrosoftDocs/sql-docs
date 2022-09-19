@@ -11,8 +11,8 @@ ms.topic: conceptual
 keywords: 
   - "master data services"
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Entity Dependencies Explorer
 

@@ -15,11 +15,11 @@ ms.custom:
 ---
 # Azure SQL Database and Azure Synapse Analytics connectivity architecture
 
-[!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+[!INCLUDE[appliesto-sqldb-asa-formerly-sqldw](../includes/appliesto-sqldb-asa-formerly-sqldw.md)]
 
-This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure.
+This article explains architecture of various components that direct network traffic to a server in Azure SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics. It also explains different connection policies and how it impacts clients connecting from within Azure and clients connecting from outside of Azure.
 
-- For settings that control connectivity to the [logical server](logical-servers.md) for Azure SQL Database and dedicated SQL pools in Azure Synapse Analytics, see [connectivity settings](connectivity-settings.md). 
+- For settings that control connectivity to the [logical server](logical-servers.md) for Azure SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics, see [connectivity settings](connectivity-settings.md).
 - This article does *not* apply to **Azure SQL Managed Instance**. Refer to [Connectivity architecture for Azure SQL Managed Instance](../managed-instance/connectivity-architecture-overview.md).
 
 ## Connectivity architecture
@@ -36,7 +36,7 @@ The following steps describe how a connection is established to Azure SQL Databa
 
 ## Connection policy
 
-Servers in SQL Database and Azure Synapse support the following three options for the server's connection policy setting:
+Servers in SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synapse support the following three options for the server's connection policy setting:
 
 - **Redirect (recommended):** Clients establish connections directly to the node hosting the database, leading to reduced latency and improved throughput. For connections to use this mode, clients need to:
   - Allow outbound communication from the client to all Azure SQL IP addresses in the region on ports in the range of 11000 to 11999. Use the Service Tags for SQL to make this easier to manage.  
@@ -73,7 +73,7 @@ The table below lists the individual Gateway IP addresses and also Gateway IP ad
 Periodically, we will retire Gateways using old hardware and migrate the traffic to new Gateways as per the process outlined at [Azure SQL Database traffic migration to newer Gateways](gateway-migration.md). We strongly encourage customers to use the **Gateway IP address subnets** in order to not be impacted by this activity in a region.
 
 > [!IMPORTANT]  
-> Logins for SQL Database or Azure Synapse can land on **any of the Gateways in a region**. For consistent connectivity to SQL Database or Azure Synapse, allow network traffic to and from **ALL** Gateway IP addresses and Gateway IP address subnets for the region.
+> Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on **any of the Gateways in a region**. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from **ALL** Gateway IP addresses and Gateway IP address subnets for the region.
 
 | Region name          | Gateway IP addresses | Gateway IP address subnets |
 | --- | --- | --- |
@@ -129,3 +129,4 @@ Periodically, we will retire Gateways using old hardware and migrate the traffic
 - For general application development overview information, see [SQL Database Application Development Overview](develop-overview.md).
 - Refer to [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519)
 - [What is a logical SQL server in Azure SQL Database and Azure Synapse?](logical-servers.md)
+- [What's the difference between Azure Synapse (formerly SQL DW) and Azure Synapse Analytics Workspace](https://aka.ms/dedicatedSQLpooldiff)

@@ -36,7 +36,10 @@ The following steps describe how a connection is established to Azure SQL Databa
 
 ## Connection policy
 
-Servers in SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synapse support the following three options for the server's connection policy setting:
+Servers in SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synapse support the following three options for the server's connection policy setting. 
+
+> [!NOTE]
+> The connection policy for dedicated SQL pools (formerly SQL DW) in Azure Synapse Analytics is set to **Default**. You cannot change this for dedicated SQL pools in Synapse workspaces.
 
 - **Redirect (recommended):** Clients establish connections directly to the node hosting the database, leading to reduced latency and improved throughput. For connections to use this mode, clients need to:
   - Allow outbound communication from the client to all Azure SQL IP addresses in the region on ports in the range of 11000 to 11999. Use the Service Tags for SQL to make this easier to manage.  

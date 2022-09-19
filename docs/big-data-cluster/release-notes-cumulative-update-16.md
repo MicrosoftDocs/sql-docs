@@ -36,7 +36,7 @@ For detailed SQL Server engine changes, check the [official SQL Server 2019 CU16
 Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
 * [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-* [SQL Server 2019 Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters partners](partner-big-data-cluster.md)
 
 ## System environment
 

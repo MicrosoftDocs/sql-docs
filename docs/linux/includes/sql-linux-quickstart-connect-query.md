@@ -22,7 +22,7 @@ The following steps use **sqlcmd** to locally connect to your new SQL Server ins
 
 1. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 
-1. If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](../../linux/sql-server-linux-troubleshooting-guide.md#connection).
+1. If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](../sql-server-linux-troubleshooting-guide.md#connection).
 
 ## Create and query data
 
@@ -111,7 +111,7 @@ QUIT
 
 ## Performance best practices
 
-After installing SQL Server on Linux, review the best practices for configuring Linux and SQL Server to improve performance for production scenarios. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](../../linux/sql-server-linux-performance-best-practices.md).
+After installing SQL Server on Linux, review the best practices for configuring Linux and SQL Server to improve performance for production scenarios. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](../sql-server-linux-performance-best-practices.md).
 
 ## Cross-platform data tools
 
@@ -121,32 +121,32 @@ In addition to **sqlcmd**, you can use the following cross-platform tools to man
 | ---- | ----------- |
 | [Azure Data Studio](../../azure-data-studio/index.yml) | A cross-platform GUI database management utility. |
 | [Visual Studio Code](../../tools/visual-studio-code/sql-server-develop-use-vscode.md) | A cross-platform GUI code editor that run Transact-SQL statements with the mssql extension. |
-| [PowerShell Core](../../linux/sql-server-linux-manage-powershell-core.md) | A cross-platform automation and configuration tool based on cmdlets. |
+| [PowerShell Core](../sql-server-linux-manage-powershell-core.md) | A cross-platform automation and configuration tool based on cmdlets. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | A cross-platform command-line interface for running Transact-SQL commands. |
 
 ## Connecting from Windows
 
 SQL Server tools on Windows connect to SQL Server instances on Linux in the same way they would connect to any remote SQL Server instance.
 
-If you have a Windows machine that can connect to your Linux machine, try the same steps in this topic from a Windows command-prompt running **sqlcmd**. You must use the target Linux machine name or IP address rather than `localhost`, and make sure that TCP port 1433 is open on the SQL Server machine. If you have any problems connecting from Windows, see [connection troubleshooting recommendations](../../linux/sql-server-linux-troubleshooting-guide.md#connection).
+If you have a Windows machine that can connect to your Linux machine, try the same steps in this topic from a Windows command-prompt running **sqlcmd**. You must use the target Linux machine name or IP address rather than `localhost`, and make sure that TCP port 1433 is open on the SQL Server machine. If you have any problems connecting from Windows, see [connection troubleshooting recommendations](../sql-server-linux-troubleshooting-guide.md#connection).
 
 For other tools that run on Windows but connect to SQL Server on Linux, see:
 
-- [SQL Server Management Studio (SSMS)](../../linux/sql-server-linux-manage-ssms.md)
-- [Windows PowerShell](../../linux/sql-server-linux-manage-powershell.md)
-- [SQL Server Data Tools (SSDT)](../../linux/sql-server-linux-develop-use-ssdt.md)
+- [SQL Server Management Studio (SSMS)](../sql-server-linux-manage-ssms.md)
+- [Windows PowerShell](../sql-server-linux-manage-powershell.md)
+- [SQL Server Data Tools (SSDT)](../sql-server-linux-develop-use-ssdt.md)
 
 ## Other deployment scenarios
 
 For other installation scenarios, see the following resources:
 
-- [Upgrade](../../linux/sql-server-linux-setup.md#upgrade): Learn how to upgrade an existing installation of SQL Server on Linux
-- [Uninstall](../../linux/sql-server-linux-setup.md#uninstall): Uninstall SQL Server on Linux
-- [Unattended install](../../linux/sql-server-linux-setup.md#unattended): Learn how to script the installation without prompts
-- [Offline install](../../linux/sql-server-linux-setup.md#offline): Learn how to manually download the packages for offline installation
+- [Upgrade](../sql-server-linux-setup.md#upgrade): Learn how to upgrade an existing installation of SQL Server on Linux
+- [Uninstall](../sql-server-linux-setup.md#uninstall): Uninstall SQL Server on Linux
+- [Unattended install](../sql-server-linux-setup.md#unattended): Learn how to script the installation without prompts
+- [Offline install](../sql-server-linux-setup.md#offline): Learn how to manually download the packages for offline installation
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../../linux/sql-server-linux-faq.yml).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../sql-server-linux-faq.yml).
 
 ## Next steps
 
-- [Explore the tutorials for SQL Server on Linux](../../linux/sql-server-linux-migrate-restore-database.md).
+- [Explore the tutorials for SQL Server on Linux](../sql-server-linux-migrate-restore-database.md).

@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|REMLOGIN_INVALID_USER|
 |Message Text|Could not connect to server '%.ls' because '%.ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.|
-||
 
 ## Explanation
 

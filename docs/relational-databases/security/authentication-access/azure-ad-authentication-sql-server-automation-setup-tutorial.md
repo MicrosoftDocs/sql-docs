@@ -25,11 +25,11 @@ In this article, we'll go over how to set up the Azure Active Directory (Azure A
 We'll also go over the updated functionality to set up an Azure AD admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Azure AD authentication for SQL server required manual setup of Azure AD admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
 
 > [!NOTE]
-> This feature is available in SQL Server 2022 CTP 2.1 or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts. Azure Virtual Machines aren't supported.
+> This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CTP 2.1 or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts. Azure Virtual Machines aren't supported.
 
 ## Prerequisites
 
-- SQL Server 2022 CTP 2.1 or later is installed.
+- [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CTP 2.1 or later is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 - Azure extension for SQL Server version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
@@ -97,7 +97,7 @@ A new Azure portal functionality is enabled to set up an Azure AD admin, and cre
 
 1. Go to the [Azure portal](https://portal.azure.com), and select **SQL Server – Azure Arc**. Select the instance for your SQL Server host.
 
-1. Check the status of your **SQL Server - Azure Arc** resource and see if it's connected by going to the **Properties** menu. For more information, see [Validate the SQL Server - Azure Arc resources](../../../sql-server/azure-arc/connect.md?#validate-the-sql-server---azure-arc-resources).
+1. Check the status of your **SQL Server - Azure Arc** resource and see if it's connected by going to the **Properties** menu. For more information, see [Validate your Arc-enabled SQL Server resources](../../../sql-server/azure-arc/connect.md#validate-your-arc-enabled-sql-server-resources).
 
 1. Select **Azure Active Directory** on the left-hand column.
 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "deployment packages [Master Data Services], about deployment packages"
   - "deployment packages [Master Data Services]"
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: chugugrace
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Deploying Models (Master Data Services)
 

@@ -35,7 +35,6 @@ After you select **.NET Framework Data Provider for MySQL** on the **Choose a Da
 |Server name|**Server**|
 |Database name|**Database**|
 |Authentication (login) info|**User Id** and **Password**|
-|||
 
 You don't have to enter the connection string in the **ConnectionString** field of the list. After you enter individual values for the MySQL server name (**Server**) and login info, the wizard assembles the connection string from the individual properties and their values. 
 

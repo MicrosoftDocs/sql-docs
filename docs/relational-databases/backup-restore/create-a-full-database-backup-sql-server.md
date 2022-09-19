@@ -252,7 +252,6 @@ The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for a full database
 |*database*|Is the database that is to be backed up.|
 |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|
 |WITH *with_options* [ **,**...*o* ]|Used to specify one or more options, *o*. For information about some of the basic with options, see step 2.|
-|||
 
 Optionally, specify one or more **WITH** options. A few basic **WITH** options are described here. For information about all the **WITH** options, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).
 

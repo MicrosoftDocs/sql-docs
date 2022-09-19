@@ -60,6 +60,4 @@ ms.author: chugu
   
 -   [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [SQL Server Connection Required Permissions for the CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
-  
-  
+-   [SQL Server Connection Required Permissions for the CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)

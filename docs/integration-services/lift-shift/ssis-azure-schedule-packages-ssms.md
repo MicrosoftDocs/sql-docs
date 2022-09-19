@@ -28,7 +28,6 @@ When you use SSMS to schedule a package, SSIS automatically creates three new Da
 | Pipeline | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
 | Execute SSIS Package activity | **Activity_MyPackage_2018-05-08T09_00_00Z** |
 | Trigger | **Trigger_MyPackage_2018-05-08T09_00_00Z** |
-|||
 
 ## Prerequisites
 

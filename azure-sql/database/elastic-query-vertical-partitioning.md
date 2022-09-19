@@ -109,7 +109,10 @@ CREATE EXTERNAL TABLE [dbo].[customer]
       [c_lastname] nvarchar(256) NOT NULL,
       [street] nvarchar(256) NOT NULL,
       [city] nvarchar(256) NOT NULL,
-      [state] nvarchar(20) NULL,
+      [state] nvarchar(20) NULL
+   )
+   WITH
+   (
       DATA_SOURCE = RemoteReferenceData
    );
 ```

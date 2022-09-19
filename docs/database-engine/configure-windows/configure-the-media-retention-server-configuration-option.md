@@ -1,20 +1,16 @@
 ---
-title: "Configure the media retention Server Configuration Option | Microsoft Docs"
+title: "Configure the media retention Server Configuration Option"
 description: Learn about the media retention option. See how to use it to specify how long SQL Server retains transaction log and database backups.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup retention duration [SQL Server]"
   - "backup sets [SQL Server], retention duration"
   - "media retention option"
-ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure the media retention Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

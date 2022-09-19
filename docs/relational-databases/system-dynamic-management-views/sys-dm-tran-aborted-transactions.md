@@ -34,7 +34,6 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 |end_xact_lsn |  numeric(25,0) | The ending LSN of the aborted transaction. |
 |begin_time |   datetime  | The begin time of the aborted transaction. |
 |nest_aborted  |  bit | When 1, indicates that the transaction has a nested aborted transaction. |
-|||
   
 ## Permissions
 

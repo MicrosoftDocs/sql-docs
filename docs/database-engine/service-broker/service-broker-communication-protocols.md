@@ -1,13 +1,13 @@
 ---
 title: Service Broker Communication Protocols
 description: "Service Broker uses a broker-specific protocol to communicate with remote brokers."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Service Broker Communication Protocols

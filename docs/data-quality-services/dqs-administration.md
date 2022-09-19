@@ -1,19 +1,16 @@
 ---
-description: "DQS Administration"
 title: "DQS Administration"
+description: "DQS Administration"
+author: swinarko
+ms.author: sawinark
 ms.date: "10/01/2012"
 ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dqs administration"
   - "administration"
   - "dqs,adminstration"
-ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: swinarko
-ms.author: sawinark
 ---
 # DQS Administration
 

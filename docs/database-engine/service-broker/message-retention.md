@@ -1,13 +1,13 @@
-﻿---
+---
 title: Message Retention
 description: "When a queue specifies message retention, Service Broker does not delete messages from the queue until the conversation ends."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Message Retention

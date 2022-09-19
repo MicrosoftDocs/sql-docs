@@ -10858,7 +10858,7 @@ items:
     items:
     - name: Educational resources
       href: sql-server/educational-sql-resources.yml
-    - name: Microsoft training >>
+    - name: Microsoft Learn training >>
       href: /training/
   - name: Help
     items:

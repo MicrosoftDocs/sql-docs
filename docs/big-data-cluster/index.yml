@@ -235,13 +235,13 @@ landingContent:
       - linkListType: reference
         links:
         - text: Integration partners
-          url: ../sql-server/partner-big-data-cluster.md
+          url: partner-big-data-cluster.md
         - text: Apache Spark
           url: /azure/hdinsight/spark/apache-spark-overview
         - text: Samples (GitHub)
           url: https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster
         - text: Solution partners
-          url: ../sql-server/partner-big-data-cluster.md
+          url: partner-big-data-cluster.md
       - linkListType: learn
         links:
           - text: Introduction to Kubernetes

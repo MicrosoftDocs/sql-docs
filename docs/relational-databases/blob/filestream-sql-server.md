@@ -160,7 +160,6 @@ The SQL Server FILESTREAM feature allows you to store varbinary(max) binary larg
     |luafv|1|135000|0|
     |FileInfo|9|45000|0|
     |RsFx0103|1|41001.03|0|
-    ||||
 
 - Check that the server has the "last access time" property disabled for the files. This file system attribute is maintained in the registry:  
 Key Name: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  

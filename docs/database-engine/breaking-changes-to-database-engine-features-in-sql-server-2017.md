@@ -7,7 +7,6 @@ ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: release-landing
 ms.topic: conceptual
 ms.custom: seo-lt-2019

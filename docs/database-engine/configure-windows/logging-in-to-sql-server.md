@@ -1,11 +1,13 @@
 ---
 title: "Logging In to SQL Server"
 description: Find out about different ways of signing in to an instance of SQL Server. Learn which format to use for the server name in various environments.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server, logging in"
   - "services [SQL Server], logging in"
   - "TCP connection string"
@@ -16,11 +18,6 @@ helpviewer_keywords:
   - "shared memory connection string"
   - "logging in [SQL Server]"
   - "logins [SQL Server]"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/14/2017"
 ---
 # Logging In to SQL Server
 

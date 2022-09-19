@@ -42,7 +42,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
 public class AKV_600 {
 
-    static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
+    static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;encrypt=true;database=test;columnEncryptionSetting=enabled";
     static String applicationClientID = "Your Client ID";
     static String applicationKey = "Your Application Key";
     static String keyID = "Your Key ID";

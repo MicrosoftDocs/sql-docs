@@ -94,7 +94,6 @@ SET @jsonInfo=N'{
 |$.info.tags|NULL|Error|Not a scalar value.<br /><br /> Use **JSON_QUERY** instead.|  
 |$.info.type[0]|NULL|Error|Not an array.|  
 |$.info.none|NULL|Error|Property does not exist.|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## Examples  
   

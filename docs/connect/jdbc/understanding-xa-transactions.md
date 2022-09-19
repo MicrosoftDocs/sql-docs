@@ -195,7 +195,7 @@ public class testXA {
         String user = "UserName";
         String password = "*****";
 
-        String connectionUrl = prefix + serverName + ":" + portNumber + ";databaseName=" + databaseName + ";user="
+        String connectionUrl = prefix + serverName + ":" + portNumber + ";encrypt=true;databaseName=" + databaseName + ";user="
                 + user + ";password=" + password;
 
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

@@ -1,13 +1,13 @@
 ---
 title: Certificates and Service Broker
 description: "This topic describes how SQL Server uses certificates for Service Broker remote security."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Certificates and Service Broker

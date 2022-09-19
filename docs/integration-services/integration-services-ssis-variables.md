@@ -134,7 +134,6 @@ The value of a user-defined variable can be a literal or an expression. The valu
 | Numeric and binary data types | 0 (zero) |
 | Char and string data types | (empty string) |
 | Object | System.Object |
-| | |
 
 A variable has options for setting the variable value and the data type of the value. The two properties must be compatible: for example, the use of a string value together with an integer data type is not valid.  
   

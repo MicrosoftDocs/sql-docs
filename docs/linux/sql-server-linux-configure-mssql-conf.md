@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to configure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/23/2022
+ms.date: 09/13/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -82,7 +82,7 @@ ms.topic: conceptual
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
 
 |Parameter|Description|
 |---|---|
@@ -771,6 +771,7 @@ The following options are additional network settings configurable using `mssql-
 | **network.kerberoscredupdatefrequency** | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer.|
 | **network.privilegedadaccount** | Privileged AD user to use for AD authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
 | **uncmapping** | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+| **ldaphostcanon** | Set whether OpenLDAP should canonicalize hostnames during the bind step. Values can be `true` or `false`. |
 
 ## <a id="traceflags"></a> Enable/Disable trace flags
 

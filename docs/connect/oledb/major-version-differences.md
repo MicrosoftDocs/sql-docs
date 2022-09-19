@@ -34,4 +34,5 @@ The new Microsoft OLE DB Driver 19 for SQL Server supports side by side installa
 [Universal Data Link (UDL) Configuration](help-topics/data-link-pages.md)  
 [SQL Server Login Dialog Box (OLE DB)](help-topics/sql-server-login-dialog.md)  
 [Initialization and authorization properties (OLE DB driver)](ole-db-data-source-objects/initialization-and-authorization-properties.md)  
+[Registry settings](features/registry-settings.md)  
   

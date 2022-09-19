@@ -10,8 +10,8 @@ ms.technology: master-data-services
 
 ms.topic: "reference"
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create Master Data Manager Web Service Proxy Classes
 

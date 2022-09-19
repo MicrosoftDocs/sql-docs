@@ -34,7 +34,6 @@ You can use the following tools to import data from Excel:
 | [BCP](#bcp)                                        |[OPENROWSET](#openrowset) function <br>            |
 | [Copy Wizard (Azure Data Factory)](#adf-wiz)       |                                                   |
 | [Azure Data Factory](#adf)                         |                                                   |
-| &nbsp; | &nbsp; |
 
 If you want to import multiple worksheets from an Excel workbook, you typically have to run any of these tools once for each sheet.
 

@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|CRTFKINVTOPO|
 |Message Text|Introducing FOREIGN KEY constraint '%.ls' on table '%.ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.|
-||
 
 ## Explanation
 

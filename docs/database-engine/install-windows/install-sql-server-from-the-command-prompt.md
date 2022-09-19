@@ -1,9 +1,15 @@
 ---
 title: "SQL Server installation - Command Prompt parameters"
 description: This article describes command parameters for SQL Server installation. You can specify features to install and configure.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
+ms.custom:
+  - intro-installation
+  - event-tier1-build-2022
 helpviewer_keywords:
   - "installing SQL Server, command prompt"
   - "installation scripts [SQL Server]"
@@ -78,14 +84,6 @@ helpviewer_keywords:
   - "INSTALLSQLDIR parameter"
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
-ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom:
-- intro-installation
-- event-tier1-build-2022
-ms.date: 07/25/2022
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -173,7 +171,7 @@ Use the parameters in the following table to develop command-line scripts for in
 |-----------------------------------------|---------------|-----------------|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ACTION<br /><br /> **Required**|Required to indicate the installation workflow.<br /><br /> Supported values: **Install**.|
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md). |
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.<br/><br/>Beginning with SQL Server 2022, read the Microsoft SQL Server Software License Terms at [aka.ms/sql2022prerelease](https://aka.ms/sql2022prerelease).|
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.<br/><br/>Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], read the Microsoft SQL Server Software License Terms at [aka.ms/sql2022prerelease](https://aka.ms/sql2022prerelease).|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python Setup Control|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Anaconda Python package.**|Required to acknowledge acceptance of the license terms.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R Setup Control|/IACCEPTROPENLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Microsoft R Open package.**|Required to acknowledge acceptance of the license terms.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|

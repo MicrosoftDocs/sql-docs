@@ -110,7 +110,7 @@ When hints are applied, the following result set appears in the `StmtSimple` ele
 
 *    Complete index and statistics maintenance before evaluating queries for potential new Query Store hints.
 *    Test your application database on the latest [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), before leveraging Query Store hints.
-     * For example, Parameter Sensitive Plan (PSP) optimization was introduced in SQL Server 2022 (compatibility level 160), which leverages multiple active plans per query to address non-uniform data distributions. If your environment cannot use the latest compatibility level, Query Store hints using the RECOMPILE hint can be leveraged on any supporting compatibility level.
+     * For example, Parameter Sensitive Plan (PSP) optimization was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (compatibility level 160), which leverages multiple active plans per query to address non-uniform data distributions. If your environment cannot use the latest compatibility level, Query Store hints using the RECOMPILE hint can be leveraged on any supporting compatibility level.
 *    Query Store hints override SQL Server query plan behavior. It is recommended to only leverage Query Store hints when it is necessary to address performance related issues.
 *    It is recommended to reevaluate Query Store hints, statement level hints, plan guides, and Query Store forced plans any time data distributions change and during database migrations projects. Changes in data distribution may cause Query Store hints to generate suboptimal execution plans.
 

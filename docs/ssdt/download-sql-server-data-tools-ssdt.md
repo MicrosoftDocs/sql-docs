@@ -57,7 +57,7 @@ The extension for Integration Services projects is not available for Visual Stud
 
 |Project Templates|SQL Platforms Supported|
 |-------------------|--------------------|
-|Relational databases| SQL Server 2016 - SQL Server 2022<br /><br />Azure SQL Database, Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
+|Relational databases| [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2019|
 
 

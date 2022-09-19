@@ -112,7 +112,6 @@ The following article was added new for SQL Server 2017. The article describes f
 | Title | What's new in SQL Server 2017 |
 | moniker range | `=">= sql-server-2017"` |
 | `https` address | `https://learn.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
-| &nbsp; | &nbsp; |
 
 Given the base `https` address, the following table explains what happens when the `?view=` parameter is appended by the user, and with various values.
 
@@ -122,7 +121,6 @@ Given the base `https` address, the following table explains what happens when t
 | `sql-server-2016` | The versioning system would realize that the moniker range of the article does not include version 2016.<br/><br/>The system would then choose one of the monikers that does satisfy the range.<br/><br/>Then as in the version 2016 case, the parameter `?view=` would be appended, and the control name would match the parameter value. |
 | `sql-server-2017` | The versioning system understands that the parameter value is included in the moniker range of the article.<br/><br/>The versioning control would be set to match the parameter value. |
 | `sql-server-2019` | Same as for the case of value `sql-server-2017`, except the parameter and control are set to 2019. |
-| &nbsp; | &nbsp; |
 
 ### <a name="anchor-allsql-hidenothing"></a> All SQL - Hide nothing, special moniker
 

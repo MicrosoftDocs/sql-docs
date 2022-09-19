@@ -380,7 +380,7 @@ WITH (
 
 ### D. Query Hadoop data
 
-`Selectstream` is an external table that connects to the `employee.tbl` delimited text file on a Hadoop cluster. The following query looks just like a query against a standard table. However, this query retrieves data from Hadoop and then computes the results.
+`ClickStream` is an external table that connects to the `employee.tbl` delimited text file on a Hadoop cluster. The following query looks just like a query against a standard table. However, this query retrieves data from Hadoop and then computes the results.
 
 ```sql
 SELECT TOP 10 (url) FROM ClickStream WHERE user_ip = 'xxx.xxx.xxx.xxx';
@@ -399,7 +399,7 @@ WHERE cs.url = 'msdn.microsoft.com';
 
 ### F. Import data from Hadoop into a SQL table
 
-This example creates a new SQL table `ms_user` that permanently stores the result of a join between the standard SQL table `user` and the external table `SelectStream`.
+This example creates a new SQL table `ms_user` that permanently stores the result of a join between the standard SQL table `user` and the external table `ClickStream`.
 
 ```sql
 SELECT DISTINCT user.FirstName, user.LastName

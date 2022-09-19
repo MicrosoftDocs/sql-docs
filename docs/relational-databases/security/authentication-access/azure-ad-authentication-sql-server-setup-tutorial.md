@@ -4,7 +4,7 @@ description: Tutorial on how to set up Azure Active Directory Authentication for
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 08/24/2022
+ms.date: 09/12/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: tutorial
@@ -134,7 +134,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 
 1. Go to the [Azure portal](https://portal.azure.com), and select **SQL Server – Azure Arc**, and select the instance for your SQL Server host.
 
-1. Check the status of your **SQL Server - Azure Arc** resource and see if it's connected by going to the **Properties** menu. For more information, see [Validate the SQL Server - Azure Arc resources](../../../sql-server/azure-arc/connect.md?#validate-the-sql-server---azure-arc-resources).
+1. Check the status of your **SQL Server - Azure Arc** resource and see if it's connected by going to the **Properties** menu. For more information, see [Validate the SQL Server - Azure Arc resources](../../../sql-server/azure-arc/connect.md?#validate-your-arc-enabled-sql-server-resources).
 
 1. Select **Azure Active Directory** on the left-hand column.
 

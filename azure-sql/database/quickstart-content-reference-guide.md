@@ -39,9 +39,9 @@ These quickstarts enable you to quickly create or import your database to Azure 
 
 The following free Learn modules help you learn about Azure SQL Database.
 
-- [Provision a database in SQL Database to store application data](/learn/modules/provision-azure-sql-db/)
-- [Develop and configure an ASP.NET application that queries a database in Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/)
-- [Secure your database in Azure SQL Database](/learn/modules/secure-your-azure-sql-database/)
+- [Provision a database in SQL Database to store application data](/training/modules/provision-azure-sql-db/)
+- [Develop and configure an ASP.NET application that queries a database in Azure SQL Database](/training/modules/develop-app-that-queries-azure-sql/)
+- [Secure your database in Azure SQL Database](/training/modules/secure-your-azure-sql-database/)
 
 ## Next steps
 

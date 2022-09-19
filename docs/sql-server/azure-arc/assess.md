@@ -1,28 +1,28 @@
 ---
-title: Configure on-demand SQL Assessment on an SQL Server on Azure Arc-enabled servers  instance
-description: Configure on-demand SQL Assessment on an SQL Server on Azure Arc-enabled servers instance
+title: Configure on-demand SQL Assessment on an Azure Arc-enabled SQL Server instance
+description: Configure on-demand SQL Assessment on an Azure Arc-enabled SQL Server instance
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/25/2022
+ms.date: 09/12/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
-# Configure SQL Assessment | SQL Server on Azure Arc-enabled servers
+# Configure SQL Assessment | Azure Arc-enabled SQL Server
 
-SQL Assessment provides a mechanism to evaluate your configuration of SQL Server. This article provides instructions for using SQL Assessment on an instance of SQL Server on Azure Arc-enabled servers.
+SQL Assessment provides a mechanism to evaluate the configuration of your SQL Server. This article provides instructions for using SQL Assessment on an instance of Azure Arc-enabled SQL Server.
 
 > [!NOTE]
 > The environment health assessment will be upgraded to a much richer SQL Server Best Practice Assessment (SQL BPA). At that point, you may have to re-configure the SQL BPA assessment and continue to get SQL Server assessments.  You can still access the previous health assessments by querying the table SQLAssessmentRecommendation from Log Analytical workspace used by Environment Health assessments.  You can also query and export the previous assessments data into Excel. See the steps at [Integrate Log Analytics and Excel](/azure/azure-monitor/logs/log-excel).
 
 ## Prerequisites
 
-- Your Windows-based SQL Server instance is connected to Azure Arc. Follow the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
+- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [onboard your SQL Server instance to Arc-enabled SQL Server](connect.md).
 
   > [!NOTE]
   > On-demand SQL Assessment is currently limited to SQL Server running on Windows machines. This will not work for SQL on Linux machines.
 
-- The Microsoft Monitoring Agent (MMA) must be installed and configured on the machine. View the [Install MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma) article for instructions. You can also get more information on the [Log Analytics Agent](/azure/azure-monitor/platform/log-analytics-agent) article.
+- The Microsoft Monitoring Agent (MMA) must be installed and configured on the machine. View the [Install MMA](configure-advanced-data-security.md#install-log-analytics-agent) article for instructions. You can also get more information on the [Log Analytics Agent](/azure/azure-monitor/platform/log-analytics-agent) article.
 
 - Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -32,9 +32,9 @@ SQL Assessment provides a mechanism to evaluate your configuration of SQL Server
 
 ## Run on-demand SQL Assessment
 
-1. Open your SQL Server – Azure Arc resource and select **Environment Health** in the left pane.
+1. Open your Arc-enabled SQL Server resource and select **Environment Health** in the left pane.
 
-   :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Screenshot showing the Environment Health screen of a SQL Server - Azure Arc resource.":::
+   :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Screenshot showing the Environment Health screen of an Arc-enabled SQL Server resource.":::
 
    If the MMA extension isn't installed, you can't initiate the on-demand SQL Assessment.
 

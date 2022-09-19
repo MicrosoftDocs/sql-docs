@@ -1,5 +1,6 @@
 ---
 title: Read queries on replicas
+titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Azure SQL provides the ability to use the capacity of read-only replicas for read workloads, called Read Scale-Out.
 author: rajeshsetlem
 ms.author: rsetlem

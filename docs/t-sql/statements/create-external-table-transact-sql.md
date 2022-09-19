@@ -207,7 +207,8 @@ Requires these user permissions:
 Note, the remote login specified in the DATABASE SCOPED CREDENTIAL used in the CREATE EXTERNAL TABLE command must have read permission for the path/table/collection on the external data source specified in the LOCATION parameter. If you're planning to use this EXTERNAL TABLE to export data to a Hadoop or Azure Storage external data source, then the login specified must have write permission on the path specified in LOCATION. Note that Hadoop is not currently supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 
-For Azure Blob Storage, when configuring the access keys and shared access signature (SAS) in the Azure portal, the Azure Blob Storage or ADLS Gen2 storage accounts, configure the **Allowed permissions** to grant at least **Read** and **Write** permissions. You must also select both **Container** and **Object** as the allowed resource types.
+For Azure Blob Storage, when configuring the access keys and shared access signature (SAS) in the Azure portal, the Azure Blob Storage or ADLS Gen2 storage accounts, configure the **Allowed permissions** to grant at least **Read** and **Write** permissions. **List** permission might also be required when searching across folders. You must also select both **Container** and **Object** as the allowed resource types.
+
 
 > [!IMPORTANT]  
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.

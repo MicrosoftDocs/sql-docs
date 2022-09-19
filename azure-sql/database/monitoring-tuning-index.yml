@@ -32,13 +32,13 @@ landingContent:
       - linkListType: learn
         links:
           - text: Configure databases for performance
-            url: /learn/modules/configure-databases-performance/
+            url: /training/modules/configure-databases-performance/
           - text: Optimize query performance 
-            url: /learn/paths/optimize-query-performance-sql-server/
+            url: /training/paths/optimize-query-performance-sql-server/
           - text: Monitor and optimize operational resources 
-            url: /learn/paths/monitor-optimize-operational-resources-sql-server/
+            url: /training/paths/monitor-optimize-operational-resources-sql-server/
           - text: Protect, monitor, and tune 
-            url: /learn/modules/protect-monitor-tuning-migrated-database/
+            url: /training/modules/protect-monitor-tuning-migrated-database/
 
   # Card (optional)
   - title: Azure SQL Database intelligent performance recommendations

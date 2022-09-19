@@ -200,8 +200,9 @@ Requires these user permissions:
 - **CREATE TABLE**
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE** 
-- **ALTER ANY EXTERNAL FILE FORMAT** (only applies to Hadoop and Azure Blob Storage external data sources in SQL Server 2019 and later)
-- **CONTROL DATABASE** (only applies to Hadoop and Azure Blob Storage external data sources in SQL Server 2019 and later)
+- **ALTER ANY EXTERNAL FILE FORMAT** (only applies to Hadoop and Azure Storage external data sources)
+- **CONTROL DATABASE** (only applies to Hadoop and Azure Storage external data sources)
+
 
 Note, the remote login specified in the DATABASE SCOPED CREDENTIAL used in the CREATE EXTERNAL TABLE command must have read permission for the path/table/collection on the external data source specified in the LOCATION parameter. If you're planning to use this EXTERNAL TABLE to export data to a Hadoop or Azure Blob Storage external data source, then the login specified must have write permission on the path specified in LOCATION. Note that Hadoop is not currently supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 

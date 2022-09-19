@@ -29,11 +29,11 @@ The following diagram illustrates the feature for Premium and Business Critical 
 The *read scale-out* feature is enabled by default on new Premium,  Business Critical, and Hyperscale databases.
 
 > [!NOTE]
-> Read scale-out is always enabled in the Business Critical service tier of Managed Instance, and for Hyperscale databases with at least one secondary replica.
+> Read scale-out is always enabled in the Business Critical service tier of SQL Managed Instance, and for Hyperscale databases with at least one secondary replica.
 
 If your SQL connection string is configured with `ApplicationIntent=ReadOnly`, the application will be redirected to a read-only replica of that database or managed instance. For information on how to use the `ApplicationIntent` property, see [Specifying Application Intent](/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery#specifying-application-intent).
 
-If you wish to ensure that the application connects to the primary replica regardless of the `ApplicationIntent` setting in the SQL connection string, you must explicitly disable read scale-out when creating the database or when altering its configuration. For example, if you upgrade your database from Standard or General Purpose tier to Premium or Business Critical and want to make sure all your connections continue to go to the primary replica, disable read scale-out. For details on how to disable it, see [Enable and disable read scale-out](#enable-and-disable-read-scale-out).
+For Azure SQL Database only, if you wish to ensure that the application connects to the primary replica regardless of the `ApplicationIntent` setting in the SQL connection string, you must explicitly disable read scale-out when creating the database or when altering its configuration. For example, if you upgrade your database from Standard or General Purpose tier to Premium or Business Critical and want to make sure all your connections continue to go to the primary replica, disable read scale-out. For details on how to disable it, see [Enable and disable read scale-out](#enable-and-disable-read-scale-out-sql-database).
 
 > [!NOTE]
 > Query Store and SQL Profiler features are not supported on read-only replicas. 

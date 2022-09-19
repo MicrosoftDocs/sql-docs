@@ -169,7 +169,7 @@ The maximum URL length (generated after using the *@url* parameter and adding al
 
 #### Headers size
 
-The maximum request and response header size (all header fields - headers parameter + credential secret + system defined) is 8 KB.
+The maximum request and response header size (all header fields: headers passed via *@headers* parameter + credential header + system supplied headers) is 8 KB.
 
 ## Throttling
 

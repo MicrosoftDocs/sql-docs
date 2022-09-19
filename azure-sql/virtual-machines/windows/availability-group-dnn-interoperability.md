@@ -67,7 +67,7 @@ You can omit the port in the URL if it is the default 1433 port. For a named ins
 
 ## Distributed availability group
 
-Distributed availability groups are not currently supported with the DNN listener. 
+If your availability group listener is configured using a distributed network name (DNN), then configuring a distributed availability group on top of your availability group is not supported. 
 
 ## Replication
 

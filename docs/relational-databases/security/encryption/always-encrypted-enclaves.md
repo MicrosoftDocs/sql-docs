@@ -46,7 +46,7 @@ In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted wi
 
 ### SQL Server 2022
 
-SQL Server 2022 adds the capability to support multi-threading inside the enclave and key caching. SQL Server 2022 continues to use VBS secure memory enclaves and Host Guardian Service for attestation. No other enclave technologies or attestation solutions are supported.
+[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] adds the capability to support multi-threading inside the enclave and key caching. [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] continues to use VBS secure memory enclaves and Host Guardian Service for attestation. No other enclave technologies or attestation solutions are supported.
 
 ## Secure enclave attestation
 
@@ -184,7 +184,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 - Clustered indexes can't be created on enclave-enabled columns using randomized encryption.
 - Enclave-enabled columns using randomized encryption can't be primary key columns and cannot be referenced by foreign key constraints or unique key constraints.
-- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (this limitation doesn't apply to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or SQL Server 2022) only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. For information about other differences among different products, see [Confidential queries](#confidential-queries).
+- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (this limitation doesn't apply to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]) only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. For information about other differences among different products, see [Confidential queries](#confidential-queries).
 - In-place cryptographic operations cannot be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you can't encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 - Using enclave-enabled keys for columns in in-memory tables isn't supported.
 - Expressions defining computed columns can't perform any computations on enclave-enabled columns using randomized encryption (even if the computations are among the supported operations listed in [Confidential queries](#confidential-queries)).

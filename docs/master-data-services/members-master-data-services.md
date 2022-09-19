@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "leaf members [Master Data Services], about leaf members"
   - "members [Master Data Services]"
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Members (Master Data Services)
 

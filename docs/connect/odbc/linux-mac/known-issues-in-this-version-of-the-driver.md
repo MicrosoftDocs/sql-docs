@@ -52,7 +52,7 @@ If you get another connection failure and don't see a log file, there (possibly)
         Entry:
             Connection = 0x17c858e0
             Window Hdl = (nil)
-            Str In = [DRIVER={ODBC Driver 17 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]
+            Str In = [DRIVER={ODBC Driver 18 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]
             Str Out = (nil)
             Str Out Max = 0
             Str Out Ptr = (nil)

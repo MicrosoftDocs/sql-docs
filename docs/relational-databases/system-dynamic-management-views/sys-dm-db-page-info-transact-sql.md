@@ -104,7 +104,6 @@ Determines the level of detail in the output of the function. 'LIMITED' will ret
 |reserved_bytes |smallint |Number of free bytes reserved by all transactions (if heap) <br> Number of ghosted rows (if index leaf) |
 |reserved_bytes_by_xdes_id |smallint |Space contributed by m_xdesID to m_reservedCnt <br> For debugging purposes only |
 |xdes_id |nvarchar(64) |Latest transaction contributed by m_reserved <br> For debugging purposes only |
-||||
 
 ## Remarks
 The `sys.dm_db_page_info` dynamic management function returns page information like `page_id`, `file_id`, `index_id`, `object_id` etc. that are present in a page header. This information is useful for troubleshooting and debugging various performance (lock and latch contention) and corruption issues.

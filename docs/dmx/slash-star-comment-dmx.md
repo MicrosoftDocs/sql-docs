@@ -1,14 +1,14 @@
 ---
+title: "Slash Star (Comment) (DMX)"
 description: "Slash Star (Comment) (DMX)"
-title: "Slash Star (Comment) (DMX) | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
-ms.custom: dmx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: dmx
 ---
 # Slash Star (Comment) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

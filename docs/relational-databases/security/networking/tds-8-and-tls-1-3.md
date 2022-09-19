@@ -16,10 +16,10 @@ monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-SQL Server 2022 supports Tabular Data Stream (TDS) 8.0, and Transport Layer Security (TLS) 1.3 when TDS 8.0 is used.
+[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] supports Tabular Data Stream (TDS) 8.0, and Transport Layer Security (TLS) 1.3 when TDS 8.0 is used.
 
 > [!IMPORTANT]
-> Although TLS 1.3 is supported for SQL Server 2022, client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
+> Although TLS 1.3 is supported for [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
 
 The [Tabular Data Stream (TDS)](/openspecs/windows_protocols/ms-tds/b46a581a-39de-4745-b076-ec4dbb7d13ec) protocol is an application layer protocol used by clients to connect to SQL Server, while SQL Server uses Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of SQL Server and a client application.
 
@@ -65,7 +65,7 @@ Here's a list of algorithms and ciphers removed in TLS 1.3:
 
 ## Strict connection encryption
 
-To leverage TDS 8.0, SQL Server 2022 added `strict` as an additional connection encryption type to SQL Server drivers (`Encrypt=strict`). Download the latest version of the ODBC or OLE DB drivers to use the `strict` connection encryption type.
+To leverage TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] added `strict` as an additional connection encryption type to SQL Server drivers (`Encrypt=strict`). Download the latest version of the ODBC or OLE DB drivers to use the `strict` connection encryption type.
 
 - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.0.1.1 or higher
 - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.0.0 or higher

@@ -40,7 +40,6 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |avg_instance_memory_percent|**decimal (5,2)**|Average memory usage for the SQL Server instance hosting the database, as measured by the operating system. Includes memory utilization by both user and internal workloads.|
 |avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 |replica_role|**int**|Represents the current replica's role with 0 as primary, 1 as secondary, and 2 as forwarder (geo-secondary's primary). You will see "1" when connected with ReadOnly intent to all readable secondaries. If connecting to a geo-secondary without specifying ReadOnly intent, you should see "2" (connecting to the forwarder).|
-|||
   
 > [!TIP]  
 > For more context about these limits and service tiers, see the topics [Service Tiers](/azure/azure-sql/database/purchasing-models), [Manually tune query performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance), and [SQL Database resource limits and resource governance](/azure/sql-database/sql-database-resource-limits-database-server).

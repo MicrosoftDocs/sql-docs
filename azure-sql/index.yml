@@ -134,6 +134,10 @@ landingContent:
   # Card
   - title: Migrate from SQL Server
     linkLists:
+      - linkListType: overview
+        links:
+          - text: Migrating SQL Server Workloads FAQ
+            url: migration-guides/modernization.md
       - linkListType: deploy
         links:
           - text: Azure SQL Database
@@ -208,7 +212,7 @@ landingContent:
         - text: Azure SQL for beginners
           url: /shows/azure-sql-for-beginners/
         - text: Azure SQL fundamentals 
-          url: /learn/paths/azure-sql-fundamentals/
+          url: /training/paths/azure-sql-fundamentals/
         - text: Azure SQL hands-on labs
           url: https://aka.ms/asqlworkshop
         - text: Azure SQL bootcamp 

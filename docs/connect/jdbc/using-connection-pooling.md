@@ -29,7 +29,7 @@ The classes for the connection pooling implementation are as follows.
  JDBC application code should always close connections explicitly to derive the most benefit from pooling. When the application explicitly closes a connection, the pooling implementation can reuse the connection immediately. If the connection is not closed, other applications cannot reuse it. Applications can use the `finally` construct to make sure that pooled connections are closed even if an exception occurs.  
   
 > [!NOTE]  
-> The JDBC driver does not currently call the sp_reset_connection stored procedure when it returns the connection to the pool. Instead, the driver relies on third-party Java Application Servers to return the connections back to their original states.  
+> Not all third-party Java connection pooling libraries implement the above JDBC APIs for connection pooling. Those libraries must implement their own methods to return connections back to their original states when they're returned to the connection pool.  
   
 ## See also
 

@@ -214,7 +214,6 @@ To import data from a memo column without truncation, you have two options:
 |---|---|
 | Excel 2016 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel |
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
-| | |
 
 ## <a name="issues-exporting"></a> Issues with exporting
 

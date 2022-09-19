@@ -71,7 +71,6 @@ struct SSPARAMPROPS {
 |*iOrdinal*|The ordinal of the passed parameter.|  
 |*cPropertySets*|The number of DBPROPSET structures in *rgPropertySets*.|  
 |*rgPropertySets*|A pointer to memory in which to return an array of DBPROPSET structures.|  
-|||
 
 ## See Also  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  

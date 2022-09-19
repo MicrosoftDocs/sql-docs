@@ -1,14 +1,14 @@
 ---
+title: "Data Mining Extensions (DMX) Syntax Elements"
 description: "Data Mining Extensions (DMX) Syntax Elements"
-title: "Data Mining Extensions (DMX) Syntax Elements | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
-ms.custom: dmx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: dmx
 ---
 # Data Mining Extensions (DMX) Syntax Elements
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

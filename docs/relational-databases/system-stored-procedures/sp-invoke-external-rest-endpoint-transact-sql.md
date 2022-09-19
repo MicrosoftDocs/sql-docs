@@ -1,5 +1,5 @@
 ---
-description: "The sp_invoke_external_rest_endpoint stored procedure invokes an HTTPS REST endpoint."
+description: "The sp_invoke_erver/azure-arcexternal_rest_endpoint stored procedure invokes an HTTPS REST endpoint."
 title: "sp_invoke_external_rest_endpoint (Transact-SQL)"
 ms.custom: ""
 ms.date: 8/26/2022
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "sp_invoke_external_rest_endpoint"
 author: yorek
 ms.author: damauri
-monikerRange: "=azuresqldb-current"
+monikerRange: "azuresqldb-current"
 ---
 # sp_invoke_external_rest_endpoint (Transact-SQL) (Preview)
 
@@ -339,4 +339,4 @@ SELECT @ret AS ReturnCode, @response AS Response;
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 - [API Management](/azure/api-management/)
-- [Resource management in Azure SQL Database](../../../azure-sql/database/resource-limits-logical-server.md)
+- [Resource management in Azure SQL Database](/azure/azure-sql/database/resource-limits-logical-server)

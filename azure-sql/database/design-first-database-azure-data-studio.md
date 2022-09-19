@@ -124,13 +124,13 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to 
    | **Login** | The server admin account | The account that you specified when you created the server. |
    | **Password** | The password for your server admin account | The password that you specified when you created the server. |
 
-   ![Screenshot of connection dialog box in ADS.](./media/design-first-database-tutorial/connect-with-ads.png)
+   ![Screenshot of connection dialog box in ADS.](./media/design-first-database-tutorial/connect-with-azure-data-studio.png)
 
 3. Click **Connect**. The **Object Explorer** window opens in ADS.
 
 4. In **Object Explorer**, expand **Databases** and then expand *yourDatabase* to view the objects in the sample database.
 
-   ![Screenshot of Object Explorer in ADS.](./media/design-first-database-tutorial/connected-with-ads.png)  
+   ![Screenshot of Object Explorer in ADS.](./media/design-first-database-tutorial/connected-with-azure-data-studio.png)  
 
 ## Create tables in your database
 
@@ -150,37 +150,37 @@ The following diagram shows how these tables are related to each other. Some of 
 2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](\sql-docs-pr\docs\azure-data-studio\table-designer-azure-data-studio.md) :
 
     - Person Table
-        ![Screenshot of Person Table in Table Designer.](./media/design-first-database-tutorial/person-table-ads.png)
+        ![Screenshot of Person Table in Table Designer.](./media/design-first-database-tutorial/person-table-azure-data-studio.png)
 
        Be sure to configure the Primary Key settings for the **Person** Table as shown below:
-          ![Screenshot of Person Table in Table Designer showing the Primary Key settings.](./media/design-first-database-tutorial/person-table-primary-key-ads.png)
+          ![Screenshot of Person Table in Table Designer showing the Primary Key settings.](./media/design-first-database-tutorial/person-table-primary-key-azure-data-studio.png)
 
     - Student Table
-        ![Screenshot of Student Table in Table Designer.](./media/design-first-database-tutorial/student-table-ads.png)
+        ![Screenshot of Student Table in Table Designer.](./media/design-first-database-tutorial/student-table-azure-data-studio.png)
 
        Be sure to configure the Primary Key settings for the **Student** Table as shown below:
-           ![Screenshot of Student Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/student-table-primary-key-ads.png)
+           ![Screenshot of Student Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/student-table-primary-key-azure-data-studio.png)
 
        Be sure to configure the Foreign Key settings for the **Student** Table as shown below:
-           ![Screenshot Student Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/student-table-foreign-key-ads.png)
+           ![Screenshot Student Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/student-table-foreign-key-azure-data-studio.png)
 
     - Course Table
-        ![Screenshot of Course Table in Table Designer.](./media/design-first-database-tutorial/course-table-ads.png)
+        ![Screenshot of Course Table in Table Designer.](./media/design-first-database-tutorial/course-table-azure-data-studio.png)
 
        Be sure to configure the Primary Key settings for the **Course** Table as shown below:
-          ![Screenshot of Course Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/course-table-primary-key-ads.png)
+          ![Screenshot of Course Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/course-table-primary-key-azure-data-studio.png)
 
     - Credit Table
-        ![Screenshot of Credit Table in Table Designer.](./media/design-first-database-tutorial/credit-table-ads.png)
+        ![Screenshot of Credit Table in Table Designer.](./media/design-first-database-tutorial/credit-table-azure-data-studio.png)
 
        Be sure to configure the Foreign Key settings for the **Credit** Table as shown below:
-        ![Screenshot of Credit Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/credit-table-foreign-key-ads.png)
+        ![Screenshot of Credit Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/credit-table-foreign-key-azure-data-studio.png)
 
        Be sure to configure the Check Constraint settings for the **Credit** Table as shown below:
-        ![Screenshot of Credit Table in Table Designer showing Check Constraint settings.](./media/design-first-database-tutorial/credit-table-check-constraint-ads.png)
+        ![Screenshot of Credit Table in Table Designer showing Check Constraint settings.](./media/design-first-database-tutorial/credit-table-check-constraint-azure-data-studio.png)
 
 3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
-   ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/ads-tables-created.png)
+   ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/azure-data-studio-tables-created.png)
 
 ## Load data into the tables
 

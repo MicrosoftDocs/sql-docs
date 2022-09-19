@@ -32,7 +32,7 @@ To use the link feature, you'll need a supported version of SQL Server. The foll
 
 In addition to the supported version, you'll need:
 
-- Network connectivity between your SQL Server and managed instance is required. If your SQL Server is running on-premises, use a VPN link or Express route. If your SQL Server is running on an Azure VM, either deploy your VM to the same subnet as your managed instance, or use global VNet peering to connect two separate subnets. 
+- Network connectivity between your SQL Server and managed instance is required. If your SQL Server is running on-premises, use a VPN link or Express route. If your SQL Server is running on an Azure VM, either deploy your VM to the same vnet as your managed instance, or use global VNet peering to connect two separate subnets. 
 - Azure SQL Managed Instance provisioned on any service tier.
 
 You'll also need the following tooling:

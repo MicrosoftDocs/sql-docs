@@ -139,8 +139,8 @@ Before using Query Store for secondary replicas, you need to have an [Always On 
 >
 > You must enable trace flag 12606 before you can enable Query Store for secondary replicas. To enable the trace flags:
 >
-> 1. In Windows, launch the SQL Server Configuration Manager. 
-> 1. Right-click on the **SQL Server** service for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and select **Properties**.
+> 1. In Windows, launch [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). 
+> 1. In the list of **SQL Server Services**, right-click on the **SQL Server** instance service for your [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] instance. Select **Properties**.
 > 1. Select the **Start Parameters** tab. In the **Specify a startup parameter:** field, add the values: `-T12606` and select **Add**.
 > 1. The SQL Server instance service must be restarted before the changes will take effect. 
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "sys.query_store_replicas catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # sys.query_store_replicas (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
 Contains information about Query Store replicas, when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled. You can use this information to determine what `replica_group_id` to use when using Query Store to force or un-force a plan on a secondary replica.
 

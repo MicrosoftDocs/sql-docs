@@ -1,6 +1,6 @@
 ---
 title: "sys.database_query_store_internal_state (Transact-SQL)"
-description: "sys.database_query_store_internal_state contains information about queue length and memory usage for the Query Store when Query Store for secondary replicas is enabled.
+description: "sys.database_query_store_internal_state contains information about queue length and memory usage for the Query Store when Query Store for secondary replicas is enabled."
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/19/2022
@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "sys.database_query_store_internal_state catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
 ---
 # sys.database_query_store_internal_state (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
 Contains information about queue length and memory usage for the Query Store when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled.
 

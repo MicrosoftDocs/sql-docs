@@ -41,7 +41,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**target_memory_kb**|bigint|The target amount of memory, in kilobytes, the resource pool is trying to attain. This value is based on the current settings and server state. Is not nullable.|
 |**used_memory_kb**|bigint|The amount of memory used, in kilobytes, for the resource pool. Is not nullable.|
 |**cache_memory_kb**|bigint|The current total cache memory usage in kilobytes. Is not nullable.|
-|**compile_memory_kb**|bigint|The current total stolen memory usage in kilobytes (KB). Most this usage would be for compile and optimization, but it can also include other memory users. Is not nullable.|
+|**compile_memory_kb**|bigint|The current total stolen memory usage in kilobytes (KB). Most of this usage would be for compile and optimization, but it can also include other memory users. Is not nullable.|
 |**active_memgrant_count**|bigint|The current count of memory grants. Is not nullable.|
 |**active_memgrant_kb**|bigint|The sum, in kilobytes (KB), of current memory grants. Is not nullable.|
 |**used_memgrant_kb**|bigint|The current total used (stolen) memory from memory grants. Is not nullable.|

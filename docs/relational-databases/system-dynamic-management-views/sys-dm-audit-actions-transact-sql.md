@@ -28,11 +28,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 |-----------------|---------------|-----------------|  
 |**action_id**|**varchar(4)**|ID of the audit action. Related to the **action_id** value written to each audit record. Is nullable. NULL for audit groups.|  
 |**action_in_log**|**bit**|Indicates whether an action can be written to an audit log. Values are as follows:<br /><br /> 1 = Yes<br /><br /> 0 = No|  
-|**name**|**sysname**|Name of the audit action or action group. Is not nullable.|  
-|**class_desc**|**nvarchar(120)**|The name of the class of the object that the audit action applies to. Can be any one of the Server, Database, or Schema scope objects, but does not include Schema objects. Is not nullable.|  
+|**name**|**sysname**|Name of the audit action or action group. Isn't nullable.|  
+|**class_desc**|**nvarchar(120)**|The name of the class of the object that the audit action applies to. Can be any one of the Server, Database, or Schema scope objects, but doesn't include Schema objects. Isn't nullable.|  
 |**parent_class_desc**|**nvarchar(120)**|Name of the parent class for the object described by class_desc. Is NULL if the class_desc is Server.|  
 |**covering_parent_action_name**|**nvarchar(120)**|Name of the audit action or audit group that contains the audit action described in this row. This is used to create a hierarchy of actions and covering actions. Is nullable.|  
-|**configuration_level**|**nvarchar(10)**|Indicates that the action or action group specified in this row is configurable at the Group or Action level. Is NULL if the action is not configurable.|  
+|**configuration_level**|**nvarchar(10)**|Indicates that the action or action group specified in this row is configurable at the Group or Action level. Is NULL if the action isn't configurable.|  
 |**containing_group_name**|**nvarchar(120)**|The name of the audit group that contains the specified action. Is NULL if the value in name is a group.|  
   
 ## Permissions  

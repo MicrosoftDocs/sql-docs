@@ -26,7 +26,7 @@ The hybrid buffer pool feature is available for both Windows and Linux. The PMEM
 
 For more information, see:
 
-* [Configure persistent memory (PMEM) for SQL Server on Windows](../configure-windows/sql-server-windows-configure-pmem.md).
+* [Configure persistent memory (PMEM) for SQL Server on Windows](../configure-windows/configure-pmem.md).
 * [Configure persistent memory (PMEM) for SQL Server on Linux](../../linux/sql-server-linux-configure-pmem.md).
 
 

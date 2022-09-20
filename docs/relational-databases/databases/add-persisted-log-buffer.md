@@ -36,7 +36,7 @@ To configure a persistent memory device in [Linux](../../linux/sql-server-linux-
 
 ## Configure persistent memory device (Windows)
 
-To configure a persistent memory device in [Windows](../../database-engine/configure-windows/sql-server-windows-configure-pmem.md).
+To configure a persistent memory device in [Windows](../../database-engine/configure-windows/configure-pmem.md).
   
 ## Add a persisted log buffer to a database  
 
@@ -97,7 +97,7 @@ In cases where the path or file are not present during an Availability Group fai
 
 ## Interoperability with other PMEM features
 
-When both Persisted log buffer and [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md) are jointly enabled, along with start-up [trace flag 809](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Hybrid buffer pool will operate in what is known as _Direct Write_ mode. 
+When both Persisted log buffer and [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md) are jointly enabled, along with start-up [trace flag 809](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Hybrid buffer pool will operate in what is known as _Direct Write_ mode.
 
 ## Backup and restore operations
 

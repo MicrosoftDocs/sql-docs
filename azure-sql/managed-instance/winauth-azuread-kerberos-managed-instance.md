@@ -66,5 +66,5 @@ To test the connection with [SQL Server Management Studio](/sql/ssms/download-sq
 Learn more about implementing Windows Authentication for Azure AD principals on Azure SQL Managed Instance:
 
 - [Troubleshoot Windows Authentication for Azure AD principals on Azure SQL Managed Instance](winauth-azuread-troubleshoot.md)
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? (Preview)](winauth-azuread-overview.md)
+- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
 - [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md)

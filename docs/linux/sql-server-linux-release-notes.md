@@ -20,7 +20,7 @@ The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.m
 
 ## Supported platforms
 
-[!INCLUDE [linux-supported-platforms-2017](../includes/linux/linux-supported-platforms-2017.md)]
+[!INCLUDE [linux-supported-platforms-2017](includes/linux-supported-platforms-2017.md)]
 
 ## Tools
 
@@ -673,7 +673,7 @@ Package details and download locations for the RPM and Debian packages are liste
 
 ## Known issues
 
-[!INCLUDE [linux-known-issues-2017](../includes/linux/linux-known-issues-2017.md)]
+[!INCLUDE [linux-known-issues-2017](includes/linux-known-issues-2017.md)]
 
 ## See also
 

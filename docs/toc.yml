@@ -9999,6 +9999,14 @@ items:
       href: tools/visual-studio-code/mssql-query-history.md
     - name: SQL Database Projects
       href: azure-data-studio/extensions/sql-database-project-extension.md
+    - name: SQL Bindings for Azure Functions
+      items: 
+      - name: Overview
+        href: tools/visual-studio-code/create-azure-function-with-mssql.md
+      - name: From Object Explorer Tutorial
+        href: tools/visual-studio-code/create-azure-function-with-mssql-object-explorer.md
+      - name: From Command Palette Tutorial
+        href: tools/visual-studio-code/create-azure-function-with-mssql-command-palette.md
 - name: Tutorials
   items:
   - name: SQL Server
@@ -10682,10 +10690,10 @@ items:
     href: sql-server/sql-server-offline-documentation.md
   - name: Learn
     items:
-    - name: Educational resources 
+    - name: Educational resources
       href: sql-server/educational-sql-resources.yml
-    - name: Microsoft Learn >>
-      href: /learn/
+    - name: Microsoft Learn training >>
+      href: /training/
   - name: Help
     items:
     - name: Get help

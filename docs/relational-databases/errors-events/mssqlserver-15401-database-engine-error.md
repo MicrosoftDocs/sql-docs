@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SEC_INVALIDLOGINORGROUP|
 |Message Text|Windows NT user or group '%s' not found. Check the name again.|
-||
 
 ## Explanation
 

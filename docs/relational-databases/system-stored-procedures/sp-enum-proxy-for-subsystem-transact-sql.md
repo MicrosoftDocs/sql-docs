@@ -61,7 +61,6 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|The name of the subsystem.|  
 |**proxy_id**|**int**|Proxy identification number.|  
 |**proxy_name**|**sysname**|The name of the proxy.|  
-| &nbsp; | &nbsp; | &nbsp; |
   
 ## Remarks  
  When no parameters are provided, **sp_enum_proxy_for_subsystem** lists information about all proxies in the instance for every subsystem.  

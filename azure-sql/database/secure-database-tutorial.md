@@ -35,7 +35,7 @@ Azure SQL Database secures data by allowing you to:
 To learn more, see the [Azure SQL Database security overview](./security-overview.md) and [capabilities](security-overview.md) articles.
 
 > [!TIP]
-> This free Learn module shows you how to [Secure your database in Azure SQL Database](/learn/modules/secure-your-azure-sql-database/).
+> This free Learn module shows you how to [Secure your database in Azure SQL Database](/training/modules/secure-your-azure-sql-database/).
 
 ## Prerequisites
 

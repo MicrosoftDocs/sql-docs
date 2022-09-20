@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|INIT_INVCOMMAND|
 |Message Text|An invalid startup option a was supplied, either from the registry or the command prompt. Correct or remove the option.|
-||
 
 ## Explanation
 

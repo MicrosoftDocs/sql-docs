@@ -22,7 +22,7 @@ This article introduces the concepts, requirements and components necessary to [
 For information on supported platforms, see [providers of S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md#providers-of-s3-compatible-object-storage).
 
 > [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of SQL Server 2022.
+> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 ## Overview
 

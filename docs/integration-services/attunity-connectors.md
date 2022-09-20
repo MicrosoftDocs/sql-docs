@@ -43,7 +43,6 @@ Check the installed version of SSDT in Visual Studio from **Help** | **About Mic
 |---------|---------|---------|---------|
 |17|Starts with 14|SQL Server 2017|[Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
 |16|Starts with 13|SQL Server 2016|[Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
-||||
 
 ## Download the latest SQL Server Data Tools (SSDT)
 

@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver16"
 Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
 > [!NOTE]
-> These instructions are specific to SQL Server 2022 on Windows. To install SQL Server Machine Learning Services on Windows for SQL Server 2016, SQL Server 2017, or SQL Server 2019, see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+> These instructions are specific to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Windows. To install SQL Server Machine Learning Services on Windows for SQL Server 2016, SQL Server 2017, or SQL Server 2019, see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -66,12 +66,12 @@ If you encounter any installation errors during setup, check the summary log in 
      
     This option installs the database services that support R and Python script execution.
 
-    This screenshot shows the minimum **Instance Features** to check when installing SQL Server 2022 Machine Learning Services.
+    This screenshot shows the minimum **Instance Features** to check when installing [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Machine Learning Services.
 
     :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
 
-4. **Next steps vary from previous versions:** Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
+4. **Next steps vary from previous versions:** Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
 
     - [Install R](#install-r)
     - [Install Python](#install-python)

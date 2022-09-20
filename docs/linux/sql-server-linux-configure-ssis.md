@@ -22,7 +22,6 @@ You can also use the `ssis-conf` utility to configure the following properties:
 | set-edition | Set the edition of SQL Server                                       |
 | telemetry   | Enable or disable SQL Server Integration Services telemetry service |
 | setup       | Initialize and set up Microsoft SQL Server Integration Services      |
-|||
 
 ## Run ssis-conf
 

@@ -341,7 +341,7 @@ FROM sys.certificates c
     ON c.thumbprint = dek.encryptor_thumbprint
 ```
 
-If the column `pvt_key_last_backup_date` is NULL, the database corresponding to that row has been enabled for TDE, but the certificate used to protect its DEK hasn't been backed up. For more information on backing up a certificate, see [BACKUP CERTIFICATE](/sql/t-sql/statements/backup-certificate-transact-sql) in SQL Server Books Online.
+If the column `pvt_key_last_backup_date` is NULL, the database corresponding to that row has been enabled for TDE, but the certificate used to protect its DEK hasn't been backed up. For more information on backing up a certificate, see [BACKUP CERTIFICATE](../../../t-sql/statements/backup-certificate-transact-sql.md) in SQL Server Books Online.
 
 ## See also
 

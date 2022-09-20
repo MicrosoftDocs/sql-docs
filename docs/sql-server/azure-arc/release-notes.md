@@ -19,9 +19,6 @@ This release is published September 13, 2022
 
 `1.1.2082.9`
 
-> [!NOTE]
-> The current image tag is available in all [Supported Azure regions](overview.md#supported-azure-regions) for `WindowsAgent.SqlServer` and `LinuxAgent.SqlServer` except West US 2.
-
 ### Azure extension for SQL Server
 
 - Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server have been released with the same image tag.

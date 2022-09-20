@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "10/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 

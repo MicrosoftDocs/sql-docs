@@ -139,27 +139,39 @@ Before using Query Store for secondary replicas, you need to have an [Always On 
 >
 > You must enable trace flag 12606 before you can enable Query Store for secondary replicas. To enable the trace flags:
 >
-> 1. Open the services management console (services.msc from the **Run** menu).
+> 1. In Windows, launch the SQL Server Configuration Manager. 
 > 1. Right-click on the **SQL Server** service for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and select **Properties**.
-> 1. If the service status is *Running*, select **Stop**. This will stop the installed instance.
-> 1. In the **Start parameters** box, add the values: `-T12606`
-> 1. Select **Start** to start the service.
-> 1. Select **OK**.
+> 1. Select the **Start Parameters** tab. In the **Specify a startup parameter:** field, add the values: `-T12606` and select **Add**.
+> 1. The SQL Server instance service must be restarted before the changes will take effect. 
 
-Enable Query Store for secondary replicas using [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md). The following example enables Query Store on the primary database, and then on secondary replicas. To execute this code, connect to the database on the primary replica.
+Enable Query Store for secondary replicas using [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
+
+If Query Store is not already enabled and in READ_WRITE mode on the primary replica of the availability group, it must be before proceeding. Execute the following for each desired database on the primary replica instance:
 
 ```sql
-ALTER DATABASE CURRENT SET QUERY_STORE = ON;
+ALTER DATABASE [Database_Name] SET QUERY_STORE = ON;
 GO
+ALTER DATABASE [Database_Name] SET QUERY_STORE 
+( OPERATION_MODE = READ_WRITE );
+```
 
-ALTER DATABASE CURRENT  
-FOR SECONDARY SET QUERY_STORE = ON ( 
-        OPERATION_MODE = READ_WRITE 
-);
+To enable the Query Store on a secondary replica, connect to each secondary replica and execute the following for each desired database:
+
+```sql
+ALTER DATABASE [Database_Name]
+FOR SECONDARY SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE );
 GO
 ```
 
-You can validate that Query Store is enabled on a secondary replica by connecting to the database on the secondary replica and executing the following Transact-SQL:
+To disable the Query STore on a secondary replica, connect to the secondary replica and execute the following for each desired database:
+
+```sql
+ALTER DATABASE [Database_Name]
+FOR SECONDARY SET QUERY_STORE = OFF;
+GO
+```
+
+You can validate that Query Store is enabled on a secondary replica by connecting to the database on the secondary replica and executing the following:
 
 ```sql
 SELECT desired_state, desired_state_desc, actual_state, actual_state_desc, readonly_reason
@@ -167,7 +179,7 @@ FROM sys.database_query_store_options;
 GO
 ```
 
-The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a read/write state for the secondary. The `readonly_reason` of 8 indicates that the query was run against a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
+The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a read/write state for the secondary. The `readonly_reason` of `8` indicates that the query was run against a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
 
 desired_state | desired_state_desc | actual_state | actual_state_desc | readonly_reason
 --------------|--------------------|--------------|-------------------|-----------------

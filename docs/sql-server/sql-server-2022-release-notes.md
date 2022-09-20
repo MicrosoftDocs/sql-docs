@@ -36,7 +36,7 @@ This section identifies known issues you may experience with this product:
 
 - When you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting won't change the encryption and may cause errors.
 
-- Query Store for secondary replicas is available for preview. It isn't available for use in production environments.
+- [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is available for preview. It isn't available for use in production environments.
 
 - Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which aren't packaged in SQL Server 2022 RC 0 installation. For RC 0, install the two drivers from the provided links as necessary.
 

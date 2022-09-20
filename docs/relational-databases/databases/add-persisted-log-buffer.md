@@ -24,7 +24,7 @@ manager: amitban
 # Add persisted log buffer to a database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] and above using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## Permissions
 
@@ -36,7 +36,7 @@ To configure a persistent memory device in [Linux](../../linux/sql-server-linux-
 
 ## Configure persistent memory device (Windows)
 
-To configure a persistent memory device in [Windows](/windows-server/storage/storage-spaces/deploy-pmem/).
+To configure a persistent memory device in [Windows](../../database-engine/configure-windows/sql-server-windows-configure-pmem.md).
   
 ## Add a persisted log buffer to a database  
 
@@ -52,9 +52,21 @@ ALTER DATABASE <MyDB>
   );
 ```
 
+For example:
+
+```sql
+ALTER DATABASE WideWorldImporters 
+  ADD LOG FILE 
+  (
+    NAME = wwi_log2, 
+    FILENAME = 'F:/SQLTLog/wwi_log2.pldf', 
+    SIZE = 20MB
+  );
+```
+
 Note that the log file on the DAX volume will be sized at 20MB regardless of the size specified wih the ADD FILE command.
 
-The volume or mount the new log file is placed must be formatted with DAX (NTFS) or mounted with the DAX option (XFS/EXT4).
+The volume or mount the new log file is placed must be formatted with DAX enabled (NTFS) or mounted with the DAX option (XFS/EXT4).
 
 ## Remove a persisted log buffer
 
@@ -67,12 +79,25 @@ ALTER DATABASE <MyDB> SET SINGLE_USER;
 ALTER DATABASE <MyDB> REMOVE FILE <DAXlog>;
 ALTER DATABASE <MyDB> SET MULTI_USER;
 ```
+For example:
+
+```sql
+ALTER DATABASE WideWorldImporters SET SINGLE_USER;
+ALTER DATABASE WideWorldImporters REMOVE FILE wwi_log2;
+ALTER DATABASE WideWorldImporters SET MULTI_USER;
+```
 
 ## Limitations
 
 [Transparent Data Encryption (TDE)](../security/encryption/transparent-data-encryption.md) is not compatible with persisted log buffer.
 
-[Availability Groups](../../t-sql/statements/create-availability-group-transact-sql.md) can only use this feature on secondary replicas due to need for normal log writing semantics on the primary. However, the small log file must be created on all nodes (ideally on DAX volumes or mounts).
+[Availability Groups](../../t-sql/statements/create-availability-group-transact-sql.md) can only use this feature on secondary replicas due to the requirement by the log reader agent for standard log writing semantics on the primary. However, the small log file must be created on all nodes (ideally on DAX volumes or mounts). In the event of a failover, the persisted log buffer path must exist, in order for the failover to be successful.
+
+In cases where the path or file are not present during an Availability Group failover event, or database startup, the database will enter a `RECOVERY PENDING` state until the issue is resolved.
+
+## Interoperability with other PMEM features
+
+When both Persisted log buffer and [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md) are jointly enabled, along with start-up [trace flag 809](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Hybrid buffer pool will operate in what is known as _Direct Write_ mode. 
 
 ## Backup and restore operations
 
@@ -82,3 +107,4 @@ Normal restore conditions apply. If persisted log buffer is restored to a DAX vo
 
 - [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](/archive/blogs/bobsql/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm)
 - [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)
+- [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md)

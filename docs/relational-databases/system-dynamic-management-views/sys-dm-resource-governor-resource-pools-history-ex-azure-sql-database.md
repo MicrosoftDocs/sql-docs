@@ -35,13 +35,13 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**active_session_count**|int|Total active sessions in current snapshot|
 |**active_worker_count**|int|Total workers in current snapshot|
 |**delta_cpu_usage_ms**|int|CPU usage in milliseconds since last snapshot. Is not nullable.|
-|**delta_cpu_usage_preemptive_ms**|int|Preemptive win32 calls not govern by SQL CPU RG, since last snapshot|
+|**delta_cpu_usage_preemptive_ms**|int|Preemptive win32 calls not governed by SQL CPU RG, since last snapshot|
 |**used_data_space_kb**|bigint|Total space used in user databases associated with user pool|
 |**allocated_disk_space_kb**|bigint|Total data file size of user databases in the associated with user pool|
-|**target_memory_kb**|bigint|The target amount of memory, in kilobytes, the resource pool is trying to attain. This is based on the current settings and server state. Is not nullable.|
+|**target_memory_kb**|bigint|The target amount of memory, in kilobytes, the resource pool is trying to attain. This value is based on the current settings and server state. Is not nullable.|
 |**used_memory_kb**|bigint|The amount of memory used, in kilobytes, for the resource pool. Is not nullable.|
 |**cache_memory_kb**|bigint|The current total cache memory usage in kilobytes. Is not nullable.|
-|**compile_memory_kb**|bigint|The current total stolen memory usage in kilobytes (KB). The majority of this usage would be for compile and optimization, but it can also include other memory users. Is not nullable.|
+|**compile_memory_kb**|bigint|The current total stolen memory usage in kilobytes (KB). Most this usage would be for compile and optimization, but it can also include other memory users. Is not nullable.|
 |**active_memgrant_count**|bigint|The current count of memory grants. Is not nullable.|
 |**active_memgrant_kb**|bigint|The sum, in kilobytes (KB), of current memory grants. Is not nullable.|
 |**used_memgrant_kb**|bigint|The current total used (stolen) memory from memory grants. Is not nullable.|
@@ -54,7 +54,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**delta_read_io_throttled**|int|The total read IOs throttled since snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**delta_read_bytes**|bigint|The total number of bytes read since last snapshot. Is not nullable.|
 |**delta_read_io_stall_ms**|int|Total time (in milliseconds) between read IO arrival and completion since last snapshot. Is not nullable.|
-|**delta_read_io_stall_queued_ms**|int|Total time (in milliseconds) between read IO arrival and issue since last snapshot. Is nullable. Null if the resource pool is not governed for IO. Non-zero  delta_read_io_stall_queued_ms means IO is being affected by RG .|
+|**delta_read_io_stall_queued_ms**|int|Total time (in milliseconds) between read IO arrival and issue since last snapshot. Is nullable. Null if the resource pool is not governed for IO. Non-zero  delta_read_io_stall_queued_ms means IO is being affected by RG.|
 |**delta_write_io_queued**|int|The total write IOs enqueued since last snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**delta_write_io_issued**|int|The total write IOs issued since last snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**delta_write_io_completed**|int|The total write IOs completed since last snapshot. Is not nullable|
@@ -64,7 +64,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**delta_write_io_stall_queued_ms**|int|Total time (in milliseconds) between write IO arrival and issue since last snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**delta_io_issue_delay_ms**|int|Total time (in milliseconds) between the scheduled issue and actual issue of IO since last snapshot. Is nullable. Null if the resource pool is not governed for IO.|
 |**max_iops_per_volume**|int|The Maximum IO per second (IOPS) per disk volume setting for this Pool. Is nullable. Null if the resource pool is not governed for IO.|
-|**max_memory_kb**|bigint|The maximum amount of memory, in kilobytes, that the resource pool can have. This is based on the current settings and server state. Is not nullable.
+|**max_memory_kb**|bigint|The maximum amount of memory, in kilobytes, that the resource pool can have. This value is based on the current settings and server state. Is not nullable.
 |**max_log_rate_kb**|bigint|Maximum log rate (kilo-bytes per sec) at resource pool level.|
 |**max_data_space_kb**|bigint|Max elastic pool storage limit setting for this elastic pool in kilobytes.|
 |**max_session**|int|Session limit for the pool|
@@ -86,7 +86,7 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**avg_data_io_percent**|decimal(5,2)|Average I/O utilization in percentage based on the limit of the pool.|
 |**avg_log_write_percent**|decimal(5,2)|Average write resource utilization in percentage of the limit of the pool.|
 |**avg_storage_percent**|decimal(5,2)|Average storage utilization in percentage of the storage limit of the pool.|
-|**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL Database|
+|**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This value is the ratio of data space allocated to data max size for the elastic pool. For more information, see: [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage)|
 |**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
 |**active_outbound_connection_worker_count**|int|Total outbound connection workers in current snapshot.|
@@ -99,7 +99,7 @@ This view requires VIEW SERVER STATE permission.
 
 ## Remarks
 
-Users can access this dynamic management view to monitor near real time resource consumption for user workload pool as well as system internal pools of Azure SQL Database instance.
+Users can access this dynamic management view to monitor near real time resource consumption for user workload pool and system internal pools of Azure SQL Database instance.
 
 > [!IMPORTANT]
 > Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.

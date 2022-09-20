@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 ## Permissions  
 This view is visible to the public.
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

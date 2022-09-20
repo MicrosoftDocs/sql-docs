@@ -25,11 +25,11 @@ This article describes how to configure the persistent memory (PMEM) for [!INCLU
 
 ### Create namespaces for PMEM devices
 
-In Windows, use the `ipmctl` utility to configure the PMEM disks (referred to as namespaces in Linux). You can find Intel® Optane™ specific instructions [here](https://www.intel.com/content/www/us/en/developer/articles/guide/qsg-part3-windows-provisioning-with-optane-pmem.html). Details on supported PMEM hardware on different Windows versions is provided [here](/azure-stack/hci/concepts/deploy-persistent-memory#supported-hardware). PMEM disks should be interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. For more on interleaved sets in Windows see [here](/azure-stack/hci/concepts/deploy-persistent-memory#understand-interleaved-sets).
+In Windows, use the `ipmctl` utility to configure the PMEM disks (referred to as namespaces in Linux). You can find Intel® Optane™ specific instructions [here](https://www.intel.com/content/www/us/en/developer/articles/guide/qsg-part3-windows-provisioning-with-optane-pmem.html). Details on supported PMEM hardware on different Windows versions are at [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#supported-hardware). PMEM disks should be interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. For more on interleaved sets in Windows see [here](/azure-stack/hci/concepts/deploy-persistent-memory#understand-interleaved-sets).
 
 ## PMEM disks
 
-### Using powershell to examine PMEM disks
+### Use PowerShell to examine PMEM disks
 
 ```powershell
 #Get information about all physical disks
@@ -44,6 +44,7 @@ Get-PmemPhysicalDevice
 #Get information about unused PMEM regions
 Get-PmemUnusedRegion
 ```
+
 ### BTT and DAX
 
 By default, `New-PmemDisk` will use the desired `FSDax` mode. Atomicity is set to the default of `None` rather than `BlockTranslationTable`. From a support perspective, BTT must be enabled for the transaction log, to mimic required sector mode semantics. Although use of [BTT](/azure-stack/hci/concepts/deploy-persistent-memory#block-translation-table) with NTFS is generally recommended, BTT is not recommended when using large pages, such as required for [DAX](/windows-server/storage/storage-spaces/persistent-memory-direct-access#dax-and-block-translation-table-btt).
@@ -51,9 +52,11 @@ By default, `New-PmemDisk` will use the desired `FSDax` mode. Atomicity is set t
 ```powershell
 Get-PmemUnusedRegion | New-PmemDisk -Atomicity None
 ```
+
 ### Formatting the NTFS volume(s)
 
 ```powershell
+
 #Initialize PMEM Disk(s)
 Get-PmemDisk | Initialize-Disk -PartitionStyle GPT
 
@@ -72,20 +75,24 @@ Format-Volume `
 ## File alignment and offset
 
 ### Check partition offset(s)
+
 ```powershell
 Get-Partition | Select-Object DiskNumber, DriveLetter, IsDAX, Offset, Size, PartitionNumber | fl
 ```
-We can check the file alignment of a particular file using `fsutil`. Note that our file size must be a modulo of 2MB.
+
+Check the file alignment of a particular file using `fsutil`. Note that our file size must be a modulo of 2 MB.
+
 ```bash
 fsutil dax queryFileAlignment A:\AdventureWorks2019_A.mdf
 ```
+
 ## Replacing PMEM
 
 ### Reprovision PMEM disks
 
-Whenever a PMEM module is replaced it needs to be reprovisioned.
+Whenever a PMEM module is replaced, it needs to be re-provisioned.
 
-> [!Note]
+> [!NOTE]
 > Removing a PMEM disk will result in the loss of data on that disk.
 
 ```powershell
@@ -94,10 +101,13 @@ Get-PmemDisk | Remove-PmemDisk -Confirm:$false
 ```
 ### Erase PMEM modules
 
-To permanently erase data from PMEM modules use the `Initialize-PmemPhysicalDevice` powershell cmdlet.
+To permanently erase data from PMEM modules use the `Initialize-PmemPhysicalDevice` PowerShell cmdlet.
 
 ```powershell
 # Reinitialize all PMEM disks
 Get-PmemPhysicalDevice | Initialize-PmemPhysicalDevice -Confirm:$false
 ```
-Other powershell cmdlets for manipulating PMEM are listed [here](/powershell/module/persistentmemory/).
+
+## See also
+
+For other cmdlets for manipulating PMEM see [PersistentMemory](/powershell/module/persistentmemory/) in the PowerShell reference documentation.

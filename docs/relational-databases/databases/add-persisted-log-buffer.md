@@ -1,5 +1,5 @@
 ---
-description: "Add persisted log buffer to a database"
+description: "Explains how to add a persisted log buffer to a database in SQL Server 2019 and later. Provides Transact SQL examples."
 title: "Add persisted log buffer to a database"
 ms.custom: ""
 ms.date: "10/30/2019"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: "briancarrig"
 ms.author: "brcarrig"
-manager: amitban
+ms.reviewer: mikeray
 ---
 
 # Add persisted log buffer to a database
@@ -40,7 +40,7 @@ To configure a persistent memory device in [Windows](../../database-engine/confi
   
 ## Add a persisted log buffer to a database  
 
-The following examples adds a persisted log buffer.
+The following example adds a persisted log buffer.
 
 ```sql
 ALTER DATABASE <MyDB> 
@@ -64,7 +64,7 @@ ALTER DATABASE WideWorldImporters
   );
 ```
 
-Note that the log file on the DAX volume will be sized at 20MB regardless of the size specified wih the ADD FILE command.
+The log file on the DAX volume will be sized at 20 MB regardless of the size specified with the ADD FILE command.
 
 The volume or mount the new log file is placed must be formatted with DAX enabled (NTFS) or mounted with the DAX option (XFS/EXT4).
 
@@ -72,7 +72,7 @@ The volume or mount the new log file is placed must be formatted with DAX enable
 
 To safely remove a persisted log buffer, the database must be placed in single user mode in order to drain the persisted log buffer.
 
-The following example places removes a persisted log buffer.
+The following example removes a persisted log buffer.
 
 ```sql
 ALTER DATABASE <MyDB> SET SINGLE_USER;
@@ -93,13 +93,13 @@ ALTER DATABASE WideWorldImporters SET MULTI_USER;
 
 [Availability Groups](../../t-sql/statements/create-availability-group-transact-sql.md) can only use this feature on secondary replicas due to the requirement by the log reader agent for standard log writing semantics on the primary. However, the small log file must be created on all nodes (ideally on DAX volumes or mounts). In the event of a failover, the persisted log buffer path must exist, in order for the failover to be successful.
 
-In cases where the path or file are not present during an Availability Group failover event, or database startup, the database will enter a `RECOVERY PENDING` state until the issue is resolved.
+In cases where the path or file isn't present during an Availability Group failover event, or database startup, the database enters a `RECOVERY PENDING` state until the issue is resolved.
 
 ## Interoperability with other PMEM features
 
 When both Persisted log buffer and [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md) are jointly enabled, along with start-up [trace flag 809](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Hybrid buffer pool will operate in what is known as _Direct Write_ mode.
 
-## Backup and restore operations
+## Back up and restore operations
 
 Normal restore conditions apply. If persisted log buffer is restored to a DAX volume or mount, it will continue to function, otherwise it can be safely removed.
   

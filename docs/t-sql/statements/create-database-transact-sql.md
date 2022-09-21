@@ -376,7 +376,7 @@ Is the path and file name used by the operating system when you create the file.
 
 SIZE, MAXSIZE, and FILEGROWTH parameters can be set when a UNC path is specified for the file.
 
-If the file is on a raw partition, *os_file_name* must specify only the drive letter of an existing raw partition. Only one data file can be created on each raw partition.
+If the file is on a raw partition, *os_file_name* must specify only the drive letter of an existing raw partition. Only one data file can be created on each raw partition. Note - raw partitions are not supported in SQL Server 2014 onwards.
 
 Data files should not be put on compressed file systems unless the files are read-only secondary files, or the database is read-only. Log files should never be put on compressed file systems.
 

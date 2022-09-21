@@ -30,7 +30,7 @@ This article summarizes the new features and enhancements for [!INCLUDE[sql-serv
 
 ## Get [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
 
-[Get SQL Server 2022 Preview Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126).
+[Get SQL Server 2022 Release Candidate (RC 1) Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126). Build number: 16.0.950.9.
 
 For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
 
@@ -39,13 +39,11 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
+- On Azure Virtual Machines, will be available soon. Look here for the market image, when available.
+- For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, RC 1 is coming soon. For RC 0, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
 - Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
-
-This is release candidate (RC) 1 (16.0.xxx.x).
 
 RC 1 introduces [Hybrid buffer pool with direct write](#platform) as well as other improvements.
 

@@ -35,7 +35,7 @@ To configure a persistent memory device in [Linux](../../linux/sql-server-linux-
 
 ## Configure persistent memory device (Windows)
 
-To configure a persistent memory device in [Windows](../../database-engine/configure-windows/configure-pmem.md).
+To configure a persistent memory device in [Windows](../../database-engine/configure-windows/configure-persistent-memory.md).
   
 ## Add a persisted log buffer to a database  
 

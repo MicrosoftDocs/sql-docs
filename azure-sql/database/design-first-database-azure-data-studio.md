@@ -10,6 +10,7 @@ ms.subservice: development
 ms.topic: tutorial
 ms.custom: sqldbrb=1
 ---
+
 # Tutorial: Design a relational database in Azure SQL Database using Azure Data Studio (ADS)
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -29,6 +30,7 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 
 > [!TIP]
 > This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.
+
 > [!NOTE]
 > For the purpose of this tutorial, we are using Azure SQL Database. You could also use a pooled database in an elastic pool or a SQL Managed Instance. For connectivity to a SQL Managed Instance, see these SQL Managed Instance quickstarts: [Quickstart: Configure Azure VM to connect to an Azure SQL Managed Instance](../managed-instance/connect-vm-instance-configure.md) and [Quickstart: Configure a point-to-site connection to an Azure SQL Managed Instance from on-premises](../managed-instance/point-to-site-p2s-configure.md).
 
@@ -74,11 +76,11 @@ Follow these steps to create a blank database.
 
 9. Enter a **Collation** for the blank database (for this tutorial, use the default value). For more information about collations, see [Collations](/sql/t-sql/statements/collations)
 
-10. Click **Next** to assign Tags for categorizing and consolidating billing for your resource groups. This is optional but recommended if you are working with multiple resources and resource groups.
+10. Select **Next** to assign Tags for categorizing and consolidating billing for your resource groups. This is optional but recommended if you are working with multiple resources and resource groups.
 
-11. Now that you've completed the **SQL Database** form, click **Next** to review and create the database. After review, click **Create**. This step may take a few minutes.
+11. Now that you've completed the **SQL Database** form, Select **Next** to review and create the database. After review, Select **Create**. This step may take a few minutes.
 
-12. On the toolbar, click **Notifications** to monitor the deployment process.
+12. On the toolbar, Select **Notifications** to monitor the deployment process.
    ![Screenshot shows the Notifications menu with Deployment in progress.](./media/design-first-database-tutorial/deployment-in-progress-notification.png)
 
 ## Create a server-level IP firewall rule
@@ -98,16 +100,16 @@ Azure SQL Database creates an IP firewall at the server-level. This firewall pre
 
    ![Screenshot of server-level IP firewall rule.](./media/design-first-database-tutorial/server-firewall-rule.png)
 
-4. Click **Add your current client IPv4 address** under **Firewall rules** to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses. Then enable Azure services and resources to access this server by checking the checkbox.
+4. Select **Add your current client IPv4 address** under **Firewall rules** to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses. Then enable Azure services and resources to access this server by checking the checkbox.
 
-5. Click **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
+5. Select **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
 
-6. You will get a *success* message upon successful configuration of firewall rule. Once this occurs, close the **Firewall settings** page.
+6. You get a *success* message upon successful configuration of firewall rule. Once this occurs, close the **Firewall settings** page.
 
 Your IP address can now pass through the IP firewall. You can now connect to your database using SQL Server Management Studio or another tool of your choice. Be sure to use the server admin account you created previously.
 
 > [!IMPORTANT]
-> By default, access through the SQL Database IP firewall is enabled for all Azure services. Click **OFF** on this page to disable for all Azure services.
+> By default, access through the SQL Database IP firewall is enabled for all Azure services. Select **OFF** on this page to disable for all Azure services.
 
 ## Connect to the database
 
@@ -117,7 +119,7 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to 
 2. In the **New Connection** from the Object Explorer to create a new connection and enter the following information:
 
    | Setting       | Suggested value | Description |
-   | ------------ | ------------------ | ------------------------------------------------- |
+   | --------------|-----------------|------------ |
    | **Connection type** | Microsoft SQL Server | This value is required. |
    | **Server name** | The fully qualified server name | For example, *yourserver.database.windows.net*. |
    | **Authentication type** | SQL Login | SQL Authentication is the only authentication type that we've configured in this tutorial. |
@@ -126,9 +128,9 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to 
 
    ![Screenshot of connection dialog box in ADS.](./media/design-first-database-tutorial/connect-with-azure-data-studio.png)
 
-3. Click **Connect**. The **Object Explorer** window opens in ADS.
+3. Select **Connect**. The **Object Explorer** window opens in ADS.
 
-4. In **Object Explorer**, expand **Databases** and then expand *yourDatabase* to view the objects in the sample database.
+4. In **Object Explorer**, expand **Databases** and then expand *yourDatabase* to view the objects in the sample database.  
 
    ![Screenshot of Object Explorer in ADS.](./media/design-first-database-tutorial/connected-with-azure-data-studio.png)  
 
@@ -143,19 +145,22 @@ Create a database schema with four tables that model a student management system
 
 The following diagram shows how these tables are related to each other. Some of these tables reference columns in other tables. For example, the *Student* table references the *PersonId* column of the *Person* table. Study the diagram to understand how the tables in this tutorial are related to one another. For an in-depth look at how to create effective database tables, see [Create effective database tables](/previous-versions/tn-archive/cc505842(v=technet.10)). For information about choosing data types, see [Data types](/sql/t-sql/data-types/data-types-transact-sql).
 
-![Screenshot of Table relationships.](./media/design-first-database-tutorial/tutorial-database-tables.png)
+![Screenshot of Table relationships.](./media/design-first-database-tutorial/tutorial-database-tables.png)  
 
-1. In **Object Explorer**, click *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
+1. In **Object Explorer**, Select *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-Select the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
 
 2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](\sql-docs-pr\docs\azure-data-studio\table-designer-azure-data-studio.md) :
 
     - Person Table
+
         ![Screenshot of Person Table in Table Designer.](./media/design-first-database-tutorial/person-table-azure-data-studio.png)
 
        Be sure to configure the Primary Key settings for the **Person** Table as shown below:
-          ![Screenshot of Person Table in Table Designer showing the Primary Key settings.](./media/design-first-database-tutorial/person-table-primary-key-azure-data-studio.png)
 
-    - Student Table
+        ![Screenshot of Person Table in Table Designer showing the Primary Key settings.](./media/design-first-database-tutorial/person-table-primary-key-azure-data-studio.png)
+
+   - Student Table
+
         ![Screenshot of Student Table in Table Designer.](./media/design-first-database-tutorial/student-table-azure-data-studio.png)
 
        Be sure to configure the Primary Key settings for the **Student** Table as shown below:
@@ -165,12 +170,14 @@ The following diagram shows how these tables are related to each other. Some of 
            ![Screenshot Student Table in Table Designer showing Foreign Key settings.](./media/design-first-database-tutorial/student-table-foreign-key-azure-data-studio.png)
 
     - Course Table
+
         ![Screenshot of Course Table in Table Designer.](./media/design-first-database-tutorial/course-table-azure-data-studio.png)
 
        Be sure to configure the Primary Key settings for the **Course** Table as shown below:
           ![Screenshot of Course Table in Table Designer showing Primary Key settings.](./media/design-first-database-tutorial/course-table-primary-key-azure-data-studio.png)
 
     - Credit Table
+
         ![Screenshot of Credit Table in Table Designer.](./media/design-first-database-tutorial/credit-table-azure-data-studio.png)
 
        Be sure to configure the Foreign Key settings for the **Credit** Table as shown below:
@@ -187,7 +194,7 @@ The following diagram shows how these tables are related to each other. Some of 
 
 1. Create a folder called *sampleData* in your Downloads folder to store sample data for your database.
 
-2. Right-click the following links and save them into the *sampleData* folder.
+2. Right-Select the following links and save them into the *sampleData* folder.
 
    - [SampleCourseData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCourseData)
    - [SamplePersonData](https://sqldbtutorial.blob.core.windows.net/tutorials/SamplePersonData)
@@ -211,7 +218,7 @@ You have now loaded sample data into the tables you created earlier.
 
 Execute the following queries to retrieve information from the database tables. See [Write SQL queries](/previous-versions/sql/sql-server-2005/express-administrator/bb264565(v=sql.90)) to learn more about writing SQL queries. The first query joins all four tables to find the students taught by 'Dominick Pope' who have a grade higher than 75%. The second query joins all four tables and finds the courses in which 'Noe Coleman' has ever enrolled.
 
-1. In the Azure Data Studio Object Explorer, right-click on your server connection, then select *New Query* to open up the Query Window. Then, execute the queries below:
+1. In the Azure Data Studio Object Explorer, right-Select on your server connection, then select *New Query* to open up the Query Window. Then, execute the queries below:
 
    ```sql
    -- Find the students taught by Dominick Pope who have a grade higher than 75%

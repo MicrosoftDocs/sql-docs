@@ -63,7 +63,7 @@ HTTP method for calling the URL. Must be one of the following values: `GET`, `PO
 
 #### [ @timeout = seconds ]
 
-Time in seconds allowed for the HTTPS call to run. If the full HTTP request and response can't be sent and received within the defined timeout in seconds, the stored procedure execution will be halted, and an exception will be raised. Timeout starts when the HTTP connection starts and ends when the response, and payload included if any, has been received. *timeout* is a positive **smallint** with a default value 5. Optional. Accepted values: 1 to 230.
+Time in seconds allowed for the HTTPS call to run. If the full HTTP request and response can't be sent and received within the defined timeout in seconds, the stored procedure execution will be halted, and an exception will be raised. Timeout starts when the HTTP connection starts and ends when the response, and payload included if any, has been received. *timeout* is a positive **smallint** with a default value 30. Optional. Accepted values: 1 to 230.
 
 #### [ @credential =  credential ]
 
@@ -296,6 +296,12 @@ If the same headers are also specified via the *@headers* parameter, the system-
 
 > [!NOTE]
 > If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](http://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
+
+## Known issues
+
+### Incorrect response headers
+
+The presence of the tilde (`~`) character in either a response header's key or value, will prevent that header key and value to be returned correctly.
 
 ## Examples  
   

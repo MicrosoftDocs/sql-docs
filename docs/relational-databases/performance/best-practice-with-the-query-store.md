@@ -1,11 +1,10 @@
 ---
-title: "Best practices with Query Store"
+title: "Best practices for monitoring workloads with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom:
 - event-tier1-build-2022
-ms.date: "06/15/2022"
+ms.date: 09/20/2022
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,7 +14,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Best practices with Query Store
+# Best practices for monitoring workloads with Query Store
 
 [!INCLUDE [SQL Server ASDB, ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
@@ -24,9 +23,7 @@ This article outlines the best practices for using [!INCLUDE[ssNoVersion](../../
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
 - For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
-
-> [!NOTE]
-> In Azure Synapse Analytics, configuration options for Query Store are not supported. 
+- In Azure Synapse Analytics, Query Store is not enabled by default for dedicated SQL pools, but can be enabled. Further configuration options for Query Store are not supported. For more information, see [Historical query storage and analysis in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-history-storage-analysis).
 
 ## <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
@@ -38,179 +35,9 @@ For a quick description on how to use Query Store in troubleshooting scenarios, 
 
 If you run Query Store in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can use [Query Performance Insight](/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use).
 
-### <a name="QueryStoreOptions"></a> Query Store Defaults in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-This section describes optimal configuration defaults in Azure SQL Database that are designed to ensure reliable operation of the Query Store and dependent features. Default configuration is optimized for continuous data collection, that is minimal time spent in OFF/READ_ONLY states. For more information about all available Query Store options, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
-
-To adjust these options as your workload grows, see [Keep Query Store adjusted to your workload](#Configure) later in this article.
-
-| Configuration | Description | Default | Comment |
-| --- | --- | --- | --- |
-| MAX_STORAGE_SIZE_MB |Specifies the limit for the data space that Query Store can take inside the customer database |100 prior to SQL Server 2019<BR>1024 starting with SQL Server 2019 |Enforced for new databases |
-| INTERVAL_LENGTH_MINUTES |Defines size of time window during which collected runtime statistics for query plans are aggregated and persisted. Every active query plan has at most one row for a period of time defined with this configuration |60 |Enforced for new databases |
-| STALE_QUERY_THRESHOLD_DAYS |Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries |30 |Enforced for new databases and databases with previous default (367) |
-| SIZE_BASED_CLEANUP_MODE |Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit |AUTO |Enforced for all databases |
-| QUERY_CAPTURE_MODE |Specifies whether all queries or only a subset of queries are tracked |AUTO |Enforced for all databases |
-| DATA_FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
-
-> [!IMPORTANT]
-> These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. After it's enabled, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] won't change configuration values that are set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
-
-> [!NOTE]  
-> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`
-
-If you want to stay with your custom settings, use [ALTER DATABASE with Query Store options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) to revert configuration to the previous state. Check out [Best Practices with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) in order to learn how to choose optimal configuration parameters.
-
 ## Use Query Store with Elastic Pool databases
 
-You can use Query Store in all databases without concerns, in even densely packed pools. All issues related to excessive resource usage that might have occurred when Query Store was enabled for the large number of databases in the elastic pools have been resolved.
-
-## <a name="Configure"></a> Keep Query Store adjusted to your workload
-
-Configure Query Store based on your workload and performance troubleshooting requirements.
-The default parameters are good enough to start, but you should monitor how Query Store behaves over time and adjust its configuration accordingly.
-
- ![Query Store properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")
-
- Here are guidelines to follow for setting parameter values:
-
-**Max Size (MB)**: Specifies the limit for the data space that Query Store takes inside your database. This is the most important setting that directly affects the operation mode of Query Store.
-
-While Query Store collects queries, execution plans, and statistics, its size in the database grows until this limit is reached. When that happens, Query Store automatically changes the operation mode to read-only and stops collecting new data, which means that your performance analysis is no longer accurate.
-
-The default value in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB. This size might not be sufficient if your workload generates a large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the default value is 1 GB. Keep track of current space usage and increase the **Max Size (MB)** value to prevent Query Store from transitioning to read-only mode.
-
-> [!IMPORTANT]
-> The **Max Size (MB)** limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the **Data Flush Interval (Minutes)** option. If Query Store has breached the maximum size limit between storage size checks, it transitions to read-only mode. If **Size Based Cleanup Mode** is enabled, the cleanup mechanism to enforce the maximum size limit is also triggered.
-
-Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:
-
-```sql
-USE [QueryStoreDB];
-GO
-
-SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
- max_storage_size_mb, readonly_reason
-FROM sys.database_query_store_options;
-```
-
-The following script sets a new value for **Max Size (MB)**:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
-```
-
- **Data Flush Interval (Minutes)**: It defines the frequency to persist collected runtime statistics to disk. It's expressed in minutes in the graphical user interface (GUI), but in [!INCLUDE[tsql](../../includes/tsql-md.md)] it's expressed in seconds. The default is 900 seconds, which is 15 minutes in the graphical user interface. Consider using a higher value if your workload doesn't generate a large number of different queries and plans, or if you can withstand longer time to persist data before a database shutdown.
-
-> [!NOTE]
-> Using trace flag 7745 prevents Query Store data from being written to disk in case of a failover or shutdown command. For more information, see the [Use trace flags on mission-critical servers](#Recovery) section.
-
-Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to set a different value for **Data Flush Interval**:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);
-```
-
-**Statistics Collection Interval**: Defines the level of granularity for the collected runtime statistic, expressed in minutes. The default is 60 minutes. Consider using a lower value if you require finer granularity or less time to detect and mitigate issues. Keep in mind that the value directly affects the size of Query Store data. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to set a different value for **Statistics Collection Interval**:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
-```
-
-**Stale Query Threshold (Days)**: Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries, expressed in days. By default, Query Store is configured to keep the data for 30 days, which might be unnecessarily long for your scenario.
-
-Avoid keeping historical data that you don't plan to use. This practice reduces changes to read-only status. The size of Query Store data and the time to detect and mitigate the issue will be more predictable. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the following script to configure time-based cleanup policy:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
-```
-
-**Size Based Cleanup Mode**: Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit. Activate size-based cleanup to make sure that Query Store always runs in read-write mode and collects the latest data.  Note that there's no guarantee under heavy workloads that Query Store cleanup will consistently maintain the data size under the limit. It's possible for the automatic data cleanup to fall behind and to switch (temporarily) into read-only mode.
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
-```
-
-**Query Store Capture Mode**: Specifies the query capture policy for Query Store.
-
-- **All**: Captures all queries. This option is the default in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- **Auto**: Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile, and runtime duration are internally determined. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], this is the default option.
-- **None**: Query Store stops capturing new queries.
-- **Custom**: Allows additional control and the capability to fine-tune the data collection policy. The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store.
-
-> [!IMPORTANT]
-> Cursors, queries inside stored procedures, and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
-
- The following script sets QUERY_CAPTURE_MODE to AUTO:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
-```
-
-### Examples
-
-The following example sets QUERY_CAPTURE_MODE to AUTO and sets other recommended options in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE = ON
-    (
-      OPERATION_MODE = READ_WRITE,
-      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
-      DATA_FLUSH_INTERVAL_SECONDS = 900,
-      QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1000,
-      INTERVAL_LENGTH_MINUTES = 60
-    );
-```
-
-The following example sets QUERY_CAPTURE_MODE to AUTO and sets other recommended options in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] to include wait statistics:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE = ON
-    (
-      OPERATION_MODE = READ_WRITE,
-      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
-      DATA_FLUSH_INTERVAL_SECONDS = 900,
-      QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1000,
-      INTERVAL_LENGTH_MINUTES = 60,
-      SIZE_BASED_CLEANUP_MODE = AUTO,
-      MAX_PLANS_PER_QUERY = 200,
-      WAIT_STATS_CAPTURE_MODE = ON
-    );
-```
-
-The following example sets QUERY_CAPTURE_MODE to AUTO and sets other recommended options in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], and *optionally* sets the CUSTOM capture policy with its defaults, instead of the new default AUTO capture mode:
-
-```sql
-ALTER DATABASE [QueryStoreDB]
-SET QUERY_STORE = ON
-    (
-      OPERATION_MODE = READ_WRITE,
-      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
-      DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1000,
-      INTERVAL_LENGTH_MINUTES = 60,
-      SIZE_BASED_CLEANUP_MODE = AUTO,
-      MAX_PLANS_PER_QUERY = 200,
-      WAIT_STATS_CAPTURE_MODE = ON,
-      QUERY_CAPTURE_MODE = CUSTOM,
-      QUERY_CAPTURE_POLICY = (
-        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
-        EXECUTION_COUNT = 30,
-        TOTAL_COMPILE_CPU_TIME_MS = 1000,
-        TOTAL_EXECUTION_CPU_TIME_MS = 100
-      )
-    );
-```
+You can use Query Store in all databases without concerns, in even densely packed Azure SQL Database elastic pools. All previous issues related to excessive resource usage that might have occurred when Query Store was enabled for the large number of databases in the elastic pools have been resolved.
 
 ## Start with query performance troubleshooting
 
@@ -384,33 +211,6 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
-
-## Set the optimal Query Store Capture Mode
-
-Keep the most relevant data in Query Store. The following table describes typical scenarios for each Query Store Capture Mode:
-
-|Query Store Capture Mode|Scenario|
-|------------------------|--------------|
-|**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
-|**Auto**|Focus your attention on relevant and actionable queries. An example is those queries that execute regularly or that have significant resource consumption.<br /><br />Note: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], this is the default capture mode.|
-|**None**|You've already captured the query set that you want to monitor in runtime and you want to eliminate the distractions that other queries might introduce.<br /><br /> None is suitable for testing and benchmarking environments.<br /><br /> None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br /> None should be used with caution because you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|
-|**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a Custom capture mode under the `ALTER DATABASE SET QUERY_STORE` command. When enabled, additional Query Store configurations are available under a new Query Store capture policy setting to fine-tune data collection in a specific server.<br /><br />The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|
-
-> [!NOTE]
-> Cursors, queries inside stored procedures, and natively compiled queries are always captured when Query Store Capture Mode is set to **All**, **Auto**, or **Custom**. To capture natively compiled queries, enable collection of per-query statistics by using [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
-
-## Keep the most relevant data in Query Store
-
-Configure Query Store to contain only the relevant data so that it runs continuously and provides a great troubleshooting experience with a minimal impact on your regular workload.
-
-The following table provides best practices:
-
-|Best practice|Setting|
-|-------------------|-------------|
-|Limit retained historical data.|Configure time-based policy to activate autocleanup.|
-|Filter out nonrelevant queries.|Configure **Query Store Capture Mode** to **Auto**.|
-|Delete less relevant queries when the maximum size is reached.|Activate size-based cleanup policy.|
-
 ## <a name="Parameterize"></a> Avoid using non-parameterized queries
 
 Using non-parameterized queries when that isn't necessary isn't a best practice. An example is in the case of ad-hoc analysis. Cached plans can't be reused, which forces Query Optimizer to compile queries for every unique query text. For more information, see [Guidelines for using forced parameterization](../../relational-databases/query-processing-architecture-guide.md#forced-parameterization).
@@ -535,6 +335,10 @@ Avoid mismatched tiers with [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 For more on estimating and configuring the size of the secondary Azure SQL database of active geo-replication, see [Configuring secondary database](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
 
 
+## <a id="QueryStoreOptions"></a><a id="Configure"></a><a id="set-the-optimal-query-store-capture-mode"></a><a id="keep-the-most-relevant-data-in-query-store"></a>Keep Query Store adjusted to your workload
+
+Best practices and recommendations for configuring and managing Query Store have been expanded in this article: [Best practices for managing the Query Store](manage-the-query-store.md).
+
 ## See also
 
  - [ALTER DATABASE SET options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)
@@ -548,3 +352,4 @@ For more on estimating and configuring the size of the secondary Azure SQL datab
 
  - [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
  - [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md)
+ - [Historical query storage and analysis in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-history-storage-analysis)

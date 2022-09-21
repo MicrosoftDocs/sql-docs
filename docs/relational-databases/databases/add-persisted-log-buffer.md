@@ -104,6 +104,6 @@ Normal restore conditions apply. If persisted log buffer is restored to a DAX vo
   
 ## Next steps
 
-- [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](/archive/blogs/bobsql/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm)
-- [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)
+- [How It Works (It Just Runs Faster): Non-Volatile Memory SQL Server Tail Of Log Caching on NVDIMM](https://techcommunity.microsoft.com/t5/sql-server-blog/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server/ba-p/3209699)
+- [Transaction Commit latency acceleration using Storage Class Memory in Windows Server 2016/SQL Server 2016 SP1](https://techcommunity.microsoft.com/t5/sql-server-blog/transaction-commit-latency-acceleration-using-storage-class/ba-p/384995)
 - [Hybrid Buffer Pool](../../database-engine/configure-windows/hybrid-buffer-pool.md)

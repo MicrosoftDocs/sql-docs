@@ -275,7 +275,7 @@ Use the following steps to verify that all components used to launch external sc
 
 ### Existing installation
 
-If you have added Machine Learning Services to an existing SQL Server instance and have previously applied a Cumulative Update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This may result in unexpected behavior or errors. 
+If you have added Machine Learning Services to an existing SQL Server instance and have previously applied a Cumulative Update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This may result in unexpected behavior or errors because the launchpad.exe and the sqlservr.exe might have different versions. The behavior like unable to start the launchpad service and launchpad might report error 0xc0000409 in the Event Viewer. For more details, check the Windows Event Viewer log.
 
 Follow these steps to bring the Machine Learning Services to the same version as your database engine.
 
@@ -295,7 +295,7 @@ Follow these steps to bring the Machine Learning Services to the same version as
 
 1. Download the [Cumulative Update (CU)](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) that you have installed for the database engine.
 
-1. Run the installation of the Cumulative Update (CU) and follow the instructions to install the CU for Machine Learning Services.
+1. Run the installation of the Cumulative Update (CU) and follow the instructions to install the CU for Machine Learning Services again. Select the existing instance that have the ML services. The upgrade status will show Incompletely Installed from the landing page of the patch. Click Next and follow the instructions to install the CU for Machine Learning Services.
 
 ### New installation
 

@@ -44,7 +44,7 @@ This section identifies known issues you may experience with this product:
 
 | Preview build | Version number | Date |
 |:--|:--|:--|
-| RC 1    | 16.0.xxx.x | September 22, 2022|
+| RC 1    | 16.0.950.9 | September 22, 2022|
 | RC 0    | 16.0.900.6 | August 23, 2022|
 | CTP 2.1 | 16.0.700.4 | July 27, 2022 |
 | CTP 2.0 | 16.0.600.9 | May 20, 2022 |

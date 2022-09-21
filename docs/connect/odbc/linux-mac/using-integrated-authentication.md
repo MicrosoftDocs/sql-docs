@@ -22,7 +22,7 @@ As of version 17.6, the driver also supports integrated authentication with Azur
 You can enable Kerberos integrated authentication by specifying **Trusted_Connection=yes** in the connection string of **SQLDriverConnect** or **SQLConnect**. For example:  
 
 ```
-Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 18 for SQL Server';Server=your_server;Encrypt=yes;Trusted_Connection=yes  
 ```
   
 When connecting with a DSN, you can also add **Trusted_Connection=yes** to the DSN entry in `odbc.ini`.

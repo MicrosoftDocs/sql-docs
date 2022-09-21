@@ -667,7 +667,7 @@ You should see the following output:
 ● mssql-server.service - Microsoft SQL Server Database Engine
    Loaded: loaded (/usr/lib/systemd/system/mssql-server.service; enabled; vendor preset: disabled)
    Active: active (running) since Thu 2019-12-05 17:30:55 UTC; 20min ago
-     Docs: https://docs.microsoft.com/en-us/sql/linux
+     Docs: https://learn.microsoft.com/sql/linux
  Main PID: 11612 (sqlservr)
    CGroup: /system.slice/mssql-server.service
            ├─11612 /opt/mssql/bin/sqlservr

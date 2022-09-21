@@ -22,7 +22,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 In this quickstart, you'll use [.NET](https://dotnet.microsoft.com) and C# code to connect to a database. You'll then run a Transact-SQL statement to query data.  This quickstart is applicable to Windows, Linux, and macOS and leverages the unified .NET platform.
 
 > [!TIP]
-> This free Learn module shows you how to [Develop and configure an ASP.NET application that queries a database in Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/)
+> This free Learn module shows you how to [Develop and configure an ASP.NET application that queries a database in Azure SQL Database](/training/modules/develop-app-that-queries-azure-sql/)
 
 ## Prerequisites
 

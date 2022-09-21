@@ -394,6 +394,14 @@ Customers can't use ESUs if they move their [!INCLUDE[ssSQL11](../../includes/ss
 
 For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure virtual machines, see the [SQL Server optimization guide](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices).
 
+**How do US Federal Government customers register and obtain SQL Server 2012 ESUs if they are running in Azure Government/O365 GCCH/O365 DOD?**
+
+Azure Government regions aren't currently supported in the Azure portal. Until then, [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] customers in Government regions interested in Extended Security Updates (ESU) will have to create an Azure subscription in one of the supported regions and register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances there.
+
+Registering provides access to offers via the Azure portal, including ESUs, for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that can't be directly connected to Azure. You can register your instance in a [disconnected](#overview) state using the following metadata for each instance: `name,version,edition,cores,hostType`. See the [formatting requirements](#formatting-requirements-for-csv-file) for more information.
+
+If there is a critical security patch for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], customers will need to download the patch from the Azure portal following these [step-by-step instructions](#download-esus), and then apply the patch to their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
+
 ## See also
 
 - [SQL Server 2012 lifecycle page](/lifecycle/products/microsoft-sql-server-2012)

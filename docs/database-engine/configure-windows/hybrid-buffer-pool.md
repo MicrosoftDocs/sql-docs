@@ -21,13 +21,13 @@ Persistent memory (PMEM) devices are byte-addressable and if a direct access (DA
 
 The hybrid buffer pool uses this ability to perform load and store operations against memory mapped files, to leverage the PMEM device both as a cache for the buffer pool and a storage location for the database files. This creates the unique situation where both a logical read and a physical read become essentially the same operation. Persistent memory devices are accessible via the memory bus just like regular volatile DRAM.
 
-By default, only clean data pages are cached on the PMEM module for the hybrid buffer pool. For a page to be modified and marked as dirty, it must be copied from the PMEM device to a DRAM buffer pool, modified and then eventually a copy of the modified page is written from DRAM back to the PMEM module, at which point it can be be marked as clean again. This process occurs using normal background operations such as checkpoint, or the lazy writer, just as though the PMEM module were a standard block device.
+By default, only clean data pages are cached on the PMEM module for the hybrid buffer pool. For a page to be modified and marked as dirty, it must be copied from the PMEM device to a DRAM buffer pool, modified and then eventually a copy of the modified page is written from DRAM back to the PMEM module, at which point it can be marked as clean again. This process occurs using normal background operations such as checkpoint, or the lazy writer, just as though the PMEM module were a standard block device.
 
 The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must use a filesystem that supports DAX (DirectAccess). XFS, EXT4, and the NTFS file systems all have support for DAX extensions, which provides access to the filesystem directly from user space. SQL Server will detect if any database data files reside on an appropriately configured PMEM disk device and automatically perform the necessary memory mapping of the database files upon database startup, or whenever a database is attached, restored, or created.
 
 For more information, see:
 
-* [Configure persistent memory (PMEM) for SQL Server on Windows](../configure-windows/configure-pmem.md)(Beginning with SQL Server 2022).
+* [Configure persistent memory (PMEM) for SQL Server on Windows](../configure-windows/configure-persistent-memory.md)(Beginning with SQL Server 2022).
 * [Configure persistent memory (PMEM) for SQL Server on Linux](../../linux/sql-server-linux-configure-pmem.md).
 
 ## Enable hybrid buffer pool

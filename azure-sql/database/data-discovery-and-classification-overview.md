@@ -252,6 +252,7 @@ You can use the REST API to programmatically manage classifications and recommen
 
 You can use the following SQL drivers to retrieve classification metadata:
 
+- [Microsoft.Data.SqlClient](/sql/connect/ado-net/sql/data-classification)
 - [ODBC Driver](/sql/connect/odbc/data-classification)
 - [OLE DB Driver](/sql/connect/oledb/features/using-data-classification)
 - [JDBC Driver](/sql/connect/jdbc/data-discovery-classification-sample)

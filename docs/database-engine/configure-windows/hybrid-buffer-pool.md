@@ -10,6 +10,7 @@ ms.technology: configuration
 ms.topic: conceptual
 ---
 # Hybrid Buffer Pool
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Hybrid Buffer Pool enables buffer pool objects to reference data pages in database files residing on persistent memory (PMEM) devices, instead of having to fetch copies of the data pages from disk and caching them in volatile DRAM. This feature was introduced in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] and is further enhanced in [!INCLUDE[sqlv16](../../includes/sssql22-md.md)].
@@ -26,9 +27,8 @@ The hybrid buffer pool feature is available for both Windows and Linux. The PMEM
 
 For more information, see:
 
-* [Configure persistent memory (PMEM) for SQL Server on Windows](../configure-windows/configure-pmem.md).
+* [Configure persistent memory (PMEM) for SQL Server on Windows](../configure-windows/configure-pmem.md)(Beginning with SQL Server 2022).
 * [Configure persistent memory (PMEM) for SQL Server on Linux](../../linux/sql-server-linux-configure-pmem.md).
-
 
 ## Enable hybrid buffer pool
 
@@ -82,12 +82,12 @@ The following example lists the databases and the database level setting for hyb
 ```sql
 SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ```
+
 ## Hybrid buffer pool with direct write
 
 Hybrid buffer pool with `Direct Write` behavior reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. It does this by leveraging the durable persisted log buffer as a means to modify the page without having to copy it into one of the DRAM buffer pools. Instead pages in database files residing on PMEM devices are modified directly without the need to cache in a DRAM buffer pool and later asynchronously flush to disk. This behavior still adheres to Write Ahead Logging (WAL) semantics, as the pages in the persisted transaction log buffer have been written, or hardened, to durable media. Considerable performance gains have been observed for transactional workloads using Hybrid buffer pool and Persisted log buffer together in this manner.
 
 To enable direct write mode, enable hybrid buffer pool and [persisted log buffer](../../relational-databases/databases/add-persisted-log-buffer.md) for a database and enable startup [trace flag 809](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
-
 
 ## Best Practices for hybrid buffer pool
 

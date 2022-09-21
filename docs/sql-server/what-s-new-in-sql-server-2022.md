@@ -47,6 +47,8 @@ After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit 
 
 This is release candidate (RC) 1 (16.0.xxx.x).
 
+RC 1 introduces [Hybrid buffer pool with direct write](#platform) as well as other improvements.
+
 ## Feature highlights
 
 The following sections identify features that are improved our introduced in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
@@ -137,6 +139,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
+|Hybrid buffer pool with direct write<|Reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. This *enlightenment* is is now available for Window 2022 as well as Linux. For details, see [Hybrid buffer pool with direct write](../database-engine/configure-windows/hybrid-buffer-pool.md#hybrid-buffer-pool-with-direct-write) and [Configure persistent memory (PMEM) for SQL Server on Windows](../database-engine/configure-windows/configure-pmem.md).|
 |Integrated acceleration & offloading | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated acceleration & offloading](../relational-databases/integrated-acceleration/overview.md). |
 | Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. Requires trace flag 15097. See [DBCC TRACEON - Trace Flags (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf15097). |
 

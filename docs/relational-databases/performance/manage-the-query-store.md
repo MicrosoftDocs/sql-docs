@@ -21,14 +21,9 @@ This article outlines the management of the [!INCLUDE[ssNoVersion](../../include
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 
-## Defaults and versions
-
-
 ### <a name="QueryStoreOptions"></a> Query Store defaults in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-This section describes optimal configuration defaults in Azure SQL Database that are designed to ensure reliable operation of the Query Store and dependent features. Default configuration is optimized for continuous data collection, that is minimal time spent in OFF/READ_ONLY states. For more information about all available Query Store options, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
-
-To adjust these options as your workload grows, see [Keep Query Store adjusted to your workload](#Configure) later in this article.
+This section describes optimal configuration defaults in Azure SQL Database that are designed to ensure reliable operation of the Query Store and dependent features. Default configuration is optimized for continuous data collection, that is minimal time spent in OFF/READ_ONLY states. For more information about all available Query Store options, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_store_option-).
 
 | Configuration | Description | Default | Comment |
 | --- | --- | --- | --- |
@@ -90,11 +85,11 @@ Tuning an appropriate custom capture policy for your environment should be consi
 - The database has a large number of unique, ad hoc queries.
 - The database has specific size or growth limitations.
 
-See [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options?view=sql-server-ver16#query_capture_policy_option_list--) for details on the custom capture policy options.
+See [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_capture_policy_option_list--) for details on the custom capture policy options.
 
 ### Example custom capture policies
 
-The following example sets QUERY_CAPTURE_MODE to AUTO and sets a custom capture mode. Each of the following sets the custom capture policies to its default value in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. You may consider adjusting these values to reduce the amount of queries captured, and therefore reduce the on-disk footprint of the Query Store. It is recommended to gradually change these values by small increments.
+The following example sets QUERY_CAPTURE_MODE to AUTO and sets a custom capture mode. Each of the following sets the custom capture policies to its default value in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. You may consider adjusting these values to reduce the number of queries captured, and therefore reduce the on-disk footprint of the Query Store. It is recommended to gradually change these values by small increments.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -136,7 +131,9 @@ The default maximum size value of the Query Store is 1000 MB, starting in [!INCL
 
 `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes). If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered. Once enough space has been cleared, the Query Store mode will automatically switch back to READ_WRITE mode.
 
-For more information, refer to the [ALTER DATABASE SET OPTION MAX_STORAGE_SIZE_MB](../../t-sql/statements/alter-database-transact-sql-set-options?view=sql-server-ver16#max_storage_size_mb) option.
+For more information, see the [ALTER DATABASE SET OPTION MAX_STORAGE_SIZE_MB](../../t-sql/statements/alter-database-transact-sql-set-options.md#max_storage_size_mb) option.
+
+
 
 ## Data Flush Interval (Minutes)
 
@@ -146,7 +143,7 @@ The Data Flush Interval defines the frequency before collected runtime statistic
 - Decreasing the data flush interval decreases the amount of Query Store data that would be lost in the event of a shutdown, power loss, or failover. It may also smoothen the storage I/O impact from Query Store by writing to disk more often, but with less data. 
 
 > [!NOTE]
-> Using trace flag 7745 prevents Query Store data from being written to disk in case of a failover or shutdown command. For more information, see the [Use trace flags on mission-critical servers](#Recovery) section.
+> Using trace flag 7745 prevents Query Store data from being written to disk in case of a failover or shutdown command. For more information, see [Use Query Store in mission-critical servers](best-practice-with-the-query-store.md#Recovery).
 
 ## Modify Query Store defaults
 
@@ -377,7 +374,7 @@ For the full list of configuration options, see [ALTER DATABASE SET Options (Tra
 
 #### Clean up the space
 
-Query Store internal tables are created in the PRIMARY filegroup during database creation and that configuration cannot be changed later. If you are running out of space you might want to clear older Query Store data by using the following statement.
+Query Store internal tables are created in the PRIMARY filegroup during database creation and that configuration cannot be changed later. If you are running out of space, you might want to clear older Query Store data by using the following statement.
 
 ```sql
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
@@ -385,7 +382,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space. 
 
-In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past 7 days.
+In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past seven days.
 
 #### Delete ad-hoc queries
 

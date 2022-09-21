@@ -84,7 +84,7 @@ The following table details all intelligent query processing features, along wit
 
 ## Query Store requirement
 
-Several of the suite of [intelligent query processing features](intelligent-query-processing.md) require the [Query Store](monitoring-performance-by-using-the-query-store.md) to be enabled in order to benefit the user database. To enable the Query Store, see [Enable the Query Store](monitoring-performance-by-using-the-query-store.md#enabling).
+Several of the suite of [intelligent query processing features](intelligent-query-processing.md) require the [Query Store](monitoring-performance-by-using-the-query-store.md) to be enabled in order to benefit the user database. To enable the Query Store, see [Enable the Query Store](monitoring-performance-by-using-the-query-store.md#Enabling).
 
 | **IQP Feature** | **Requires Query Store to be enabled and READ_WRITE**|
 | ---------------- | ------- | 

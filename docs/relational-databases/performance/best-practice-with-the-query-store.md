@@ -309,7 +309,7 @@ Execution plans reference objects by using three-part names like `database.schem
 
 If you rename a database, plan forcing fails, which causes recompilation in all subsequent query executions.
 
-## <a name="Recovery"></a> Using Query Store in mission-critical servers
+## <a name="Recovery"></a> Use Query Store in mission-critical servers
 
 The global trace flags 7745 and 7752 can be used to improve availability of databases by using Query Store. For more information, see [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 

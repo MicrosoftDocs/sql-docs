@@ -3,7 +3,7 @@ title: "Install using graphical user interface"
 description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/16/2022
+ms.date: 09/12/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -174,7 +174,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]
 
     > [!NOTE]  
-    > Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
+    > With [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
 
 1. Use the **Server Configuration - Collation** page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 
@@ -201,7 +201,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).
 
-1. Use the **Analysis Services Configuration - Account Provisioning** page to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
+1. Use the **Analysis Services Configuration** page to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. **Tabular mode** is the default.
 
     You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:
 
@@ -209,16 +209,16 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
     * To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 
-    For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning-page).
+    For more information about server mode and administrator permissions, see [Analysis Services Configuration](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning-page).
 
-    When you're finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. After the list is complete, select **Next**.
+    When you're finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box.
 
-    Use the **Analysis Services Configuration - Data Directories** page to specify nondefault installation directories. To install to the default directories, select **Next**.
+    Use the **Analysis Services Configuration - Data Directories** tab to specify non-default installation directories. To install to the default directories, select **Next**.
 
     > [!IMPORTANT]  
     > When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if you specify the same directory path for `INSTANCEDIR` and `SQLUSERDBDIR`, SQL Server Agent and Full Text Search won't start due to missing permissions.  
     >  
-    > If you specify nondefault installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+    > If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
     For more information, see [Analysis Services Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).
 
@@ -474,8 +474,8 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable integration scenarios with Azure (like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)), and is required to enable Microsoft Defender for Cloud, Purview, Azure Active Directory and other Azure services. This feature is selected by default.  
 
-   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. If you wish to proceed without conncting to Azure, you can unselect the Azure Extension for SQL Server checkbox. However, if the checkbox is selected and disabled (you can't unselect it), it means that the extension was already installed on your machine.
-
+   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/connect.md#prerequisites) are registered in your subscription.  If you wish to proceed without connecting to Azure, you can unselect the Azure Extension for SQL Server checkbox. 
+   
    To authenticate the SQL Server instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/overview.md#required-permissions).
 
    The following information is required:

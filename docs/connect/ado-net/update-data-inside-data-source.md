@@ -1,17 +1,15 @@
 ---
 title: "Updating data in a data source"
 description: Describes how to execute commands or stored procedures that modify data in a database.
-ms.date: "11/25/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Updating data in a data source
 

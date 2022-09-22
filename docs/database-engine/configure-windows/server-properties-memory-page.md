@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (Memory Page) | Microsoft Docs"
+title: "Server Properties (Memory Page)"
 description: Get acquainted with server memory options in SQL Server. Learn about minimum and maximum server memory, index creation memory, and other settings.
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.memory.f1"
-ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/08/2016"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.memory.f1"
 ---
 # Server Properties - Memory Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

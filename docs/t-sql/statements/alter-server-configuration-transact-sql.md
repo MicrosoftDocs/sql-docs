@@ -286,12 +286,12 @@ Enables or disables hybrid buffer pool at the instance level. Requires a restart
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]).
 
 ON <br>
-Enables the use of integrated offloading and acceleration for the instance.  Requires restart.
+Enables the use of integrated acceleration and offloading for the instance.  Requires restart.
 
 OFF <br>
-Disables all instance-level use of integrated offloading and acceleration. Requires a restart to take effect.
+Disables all instance-level use of integrated acceleration and offloading. Requires a restart to take effect.
 
-For more information, see [Integrated offloading and acceleration](../../relational-databases/integrated-acceleration/overview.md).
+For more information, see [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md).
 
 ## General Remarks  
 This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. If it's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it doesn't require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  

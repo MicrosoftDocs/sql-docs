@@ -1,30 +1,26 @@
 ---
+title: "DBCC FREEPROCCACHE (Transact-SQL)"
 description: "DBCC FREEPROCCACHE (Transact-SQL)"
-title: "DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/13/2017"
 ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "FREEPROCCACHE_TSQL"
   - "FREEPROCCACHE"
   - "DBCC_FREEPROCCACHE_TSQL"
   - "DBCC FREEPROCCACHE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "freeing procedure cache"
   - "removing procedure cache elements"
   - "deleting procedure cache elements"
   - "DBCC FREEPROCCACHE statement"
   - "procedure cache [SQL Server]"
   - "clearing procedure cache"
-ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DBCC FREEPROCCACHE (Transact-SQL)

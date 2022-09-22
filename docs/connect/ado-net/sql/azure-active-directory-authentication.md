@@ -1,16 +1,15 @@
 ---
 title: Using Azure Active Directory authentication with SqlClient
 description: Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient
-ms.date: 12/14/2021
-dev_langs: 
-  - "csharp"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
+ms.date: 12/14/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 
 # Using Azure Active Directory authentication with SqlClient
@@ -55,7 +54,7 @@ When the application is connecting to Azure SQL data sources by using Azure AD a
 
 ```cs
 // Use your own server, database, user ID, and password.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Database=testdb; User Id=user@domain.com; Password=***";
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Database=testdb; User Id=user@domain.com; Password=***";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -72,14 +71,14 @@ The following code snippet is an example of when `Active Directory Integrated` a
 
 ```cs
 // Use your own server and database.
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // User ID is optional for .NET Core and .NET Standard.
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Database=testdb; User Id=user@domain.com";
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Encrypt=True; Database=testdb; User Id=user@domain.com";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -97,14 +96,14 @@ The following example shows how to use `Active Directory Interactive` authentica
 ```cs
 // Use your own server, database, and user ID.
 // User ID is optional.
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Database=testdb; User Id=user@domain.com";
+string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Encrypt=True; Database=testdb; User Id=user@domain.com";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // User ID is not provided.
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -123,7 +122,7 @@ The following example shows how to use `Active Directory Service Principal` auth
 
 ```cs
 // Use your own server, database, app ID, and secret.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Service Principal; Database=testdb; User Id=AppId; Password=secret";
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Service Principal; Encrypt=True; Database=testdb; User Id=AppId; Password=secret";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -140,7 +139,7 @@ The following code snippet is an example of using `Active Directory Device Code 
 
 ```cs
 // Use your own server and database.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Device Code Flow; Database=testdb";
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Device Code Flow; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();
@@ -167,13 +166,13 @@ The following example shows how to use `Active Directory Managed Identity` authe
 ```cs
 // For system-assigned managed identity
 // Use your own server and database.
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -187,14 +186,14 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 // Use your own values for Server, Database, and User Id.
 
 // With Microsoft.Data.SqlClient v3.0+
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; User Id=ClientIdOfManagedIdentity; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // With Microsoft.Data.SqlClient v3.0+
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; User Id=ClientIdOfManagedIdentity; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Encrypt=True; User Id=ClientIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -205,14 +204,14 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 
 ```cs
 // With Microsoft.Data.SqlClient v2.1
-string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; User Id=ObjectIdOfManagedIdentity; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
 // With Microsoft.Data.SqlClient v2.1
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; User Id=ObjectIdOfManagedIdentity; Database=testdb";
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Encrypt=True; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -247,7 +246,7 @@ The following example shows how to use **Active Directory Default** authenticati
 
 ```cs
 // Use your own server, database
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Default; Database=testdb;";
+string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Default; Encrypt=True; Database=testdb;";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString)) {
     conn.Open();

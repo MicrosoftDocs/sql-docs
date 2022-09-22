@@ -1,14 +1,13 @@
 ---
 title: Resolve capacity errors with Azure SQL resources
-description: Learn how to resolve possible capacity errors when attempting to deploy or scale Azure SQL Database or Azure SQL Managed Instance resources. 
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: deployment-configuration
-ms.topic: how-to
+description: Learn how to resolve possible capacity errors when attempting to deploy or scale Azure SQL Database or Azure SQL Managed Instance resources.
 author: sachinpMSFT
 ms.author: sachinp
 ms.reviewer: mathoma, kendralittle
 ms.date: 09/03/2021
+ms.service: sql-db-mi
+ms.subservice: deployment-configuration
+ms.topic: how-to
 ms.custom: references_regions
 ---
 

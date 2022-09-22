@@ -119,7 +119,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ## Query Store for secondary replicas
 
-**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together.
 
@@ -133,7 +133,7 @@ The data stored about queries can be analyzed as workloads on a replica set basi
 Before using Query Store for secondary replicas, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) set up and configured.
 
 > [!IMPORTANT]
-> **APPLIES TO**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+> **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 >
 > Query Store for secondary replicas is a *preview* feature. It is not intended for production deployments. See: [release notes](../../sql-server/sql-server-2022-release-notes.md).
 >

@@ -1,21 +1,18 @@
 ---
+title: "DBCC OPENTRAN (Transact-SQL)"
 description: "DBCC OPENTRAN (Transact-SQL)"
-title: "DBCC OPENTRAN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC_OPENTRAN_TSQL"
   - "DBCC OPENTRAN"
   - "OPENTRAN_TSQL"
   - "OPENTRAN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server], transactions"
   - "transactions [SQL Server], status information"
   - "DBCC OPENTRAN statement"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "displaying transaction information"
   - "checking open transactions"
   - "oldest transactions [SQL Server]"
-ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,21 +1,15 @@
 ---
-title: Automated Backup v2 for SQL Server 2016/2017 Azure VMs | Microsoft Docs
+title: Automated Backup v2 for SQL Server 2016/2017 Azure VMs
 description: This article explains the Automated Backup feature for SQL Server 2016/2017 VMs running on Azure. This article is specific to VMs using the Resource Manager.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: ebd23868-821c-475b-b867-06d4a2e310c7
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 12/21/2021
 ms.service: virtual-machines-sql
 ms.subservice: backup
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 12/21/2021
-ms.author: pamela
-ms.reviewer: mathoma 
 ms.custom: devx-track-azurepowershell
+tags: azure-resource-manager
 ---
 
 # Automated Backup v2 for Azure virtual machines (Resource Manager)
@@ -48,7 +42,7 @@ To use Automated Backup v2, review the following prerequisites:
 -  Automated backup relies on the full [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). As such, automated backup is only supported on target databases from the default instance, or a single named instance. If there is no default instance, and multiple named instances, the SQL IaaS extension fails and automated backup will not work. 
 
 ## Settings
-The following table describes the options that can be configured for Automated Backup v2. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands.
+The following table describes the options that can be configured for Automated Backup. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands. Note that Automated backup uses [backup compression](/sql/database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option?view=sql-server-ver16) by default and you cannot disable it.
 
 ### Basic Settings
 

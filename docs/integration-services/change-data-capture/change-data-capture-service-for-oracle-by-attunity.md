@@ -88,5 +88,3 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
   
 ## See Also  
  [Working with the Oracle CDC Service](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
-  
-  

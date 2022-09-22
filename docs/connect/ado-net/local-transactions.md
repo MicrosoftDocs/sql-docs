@@ -1,14 +1,13 @@
 ---
 title: "Local transactions"
 description: "Demonstrates how to perform transactions against a database with Microsoft SqlClient Data Provider for SQL Server."
-ms.date: "11/24/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/24/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Local transactions
 

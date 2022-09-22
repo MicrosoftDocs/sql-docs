@@ -4,9 +4,8 @@ description: Find out how to manage and optimize SQL Server resources. View avai
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: 08/23/2022
+ms.date: 09/14/2022
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,7 +25,7 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], configuration options"
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
-keywords: "server configuration (SQL Server)"
+keywords: server configuration (SQL Server)
 ---
 
 # Server configuration options (SQL Server)
@@ -79,6 +78,8 @@ There are two configuration options where the `value` and `value_in_use` might n
 
 The `is_dynamic` column can be used to determine if the configuration option requires a restart. A value of `1` in the `is_dynamic` column means that, when the `RECONFIGURE` command is run, the new value will take effect immediately. In some cases, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] might not evaluate the new value immediately but will do so in the normal course of its execution. A value of `0` in the `is_dynamic` column means that the changed configuration value won't take effect until the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is restarted, even though the `RECONFIGURE` command was run.
 
+For a configuration option that isn't dynamic there is no way to tell if the `RECONFIGURE` command has been run to apply the configuration change. Before you restart SQL Server to apply the configuration change, run the `RECONFIGURE` command to ensure all configuration changes will take effect when SQL Server next restarts.
+
 ## Configuration options
 
 The following table lists all available configuration options, the range of possible settings, and default values. Configuration options are marked with letter codes as follows:
@@ -107,12 +108,13 @@ The following table lists all available configuration options, the range of poss
 | [allow updates](allow-updates-server-configuration-option.md) (Obsolete. Don't use. Will cause an error during reconfigure.) | 0 | 1 | 0 |
 | [automatic soft-NUMA disabled](soft-numa-sql-server.md) | 0 | 1 | 0 |
 | [backup checksum default](backup-checksum-default.md) | 0 | 1 | 0 |
-| [backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md) | 0 | 1 | 0 |
+| [backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md) | 0 | 1 - versions prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]<br /><br />2 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later | 0 |
+| [backup compression algorithm](view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later. | 0 | 1 | 0 |
 | [blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A) | 5 | 86400 | 0 |
 | [c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [clr enabled](clr-enabled-server-configuration-option.md) | 0 | 1 | 0 |
 | [clr strict security](clr-strict-security.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 0 | 1 | 0 |
-| [column encryption enclave type ](configure-column-encryption-enclave-type.md) (A, RR) | 0 | 1 | 0 |
+| [column encryption enclave type](configure-column-encryption-enclave-type.md) (A, RR) | 0 | 2 | 0 |
 | [common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [contained database authentication](contained-database-authentication-server-configuration-option.md) | 0 | 1 | 0 |
 | [cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A) | 0 | 32767 | 5 |

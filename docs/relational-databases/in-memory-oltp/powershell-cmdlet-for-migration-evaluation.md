@@ -61,7 +61,6 @@ Conversely, if you do _not_ specify `-InputObject`, then you must specify `-Serv
 | Schema | The name of the schema that owns the object to be reported about.<br/><br/> Optional. |
 | Server | The name of the target SQL Server instance. Mandatory in Windows Powershell environment if `-InputObject` parameter is not supplied.<br/><br/> Optional in SQLPS. |
 | Username | Required when connecting through SQL Server Authentication, as opposed to Windows Authentication. Otherwise omit. |
-| &nbsp; | &nbsp; |
 
 ## Prerequisites
 
@@ -180,7 +179,6 @@ And next is an approximation of what the table looks like.
 | No unsupported triggers are defined on this table. | Succeeded |
 | Post migration row size does not exceed the row size limit of memory-optimized tables. | Succeeded |
 | Table is not partitioned or replicated. | Succeeded |
-| &nbsp; | &nbsp; |
 
 ## Related links
 

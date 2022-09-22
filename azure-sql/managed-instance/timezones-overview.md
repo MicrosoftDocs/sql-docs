@@ -1,16 +1,14 @@
 ---
 title: Azure SQL Managed Instance time zones
 description: Learn about the time zone specifics of Azure SQL Managed Instance
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: reference
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
 ms.date: 10/12/2020
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom: sqldbrb=1
 ---
 # Time zones in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -29,6 +27,9 @@ A set of supported time zones is inherited from the underlying operating system 
 [Daylight saving time/time zone changes policy](/troubleshoot/windows-client/system-management-components/daylight-saving-time-help-support) guarantees historical accuracy from 2010 forward.
 
 A list with names of the supported time zones is exposed through the [sys.time_zone_info](/sql/relational-databases/system-catalog-views/sys-time-zone-info-transact-sql) system view.
+
+> [!NOTE]
+> On August 8, 2022, the Chilean government made an official announcement about a Daylight-Saving Time (DST) [time zone change](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290). Starting at 12:00 a.m. Saturday, September 10, 2022, until 12:00 a.m. Saturday, April 1, 2023, the official time will advance 60 minutes. The change affects the following three time zones: **Pacific SA Standard Time**, **Easter Island Standard Time** and **Magallanes Standard Time**. Azure SQL Managed Instances using affected time zones will not reflect the changes [until Microsoft releases an OS update](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290) to support this and Azure SQL Managed Instance service absorbs the update on the OS level. If you need to alter affected time zones for your managed instances, please be aware of the [limitations](#limitations) and follow the guidance from the documentation.
 
 ## Set a time zone
 

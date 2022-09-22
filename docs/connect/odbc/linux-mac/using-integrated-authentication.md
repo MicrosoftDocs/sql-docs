@@ -1,18 +1,14 @@
 ---
 title: "Using Integrated Authentication"
 description: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
-ms.custom: ""
-ms.date: 09/01/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "integrated authentication"
-ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 09/01/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "integrated authentication"
 ---
 # Using Integrated Authentication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +22,7 @@ As of version 17.6, the driver also supports integrated authentication with Azur
 You can enable Kerberos integrated authentication by specifying **Trusted_Connection=yes** in the connection string of **SQLDriverConnect** or **SQLConnect**. For example:  
 
 ```
-Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 18 for SQL Server';Server=your_server;Encrypt=yes;Trusted_Connection=yes  
 ```
   
 When connecting with a DSN, you can also add **Trusted_Connection=yes** to the DSN entry in `odbc.ini`.

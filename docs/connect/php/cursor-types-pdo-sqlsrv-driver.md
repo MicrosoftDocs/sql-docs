@@ -1,16 +1,12 @@
 ---
 title: "Cursor types (PDO_SQLSRV Driver)"
 description: "Learn about various server-side and client-side cursors and how users may specify the cursor type when using Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Cursor Types (PDO_SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

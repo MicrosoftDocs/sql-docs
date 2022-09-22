@@ -1,16 +1,12 @@
 ---
 title: Connection resiliency
 description: Connection resiliency can transparently restore broken connections. This feature improves application behavior when the server closes idle connections.
-ms.custom: ""
-ms.date: 07/23/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 07/23/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Connection resiliency in the ODBC driver
 
@@ -135,7 +131,7 @@ void func2() {
 
 #define MAXBUFLEN 255
 
-    SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+    SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 18 for SQL Server};SERVER=server_that_supports_connection_resiliency;Encrypt=yes;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
     SQLCHAR ConnStrOut[MAXBUFLEN];
 
     SQLSMALLINT cbConnStrOut = 0;

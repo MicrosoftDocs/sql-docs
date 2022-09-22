@@ -729,7 +729,7 @@ In most cases, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] delivers the best
   
     ```sql
     BEGIN TRAN
-    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    SELECT * FROM mytable WITH (UPDLOCK, HOLDLOCK) WHERE 1=0
     WAITFOR DELAY '1:00:00'
     COMMIT TRAN
     ```

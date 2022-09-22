@@ -3,13 +3,10 @@ title: "NEWID (Transact-SQL)"
 description: "NEWID (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "NEWID"
   - "NEWID_TSQL"

@@ -73,6 +73,8 @@ You can still use a certificate that exceeds its expiration date to encrypt and 
 
 ### Encryption hierarchy
 
+The Windows Data Protection API (DPAPI) is at the root of the encryption tree, secures the key hierarchy at the machine level, and is used to protect the service master key (SMK) for the database server instance. The SMK protects the database master key (DMK), which is stored at the user database level and protects certificates and asymmetric keys. These, in turn, protect symmetric keys, which protect the data. TDE uses a similar hierarchy down to the certificate. When you use TDE, the DMK and certificate must be stored in the master database. A new key, used only for TDE and referred to as the database encryption key (DEK), is created and stored in the user database.
+
 The following illustration shows the architecture of TDE encryption. Only the database-level items (the database encryption key and ALTER DATABASE portions) are user-configurable when you use TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].
 
 ![The Transparent Database Encryption architecture](../../../relational-databases/security/encryption/media/tde-architecture.png)
@@ -129,7 +131,7 @@ The following table provides links and explanations of TDE commands and function
 
 |Command or function|Purpose|
 |-------------------------|-------------|
-|[CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that encrypts a database| 
+|[CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that encrypts a database|
 |[ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Changes the key that encrypts a database|
 |[DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Removes the key that encrypts a database|
 |[ALTER DATABASE SET Options (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql-set-options.md)|Explains the **ALTER DATABASE** option that is used to enable TDE|
@@ -180,7 +182,7 @@ The following operations are disallowed during initial database encryption, key 
 
 - Transitioning a database or filegroup into a READ ONLY state
 
-The following operations are disallowed during the CREATE DATABASE ENCRYPTION KEY, ALTER DATABASE ENCRYPTION KEY, DROP DATABASE ENCRYPTION KEY, and ALTER DATABASE...SET ENCRYPTION statements:
+The following operations are disallowed during the `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, and `ALTER DATABASE...SET ENCRYPTION` statements:
 
 - Dropping a file from a filegroup in a database
 
@@ -200,7 +202,7 @@ The following operations are disallowed during the CREATE DATABASE ENCRYPTION KE
 
 - Creating a snapshot
 
-The following operations or conditions prevent the CREATE DATABASE ENCRYPTION KEY, ALTER DATABASE ENCRYPTION KEY, DROP DATABASE ENCRYPTION KEY, and ALTER DATABASE...SET ENCRYPTION statements:
+The following operations or conditions prevent the `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, and `ALTER DATABASE...SET ENCRYPTION` statements:
 
 - A database is read-only or has read-only filegroups.
 
@@ -278,18 +280,23 @@ Snapshot replication can store data in unencrypted intermediate files like BCP f
 
 For more information, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
-## TDE and Always On	
-You can [add an encrypted database to an Always On availability group](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md). 	
+## TDE and Always On
 
-To encrypt databases that are part of an availability group, create the master key and certificates, or asymmetric key (EKM) on all secondary replicas before creating the [database encryption key](../../../t-sql/statements/create-database-encryption-key-transact-sql.md) on the primary replica. 	
+You can [add an encrypted database to an Always On availability group](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md).
 
-If a certificate is used to protect the database encryption key (DEK), [back up the certificate](../../../t-sql/statements/backup-certificate-transact-sql.md) created on the primary replica, and then [create the certificate from a file](../../../t-sql/statements/create-certificate-transact-sql.md) on all secondary replicas before creating the database encryption key on the primary replica. 
+To encrypt databases that are part of an availability group, create the master key and certificates, or asymmetric key (EKM) on all secondary replicas before creating the [database encryption key](../../../t-sql/statements/create-database-encryption-key-transact-sql.md) on the primary replica.
+
+If a certificate is used to protect the database encryption key (DEK), [back up the certificate](../../../t-sql/statements/backup-certificate-transact-sql.md) created on the primary replica, and then [create the certificate from a file](../../../t-sql/statements/create-certificate-transact-sql.md) on all secondary replicas before creating the database encryption key on the primary replica.
 
 ## TDE and FILESTREAM data
 
 **FILESTREAM** data isn't encrypted even when you enable TDE.
 
 <a name="scan-suspend-resume"></a>
+
+## TDE and Backups
+
+Certificates are commonly used in Transparent Data Encryption to protect the Database Encryption Key (DEK). The certificate must be created in the master database. Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore from these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you must maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available.
 
 ## Remove TDE
 
@@ -304,7 +311,7 @@ To view the state of the database, use the [sys.dm_database_encryption_keys](../
 Wait for decryption to finish before removing the database encryption key by using [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
 
 > [!IMPORTANT]
-> Back up the master key and certificate that are used for TDE to a safe location. The master key and certificate are required to restore backups that were taken when the database was encrypted with TDE. After you remove the database encryption key, take a log backup followed by a fresh full backup of the decrypted database. 
+> Back up the master key and certificate that are used for TDE to a safe location. The master key and certificate are required to restore backups that were taken when the database was encrypted with TDE. After you remove the database encryption key, take a log backup followed by a fresh full backup of the decrypted database.
 
 ## TDE and buffer pool extension
 
@@ -314,9 +321,31 @@ When you encrypt a database using TDE, files related to buffer pool extension (B
 
 You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
 
+## Guidelines on Managing Certificates used in Transparent Data Encryption
+
+The backup of the certificate and database master key is needed when the database is enabled for TDE and is used in Log Shipping or Database Mirroring.
+
+It's also important to remember that the certificate used to protect the Database Encryption Key should never be dropped from the Master database. Doing so will cause the encrypted database to become inaccessible.
+
+A Warning message like the following one is raised after executing the `Create Database Encryption Key` if the certificate used in the command hasn't been backed up already.
+
+> The certificate used for encrypting the database encryption key hasn't been backed up. You should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key, or you won't be able to open the database.
+
+The following query can be used to identify the certificates used in TDE that haven't been backed up from the time it was created.
+
+```sql
+SELECT pvt_key_last_backup_date, 
+    Db_name(dek.database_id) AS encrypteddatabase ,c.name AS Certificate_Name
+FROM sys.certificates c
+    INNER JOIN sys.dm_database_encryption_keys dek 
+    ON c.thumbprint = dek.encryptor_thumbprint
+```
+
+If the column `pvt_key_last_backup_date` is NULL, the database corresponding to that row has been enabled for TDE, but the certificate used to protect its DEK hasn't been backed up. For more information on backing up a certificate, see [BACKUP CERTIFICATE](../../../t-sql/statements/backup-certificate-transact-sql.md) in SQL Server Books Online.
+
 ## See also
 
 - [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 - [FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)
 - [SQL Server Encryption](../../../relational-databases/security/encryption/sql-server-encryption.md)  
-- [SQL Server and Database Encryption Keys (Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+- [SQL Server and Database Encryption Keys (Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)

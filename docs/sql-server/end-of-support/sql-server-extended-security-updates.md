@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/06/2022
+ms.date: 08/25/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -32,7 +32,7 @@ You can receive Extended Security Updates in several ways:
 
 - **Azure Arc**. Purchased for your on-premises or hosted environment. You'll download updates when they're available. There are two ways to use Azure Arc:
 
-  - **Connected**. Install the Azure Connected Machine agent with direct connectivity to Azure. You'll benefit from the features that [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) provide.
+  - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [SQL Server on Azure Arc-enabled servers](../azure-arc/overview.md) provides.
 
   - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state.
 
@@ -393,6 +393,14 @@ Customers can't use ESUs if they move their [!INCLUDE[ssSQL11](../../includes/ss
 **What are the best practices for enhancing performance of SQL Server in Azure virtual machines?**
 
 For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure virtual machines, see the [SQL Server optimization guide](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices).
+
+**How do US Federal Government customers register and obtain SQL Server 2012 ESUs if they are running in Azure Government/O365 GCCH/O365 DOD?**
+
+Azure Government regions aren't currently supported in the Azure portal. Until then, [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] customers in Government regions interested in Extended Security Updates (ESU) will have to create an Azure subscription in one of the supported regions and register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances there.
+
+Registering provides access to offers via the Azure portal, including ESUs, for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that can't be directly connected to Azure. You can register your instance in a [disconnected](#overview) state using the following metadata for each instance: `name,version,edition,cores,hostType`. See the [formatting requirements](#formatting-requirements-for-csv-file) for more information.
+
+If there is a critical security patch for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], customers will need to download the patch from the Azure portal following these [step-by-step instructions](#download-esus), and then apply the patch to their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
 
 ## See also
 

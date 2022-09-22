@@ -1,21 +1,15 @@
 ---
+title: "updateDate Method (int, java.sql.Date)"
 description: "updateDate Method (int, java.sql.Date)"
-title: "updateDate Method (int, java.sql.Date) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateDate (int, java.sql.Date)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateDate (int, java.sql.Date)"
+apitype: "Assembly"
 ---
 # updateDate Method (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

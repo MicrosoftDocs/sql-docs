@@ -4,7 +4,7 @@ description: "RTRIM (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 08/22/2022
+ms.date: 09/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -46,6 +46,9 @@ RTRIM ( character_expression )
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
 
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the optional *characters* argument.
+
 ```syntaxsql
 RTRIM ( character_expression , [ characters ] )
 ```
@@ -63,9 +66,7 @@ RTRIM ( character_expression )
 
 #### *character_expression*
 
-An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column of either character or binary data.
-
-*character_expression* must be of a data type that is implicitly convertible to **varchar**. Otherwise, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) to explicitly convert *character_expression*.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character or binary data. *character_expression* can be a constant, variable, or column. *character_expression* must be of a data type, except **text**, **ntext**, and **image**, that is implicitly convertible to **varchar**. Otherwise, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) to explicitly convert *character_expression*.
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 #### *characters*
@@ -123,7 +124,12 @@ Four spaces are after the period in this sentence.     Next string.
 Four spaces are after the period in this sentence. Next string.
 ```
 
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
+
 ### C. Remove specified characters from the end of a string
+
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the optional *characters* argument.
 
 The following example removes the characters `abc.` from the end of the `.123abc.` string.
 
@@ -136,6 +142,7 @@ SELECT RTRIM('.123abc.' , 'abc.');
 ```output
 .123
 ```
+::: moniker-end
 
 ## See also
 

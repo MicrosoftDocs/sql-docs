@@ -1,14 +1,11 @@
 ---
 title: Enable SQL Insights (preview)
 description: Enable SQL Insights (preview) in Azure Monitor
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 08/03/2022
-services:
-  - "sql-database"
 ms.service: sql-db-mi
+ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -22,7 +19,7 @@ This article describes how to enable [SQL Insights (preview)](sql-insights-overv
 > To enable SQL Insights (preview) by creating the monitoring profile and virtual machine using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](/azure/azure-monitor/insights/resource-manager-sql-insights).
 
 To learn how to enable SQL Insights (preview), you can also refer to this Data Exposed episode.
-> [!VIDEO https://docs.microsoft.com/Shows/Data-Exposed/How-to-Set-up-Azure-Monitor-for-SQL-Insights/player?format=ny]
+> [!VIDEO https://learn.microsoft.com/Shows/Data-Exposed/How-to-Set-up-Azure-Monitor-for-SQL-Insights/player?format=ny]
 
 ## Create Log Analytics workspace
 SQL Insights stores its data in one or more [Log Analytics workspaces](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces). Before you can enable SQL Insights, you need to either [create a workspace](/azure/azure-monitor/logs/quick-create-workspace) or select an existing one. A single workspace can be used with multiple monitoring profiles, but the workspace and profiles must be located in the same Azure region. To enable and access the features in SQL Insights, you must have the [Log Analytics contributor role](/azure/azure-monitor/logs/manage-access) in the workspace. 

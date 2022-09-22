@@ -1,16 +1,14 @@
 ---
 title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
-ms.custom: ""
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
+ms.reviewer: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 
@@ -43,7 +41,6 @@ GeneMi.  2019/04/03.
 | ServerCertificate option | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. See [Using Azure Active Directory](../using-azure-active-directory.md) for more information. |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.10, June 2022
 
@@ -52,7 +49,6 @@ GeneMi.  2019/04/03.
 | New distributions supported. | Ubuntu 22.04, Red Hat 9 |
 | TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 18.0, February 2022
 
@@ -64,7 +60,6 @@ GeneMi.  2019/04/03.
 | Support for TDS 8.0 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](../windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](../windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.9, February 2022
 
@@ -73,14 +68,12 @@ GeneMi.  2019/04/03.
 | New distributions supported. | Debian 11, Ubuntu 21.10, macOS 12 |
 | Added compatibility with OpenSSL 3.0 | See [Connection String Keywords and Data Source Names](connection-string-keywords-and-data-source-names-dsns.md#using-tlsssl). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.8.1.2, October 2021
 
 | New item | Details |
 | :------- | :------ |
 | Package update | Updated RPM packages for Red Hat 7, Red Hat 8, SUSE 12, and SUSE 15 to use SHA256 RPM signing. |
-| &nbsp; | &nbsp; |
 
 ## 17.8, July 2021
 
@@ -91,14 +84,12 @@ GeneMi.  2019/04/03.
 | Replication option added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | KeepAlive and KeepAliveInterval options added to the connection string | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.7.2, March 2021
 
 | New item | Details |
 | :------- | :------ |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.7, January 2021
 
@@ -108,7 +99,6 @@ GeneMi.  2019/04/03.
 | Service Principal Authentication | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Ability to insert into encrypted money and smallmoney columns | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.6, July 2020
 
@@ -119,14 +109,12 @@ GeneMi.  2019/04/03.
 | Metadata caching for prepared statements | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | SQL_COPT_SS_AUTOBEGINTXN connection attribute to control whether automatic BEGIN TRANSACTION happens after ROLLBACK or COMMIT | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.5.2.2, April 2020 (Alpine Linux only)
 
 | Feature added | Details |
 | :------------ | :------ |
 | Bug fixed. | See [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.5.2, March 2020
 
@@ -135,7 +123,6 @@ GeneMi.  2019/04/03.
 | Support authentication with Managed Identity for Azure Key Vault | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for more Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.5, January 2020
 
@@ -145,7 +132,6 @@ GeneMi.  2019/04/03.
 | Support for indicating EULA acceptance via `debconf` on Debian and Ubuntu | See [Installing the Driver](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
 | New distributions supported. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.4.2, October 2019
 
@@ -154,7 +140,6 @@ GeneMi.  2019/04/03.
 | Support for more Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Support for setting data classification version | See [Data Classification](../data-classification.md#bkmk-version). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 **Known Issue:**
 
@@ -168,7 +153,6 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#bkmk-openssl). |
 | Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.3, February 2019
 
@@ -178,7 +162,6 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | Azure Active Directory Managed Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
 | Ability to stream input parameters against Always Encrypted columns. | For more information, see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | See [Using XA Transactions](../use-xa-with-dtc.md).<br/><br/>XA is an initialism for _eXtended Architecture_, which is a standard for the execution of a global transaction that accesses more than one server-side data storage system. |
-| &nbsp; | &nbsp; |
 
 ## 17.2, July 2018
 
@@ -191,7 +174,6 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | Dynamic dependency on `libcurl`. | Starting with this version, the `libcurl` package isn't an explicit dependency.<br/>The `libcurl` package for OpenSSL or NSS is required when using Azure Key Vault or Azure Active Directory authentication.<br/>If you encounter an error regarding `libcurl`, ensure it's installed. |
 | Idle Connection Resiliency with ConnectRetryCount and ConnectRetryInterval keywords in connection string. | &bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_COUNT`(read only) to retrieve the number of connection retry attempts.<br/><br/>&bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(read only) to retrieve the length of the connection retry interval.<br/><br/>See [Connection Resiliency](../connection-resiliency.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17.1, March 2018
 
@@ -200,7 +182,6 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes. | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` allows controlling the time that the local cache of Column Encryption Keys exists, and flushing it.<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` allows the application to restrict Always Encrypted operations to use only the specified list of Column Master Keys.<br/><br/>See [Using Always Encrypted with the ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md)). |
 | Support for loading the `.rll` from default location. | See ['Resource File Loading' section in the Installation document](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-| &nbsp; | &nbsp; |
 
 ## 17
 

@@ -1,15 +1,14 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of all user databases on a managed instance in Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: "azure-sql-split"
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
-ms.date: 07/08/2022
+ms.date: 09/09/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Managed Instance)
@@ -129,6 +128,9 @@ Additionally, if you're using other mechanisms for providing connectivity betwee
 When establishing a failover group between managed instances, there's an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive part of the operation. Once initial seeding completes data is synchronized, and only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of data, number of replicated databases, workload intensity on the primary databases, and the speed of the link between the virtual networks hosting primary and secondary instance that mostly depends on the way connectivity is established. Under normal circumstances, and when connectivity is established using recommended global virtual network peering, seeding speed is up to 360 GB an hour for SQL Managed Instance. Seeding is performed for a batch of user databases in parallel - not necessarily for all databases at the same time. Multiple batches may be needed if there are many databases hosted on the instance.
 
 If the speed of the link between the two instances is slower than what is necessary, the time to seed is likely to be noticeably impacted. You can use the stated seeding speed, number of databases, total size of data, and the link speed to estimate how long the initial seeding phase will take before data replication starts. For example, for a single 100 GB database, the initial seed phase would take about 1.2 hours if the link is capable of pushing 84 GB per hour, and if there are no other databases being seeded. If the link can only transfer 10 GB per hour, then seeding a 100-GB database will take about 10 hours. If there are multiple databases to replicate, seeding will be executed in parallel, and, when combined with a slow link speed, the initial seeding phase may take considerably longer, especially if the parallel seeding of data from all databases exceeds the available link bandwidth.
+
+> [!IMPORTANT]
+> In case of an extremely low-speed or busy link causing the initial seeding phase to take days the creation of a failover group can time out. The creation process will be automatically canceled after 6 days.
 
 ## <a name="managing-failover-to-secondary-instance"></a> Manage geo-failover to a geo-secondary instance
 

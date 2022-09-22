@@ -26,7 +26,7 @@ If you haven't installed PolyBase, see [PolyBase installation](polybase-installa
 
 ### SQL Server 2022 
 
-In SQL Server 2022 Preview, configure your external data sources to use new connectors when you connect to Azure Storage. The table below summarizes the change:
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], configure your external data sources to use new connectors when you connect to Azure Storage. The table below summarizes the change:
 
 | External Data Source | From | To |
 | -------------------- | ---- | -- |

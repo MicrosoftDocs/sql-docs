@@ -1,21 +1,15 @@
 ---
 title: Automated Backup for SQL Server 2014 Azure virtual machines
 description: Explains the Automated Backup feature for SQL Server 2014 VMs running in Azure. This article is specific to VMs using the Resource Manager.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: bdc63fd1-db49-4e76-87d5-b5c6a890e53c
+ms.author: pamela
+ms.reviewer: pamela
+ms.date: 05/03/2018
 ms.service: virtual-machines-sql
 ms.subservice: backup
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/03/2018
-ms.author: mathoma
-ms.reviewer: pamela 
 ms.custom: devx-track-azurepowershell
+tags: azure-resource-manager
 ---
 
 # Automated Backup for SQL Server 2014 virtual machines (Resource Manager)
@@ -53,7 +47,7 @@ To use Automated Backup, consider the following prerequisites:
 
 ## Settings
 
-The following table describes the options that can be configured for Automated Backup. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands.
+The following table describes the options that can be configured for Automated Backup. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands. Note that Automated backup uses [backup compression](/sql/database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option?view=sql-server-ver16) by default and you cannot disable it.
 
 | Setting | Range (Default) | Description |
 | --- | --- | --- |

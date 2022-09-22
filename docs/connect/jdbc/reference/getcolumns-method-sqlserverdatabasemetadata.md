@@ -1,21 +1,15 @@
 ---
+title: "getColumns Method (SQLServerDatabaseMetaData)"
 description: "getColumns Method (SQLServerDatabaseMetaData)"
-title: "getColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getColumns"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getColumns"
+apitype: "Assembly"
 ---
 # getColumns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -172,7 +166,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 import java.sql.*;  
 public class c1 {  
    public static void main(String[] args) {  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedsecurity=true";  
+      String connectionUrl = "jdbc:sqlserver://localhost:1433;encrypt=true;databaseName=AdventureWorks;integratedsecurity=true";  
   
       Connection con = null;  
       Statement stmt = null;  

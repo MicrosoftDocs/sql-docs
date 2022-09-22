@@ -1,17 +1,15 @@
 ---
 title: "Snapshot isolation in SQL Server"
 description: "Describes support for snapshot isolation, a row versioning mechanism designed to reduce blocking in transactional applications."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Snapshot isolation in SQL Server
 

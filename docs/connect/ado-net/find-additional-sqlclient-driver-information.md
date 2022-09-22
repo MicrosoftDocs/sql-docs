@@ -1,18 +1,16 @@
 ---
 title: Finding additional SqlClient driver information
 description: Page that contains useful information regarding the driver.
-ms.date: 03/31/2022
-dev_langs: 
-  - "csharp"
-  - "vb"
-ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: 03/31/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
+  - "vb"
 ---
 # Finding additional SqlClient driver information
 

@@ -33,7 +33,6 @@ ms.author: chugu
 |StatementTimeout|Integer|The number of seconds to wait for an SQL statement to execute before returning, with an error, to the application. The default value is 0. A value of 0 indicates that the system does not time out.|  
 |TableName|String|The name of the table with the data that is being used when AccessMode is set to Table Name.|  
 |LobChunckSize|Integer|The chunk size allocation for LOB columns.|  
-||||  
   
 ## See Also  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   

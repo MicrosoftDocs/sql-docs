@@ -23,7 +23,7 @@ This article describes how to configure the correct repository for [!INCLUDE [ss
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-This article describes how to configure the correct repository for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] installations and upgrades on Linux. At the top, your current selection is **Ubuntu**.
+This article describes how to configure the correct repository for [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] installations and upgrades on Linux. At the top, your current selection is **Ubuntu**.   
 ::: zone-end
 
 > [!TIP]  

@@ -66,7 +66,6 @@ Each row represents a periodic snapshot of workload group statistics in Azure SQ
 |**max_log_rate_kb**| bigint |Maximum log rate (kilo-bytes per sec) at resource group level.|
 |**max_session**| int |Session limit for the group.|
 |**max_worker**| int |Worker limit for the group.|
-|||
 
 ## Permissions
 

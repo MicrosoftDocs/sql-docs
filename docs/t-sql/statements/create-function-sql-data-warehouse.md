@@ -115,10 +115,10 @@ RETURNS TABLE
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
 
- *select_stmt* **APPLIES TO**: Azure Synapse Analytics  
+ *select_stmt* **Applies to:** Azure Synapse Analytics  
  Is the single SELECT statement that defines the return value of an inline table-valued function (preview).
 
- TABLE **APPLIES TO**: Azure Synapse Analytics  
+ TABLE **Applies to:** Azure Synapse Analytics  
  Specifies that the return value of the table-valued function (TVF) is a table. Only constants and @*local_variables* can be passed to TVFs.
 
  In inline TVFs (preview), the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.

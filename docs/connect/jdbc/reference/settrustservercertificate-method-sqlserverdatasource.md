@@ -1,21 +1,15 @@
 ---
+title: "setTrustServerCertificate Method (SQLServerDataSource)"
 description: "setTrustServerCertificate Method (SQLServerDataSource)"
-title: "setTrustServerCertificate Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "setTrustServerCertificate Method (SQLServerDataSource)"
-apilocation: 
-  - "setTrustServerCertificate Method (SQLServerDataSource)"
-apitype: "Assembly"
-ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "setTrustServerCertificate Method (SQLServerDataSource)"
+apiname: "setTrustServerCertificate Method (SQLServerDataSource)"
+apitype: "Assembly"
 ---
 # setTrustServerCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

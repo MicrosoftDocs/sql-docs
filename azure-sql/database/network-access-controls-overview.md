@@ -2,18 +2,16 @@
 title: Network Access Controls
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of how to manage and control network access for Azure SQL Database and Azure Synapse Analytics.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: security
-ms.custom:
-  - "sqldbrb=3"
-  - "devx-track-azurepowershell"
-ms.topic: conceptual
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 07/18/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=3"
+  - "devx-track-azurepowershell"
 ---
 
 # Azure SQL Database and Azure Synapse Analytics network access controls
@@ -35,7 +33,7 @@ You can also allow private access to the database from [virtual networks](/azure
 
 See the below video for a high-level explanation of these access controls and what they do:
 
-> [!VIDEO https://docs.microsoft.com/shows/Data-Exposed/Data-Exposed--SQL-Database-Connectivity-Explained/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--SQL-Database-Connectivity-Explained/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Allow Azure services
 
@@ -110,7 +108,7 @@ Ip based firewall is a feature of the logical SQL server in Azure that prevents 
 In addition to IP rules, the server firewall allows you to define *virtual network rules*.  
 To learn more, see [Virtual network service endpoints and rules for Azure SQL Database](vnet-service-endpoint-rule-overview.md) or watch this video:
 
-> [!VIDEO https://docs.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 ### Azure Networking terminology
 

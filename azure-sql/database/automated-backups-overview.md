@@ -2,21 +2,19 @@
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Database
 description: Learn how Azure SQL Database automatically backs up all databases and provides a point-in-time restore capability.
-services:
-  - "sql-database"
+author: SudhirRaparla
+ms.author: nvraparl
+ms.reviewer: mathoma, wiassaf, danil
+ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
+ms.topic: conceptual
 ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
-  -  "azure-sql-split"
-ms.topic: conceptual
-author: SudhirRaparla
-ms.author: nvraparl
-ms.reviewer: mathoma, wiassaf, danil
-ms.date: 07/20/2022
-monikerRange: "= azuresql || = azuresql-db "
+  - "azure-sql-split"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups in Azure SQL Database
 
@@ -213,7 +211,7 @@ If you delete a database, the system keeps backups in the same way that it would
 
 For SQL Database, you can configure full LTR backups for up to 10 years in Azure Blob Storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. 
 
-To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md). Databases in the Hyperscale service tier don't currently support long-term retention. 
+To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md). Databases in the Hyperscale service tier don't currently support long-term retention.
 
 Updating the backup storage redundancy for an existing database applies the change only to subsequent backups taken in the future and not for existing backups. All existing LTR backups for the database will continue to reside in the existing storage blob. New backups will be replicated based on the configured backup storage redundancy. 
 

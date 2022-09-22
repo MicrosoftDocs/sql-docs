@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 2: Creating an Internal Activation Procedure'
+title: "Lesson 2: Creating an Internal Activation Procedure"
 description: "In this lesson, you will learn to create a stored procedure to process messages from a Service Broker queue."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 2: Creating an Internal Activation Procedure

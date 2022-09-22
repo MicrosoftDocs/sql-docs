@@ -1,17 +1,14 @@
 ---
 title: Report across scaled-out cloud databases
 description: Use cross database database queries to report across multiple databases.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/15/2021
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 # Report across scaled-out cloud databases (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

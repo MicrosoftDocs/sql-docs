@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "guide, post-migration validation and optimization"
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rwestMSFT
-ms.author: "harinid"
+ms.author: "randolphwest"
 ---
 # Post-migration Validation and Optimization Guide
 

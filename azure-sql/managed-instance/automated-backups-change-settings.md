@@ -1,21 +1,19 @@
 ---
-title: Change automated backup settings 
+title: Change automated backup settings
 titleSuffix: Azure SQL Managed Instance
-description: Change point-in-time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API. 
-services:
-  - "sql-database"
+description: Change point-in-time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
+author: MilanMSFT
+ms.author: mlazic
+ms.reviewer: wiassaf, mathoma, danil
+ms.date: 07/20/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
+ms.topic: conceptual
 ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
   - "azure-sql-split"
-ms.topic: conceptual
-author: MilanMSFT
-ms.author: mlazic
-ms.reviewer: wiassaf, mathoma, danil
-ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Change automated backup settings for Azure SQL Managed Instance
@@ -50,7 +48,7 @@ To change the PITR backup retention period or the differential backup frequency 
 1. Go to the managed instance with the databases whose retention period you want to change. 
 1. Select **Backups** on the left pane, and then select the **Retention policies** tab. 
 1. Select the databases for which you want to change the PITR backup retention. 
-1. Select **Configure retention** from the action bar.
+1. Select **Configure policies** from the action bar.
 
 :::image type="content" source="../database/media/automated-backups-overview/configure-backup-retention-sqlmi.png" alt-text="Screenshot of the Azure portal backup settings to change PITR retention for the managed instance.":::
 

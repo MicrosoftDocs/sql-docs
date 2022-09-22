@@ -1,13 +1,13 @@
 ---
 title: Troubleshooting Routing and Message Delivery
 description: "This section provides suggestions to correct common problems related to routing and message delivery."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Troubleshooting Routing and Message Delivery

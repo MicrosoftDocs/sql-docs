@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|REMLOGIN_INVALID_SITE|
 |Message Text|Could not connect to server '%.ls' because '%.ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls|
-||
 
 ## Explanation
 
@@ -48,7 +47,6 @@ For example, suppose your local server was named SERV_LOCAL, the remote server w
 |---|---|---|---|
 |1|2|SERV_LOCAL|SERV_LOCAL|
 |2|1|SERV_REMOTE|SERV_REMOTE|
-||||
 
 In the preceding output, SERV_LOCAL is the local server, but it has a srvid of 1; it should be 0. To correct this, follow these steps:
 
@@ -62,7 +60,6 @@ After running those steps, the sysservers table should look like the following:
 |---|---|---|---|
 |0|0|SERV_LOCAL|SERV_LOCAL|
 |2|1|SERV_REMOTE|SERV_REMOTE|
-||||
 
 > [!NOTE]
 > Server ID (srvid) should be 0 for the local server.

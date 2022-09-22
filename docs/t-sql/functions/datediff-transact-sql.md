@@ -3,10 +3,8 @@ title: "DATEDIFF (Transact-SQL)"
 description: "Transact-SQL reference for the DATEDIFF function. Returns the numerical difference between a start and end date based on datepart."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/18/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
@@ -72,7 +70,6 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.

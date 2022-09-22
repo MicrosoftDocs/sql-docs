@@ -1,17 +1,16 @@
 ---
 title: Download and install Azure Data Studio
 description: Download and install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: overview
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
+ms.date: 08/30/2022
+ms.prod: azure-data-studio
+ms.topic: overview
 ms.custom:
   - seodec18
   - contperf-fy21q4
   - intro-overview
-ms.date: 08/24/2022
 ---
 
 # Download and install Azure Data Studio
@@ -26,10 +25,10 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.39.0 is the latest general availability (GA) version.
+Azure Data Studio 1.39.1 is the latest general availability (GA) version.
 
-- Release number: 1.39.0
-- Release date: August 24, 2022
+- Release number: 1.39.1
+- Release date: August 30, 2022
 
 | Platform | Download |
 |----------|----------|
@@ -228,10 +227,10 @@ Azure Data Studio supports connecting to the following versions of SQL Server:
 
 - Azure SQL Database
 - Azure SQL Managed Instance
-- SQL Server 2022 (Preview)
-- SQL Server 2019
-- SQL Server 2017
-- SQL Server 2016
+- [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
+- [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]
+- [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
+- [!INCLUDE [sssql16-md](../includes/sssql16-md.md)]
 
 ## System requirements
 
@@ -291,7 +290,7 @@ To uninstall apps you've downloaded from the App Store, use Launchpad.
 
 ## Uninstall Azure Data Studio from Linux
 
-### In Debian
+### In Ubuntu/Debian
 
 You can uninstall Azure Data Studio under Debian or Ubuntu Linux.
 
@@ -300,7 +299,7 @@ To list installed software type, run the following commands:
 ```bash
 dpkg --list
 dpkg --list | less
-dpkg --list | grep apache
+dpkg --list | grep azuredatastudio
 ```
 
 To delete the software, run the following commands:

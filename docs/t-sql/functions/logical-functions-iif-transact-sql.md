@@ -3,13 +3,10 @@ title: "IIF (Transact-SQL)"
 description: "The IIF logical function Returns one of two values, depending on whether the Boolean expression evaluates to true or false. "
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/11/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "IIF_TSQL"
   - "IIF"

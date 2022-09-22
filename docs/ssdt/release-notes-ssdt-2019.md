@@ -51,7 +51,11 @@ Follow the below steps to install this product in an offline environment:
 - SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
 
 ## Known issues
-  **Version 4.1**
+**Version 4.2**
+- Known issues:
+    1. **Cannot design Oracle and Teradata Components.**
+ 
+**Version 4.1**
 - Known issues:
     1. **Cannot design Oracle and Teradata Components.**
     2. **Due to a limitation of VS marketplace, the version 4.1.2 does not introduce new binaries to download. Version 4.1 contains the latest binaries.**
@@ -59,7 +63,7 @@ Follow the below steps to install this product in an offline environment:
 **Version 4.0 preview:**
 - Known issues:
     1. **Cannot design Oracle and Teradata Components.**
-    2. CDC source component in target SQL Server 2022 can’t do preview.
+    2. CDC source component in target [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] can't do preview.
     3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
 

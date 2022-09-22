@@ -1,14 +1,12 @@
 ---
 title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
-ms.date: 07/26/2022
-ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 07/26/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Introduction to Microsoft.Data.SqlClient namespace
 
@@ -470,7 +468,7 @@ Reference documentation: [OAuth2.0 Device Authorization Grant flow](/azure/activ
 
 Connection string example:
 
-`Server=<server>.database.windows.net; Authentication=Active Directory Device Code Flow; Database=Northwind;`
+`Server=<server>.database.windows.net; Authentication=Active Directory Device Code Flow; Database=Northwind;Encrypt=True`
 
 The following API enables customization of the Device Code Flow callback mechanism:
 
@@ -495,16 +493,16 @@ Connection string examples:
 
 ```cs
 // For System Assigned Managed Identity
-"Server={serverURL}; Authentication=Active Directory MSI; Initial Catalog={db};"
+"Server={serverURL}; Authentication=Active Directory MSI; Encrypt=True; Initial Catalog={db};"
 
 // For System Assigned Managed Identity
 "Server={serverURL}; Authentication=Active Directory Managed Identity; Initial Catalog={db};"
 
 // For User Assigned Managed Identity
-"Server={serverURL}; Authentication=Active Directory MSI; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+"Server={serverURL}; Authentication=Active Directory MSI; Encrypt=True; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
 
 // For User Assigned Managed Identity
-"Server={serverURL}; Authentication=Active Directory Managed Identity; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+"Server={serverURL}; Authentication=Active Directory Managed Identity; Encrypt=True; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
 ```
 
 ### Azure Active Directory Interactive authentication enhancements
@@ -659,7 +657,7 @@ Microsoft.Data.SqlClient v2.1 introduces the "Command Timeout" connection string
 
 Connection string examples:
 
-`"Server={serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
+`"Server={serverURL}; Initial Catalog={db}; Encrypt=True; Integrated Security=true; Command Timeout=60"`
 
 ### Removal of symbols from Native SNI
 
@@ -763,7 +761,7 @@ A username can be specified in the connection string when using Azure Active Dir
 Set a username using the **User ID** or **UID** connection string property:
 
 ```csharp
-"Server=<server name>; Database=<db name>; Authentication=Active Directory Interactive; User Id=<username>;"
+"Server=<server name>; Database=<db name>; Authentication=Active Directory Interactive; User Id=<username>;Encrypt=True;"
 ```
 
 #### Order hints for SqlBulkCopy

@@ -83,7 +83,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics, Parallel Data Warehouse, SQL Server 2022 (16.0) and later
+-- Syntax for Azure Synapse Analytics, Parallel Data Warehouse, [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -714,14 +714,40 @@ CREATE TABLE xDimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey
 WITH ( DISTRIBUTION = HASH(ProductKey),  
     CLUSTERED INDEX (ProductKey) )  
 AS SELECT ProductKey, ProductAlternateKey, ProductSubcategoryKey FROM DimProduct;  
-  
---Change the existing clustered index   
---to a clustered columnstore index with the same name.  
---Look up the name of the index before running this statement.  
-CREATE CLUSTERED COLUMNSTORE INDEX [<index_name>]
+```
+
+Look up the name of the clustered index automatically created for the new table in the system metadata, using `sys.indexes`. For example:
+
+```sql
+SELECT i.object_id, i.name, t.object_id, t.name, i.type_desc
+FROM sys.indexes i   
+INNER JOIN sys.tables t ON i.object_id = t.object_id
+WHERE i.type_desc = 'CLUSTERED'
+AND t.name = 'xdimProduct';
+```
+
+Now, you can choose to:
+
+1. Drop the existing clustered columnstore index with an automatically-created name, then create a new clustered columnstore index with a user-defined name. 
+2. Drop and replace the existing index with a clustered columnstore index, keeping the same system-generated name, such as `ClusteredIndex_1bd8af8797f7453182903cc68df48541`.
+
+For example:
+
+```sql
+--1. DROP the existing clustered columnstore index with an automatically-created name, for example:
+DROP INDEX ClusteredIndex_1bd8af8797f7453182903cc68df48541 on xdimProduct;
+GO
+CREATE CLUSTERED COLUMNSTORE INDEX [<new_index_name>]
+ON xdimProduct;
+GO
+
+--Or, 
+--2. Change the existing clustered index to a clustered columnstore index with the same name.  
+CREATE CLUSTERED COLUMNSTORE INDEX [ClusteredIndex_1bd8af8797f7453182903cc68df48541]
 ON xdimProduct   
-WITH ( DROP_EXISTING = ON );  
-```  
+WITH ( DROP_EXISTING = ON );
+GO
+```
   
 ### B. Rebuild a clustered columnstore index  
 

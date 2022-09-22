@@ -1,19 +1,15 @@
 ---
 title: Feature interoperability with availability groups and DNN listener
-description: "Learn about the additional considerations when working with certain SQL Server features and a distributed network name (DNN) listener with an Always On availability group on SQL Server on Azure VMs. " 
-services: virtual-machines
-documentationCenter: na
+description: "Learn about the additional considerations when working with certain SQL Server features and a distributed network name (DNN) listener with an Always On availability group on SQL Server on Azure VMs. "
 author: adbadram
-editor: monicar
-tags: azure-service-management
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.reviewer: mathoma
+editor: monicar
+tags: azure-service-management
 ---
 
 # Feature interoperability with AG and DNN listener 
@@ -71,7 +67,7 @@ You can omit the port in the URL if it is the default 1433 port. For a named ins
 
 ## Distributed availability group
 
-Distributed availability groups are not currently supported with the DNN listener. 
+If your availability group listener is configured using a distributed network name (DNN), then configuring a distributed availability group on top of your availability group is not supported. 
 
 ## Replication
 
@@ -125,7 +121,7 @@ Configure the linked server using the AG DNN listener name and port. If the port
 
 - Does DNN support multiple-subnet clusters?
 
-   Yes. The cluster binds the DNN in DNS with the physical IP addresses of all replicas in the availability regardless of the subnet. The SQL client tries all IP addresses of the DNS name regardless of the subnet. 
+   Yes. The cluster binds the DNN in DNS with the physical IP addresses of all replicas in the availability group regardless of the subnet. The SQL client tries all IP addresses of the DNS name regardless of the subnet. 
 
 - Does the availability group DNN listener support read-only routing? 
 

@@ -1,17 +1,15 @@
 ---
 title: "Paging through a query result"
 description: Provides an example of viewing the results of a query as pages of data.
-ms.date: "11/30/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/30/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Paging through a query result
 

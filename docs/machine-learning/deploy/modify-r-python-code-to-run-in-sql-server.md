@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 
 This article provides high-level guidance on how to modify R or Python code to run as a SQL Server stored procedure to improve performance when accessing SQL data.
 
-When you move R/Python code from a local IDE or other environment to SQL Server, the code generally works without further modification. This is especially true for simple code, such as a function that takes some inputs and returns a value. It's also easier to port solutions that use the **RevoScaleR**/**revoscalepy** packages, which support execution in different execution contexts with minimal changes. Note that **MicrosoftML** applies to SQL Server 2016, SQL Server 2017, and SQL Server 2019 and does not appear in SQL Server 2022.
+When you move R/Python code from a local IDE or other environment to SQL Server, the code generally works without further modification. This is especially true for simple code, such as a function that takes some inputs and returns a value. It's also easier to port solutions that use the **RevoScaleR**/**revoscalepy** packages, which support execution in different execution contexts with minimal changes. Note that **MicrosoftML** applies to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and does not appear in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 However, your code might require substantial changes if any of the following apply:
 

@@ -65,7 +65,7 @@ For information on setting up an availability group for servers with multiple NI
 - [SLES](sql-server-linux-availability-group-cluster-sles.md#considerations-for-multiple-network-interfaces-nics)
 - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#considerations-for-multiple-network-interfaces-nics)
 
-[!INCLUDE [Create Prerequisites](../includes/linux/ss-linux-cluster-availability-group-create-prereq.md)]
+[!INCLUDE [Create Prerequisites](includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the AG
 
@@ -218,7 +218,7 @@ ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-[!INCLUDE [Create Post](../includes/linux/ss-linux-cluster-availability-group-create-post.md)]
+[!INCLUDE [Create Post](includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
 >After you create the AG, you must configure integration with a cluster technology like Pacemaker for high availability. For a read-scale configuration using AGs, starting with [!INCLUDE [SQL Server version](../includes/sssql17-md.md)], setting up a cluster is not required.
@@ -232,7 +232,6 @@ If you followed the steps in this document, you have an AG that is not yet clust
 
 >[!IMPORTANT]
 >If the AG is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica succeeds.
-
 
 ## Next steps
 

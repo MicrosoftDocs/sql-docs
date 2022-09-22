@@ -1,21 +1,19 @@
 ---
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Managed Instance
-description: Learn how Azure SQL Managed Instance automatically backs up all databases and provides point-in-time restore capability. 
-services:
-  - "sql-database"
+description: Learn how Azure SQL Managed Instance automatically backs up all databases and provides point-in-time restore capability.
+author: MilanMSFT
+ms.author: mlazic
+ms.reviewer: mathoma, wiassaf, danil
+ms.date: 07/20/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
+ms.topic: conceptual
 ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
   - "azure-sql-split"
-ms.topic: conceptual
-author: MilanMSFT
-ms.author: mlazic
-ms.reviewer: mathoma, wiassaf, danil
-ms.date: 07/20/2022
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Automated backups in Azure SQL Managed Instance
@@ -276,6 +274,8 @@ If your database is encrypted with TDE, backups are automatically encrypted at r
 ## Backup integrity
 
 All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team is not currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload. 
+
+Although the system does not verify the integrity of the backups, there is still built-in protection of your backups that alerts Microsoft if there's an issue with the backup service. Additionally, Microsoft supports you if an issue occurs with a backup, such as if a full backup is not taken, the backup service is stuck, a log backup is out of SLA, or if the backup hardware or software is corrupted.
 
 ## Use Azure Policy to enforce backup storage redundancy
 

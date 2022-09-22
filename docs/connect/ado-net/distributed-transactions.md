@@ -18,7 +18,7 @@ ms.topic: conceptual
 A transaction is a set of related tasks that either succeeds (commit) or fails (abort) as a unit, among other things. A *distributed transaction* is a transaction that affects several resources. For a distributed transaction to commit, all participants must guarantee that any change to data will be permanent. Changes must persist despite system crashes or other unforeseen events. If even a single participant fails to make this guarantee, the entire transaction fails, and any changes to data within the scope of the transaction are rolled back. 
 
 > [!NOTE]
-> An exception will be thrown if you attempt to commit or roll back a transaction if a `DataReader` is started while the transaction is active.
+> For information on distributed transactions in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], see [Distributed transactions across cloud databases](/azure/azure-sql/database/elastic-transactions-overview).
 
 ## Working with System.Transactions
 
@@ -35,6 +35,9 @@ Automatic enlistment is the default (and preferred) way of integrating ADO.NET c
 ## Manually enlisting in a distributed transaction
 
 If auto-enlistment is disabled or you need to enlist a transaction that was started after the connection was opened, you can enlist in an existing distributed transaction using the `EnlistTransaction` method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object for the Microsoft SqlClient Data Provider for SQL Server. Enlisting in an existing distributed transaction ensures that, if the transaction is committed or rolled back, modifications made by the code at the data source will be committed or rolled back as well.
+
+> [!NOTE]
+> An exception will be thrown if you attempt to commit or roll back a transaction if a `DataReader` is started while the transaction is active.
 
 Enlisting in distributed transactions is particularly applicable when pooling business objects. If a business object is pooled with an open connection, automatic transaction enlistment only occurs when that connection is opened. If multiple transactions are performed using the pooled business object, the open connection for that object will not automatically enlist in newly initiated transactions. In this case, you can disable automatic transaction enlistment for the connection and enlist the connection in transactions using `EnlistTransaction`.
 

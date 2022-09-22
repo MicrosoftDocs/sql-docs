@@ -139,7 +139,7 @@ The error is harmless, and cluster configuration can continue.
 
    If you previously configured a cluster on the same nodes, you need to use the `--force` option when running `pcs cluster setup`. This is equivalent to running `pcs cluster destroy`, and the Pacemaker service needs to be reenabled using `sudo systemctl enable pacemaker`.
 
-[!INCLUDE [Considerations for multiple NICs](../includes/linux/sql-server-linux-availability-group-multiple-network-interfaces.md)]
+[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
 
 ## <a id="stonith"></a> Configure fencing (STONITH)
 

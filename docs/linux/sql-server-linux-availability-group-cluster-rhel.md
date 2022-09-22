@@ -102,7 +102,7 @@ After you register the subscription, complete the following steps to configure P
 
 After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster.
 
-[!INCLUDE [Considerations for multiple NICs](../includes/linux/sql-server-linux-availability-group-multiple-network-interfaces.md)]
+[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
 
 ## Configure fencing (STONITH)
 

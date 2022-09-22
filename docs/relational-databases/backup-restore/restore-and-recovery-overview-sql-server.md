@@ -99,7 +99,7 @@ Information about the progress of each database recovery stage is logged in the 
 
 <a name="FastRecovery"></a>
 > [!NOTE]
-> To maximize the availability of databases in an enterprise environment after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is started, such as after a failover of an [Always On Failover Cluster Instance](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) or in-place restart, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition can bring a database online after the Redo Phase, while the Undo Phase is still executing. This is known as Fast Recovery.
+> To maximize the availability of databases in an enterprise environment after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is started, such as after a failover of an [Always On Failover Cluster Instance](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) or in-place restart, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition can bring a database online after the Redo Phase, while the Undo Phase is still executing. This is known as Fast Recovery.
 > However, Fast Recovery is not available when the database transitions to an online state but the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service has not been restarted. For example, executing `ALTER DATABASE AdventureWorks SET ONLINE;` will not allow the datbaase to be in read-write state until all phases of recovery have completed.
 
 ##  <a name="RMsAndSupportedRestoreOps"></a> Recovery models and supported restore operations  

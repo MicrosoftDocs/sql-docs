@@ -65,7 +65,7 @@ For your SQL Server availability group or failover cluster instance, consider th
 `netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
 It is important to configure the port exclusion when the port is not in use, otherwise the command will fail with a message like “The process cannot access the file because it is being used by another process.”
 To confirm that the exclusions have been configured correctly, use the following command: `netsh int ipv4 show excludedportrange tcp`  
-By setting this exclusion for the AG role IP probe port, we could prevent an **Event ID: 1069** with status 10048, from Windows Failover cluster events, this is identified with event detail: 
+Setting this exclusion for the AG role IP probe port should prevent events such as **Event ID: 1069** with status 10048. This event can be seen in the Windows Failover cluster events with the following message:
 ```
 Cluster resource '<IP name in AG role>' of type 'IP Address' in cluster role '<AG Name>' failed.
 ```

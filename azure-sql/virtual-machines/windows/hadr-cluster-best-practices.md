@@ -69,7 +69,7 @@ By setting this exclusion for the AG role IP probe port, we could prevent an **E
 ```
 Cluster resource '<IP name in AG role>' of type 'IP Address' in cluster role '<AG Name>' failed.
 ```
-An Event ID: 1069 with status 10048, can be identified from cluster logs with events like: 
+An Event ID: 1069 with status 10048 can be identified from cluster logs with events like: 
 ```
 Resource IP Address 10.0.1.0 called SetResourceStatusEx: checkpoint 5. Old state OnlinePending, new state OnlinePending, AppSpErrorCode 0, Flags 0, nores=false
 IP Address <IP Address 10.0.1.0>: IpaOnlineThread: **Listening on probe port 59999** failed with status **10048**

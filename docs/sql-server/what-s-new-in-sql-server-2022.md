@@ -39,7 +39,7 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, will be available soon. Look here for the market image, when available.
+- On Azure Virtual Machines it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
 - For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, RC 1 is coming soon. For RC 0, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
 - Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 

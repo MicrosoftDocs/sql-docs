@@ -5,7 +5,7 @@ author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 03/01/2022
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -56,6 +56,14 @@ The steps to create an AG on Linux servers for high availability are different f
    * [RHEL](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)
    * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)
+
+### Considerations for multiple Network Interfaces (NICs)
+
+For information on setting up an availability group for servers with multiple NICs, see the relevant sections for:
+
+- [RHEL](sql-server-linux-availability-group-cluster-rhel.md#considerations-for-multiple-network-interfaces-nics)
+- [SLES](sql-server-linux-availability-group-cluster-sles.md#considerations-for-multiple-network-interfaces-nics)
+- [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#considerations-for-multiple-network-interfaces-nics)
 
 [!INCLUDE [Create Prerequisites](includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -224,7 +232,6 @@ If you followed the steps in this document, you have an AG that is not yet clust
 
 >[!IMPORTANT]
 >If the AG is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica succeeds.
-
 
 ## Next steps
 

@@ -51,8 +51,8 @@ SELECT [ ALL | DISTINCT ]
           | udt_column_name [ { . | :: } { { property_name | field_name }   
             | method_name ( argument [ ,...n] ) } ]  
           | expression  
-          [ [ AS ] column_alias ]   
          }  
+        [ [ AS ] column_alias ]   
       | column_alias = expression   
     } [ ,...n ]   
 ```  

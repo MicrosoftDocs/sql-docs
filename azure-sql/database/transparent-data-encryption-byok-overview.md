@@ -199,6 +199,25 @@ It may happen that someone with sufficient access rights to the key vault accide
 
 Learn more about [the common causes for database to become inaccessible](/sql/relational-databases/security/encryption/troubleshoot-tde?view=azuresqldb-current&preserve-view=true#common-errors-causing-databases-to-become-inaccessible).
 
+### Broken connectivity between SQL Managed Instance and Key Vault
+
+On SQL Managed Instance, network errors while trying to access TDE protector in Azure Key Vault will not cause the databases to change its state to *Inaccessible* but will render the instance unavailable in the future.
+
+The most common causes for lack of networking connectivity to Key Vault are:
+
+- Key Vault is exposed via private endpoint and private IP address of AKV service is blocked at the Network Security Group (NSG) level.
+- Bad DNS resolution.
+
+[Test the connectivity](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-test-tcp-connectivity-from-a-sql-managed-instance/ba-p/3058458) from Managed Instance to the Key Vault hosting the TDE protector.
+    - The endpoint is your vault FQDN, like *<vault_name>.vault.azure.net* (without the https://).
+    - The port to be tested is 443.
+    - The result for remote address should be correct, and the TCP test result should be *TcpTestSucceeded : True*.
+
+In case the test returns *TcpTestSucceeded : False*, verify the results and review the networking configuration:
+    - Check the resolved IP address, a missing value means there's issues with DNS resolution.
+    - Confirm that the network security group on the managed instance has an **outbound** rule that covers the resolved IP address on port 443, especially when the resolved address belongs to the Key Vault private endpoint.
+    - Check other networking configurations like route table, existence of virtual appliance and its configuration, etc.
+
 ## Monitoring of the customer-managed TDE
 
 To monitor database state and to enable alerting for loss of TDE protector access, configure the following Azure features:

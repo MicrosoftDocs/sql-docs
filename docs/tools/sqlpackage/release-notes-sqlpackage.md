@@ -44,10 +44,6 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 | Export | Fixes an issue where export would fail when a table had stats with computed columns |
 | Import | Fixes an issue where the import would get stuck at 95% |
-| Schema Compare | Fixes an issue where GO would get put on the same line as VIEW script during schema compare publish to a SQL project |
-| Schema Compare | Fixes an issue where schema compare would not handle object descriptions correctly |
-| Schema Compare | Fixes an issue where an extra GO would sometimes get added when applying schema compare to a SQL project |
-| Schema Compare | Fixes an issue where update project would fail when there wasn't a GO after the last statement in the file |
 | ScriptDOM | Fixes an issue where STRING_SPLIT would not support a NULL ordinal value |
 
 

@@ -1,6 +1,6 @@
 ---
 title: "nchar and nvarchar (Transact-SQL)"
-description: "nchar and nvarchar (Transact-SQL)"
+description: "Unicode character data types that are either fixed-size (nchar), or variable-size (nvarchar)."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

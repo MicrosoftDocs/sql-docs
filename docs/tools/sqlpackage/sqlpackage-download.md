@@ -23,9 +23,9 @@ Download and install the latest releases:
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
 |[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2209512)|September 22, 2022|19.2|16.0.6296.0|
-|[macOS .NET 6](#macos-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)|September 22, 2022|19.2|16.0.6296.0|
-|[Linux .NET 6](#linux-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)|September 22, 2022|19.2|16.0.6296.0|
-|[Windows .NET 6](#windows-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)|September 22, 2022|19.2|16.0.6296.0|
+|[macOS .NET 6](#macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)|September 22, 2022|19.2|16.0.6296.0|
+|[Linux .NET 6](#linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)|September 22, 2022|19.2|16.0.6296.0|
+|[Windows .NET 6](#windows-net-6) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)|September 22, 2022|19.2|16.0.6296.0|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 

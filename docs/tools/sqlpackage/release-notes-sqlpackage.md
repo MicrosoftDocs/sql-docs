@@ -36,7 +36,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, does not import or publish the history table to a database. |
 | Platform | SqlPackage is now built with .NET 6 |
 | SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](/sql/relational-databases/security/permissions-database-engine).|
-| XML compression | [XML compression](/sql/t-sql/statements/create-table-transact-sql#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation]((/sql/relational-databases/xml/xml-data-sql-server). |
+| XML compression | [XML compression](/sql/t-sql/statements/create-table-transact-sql#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation](/sql/relational-databases/xml/xml-data-sql-server). |
 
 
 ### Fixes
@@ -56,6 +56,7 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+| XML compression | XML compression of an XML index is not yet supported in SqlPackage. | N/A |
 
 ## 19.1 SqlPackage
 

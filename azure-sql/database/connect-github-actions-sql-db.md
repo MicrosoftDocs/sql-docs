@@ -268,7 +268,7 @@ You need to provide your application's **Client ID**, **Tenant ID**, and **Subsc
     - uses: azure/sql-action@v2
       with:
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-        dacpac-package: './Database.dacpac'
+        path: './Database.dacpac'
         action: 'Publish'
 
         # Azure logout 
@@ -302,7 +302,7 @@ You need to provide your application's **Client ID**, **Tenant ID**, and **Subsc
     - uses: azure/sql-action@v2
       with:
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-        dacpac-package: './Database.dacpac'
+        path: './Database.dacpac'
         action: 'Publish'
 
         # Azure logout 

@@ -21,7 +21,7 @@ titleSuffix: SQL Server & Azure SQL
 > [!NOTE]
 > The resumable add table constraints feature is in public preview for Azure SQL Database and Azure SQL Managed Instance.
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], resumable operations for online index creation and rebuild are supported. The resumable operations allow index operations to be executed while the table is [online](../../t-sql/statements/alter-table-transact-sql.md#with--online--on--off-as-applies-to-altering-a-column) (`ONLINE=ON`) and also:
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], resumable add table constraints are supported. The resumable operations allow index operations to be executed while the table is [online](../../t-sql/statements/alter-table-transact-sql.md#with--online--on--off-as-applies-to-altering-a-column) (`ONLINE=ON`) and also:
 
 - Pause and restart an index create or rebuild operation multiple times to fit a maintenance window
 

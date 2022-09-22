@@ -30,12 +30,6 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 This section identifies known issues you may experience with this product:
 
-- If you choose to add the Azure extension for SQL Server to an existing instance, Setup currently requires that you also add at least 1 other feature from the **Feature Selection** page in order to complete adding the Arc extension feature.
-
-- When you install Azure extension for SQL Server during setup, in some cases a timeout may occur. In this case, setup returns a timeout exception but setup should succeed and the extension should be installed.
-
-- When you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting won't change the encryption and may cause errors.
-
 - Query Store for secondary replicas is available for preview. It isn't available for use in production environments.
 
 ## Build number

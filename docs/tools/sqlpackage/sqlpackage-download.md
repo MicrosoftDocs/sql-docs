@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 5/24/2022
+ms.date: 9/22/2022
 ---
 
 # Download and install SqlPackage
@@ -22,10 +22,10 @@ Download and install the latest releases:
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|May 24, 2022|19.1|16.0.6161.0|
-|[macOS .NET Core](#macos-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)|May 24, 2022|19.1|16.0.6161.0|
-|[Linux .NET Core](#linux-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)|May 24, 2022|19.1|16.0.6161.0|
-|[Windows .NET Core](#windows-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)|May 24, 2022|19.1|16.0.6161.0|
+|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2209512)|September 22, 2022|19.2|16.0.6296.0|
+|[macOS .NET Core](#macos-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)|September 22, 2022|19.2|16.0.6296.0|
+|[Linux .NET Core](#linux-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)|September 22, 2022|19.2|16.0.6296.0|
+|[Windows .NET Core](#windows-net-core) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)|September 22, 2022|19.2|16.0.6296.0|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 
@@ -96,7 +96,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 
 ## macOS (.NET Core)
 
-1. Download [SqlPackage for macOS](https://go.microsoft.com/fwlink/?linkid=2196439).
+1. Download [SqlPackage for macOS](https://go.microsoft.com/fwlink/?linkid=2209610).
 2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
 
    ```bash
@@ -123,7 +123,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 
 ## Windows (.NET Core)
 
-1. Download [SqlPackage for Windows](https://go.microsoft.com/fwlink/?linkid=2196334).
+1. Download [SqlPackage for Windows](https://go.microsoft.com/fwlink/?linkid=2209609).
 2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
 3. Open a new Terminal window and cd to the location where SqlPackage was extracted:
 
@@ -179,16 +179,16 @@ SqlPackage runs on Windows, macOS, and Linux and is built using .NET Core 3.1.  
 This release of SqlPackage can be installed in the following languages:
 
 SqlPackage Windows:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2196438&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x40a)
 
 SqlPackage .NET Core Windows:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2196334&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x40a)
 
 SqlPackage .NET Core macOS:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2196439&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x40a)
 
 SqlPackage .NET Core Linux:  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2196335&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x40a)
 
 
 ## Next Steps

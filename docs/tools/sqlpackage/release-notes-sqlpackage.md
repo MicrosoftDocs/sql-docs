@@ -2,7 +2,7 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
 ms.custom: "tools|sos"
-ms.date: 05/24/2022
+ms.date: 09/22/2022
 ms.prod: sql
 ms.reviewer: "llali"
 ms.prod_service: sql-tools
@@ -15,6 +15,48 @@ ms.author: drskwier
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
+
+
+## 19.2 SqlPackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2209512)|September 22, 2022|19.2|16.0.6296.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)|September 22, 2022| 19.2|16.0.6296.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)|September 22, 2022| 19.2|16.0.6296.0|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)|September 22, 2022| 19.2|16.0.6296.0|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Connection pooling | Enables connection pooling for all connections if the environment variable `CONNECTION_POOLING_ENABLED` is set to True.  This is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling. |
+| Deployment options | Surfaces friendly names for deployment options in DacFx .NET APIs. |
+| Dynamic Data Masking | Adds support for [granular UNMASK permissions](/sql/relational-databases/security/dynamic-data-masking#granular) in Import/Export and Extract/Publish.|
+| Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, does not import or publish the history table to a database. |
+| Platform | SqlPackage is now built with .NET 6 |
+| SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](/sql/relational-databases/security/permissions-database-engine).|
+| XML compression | [XML compression](/sql/t-sql/statements/create-table-transact-sql#xml_compression)
+support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation]((/sql/relational-databases/xml/xml-data-sql-server). |
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Export | Fixes an issue where export would fail when a table had stats with computed columns |
+| Import | Fixes an issue where the import would get stuck at 95% |
+| Schema Compare | Fixes an issue where GO would get put on the same line as VIEW script during schema compare publish to a SQL project |
+| Schema Compare | Fixes an issue where schema compare would not handle object descriptions correctly |
+| Schema Compare | Fixes an issue where an extra GO would sometimes get added when applying schema compare to a SQL project |
+| Schema Compare | Fixes an issue where update project would fail when there wasn't a GO after the last statement in the file |
+| ScriptDOM | Fixes an issue where STRING_SPLIT would not support a NULL ordinal value |
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 19.1 SqlPackage
 
@@ -47,6 +89,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Publish | Fixes issue where publish operation would drop and create a clustered columnstore index when a column is added. |
 | Publish | Fixes issue where graph tables fail to deploy when a partition function includes leading zeros. |
 | ScriptDOM | Fixes an issue where `IIF` condition is enclosed in parenthesis fails to parse. |
+
 
 ### Known Issues
 | Feature | Details | Workaround |

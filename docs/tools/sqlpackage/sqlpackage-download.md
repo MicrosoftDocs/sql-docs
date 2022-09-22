@@ -51,7 +51,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
 - Windows ([https://aka.ms/sqlpackage-windows](https://aka.ms/sqlpackage-windows))
 - Windows, .NET Framework ([https://aka.ms/dacfx-msi](https://aka.ms/dacfx-msi))
 
-## Linux (.NET Core)
+## Linux
 
 1. Download [SqlPackage for Linux](https://aka.ms/sqlpackage-linux).
 2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
@@ -94,7 +94,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
    sudo apt-get install libicu66      # for 20.x
    ```
 
-## macOS (.NET Core)
+## macOS
 
 1. Download [SqlPackage for macOS](https://go.microsoft.com/fwlink/?linkid=2209610).
 2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
@@ -121,7 +121,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
    sudo spctl --master-enable
    ```
 
-## Windows (.NET Core)
+## Windows (.NET 6)
 
 1. Download [SqlPackage for Windows](https://go.microsoft.com/fwlink/?linkid=2209609).
 2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
@@ -147,7 +147,7 @@ If you installed SqlPackage with a .zip or other archive, then delete the files.
 
 ## Supported Operating Systems
 
-SqlPackage runs on Windows, macOS, and Linux and is built using .NET Core 3.1.  The [.NET Core 3.1 OS requirements](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) apply to SqlPackage.
+SqlPackage runs on Windows, macOS, and Linux and is built using .NET 6.  The [.NET 6 OS requirements](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) are minimum requirements for SqlPackage, which has additional requirements due to its dependencies.
 
 ### Windows (x64)
 
@@ -163,31 +163,32 @@ SqlPackage runs on Windows, macOS, and Linux and is built using .NET Core 3.1.  
 
 ### macOS
 
+- macOS 13 "Ventura"
 - macOS 12 "Monterey"
 - macOS 11 "Big Sur"
 - macOS 10.15 "Catalina"
 
 ### Linux (x64)
 
-- Debian 9, 10, 11
+- Debian 10, 11
 - Red Hat Enterprise Linux 7+
 - SUSE Linux Enterprise Server v12 SP2+
-- Ubuntu 16.04, 18.04, 20.04
+- Ubuntu 16.04, 18.04, 20.04, 22.04
 
 ## Available Languages
 
 This release of SqlPackage can be installed in the following languages:
 
-SqlPackage Windows:  
+SqlPackage .NET Framework Windows:  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209512&clcid=0x40a)
 
-SqlPackage .NET Core Windows:  
+SqlPackage .NET 6 Windows:  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209609&clcid=0x40a)
 
-SqlPackage .NET Core macOS:  
+SqlPackage .NET 6 macOS:  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209610&clcid=0x40a)
 
-SqlPackage .NET Core Linux:  
+SqlPackage .NET 6 Linux:  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2209513&clcid=0x40a)
 
 

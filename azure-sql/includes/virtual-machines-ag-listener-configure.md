@@ -136,7 +136,7 @@ If necessary, repeat the steps above to set the cluster parameters for the WSFC 
 If the SQL Server database engine, Always On availability group listener, failover cluster instance health probe, database mirroring endpoint, cluster core IP resource, or any other SQL resource is configured to use a port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Doing so will prevent other system processes from being dynamically assigned to the same port. For this scenario, the following exclusions should be configured in all cluster nodes:
 `netsh int ipv4 add excludedportrange tcp startport=58888 numberofports=1 store=persistent`
 `netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
-It is necessary for the port to be excluded not being used when the exclusion is configured, otherwise, the execution will fail with a message like “The process cannot access the file because it is being used by another process.”
+It is important to configure the port exclusion when the port is not in use, otherwise the command will fail with a message like “The process cannot access the file because it is being used by another process.”
 To confirm if the exclusions have been configured, we can check by using: `netsh int ipv4 show excludedportrange tcp`  
 
 >[!WARNING]

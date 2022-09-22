@@ -15591,8 +15591,9 @@ items:
       - name: money & smallmoney
         href: t-sql/data-types/money-and-smallmoney-transact-sql.md
     - name: String & binary
-      href: t-sql/data-types/string-and-binary-types.md
       items:
+      - name: Overview
+        href: t-sql/data-types/string-and-binary-types.md
       - name: binary & varbinary
         href: t-sql/data-types/binary-and-varbinary-transact-sql.md
       - name: char & varchar

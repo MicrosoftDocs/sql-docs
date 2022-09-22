@@ -1,6 +1,6 @@
 ---
 title: char and varchar (Transact-SQL)
-description: "char and varchar (Transact-SQL)"
+description: "Character data types that are either fixed-size (char), or variable-size (varchar)."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

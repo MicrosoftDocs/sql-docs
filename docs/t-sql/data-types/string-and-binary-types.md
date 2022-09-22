@@ -1,6 +1,6 @@
 ---
 title: "String and Binary Types"
-description: "String and Binary Types"
+description: "Learn about the string and binary types in the Database Engine, including binary, varbinary, char, nchar, varchar, and nvarchar."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest

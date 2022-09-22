@@ -6,7 +6,7 @@ ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 04/12/2022
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -138,6 +138,8 @@ The error is harmless, and cluster configuration can continue.
    - Use the `addr` option in the `pcs cluster auth` command to match the node name to the `SERVERPROPERTY('ServerName')` value and use a static IP as the node address.
 
    If you previously configured a cluster on the same nodes, you need to use the `--force` option when running `pcs cluster setup`. This is equivalent to running `pcs cluster destroy`, and the Pacemaker service needs to be reenabled using `sudo systemctl enable pacemaker`.
+
+[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
 
 ## <a id="stonith"></a> Configure fencing (STONITH)
 

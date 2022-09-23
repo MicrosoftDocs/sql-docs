@@ -224,6 +224,8 @@
         href: identify-query-performance-issues.md
       - name: Troubleshoot performance issues
         href: database/intelligent-insights-troubleshoot-performance.md
+      - name: Use the Intelligent Insights performance diagnostics log
+        href: database/intelligent-insights-use-diagnostics-log.md
       - name: Batching for performance
         href: performance-improve-use-batching.md
       - name: Load data with BCP

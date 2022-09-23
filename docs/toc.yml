@@ -1967,6 +1967,8 @@ items:
       href: relational-databases/views/rename-views.md
     - name: Delete
       href: relational-databases/views/delete-views.md
+    - name: Use DMVs to determine performance of Views
+      href: relational-databases/performance/use-dmvs-determine-usage-performance-views.md
   - name: XML data
     href: relational-databases/xml/xml-data-sql-server.md
     items:

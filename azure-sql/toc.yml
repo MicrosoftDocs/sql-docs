@@ -909,7 +909,7 @@
           href: database/scripts/sql-data-sync-sync-data-between-sql-databases-rest-api.md
     - name: Azure PowerShell 
       items: 
-        -name: Azure PowerShell samples guide
+        - name: Azure PowerShell samples guide
          href: database/powershell-script-content-guide.md?tabs=single-database
         - name: Create databases
           items: 

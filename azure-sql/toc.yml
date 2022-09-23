@@ -910,7 +910,7 @@
     - name: Azure PowerShell 
       items: 
         - name: Azure PowerShell samples guide
-         href: database/powershell-script-content-guide.md?tabs=single-database
+          href: database/powershell-script-content-guide.md?tabs=single-database
         - name: Create databases
           items: 
           - name: Create single Azure SQL Database

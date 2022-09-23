@@ -258,7 +258,7 @@ Use Transact-SQL (T-SQL) to modify the **session timeout** for an availability g
 
 ```sql
 ALTER AVAILABILITY GROUP AG1
-MODIFY REPLICA ON 'INSTANCE01' WITH (SESSION_TIMEOUT = 15);
+MODIFY REPLICA ON 'INSTANCE01' WITH (SESSION_TIMEOUT = 20);
 ```
 
 **Max failures in specified period**

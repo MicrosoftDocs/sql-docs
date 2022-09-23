@@ -72,8 +72,6 @@ Learn more about [PowerShell cmdlets for Azure SQL Managed Instance](../managed-
 
 ---
 
-## Additional resources
+## Next steps
 
 The examples listed on this page use [az.sql PowerShell cmdlets](/powershell/module/az.sql/) for creating and managing Azure SQL resources. Additional cmdlets for running queries and performing many database tasks are located in the [SqlServer PowerShell cmdlets](/powershell/module/sqlserver/). For more information, see [SQL Server PowerShell](/sql/powershell/sql-server-powershell/).
-
-## Next steps 

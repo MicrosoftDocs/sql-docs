@@ -942,7 +942,7 @@
           - name: Import from BACPAC
             href: database/scripts/import-from-bacpac-powershell.md
           - name: Restore a database
-            href: restore-database-powershell.md
+            href: database/scripts/restore-database-powershell.md
         - name: Sync database between databases
           items: 
           - name: Sync data between databases
@@ -1402,7 +1402,7 @@
         - name: Restore database to a managed instance
           href: managed-instance/scripts/restore-geo-backup.md
       - name: Add a managed instance to a failover group
-        href: managed-instance/scripts/add-to-failover-group-powershell
+        href: managed-instance/scripts/add-to-failover-group-powershell.md
       - name: Configure transparent data encryption (TDE)
         href: managed-instance/scripts/transparent-data-encryption-byok-powershell.md
     - name: Azure Resource Manager

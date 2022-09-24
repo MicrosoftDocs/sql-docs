@@ -1967,6 +1967,8 @@ items:
       href: relational-databases/views/rename-views.md
     - name: Delete
       href: relational-databases/views/delete-views.md
+    - name: Use DMVs to determine performance of Views
+      href: relational-databases/performance/use-dmvs-determine-usage-performance-views.md
   - name: XML data
     href: relational-databases/xml/xml-data-sql-server.md
     items:
@@ -10410,6 +10412,8 @@ items:
         href: big-data-cluster/deployment-custom-configuration.md
       - name: Configure storage
         href: big-data-cluster/concept-data-persistence.md
+      - name: Configure Apache Spark
+        href: big-data-cluster/configure-spark-hdfs.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
       - name: Deploy with high availability

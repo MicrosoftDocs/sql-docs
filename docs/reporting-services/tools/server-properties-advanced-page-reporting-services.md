@@ -40,7 +40,10 @@ A comma-separated list of headers that the server will allow when a client makes
 A comma-separated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
 
 ### AccessControlAllowOrigin
-*Power BI Report Server, Reporting Services 2017 and later only) A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials aren't set; if credentials are specified an explicit list of origins must be specified.
+
+*Power BI Report Server, Reporting Services 2017 and later only* 
+
+A comma-separated list of origins that the server will allow when a client makes a request. The default value is blank, which prevents all requests, specifying * will allow all origins when credentials aren't set; if credentials are specified an explicit list of origins must be specified.
 
 ### AccessControlExposeHeaders
 
@@ -129,7 +132,7 @@ The second header in above XML adds `Embed: True` header for URL which contains 
 
 *Power BI Report Server, Reporting Services 2022 and later only*
 
-Branding option to add a custom hyperlink. Default values are *empty*. 
+Branding option to add a custom hyperlink. Default values are **empty**. 
 
 |Values |Description  |
 |---------|---------|
@@ -152,7 +155,10 @@ When enabled, Power BI reports load the latest certified custom visuals from a c
 Determines whether the RSClientPrint ActiveX control is available for download from the report server. The valid values are **true** and **false**. The default value is **true**. For more information about additional settings that are required for this control, see [Enable and Disable Client-Side Printing for Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
 
 ### EnableCustomVisuals 
-*Power BI Report Server only) To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
+
+*Power BI Report Server only* 
+
+To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
 
 ###  EnableExecutionLogging  
 Indicates whether report execution logging is enabled. The default value is **true**. For more information about the report server execution log, see [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
@@ -178,6 +184,7 @@ Indicates whether the My Reports feature is enabled. A value of **true** indicat
 ### EnablePowerBIReportExportData 
 
 *Power BI Report Server only* 
+
 Enable Power BI Report Server data export from Power BI visuals. Values are True, False.  Default is True. 
 
 ### EnablePowerBIReportExportUnderlyingData 
@@ -256,14 +263,17 @@ The name of the role used when creating security policies on user's My Reports f
 
 Set for how long you want the office access token to expire in seconds. *Default is 60.*
 
-### OfficeOnlineDiscoveryURL 
-*Power BI Report Server only) Set the address of your Office Online Server instance for viewing Excel Workbooks.
+### OfficeOnlineDiscoveryURL
+
+*Power BI Report Server only*
+
+Set the address of your Office Online Server instance for viewing Excel Workbooks.
 
 ### PowerBIMigrateUrl  
 
 *Power BI Report Server, Reporting Services 2022 and later only*
 
-URL used to define the Power BI cloud endpoint to use. Default is https://app.powerbi.com 
+URL used to define the Power BI cloud endpoint to use. Default is `https://app.powerbi.com`.
 
 ### RDLXReportTimetout
 RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.

@@ -8,10 +8,9 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: conceptual
-ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">= sql-server-2017"
+monikerRange: ">= sql-server-2016"
 ---
 # What's new in SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]

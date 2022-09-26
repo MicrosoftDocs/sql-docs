@@ -20,7 +20,7 @@ This article introduces [SQL Server PowerShell](../powershell/sql-server-powersh
 
 ## Before you begin
 
-Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server on Linux.
+Read the [Known Issues](sql-server-linux-release-notes-2017.md#known-issues) for SQL Server on Linux.
 
 ## Launch PowerShell and import the *sqlserver* module
 

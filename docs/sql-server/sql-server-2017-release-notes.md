@@ -16,7 +16,7 @@ monikerRange: "= sql-server-2017"
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes.md)
+- [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes-2017.md)
 - [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu) for information about the latest cumulative update (CU) release
 
 **Try SQL Server!**
@@ -61,7 +61,7 @@ On the user permissions page, when granting permission to the root level in the 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
-There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](../linux/sql-server-linux-release-notes.md).
+There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](../linux/sql-server-linux-release-notes-2017.md).
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)

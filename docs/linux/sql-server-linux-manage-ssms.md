@@ -37,7 +37,7 @@ See [What is SSMS?](../ssms/sql-server-management-studio-ssms.md) for more infor
 When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there's a new version available to download.
 
 > [!NOTE]
-> Before using SSMS to manage Linux, review the [known issues](sql-server-linux-release-notes.md) for SSMS on Linux.
+> Before using SSMS to manage Linux, review the [known issues](sql-server-linux-release-notes-2017.md#known-issues) for SSMS on Linux.
 
 ## Connect to SQL Server on Linux
 

@@ -74,6 +74,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | --- | --- |
 | **Cross-subscription failover group with Azure PowerShell** | It's now possible to deploy your auto-failover group for a single database across subscriptions by using Azure PowerShell. To learn more, review [Configure auto-failover group](auto-failover-group-configure-sql-db.md?view=azuresql&tabs=azure-powershell&pivots=azure-sql-single-db&preserve-view=true#create-failover-group). |
 | **UMI support for auditing preview** | It's now possible to configure the storage account used for SQL auditing logs by using User Managed Identity (UMI). This feature is currently in preview. Review [auditing](auditing-overview.md) to learn more. |
+| **Read access geo-zone-redundant backup storage** | It's now possible to choose read access geo-zone-redundancy as backup storage redundancy for Hyperscale databases. To learn more, review [Hyperscale backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). |
 
 
 ### August 2022

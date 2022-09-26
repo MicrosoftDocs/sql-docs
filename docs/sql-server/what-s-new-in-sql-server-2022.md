@@ -11,7 +11,7 @@ ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
 ms.date: 09/22/2022
-monikerRange: ">=sql-server-ver15"
+monikerRange: ">= sql-server-2016"
 ---
 
 # What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]

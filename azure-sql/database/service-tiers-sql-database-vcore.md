@@ -142,7 +142,7 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 ### Hardware availability
 
-For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware-availability).
+For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
 
 #### <a id="gen4gen5-1"></a><a id="gen5"></a> Gen5
 

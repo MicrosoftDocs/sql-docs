@@ -20,12 +20,12 @@ The following table lists the release history for [!INCLUDE[ssSQL22](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
-| [RC0](#RC0)           | 16.0.900.3    | 2022-09-01   |
-| [CTP2.1](#CTP2.1)     | 16.0.600.9    | 2022-05-31   |
+| [RC 0](#RC0)          | 16.0.900.3    | 2022-09-01   |
+| [CTP 2.1](#CTP2.1)    | 16.0.600.9    | 2022-05-31   |
 
-## <a id="RC0"></a> RC0 (September 2022)
+## <a id="RC0"></a> RC 0 (September 2022)
 
-This is the RC0 release of [!INCLUDE[ssSQL22](../includes/sssql22-md.md)]. This is a pre-release version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 16.0.900.3.
+This is the RC 0 release of [!INCLUDE[ssSQL22](../includes/sssql22-md.md)]. This is a pre-release version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 16.0.900.3.
 
 ### Package details
 
@@ -38,9 +38,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-## <a id="CTP2.1"></a> CTP2.1 (May 2022)
+## <a id="CTP2.1"></a> CTP 2.1 (May 2022)
 
-This is the CTP2.1 release of [!INCLUDE[ssSQL22](../includes/sssql22-md.md)]. This is a pre-release version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 16.0.600.9.
+This is the CTP 2.1 release of [!INCLUDE[ssSQL22](../includes/sssql22-md.md)]. This is a pre-release version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 16.0.600.9.
 
 ### Package details
 

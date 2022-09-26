@@ -30,11 +30,11 @@ Most existing client tools that target [!INCLUDE[ssNoVersion](../includes/ssnove
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019. The following table shows the most recent release, which is **CU17**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](sql-server-linux-release-history-2019.md).
+This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019. The following table shows the most recent release, which is **CU 17**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](sql-server-linux-release-history-2019.md).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] | CU17 | 2022-08-11 | 15.0.4249.2 | [KB 5016394](https://support.microsoft.com/help/5016394) |
+| [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] | CU 17 | 2022-08-11 | 15.0.4249.2 | [KB 5016394](https://support.microsoft.com/help/5016394) |
 
 
 - The **mssql-server-is** package isn't supported on SUSE in this release. See [SQL Server Integration Services (SSIS)](#ssis) for more information.
@@ -84,26 +84,26 @@ The following table lists the release history for [!INCLUDE[ssSQL19](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
-| [CU17](sql-server-linux-release-history-2019.md#CU17) | 15.0.4249.2   | 2022-08-11   |
-| [CU16-GDR](sql-server-linux-release-history-2019.md#CU16-GDR) | 15.0.4236.7   | 2022-06-14   |
-| [CU16](sql-server-linux-release-history-2019.md#CU16) | 15.0.4223.1   | 2022-04-18   |
-| [CU15](sql-server-linux-release-history-2019.md#CU15) | 15.0.4198.2   | 2022-01-27   |
-| [CU14](sql-server-linux-release-history-2019.md#CU14) | 15.0.4188.2   | 2021-11-22   |
-| [CU13](sql-server-linux-release-history-2019.md#CU13) | 15.0.4178.1   | 2021-10-05   |
-| [CU12](sql-server-linux-release-history-2019.md#CU12) | 15.0.4153.1   | 2021-08-04   |
-| [CU11](sql-server-linux-release-history-2019.md#CU11) | 15.0.4138.2   | 2021-06-10   |
-| [CU10](sql-server-linux-release-history-2019.md#CU10) | 15.0.4123.1   | 2021-04-06   |
-| [CU9](sql-server-linux-release-history-2019.md#CU9) | 15.0.4102.2   | 2021-02-10   |
-| [CU8-GDR](sql-server-linux-release-history-2019.md#CU8-GDR) | 15.0.4083.2   | 2021-01-12   |
-| [GDR1](sql-server-linux-release-history-2019.md#GDR1) | 15.0.2080.9   | 2021-01-12   |
-| [CU8](sql-server-linux-release-history-2019.md#CU8) | 15.0.4073.23  | 2020-10-07   |
-| [CU7 (Removed)](https://support.microsoft.com/help/4570012) | 15.0.4063.15  | 2020-09-02   |
-| [CU6](sql-server-linux-release-history-2019.md#CU6) | 15.0.4053.23  | 2020-08-04   |
-| [CU5](sql-server-linux-release-history-2019.md#CU5) | 15.0.4043.16  | 2020-06-22   |
-| [CU4](sql-server-linux-release-history-2019.md#CU4) | 15.0.4033.1   | 2020-03-31   |
-| [CU3](sql-server-linux-release-history-2019.md#CU3) | 15.0.4023.6   | 2020-03-12   |
-| [CU2](sql-server-linux-release-history-2019.md#CU2) | 15.0.4013.40  | 2020-02-13   |
-| [CU1](sql-server-linux-release-history-2019.md#CU1) | 15.0.4003.23  | 2020-01-07   |
+| [CU 17](sql-server-linux-release-history-2019.md#CU17) | 15.0.4249.2   | 2022-08-11   |
+| [CU 16 GDR](sql-server-linux-release-history-2019.md#CU16-GDR) | 15.0.4236.7   | 2022-06-14   |
+| [CU 16](sql-server-linux-release-history-2019.md#CU16) | 15.0.4223.1   | 2022-04-18   |
+| [CU 15](sql-server-linux-release-history-2019.md#CU15) | 15.0.4198.2   | 2022-01-27   |
+| [CU 14](sql-server-linux-release-history-2019.md#CU14) | 15.0.4188.2   | 2021-11-22   |
+| [CU 13](sql-server-linux-release-history-2019.md#CU13) | 15.0.4178.1   | 2021-10-05   |
+| [CU 12](sql-server-linux-release-history-2019.md#CU12) | 15.0.4153.1   | 2021-08-04   |
+| [CU 11](sql-server-linux-release-history-2019.md#CU11) | 15.0.4138.2   | 2021-06-10   |
+| [CU 10](sql-server-linux-release-history-2019.md#CU10) | 15.0.4123.1   | 2021-04-06   |
+| [CU 9](sql-server-linux-release-history-2019.md#CU9) | 15.0.4102.2   | 2021-02-10   |
+| [CU 8 GDR](sql-server-linux-release-history-2019.md#CU8-GDR) | 15.0.4083.2   | 2021-01-12   |
+| [GDR 1](sql-server-linux-release-history-2019.md#GDR1) | 15.0.2080.9   | 2021-01-12   |
+| [CU 8](sql-server-linux-release-history-2019.md#CU8) | 15.0.4073.23  | 2020-10-07   |
+| [CU 7 (Removed)](https://support.microsoft.com/help/4570012) | 15.0.4063.15  | 2020-09-02   |
+| [CU 6](sql-server-linux-release-history-2019.md#CU6) | 15.0.4053.23  | 2020-08-04   |
+| [CU 5](sql-server-linux-release-history-2019.md#CU5) | 15.0.4043.16  | 2020-06-22   |
+| [CU 4](sql-server-linux-release-history-2019.md#CU4) | 15.0.4033.1   | 2020-03-31   |
+| [CU 3](sql-server-linux-release-history-2019.md#CU3) | 15.0.4023.6   | 2020-03-12   |
+| [CU 2](sql-server-linux-release-history-2019.md#CU2) | 15.0.4013.40  | 2020-02-13   |
+| [CU 1](sql-server-linux-release-history-2019.md#CU1) | 15.0.4003.23  | 2020-01-07   |
 | [GA](sql-server-linux-release-history-2019.md#GA) | 15.0.2000.5   | 2019-11-04   |
 
 ## Known issues

@@ -28,7 +28,7 @@ The following features are not supported in this release of SSIS on Linux:
   - Hadoop and HDFS support
   - Microsoft Connector for SAP BW
 
-For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes.md#ssis).
+For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md#ssis).
 
 ## <a name="components"></a> Supported and unsupported components
 

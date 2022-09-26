@@ -3,7 +3,7 @@ title: "What's new in columnstore indexes"
 description: "This article details features by version and the latest new features of SQL Server columnstore indexes."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 07/26/2022
+ms.date: 09/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: table-view-index
@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|yes|
 |Columnstore index can have a non-persisted computed column||||yes|yes|yes|||
 |Tuple mover background merge support|||||yes|yes|yes|yes|
-|Ordered clustered columnstore indexes||||||yes||yes|
+|Ordered clustered columnstore indexes||||||yes|yes|yes|
 
  <sup>1</sup> For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and above, columnstore indexes are available in all editions. For [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (before SP1) and earlier versions, columnstore indexes are only available in Enterprise Edition.
  

@@ -3,7 +3,7 @@ title: "Columnstore indexes - Design guidance"
 description: "High-level recommendations for designing columnstore indexes."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 07/25/2022
+ms.date: 09/26/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: table-view-index
@@ -28,7 +28,7 @@ Before designing a columnstore index, understand as much as possible about your 
 - Do I have fact and dimension tables for a data warehouse?
 - Do I need to perform analytics on a transactional workload? If this is the case, see the columnstore design guidance for real-time operational analytics.
 
-You might not need a columnstore index. Rowstore tables with heaps or clustered indexes perform best on queries that seek into the data, searching for a particular value, or for queries on a small range of values. Use rowstore indexes with transactional workloads since they tend to require mostly table seeks instead of large range table scans.  
+You might not need a columnstore index. Rowstore (or B-tree) tables with heaps or clustered indexes perform best on queries that seek into the data, searching for a particular value, or for queries on a small range of values. Use rowstore indexes with transactional workloads since they tend to require mostly table seeks instead of large range table scans.  
 
 ## Choose the best columnstore index for your needs
 
@@ -62,9 +62,19 @@ Don't use a clustered columnstore index when:
 
 For more information, see [Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
+## Use an ordered clustered columnstore index for large data warehouse tables
+
+Consider using a clustered columnstore index when:
+
+- When data is relatively static (without frequently writes and deletes) and the ordered CCI key is static, ordered clustered columnstore indexes can provide significant performance advantages over non-ordered clustered columnstore indexes or rowstore clustered indexes for analytical workloads. 
+
+Don't use a clustered columnstore index when:
+
+- Similar to a rowstore clustered index, a high rate of insert activity could create excessive storage I/O due to page splits, depending on the key. Instead, a non-ordered clustered columnstore index may server analytical workloads without the excessive page movement.
+
 ## Add B-tree nonclustered indexes for efficient table seeks
 
-Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
+Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create nonclustered B-tree or rowstore indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
 By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since a non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
@@ -191,3 +201,7 @@ To create an empty columnstore index for:
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], refer to [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 For more information on how to convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
+
+- [What's new in columnstore indexes](columnstore-indexes-what-s-new.md)
+- [Columnstore indexes - Data Warehouse](columnstore-indexes-data-warehouse.md)
+- [Columnstore indexes - Query performance](columnstore-indexes-query-performance.md)

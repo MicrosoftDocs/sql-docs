@@ -20,7 +20,7 @@ ms.custom:
 
 This article guides you in the installation of [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
-You can install Machine Learning Services on Ubuntu. Currently, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) are unsupported. 
+You can install Machine Learning Services on Ubuntu and Red Hat Enterprise Linux (RHEL). Currently SUSE Linux Enterprise Server (SLES) is unsupported. 
 
 You can install ML Services on a Docker container running a Linux distribution. Inside the Docker container, the steps would be the same as below.
 

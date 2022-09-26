@@ -1429,7 +1429,7 @@
     - name: Quickstarts
       items:
       - name: Portal
-        href: virtual-machines/windows/sql-vm-create-portal-quickstart.md
+        href: virtual-machines/windows/sql-vm-create-confidential-vm-quickstart.md
       - name: PowerShell
         href: virtual-machines/windows/sql-vm-create-powershell-quickstart.md
       - name: Bicep
@@ -1438,6 +1438,8 @@
       - name: ARM template
         displayName: Resource Manager
         href: virtual-machines/windows/create-sql-vm-resource-manager-template.md
+      - name: Confidential VMs
+        href: virtual-machines/windows/sql-vm-create-portal-quickstart.md
     - name: Concepts
       items:
       - name: Business continuity

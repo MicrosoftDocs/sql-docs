@@ -4,11 +4,11 @@ description: Learn about the new features and improvements for different release
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 10/14/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
-ms.custom: ignite-fall-2021
+ms.custom: 
 tags: azure-service-management
 ---
 # Documentation changes for SQL Server on Azure Virtual Machines
@@ -18,7 +18,11 @@ tags: azure-service-management
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
 
 
+## September 2022
 
+| Changes | Details |
+| --- | --- |
+| **Confidential VMs** | SQL Server on Azure VMs has added support to deploy to SQL Server to an [Azure confidential VM](/azure/confidential-computing/confidential-vm-overview). To learn more, review [SQL Server on Azure confidential VMs](security-considerations-best-practices.md#confidential-vms) and to get started review the [Quickstart: Deploy SQL Server to an Azure confidential VM](sql-vm-create-confidential-vm-portal-quickstart.md). 
 
 ## July 2022
 

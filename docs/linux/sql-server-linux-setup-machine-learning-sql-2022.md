@@ -20,7 +20,7 @@ ms.custom:
 
 This article guides you in the installation of [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
-You can install Machine Learning Services on Ubuntu. Currently, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) are unsupported. 
+You can install Machine Learning Services on Ubuntu and Red Hat Enterprise Linux (RHEL). Currently, SUSE Linux Enterprise Server (SLES) is unsupported. 
 
 You can install ML Services on a Docker container running a Linux distribution. Inside the Docker container, the steps would be the same as below.
 
@@ -50,62 +50,31 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Extensibility framework used to run Python and R. |
 
-
-<a name="ubuntu"></a>
-
-## Install on Ubuntu
-
-Refer to [Quickstart: Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md) for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux installation. Then, use the following steps to install SQL Server Machine Learning Services on Ubuntu:
-
- - [Install R on Ubuntu](#install-r-on-ubuntu)
- - [Install Python on Ubuntu](#install-python-on-ubuntu)
-
-### Install R on Ubuntu
+## Setup R support
 
 The following commands register the repository providing the R language platform. 
 
-> [!Tip]
-> If possible, run `apt-get update` to refresh packages on the system prior to installation. 
+1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package mssql-server-extensibility.
 
-1. Begin installation as root.
-
-    ```bash
-    sudo su
-    ```
-
-2. Optionally, if your system does not have the `https apt transport` option:
-
-    ```bash
-    apt-get install apt-transport-https
-    ```
-
-3. Set the location of the package repo the "prod" directory containing the distribution. This example specifies 20.04. Replace with 16.04 or 14.04 if you want those versions.
-
-    ```bash
-    wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
-    ```
-
-4. Register the repository.
-
-    ```bash
-    dpkg -i packages-microsoft-prod.deb
-    ```
-
-5. Update packages on your system (required).
-
-    ```bash
-    apt-get update
-    ```
-
-6. Install the SQL Server extensibility feature.
-
+    **Ubuntu**
     ```bash
     apt-get install mssql-server-extensibility
     ```
 
-7. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
+    **Redhat**
+    ```bash
+    yum install mssql-server-extensibility
+    ```
 
-8. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
+2. Accept the EULA for SQL ML Services
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+    ```
+
+3. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
+
+4. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
@@ -115,20 +84,16 @@ The following commands register the repository providing the R language platform
     install.packages("jsonlite")
     ```
 
-11. Download the [CompatibilityAPI for Linux](https://go.microsoft.com/fwlink/?LinkID=2193925).
-
-12. Install CompatibilityAPI for Linux, specifying the absolute file path to the `.tar.gz` file.
+5. Download and Install CompatibilityAPI for Linux.
 
     ```r
-    install.packages('/path/to/CompatibilityAPI.tar.gz', repos = NULL)
+    install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1. 0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL)
     ```
 
-13. Download [RevoScaleR Linux](https://go.microsoft.com/fwlink/?LinkID=2193829).
-
-14. Install RevoScaleR for Linux, specifying the absolute file path to the `.tar.gz` file.
+6. Download and Install RevoScaleR for Linux.
 
     ```r
-    install.packages('/path/to/RevoScaleR.tar.gz', repos = NULL)
+    install.packages("https://aka.ms/sqlml/r4.2/linux/RevoScaleR_10.0.1_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL)
     ```
 
 15. Verify RevoScaleR installation from the R terminal.
@@ -167,34 +132,32 @@ The following commands register the repository providing the R language platform
     GO
     ```
 
-### Install Python on Ubuntu
+### Setup Python support
 
-1. Begin installation as root.
+1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package mssql-server-extensibility.
 
-    ```bash
-    sudo su
-    ```
-    
-2. Update packages on your system (required).
-
-    ```bash
-    apt-get update
-    ```
-
-3. Install the SQL Server extensibility feature.
-
+    **Ubuntu**
     ```bash
     apt-get install mssql-server-extensibility
     ```
 
-4. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime.
+    **Redhat**
+    ```bash
+    yum install mssql-server-extensibility
+    ```
 
-5. Download [revoscalepy for Linux](https://go.microsoft.com/fwlink/?LinkID=2193830).
+2. Accept the EULA for SQL ML Services
 
-6. Install revoscalepy for the root user, specifying the absolute file path to the `.whl` file.
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+    ```
+
+3. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime.
+
+4. Download and Install revoscalepy for the root user.
 
     ```bash  
-    pip install /path/to/revoscalepy.whl
+    pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
 7. Verify the revoscalepy installation from the python terminal. Verify the library can be imported.
@@ -231,18 +194,6 @@ The following commands register the repository providing the R language platform
     EXEC sp_execute_external_script @script=N'import sys;print(sys.version)',@language=N'Python';
     GO
     ```
-
-<a name="RHEL"></a>
-
-## Install on RHEL
-
-Installation for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Machine Learning Services for Red Hat Enterprise Linux (RHEL) is currently not supported.
-
-<a name="SLES"></a>
-
-## Install on SUSE Linux
-
-Installation for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Machine Learning Services for SUSE Linux Enterprise Server (SLES) v15 is currently not supported.
 
 ## Install Java
 

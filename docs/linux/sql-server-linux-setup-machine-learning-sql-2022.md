@@ -61,7 +61,7 @@ The following commands register the repository providing the R language platform
     apt-get install mssql-server-extensibility
     ```
 
-    **Redhat or SLES**
+    **Redhat**
     ```bash
     yum install mssql-server-extensibility
     ```

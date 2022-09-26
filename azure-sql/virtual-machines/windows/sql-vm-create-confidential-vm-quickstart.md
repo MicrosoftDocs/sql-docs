@@ -58,10 +58,9 @@ On the **Basics** tab, provide the following information:
    :::image type="content" source="media/sql-vm-create-confidential-vm-quickstart/basic-instance-details.png" alt-text="Screen shot of the Azure portal showing instance details.":::
 
 
-
 1. Under **Administrator account**, provide a username, such as _azureuser_ and a password. The password must be at least 12 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).
 
-   :::image type="content" source="./media/sql-vm-create-portal-quickstart/:::image type="content" source="media/create-sql-vm-portal/basics-administrator-account.png" alt-text=""Screen shot of the Azure portal, Administrator account.":::
+   :::image type="content" source="media/sql-vm-create-confidential-vm-quickstart/basics-administrator-account.png" alt-text="Screen shot of the Azure portal, Administrator account":::
 
 
 1. Under **Inbound port rules**, choose **Allow selected ports** and then select **RDP (3389)** from the drop-down. 

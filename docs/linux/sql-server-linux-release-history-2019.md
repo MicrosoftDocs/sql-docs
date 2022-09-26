@@ -63,12 +63,12 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 16-GDR (CU 16 GDR) release of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. This is a security update that also includes the previously released CU (CU 16). The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 15.0.4236.7. For information about the fixes and improvements in this release, see [KB 5014553](https://support.microsoft.com/help/5014553).
 
 > [!IMPORTANT]  
-> TDE-compressed backups that are made using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU16 and later cannot be restored to previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
+> TDE-compressed backups that are made using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU 16 and later cannot be restored to previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
 >
-> Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU16 and later versions.
+> Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU 16 and later versions.
 
 > [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
+> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
 
 ### Package details
 
@@ -87,12 +87,12 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 16 (CU 16) release of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 15.0.4223.1. For information about the fixes and improvements in this release, see [KB 5011644](https://support.microsoft.com/help/5011644).
 
 > [!IMPORTANT]  
-> TDE-compressed backups that are made using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU16 and later cannot be restored to previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
+> TDE-compressed backups that are made using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU 16 and later cannot be restored to previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
 >
-> Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU16 and later versions.
+> Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU 16 and later versions.
 
 > [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
+> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
 
 ### Package details
 
@@ -127,7 +127,7 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 14 (CU 14) release of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 15.0.4188.2. For information about the fixes and improvements in this release, see [KB 5007182](https://support.microsoft.com/help/5007182).
 
 > [!NOTE]  
-> **SLES v15** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU14. The offline package installation links for SLES are pointing to SLES v15 packages. If you are looking for SLES v12 packages, refer to the download path <https://packages.microsoft.com/sles/12/mssql-server-2019/>.
+> **SLES v15** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU 14. The offline package installation links for SLES are pointing to SLES v15 packages. If you are looking for SLES v12 packages, refer to the download path <https://packages.microsoft.com/sles/12/mssql-server-2019/>.
 
 ### Package details
 
@@ -194,7 +194,7 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 10 (CU 10) release of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 15.0.4123.1. For information about the fixes and improvements in this release, see [KB 5001090](https://support.microsoft.com/help/5001090).
 
 > [!NOTE]  
-> **Ubuntu 20.04** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU10. The offline package installation links for Ubuntu are pointing to Ubuntu 20.04 packages. If you are looking for Ubuntu 18.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/>.
+> **Ubuntu 20.04** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU 10. The offline package installation links for Ubuntu are pointing to Ubuntu 20.04 packages. If you are looking for Ubuntu 18.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/>.
 
 ### Package details
 
@@ -325,7 +325,7 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 3 (CU 3) release of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 15.0.4023.6. For information about the fixes and improvements in this release, see [KB 4538853](https://support.microsoft.com/help/4538853).
 
 > [!NOTE]  
-> **Ubuntu 18.04** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU3. The offline package installation links for Ubuntu are pointing to Ubuntu 18.04 packages. If you are looking for Ubuntu 16.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>.
+> **Ubuntu 18.04** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU 3. The offline package installation links for Ubuntu are pointing to Ubuntu 18.04 packages. If you are looking for Ubuntu 16.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>.
 
 ### Package details
 
@@ -360,7 +360,7 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 1 (CU 1) release of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 15.0.4003.23. For information about the fixes and improvements in this release, see [KB 4527376](https://support.microsoft.com/help/4527376).
 
 > [!NOTE]  
-> **RHEL 8** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU1. The offline package installation links for RHEL are pointing to RHEL 8 packages. If you are looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2019/>.
+> **RHEL 8** is now supported on [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] starting with CU 1. The offline package installation links for RHEL are pointing to RHEL 8 packages. If you are looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2019/>.
 
 ### Package details
 

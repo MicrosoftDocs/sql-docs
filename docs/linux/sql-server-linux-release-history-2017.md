@@ -292,7 +292,7 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 20 (CU 20) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3294.2. For information about the fixes and improvements in this release, see [KB 4541283](https://support.microsoft.com/help/4541283).
 
 > [!NOTE]  
-> **Ubuntu 18.04** and **RHEL 8** are now supported on [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] starting with CU20.
+> **Ubuntu 18.04** and **RHEL 8** are now supported on [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] starting with CU 20.
 >
 > The offline package installation links for Ubuntu are pointing to Ubuntu 18.04 packages, except for the SSIS package (which isn't available for Ubuntu 18.04). If you are looking for Ubuntu 16.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
 >
@@ -332,8 +332,8 @@ This is the Cumulative Update 18 (CU 18) release of [!INCLUDE[ssSQL17](../includ
 
 ### Added support
 
-- Change Data Capture (CDC) is supported with [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux starting with CU18.
-- Transactional Replication is supported with [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux starting with CU18.
+- Change Data Capture (CDC) is supported with [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux starting with CU 18.
+- Transactional Replication is supported with [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux starting with CU 18.
 ### Remarks
 
 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] containers now have a new tagging pattern as described below with examples.
@@ -350,11 +350,11 @@ This is the Cumulative Update 18 (CU 18) release of [!INCLUDE[ssSQL17](../includ
 
 - `mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
 
-  This will pull [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] CU18 based on the Ubuntu 16.04 container.
+  This will pull [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] CU 18 based on the Ubuntu 16.04 container.
 
 - `mcr.microsoft.com/mssql/server:2017-latest`
 
-  This will pull the latest [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] version (CU18 as the time of this writing) based on the %%LATESTUBUNTU%% container.
+  This will pull the latest [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] version (CU 18 as the time of this writing) based on the %%LATESTUBUNTU%% container.
 
 > [!NOTE]
 >  
@@ -624,7 +624,7 @@ This is the Cumulative Update 5 (CU 5) release of [!INCLUDE[ssSQL17](../includes
 
 ### Known upgrade issue
 
-When you upgrade from a previous release to CU5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might fail to start with the following error:
+When you upgrade from a previous release to CU 5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might fail to start with the following error:
 
 ```output
 Error: 4860, Severity: 16, State: 1.
@@ -657,7 +657,7 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 4 (CU 4) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see [KB 4056498](https://support.microsoft.com/help/4056498).
 
 > [!NOTE]  
-> As of CU4, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
+> As of CU 4, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
 
 ### Package details
 

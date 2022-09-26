@@ -40,7 +40,7 @@ This section lists the latest versions of each package per distribution, for [!I
 > This is the final cumulative update for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
 
-- As of CU4, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
+- As of CU 4, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
 - The **mssql-server-is** package isn't supported on SUSE in this release. See [SQL Server Integration Services (SSIS)](#ssis) for more information.
 
 | Distribution | Package name | Package version | Download |

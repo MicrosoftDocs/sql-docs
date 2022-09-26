@@ -34,14 +34,7 @@ Runs insert, update, or delete operations on a target table from the results of 
 
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 > [!NOTE]
-> MERGE is currently in preview for Azure Synapse Analytics. 
 > Change the product version selector for important content on MERGE specific to Azure Synapse Analytics. To change document version to Azure Synapse Analytics: [Azure Synapse Analytics](merge-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
-::: moniker-end
-
-::: moniker range="=azure-sqldw-latest"
-> [!NOTE]
-> MERGE is currently in preview for Azure Synapse Analytics. Preview features are meant for testing only and should not be used on production instances or production data. As a preview feature, MERGE is subject to undergo changes in behavior or functionality. Please also keep a copy of your test data if the data is important.
-::: moniker-end
 
 **Performance Tip:** The conditional behavior described for the MERGE statement works best when the two tables have a complex mixture of matching characteristics. For example, inserting a row if it doesn't exist, or updating a row if it matches. When simply updating one table based on the rows of another table, improve the performance and scalability with basic INSERT, UPDATE, and DELETE statements. For example:  
   
@@ -51,6 +44,22 @@ SELECT col, col2
 FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
+::: moniker-end
+
+::: moniker range="=azure-sqldw-latest"
+> [!NOTE]
+> MERGE is now Generally Available in Synapse Dedicated SQL Pool with version '10.0.17829.0' or above. Connect to your dedicated SQL pool (formerly SQL DW) and run `SELECT @@VERSION`. A pause and resume may be required to ensure your instance gets the latest version.
+
+> [!TIP]
+> The conditional behavior described for the MERGE statement works best when the two tables have a complex mixture of matching characteristics. For example, inserting a row if it doesn't exist, or updating a row if it matches. When simply updating one table based on the rows of another table, consider using basic INSERT, UPDATE, and DELETE statements for better query performance and scalability. For example:  
+>  
+> ```sql
+> INSERT tbl_A (col, col2)  
+> SELECT col, col2
+> FROM tbl_B
+> WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
+> ```  
+::: moniker-end
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -111,7 +120,7 @@ MERGE
 ::: moniker range="=azure-sqldw-latest"
 
 ```syntaxsql
--- MERGE (Preview) for Azure Synapse Analytics 
+-- MERGE for Azure Synapse Analytics 
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ INTO ] <target_table> [ [ AS ] table_alias ]  
@@ -125,6 +134,27 @@ MERGE
         THEN <merge_matched> ] [ ...n ]
     [ OPTION ( <query_hint> [ ,...n ] ) ]
 ;  -- The semi-colon is required, or the query will return a syntax error. 
+  
+<target_table> ::=  
+{
+    [ database_name . schema_name . | schema_name . ]  
+  target_table  
+}  
+
+<merge_search_condition> ::=  
+    <search_condition>  
+  
+<merge_matched>::=  
+    { UPDATE SET <set_clause> | DELETE }  
+  
+<merge_not_matched>::=  
+{  
+    INSERT [ ( column_list ) ]
+        VALUES ( values_list )  
+}  
+  
+<clause_search_condition> ::=  
+    <search_condition> 
 ```
 
 ::: moniker-end
@@ -135,6 +165,7 @@ MERGE
 
 Specifies the temporary named result set or view, also known as common table expression, that's defined within the scope of the MERGE statement. The result set derives from a simple query and is referenced by the MERGE statement. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 #### TOP (expression* ) [ PERCENT ]
 
 Specifies the number or percentage of affected rows. *expression* can be either a number or a percentage of the rows. The rows referenced in the TOP expression aren't arranged in any order. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
@@ -142,7 +173,8 @@ Specifies the number or percentage of affected rows. *expression* can be either 
 The TOP clause applies after the entire source table and the entire target table  join and the joined rows that don't qualify for an insert, update, or delete action are removed. The TOP clause further reduces the number of joined rows to the specified value. The insert, update, or delete actions apply to the remaining joined rows in an unordered way. That is, there's no order in which the rows are distributed among the actions defined in the WHEN clauses. For example, specifying TOP (10) affects 10 rows. Of these rows, 7 may be updated and 3 inserted, or 1 may be deleted, 5 updated, and 4 inserted, and so on.  
   
 Without filters on the source table, the MERGE statement may perform a table scan or clustered index scan on the source table, as well as a table scan  or clustered index scan of target table. Therefore, I/O performance is sometimes affected even when using the TOP clause to modify a large table by creating multiple batches. In this scenario, it's important to ensure that all successive batches target new rows.  
-  
+::: moniker-end
+
 #### *database_name*  
 The name of the database in which *target_table* is located.  
   
@@ -155,6 +187,7 @@ The table or view against which the data rows from \<table_source> are matched b
 If *target_table* is a view, any actions against it must satisfy the conditions for updating views. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
 *target_table* can't be a remote table. *target_table* can't have any rules defined on it.  
+
 
 Hints can be specified as a <merge_hint>. 
 
@@ -205,6 +238,7 @@ When no rows are returned by \<table_source>, columns in the source table can't 
 #### AND \<clause_search_condition>  
 Specifies any valid search condition. For more information, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 #### \<table_hint_limited>  
 Specifies one or more table hints to apply on the target table for each of the insert, update, or delete actions done by the MERGE statement. The WITH keyword and the parentheses are required.  
   
@@ -218,8 +252,6 @@ Specifying the TABLOCK hint on a table that's the target of an INSERT statement 
 #### INDEX ( index_val [ ,...n ] )  
 Specifies the name or ID of one or more indexes on the target table for doing an implicit join with the source table. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"  
-
 #### \<output_clause>  
 Returns a row for every row in *target_table* that's updated, inserted, or deleted, in no particular order. **$action** can be specified in the output clause. **$action** is a column of type **nvarchar(10)** that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action done on that row. The OUTPUT clause is the recommended way to query or count rows affected by a MERGE. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
 
@@ -248,24 +280,28 @@ A list of one or more columns of the target table in which to insert data. Colum
 #### VALUES ( *values_list*)  
 A comma-separated list of constants, variables, or expressions that return values to insert into the target table. Expressions can't contain an EXECUTE statement.  
   
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 #### DEFAULT VALUES  
 Forces the inserted row to contain the default values defined for each column.  
   
 For more information about this clause, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+::: moniker-end
   
 #### \<search_condition>  
 Specifies the search conditions to specify \<merge_search_condition> or \<clause_search_condition>. For more information about the arguments for this clause, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 #### \<graph search pattern>  
 Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+::: moniker-end
    
 ## Remarks
 
 ::: moniker range="=azure-sqldw-latest"
 
 >[!NOTE]
-> In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
-> - Using MERGE to update a distribution key column is not supported. For a workaround, use `UPDATE FROM ... JOIN` statement to synchronize the two tables and update distribution key.
+> In Azure Synapse Analytics, the MERGE command has following differences compared to SQL server and Azure SQL database.  
+> - Using MERGE to update a distribution key column is not supported in builds older than `10.0.17829.0`. If unable to pause or force-upgrade, use the ANSI `UPDATE FROM ... JOIN` statement as a workaround until on version `10.0.17829.0`.
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
 > - MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
 > - Table value constructor can't be used in the USING clause for the source table. Use `SELECT ... UNION ALL` to create a derived source table with multiple rows.
@@ -281,12 +317,12 @@ Specifies the graph match pattern. For more information about the arguments for 
 > If you're using the distribution hash key as the JOIN column in MERGE and performing just an equality comparison, you can omit the distribution key from the list of columns in the `WHEN MATCHED THEN UPDATE SET` clause, as this is a redundant update.
 
 >[!IMPORTANT]
-> In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen in 2 cases:
+> In Azure Synapse Analytics the MERGE command on builds older than `10.0.17829.0` may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen in 2 cases:
 > 
 >|Scenario|Comment|  
 >|---------------|-----------------|  
 >|**Case 1** <br> Using MERGE on a HASH distributed TARGET table that contains secondary indices or a UNIQUE constraint. | - Fixed in Synapse SQL version ***10.0.15563.0*** and higher. <br> - If ```SELECT @@VERSION``` returns a lower version than 10.0.15563.0, manually pause and resume the Synapse SQL pool to pick up this fix. <br> - Until the fix has been applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints. |
->|**Case 2** <br> Using MERGE to update a distribution key column of a HASH distributed table. | - Do not use MERGE to update distribution key columns as this is not supported. <br> - Ensure your Synapse SQL pool is on version ***10.0.15658.0*** and higher. |
+>|**Case 2** <br> Using MERGE to update a distribution key column of a HASH distributed table. | - Fixed in Synapse SQL version ***10.0.17829.0*** and higher. <br> - If ```SELECT @@VERSION``` returns a lower version than 10.0.17829.0, manually pause and resume the Synapse SQL pool to pick up this fix. <br> - Until the fix has been applied to your Synapse SQL pool, avoid using the MERGE command to update distribution key columns. |
 >
 > **Note that the updates in both scenarios do not repair tables already affected by previous MERGE execution.** Use scripts below to identify and repair any affected tables manually.
 >
@@ -373,6 +409,15 @@ MERGE is a fully reserved keyword when the database compatibility level is set t
   
 > [!CAUTION]
 > Don't use the MERGE statement when using [queued updating replication](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md). The MERGE and queued updating trigger aren't compatible. Replace the MERGE statement with an insert or an update statement.
+
+::: moniker range="=azure-sqldw-latest"
+### Troubleshooting
+In certain scenarios, a MERGE statement may result in the error `“CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns.”`, even when neither Target nor Source table has 1024 columns. This scenario can arise when all the below conditions are met:
+- Multiple columns are specified in an UPDATE SET or INSERT operation within MERGE (not specific to any WHEN [NOT] MATCHED clause)
+- Any column in the JOIN condition has a Non-Clustered Index (NCI)
+
+If this error is found, the suggested workaround is to remove the Non-Clustered Index (NCI) from the JOIN columns, or join on columns without an NCI. If you later update the underlying tables to include an NCI on the JOIN columns, your MERGE statement may be susceptible to this error at runtime. See [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) to learn how to drop the Non-Clustered Index.
+::: moniker-end
 
 ## Trigger implementation
 

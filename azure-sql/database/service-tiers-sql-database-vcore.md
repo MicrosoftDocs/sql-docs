@@ -194,7 +194,7 @@ For more information see resource limits for [single databases](resource-limits-
 > [!IMPORTANT]
 > M-series hardware has been deprecated and is not available for provisioning. 
 >
-> Existing customers should migrate to hardware before September 2023.
+> Existing customers should migrate to other hardware tiers before September 2023.
 
 M-series is only supported in the Business Critical tier and does not support zone redundancy. 
 

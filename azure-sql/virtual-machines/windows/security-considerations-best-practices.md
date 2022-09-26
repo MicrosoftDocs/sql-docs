@@ -84,9 +84,8 @@ Azure confidential VMs are available in both the [General Purpose](performance-g
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](#azure-confidential-vms) to learn more. 
 
-To view all SQL Server images that support confidential VMs, when you're deploying your SQL Server VM, choose confidential VM as the **Security type** and then select **See all images** under the image selection drop-down. Filter by **Security type = Confidential** to view all SQL Server images that support confidential VMs. 
+To view all SQL Server images that support confidential VMs, begin to create a SQL Server virtual machine resource from the [Azure portal](https://portal.azure.com), and then select **See all images**  under **Images** on the **Basics tab** to open the Azure marketplace. Filter the options by selecting **Security type = Confidential** to view all SQL Server images that support confidential VMs. 
 
-go to [Azure marketplace](https://ms.portal.azure.com/#view/Microsoft_Azure_Marketplace/MarketplaceOffersBlade/selectedMenuItemId/home) and filter by **Security Type = Confidential**. 
 
 ### Limitations
 

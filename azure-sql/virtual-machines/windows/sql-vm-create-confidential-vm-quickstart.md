@@ -64,7 +64,6 @@ On the **Basics** tab, provide the following information:
    :::image type="content" source="./media/sql-vm-create-portal-quickstart/:::image type="content" source="media/create-sql-vm-portal/basics-administrator-account.png" alt-text="basics-administrator-account.png":::" alt-text=""Screen shot of the Azure portal, Administrator account.":::
 
 
-
 1. Under **Inbound port rules**, choose **Allow selected ports** and then select **RDP (3389)** from the drop-down. 
 
    :::image type="content" source="media/create-sql-vm-portal/basics-inbound-port-rules.png" alt-text="Screen shot of the Azure portal, Inbound port rules.":::

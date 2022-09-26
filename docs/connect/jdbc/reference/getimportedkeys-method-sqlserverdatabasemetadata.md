@@ -1,21 +1,15 @@
 ---
+title: "getImportedKeys Method (SQLServerDatabaseMetaData)"
 description: "getImportedKeys Method (SQLServerDatabaseMetaData)"
-title: "getImportedKeys Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getImportedKeys"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getImportedKeys"
+apitype: "Assembly"
 ---
 # getImportedKeys Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -76,7 +70,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 >  For more information about the data returned by the getImportedKeys method, see "sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getImportedKeys method to return information about all the primary keys that reference the foreign keys of the Person.Address table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  
+ The following example demonstrates how to use the getImportedKeys method to return information about all the primary keys that reference the foreign keys of the Person.Address table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```  
 public static void executeGetImportedKeys(Connection con) {  

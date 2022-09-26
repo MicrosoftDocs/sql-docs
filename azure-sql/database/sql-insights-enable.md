@@ -1,14 +1,11 @@
 ---
 title: Enable SQL Insights (preview)
 description: Enable SQL Insights (preview) in Azure Monitor
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
 ms.date: 08/03/2022
-services:
-  - "sql-database"
 ms.service: sql-db-mi
+ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
@@ -22,7 +19,7 @@ This article describes how to enable [SQL Insights (preview)](sql-insights-overv
 > To enable SQL Insights (preview) by creating the monitoring profile and virtual machine using a resource manager template, see [Resource Manager template samples for SQL Insights (preview)](/azure/azure-monitor/insights/resource-manager-sql-insights).
 
 To learn how to enable SQL Insights (preview), you can also refer to this Data Exposed episode.
-> [!VIDEO https://docs.microsoft.com/Shows/Data-Exposed/How-to-Set-up-Azure-Monitor-for-SQL-Insights/player?format=ny]
+> [!VIDEO https://learn.microsoft.com/Shows/Data-Exposed/How-to-Set-up-Azure-Monitor-for-SQL-Insights/player?format=ny]
 
 ## Create Log Analytics workspace
 SQL Insights stores its data in one or more [Log Analytics workspaces](/azure/azure-monitor/logs/data-platform-logs#log-analytics-workspaces). Before you can enable SQL Insights, you need to either [create a workspace](/azure/azure-monitor/logs/quick-create-workspace) or select an existing one. A single workspace can be used with multiple monitoring profiles, but the workspace and profiles must be located in the same Azure region. To enable and access the features in SQL Insights, you must have the [Log Analytics contributor role](/azure/azure-monitor/logs/manage-access) in the workspace. 
@@ -37,12 +34,12 @@ The instructions below cover the process per type of SQL that you can monitor. T
 > [!NOTE]
 > SQL Insights (preview) does not support the following Azure SQL Database scenarios:
 > - **Elastic pools**: Metrics cannot be gathered for elastic pools. Metrics cannot be gathered for databases within elastic pools.
-> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, S1, and S2 [service tiers](/azure/azure-sql/database/resource-limits-dtu-single-databases)
+> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, S1, and S2 [service tiers](./resource-limits-dtu-single-databases.md)
 > 
 > SQL Insights (preview) has limited support for the following Azure SQL Database scenarios:
-> - **Serverless tier**: Metrics can be gathered for databases using the [serverless compute tier](/azure/azure-sql/database/serverless-tier-overview). However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
+> - **Serverless tier**: Metrics can be gathered for databases using the [serverless compute tier](./serverless-tier-overview.md). However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
 
-Connect to an Azure SQL database with [SQL Server Management Studio](/azure/azure-sql/database/connect-query-ssms), [Query Editor (preview)](/azure/azure-sql/database/connect-query-portal) in the Azure portal, or any other SQL client tool.
+Connect to an Azure SQL database with [SQL Server Management Studio](./connect-query-ssms.md), [Query Editor (preview)](./connect-query-portal.md) in the Azure portal, or any other SQL client tool.
 
 Run the following script to create a user with the required permissions. Replace *user* with a username and *mystrongpassword* with a strong password.
 
@@ -72,7 +69,7 @@ order by username
 ```
 
 ### Azure SQL Managed Instance
-Connect to your Azure SQL Managed Instance using [SQL Server Management Studio](/azure/azure-sql/database/connect-query-ssms) or a similar tool, and execute the following script to create the monitoring user with the permissions needed. Replace *user* with a username and *mystrongpassword* with a strong password.
+Connect to your Azure SQL Managed Instance using [SQL Server Management Studio](./connect-query-ssms.md) or a similar tool, and execute the following script to create the monitoring user with the permissions needed. Replace *user* with a username and *mystrongpassword* with a strong password.
 
  
 ```sql
@@ -87,7 +84,7 @@ GO
 ```
 
 ### SQL Server
-Connect to SQL Server on your Azure virtual machine and use [SQL Server Management Studio](/azure/azure-sql/database/connect-query-ssms) or a similar tool to run the following script to create the monitoring user with the permissions needed. Replace *user* with a username and *mystrongpassword* with a strong password.
+Connect to SQL Server on your Azure virtual machine and use [SQL Server Management Studio](./connect-query-ssms.md) or a similar tool to run the following script to create the monitoring user with the permissions needed. Replace *user* with a username and *mystrongpassword* with a strong password.
  
 ```sql
 USE master; 
@@ -138,7 +135,7 @@ Each type of SQL offers methods for your monitoring virtual machine to securely 
 
 SQL Insights supports accessing your Azure SQL Database via its public endpoint as well as from its virtual network.
 
-For access via the public endpoint, you would add a rule under the **Firewall settings** page and the [IP firewall settings](/azure/azure-sql/database/network-access-controls-overview#ip-firewall-rules) section. For specifying access from a virtual network, you can set [virtual network firewall rules](/azure/azure-sql/database/network-access-controls-overview#virtual-network-firewall-rules) and set the [service tags required by the Azure Monitor agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#networking). [This article](/azure/azure-sql/database/network-access-controls-overview#ip-vs-virtual-network-firewall-rules) describes the differences between these two types of firewall rules.
+For access via the public endpoint, you would add a rule under the **Firewall settings** page and the [IP firewall settings](./network-access-controls-overview.md#ip-firewall-rules) section. For specifying access from a virtual network, you can set [virtual network firewall rules](./network-access-controls-overview.md#virtual-network-firewall-rules) and set the [service tags required by the Azure Monitor agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#networking). [This article](./network-access-controls-overview.md#ip-vs-virtual-network-firewall-rules) describes the differences between these two types of firewall rules.
 
 :::image type="content" source="media/sql-insights-enable/set-server-firewall.png" alt-text="Screenshot of an Azure SQL Database page in the Azure portal. The Set server firewall button is highlighted." lightbox="media/sql-insights-enable/set-server-firewall.png":::
 
@@ -146,10 +143,10 @@ For access via the public endpoint, you would add a rule under the **Firewall se
 
 ### Azure SQL Managed Instance
 
-If your monitoring virtual machine will be in the same VNet as your SQL MI resources, then see [Connect inside the same VNet](/azure/azure-sql/managed-instance/connect-application-instance#connect-inside-the-same-vnet). If your monitoring virtual machine will be in the different VNet than your SQL MI resources, then see [Connect inside a different VNet](/azure/azure-sql/managed-instance/connect-application-instance#connect-inside-a-different-vnet).
+If your monitoring virtual machine will be in the same VNet as your SQL MI resources, then see [Connect inside the same VNet](../managed-instance/connect-application-instance.md#connect-inside-the-same-vnet). If your monitoring virtual machine will be in the different VNet than your SQL MI resources, then see [Connect inside a different VNet](../managed-instance/connect-application-instance.md#connect-inside-a-different-vnet).
 
 ### SQL Server 
-If your monitoring virtual machine is in the same VNet as your SQL virtual machine resources, then see [Connect to SQL Server within a virtual network](/azure/azure-sql/virtual-machines/windows/ways-to-connect-to-sql#connect-to-sql-server-within-a-virtual-network). If your monitoring virtual machine will be in the different VNet than your SQL virtual machine resources, then see  [Connect to SQL Server over the internet](/azure/azure-sql/virtual-machines/windows/ways-to-connect-to-sql#connect-to-sql-server-over-the-internet).
+If your monitoring virtual machine is in the same VNet as your SQL virtual machine resources, then see [Connect to SQL Server within a virtual network](../virtual-machines/windows/ways-to-connect-to-sql.md#connect-to-sql-server-within-a-virtual-network). If your monitoring virtual machine will be in the different VNet than your SQL virtual machine resources, then see  [Connect to SQL Server over the internet](../virtual-machines/windows/ways-to-connect-to-sql.md#connect-to-sql-server-over-the-internet).
 
 ## Store monitoring password in Azure Key Vault
 As a security best practice, we strongly recommend that you store your SQL user (login) passwords in a Key Vault, rather than entering them directly into your monitoring profile connection strings.
@@ -204,7 +201,7 @@ The connection string specifies the login name that SQL Insights (preview) shoul
 The connections string will vary for each type of SQL resource:
 
 #### Azure SQL Database
-TCP connections from the monitoring machine to the IP address and port used by the database must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Database connectivity architecture](/azure/azure-sql/database/connectivity-architecture).
+TCP connections from the monitoring machine to the IP address and port used by the database must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Database connectivity architecture](./connectivity-architecture.md).
 
 Enter the connection string in the form:
 
@@ -220,7 +217,7 @@ Get the details from the **Connection strings** page and the appropriate ADO.NET
 To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring a single secondary. The collected data will be tagged to reflect primary or secondary. 
 
 #### Azure SQL Managed Instance
-TCP connections from the monitoring machine to the IP address and port used by the managed instance must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Managed Instance connection types](/azure/azure-sql/managed-instance/connection-types-overview).
+TCP connections from the monitoring machine to the IP address and port used by the managed instance must be allowed by any firewalls or [network security groups](/azure/virtual-network/network-security-groups-overview) (NSGs) that may exist on the network path. For details on IP addresses and ports, see [Azure SQL Managed Instance connection types](../managed-instance/connection-types-overview.md).
 
 Enter the connection string in the form:
 
@@ -231,7 +228,7 @@ Enter the connection string in the form:
 ] 
 ```
 
-Get the details from the **Connection strings** page and the appropriate ADO.NET endpoint for the managed instance. If using managed instance [public endpoint](/azure/azure-sql/managed-instance/public-endpoint-configure), replace port 1433 with 3342.
+Get the details from the **Connection strings** page and the appropriate ADO.NET endpoint for the managed instance. If using managed instance [public endpoint](../managed-instance/public-endpoint-configure.md), replace port 1433 with 3342.
 
 To monitor a readable secondary, append `;ApplicationIntent=ReadOnly` to the connection string. SQL Insights supports monitoring of a single high-availability (HA) secondary replica for a given primary database. Collected data will be tagged to reflect Primary or Secondary. 
 

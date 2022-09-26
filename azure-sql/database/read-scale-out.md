@@ -1,18 +1,17 @@
 ---
 title: Read queries on replicas
+titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Azure SQL provides the ability to use the capacity of read-only replicas for read workloads, called Read Scale-Out.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-ms.topic: conceptual
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 7/22/2022
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Use read-only replicas to offload read-only query workloads
@@ -31,11 +30,11 @@ The following diagram illustrates the feature for Premium and Business Critical 
 The *read scale-out* feature is enabled by default on new Premium,  Business Critical, and Hyperscale databases.
 
 > [!NOTE]
-> Read scale-out is always enabled in the Business Critical service tier of Managed Instance, and for Hyperscale databases with at least one secondary replica.
+> Read scale-out is always enabled in the Business Critical service tier of SQL Managed Instance, and for Hyperscale databases with at least one secondary replica.
 
 If your SQL connection string is configured with `ApplicationIntent=ReadOnly`, the application will be redirected to a read-only replica of that database or managed instance. For information on how to use the `ApplicationIntent` property, see [Specifying Application Intent](/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery#specifying-application-intent).
 
-If you wish to ensure that the application connects to the primary replica regardless of the `ApplicationIntent` setting in the SQL connection string, you must explicitly disable read scale-out when creating the database or when altering its configuration. For example, if you upgrade your database from Standard or General Purpose tier to Premium or Business Critical and want to make sure all your connections continue to go to the primary replica, disable read scale-out. For details on how to disable it, see [Enable and disable read scale-out](#enable-and-disable-read-scale-out).
+For Azure SQL Database only, if you wish to ensure that the application connects to the primary replica regardless of the `ApplicationIntent` setting in the SQL connection string, you must explicitly disable read scale-out when creating the database or when altering its configuration. For example, if you upgrade your database from Standard or General Purpose tier to Premium or Business Critical and want to make sure all your connections continue to go to the primary replica, disable read scale-out. For details on how to disable it, see [Enable and disable read scale-out](#enable-and-disable-read-scale-out-for-sql-database).
 
 > [!NOTE]
 > Query Store and SQL Profiler features are not supported on read-only replicas. 
@@ -133,18 +132,20 @@ If a long-running query on a read-only replica directly or indirectly causes thi
 > In Premium and Business Critical service tiers, when connected to a read-only replica, the `redo_queue_size` and `redo_rate` columns in the [sys.dm_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database) DMV may be used to monitor data synchronization process, serving as indicators of data propagation latency on the read-only replica.
 > 
 
-## Enable and disable read scale-out
+## Enable and disable read scale-out for SQL Database
 
-Read scale-out is enabled by default on Premium, Business Critical, and Hyperscale service tiers. Read scale-out cannot be enabled in Basic, Standard, or General Purpose service tiers. Read scale-out is automatically disabled on Hyperscale databases configured with zero secondary replicas.
+For SQL Managed Instance, read-scale out is automatically enabled on the Business Critical service tier, and is not available in the General Purpose service tier. Disabling and reenabling read scale-out is not possible. 
 
-You can disable and re-enable read scale-out on single databases and elastic pool databases in the Premium or Business Critical service tiers using the following methods.
+For SQL Database, read scale-out is enabled by default on Premium, Business Critical, and Hyperscale service tiers. Read scale-out cannot be enabled in Basic, Standard, or General Purpose service tiers. Read scale-out is automatically disabled on Hyperscale databases configured with zero secondary replicas.
+
+For single and pooled databases in Azure SQL Database, you can disable and re-enable read scale-out in the Premium or Business Critical service tiers by using the Azure portal, and Azure PowerShell. These options are not available for SQL Managed Instance as read-scale out cannot be disabled. 
 
 > [!NOTE]
 > For single databases and elastic pool databases, the ability to disable read scale-out is provided for backward compatibility. Read scale-out cannot be disabled on Business Critical managed instances.
 
 ### Azure portal
 
-You can manage the read scale-out setting on the **Configure** database blade.
+For Azure SQL Database, you can manage the read scale-out setting on the **Configure** database blade. Using the Azure portal to enable or disable read scale-out is not available for Azure SQL Managed Instance. 
 
 ### PowerShell
 
@@ -153,7 +154,7 @@ You can manage the read scale-out setting on the **Configure** database blade.
 
 Managing read scale-out in Azure PowerShell requires the December 2016 Azure PowerShell release or newer. For the newest PowerShell release, see [Azure PowerShell](/powershell/azure/install-az-ps).
 
-You can disable or re-enable read scale-out in Azure PowerShell by invoking the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet and passing in the desired value  (`Enabled` or `Disabled`) for the `-ReadScale` parameter.
+In Azure SQL Database, you can disable or re-enable read scale-out in Azure PowerShell by invoking the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) cmdlet and passing in the desired value  (`Enabled` or `Disabled`) for the `-ReadScale` parameter. Disabling read scale-out for SQL Managed Instance is not available. 
 
 To disable read scale-out on an existing database (replacing the items in the angle brackets with the correct values for your environment and dropping the angle brackets):
 

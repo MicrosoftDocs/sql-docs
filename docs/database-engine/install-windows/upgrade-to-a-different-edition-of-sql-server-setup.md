@@ -1,15 +1,13 @@
 ---
 title: "Upgrade to different edition"
 description: SQL Server Setup supports edition upgrade among various editions of SQL Server. Before you begin an edition upgrade, review the resources in this article.
-ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "12/13/2019"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade to a Different Edition of SQL Server (Setup)

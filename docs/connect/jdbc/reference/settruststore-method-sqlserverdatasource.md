@@ -1,21 +1,15 @@
 ---
+title: "setTrustStore Method (SQLServerDataSource)"
 description: "setTrustStore Method (SQLServerDataSource)"
-title: "setTrustStore Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "setTrustStore Method (SQLServerDataSource)"
-apilocation: 
-  - "setTrustStore Method (SQLServerDataSource)"
-apitype: "Assembly"
-ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "setTrustStore Method (SQLServerDataSource)"
+apiname: "setTrustStore Method (SQLServerDataSource)"
+apitype: "Assembly"
 ---
 # setTrustStore Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

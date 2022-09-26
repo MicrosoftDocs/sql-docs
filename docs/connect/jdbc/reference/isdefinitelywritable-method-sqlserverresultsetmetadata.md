@@ -1,21 +1,15 @@
 ---
+title: "isDefinitelyWritable Method (SQLServerResultSetMetaData)"
 description: "isDefinitelyWritable Method (SQLServerResultSetMetaData)"
-title: "isDefinitelyWritable Method (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSetMetaData.isDefinitelyWritable"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSetMetaData.isDefinitelyWritable"
+apitype: "Assembly"
 ---
 # isDefinitelyWritable Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

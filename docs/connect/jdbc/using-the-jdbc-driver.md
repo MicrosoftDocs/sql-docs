@@ -1,17 +1,12 @@
 ---
 title: Using the JDBC driver
 description: This section provides quick start instructions to make a simple connection to a SQL Server database using the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 08/08/2022
-
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using the JDBC driver
 
@@ -49,7 +44,7 @@ The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server provide **sqljdbc41.jar**,
   
 The Microsoft JDBC Driver 4.1 for SQL Server provides the **sqljdbc41.jar** class library file.
 
-Your choice will determines the available features. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+Your choice will determine the available features. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Setting the classpath
 

@@ -1,18 +1,14 @@
 ---
 title: "Constants (Microsoft Drivers for PHP for SQL Server)"
 description: "Learn about constants defined in the Microsoft SQLSRV and PDO_SQLSRV Drivers for PHP for SQL Server."
-ms.custom: ""
-ms.date: "02/11/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "constants"
-ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "02/11/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "constants"
 ---
 # Constants (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

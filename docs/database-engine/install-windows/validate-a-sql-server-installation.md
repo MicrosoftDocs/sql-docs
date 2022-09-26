@@ -1,17 +1,14 @@
 ---
-title: "Validate a SQL Server Installation | Microsoft Docs"
+title: "Validate a SQL Server Installation"
 description: The SQL Server discovery report can be used to verify the version of SQL Server and the SQL Server features installed on the computer.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "validating installations [SQL Server]"
-ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
+helpviewer_keywords:
+  - "validating installations [SQL Server]"
 monikerRange: ">=sql-server-2016"
 ---
 # Validate a SQL Server Installation

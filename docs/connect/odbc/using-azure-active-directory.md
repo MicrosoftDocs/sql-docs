@@ -1,16 +1,12 @@
 ---
 title: Using Azure Active Directory with the ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to an instance of Azure SQL Database using Azure Active Directory.
-ms.custom: ""
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using Azure Active Directory with the ODBC Driver
 
@@ -98,27 +94,27 @@ These options correspond to the same six available in the DSN setup UI above.
 ### Example connection strings
 
 1. SQL Server Authentication - legacy syntax. Server certificate isn't validated, and encryption is used only if the server enforces it. The username/password is passed in the connection string.
-`server=Server;database=Database;UID=UserName;PWD=Password;`
+`server=Server;database=Database;UID=UserName;PWD=Password;Encrypt=no;TrustServerCertificate=yes;`
 2. SQL Authentication - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string.
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. Integrated Windows Authentication (Kerberos on Linux and macOS) using SSPI (to SQL Server or SQL IaaS) - current syntax. Server certificate isn't validated, unless encryption is used.
-`server=Server;database=Database;Trusted_Connection=yes;`
+3. Integrated Windows Authentication (Kerberos on Linux and macOS) using SSPI (to SQL Server or SQL IaaS) - current syntax. Server certificate isn't validated, unless encryption is required by the server.
+`server=Server;database=Database;Trusted_Connection=yes;Encrypt=no;`
 4. (_Windows driver only_.) Integrated Windows Authentication using SSPI (if the target database is in SQL Server or SQL IaaS) - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`).
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. Azure Active Directory Username/Password Authentication (if the target database is in Azure SQL Database). Server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string.
-`server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
+`server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;Encrypt=yes;`
 6. (_Windows, and Linux/macOS 17.6+, driver only_.) Integrated Windows Authentication using ADAL or Kerberos, which involves redeeming Windows account credentials for an Azure AD-issued access token, assuming the target database is in Azure SQL Database. Server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). On Linux/macOS, a suitable Kerberos ticket needs to be available. For more information, see the section below on Federated Accounts and [Using Integrated Authentication](linux-mac/using-integrated-authentication.md).
-`server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
+`server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;Encrypt=yes;`
 7. (_Windows driver only_.) Azure AD Interactive Authentication uses Azure Active Directory Multi-Factor Authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection. The username is passed in the connection string.
-`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`
 ![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
 8. Azure Active Directory Managed Identity Authentication uses system-assigned or user-assigned identity for authentication to set up connection. For user-assigned identity, UID is set to the object ID of the user identity.<br>
 For system-assigned identity,<br>
-`server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
+`server=Server;database=Database;Authentication=ActiveDirectoryMsi;Encrypt=yes;`<br>
 For user-assigned identity with object ID equals to myObjectId,<br>
-`server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
+`server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;Encrypt=yes;`
 9. Azure Active Directory Service Principal Authentication
-`server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;`
+`server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;Encrypt=yes;`
 
 > [!NOTE]
 >
@@ -153,7 +149,7 @@ The following sample shows the code required to connect to SQL Server using Azur
 
 ```cpp
     ...
-    SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
+    SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword;Encrypt=yes;"
     ...
     SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);
     ...
@@ -162,7 +158,7 @@ The following sample shows the code required to connect to SQL Server using Azur
 The following sample shows the code required to connect to SQL Server using Azure Active Directory with access token authentication. In this case, it's necessary to modify application code to process the access token and set the associated connection attribute.
 
 ```cpp
-    SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server}"
+    SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};Encrypt=yes;"
     SQLCHAR accessToken[] = "eyJ0eXAiOi..."; // In the format extracted from an OAuth JSON response
     ...
     DWORD dataSize = 2 * strlen(accessToken);
@@ -183,17 +179,17 @@ The following sample shows the code required to connect to SQL Server using Azur
 The following sample connection string is for use with Azure Active Directory Interactive Authentication. It doesn't contain PWD field as the password would be entered on the Azure Authentication screen.
 
 ```cpp
-SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
+SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive;Encrypt=yes;"
 ```
 
 The following sample connection string is for use with Azure Active Directory Managed Identity Authentication. UID is set to the object ID of the user identity when using a user-assigned identity.
 
 ```cpp
 // For system-assigned identity,
-SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"
+SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi;Encrypt=yes;"
 ...
 // For user-assigned identity with object ID equals to myObjectId
-SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myObjectId;Authentication=ActiveDirectoryMsi"
+SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};UID=myObjectId;Authentication=ActiveDirectoryMsi;Encrypt=yes;"
 ```
 
 ## Considerations for using ADFS Federated Accounts on Linux/macOS

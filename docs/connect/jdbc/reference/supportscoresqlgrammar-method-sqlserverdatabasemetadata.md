@@ -1,21 +1,15 @@
 ---
+title: "supportsCoreSQLGrammar Method (SQLServerDatabaseMetaData)"
 description: "supportsCoreSQLGrammar Method (SQLServerDatabaseMetaData)"
-title: "supportsCoreSQLGrammar Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsCoreSQLGrammar"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsCoreSQLGrammar"
+apitype: "Assembly"
 ---
 # supportsCoreSQLGrammar Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

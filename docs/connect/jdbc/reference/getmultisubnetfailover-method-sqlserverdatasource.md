@@ -1,16 +1,12 @@
 ---
+title: "getMultiSubnetFailover Method (SQLServerDataSource)"
 description: "getMultiSubnetFailover Method (SQLServerDataSource)"
-title: "getMultiSubnetFailover Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 1e8cb175-5f4c-4208-b4f5-3646990a30e3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getMultiSubnetFailover Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

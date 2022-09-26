@@ -1,16 +1,12 @@
 ---
 title: "Bulk copy API for batch insert in JDBC"
 description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch inserts for faster loading of data into the database."
-ms.custom: ""
-ms.date: "01/29/2021"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/29/2021"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using bulk copy API for batch insert operation
@@ -36,7 +32,7 @@ There are three ways to enable Bulk Copy API for batch insert.
 Adding **useBulkCopyForBatchInsert=true;** to the connection string enables this feature.
 
 ```java
-Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
+Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;encrypt=true;useBulkCopyForBatchInsert=true;");
 ```
 
 ### 2. Enabling with setUseBulkCopyForBatchInsert() method from SQLServerConnection object
@@ -73,7 +69,7 @@ This is an example that demonstrates the use case for a batch insert operation o
         String tableName = "batchTest";
         String tableNameBulkCopyAPI = "batchTestBulk";
 
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement();

@@ -1,19 +1,17 @@
 ---
 title: "Service Broker with availability groups"
-description: Contains information about configuring Service Broker with SQL Server Always On availability groups. 
-ms.custom: "seo-lt-2019"
+description: Contains information about configuring Service Broker with SQL Server Always On availability groups.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Service Broker, AlwaysOn Availability Groups"
   - "Service Broker, Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
-ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Service Broker with Always On Availability Groups (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

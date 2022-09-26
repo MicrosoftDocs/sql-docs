@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "removing services"
 dev_langs:
   - "TSQL"
-ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 ---
 # DROP SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

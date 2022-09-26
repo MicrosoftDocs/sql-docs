@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "estimated execution information [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 ---
 # SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
@@ -73,7 +72,6 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**:::no-loc text="Type":::**|Node type. For the parent node of each query, this is the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement type (for example, SELECT, INSERT, EXECUTE, and so on). For subnodes representing execution plans, the type is PLAN_ROW.|  
 |**Parallel**|**0** = Operator is not running in parallel.<br /><br /> **1** = Operator is running in parallel.|  
 |**EstimateExecutions**|Estimated number of times this operator will be executed while running the current query.|  
-|||
 
  *Cost units are based on an internal measurement of time, not wall-clock time. They are used for determining the relative cost of a plan in comparison to other plans.  
   

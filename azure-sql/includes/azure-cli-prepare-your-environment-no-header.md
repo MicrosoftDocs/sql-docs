@@ -1,9 +1,9 @@
 ---
-ms.topic: include
-ms.date: 09/10/2020
 author: dbradish-microsoft
 ms.author: dbradish
 manager: barbkess
+ms.date: 09/10/2020
+ms.topic: include
 ms.custom: devx-track-azurecli
 ---
 

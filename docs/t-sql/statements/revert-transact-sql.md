@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "COOKIE clause"
 dev_langs:
   - "TSQL"
-ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # REVERT (Transact-SQL)

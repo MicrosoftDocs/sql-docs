@@ -16,7 +16,7 @@ adobe-target: true
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-To view the release notes for SSMS 19 Preview 2, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
+To view the release notes for SSMS 19 Preview 3, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 
@@ -24,7 +24,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 18.12.1](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.12.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
@@ -103,7 +103,7 @@ Download previous SSMS versions by selecting the download link in the related se
 |----------|---------|
 | Always Encrypted | Updated AE Tools to only show keys with no expiration date. | 
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.36.2. |
-| Compatibility Mode | Added support for compatibility mode 160.  Note that SSMS 19 is the recommended SSMS release for use with SQL Server 2022. Visit [Download SQL Server Management Studio 19](download-sql-server-management-studio-ssms-19.md) to obtain SSMS 19. |
+| Compatibility Mode | Added support for compatibility mode 160.  Note that SSMS 19 is the recommended SSMS release for use with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Visit [Download SQL Server Management Studio 19](download-sql-server-management-studio-ssms-19.md) to obtain SSMS 19. |
 | Data Classification | Improvements to Data Classification user interface. |
 | Link feature for Azure SQL Managed Instance | Added the link feature support for SQL Server 2016 for connection and failover wizards. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
 | Link feature for Azure SQL Managed Instance | Added failover wizard support to migrate multiple databases at the time from SQL Server to Azure SQL Managed Instance using the link feature. |
@@ -138,7 +138,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.11.1
 
-![download](media/download-icon.png) [Download SSMS 18.11.1](https://go.microsoft.com/fwlink/?linkid=2189054)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.11.1](https://go.microsoft.com/fwlink/?linkid=2189054)
 
 - Release number: 18.11.1
 - Build number: 15.0.18410.0
@@ -172,7 +172,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.11
 
-![download](media/download-icon.png) [Download SSMS 18.11](https://go.microsoft.com/fwlink/?linkid=2188603)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.11](https://go.microsoft.com/fwlink/?linkid=2188603)
 
 - Release number: 18.11
 - Build number: 15.0.18404.0
@@ -231,7 +231,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.10
 
-![download](media/download-icon.png) [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2174135)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.10](https://go.microsoft.com/fwlink/?linkid=2174135)
 
 - Release number: 18.10
 - Build number: 15.0.18390.0
@@ -279,7 +279,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.9.2
 
-![download](media/download-icon.png) [Download SSMS 18.9.2](https://go.microsoft.com/fwlink/?linkid=2168063)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9.2](https://go.microsoft.com/fwlink/?linkid=2168063)
 
 - Release number: 18.9.2
 - Build number: 15.0.18386.0
@@ -328,7 +328,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.9.1
 
-![download](media/download-icon.png) [Download SSMS 18.9.1](https://go.microsoft.com/fwlink/?linkid=2161193)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9.1](https://go.microsoft.com/fwlink/?linkid=2161193)
 
 - Release number: 18.9.1
 - Build number: 15.0.18384.0
@@ -359,7 +359,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.9
 
-![download](media/download-icon.png) [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
 
 - Release number: 18.9
 - Build number: 15.0.18382.0
@@ -433,7 +433,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.8
 
-![download](media/download-icon.png) [Download SSMS 18.8](https://go.microsoft.com/fwlink/?linkid=2151644)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.8](https://go.microsoft.com/fwlink/?linkid=2151644)
 
 - Release number: 18.8
 - Build number: 15.0.18369.0
@@ -484,7 +484,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.7.1
 
-![download](media/download-icon.png) [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2147207)
 
 - Release number: 18.7.1
 - Build number: 15.0.18358.0
@@ -513,7 +513,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.7
 
-![download](media/download-icon.png) [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2146265)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.7](https://go.microsoft.com/fwlink/?linkid=2146265)
 
 - Release number: 18.7
 - Build number: 15.0.18357.0
@@ -589,7 +589,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.6
 
-![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Release number: 18.6
 - Build number: 15.0.18338.0
@@ -648,7 +648,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.5.1
 
-![download](media/download-icon.png) [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
 
 - Release number: 18.5.1
 - Build number: 15.0.18333.0
@@ -676,7 +676,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.5
 
-![download](media/download-icon.png) [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
 
 - Release number: 18.5
 - Build number: 15.0.18330.0
@@ -778,7 +778,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.4
 
-![download](media/download-icon.png) [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2108895)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.4](https://go.microsoft.com/fwlink/?linkid=2108895)
 
 - Release number: 18.4
 - Build number: 15.0.18206.0
@@ -833,7 +833,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.3.1
 
-![download](media/download-icon.png) [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 - Release number: 18.3.1
 - Build number: 15.0.18183.0
@@ -887,7 +887,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.2
 
-![download](media/download-icon.png) [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 - Release number: 18.2
 - Build number: 15.0.18142.0
@@ -907,7 +907,6 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Query Execution or Results | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256 K   and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
 | ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqludfs). |
 | SMO | Added support for *SQL Assessment API*. For more information, see [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
-|  |  |
 
 #### Bug fixes in 18.2
 
@@ -959,7 +958,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.1
 
-![download](media/download-icon.png) [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Release number: 18.1
 - Build number: 15.0.18131.0
@@ -1029,7 +1028,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ### 18.0
 
-![download](media/download-icon.png) [Download SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - Release number: 18.0  
 - Build number: 15.0.18118.0  
@@ -1301,7 +1300,7 @@ Here are the deprecated and removed Features from SSMS version 18.0.
 
 ### 17.9.1
 
-![download](media/download-icon.png) [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Release number: 17.9.1
 - Build number: 14.0.17289.0
@@ -1344,7 +1343,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 ### 16.5.3
 
-![download](media/download-icon.png) [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+:::image type="icon" source="../includes/media/download.svg" border="false"::: [Download SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 
 - Release number: 16.5.3  
 - Build number: 13.0.16106.4  

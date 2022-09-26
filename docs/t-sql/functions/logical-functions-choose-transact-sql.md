@@ -3,13 +3,10 @@ title: "CHOOSE (Transact-SQL)"
 description: "The CHOOSE logical function returns the item at the specified index from a list of values."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "03/11/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "CHOOSE"
   - "CHOOSE_TSQL"

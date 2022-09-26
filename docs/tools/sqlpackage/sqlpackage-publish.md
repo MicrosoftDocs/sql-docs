@@ -35,7 +35,7 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
 
 # example publish using short form parameter names, skips schema validation
 SqlPackage /a:Publish /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
-    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyExtraction=False
+    /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyDeployment=False
 
 # example publish using Azure Active Directory Service Principal
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
@@ -55,6 +55,19 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" /UniversalAu
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" \
     /v:ETLUserPassword="asecurestringaddedhere" /v:AppUserPassword="asecurestringaddedhere"
+```
+
+```powershell
+# example publish connecting using an access token associated with a service principal
+$Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
+$AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
+$AccessToken = $AccessToken_Object.Token
+
+sqlpackage.exe /at:$AccessToken /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+# OR
+sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
 
@@ -118,7 +131,7 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
 |**/p:**|AzureStorageContainer=(STRING)|Azure blob storage container, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
 |**/p:**|AzureStorageKey=(STRING)|Azure storage account key, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
 |**/p:**|AzureStorageRootPath=(STRING)|Storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
-|**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Backups the database before deploying any changes.|
+|**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Backups the database before deploying any changes. This property is not applicable to Azure SQL Database.|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Specifies that the operation will be terminated during the schema validation step if the resulting schema changes could incur a loss of data, including due to data precision reduction or a data type change that requires a cast operation. The default (`True`) value causes the operation to terminate regardless if the target database contains data.  An execution with a `False` value for BlockOnPossibleDataLoss can still fail during deployment plan execution if data is present on the target that cannot be converted to the new column type. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Specifies whether to block updating a database whose schema no longer matches its registration or is unregistered.|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
@@ -217,7 +230,6 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Specifies whether warnings should be generated when differences are found in objects that cannot be modified, for example, if the file size or file paths were different for a file.|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that will stop the publish action if issues are present that might block successful publishing. For example, your publish action might stop if you have foreign keys on the target database that do not exist in the database project, and that causes errors when you publish.|
-|
 
 ## SQLCMD Variables
 

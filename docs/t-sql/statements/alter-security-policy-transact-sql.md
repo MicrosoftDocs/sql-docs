@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "ALTER SECURITY POLICY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
 

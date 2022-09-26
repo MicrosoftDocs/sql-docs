@@ -1,21 +1,15 @@
 ---
+title: "storesMixedCaseIdentifiers Method (SQLServerDatabaseMetaData)"
 description: "storesMixedCaseIdentifiers Method (SQLServerDatabaseMetaData)"
-title: "storesMixedCaseIdentifiers Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.storesMixedCaseIdentifiers"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.storesMixedCaseIdentifiers"
+apitype: "Assembly"
 ---
 # storesMixedCaseIdentifiers Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

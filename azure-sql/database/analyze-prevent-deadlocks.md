@@ -5,12 +5,10 @@ description: Learn how to analyze deadlocks and prevent them from reoccurring in
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mathoma, dfurman
-services:
-  - "sql-database"
+ms.date: 4/8/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.date: 4/8/2022
 ---
 
 # Analyze and prevent deadlocks in Azure SQL Database
@@ -817,5 +815,5 @@ Learn more about performance in Azure SQL Database:
 - [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
 - [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)
 - [Azure SQL Database: Improving Performance Tuning with Automatic Tuning](/Shows/Data-Exposed/Azure-SQL-Database-Improving-Performance-Tuning-with-Automatic-Tuning)
-- [Deliver consistent performance with Azure SQL](/learn/modules/azure-sql-performance/)
+- [Deliver consistent performance with Azure SQL](/training/modules/azure-sql-performance/)
 - [Retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors).

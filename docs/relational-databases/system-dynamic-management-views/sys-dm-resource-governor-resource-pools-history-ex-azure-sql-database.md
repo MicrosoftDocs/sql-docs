@@ -90,7 +90,6 @@ Each row represents a periodic snapshot of resource pool statistics in Azure SQL
 |**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
 
-
 ## Permissions
 
 This view requires VIEW SERVER STATE permission.

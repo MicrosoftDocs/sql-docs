@@ -1,15 +1,12 @@
 ---
 title: SQL Data Discovery and Classification Sample
 description: This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use a result set to retrieve Data Discovery and Classification information.
-ms.custom: ""
-ms.date: 07/31/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 07/31/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # SQL Data Discovery and Classification JDBC Sample
@@ -26,7 +23,7 @@ The code file for this sample is named DataDiscoveryAndClassification.java, and 
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;
@@ -48,7 +45,7 @@ public class DataDiscoveryAndClassification {
         String tableName = "JDBC_SQL_DATA_DISCOVERY_CLASSIFICATION";
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;username=<user>;password=<password>;";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<database>;username=<user>;password=<password>;";
 
         // Establish the connection.
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement()) {

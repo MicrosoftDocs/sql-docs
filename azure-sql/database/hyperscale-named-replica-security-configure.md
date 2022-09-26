@@ -1,15 +1,13 @@
 ---
 title: Configure named replicas security to allow isolated access
 description: Learn the security considerations for configuring and managing named replica so that a user can access the named replica but not other replicas.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.topic: how-to
 author: yorek
 ms.author: damauri
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 7/27/2021
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
 ---
 # Configure isolated access to a Hyperscale named replica
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -83,7 +81,7 @@ Once you have set up login authentication as described, you can use regular `GRA
 Remember that by default a newly created user has a minimal set of permissions granted (for example, it cannot access any user tables). If you want to allow `third-party-user` to read data in a table, you need to explicitly grant the `SELECT` permission:
 
 ```sql
-grant select on [Application].[Cities] to [third-party-user];
+GRANT SELECT ON [Application].[Cities] to [third-party-user];
 ```
 
 As an alternative to granting permissions individually on every table, you can add the user to the `db_datareaders` [database role](/sql/relational-databases/security/authentication-access/database-level-roles) to allow read access to all tables, or you can use [schemas](/sql/relational-databases/security/authentication-access/create-a-database-schema) to [allow access](/sql/t-sql/statements/grant-schema-permissions-transact-sql) to all existing and new tables in a schema.

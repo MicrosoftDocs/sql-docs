@@ -9,7 +9,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "database roles [SQL Server], permissions"
   - "REVOKE statement, roles"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,20 +1,16 @@
 ---
-title: "cross db ownership chaining Server Configuration Option | Microsoft Docs"
-description: 'Learn how to use the "cross db ownership chaining" option in SQL Server. View considerations for turning cross-database ownership chaining on and off.'
-ms.custom: ""
+title: "cross db ownership chaining Server Configuration Option"
+description: "Learn how to use the cross db ownership chaining option in SQL Server. View considerations for turning cross-database ownership chaining on and off."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/15/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cross-database ownership chaining"
   - "cross db ownership chaining option"
   - "chaining ownership"
-ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # cross db ownership chaining Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

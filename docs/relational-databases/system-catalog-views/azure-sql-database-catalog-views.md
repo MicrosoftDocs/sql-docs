@@ -14,7 +14,7 @@ dev_langs:
 monikerRange: "=azuresqldb-current"
 ---
 # Azure SQL Database Catalog Views
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 The following catalog views are available in this section.  
 

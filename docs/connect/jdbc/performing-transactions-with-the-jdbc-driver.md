@@ -1,16 +1,12 @@
 ---
 title: Performing transactions
 description: Learn how the JDBC Driver for SQL Server supports transactions including isolation levels, savepoints, and result set holdability.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Performing transactions with the JDBC driver
 

@@ -1,20 +1,16 @@
 ---
-title: "affinity64 mask Server Configuration Option | Microsoft Docs"
+title: "affinity64 mask Server Configuration Option"
 description: Find out about the affinity64 mask option. See when to use it in SQL Server to bind processors to specific threads.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "processor affinity [SQL Server]"
   - "affinity64 mask option"
   - "binding processors [SQL Server]"
-ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # affinity64 mask Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -22,7 +18,7 @@ ms.author: randolphwest
   The affinity64 mask binds processors to specific threads, similar to the affinity mask option. Use affinity mask to bind the first 32 processors, and use affinity64 mask to bind the remaining processors on the computer. This option is only visible on the 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Use [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) instead.  
   
 ## See Also  
  [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   

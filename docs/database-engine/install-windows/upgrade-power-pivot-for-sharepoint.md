@@ -1,18 +1,13 @@
 ---
+title: "Upgrade Power Pivot for SharePoint"
 description: "Upgrade Power Pivot for SharePoint"
-title: "Upgrade Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
-  
-ms.topic: conceptual
-ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: "Minewiskan"
 ms.author: "owend"
-monikerRange: ">=sql-server-2016"
 manager: erikre
+ms.date: "03/14/2017"
+ms.prod: sql
+ms.topic: conceptual
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade Power Pivot for SharePoint
 

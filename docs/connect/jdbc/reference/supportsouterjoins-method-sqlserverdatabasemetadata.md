@@ -1,21 +1,15 @@
 ---
+title: "supportsOuterJoins Method (SQLServerDatabaseMetaData)"
 description: "supportsOuterJoins Method (SQLServerDatabaseMetaData)"
-title: "supportsOuterJoins Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsOuterJoins"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 9dd19257-b120-4b74-8055-6570a343fc8d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsOuterJoins"
+apitype: "Assembly"
 ---
 # supportsOuterJoins Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

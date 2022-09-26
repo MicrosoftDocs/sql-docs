@@ -1,16 +1,12 @@
 ---
 title: Handling complex statements
 description: Learn about handling complex statements when using the JDBC driver. Different methods can be used in different scenarios.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Handling complex statements
 
@@ -22,7 +18,7 @@ To process complex statements, the JDBC driver provides many methods to query th
 
 When you know the type of object or data that's returned, you can use either the [getResultSet](reference/getresultset-method-sqlserverstatement.md) or the [getUpdateCount](reference/getupdatecount-method-sqlserverstatement.md) method to process that data. To continue to the next object or data that's returned from the complex statement, you can call the [getMoreResults](reference/getmoreresults-method.md) method.
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, a complex statement is constructed that combines a stored procedure call with a SQL statement, the statements are run, and then a `do` loop is used to process all the result sets and updated counts that are returned.
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, a complex statement is constructed that combines a stored procedure call with a SQL statement, the statements are run, and then a `do` loop is used to process all the result sets and updated counts that are returned.
 
 :::code language="java" source="codesnippet/Java/handling-complex-statements_1.java":::
 

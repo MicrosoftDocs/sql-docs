@@ -1,16 +1,12 @@
 ---
 title: Setting the connection properties
 description: The connection string properties for the Microsoft JDBC Driver for SQL Server can be specified in various ways.
-ms.custom: ""
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Setting the connection properties
@@ -98,7 +94,7 @@ The following table lists all the currently available connection string properti
 | sendTemporalDataTypesAsStringForBulkCopy<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | (Version 8.4+) This connection property, when set to "false", sends **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME**, and **TIME** datatypes as their respective types instead of sending them as String.<br/><br/>With this connection property set to "false", the driver will only accept the default string literal format of each temporal datatype, for example:<br/><br/>DATE: `YYYY-MM-DD`<br/>DATETIME: `YYYY-MM-DD hh:mm:ss[.nnn]`<br/>DATETIME2: `YYYY-MM-DD hh:mm:ss[.nnnnnnn]`<br/>DATETIMEOFFSET: `YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`<br/>SMALLDATETIME: `YYYY-MM-DD hh:mm:ss`<br/>TIME: `hh:mm:ss[.nnnnnnn]`<br/> |
 | sendTimeAsDatetime<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | This property was added in SQL Server JDBC Driver 3.0.<br/><br/> Set to "true" to send java.sql.Time values to the server as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** values. <br/>Set to "false" to send java.sql.Time values to the server as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **time** values.<br/><br/> The default value for this property is currently "true" and might change in a future release.<br/><br/> For more information about how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] configures java.sql.Time values before it sends them to the server, see [Configuring How java.sql.Time Values are Sent to the Server](configuring-how-java-sql-time-values-are-sent-to-the-server.md). |
 | serverCertificate,<br/>server<br/><br/>String<br/><br/>null | (Version 11.2.0+) The path to the server certificate file. Used for validation when using **encrypt** set to **strict**. The driver supports certificate files using the PEM file format. |
-| serverName,<br/>server<br/><br/>String<br/><br/>null | The computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL database.<br/><br/> You can also specify the Virtual Network Name of an [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] availability group. For more information about disaster recovery, see [JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md). |
+| serverName,<br/>server<br/><br/>String<br/><br/>null | The computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or an Azure SQL database.<br/><br/> You can also specify the Virtual Network Name of an availability group. For more information about disaster recovery, see [JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md). |
 | serverNameAsACE<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | (Version 6.0+) Set to "true" to indicate that the driver should translate the Unicode server name to ASCII compatible encoding (Punycode) for the connection. If this setting is false, the driver uses the server name as provided to connect.<br/><br/> For more information about international features, see [International features of the JDBC driver](international-features-of-the-jdbc-driver.md). |
 | serverPreparedStatement...<br/>DiscardThreshold<br/><br/>Integer<br/><br/>10 | (Version 6.2+) This property can be used to control how many outstanding prepared statement discard actions (<code>sp_unprepare</code>) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. <br/><br/> If this property is set to &lt;= 1, unprepare actions are executed immediately on prepared statement close. If it's set to &gt;1, these calls are batched together to avoid overhead of calling sp_unprepare too often. |
 | serverSpn<br/><br/>String<br/><br/>null | (Version 4.2+) This optional property can be used to specify the Service Principal Name (SPN) for a Java Kerberos connection.  It's used with **authenticationScheme**.<br/><br/> To specify the SPN, it can be in the form of: "MSSQLSvc/fqdn:port@REALM" where fqdn is the fully qualified domain name, port is the port number, and REALM is the Kerberos realm of the SQL Server in upper-case letters.<br/><br/> Note: the @REALM is optional if the default realm of the client (as specified in the Kerberos configuration) is the same as the Kerberos realm for the SQL Server.<br/><br/> For more information about using **serverSpn** with Java Kerberos, see [Using Kerberos integrated authentication to connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md). |
@@ -118,7 +114,6 @@ The following table lists all the currently available connection string properti
 | userName,<br/>user<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | The database user, if connection with SQL user and password.<br/><br/>For Kerberos connection with principal name and password, this property is set to Kerberos Principal name.<br/><br/>(Version 10.2+) When **authentication=ActiveDirectoryServicePrincipal**, the **userName** property specifies a valid Azure Active Directory secure client ID.  |
 | workstationID<br/><br/>String<br/>[&lt;=128 char]<br/><br/>&lt;empty string&gt; | The workstation ID. Used to identify the specific workstation in various profiling and logging tools. <br/><br/>If none is specified, the &lt;empty string&gt; is used. |
 | xopenStates<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | Set to "true" to specify that the driver returns XOPEN-compliant state codes in exceptions. <br/><br/>The default is to return SQL 99 state codes. |
-| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] takes the server default values for connection properties except for ANSI_DEFAULTS and IMPLICIT_TRANSACTIONS. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] automatically sets ANSI_DEFAULTS to ON and IMPLICIT_TRANSACTIONS to OFF.

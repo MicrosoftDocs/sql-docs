@@ -41,7 +41,6 @@ ms.author: chugu
 |**SERVER_LOGGING_LEVEL**|The default logging level for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.|
 |**SERVER_OPERATION_ENCRYPTION_LEVEL**|When the value is 1 (`PER_EXECUTION`), the certificate and symmetric key used for protecting sensitive execution parameters and execution logs are created for each *execution*. When the value is 2 (`PER_PROJECT`), the certificate and symmetric key are created one time for each *project*. For more info about this property, see the Remarks for the SSIS stored procedure [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks).|
 |**VERSION_CLEANUP_ENABLED**|When the value is `TRUE`, only the **MAX_PROJECT_VERSIONS** number of project versions are stored in the catalog and all other project versions are deleted. When the value is **FALSE**, all project versions are stored in the catalog. Note: a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] job performs the operation cleanup.|
-|||
   
 ## Permissions  
  This view requires one of the following permissions:  

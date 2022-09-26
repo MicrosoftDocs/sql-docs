@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 06/14/2022
+ms.date: 08/15/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
@@ -34,6 +34,7 @@ The following table contains the tested configuration matrix for each release of
 
 | Release | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ----------- | ------------ | ------- | ------- | ------------ | ----------- |
+| CU17 | Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU16 GDR | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU16 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 | CU15 | Ubuntu 20.04 LTS | 1.21 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
@@ -44,21 +45,22 @@ The following table contains the tested configuration matrix for each release of
 Restrictions:
 
 * SQL Server 2019 Big Data Clusters is supported as a *workload*. Microsoft provides support for the software components on the containers installed and configured by SQL Server 2019 Big Data Clusters only. Kubernetes itself, and other containers that may influence SQL Server 2019 Big Data Clusters behavior, are not supported by the support team. For Kubernetes support, contact your certified Kubernetes distribution provider.
-* SQL Server 2019 Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by a big data cluster is a capability that depends on the storage provider including, for example, operations to expand persistent volumes (PVs). Reference your specific CSI storage provider documentation or the [partner reference architecture and white papers](../sql-server/partner-big-data-cluster.md).
+* SQL Server 2019 Big Data Clusters requires block storage for all persisted volumes. Management operation on top of the persisted volumes created and used by a big data cluster is a capability that depends on the storage provider including, for example, operations to expand persistent volumes (PVs). Reference your specific CSI storage provider documentation or the [partner reference architecture and white papers](partner-big-data-cluster.md).
 * The open-source components included by SQL Server 2019 Big Data Clusters are fixed for that particular release and must not be updated or modified.
 * Container images are provided "as-is". Composability features of Kubernetes aren't supported. Changing the set of container images in a SQL Server 2019 Big Data Cluster release, or to customize the containers, is not supported.
 
 Reference architecture and white papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
 * [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-* [SQL Server 2019 Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters partners](partner-big-data-cluster.md)
 
 ## Release history
 
-The following table lists the release history for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)].
+The following table lists the release history for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)]. For more information, see [SQL Server 2019 Big Data Clusters cumulative updates history](release-notes-cumulative-updates-history.md).
 
 | Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU17](release-notes-cumulative-update-17.md) |  15.0.4249.2  | 20.3.12   | August 11 2022 |
 | CU16 GDR [KB 5014356](https://support.microsoft.com/help/5014356) |  15.0.4236.7  | 20.3.12   | June 14 2022 |
 | [CU16](release-notes-cumulative-update-16.md) |  15.0.4223.1  | 20.3.11   | May 2 2022 |
 | [CU15](release-notes-cumulative-update-15.md) |  15.0.4198.2  | 20.3.10   | Jan 27 2022 |
@@ -102,7 +104,7 @@ To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-nover](../in
 
 - **Issue and customer effect**: After a thorough assessment of the SQL Server 2019 Big Data Clusters codebase, no risk associated with the log4j vulnerability reported in December was identified. CU15 includes an updated version of log4j (2.17) for the ElasticSearch instance in the control plane to ensure that image scan alerts are not triggered by static code analysis of Big Data Cluster containers.
 
-- **Solution**: Always keep your big data cluster updated to the lastest release.
+- **Solution**: Always keep your big data cluster updated to the latest release.
 
 ### Cluster upgrade from a CU8 and previous release to a post-CU9 release is not supported
 

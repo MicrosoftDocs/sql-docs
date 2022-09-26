@@ -1,19 +1,17 @@
 ---
 title: Import a BACPAC file to create a database in Azure SQL Database
 description: Create a new database in Azure SQL Database or Azure SQL Managed Instance from a BACPAC file.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: backup-restore
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "mode-api"
-ms.topic: quickstart
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
 ms.date: 10/29/2020
+ms.service: sql-db-mi
+ms.subservice: backup-restore
+ms.topic: quickstart
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+  - "mode-api"
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Quickstart: Import a BACPAC file to a database in Azure SQL Database or Azure SQL Managed Instance
@@ -35,7 +33,7 @@ You can import a SQL Server database into Azure SQL Database or SQL Managed Inst
 
 Watch this video to see how to import from a BACPAC file in the Azure portal or continue reading below:
 
-> [!VIDEO https://docs.microsoft.com/Shows/Data-Exposed/Its-just-SQL-Restoring-a-database-to-Azure-SQL-DB-from-backup/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/Shows/Data-Exposed/Its-just-SQL-Restoring-a-database-to-Azure-SQL-DB-from-backup/player?WT.mc_id=dataexposed-c9-niner]
 
 The [Azure portal](https://portal.azure.com) *only* supports creating a single database in Azure SQL Database and *only* from a BACPAC file stored in Azure Blob storage.
 
@@ -64,7 +62,7 @@ To migrate a database into an [Azure SQL Managed Instance](../managed-instance/s
 
 ## Using SqlPackage
 
-To import a SQL Server database using the [SqlPackage](/sql/tools/sqlpackage) command-line utility, see [import parameters and properties](/sql/tools/sqlpackage#import-parameters-and-properties). [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt) include SqlPackage. You can also download the latest [SqlPackage](https://www.microsoft.com/download/details.aspx?id=53876) from the Microsoft download center. 
+To import a SQL Server database using the [SqlPackage](/sql/tools/sqlpackage) command-line utility, see [import parameters and properties](/sql/tools/sqlpackage/sqlpackage-import). You can download the latest [SqlPackage](/sql/tools/sqlpackage/sqlpackage-download) for Windows, macOS, or Linux. 
 
 For scale and performance, we recommend using SqlPackage in most production environments rather than using the Azure portal. For a SQL Server Customer Advisory Team blog about migrating using `BACPAC` files, see [migrating from SQL Server to Azure SQL Database using BACPAC Files](/archive/blogs/sqlcat/migrating-from-sql-server-to-azure-sql-database-using-bacpac-files).
 
@@ -84,6 +82,10 @@ This example shows how to import a database using SqlPackage with Active Directo
 ```cmd
 sqlpackage.exe /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.database.windows.net /ua:True /tid:"apptest.onmicrosoft.com"
 ```
+
+## Azure Data Studio
+
+[Azure Data Studio](/sql/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import.  See the extension's [documentation page](/sql/azure-data-studio/extensions/sql-server-dacpac-extension) for more information on installing and using the extension.
 
 ## Using PowerShell
 
@@ -160,12 +162,12 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $Se
 ## Limitations
 
 - Importing to a database in elastic pool isn't supported. You can import data into a single database and then move the database to an elastic pool.
-- Import Export Service does not work when Allow access to Azure services is set to OFF. However you can work around the problem by manually running sqlpackage.exe from an Azure VM or performing the export directly in your code by using the DACFx API.
+- Import Export Service does not work when Allow access to Azure services is set to OFF. However you can work around the problem by manually running sqlpackage.exe from an Azure VM or performing the export directly in your code by using the DacFx API.
 - Import does not support specifying a backup storage redundancy while creating a new database and creates with the default geo-redundant backup storage redundancy. To workaround, first create an empty database with desired backup storage redundancy using Azure portal or PowerShell and then import the BACPAC into this empty database. 
 - Storage behind a firewall is currently not supported.
 
 
-## Import using wizards
+## Additional tools
 
 You can also use these wizards.
 
@@ -174,6 +176,7 @@ You can also use these wizards.
 
 ## Next steps
 
+- To learn how to connect to and query Azure SQL Database from Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database).
 - To learn how to connect to and query a database in Azure SQL Database, see [Quickstart: Azure SQL Database: Use SQL Server Management Studio to connect to and query data](connect-query-ssms.md).
 - For a SQL Server Customer Advisory Team blog about migrating using BACPAC files, see [Migrating from SQL Server to Azure SQL Database using BACPAC Files](https://techcommunity.microsoft.com/t5/DataCAT/Migrating-from-SQL-Server-to-Azure-SQL-Database-using-Bacpac/ba-p/305407).
 - For a discussion of the entire SQL Server database migration process, including performance recommendations, see [SQL Server database migration to Azure SQL Database](migrate-to-database-from-sql-server.md).

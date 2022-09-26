@@ -1,18 +1,15 @@
 ---
 title: Release Notes for the Microsoft Drivers for PHP
 description: This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ms.date: 06/16/2022
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
-ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 
@@ -36,7 +33,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## 5.10
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2199011)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2199011)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.1)
 
 - Release number: 5.10.1
@@ -52,7 +49,7 @@ Fixed issues in 5.10.1:
 - Release number: 5.10.0<sup>1</sup>
 - Released: January 31, 2022
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
 
 ### What's new in 5.10
@@ -75,7 +72,7 @@ Fixed issues in 5.10.1:
 
 ## 5.9
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2152937)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2152937)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
 
 ### Version information
@@ -99,7 +96,6 @@ Fixed issues in 5.10.1:
 | Improved performance when handling decimal numbers as inputs or outputs and removed unnecessary conversions for numeric values. | &nbsp; |
 | Improved performance when fetching numbers using client buffers. | &nbsp; |
 | Set query timeout without using LOCK TIMEOUT, which saves an extra trip to the server. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 <sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
 
@@ -121,11 +117,10 @@ This release only applies to Linux and macOS.
 | Bug fix | Fixed default locale issues in Alpine Linux. |
 | Bug fix | Removed unnecessary data structure to support Client-Side Cursors feature in Alpine Linux. |
 | Bug fix | Fixed logging issues when both drivers are enabled in Alpine Linux. |
-| &nbsp; | &nbsp; |
 
 ## 5.8
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120362)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120362)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 
 ### Version information
@@ -149,13 +144,12 @@ This release only applies to Linux and macOS.
 | Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
 | Support configurable options for locale settings in Linux and macOS. |
 | Improved performance by caching metadata on fetches and omitting redundant calls. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 <sup>1</sup> Alpine Linux support is experimental for version 5.8.
 
 ## 5.6.1
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120446)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120446)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
 
 ### Version information
@@ -170,11 +164,10 @@ This release only applies to Linux and macOS.
 | Bug fix | Fixed assumptions made when calculating field or column metadata which may have resulted in application termination. |
 | Bug fix | Modified sqlsrv config file such that it can be compiled independently of pdo_sqlsrv. |
 | Bug fix | Fixed PDOStatement::getColumnMeta() to return false when something goes wrong. |
-| &nbsp; | &nbsp; |
 
 ## 5.6
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120450)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120450)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 
 ### Version information
@@ -197,11 +190,10 @@ This release only applies to Linux and macOS.
 | New fetch functionalities | &bull; &nbsp; New PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE flag for pdo_sqlsrv to return datetime as objects.<br/><br/>&bull; &nbsp; Add ReturnDatesAsStrings option to statement level for sqlsrv.<br/><br/>&bull; &nbsp; New options at connection and statement levels for both drivers for formatting decimal values in the fetched results. |
 | Support for static compilation of drivers if users choose to build from source. | &nbsp; |
 | Improved performance by caching metadata on fetches and speeding up Unicode string conversions. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 5.3
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120447)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120447)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 
 ### Version information
@@ -219,7 +211,7 @@ This release only applies to Linux and macOS.
 
 ## 5.2
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120451)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120451)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 
 ### Version information
@@ -244,7 +236,7 @@ This release only applies to Linux and macOS.
 
 ## 4.3
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120616)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120616)  
 [GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
 
 ### Version information
@@ -266,7 +258,7 @@ This release only applies to Linux and macOS.
 
 ## 4.0
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120448)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120448)  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
 ### Version information
@@ -282,7 +274,7 @@ This release only applies to Linux and macOS.
 
 ## 3.2
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120449)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2120449)  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
 
 ### Version information
@@ -298,7 +290,7 @@ This release only applies to Linux and macOS.
 
 ## 3.1
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143027)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143027)  
 [GitHub Release Tag](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
 
 ### Version information
@@ -313,7 +305,7 @@ This release only applies to Linux and macOS.
 
 ## 3.0
 
-![download](../../ssms/media/download-icon.png) [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143026)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2143026)  
 
 ### What's new in 3.0  
 

@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 2: Beginning a Conversation and Transmitting Messages'
+title: "Lesson 2: Beginning a Conversation and Transmitting Messages"
 description: "In this lesson, you will learn to start a conversation, complete a simple request-reply message cycle, and then end the conversation."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 2: Beginning a Conversation and Transmitting Messages

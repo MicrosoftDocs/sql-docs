@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "type permissions [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 ---
 # GRANT Type Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

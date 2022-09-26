@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "17204 (Database Engine error)"
 ms.assetid: 
 author: PijoCoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

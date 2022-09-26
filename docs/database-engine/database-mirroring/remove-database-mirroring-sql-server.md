@@ -1,19 +1,15 @@
 ---
-title: "Remove Database Mirroring (SQL Server) | Microsoft Docs"
+title: "Remove Database Mirroring (SQL Server)"
 description: Learn how to remove database mirroring from a database by using SQL Server Management Studio or Transact-SQL in SQL Server.
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database mirroring [SQL Server], removing"
-  - "removing database mirroring [SQL Server]"
-ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database mirroring [SQL Server], removing"
+  - "removing database mirroring [SQL Server]"
 ---
 # Remove Database Mirroring (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

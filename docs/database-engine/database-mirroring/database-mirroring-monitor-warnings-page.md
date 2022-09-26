@@ -1,18 +1,14 @@
 ---
-title: "Database Mirroring Monitor (Warnings Page) | Microsoft Docs"
+title: "Database Mirroring Monitor (Warnings Page)"
 description: Use this read-only Database Mirroring Monitor page to view warnings supported on database mirroring events and the warning threshold values, if available.
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.warningsandalerts.f1"
-ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/07/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dbmmonitor.warningsandalerts.f1"
 ---
 # Database Mirroring Monitor (Warnings Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

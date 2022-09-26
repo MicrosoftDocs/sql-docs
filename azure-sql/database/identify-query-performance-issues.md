@@ -2,16 +2,14 @@
 title: Detectable types of query performance bottlenecks
 titleSuffix: Azure SQL Database
 description: Learn about types of query performance issues in Azure SQL Database and how to identify and resolve queries with these issues.
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: azure-sql-split
-ms.devlang: 
-ms.topic: troubleshooting
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
 ms.date: 08/03/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: troubleshooting
+ms.custom: azure-sql-split
 monikerRange: "=azuresql||=azuresql-db"
 ---
 
@@ -70,7 +68,7 @@ For more information on parameter sniffing and query processing, see the [Query-
 
 Several workarounds can mitigate PSP problems. Each workaround has associated tradeoffs and drawbacks:
 
-- A new feature introduced with SQL Server 2022 (16.x) is [Parameter Sensitive Plan optimization](/sql/relational-databases/performance/parameter-sensitivity-plan-optimization.md), which attempts to mitigate most suboptimal query plans caused by parameter sensitivity. This is enabled with database compatibility level 160 in Azure SQL Database.
+- A new feature introduced with SQL Server 2022 (16.x) is [Parameter Sensitive Plan optimization](/sql/relational-databases/performance/parameter-sensitivity-plan-optimization), which attempts to mitigate most suboptimal query plans caused by parameter sensitivity. This is enabled with database compatibility level 160 in Azure SQL Database.
 - Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query) query hint at each query execution. This workaround trades compilation time and increased CPU for better plan quality. The `RECOMPILE` option is often not possible for workloads that require a high throughput.
 - Use the [OPTION (OPTIMIZE FOR…)](/sql/t-sql/queries/hints-transact-sql-query) query hint to override the actual parameter value with a typical parameter value that produces a plan that's good enough for most parameter value possibilities. This option requires a good understanding of optimal parameter values and associated plan characteristics.
 - Use the [OPTION (OPTIMIZE FOR UNKNOWN)](/sql/t-sql/queries/hints-transact-sql-query) query hint to override the actual parameter value and instead use the density vector average. You can also do this by capturing the incoming parameter values in local variables and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be *good enough*.

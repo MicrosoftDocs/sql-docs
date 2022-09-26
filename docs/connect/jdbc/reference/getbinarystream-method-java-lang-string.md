@@ -1,21 +1,15 @@
 ---
+title: "getBinaryStream Method (java.lang.String)"
 description: "getBinaryStream Method (java.lang.String)"
-title: "getBinaryStream Method (java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getBinaryStream (java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getBinaryStream (java.lang.String)"
+apitype: "Assembly"
 ---
 # getBinaryStream Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

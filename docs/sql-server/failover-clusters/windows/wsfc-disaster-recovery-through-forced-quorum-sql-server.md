@@ -37,7 +37,7 @@ ms.author: mathoma
 > [!WARNING]  
 >  The user should be well-informed on the concepts and interactions of Windows Server Failover Clustering, WSFC Quorum Models, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and the environment's specific deployment configuration.  
 >   
->  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC Quorum Modes and Voting Configuration (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md), [WSFC Quorum Modes and Voting Configuration (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ###  <a name="Security"></a> Security  
  The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database [Master Data Services], logins"
   - "security [Master Data Services], database logins"
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Database Logins, Users, and Roles (Master Data Services)
 

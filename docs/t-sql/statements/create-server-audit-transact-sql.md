@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "audits [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

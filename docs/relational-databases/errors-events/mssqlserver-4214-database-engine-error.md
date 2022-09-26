@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DMPX_NODBBACKUP|
 |Message Text|BACKUP LOG cannot be performed because there is no current database backup|
-||
 
 ## Explanation
 

@@ -25,7 +25,7 @@ By default, installers connect to Microsoft download sites to get required and u
 
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. The offline installation process is therefore similar to the online process. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server 2022 Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
++ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. The offline installation process is therefore similar to the online process. For more information, see [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server 2022 Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
 + SQL Server 2019 includes R, Python, and Java.
 + SQL Server 2017 includes R and Python.
 + SQL Server 2016 is R-only.
@@ -34,10 +34,10 @@ In-database analytics consist of database engine instance, plus additional compo
 
 ## SQL Server 2022 offline install
 
-Offline installation of SQL Server 2022 is similar to the online installation experience. 
+Offline installation of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] is similar to the online installation experience. 
 
 1. Use SQL Setup to install the Machine Learning services feature.
-2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for SQL Server 2022 are customer-installed. CAB files are not used for SQL Server 2022.
+2. Download any desired runtimes and copy them to the offline installation server. Custom runtimes for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] are customer-installed. CAB files are not used for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 3. Download any desired packages and copy them to the offline installation server. Otherwise, refer to instructions for installation from SQL Setup and installation of any desired custom packages: 
 
    - [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md)

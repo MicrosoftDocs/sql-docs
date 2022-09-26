@@ -1,16 +1,13 @@
 ---
+title: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
-title: "Using Always Encrypted with secure enclaves with the JDBC Driver | Microsoft Docs"
-ms.custom: ""
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: DavidEngel
 ms.author: v-davidengel
+ms.reviewer: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using Always Encrypted with secure enclaves with the JDBC driver
 
@@ -57,7 +54,7 @@ When the enclave connection properties are set properly, the feature will work t
 Rich queries will trigger enclave computations:
 
 ```java
-private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
+private static final String URL = "jdbc:sqlserver://<server>:<port>;encrypt=true;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL)) {
     try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SSN LIKE ?")) {
         p.setString(1, "%6818");
@@ -82,7 +79,7 @@ try (Connection c = DriverManager.getConnection(URL)) {
 Toggling encryption on a column will also trigger enclave computations:
 
 ```java
-private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
+private static final String URL = "jdbc:sqlserver://<server>:<port>;encrypt=true;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL);Statement s = c.createStatement()) {
     s.executeUpdate("ALTER TABLE Employees ALTER COLUMN SSN CHAR(11) NULL WITH (ONLINE = ON)");
 }

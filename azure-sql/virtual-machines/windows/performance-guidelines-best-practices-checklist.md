@@ -35,7 +35,7 @@ For videos about the latest features to optimize SQL Server VM performance and a
 
 While running SQL Server on Azure Virtual Machines, continue using the same database performance tuning options that are applicable to SQL Server in on-premises server environments. However, the performance of a relational database in a public cloud depends on many factors, such as the size of a virtual machine, and the configuration of the data disks.
 
-There is typically a trade-off between optimizing for costs and optimizing for performance. This performance best practices series is focused on getting the *best* performance for SQL Server on Azure Virtual Machines. If your workload is less demanding, you might not require every recommended optimization. Consider your performance needs, costs, and workload patterns as you evaluate these recommendations.
+There's typically a trade-off between optimizing for costs and optimizing for performance. This performance best practices series is focused on getting the *best* performance for SQL Server on Azure Virtual Machines. If your workload is less demanding, you might not require every recommended optimization. Consider your performance needs, costs, and workload patterns as you evaluate these recommendations.
 
 ## VM Size
 
@@ -63,16 +63,16 @@ The following is a quick checklist of storage configuration best practices for r
     - For the log drive plan for capacity and test performance versus cost while evaluating the [premium P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds).
       - If submillisecond storage latency is required, use [Azure ultra disks](/azure/virtual-machines/disks-types#ultra-disks) for the transaction log. 
       - For M-series virtual machine deployments consider [Write Accelerator](/azure/virtual-machines/how-to-enable-write-accelerator) over using Azure ultra disks.
-    - Place [tempdb](/sql/relational-databases/databases/tempdb-database) on the local ephemeral SSD (default `D:\`) drive for most SQL Server workloads that are not part of Failover Cluster Instance (FCI) after choosing the optimal VM size. 
-      - If the capacity of the local drive is not enough for tempdb, consider sizing up the VM. See [Data file caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies) for more information.
+    - Place [tempdb](/sql/relational-databases/databases/tempdb-database) on the local ephemeral SSD (default `D:\`) drive for most SQL Server workloads that aren't part of Failover Cluster Instance (FCI) after choosing the optimal VM size. 
+      - If the capacity of the local drive isn't enough for tempdb, consider sizing up the VM. See [Data file caching policies](performance-guidelines-best-practices-storage.md#data-file-caching-policies) for more information.
     - For FCI place tempdb on the shared storage. 
-      - If the FCI workload is heavily dependent on tempdb disk performance, then as an advanced configuration place tempdb on the local ephemeral SSD (default `D:\`) drive which is not part of FCI storage. This configuration will need custom monitoring and action to ensure the local ephemeral SSD (default `D:\`) drive is available all the time as any failures of this drive will not trigger action from FCI.       
+      - If the FCI workload is heavily dependent on tempdb disk performance, then as an advanced configuration place tempdb on the local ephemeral SSD (default `D:\`) drive, which isn't part of FCI storage. This configuration will need custom monitoring and action to ensure the local ephemeral SSD (default `D:\`) drive is available all the time as any failures of this drive won't trigger action from FCI.       
 - Stripe multiple Azure data disks using [Storage Spaces](/windows-server/storage/storage-spaces/overview) to increase I/O bandwidth up to the target virtual machine's IOPS and throughput limits.
 - Set [host caching](/azure/virtual-machines/disks-performance#virtual-machine-uncached-vs-cached-limits) to read-only for data file disks.
 - Set [host caching](/azure/virtual-machines/disks-performance#virtual-machine-uncached-vs-cached-limits) to none for log file disks.
-    - Do not enable read/write caching on disks that contain SQL Server data or log files. 
+    - Don't enable read/write caching on disks that contain SQL Server data or log files. 
     - Always stop the SQL Server service before changing the cache settings of your disk.
-- For development and test workloads consider using standard storage. It is not recommended to use Standard HDD/SDD for production workloads.
+- For development and test workloads consider using standard storage. It isn't recommended to use Standard HDD/SDD for production workloads.
 - [Credit-based Disk Bursting](/azure/virtual-machines/disk-bursting#credit-based-bursting) (P1-P20) should only be considered for smaller dev/test workloads and departmental systems.
 - Provision the storage account in the same region as the SQL Server VM. 
 - Disable Azure geo-redundant storage (geo-replication) and use LRS (local redundant storage) on the storage account.
@@ -105,7 +105,7 @@ The following is a quick checklist of best practices for SQL Server configuratio
 - Schedule SQL Server Agent jobs to run [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#a-checking-both-the-current-and-another-database), [index reorganize](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes#reorganize-an-index), [index rebuild](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes#rebuild-an-index), and [update statistics](/sql/t-sql/statements/update-statistics-transact-sql#examples) jobs.
 - Monitor and manage the health and size of the SQL Server [transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file#Recommendations).
 - Take advantage of any new [SQL Server features](/sql/sql-server/what-s-new-in-sql-server-ver15) available for the version being used.
-- Be aware of the differences in [supported features](/sql/sql-server/editions-and-components-of-sql-server-version-15) between the editions you are considering deploying.
+- Be aware of the differences in [supported features](/sql/sql-server/editions-and-components-of-sql-server-version-15) between the editions you're considering deploying.
 
 ## Azure features
 
@@ -136,7 +136,7 @@ For your Windows cluster, consider these best practices:
    - **CrossSubnetThreshold**:  40 heartbeats
 * Place your VMs in an availability set or different availability zones.  To learn more, see [VM availability settings](hadr-cluster-best-practices.md#vm-availability-settings). 
 * Use a single NIC per cluster node and a single subnet. 
-* Configure cluster [quorum voting](hadr-cluster-best-practices.md#quorum-voting) to use 3 or more odd number of votes. Do not assign votes to DR regions. 
+* Configure cluster [quorum voting](hadr-cluster-best-practices.md#quorum-voting) to use 3 or more odd number of votes. Don't assign votes to DR regions. 
 * Carefully monitor [resource limits](hadr-cluster-best-practices.md#resource-limits) to avoid unexpected restarts or failovers due to resource constraints.
    - Ensure your OS, drivers, and SQL Server are at the latest builds. 
    - Optimize performance for SQL Server on Azure VMs. Review the other sections in this article to learn more. 
@@ -146,14 +146,14 @@ For your Windows cluster, consider these best practices:
 For your SQL Server availability group or failover cluster instance, consider these best practices: 
 
 * If you're experiencing frequent unexpected failures, follow the performance best practices outlined in the rest of this article. 
-* If optimizing SQL Server VM performance does not resolve your unexpected failovers, consider [relaxing the monitoring](hadr-cluster-best-practices.md#relaxed-monitoring) for the availability group or failover cluster instance. However, doing so may not address the underlying source of the issue and could mask symptoms by reducing the likelihood of failure. You may still need to investigate and address the underlying root cause. For Windows Server 2012 or higher, use the following recommended values: 
-   - **Lease timeout**: Use this equation to calculate the maximum lease time out value:   
+* If optimizing SQL Server VM performance doesn't resolve your unexpected failovers, consider [relaxing the monitoring](hadr-cluster-best-practices.md#relaxed-monitoring) for the availability group or failover cluster instance. However, doing so may not address the underlying source of the issue and could mask symptoms by reducing the likelihood of failure. You may still need to investigate and address the underlying root cause. For Windows Server 2012 or higher, use the following recommended values: 
+   - **Lease timeout**: Use this equation to calculate the maximum lease time-out value:   
     `Lease timeout < (2 * SameSubnetThreshold * SameSubnetDelay)`.    
-    Start with 40 seconds. If you're using the relaxed `SameSubnetThreshold` and `SameSubnetDelay` values recommended previously, do not exceed 80 seconds for the lease timeout value. 
+    Start with 40 seconds. If you're using the relaxed `SameSubnetThreshold` and `SameSubnetDelay` values recommended previously, don't exceed 80 seconds for the lease timeout value. 
    - **Max failures in a specified period**: You can set this value to 6.
    - **Healthcheck timeout**: You can set this value to 60000 initially, adjust as necessary. 
 * When using the virtual network name (VNN) and Azure Load Balancer to connect to your HADR solution, specify `MultiSubnetFailover = true` in the connection string, even if your cluster only spans one subnet. 
-   - If the client does not support `MultiSubnetFailover = True` you may need to set `RegisterAllProvidersIP = 0` and `HostRecordTTL = 300` to cache client credentials for shorter durations. However, doing so may cause additional queries to the DNS server. 
+   - If the client doesn't support `MultiSubnetFailover = True` you may need to set `RegisterAllProvidersIP = 0` and `HostRecordTTL = 300` to cache client credentials for shorter durations. However, doing so may cause additional queries to the DNS server. 
 - To connect to your HADR solution using the distributed network name (DNN), consider the following:
    - You must use a client driver that supports `MultiSubnetFailover = True`, and this parameter must be in the connection string. 
    - Use a unique DNN port in the connection string when connecting to the DNN listener for an availability group. 
@@ -189,7 +189,7 @@ SQL Server features and capabilities provide a method of security at the data le
    - [Guest Configuration extension](/azure/virtual-machines/extensions/guest-configuration) performs audit and configuration operations inside virtual machines.
    - [Network Watcher Agent virtual machine extension for Windows and Linux](/azure/virtual-machines/extensions/network-watcher-windows) monitors network performance, diagnostic, and analytics service that allows monitoring of Azure networks. 
    - [Microsoft Antimalware Extension for Windows](/azure/virtual-machines/extensions/iaas-antimalware-windows) to help identify and remove viruses, spyware, and other malicious software, with configurable alerts.
-   - [Evaluate 3rd party extensions](/azure/virtual-machines/extensions/overview) such as Symantec Endpoint Protection for Windows VM (/azure/virtual-machines/extensions/symantec)
+   - [Evaluate third party extensions](/azure/virtual-machines/extensions/overview) such as Symantec Endpoint Protection for Windows VM (/azure/virtual-machines/extensions/symantec)
 - Leverage [Azure Policy](/azure/governance/policy/overview) to create business rules that can be applied to your environment. Azure Policies evaluate Azure resources by comparing the properties of those resources against rules defined in JSON format.
 - Azure Blueprints enables cloud architects and central information technology groups to define a repeatable set of Azure resources that implements and adheres to an organization's standards, patterns, and requirements. Azure Blueprints are [different than Azure Policies](/azure/governance/blueprints/overview#how-its-different-from-azure-policy).
 

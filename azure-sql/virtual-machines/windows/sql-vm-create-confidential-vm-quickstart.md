@@ -33,11 +33,11 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 1. Select **+Add** to open the **Select SQL deployment option** page. You can view additional information by selecting **Show details** on the **SQL virtual machines** tile.
 1. Select any of the SQL Server versions from the drop-down as you will be changing the selection on the next screen. 
 
-   ![Screenshot that shows where you select the Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016 image.](./media/sql-vm-create-portal-quickstart/select-sql-2017-vm-image.png)
+   :::image type="content" source="./media/sql-vm-create-portal-quickstart/select-sql-2017-vm-image.png" alt-text="Screenshot that shows where you select the Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016 image.":::
 
 1. Select **Create**.
 
-   ![New search window](./media/sql-vm-create-portal-quickstart/create-sql-2017-vm-image.png)
+   :::image type="content" source="./media/sql-vm-create-portal-quickstart/create-sql-2017-vm-image.png" alt-text="Screenshot that shows the New search window":::
 
 ## <a id="configure"></a> Provide basic details
 
@@ -45,7 +45,7 @@ On the **Basics** tab, provide the following information:
 
 1. In the **Project Details** section, select your Azure subscription and then select **Create new** to create a new resource group. Type _SQLVM-RG_ for the name.
 
-   ![Subscription](./media/sql-vm-create-portal-quickstart/basics-project-details.png)
+   :::image type="content" source="./media/sql-vm-create-portal-quickstart/basics-project-details.png" alt-text="Screenshot that shows that shows the subscription":::
 
 1. Under **Instance details**:
     1. Type _SQLVM_ for the **Virtual machine name**. 
@@ -55,15 +55,17 @@ On the **Basics** tab, provide the following information:
     1. In the **Image** list, choose the `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only - Gen 2` image. To change the SQL Server image, select **See all images** and then filter by **Security type = Confidential VMs** to identify all SQL Server images that support confidential VMs. 
     1. Leave the size at the default of `Standard_EC2ads_v5`. However, to see all available sizes, select **See all sizes** to identify all the VM sizes that support confidential VMs, as well as the sizes that do not. 
 
-   ![Instance details](./media/sql-vm-create-confidential-vm-quickstart/basics-instance-details.png)
+   :::image type="content" source="media/sql-vm-create-confidential-vm-quickstart/basic-instance-details.png" alt-text="Screen shot of the Azure portal showing instance details.":::
+
+
 
 1. Under **Administrator account**, provide a username, such as _azureuser_ and a password. The password must be at least 12 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).
 
-   ![Administrator account](./media/sql-vm-create-portal-quickstart/basics-administrator-account.png)
+   :::image type="content" source="./media/sql-vm-create-portal-quickstart/basics-administrator-account.png" alt-text=""Screen shot of the Azure portal, Administrator account":::
 
 1. Under **Inbound port rules**, choose **Allow selected ports** and then select **RDP (3389)** from the drop-down. 
 
-   ![Inbound port rules](./media/sql-vm-create-portal-quickstart/basics-inbound-port-rules.png)
+   :::image type="content" source="./media/sql-vm-create-portal-quickstart/basics-inbound-port-rules.png" alt-text=""Screen shot of the Azure portal, Inbound port rules":::
 
 ## Disks
 
@@ -124,12 +126,12 @@ On the **SQL Server settings** tab, configure the following options:
 1. Under **Security & Networking**, select _Public (Internet_) for **SQL Connectivity** and change the port to `1401` to avoid using a well-known port number in the public scenario. 
 1. Under **SQL Authentication**, select **Enable**. The SQL login credentials are set to the same user name and password that you configured for the VM. Use the default setting for [**Azure Key Vault integration**](azure-key-vault-integration-configure.md). **Storage configuration** is not available for the basic SQL Server VM image, but you can find more information about available options for other images at [storage configuration](storage-configuration.md#new-vms).  
 
-   ![SQL server security settings](./media/sql-vm-create-portal-quickstart/sql-server-settings.png)
+   :::image type="content" source="./media/sql-vm-create-portal-quickstart/sql-server-settings.png" alt-text="SQL server security settings":::
 
 
 1. Change any other settings if needed, and then select **Review + create**. 
 
-   ![Review + create](./media/sql-vm-create-portal-quickstart/review-create.png)
+   :::image type="content" source="./media/sql-vm-create-portal-quickstart/review-create.png" alt-text="Review + create":::
 
 
 ## Create the SQL Server VM
@@ -155,7 +157,7 @@ You can monitor the deployment from the Azure portal. The **Notifications** butt
 
 1. Select **Connect**.
 
-    ![ssms connect](./media/sql-vm-create-portal-quickstart/ssms-connect.png)
+    :::image type="content" source="./media/sql-vm-create-portal-quickstart/ssms-connect.png" alt-text="Screenshot that shows ssms connect":::
 
 ## <a id="remotedesktop"></a> Log in to the VM remotely
 

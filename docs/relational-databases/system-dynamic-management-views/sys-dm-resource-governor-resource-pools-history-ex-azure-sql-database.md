@@ -3,9 +3,9 @@ title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)"
 description: "Each row in sys.dm_resource_governor_resource_pools_history_ex represents a periodic snapshot of resource pool statistics in Azure SQL Database."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 08/11/2022
+ms.reviewer: wiassaf
+ms.date: 09/26/2022
 ms.prod: sql
-ms.prod_service: sql-database
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords:
@@ -25,8 +25,11 @@ monikerRange: "=azuresqldb-current"
 
 Each row represents a periodic snapshot of resource pool statistics in Azure SQL Database. A snapshot is taken when the database engine starts, and every few seconds thereafter. The interval between the current and the previous snapshot may vary, and is provided in the `duration_ms` column. The latest available snapshots are returned, up to 128 snapshots for each resource pool.
 
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
+> [!IMPORTANT]  
+> Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.
+
+|Column name|Data type|Description|
+|-----------------|---------------|-----------------|
 |**pool_id**|int|The ID of the resource pool. Is not nullable.|
 |**name**|sysname|The name of the resource pool. Is not nullable.|
 |**snapshot_time**|datetime2|Datetime of the resource pool stats snapshot taken.|
@@ -98,25 +101,22 @@ This view requires VIEW SERVER STATE permission.
 
 Users can access this dynamic management view to monitor near real time resource consumption for user workload pool as well as system internal pools of Azure SQL Database instance.
 
-> [!IMPORTANT]
-> Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.
-
 ## Examples
 
 The following example returns maximum log rate data and consumption at each snapshot by user pool:
 
 ```sql
-SELECT snapshot_time, name, max_log_rate_kb, delta_log_bytes_used 
-FROM sys.dm_resource_governor_resource_pools_history_ex 
-WHERE name LIKE 'SloSharedPool1' 
+SELECT snapshot_time, name, max_log_rate_kb, delta_log_bytes_used
+FROM sys.dm_resource_governor_resource_pools_history_ex
+WHERE name LIKE 'SloSharedPool1'
 ORDER BY snapshot_time DESC;
 ```
-
 
 ## Next steps
 
 - [Translation log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Elastic pool DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
 - [Elastic pool vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Manage elastic pools in Azure SQL Database](../../../azure-sql/database/elastic-pool-manage.md)
 - [sys.elastic_pool_resource_stats (Azure SQL Database)](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
 - [sys.dm_elastic_pool_resource_stats (Azure SQL Database)](sys-dm-elastic-pool-resource-stats-azure-sql-database.md)

@@ -25,18 +25,18 @@ All pool settings can be found in one place: the **Configure pool** blade. To ge
 
 From here you can make any combination of the following changes and save them all in one batch:
 
-1. Change the service tier of the pool
-1. Scale the performance (DTU or vCores) and storage up or down
-1. Add or remove databases to/from the pool
-1. Set a min (guaranteed) and max performance limit for the databases in the pools
-1. Review the cost summary to view any changes to your bill as a result of your new selections
+- Change the service tier of the pool.
+- Scale the performance (DTU or vCores) and storage up or down.
+- Add or remove databases to/from the pool.
+- Set a min (guaranteed) and max performance limit for the databases in the pools.
+- Review the cost summary to view any changes to your bill as a result of your new selections.
 
 ## PowerShell
 
 [!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
 
 > [!IMPORTANT]
-> The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
+> The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the `Az.Sql` module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 
 To create and manage SQL Database elastic pools and pooled databases with Azure PowerShell, use the following PowerShell cmdlets. If you need to install or upgrade PowerShell, see [Install Azure PowerShell module](/powershell/azure/install-az-ps). To create and manage the servers for an elastic pool, see [Create and manage servers](logical-servers.md). To create and manage firewall rules, see [Create and manage firewall rules using PowerShell](firewall-configure.md#use-powershell-to-manage-server-level-ip-firewall-rules).
 

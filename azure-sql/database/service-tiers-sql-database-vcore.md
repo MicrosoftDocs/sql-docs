@@ -192,7 +192,7 @@ For more information see resource limits for [single databases](resource-limits-
 ### <a id="azure-offer-types-supported-by-m-series"></a> M-series
 
 > [!IMPORTANT]
-> M-series hardware has been deprecated and is not available for provisioning. 
+> For Azure SQL Database, M-series hardware has been retired and is not available for new deployments. 
 >
 > Existing customers should migrate to other hardware tiers before September 2023.
 

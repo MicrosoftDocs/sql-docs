@@ -93,26 +93,21 @@ If you encounter any installation errors during setup, check the summary log in 
     install.packages("jsonlite")
     ```
     
-7. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
+7. Download and Install the latest version of RevoScaleR package and its dependencies.
 
-   - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
-   - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
+    ```r
+    install.packages("https://aka.ms/sqlml/r4.2/windows/CompatibilityAPI_1.1.0.zip", repos=NULL)
 
-    Assuming you have installed version 4.2.0 of R in its default location, for example `C:\Program Files\R\R-4.2.0`, and downloaded the required packages in `C:\temp` directory, the following sample scripts can be adapted for the installation:
-
-    ```cmd
-    cd C:\Program Files\R\R-4.2.0\bin
-    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\CompatibilityAPI.zip"
-    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\RevoScaleR.zip"
+    install.packages("https://aka.ms/sqlml/r4.2/windows/RevoScaleR_10.0.1.zip", repos=NULL)
     ```
 
 8. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder depending on the installation, usually in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
    The following script can be used to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
-  ```cmd
-  .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
-  ```
+    ```cmd
+    .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
+    ```
 
 9. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
 
@@ -145,11 +140,11 @@ If you encounter any installation errors during setup, check the summary log in 
     1. Select all **Optional Features** options, or as desired.
     1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. It is recommended that the Python installation path is accessible by all users such as `C:\Program Files\Python310 `and it is not specific to a single user.
 
-6. Download the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924) and install revoscalepy from the Python custom install location. For example: 
+6. Download and install the latest version of RevoScalePY package and its dependencies.
 
     ```cmd
     cd C:\Program Files\Python310\
-    python -m pip install C:\Users\%username%\Downloads\revoscalepy-10.0.0-py3-none-any.whl
+    python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
 7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the custom install location, for example: `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`.

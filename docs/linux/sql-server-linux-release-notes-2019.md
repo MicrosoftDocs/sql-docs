@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 08/11/2022
+ms.date: 09/26/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -13,352 +13,98 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver2019-linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-The following release notes apply to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
+The following release notes apply to [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each cumulative update (CU) or general distribution release (GDR) has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
-> [!TIP]
-> To learn about new Linux features in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)], see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-2019.md?preserve-view=true&view=sql-server-ver15#sql-server-on-linux).
+These release notes are specifically for [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] releases. For release notes on other editions, see the following articles:
+
+- [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md?view=sql-server-ver14&preserve-view=true)
+- [Release notes for SQL Server 2022 (Preview) on Linux](sql-server-linux-release-notes-2022.md?view=sql-server-ver16&preserve-view=true)
 
 ## Supported platforms
 
-[!INCLUDE [linux-supported-platforms-2019](includes/linux-supported-platforms-2019.md)]
+[!INCLUDE[linux-supported-platforms-2019](includes/linux-supported-platforms-2019.md)]
 
 ## Tools
 
-Most existing client tools that target SQL Server can seamlessly target SQL Server running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of SQL Server tools, see [SQL Tools and Utilities for SQL Server](../tools/overview-sql-tools.md).
+Most existing client tools that target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can seamlessly target [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tools, see [SQL Tools and Utilities for SQL Server](../tools/overview-sql-tools.md).
 
-## Release history
+## Latest versions for all packages
 
-The following table lists the release history for [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] releases.
+This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019. The following table shows the most recent release, which is **CU 17**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](sql-server-linux-release-history-2019.md).
 
-| Release                   | Version       | Release date |
-|---------------------------|---------------|--------------|
-| [CU17](#cu17)             | 15.0.4249.2   | 2022-08-11   |
-| [CU16-GDR](#cu16-GDR)     | 15.0.4236.7   | 2022-06-14   |
-| [CU16](#cu16)             | 15.0.4223.1   | 2022-05-16   |
-| [CU15](#cu15)             | 15.0.4198.2   | 2022-01-27   |
-| [CU14](#cu14)             | 15.0.4188.2   | 2021-11-22   |
-| [CU13](#cu13)             | 15.0.4178.1   | 2021-10-05   |
-| [CU12](#cu12)             | 15.0.4153.1   | 2021-08-04   |
-| [CU11](#cu11)             | 15.0.4138.2   | 2021-06-10   |
-| [CU10](#cu10)             | 15.0.4123.1   | 2021-04-06   |
-| [CU9](#cu9)               | 15.0.4102.2   | 2021-02-10   |
-| [CU8-GDR](#cu8-GDR)       | 15.0.4083.2   | 2021-01-12   |
-| [CU8](#cu8)               | 15.0.4073.23  | 2020-10-07   |
-| [CU7 (Removed)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
-| [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
-| [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
-| [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
-| [CU3](#cu3)               | 15.0.4023.6   | 2020-03-12   |
-| [CU2](#cu2)               | 15.0.4013.40  | 2020-02-13   |
-| [CU1](#cu1)               | 15.0.4003.23  | 2020-01-07   |
-| [GA](#ga)                 | 15.0.2000.5   | 2019-11-04   |
+| Version | Release | Date | Build | KB article |
+| --- | --- | --- | --- | --- |
+| [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] | CU 17 | 2022-08-11 | 15.0.4249.2 | [KB 5016394](https://support.microsoft.com/help/5016394) |
+
+
+- The **mssql-server-is** package isn't supported on SUSE in this release. See [SQL Server Integration Services (SSIS)](#ssis) for more information.
+
+| Distribution | Package name | Package version | Download |
+| --- | --- | --- | --- |
+| **Red Hat Enterprise Linux** | | | |
+| RHEL 8 | Database Engine | 15.0.4249.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4249.2-1.x86_64.rpm) |
+| RHEL 8 | Extensibility | 15.0.4249.2-1 | [Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4249.2-1.x86_64.rpm) |
+| RHEL 8 | Full-Text Search | 15.0.4249.2-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4249.2-1.x86_64.rpm) |
+| RHEL 8 | High Availability | 15.0.4249.2-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4249.2-1.x86_64.rpm) |
+| RHEL 8 | Java Extensibility | 15.0.4249.2-1 | [Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4249.2-1.x86_64.rpm) |
+| RHEL 8 | PolyBase | 15.0.4249.2-1 | [PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4249.2-1.x86_64.rpm) |
+| RHEL 8 | SSIS | 15.0.4063.15-88 | [SSIS RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-is-15.0.4063.15-88.x86_64.rpm) |
+| **SUSE Enterprise Linux Server** | | | |
+| SLES 15 | Database Engine | 15.0.4249.2-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4249.2-1.x86_64.rpm) |
+| SLES 15 | Extensibility | 15.0.4249.2-1 | [Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4249.2-1.x86_64.rpm) |
+| SLES 15 | Full-Text Search | 15.0.4249.2-1 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4249.2-1.x86_64.rpm) |
+| SLES 15 | High Availability | 15.0.4249.2-1 | [High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4249.2-1.x86_64.rpm) |
+| SLES 15 | Java Extensibility | 15.0.4249.2-1 | [Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4249.2-1.x86_64.rpm) |
+| SLES 15 | PolyBase | 15.0.4249.2-1 | [PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4249.2-1.x86_64.rpm) |
+| **Ubuntu** | | | |
+| Ubuntu 20.04 | Database Engine | 15.0.4249.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4249.2-1_amd64.deb) |
+| Ubuntu 20.04 | Extensibility | 15.0.4249.2-1 | [Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4249.2-1_amd64.deb) |
+| Ubuntu 20.04 | Full-Text Search | 15.0.4249.2-1 | [Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4249.2-1_amd64.deb) |
+| Ubuntu 20.04 | High Availability | 15.0.4249.2-1 | [High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4249.2-1_amd64.deb) |
+| Ubuntu 20.04 | Java Extensibility | 15.0.4249.2-1 | [Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4249.2-1_amd64.deb) |
+| Ubuntu 20.04 | PolyBase | 15.0.4249.2-1 | [PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4249.2-1_amd64.deb) |
+| Ubuntu 18.04 | SSIS | 15.0.4153.1-89 | [SSIS Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-is/mssql-server-is_15.0.4153.1-89_amd64.deb) |
 
 ## <a id="cuinstall"></a> How to install updates
 
-If you have configured the CU repository (`mssql-server-2019`), then you will get the latest CU of SQL Server packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+If you have configured the CU repository (`mssql-server-2019`), then you will get the latest CU of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] packages when you perform new installations. If you require Docker container images, see official images for [Microsoft SQL Server on Linux for Docker Engine](https://hub.docker.com/r/microsoft/mssql-server/). For more information about repository configuration, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
-If you are updating existing SQL Server packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
+If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] packages, run the appropriate update command for each package to get the latest CU. For specific update instructions for each package, see the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md#upgrade)
-- [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
+- [Install Full-Text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Install SQL Server 2019 Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="cu17"></a> CU17 (August 2022)
-
-This is the Cumulative Update 17 (CU17) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4249.2. For information about the fixes and improvements, see <https://support.microsoft.com/help/5016394>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages for the latest supported distributions, with the information in the following table.
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4249.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4249.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4249.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4249.2-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4249.2-1.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4249.2-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4249.2-1.x86_64.rpm)|
-| **SLES v15 RPM packages**<br /><br />(Get [SLES v12 RPM packages](https://packages.microsoft.com/sles/12/mssql-server-2019/)) | 15.0.4249.2-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4249.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4249.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4249.2-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4249.2-1.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4249.2-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4249.2-1.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4249.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4249.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4249.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4249.2-1_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4249.2-1_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4249.2-1_amd64.deb)<br />[PolyBase Debian Package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4249.2-1_amd64.deb)|
-
-## <a id="cu16-GDR"></a> CU16-GDR (June 2022)
-
-This is the Cumulative Update 16-GDR (CU16-GDR) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4236.7. For information about the fixes and improvements, see <https://support.microsoft.com/help/5014553>.
-
-> [!IMPORTANT]  
-> TDE-compressed backups that are made using [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 16 and later cannot be restored to previous CU versions of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
->
-> Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 16 and later versions.
-
-> [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages for the latest supported distributions, with the information in the following table.
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4236.7-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4236.7-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4236.7-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4236.7-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4236.7-1.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4236.7-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4236.7-1.x86_64.rpm)|
-| **SLES v15 RPM packages**<br /><br />(Get [SLES v12 RPM packages](https://packages.microsoft.com/sles/12/mssql-server-2019/)) | 15.0.4236.7-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4236.7-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4236.7-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4236.7-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4236.7-1.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4236.7-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4236.7-1.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4236.7-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4236.7-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4236.7-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4236.7-1_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4236.7-1_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4236.7-1_amd64.deb)<br />[PolyBase Debian Package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4236.7-1_amd64.deb)|
-
-## <a id="cu16"></a> CU16 (May 2022)
-
-This is the Cumulative Update 16 (CU16) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4223.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/5011644>.
-
-> [!IMPORTANT]  
-> TDE-compressed backups that are made using [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 16 and later cannot be restored to previous CU versions of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. For more information, see [FIX: Error 3241 occurs during executing RESTORE LOG or RESTORE DATABASE](https://support.microsoft.com/help/5014298).
->
-> Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 16 and later versions.
-
-> [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages for the latest supported distributions, with the information in the following table.
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4223.1-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4223.1-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4223.1-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4223.1-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4223.1-2.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4223.1-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4223.1-2.x86_64.rpm)|
-| **SLES v15 RPM packages**<br /><br />(Get [SLES v12 RPM packages](https://packages.microsoft.com/sles/12/mssql-server-2019/)) | 15.0.4223.1-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4223.1-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4223.1-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4223.1-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4223.1-2.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4223.1-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4223.1-2.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4223.1-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4223.1-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4223.1-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4223.1-2_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4223.1-2_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4223.1-2_amd64.deb)<br />[PolyBase Debian Package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4223.1-2_amd64.deb)|
-
-## <a id="cu15"></a> CU15 (January 2022)
-
-This is the Cumulative Update 15 (CU15) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4198.2. This update adds improvements in capturing memory dumps on unexpected crashes in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux. For information about the fixes and improvements, see <https://support.microsoft.com/help/5008996>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4198.2-10 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4198.2-10.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4198.2-10.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4198.2-10.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4198.2-10.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4198.2-10.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4198.2-10.x86_64.rpm)|
-| **SLES v15 RPM packages**<br /><br />(Get [SLES v12 RPM packages](https://packages.microsoft.com/sles/12/mssql-server-2019/)) | 15.0.4198.2-10 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4198.2-10.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4198.2-10.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4198.2-10.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4198.2-10.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4198.2-10.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4198.2-10.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4198.2-10 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4198.2-10_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4198.2-10_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4198.2-10_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4198.2-10_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4198.2-10_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4198.2-10_amd64.deb)|
-
-## <a id="cu14"></a> CU14 (November 2021)
-
-This is the Cumulative Update 14 (CU14) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4188.2. For information about the fixes and improvements, see <https://support.microsoft.com/help/5007182>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-> [!NOTE]  
-> **SLES v15** is now supported on [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] starting with CU14. The offline package installation links for SLES are pointing to SLES 15 packages. If you are looking for SLES 12 packages, refer to the download path <https://packages.microsoft.com/sles/12/mssql-server-2019/>
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4188.2-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4188.2-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4188.2-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4188.2-3.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4188.2-3.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4188.2-3.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4188.2-3.x86_64.rpm)|
-| **SLES v15 RPM packages**<br /><br />(Get [SLES v12 RPM packages](https://packages.microsoft.com/sles/12/mssql-server-2019/)) | 15.0.4188.2-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-15.0.4188.2-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-ha-15.0.4188.2-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-fts-15.0.4188.2-3.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-15.0.4188.2-3.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-extensibility-java-15.0.4188.2-3.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2019/mssql-server-polybase-15.0.4188.2-3.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4188.2-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4188.2-3_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4188.2-3_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4188.2-3_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4188.2-3_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4188.2-3_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4188.2-3_amd64.deb)|
-
-## <a id="cu13"></a> CU13 (October 2021)
-
-This is the Cumulative Update 13 (CU13) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4178.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/5005679>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4178.1-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4178.1-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4178.1-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4178.1-3.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4178.1-3.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4178.1-3.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4178.1-3.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4178.1-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4178.1-3.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4178.1-3.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4178.1-3.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4178.1-3.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4178.1-3.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4178.1-3.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4178.1-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4178.1-3_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4178.1-3_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4178.1-3_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4178.1-3_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4178.1-3_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4178.1-3_amd64.deb)|
-
-## <a id="cu12"></a> CU12 (August 2021)
-
-This is the Cumulative Update 12 (CU12) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4153.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/5004524>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4153.1-6 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4153.1-6.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4153.1-6.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4153.1-6.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4153.1-6.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4153.1-6.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4153.1-6.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4153.1-6 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4153.1-6.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4153.1-6.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4153.1-6.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4153.1-6.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4153.1-6.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4153.1-6.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4153.1-6 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4153.1-6_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4153.1-6_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4153.1-6_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4153.1-6_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4153.1-6_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4153.1-6_amd64.deb)|
-
-## <a id="cu11"></a> CU11 (June 2021)
-
-This is the Cumulative Update 11 (CU11) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4138.2. For information about the fixes and improvements, see <https://support.microsoft.com/help/5003249>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4138.2-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4138.2-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4138.2-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4138.2-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4138.2-1.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4138.2-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4138.2-1.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4138.2-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4138.2-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4138.2-1.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4138.2-1.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4138.2-1.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4138.2-1.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4138.2-1.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4138.2-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4138.2-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4138.2-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4138.2-1_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4138.2-1_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4138.2-1_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4138.2-1_amd64.deb)|
-
-## <a id="cu10"></a> CU10 (April 2021)
-
-This is the Cumulative Update 10 (CU10) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4123.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/5001090>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-> [!NOTE]  
-> **Ubuntu 20.04** is now supported on [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] starting with CU10. The offline package installation links for Ubuntu are pointing to Ubuntu 20.04 packages. If you are looking for Ubuntu 18.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/>
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4123.1-5 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4123.1-5.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4123.1-5.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4123.1-5.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4123.1-5.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4123.1-5.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4123.1-5.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4123.1-5 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4123.1-5.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4123.1-5.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4123.1-5.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4123.1-5.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4123.1-5.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4123.1-5.x86_64.rpm)|
-| **Ubuntu 20.04 Debian packages**<br /><br />(Get [Ubuntu 18.04 Debian packages](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/)) | 15.0.4123.1-5 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4123.1-5_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4123.1-5_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4123.1-5_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4123.1-5_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4123.1-5_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4123.1-5_amd64.deb)|
-
-## <a id="cu9"></a> CU9 (February 2021)
-
-This is the Cumulative Update 9 (CU9) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4102.2. For information about the fixes and improvements, see <https://support.microsoft.com/help/5000642>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4102.2-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4102.2-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4102.2-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4102.2-4.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4102.2-4.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4102.2-4.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4102.2-4.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4102.2-4 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4102.2-4.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4102.2-4.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4102.2-4.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4102.2-4.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4102.2-4.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4102.2-4.x86_64.rpm)|
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/)) | 15.0.4102.2-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4102.2-4_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4102.2-4_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4102.2-4_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4102.2-4_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4102.2-4_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4102.2-4_amd64.deb)|
-
-## <a id="cu8-GDR"></a> CU8-GDR (January 2021)
-
-This is the Cumulative Update 8-GDR (CU8-GDR) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4083.2. For information about the fixes and improvements, see <https://support.microsoft.com/help/4577194>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4083.2-15 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4083.2-15.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4083.2-15.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4083.2-15.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4083.2-15.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4083.2-15.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4083.2-15.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4083.2-15 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4083.2-15.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4083.2-15.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4083.2-15.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4083.2-15.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4083.2-15.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4083.2-15.x86_64.rpm)|
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/)) | 15.0.4083.2-15 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4083.2-15_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4083.2-15_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4083.2-15_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4083.2-15_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4083.2-15_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4083.2-15_amd64.deb)|
-
-## <a id="cu8"></a> CU8 (September 2020)
-
-This is the Cumulative Update 8 (CU8) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4073.23. For information about the fixes and improvements, see <https://support.microsoft.com/help/4577194>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4073.23-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4073.23-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4073.23-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4073.23-4.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4073.23-4.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4073.23-4.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4073.23-4.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4073.23-4 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4073.23-4.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4073.23-4.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4073.23-4.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4073.23-4.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4073.23-4.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4073.23-4.x86_64.rpm)|
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/)) | 15.0.4073.23-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4073.23-4_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4073.23-4_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4073.23-4_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4073.23-4_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4073.23-4_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4073.23-4_amd64.deb)|
-
-## <a id="cu6"></a> CU6 (July 2020)
-
-This is the Cumulative Update 6 (CU6) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4053.23. For information about the fixes and improvements, see <https://support.microsoft.com/help/4563110>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4053.23-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4053.23-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4053.23-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4053.23-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4053.23-2.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4053.23-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4053.23-2.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4053.23-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4053.23-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4053.23-2.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4053.23-2.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4053.23-2.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4053.23-2.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4053.23-2.x86_64.rpm)|
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/)) | 15.0.4053.23-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4053.23-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4053.23-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4053.23-2_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4053.23-2_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4053.23-2_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4053.23-2_amd64.deb)|
-
-## <a id="cu5"></a> CU5 (June 2020)
-
-This is the Cumulative Update 5 (CU5) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4043.16. For information about the fixes and improvements, see <https://support.microsoft.com/help/4552255>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4043.16-4 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4043.16-4.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4043.16-4.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4043.16-4.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4043.16-4.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4043.16-4.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4043.16-4.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4043.16-4 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4043.16-4.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4043.16-4.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4043.16-4.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4043.16-4.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4043.16-4.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4043.16-4.x86_64.rpm)|
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/)) | 15.0.4043.16-4 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4043.16-4_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4043.16-4_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4043.16-4_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4043.16-4_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4043.16-4_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4043.16-4_amd64.deb)|
-
-## <a id="cu4"></a> CU4 (April 2020)
-
-This is the Cumulative Update 4 (CU4) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4033.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/4548597>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4033.1-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4033.1-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4033.1-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4033.1-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4033.1-2.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4033.1-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4033.1-2.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4033.1-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4033.1-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4033.1-2.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4033.1-2.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4033.1-2.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4033.1-2.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4033.1-2.x86_64.rpm)|
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/)) | 15.0.4033.1-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4033.1-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4033.1-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4033.1-2_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4033.1-2_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4033.1-2_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4033.1-2_amd64.deb)|
-
-## <a id="cu3"></a> CU3 (March 2020)
-
-This is the Cumulative Update 3 (CU3) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4023.6. For information about the fixes and improvements, see <https://support.microsoft.com/help/4538853>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-> [!NOTE]  
-> **Ubuntu 18.04** is now supported on [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] starting with CU3. The offline package installation links for Ubuntu are pointing to Ubuntu 18.04 packages. If you are looking for Ubuntu 16.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4023.6-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4023.6-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4023.6-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4023.6-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4023.6-2.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4023.6-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4023.6-2.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4023.6-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4023.6-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4023.6-2.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4023.6-2.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4023.6-2.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4023.6-2.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4023.6-2.x86_64.rpm)|
-| **Ubuntu 18.04 Debian packages**<br /><br />(Get [Ubuntu 16.04 Debian packages](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/)) | 15.0.4023.6-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4023.6-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4023.6-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4023.6-2_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4023.6-2_amd64.deb)<br />[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4023.6-2_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4023.6-2_amd64.deb)|
-
-## <a id="cu2"></a> CU2 (February 2020)
-
-This is the Cumulative Update 2 (CU2) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4013.40. For information about the fixes and improvements, see <https://support.microsoft.com/help/4536075>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4013.40-8 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4013.40-8 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4013.40-8.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4013.40-8.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4013.40-8.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4013.40-8.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4013.40-8.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4013.40-8.x86_64.rpm)|
-| **Ubuntu 16.04 Debian packages** | 15.0.4013.40-8 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4013.40-8_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4013.40-8_amd64.deb)</br>[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4013.40-8_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4013.40-8_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4013.40-8_amd64.deb)</br>[PolyBase Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4013.40-8_amd64.deb)|
-
-## <a id="cu1"></a> CU1 (January 2020)
-
-This is the Cumulative Update 1 (CU1) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.4003.23. For information about the fixes and improvements in this release, see <https://support.microsoft.com/en-us/help/4527376>.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-> [!NOTE]  
-> Starting with CU1, the offline package installation links for Red Hat are pointing to RHEL 8 packages. If you are looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 8.x RPM packages**<br /><br />(Get [RHEL 7.x RPM packages](https://packages.microsoft.com/rhel/7/mssql-server-2019/)) | 15.0.4003.23-3 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4003.23-3.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4003.23-3.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4003.23-3.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4003.23-3.x86_64.rpm)<br />[Java Extensibility RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4003.23-3.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4003.23-3.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.4003.23-3 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4003.23-3.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4003.23-3.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4003.23-3.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4003.23-3.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4003.23-3.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4003.23-3.x86_64.rpm)|
-| **Ubuntu 16.04 Debian packages** | 15.0.4003.23-3 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4003.23-3_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4003.23-3_amd64.deb)</br>[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4003.23-3_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4003.23-3_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4003.23-3_amd64.deb)</br>[PolyBase Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4003.23-3_amd64.deb)|
-
-## <a id="ga"></a> GA (November 2019)
-
-This is the General Availability (GA) release of [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]. The SQL Server Database Engine version for this release is 15.0.2000.5.
-
-### Package details
-
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| **RHEL 7.x RPM packages** | 15.0.2000.5-5 | [Database Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
-| **SLES v12 RPM packages** | 15.0.2000.5-5 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Java Extensibility RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[PolyBase RPM package](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
-| **Ubuntu 16.04 Debian packages** | 15.0.2000.5-5 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.2000.5-5_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.2000.5-5_amd64.deb)</br>[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.2000.5-5_amd64.deb)</br>[Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.2000.5-5_amd64.deb)</br>[Java Extensibility Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.2000.5-5_amd64.deb)</br>[PolyBase Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.2000.5-5_amd64.deb)|
+## Release history
+
+The following table lists the release history for [!INCLUDE[ssSQL19](../includes/sssql19-md.md)].
+
+| Release               | Version       | Release date |
+| --------------------- | ------------- | ------------ |
+| [CU 17](sql-server-linux-release-history-2019.md#CU17) | 15.0.4249.2   | 2022-08-11   |
+| [CU 16 GDR](sql-server-linux-release-history-2019.md#CU16-GDR) | 15.0.4236.7   | 2022-06-14   |
+| [CU 16](sql-server-linux-release-history-2019.md#CU16) | 15.0.4223.1   | 2022-04-18   |
+| [CU 15](sql-server-linux-release-history-2019.md#CU15) | 15.0.4198.2   | 2022-01-27   |
+| [CU 14](sql-server-linux-release-history-2019.md#CU14) | 15.0.4188.2   | 2021-11-22   |
+| [CU 13](sql-server-linux-release-history-2019.md#CU13) | 15.0.4178.1   | 2021-10-05   |
+| [CU 12](sql-server-linux-release-history-2019.md#CU12) | 15.0.4153.1   | 2021-08-04   |
+| [CU 11](sql-server-linux-release-history-2019.md#CU11) | 15.0.4138.2   | 2021-06-10   |
+| [CU 10](sql-server-linux-release-history-2019.md#CU10) | 15.0.4123.1   | 2021-04-06   |
+| [CU 9](sql-server-linux-release-history-2019.md#CU9) | 15.0.4102.2   | 2021-02-10   |
+| [CU 8 GDR](sql-server-linux-release-history-2019.md#CU8-GDR) | 15.0.4083.2   | 2021-01-12   |
+| [GDR 1](sql-server-linux-release-history-2019.md#GDR1) | 15.0.2080.9   | 2021-01-12   |
+| [CU 8](sql-server-linux-release-history-2019.md#CU8) | 15.0.4073.23  | 2020-10-07   |
+| [CU 7 (Removed)](https://support.microsoft.com/help/4570012) | 15.0.4063.15  | 2020-09-02   |
+| [CU 6](sql-server-linux-release-history-2019.md#CU6) | 15.0.4053.23  | 2020-08-04   |
+| [CU 5](sql-server-linux-release-history-2019.md#CU5) | 15.0.4043.16  | 2020-06-22   |
+| [CU 4](sql-server-linux-release-history-2019.md#CU4) | 15.0.4033.1   | 2020-03-31   |
+| [CU 3](sql-server-linux-release-history-2019.md#CU3) | 15.0.4023.6   | 2020-03-12   |
+| [CU 2](sql-server-linux-release-history-2019.md#CU2) | 15.0.4013.40  | 2020-02-13   |
+| [CU 1](sql-server-linux-release-history-2019.md#CU1) | 15.0.4003.23  | 2020-01-07   |
+| [GA](sql-server-linux-release-history-2019.md#GA) | 15.0.2000.5   | 2019-11-04   |
 
 ## Known issues
 
@@ -370,11 +116,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## Next steps
 
-To get started, see the following quickstarts:
-
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-ubuntu.md)
-- [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json)
+- [Run on Docker](quickstart-install-connect-docker.md)
+- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)

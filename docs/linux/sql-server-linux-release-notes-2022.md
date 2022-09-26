@@ -30,11 +30,11 @@ Most existing client tools that target [!INCLUDE[ssNoVersion](../includes/ssnove
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022 (Preview). The following table shows the most recent release, which is **RC0**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022 (Preview)](sql-server-linux-release-history-2022.md).
+This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022 (Preview). The following table shows the most recent release, which is **RC 0**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022 (Preview)](sql-server-linux-release-history-2022.md).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| [!INCLUDE[ssSQL22](../includes/sssql22-md.md)] | RC0 | 2022-09-01 | 16.0.900.3 | |
+| [!INCLUDE[ssSQL22](../includes/sssql22-md.md)] | RC 0 | 2022-09-01 | 16.0.900.3 | |
 
 
 - The **mssql-server-is** package isn't supported on SUSE in this release. See [SQL Server Integration Services (SSIS)](#ssis) for more information.
@@ -76,8 +76,8 @@ The following table lists the release history for [!INCLUDE[ssSQL22](../includes
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
-| [RC0](sql-server-linux-release-history-2022.md#RC0) | 16.0.900.3    | 2022-09-01   |
-| [CTP2.1](sql-server-linux-release-history-2022.md#CTP2.1) | 16.0.600.9    | 2022-05-31   |
+| [RC 0](sql-server-linux-release-history-2022.md#RC0) | 16.0.900.3    | 2022-09-01   |
+| [CTP 2.1](sql-server-linux-release-history-2022.md#CTP2.1) | 16.0.600.9    | 2022-05-31   |
 
 ## Known issues
 

@@ -64,7 +64,8 @@ The following table lists the feature differences between change data capture an
 
 Change data capture provides historical change information for a user table by capturing both the fact that DML changes were made and the actual data that was changed. Changes are captured by using an asynchronous process that reads the transaction log and has a low impact on the system.
 
-As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide an historical view of the changes over time. The [change data capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.
+As shown in the following illustration, the changes that were made to user tables are captured in corresponding change tables. These change tables provide a historical view of the changes over time. The [change data capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) functions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides enable the change data to be consumed easily and systematically.
+
 
 :::image type="content" source="media/track-data-changes-sql-server/concept-change-data-capture.gif" alt-text="Diagram showing the concept of change data capture.":::
 

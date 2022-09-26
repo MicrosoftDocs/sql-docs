@@ -5,7 +5,7 @@ description: "Learn how to install SQL Server 2022 Machine Learning Services on 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 manager: rothja
-ms.date: 05/24/2022
+ms.date: 09/26/2022
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -18,7 +18,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server 2022 - Linux](../includes/applies-to-version/sqlserver2022-linux.md)]
 
-This article guides you in the installation of [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
+This article guides you in the installation of [SQL Server Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
 You can install Machine Learning Services on Ubuntu and Red Hat Enterprise Linux (RHEL). Currently, SUSE Linux Enterprise Server (SLES) is unsupported. 
 
@@ -27,7 +27,7 @@ You can install ML Services on a Docker container running a Linux distribution. 
 For more information, see [the Supported platforms section in the installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
 > [!IMPORTANT]
-> This article refers to [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md).
+> This article refers to [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md). <BR />For SQL Server on Windows, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md).
 
 ## Pre-install checklist
 
@@ -66,7 +66,7 @@ The following commands register the repository providing the R language platform
     yum install mssql-server-extensibility
     ```
 
-2. Accept the EULA for SQL ML Services
+2. Accept the EULA for SQL ML Services:
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
@@ -146,7 +146,7 @@ The following commands register the repository providing the R language platform
     yum install mssql-server-extensibility
     ```
 
-2. Accept the EULA for SQL ML Services
+2. Accept the EULA for SQL ML Services:
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
@@ -154,7 +154,7 @@ The following commands register the repository providing the R language platform
 
 3. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime.
 
-4. Download and Install revoscalepy for the root user.
+4. Download and install revoscalepy for the root user.
 
     ```bash  
     pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl
@@ -241,10 +241,10 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
-+ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
+- [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
+- [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/r-taxi-classification-introduction.md)
+- [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
+- [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/r-taxi-classification-introduction.md)

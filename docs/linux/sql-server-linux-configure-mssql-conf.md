@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to configure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 09/13/2022
+ms.date: 09/27/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -125,6 +125,24 @@ ms.topic: conceptual
 - For the shared disk cluster scenario, don't attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
 
 - These examples run **mssql-conf** by specifying the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run **mssql-conf** in the context of the current directory: `./mssql-conf`.
+
+- If you want to modify the `mssql.conf` file inside of a container, create a `mssql.conf` file on the host where you have the container running with your desired settings, and then redeploy your container. For example, the following addition to the `mssql.conf` file enables SQL Server Agent.
+
+  ```ini
+  [sqlagent]
+  enabled = true
+  ```
+
+  You can deploy your container with the following commands:
+  
+  ```bash
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
+  -p 5433:1433 --name sql1 \
+  -v /container/sql1:/var/opt/mssql \
+  -d mcr.microsoft.com/mssql/server:2019-latest
+  ```
+  
+  For more information, see [Create the config files to be used by the SQL Server container](sql-server-linux-containers-ad-auth-adutil-tutorial.md#create-the-config-files-to-be-used-by-the-sql-server-container).
 
 ## <a id="agent"></a> Enable SQL Server Agent
 

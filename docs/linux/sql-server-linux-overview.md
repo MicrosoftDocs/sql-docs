@@ -65,7 +65,7 @@ Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], [!INCLUDE [ssn
 
 If you're already familiar with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, review the release notes for general guidelines and known issues for this release:
 
-- [SQL Server 2017 release notes](sql-server-linux-release-notes.md)
+- [SQL Server 2017 release notes](sql-server-linux-release-notes-2017.md)
 - [SQL Server 2019 release notes](sql-server-linux-release-notes-2019.md)
 - [SQL Server 2022 Preview release notes](sql-server-linux-release-notes-2022.md)
 

@@ -41596,7 +41596,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "    docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
       "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-session",
       "redirect_document_id": false
     },
@@ -59463,6 +59463,11 @@
     {
       "source_path": "azure-sql/database/ledger-digest-management-and-database-verification.md",
       "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-notes.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes-2017",
       "redirect_document_id": false
     }
   ]

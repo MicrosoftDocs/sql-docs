@@ -21,7 +21,7 @@ SQL Server jobs are used to regularly perform the same sequence of commands in y
 > * Schedule and run the job
 > * Perform the same steps in SSMS (optional)
 
-For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-server-linux-release-notes.md).
+For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md).
 
 ## Prerequisites
 

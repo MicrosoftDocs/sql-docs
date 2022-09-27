@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to configure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 09/13/2022
+ms.date: 09/27/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -125,6 +125,15 @@ ms.topic: conceptual
 - For the shared disk cluster scenario, don't attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
 
 - These examples run **mssql-conf** by specifying the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run **mssql-conf** in the context of the current directory: `./mssql-conf`.
+
+- If you want to modify a configuration inside of a container, but the commands require the use of `sudo`, use the config file method to mount and deploy the container with your desired settings. For example, add the following to the `mssql.conf` file to run the container with SQL Server Agent enabled.
+
+  ```ini
+  [sqlagent]
+  enabled = true
+  ```
+
+  For more information, see [Create the config files to be used by the SQL Server container](sql-server-linux-containers-ad-auth-adutil-tutorial.md#create-the-config-files-to-be-used-by-the-sql-server-container).
 
 ## <a id="agent"></a> Enable SQL Server Agent
 

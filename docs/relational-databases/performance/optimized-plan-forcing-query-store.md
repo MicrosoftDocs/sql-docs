@@ -63,7 +63,9 @@ Find an example of applying this query hint in [Example E](#e-disable-optimized-
 
 ### Force a plan with Query Store, but disable optimized plan forcing
 
-The [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure includes a `disable_optimized_plan_forcing` parameter, with default OFF (0) (if the parameter is omitted from the procedure call).
+The [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure includes a `disable_optimized_plan_forcing` parameter. In order to use this parameter, an additional parameter is required by the sp_query_store_force_plan stored procedure. The additional parameter is called `replica_group_id`. By default, the primary `replica_group_id` will have a value of one (*1*) even in the case where there are no configured secondary replicas.
+
+Find an example of applying the appropriate parameters to the sp_query_store_force_plan stored procedure in [Example C](#c-force-a-plan-and-disable-optimized-plan-forcing-in-query-store).
 
 The `sys.query_store_plan` catalog view includes columns that indicate if the plan has an associated optimization replay script, and adds a new state to existing failure reason column specific to associated optimization replay script. Learn more in [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md).
 
@@ -111,10 +113,10 @@ GO
 
 ### C. Force a plan and disable optimized plan forcing in Query Store
 
-The following code forces a plan in Query Store, but disables optimized plan forcing. Before running the following code, replace `@query_id` and `@plan_id` with a combination appropriate for your instance.  The sp_query_store_force_plan stored procedure will also accept an optional third `@replica_group_id` parameter.  This can be used to force a plan on a specific replica.  A value of 0 - `@replica_group_id=0` will be used if this parameter is omitted.
+The following code forces a plan in Query Store, but disables optimized plan forcing. Before running the following code, replace `@query_id` and `@plan_id` with a combination appropriate for your instance.  The sp_query_store_force_plan stored procedure will expect that the `@replica_group_id` parameter be passed in as the third parameter value when attempting to disabled optimized plan forcing in Query Store.  This can be used to disable optimized plan forcing for a particular forced plan on a specific replica.  A value of 1 - `@replica_group_id=1` will be used to disable the feature on the primary replica.
 
 ```sql
-EXEC sp_query_store_force_plan @query_id=148, @plan_id=4, @disable_optimized_plan_forcing=0;
+EXEC sp_query_store_force_plan @query_id=148, @plan_id=4, @replica_group_id=1, @disable_optimized_plan_forcing=1;
 GO
 ```
 

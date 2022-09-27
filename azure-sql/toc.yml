@@ -1438,8 +1438,7 @@
       - name: ARM template
         displayName: Resource Manager
         href: virtual-machines/windows/create-sql-vm-resource-manager-template.md
-      - name: Confidential VMs
-        href: virtual-machines/windows/sql-vm-create-confidential-vm-quickstart.md
+
         
     - name: Concepts
       items:
@@ -1492,6 +1491,8 @@
           href: virtual-machines/windows/create-sql-vm-portal.md
         - name: Use Azure PowerShell
           href: virtual-machines/windows/create-sql-vm-powershell.md
+        - name: on Azure confidential VMs
+          href: virtual-machines/windows/sql-vm-create-confidential-vm-how-to.md
 
       - name: Manage
         items: 

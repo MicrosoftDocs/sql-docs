@@ -94,7 +94,7 @@ For the filesystem configuration on Persistent Memory devices, the block allocat
 
 ##### Open file limitation
 
-The default open file limit is often set at 1024. Your production environment may require more connections than the default limit. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in RHEL, edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
+The default open file limit is often set at 1024. Your production environment may require more connections than the default limit. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
 
 ```ini
 mssql hard nofile 32727

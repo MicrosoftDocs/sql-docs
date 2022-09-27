@@ -55,7 +55,7 @@ The following tables show the resources available for a single database at each 
 > [!IMPORTANT]
 > The Basic service tier provides less than one vCore (CPU).  For CPU-intensive workloads, a service tier of S3 or greater is recommended. 
 > 
-> Restoration operations can be CPU-intensive and often require a service tier of S3 or greater. 
+> Database restore operations can be CPU-intensive and may require a service objective of S3 or greater. Once restored, a database can be scaled down to a lower service objective if required.
 >
 >Regarding data storage, the Basic service tier is placed on Standard Page Blobs. Standard Page Blobs use hard disk drive (HDD)-based storage media and are best suited for development, testing, and other infrequently accessed workloads that are less sensitive to performance variability.
 >

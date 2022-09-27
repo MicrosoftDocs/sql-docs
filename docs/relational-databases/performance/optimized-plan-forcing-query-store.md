@@ -65,7 +65,7 @@ Find an example of applying this query hint in [Example E](#e-disable-optimized-
 
 The [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure includes a `disable_optimized_plan_forcing` parameter. In order to use this parameter, an additional parameter is required by the sp_query_store_force_plan stored procedure. The additional parameter is called `replica_group_id`. By default, the primary `replica_group_id` will have a value of one (*1*) even in the case where there are no configured secondary replicas.
 
-Find an example of applying this query hint in [Example C](#c-force-a-plan-and-disable-optimized-plan-forcing-in-query-store).
+Find an example of applying the appropriate parameters to the sp_query_store_force_plan stored procedure in [Example C](#c-force-a-plan-and-disable-optimized-plan-forcing-in-query-store).
 
 The `sys.query_store_plan` catalog view includes columns that indicate if the plan has an associated optimization replay script, and adds a new state to existing failure reason column specific to associated optimization replay script. Learn more in [sys.query_store_plan (Transact-SQL)](../system-catalog-views/sys-query-store-plan-transact-sql.md).
 

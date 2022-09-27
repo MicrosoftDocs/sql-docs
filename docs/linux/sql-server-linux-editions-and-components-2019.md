@@ -226,8 +226,8 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management (EKM) |
-| &nbsp; | AD Authentication for Linked Servers |
-| &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
+| &nbsp; | Active Directory Authentication for Linked Servers |
+| &nbsp; | Active Directory Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |

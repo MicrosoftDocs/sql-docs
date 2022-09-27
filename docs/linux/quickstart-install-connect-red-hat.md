@@ -22,7 +22,7 @@ ms.technology: linux
 
 In this quickstart, you install [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] on Red Hat Enterprise Linux (RHEL) 8.x. Then you can connect with **sqlcmd** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md).
+For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->

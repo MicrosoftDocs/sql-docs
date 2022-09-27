@@ -13,7 +13,7 @@ ms.technology: linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article describes how to troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Docker container. When troubleshooting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
+This article describes how to troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running on Linux or in a Docker container. When troubleshooting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes-2017.md).
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 

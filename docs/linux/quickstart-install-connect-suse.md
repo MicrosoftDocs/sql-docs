@@ -20,7 +20,7 @@ ms.custom:
 
 In this quickstart, you install [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] on SUSE Linux Enterprise Server (SLES) v12. Then you can connect with **sqlcmd** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md).
+For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
 ::: moniker-end
 <!--SQL Server 2019+ on Linux-->

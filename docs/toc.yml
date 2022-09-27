@@ -12048,6 +12048,8 @@ items:
         href: relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md
       - name: sys.database_usage
         href: relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md
+      - name: sys.dm_elastic_pool_resource_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database.md
       - name: sys.elastic_pool_resource_stats
         href: relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md
       - name: sys.event_log

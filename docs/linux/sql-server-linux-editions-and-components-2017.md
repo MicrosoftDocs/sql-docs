@@ -35,7 +35,7 @@ This article provides details of features supported by the various editions of S
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 For the latest release notes and what's new information, see the following:
-- [SQL Server 2017 on Linux release notes](sql-server-linux-release-notes.md)
+- [SQL Server 2017 on Linux release notes](sql-server-linux-release-notes-2017.md)
 - [What's new in SQL Server 2017 on Linux](sql-server-linux-whats-new.md)
 
 For a list of SQL Server features not available on Linux, see [Unsupported features and services](#Unsupported).

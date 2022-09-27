@@ -179,7 +179,7 @@ However, after a restart, SQL Server does not start listening on the **servertcp
 
 ## Configure authentication on RPC communication for MSDTC
 
-MSDTC for SQL Server on Linux does not use authentication on RPC communication by default. However, when the host machine is joined to an Active Directory (AD) domain, it is possible to configure MSDTC to use authenticated RPC communication using following **mssql-conf** settings:
+MSDTC for SQL Server on Linux does not use authentication on RPC communication by default. However, when the host machine is joined to an Active Directory domain, it is possible to configure MSDTC to use authenticated RPC communication using following **mssql-conf** settings:
 
 | Setting | Description |
 |---|---|
@@ -191,7 +191,7 @@ MSDTC for SQL Server on Linux does not use authentication on RPC communication b
 
 ### Active directory
 
-Microsoft recommends using MSDTC with RPC enabled if SQL Server is enrolled into an Active Directory (AD) configuration. If SQL Server is configured to use AD authentication, MSDTC uses mutual authentication RPC security by default.
+Microsoft recommends using MSDTC with RPC enabled if SQL Server is enrolled into an Active Directory configuration. If SQL Server is configured to use Active Directory authentication, MSDTC uses mutual authentication RPC security by default.
 
 ### Windows and Linux
 

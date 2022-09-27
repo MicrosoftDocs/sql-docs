@@ -68,7 +68,7 @@ This is the Cumulative Update 16-GDR (CU 16 GDR) release of [!INCLUDE[ssSQL19](.
 > Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU 16 and later versions.
 
 > [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
+> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#install-adutil).
 
 ### Package details
 
@@ -92,7 +92,7 @@ This is the Cumulative Update 16 (CU 16) release of [!INCLUDE[ssSQL19](../includ
 > Transparent Data Encryption (TDE)-compressed backups that are made using previous CU versions of [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] can still be restored by using [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] CU 16 and later versions.
 
 > [!WARNING]  
-> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#installing-adutil).
+> The **adutil** tool has been removed from [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] on Linux for CU 16, and will be reintroduced in a future Cumulative Update. However, you can still [install **adutil** manually](sql-server-linux-ad-auth-adutil-introduction.md#install-adutil).
 
 ### Package details
 

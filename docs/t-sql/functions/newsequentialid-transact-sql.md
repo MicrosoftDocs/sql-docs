@@ -3,13 +3,10 @@ title: "NEWSEQUENTIALID (Transact-SQL)"
 description: "NEWSEQUENTIALID (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "08/08/2015"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "NEWSEQUENTIALID"
   - "NEWSEQUENTIALID_TSQL"

@@ -1,14 +1,12 @@
 ---
 title: "Commands and parameters"
 description: Learn how to use Command objects for Microsoft SqlClient Data Provider for SQL Server to run commands and return results from a data source.
-ms.date: "11/25/2020"
-ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Commands and parameters
 

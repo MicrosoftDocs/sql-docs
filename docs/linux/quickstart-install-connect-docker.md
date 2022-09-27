@@ -1,19 +1,19 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
 description: This quickstart shows how to use Docker to run the SQL Server Linux container images. You connect to a database and run a query.
-ms.custom:
-  - intro-quickstart
-  - kr2b-contr-experiment
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 05/24/2022
-ms.topic: quickstart
+ms.date: 07/18/2022
 ms.prod: sql
-ms.technology: linux
 ms.prod_service: linux
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+ms.technology: linux
+ms.topic: quickstart
+ms.custom:
+  - intro-quickstart
+  - kr2b-contr-experiment
 zone_pivot_groups: cs1-command-shell
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 ---
 # Quickstart: Run SQL Server Linux container images with Docker
 
@@ -24,7 +24,7 @@ zone_pivot_groups: cs1-command-shell
 
 In this quickstart, you'll use Docker to pull and run the [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] Linux container image, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Then you can connect with **sqlcmd** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md).
+For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
 > [!TIP]  
 > This quickstart creates [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] containers. If you prefer to create Linux containers for different versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true#pullandrun2019) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-docker.md?view=sql-server-linux-ver16&preserve-view=true#pullandrun2022) versions of this article.
@@ -154,6 +154,7 @@ Before starting the following steps, make sure that you've selected your preferr
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_COLLATION=\<*SQL_Server_collation*\>"** | Specify a custom SQL Server collation, instead of the default `SQL_Latin1_General_CP1_CI_AS`. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
@@ -289,6 +290,7 @@ Before starting the following steps, make sure that you've selected your preferr
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_COLLATION=\<*SQL_Server_collation*\>"** | Specify a custom SQL Server collation, instead of the default `SQL_Latin1_General_CP1_CI_AS`. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
@@ -424,6 +426,7 @@ Before starting the following steps, make sure that you've selected your preferr
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_COLLATION=\<*SQL_Server_collation*\>"** | Specify a custom SQL Server collation, instead of the default `SQL_Latin1_General_CP1_CI_AS`. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
    | **--hostname sql1** | Used to explicitly set the container hostname. If you don't specify the hostname, it defaults to the container ID, which is a randomly generated system GUID. |
@@ -551,7 +554,11 @@ The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
    ```
 
    > [!TIP]
-   > You can omit the password on the command-line to be prompted to enter it.
+   > You can omit the password on the command-line to be prompted to enter it. Here's an example:    
+    
+   ```bash
+     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA
+   ```
 
 3. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 

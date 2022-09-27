@@ -74,7 +74,7 @@ Under several scenarios you may want to view the difference between a database a
 
 ### All databases
 **View database changes by using schema compare**
-- Using the [Schema Compare extension in Azure Data Studio](/sql/azure-data-studio/extensions/schema-compare-extension#compare-schemas), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows, macOS, and Linux.
+- Using the [Schema Compare extension in Azure Data Studio](../../azure-data-studio/extensions/schema-compare-extension.md#compare-schemas), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows, macOS, and Linux.
 
 - Using [SQL Server Data Tools in Visual Studio](../../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md), the schema differences between an existing *.dacpac* and a database or two of the same can be viewed on Windows.
 
@@ -131,9 +131,9 @@ The SqlPackage CLI can be used with the [DriftReport action](../../tools/sqlpack
 ### All databases
 
 **View database changes by using SQL project publish**
-- Using the [SQL Database Projects extension in Azure Data Studio](/sql/azure-data-studio/extensions/sql-database-project-extension-build), the actions to be taken when a SQL project will be published to a database can be viewed on Windows, macOS, and Linux by selecting "Generate Script" during the publish process.
+- Using the [SQL Database Projects extension in Azure Data Studio](../../azure-data-studio/extensions/sql-database-project-extension-build.md), the actions to be taken when a SQL project will be published to a database can be viewed on Windows, macOS, and Linux by selecting "Generate Script" during the publish process.
 
-- Using [SQL Server Data Tools in Visual Studio](/sql/ssdt/how-to-change-target-platform-and-publish-a-database-project#to-publish-a-database-project), the actions to be taken when a SQL project will be published to a database can be viewed on Windows as a deployment script.
+- Using [SQL Server Data Tools in Visual Studio](../../ssdt/how-to-change-target-platform-and-publish-a-database-project.md#to-publish-a-database-project), the actions to be taken when a SQL project will be published to a database can be viewed on Windows as a deployment script.
 
 **View upgrade actions by using SqlPackage CLI**
 The SqlPackage CLI can be used with the [DeployReport action](../../tools/sqlpackage/sqlpackage-deploy-drift-report.md) to view the differences between a *.dacpac* and a database through the actions that would be taken if the *.dacpac* were published to the database.
@@ -204,5 +204,4 @@ $fileStream.Close()
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Upgrade a Data-tier Application](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
-  
   

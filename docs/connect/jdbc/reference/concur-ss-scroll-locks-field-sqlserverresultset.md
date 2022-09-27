@@ -1,21 +1,15 @@
 ---
+title: "CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)"
 description: "CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)"
-title: "CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.CONCUR_SS_SCROLL_LOCKS"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.CONCUR_SS_SCROLL_LOCKS"
+apitype: "Assembly"
 ---
 # CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

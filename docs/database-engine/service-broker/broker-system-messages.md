@@ -1,13 +1,13 @@
 ---
 title: Broker System Messages
 description: "Service Broker uses three system message types to communicate status and error information from Service Broker."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Broker System Messages

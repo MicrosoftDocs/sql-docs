@@ -1,23 +1,21 @@
 ---
+title: "DBCC CLONEDATABASE (Transact-SQL)"
 description: "DBCC CLONEDATABASE (Transact-SQL)"
-title: "DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: "bluefooted"
+ms.author: "pamela"
+manager: amitban
 ms.date: 04/23/2019
 ms.prod: "sql"
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "CLONEDATABASE"
   - "CLONE DATABASE"
   - "DBCC_CLONEDATABASE_TSQL"
   - "DBCC CLONEDATABASE"
   - "DBCC CLONE DATABASE"
   - "CLONEDATABASE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database cloning [SQL Server]"
   - "cloning databases"
   - "clone databases"
@@ -32,12 +30,9 @@ helpviewer_keywords:
   - "VERIFY_CLONEDB option"
   - "BACKUP_CLONEDB option"
   - "database copying [SQL Server]"
-  - "database cloning [SQL Server]"
   - "DBCC CLONEDATABASE statement"
-ms.assetid: 
-author: "bluefooted" 
-ms.author: "pamela"
-manager: amitban
+dev_langs:
+  - "TSQL"
 ---
 # DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

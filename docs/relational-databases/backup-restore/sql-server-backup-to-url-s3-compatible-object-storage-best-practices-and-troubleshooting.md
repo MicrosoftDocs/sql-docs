@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
   This article includes best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
   
 > [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of SQL Server 2022.
+> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
  For more information about using Azure Blob Storage for SQL Server backup or restore operations, see:  
   
@@ -101,7 +101,7 @@ The name of the credential is not required to match the exact URL path. Here is 
 1. `s3://10.193.16.183:8787/myS3Bucket/sqlbackups`
 1. `s3://10.193.16.183:8787/myS3Bucket`
 
-If there are multiple credentials matching search, such as more specific `s3://10.193.16.183:8787/myS3Bucket/sqlbackups` and more generic `s3://10.193.16.183:8787/myS3Bucket`, we will choose the most specific one. This will allow you to set up more granular access control at directory level for what folders may be accessed from SQL Server. Bucket name needs to be present part of the credential name.
+If there are multiple credentials matching search, such as more specific `s3://10.193.16.183:8787/myS3Bucket/sqlbackups` and more generic `s3://10.193.16.183:8787/myS3Bucket`, we will choose the most specific one. This will allow you to set up more granular access control at directory level for what folders may be accessed from SQL Server.
 
 ### Unsupported option FILE_SNAPSHOT
 

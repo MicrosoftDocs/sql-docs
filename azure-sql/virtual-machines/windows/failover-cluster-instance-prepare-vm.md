@@ -1,19 +1,15 @@
 ---
-title: Prepare virtual machines for an FCI  
-description: "Prepare your Azure virtual machines to use them with a failover cluster instance (FCI) and SQL Server on Azure Virtual Machines." 
-services: virtual-machines
-documentationCenter: na
+title: Prepare virtual machines for an FCI
+description: "Prepare your Azure virtual machines to use them with a failover cluster instance (FCI) and SQL Server on Azure Virtual Machines."
 author: adbadram
-editor: monicar
-tags: azure-service-management
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.reviewer: mathoma
+editor: monicar
+tags: azure-service-management
 ---
 
 # Prepare virtual machines for an FCI (SQL Server on Azure VMs)

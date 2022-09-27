@@ -35,7 +35,6 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

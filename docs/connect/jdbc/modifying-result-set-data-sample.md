@@ -1,16 +1,12 @@
 ---
 title: Modifying result set data sample
 description: This JDBC Driver for SQL Server sample application demonstrates how to retrieve an updateable set of data from a database. Then you can insert, update, and delete rows.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Modifying result set data sample
@@ -27,14 +23,14 @@ The code file for this sample is named UpdateResultSet.java, and it can be found
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 > [!NOTE]
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
-The sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updatable SQLServerResultSet object.
+The sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into an updatable SQLServerResultSet object.
 
 Next, the sample code uses the [moveToInsertRow](reference/movetoinsertrow-method-sqlserverresultset.md) method to move the result set cursor to the insert row. It then uses a series of [updateString](reference/updatestring-method-sqlserverresultset.md) methods to insert data into the new row. After that, it calls the [insertRow](reference/insertrow-method-sqlserverresultset.md) method to persist the new row of data back to the database.
 
@@ -54,7 +50,7 @@ public class UpdateResultSet {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);) {

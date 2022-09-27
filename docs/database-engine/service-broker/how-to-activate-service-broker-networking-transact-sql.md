@@ -1,13 +1,13 @@
 ---
-title: 'How to: Activate Service Broker Networking (Transact-SQL)'
+title: "How to: Activate Service Broker Networking (Transact-SQL)"
 description: "Service Broker does not send or receive messages over the network by default."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # How to: Activate Service Broker Networking (Transact-SQL)

@@ -1,17 +1,15 @@
 ---
 title: "Transaction and bulk copy operations"
 description: "Describes how to perform a bulk copy operation within a transaction, including how to commit or rollback the transaction."
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Transaction and bulk copy operations
 

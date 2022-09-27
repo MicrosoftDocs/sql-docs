@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to configure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
+ms.date: 09/13/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -82,7 +82,7 @@ ms.topic: conceptual
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
 
 |Parameter|Description|
 |---|---|
@@ -174,7 +174,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 
 ## <a id="azure-ad"></a> Configure Azure Active Directory authentication
 
-Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Azure Active Directory (Azure AD) for SQL Server. For more information, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
+Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Azure Active Directory (Azure AD) for SQL Server. To configure Azure AD, you must install the Azure extension for SQL Server following the installation of SQL Server. For information on how to configure Azure AD, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
 
 ### Change the default Azure AD certificate path
 
@@ -186,14 +186,17 @@ sudo /opt/mssql/bin/mssql-conf set network.aadcertificatefilepath /path/to/new/l
 
 In the previous example, `/path/to/new/location.pfx` is your preferred path *including* the certificate name.
 
-The certificate downloaded by the SQL Server Azure Arc agent for Azure AD authentication will now be stored at this location. You won't be able to change it to `/var/opt/mssql/secrets`.
+The certificate for Azure AD authentication downloaded by the Azure extension for SQL Server, will now be stored at this location. You won't be able to change it to `/var/opt/mssql/secrets`.
+
+> [!NOTE]  
+> The default Azure AD certificate path can be changed at any time after SQL Server is installed, but must be changed *before* enabling Azure AD.
 
 ### Azure AD configuration options
 
 The following options are used by Azure AD authentication for an instance of SQL Server running on Linux.
 
 > [!WARNING]  
-> Azure AD parameters are configured by the Azure Arc agent, and should not be reconfigured manually.
+> Azure AD parameters are configured by the Azure extension for SQL Server, and should not be reconfigured manually. They are listed here for information purposes.
 
 |Option |Description |
 |--- |--- |
@@ -748,7 +751,7 @@ The following options configure TLS for an instance of SQL Server running on Lin
 |**network.tlscert** |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlsprotocols** |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client doesn't support any allowed protocol, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejects the connection attempt. For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0). If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
-|**network.tlsciphers** |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**network.tlsciphers** |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Path to the Kerberos keytab file |
 
 For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
@@ -768,6 +771,7 @@ The following options are additional network settings configurable using `mssql-
 | **network.kerberoscredupdatefrequency** | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer.|
 | **network.privilegedadaccount** | Privileged AD user to use for AD authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
 | **uncmapping** | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+| **ldaphostcanon** | Set whether OpenLDAP should canonicalize hostnames during the bind step. Values can be `true` or `false`. |
 
 ## <a id="traceflags"></a> Enable/Disable trace flags
 

@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|HARDWARE_MEMORY_SCRUBBER|
 |Message Text|Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption|
-||
 
 ## Explanation
 

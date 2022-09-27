@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "table permissions [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 ---
 # DENY Object Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

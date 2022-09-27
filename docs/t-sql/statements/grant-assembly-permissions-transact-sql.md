@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "GRANT statement, assemblies"
 dev_langs:
   - "TSQL"
-ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 ---
 # GRANT Assembly Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

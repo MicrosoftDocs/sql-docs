@@ -1,18 +1,15 @@
 ---
 title: "Step 4: Connect resiliently to SQL with ADO.NET"
 description: "Learn how to use retry logic to improve connection resiliency to a SQL database using ADO.NET."
-ms.custom: ""
-ms.date: "08/15/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
-dev_langs: 
-  - "CSharp"
-ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "CSharp"
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
 
@@ -66,176 +63,158 @@ NOTE: The connection string for server name is geared toward Azure SQL Database,
   
   
 ```csharp
-using System;  // C#  
-using CG = System.Collections.Generic;  
-using QC = Microsoft.Data.SqlClient;  
-using TD = System.Threading;  
-	
-namespace RetryAdo2  
-{  
-  public class Program  
-  {  
-	static public int Main(string[] args)  
-	{  
-	  bool succeeded = false;  
-	  int totalNumberOfTimesToTry = 4;  
-	  int retryIntervalSeconds = 10;  
-	
-	  for (int tries = 1;  
-		tries <= totalNumberOfTimesToTry;  
-		tries++)  
-	  {  
-		try  
-		{  
-		  if (tries > 1)  
-		  {  
-			Console.WriteLine  
-			  ("Transient error encountered. Will begin attempt number {0} of {1} max...",  
-			  tries, totalNumberOfTimesToTry  
-			  );  
-			TD.Thread.Sleep(1000 * retryIntervalSeconds);  
-			retryIntervalSeconds = Convert.ToInt32  
-			  (retryIntervalSeconds * 1.5);  
-		  }  
-		  AccessDatabase();  
-		  succeeded = true;  
-		  break;  
-		}  
-	
-		catch (QC.SqlException sqlExc)  
-		{  
-		  if (TransientErrorNumbers.Contains  
-			(sqlExc.Number) == true)  
-		  {  
-			Console.WriteLine("{0}: transient occurred.", sqlExc.Number);  
-			continue;  
-		  }  
-		  else  
-		  {  
-			Console.WriteLine(sqlExc);  
-			succeeded = false;  
-			break;  
-		  }  
-		}  
-	
-		catch (TestSqlException sqlExc)  
-		{  
-		  if (TransientErrorNumbers.Contains  
-			(sqlExc.Number) == true)  
-		  {  
-			Console.WriteLine("{0}: transient occurred. (TESTING.)", sqlExc.Number);  
-			continue;  
-		  }  
-		  else  
-		  {  
-			Console.WriteLine(sqlExc);  
-			succeeded = false;  
-			break;  
-		  }  
-		}  
-	
-		catch (Exception Exc)  
-		{  
-		  Console.WriteLine(Exc);  
-		  succeeded = false;  
-		  break;  
-		}  
-	  }  
-	
-	  if (succeeded == true)  
-	  {  
-		return 0;  
-	  }  
-	  else  
-	  {  
-		Console.WriteLine("ERROR: Unable to access the database!");  
-		return 1;  
-	  }  
-	}  
-	
-	/// <summary>  
-	/// Connects to the database, reads,  
-	/// prints results to the console.  
-	/// </summary>  
-	static public void AccessDatabase()  
-	{  
-	  //throw new TestSqlException(4060); //(7654321);  // Uncomment for testing.  
-	
-	  using (var sqlConnection = new QC.SqlConnection  
-		  (GetSqlConnectionString()))  
-	  {  
-		using (var dbCommand = sqlConnection.CreateCommand())  
-		{  
-		  dbCommand.CommandText = @"  
+using System;
+using System.Collections.Generic;
+using Microsoft.Data.SqlClient;
+using System.Threading;
+
+namespace RetryAdo2; 
+
+public class Program
+{
+    public static int Main(string[] args)
+    {
+        bool succeeded = false;
+        const int totalNumberOfTimesToTry = 4;
+        int retryIntervalSeconds    = 10;
+
+        for (int tries = 1; tries <= totalNumberOfTimesToTry; tries++)
+        {
+            try
+            {
+                if (tries > 1)
+                {
+                    Console.WriteLine(
+                        "Transient error encountered. Will begin attempt number {0} of {1} max...",
+                        tries,
+                        totalNumberOfTimesToTry
+                    );
+                    Thread.Sleep(1000 * retryIntervalSeconds);
+                    retryIntervalSeconds = Convert.ToInt32(retryIntervalSeconds * 1.5);
+                }
+                AccessDatabase();
+                succeeded = true;
+                break;
+            }
+            catch (SqlException sqlExc) {
+                if (TransientErrorNumbers.Contains(sqlExc.Number))
+                {
+                    Console.WriteLine("{0}: transient occurred.", sqlExc.Number);
+                    continue;
+                }
+
+                Console.WriteLine(sqlExc);
+                succeeded = false;
+                break;
+            }
+            catch (TestSqlException sqlExc) {
+                if (TransientErrorNumbers.Contains(sqlExc.Number))
+                {
+                    Console.WriteLine("{0}: transient occurred. (TESTING.)", sqlExc.Number);
+                    continue;
+                }
+
+                Console.WriteLine(sqlExc);
+                succeeded = false;
+                break;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                succeeded = false;
+                break;
+            }
+        }
+
+        if (!succeeded) {
+            Console.WriteLine("ERROR: Unable to access the database!");
+            return 1;
+        }
+
+        return 0;
+    }
+
+    /// <summary>
+    /// Connects to the database, reads,
+    /// prints results to the console.
+    /// </summary>
+    static void AccessDatabase() {
+        //throw new TestSqlException(4060); //(7654321);  // Uncomment for testing.
+
+        using var sqlConnection = new SqlConnection(GetSqlConnectionString());
+
+        using var dbCommand = sqlConnection.CreateCommand();
+
+        dbCommand.CommandText =
+            @"  
 SELECT TOP 3  
 	ob.name,  
 	CAST(ob.object_id as nvarchar(32)) as [object_id]  
   FROM sys.objects as ob  
   WHERE ob.type='IT'  
-  ORDER BY ob.name;";  
-	
-		  sqlConnection.Open();  
-		  var dataReader = dbCommand.ExecuteReader();  
-	
-		  while (dataReader.Read())  
-		  {  
-			Console.WriteLine("{0}\t{1}",  
-			  dataReader.GetString(0),  
-			  dataReader.GetString(1));  
-		  }  
-		}  
-	  }  
-	}  
-	
-	/// <summary>  
-	/// You must edit the four 'my' string values.  
-	/// </summary>  
-	/// <returns>An ADO.NET connection string.</returns>  
-	static private string GetSqlConnectionString()  
-	{  
-	  // Prepare the connection string to Azure SQL Database.  
-	  var sqlConnectionSB = new QC.SqlConnectionStringBuilder();  
-	
-	  // Change these values to your values.  
-	  sqlConnectionSB.DataSource = "tcp:myazuresqldbserver.database.windows.net,1433"; //["Server"]  
-	  sqlConnectionSB.InitialCatalog = "MyDatabase"; //["Database"]  
-	
-	  sqlConnectionSB.UserID = "MyLogin";  // "@yourservername"  as suffix sometimes.  
-	  sqlConnectionSB.Password = "MyPassword";  
-	
-	  // Adjust these values if you like. (ADO.NET 4.5.1 or later.)  
-	  sqlConnectionSB.ConnectRetryCount = 3;  
-	  sqlConnectionSB.ConnectRetryInterval = 10;  // Seconds.  
-	
-	  // Leave these values as they are.  
-	  sqlConnectionSB.IntegratedSecurity = false;  
-	  sqlConnectionSB.Encrypt = true;  
-	  sqlConnectionSB.ConnectTimeout = 30;  
-	
-	  return sqlConnectionSB.ToString();  
-	}  
-	
-	static public CG.List<int> TransientErrorNumbers =  
-	  new CG.List<int> { 4060, 40197, 40501, 40613,  
-	  49918, 49919, 49920, 11001 };  
-  }  
-	
-  /// <summary>  
-  /// For testing retry logic, you can have method  
-  /// AccessDatabase start by throwing a new  
-  /// TestSqlException with a Number that does  
-  /// or does not match a transient error number  
-  /// present in TransientErrorNumbers.  
-  /// </summary>  
-  internal class TestSqlException : ApplicationException  
-  {  
-	internal TestSqlException(int testErrorNumber)  
-	{ this.Number = testErrorNumber; }  
-	
-	internal int Number  
-	{ get; set; }  
-  }  
-}  
+  ORDER BY ob.name;";
+
+        sqlConnection.Open();
+        var dataReader = dbCommand.ExecuteReader();
+
+        while (dataReader.Read())
+        {
+            Console.WriteLine(
+                "{0}\t{1}",
+                dataReader.GetString(0),
+                dataReader.GetString(1)
+            );
+        }
+    }
+
+    /// <summary>
+    /// You must edit the four 'my' string values.
+    /// </summary>
+    /// <returns>An ADO.NET connection string.</returns>
+    static private string GetSqlConnectionString()
+    {
+        // Prepare the connection string to Azure SQL Database.
+        var sqlConnectionSB = new SqlConnectionStringBuilder 
+        {
+            // Change these values to your values.
+            DataSource           = "tcp:myazuresqldbserver.database.windows.net,1433", //["Server"]
+            InitialCatalog       = "MyDatabase",                                       //["Database"]
+            UserID               = "MyLogin",                                          // "@yourservername"  as suffix sometimes.
+            Password             = "MyPassword",
+            // Adjust these values if you like. (ADO.NET 4.5.1 or later.)
+            ConnectRetryCount    = 3,
+            ConnectRetryInterval = 10, // Seconds.
+            // Leave these values as they are.
+            IntegratedSecurity = false,
+            Encrypt            = true,
+            ConnectTimeout     = 30
+        };
+
+        return sqlConnectionSB.ToString();
+    }
+
+    static List<int> TransientErrorNumbers = new() 
+    {
+        4060, 40197, 40501, 40613, 49918, 49919, 49920, 11001
+    };
+}
+
+/// <summary>
+/// For testing retry logic, you can have method
+/// AccessDatabase start by throwing a new
+/// TestSqlException with a Number that does
+/// or does not match a transient error number
+/// present in TransientErrorNumbers.
+/// </summary>
+internal class TestSqlException : ApplicationException
+{
+    internal TestSqlException(int testErrorNumber)
+    {
+        Number = testErrorNumber;
+    }
+
+    internal int Number { get; set; }
+}
 ```  
   
 ###  Step 2.c: Run the program  

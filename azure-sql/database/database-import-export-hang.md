@@ -1,18 +1,16 @@
 ---
 title: Import and export of a database takes a long time
 description: Azure SQL Database and Azure SQL Managed Instance Import/Export service takes a long time to import or export a database
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: data-movement
-ms.topic: troubleshooting
 author: v-miegge
 ms.author: ramakoni
 ms.reviewer: wiassaf, mathoma
 ms.date: 09/27/2019
+ms.service: sql-db-mi
+ms.subservice: data-movement
+ms.topic: troubleshooting
+ms.custom:
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 ---
 
 # Azure SQL Database and Managed Instance Import/Export service takes a long time to import or export a database
@@ -31,17 +29,19 @@ The import and export operations don't represent a traditional physical database
 
 The Azure SQL Database Import/Export service provides a limited number of compute virtual machines (VMs) per region to process import and export operations. The compute VMs are hosted per region to make sure that the import or export avoids cross-region bandwidth delays and charges. If too many requests are made at the same time in the same region, significant delays can occur in processing the operations. The time that's required to complete requests can vary from a few seconds to many hours.
 
+Additionally, as the Import/Export service performs a logical backup of the database the time to complete is more dependent on the number of objects in the database than a traditional physical database backup.
+
 
 ## Recommended solutions
 
 If your database exports are used only for recovery from accidental data deletion, all the Azure SQL Database editions provide self-service restoration capability from system-generated backups. But if you need these exports for other reasons, and if you require consistently faster or more predictable import/export performance, consider the following options:
 
 * [Export to a BACPAC file by using the SQLPackage utility](./database-export.md#sqlpackage-utility).
+* [Export to a BACPAC file by using Azure Data Studio](./database-export.md#azure-data-studio).
 * [Export to a BACPAC file by using SQL Server Management Studio (SSMS)](./database-export.md#sql-server-management-studio-ssms).
 * Run the BACPAC import or export directly in your code by using the Microsoft SQL Server Data-Tier Application Framework (DacFx) API. For additional information, see:
   * [Export a data-tier application](/sql/relational-databases/data-tier-applications/export-a-data-tier-application)
   * [Microsoft.SqlServer.Dac Namespace](/dotnet/api/microsoft.sqlserver.dac)
-  * [Download DACFx](https://www.microsoft.com/download/details.aspx?id=55713)
 
 ## Things to consider when you export or import a database
 

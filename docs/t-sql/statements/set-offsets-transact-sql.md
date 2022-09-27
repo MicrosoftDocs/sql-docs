@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "SET OFFSETS statement"
 dev_langs:
   - "TSQL"
-ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 ---
 # SET OFFSETS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

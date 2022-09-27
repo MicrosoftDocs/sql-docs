@@ -6,7 +6,7 @@ ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto, randolphwest
-ms.date: 04/12/2022
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -139,6 +139,8 @@ The error is harmless, and cluster configuration can continue.
 
    If you previously configured a cluster on the same nodes, you need to use the `--force` option when running `pcs cluster setup`. This is equivalent to running `pcs cluster destroy`, and the Pacemaker service needs to be reenabled using `sudo systemctl enable pacemaker`.
 
+[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
+
 ## <a id="stonith"></a> Configure fencing (STONITH)
 
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. (STONITH stands for "shoot the other node in the head".) When the cluster resource manager can't determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
@@ -193,7 +195,7 @@ sudo apt-get install mssql-server-ha
 
 ## Create a SQL Server login for Pacemaker
 
-[!INCLUDE [SLES-Create-SQL-Login](../includes/linux/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [SLES-Create-SQL-Login](includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Create availability group resource
 
@@ -203,7 +205,7 @@ To create the availability group resource, use `pcs resource create` command and
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s promotable notify=true
 ```
 
-[!INCLUDE [required-synchronized-secondaries-default](../includes/linux/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
 ## Create virtual IP resource
 

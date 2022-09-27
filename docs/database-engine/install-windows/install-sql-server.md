@@ -1,19 +1,16 @@
 ---
 title: "SQL Server installation guide"
 description: An index of content that helps you install SQL Server and associated components using options such as the installation wizard, command prompt, or sysprep.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/05/2021"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AdventureWorks sample database"
   - "installing SQL Server, preparing to install"
   - "installation [SQL Server]"
-ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # SQL Server installation guide

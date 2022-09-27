@@ -1,20 +1,17 @@
 ---
 title: "MSOLEDBSQL major version differences"
 description: A description of the differences between the OLE DB Driver 19 for SQL Server and the OLE DB Driver for SQL Server
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "02/16/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSOLEDBSQL, additional resources"
   - "MSOLEDBSQL19, additional resources"
   - "OLE DB Driver for SQL Server, additional resources"
   - "OLE DB Driver 19 for SQL Server, additional resources"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Major version differences
 
@@ -37,4 +34,5 @@ The new Microsoft OLE DB Driver 19 for SQL Server supports side by side installa
 [Universal Data Link (UDL) Configuration](help-topics/data-link-pages.md)  
 [SQL Server Login Dialog Box (OLE DB)](help-topics/sql-server-login-dialog.md)  
 [Initialization and authorization properties (OLE DB driver)](ole-db-data-source-objects/initialization-and-authorization-properties.md)  
+[Registry settings](features/registry-settings.md)  
   

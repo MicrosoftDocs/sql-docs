@@ -1,16 +1,16 @@
 ---
 title: Configure an auto-failover group
-description: Learn how to configure an auto-failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: devx-track-azurecli, sql-db-mi-split
-ms.topic: how-to
-ms.devlang: 
+description: Learn how to configure an auto-failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell.
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
 ms.date: 07/09/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: how-to
+ms.custom:
+  - devx-track-azurecli
+  - "azure-sql-split"
 ---
 # Configure an auto-failover group for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

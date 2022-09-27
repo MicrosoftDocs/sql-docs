@@ -1,21 +1,15 @@
 ---
+title: "getXAConnection Method (java.lang.String, java.lang.String)"
 description: "getXAConnection Method (java.lang.String, java.lang.String)"
-title: "getXAConnection Method (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerXADataSource.getXAConnection (java.lang.String, java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerXADataSource.getXAConnection (java.lang.String, java.lang.String)"
+apitype: "Assembly"
 ---
 # getXAConnection Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

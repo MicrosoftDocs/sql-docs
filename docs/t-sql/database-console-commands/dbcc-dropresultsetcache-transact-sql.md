@@ -1,16 +1,15 @@
 ---
-description: "DBCC DROPRESULTSETCACHE  (Transact-SQL)"
 title: DBCC DROPRESULTSETCACHE (Transact-SQL)
-ms.custom: ""
+description: "DBCC DROPRESULTSETCACHE  (Transact-SQL)"
+author: mstehrani
+ms.author: emtehran
+ms.reviewer: wiassaf
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: wiassaf
 ms.topic: "language-reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: mstehrani
-ms.author: emtehran
 monikerRange: "= azure-sqldw-latest"
 ---
 

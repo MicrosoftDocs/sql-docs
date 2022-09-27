@@ -1,16 +1,12 @@
 ---
 title: Compliance and legal
 description: Here you can find compliance and legal information for version 4.x of the JDBC SQL driver.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # JDBC specification compliance
 

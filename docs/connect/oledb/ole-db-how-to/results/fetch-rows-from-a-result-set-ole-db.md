@@ -1,17 +1,14 @@
 ---
-title: "Fetch rows from a result set (OLE DB driver) | Microsoft Docs"
+title: "Fetch rows from a result set (OLE DB driver)"
 description: Learn how to fetch rows from a result set by using OLE DB Driver for SQL Server. This sample uses the AdventureWorks sample database.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "rows [OLE DB]"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "rows [OLE DB]"
 ---
 # Fetch Rows from a Result Set (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

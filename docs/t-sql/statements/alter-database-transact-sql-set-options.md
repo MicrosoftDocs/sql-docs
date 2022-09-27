@@ -1,8 +1,8 @@
 ---
 title: "ALTER DATABASE SET Options (Transact-SQL)"
 description: Learn how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.prod: sql
@@ -777,7 +777,7 @@ Controls whether the Query Store is enabled in this database, and also controls 
 ON     
 Enables the Query Store. 
 
-Many new performance features of SQL Server 2022 such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) feedback, and Memory Grant feedback (MGF) persistence required Query Store to be enabled. For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings. If there is concern about the overhead Query Store may introduce, administrators can leverage [custom capture policies](#query_capture_policy_option_list--) with `QUERY_CAPTURE_MODE = CUSTOM`. For examples of how to enable the Query Store with custom capture policy options, see the [Examples](#examples) section later in this article.  
+Many new performance features of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] such as Query Store hints, CE Feedback, Degree of Parallelism (DOP) feedback, and Memory Grant feedback (MGF) persistence required Query Store to be enabled. For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], these databases will retain the previous Query Store settings. If there is concern about the overhead Query Store may introduce, administrators can leverage [custom capture policies](#query_capture_policy_option_list--) with `QUERY_CAPTURE_MODE = CUSTOM`. For examples of how to enable the Query Store with custom capture policy options, see the [Examples](#examples) section later in this article.  
 
 OFF [ ( FORCED ) ]      
 Disables the Query Store. <!--OFF is the default value for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].--> FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6, and later builds.
@@ -972,7 +972,7 @@ The current setting of this option can be determined by examining the `page_veri
 Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 #### REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ON     
@@ -3374,7 +3374,7 @@ WHERE request_id = <'Your_Query_Request_ID'>
 ```
 
 > [!NOTE]
-> Result set caching should not be used in conjunction with [DECRYPTBYKEY](/sql/t-sql/functions/decryptbykey-transact-sql). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level](/sql/t-sql/statements/set-result-set-caching-transact-sql) or [database-level](/sql/t-sql/statements/alter-database-transact-sql-set-options)) at the time of execution.
+> Result set caching should not be used in conjunction with [DECRYPTBYKEY](../functions/decryptbykey-transact-sql.md). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level](./set-result-set-caching-transact-sql.md) or [database-level](alter-database-transact-sql-set-options.md)) at the time of execution.
 
 > [!IMPORTANT]
 > The operations to create result set cache and retrieve data from the cache happen on the control node of a data warehouse instance. When result set caching is turned ON, running queries that return large result set (for example, >1 million rows) can cause high CPU usage on the control node and slow down the overall query response on the instance. Those queries are commonly used during data exploration or ETL operations. To avoid stressing the control node and cause performance issue, users should turn OFF result set caching on the database before running those types of queries.  

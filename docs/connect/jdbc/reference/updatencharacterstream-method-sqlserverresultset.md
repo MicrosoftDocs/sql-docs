@@ -1,16 +1,12 @@
 ---
+title: "updateNCharacterStream Method (SQLServerResultSet)"
 description: "updateNCharacterStream Method (SQLServerResultSet)"
-title: "updateNCharacterStream Method (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: d6a21d01-6d8e-4449-9fdf-ddb09bd4fdb8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateNCharacterStream Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

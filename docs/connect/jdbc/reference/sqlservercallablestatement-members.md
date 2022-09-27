@@ -1,17 +1,13 @@
 ---
+title: "SQLServerCallableStatement Members"
 description: "SQLServerCallableStatement Members"
-title: "SQLServerCallableStatement Members | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
 apitype: "Assembly"
-ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQLServerCallableStatement Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

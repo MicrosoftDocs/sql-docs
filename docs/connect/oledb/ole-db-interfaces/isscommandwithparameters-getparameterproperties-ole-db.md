@@ -1,20 +1,16 @@
 ---
-title: "ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs"
-description: ISSCommandWithParameters::GetParameterProperties returns an array of property set structures in OLE DB Driver for SQL Server, one for each UDT or XML parameter.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "GetParameterProperties method"
+title: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
+description: "ISSCommandWithParameters::GetParameterProperties returns an array of property set structures in OLE DB Driver for SQL Server, one for each UDT or XML parameter."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "GetParameterProperties method"
+apiname: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
+apitype: "COM"
 ---
 # ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

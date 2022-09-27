@@ -1,14 +1,13 @@
 ---
 title: "OLE DB Driver for SQL Server Programming"
 description: "Learn about programming applications using the OLE DB Driver for SQL Server, which implements the OLE DB API to enable applications to connect to the database."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, about OLE DB Driver for SQL Server"
   - "OLE DB, OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], OLE DB"
@@ -16,8 +15,6 @@ helpviewer_keywords:
   - "OLE DB"
   - "OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server, OLE DB"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # OLE DB Driver for SQL Server Programming
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

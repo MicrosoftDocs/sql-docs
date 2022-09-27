@@ -1,18 +1,14 @@
 ---
 title: "Configure error and warning handling using the SQLSRV driver"
 description: "This topic describes how to configure the SQLSRV driver to handle errors and warnings when using the Microsoft SQLSRV Driver for PHP for SQL Server"
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "errors and warnings"
-ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "errors and warnings"
 ---
 # How to: Configure Error and Warning Handling Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

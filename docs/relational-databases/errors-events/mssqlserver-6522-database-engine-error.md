@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SQLCLR_UDF_EXEC_FAILED|
 |Message Text|A .NET Framework error occurred during execution of user defined routine or aggregate "%.*ls": %ls.|
-||
 
 ## Explanation
 

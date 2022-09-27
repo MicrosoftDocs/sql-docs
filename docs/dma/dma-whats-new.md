@@ -1,21 +1,17 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server)"
 description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
-ms.custom:
-  - intro-whats-new
-ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: randolphwest
-ms.technology: dma
-ms.topic: conceptual
-keywords:
-  - ""
-helpviewer_keywords:
-  - "Data Migration Assistant, new features"
-ms.assetid: ""
 author: aciortea
 ms.author: aciortea
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.prod: sql
+ms.technology: dma
+ms.topic: conceptual
+ms.custom: intro-whats-new
+helpviewer_keywords:
+  - "Data Migration Assistant, new features"
+keywords: ""
 ---
 
 # What's new in Data Migration Assistant
@@ -234,7 +230,7 @@ The v2.1 release of Data Migration Assistant includes the following additions:
 The v2.0 release of Data Migration Assistant includes improved Stretch database feature recommendations to provide proper prioritized tables that maximize the storage savings.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../includes/ssnotedepfutureavoid-md.md)]
 
 ## Data Migration Assistant v1.0
 

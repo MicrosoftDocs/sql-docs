@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 

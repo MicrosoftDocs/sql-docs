@@ -1,15 +1,12 @@
 ---
 title: Download
 description: Download the Microsoft JDBC Driver for SQL Server to develop Java applications that connect to SQL Server and Azure SQL Database.
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Download Microsoft JDBC Driver for SQL Server
 
@@ -19,8 +16,8 @@ The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides d
 
 Version 11.2 is the latest general availability (GA) version. It supports Java 8, 11, 17, and 18. If you need to use an older Java runtime, see the [Java and JDBC specification support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md#java-and-jdbc-specification-support) to see if there's a supported driver version you can use. We're continually improving Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2202911)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 11.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2203102)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2202911)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 11.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2203102)**
 
 ### Version information
 

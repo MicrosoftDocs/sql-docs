@@ -1,21 +1,15 @@
 ---
+title: "moveToInsertRow Method (SQLServerResultSet)"
 description: "moveToInsertRow Method (SQLServerResultSet)"
-title: "moveToInsertRow Method (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.moveToInsertRow"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.moveToInsertRow"
+apitype: "Assembly"
 ---
 # moveToInsertRow Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

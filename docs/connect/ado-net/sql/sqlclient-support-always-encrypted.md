@@ -1,14 +1,12 @@
 ---
 title: Using Always Encrypted with SqlClient
 description: Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure.
-ms.date: 02/08/2022
-ms.assetid: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 02/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server
@@ -336,7 +334,6 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 | 1.2.0 | 1.0.19269.1+ <br/> 2.1.0+ | .NET Framework 4.6+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
 | 1.1.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
 | 1.0.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
-|||
 
 Starting with **v3.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` supports column encryption key caching capabilities when registering the provider using [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) or [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) APIs.
 

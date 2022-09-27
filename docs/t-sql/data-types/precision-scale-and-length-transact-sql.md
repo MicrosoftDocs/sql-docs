@@ -1,16 +1,13 @@
 ---
+title: "Precision, scale, and length (Transact-SQL)"
 description: "Precision, scale, and length (Transact-SQL)"
-title: "Precision, scale, and length (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/22/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data types [SQL Server], length"
   - "data types [SQL Server], scale"
   - "precision [SQL Server], data types"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "scale [SQL Server]"
   - "scale [SQL Server], data types"
   - "data types [SQL Server], precision"
-ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # Precision, scale, and Length (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

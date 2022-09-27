@@ -1,19 +1,14 @@
 ---
 title: Configure DNN listener for availability group
-description: Learn how to configure a distributed network name (DNN) listener to replace your virtual network name (VNN) listener and route traffic to your Always On availability group on SQL Server on Azure VM. 
-services: virtual-machines-windows
-documentationcenter: na
+description: Learn how to configure a distributed network name (DNN) listener to replace your virtual network name (VNN) listener and route traffic to your Always On availability group on SQL Server on Azure VM.
 author: adbadram
-tags: azure-resource-manager
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.reviewer: mathoma
-
+tags: azure-resource-manager
 ---
 # Configure a DNN listener for an availability group
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -178,6 +173,11 @@ Test the connectivity to your DNN listener with these steps:
 ## Port considerations
 
 DNN listeners are designed to listen on all IP addresses, but on a specific, unique port. The DNS entry for the listener name should resolve to the addresses of all replicas in the availability group. This is done automatically with the PowerShell script provided in the [Create Script](#create-script) section. Since DNN listeners accept connections on all IP addresses, it is critical that the listener port be unique, and not in use by any other replica in the availability group. Since SQL Server listens on port 1433 by default, either directly or via the SQL Browser service, using port 1433 for the DNN listener is strongly discouraged. 
+
+If the listener port chosen for the VNN listener is between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip), add an exclusion for this. Doing so will prevent other systems from being dynamically assigned the same port. 
+
+You can add a port exclusion with the following command:
+`netsh int ipv4 add excludedportrange tcp startport=<Listener Port> numberofports=1 store=persistent`
 
 ## Next steps
 

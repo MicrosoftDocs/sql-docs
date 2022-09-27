@@ -1,8 +1,8 @@
 ---
 title: ALTER TABLE (Transact-SQL)
 description: ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.prod: sql
@@ -935,7 +935,7 @@ Specifies the Windows-compatible FileTable directory name. This name should be u
 Enables or disables Stretch Database for a table. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 **Enabling Stretch Database for a table**
 
@@ -1023,7 +1023,7 @@ Requires **ALTER ANY CONNECTION** permission.
 Conditionally drops the column or constraint only if it already exists.
 
 #### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
-**Applies to**: SQL Server 2022 and later.
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
 Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
 
@@ -1150,7 +1150,6 @@ Adding or altering a column that updates the rows of the table requires **UPDATE
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 |[Online operations](#online)|ONLINE|
 |[System versioning](#system_versioning)|SYSTEM_VERSIONING|
-| &nbsp; | &nbsp; |
 
 ### <a name="add"></a>Adding columns and constraints
 

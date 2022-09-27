@@ -1,22 +1,18 @@
 ---
-title: "transform noise words Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "transform noise words" option. See how it can be useful in some SQL Server full-text queries that include noise words (stopwords).'
-ms.custom: ""
+title: "transform noise words Server Configuration Option"
+description: "Learn about the transform noise words option. See how it can be useful in some SQL Server full-text queries that include noise words (stopwords)."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text queries [SQL Server], performance"
   - "transform noise words option"
   - "noise words [full-text search]"
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
-ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # transform noise words Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

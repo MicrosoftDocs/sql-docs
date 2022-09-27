@@ -1,15 +1,12 @@
 ---
 title: Azure Key Vault sample 7.0, 8.0
 description: This article provides sample code for using JDBC driver version 7.0 or 8.0 and Azure Key Vault with the Always Encrypted feature.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Azure Key Vault sample versions 7.0, 8.0
 
@@ -44,7 +41,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
 public class AKV {
 
-    static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
+    static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;encrypt=true;database=test;columnEncryptionSetting=enabled";
     static String applicationClientID = "Your Client ID";
     static String applicationKey = "Your Application Key";
     static String keyID = "Your Key ID";

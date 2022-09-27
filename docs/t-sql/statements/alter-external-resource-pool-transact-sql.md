@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "ALTER EXTERNAL RESOURCE POOL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)

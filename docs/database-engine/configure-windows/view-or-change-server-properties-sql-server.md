@@ -1,24 +1,21 @@
 ---
 title: View or Change Server Properties (SQL Server)
 description: Learn how to use SQL Server Management Studio, Transact-SQL, or SQL Server Configuration Manager to view or change the properties of an instance of SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.technology: configuration
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: contperf-fy20q4
+f1_keywords:
   - "sql13.swb.connectionproperties.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing server properties"
   - "server properties [SQL Server]"
   - "displaying server properties"
   - "servers [SQL Server], viewing"
   - "Connection Properties dialog box"
-ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: contperf-fy20q4
-ms.date: 03/14/2017
 ---
 
 # View or Change Server Properties (SQL Server)
@@ -93,9 +90,7 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 3.  Copy and paste the following example into the query window and select **Execute**. This example queries the [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view to return information about each server configuration option on the current server. The example returns the name (`name`) and description (`description`) of the option, its value (`value`), and whether the option is an advanced option (`is_advanced`).  
   
-    ```wmimof  
-    USE AdventureWorks2012;   
-    GO  
+    ```sql   
     SELECT name, description, value, is_advanced  
     FROM sys.configurations;   
     GO  
@@ -111,8 +106,6 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
 3.  Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to change a server property. The example changes the value of the `fill factor` option to `100`. The server must be restarted before the change can take effect.  
   
 ```sql  
-Use AdventureWorks2012;  
-GO  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  

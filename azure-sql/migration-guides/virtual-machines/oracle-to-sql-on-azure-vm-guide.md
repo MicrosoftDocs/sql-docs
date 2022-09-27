@@ -2,15 +2,13 @@
 title: "Oracle to SQL Server on Azure Virtual Machines: Migration guide"
 titleSuffix: SQL Server on Azure VMs
 description: This guide teaches you to migrate your Oracle schemas to SQL Server on Azure Virtual Machines by using SQL Server Migration Assistant for Oracle.
-ms.service: virtual-machines-sql
-ms.subservice: migration-guide
-ms.custom:
-ms.devlang:
-ms.topic: how-to
 author: mokabiru
 ms.author: mokabiru
 ms.reviewer: mathoma, randolphwest
 ms.date: 05/24/2022
+ms.service: virtual-machines-sql
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 # Migration guide: Oracle to SQL Server on Azure Virtual Machines
 
@@ -264,7 +262,7 @@ Microsoft SQL Server Migration Assistant for Oracle Tester (SSMA Tester) allows 
 
    For more information on test case settings, [Finishing test case preparation](/sql/ssma/oracle/finishing-test-case-preparation-oracletosql)
 
-1. Select on finish to create the test case.
+1. Select **Finish** to create the test case.
 
    :::image type="content" source="./media/oracle-to-sql-on-azure-vm-guide/tester-test-repo.png" alt-text="Screenshot that shows step to test repo.":::
 

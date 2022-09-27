@@ -1,13 +1,13 @@
 ---
-description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
 title: Latest updates for SQL Server
+description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
+author: SrinivasSQLMS
+ms.author: skandi
+ms.reviewer: hristins
 ms.date: 06/14/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: SrinivasSQLMS
-ms.author: skandi
-ms.reviewer: hristins
 ---
 
 # Latest updates for Microsoft SQL Server
@@ -24,8 +24,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 5014356](https://support.microsoft.com/help/5014356)|CU 16 + GDR </br> [(KB 5014353)](https://support.microsoft.com/help/5014353)|6/14/2022|[SQL Server 2019 Installation](./install-sql-server.md)|
-|SQL Server 2017|N/A|[KB 5014354](https://support.microsoft.com/help/5014354)|CU 30 </br> [(KB 5013756)](https://support.microsoft.com/help/5013756)|7/13/2022|[SQL Server 2017 Installation](./install-sql-server.md)|
+|SQL Server 2019|N/A|[KB 5014356](https://support.microsoft.com/help/5014356)|CU 17 </br> [(KB 5016394)](https://support.microsoft.com/help/5016394)|8/11/2022|[SQL Server 2019 Installation](./install-sql-server.md)|
+|SQL Server 2017|N/A|[KB 5014354](https://support.microsoft.com/help/5014354)|CU 31 </br> [(KB 5016884)](https://support.microsoft.com/help/5016884)|9/20/2022|[SQL Server 2017 Installation](./install-sql-server.md)|
 |SQL Server 2016|Azure Connect pack [(KB 5014242)](https://support.microsoft.com/help/5014242)|[KB 5015371](https://support.microsoft.com/help/5015371)|N/A|N/A|[Link - Azure SQL Managed Instance](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview)|
 |SQL Server 2016|SP3 [(KB 5003279)](https://support.microsoft.com/help/5003279)|[KB 5014355](https://support.microsoft.com/help/5014355)|N/A|N/A|[SQL Server 2016 Installation](./install-sql-server.md)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 5014365](https://support.microsoft.com/help/5014365)|CU 17 + GDR </br> [(KB 5014351)](https://support.microsoft.com/kb/5014351)|6/14/2022|[SQL Server 2016 Installation](./install-sql-server.md)|

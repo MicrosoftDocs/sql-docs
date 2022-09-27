@@ -1,16 +1,12 @@
 ---
+title: "setNString Method (SQLServerCallableStatement)"
 description: "setNString Method (SQLServerCallableStatement)"
-title: "setNString Method (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 6494300b-7fc0-4076-8311-22d35a96cdc6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setNString Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

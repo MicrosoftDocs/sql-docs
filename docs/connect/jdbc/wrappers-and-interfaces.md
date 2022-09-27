@@ -1,16 +1,12 @@
 ---
-description: Learn how to create proxy interfaces and wrappers that let you access extensions to the JDBC API.
 title: Wrappers and interfaces
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
+description: Learn how to create proxy interfaces and wrappers that let you access extensions to the JDBC API.
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Wrappers and interfaces

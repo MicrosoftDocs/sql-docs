@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "permissions [SQL Server], endpoints"
 dev_langs:
   - "TSQL"
-ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 ---
 # GRANT Endpoint Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -38,7 +38,7 @@ A removed item still exists on the file system. Therefore, you can add a removed
   
 3.  On the confirmation dialog, click **OK**, to remove the project from the solution.  
   
-You can delete a project permanently, but you first need to remove any references to the project from SQL Server Management Studio solutions, and then use [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Explorer to permanently delete the associated files from storage.  
+You can delete a project permanently, but you first need to remove any references to the project from SQL Server Management Studio solutions, and then use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer to permanently delete the associated files from storage.  
   
 #### To delete a project  
   

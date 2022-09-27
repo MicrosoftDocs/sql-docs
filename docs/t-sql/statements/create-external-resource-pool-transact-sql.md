@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "CREATE EXTERNAL RESOURCE POOL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)

@@ -5,7 +5,7 @@ description: Learn how to create availability group clusters for SQL Server on S
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 07/09/2021
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -79,7 +79,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ## Create a SQL Server login for Pacemaker
 
-[!INCLUDE [SLES-Create-SQL-Login](../includes/linux/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [SLES-Create-SQL-Login](includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Configure an Always On Availability Group
 
@@ -142,7 +142,7 @@ If you have a cluster running with one or more nodes, add more cluster nodes wit
 
 If you have configured the existing cluster nodes with the `YaST` cluster module, make sure the following prerequisites are fulfilled before you run `ha-cluster-join`:
 - The root user on the existing nodes has SSH keys in place for passwordless login. 
-- `Csync2` is configured on the existing nodes. For more information,see Configuring Csync2 with YaST. 
+- `Csync2` is configured on the existing nodes. For more information, see Configuring Csync2 with YaST. 
 
 1. Log in as root to the physical or virtual machine supposed to join the cluster. 
 2. Start the bootstrap script by executing: 
@@ -178,7 +178,7 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
    >[!NOTE]
    >`admin_addr` is the virtual IP cluster resource which is configured during initial one-node cluster setup.
 
-After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information,see Section 4.1.2, Option no-quorum-policy. 
+After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information, see Section 4.1.2, Option no-quorum-policy. 
 
 ## Set cluster property cluster-recheck-interval
 
@@ -208,6 +208,8 @@ crm configure property cluster-recheck-interval=2min
 >```
 
 For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
+
+[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
 
 ## Configure fencing (STONITH)
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
@@ -277,7 +279,7 @@ Run the command on one of the nodes in the cluster:
    commit
       ```
 
-[!INCLUDE [required-synchronized-secondaries-default](../includes/linux/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
 ### Create virtual IP resource
 
@@ -332,7 +334,7 @@ For more information, see:
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/sphinx/Pacemaker_Administration/pcs-crmsh.rst) 
 
-<!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
+<!--[!INCLUDE [ss-linux-cluster-pacemaker-concepts](includes/ss-linux-cluster-pacemaker-concepts.md)]-->
 
 ## Next steps
 

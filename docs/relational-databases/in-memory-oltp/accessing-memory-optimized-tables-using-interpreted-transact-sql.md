@@ -12,7 +12,7 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing Memory-Optimized Tables Using Interpreted Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  With only a few exceptions, you can access memory-optimized tables using any [!INCLUDE[tsql](../../includes/tsql-md.md)] query or DML operation (select, insert, update, or delete), ad hoc batches, and SQL modules such as stored procedures, table-value functions, triggers, and views.  
   

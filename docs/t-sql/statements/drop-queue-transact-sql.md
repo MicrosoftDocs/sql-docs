@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "removing queues"
 dev_langs:
   - "TSQL"
-ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 ---
 # DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

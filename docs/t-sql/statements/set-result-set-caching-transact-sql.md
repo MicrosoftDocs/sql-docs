@@ -43,7 +43,7 @@ Enables result set caching for the current client session.  Result set caching c
 Disable result set caching for the current client session.
 
 > [!NOTE]
-> Result set caching should not be used in conjunction with [DECRYPTBYKEY](/sql/t-sql/functions/decryptbykey-transact-sql). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level](/sql/t-sql/statements/set-result-set-caching-transact-sql) or [database-level](/sql/t-sql/statements/alter-database-transact-sql-set-options)) at the time of execution.
+> Result set caching should not be used in conjunction with [DECRYPTBYKEY](../functions/decryptbykey-transact-sql.md). If this cryptographic function must be used, ensure you have result set caching disabled (either at [session-level]() or [database-level](./alter-database-transact-sql-set-options.md)) at the time of execution.
 
 ## Examples
 

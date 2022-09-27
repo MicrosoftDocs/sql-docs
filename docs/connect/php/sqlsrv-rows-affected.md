@@ -1,22 +1,17 @@
 ---
+title: "sqlsrv_rows_affected"
 description: "sqlsrv_rows_affected"
-title: "sqlsrv_rows_affected | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "sqlsrv_rows_affected"
-apitype: "NA"
-helpviewer_keywords: 
-  - "sqlsrv_rows_affected"
-  - "API Reference, sqlsrv_rows_affected"
-ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "sqlsrv_rows_affected"
+  - "API Reference, sqlsrv_rows_affected"
+apiname: "sqlsrv_rows_affected"
+apitype: "NA"
 ---
 # sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

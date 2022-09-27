@@ -1,8 +1,8 @@
 ---
 title: "ALTER PARTITION SCHEME (Transact-SQL)"
 description: ALTER PARTITION SCHEME (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "4/5/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "NEXT USED filegroups"
 dev_langs:
   - "TSQL"
-ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 

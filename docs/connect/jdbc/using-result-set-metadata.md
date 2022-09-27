@@ -1,16 +1,12 @@
 ---
+title: "Using result set metadata"
 description: "Using result set metadata"
-title: "Using result set metadata | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 5e37529a-30db-48c8-b90a-ae9657d0f6b0
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using result set metadata
@@ -21,7 +17,7 @@ To query a result set for information about the columns that it contains, the [!
 
 To create a SQLServerResultSetMetaData object, you can use the [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class.
 
-In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, the getMetaData method of the SQLServerResultSet class is used to return a SQLServerResultSetMetaData object, and then various methods of the SQLServerResultSetMetaData object are used to display information about the name and data type of the columns contained within the result set.
+In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database is passed in to the function, the getMetaData method of the SQLServerResultSet class is used to return a SQLServerResultSetMetaData object, and then various methods of the SQLServerResultSetMetaData object are used to display information about the name and data type of the columns contained within the result set.
 
 [!code[JDBC#UsingResultSetMetaData1](../../connect/jdbc/codesnippet/Java/using-result-set-metadata_1.java)]
 

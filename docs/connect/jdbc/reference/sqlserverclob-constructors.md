@@ -1,17 +1,13 @@
 ---
+title: "SQLServerClob Constructors"
 description: "SQLServerClob Constructors"
-title: "SQLServerClob Constructors | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
 apitype: "Assembly"
-ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQLServerClob Constructors
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

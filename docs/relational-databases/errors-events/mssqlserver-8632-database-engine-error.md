@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|QUERY_EXPRESSION_TOO_COMPLEX|
 |Message Text|Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.|
-||
 
 ## Explanation
 

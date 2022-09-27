@@ -45,14 +45,14 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-[!INCLUDE [linux-supported-platforms-2017](../includes/linux/linux-supported-platforms-2017.md)]
+[!INCLUDE [linux-supported-platforms-2017](includes/linux-supported-platforms-2017.md)]
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15 "
 
-[!INCLUDE [linux-supported-platforms-2019](../includes/linux/linux-supported-platforms-2019.md)]
+[!INCLUDE [linux-supported-platforms-2019](includes/linux-supported-platforms-2019.md)]
 
 ::: moniker-end
 
@@ -117,7 +117,7 @@ To upgrade SQL Server, first [change your configured repository](sql-server-linu
 
 To rollback or downgrade SQL Server to a previous release, use the following steps:
 
-1. Identify the version number for the SQL Server package you want to downgrade to. For a list of package numbers, see the [Release notes](../linux/sql-server-linux-release-notes.md).
+1. Identify the version number for the SQL Server package you want to downgrade to. For a list of package numbers, see the [Release notes](../linux/sql-server-linux-release-notes-2017.md).
 
 1. Downgrade to a previous version of SQL Server. In the following commands, replace `<version_number>` with the SQL Server version number you identified in step one.
 
@@ -186,7 +186,7 @@ If your Linux machine does not have access to the online repositories used in th
 > [!TIP]
 > If you successfully installed with the steps in the quick starts, you do not need to download or manually install the SQL Server package(s). This section is only for the offline scenario.
 
-1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](../linux/sql-server-linux-release-notes.md).
+1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](../linux/sql-server-linux-release-notes-2017.md).
 
 1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 

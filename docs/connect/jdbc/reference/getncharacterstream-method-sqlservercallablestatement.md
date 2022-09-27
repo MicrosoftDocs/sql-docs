@@ -1,16 +1,12 @@
 ---
+title: "getNCharacterStream Method (SQLServerCallableStatement)"
 description: "getNCharacterStream Method (SQLServerCallableStatement)"
-title: "getNCharacterStream Method (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: e4f1e99c-4c7a-4c83-b202-4608538ab50b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getNCharacterStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

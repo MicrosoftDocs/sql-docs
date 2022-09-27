@@ -1,20 +1,17 @@
 ---
 title: Preparing commands (OLE DB driver)
 description: For a single command that is run multiple times, the OLE DB Driver for SQL Server supports command preparation to improve performance.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, commands"
   - "prepared statements [OLE DB Driver for SQL Server]"
   - "commands [OLE DB]"
   - "command preparation [OLE DB Driver for SQL Server]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Preparing Commands
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

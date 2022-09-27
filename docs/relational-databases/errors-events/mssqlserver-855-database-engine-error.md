@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|BAD_MEMORY_OUTSIDE_BPOOL|
 |Message Text|Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the Windows event log for more details|
-||
 
 ## Explanation
 

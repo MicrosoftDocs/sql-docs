@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "transactions [SQL Server], isolation levels"
 dev_langs:
   - "TSQL"
-ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)

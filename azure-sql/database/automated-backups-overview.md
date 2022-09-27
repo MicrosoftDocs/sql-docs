@@ -2,21 +2,19 @@
 title: Automatic, geo-redundant backups
 titleSuffix: Azure SQL Database
 description: Learn how Azure SQL Database automatically backs up all databases and provides a point-in-time restore capability.
-services:
-  - "sql-database"
+author: SudhirRaparla
+ms.author: nvraparl
+ms.reviewer: mathoma, wiassaf, danil
+ms.date: 09/14/2022
 ms.service: sql-database
 ms.subservice: backup-restore
+ms.topic: conceptual
 ms.custom:
   - "references_regions"
   - "devx-track-azurepowershell"
   - "devx-track-azurecli"
-  -  "azure-sql-split"
-ms.topic: conceptual
-author: SudhirRaparla
-ms.author: nvraparl
-ms.reviewer: mathoma, wiassaf, danil
-ms.date: 07/20/2022
-monikerRange: "= azuresql || = azuresql-db "
+  - "azure-sql-split"
+monikerRange: "= azuresql || = azuresql-db"
 ---
 # Automated backups in Azure SQL Database
 
@@ -69,11 +67,25 @@ You can configure backup storage redundancy when you create your database, and y
 You can choose one of the following storage redundancies for backups:
 
 - **Locally redundant storage (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive storage option, but we don't recommend it for applications that require resiliency to regional outages or a guarantee of high data durability.
+
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally-redundant storage (LRS) option.":::
+
 - **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
-- **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region.
+
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-zrs.svg" alt-text="Diagram showing the zone-redundant storage (ZRS) option.":::
+
+- **Geo-redundant storage (GRS)**: Copies your backups synchronously three times within a single physical location in the primary region by using LRS. Then it copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. 
+
+  The result is:
+  
+  - Three synchronous copies in the primary region.
+  - Three synchronous copies in the paired region that were copied over from the primary region to the secondary region asynchronously. 
+
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-grs.svg" alt-text="Diagram showing the geo-redundant storage (GRS) option.":::
 
 > [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
+> - The storage redundancy diagrams all show regions with multiple availability zones (multi-az). However, there are some regions which provide only a single availability zone and do not support ZRS. 
 > - Backup storage redundancy for Hyperscale databases can be set only during creation. You can't modify this setting after the resource is provisioned. To update backup storage redundancy settings for an existing Hyperscale database with minimum downtime, use [active geo-replication](active-geo-replication-overview.md). Alternatively, you can use [database copy](database-copy.md). Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
 ## Backup usage
@@ -199,7 +211,7 @@ If you delete a database, the system keeps backups in the same way that it would
 
 For SQL Database, you can configure full LTR backups for up to 10 years in Azure Blob Storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. 
 
-To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md). Databases in the Hyperscale service tier don't currently support long-term retention. 
+To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md). Databases in the Hyperscale service tier don't currently support long-term retention.
 
 Updating the backup storage redundancy for an existing database applies the change only to subsequent backups taken in the future and not for existing backups. All existing LTR backups for the database will continue to reside in the existing storage blob. New backups will be replicated based on the configured backup storage redundancy. 
 

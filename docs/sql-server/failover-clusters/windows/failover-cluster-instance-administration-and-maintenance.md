@@ -45,7 +45,7 @@ ms.author: mathoma
 > [!IMPORTANT]  
 >  Do not use the same account for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account and the WSFC service account. If the password changes for the WSFC service account, your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation will fail.  
   
- On [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], service SIDs are used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts. For more information, see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ On [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)], service SIDs are used for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts. For more information, see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## Administering a Failover Cluster Instance  
   

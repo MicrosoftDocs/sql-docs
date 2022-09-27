@@ -2,16 +2,14 @@
 title: Connect your application to SQL Managed Instance
 titleSuffix: Azure SQL Managed Instance
 description: This article discusses how to connect your application to Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: connect
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, vanto
 ms.date: 08/20/2021
+ms.service: sql-managed-instance
+ms.subservice: connect
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 
 # Connect your application to Azure SQL Managed Instance

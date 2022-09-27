@@ -1,16 +1,12 @@
 ---
+title: "SQLServerXADataSource Class"
 description: "SQLServerXADataSource Class"
-title: "SQLServerXADataSource Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerXADataSource Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +33,7 @@ public class SQLServerXADataSource
   
  A SQLServerXAConnection object is a pooled connection that can participate in a distributed transaction. More precisely, SQLServerXAConnection extends the SQLServerPooledConnection interface by adding the method [getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md). This method produces a [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) object that can be used by a transaction manager to coordinate the work done on this connection with the other participants in the distributed transaction. Because they extend the SQLServerPooledConnection interface, SQLServerXAConnection objects support all the methods of SQLServerPooledConnection objects. They are reusable physical connections to an underlying data source and produce logical connection handles that can be passed back to a JDBC application.  
   
- SQLServerXAConnection objects are produced by a SQLServerXADataSource object. SQLServerConnectionPoolDataSource objects and SQLServerXADataSource objects are similar because they are both implemented below a data source layer that is visible to the JDBC application. This architecture lets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support distributed transactions in a way that is transparent to the application. SQLServerXADataSource can be configured to integrate with [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Distributed Transaction Coordinator (DTC) to provide true, distributed transaction processing.  
+ SQLServerXAConnection objects are produced by a SQLServerXADataSource object. SQLServerConnectionPoolDataSource objects and SQLServerXADataSource objects are similar because they are both implemented below a data source layer that is visible to the JDBC application. This architecture lets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support distributed transactions in a way that is transparent to the application. SQLServerXADataSource can be configured to integrate with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC) to provide true, distributed transaction processing.  
   
 ## See Also  
  [SQLServerXADataSource Members](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   

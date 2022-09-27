@@ -1,23 +1,20 @@
 ---
 title: Design globally available services
 description: Learn about application design for highly available services using Azure SQL Database.
+author: rajeshsetlem
+ms.author: rsetlem
+ms.reviewer: wiassaf, mathoma
+ms.date: 07/28/2020
+ms.service: sql-database
+ms.subservice: development
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 keywords:
   - "cloud disaster recovery"
   - "disaster recovery solutions"
   - "app data backup"
   - "geo-replication"
   - "business continuity planning"
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: development
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
-author: emlisa
-ms.author: emlisa
-ms.reviewer: wiassaf, mathoma
-ms.date: 07/28/2020
 ---
 # Designing globally available services using Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -33,7 +33,6 @@ ms.author: maghan
 sp_changedistpublisher [ @publisher = ] 'publisher'  
     [ , [ @property = ] 'property' ]  
     [ , [ @value = ] 'value' ]  
-    [ , [ @storage_connection_string = ] 'storage_connection_string']
 ```  
   
 ## Arguments  
@@ -46,9 +45,6 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 `[ @value = ] 'value'`
  Is the value for the given property. *value* is **nvarchar(255)**, with a default of NULL.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`
- Is required for SQL Managed Instance, should match the access key for the Azure SQL Database storage volume. 
-
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
  
@@ -62,7 +58,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**login**||Login name.|  
 |**password**||Strong password for the supplied login.|  
 |**security_mode**|**1**|Use Windows Authentication when connecting to the Publisher. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*|  
-||**0**|Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. *This cannot be changed for a non-*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*|  
+||**0**|Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. *This can't be changed for a non-*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*|  
 |**working_directory**||Working directory used to store data and schema files for the publication.|  
 |NULL (default)||All available *property* options are printed.| 
 |**storage_connection_string**| Access key | The access key for the working directory when the database is Azure SQL Managed Instance. 
@@ -72,6 +68,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 ## Remarks  
  **sp_changedistpublisher** is used in all types of replication.  
+
+ If you're changing the **working_directory** property and the **storage_connection_string** property has to be updated, execute the stored procedure separately by updating the **working_directory** property followed by updating the **storage_connection_string** property or visa-versa.
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changedistpublisher**.  

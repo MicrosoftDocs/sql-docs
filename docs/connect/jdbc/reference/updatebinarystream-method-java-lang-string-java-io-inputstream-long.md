@@ -1,16 +1,12 @@
 ---
+title: "updateBinaryStream Method (java.io.InputStream, long)"
 description: "updateBinaryStream Method (java.lang.String, java.io.InputStream, long)"
-title: "updateBinaryStream Method (java.io.InputStream, long) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: d3c0fb5d-ca05-43f7-9f38-fba6cf3705c6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateBinaryStream Method (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

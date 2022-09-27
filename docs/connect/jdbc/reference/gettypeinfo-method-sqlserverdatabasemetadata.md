@@ -1,21 +1,15 @@
 ---
+title: "getTypeInfo Method (SQLServerDatabaseMetaData)"
 description: "getTypeInfo Method (SQLServerDatabaseMetaData)"
-title: "getTypeInfo Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getTypeInfo"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getTypeInfo"
+apitype: "Assembly"
 ---
 # getTypeInfo Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

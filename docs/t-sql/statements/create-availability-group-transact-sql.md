@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
 dev_langs:
   - "TSQL"
-ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 ---
 
 # CREATE AVAILABILITY GROUP (Transact-SQL)

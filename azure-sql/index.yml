@@ -134,6 +134,10 @@ landingContent:
   # Card
   - title: Migrate from SQL Server
     linkLists:
+      - linkListType: overview
+        links:
+          - text: Migrating SQL Server Workloads FAQ
+            url: migration-guides/modernization.md
       - linkListType: deploy
         links:
           - text: Azure SQL Database
@@ -153,7 +157,7 @@ landingContent:
           - text: SQL Server Management Studio (SSMS)
             url: database/connect-query-ssms.md
           - text: Azure Data Studio
-            url: /sql/azure-data-studio/quickstart-sql-database?toc=%2Fazure%2Fazure-sql%2Ftoc.json
+            url: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
           - text: Azure portal
             url: database/connect-query-portal.md 
           - text: Visual Studio (.NET)
@@ -208,7 +212,7 @@ landingContent:
         - text: Azure SQL for beginners
           url: /shows/azure-sql-for-beginners/
         - text: Azure SQL fundamentals 
-          url: /learn/paths/azure-sql-fundamentals/
+          url: /training/paths/azure-sql-fundamentals/
         - text: Azure SQL hands-on labs
           url: https://aka.ms/asqlworkshop
         - text: Azure SQL bootcamp 

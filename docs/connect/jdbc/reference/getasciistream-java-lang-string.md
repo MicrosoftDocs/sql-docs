@@ -1,21 +1,15 @@
 ---
+title: "getAsciiStream (java.lang.String)"
 description: "getAsciiStream (java.lang.String)"
-title: "getAsciiStream (java.lang.String) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.getAsciiStream(String paramName)"
-apilocation: 
-  - "SQLServerCallableStatement.getAsciiStream(String paramName)"
-apitype: "Assembly"
-ms.assetid: 630b659f-eb36-4277-b04e-9a2e6134f795
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "SQLServerCallableStatement.getAsciiStream(String paramName)"
+apiname: "SQLServerCallableStatement.getAsciiStream(String paramName)"
+apitype: "Assembly"
 ---
 # getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "UTF16"
   - "UCS2"
   - "server-level collations [SQL Server]"
-author: rwestMSFT
+author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: FY22Q2Fresh

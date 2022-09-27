@@ -1,13 +1,13 @@
 ---
 title: PDW firewall configuration
-description: The firewall page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.  
-author: charlesfeddersen 
+description: The firewall page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.
+author: charlesfeddersen
+ms.author: charlesf
+ms.reviewer: martinle
+ms.date: 04/17/2018
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
-ms.author: charlesf
-ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
 # Parallel Data Warehouse firewall configuration in Analytics Platform System
@@ -40,7 +40,6 @@ The following ports are opened for client connections coming from outside of PDW
 |SQL Server PDW Load Control Flow - Windows Credentials|8002|CTL|  
 |_Kerberos|88|AD01 and AD02,|  
 |_ldap|389|AD01 and AD02|  
-| &nbsp; | &nbsp; | &nbsp; |
   
 ## Internal Ports  
 The following ports are used by PDW for internal communication, but are not opened for connections coming from outside of the PDW appliance.  
@@ -54,7 +53,6 @@ The following ports are used by PDW for internal communication, but are not open
 |Failover status (Engine)|15001|CMP|  
 |Dynamic (ephemeral) port range|20000-65535|CTL, CMP|  
 |SQL Server port ranges (TDS)|1433, 1500-1508|CTL, CMP|  
-| &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  
 > Creating external tables or external data sources uses TCP port 8020 by default. These statements can be configured to use other ports instead. The Hortonworks JOB_TRACKER_LOCATION default port is 50300. Integrating with other systems and tools may require additional ports.  

@@ -60,6 +60,7 @@ You can enable or disable preview features anytime in your Settings.
 * Kusto
 * Managed Instance Dashboard
 * Oracle
+* MySQL
 * PostgreSQL
 * Query History
 * SandDance for Azure Data Studio

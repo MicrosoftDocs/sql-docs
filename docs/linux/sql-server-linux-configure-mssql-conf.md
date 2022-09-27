@@ -126,13 +126,22 @@ ms.topic: conceptual
 
 - These examples run **mssql-conf** by specifying the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run **mssql-conf** in the context of the current directory: `./mssql-conf`.
 
-- If you want to modify a configuration inside of a container, but the commands require the use of `sudo`, use the config file method to mount and deploy the container with your desired settings. For example, add the following to the `mssql.conf` file to run the container with SQL Server Agent enabled.
+- If you want to modify the `mssql.conf` file inside of a container, create a `mssql.conf` file on the host where you have the container running with your desired settings, and then redeploy your container. For example, the following addition to the `mssql.conf` file enables SQL Server Agent.
 
   ```ini
   [sqlagent]
   enabled = true
   ```
 
+  You can deploy your container with the following commands:
+  
+  ```bash
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
+  -p 5433:1433 --name sql1 \
+  -v /container/sql1:/var/opt/mssql \
+  -d mcr.microsoft.com/mssql/server:2019-latest
+  ```
+  
   For more information, see [Create the config files to be used by the SQL Server container](sql-server-linux-containers-ad-auth-adutil-tutorial.md#create-the-config-files-to-be-used-by-the-sql-server-container).
 
 ## <a id="agent"></a> Enable SQL Server Agent

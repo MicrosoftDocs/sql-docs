@@ -13,7 +13,7 @@ ms.custom:
 
 # Quickstart: Use Azure Data Studio to connect and query MySQL (Preview)
 
-This quickstart shows how to use Azure Data Studio to connect to a MySQL server (hosted on-premises, on VMs, on managed MySQL in other clouds or on Azure Database for MySQL - FLexible Server), create a database, and use SQL statements to query, insert, update and delete data in the database.
+This quickstart shows how to use Azure Data Studio to connect to a MySQL server (hosted on-premises, on VMs, on managed MySQL in other clouds or on Azure Database for MySQL - FLexible Server), create a database, and use SQL statements to insert and query data in the database.
 
 ## Prerequisites
 
@@ -31,15 +31,15 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
 
     :::image type="content" source="media/quickstart-mysql/new-connection-icon.png" alt-text="Screenshot of new connection icon in the Servers sidebar.":::
 
-3. In the dialog that pops up, go to **Connection type** and select **MySQL** from the drop-down.
+3. In the dialog window that pops up, go to **Connection type** and select **MySQL** from the drop-down.
 
 4. Enter your MySQL server name, user name, and password for authentication:
 
-   ![New Connection Screen](media/quickstart-postgresql/new-connection-screen.png)  
+    :::image type="content" source="media/quickstart-mysql/new-connection-screen.png" alt-text="Screenshot of new connection screen to connect to MySQL server.":::
 
    | Setting       | Example value | Description |
    | ------------ | ------------------ | ------------------------------------------------- |
-   | **Server name** | localhost / demoserver.mysql.database.azure.con | The fully qualified server name. |
+   | **Server name** | localhost / exampleserver.mysql.database.azure.con | The fully qualified server name. |
    | **User name** | mysqluser | The user name you want to log in with. |
    | **Password (SQL Login)** | *password* | The password for the user account you are logging in with. |
    | **Remember Password** | *Check* | Check this box if you don't want to enter the password each time you connect. |
@@ -47,7 +47,7 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
    | **Server group** | \<Default\> | This option lets you assign this connection to a specific server group you create. |
    | **Name (optional)** | *leave blank* | This option lets you specify a friendly name for your server. |
 
-5. If your MySQL server requires SSL encryptions, select **Advanced...**, navigate to **Advanced Properties** window, enter the SSL configuration details and select **OK**. By default, SSL mode is configured as *Require*. For more details on SSL encryption and modes, see [Configuring MySQL to Use Encrypted Connections](https://dev.mysql.com/doc/refman/8.0/en/using-encrypted-connections.html).
+5. If your MySQL server requires SSL encryptions, navigate to **Advanced Properties** window by selecting **Advanced...** button, enter the SSL configuration details and select **OK**. By default, SSL mode is configured as *Require*. For more details on SSL encryption and modes, see [Configuring MySQL to Use Encrypted Connections](https://dev.mysql.com/doc/refman/8.0/en/using-encrypted-connections.html).
 
 6. Review the connection details and select **Connect**.
 
@@ -80,10 +80,10 @@ After the query completes, right-click **Databases** under your MySQL server in 
 
    ![Change context](media/quickstart-postgresql/change-context.png)
 
-2. Paste the following SQL statement into the query editor and click **Run**.
+2. Paste the following SQL statement into the query editor and select **Run**.
 
    > [!NOTE]
-   > You can either append this or overwrite the existing query in the editor. Clicking **Run** executes only the query that is highlighted. If nothing is highlighted, clicking **Run** executes all queries in the editor.
+   > You can either append this or overwrite the existing query in the editor. Selecting **Run** executes only the query that is highlighted. If nothing is highlighted, selecting **Run** executes all queries in the editor.
 
    ```sql
    -- Drop the table if it already exists
@@ -97,7 +97,7 @@ After the query completes, right-click **Databases** under your MySQL server in 
    );
    ```
 
-## Insert rows
+## Insert data
 
 Paste the following snippet into the query window and click **Run**:
 
@@ -112,9 +112,9 @@ Paste the following snippet into the query window and click **Run**:
       ( 4, 'Janet', 'United States','janet1@adventure-works.com');
    ```
 
-## Query the data
+## Query data
 
-1. Paste the following snippet into the query editor and click **Run**:
+1. Paste the following snippet into the query editor and select **Run**:
 
    ```sql
    -- Select rows from table 'customers'
@@ -129,4 +129,4 @@ Alternatively, in the **SERVERS** sidebar, navigate down to the **customers** ta
 
 ## Next Steps
 
-Learn about the [scenarios available for MySQL in Azure Data Studio](./extensions/mysql-extension.md).
+- Learn about the [scenarios available for MySQL in Azure Data Studio](./extensions/mysql-extension.md).

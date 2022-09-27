@@ -39,4 +39,4 @@ If you don't already have Azure Data Studio installed, see its [install instruct
 
 ## Next steps
 
-Learn how to connect and query [MySQL from Azure Data Studio](../quickstart-mysql.md).
+Learn how to [connect and query MySQL using Azure Data Studio](../quickstart-mysql.md).

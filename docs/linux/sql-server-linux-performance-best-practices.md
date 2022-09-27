@@ -4,7 +4,7 @@ description: This article provides performance best practices and guidelines for
 author: tejasaks 
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 01/19/2021
+ms.date: 09/27/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -91,6 +91,15 @@ mkfs.xfs /dev/md2 -f -L tempdb
 ##### Persistent Memory filesystem recommendation
 
 For the filesystem configuration on Persistent Memory devices, the block allocation for the underlying filesystem should be 2 MB. For more information on this topic, review the article [Technical considerations](sql-server-linux-configure-pmem.md#technical-considerations).
+
+##### Open file limitation
+
+The default open file limit is often set at 1024. Your production environment may require more connections than the default limit. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in RHEL, edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
+
+```ini
+mssql hard nofile 32727
+mssql soft nofile 16000
+```
 
 #### Disable last accessed date/time on file systems for SQL Server data and log files
 

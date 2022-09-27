@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Data Masking"
 description: Learn about dynamic data masking, which limits sensitive data exposure by masking it to non-privileged users. It can greatly simplify security in SQL Server.
-ms.date: "05/24/2022"
+ms.date: "09/27/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -265,7 +265,7 @@ ALTER COLUMN LastName DROP MASKED;
        MemberID int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED, 
        Feedback varchar(100) MASKED WITH (FUNCTION = 'default()') NULL, 
        Rating int MASKED WITH (FUNCTION='default()'), 
-       Received_On datetime) 
+       Received_On datetime 
        );
    ```
 

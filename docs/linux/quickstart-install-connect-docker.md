@@ -24,7 +24,7 @@ monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 
 In this quickstart, you'll use Docker to pull and run the [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] Linux container image, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Then you can connect with **sqlcmd** to create your first database and run queries.
 
-For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md).
+For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
 > [!TIP]  
 > This quickstart creates [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] containers. If you prefer to create Linux containers for different versions of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [[!INCLUDE [sssql19-md](../includes/sssql19-md.md)]](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true#pullandrun2019) or [[!INCLUDE [sssql22-md](../includes/sssql22-md.md)]](quickstart-install-connect-docker.md?view=sql-server-linux-ver16&preserve-view=true#pullandrun2022) versions of this article.

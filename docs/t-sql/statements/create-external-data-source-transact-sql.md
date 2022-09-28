@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/31/2022
+ms.date: 09/28/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -150,7 +150,7 @@ In order for PolyBase to function correctly with a Hadoop external data source, 
 - HDFS ports
     - Namenode
     - Datanode
-- Resource manager
+- Resource Manager
     - Job submission
     - Job history
  
@@ -167,7 +167,7 @@ If the port isn't specified, the default value is chosen using the current setti
 | 7                   | 8050                          |
 | 8                   | 8032                          |
 
-The following table shows the default ports for these components. Note that there is Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
+The following table shows the default ports for these components. There is Hadoop version dependency as well as the possibility of custom configuration that doesn't use the default port assignment.
 
 | **Hadoop cluster component** | **Default Port** | 
 | :-- | :-- |
@@ -725,7 +725,7 @@ Applies to generic `ODBC` connections, as well as built-in `ODBC` connectors for
 
 The `key_value_pair` is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type. The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
-Possible key value pairs are specific to the provider for the external data source vendor. For more information for each provider, consult [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
+Possible key value pairs are specific to the provider for the external data source vendor. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
 #### Pushdown = ON | OFF
 
@@ -782,7 +782,7 @@ In order for PolyBase to function correctly with a Hadoop external data source, 
 - HDFS ports
     - Namenode
     - Datanode
-- Resource manager
+- Resource Manager
     - Job submission
     - Job history
  
@@ -962,7 +962,7 @@ WITH (
 ) ;
 ```
 
-Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -1094,6 +1094,22 @@ WITH
   ) ;
 ```
 
+### J. Create external data source using generic ODBC to PostgreSQL
+
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the server.
+
+In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
+
+```sql
+CREATE EXTERNAL DATA SOURCE POSTGRES1
+WITH
+(
+ LOCATION = 'odbc://POSTGRES1.domain:5432'
+,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
+,CREDENTIAL = postgres_credential
+)
+```
+
 ## Next steps
 
 - [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
@@ -1216,7 +1232,7 @@ Applies to generic `ODBC` connections, as well as built-in `ODBC` connectors for
 
 The `key_value_pair` is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type. The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 
-Possible key value pairs are specific to the driver. For more information for each provider, consult [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
+Possible key value pairs are specific to the driver. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
 <!---
 #### PUSHDOWN = **ON** | OFF
@@ -1419,7 +1435,7 @@ WITH (
 ) ;
 ```
 
-Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -1556,7 +1572,7 @@ LOCATION = 'adls://<storage_account>.dfs.core.windows.net'
 
 ### G. Create external data source to access data in a CSV file
 
-As in other examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. In this example, the CSV file resides in Azure Blob Storage. Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], so use prefix `abs` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. In this example, the CSV file resides in Azure Blob Storage. Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], so use prefix `abs` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
 
 ```sql
 CREATE EXTERNAL DATA SOURCE Blob_CSV
@@ -1569,7 +1585,7 @@ WITH
 
 ### H. Create external data source to access data in a CSV file
 
-As in other examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source.  
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source.  
 
 In this example, the delta table resides in Azure Data Lake Storage Gen2, so use prefix `adls` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
 
@@ -1583,6 +1599,23 @@ WITH
 ,CREDENTIAL = delta_storage_dsc
 )
 ```
+
+### I. Create external data source using generic ODBC to PostgreSQL
+
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the server.
+
+In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
+
+```sql
+CREATE EXTERNAL DATA SOURCE POSTGRES1
+WITH
+(
+ LOCATION = 'odbc://POSTGRES1.domain:5432'
+,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
+,CREDENTIAL = postgres_credential
+)
+```
+
 
 ## Examples: Bulk Operations
 
@@ -1734,7 +1767,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
   - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
-- Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
+- When connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
 - When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
@@ -2304,7 +2337,7 @@ In order for PolyBase to function correctly with a Hadoop external data source, 
 - HDFS ports
     - Namenode
     - Datanode
-- Resource manager
+- Resource Manager
     - Job submission
     - Job history
  
@@ -2544,7 +2577,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
   - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
--  Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
+-  When connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL MI](#a-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 

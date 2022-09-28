@@ -39,8 +39,9 @@ For more details, review [resource limits](resource-limits.md).
 |**Category**|**General Purpose**|**Business Critical**|
 |---|---|---|
 |**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several isolated replicas, and provides the highest I/O performance.|
-|**Availability**|1 replica for failover|4 replicas total, 1 [read-scale replica in a failover group](auto-failover-group-sql-mi.md),<br/> 2 high availability replicas (HA)|
-|**Read-only replicas**| 0 built-in <br> 0 - 4 using [failover groups](auto-failover-group-sql-mi.md) | 1 built-in, included in price <br> 0 - 4 using [failover groups](auto-failover-group-sql-mi.md) |
+|**Read-only replicas**| 0 | 1 | 
+|**Replicas for availability**|1 replica for high availability| 3 high availability replicas, 1 is also a [read-scale replica](../database/read-scale-out.md) |
+|**Read-only replicas with [failover groups](auto-failover-group-sql-mi.md) enabled**| 1 additional read-only replica. 2 total readable replicas, which includes the primary replica. | 2 additional read-only replicas, 3 total read-only replicas. 4 total readable replicas, which includes the primary replica. |
 |**Pricing/billing**| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged| [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/managed/) is charged. <br/>IOPS is not charged.
 |**Discount models**| [Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](../database/reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 

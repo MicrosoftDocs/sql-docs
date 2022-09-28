@@ -1,6 +1,6 @@
 ---
 title: Database Migration Assessment for Oracle extension
-description: Learn how to install the Azure Data Studio Database Migration Assessment for Oracle extension. This extension helps guide you choose the best Azure SQL database migration path.
+description: Learn how to install the Azure Data Studio Database Migration Assessment for Oracle extension. This extension helps guide you choose the best Azure  SQL database and Azure database for PostgreSQL migration path.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: niball
@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Database Migration Assessment for Oracle extension (Preview)
 
-The Database Migration Assessment for Oracle extension in Azure Data Studio helps you assess an Oracle workload for migrating to SQL. The extension identifies an appropriate Azure SQL target with right-sizing recommendations, and how complex the migration can be.
+The Database Migration Assessment for Oracle extension in Azure Data Studio helps you assess an Oracle workload for migrating to Azure SQL and Azure database for PostgreSQL. The extension identifies an appropriate Azure SQL target with right-sizing recommendations, and how complex the migration can be.
 
 ## Pre-requisites
 
@@ -69,8 +69,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
     1. In the **Assessment name** field, enter a title.
         1. For example, *demo1*.
     1. Enter your **Assessment setting**.
-        1. In the **Target Platform** field, enter the destination migration database.
-            1. For example, **SQL**.
+        1. In the **Target Platform** field, enter the destination migration database.Currently, it supports SQL and PostgreSQL as target.
         1. In the **Scale factor** field, enter the multiplier value.
             1. If the recommended SKU needs to consider other peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas, when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
 
@@ -96,7 +95,7 @@ Once the Assessment is complete, a consolidated output is generated for each Azu
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-view-assessment.png" alt-text="view assessment":::
 
-Each card has three sections. The card shows the overall feasibility of the migration to the SQL target.  Also drills down on various workloads under various migration complexity categories. The feature compatibility section that provides the feature assessment review result. SKU recommendation provides the proper sizing of the target.
+Each card has multiple sections. The card shows the overall feasibility of the migration to the SQL target.  Also drills down on various workloads under various migration complexity categories. The feature compatibility section that provides the feature assessment review result. SKU recommendation provides the proper sizing of the target.
 
 When you click on view detail report, it first shows the summary of the Assessment.
 
@@ -121,6 +120,8 @@ The SKU  recommendation evaluates various performance metrics - CPU, memory, IOP
 > [!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
 
+The code assessment provides a summary of schema objects that can be converted to Azure target. The report provides the breakup of the objects that can converted automatically, ready with conditions and those objects that needs manual intervention or actions to resolve and convert them manually.
+ 
 The feature assessment provides the Oracle to Azure SQL mapped features and the effort required for migrating those capabilities to Azure SQL target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-mapped-assessment.png" alt-text="Mapped assessment":::

@@ -372,7 +372,9 @@ sections:
           
           In rare but necessary situations, we might need to do an online migration of a managed instance to a new virtual cluster. If needed, this migration is because of changes in our technology stack aimed to improve security and reliability of the service. Migrating to a new virtual cluster results in changing the IP address that is mapped to the managed instance host name. The managed instance service doesn't claim static IP address support and reserves the right to change it without notice as a part of regular maintenance cycles.
           
-          For this reason, we strongly discourage relying on immutability of the IP address as it could cause unnecessary downtime.
+          The above holds for both local and public IP addresses.
+          
+          For this reason, we strongly discourage relying on immutability of the endoints' IP address as it could cause unnecessary downtime. By contrast, instance's assigned FQDNs are guaranteed to resolve to the latest IP addresses.
           
           ### Does SQL Managed Instance have a public endpoint?
           

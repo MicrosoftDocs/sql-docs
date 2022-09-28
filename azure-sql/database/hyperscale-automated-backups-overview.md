@@ -120,7 +120,13 @@ The following screenshot shows an example cost analysis.
 
 ## Data and backup storage redundancy
 
-Hyperscale supports configurable storage redundancy. When you're creating a Hyperscale database, you can choose your preferred storage type: read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS). The selected storage redundancy option is used for the lifetime of the database for both data storage redundancy and backup storage redundancy. 
+Hyperscale supports configurable storage redundancy. When you're creating a Hyperscale database, you can choose your preferred storage type:  read-access geo-zone-redundant storage (RA-GZRS), read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS). 
+
+- **Geo-zone-redundant storage**: Copies your backups synchronously across three Azure availability zones in the primary region. similar to zone-redundant storage(ZRS).  In addition,copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage).
+
+To learn how the backups are replicated for other storage types, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy)
+
+Since Hyperscale uses storage snapshots for backups, data and backups share the same storage account. As a result the selected backup storage redundancy is applicable for both data and backups. 
 
 Consider backup storage redundancy carefully when you create a Hyperscale database, because you can set it only during database creation. You can't modify this setting after the resource is provisioned. 
 
@@ -129,6 +135,7 @@ Use [active geo-replication](active-geo-replication-overview.md) to update backu
 > [!WARNING]
 > - [Geo-restore](recovery-using-backups.md#geo-restore) is disabled as soon as a database is updated to use locally redundant or zone-redundant storage. 
 > - Zone-redundant storage is currently available in only [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
+> - Geo-zone-redundant storage is currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage). 
 
 ## Restore a Hyperscale database to a different region
 

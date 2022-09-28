@@ -40,8 +40,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         
         [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
         
-        [sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)
-        
         [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
     :::column-end:::
 :::row-end:::

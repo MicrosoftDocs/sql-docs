@@ -78,7 +78,7 @@ After the query completes, right-click **Databases** under your MySQL server in 
 
 1. Change the connection context to **tutorialdb** using the drop-down in the query editor.
 
-   ![Change context](media/quickstart-postgresql/change-context.png)
+    :::image type="content" source="media/quickstart-mysql/change-context.png" alt-text="Screenshot showing connection context drop-down in query editor.":::
 
 2. Paste the following SQL statement into the query editor and select **Run**.
 
@@ -123,7 +123,7 @@ Paste the following snippet into the query window and click **Run**:
 
 2. The results of the query are displayed:
 
-   ![View results](media/quickstart-postgresql/view-results.png)
+   :::image type="content" source="media/quickstart-mysql/view-results.png" alt-text="Screenshot showing results of the SELECT query.":::
 
 Alternatively, in the **SERVERS** sidebar, navigate down to the **customers** table, right-click on the table and select **Select Top 1000** to query the data.
 

@@ -33,7 +33,9 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
-| [Azure SQL Database Hyperscale tier short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Retain backups from 1 up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured retention period. |
+| [Hyperscale long-term retention](long-term-retention-overview.md) | Store your Hyperscale database backups for up to 10 years with the long-term retention (LTR) capability.  |
+| [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Retain backups from 1 up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured retention period. |
+| [Hyperscale RA-GZRS](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundanc) | Store your Hyperscale database backups on read access geo-zone-redundancy (RA-GZRS) storage. |
 | [JavaScript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use JavaScript or Python SQL bindings with Azure Functions. | 
 | [Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
 | [Query editor in the Azure portal](connect-query-portal.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com).|
@@ -42,7 +44,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) | An extension to develop databases for Azure SQL Database with Azure Data Studio and VS Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. |
 | [SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) | SQL Insights (preview) is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights (preview) uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance.|
 | [UMI for auditing](auditing-overview.md) | Configure the storage account for your SQL auditing logs by using User Managed Identity (UMI). | 
-| [Azure SQL Database Hyperscale tier long-term retention](long-term-retention-overview.md) | Long-term retention (LTR) capability for Hyperscale databases is now in preview. |
+
 
 ## General availability (GA)
 
@@ -73,10 +75,10 @@ Learn about significant changes to the Azure SQL Database documentation.
 | Changes | Details |
 | --- | --- |
 | **Cross-subscription failover group with Azure PowerShell** | It's now possible to deploy your auto-failover group for a single database across subscriptions by using Azure PowerShell. To learn more, review [Configure auto-failover group](auto-failover-group-configure-sql-db.md?view=azuresql&tabs=azure-powershell&pivots=azure-sql-single-db&preserve-view=true#create-failover-group). |
+| **Hyperscale RA-GZRS preview** | It's now possible to choose read access geo-zone-redundancy (RA-GZRS) as a backup storage redundancy for Hyperscale databases. This feature is currently in preview. To learn more, review [Hyperscale backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). |
+| **Hyperscale tier long-term retention preview** | It's now possible to store your Hyperscale database backups for up to 10 years using the long-term retention (LTR) capability. This feature is now in preview. To learn more, review [long-term retention](long-term-retention-overview.md).  |
 | **UMI support for auditing preview** | It's now possible to configure the storage account used for SQL auditing logs by using User Managed Identity (UMI). This feature is currently in preview. Review [auditing](auditing-overview.md) to learn more. |
-| Reverse migrate from Hyperscale |  This feature allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. [Reverse migration to the General Purpose service tier is now generally available](manage-hyperscale-database.md#reverse-migrate-from-hyperscale).|
-| **Read-Access geo-zone redundant storage(RA-GZRS) option for Hyperscale databases** | It's now possible to choose read access geo-zone-redundancy as backup storage redundancy for Hyperscale databases. To learn more, review [Hyperscale backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). |
-| [Azure SQL Database Hyperscale tier long-term retention](long-term-retention-overview.md) | Long-term retention (LTR) capability for Hyperscale databases is now in preview. |
+| **Reverse migrate from Hyperscale GA** |  This feature allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. This feature is now generally available. To learn more, review [Reverse migration to the General Purpose service tier](manage-hyperscale-database.md#reverse-migrate-from-hyperscale).|
 
 ### August 2022
 

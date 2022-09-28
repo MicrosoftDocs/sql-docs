@@ -123,7 +123,7 @@ If you're deploying SQL Server containers on a Kubernetes platform, see the exam
 
 The following diagram shows the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container on Kubernetes.
 
-:::image type="content" source="media/sql-server-linux-configure-msdtc-docker/msdtc-single.svg" alt-text="Diagram showing the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container.":::
+:::image type="content" source="media/sql-server-linux-configure-msdtc-docker/msdtc-single.png" alt-text="Diagram showing the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container.":::
 
 1. The MSDTC client makes a connection to port 135 on the Kubernetes host.
 1. The connection is forwarded to port 135 on the container.

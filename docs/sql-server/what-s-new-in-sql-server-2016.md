@@ -13,11 +13,11 @@ keywords:
 helpviewer_keywords:
   - "new features [SQL Server]"
   - "SQL Server, what's new"
-  - "SQL Server 2008 what's new"
+  - "SQL Server 2016 what's new"
   - "what's new [SQL Server]"
-ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
+monikerRange: ">= sql-server-2016"
 ---
 # What's new in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    

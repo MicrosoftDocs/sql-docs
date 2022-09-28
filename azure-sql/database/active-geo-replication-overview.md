@@ -4,7 +4,7 @@ description: Use active geo-replication to create readable secondary databases o
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/30/2022
+ms.date: 09/28/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual

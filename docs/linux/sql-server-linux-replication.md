@@ -41,7 +41,7 @@ The following replication features are supported:
 * Snapshot replication
 * Transactional replication
 * Replication with non-default ports <!--Add link to explanation-->
-* Replication with AD authentication
+* Replication with Active Directory authentication
 * Replication configurations across Windows and Linux
 * Immediate updates for transactional replication
 

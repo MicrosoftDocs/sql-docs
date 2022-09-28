@@ -38,7 +38,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, then type *Azure SQL* in the search box.
 1. Select **+Add** to open the **Select SQL deployment option** page. You can view additional information by selecting **Show details** on the **SQL virtual machines** tile.
-1. Select one of the versions labeled **Free SQL Server License...** from the dropdown.
+1. For conventional SQL Server VMs, select one of the versions labeled **Free SQL Server License...** from the drop-down. For confidential VMs, choose the `SQL Server 2019 Enterprise on Windows Server 2022 Database Engine Only` image from the drop-down. 
 
    ![Screenshot that shows where you select the Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016 image.](./media/sql-vm-create-portal-quickstart/select-sql-2017-vm-image.png)
 

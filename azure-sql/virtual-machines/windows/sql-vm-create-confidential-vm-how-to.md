@@ -34,12 +34,12 @@ Recommendations for disk encryption are different for confidential VMs than for 
 
 For detailed steps to deploy a confidential VM, review the [Quickstart: Deploy a SQL Server on Azure VM](sql-vm-create-portal-quickstart.md?tabs=confidential-vm). 
 
-To deploy a SQL Server VM to a confidential Azure VM simply select the following values when deploying a SQL Server VM:
+To deploy a SQL Server VM to a confidential Azure VM, select the following values when deploying a SQL Server VM:
 
 1. Choose a supported region. To validate region supportability, look for the `ECadsv5-series` or `DCadsv5-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines). 
-1. Set the **Security type** to **Confidential virtual machines**.  If this option is grayed out, it's likely the chosen region does not currently support confidential VMs. Choose a different region from the drop-down. 
+1. Set the **Security type** to **Confidential virtual machines**.  If this option is grayed out, it's likely the chosen region doesn't currently support confidential VMs. Choose a different region from the drop-down. 
 1. Choose a supported confidential SQL Server image. To change the SQL Server image, select **See all images** and then filter by **Security type = Confidential VMs** to identify all SQL Server images that support confidential VMs. 
-1. Choose a supported VM size. To see all available sizes, select **See all sizes** to identify all the VM sizes that support confidential VMs, as well as the sizes that do not. 
+1. Choose a supported VM size. To see all available sizes, select **See all sizes** to identify all the VM sizes that support confidential VMs, as well as the sizes that don't. 
 1. (Optional) Configure confidential disk encryption. Follow the steps in the [Disk section of the Quickstart](sql-vm-create-portal-quickstart.md?tabs=confidential-vm#disks). 
 
 ## Identify available images
@@ -51,7 +51,7 @@ To view all SQL Server images that support confidential VMs, begin to deploy a S
 - Currently, only the following SQL Server image supports Azure confidential VMs: 
     - `SQL Server 2019 Enterprise on Windows Server 2022 Database Engine Only`. 
     - `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only`
-- Confidential VMs are not currently available in all regions. To validate region supportability, look for the `ECadsv5-series` or `DCadsv5-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines). 
+- Confidential VMs aren't currently available in all regions. To validate region supportability, look for the `ECadsv5-series` or `DCadsv5-series` in [VM products Available by Azure region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=virtual-machines). 
 
 ## Next steps
 

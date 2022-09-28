@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 09/26/2022
+ms.date: 09/28/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -46,7 +46,7 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 | [CU 12](#CU12)        | 14.0.3045.24  | 2018-10-24   |
 | [CU 11](#CU11)        | 14.0.3038.14  | 2018-09-20   |
 | [CU 10](#CU10)        | 14.0.3037.1   | 2018-08-27   |
-| [CU 9 GDR 2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [CU 9 GDR](#CU9-GDR)  | 14.0.3035.2   | 2018-08-18   |
 | [GDR 2](#GDR2)        | 14.0.2002.14  | 2018-08-18   |
 | [CU 9](#CU9)          | 14.0.3030.27  | 2018-07-18   |
 | [CU 8](#CU8)          | 14.0.3029.16  | 2018-06-21   |
@@ -334,6 +334,7 @@ This is the Cumulative Update 18 (CU 18) release of [!INCLUDE[ssSQL17](../includ
 
 - Change Data Capture (CDC) is supported with [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux starting with CU 18.
 - Transactional Replication is supported with [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux starting with CU 18.
+
 ### Remarks
 
 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] containers now have a new tagging pattern as described below with examples.
@@ -522,9 +523,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-## <a id="CU9-GDR2"></a> CU 9 GDR 2 (August 2018)
+## <a id="CU9-GDR"></a> CU 9 GDR (August 2018)
 
-This is the Cumulative Update 9-GDR2 (CU 9 GDR 2) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. This is a security update that also includes the previously released CU (CU 9). The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [KB 4293805](https://support.microsoft.com/help/4293805).
+This is the Cumulative Update 9-GDR (CU 9 GDR) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. This is a security update that also includes the previously released CU (CU 9). The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3035.2. For information about the fixes and improvements in this release, see [KB 4293805](https://support.microsoft.com/help/4293805).
 
 ### Package details
 

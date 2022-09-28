@@ -1,8 +1,8 @@
 ---
 title: Configure a domain-independent workgroup availability group
 description: Learn how to configure an Active Directory domain-independent workgroup Always On availability group on a SQL Server virtual machine in Azure.
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 01/29/2020
 ms.service: virtual-machines-sql

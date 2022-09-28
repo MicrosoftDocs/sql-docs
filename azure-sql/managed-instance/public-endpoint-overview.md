@@ -37,7 +37,7 @@ The following diagram shows the recommended security configurations:
 
 ![Security configurations for locking down inbound and outbound connectivity](./media/public-endpoint-overview/managed-instance-vnet.png)
 
-A managed instance has a public endpoint address that is dedicated to a customer. This endpoint shares the IP with the [management endpoint](management-endpoint-find-ip-address.md) but uses a different port. In the client-side outbound firewall and in the network security group rules, set this public endpoint IP address to limit outbound connectivity.
+A managed instance has a public endpoint address that is dedicated to a customer. This endpoint shares the IP address with the [management endpoint](management-endpoint-find-ip-address.md) but uses a different port. Like local endpoint, public endpoint may also change following certain management operations. We advise that the public endpoint address be always determined by resolving the public endpoint FQDN record, for example when configuring application-level firewall rules.
 
 To ensure traffic to the managed instance is coming from trusted sources, we recommend connecting from sources with well-known IP addresses. Use a network security group to limit access to the managed instance public endpoint on port 3342.
 

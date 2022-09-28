@@ -4,7 +4,7 @@ description: This tutorial shows how to create a Windows virtual machine with SQ
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 07/11/2019
+ms.date: 10/14/2022
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
@@ -21,7 +21,7 @@ tags: azure-resource-manager
 > * [Windows](sql-vm-create-portal-quickstart.md)
 > * [Linux](../linux/sql-vm-create-portal-quickstart.md)
 
-This quickstart steps through creating a SQL Server virtual machine (VM) in the Azure portal.
+This quickstart steps through creating a SQL Server virtual machine (VM) in the Azure portal. Follow the article to deploy either a conventional SQL Server on Azure VM, or SQL Server deployed to an [Azure confidential VM](sql-vm-create-confidential-vm-how-to.md). 
 
 
   > [!TIP]

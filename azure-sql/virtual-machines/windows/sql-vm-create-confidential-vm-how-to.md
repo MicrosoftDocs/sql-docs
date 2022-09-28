@@ -40,7 +40,7 @@ To deploy a SQL Server VM to a confidential Azure VM simply select the following
 1. Set the **Security type** to **Confidential virtual machines**.  If this option is grayed out, it's likely the chosen region does not currently support confidential VMs. Choose a different region from the drop-down. 
 1. Choose a supported confidential SQL Server image. To change the SQL Server image, select **See all images** and then filter by **Security type = Confidential VMs** to identify all SQL Server images that support confidential VMs. 
 1. Choose a supported VM size. To see all available sizes, select **See all sizes** to identify all the VM sizes that support confidential VMs, as well as the sizes that do not. 
-1. (Optional) Configure disk encryption. Follow the steps in the [Disk section of the Quickstart](sql-vm-create-portal-quickstart.md?tabs=confidential-vm#disks). 
+1. (Optional) Configure confidential disk encryption. Follow the steps in the [Disk section of the Quickstart](sql-vm-create-portal-quickstart.md?tabs=confidential-vm#disks). 
 
 ## Identify available images
 
@@ -55,7 +55,7 @@ To view all SQL Server images that support confidential VMs, begin to deploy a S
 
 ## Next steps
 
-In this quickstart, you created a SQL Server virtual machine in the Azure portal. To learn more about how to migrate your data to the new SQL Server, see the following article.
+In this article, you learned to deploy SQL Server to a confidential virtual machine in the Azure portal. To learn more about how to migrate your data to the new SQL Server, see the following article.
 
 > [!div class="nextstepaction"]
 > [Migrate a database to a SQL VM](migrate-to-vm-from-sql-server.md)

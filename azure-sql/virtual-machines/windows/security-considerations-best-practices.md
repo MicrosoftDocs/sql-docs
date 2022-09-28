@@ -82,7 +82,6 @@ For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confi
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](security-considerations-best-practices.md#azure-confidential-vms) to learn more. 
 
-
 ## Azure Advisor 
        
 [Azure Advisor](/azure/advisor/advisor-security-recommendations) is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. Azure Advisor analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, high availability, and security of your Azure resources. Azure Advisor can evaluate at the virtual machine, resource group, or subscription level.
@@ -148,7 +147,7 @@ provide OS and data disk encryption.
 If you are using an Azure confidential VM, consider the following recommendations to maximize security benefits: 
 
 - Configure [confidential OS disk encryption](/azure/confidential-computing/confidential-vm-overview#confidential-os-disk-encryption), which binds the OS disk encryption keys to the Trusted Platform Module (TPM) chip of the virtual machine, and makes the protected disk content accessible only to the VM. 
-- Encrypt your data disks (any disks containing database files, log files, or backup files) with [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview), and enable automatic unlocking - review [manage-bde autounlock](/windows-server/administration/windows-commands/manage-bde-autounlock) or [EnableBitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock) for more information. Automatic unlocking ensures the encryption keys are stored on the OS disk. In conjunction with confidential OS disk encryption, this protects the data-at-rest stored to the VM disks from unauthorized host access. It is recommended to store BitLocker recovery keys in a secure location (for example, in a [managed HSM in Azure Key Vault](/azure/key-vault/managed-hsm/overview)), making it easier to migrate the disk to another VM in the future. 
+- Encrypt your data disks (any disks containing database files, log files, or backup files) with [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview), and enable automatic unlocking - review [manage-bde autounlock](/windows-server/administration/windows-commands/manage-bde-autounlock) or [EnableBitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock) for more information. Automatic unlocking ensures the encryption keys are stored on the OS disk. In conjunction with confidential OS disk encryption, this protects the data-at-rest stored to the VM disks from unauthorized host access. 
 
 
 ## Manage accounts

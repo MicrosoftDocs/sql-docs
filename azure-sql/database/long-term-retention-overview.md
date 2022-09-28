@@ -19,7 +19,8 @@ Long-term retention can be enabled for Azure SQL Database and for Azure SQL Mana
 
 In Azure SQL Managed Instance, you can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to LTR beyond 35 days.
 
-
+> [!NOTE]
+> Long-term backup retention for Hyperscale databases is now in preview.
 
 ## How long-term retention works
      

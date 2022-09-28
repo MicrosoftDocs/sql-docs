@@ -38,7 +38,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, then type *Azure SQL* in the search box.
 1. Select **+Add** to open the **Select SQL deployment option** page. You can view additional information by selecting **Show details** on the **SQL virtual machines** tile.
-1. Select one of the versions labelled **Free SQL Server License...** from the dropdown.
+1. Select one of the versions labeled **Free SQL Server License...** from the dropdown.
 
    ![Screenshot that shows where you select the Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016 image.](./media/sql-vm-create-portal-quickstart/select-sql-2017-vm-image.png)
 
@@ -91,7 +91,7 @@ To deploy your SQL Server to an Azure confidential VM, on the **Basics** tab, pr
     1. In the **Image** list, choose the `SQL Server 2017 Enterprise on Windows Server 2019 Database Engine Only - Gen 2` image. To change the SQL Server image, select **See all images** and then filter by **Security type = Confidential VMs** to identify all SQL Server images that support confidential VMs. 
     1. Leave the size at the default of `Standard_EC2ads_v5`. However, to see all available sizes, select **See all sizes** to identify all the VM sizes that support confidential VMs, as well as the sizes that do not. 
 
-   :::image type="content" source="media/sql-vm-create-vm-quickstart/basic-instance-details-confidential.png" alt-text="Screen shot of the Azure portal showing instance details.":::
+   :::image type="content" source="media/sql-vm-create-portal-quickstart/basic-instance-details-confidential.png" alt-text="Screen shot of the Azure portal showing instance details.":::
 
 
 1. Under **Administrator account**, provide a username, such as _azureuser_ and a password. The password must be at least 12 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-).

@@ -76,9 +76,9 @@ See [manage SQL Server VM in the portal](manage-sql-vm-portal.md) to learn more.
 
 ## Confidential VMs
 
-[Azure confidential VMs](sql-vm-create-confidetnial-vm-how-to.md) provide a strong, hardware-enforced boundary that hardens the protection of the guest OS against host operator access. Choosing a confidential VM size for your SQL Server on Azure VM provides an extra layer of protection, enabling you to confidently store your sensitive data in the cloud and meet strict compliance requirements. 
+[Azure confidential VMs](sql-vm-create-confidential-vm-how-to.md) provide a strong, hardware-enforced boundary that hardens the protection of the guest OS against host operator access. Choosing a confidential VM size for your SQL Server on Azure VM provides an extra layer of protection, enabling you to confidently store your sensitive data in the cloud and meet strict compliance requirements. 
 
-For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confidential VM](sql-vm-create-vm-quickstart.md?tab=confidential-vms). 
+For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confidential VM](sql-vm-create-portal-quickstart.md?tabs=confidential-vm). 
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](security-considerations-best-practices.md#azure-confidential-vms) to learn more. 
 

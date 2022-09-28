@@ -22,7 +22,7 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 | Changes | Details |
 | --- | --- |
-| **Confidential VMs** | SQL Server on Azure VMs has added support to deploy to SQL Server to an [Azure confidential VM](/azure/confidential-computing/confidential-vm-overview). To learn more, review [SQL Server on Azure confidential VMs](security-considerations-best-practices.md#confidential-vms) and to get started review the [Quickstart: Deploy SQL Server to an Azure confidential VM](sql-vm-create-portal-quickstart.md?tabs=confidential-vm). 
+| **Confidential VMs** | SQL Server on Azure VMs has added support to deploy to [SQL Server on Azure confidential VMs](sql-vm-create-confidential-vm-how-to.md). To get started, review the [Quickstart: Deploy SQL Server to an Azure confidential VM](sql-vm-create-portal-quickstart.md?tabs=confidential-vm). 
 
 ## July 2022
 

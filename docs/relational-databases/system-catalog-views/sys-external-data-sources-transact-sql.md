@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |credential_id|**int**|The object ID of the database scoped credential used to connect to the external data source.||  
 |database_name|**sysname**|For type RDBMS, the name of the remote database. For type SHARD_MAP_MANAGER, the name of the shard map manager database. NULL for other types of external data sources.||  
 |shard_map_name|**sysname**|For type SHARD_MAP_MANAGER, the name of the shard map. NULL for other types of external data sources.||  
-|connection_options|**nvarchar(4000)**|**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. See [CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS](../../t-sql/statements/create-external-data-source-transact-sql#connection_options--key_value_pair-1). <BR /><BR />In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], this is a semicolon-separated string.<BR />In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], this can also be a JSON-formatted string, containing options for the external data source parameters, dependent on the type of external data source. | |
+|connection_options|**nvarchar(4000)**|**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.  The `connection_options` will contain the same string from your CONNECTION_OPTIONS parameter from [CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS](../../t-sql/statements/create-external-data-source-connection-options.md).<BR /><BR />In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], this is a semicolon-separated string.<BR />In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], this can also be a JSON-formatted string. | |
 |pushdown|**nvarchar(256)**|*Applies to:* [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.<br /><br />NOT NULL. Whether pushdown is enabled. For more information, see [Pushdown computations in PolyBase](../polybase/polybase-pushdown-computation.md).|ON, OFF |
 
 ## Permissions
@@ -40,12 +40,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## Remarks
 
-SQL Server support for HDFS Cloudera (CDP) and Hortonworks (HDP) external data sources are retired and not included in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. There is no need to use the CREATE EXTERNAL DATA SOURCE ... TYPE argument in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+SQL Server support for HDFS Cloudera (CDP) and Hortonworks (HDP) external data sources are retired and not included in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. There is no need to use the `CREATE EXTERNAL DATA SOURCE ... TYPE` argument in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Next steps
 
 - [sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)
 - [sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](../../t-sql/statements/create-external-data-source-connection-options.md)
 - [Pushdown computations in PolyBase](../polybase/polybase-pushdown-computation.md)
 - [Introducing data virtualization with PolyBase](../polybase/polybase-guide.md)

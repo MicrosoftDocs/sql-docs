@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/31/2022
+ms.date: 09/28/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -962,7 +962,7 @@ WITH (
 ) ;
 ```
 
-Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -1092,6 +1092,22 @@ WITH
     CREDENTIAL = AzureStorageCredential ,
     TYPE = HADOOP
   ) ;
+```
+
+### J. Create external data source using generic ODBC to PostgreSQL
+
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the SQL Server.
+
+In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully-qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
+
+```sql
+CREATE EXTERNAL DATA SOURCE POSTGRES1
+WITH
+(
+ LOCATION = 'odbc://POSTGRES1.domain:5432'
+,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
+,CREDENTIAL = postgres_credential
+)
 ```
 
 ## Next steps
@@ -1419,7 +1435,7 @@ WITH (
 ) ;
 ```
 
-Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+Alternatively, you can use a port to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -1569,7 +1585,7 @@ WITH
 
 ### H. Create external data source to access data in a CSV file
 
-As in other examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source.  
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source.  
 
 In this example, the delta table resides in Azure Data Lake Storage Gen2, so use prefix `adls` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
 
@@ -1583,6 +1599,23 @@ WITH
 ,CREDENTIAL = delta_storage_dsc
 )
 ```
+
+### I. Create external data source using generic ODBC to PostgreSQL
+
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the SQL Server.
+
+In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully-qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
+
+```sql
+CREATE EXTERNAL DATA SOURCE POSTGRES1
+WITH
+(
+ LOCATION = 'odbc://POSTGRES1.domain:5432'
+,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
+,CREDENTIAL = postgres_credential
+)
+```
+
 
 ## Examples: Bulk Operations
 

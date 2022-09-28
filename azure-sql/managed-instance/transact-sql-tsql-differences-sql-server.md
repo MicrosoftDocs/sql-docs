@@ -226,7 +226,7 @@ For more information, see [ALTER DATABASE SET PARTNER and SET WITNESS](/sql/t-sq
 The following limitations apply to `CREATE DATABASE`:
 
 - Files and filegroups can't be defined. 
-- A memory-optimized filegroup and file are automatically added and called XTP. Manually adding or removing XTP file or filegroup is not allowed in SQL Database Managed Instance.
+- A memory-optimized filegroup and file are automatically added and called XTP.
 - The `CONTAINMENT` option isn't supported. 
 - `WITH` options aren't supported. 
    > [!TIP]
@@ -243,6 +243,7 @@ Some file properties can't be set or changed:
 
 - A file path can't be specified in the `ALTER DATABASE ADD FILE (FILENAME='path')` T-SQL statement. Remove `FILENAME` from the script because SQL Managed Instance automatically places the files. 
 - A file name can't be changed by using the `ALTER DATABASE` statement.
+- Adding or removing XTP file or filegroup is not allowed.
 
 The following options are set by default and can't be changed:
 

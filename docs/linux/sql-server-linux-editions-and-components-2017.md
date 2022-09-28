@@ -228,8 +228,8 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
-| &nbsp; | AD Authentication for Linked Servers |
-| &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
+| &nbsp; | Active Directory Authentication for Linked Servers |
+| &nbsp; | Active Directory Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |

@@ -4,7 +4,7 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 09/26/2022
+ms.date: 09/28/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -103,7 +103,7 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 | [CU 12](sql-server-linux-release-history-2017.md#CU12) | 14.0.3045.24  | 2018-10-24   |
 | [CU 11](sql-server-linux-release-history-2017.md#CU11) | 14.0.3038.14  | 2018-09-20   |
 | [CU 10](sql-server-linux-release-history-2017.md#CU10) | 14.0.3037.1   | 2018-08-27   |
-| [CU 9 GDR 2](sql-server-linux-release-history-2017.md#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [CU 9 GDR](sql-server-linux-release-history-2017.md#CU9-GDR) | 14.0.3035.2   | 2018-08-18   |
 | [GDR 2](sql-server-linux-release-history-2017.md#GDR2) | 14.0.2002.14  | 2018-08-18   |
 | [CU 9](sql-server-linux-release-history-2017.md#CU9) | 14.0.3030.27  | 2018-07-18   |
 | [CU 8](sql-server-linux-release-history-2017.md#CU8) | 14.0.3029.16  | 2018-06-21   |

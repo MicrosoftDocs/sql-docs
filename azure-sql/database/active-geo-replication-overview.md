@@ -4,7 +4,7 @@ description: Use active geo-replication to create readable secondary databases o
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/30/2022
+ms.date: 09/28/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -19,7 +19,7 @@ Active geo-replication is a feature that lets you to create a continuously synch
 Active geo-replication is designed as a business continuity solution that lets you perform quick disaster recovery of individual databases in case of a regional disaster or a large scale outage. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. The geo-failover is initiated programmatically by the application or manually by the user.
 
 > [!NOTE]
-> Active geo-replication is not supported by Azure SQL Managed Instance. For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md). For more information, [Compare geo-replication with failover groups](business-continuity-high-availability-disaster-recover-hadr-overview.md#compare-geo-replication-with-failover-groups).
+> For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md). For more information, [Compare geo-replication with failover groups](business-continuity-high-availability-disaster-recover-hadr-overview.md#compare-geo-replication-with-failover-groups). Active geo-replication is not supported by Azure SQL Managed Instance. 
 
 > [!NOTE]
 > To migrate SQL databases from Azure Germany using active geo-replication, see [Migrate SQL Database using active geo-replication](/azure/germany/germany-migration-databases#migrate-sql-database-using-active-geo-replication).

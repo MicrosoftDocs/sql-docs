@@ -69,7 +69,7 @@ The following diagram demonstrates a simple on-premises scenario and how you can
 
 Deploying the business layer (business logic and data access components) on the same physical tier as the presentation layer can maximize application performance, unless you must use a separate tier due to scalability or security concerns.
 
-Since this is a very common pattern to start with, you might find the following article on migration useful for moving your data to your SQL Server VM: [Migrating a Database to SQL Server on an Azure VM](migrate-to-vm-from-sql-server.md).
+Since this is a very common pattern to start with, you might find the following article on migration useful for moving your data to your SQL Server VM: [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md).
 
 ## 3-tier (simple): Multiple virtual machines
 In this application pattern, you deploy a 3-tier application in Azure by placing each application tier in a different virtual machine. This provides a flexible environment for an easy scale-up and scale-out scenarios. When one virtual machine contains your client/web application, the other one hosts your business components, and the other one hosts the database server.

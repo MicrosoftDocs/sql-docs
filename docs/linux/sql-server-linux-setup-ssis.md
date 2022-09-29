@@ -15,7 +15,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Follow the steps in this article to install SQL Server Integration Services (**mssql-server-is**) on Linux. For info about the features that are supported in this release of Integration Services for Linux, see the [Release Notes](sql-server-linux-release-notes.md).
+Follow the steps in this article to install SQL Server Integration Services (**mssql-server-is**) on Linux. For info about the features that are supported in this release of Integration Services for Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md).
 
 You can install SQL Server Integration Services on these platforms:
 

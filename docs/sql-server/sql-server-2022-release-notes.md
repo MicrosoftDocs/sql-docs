@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2022 Release Notes"
 description: Find information about SQL Server 2019 (16.x) limitations, known issues, help resources, and other release notes.
-ms.date: 08/23/2022
+ms.date: 09/22/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -16,7 +16,7 @@ monikerRange: "= sql-server-ver16"
 
 [!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release candidate (RC) 0.
+This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release candidate (RC) 1.
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 
@@ -38,12 +38,11 @@ This section identifies known issues you may experience with this product:
 
 - [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is available for preview. It isn't available for use in production environments.
 
-- Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which aren't packaged in SQL Server 2022 RC 0 installation. For RC 0, install the two drivers from the provided links as necessary.
-
 ## Build number
 
 | Preview build | Version number | Date |
 |:--|:--|:--|
+| RC 1    | 16.0.950.9 | September 22, 2022|
 | RC 0    | 16.0.900.6 | August 23, 2022|
 | CTP 2.1 | 16.0.700.4 | July 27, 2022 |
 | CTP 2.0 | 16.0.600.9 | May 20, 2022 |

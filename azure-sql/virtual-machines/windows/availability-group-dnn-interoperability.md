@@ -1,8 +1,8 @@
 ---
 title: Feature interoperability with availability groups and DNN listener
 description: "Learn about the additional considerations when working with certain SQL Server features and a distributed network name (DNN) listener with an Always On availability group on SQL Server on Azure VMs. "
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 11/10/2021
 ms.service: virtual-machines-sql
@@ -121,7 +121,7 @@ Configure the linked server using the AG DNN listener name and port. If the port
 
 - Does DNN support multiple-subnet clusters?
 
-   Yes. The cluster binds the DNN in DNS with the physical IP addresses of all replicas in the availability regardless of the subnet. The SQL client tries all IP addresses of the DNS name regardless of the subnet. 
+   Yes. The cluster binds the DNN in DNS with the physical IP addresses of all replicas in the availability group regardless of the subnet. The SQL client tries all IP addresses of the DNS name regardless of the subnet. 
 
 - Does the availability group DNN listener support read-only routing? 
 

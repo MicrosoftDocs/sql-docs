@@ -183,7 +183,7 @@ There are two options for connecting virtual networks:
 - [Azure VNet peering](/azure/virtual-network/virtual-network-peering-overview)
 - VNet-to-VNet VPN gateway ([Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-cli))
 
-Peering is preferable because it uses the Microsoft backbone network, so from the connectivity perspective, there is no noticeable difference in latency between virtual machines in a peered virtual network and in the same virtual network. Virtual network peering is supported between the networks in the same region. Global virtual network peering is [supported for instances hosted in subnets created since 9/22/2020](frequently-asked-questions-faq#does-sql-managed-instance-support-global-vnet-peering).
+Peering is preferable because it uses the Microsoft backbone network, so from the connectivity perspective, there is no noticeable difference in latency between virtual machines in a peered virtual network and in the same virtual network. Virtual network peering is supported between the networks in the same region. Global virtual network peering is [supported for instances hosted in subnets created since 9/22/2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering).
 
 ### SQL Server outside Azure 
 

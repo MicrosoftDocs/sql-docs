@@ -13239,6 +13239,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services
         href: relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md
+      - name: sys.dm_server_suspend_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-suspend-status.md
       - name: sys.dm_server_registry
         href: relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md
     - name: Service Broker

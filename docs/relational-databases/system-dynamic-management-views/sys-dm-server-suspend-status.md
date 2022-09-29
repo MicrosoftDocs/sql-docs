@@ -1,8 +1,8 @@
 ---
 title: "sys.dm_server_suspend_status (Transact-SQL)"
 description: Reference documentation to explain sys.dm_server_suspend_status (Transact-SQL) dynamic management view.
-author: sravanisaluru
-ms.author: srsaluru
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/29/2022"
 ms.prod: sql
 ms.technology: system-objects
@@ -42,4 +42,5 @@ Principals must have the **VIEW SERVER STATE** permission.
 ## See Also
 
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)
- [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)
+ [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)
+ [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)

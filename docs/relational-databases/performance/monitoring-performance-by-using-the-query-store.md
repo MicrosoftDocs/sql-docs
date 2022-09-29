@@ -155,7 +155,7 @@ ALTER DATABASE [Database_Name] SET QUERY_STORE
 ( OPERATION_MODE = READ_WRITE );
 ```
 
-To enable the Query Store on a secondary replica, connect to each secondary replica and execute the following for each desired database:
+To enable the Query Store on all secondary replicas, connect to the primary replica and execute the following for each desired database. Currently, the Query Store is enabled for all secondary replicas.
 
 ```sql
 ALTER DATABASE [Database_Name]
@@ -163,7 +163,7 @@ FOR SECONDARY SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE );
 GO
 ```
 
-To disable the Query STore on a secondary replica, connect to the secondary replica and execute the following for each desired database:
+To disable the Query Store on all secondary replicas, connect to the primary replica and execute the following for each desired database:
 
 ```sql
 ALTER DATABASE [Database_Name]

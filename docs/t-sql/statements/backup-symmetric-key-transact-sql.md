@@ -15,7 +15,7 @@ ms.custom: event-tier1-build-2022
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
 > [!NOTE]
-> SQL Server 2022 introduces support for exporting and importing symmetric keys, either to or from Azure Blob storage or file.
+> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces support for exporting and importing symmetric keys, either to or from Azure Blob storage or file.
 
 Exports the symmetric key.
 

@@ -1,17 +1,15 @@
 ---
 title: "Upgrade log shipping to SQL Server 2016 and newer"
-description: Learn the appropriate order to preserve your log shipping disaster recovery solution when upgrading to SQL Server 2016 and newer from a previous version. 
-ms.custom: seo-lt-2019
-ms.date: "02/01/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: log-shipping
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "log shipping [SQL Server], upgrading"
-ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
+description: Learn the appropriate order to preserve your log shipping disaster recovery solution when upgrading to SQL Server 2016 and newer from a previous version.
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "02/01/2016"
+ms.prod: sql
+ms.technology: log-shipping
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "log shipping [SQL Server], upgrading"
 ---
 # Upgrading Log Shipping to SQL Server 2016 (Transact-SQL)
 

@@ -1,16 +1,13 @@
 ---
 title: "Upgrade DQS databases schema after installing SQL Server update"
-description: Learn how to upgrade the Data Quality Services (DQS) instance using DQSInstaller.exe after SQL Server has been updated by a patch, hotfix, or cumulative update. 
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
+description: Learn how to upgrade the Data Quality Services (DQS) instance using DQSInstaller.exe after SQL Server has been updated by a patch, hotfix, or cumulative update.
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 # Upgrade DQS databases schema after installing SQL Server update
 

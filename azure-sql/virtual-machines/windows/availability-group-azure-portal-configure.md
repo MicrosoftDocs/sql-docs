@@ -1,8 +1,8 @@
 ---
 title: Configure an availability group (Azure portal)
 description: "Use the Azure portal to create the Windows failover cluster, the availability group listener, and the internal load balancer on a SQL Server VM in Azure."
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 11/10/2021
 ms.service: virtual-machines-sql

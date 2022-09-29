@@ -1,13 +1,14 @@
 ---
 title: "Rename computer hosting instance"
 description: When you rename a computer that hosts an instance of SQL Server, update the system metadata stored in sys.servers.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "remote login errors [SQL Server]"
   - "standalone computer names [SQL Server]"
   - "names [SQL Server], standalone instances of SQL Server"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "removing remote logins"
   - "deleting remote logins"
   - "dropping remote logins"
-ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server

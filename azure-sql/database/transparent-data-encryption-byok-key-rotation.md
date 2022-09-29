@@ -2,8 +2,8 @@
 title: Rotate TDE protector (PowerShell & the Azure CLI)
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Learn how to rotate the Transparent data encryption (TDE) protector for a server in Azure used by Azure SQL Database and Azure Synapse Analytics using PowerShell and the Azure CLI.
-author: shohamMSFT
-ms.author: shohamd
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 08/18/2022
 ms.service: sql-database

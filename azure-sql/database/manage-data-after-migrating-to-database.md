@@ -2,8 +2,8 @@
 title: Manage after migration
 titleSuffix: Azure SQL Database
 description: Learn how to manage your single and pooled databases after migration to Azure SQL Database.
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: wiassaf, mathoma
 ms.date: 02/13/2019
 ms.service: sql-database

@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -41,8 +41,8 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
-  
+[!INCLUDE [create-workload-group](../includes/create-workload-group.md)]
+
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 
@@ -62,7 +62,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
+[!INCLUDE [create-workload-group](../includes/create-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"
@@ -130,7 +130,6 @@ Consider the values that are used for resource classes as a guideline for reques
 |Mediumrc|10%|
 |Largerc|22%|
 |Xlargerc|70%|
-|||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
 Sets the maximum amount of resources allocated per request. Memory is the only resource governed by this parameter. *value* is an optional decimal parameter with a default value equal to the request_min_resource_grant_percent. *value* must be greater than or equal to request_min_resource_grant_percent. When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
@@ -179,7 +178,6 @@ The `request_min_resource_grant_percent` parameter has an effective value becaus
 |DW10000c|0.75%|128|
 |DW15000c|0.75%|128|
 |DW30000c|0.75%|128|
-||||
 
 The `min_percentage_resource` parameter must be greater than or equal to the effective `request_min_resource_grant_percent`. A workload group with `min_percentage_resource` configured less than effective `min_percentage_resource` has the value adjusted to zero at run time. When this happens, the resources configured for `min_percentage_resource` are sharable across all workload groups. For example, the workload group `wgAdHoc` with a `min_percentage_resource` of 10% running at DW1000c would have an effective `min_percentage_resource` of 10% (3% is the minimum supported value at DW1000c). `wgAdhoc` at DW100c would have an effective min_percentage_resource of 0%. The 10% configured for `wgAdhoc` would be shared across all workload groups.
 

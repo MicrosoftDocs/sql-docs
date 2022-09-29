@@ -216,7 +216,6 @@ The following table lists all operations that are supported by the different ind
 | Index seek on inequality and range predicates <br/> (>, <, <=, >=, `BETWEEN`). | No <br/> (Results in an index scan.) | Yes <sup>1</sup> | Yes |  
 | Retrieve rows in a sort order that matches the index definition. | No | Yes | Yes |  
 | Retrieve rows in a sort-order that matches the reverse of the index definition. | No | No | Yes |  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> For a memory-optimized Nonclustered index, the full key is not required to perform an index seek.  
 

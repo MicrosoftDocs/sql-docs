@@ -17,9 +17,9 @@ ms.date: 7/29/2022
 In some scenarios, SqlPackage operations take longer than expected or fail to complete.  This article describes some frequently suggested tactics to troubleshoot or improve performance of these operations. While reading the specific documentation page for each action to understand the available parameters and properties is recommended, this article serves as a starting point in investigating SqlPackage operations.
 
 ## Overall strategy
-As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-core) of SqlPackage.exe.
+As general guideline, better performance can be obtained via the [.NET Core version](sqlpackage-download.md#windows-net-6) of SqlPackage.exe.
 
-1. [Download](sqlpackage-download.md#windows-net-core) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
+1. [Download](sqlpackage-download.md#windows-net-6) the zip for SqlPackage on .NET Core for your operating system (Windows, macOS, or Linux).
 2. Unzip archive as directed on the download page.
 3. Open a command prompt and change directory (`cd`) to the SqlPackage folder.
 

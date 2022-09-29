@@ -1,13 +1,13 @@
 ---
 title: New Installation (Service Broker)
 description: "To install a Service Broker service, the developer gives the administrator a set of installation scripts."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # New Installation (Service Broker)

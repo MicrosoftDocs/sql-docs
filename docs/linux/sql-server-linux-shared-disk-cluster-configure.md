@@ -219,7 +219,7 @@ This example will create an FCI in the group NewLinFCIGrp. The name of the resou
 
     \<Password> is the password for the user
 
-    \<ADDomain> is the AD DS domain (if applicable when using a Windows Server-based SMB share)
+    \<ADDomain> is the Active Directory DS domain (if applicable when using a Windows Server-based SMB share)
 
     \<mssqlUID> is the UID of the mssql user
 

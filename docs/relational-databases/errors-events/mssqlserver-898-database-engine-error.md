@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|BPOOL_SCAN_LONG_DURATION|
 |Message Text|`Buffer Pool scan took %I64d seconds: database ID %d, command '%ls', operation '%ls', scanned buffers %I64d, total iterated buffers %I64d, wait time %I64d ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information.` |
-||
 
 ## Explanation
 

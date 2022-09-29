@@ -176,11 +176,14 @@ For the link to work, you must have network connectivity between SQL Server and 
 
 Deploying SQL Server on Azure Virtual Machines in the same Azure virtual network that hosts SQL Managed Instance is the simplest method, because network connectivity will automatically exist between the two instances. To learn more, see the detailed tutorial [Deploy and configure an Azure VM to connect to Azure SQL Managed Instance](./connect-vm-instance-configure.md). 
 
-If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, either connect the two Azure virtual networks by using [global virtual network peering](https://techcommunity.microsoft.com/t5/azure-sql/new-feature-global-vnet-peering-support-for-azure-sql-managed/ba-p/1746913) or configure [VPN gateways](/azure/vpn-gateway/tutorial-create-gateway-portal). 
+If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, you need to make a connection between both virtual networks. The virtual networks don't have to be in the same subscription for this scenario to work.
 
->[!NOTE]
-> Global virtual network peering is enabled by default on managed instances provisioned after November 2020. [Raise a support ticket](../database/quota-increase-request.md) to enable global virtual network peering on older instances. 
+There are two options for connecting virtual networks:
 
+- [Azure VNet peering](/azure/virtual-network/virtual-network-peering-overview)
+- VNet-to-VNet VPN gateway ([Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-cli))
+
+Peering is preferable because it uses the Microsoft backbone network, so from the connectivity perspective, there is no noticeable difference in latency between virtual machines in a peered virtual network and in the same virtual network. Virtual network peering is supported between the networks in the same region. Global virtual network peering is [supported for instances hosted in subnets created starting 9/22/2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering).
 
 ### SQL Server outside Azure 
 
@@ -293,7 +296,7 @@ EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper',
     @enabled=1,
     @description=N'Test Managed Instance to SQL Server network connectivity on port 5022.',
     @category_name=N'[Uncategorized (Local)]',
-    @owner_login_name=N'cloudSA', @job_id = @jobId OUTPUT
+    @owner_login_name=N'sa', @job_id = @jobId OUTPUT
 
 EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'TNC network probe from MI to SQL Server',
     @step_id=1,

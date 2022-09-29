@@ -1,18 +1,14 @@
 ---
-title: "Setting Up Database Mirroring (SQL Server) | Microsoft Docs"
+title: "Setting Up Database Mirroring (SQL Server)"
 description: Learn about prerequisites, recommendations, and steps for setting up database mirroring in SQL Server, including an overview of a database mirroring session.
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database mirroring [SQL Server], deployment"
-ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database mirroring [SQL Server], deployment"
 ---
 # Setting Up Database Mirroring (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

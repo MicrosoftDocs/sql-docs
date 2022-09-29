@@ -1,16 +1,12 @@
 ---
-description: "Using the DQS Default Knowledge Base"
 title: "Using the DQS Default Knowledge Base"
-ms.custom: ""
-ms.date: "07/31/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
+description: "Using the DQS Default Knowledge Base"
 author: swinarko
 ms.author: sawinark
+ms.date: "07/31/2012"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
 ---
 # Using the DQS Default Knowledge Base
 

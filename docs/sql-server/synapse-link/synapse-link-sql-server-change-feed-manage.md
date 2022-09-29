@@ -65,7 +65,7 @@ SELECT * FROM sys.dm_change_feed_log_scan_sessions;
 
 ## Enabling the change feed and creating change feed objects
 
-The system stored procedures `sys.sp_change_feed_enable_table`, `sys.sp_change_feed_enable_db`, `sys.sp_change_feed_create_table_group` are undocumented and for internal use only. Always use Synapse Studio in the Azure portal to create and configure the Azure Synapse Link for SQL Server 2022 and Azure SQL Database. The following drop and disable stored procedures are provided to remove the Azure Synapse Link in the case where the Azure Synapse Studio has been removed or is inaccessible.
+The system stored procedures `sys.sp_change_feed_enable_table`, `sys.sp_change_feed_enable_db`, `sys.sp_change_feed_create_table_group` are undocumented and for internal use only. Always use Synapse Studio in the Azure portal to create and configure the Azure Synapse Link for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and Azure SQL Database. The following drop and disable stored procedures are provided to remove the Azure Synapse Link in the case where the Azure Synapse Studio has been removed or is inaccessible.
 
 ## Disable change feed for database
 

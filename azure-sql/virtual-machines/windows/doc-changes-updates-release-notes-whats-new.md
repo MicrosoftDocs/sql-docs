@@ -123,7 +123,7 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
 * [Provision SQL Server on a Windows VM](create-sql-vm-portal.md)
-* [Migrate a database to SQL Server on an Azure VM](migrate-to-vm-from-sql-server.md)
+* [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)
 * [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md)
 * [Performance best practices for SQL Server on Azure Virtual Machines](./performance-guidelines-best-practices-checklist.md)
 * [Application patterns and development strategies for SQL Server on Azure Virtual Machines](application-patterns-development-strategies.md)

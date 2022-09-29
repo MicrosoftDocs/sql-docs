@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Master Data Services], determining permissions"
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # How Permissions Are Determined (Master Data Services)
 

@@ -1,5 +1,5 @@
 ---
-title: "What's new in SQL Server 2022 | Microsoft Docs"
+title: "What's new in SQL Server 2022 (Preview)"
 description: Learn about new features for SQL Server 2022 (16.x), which gives you choices of development languages, data types, environments, and operating systems.
 ms.prod: sql
 ms.technology: release-landing
@@ -10,8 +10,8 @@ ms.reviewer: wiassaf
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/23/2022
-monikerRange: ">=sql-server-ver15"
+ms.date: 09/22/2022
+monikerRange: ">= sql-server-2016"
 ---
 
 # What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver15"
 
 [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud environments, and operating systems.
 
-The following video introduces SQL Server 2022 Preview.
+The following video introduces [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 > [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
 
@@ -28,9 +28,9 @@ For additional video content, see [What's new in SQL Server](https://microsoftme
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
-## Get SQL Server 2022 Preview
+## Get [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
 
-[Get SQL Server 2022 Preview Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126).
+[Get SQL Server 2022 Release Candidate (RC 1) Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126). Build number: 16.0.950.9.
 
 For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
 
@@ -39,39 +39,33 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For SQL Server 2022 Preview on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
+- On Azure Virtual Machines it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
+- For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
 - Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
-## Release candidate
+RC 1 introduces [Hybrid buffer pool with direct write](#platform) as well as other improvements.
 
-This is release candidate (RC) 0.
+## Feature highlights
 
-SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
+The following sections identify features that are improved our introduced in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
-- [Intelligent query processing](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism (DOP) feedback - improved comparison algorithm.
+- [Analytics](#analytics)
+- [Availability](#availability)
+- [Security](#security)
+- [Performance](#performance)
+- [Query Store and intelligent query processing](#query-store-and-intelligent-query-processing)
 - [Management](#management)
-  - Improved snapshot backup support
 - [Platform](#platform)
-  - Integrated acceleration & offloading
 - [Language](#language)
-  - APPROX_PERCENTILE_DISC()
-  - APPROX_PERCENTILE_CONT()
-  - TRIM scalar function extensions
-
-For details, see the feature descriptions in the sections below.
-
-The following sections provide an overview of these features.
 
 ## Analytics
 
 | New feature or update | Details |
 |:---|:---|
 |Azure Synapse Link for SQL|Get near real time analytics over operational data in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]. With a seamless integration between operational stores in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. <br/><br/> For more information, see [What is Azure Synapse Link for SQL? (Preview) - Azure Synapse Analytics](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). <br/></br> See also, [Known issues](/azure/synapse-analytics/synapse-link/synapse-link-for-sql-known-issues).|
-|Object storage integration | SQL Server 2022 Preview introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. The first is [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md) and the second is Data Lake Virtualization. <br/><br/> Data Lake Virtualization integrates [PolyBase with S3-compatible object storage](../relational-databases/polybase/polybase-configure-s3-compatible.md), adds support for to querying parquet files with T-SQL.|
+|Object storage integration | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] introduces new object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. The first is [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md) and the second is Data Lake Virtualization. <br/><br/> Data Lake Virtualization integrates [PolyBase with S3-compatible object storage](../relational-databases/polybase/polybase-configure-s3-compatible.md), adds support for to querying parquet files with T-SQL.|
 |Data Virtualization | Query different types of data on different types of data sources from SQL Server. |
 
 ## Availability
@@ -107,7 +101,7 @@ The following sections provide an overview of these features.
 | Ordered clustered columnstore index | Ordered clustered columnstore index (CCI) sorts the existing data in memory before the index builder compresses the data into index segments. This has the potential of more efficient segment elimination, resulting in better performance as the number of segments to read from disk is reduced. For more information, see [CREATE COLUMNSTORE INDEX (Transact-SQL)](../t-sql/statements/create-columnstore-index-transact-sql.md) and [What's new in columnstore indexes](../relational-databases/indexes/columnstore-indexes-what-s-new.md).</br></br> Also available in Synapse Analytics. See [Query performance](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci#query-performance).|
 |Improved columnstore segment elimination | All columnstore indexes benefit from enhanced segment elimination by data type. Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index. This segment elimination applied to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. |
 | In-memory OLTP management | Improve memory management in large memory servers to reduce out-of-memory conditions. |
-| Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64MB, four VLFs were created. In SQL Server 2022, this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
+| Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64MB, four VLFs were created. In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
 
 ## Query Store and intelligent query processing
 
@@ -118,8 +112,8 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | New feature or update | Details |
 |:---|:---|
 | Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|
-| Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in SQL Server 2022 Preview. Requires the Query Store to be enabled and in "Read write" mode. |
-| Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. SQL Server 2022 preview introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store.<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. Persistance benefits memory grant feedback as well as the new DOP and CE feedback features.<br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution. Requires enabling Query Store. Query Store is enabled by default for newly created databases as of SQL Server 2022 CTP 2.1.|
+| Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Requires the Query Store to be enabled and in "Read write" mode. |
+| Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store.<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. Persistance benefits memory grant feedback as well as the new DOP and CE feedback features.<br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution. Requires enabling Query Store. Query Store is enabled by default for newly created databases as of SQL Server 2022 CTP 2.1.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitivity-plan-optimization.md).|
 | Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires the Query Store to be enabled and in "Read write" mode. <br/><br/> Beginning with RC 0, every query recompilation SQL Server compares the runtime stats of the query using existing feedback to the runtime stats of the previous compilation with the existing feedback. If the performance is not the same or better, we clear all DOP feedback and trigger a reanalysis of the query starting from the compiled DOP. <br/><br/> See `DOP_FEEDBACK` in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 | Cardinality estimation feedback | Identifies and corrects suboptimal query execution plans for repeating queries, when these issues are caused by incorrect estimation model assumptions. Requires the Query Store to be enabled and in "Read write" mode. See [Cardinality Estimation (SQL Server)](../relational-databases/performance/cardinality-estimation-sql-server.md). |
@@ -131,20 +125,21 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 |:---|:---|
 | Integrated setup experience for the Azure extension for SQL Server | Install the Azure extension for SQL Server at setup. Required for Azure integration features. For more information, see:</br>- [Install SQL Server from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-sql-server-from-the-command-prompt) <br/>- [Install SQL Server from the Installation Wizard (Setup)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md?view=sql-server-ver16&preserve-view=true).|
 | Manage Azure extension for SQL Server | Use SQL Server Configuration Manager to manage Azure extension for SQL Server service. Required to create Azure Arc-enabled SQL Server instance, and for other Azure connected features.  See [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md). |
-| Max server memory calculations | During setup, SQL Setup recommends a value for max server memory to align with documented recommendations. The underlying calculation is different in SQL Server 2022 to reflect recommended [server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
-| Accelerated Database Recovery (ADR) improvements | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. SQL Server 2022 implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking.<br/><br/>See [ADR improvements in SQL Server 2022 (16.x) Preview](../relational-databases/accelerated-database-recovery-concepts.md#adr-improvements-in-).|
+| Max server memory calculations | During setup, SQL Setup recommends a value for max server memory to align with documented recommendations. The underlying calculation is different in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] to reflect recommended [server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md). |
+| Accelerated Database Recovery (ADR) improvements | There are several improvements to address persistent version store (PVS) storage and improve overall scalability. [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] implements a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking.<br/><br/>See [ADR improvements in SQL Server 2022 (16.x) Preview](../relational-databases/accelerated-database-recovery-concepts.md#adr-improvements-in-).|
 | Improved snapshot backup support |  Adds Transact-SQL support for freezing and thawing I/O without requiring a VDI client. [Create a Transact-SQL snapshot backup](../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).|
-| Shrink database WAIT_AT_LOW_PRIORITY | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. SQL Server 2022 Preview adds WAIT_AT_LOW_PRIORITY as an additional option for shrink operations (DBCC SHRINKDATABASE and DBCC SHRINKFILE). When you specify WAIT_AT_LOW_PRIORITY, new queries requiring Sch-S or Sch-M locks aren't blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing. See [Shrink a database](../relational-databases/databases/shrink-a-database.md) and [Shrink a file](../relational-databases/databases/shrink-a-file.md).|
+| Shrink database WAIT_AT_LOW_PRIORITY | In previous releases, shrinking databases and database files to reclaim space often leads to concurrency issues. [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] adds WAIT_AT_LOW_PRIORITY as an additional option for shrink operations (DBCC SHRINKDATABASE and DBCC SHRINKFILE). When you specify WAIT_AT_LOW_PRIORITY, new queries requiring Sch-S or Sch-M locks aren't blocked by the waiting shrink operation, until the shrink operation stops waiting and begins executing. See [Shrink a database](../relational-databases/databases/shrink-a-database.md) and [Shrink a file](../relational-databases/databases/shrink-a-file.md).|
 | XML compression |XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md).|
 | Asynchronous auto update statistics concurrency|Avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-| Backup and restore to S3-compatible object storage | SQL Server 2022 extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API. See [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).|
+| Backup and restore to S3-compatible object storage | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] extends the `BACKUP`/`RESTORE` `TO`/`FROM` `URL` syntax by adding support for a new S3 connector using the REST API. See [backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).|
 
 ## Platform
 
 | New feature or update | Details |
 |:---|:---|
+|Hybrid buffer pool with direct write<|Reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. This *enlightenment* is is now available for Window 2022 as well as Linux. For details, see [Hybrid buffer pool with direct write](../database-engine/configure-windows/hybrid-buffer-pool.md#hybrid-buffer-pool-with-direct-write) and [Configure persistent memory (PMEM) for SQL Server on Windows](../database-engine/configure-windows/configure-persistent-memory.md).|
 |Integrated acceleration & offloading | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated acceleration & offloading](../relational-databases/integrated-acceleration/overview.md). |
-| Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities - including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. |
+| Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. Requires trace flag 15097. See [DBCC TRACEON - Trace Flags (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf15097). |
 
 ## Language
 
@@ -165,15 +160,15 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
-| Azure Data Studio | Get the latest release at [Download and install Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). The latest release includes support for SQL Server 2022.  |
+| Azure Data Studio | Get the latest release at [Download and install Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). The latest release includes support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].  |
 | Distributed Replay |  SQL Server setup no longer includes the Distributed Replay client and controller executables. These will be available, along with the Admin executable, as a separate download |
-| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for SQL Server 2022. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms-19.md). |
-| SqlPackage.exe | Version 19 of SqlPackage provides support for SQL Server 2022. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md).|
-| VS Code | The latest release of VS Code, version 1.67, supports SQL Server 2022. Get it at <https://code.visualstudio.com/>. |
+| SQL Server Management Studio | SSMS version 19.0 is now available and is the recommended version of SSMS for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms-19.md). |
+| SqlPackage.exe | Version 19 of SqlPackage provides support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Get the latest version at [Download and install sqlpackage](../tools/sqlpackage/sqlpackage-download.md).|
+| VS Code | The latest release of VS Code, version 1.67, supports [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Get it at <https://code.visualstudio.com/>. |
 
 ## SQL Machine Learning Services
 
-Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
+Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning-sql-2022.md).
 
 ## Additional information
 
@@ -183,7 +178,7 @@ This section provides additional information for the features highlighted above.
 
 Query Store helps you better track performance history, troubleshoot query plan related issues, and enable new capabilities in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], and [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. CTP 2.1 introduces Query Store enabled by default for new databases. If you need to enable the query store, see [Enable the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Enabling).
 
-- For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to SQL Server 2022, these databases will retain the previous Query Store settings.
+- For databases that have been restored from other SQL Server instances and for those databases that are upgraded from an in-place upgrade to [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], these databases will retain the previous Query Store settings.
 
 - For databases that are restored from previous SQL Server instances, separately evaluate the [database compatibility level settings](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) as some Intelligent Query Processing features are enabled by the compatibility level setting.
 

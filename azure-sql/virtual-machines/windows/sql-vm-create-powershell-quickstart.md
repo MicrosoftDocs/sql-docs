@@ -188,4 +188,4 @@ You can also permanently delete all resources associated with the virtual machin
 In this quickstart, you created a SQL Server 2017 virtual machine using Azure PowerShell. To learn more about how to migrate your data to the new SQL Server, see the following article.
 
 > [!div class="nextstepaction"]
-> [Migrate a database to a SQL VM](migrate-to-vm-from-sql-server.md)
+> [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)

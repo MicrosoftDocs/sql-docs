@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "annotations [Master Data Services]"
   - "annotations [Master Data Services], about annotations"
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Annotations (Master Data Services)
 

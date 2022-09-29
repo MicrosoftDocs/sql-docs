@@ -62,7 +62,7 @@ public class ClientFailover {
     public static void main(String[] args) {
 
         String connectionUrl = "jdbc:sqlserver://serverA:1433;"
-                + "databaseName=AdventureWorks;integratedSecurity=true;"
+                + "encrypt=true;databaseName=AdventureWorks;integratedSecurity=true;"
                 + "failoverPartner=serverB";
 
         // Establish the connection to the principal server.

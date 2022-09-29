@@ -1,13 +1,14 @@
 ---
 title: "Monitor availability groups using Transact-SQL (T-SQL)"
 description: "Use Transact-SQL SELECT statements to monitor Always On availability groups and their replicas and databases."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seodec18
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
   - "dynamic management views [SQL Server], Always On Availability Groups"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
   - "catalog views [SQL Server], Always On Availability Groups"
-ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Monitor Availability Groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

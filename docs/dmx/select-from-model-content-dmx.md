@@ -1,14 +1,14 @@
 ---
+title: "SELECT FROM &lt;model&gt;.CONTENT (DMX)"
 description: "SELECT FROM &lt;model&gt;.CONTENT (DMX)"
-title: "SELECT FROM &lt;model&gt;.CONTENT (DMX) | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
-ms.custom: dmx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: dmx
 ---
 # SELECT FROM &lt;model&gt;.CONTENT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

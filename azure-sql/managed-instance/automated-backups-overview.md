@@ -31,9 +31,6 @@ This article describes the automated backup feature for Azure SQL Managed Instan
 
 To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [Recover using automated database backups](recovery-using-backups.md). 
 
-
-[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
-
 ## What is a database backup?
 
 Database backups are an essential part of any business continuity and disaster recovery strategy, because they help protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](../database/long-term-retention-overview.md) for both single and pooled databases.
@@ -275,6 +272,8 @@ If your database is encrypted with TDE, backups are automatically encrypted at r
 
 All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team is not currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload. 
 
+Although the system does not verify the integrity of the backups, there is still built-in protection of your backups that alerts Microsoft if there's an issue with the backup service. Additionally, Microsoft supports you if an issue occurs with a backup, such as if a full backup is not taken, the backup service is stuck, a log backup is out of SLA, or if the backup hardware or software is corrupted.
+
 ## Use Azure Policy to enforce backup storage redundancy
 
 If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL managed instance by using Azure Policy. 
@@ -289,6 +288,14 @@ For a full list of built-in policy definitions for SQL Managed Instance, review 
 
 > [!IMPORTANT]
 > Azure policies are not enforced when you're creating a database via T-SQL. To enforce data residency when you're creating a database by using T-SQL, [use LOCAL or ZONE as input to the BACKUP_STORAGE_REDUNDANCY parameter in the CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
+
+## Compliance
+
+If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy).
+
+> [!NOTE]
+> The [Change automated backup settings](automated-backups-change-settings.md) article provides steps about how to delete personal data from the device or service and can be used to support your obligations under the GDPR. For general information about GDPR, see the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview) and the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
 
 ## Next steps
 

@@ -29,7 +29,7 @@ Generates a predicted value or scores based on a stored model. For more informat
 > [!IMPORTANT]
 > Support for `PREDICT` is in Preview in Azure SQL Managed Instance.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
 :::row:::

@@ -1,16 +1,12 @@
 ---
-title: "backup checksum default | Microsoft Docs"
+title: "backup checksum default"
 description: Find out about the backup checksum default option. See how to use it to turn backup checksum on or off during SQL Server backup and restore operations.
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 # backup checksum default
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

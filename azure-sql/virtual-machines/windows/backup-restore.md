@@ -137,4 +137,4 @@ The following table summarizes the capabilities of each backup and restore optio
 
 If you are planning your deployment of SQL Server on Azure VM, you can find provisioning guidance in the following guide: [How to provision a Windows SQL Server virtual machine in the Azure portal](create-sql-vm-portal.md).
 
-Although backup and restore can be used to migrate your data, there are potentially easier data migration paths to SQL Server on VM. For a full discussion of migration options and recommendations, see [Migrating a Database to SQL Server on Azure VM](migrate-to-vm-from-sql-server.md).
+Although backup and restore can be used to migrate your data, there are potentially easier data migration paths to SQL Server on VM. For a full discussion of migration options and recommendations, see [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md).

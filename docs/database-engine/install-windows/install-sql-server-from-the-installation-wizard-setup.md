@@ -3,7 +3,7 @@ title: "Install using graphical user interface"
 description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/16/2022
+ms.date: 09/12/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -174,7 +174,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]
 
     > [!NOTE]  
-    > Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
+    > With [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, select the **Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service** check box to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).
 
 1. Use the **Server Configuration - Collation** page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 
@@ -474,13 +474,13 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable integration scenarios with Azure (like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)), and is required to enable Microsoft Defender for Cloud, Purview, Azure Active Directory and other Azure services. This feature is selected by default.  
 
-   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. If you wish to proceed without conncting to Azure, you can unselect the Azure Extension for SQL Server checkbox. However, if the checkbox is selected and disabled (you can't unselect it), it means that the extension was already installed on your machine.
-
+   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/connect.md#prerequisites) are registered in your subscription.  If you wish to proceed without connecting to Azure, you can unselect the Azure Extension for SQL Server checkbox. 
+   
    To authenticate the SQL Server instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/overview.md#required-permissions).
 
    The following information is required:
 
-   * Azure service principal. If you provide the service principal, provide the service principal secret. This is used to authenticate the SQL Server instance to Azure.
+   * **Azure service principal**: If you provide the service principal, provide the service principal secret. This is used to authenticate the SQL Server instance to Azure.
    * **Azure subscription ID**: Azure subscription where the SQL Server instance resource will be created.
    * **Azure resource group**: Azure resource group where the SQL Server instance resource will be created.
    * **Azure region**: Azure region where the SQL Server instance resource will be created.

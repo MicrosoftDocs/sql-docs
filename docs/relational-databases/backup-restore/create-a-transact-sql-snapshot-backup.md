@@ -1,5 +1,5 @@
 ---
-title: "Create a T-SQL Backup | Microsoft Docs"
+title: "Create a Transact-SQL snapshot backup | Microsoft Docs"
 description: This article shows you how to create a Transact-SQL backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
 ms.date: 07/25/2022
 ms.prod: sql
@@ -73,7 +73,7 @@ WITH METADATA_ONLY, FORMAT
 
 ### Suspend multiple user databases for snapshot backup
 
-If multiple databases on the same underlying disk, you could supsend multiple databases with the folowing command.
+If multiple databases on the same underlying disk, you could suspend multiple databases with the following command.
 
 ```sql
 ALTER SERVER CONFIGURATION
@@ -148,7 +148,7 @@ WITH METADATA_ONLY, FORMAT
 
 ### Tagging the backupset
 
-You may use the MEDIANAME and MEDIADESCRIPTION options in the backup command to tag the URI associated with the snapshot. This use allows the backupfile to carry the underlying snapshot information along with the database metadata. You can also use the NAME and DESCRIPTION options to tag the URI with the individual backupset snapshot.   
+You may use the MEDIANAME and MEDIADESCRIPTION options in the backup command to tag the URI associated with the snapshot. This use allows the backup file to carry the underlying snapshot information along with the database metadata. You can also use the NAME and DESCRIPTION options to tag the URI with the individual backupset snapshot.   
 
 SQL Server will not interpret the LABEL information in any way, it will however help the user to view the URI associated with the snapshot backup with RESTORE LABELONLY command.  
 

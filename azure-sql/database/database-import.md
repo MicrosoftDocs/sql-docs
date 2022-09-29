@@ -4,7 +4,7 @@ description: Create a new database in Azure SQL Database or Azure SQL Managed In
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/29/2020
+ms.date: 9/29/2022
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: quickstart

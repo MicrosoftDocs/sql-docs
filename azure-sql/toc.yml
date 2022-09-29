@@ -1523,8 +1523,6 @@
             href: virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk.md
       - name: Migrate
         items:
-        - name: SQL Server database to VM
-          href: virtual-machines/windows/migrate-to-vm-from-sql-server.md
         - name: VM to a new region
           href: virtual-machines/windows/move-sql-vm-different-region.md
       - name: Business continuity

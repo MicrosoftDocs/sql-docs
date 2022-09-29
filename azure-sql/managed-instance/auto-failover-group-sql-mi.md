@@ -103,7 +103,7 @@ Connectivity between the virtual network subnets hosting primary and secondary i
 
 > [!IMPORTANT]
 > [Global virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is the recommended way for establishing connectivity between two instances in a failover group. It provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public Internet, gateways, or additional encryption is required in the communication between the peered virtual networks.
-Global virtual network peering is [supported for instances hosted in subnets created since 9/22/2020](frequently-asked-questions-faq.md#does-sql-managed-instance-support-global-vnet-peering).
+Global virtual network peering is [supported for instances hosted in subnets created since 9/22/2020](frequently-asked-questions-faq#does-sql-managed-instance-support-global-vnet-peering).
 
 Regardless of the connectivity mechanism, there are requirements that must be fulfilled for geo-replication traffic to flow:
 - The Network Security Group (NSG) rules on the subnet hosting **primary** instance allow:

@@ -36,10 +36,10 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## Arguments
 
 #### `[ @query_id = ] query_id`
- Is the id of the query. *query_id* is a **bigint**, with no default.
+ Is the `query_id` of the query. `query_id` is a **bigint**, with no default.
 
 #### `[ @plan_id = ] plan_id`
- Is the id of the query plan that will no longer be enforced. *plan_id* is a **bigint**, with no default.
+ Is the `plan_id` of the query plan that will no longer be enforced. `plan_id` is a **bigint**, with no default.
 
 #### `[ @force_plan_scope = ] ??? `
 
@@ -68,7 +68,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;
 ```
 
- After you identify the query_id and plan_id that you want to unforce, use the following example to unforce the plan.
+ After you identify the `query_id` and `plan_id` that you want to unforce, use the following example to unforce the plan.
 
 ```sql
 EXEC sp_query_store_unforce_plan 3, 3;

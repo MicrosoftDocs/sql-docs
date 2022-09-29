@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Removes the query, as well as all associated plans and runtime stats from the query store.
+  Removes the query and all associated plans and runtime stats from the query store.
 
  :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -37,7 +37,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 
 #### `[ @query_id = ] query_id`
 
- Is the id of the query to be removed from the query store. *query_id* is a **bigint**, with no default.
+ The `query_id` of the query to be removed from the query store. `query_id` is a **bigint**, with no default.
 
 ## Return Code Values
 

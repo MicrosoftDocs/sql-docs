@@ -25,7 +25,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
 SQL Server 2019 Big Data Clusters CU18 includes important changes and capabilities. The following known issue has been resolved: 
 
-For detailed SQL Server engine changes, check the [official SQL Server 2019 CU18 knowledge base article KB5017593](https://support.microsoft.com/en-us/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc).
+For detailed SQL Server engine changes, check the [official SQL Server 2019 CU18 knowledge base article KB5017593](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc).
 
 ## Tested configurations for CU18
 

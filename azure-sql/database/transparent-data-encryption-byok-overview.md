@@ -209,13 +209,15 @@ The most common causes for lack of networking connectivity to Key Vault are:
 - Bad DNS resolution, like when the key vault FQDN is not resolved or resolves to an invalid IP address.
 
 [Test the connectivity](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-test-tcp-connectivity-from-a-sql-managed-instance/ba-p/3058458) from Managed Instance to the Key Vault hosting the TDE protector.
-    - The endpoint is your vault FQDN, like *<vault_name>.vault.azure.net* (without the https://).
-    - The port to be tested is 443.
-    - The result for RemoteAddress should exist and be the correct IP address
-    - The result for TCP test should be *TcpTestSucceeded : True*.
+
+- The endpoint is your vault FQDN, like *<vault_name>.vault.azure.net* (without the https://).
+- The port to be tested is 443.
+- The result for RemoteAddress should exist and be the correct IP address
+- The result for TCP test should be *TcpTestSucceeded : True*.
 
 In case the test returns *TcpTestSucceeded : False*, review the networking configuration:
-    - Check the resolved IP address, confirm it's valied. A missing value means there's issues with DNS resolution.
+
+- Check the resolved IP address, confirm it's valied. A missing value means there's issues with DNS resolution.
     - Confirm that the network security group on the managed instance has an **outbound** rule that covers the resolved IP address on port 443, especially when the resolved address belongs to the key vault's private endpoint.
     - Check other networking configurations like route table, existence of virtual appliance and its configuration, etc.
 

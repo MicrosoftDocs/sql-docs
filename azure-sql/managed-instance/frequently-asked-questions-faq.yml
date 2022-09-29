@@ -395,16 +395,14 @@ sections:
           ### What is the recommended way to connect managed instances placed in different regions?
           
           Global virtual network peering (VNet peering) is the recommended method to connect two managed instances in different regions. Express Route circuit peering is an alternative option. If neither option is possible in your environment, the only other connectivity method is a Site-to-Site VPN connection. Configure Site-to-Site VPN by using the [Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), or the [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)
-                    
-
-          ### Does SQL Managed Instance support Global VNet Peering?
-
-          Support for [global virtual network peering (VNet peering) for newly created virtual clusters](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/) was added to Azure SQL Managed Instance on September 22, 2020. As such, virtual network peering is supported for managed instances created in empty subnets after 09/22/2020. For instances deployed before this date, peering support is limited to networks within the same region due to the [constraints of global virtual network peering](/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints).  For more information, review the relevant section of the [Azure Virtual Networks frequently asked questions](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers).
-
-          To use global VNet peering with instances created before 09/2020, considering configuring a [maintenance window](../database/maintenance-window.md) or [moving the instance to a new subnet](./vnet-subnet-move-instance.md) as either option will move the instance to a new virtual cluster that supports global virtual network peering.    
-
-          See [how to check if global virtual network peering is supported on the virtual cluster](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-check-if-global-virtual-network-peering-is-supported-on/ba-p/3636546) if needed.
           
+          ### Does SQL Managed Instance support Global VNet Peering?
+          
+          Support for [global virtual network peering (VNet peering) for newly created virtual clusters](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/) was added to Azure SQL Managed Instance on September 22, 2020. As such, virtual network peering is supported for managed instances created in empty subnets after 09/22/2020. For instances deployed before this date, peering support is limited to networks within the same region due to the [constraints of global virtual network peering](/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints).  For more information, review the relevant section of the [Azure Virtual Networks frequently asked questions](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers).
+          
+          To use global VNet peering with instances created before 09/2020, considering configuring a [maintenance window](../database/maintenance-window.md) or [moving the instance to a new subnet](./vnet-subnet-move-instance.md) as either option will move the instance to a new virtual cluster that supports global virtual network peering.    
+          
+          See [how to check if global virtual network peering is supported on the virtual cluster](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-check-if-global-virtual-network-peering-is-supported-on/ba-p/3636546) if needed.
           
       - question: |
           Mitigate data exfiltration risks  

@@ -10,8 +10,8 @@ ms.reviewer: wiassaf
 ms.custom:
 - intro-whats-new
 - event-tier1-build-2022
-ms.date: 08/23/2022
-monikerRange: ">=sql-server-ver15"
+ms.date: 09/22/2022
+monikerRange: ">= sql-server-2016"
 ---
 
 # What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]
@@ -30,7 +30,7 @@ This article summarizes the new features and enhancements for [!INCLUDE[sql-serv
 
 ## Get [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
 
-[Get SQL Server 2022 Preview Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126).
+[Get SQL Server 2022 Release Candidate (RC 1) Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126). Build number: 16.0.950.9.
 
 For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
 
@@ -39,32 +39,26 @@ For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.m
 This release:
 
 - Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
+- On Azure Virtual Machines it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
+- For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, RC 1 is coming soon. For RC 0, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
 - Doesn't include support from Microsoft, except for select Early Adoption Program customers.
 
 After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
 
-## Release candidate
+RC 1 introduces [Hybrid buffer pool with direct write](#platform) as well as other improvements.
 
-This is release candidate (RC) 0.
+## Feature highlights
 
-SQL Server 2022 RC 0 (16.0.900.6) includes updates to the following features:
+The following sections identify features that are improved our introduced in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
-- [Intelligent query processing](#query-store-and-intelligent-query-processing)
-  - Degree of parallelism (DOP) feedback - improved comparison algorithm.
+- [Analytics](#analytics)
+- [Availability](#availability)
+- [Security](#security)
+- [Performance](#performance)
+- [Query Store and intelligent query processing](#query-store-and-intelligent-query-processing)
 - [Management](#management)
-  - Improved snapshot backup support
 - [Platform](#platform)
-  - Integrated acceleration & offloading
 - [Language](#language)
-  - APPROX_PERCENTILE_DISC()
-  - APPROX_PERCENTILE_CONT()
-  - TRIM scalar function extensions
-
-For details, see the feature descriptions in the sections below.
-
-The following sections provide an overview of these features.
 
 ## Analytics
 
@@ -143,6 +137,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
+|Hybrid buffer pool with direct write<|Reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. This *enlightenment* is is now available for Window 2022 as well as Linux. For details, see [Hybrid buffer pool with direct write](../database-engine/configure-windows/hybrid-buffer-pool.md#hybrid-buffer-pool-with-direct-write) and [Configure persistent memory (PMEM) for SQL Server on Windows](../database-engine/configure-windows/configure-persistent-memory.md).|
 |Integrated acceleration & offloading | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated acceleration & offloading](../relational-databases/integrated-acceleration/overview.md). |
 | Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. Requires trace flag 15097. See [DBCC TRACEON - Trace Flags (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf15097). |
 

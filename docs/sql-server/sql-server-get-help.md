@@ -65,7 +65,6 @@ The following Twitter accounts provide updates about SQL Server:
 - [Azure SQL - @AzureSQL](https://twitter.com/azuresql)
 - [Azure Data SQL Team - @mssqltiger ](https://twitter.com/mssqltiger)
 - [SQL Docs Team - @sqldocs](https://twitter.com/sqldocs)
-- [@MashaMSFT](https://twitter.com/mashamsft)
  
 ### Blogs
 

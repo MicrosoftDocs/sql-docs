@@ -86,7 +86,7 @@ The following table shows additional fixed server-level roles that are introduce
 
 ### Permissions of new fixed server roles in SQL Server 2022
 
-Each fixed server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the inherited database-level permissions as long as the user can connect to individual databases.
+Each fixed server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the  database-level permissions which are inherited as long as the user can connect to individual databases.
 
 |Fixed server-level role  | Server-level permissions | Database-level permissions |
 |---|---|---|

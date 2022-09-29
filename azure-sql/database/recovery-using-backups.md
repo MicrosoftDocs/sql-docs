@@ -86,6 +86,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 > - You can run a restore only on the same server. Point-in-time restore doesn't support cross-server restoration.
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 > - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
+> - Database restore operations are resource-intensive and may require a service tier of S3 or greater for the restoring (target) database. Once restore completes, the database or elastic pool may be scaled down, if required.
 
 - **Database replacement**
 

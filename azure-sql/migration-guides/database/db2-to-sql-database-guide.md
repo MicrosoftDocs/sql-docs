@@ -1,8 +1,8 @@
 ---
 title: "Db2 to Azure SQL Database: Migration guide"
 description: This guide teaches you to migrate your IMB Db2 databases to Azure SQL Database, by using the SQL Server Migration Assistant for Db2 (SSMA for Db2).
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma, kendralittle
 ms.date: 05/14/2021
 ms.service: sql-database

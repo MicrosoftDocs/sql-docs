@@ -12,5 +12,7 @@ Tools/NuGet/
 .openpublishing.buildcore.ps1
 packages.config
 
+.DS_Store
+.vscode
 
 **/.vscode/settings.json

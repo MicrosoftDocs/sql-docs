@@ -117,6 +117,11 @@ or the PowerShell [Stop-AzSqlDatabaseActivity command](/powershell/module/az.sql
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId
 ```
 
+> [!NOTE]
+> To cancel export operation you will need to have one of the following roles:
+> - SQL DB Contributor role or 
+> - A Custom role with Microsoft.Sql/servers/databases/operations permission
+
 ## Next steps
 
 - To learn about long-term backup retention of a single database and pooled databases as an alternative to exporting a database for archive purposes, see [Long-term backup retention](long-term-retention-overview.md). You can use SQL Agent jobs to schedule [copy-only database backups](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) as an alternative to long-term backup retention.

@@ -158,6 +158,10 @@ or the PowerShell [Stop-AzSqlDatabaseActivity command](/powershell/module/az.sql
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId
 ```
 
+> [!NOTE]
+> To cancel import operation you will need to have one of the following roles:
+> - SQL DB Contributor role or 
+> - A Custom role with Microsoft.Sql/servers/databases/operations permission
 
 ## Limitations
 

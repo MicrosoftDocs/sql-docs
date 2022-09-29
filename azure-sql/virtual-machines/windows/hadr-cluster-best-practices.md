@@ -74,7 +74,7 @@ An Event ID: 1069 with status 10048 can be identified from cluster logs with eve
 Resource IP Address 10.0.1.0 called SetResourceStatusEx: checkpoint 5. Old state OnlinePending, new state OnlinePending, AppSpErrorCode 0, Flags 0, nores=false
 IP Address <IP Address 10.0.1.0>: IpaOnlineThread: **Listening on probe port 59999** failed with status **10048**
 ```
-Status [**10048**]( win32/desktop-src/WinSock/windows-sockets-error-codes-2.md) refers to: **This error occurs** if an application attempts to bind a socket to an **IP address/port that has already been used** for an existing socket.
+Status [**10048**](/win32/desktop-src/WinSock/windows-sockets-error-codes-2) refers to: **This error occurs** if an application attempts to bind a socket to an **IP address/port that has already been used** for an existing socket.
 This can be caused by an internal process taking the same port defined as probe port, remember that probe port is used to check the status of a backend pool instance from the Azure Load Balancer. 
 If the **health probe fails** to get a response from a backend instance, then **no new connections will be sent to that backend instance** until the health probe succeeds again.
 

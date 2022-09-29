@@ -20,9 +20,9 @@ To learn more about the SSMS version of this feature, you can read [this article
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
 2. In the search box, search for **SQL Server Import**. Select the extension to view its details.
 
-   ![import extension manager](media/sql-server-import-extension/import-wizard-install.png)
+   ![Screenshot showing the import extension manager.](media/sql-server-import-extension/import-wizard-install.png)
 
-3. Click **Install**.
+3. Select **Install**.
 
 ## Start Import Wizard
 

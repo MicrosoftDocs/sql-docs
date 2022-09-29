@@ -76,6 +76,7 @@ An expression that contains the property information to be returned for the serv
 | `IsIntegratedSecurityOnly` | Server is in integrated security mode.<br /><br />1 = Integrated security (Windows Authentication)<br /><br />0 = Not integrated security. (Both Windows Authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.)<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **int** |
 | `IsLocalDB` | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br />Server is an instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **int** |
 | `IsPolyBaseInstalled` | **Applies to**: [!INCLUDE[ssSQL2016](../../includes/sssql16-md.md)].<br /><br />Returns whether the server instance has the PolyBase feature installed.<br /><br />0 = PolyBase isn't installed.<br /><br />1 = PolyBase is installed.<br /><br />Base data type: **int** |
+| `IsServerSuspendedForSnapshotBackup` | Server is in suspend mode and requires server level thaw.<br /><br />1 = Suspended.<br /><br />0 = Not suspended<br /><br />Base data type: **int** |
 | `IsSingleUser` | Server is in single-user mode.<br /><br />1 = Single user.<br /><br />0 = Not single user<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **int** |
 | `IsTempDbMetadataMemoryOptimized` | **Applies to**: [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] and later.<br /><br />Returns 1 if tempdb has been enabled to use memory-optimized tables for metadata; 0 if tempdb is using regular, disk-based tables for metadata. For more information, see [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).<br /><br />Base data type: **int** |
 | `IsXTPSupported` | **Applies to**: SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br />Server supports In-Memory OLTP.<br /><br />1 = Server supports In-Memory OLTP.<br /><br />0 = Server doesn't supports In-Memory OLTP.<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **int** |
@@ -100,6 +101,8 @@ An expression that contains the property information to be returned for the serv
 | `SqlCharSetName` | The SQL character set name from the collation.<br /><br />Base data type: **nvarchar(128)** |
 | `SqlSortOrder` | The SQL sort order ID from the collation<br /><br />Base data type: **tinyint** |
 | `SqlSortOrderName` | The SQL sort order name from the collation.<br /><br />Base data type: **nvarchar(128)** |
+| `SuspendedDatabaseCount` | The number of suspended databases on the server.<br /><br />Base data type: **int** |
+
 
 ## Return types
 

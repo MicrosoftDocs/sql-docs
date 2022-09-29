@@ -5,7 +5,7 @@ description: Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cl
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/12/2022
+ms.date: 09/13/2022
 ms.prod: sql
 ms.topic: conceptual
 ---

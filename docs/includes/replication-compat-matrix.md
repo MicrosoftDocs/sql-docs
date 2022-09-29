@@ -1,30 +1,30 @@
 ---
- author: MashaMSFT
- ms.service: sql
- ms.topic: include
- ms.date: 11/14/2018
- ms.author: mathoma
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: randolphwest
+ms.date: 09/28/2022
+ms.service: sql
+ms.topic: include
 ---
 
-### Transactional & Snapshot Replication compatibility matrix
+### Transactional and snapshot replication compatibility matrix
 
-| **Publisher**   | **Distributor** | **Subscriber** |
-| :------------   | :-------------- | :------------- |
-| SQL Server 2019 | SQL Server 2019 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/>  |
-| SQL Server 2017 | SQL Server 2019 <br/>SQL Server 2017 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 |
-| SQL Server 2016 | SQL Server 2019 <br/>SQL Server 2017 <br/> SQL Server 2016 | SQL Server 2019 <br/> SQL Server 2017 <br/>SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 |
-| SQL Server 2014 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>| SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 |
-| SQL Server 2012 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> | SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | 
-| SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 |  SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 <br/>  |
+| **Publisher** | **Distributor** | **Subscriber** |
+| :------------ | :-------------- | :------------- |
+| SQL Server 2019 | SQL Server 2019 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016 |
+| SQL Server 2017 | SQL Server 2019<br />SQL Server 2017 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014 |
+| SQL Server 2016 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012 |
+| SQL Server 2014 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014 | SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
+| SQL Server 2012 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012 | SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
+| SQL Server 2008 R2<br />SQL Server 2008 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |  SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
 
-### Merge Replication  compatibility matrix
-| **Publisher**   | **Distributor** | **Subscriber** |
-| :------------   | :-------------- | :------------- |
-| SQL Server 2019 | SQL Server 2019 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 <br/>   |
-| SQL Server 2017 | SQL Server 2019 <br/>SQL Server 2017 | SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 <br/>  |
-| SQL Server 2016 | SQL Server 2019 <br/>SQL Server 2017 <br/> SQL Server 2016 |SQL Server 2016 <br/> SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 |
-| SQL Server 2014 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>| SQL Server 2014 <br/> SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 |
-| SQL Server 2012 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> |SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 | 
-| SQL Server 2008 R2 <br/> SQL Server 2008 | SQL Server 2019 <br/> SQL Server 2017 <br/> SQL Server 2016 <br/> SQL Server 2014 <br/>SQL Server 2012 <br/> SQL Server 2008 R2 <br/> SQL Server 2008 |  SQL Server 2008 R2 <br/> SQL Server 2008 <br/>  |
-| &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | &nbsp; | &nbsp; |
+### Merge replication compatibility matrix
+
+| **Publisher** | **Distributor** | **Subscriber** |
+| :------------ | :-------------- | :------------- |
+| SQL Server 2019 | SQL Server 2019 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
+| SQL Server 2017 | SQL Server 2019<br />SQL Server 2017 | SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
+| SQL Server 2016 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016 |SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
+| SQL Server 2014 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014 | SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
+| SQL Server 2012 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012 |SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |
+| SQL Server 2008 R2<br />SQL Server 2008 | SQL Server 2019<br />SQL Server 2017<br />SQL Server 2016<br />SQL Server 2014<br />SQL Server 2012<br />SQL Server 2008 R2<br />SQL Server 2008 |  SQL Server 2008 R2<br />SQL Server 2008 |

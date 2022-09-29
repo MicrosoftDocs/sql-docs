@@ -25,7 +25,7 @@ Cumulative Update 18 (CU18) release for SQL Server 2019 Big Data Clusters, [KB 5
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
-|15.0.4261.1| 2019-CU18-ubuntu-20.04| [KB 5017593](https://support.microsoft.com/help/5017593) |
+|15.0.4261.1|[2019-CU18-ubuntu-20.04]| [KB 5017593](https://support.microsoft.com/help/5017593) |
 
 
 ## <a id="cu17"></a> CU17 (August 2022)
@@ -34,7 +34,7 @@ Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters, [KB 5
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
-|15.0.4249.2| 2019-CU17-ubuntu-20.04| [KB 5016394](https://support.microsoft.com/help/5016394) |
+|15.0.4249.2|[2019-CU17-ubuntu-20.04]| [KB 5016394](https://support.microsoft.com/help/5016394) |
 
 ## <a id="cu16"></a> CU16 GDR (June 2022)
 

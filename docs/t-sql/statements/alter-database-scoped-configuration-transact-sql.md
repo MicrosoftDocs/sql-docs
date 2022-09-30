@@ -5,7 +5,7 @@ description: Enable several database configuration settings at the individual da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: katsmith, jovanpop, wiassaf
-ms.date: 09/29/2022
+ms.date: 09/30/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -228,7 +228,7 @@ Enables or disables identity cache at the database level. The default is **ON**.
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Allows you to enable or disable Interleaved execution for multi-statement table-valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. The default is **ON**. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md).
+Allows you to enable or disable Interleaved execution for multi-statement table-valued functions at the database or statement scope while still maintaining database compatibility level 140 and higher. The default is **ON**. Interleaved execution is a feature that is part of Adaptive query processing in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, please refer to [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing-details.md##interleaved-execution-for-mstvfs).
 
 > [!NOTE]  
 > For database compatibility level 130 or lower, this database scoped configuration has no effect.
@@ -248,7 +248,7 @@ Allows you to enable or disable batch mode memory grant feedback at the database
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. The default is **ON**. Batch mode adaptive joins is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+Allows you to enable or disable batch mode adaptive joins at the database scope while still maintaining database compatibility level 140 and higher. The default is **ON**. Batch mode adaptive joins is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-adaptive-joins) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 > [!NOTE]  
 > For database compatibility level 130 or lower, this database scoped configuration has no effect.
@@ -257,7 +257,7 @@ Allows you to enable or disable batch mode adaptive joins at the database scope 
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (feature is in public preview)
 
-Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**. T-SQL Scalar UDF inlining is part of the [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**. T-SQL Scalar UDF inlining is part of the [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining) feature family.
 
 > [!NOTE]  
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
@@ -327,7 +327,7 @@ For more information about performance monitoring of natively compiled [!INCLUDE
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**. Row mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (row mode is supported in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). For more information, see [Memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#memory-grant-feedback).
+Allows you to enable or disable row mode memory grant feedback at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**. Row mode memory grant feedback a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing-feedback.md#row-mode-memory-grant-feedback) introduced in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Row mode is supported in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information on memory grant feedback, see [Memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#memory-grant-feedback).
 
 > [!NOTE]  
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
@@ -354,7 +354,7 @@ Allows you to disable memory grant feedback persistence for all query executions
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Allows you to enable or disable batch mode on rowstore at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**. Batch mode on rowstore is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+Allows you to enable or disable batch mode on rowstore at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**. Batch mode on rowstore is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing-details#batch-mode-on-rowstore) feature family.
 
 > [!NOTE]  
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
@@ -363,7 +363,7 @@ Allows you to enable or disable batch mode on rowstore at the database scope whi
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Allows you to enable or disable table variable deferred compilation at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**.  Table variable deferred compilation is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+Allows you to enable or disable table variable deferred compilation at the database scope while still maintaining database compatibility level 150 and higher. The default is **ON**.  Table variable deferred compilation is a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation) feature family.
 
 > [!NOTE]  
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
@@ -462,7 +462,7 @@ If asynchronous statistics update is enabled, enabling this configuration will c
 
 #### OPTIMIZED_PLAN_FORCING = { ON | OFF }
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<!-- >, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview) -->
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) <!--, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)-->
 
 Optimized plan forcing reduces compilation overhead for repeating forced queries. The default is **ON**. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute. Learn more in [Optimized plan forcing with Query Store](../../relational-databases/performance/optimized-plan-forcing-query-store.md).
 

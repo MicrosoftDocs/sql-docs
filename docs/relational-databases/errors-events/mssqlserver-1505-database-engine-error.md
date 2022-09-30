@@ -54,7 +54,7 @@ Consider the following solutions.
   
 -   Select columns that are defined as NOT NULL when you choose columns for a unique index or constraint. This eliminates the possibility of a uniqueness violation caused when more than one row contains NULL in the key values.  
   
--   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, review [Remove duplicate rows from a SQL Server table](https://docs.microsoft.com/troubleshoot/sql/database-design/remove-duplicate-rows-sql-server-tab).  
+-   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, review [Remove duplicate rows from a SQL Server table](/troubleshoot/sql/database-design/remove-duplicate-rows-sql-server-tab).  
   
 ## See Also  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

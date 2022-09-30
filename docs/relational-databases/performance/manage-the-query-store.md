@@ -3,7 +3,7 @@ title: "Best practices for managing the Query Store"
 description: Learn best practices for managing the SQL Server Query Store, including version specific details, managing custom capture policies, and other performance features.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 09/20/2022
+ms.date: 09/30/2022
 ms.prod: sql
 ms.technology: performance
 ms.topic: conceptual
@@ -293,9 +293,7 @@ SET QUERY_STORE = ON
 ```
 
 
-## <a name="Scenarios"></a> Query Store Maintenance
-
-### <a name="OptionMgmt"></a> Option management
+## <a name="Scenarios"></a><a name="OptionMgmt"></a> Query Store Maintenance
 
 This section provides some guidelines on managing Query Store feature itself.
 

@@ -60,7 +60,7 @@ $ledgerDigestUploadConfig = Enable-AzSqlDatabaseLedgerDigestUpload `
      -ResourceGroupName "ResourceGroup01" `
      -ServerName "Server01" `
      -DatabaseName "Database01" `
-     -Endpoint "https://mystorage.blob.core.windows.net"
+     -Endpoint "https://ledgerstorage.blob.core.windows.net"
 $ledgerDigestUploadConfig
 ```
 
@@ -78,7 +78,7 @@ az sql db ledger-digest-uploads enable \
     --name Database01 \
     --resource-group ResourceGroup01 \
     --server Server01 \
-    --endpoint https://mystorage.blob.core.windows.net
+    --endpoint https://ledgerstorage.blob.core.windows.net
 ```
 
 ---
@@ -105,7 +105,7 @@ To enable uploading ledger digests, specify the endpoint of an Azure Blob storag
 
    ```sql
    ALTER DATABASE SCOPED CONFIGURATION
-    SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://mystorage.blob.core.windows.net';
+    SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://ledgerstorage.blob.core.windows.net';
    ```
 
 For more information, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../../t-sql/statements/create-database-transact-sql.md).

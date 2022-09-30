@@ -82,7 +82,7 @@ Extended security updates for SQL Server VMs are delivered through the Microsoft
 
 ## Next steps
 
-- [Migrate a SQL Server database to SQL Server in an Azure VM](migrate-to-vm-from-sql-server.md)
+- [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)
 - [Create a SQL Server VM in the Azure portal](sql-vm-create-portal-quickstart.md)
 - [FAQ for SQL Server on Azure Virtual Machines](frequently-asked-questions-faq.yml)
 

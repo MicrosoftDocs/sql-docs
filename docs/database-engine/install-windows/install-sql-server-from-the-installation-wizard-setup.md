@@ -480,7 +480,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
    The following information is required:
 
-   * Azure service principal. If you provide the service principal, provide the service principal secret. This is used to authenticate the SQL Server instance to Azure.
+   * **Azure service principal**: If you provide the service principal, provide the service principal secret. This is used to authenticate the SQL Server instance to Azure.
    * **Azure subscription ID**: Azure subscription where the SQL Server instance resource will be created.
    * **Azure resource group**: Azure resource group where the SQL Server instance resource will be created.
    * **Azure region**: Azure region where the SQL Server instance resource will be created.

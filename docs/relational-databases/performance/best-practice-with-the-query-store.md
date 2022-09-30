@@ -62,7 +62,7 @@ It takes some time until Query Store collects the data set that accurately repre
 
 The following graphic shows how to locate Query Store views:
 
-![Query Store views](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")
+![Query Store views](../../relational-databases/performance/media/monitoring-performance-by-using-the-query-store/objectexplorerquerystore_sql17.png "Query Store views")
 
 The following table explains when to use each of the Query Store views:
 

@@ -179,11 +179,11 @@ FROM sys.database_query_store_options;
 GO
 ```
 
-The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a read/write state for the secondary. The `readonly_reason` of `8` indicates that the query was run against a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
+The following sample results from querying [sys.database_query_store_options](../system-catalog-views/sys-database-query-store-options-transact-sql.md) indicate that the Query Store is in a READ_CAPTURE_SECONDARY state for the secondary. The `readonly_reason` of `8` indicates that the query was run against a secondary replica. These results indicate that Query Store has been enabled successfully on the secondary replica.
 
 desired_state | desired_state_desc | actual_state | actual_state_desc | readonly_reason
 --------------|--------------------|--------------|-------------------|-----------------
-2|READ_WRITE|2|READ_WRITE|8
+4|READ_CAPTURE_SECONDARY|4|READ_CAPTURE_SECONDARY|8
 
 ### Performance considerations for Query Store for secondary replicas
 

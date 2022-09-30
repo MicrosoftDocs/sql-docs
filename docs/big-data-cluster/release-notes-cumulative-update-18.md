@@ -53,7 +53,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
     * __Java__: Azul Zulu JRE 1.8.0_275
     * __Scala__: 2.12
     * __Python__: 3.8 (miniforge 4.9)
-    * __R__: CRAN R 4.1.2
+    * __R__: CRAN R 4.2.1
     * __Spark SQL Connector__: [1.2.0](https://github.com/microsoft/sql-spark-connector)
 
 ## Embedded OSS component versions

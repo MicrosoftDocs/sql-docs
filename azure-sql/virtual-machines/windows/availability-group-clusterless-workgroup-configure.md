@@ -282,14 +282,15 @@ However, there may be some [limitations](https://techcommunity.microsoft.com/t5/
 
 ```powershell
 Add-ClusterResource -Name "IPAddress1" -ResourceType "IP Address" -Group "WGAG" 
-Get-ClusterResource -Name IPAddress1 | Set-ClusterParameter -Multiple @{"Network" = "Cluster Network 1";"Address" = "20.250.250.9";"SubnetMask" = "255.0.0.0";"EnableDHCP" = 0} 
+Get-ClusterResource -Name IPAddress1 | Set-ClusterParameter -Multiple @{"Network" = "Cluster Network 1";"Address" = "10.0.0.4";"SubnetMask" = "255.0.0.0";"EnableDHCP" = 0} 
 Add-ClusterResource -Name "IPAddress2" -ResourceType "IP Address" -Group "WGAG" 
-Get-ClusterResource -Name IPAddress2 | Set-ClusterParameter -Multiple @{"Network" = "Cluster Network 2";"Address" = "30.250.250.9";"SubnetMask" = "255.0.0.0";"EnableDHCP" = 0} 
+Get-ClusterResource -Name IPAddress2 | Set-ClusterParameter -Multiple @{"Network" = "Cluster Network 2";"Address" = "10.0.0.5";"SubnetMask" = "255.0.0.0";"EnableDHCP" = 0} 
 Add-ClusterResource -Name "TestName" -Group "WGAG" -ResourceType "Network Name" 
 Get-ClusterResource -Name "TestName" | Set-ClusterParameter -Multiple @{"DnsName" = "TestName";"RegisterAllProvidersIP" = 1} 
 Set-ClusterResourceDependency -Resource TestName -Dependency "[IPAddress1] or [IPAddress2]" 
 Start-ClusterResource -Name TestName -Verbose 
 ```
+
 
 
 ## Next steps

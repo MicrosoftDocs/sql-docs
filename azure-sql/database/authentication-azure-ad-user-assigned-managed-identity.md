@@ -148,30 +148,68 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
 
 #### Azure SQL Database
 
+To retrieve the current system-assigned managed identity:
+
 - To provision a new server with a UMI, use the [az sql server create](/cli/azure/sql/server#az-sql-server-create) command.
-- To obtain the UMI's server information, use the [az sql server show](/cli/azure/sql/server#az-sql-server-show) command. 
+- To obtain the managed identities for a logical server, use the [az sql server show](/cli/azure/sql/server#az-sql-server-show) command. 
+    - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` in
+    ```azurecli
+    az sql server show --resource-group "resourcegroupnamehere" --name "sql-logical-server-name-here" --query identity.userAssignedIdentities
+    ```
+    - To retrieve the SMI of an Azure SQL Database logical server:
+    ```azurecli
+    az sql server show --resource-group "resourcegroupnamehere" --name "sql-logical-server-name-here" --query identity.principalId
+    ``` 
 - To update the UMI's server setting, use the [az sql server update](/cli/azure/sql/server#az-sql-server-update) command.
 
 #### Azure SQL Managed Instance
 
 - To provision a new managed instance with a UMI, use the [az sql mi create](/cli/azure/sql/mi#az-sql-mi-create) command.
-- To obtain the UMI's managed instance information, use the [az sql server show](/cli/azure/sql/mi#az-sql-mi-show) command.
+- To obtain the system-assigned and user-assigned MI's for managed instances, use the [az sql mi show](/cli/azure/sql/mi#az-sql-mi-show) command.
+    - For example, to retrieve the UMI(s) for a managed instance, look for the `principalId` of each:
+    ```azurecli
+    az sql mi show --resource-group "resourcegroupnamehere" --name "midocssample" --query identity.userAssignedIdentities
+    ``` 
+    - To retrieve the SMI of a managed instance:
+    ```azurecli
+    az sql mi show --resource-group "resourcegroupnamehere" --name "midocssample" --query identity.principalId
+    ``` 
 - To update the UMI's managed instance setting, use the [az sql mi update](/cli/azure/sql/mi#az-sql-mi-update) command.
 
 ### Create or set a managed identity by using PowerShell
 
-[Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or later is required for using PowerShell with a UMI.
+[Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or later is required for using PowerShell with a UMI. The [latest version of PowerShell](/powershell/scripting/install/installing-powershell) is recommended.
 
 #### Azure SQL Database
 
 - To provision a new server with a UMI, use the [New-AzSqlServer](/powershell/module/az.sql/new-azsqlserver) command.
-- To obtain the UMI's server information, use the [Get-AzSqlServer](/powershell/module/az.sql/get-azsqlserver) command.
+- To obtain the managed identities for a logical server, use the [Get-AzSqlServer](/powershell/module/az.sql/get-azsqlserver) command.
+    - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
+    ```powershell
+    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
+    ``` 
+    - To retrieve the SMI of an Azure SQL Database logical server:
+    ```powershell
+    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI.Identity.principalId
+    ```
 - To update the UMI's server setting, use the [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) command.
 
 #### Azure SQL Managed Instance
 
 - To provision a new managed instance with a UMI, use the [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance) command.
-- To obtain the UMI's managed instance information, use the [Get-AzSqlInstance](/powershell/module/az.sql/get-azsqlinstance) command.
+- To obtain the managed identities for a managed instance, use the [Get-AzSqlInstance](/powershell/module/az.sql/get-azsqlinstance) command.
+    - For example, to retrieve the UMI(s) of a managed instance, look for the `principalId` of each:
+    ```powershell
+    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
+    ``` 
+    - To retrieve the SMI of a managed instance:
+    ```powershell
+    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI.Identity.principalId
+    ```
 - To update the UMI's managed instance setting, use the [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance) command.
 
 ### Create or set a managed identity by using the REST API

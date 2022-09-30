@@ -22,13 +22,13 @@ The following release notes apply to [!INCLUDE[ssbigdataclusters-ver15](../inclu
 
 ## Tested configurations
 
-[!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] is a fully containerized solution orchestrated by Kubernetes. Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU12, each release of SQL Server Big Data Clusters is tested against a fixed configuration of components. The configuration is evaluated with each release and adjustments are made to stay in-line with the ecosystem as Kubernetes continues to evolve.
+[!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] is a fully containerized solution orchestrated by Kubernetes. Starting with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] CU12, each release of SQL Server Big Data Clusters is tested against a fixed configuration of components. The configuration is evaluated with each release and adjustments are made to stay in-line with the ecosystem as Kubernetes continues to evolve.
 
    > [!IMPORTANT]
    > Kubernetes is a fast paced ecosystem. It is key to keep your platform updated in order to be secure, and to be on a tested configuration for SQL Server Big Data Clusters.
 
    > [!WARNING]
-   > On [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
+   > On [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
 
 The following table contains the tested configuration matrix for each release of SQL Server 2019 Big Data Clusters:
 

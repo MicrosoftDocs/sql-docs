@@ -10384,6 +10384,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 18
+          href: big-data-cluster/release-notes-cumulative-update-18.md
         - name: Cumulative Update 17
           href: big-data-cluster/release-notes-cumulative-update-17.md
         - name: Cumulative Update 16

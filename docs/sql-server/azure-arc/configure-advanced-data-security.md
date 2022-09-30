@@ -5,7 +5,7 @@ description: Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cl
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/13/2022
+ms.date: 09/1314/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
@@ -51,9 +51,7 @@ For more information, see [Extension management with Azure Arc](/azure/azure-arc
 
 1. Go to **Azure Arc > SQL Servers** and open  the Azure Arc-enabled SQL server resource for the instance that you want to protect. 
 
-1. Click on the **Microsoft Defender for Cloud** tile and then on **Enable Microsoft Defender for Cloud**.
-
-1. Follow the steps documented in [Enable Microsoft Defender for SQL servers on machines](/azure/defender-for-cloud/defender-for-sql-usage#set-up-microsoft-defender-for-sql-servers-on-machines).
+1. Click on the **Microsoft Defender for Cloud** tile. If Enablement Status shows **"Disabled at the subscription-level"** ,follow the steps documented in [Enable Microsoft Defender for SQL servers on machines]https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-usage#step-3-enable-the-optional-plan-in-defender-for-clouds-environment-settings-page).
  
 > [!NOTE]
    > The first scan to generate the vulnerability assessment happens within 24 hours after enabling Microsoft Defender for Cloud. After that, auto scans are be performed every week on Sunday.
@@ -62,24 +60,21 @@ For more information, see [Extension management with Azure Arc](/azure/azure-arc
 
 Explore security anomalies and threats in Azure Security Center.
 
-1. Open your SQL Server – Azure Arc resource and select **Security** in the left menu. to see the recommendations and alerts for that instance.
+1. Open your SQL Server – Azure Arc resource and select **Microsoft Defender for Cloud** in the **Settings** section of the left menu. to see the recommendations and alerts for that SQL Server instance.
 
    :::image type="content" source="media/configure-advanced-data-security/security-heading-sql-server-arc.png" alt-text="Screenshot showing how to select security heading.":::
 
-1. Select any of the recommendations to see the vulnerability details in **Security Center**.
+1. Select any of the recommendations to see the vulnerability details.
 
    :::image type="content" source="media/configure-advanced-data-security/vulnerabilities-report.png" alt-text="Screenshot showing the Vulnerability report.":::
 
-1. Select any security alert for full details and further explore the attack in [Azure Sentinel](/azure/sentinel/overview). The following diagram is an example of the brute force alert.
+1. Select any security alert for full details and further explore the attack. The following diagram is an example of the Potential SQL Injection alert.
 
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert.png" alt-text="Screenshot showing a brute force alert.":::
 
 1. Select **Take action** to mitigate the alert.
 
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert-mitigation.png" alt-text="Screenshot showing alert mitigation.":::
-
-> [!NOTE]
-> The general **Security Center** link at the top of the page does not use the preview portal URL so your **SQL Server - Azure Arc** resources are not be visible there. Follow the links for the individual recommendations or alerts.
 
 ## Next steps
 

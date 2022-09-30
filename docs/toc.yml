@@ -10197,6 +10197,8 @@ items:
         href: linux/sql-server-linux-docker-container-configure.md
       - name: Container security
         href: linux/sql-server-linux-docker-container-security.md
+      - name: Guidance for deploying to Kubernetes
+        href: linux/sql-server-linux-kubernetes-best-practices-statefulsets.md
       - name: Use MSDTC with containers
         href: linux/sql-server-linux-configure-msdtc-docker.md
       - name: Troubleshoot Docker containers

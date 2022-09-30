@@ -71,7 +71,7 @@ First, if the plan contains following constructions:
 * Invalid star join specification
 
 > [!NOTE]  
-> Azure SQL Database and SQL Server 2019 support plan forcing for static and fast forward cursors.
+> Azure SQL Database and SQL Server 2019 and later build versions support plan forcing for static and fast forward cursors.
 
 Second, when objects that plan relies on, are no longer available:
 * Database (if Database, where plan originated, does not exist anymore)
@@ -116,6 +116,7 @@ SELECT TOP 1000
 
 Learn more about Query Store and related concepts in the following articles:
 
+- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
 - [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
@@ -123,6 +124,5 @@ Learn more about Query Store and related concepts in the following articles:
 - [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)
 - [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
 - [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)

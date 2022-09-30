@@ -3,7 +3,7 @@ title: "sp_query_store_remove_query (Transact-SQL)"
 description: "sp_query_store_remove_query (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: 09/19/2022
+ms.date: 09/30/2022
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"
@@ -35,9 +35,9 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 
 ## Arguments
 
-#### `[ @query_id = ] query_id`
+#### [ @query_id = ] query_id
 
- The `query_id` of the query to be removed from the query store. `query_id` is a **bigint**, with no default.
+ The `query_id` of the query to be removed from the Query Store. `query_id` is a **bigint**, with no default.
 
 ## Return Code Values
 
@@ -51,7 +51,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 
 ## Examples
 
- The following example returns information about the queries in the query store.
+ The following example returns information about the queries in the Query Store.
 
 ```sql
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*

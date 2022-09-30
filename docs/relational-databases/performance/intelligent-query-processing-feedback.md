@@ -138,7 +138,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
-A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
+A USE HINT query hint takes precedence over a [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) or trace flag setting.
 
 ### Row mode memory grant feedback
 
@@ -197,7 +197,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
-A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
+A USE HINT query hint takes precedence over a [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) or trace flag setting.
 
 ### Percentile and persistence mode memory grant feedback
 
@@ -275,7 +275,7 @@ Instead of incurring in the pains of an all-encompassing default or manual adjus
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan. For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
 
-- To enable DOP feedback, enable the `DOP_FEEDBACK` database scoped configuration in a database.
+- To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dopfeedback---on--off) in a database.
 
 - The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the `sys.query_store_plan_feedback` catalog view when we reach a stable degree of parallelism feedback value.
 
@@ -285,7 +285,7 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - Stable feedback is reverified upon plan recompilation and may readjust up or down, but never above MAXDOP setting (including a MAXDOP hint).
 
-- To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` database scoped configuration.
+- To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dopfeedback---on--off).
 
 - To disable DOP feedback at the query level, use the `DISABLE_DOP_FEEDBACK` query hint.
 
@@ -417,6 +417,8 @@ When the row goal plan is applied, the estimated number of rows in the query pla
 
 While row goal is a beneficial optimization strategy for certain query patterns, if data isn't uniformly distributed, more pages may be scanned than estimated, meaning that row goal becomes inefficient. CE feedback can disable the row goal scan and enable a seek when this inefficiency is detected.
 
+In the execution plan, there is no attribute specific to CE Feedback, but there will ben an attribute listed for the Query Store hint. Look for the `QueryStoreStatementHintSource` to be `CE feedback`.
+
 ### Considerations for CE Feedback
 
 To enable CE feedback, enable database compatibility level 160 for the database you're connected to when executing the query. The Query Store must be enabled and in READ_WRITE mode for every database where CE feedback is used.
@@ -427,17 +429,13 @@ Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](
 
 Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view.
 
-Starting with CE feedback, a new `IsCEFeedbackAdjusted` attribute is available on the StmtSimple element to see whether CE Feedback adjustment was used.
-
-To disable CE feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF` database scoped configuration.
+To disable CE feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#cefeedback---on--off).
 
 To disable CE feedback at the query level, use the `DISABLE_CE_FEEDBACK` query hint.
 
 If a query has a query plan forced through Query Store, CE feedback won't be used for that query.
 
 If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback won't be used for that query. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hint](query-store-hints.md).
-
-To allow CE feedback to override hard-coded query hints and Query Store user hints, use the `ALTER DATABASE SCOPED CONFIGURATION SET FORCE_CE_FEEDBACK = ON` database scoped configuration.
 
 ### Feedback and Reporting Issues
 
@@ -452,3 +450,4 @@ For feedback or questions, email [CEFfeedback@microsoft.com](mailto:CEFfeedback@
 - [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
 - [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 - [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)
+- [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

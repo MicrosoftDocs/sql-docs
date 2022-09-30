@@ -1,8 +1,8 @@
 ---
 title: Resolving T-SQL differences-migration
 description: T-SQL statements that are less than fully supported in Azure SQL Database.
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/17/2021
 ms.service: sql-database

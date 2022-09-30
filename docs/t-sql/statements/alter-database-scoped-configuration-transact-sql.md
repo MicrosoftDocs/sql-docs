@@ -470,13 +470,13 @@ Optimized plan forcing reduces compilation overhead for repeating forced queries
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled and in READ_WRITE mode. For more information, see [Degrees of Parallelism (DOP) feedback](../../relational-databases/performance/intelligent-query-processing-details.md#degree-of-parallelism-dop-feedback). The default is **OFF**. 
+Identifies parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verifies if it helps. Requires Query Store enabled and in READ_WRITE mode. For more information, see [Degrees of Parallelism (DOP) feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback). The default is **OFF**. 
 
 #### CE_FEEDBACK = { ON | OFF }
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-CE feedback addresses perceived regression issues resulting from incorrect CE model assumptions when using the default CE (CE120 or higher) and can selectively use different model assumptions. Requires Query Store enabled and in READ_WRITE mode. For more information, see [Cardinality estimation (CE) feedback](../../relational-databases/performance/intelligent-query-processing-details.md#cardinality-estimation-ce-feedback). The default is **ON** in database compatibility level 160 and higher. 
+CE feedback addresses perceived regression issues resulting from incorrect CE model assumptions when using the default CE (CE120 or higher) and can selectively use different model assumptions. Requires Query Store enabled and in READ_WRITE mode. For more information, see [Cardinality estimation (CE) feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#cardinality-estimation-ce-feedback). The default is **ON** in database compatibility level 160 and higher. 
 
 #### PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = { ON | OFF }
 

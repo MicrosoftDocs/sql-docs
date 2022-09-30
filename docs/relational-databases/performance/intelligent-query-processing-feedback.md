@@ -37,6 +37,8 @@ The feedback features discussed in this article are:
 
 Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
 
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, memory grant feedback is also replica-aware for secondary replicas in availability groups. Memory grant feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+
 ### Batch mode memory grant feedback
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -288,6 +290,8 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 - To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dopfeedback---on--off).
 
 - To disable DOP feedback at the query level, use the `DISABLE_DOP_FEEDBACK` query hint.
+ 
+- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, DOP feedback is also replica-aware for secondary replicas in availability groups. DOP feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
 
 ### DOP Feedback implementation
 
@@ -328,6 +332,8 @@ The following XEs are available for the feature:
 Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 
 Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Feedback is applied when significant model estimation errors resulting in performance drops are found.
+
+- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback is also replica-aware for secondary replicas in availability groups. CE feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
 
 ### Understand Cardinality Estimation
 

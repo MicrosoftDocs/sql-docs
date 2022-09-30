@@ -44,7 +44,7 @@ To deploy a SQL Server VM to a confidential Azure VM, select the following value
 
 ## Identify available images
 
-To view all SQL Server images that support confidential VMs, begin to deploy a SQL Server virtual machine from the [Azure portal](https://portal.azure.com), and then select **See all images**  under **Images** on the **Basics tab** to open the Azure marketplace. Filter the options by selecting **Security type = Confidential** to view all SQL Server images that support confidential VMs. 
+To view all SQL Server images that support confidential VMs, begin to deploy a SQL Server virtual machine from the [Azure portal](https://portal.azure.com), and then select **See all images**  under **Images** on the **Basics tab** to open the Azure Marketplace. Filter the options by selecting **Security type = Confidential** to view all SQL Server images that support confidential VMs. 
 
 ## Limitations
 

@@ -119,8 +119,8 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $Se
 
 > [!NOTE]
 > To cancel export operation you will need to have one of the following roles:
-> - SQL DB Contributor role or 
-> - A Custom role with Microsoft.Sql/servers/databases/operations permission
+> - The [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role or 
+> - A [custom Azure RBAC role](/azure/role-based-access-control/custom-roles) with `Microsoft.Sql/servers/databases/operations` permission
 
 ## Next steps
 

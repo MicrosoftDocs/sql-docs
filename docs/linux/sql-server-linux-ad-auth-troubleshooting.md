@@ -224,7 +224,7 @@ Once you have PAL logging enabled and you reproduce the issue, look for the firs
 
 This error is encountered when you try logging in using an Active Directory account, once you have configured Active Directory authentication.
 
-#### Troubleshoot guidance
+#### Guidance
 
 This is a generic error message, and you must [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) to identify the specific error message.
 
@@ -249,7 +249,7 @@ You can refer to this list of common errors to identify the possible cause for e
 
  You may encounter this error when trying to create the Windows login, or during [group refresh](sql-server-linux-ad-auth-understanding.md#sql-server-group-refresh).
 
-#### Troubleshoot guidance
+#### Guidance
 
 To validate the issue, please follow the guidance as documented for "Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication. (Microsoft SQL Server, Error: 18452)" [enable PAL logging](#enable-kerberos-and-security-based-pal-logging) to identify the specific error, and troubleshoot accordingly.
 
@@ -265,7 +265,7 @@ CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
 
 The NetBIOS name (`CONTOSO`) is required in the command, but in the backend when performing an LDAP connection, the FQDN of the domain (`contoso.com`) must be provided. To do this conversion, a DNS lookup is performed on `CONTOSO` to resolve to the IP of a domain controller, which can then be bound to for LDAP queries.
 
-#### Troubleshoot guidance
+#### Guidance
 
 The error message "Could not look up short domain name due to error" suggests that `nslookup` for `contoso` doesn't resolve to IP address of the domain controller. You should review [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups) to confirm that `nslookup` for both the NetBIOS and domain name should match.
 
@@ -275,7 +275,7 @@ The error message "Could not look up short domain name due to error" suggests th
 
 This error message mostly indicates that the reverse DNS records (PTR records) don't exist for all domain controllers.
 
-#### Troubleshoot guidance
+#### Guidance
 
 Check the [DNS and reverse DNS lookups](#dns-and-reverse-dns-lookups). Once the domain controllers that don't have rDNS entries are identified, there are two options:
 
@@ -302,7 +302,7 @@ Here is one such example of the error message:
 12/09/2021 14:32:11.319933684 Error [security.ldap] <0000000142/0x000001c0> Failed to bind to LDAP server ldap://[CONTOSO.COM:3268]: Local error
 ```
 
-#### Troubleshoot guidance
+#### Guidance
 
 - **No credentials**
 
@@ -320,7 +320,7 @@ Here is one such example of the error message:
 
 This error indicates access issues with the keytab file, or not having all the required entries in the keytab.
 
-#### Troubleshoot guidance
+#### Guidance
 
 Make sure the keytab file has the correct access level and permissions. The default location and the name for the keytab file is `/var/opt/mssql/secrets/mssql.keytab`. To view the current permissions on all files under the secrets folder, you can run this command:
 
@@ -343,7 +343,7 @@ For more details on listing the keytab entries and setting the correct permissio
 
 When attempting to retrieve the credentials of `<principal>` from the keytab, no applicable entries were found.
 
-#### Troubleshoot guidance
+#### Guidance
 
 Follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. Make sure that `<principal>` is present. The principal account here is usually the **network.privilegedadaccount** to which the SPNs are registered. If it isn't, then add it using the **adutil** command. See [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md#create-the-sql-server-service-keytab-file) for more information.
 
@@ -353,7 +353,7 @@ Follow the [Check keytab file and permissions](#check-keytab-file-and-permission
 
 This error indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] couldn't find a keytab entry for the requested ticket with the specified KVNO (Key Version Number).
 
-#### Troubleshoot guidance
+#### Guidance
 
 Follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. If you can't find an error message that matches the `<principal>` and KVNO, add this entry by updating the keytab file using the steps mentioned in that section.
 
@@ -369,7 +369,7 @@ kvno MSSQLSvc/<hostname>
 
 This error means that the encryption type requested by the client wasn't present in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]'s keytab.
 
-#### Troubleshoot guidance
+#### Guidance
 
 To validate, follow the [Check keytab file and permissions](#check-keytab-file-and-permissions) section of this document to list all entries in the keytab. If you can't find an error message that matches the principal, KVNO, and encryption type, add this entry by updating the keytab file using the steps mentioned in that section.
 
@@ -379,7 +379,7 @@ To validate, follow the [Check keytab file and permissions](#check-keytab-file-a
 
 This error indicates that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] couldn't use a credential from the keytab file to decrypt the incoming authentication request. The error is often cased by an incorrect password.
 
-#### Troubleshoot guidance
+#### Guidance
 
 Recreate the keytab using the correct password. If you use **adutil**, follow the steps in [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md) to create the keytab with the right password.
 

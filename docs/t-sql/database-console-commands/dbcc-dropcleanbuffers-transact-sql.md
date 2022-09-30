@@ -34,7 +34,7 @@ Removes all clean buffers from the buffer pool, and columnstore objects from the
   
 ## Syntax
 
-Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  

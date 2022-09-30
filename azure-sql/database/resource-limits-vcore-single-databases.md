@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/18/2022
+ms.date: 09/30/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -86,28 +86,28 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Gen5 hardware (part 2)
 
-|Compute size (service objective)|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
-|:--- | --: |--: |--: |--: |
-|Hardware|Gen5|Gen5|Gen5|Gen5|
-|Min-max vCores|1.25-10|1.50-12|1.75-14|2.00-16|
-|Min-max memory (GB)|3.75-30|4.50-36|5.25-42|6.00-48|
-|Min-max auto-pause delay (minutes)|60-10080|60-10080|60-10080|60-10080|
-|Columnstore support|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|
-|Max data size (GB)|2048|3072|3072|3072|
-|Max log size (GB) <sup>1</sup>|461|461|461|922|
-|Tempdb max data size (GB)|320|384|448|512|
-|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
-|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS <sup>2</sup>|3200|3840|4480|5120|
-|Max log rate (MBps)|45|50|50|50|
-|Max concurrent workers|750|900|1050|1200|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|
-|Number of replicas|1|1|1|1|
-|Multi-AZ|Yes|Yes|Yes|Yes|
-|Read Scale-out|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|
+|Compute size (service objective)|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|GP_S_Gen5_18|
+|:--- | --: |--: |--: |--: |--: |
+|Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Min-max vCores|1.25-10|1.50-12|1.75-14|2.00-16|2.25-18|
+|Min-max memory (GB)|3.75-30|4.50-36|5.25-42|6.00-48|6.75-54|
+|Min-max auto-pause delay (minutes)|60-10080|60-10080|60-10080|60-10080|60-10080|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|2048|3072|3072|3072|3072|
+|Max log size (GB) <sup>1</sup>|461|461|461|922|922|
+|Tempdb max data size (GB)|320|384|448|512|576|
+|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
+|Max data IOPS <sup>2</sup>|3200|3840|4480|5120|5760|
+|Max log rate (MBps)|45|50|50|50|50|
+|Max concurrent workers|750|900|1050|1200|1350|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|1|1|1|1|1|
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
 
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
@@ -115,23 +115,23 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 ### Gen5 hardware (part 3)
 
-|Compute size (service objective)|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
-|:--- | --: |--: |--: |--: |--:|
+|Compute size (service objective)|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|GP_S_Gen5_80 <sup>3</sup>|
+|:--- |--: |--: |--: |--: |--:|
 |Hardware|Gen5|Gen5|Gen5|Gen5|Gen5|
-|Min-max vCores|2.25-18|2.5-20|3-24|4-32|5-40|
-|Min-max memory (GB)|6.75-54|7.5-60|9-72|12-96|15-120|
+|Min-max vCores|2.5-20|3-24|4-32|5-40|10-80|
+|Min-max memory (GB)|7.5-60|9-72|12-96|15-120|30-240|
 |Min-max auto-pause delay (minutes)|60-10080|60-10080|60-10080|60-10080|60-10080|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|3072|3072|4096|4096|4096|
-|Max log size (GB) <sup>1</sup>|922|922|1024|1024|1024|
-|Tempdb max data size (GB)|576|640|768|1024|1280|
+|Max data size (GB)|3072|4096|4096|4096|4096|
+|Max log size (GB) <sup>1</sup>|922|1024|1024|1024|1024|
+|Tempdb max data size (GB)|640|768|1024|1280|2560|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS <sup>2</sup>|5760|6400|7680|10240|12800|
+|Max data IOPS <sup>2</sup>|6400|7680|10240|12800|12800|
 |Max log rate (MBps)|50|50|50|50|50|
-|Max concurrent workers|1350|1500|1800|2400|3000|
+|Max concurrent workers|1500|1800|2400|3000|6000|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -142,6 +142,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> For specific regions where 80 max vcores in serverless is available, see [Available regions](serverless-tier-overview.md#available-regions). 
 
 ## Hyperscale - provisioned compute - Gen5
 

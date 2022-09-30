@@ -62,9 +62,9 @@ For each query variant mapping to a given dispatcher:
 
 To enable PSP optimization, enable database compatibility level 160 for the database you are connected to when executing the query.
 
-For additional insights into the PSP optimization feature, we recommend that Query Store integration also be enabled by ensuring that the Query Store is turned on.  The following example will turn on the Query Store for a database called my_psp_database:
+For additional insights into the PSP optimization feature, we recommend that Query Store integration also be enabled by ensuring that the Query Store is turned on.  The following example will turn on the Query Store for a database called `my_psp_database`:
 
-`ALTER DATABASE my_psp_database  SET QUERY_STORE (QUERY_CAPTURE_MODE = auto);`
+`ALTER DATABASE my_psp_database  SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);`
 
 To disable PSP optimization at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = OFF` database scoped configuration.
 

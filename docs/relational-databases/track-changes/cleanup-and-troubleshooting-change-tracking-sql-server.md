@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "change tracking, troubleshooting"
   - "change tracking, troubleshoot"
 ms.assetid: 
-author: bspendolini
+author: JetterMcTedder
 ms.author: bspendolini
 ---
 # Change Tracking Cleanup and Troubleshooting
@@ -60,7 +60,7 @@ The sp_flush_CT_internal_table_on_demand stored procedure will do the following:
 
 **Extended Events Are Not Available With Azure SQL Database**
 
-[Extended Events](https://learn.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events) can be used for monitoring and alerting with Change Tracking and can be created with [SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server).
+[Extended Events](https://learn.microsoft.com/sql/relational-databases/extended-events/extended-events) can be used for monitoring and alerting with Change Tracking and can be created with [SQL Server Management Studio (SSMS)](https://learn.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server).
 
 Change Tracking has two events you can capture with Extended Events:
 - syscommittab_cleanup
@@ -99,7 +99,7 @@ A result of this could be that seeing the side tables need to clean up and could
 
 ### Auto-cleanup not able to keep up with transactions
 
-If it's discovered that the auto-cleanup job is able to clean up the side tables and syscommittab using the 30-minute interval, run a manual cleanup job with greater frequency to aid in the process. For SQL Server and Azure SQL Managed Instances, [create a background job](https://learn.microsoft.com/en-us/sql/ssms/agent/create-a-job) using sp_flush_CT_internal_table_on_demand with shorter internal than the default 30 minutes. For Azure SQL, [Azure Logic Apps](https://learn.microsoft.com/en-us/azure/connectors/connectors-create-api-sqlazure) can be used to schedule these jobs.
+If it's discovered that the auto-cleanup job is able to clean up the side tables and syscommittab using the 30-minute interval, run a manual cleanup job with greater frequency to aid in the process. For SQL Server and Azure SQL Managed Instances, [create a background job](https://learn.microsoft.com/sql/ssms/agent/create-a-job) using sp_flush_CT_internal_table_on_demand with shorter internal than the default 30 minutes. For Azure SQL, [Azure Logic Apps](https://learn.microsoft.com/azure/connectors/connectors-create-api-sqlazure) can be used to schedule these jobs.
 
 
 The follow is a sample script that can be used to create a job to help clean up the side tables for Change Tracking:
@@ -129,8 +129,7 @@ drop table #CT_Tables
 ```
 
 ## See Also
-
-- [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
-- [About change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)
-- [Enable and Disable change data capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)
-- [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
+ [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
+ [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshooting-change-tracking-sql-server.md)  
+ [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)
+ [Change Tracking Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)  

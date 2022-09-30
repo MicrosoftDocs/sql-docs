@@ -1,7 +1,7 @@
 ---
 title: "Change Tracking Tables (Transact-SQL)"
 description: Change Tracking Tables (Transact-SQL)
-author: bspendolini
+author: JetterMcTedder
 ms.author: bspendolini
 ms.date: "08/22/2022"
 ms.prod: sql
@@ -23,6 +23,6 @@ ms.assetid:
   
 ## See Also  
  [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
- [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/TBD.md)  
+ [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshooting-change-tracking-sql-server.md)  
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)
  [Change Tracking Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)  

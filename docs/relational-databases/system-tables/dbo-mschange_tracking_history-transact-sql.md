@@ -1,7 +1,7 @@
 ---
 title: "dbo.MSchange_tracking_history (Transact-SQL)"
 description: dbo.MSchange_tracking_history (Transact-SQL)
-author: bspendolini
+author: JetterMcTedder
 ms.author: bspendolini
 ms.date: "08/22/2022"
 ms.prod: sql
@@ -26,15 +26,15 @@ This system table contains the history of Change Tracking cleanup jobs.
 |-----------------|---------------|-----------------|  
 |**internal_table_name**|**sysname**|Name of the side table used to track changes for a change tracking enabled table or the syscommittab table.|  
 |**table_name**|**sysname**|Name of the change tracking enabled table or the syscommittab table.|  
-|**start_time**|**datatime**|Start time of the last auto cleanup process.|  
-|**end_time**|**datatime**|End time of the last auto cleanup process.|  
+|**start_time**|**datetime**|Start time of the last auto cleanup process.|  
+|**end_time**|**datetime**|End time of the last auto cleanup process.|  
 |**rows_cleaned_up**|**bigint**|How many rows were processed by the auto cleanup process.|  
 |**cleanup_version**|**bigint**|Current valid change tracking version.|  
 |**comments**|**ntext**|Clean up job comments.|  
   
 ## See Also  
  [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
- [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/TBD.md)  
+ [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshooting-change-tracking-sql-server.md)  
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [Change Tracking Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)  
   

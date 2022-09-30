@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], change tracking"
   - "change tracking [SQL Server], stored procedures"
 ms.assetid: 
-author: bspendolini
+author: JetterMcTedder
 ms.author: bspendolini
 ---
 # Change Tracking Stored Procedures (Transact-SQL)
@@ -37,5 +37,5 @@ ms.author: bspendolini
 
 ## See Also  
  [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
- [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/TBD.md)  
+ [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshooting-change-tracking-sql-server.md)  
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  

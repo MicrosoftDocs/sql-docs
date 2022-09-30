@@ -34,7 +34,7 @@ Removes all clean buffers from the buffer pool, and columnstore objects from the
   
 ## Syntax
 
-Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
@@ -72,7 +72,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## Permissions  
 Requires membership in the `sysadmin` fixed server role for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-Requires server administrator permissions in Azure SQL Database.  
+Requires server administrator permissions in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 Requires membership in the `DB_OWNER` fixed server role for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## See Also  

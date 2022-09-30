@@ -55,7 +55,7 @@ To create a replica in a remote data center, do the following steps:
 
    Select the subnet network, Cluster IP, and AG Listener IP addresses to be used for the local and remote region. The step listed here are using the following:
 
-   |  | Local | Remote Region
+   | Type | Local | Remote Region
    | ----- | ----- | ----------
    | Subnet Network | 192.168.15.0/24 | 10.36.1.0/24
    | Cluster IP | 192.168.15.200 | 10.36.1.200

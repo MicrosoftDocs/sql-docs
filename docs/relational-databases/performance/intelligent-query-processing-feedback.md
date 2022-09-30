@@ -26,12 +26,12 @@ This article has in-depth descriptions of various intelligent query processing (
 
 The feedback features discussed in this article are:
 
-- [Memory Grant Feedback](#memory-grant-feedback)
+- [Memory Grant feedback](#memory-grant-feedback)
     - [Batch mode](#batch-mode-memory-grant-feedback)
     - [Row mode](#row-mode-memory-grant-feedback)
     - [Percentile and persistence mode](#percentile-and-persistence-mode-memory-grant-feedback)
-- [Degree of parallelism Feedback](#degree-of-parallelism-dop-feedback)
-- [Cardinality Estimation Feedback](#cardinality-estimation-ce-feedback)
+- [Degree of parallelism feedback](#degree-of-parallelism-dop-feedback)
+- [Cardinality Estimation feedback](#cardinality-estimation-ce-feedback)
 
 ## Memory grant feedback
 
@@ -271,13 +271,13 @@ Percentile-based memory grant errs on the side of reducing spills. Because it's 
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) Feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP Feedback self-adjusts DOP to avoid the issues described above.
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid the issues described above.
 
-Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism. If parallelism usage is deemed inefficient, DOP Feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
+Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 
 Parallelism is often beneficial for reporting and analytical queries, or queries that otherwise handle large amounts of data. Conversely, OLTP-centric queries that are executed in parallel could experience performance issues when the time spent coordinating all threads outweighs the advantages of using a parallel plan. For more information, see [parallel plan execution](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
 
-- To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off) in a database.
+- To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-) in a database.
 
 - The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the `sys.query_store_plan_feedback` catalog view when we reach a stable degree of parallelism feedback value.
 
@@ -287,34 +287,34 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - Stable feedback is reverified upon plan recompilation and may readjust up or down, but never above MAXDOP setting (including a MAXDOP hint).
 
-- To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off).
+- To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-).
 
 - To disable DOP feedback at the query level, use the `DISABLE_DOP_FEEDBACK` query hint.
  
 - Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, DOP feedback is also replica-aware for secondary replicas in availability groups. DOP feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
 
-### DOP Feedback implementation
+### DOP feedback implementation
 
-DOP Feedback will identify parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP Feedback will lower the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
+DOP feedback will identify parallelism inefficiencies for repeating queries, based on elapsed time and waits. If parallelism usage is deemed inefficient, DOP feedback will lower the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 
-To assess query eligibility, the adjusted query elapsed time is measured over a few executions. The total elapsed time for each query is adjusted by ignoring Buffer Latch, Buffer IO, and Network IO waits which are external to the parallel query execution. The goal of the DOP Feedback feature is to increase overall concurrency and reduce waits significantly, even if it slightly increases query elapsed time.
+To assess query eligibility, the adjusted query elapsed time is measured over a few executions. The total elapsed time for each query is adjusted by ignoring Buffer Latch, Buffer IO, and Network IO waits which are external to the parallel query execution. The goal of the DOP feedback feature is to increase overall concurrency and reduce waits significantly, even if it slightly increases query elapsed time.
 
 Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression.
 
 > [!NOTE]  
-> DOP Feedback doesn't recompile plans.
+> DOP feedback doesn't recompile plans.
 
 ### DOP feedback considerations
 
-Minimum DOP for any query adjusted with DOP Feedback is 2. Serial executions are out of scope for DOP Feedback.
+Minimum DOP for any query adjusted with DOP feedback is 2. Serial executions are out of scope for DOP feedback.
 
 Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view.
 
 If a query has a query plan forced through Query Store, DOP feedback can still be used for that query.
 
-If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP Feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hints](../../relational-databases/performance/query-store-hints.md).
+If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hints](../../relational-databases/performance/query-store-hints.md).
 
-#### Extended events for DOP Feedback
+#### Extended events for DOP feedback
 
 The following XEs are available for the feature:
 
@@ -341,9 +341,9 @@ Cardinality Estimation (CE) is how the Query Optimizer can estimate the total nu
 
 Different versions of the Database Engine use different CE model assumptions based on how data is distributed and queried. For more information, see [versions of the CE](cardinality-estimation-sql-server.md#versions-of-the-ce).
 
-### CE Feedback implementation
+### CE feedback implementation
 
-CE Feedback learns which CE model assumptions are optimal over time and then apply the historically most correct assumption:
+CE feedback learns which CE model assumptions are optimal over time and then apply the historically most correct assumption:
 
 1. CE feedback **identifies** model-related assumptions and evaluates whether they're accurate for repeating queries.
 
@@ -423,9 +423,9 @@ When the row goal plan is applied, the estimated number of rows in the query pla
 
 While row goal is a beneficial optimization strategy for certain query patterns, if data isn't uniformly distributed, more pages may be scanned than estimated, meaning that row goal becomes inefficient. CE feedback can disable the row goal scan and enable a seek when this inefficiency is detected.
 
-In the execution plan, there is no attribute specific to CE Feedback, but there will ben an attribute listed for the Query Store hint. Look for the `QueryStoreStatementHintSource` to be `CE feedback`.
+In the execution plan, there is no attribute specific to CE feedback, but there will ben an attribute listed for the Query Store hint. Look for the `QueryStoreStatementHintSource` to be `CE feedback`.
 
-### Considerations for CE Feedback
+### Considerations for CE feedback
 
 To enable CE feedback, enable database compatibility level 160 for the database you're connected to when executing the query. The Query Store must be enabled and in READ_WRITE mode for every database where CE feedback is used.
 
@@ -435,7 +435,7 @@ Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](
 
 Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view.
 
-To disable CE feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off).
+To disable CE feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-).
 
 To disable CE feedback at the query level, use the `DISABLE_CE_FEEDBACK` query hint.
 
@@ -443,7 +443,7 @@ If a query has a query plan forced through Query Store, CE feedback won't be use
 
 If a query uses hard-coded query hints or is using Query Store hints set by the user, CE feedback won't be used for that query. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hint](query-store-hints.md).
 
-### Feedback and Reporting Issues
+#### Feedback and reporting issues
 
 For feedback or questions, email [CEFfeedback@microsoft.com](mailto:CEFfeedback@microsoft.com)
 

@@ -315,7 +315,7 @@ There are queries that batch mode isn't used for even with columnstore indexes. 
 
 ### Configure batch mode on rowstore
 
-The `BATCH_MODE_ON_ROWSTORE` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#batch_mode_on_rowstore---on--off) is ON by default.
+The `BATCH_MODE_ON_ROWSTORE` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#batch_mode_on_rowstore---on--off-) is ON by default.
 
 You can disable batch mode on rowstore without changing the database compatibility level:
 

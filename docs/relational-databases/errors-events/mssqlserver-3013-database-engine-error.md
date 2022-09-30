@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DMP_ABORT|
 |Message Text|BACKUP DATABASE is terminating abnormally|
-||
 
 ## Explanation
 

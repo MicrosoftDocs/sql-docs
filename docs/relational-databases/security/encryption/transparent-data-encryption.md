@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Transparent data encryption, about"
   - "encryption [SQL Server], Transparent data encryption"
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: shohamMSFT
-ms.author: shohamd
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -341,7 +341,7 @@ FROM sys.certificates c
     ON c.thumbprint = dek.encryptor_thumbprint
 ```
 
-If the column `pvt_key_last_backup_date` is NULL, the database corresponding to that row has been enabled for TDE, but the certificate used to protect its DEK hasn't been backed up. For more information on backing up a certificate, see [BACKUP CERTIFICATE](/sql/t-sql/statements/backup-certificate-transact-sql) in SQL Server Books Online.
+If the column `pvt_key_last_backup_date` is NULL, the database corresponding to that row has been enabled for TDE, but the certificate used to protect its DEK hasn't been backed up. For more information on backing up a certificate, see [BACKUP CERTIFICATE](../../../t-sql/statements/backup-certificate-transact-sql.md) in SQL Server Books Online.
 
 ## See also
 

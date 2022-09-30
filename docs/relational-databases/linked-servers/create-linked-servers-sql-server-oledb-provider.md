@@ -290,7 +290,6 @@ Results of a distributed query based on provider capabilities and transaction co
 |:-----|:-----|:-----|:-----|
 | In a transaction by itself (no user transaction).|By default, only read operations are allowed. When the provider level option `Nontransacted Updates` is enabled, write operations are allowed. (When this option is enabled, SQL Server cannot guarantee atomicity and consistency on the provider's data. This can cause partial effects of a write operation to be reflected in the remote data source without the ability to undo them.)| All statements are allowed against remote data. Keyset cursors are read-only. The local transaction is started on the provider with the current SQL Server session's isolation level and is committed at the end of successful statement evaluation. (The default isolation level for a SQL Server session is `READ COMMITTED` unless it is modified with the `SET TRANSACTION ISOLATION LEVEL` statement. The provider must support the requested isolation level.) | All statements are allowed. Keyset cursors are read-only. The local transaction is started on the provider with the current SQL Server session's isolation level and is committed at the end of a successful statement evaluation. |
 | In a user transaction (that is, between `BEGIN TRAN` or `BEGIN DISTRIBUTED TRAN` and `COMMIT`). | If the isolation level of the transaction is `READ COMMITTED` (the default) or below, read operations are allowed. If the isolation level is higher, no distributed queries are allowed. | Only read operations are allowed. New distributed transactions are started on the provider with the current SQL Server session's isolation level. |All statements are allowed. New distributed transaction is started on the provider with the current SQL Server session's isolation level and committed when the user transaction commits. For data modification statements, by default SQL Server starts a nested transaction under the distributed transaction, so that the data modification statement can be stopped under certain error conditions without stopping the surrounding transaction. If the `XACT_ABORT SET` option is on, SQL Server does not require nested transaction support and stops the surrounding transaction in the case of errors during the data modification statement. |
-|  |  |  |
 
 ### Data Type Handling in Distributed Queries
 
@@ -645,7 +644,6 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 |Error object|`IErrorRecords`|Yes|Use for getting a pointer to an `IErrorInfo` interface corresponding to a single error record.| |
 | |`IErrorInfo`|Yes|Use for getting a pointer to an `IErrorInfo` interface corresponding to a single error record.| |
 |Any object|`ISupportErrorInfo`|No|Use to verify whether a given interface supports error objects.| |
-|  |  |  |  |  |
 
 >[!NOTE]
 >The `Index` object, `Command` object, and `Error` object are not mandatory. However, if they are supported, the listed interfaces are mandatory as specified in the Required column.

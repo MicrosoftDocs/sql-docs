@@ -43,8 +43,6 @@ landingContent:
             url: windows/sql-server-on-azure-vm-iaas-what-is-overview.md
           - text: What is SQL Server on Linux VM?
             url: linux/sql-server-on-linux-vm-what-is-iaas-overview.md
-          - text: Migrate from SQL Server
-            url: windows/migrate-to-vm-from-sql-server.md
           - text: Security considerations
             url: windows/security-considerations-best-practices.md
           - text: Performance guidelines
@@ -112,7 +110,7 @@ landingContent:
         - text: Azure SQL for beginners
           url: /shows/azure-sql-for-beginners/
         - text: Azure SQL fundamentals 
-          url: /learn/paths/azure-sql-fundamentals/
+          url: /training/paths/azure-sql-fundamentals/
         - text: Azure SQL hands-on labs
           url: https://aka.ms/asqlworkshop
         - text: Azure SQL bootcamp 

@@ -50,7 +50,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 
 Backs up a SQL database.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -1140,6 +1140,10 @@ The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFER
 Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).
 
 For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
+
+> [!NOTE]
+> MAXTRANSFERSIZE specifies the largest unit of transfer, and doesn't guarantee that every write operation will transfer the specified largest size.
+> MAXTRANSFERSIZE for write operations of striped transaction log backups is set to 64 KB.
 
 ### Error management options
 

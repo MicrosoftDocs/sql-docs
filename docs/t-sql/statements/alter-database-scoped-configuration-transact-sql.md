@@ -461,7 +461,7 @@ If asynchronous statistics update is enabled, enabling this configuration will c
 
 #### OPTIMIZED_PLAN_FORCING **=** { **ON** | OFF }
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) <!--, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Preview) and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (Preview)-->
 
 Optimized plan forcing reduces compilation overhead for repeating forced queries. Once the query execution plan is generated, specific compilation steps are stored for reuse as an optimization replay script. An optimization replay script is stored as part of the compressed showplan XML in [Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md), in a hidden `OptimizationReplay` attribute. Learn more in [Optimized plan forcing with Query Store](../../relational-databases/performance/optimized-plan-forcing-query-store.md).
 
@@ -482,6 +482,15 @@ It addresses the scenario where a single cached plan for a parameterized query i
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
 Enables or disables uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger. To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account or a ledger in Azure Confidential Ledger. To disable uploading ledger digests, set the option value to OFF. The default is OFF.
+
+#### FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }
+
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+
+Causes SQL Server to generate a Showplan XML fragment with the ParameterRuntimeValue when using the lightweight query execution statistics profiling infrastructure or executing the sys.dm_exec_query_statistics DMV while troubleshooting long running queries.
+
+> [!IMPORTANT]
+> The FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION database scoped configuration option isn't meant to be enabled continuously in a production environment, but only for time-limited troubleshooting purposes. Using this database scoped configuration option will introduce additional and possibly significant CPU and memory overhead as we will create a Showplan XML fragment with runtime parameter information, whether the sys.dm_exec_query_statistics_xml DMV or lightweight query execution statistics profile infrastructure is enabed or not. 
 
 ## <a name="Permissions"></a> Permissions
 

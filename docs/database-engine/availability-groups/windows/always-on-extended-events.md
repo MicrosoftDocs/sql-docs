@@ -60,7 +60,6 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |Name|availability_replica_state_change|  
 |Category|always on|  
 |Channel|Operational|  
-|||
   
 #### Event fields  
   
@@ -71,7 +70,6 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |availability_replica_id|guid|The ID of the Availability Replica.|  
 |previous_state|availability_replica_state|The role of the replica before the change.<br /><br /> **Possible values are:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|The role of the replica after the change.<br /><br /> **Possible values are:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
-||||
   
 #### alwayson_health session definition  
   
@@ -93,7 +91,6 @@ GO
 |Name|availability_group_lease_expired|  
 |Category|always on|  
 |Channel|Operational| 
-||| 
   
 #### Event fields  
   
@@ -101,7 +98,6 @@ GO
 |----------|----------------|-----------------|  
 |availability_group_id|guid|The ID of availability group.|  
 |availability_group_name|unicode_string|The name of availability group.|  
-||||
   
 #### alwayson_health session definition  
   
@@ -123,7 +119,6 @@ GO
 |availability_replica_automatic _failover_validation||  
 |Category|always on|  
 |Channel|Analytic|  
-|||
   
 #### Event fields  
   
@@ -135,7 +130,6 @@ GO
 |forced_quorum|validation_result_type|If the value is TRUE, then the automatic failover is invalidated on this availability replica.<br /><br /> TRUE<br /><br /> FALSE|  
 |joined_and_synchronized|validation_result_type|If the value is FALSE, then the automatic failover is invalidated on this availability replica.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|If the value is FALSE, then the automatic failover is invalidated on this availability replica.<br /><br /> TRUE<br /><br /> FALSE|  
-||||
   
 #### alwayson_health session definition  
   
@@ -162,7 +156,6 @@ GO
 |Name|error_reported<br /><br /> numbers to filter: 35201, 35202, 35206, 35204, 35207, 35217, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Category|errors|  
 |Channel|Admin|  
-|||
   
 #### Error numbers to filter  
   
@@ -185,7 +178,6 @@ GO
 |28080|Connection handshake failed. The %S_MSG endpoint is not configured. State %d.|  
 |28091|Starting endpoint for %S_MSG with no authentication is not supported.|  
 |33309|Cannot start cluster endpoint because the default %S_MSG endpoint  configuration has not been loaded yet.| 
-||| 
   
 #### alwayson_health session definition  
   
@@ -229,7 +221,6 @@ GO
 |Name|data_movement_suspend_resume|  
 |Category|Always on|  
 |Channel|Operational|  
-|||
   
 #### Event fields  
   
@@ -244,7 +235,6 @@ GO
 |suspend_status|suspend_status_type|The suspend status values.<br /><br /> SUSPEND_NULL<br /><br /> RESUMED<br /><br /> SUSPENDED<br /><br /> SUSPENDED_INVALID|  
 |suspend_source|suspend_source_type|The source of the suspend or resume action.|  
 |suspend_reason|unicode_string|The suspend reason captured in database replica manager.|  
-||||
   
 #### alwayson_health session definition  
   
@@ -273,7 +263,6 @@ GO
 |Name|alwayson_ddl_execution|  
 |Category|always on|  
 |Channel|Analytic|  
-|||
   
 #### Event fields  
   
@@ -284,7 +273,6 @@ GO
 |ddl_action|alwayson_ddl_action|Indicates the type of DDL action: CREATE, ALTER, or DROP.|  
 |ddl_phase|ddl_opcode|Indicates the phase of the DDL operation: BEGIN, COMMIT, or ROLLBACK.|  
 |Statement|unicode_string|The text of the statement that was executed.|  
-||||
   
 #### alwayson_health session definition  
   
@@ -308,14 +296,12 @@ GO
 |Name|availability_replica_manager_state_change|  
 |Category|always on|  
 |Channel|Operational| 
-||| 
   
 #### Event fields  
   
 |Name|Type_name|Description|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|The current state of the availability replica manager.<br /><br /> Online<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
-||||
   
 #### Alwayson_health session definition  
   
@@ -341,7 +327,6 @@ GO
 |Name|error_reported<br /><br /> Error Number 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from "OLD_ROLE" to "NEW_ROLE" due to REASON_MSG|  
 |Category|errors|  
 |Channel|Admin|  
-|||
   
 #### alwayson_health session definition  
   
@@ -376,7 +361,6 @@ Captures diagnostic data and health information about SQL Server to detect poten
 |Name|sp_server_diagnostics_component_result|  
 |Category|Server|  
 |Channel|Debug|
-|||  
   
 #### Event fields  
   
@@ -385,7 +369,6 @@ Captures diagnostic data and health information about SQL Server to detect poten
 |component|UInt8|component name.|  
 |state|UInt8|Indicates the health status of the component.|  
 |data|XML|XML field containing extra information regarding the component.|  
-||||  
  
   
 #### alwayson_health session definition  
@@ -413,7 +396,6 @@ Dump connectivity or network related logs between primary and secondary replicas
 |Name|ucs_connection_setup|  
 |Category|Transport|  
 |Channel|Debug|  
-|||
   
 #### Event fields  
   
@@ -428,7 +410,6 @@ Dump connectivity or network related logs between primary and secondary replicas
 |error_message|UnicodeString|Connection error message|  
 |address|UnicodeString|Connection target address|  
 |circuit_id|UnicodeString|Connection circuit id|  
-||||  
  
   
 #### alwayson_health session definition  
@@ -455,14 +436,12 @@ Redirects the output of some DBCC commands and HADR log information to the exten
 |Name|hadr_trace_message|  
 |Category|Always on|  
 |Channel|Debug|  
-|||
   
 #### Event fields  
   
 |Name|Type_name|Description|  
 |----------|----------------|-----------------|  
 |hadr_message|unicode_string |Redirects the output of some DBCC commands and HADR log information to the extended event session (similar to trace flag 3605).|  
-||||  
  
   
 #### alwayson_health session definition  

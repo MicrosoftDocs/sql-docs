@@ -19,12 +19,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith
 ms.custom:
-ms.date: 08/26/2022
+ms.date: 09/28/2022
 ---
 
 # Query processing feedback features
 
-This article has in-depth descriptions of various intelligent query processing (IQP) feedback features. The query processing feedback features are part of the Intelligent query processing family of features. Query processing feedback is a process by which the query processor in SQL Server, Azure SQL Database, and Azure SQL Managed Instance uses historical data about a query’s execution to decide if the query might receive help from one or more changes to the way it's compiled and executed. The performance data is collected in the [query store](tune-performance-with-the-query-store.md), with various suggestions to improve query execution. If successful, we persist these modifications to disk in memory and/or in the query store for future use. If the suggestions don't yield sufficient improvement, they're discarded, and the query continues to execute without that feedback.
+This article has in-depth descriptions of various intelligent query processing (IQP) feedback features. The query processing feedback features are part of the Intelligent query processing family of features. Query processing feedback is a process by which the query processor in SQL Server, Azure SQL Database, and Azure SQL Managed Instance uses historical data about a query's execution to decide if the query might receive help from one or more changes to the way it's compiled and executed. The performance data is collected in the [query store](tune-performance-with-the-query-store.md), with various suggestions to improve query execution. If successful, we persist these modifications to disk in memory and/or in the query store for future use. If the suggestions don't yield sufficient improvement, they're discarded, and the query continues to execute without that feedback.
 
 The feedback features discussed in this article are:
 
@@ -37,7 +37,7 @@ The feedback features discussed in this article are:
 
 ## Memory grant feedback
 
-Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in SQL Server 2022, multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in SQL Server 2022, we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
+Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
 
 ### Batch mode memory grant feedback
 
@@ -158,7 +158,7 @@ ALTER DATABASE [<database name>] SET COMPATIBILITY_LEVEL = 150;
 
 As with batch mode memory grant feedback, row mode memory grant feedback activity is visible via the `memory_grant_updated_by_feedback` XEvent. We're also introducing two new query execution plan attributes for better visibility into the current state of a memory grant feedback operation for both row and batch mode.
 
-Memory grant feedback doesn't require the Query Store, however, the persistence improvements introduced in SQL Server 2022 (16.x) Preview require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
+Memory grant feedback doesn't require the Query Store, however, the persistence improvements introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] require the Query Store to be enabled for the database and in a "read write" state. For more information on persistence, see [Percentile and persistence mode memory grant feedback](#percentile-and-persistence-mode-memory-grant-feedback) later in this article.
 
 Row mode memory grant feedback activity is visible via the `memory_grant_updated_by_feedback` extended event.
 
@@ -207,6 +207,9 @@ A USE HINT query hint takes precedence over a database scoped configuration or t
 
 This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
 
+ - Percentile memory grant feedback is disabled by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. To take advantage of this in compatibility level 140 and higher, [Percentile memory grant feedback must be enabled](#percentile).
+ - Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]. Persistence is not currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+
 Memory grant feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The new solution is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions. Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
 
 Additionally, the grant size adjustments only accounted for the most recently used grant. So, if a parameterized query or workload requires significantly varying memory grant sizes with each execution, the most recent grant information could be inaccurate. It could be out of step with the actual needs of the query being executed. Memory grant feedback in this scenario is unhelpful to performance because we're always adjusting memory based on the last used grant value. The next image shows the behavior possible with memory grant feedback without percentile and persistence mode.
@@ -227,7 +230,7 @@ Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) 
 
 It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
 
-#### Enabling memory grant feedback: persistence and percentile
+#### Enable memory grant feedback: persistence and percentile
 
 To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query.
 
@@ -284,7 +287,7 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the `sys.query_store_plan_feedback` catalog view when we reach a stable degree of parallelism feedback value.
 
-- DOP feedback is available for queries that operate in the database compatibility level 160 (introduced with SQL Server 2022) or higher.
+- DOP feedback is available for queries that operate in the database compatibility level 160 (introduced with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]) or higher.
 
 - Only verified feedback is persisted. If the adjusted DOP results in a performance regression, DOP feedback will go back to the last known good DOP. In this context, a user canceled query is also perceived as a regression. The DOP feedback doesn't recompile plans.
 

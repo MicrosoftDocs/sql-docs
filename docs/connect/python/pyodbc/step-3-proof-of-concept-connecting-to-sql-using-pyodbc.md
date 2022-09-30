@@ -3,7 +3,7 @@ title: "Step 3: Connecting to SQL using pyodbc"
 description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pyODBC. The basic examples demonstrate selecting and inserting data."
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "03/24/2022"
+ms.date: 09/16/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -29,14 +29,15 @@ server = 'tcp:myserver.database.windows.net'
 database = 'mydb' 
 username = 'myusername' 
 password = 'mypassword' 
-cnxn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+# ENCRYPT defaults to yes starting in ODBC Driver 18. It's good to always specify ENCRYPT=yes on the client side to avoid MITM attacks.
+cnxn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER='+server+';DATABASE='+database+';ENCRYPT=yes;UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
 ```  
 
 ## Run query  
   
-The cursor.executefunction can be used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set, which can be iterated over with the use of cursor.fetchone().
+The cursor.execute function can be used to retrieve a result set from a query against SQL Database. This function accepts a query and returns a result set, which can be iterated over with the use of cursor.fetchone().
 
 ```python
 #Sample select query
@@ -73,7 +74,7 @@ This interactive option works if Python and pyODBC permit the ODBC driver to dis
 
 The following example provides an ODBC connection string that specifies Azure Active Directory interactive authentication:
 
-`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`
 
 For more information about the authentication options of the ODBC driver, see [Using Azure Active Directory with the ODBC Driver](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords).
 

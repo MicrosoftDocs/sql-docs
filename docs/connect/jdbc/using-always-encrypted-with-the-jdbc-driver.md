@@ -44,7 +44,6 @@ The Microsoft JDBC Driver for SQL Server comes with the following built-in colum
 | **`SQLServerColumnEncryptionAzureKeyVaultProvider`**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ as of JDBC driver version 7.4.1. | Windows, Linux, macOS |
 | **`SQLServerColumnEncryptionCertificateStoreProvider`** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                | Windows |
 | **`SQLServerColumnEncryptionJavaKeyStoreProvider`**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                | Windows, Linux, macOS |
-|||||
 
 For the pre-registered keystore providers, you don't need any application code changes to use these providers but note the following items:
 
@@ -105,7 +104,7 @@ A client application that uses the JDBC driver can configure to use Azure Key Va
 Here's an example that provides this configuration information in a JDBC connection string.
 
 ```java
-String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyVaultProviderClientId=<ClientId>;keyVaultProviderClientKey=<ClientKey>";
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyVaultProviderClientId=<ClientId>;keyVaultProviderClientKey=<ClientKey>";
 ```
 
 The JDBC driver automatically instantiates a **`SQLServerColumnEncryptionAzureKeyVaultProvider`** object when these credentials are present among the connection properties.
@@ -163,19 +162,19 @@ The following examples show how the connection properties are used in a connecti
 #### Use Managed Identity to authenticate to AKV
 
 ```java
-"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
+"jdbc:sqlserver://<server>:<port>;encrypt=true;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
 ```
 
 #### Use Managed Identity and the principal ID to authenticate to AKV
 
 ```java
-"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
+"jdbc:sqlserver://<server>:<port>;encrypt=true;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
 ```
 
 #### Use clientId and clientSecret to authentication to AKV
 
 ```java
-"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+"jdbc:sqlserver://<server>:<port>;encrypt=true;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
 ```
 
 Users are encouraged to use these connection properties to specify the type of authentication used for the Key Stores instead of the `SQLServerColumnEncryptionAzureKeyVaultProvider` API.
@@ -228,7 +227,7 @@ There are three connection string properties that allow a client application to 
 Here's an example of providing these credentials in the connection string:
 
 ```java
-String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
 You can also get or set these settings with the `SQLServerDataSource` object. For more information, see [Always Encrypted API Reference for the JDBC Driver](always-encrypted-api-reference-for-the-jdbc-driver.md).
@@ -464,7 +463,7 @@ public class AlwaysEncrypted {
     private static String algorithm = "RSA_OAEP";
 
     public static void main(String[] args) {
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 
         try (Connection connection = DriverManager.getConnection(connectionUrl);
                 Statement statement = connection.createStatement();) {
@@ -477,7 +476,7 @@ public class AlwaysEncrypted {
 
             /**
              * Create column encryption key For more details on the syntax, see:
-             * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql Encrypted column encryption key first needs
+             * https://learn.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql Encrypted column encryption key first needs
              * to be converted into varbinary_literal from bytes, for which byteArrayToHex() is used.
              */
             String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
@@ -527,7 +526,7 @@ The easiest way to enable the encryption of parameters and the decryption of que
 The following connection string is an example of enabling Always Encrypted in the JDBC driver:
 
 ```java
-String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;encrypt=true;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
 SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
 ```
 
@@ -611,19 +610,19 @@ To use an Azure Key Vault keystore provider:
     Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
     keyStoreMap.put(akvProvider.getName(), akvProvider);
     SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
-    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 To use a Windows Certificate Store keystore provider:
 
 ```java
-    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 To use a Java Key Store keystore provider:
 
 ```java
-    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
 ```
 
 ### Inserting data example
@@ -788,7 +787,7 @@ In the following example, Always Encrypted is disabled for the database connecti
 ```java
 // Assumes the same table definition as in Section "Retrieving and modifying data in encrypted columns"
 // where only SSN and BirthDate columns are encrypted in the database.
-String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>;"
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<database>;user=<user>;password=<password>;"
         + "keyStoreAuthentication=JavaKeyStorePassword;"
         + "keyStoreLocation=<keyStoreLocation>"
         + "keyStoreSecret=<keyStoreSecret>;";

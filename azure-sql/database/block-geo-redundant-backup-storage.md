@@ -32,23 +32,22 @@ In order to register or remove this feature, the Azure user must be a member of 
 
 The following section describes how you can register or unregister a preview feature with Microsoft.Sql resource provider in Azure portal: 
 
-### Register Block T-SQL CRUD
+### Register Block Geo-replication of Azure SQL Database Backups
 
 1. Go to your subscription on Azure portal.
 2. Select the **Preview Features** tab. 
 3. Select **Azure SQL Database Block Geo-Redundant Backup Storage**.
 4. After you select **Azure SQL Database Block Geo-Redundant Backup Storage**, a new window will open, select **Register**, to register this block with Microsoft.Sql resource provider.
 
-![Select "Block T-SQL CRUD" in the list of Preview Features](./media/block-tsql-crud/block-tsql-crud.png)
+![Select "Block Geo-replication of Azure SQL Database Backups" in the list of Preview Features](./media/block-backup-geo-replication/block-backup-geo-replication.png)
 
-![With "Block T-SQL CRUD" checked, select Register](./media/block-tsql-crud/block-tsql-crud-register.png)
+![With "Block Geo-replication of Azure SQL Database Backups" checked, select Register](./media/block-backup-geo-replication/block-backup-geo-replication-register.png)
 
 
-### Removing Block T-SQL CRUD
+### Removing Block Geo-replication of Azure SQL Database Backups
 To remove the block on geo-redundant backup storage from your subscription, unregister the previously registered Azure SQL Database Block Geo-Redundant Backup Storage feature.
 
 
 ## Next steps
 
-- [An overview of Azure SQL Database security capabilities](security-overview.md)
-- [Azure SQL Database security best practices](security-best-practice.md)
+- [An overview of Azure SQL Database Backup storage redundancy](/azure-sql/database/automated-backups-overview.md#backup-storage-redundancy)

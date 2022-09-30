@@ -137,11 +137,12 @@ To create a server by using a UMI, see the following guide: [Create an Azure SQL
 
 ### Get the SMI for Azure SQL Database logical server
 
-To retrieve the UMI(s) for Azure SQL Managed Instance or Azure SQL Database, use the PowerShell or Azure CLI examples below.
-
 The Azure portal displays the SMI id in the **Properties** menu of the Azure SQL Database logical server.
 
 :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/get-system-assigned-managed-identity-azure-sql-server-azure-portal.png" alt-text="Screenshot of the Azure portal page for an Azure SQL Database logical server. In the Properties menu, the System Assigned Managed Identity is highlighted.":::
+
+- To retrieve the UMI(s) for Azure SQL Managed Instance or Azure SQL Database, use the PowerShell or Azure CLI examples below. 
+- To retrieve the SMI for Azure SQL Managed Instance, use the PowerShell or Azure CLI examples below.
 
 ### Set a managed identity in the Azure portal
 

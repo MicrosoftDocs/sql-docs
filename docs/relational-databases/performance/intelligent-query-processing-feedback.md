@@ -423,7 +423,7 @@ When the row goal plan is applied, the estimated number of rows in the query pla
 
 While row goal is a beneficial optimization strategy for certain query patterns, if data isn't uniformly distributed, more pages may be scanned than estimated, meaning that row goal becomes inefficient. CE feedback can disable the row goal scan and enable a seek when this inefficiency is detected.
 
-In the execution plan, there is no attribute specific to CE feedback, but there will ben an attribute listed for the Query Store hint. Look for the `QueryStoreStatementHintSource` to be `CE feedback`.
+In the execution plan, there is no attribute specific to CE feedback, but there will be an attribute listed for the Query Store hint. Look for the `QueryStoreStatementHintSource` to be `CE feedback`.
 
 ### Considerations for CE feedback
 

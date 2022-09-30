@@ -1,37 +1,35 @@
 ---
-title: SQL Server 2019 Big Data Clusters CU17 release notes
+title: SQL Server 2019 Big Data Clusters CU18 release notes
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 17 contents.
+description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 18 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 09/13/2022
+ms.date: 09/28/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
 ---
 
-# SQL Server 2019 Big Data Clusters CU17 release notes
+# SQL Server 2019 Big Data Clusters CU18 release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 17 (CU17).
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 18 (CU18).
 
-## CU17 changes and new capabilities
+## CU18 changes and new capabilities
 
    > [!WARNING]
    > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
    > <br/> This __doesn't affect new deployments__ of SQL Server 2019 Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
 
-SQL Server Big Data Clusters CU17 includes important changes and capabilities. The following known issue has been resolved: 
+SQL Server 2019 Big Data Clusters CU18 includes important changes and capabilities. The following known issue has been resolved: 
 
-- When you use the `AZDATA BDC ROTATE` command to rotate the password of a big data cluster that uses Active Directory, you receive the following error message: `Failed to update password for existing AD account '<Account Name>'. Error code: 30`. This issue has been resolved.
+For detailed SQL Server engine changes, check the [official SQL Server 2019 CU18 knowledge base article KB5017593](https://support.microsoft.com/topic/kb5017593-cumulative-update-18-for-sql-server-2019-5fa00c36-edeb-446c-94e3-c4882b7526bc).
 
-For detailed SQL Server engine changes, check the [official SQL Server 2019 CU17 knowledge base article KB5016394](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).
+## Tested configurations for CU18
 
-## Tested configurations for CU17
-
-[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU17 was tested on the following environment combinations:
+[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU18 was tested on the following environment combinations:
 
 | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ------------ | ------- | ------- | ------------ | ----------- |
@@ -55,7 +53,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
     * __Java__: Azul Zulu JRE 1.8.0_275
     * __Scala__: 2.12
     * __Python__: 3.8 (miniforge 4.9)
-    * __R__: CRAN R 4.1.2
+    * __R__: CRAN R 4.2.1
     * __Spark SQL Connector__: [1.2.0](https://github.com/microsoft/sql-spark-connector)
 
 ## Embedded OSS component versions

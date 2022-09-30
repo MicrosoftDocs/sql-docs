@@ -38,7 +38,7 @@ Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-m
   + R and Python scripts running in external libraries can't be managed by SQL Server, leading to resource contention.
 
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
+> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps may include enabling SQL Server to use external scripts and other steps. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
 
 ## Get the installation media
 
@@ -152,7 +152,7 @@ If you encounter any installation errors during setup, check the summary log in 
     The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
     
     ```cmd
-    cd C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs
+    cd "C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs"
     .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"MSSQLSERVER"
     ```
 

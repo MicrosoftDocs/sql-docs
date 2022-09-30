@@ -108,7 +108,7 @@ The following reconfigure operations also clear the procedure cache:
 -   remote query timeout  
 -   user options  
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], DBCC FREEPROCCACHE acts on the database engine instance hosting the current database or elastic pool. Executing DBCC FREEPROCCACHE in a user database clears the plan cache for that database. If the database is in an elastic pool, it also clears the plan cache in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server.
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], DBCC FREEPROCCACHE acts on the database engine instance hosting the current database or elastic pool. Executing DBCC FREEPROCCACHE in a user database clears the plan cache for that database. If the database is in an elastic pool, it also clears the plan cache in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server. Executing this command in a database using Basic, S0, or S1 service objective may clear the plan cache in other databases using these service objectives on the same logical server.
 
   
 ## Result Sets  

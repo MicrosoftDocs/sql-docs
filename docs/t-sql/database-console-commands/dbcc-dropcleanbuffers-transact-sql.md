@@ -61,7 +61,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 Use DBCC DROPCLEANBUFFERS to test queries with a cold buffer cache without shutting down and restarting the server.
 To drop clean buffers from the buffer pool and columnstore objects from the columnstore object pool, first use CHECKPOINT to produce a cold buffer cache. CHECKPOINT forces all dirty pages for the current database to be written to disk and cleans the buffers. After you checkpoint the database, you can issue DBCC DROPCLEANBUFFERS command to remove all buffers from the buffer pool.
 
-In Azure SQL Database, DBCC DROPCLEANBUFFERS acts on the database engine instance hosting the current database or elastic pool. Executing DBCC DROPCLEANBUFFERS in a user database drops clean buffers for that database. If the database is in an elastic pool, it also drops clean buffers in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server.
+In Azure SQL Database, DBCC DROPCLEANBUFFERS acts on the database engine instance hosting the current database or elastic pool. Executing DBCC DROPCLEANBUFFERS in a user database drops clean buffers for that database. If the database is in an elastic pool, it also drops clean buffers in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server. Executing this command in a database using Basic, S0, or S1 service objective may drop clean buffers in other databases using these service objectives on the same logical server.
   
 ## Result Sets  
 DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns:

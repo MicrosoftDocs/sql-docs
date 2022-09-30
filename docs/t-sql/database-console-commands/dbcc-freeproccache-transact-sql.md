@@ -108,7 +108,7 @@ The following reconfigure operations also clear the procedure cache:
 -   remote query timeout  
 -   user options  
 
-In Azure SQL Database, DBCC FREEPROCCACHE acts on the database engine instance hosting the current database or elastic pool. Executing DBCC FREEPROCCACHE in a user database clears the plan cache for that database. If the database is in an elastic pool, it also clears the plan cache in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server.
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], DBCC FREEPROCCACHE acts on the database engine instance hosting the current database or elastic pool. Executing DBCC FREEPROCCACHE in a user database clears the plan cache for that database. If the database is in an elastic pool, it also clears the plan cache in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server.
 
   
 ## Result Sets  
@@ -119,7 +119,7 @@ When the WITH NO_INFOMSGS clause is not specified, DBCC FREEPROCCACHE returns:
 Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Requires ALTER SERVER STATE permission on the server.  
 
-Applies to: Azure SQL Database
+Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 - Requires server administrator permissions.  
 
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]

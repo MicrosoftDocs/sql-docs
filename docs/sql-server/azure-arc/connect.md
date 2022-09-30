@@ -3,9 +3,9 @@ title: Connect to Azure Arc
 titleSuffix:
 description: Connect an instance of SQL Server to Azure Arc
 author: anosov1960
-ms.author: sashan 
+ms.author: sashan, rajpo
 ms.reviewer: mikeray
-ms.date: 09/12/2021
+ms.date: 09/30/2021
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
@@ -99,7 +99,7 @@ To install *Azure extension for SQL Server* for Linux operating system, run:
 > [!NOTE]
 > The specified resource group must match the resource group where the corresponding connected server is registered. Otherwise, the command will fail.
 
-## When machine not connected to Arc-Server
+## When machine not connected to Arc-enabled Server
 
 If the server that runs your SQL Server instance is not yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script will connect the server to Azure and will install Azure extension for SQL Server.
 

@@ -10384,6 +10384,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 18
+          href: big-data-cluster/release-notes-cumulative-update-18.md
         - name: Cumulative Update 17
           href: big-data-cluster/release-notes-cumulative-update-17.md
         - name: Cumulative Update 16
@@ -12434,10 +12436,14 @@ items:
         href: relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md
       - name: sys.query_store_plan
         href: relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md
+      - name: sys.query_store_plan_forcing_locations
+        href: relational-databases/system-catalog-views/sys-plan-forcing-locations.md
       - name: sys.query_store_query
         href: relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md
       - name: sys.query_store_query_text
         href: relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md
+      - name: sys.query_store_replicas
+        href: relational-databases/system-catalog-views/sys-query-store-replicas.md
       - name: sys.query_store_runtime_stats
         href: relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md
       - name: sys.query_store_wait_stats

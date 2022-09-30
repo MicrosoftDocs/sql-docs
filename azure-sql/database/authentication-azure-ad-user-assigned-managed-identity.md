@@ -5,7 +5,7 @@ description: Learn how to use user-assigned managed identities in Azure AD (Azur
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 06/30/2022
+ms.date: 09/29/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -24,6 +24,8 @@ Previously, only an SMI could be assigned to the SQL Managed Instance or SQL Dat
 
 In addition to using a UMI and an SMI as the instance or server identity, you can use them to access the database by using the SQL connection string option `Authentication=Active Directory Managed Identity`. You need to map a SQL user to the managed identity in the target database. For more information, see [Using Azure Active Directory authentication with SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication).
 
+To retrieve the current UMI(s) or SMI for Azure SQL Managed instance or Azure SQL Database, see [Get or set a managed identity for a logical server or managed instance](#get-or-set-a-managed-identity-for-a-logical-server-or-managed-instance) later in this article.
+
 ## Benefits of using user-assigned managed identities
 
 There are several benefits of using a UMI as a server identity:
@@ -41,7 +43,7 @@ There are several benefits of using a UMI as a server identity:
 > [!NOTE]
 > You must enable the instance identity (SMI or UMI) to allow support for Azure AD authentication in SQL Managed Instance. For SQL Database, enabling the server identity is optional and required only if an Azure AD service principal (Azure AD application) oversees creating and managing Azure AD users, groups, or applications in the server. For more information, see [Azure Active Directory service principal with Azure SQL](authentication-aad-service-principal.md).
 
-## Creating a user-assigned managed identity
+## <a id="creating-a-user-assigned-managed-identity"></a> Create a user-assigned managed identity
 
 For information on how to create a UMI, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities).
 
@@ -127,9 +129,19 @@ Select the UMI, and go to the **Permissions** settings under **Security**.
 
 :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/azure-ad-check-user-assigned-managed-identity-permissions.png" alt-text="Screenshot of user-assigned managed identity permissions.":::
 
-## Managing a managed identity for a server or instance
+<a id="manage-a-managed-identity-for-a-server-or-instance"></a>
+
+## Get or set a managed identity for a logical server or managed instance
 
 To create a server by using a UMI, see the following guide: [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md).
+
+### Get the SMI for Azure SQL Database logical server
+
+To retrieve the UMI(s) for Azure SQL Managed Instance or Azure SQL Database, use the PowerShell or Azure CLI examples below.
+
+The Azure portal displays the SMI id in the **Properties** menu of the Azure SQL Database logical server.
+
+:::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/get-system-assigned-managed-identity-azure-sql-server-azure-portal.png" alt-text="Screenshot of the Azure portal page for an Azure SQL Database logical server. In the Properties menu, the System Assigned Managed Identity is highlighted.":::
 
 ### Set a managed identity in the Azure portal
 
@@ -147,8 +159,6 @@ To set the identity for the logical server or managed instance in the [Azure por
 The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
 
 #### Azure SQL Database
-
-To retrieve the current system-assigned managed identity:
 
 - To provision a new server with a UMI, use the [az sql server create](/cli/azure/sql/server#az-sql-server-create) command.
 - To obtain the managed identities for a logical server, use the [az sql server show](/cli/azure/sql/server#az-sql-server-show) command. 
@@ -178,7 +188,7 @@ To retrieve the current system-assigned managed identity:
 
 ### Create or set a managed identity by using PowerShell
 
-[Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or later is required for using PowerShell with a UMI. The [latest version of PowerShell](/powershell/scripting/install/installing-powershell) is recommended.
+[Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or later is required for using PowerShell with a UMI. The [latest version of PowerShell](/powershell/scripting/install/installing-powershell) is recommended, or use the [Azure Cloud Shell in the Azure portal](/azure/cloud-shell/overview).
 
 #### Azure SQL Database
 
@@ -186,12 +196,12 @@ To retrieve the current system-assigned managed identity:
 - To obtain the managed identities for a logical server, use the [Get-AzSqlServer](/powershell/module/az.sql/get-azsqlserver) command.
     - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
     ```powershell
-    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
     $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
     ``` 
     - To retrieve the SMI of an Azure SQL Database logical server:
     ```powershell
-    $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
+    $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
     $MI.Identity.principalId
     ```
 - To update the UMI's server setting, use the [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) command.

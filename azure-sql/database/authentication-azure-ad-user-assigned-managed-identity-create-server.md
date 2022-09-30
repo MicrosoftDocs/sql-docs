@@ -236,7 +236,7 @@ $responce.content
 
 # [ARM Template](#tab/arm-template)
 
-Here's an example of an ARM template that creates an Azure SQL logical server with a user-assigned managed identity. The template also adds an Azure AD admin set for the server and enables [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
+Here's an example of an ARM template that creates an Azure SQL Database logical server with a user-assigned managed identity. The template also adds an Azure AD admin set for the server and enables [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
 
 For more information and ARM templates, see [Azure Resource Manager templates for Azure SQL Database & SQL Managed Instance](arm-templates-content-guide.md).
 
@@ -341,6 +341,10 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 ```
 
 ---
+
+## Retrieve the managed identities 
+
+To retrieve the user-assigned managed identity (SMI) or user-assigned managed identity or identities (UMI) of an Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md#managing-a-managed-identity-for-a-server-or-instance).
 
 ## See also
 

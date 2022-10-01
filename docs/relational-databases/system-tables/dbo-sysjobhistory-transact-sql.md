@@ -58,7 +58,7 @@ SET NOCOUNT ON;
 SELECT sj.name,
     sh.run_date,
     sh.step_name,
-    STUFF(STUFF(RIGHT(REPLICATE('0', 6) +  CAST(sh.run_time as varchar(6)), 6), 3, 0, ':'), 6, 0, ':') 'run_time',
+    STUFF(STUFF(STUFF(STUFF(STUFF(sh.run_time,13,0,':'),11,0,':'),9,0,' '),7,0,'-'),5,0,'-') AS LastRun_datetime,
     CASE 
         WHEN sh.run_duration > 235959 THEN
     		   CAST((CAST(LEFT(CAST(sh.run_duration AS VARCHAR), LEN(CAST(sh.run_duration AS VARCHAR)) - 4) AS INT) / 24) AS VARCHAR)
@@ -67,9 +67,9 @@ SELECT sj.name,
     		ELSE
     		   STUFF(STUFF(RIGHT(REPLICATE('0', 6) + CAST(sh.run_duration AS VARCHAR(6)), 6), 3, 0, ':'), 6, 0, ':')
     		END AS 'LastRunDuration (d.HH:MM:SS) '
-    FROM msdb.dbo.sysjobs sj
-JOIN msdb.dbo.sysjobhistory sh
-    ON sj.job_id = sh.job_id;
+FROM msdb.dbo.sysjobs sj
+JOIN msdb.dbo.sysjobhistory sh 
+  ON sj.job_id = sh.job_id;
 GO
 ```
 

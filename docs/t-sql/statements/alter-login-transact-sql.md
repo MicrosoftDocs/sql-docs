@@ -1,19 +1,17 @@
 ---
-description: "ALTER LOGIN (Transact-SQL)"
 title: "ALTER LOGIN (Transact-SQL)"
-ms.custom: ""
+description: ALTER LOGIN (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/06/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_LOGIN_TSQL"
   - "ALTER LOGIN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER LOGIN statement"
   - "change password"
   - "mapping logins [SQL Server]"
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "passwords [SQL Server], modifying"
   - "names [SQL Server], logins"
   - "modifying login accounts"
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER LOGIN (Transact-SQL)
@@ -31,7 +29,7 @@ Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 

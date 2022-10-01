@@ -1,20 +1,16 @@
 ---
+title: "Status Property Example (Recordset) (VB)"
 description: "Status Property Example (Recordset) (VB)"
-title: "Status Property Example (Recordset) (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Status property [ADO Recordset], Visual Basic example"
-ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Status property [ADO Recordset], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Status Property Example (Recordset) (VB)
 This example uses the [Status](./status-property-ado-recordset.md) property to display which records have been modified in a batch operation before a batch update has occurred.  

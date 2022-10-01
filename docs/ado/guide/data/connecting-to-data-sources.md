@@ -1,18 +1,14 @@
 ---
+title: "Connecting to Data Sources"
 description: "Connecting to Data Sources"
-title: "Connecting to Data Sources | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connections [ADO]"
-ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connections [ADO]"
 ---
 # Connecting to Data Sources
 An ADO **Connection** object represents a unique session with a data source, including a DBMS, a file store, or a comma-delimited text file. In the case of a client/server database system, the ADO connection can be an actual network connection to the server.  

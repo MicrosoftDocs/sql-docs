@@ -93,7 +93,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 10. From the **Default language** list, select a default language for the login.  
   
-11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+11. Select **OK**.
 
 ### Additional options  
  The **Login - New** dialog box also offers options on four additional pages: **Server Roles**, **User Mapping**, **Securables**, and **Status**.  
@@ -166,15 +166,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  Select **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server\_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server\_name_. Select **OK**.
   
-    > **NOTE:** Selecting **The server**_server\_name_ automatically fills the upper grid with all of that servers' securable objects.  
+    > [!NOTE]  
+    > Selecting **The server**_server\_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
 3.  If you select **Specific objects...**:  
   
     1.  In the **Select Objects** dialog box, under **Select these object types**, select **Object Types...**.  
   
-    2.  In the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  In the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. Select **OK**.
   
     3.  Under **Enter the object names to select (examples)**, select **Browse...**.  
   
@@ -182,7 +183,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     5.  In the **Select Objects** dialog box, select **OK**.  
   
-4.  If you select **All objects of the types...**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  If you select **All objects of the types...**, in the **Select Object Types** dialog box, select any or all of the following object types: **Endpoints**, **Logins**, **Servers**, **Availability Groups**, and **Server roles**. Select **OK**.
   
  **Name**  
  The name of each principal or securable that is added to the grid.  

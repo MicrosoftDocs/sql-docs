@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_exec_query_resource_semaphores (Transact-SQL)"
-title: "sys.dm_exec_query_resource_semaphores (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_exec_query_resource_semaphores (Transact-SQL)"
+description: sys.dm_exec_query_resource_semaphores (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_exec_query_resource_semaphores_TSQL"
   - "dm_exec_query_resource_semaphores_TSQL"
   - "sys.dm_exec_query_resource_semaphores"
   - "dm_exec_query_resource_semaphores"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_query_resource_semaphores dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_resource_semaphores (Transact-SQL)

@@ -1,23 +1,21 @@
 ---
-description: "syssubscriptions (Transact-SQL)"
-title: "syssubscriptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syssubscriptions (Transact-SQL)"
+description: syssubscriptions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syssubscriptions_TSQL"
   - "syssubscriptions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "syssubscriptions system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
-author: LitKnd
-ms.author: kendralittle
 ---
 # syssubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

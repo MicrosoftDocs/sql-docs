@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot performance issues with Intelligent Insights
 description: Intelligent Insights helps you troubleshoot Azure SQL Database and Azure SQL Managed Instance performance issues.
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom: sqldbrb=2
-ms.devlang: 
-ms.topic: troubleshooting
 author: AlainDormehlMSFT
 ms.author: aldorme
-ms.reviewer: kendralittle, mathoma, wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 11/04/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: troubleshooting
+ms.custom: sqldbrb=2
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Troubleshoot Azure SQL Database and Azure SQL Managed Instance performance issues with Intelligent Insights
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]

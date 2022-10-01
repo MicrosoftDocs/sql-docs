@@ -1,18 +1,28 @@
 ---
-title: Azure CLI samples for Azure SQL Database & Managed Instances | Microsoft Docs
-titleSuffix: Azure SQL Database & SQL Managed Instance 
+title: Azure CLI samples for Azure SQL Database & Managed Instances
+titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Find Azure CLI script samples to create and manage Azure SQL Database and Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: deployment-configuration
-ms.custom: overview-samples, mvc, sqldbrb=2, devx-track-azurecli, seo-azure-cli
-ms.devlang: azurecli
-ms.topic: sample
-author: LitKnd
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 12/22/2021
-keywords: sql database, managed instance, azure cli samples, azure cli examples, azure cli code samples, azure cli script examples
+ms.service: sql-db-mi
+ms.subservice: deployment-configuration
+ms.topic: sample
+ms.custom:
+  - "overview-samples"
+  - "mvc"
+  - "sqldbrb=2"
+  - "devx-track-azurecli"
+  - "seo-azure-cli"
+keywords:
+  - "sql database"
+  - "managed instance"
+  - "azure cli samples"
+  - "azure cli examples"
+  - "azure cli code samples"
+  - "azure cli script examples"
+ms.devlang: azurecli
 ---
 
 # Azure CLI samples for Azure SQL Database and SQL Managed Instance
@@ -46,8 +56,6 @@ The following table includes links to Azure CLI script examples to manage single
 | [Configure failover group](scripts/setup-geodr-failover-group-cli.md) | Configures a failover group for a group of databases and failover over databases to the secondary server. |
 | [Single database](scripts/add-database-to-failover-group-cli.md)| Creates a database and a failover group, adds the database to the failover group, then tests failover to the secondary server. |
 | [Pooled database](scripts/add-elastic-pool-to-failover-group-cli.md) | Creates a database, adds it to an elastic pool, adds the elastic pool to the failover group, then tests failover to the secondary server. |
-| **Auditing and threat detection** |
-| [Configure auditing and threat-detection](scripts/auditing-threat-detection-cli.md)| Configures auditing and threat detection policies for a database in Azure SQL Database. |
 | **Back up, restore, copy, and import a database**||
 | [Back up a database](scripts/backup-database-cli.md)| Backs up a database in SQL Database to an Azure storage backup. |
 | [Restore a database](scripts/restore-database-cli.md)| Restores a database in SQL Database to a specific point in time. |

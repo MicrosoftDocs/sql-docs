@@ -1,15 +1,13 @@
 ---
+title: "Source Property (ADO Recordset)"
 description: "Source Property (ADO Recordset)"
-title: "Source Property (ADO Recordset) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Recordset15::putref_Source"
   - "Recordset15::Source"
   - "Recordset15::PutSource"
@@ -17,11 +15,9 @@ f1_keywords:
   - "Recordset15::GetSource"
   - "Recordset15::PutRefSource"
   - "Recordset15::put_Source"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Source property [ADO Recordset]"
-ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Source Property (ADO Recordset)
 Indicates the data source for a [Recordset](./recordset-object-ado.md) object.  

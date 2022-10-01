@@ -1,17 +1,19 @@
 ---
 title: Configure Always Encrypted by using the Windows certificate store
 description: This article shows you how to secure sensitive data in Azure SQL Database with database encryption by using the Always Encrypted wizard in SQL Server Management Studio (SSMS). It also shows you how to store your encryption keys in the Windows certificate store.
-keywords: encrypt data, sql encryption, database encryption, sensitive data, Always Encrypted
-services: sql-database
-ms.service: sql-database
-ms.subservice: security
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
-ms.reviwer: 
 ms.date: 04/23/2020
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
+ms.custom: sqldbrb=1
+keywords:
+  - "encrypt data"
+  - "sql encryption"
+  - "database encryption"
+  - "sensitive data"
+  - "Always Encrypted"
 ---
 
 # Configure Always Encrypted by using the Windows certificate store

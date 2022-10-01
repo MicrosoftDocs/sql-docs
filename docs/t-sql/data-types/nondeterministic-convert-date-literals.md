@@ -1,17 +1,15 @@
 ---
+title: "Nondeterministic conversion of date literals"
 description: "Nondeterministic conversion of literal date strings into DATE values"
-title: "Nondeterministic conversion of date literals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/19/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: "genemi"
+ms.reviewer: mikeray
+ms.date: "11/19/2018"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Nondeterministic conversion of literal date strings into DATE values

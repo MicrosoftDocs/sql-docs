@@ -1,21 +1,17 @@
 ---
+title: "Filter and RecordCount Properties Example (VB)"
 description: "Filter and RecordCount Properties Example (VB)"
-title: "Filter and RecordCount Properties Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "RecordCount property [ADO], Visual Basic example"
-  - "Filter property [ADO], Visual Basic example"
-ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "RecordCount property [ADO], Visual Basic example"
+  - "Filter property [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Filter and RecordCount Properties Example (VB)
 This example open a [Recordset](./recordset-object-ado.md) on the Publishers table in the ***Pubs*** database. It then uses the [Filter](./filter-property.md) property to limit the number of visible records to those publishers in a particular country/region. The **RecordCount** property is used to show the difference between the filtered and unfiltered recordsets.  

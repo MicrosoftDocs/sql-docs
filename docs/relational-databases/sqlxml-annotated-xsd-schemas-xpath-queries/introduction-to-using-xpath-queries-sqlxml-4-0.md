@@ -1,20 +1,19 @@
 ---
 title: "Introduction to Using XPath Queries (SQLXML)"
 description: Learn the basics of using XPath queries in SQLXML 4.0.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "XPath queries [SQLXML], about XPath queries"
   - "W3C XPath specification"
   - "XPath queries [SQLXML], functionality"
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Using XPath Queries (SQLXML 4.0)

@@ -1,20 +1,16 @@
 ---
+title: "Optimize Property Example (VC++)"
 description: "Optimize Property Example (VC++)"
-title: "Optimize Property Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Optimize property [ADO], VC++ example"
-ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Optimize property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Optimize Property Example (VC++)
 This example demonstrates the [Field](./field-object.md) object dynamic **Optimize** property. The **zip** field of the **Authors** table in the **Pubs** database is not indexed. Setting the [Optimize](./optimize-property-dynamic-ado.md) property to **True** on the **zip** field authorizes ADO to build an index that improves the performance of the [Find](./find-method-ado.md) method.  

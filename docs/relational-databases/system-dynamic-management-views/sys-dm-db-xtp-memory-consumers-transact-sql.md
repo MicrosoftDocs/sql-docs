@@ -1,32 +1,30 @@
 ---
 title: "sys.dm_db_xtp_memory_consumers (Transact-SQL)"
-description: "dm_db_xtp_memory_consumers returns data on database-level memory consumers that the database engine uses for In-Memory OLTP."
-ms.custom: ""
+description: dm_db_xtp_memory_consumers returns data on database-level memory consumers that the database engine uses for In-Memory OLTP.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_db_xtp_memory_consumers"
   - "dm_db_xtp_memory_consumers"
   - "dm_db_xtp_memory_consumers_TSQL"
   - "sys.dm_db_xtp_memory_consumers_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_memory_consumers dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Reports the database-level memory consumers in the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database engine. The view returns a row for each memory consumer that the database engine uses. Use this DMV to see how the memory is distributed across different internal objects.  
+  Reports the database-level memory consumers in the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] database engine. The view returns a row for each memory consumer that the database engine uses. Use this DMV to see how the memory is distributed across different internal objects.  
   
- For more information, see [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
+ For more information, see [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +43,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |min_sizeclass|**int**|Internal use only.|  
 |max_sizeclass|**int**|Internal use only.|  
 |memory_consumer_address|**varbinary**|Internal address of the consumer. For internal use only.|  
-|xtp_object_id|**bigint**|The [!INCLUDE[hek_2](../../includes/hek-2-md.md)] object ID that corresponds to the memory-optimized table.|  
+|xtp_object_id|**bigint**|The [!INCLUDE[inmemory](../../includes/inmemory-md.md)] object ID that corresponds to the memory-optimized table.|  
   
 ## Remarks  
  In the output, the allocators at database levels refer to user tables, indexes, and system tables. VARHEAP with `object_id` = `NULL` refers to memory allocated to tables with variable length columns.  
@@ -128,5 +126,5 @@ total_allocated_MB   total_used_MB
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)

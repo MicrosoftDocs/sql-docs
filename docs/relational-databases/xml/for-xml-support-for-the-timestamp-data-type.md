@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # FOR XML support for the timestamp data type
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 In the FOR XML transformation, **timestamp** type values are treated as **varbinary(8)** data and will always be base 64 encoded. The XSD or XDR schema, if requested, reflects this type.
 

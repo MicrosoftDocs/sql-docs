@@ -1,29 +1,27 @@
 ---
-description: "TRUNCATE TABLE (Transact-SQL)"
-title: "TRUNCATE TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "TRUNCATE TABLE (Transact-SQL)"
+description: TRUNCATE TABLE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "TRUNCATE"
   - "TRUNCATE TABLE"
   - "TRUNCATE_TSQL"
   - "TRUNCATE_TABLE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row removal [SQL Server], TRUNCATE TABLE statement"
   - "table truncating [SQL Server]"
   - "removing rows"
   - "TRUNCATE TABLE statement"
   - "deleting rows"
   - "dropping rows"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRUNCATE TABLE (Transact-SQL)

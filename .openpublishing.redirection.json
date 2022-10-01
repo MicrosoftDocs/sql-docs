@@ -3657,7 +3657,7 @@
     },
     {
       "source_path": "docs/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md",
-      "redirect_url": "https://docs.microsoft.com/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
       "redirect_document_id": false
     },
     {
@@ -41281,6 +41281,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/integrated-acceleration/intel-quickassist.md",
+      "redirect_url": "/sql/relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
       "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
       "redirect_document_id": false
@@ -41591,7 +41596,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "    docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
       "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-session",
       "redirect_document_id": false
     },
@@ -43627,7 +43632,7 @@
     },
     {
       "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart",
       "redirect_document_id": false
     },
     {
@@ -47912,7 +47917,7 @@
     },
     {
       "source_path": "docs/relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md",
-      "redirect_url": "/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision",
+      "redirect_url": "/azure/azure-sql/virtual-machines/windows/create-sql-vm-portal",
       "redirect_document_id": false
     },
     {
@@ -58816,6 +58821,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md",
+      "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/stretch-database/index.md",
       "redirect_url": "/sql/sql-server/stretch-database/stretch-database",
       "redirect_document_id": false
@@ -59419,6 +59429,47 @@
       "source_path": "azure-sql/database/ledger-verify-database.md",
       "redirect_url": "/sql/relational-databases/security/ledger/ledger-verify-database",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
+      "redirect_url": "/sql/linux/quickstart-sql-server-containers-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/install-distributed-replay-overview.md",
+      "redirect_url": "/sql/tools/distributed-replay/install-distributed-replay",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/distributed-replay/distributed-replay-requirements.md",
+      "redirect_url": "/sql/tools/distributed-replay/sql-server-distributed-replay",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md",
+      "redirect_url": "/sql/ssms/scripting/transact-sql-debugger-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/partner-big-data-cluster.md",
+      "redirect_url": "/sql/big-data-cluster/partner-big-data-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-digest-management-and-database-verification.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-notes.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes-2017",
+      "redirect_document_id": false
     }
   ]
 }
+

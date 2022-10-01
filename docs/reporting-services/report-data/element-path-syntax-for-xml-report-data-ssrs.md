@@ -196,7 +196,7 @@ XMLLocalName :: =
   
      The result set displays 4 lines of data with the following columns: `xmlns`, `Customer.ID`, `FirstName`, `LastName`, `ID`, `Qty`, `Order`.  
   
-9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9.  Select **OK**.
   
 ## See Also  
  [XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   

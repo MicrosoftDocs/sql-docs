@@ -1,21 +1,20 @@
 ---
+title: "System Functions (Transact-SQL)"
 description: "System Functions (Transact-SQL)"
-title: "System Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: ""
+helpviewer_keywords:
   - "system functions [SQL Server]"
   - "functions [SQL Server], system"
-ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # System Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

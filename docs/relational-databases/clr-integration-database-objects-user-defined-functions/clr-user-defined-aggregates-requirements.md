@@ -1,13 +1,13 @@
 ---
-title: "Requirements for CLR User-Defined Aggregates | Microsoft Docs"
+title: "Requirements for CLR User-Defined Aggregates"
 description: SQL Server CLR integration allows you to create custom aggregate functions in managed code. They must implement the required aggregation contract.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "aggregate functions [CLR integration]"
   - "user-defined types [CLR integration], user-defined aggregates"
   - "CREATE AGGREGATE statement"
@@ -18,8 +18,6 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
   - "UDTs [CLR integration], user-defined aggregates"
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-author: "rothja"
-ms.author: "jroth"
 ---
 # CLR User-Defined Aggregates - Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

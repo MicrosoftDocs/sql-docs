@@ -9,6 +9,8 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
 author: cpichuka 
+f1_keywords: 
+    - "ssma.sybase.globalsettingeditor.f1"
 ms.author: cpichuka 
 ---
 # Global Settings (Editor) (SybaseToSQL)

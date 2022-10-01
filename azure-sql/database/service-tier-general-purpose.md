@@ -1,18 +1,18 @@
 ---
 title: General Purpose service tier
-titleSuffix: Azure SQL Database & Azure SQL Managed Instance 
-description: Learn about the General Purpose service tier for Azure SQL Database and Azure SQL Managed Instance. 
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: service-overview
-ms.custom: sqldbrb=2
-ms.devlang: 
-ms.topic: conceptual
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Learn about the General Purpose service tier for Azure SQL Database and Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
-ms.reviewer: kendralittle, mathoma, urmilano
+ms.reviewer: wiassaf, mathoma, urmilano
 ms.date: 04/13/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-db-mi
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=2"
+  - "azure-sql-split"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # General Purpose service tier - Azure SQL Database and Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -71,7 +71,7 @@ The following table shows resource limits for both Azure SQL Database and Azure 
 | **Storage type** | Remote storage | Remote storage| 
 | **Storage size** | 1 GB - 4 TB | 2 GB - 16 TB| 
 | **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md) | [24 GB per vCore](../managed-instance/resource-limits.md#service-tier-characteristics) |
-| **Log write throughput** | Single databases: [4.5 MB/s per vCore (max 50 MB/s)](resource-limits-vcore-single-databases.md) <br> Elastic pools: [6 MB/s per vCore (max 62.5 MB/s)](resource-limits-vcore-elastic-pools.md) | [3 MB/s per vCore (max 22 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics)|
+| **Log write throughput** | Single databases: [4.5 MB/s per vCore (max 50 MB/s)](resource-limits-vcore-single-databases.md) <br> Elastic pools: [6 MB/s per vCore (max 62.5 MB/s)](resource-limits-vcore-elastic-pools.md) | General Purpose: [3 MB/s per vCore (max 120 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) <br> Business Critical: [4 MB/s per vCore (max 96 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |
 | **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla.md#general-purpose-service-tier-zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|
 | **Backups** | 1-35 days (7 days by default) | 1-35 days (7 days by default)| 
 | [**Read-only replicas**](read-scale-out.md) | 0 built-in </br> 0 - 4 [geo-replicas](active-geo-replication-overview.md) | 0 built-in </br> 0 - 1 geo-replicas using [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md) | 

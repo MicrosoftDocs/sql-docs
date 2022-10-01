@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_xe_sessions (Transact-SQL)"
 title: "sys.dm_xe_sessions (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_xe_sessions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "3/30/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_xe_sessions_TSQL"
   - "dm_xe_sessions"
   - "sys.dm_xe_sessions_TSQL"
   - "sys.dm_xe_sessions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_xe_sessions dynamic management view"
   - "extended events [SQL Server], views"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

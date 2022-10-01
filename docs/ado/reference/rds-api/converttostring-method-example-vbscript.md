@@ -1,20 +1,16 @@
 ---
+title: "ConvertToString Method Example (VBScript)"
 description: "ConvertToString Method Example (VBScript)"
-title: "ConvertToString Method Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ConvertToString method [ADO], VBScript example"
-ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ConvertToString method [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # ConvertToString Method Example (VBScript)
 > [!IMPORTANT]

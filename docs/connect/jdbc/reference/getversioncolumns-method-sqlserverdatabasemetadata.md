@@ -1,21 +1,15 @@
 ---
+title: "getVersionColumns Method (SQLServerDatabaseMetaData)"
 description: "getVersionColumns Method (SQLServerDatabaseMetaData)"
-title: "getVersionColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.getVersionColumns"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.getVersionColumns"
+apitype: "Assembly"
 ---
 # getVersionColumns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -70,7 +64,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 >  For more information about the data returned by the getVersionColumns method, see "sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
- The following example demonstrates how to use the getVersionColumns method to return information about the columns that are automatically updated in the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  
+ The following example demonstrates how to use the getVersionColumns method to return information about the columns that are automatically updated in the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  

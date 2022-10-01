@@ -1,21 +1,15 @@
 ---
+title: "updateObject Method (SQLServerResultSet)"
 description: "updateObject Method (SQLServerResultSet)"
-title: "updateObject Method (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateObject"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6d2baa57-079c-4e79-a5c4-c1a0c4376e72
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateObject"
+apitype: "Assembly"
 ---
 # updateObject Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,31 +1,28 @@
 ---
-description: "SET ANSI_NULLS (Transact-SQL)"
-title: "SET ANSI_NULLS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET ANSI_NULLS (Transact-SQL)"
+description: SET ANSI_NULLS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/24/2020"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET_ANSI_NULLS_TSQL"
   - "ANSI_NULLS"
   - "SET ANSI_NULLS"
   - "ANSI_NULLS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET ANSI_NULLS statement"
   - "not equal to operator (<>)"
   - "ANSI_NULLS option"
   - "equals operator (=)"
   - "null values [SQL Server], comparison operators"
   - "comparison operators [SQL Server], null values"
-ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||azuresqldb-current"
 ---
 # SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

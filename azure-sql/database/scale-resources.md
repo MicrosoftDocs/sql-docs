@@ -1,17 +1,15 @@
 ---
 title: Scale resources
 description: This article explains how to scale your database in Azure SQL Database and SQL Managed Instance by adding or removing allocated resources.
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: performance
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma, urmilano, wiassaf
+ms.reviewer: wiassaf, mathoma, urmilano
 ms.date: 06/25/2019
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-db-mi
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom: sqldbrb=1
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Dynamically scale database resources with minimal downtime

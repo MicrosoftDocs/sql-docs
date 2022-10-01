@@ -1,24 +1,22 @@
 ---
-description: "RESTORE Statements restore SQL database backups taken using the BACKUP command."
 title: "RESTORE (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/10/2022
+description: RESTORE Statements restore SQL database backups taken using the BACKUP command.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 08/17/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "RESTORE DATABASE"
   - "RESTORE_TSQL"
   - "RESTORE_DATABASE_TSQL"
   - "RESTORE"
   - "RESTORE_LOG_TSQL"
   - "RESTORE LOG"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RESTORE DATABASE, see RESTORE statement"
   - "full backups [SQL Server]"
   - "RECOVERY option"
@@ -38,15 +36,15 @@ helpviewer_keywords:
   - "reverting database snapshots"
   - "transaction log backups [SQL Server], RESTORE statement"
   - "RESTORE LOG, see RESTORE statement"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016"
 ---
 # RESTORE Statements (Transact-SQL)
 
 Restores SQL database backups taken using the [BACKUP](backup-transact-sql.md) command.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -351,6 +349,12 @@ Restoring a damaged `master` database is performed using a special procedure. Fo
 Restoring a database clears the plan cache for the database being restored. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. 
 
 To restore an availability database, first restore the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then add the database to the availability group.
+
+### Integrated acceleration and offloading for backup compression and decompression
+
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. For more information, see [Backup COMPRESSION](backup-transact-sql.md#compression). 
+
+For more information, see [Restore operations](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md#restore-operations)
 
 ### Restore from URL
 
@@ -732,7 +736,7 @@ RESTORE DATABASE Sales
  - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
  - [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
  - [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
- - [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+ - [BACKUP](../../t-sql/statements/backup-transact-sql.md)      
  - [Media Sets, Media Families, and Backup Sets](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
  - [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
  - [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     

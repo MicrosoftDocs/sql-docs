@@ -1,20 +1,16 @@
 ---
+title: "Catalog Example (VB)"
 description: "Catalog Example (VB)"
-title: "Catalog Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Catalog object, Visual Basic example"
-ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Catalog object, Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Catalog Example (VB)
 This Visual Basic project creates a new cube using MDX. Then, it documents the structure of a cube in a Microsoft Word document.  

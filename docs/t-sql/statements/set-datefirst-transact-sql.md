@@ -1,30 +1,27 @@
 ---
-description: "SET DATEFIRST (Transact-SQL)"
-title: "SET DATEFIRST (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET DATEFIRST (Transact-SQL)"
+description: SET DATEFIRST (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET DATEFIRST"
   - "SET_DATEFIRST_TSQL"
   - "DATEFIRST_TSQL"
   - "DATEFIRST"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "first day of week [SQL Server]"
   - "day of week [SQL Server]"
   - "SET DATEFIRST option [SQL Server]"
   - "DATEFIRST option [SQL Server]"
   - "weekdays [SQL Server]"
   - "options [SQL Server], date"
-ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFIRST (Transact-SQL)

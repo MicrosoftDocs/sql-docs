@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_current_partition_mappings"
-title: "MSmerge_current_partition_mappings | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_current_partition_mappings"
+description: MSmerge_current_partition_mappings
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_current_partition_mappings"
   - "MSmerge_current_partition_mappings_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_current_partition_mappings system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_current_partition_mappings
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], server management"
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"

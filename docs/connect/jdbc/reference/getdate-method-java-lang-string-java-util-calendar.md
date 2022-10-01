@@ -1,21 +1,15 @@
 ---
+title: "getDate Method (java.util.Calendar) parameter"
 description: "getDate Method (java.lang.String, java.util.Calendar)"
-title: "getDate Method (java.util.Calendar) parameter | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.getDate (java.util.Calendar)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6d0deaf2-6f12-4a6e-b537-a51fa3478059
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.getDate (java.util.Calendar)"
+apitype: "Assembly"
 ---
 # getDate Method (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

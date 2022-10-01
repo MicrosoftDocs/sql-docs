@@ -2,15 +2,13 @@
 title: Move managed instance to another subnet
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to move an Azure SQL Managed Instance to another subnet with only a short downtime during failover - typically up to 10 seconds.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: how-to
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, bonova, srbozovi, wiassaf
 ms.date: 09/30/2021
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
 ms.custom: ignite-fall-2021
 ---
 # Move Azure SQL Managed Instance across subnets
@@ -18,7 +16,7 @@ ms.custom: ignite-fall-2021
 
 Azure SQL Managed Instance must be deployed inside a dedicated subnet within an Azure [virtual network](/azure/virtual-network/virtual-networks-overview). The number of managed instances that can be deployed within the subnet depends on the size of the subnet (subnet range).
 
-This article teaches you to move your managed instance from one subnet to another, similar to scaling vCores or changing the instance service tier. SQL Managed Instance is available during the move, except during a short downtime caused by a failover at the end of the update - typically lasting up to 10 seconds, even if long-running transactions are interrupted. 
+This article teaches you to move your managed instance from one subnet to another (in the same VNet or a different one), similar to scaling vCores or changing the instance service tier. SQL Managed Instance is available during the move, except during a short downtime caused by a failover at the end of the update - typically lasting up to 10 seconds, even if long-running transactions are interrupted. 
 
 Moving the instance to another subnet triggers the following virtual cluster operations:
 - The destination subnet builds out or resizes the virtual cluster.
@@ -67,10 +65,13 @@ Depending on the subnet state and designation, the following adjustments may be 
 ### Destination subnet limitations
 
 Consider the following limitations when choosing a destination subnet for an existing instance:
+- SQL Managed Instance can be moved to the subnet that is either:
+ 1. Empty
+ 2. In a peered vNet (if you are moving to a subnet in another vNet you must [establish the peering](/azure/virtual-network/tutorial-connect-virtual-networks-portal))
+ 3. Specially prepared subnet that retains the DNS zone of SQL Managed Instance that is being moved. This can be done by populating an empty subnet with new SQL Managed Instances that are created with populated dnsZonePartner parameter. This parameter as a value accepts the id of SQL Managed Instance [see docs](api-references-create-manage-instance.md)and in this case you can use the instance that would later be moved to the new subnet.
+(Please note that apart from this approach there is no other way for you to dictate the DNS zone of SQL Managed Instance since it is randomly generated. There also, as of now, doesn't exist a way to update the DNS zone of an existing SQL Managed Instance.)
 
-- The destination subnet must be in the same virtual network as the source subnet.
 - The DNS zone of the destination subnet must match the DNS zone of the source subnet as changing the DNS zone of a managed instance is not currently supported.
-- Instances running on Gen4 hardware must be upgraded to newer hardware since Gen4 is being retired. Upgrading hardware and moving to another subnet can be performed in one operation.
 
 If you want to migrate a SQL Managed Instance with an [auto-failover group](auto-failover-group-sql-mi.md), the following prerequisites apply: 
 - The target subnet needs to have the same security rules needed for failover group replication as the source subnet: 
@@ -78,7 +79,13 @@ Open both inbound and outbound ports 5022 and the range 11000~11999 in the Netwo
 - The target subnet can't have an overlapping address range with the subnet that holds the secondary instance replica of the failover group. 
 For example, if MI1 is in subnet S1, the secondary instance in the failover group is MI2 in subnet S2, and we want to move MI1 to subnet S3, subnet S3 can't have an overlapping address range with subnet S2. 
 
-To learn more about setting up the network for auto-failover groups, review [Enable geo-replication between managed instances](auto-failover-group-configure-sql-mi.md#enabling-geo-replication-between-managed-instances-and-their-vnets). 
+To learn more about configuring the network for auto-failover groups, review [Enable geo-replication between managed instances](auto-failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances). 
+
+### Migration from Gen4 hardware
+
+Instances running on Gen4 hardware must be upgraded to newer hardware since Gen4 is being retired. Upgrading hardware and moving to another subnet can be performed in one operation.
+
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
 ## Operation steps
 

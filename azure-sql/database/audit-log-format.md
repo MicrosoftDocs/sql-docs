@@ -1,14 +1,13 @@
 ---
 title: SQL Database audit log format
 description: Understand how Azure SQL Database audit logs are structured.
-services: sql-database
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: "03/23/2022"
 ms.service: sql-database
 ms.subservice: security
 ms.topic: reference
-author: sravanisaluru
-ms.author: srsaluru
-ms.date: "03/23/2022"
-ms.reviewer: kendralittle, vanto, mathoma
 ms.custom: sqldbrb=1
 ---
 

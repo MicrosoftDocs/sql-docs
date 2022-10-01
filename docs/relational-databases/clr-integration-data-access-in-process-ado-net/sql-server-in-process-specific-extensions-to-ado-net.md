@@ -1,14 +1,15 @@
 ---
 title: "SQL Server In-Process Extensions to ADO.NET"
 description: Links to articles about the four main functional extensions to ADO.NET that are specifically for in-process use.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "data access [CLR integration]"
   - "ADO.NET [CLR integration]"
   - "common language runtime [SQL Server], ADO.NET"
@@ -16,8 +17,6 @@ helpviewer_keywords:
   - "in-process data access providers [CLR integration]"
   - "extensions [CLR integration]"
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
-author: rothja
-ms.author: jroth
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

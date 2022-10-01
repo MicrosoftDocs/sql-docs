@@ -1,19 +1,17 @@
 ---
-description: "ALTER SERVICE MASTER KEY (Transact-SQL)"
-title: "ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER SERVICE MASTER KEY (Transact-SQL)"
+description: ALTER SERVICE MASTER KEY (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_SERVICE_MASTER_KEY_TSQL"
   - "ALTER SERVICE MASTER KEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REGENERATE phrase"
   - "FORCE option"
   - "ALTER SERVICE MASTER KEY statement"
@@ -22,9 +20,8 @@ helpviewer_keywords:
   - "decryption [SQL Server], Service Master Key"
   - "encryption [SQL Server], Service Master Key"
   - "service master key [SQL Server], modifying"
-ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

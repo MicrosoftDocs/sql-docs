@@ -25,9 +25,9 @@ ms.author: maghan
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-  Binds the specified [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database to the specified resource pool. Both the database and the resource pool must exist prior to executing `sys.sp_xtp_bind_db_resource_pool`.  
+  Binds the specified [!INCLUDE[inmemory](../../includes/inmemory-md.md)] database to the specified resource pool. Both the database and the resource pool must exist prior to executing `sys.sp_xtp_bind_db_resource_pool`.  
   
- This system procedure creates a binding between the Resource Governor pool identified by resource_pool_name, and the database identified by database_name. It is not required that the database has any memory-optimized objects at the time of binding. In the absence of memory-optimized objects, there is no memory taken from the resource pool. This binding will be used by Resource Governor to manage memory allocated by [!INCLUDE[hek_2](../../includes/hek-2-md.md)] allocators as described below.  
+ This system procedure creates a binding between the Resource Governor pool identified by resource_pool_name, and the database identified by database_name. It is not required that the database has any memory-optimized objects at the time of binding. In the absence of memory-optimized objects, there is no memory taken from the resource pool. This binding will be used by Resource Governor to manage memory allocated by [!INCLUDE[inmemory](../../includes/inmemory-md.md)] allocators as described below.  
   
  If there is already a binding in place for a given database, the procedure returns an error.  In no event may a database have more than one active binding.  
   
@@ -42,7 +42,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
   
 ## Arguments  
  database_name  
- The name of an existing [!INCLUDE[hek_2](../../includes/hek-2-md.md)] enabled database.  
+ The name of an existing [!INCLUDE[inmemory](../../includes/inmemory-md.md)] enabled database.  
   
  resource_pool_name  
  The name of an existing resource pool.  
@@ -60,7 +60,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **Database is a system database**  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tables cannot be created in system databases.  Thus it is invalid to create a binding of [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory for such a database.  The following error is returned:  
+ [!INCLUDE[inmemory](../../includes/inmemory-md.md)] tables cannot be created in system databases.  Thus it is invalid to create a binding of [!INCLUDE[inmemory](../../includes/inmemory-md.md)] memory for such a database.  The following error is returned:  
 *Database_name %s refers to a system database.  Resource pools may only be bound to a user database.*  
   
 ```  

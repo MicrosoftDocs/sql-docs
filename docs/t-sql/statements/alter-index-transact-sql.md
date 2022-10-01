@@ -1,19 +1,18 @@
 ---
-description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: ALTER INDEX (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf, randolphwest
 ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: wiassaf, randolphwest
 ms.technology: t-sql
 ms.topic: reference
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "ALTER INDEX"
   - "ALTER_INDEX_TSQL"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "indexes [SQL Server], reorganizing"
   - "ALTER INDEX statement"
@@ -44,8 +43,8 @@ helpviewer_keywords:
   - "page locks [SQL Server]"
   - "index rebuild [SQL Server]"
   - "index reorganize [SQL Server]"
-author: pmasl
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -412,7 +411,7 @@ For an XML index or spatial index, only `ONLINE = OFF` is supported, and if ONLI
 > [!IMPORTANT]  
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
 >  
->- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+>- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 >- [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
 >- [Editions and Supported Features for SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
 
@@ -751,7 +750,7 @@ The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY`
 
 In order to execute the DDL statement for an online index rebuild, all active blocking transactions running on a particular table must be completed. When the online index rebuild executes, it blocks all new transactions that are ready to start execution on this table. Although the duration of the lock for online index rebuild is very short, waiting for all open transactions on a given table to complete and blocking the new transactions to start, might significantly affect the throughput, causing a workload slow down or timeout, and significantly limit access to the underlying table.
 
-The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Schema Stability (Sch-S) locks and Schema Modify (Sch-M) locks required for online index rebuilds and allows them to select one of three options. In all three cases, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.
+The `WAIT_AT_LOW_PRIORITY` option allows DBAs to manage the Schema Stability (Sch-S) locks and Schema Modify (Sch-M) locks required for online index rebuilds and allows them to select one of two options. In either case, if during the wait time `MAX_DURATION = n [minutes]`, there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.
 
 `WAIT_AT_LOW_PRIORITY` indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the `WAIT AT LOW PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.
 
@@ -759,7 +758,7 @@ MAX_DURATION = *time* [**MINUTES**]
 
 The wait time (an integer value specified in minutes) that the online index rebuild locks will wait with low priority when executing the DDL command. If the operation is blocked for the `MAX_DURATION` time, the specified `ABORT_AFTER_WAIT` action will be executed. `MAX_DURATION` time is always in minutes, and the word **MINUTES** can be omitted.
 
-ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]
+ABORT_AFTER_WAIT = [ **NONE** | **SELF** | **BLOCKERS** ]
 
 NONE  
 Continue waiting for the lock with normal (regular) priority.

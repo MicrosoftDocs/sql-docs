@@ -1,17 +1,17 @@
 ---
 title: "Tutorial: Add SQL Managed Instance to a failover group"
-titleSuffix: Azure SQL Managed Instance 
-description: In this tutorial, learn to create a failover group between a primary and secondary Azure SQL Managed Instance. 
-services: sql-database
+titleSuffix: Azure SQL Managed Instance
+description: In this tutorial, learn to create a failover group between a primary and secondary Azure SQL Managed Instance.
+author: rajeshsetlem
+ms.author: rsetlem
+ms.reviewer: mathoma
+ms.date: 06/02/2022
 ms.service: sql-managed-instance
 ms.subservice: high-availability
-ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.devlang: 
 ms.topic: tutorial
-author: emlisa
-ms.author: emlisa
-ms.reviewer: mathoma
-ms.date: 08/27/2019
+ms.custom:
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ---
 # Tutorial: Add SQL Managed Instance to a failover group
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -30,16 +30,16 @@ In this tutorial, you will learn how to:
 > - Create a secondary managed instance as part of a failover group. 
 > - Test failover.
 
- There are multiple ways to establish connectivity between managed instances in different virtual networks, including:
+ There are multiple ways to establish connectivity between managed instances in different Azure regions, including:
+ * [Global virtual network peering](/azure/virtual-network/virtual-network-peering-overview) - the most performant and recommended way
  * [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
- * [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview)
  * VPN gateways
 
-This tutorial provides steps for creating and connecting VPN gateways. If you prefer to use ExpressRoute or VNet peering, replace the gateway steps accordingly, or 
-skip ahead to [Step 7](#create-a-failover-group) if you already have ExpressRoute or global VNet peering configured. 
+This tutorial provides steps for global virtual network peering. If you prefer to use ExpressRoute or VPN gateways, replace the peering steps accordingly, or 
+skip ahead to [Step 7](#create-a-failover-group) if you already have ExpressRoute or VPN gateways configured. 
 
 
-  > [!NOTE]
+  > [!IMPORTANT]
   > - When going through this tutorial, ensure you are configuring your resources with the [prerequisites for setting up failover groups for SQL Managed Instance](auto-failover-group-sql-mi.md#enabling-replication-traffic-between-two-instances). 
   > - Creating a managed instance can take a significant amount of time. As a result, this tutorial may take several hours to complete. For more information on provisioning times, see [SQL Managed Instance management operations](sql-managed-instance-paas-overview.md#management-operations). 
 
@@ -64,7 +64,7 @@ To complete the tutorial, make sure you have the following items:
 
 In this step, you will create the resource group and the primary managed instance for your failover group using the Azure portal or PowerShell. 
 
-Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. Managed instances residing in geo-paired regions have much better performance compared to unpaired regions. 
+Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for data replication performance reasons. Managed instances residing in geo-paired regions have much better data replication performance compared to instances residing in unpaired regions. 
 
 
 # [Portal](#tab/azure-portal) 
@@ -378,7 +378,7 @@ Create your resource group and the primary managed instance using PowerShell.
    # Create the primary managed instance
    
    Write-host "Creating primary SQL Managed Instance..."
-   Write-host "This will take some time, see https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
+   Write-host "This will take some time, see https://learn.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
    New-AzSqlInstance -Name $primaryInstance `
                          -ResourceGroupName $resourceGroupName `
                          -Location $location `
@@ -416,14 +416,14 @@ This portion of the tutorial uses the following PowerShell cmdlets:
 
 ## Create secondary virtual network
 
-If you're using the Azure portal to create your managed instance, you will need to create the virtual network separately because there is a requirement that the subnet of the primary and secondary managed instance do not have overlapping ranges. If you're using PowerShell to configure your managed instance, skip ahead to step 3. 
+If you're using the Azure portal to create your secondary managed instance, you will need to create the virtual network before creating the instance to make sure that the subnets of the primary and secondary managed instance do not have overlapping IP address ranges. If you're using PowerShell to configure your managed instance, skip ahead to step 3. 
 
 # [Portal](#tab/azure-portal) 
 
 To verify the subnet range of your primary virtual network, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), navigate to your resource group and select the virtual network for your primary instance.  
-2. Select **Subnets** under **Settings** and note the **Address range**. The subnet address range of the virtual network for the secondary managed instance cannot overlap this. 
+2. Select **Subnets** under **Settings** and note the **Address range** of the subnet created automatically during creation of your primary instance. The subnet IP address range of the virtual network for the secondary managed instance must not overlap with the IP address range of the subnet hosting primary instance. 
 
 
    ![Primary subnet](./media/failover-group-add-instance-tutorial/verify-primary-subnet-range.png)
@@ -431,10 +431,10 @@ To verify the subnet range of your primary virtual network, follow these steps:
 To create a virtual network, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), select **Create a resource** and search for *virtual network*. 
-1. Select the **Virtual Network** option published by Microsoft and then select **Create** on the next page. 
-1. Fill out the required fields to configure the virtual network for your secondary managed instance, and then select **Create**. 
+2. Select the **Virtual Network** option and then select **Create** on the next page. 
+3. Fill out the required fields to configure the virtual network for your secondary managed instance, and then select **Create**. 
 
-   The following table shows the values necessary for the secondary virtual network:
+   The following table shows the required fields and corresponding values for the secondary virtual network:
 
     | **Field** | Value |
     | --- | --- |
@@ -442,8 +442,8 @@ To create a virtual network, follow these steps:
     | **Address space** | The address space for your virtual network, such as `10.128.0.0/16`. | 
     | **Subscription** | The subscription where your primary managed instance and resource group reside. |
     | **Region** | The location where you will deploy your secondary managed instance. |
-    | **Subnet** | The name for your subnet. `default` is provided for you by default. |
-    | **Address range**| The address range for your subnet. This must be different than the subnet address range used by the virtual network of your primary managed instance, such as `10.128.0.0/24`.  |
+    | **Subnet** | The name for your subnet. `default` is offered as a default name. |
+    | **Address range**| The IP address range for your subnet, such as `10.128.0.0/24`. This must not overlap with the IP address range used by the virtual network subnet of your primary managed instance.  |
 
 
     ![Secondary virtual network values](./media/failover-group-add-instance-tutorial/secondary-virtual-network.png)
@@ -455,17 +455,15 @@ This step is only necessary if you're using the Azure portal to deploy SQL Manag
 ---
 
 ## Create a secondary managed instance
-In this step, you will create a secondary managed instance in the Azure portal, which will also configure the networking between the two managed instances. 
+In this step you will create a secondary managed instance, which will also configure the networking between the two managed instances. 
 
-Your second managed instance must:
-- Be empty. 
-- Have a different subnet and IP range than the primary managed instance. 
+Your second managed instance must be:
+- Empty, i.e. with no user databases on it. 
+- Hosted in a virtual network subnet that has no IP address range overlap with the virtual network subnet hosting the primary managed instance. 
 
-# [Portal](#tab/azure-portal) 
+# [Portal](#tab/azure-portal)  
 
-Create the secondary managed instance using the Azure portal. 
-
-1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, and then type `Azure SQL` in the search box. (Optional) Select the star next to **Azure SQL** to favorite it and add it as an item in the left-hand navigation. 
+1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, and then type `Azure SQL` in the search box. (Optional) Select the star next to **Azure SQL** to add it as a favorite item in the left-hand navigation. 
 1. Select **+ Add** to open the **Select SQL deployment option** page. You can view additional information about the different databases by selecting **Show details** on the **Databases** tile.
 1. Select **Create** on the **SQL managed instances** tile. 
 
@@ -477,15 +475,15 @@ Create the secondary managed instance using the Azure portal.
  
     | **Field** | Value |
     | --- | --- |
-    | **Subscription** |  The subscription where your primary managed instance is. |
-    | **Resource group**| The resource group where your primary managed instance is. |
+    | **Subscription** |  The Azure subscription to create the instance in. When using Azure portal, it must be the same subscription as for primary instance.|
+    | **Resource group**| The resource group to create secondary managed instance in. |
     | **SQL Managed Instance name** | The name of your new secondary managed instance, such as `sql-mi-secondary`.  | 
-    | **Region**| The location for your secondary managed instance.  |
+    | **Region**| The Azure region for your secondary managed instance.  |
     | **SQL Managed Instance admin login** | The login you want to use for your new secondary managed instance, such as `azureuser`. |
     | **Password** | A complex password that will be used by the admin login for the new secondary managed instance.  |
 
 
-1. Under the **Networking** tab, for the **Virtual Network**, select the virtual network you created for the secondary managed instance from the drop-down.
+1. Under the **Networking** tab, for the **Virtual Network**, select from the drop-down list the virtual network you previously created for the secondary managed instance.
 
    ![Secondary MI networking](./media/failover-group-add-instance-tutorial/networking-settings-for-secondary-mi.png)
 
@@ -707,7 +705,7 @@ Create the secondary managed instance using PowerShell.
    
    
    Write-host "Creating secondary SQL Managed Instance..."
-   Write-host "This will take some time, see https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
+   Write-host "This will take some time, see https://learn.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
    New-AzSqlInstance -Name $secondaryInstance `
                      -ResourceGroupName $resourceGroupName `
                      -Location $drLocation `
@@ -744,82 +742,84 @@ This portion of the tutorial uses the following PowerShell cmdlets:
 
 ---
 
-## Create a primary gateway 
+## Create a global virtual network peering 
 
 > [!NOTE]
-> The SKU of the gateway affects throughput performance. This tutorial deploys a gateway with the most basic SKU (`HwGw1`). Deploy a higher SKU (example: `VpnGw3`) to achieve higher throughput. For all available options, see [Gateway SKUs](/azure/vpn-gateway/vpn-gateway-about-vpngateways#benchmark)
+> The steps listed below will create peering links between the virtual networks in both directions.
 
 # [Portal](#tab/azure-portal)
 
-Create the gateway for the virtual network of your primary managed instance using the Azure portal. 
+1. In the [Azure portal](https://portal.azure.com), go to the **Virtual network** resource for your primary managed instance. 
+1. Select **Peerings** under *Settings* and then select + Add.
+
+![Screenshot of peerings page for VNetA](./media/failover-group-add-instance-tutorial/vneta-peerings.png)
+
+1. Enter or select values for the following settings:
+
+   | Settings | Description |
+    | -------- | ----------- |
+    | **This virtual network** |  |
+    | Peering link name | The name for the peering must be unique within the virtual network. |
+    | Traffic to remote virtual network | Select **Allow (default)** to enable communication between the two virtual networks through the default `VirtualNetwork` flow. Enabling communication between virtual networks allows resources that are connected to either virtual network to communicate with each other with the same bandwidth and latency as if they were connected to the same virtual network. All communication between resources in the two virtual networks is over the Azure private network. |
+    | Traffic forwarded from remote virtual network | Both **Allowed (default)** and **Block** option will work for this tutorial. For more information, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering)|
+    | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
+    | **Remote virtual network** |  |
+    | Peering link name | The name of the same peering to be used in the virtual network hosting secondary instance. |
+    | Virtual network deployment model | Select **Resource manager**. |
+    | I know my resource ID | Leave this checkbox unchecked. |
+    | Subscription | Select the Azure subscription of the virtual network hosting the secondary instance that you want to peer with. |
+    | Virtual network | Select the virtual network hosting the secondary instance that you want to peer with. If the virtual network is listed, but grayed out, it may be because the address space for the virtual network overlaps with the address space for this virtual network. If virtual network address spaces overlap, they cannot be peered.|
+    | Traffic to remote virtual network | Select **Allow (default)** |
+    | Traffic forwarded from remote virtual network | Both **Allowed (default)** and **Block** option will work for this tutorial. For more information, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
+    | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
 
 
-1. In the [Azure portal](https://portal.azure.com), go to your resource group and select the **Virtual network** resource for your primary managed instance. 
-1. Select **Subnets** under **Settings** and then select to add a new **Gateway subnet**. Leave the default values. 
+1. Click **Add** to configure the peering with the virtual network you selected. After a few seconds, select the **Refresh** button and the peering status will change from *Updating* to *Connected*.
 
-   ![Add gateway for primary managed instance](./media/failover-group-add-instance-tutorial/add-subnet-gateway-primary-vnet.png)
-
-1. Once the subnet gateway is created, select **Create a resource** from the left navigation pane and then type `Virtual network gateway` in the search box. Select the **Virtual network gateway** resource published by **Microsoft**. 
-
-   ![Create a new virtual network gateway](./media/failover-group-add-instance-tutorial/create-virtual-network-gateway.png)
-
-1. Fill out the required fields to configure the gateway for your primary managed instance. 
-
-   The following table shows the values necessary for the gateway for the primary managed instance:
- 
-    | **Field** | Value |
-    | --- | --- |
-    | **Subscription** |  The subscription where your primary managed instance is. |
-    | **Name** | The name for your virtual network gateway, such as `primary-mi-gateway`. | 
-    | **Region** | The region where your primary managed instance is. |
-    | **Gateway type** | Select **VPN**. |
-    | **VPN Type** | Select **Route-based**. |
-    | **SKU**| Leave default of `VpnGw1`. |
-    | **Virtual network**| Select the virtual network that was created in section 2, such as `vnet-sql-mi-primary`. |
-    | **Public IP address**| Select **Create new**. |
-    | **Public IP address name**| Enter a name for your IP address, such as `primary-gateway-IP`. |
-
-
-1. Leave the other values as default, and then select **Review + create** to review the settings for your virtual network gateway.
-
-   ![Primary gateway settings](./media/failover-group-add-instance-tutorial/settings-for-primary-gateway.png)
-
-1. Select **Create** to create your new virtual network gateway. 
-
+   ![Virtual network peering status on peerings page](./media/failover-group-add-instance-tutorial/vnet-peering-connected.png)
 
 # [PowerShell](#tab/azure-powershell)
 
-Create the gateway for the virtual network of your primary managed instance using PowerShell. 
+Create global virtual network peering between virtual networks hosting primary and secondary instance. 
 
    ```powershell-interactive
-   # Create the primary gateway
-   Write-host "Adding GatewaySubnet to primary VNet..."
-   Get-AzVirtualNetwork `
-                     -Name $primaryVNet `
-                     -ResourceGroupName $resourceGroupName `
-                   | Add-AzVirtualNetworkSubnetConfig `
-                     -Name "GatewaySubnet" `
-                     -AddressPrefix $primaryMiGwSubnetAddress `
-                   | Set-AzVirtualNetwork
-   
+   # Peer the virtual networks
+   Write-host "Peering primary VNet to secondary VNet..."
+
    $primaryVirtualNetwork  = Get-AzVirtualNetwork `
                      -Name $primaryVNet `
                      -ResourceGroupName $resourceGroupName
-   $primaryGatewaySubnet = Get-AzVirtualNetworkSubnetConfig `
-                     -Name "GatewaySubnet" `
-                     -VirtualNetwork $primaryVirtualNetwork
    
-   Write-host "Creating primary gateway..."
-   Write-host "This will take some time."
-   $primaryGWPublicIP = New-AzPublicIpAddress -Name $primaryGWPublicIPAddress -ResourceGroupName $resourceGroupName `
-            -Location $location -AllocationMethod Dynamic
-   $primaryGatewayIPConfig = New-AzVirtualNetworkGatewayIpConfig -Name $primaryGWIPConfig `
-            -Subnet $primaryGatewaySubnet -PublicIpAddress $primaryGWPublicIP
+   $secondaryVirtualNetwork = Get-AzVirtualNetwork -Name $secondaryVNet `
+                                   -ResourceGroupName $resourceGroupName
+
+  Write-host "Peering primary VNet to secondary VNet..."
+  
+  Add-AzVirtualNetworkPeering `
+    -Name primaryVnet-secondaryVNet `
+    -VirtualNetwork $primaryVirtualNetwork `
+    -RemoteVirtualNetworkId $secondaryVirtualNetwork.Id
    
-   $primaryGateway = New-AzVirtualNetworkGateway -Name $primaryGWName -ResourceGroupName $resourceGroupName `
-       -Location $location -IpConfigurations $primaryGatewayIPConfig -GatewayType Vpn `
-       -VpnType RouteBased -GatewaySku VpnGw1 -EnableBgp $true -Asn $primaryGWAsn
-   $primaryGateway
+  Write-host "Peering secondary VNet to primary VNet..."
+   
+  Add-AzVirtualNetworkPeering `
+    -Name secondaryVNet-primaryVNet`
+    -VirtualNetwork $secondaryVirtualNetwork `
+    -RemoteVirtualNetworkId $primaryVirtualNetwork.Id
+  
+  Write-host "Checking peering state on the primary virtual network..."
+
+  Get-AzVirtualNetworkPeering `
+  -ResourceGroupName $resourceGroupName `
+  -VirtualNetworkName $primaryVNet `
+  | Select PeeringState
+
+  Write-host "Checking peering state on the secondary virtual network..."
+
+  Get-AzVirtualNetworkPeering `
+  -ResourceGroupName $resourceGroupName `
+  -VirtualNetworkName $secondaryVNet `
+  | Select PeeringState
    ```
 
 This portion of the tutorial uses the following PowerShell cmdlets:
@@ -827,157 +827,10 @@ This portion of the tutorial uses the following PowerShell cmdlets:
 | Command | Notes |
 |---|---|
 | [Get-AzVirtualNetwork](/powershell/module/az.network/get-azvirtualnetwork) | Gets a virtual network in a resource group. |
-| [Add-AzVirtualNetworkSubnetConfig](/powershell/module/az.network/add-azvirtualnetworksubnetconfig) | Adds a subnet configuration to a virtual network. | 
-| [Set-AzVirtualNetwork](/powershell/module/az.network/set-azvirtualnetwork) | Updates a virtual network.  |
-| [Get-AzVirtualNetworkSubnetConfig](/powershell/module/az.network/get-azvirtualnetworksubnetconfig) | Gets a subnet in a virtual network. |
-| [New-AzPublicIpAddress](/powershell/module/az.network/new-azpublicipaddress) | Creates a public IP address.  | 
-| [New-AzVirtualNetworkGatewayIpConfig](/powershell/module/az.network/new-azvirtualnetworkgatewayipconfig) | Creates an IP configuration for a virtual network gateway. |
-| [New-AzVirtualNetworkGateway](/powershell/module/az.network/new-azvirtualnetworkgateway) | Creates a virtual network gateway. |
-
+| [Add-AzVirtualNetworkPeering](/powershell/module/az.network/add-azvirtualnetworkpeering) | Adds a peering to a virtual network. | 
+| [Get-AzVirtualNetworkPeering](/powershell/module/az.network/get-azvirtualnetworkpeering) | Gets a peering for a virtual network. |
 
 ---
-
-
-## Create secondary gateway 
-In this step, create the gateway for the virtual network of your secondary managed instance using the Azure portal. 
-
-
-# [Portal](#tab/azure-portal)
-
-Using the Azure portal, repeat the steps in the previous section to create the virtual network subnet and gateway for the secondary managed instance. Fill out the required fields to configure the gateway for your secondary managed instance. 
-
-   The following table shows the values necessary for the gateway for the secondary managed instance:
-
-   | **Field** | Value |
-   | --- | --- |
-   | **Subscription** |  The subscription where your secondary managed instance is. |
-   | **Name** | The name for your virtual network gateway, such as `secondary-mi-gateway`. | 
-   | **Region** | The region where your secondary managed instance is. |
-   | **Gateway type** | Select **VPN**. |
-   | **VPN Type** | Select **Route-based**. |
-   | **SKU**| Leave default of `VpnGw1`. |
-   | **Virtual network**| Select the virtual network for the secondary managed instance, such as `vnet-sql-mi-secondary`. |
-   | **Public IP address**| Select **Create new**. |
-   | **Public IP address name**| Enter a name for your IP address, such as `secondary-gateway-IP`. |
-
-
-   ![Secondary gateway settings](./media/failover-group-add-instance-tutorial/settings-for-secondary-gateway.png)
-
-
-# [PowerShell](#tab/azure-powershell)
-
-Create the gateway for the virtual network of the secondary managed instance using PowerShell. 
-
-   ```powershell-interactive
-   # Create the secondary gateway
-   Write-host "Creating secondary gateway..."
-   
-   Write-host "Adding GatewaySubnet to secondary VNet..."
-   Get-AzVirtualNetwork `
-                     -Name $secondaryVNet `
-                     -ResourceGroupName $resourceGroupName `
-                   | Add-AzVirtualNetworkSubnetConfig `
-                     -Name "GatewaySubnet" `
-                     -AddressPrefix $secondaryMiGwSubnetAddress `
-                   | Set-AzVirtualNetwork
-   
-   $secondaryVirtualNetwork  = Get-AzVirtualNetwork `
-                     -Name $secondaryVNet `
-                     -ResourceGroupName $resourceGroupName
-   $secondaryGatewaySubnet = Get-AzVirtualNetworkSubnetConfig `
-                     -Name "GatewaySubnet" `
-                     -VirtualNetwork $secondaryVirtualNetwork
-   $drLocation = $secondaryVirtualNetwork.Location
-   
-   Write-host "Creating secondary gateway..."
-   Write-host "This will take some time."
-   $secondaryGWPublicIP = New-AzPublicIpAddress -Name $secondaryGWPublicIPAddress -ResourceGroupName $resourceGroupName `
-            -Location $drLocation -AllocationMethod Dynamic
-   $secondaryGatewayIPConfig = New-AzVirtualNetworkGatewayIpConfig -Name $secondaryGWIPConfig `
-            -Subnet $secondaryGatewaySubnet -PublicIpAddress $secondaryGWPublicIP
-   
-   $secondaryGateway = New-AzVirtualNetworkGateway -Name $secondaryGWName -ResourceGroupName $resourceGroupName `
-       -Location $drLocation -IpConfigurations $secondaryGatewayIPConfig -GatewayType Vpn `
-       -VpnType RouteBased -GatewaySku VpnGw1 -EnableBgp $true -Asn $secondaryGWAsn
-   $secondaryGateway
-   ```
-
-This portion of the tutorial uses the following PowerShell cmdlets:
-
-| Command | Notes |
-|---|---|
-| [Get-AzVirtualNetwork](/powershell/module/az.network/get-azvirtualnetwork) | Gets a virtual network in a resource group. |
-| [Add-AzVirtualNetworkSubnetConfig](/powershell/module/az.network/add-azvirtualnetworksubnetconfig) | Adds a subnet configuration to a virtual network. | 
-| [Set-AzVirtualNetwork](/powershell/module/az.network/set-azvirtualnetwork) | Updates a virtual network.  |
-| [Get-AzVirtualNetworkSubnetConfig](/powershell/module/az.network/get-azvirtualnetworksubnetconfig) | Gets a subnet in a virtual network. |
-| [New-AzPublicIpAddress](/powershell/module/az.network/new-azpublicipaddress) | Creates a public IP address.  | 
-| [New-AzVirtualNetworkGatewayIpConfig](/powershell/module/az.network/new-azvirtualnetworkgatewayipconfig) | Creates an IP configuration for a virtual network gateway. |
-| [New-AzVirtualNetworkGateway](/powershell/module/az.network/new-azvirtualnetworkgateway) | Creates a virtual network gateway. |
-
----
-
-
-## Connect the gateways
-In this step, create a bidirectional connection between the two gateways of the two virtual networks. 
-
-
-# [Portal](#tab/azure-portal)
-
-Connect the two gateways using the Azure portal. 
-
-
-1. Select **Create a resource** from the [Azure portal](https://portal.azure.com).
-1. Type `connection` in the search box and then press enter to search, which takes you to the **Connection** resource, published by Microsoft.
-1. Select **Create** to create your connection. 
-1. On the **Basics** page, select the following values and then select **OK**. 
-    1. Select `VNet-to-VNet` for the **Connection type**. 
-    1. Select your subscription from the drop-down. 
-    1. Select the resource group for SQL Managed Instance in the drop-down. 
-    1. Select the location of your primary managed instance from the drop-down. 
-1. On the **Settings** page, select or enter the following values and then select **OK**:
-    1. Choose the primary network gateway for the **First virtual network gateway**, such as `primaryGateway`.  
-    1. Choose the secondary network gateway for the **Second virtual network gateway**, such as `secondaryGateway`. 
-    1. Select the checkbox next to **Establish bidirectional connectivity**. 
-    1. Either leave the default primary connection name, or rename it to a value of your choice. 
-    1. Provide a **Shared key (PSK)** for the connection, such as `mi1m2psk`. 
-    1. Select **OK** to save your settings. 
-
-    ![Create gateway connection](./media/failover-group-add-instance-tutorial/create-gateway-connection.png)
-
-    
-
-1. On the **Review + create** page, review the settings for your bidirectional connection and then select **OK** to create your connection. 
-
-
-# [PowerShell](#tab/azure-powershell)
-
-Connect the two gateways using PowerShell. 
-
-   ```powershell-interactive
-   # Connect the primary to secondary gateway
-   Write-host "Connecting the primary gateway to secondary gateway..."
-   New-AzVirtualNetworkGatewayConnection -Name $primaryGWConnection -ResourceGroupName $resourceGroupName `
-       -VirtualNetworkGateway1 $primaryGateway -VirtualNetworkGateway2 $secondaryGateway -Location $location `
-       -ConnectionType Vnet2Vnet -SharedKey $vpnSharedKey -EnableBgp $true
-   $primaryGWConnection
-   
-   # Connect the secondary to primary gateway
-   Write-host "Connecting the secondary gateway to primary gateway..."
-   
-   New-AzVirtualNetworkGatewayConnection -Name $secondaryGWConnection -ResourceGroupName $resourceGroupName `
-       -VirtualNetworkGateway1 $secondaryGateway -VirtualNetworkGateway2 $primaryGateway -Location $drLocation `
-       -ConnectionType Vnet2Vnet -SharedKey $vpnSharedKey -EnableBgp $true
-   $secondaryGWConnection
-   ```
-
-This portion of the tutorial uses the following PowerShell cmdlet:
-
-| Command | Notes |
-|---|---|
-| [New-AzVirtualNetworkGatewayConnection](/powershell/module/az.network/new-azvirtualnetworkgatewayconnection) | Creates a connection between the two virtual network gateways.   |
-
----
-
 
 ## Create a failover group
 In this step, you will create the failover group and add both managed instances to it. 
@@ -987,7 +840,7 @@ In this step, you will create the failover group and add both managed instances 
 Create the failover group using the Azure portal. 
 
 
-1. Select **Azure SQL** in the left-hand menu of the [Azure portal](https://portal.azure.com). If **Azure SQL** is not in the list, select **All services**, and then type `Azure SQL` in the search box. (Optional) Select the star next to **Azure SQL** to favorite it and add it as an item in the left-hand navigation. 
+1. Select **Azure SQL** in the left-hand menu of the [Azure portal](https://portal.azure.com). If **Azure SQL** is not in the list, select **All services**, and then type `Azure SQL` in the search box. (Optional) Select the star next to **Azure SQL** to add it as a favorite item in the left-hand navigation. 
 1. Select the primary managed instance you created in the first section, such as `sql-mi-primary`. 
 1. Under **Data management**, navigate to **Failover groups** and then choose **Add group** to open the **Instance Failover Group** page. 
 
@@ -1018,9 +871,7 @@ This portion of the tutorial uses the following PowerShell cmdlet:
 |---|---|
 | [New-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/new-azsqldatabaseinstancefailovergroup)| Creates a new Azure SQL Managed Instance failover group.  |
 
-
 ---
-
 
 ## Test failover
 In this step, you will fail your failover group over to the secondary server, and then fail back using the Azure portal. 
@@ -1031,12 +882,12 @@ Test failover using the Azure portal.
 
 
 1. Navigate to your _secondary_ managed instance within the [Azure portal](https://portal.azure.com) and select **Instance Failover Groups** under settings. 
-1. Review which managed instance is the primary, and which managed instance is the secondary. 
+1. Note managed instances in the primary and in the secondary role. 
 1. Select **Failover** and then select **Yes** on the warning about TDS sessions being disconnected. 
 
    ![Fail over the failover group](./media/failover-group-add-instance-tutorial/failover-mi-failover-group.png)
 
-1. Review which managed instance is the primary and which managed instance is the secondary. If failover succeeded, the two instances should have switched roles. 
+1. Review that managed instance is the primary and which managed instance is the secondary. If failover succeeded, the two instances should have switched roles. 
 
    ![Managed instances have switched roles after failover](./media/failover-group-add-instance-tutorial/mi-switched-after-failover.png)
 
@@ -1088,9 +939,8 @@ This portion of the tutorial uses the following PowerShell cmdlets:
 ---
 
 
-
 ## Clean up resources
-Clean up resources by first deleting the managed instances, then the virtual cluster, then any remaining resources, and finally the resource group. 
+Clean up resources by first deleting the managed instances, then the virtual cluster, then any remaining resources, and finally the resource group. Failover group will be automatically deleted when you delete any of the two instances.
 
 # [Portal](#tab/azure-portal)
 1. Navigate to your resource group in the [Azure portal](https://portal.azure.com). 
@@ -1101,7 +951,7 @@ Clean up resources by first deleting the managed instances, then the virtual clu
 
 # [PowerShell](#tab/azure-powershell)
 
-You will need to remove the resource group twice. Removing the resource group the first time will remove the managed instances and virtual clusters but will then fail with the error message `Remove-AzResourceGroup : Long running operation failed with status 'Conflict'`. Run the Remove-AzResourceGroup command a second time to remove any residual resources as well as the resource group.
+You will need to remove the resource group twice. Removing the resource group the first time will remove the managed instances and virtual clusters but will then fail with the error message `Remove-AzResourceGroup : Long running operation failed with status 'Conflict'`. Run the Remove-AzResourceGroup command a second time to remove any residual resources and the resource group.
 
 ```powershell-interactive
 Remove-AzResourceGroup -ResourceGroupName $resourceGroupName
@@ -1144,9 +994,8 @@ This script uses the following commands. Each command in the table links to comm
 | [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance) | Creates a managed instance.  |
 | [Get-AzSqlInstance](/powershell/module/az.sql/get-azsqlinstance)| Returns information about Azure SQL Managed Instance. |
 | [New-AzPublicIpAddress](/powershell/module/az.network/new-azpublicipaddress) | Creates a public IP address.  | 
-| [New-AzVirtualNetworkGatewayIpConfig](/powershell/module/az.network/new-azvirtualnetworkgatewayipconfig) | Creates an IP configuration for a virtual network gateway. |
-| [New-AzVirtualNetworkGateway](/powershell/module/az.network/new-azvirtualnetworkgateway) | Creates a virtual network gateway. |
-| [New-AzVirtualNetworkGatewayConnection](/powershell/module/az.network/new-azvirtualnetworkgatewayconnection) | Creates a connection between the two virtual network gateways.   |
+| [Add-AzVirtualNetworkPeering](/powershell/module/az.network/add-azvirtualnetworkpeering) | Adds a peering to a virtual network. | 
+| [Get-AzVirtualNetworkPeering](/powershell/module/az.network/get-azvirtualnetworkpeering) | Gets a peering for a virtual network. |
 | [New-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/new-azsqldatabaseinstancefailovergroup)| Creates a new SQL Managed Instance failover group.  |
 | [Get-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/get-azsqldatabaseinstancefailovergroup) | Gets or lists SQL Managed Instance failover groups.| 
 | [Switch-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/switch-azsqldatabaseinstancefailovergroup) | Executes a failover of a SQL Managed Instance failover group. | 
@@ -1172,5 +1021,3 @@ Advance to the next quickstart on how to connect to SQL Managed Instance, and ho
 > [!div class="nextstepaction"]
 > [Connect to SQL Managed Instance](connect-vm-instance-configure.md)
 > [Restore a database to SQL Managed Instance](restore-sample-database-quickstart.md)
-
-

@@ -1,25 +1,23 @@
 ---
-description: "sys.bandwidth_usage (Azure SQL Database)"
-title: "sys.bandwidth_usage (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "sys.bandwidth_usage (Azure SQL Database)"
+description: sys.bandwidth_usage (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "bandwidth_usage"
   - "sys.bandwidth_usage"
   - "bandwidth_usage_TSQL"
   - "sys.bandwidth_usage_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.bandwidth_usage"
   - "bandwidth_usage"
+dev_langs:
+  - "TSQL"
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: LitKnd
-ms.author: kendralittle
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.bandwidth_usage (Azure SQL Database)
 

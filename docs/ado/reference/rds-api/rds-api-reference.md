@@ -1,18 +1,14 @@
 ---
+title: "RDS API Reference"
 description: "RDS API Reference"
-title: "RDS API Reference | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "RDS API reference [ADO]"
-ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "RDS API reference [ADO]"
 ---
 # RDS API Reference
 > [!IMPORTANT]

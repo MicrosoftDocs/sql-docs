@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Approval Required (Master Data Services)
 

@@ -1,21 +1,15 @@
 ---
-title: Automated Backup v2 for SQL Server 2016/2017 Azure VMs | Microsoft Docs
+title: Automated Backup v2 for SQL Server 2016/2017 Azure VMs
 description: This article explains the Automated Backup feature for SQL Server 2016/2017 VMs running on Azure. This article is specific to VMs using the Resource Manager.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-ms.assetid: ebd23868-821c-475b-b867-06d4a2e310c7
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 12/21/2021
 ms.service: virtual-machines-sql
 ms.subservice: backup
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 12/21/2021
-ms.author: pamela
-ms.reviewer: mathoma 
 ms.custom: devx-track-azurepowershell
+tags: azure-resource-manager
 ---
 
 # Automated Backup v2 for Azure virtual machines (Resource Manager)
@@ -23,7 +17,7 @@ ms.custom: devx-track-azurepowershell
 
 > [!div class="op_single_selector"]
 > * [SQL Server 2014](automated-backup-sql-2014.md)
-> * [SQL Server 2016 +](automated-backup.md)
+> * [SQL Server 2016 and later](automated-backup.md)
 
 Automated Backup v2 automatically configures [Managed Backup to Microsoft Azure](/sql/relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure) for all existing and new databases on an Azure VM running SQL Server 2016 or later Standard, Enterprise, or Developer editions. This enables you to configure regular database backups that utilize durable Azure blob storage. Automated Backup v2 depends on the [SQL Server infrastructure as a service (IaaS) Agent Extension](sql-server-iaas-agent-extension-automate-management.md).
 
@@ -48,14 +42,14 @@ To use Automated Backup v2, review the following prerequisites:
 -  Automated backup relies on the full [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). As such, automated backup is only supported on target databases from the default instance, or a single named instance. If there is no default instance, and multiple named instances, the SQL IaaS extension fails and automated backup will not work. 
 
 ## Settings
-The following table describes the options that can be configured for Automated Backup v2. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands.
+The following table describes the options that can be configured for Automated Backup. The actual configuration steps vary depending on whether you use the Azure portal or Azure Windows PowerShell commands. Note that Automated backup uses [backup compression](/sql/database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option) by default and you cannot disable it.
 
 ### Basic Settings
 
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
 | **Automated Backup** | Enable/Disable (Disabled) | Enables or disables Automated Backup for an Azure VM running SQL Server 2016/2017 Developer, Standard, or Enterprise. |
-| **Retention Period** | 1-30 days (30 days) | The number of days to retain backups. |
+| **Retention Period** | 1-90 days (90 days) | The number of days to retain backups. |
 | **Storage Account** | Azure storage account | An Azure storage account to use for storing Automated Backup files in blob storage. A container is created at this location to store all backup files. The backup file naming convention includes the date, time, and database GUID. |
 | **Encryption** |Enable/Disable (Disabled) | Enables or disables encryption. When encryption is enabled, the certificates used to restore the backup are located in the specified storage account. It uses the same **automatic backup** container with the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
 | **Password** |Password text | A password for encryption keys. This password is only required if encryption is enabled. In order to restore an encrypted backup, you must have the correct password and related certificate that was used at the time the backup was taken. |

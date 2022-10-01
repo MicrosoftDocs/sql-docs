@@ -1,27 +1,25 @@
 ---
-description: "DROP WORKLOAD GROUP (Transact-SQL)"
-title: "DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP WORKLOAD GROUP (Transact-SQL)"
+description: DROP WORKLOAD GROUP (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_WORKLOAD_GROUP_TSQL"
   - "DROP WORKLOAD GROUP"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP WORKLOAD GROUP statement"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 

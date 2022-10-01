@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|XACT_UNSUPPORT_PARALLEL_TRAN3|
 |Message Text|New request is not allowed to start because it should come with valid transaction descriptor.|
-||
 
 ## Explanation
 

@@ -1,22 +1,19 @@
 ---
-description: "The CHOOSE logical function returns the item at the specified index from a list of values."
 title: "CHOOSE (Transact-SQL)"
-ms.custom: ""
-ms.date: "03/11/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "CHOOSE"
-  - "CHOOSE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CHOOSE function"
+description: "The CHOOSE logical function returns the item at the specified index from a list of values."
 author: markingmyname
 ms.author: maghan
+ms.date: "03/11/2022"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "CHOOSE"
+  - "CHOOSE_TSQL"
+helpviewer_keywords:
+  - "CHOOSE function"
+dev_langs:
+  - "TSQL"
 ---
 # Logical Functions - CHOOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

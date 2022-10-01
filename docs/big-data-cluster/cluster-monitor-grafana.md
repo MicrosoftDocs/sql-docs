@@ -5,11 +5,11 @@ description: Monitoring cluster with Grafana Dashboard on SQL Server 2019 Big Da
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 06/28/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Monitor Big Data Clusters by using azdata and Grafana Dashboard

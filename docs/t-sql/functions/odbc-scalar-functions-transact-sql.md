@@ -1,16 +1,13 @@
 ---
+title: "ODBC Scalar Functions (Transact-SQL)"
 description: "ODBC Scalar Functions (Transact-SQL)"
-title: "ODBC Scalar Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CURDATE ODBC function"
   - "DAYOFMONTH ODBC function"
   - "WEEK ODBC function"
@@ -49,10 +46,9 @@ helpviewer_keywords:
   - "DAYOFYEAR ODBC function"
   - "functions, ODBC WEEK"
   - "HOUR ODBC function"
-ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # ODBC Scalar Functions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,31 +1,27 @@
 ---
-title: "srv_pfieldex (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_pfieldex (Extended Stored Procedure API)"
 description: Learn how srv_pfieldex in the Extended Stored Procedure API returns a pointer to data containing the requested SRV_PROC field.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_pfieldex"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_pfieldex"
+apilocation: opends60.dll
+apiname: srv_pfieldex
+apitype: "DLLExport"
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_pfieldex (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns a pointer to data containing the requested SRV_PROC field.  
   

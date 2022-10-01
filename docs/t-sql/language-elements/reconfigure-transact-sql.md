@@ -1,28 +1,27 @@
 ---
+title: "RECONFIGURE (Transact-SQL)"
 description: "RECONFIGURE (Transact-SQL)"
-title: "RECONFIGURE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "05/20/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "reconfiguring configuration options"
   - "configuration options [SQL Server], reconfiguring"
   - "updating configuration options"
   - "RECONFIGURE, RECONFIGURE statement"
   - "RECONFIGURE"
   - "RECONFIGURE, WITH OVERRIDE statement"
-ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

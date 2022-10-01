@@ -25,20 +25,20 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Hints (Transact-SQL) - Join
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!CAUTION]  
 >  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.
   
- **Applies to:**  
+#### Applies to
   
- [DELETE](../../t-sql/statements/delete-transact-sql.md)  
+- [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
- [SELECT](../../t-sql/queries/select-transact-sql.md)  
+- [SELECT](../../t-sql/queries/select-transact-sql.md)  
   
- [UPDATE](../../t-sql/queries/update-transact-sql.md)  
+- [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,23 +1,21 @@
 ---
-description: "cdc.change_tables (Transact-SQL)"
-title: "cdc.change_tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "cdc.change_tables (Transact-SQL)"
+description: cdc.change_tables (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cdc.change_tables"
   - "cdc.change_tables_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cdc.change_tables"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: LitKnd
-ms.author: kendralittle
 ---
 # cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

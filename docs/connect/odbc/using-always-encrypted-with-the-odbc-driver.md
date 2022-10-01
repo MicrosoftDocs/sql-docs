@@ -1,15 +1,13 @@
 ---
 title: Using Always Encrypted
 description: Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 02/15/2022
+author: v-chojas
+ms.author: v-chojas
+ms.reviewer: v-davidengel
+ms.date: 08/08/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-ms.reviewer: v-davidengel
-ms.author: v-chojas
-author: v-chojas
 ---
 # Using Always Encrypted with the ODBC Driver for SQL Server
 
@@ -38,7 +36,7 @@ If you're using Always Encrypted with secure enclaves, see [Develop applications
 The easiest way to enable both parameter encryption and resultset encrypted column decryption is by setting the value of the `ColumnEncryption` connection string keyword to **Enabled**. The following code is an example of a connection string that enables Always Encrypted:
 
 ```cpp
-SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 18 for SQL Server};Server={myServer};Encrypt=yes;Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 Always Encrypted may also be enabled in the DSN configuration, using the same key and value (which will be overridden by the connection string setting, if present), or programmatically with the `SQL_COPT_SS_COLUMN_ENCRYPTION` pre-connection attribute. Setting it this way overrides the value set in the connection string or DSN:
@@ -60,29 +58,38 @@ Enabling Always Encrypted isn't sufficient for encryption or decryption to succe
 > [!NOTE]
 > On Linux and macOS, OpenSSL version 1.0.1 or later is required to use Always Encrypted with secure enclaves.
 
-Beginning with version 17.4, the driver supports Always Encrypted with secure enclaves. To enable the use of the enclave when connecting to a database, set the `ColumnEncryption` DSN key, connection string keyword, or connection attribute to the following value: `<attestation protocol>\<attestation URL>`, where:
+Beginning with version 17.4, the driver supports Always Encrypted with secure enclaves. To enable the use of the enclave when connecting to a database, set the `ColumnEncryption` DSN key, connection string keyword, or connection attribute to the following value: `<attestation protocol>,<attestation URL>`, where:
 
 - `<attestation protocol>` - specifies a protocol used for enclave attestation.
   - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), `<attestation protocol>` should be `VBS-HGS`.
   - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, `<attestation protocol>` should be `SGX-AAS`.
+  - If you do not require attestation, `<attestation-protocol>` should be `VBS-NONE`. (Version 18.1+)
+
 
 - `<attestation URL>` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
   - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you do not require attestation, do not specify an attestation URL (nor the preceding comma). (Version 18.1+)
 
 Examples of connection strings enabling enclave computations for a database connection:
 
 - [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
   
    ```cpp
-   "Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation"
+   "Driver=ODBC Driver 18 for SQL Server;Server=myServer.myDomain;Encrypt=yes;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation"
    ```
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
   
    ```cpp
-   "Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave"
+   "Driver=ODBC Driver 18 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/"
+   ```
+
+- No attestation (v18.1+):
+  
+   ```cpp
+   "Driver=ODBC Driver 18 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=VBS-NONE"
    ```
 
 If the server and attestation service are configured correctly along with enclave-enabled CMKs and CEKs for the encrypted columns, you can execute queries that use the enclave such as in-place encryption and rich computations, in addition to the existing functionality provided by Always Encrypted. For more information, see [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md).
@@ -476,31 +483,31 @@ The following connection strings show how to authenticate to Azure Key Vault wit
 ##### ClientID/Secret
 
 ```cpp
-"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>"
+"DRIVER=ODBC Driver 18 for SQL Server;SERVER=myServer;Encrypt=yes;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>"
 ```
 
 ##### Username/Password
 
 ```cpp
-"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>"
+"DRIVER=ODBC Driver 18 for SQL Server;SERVER=myServer;Encrypt=yes;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>"
 ```
 
 ##### Managed Identity (system-assigned)
 
 ```cpp
-"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity"
+"DRIVER=ODBC Driver 18 for SQL Server;SERVER=myServer;Encrypt=yes;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity"
 ```
 
 ##### Managed Identity (user-assigned)
 
 ```cpp
-"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>"
+"DRIVER=ODBC Driver 18 for SQL Server;SERVER=myServer;Encrypt=yes;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>"
 ```
 
 ##### AKV Interactive
 
 ```cpp
-"DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>"
+"DRIVER=ODBC Driver 18 for SQL Server;SERVER=myServer;Encrypt=yes;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>"
 ```
 
 No other ODBC application changes are required to use AKV for CMK storage.

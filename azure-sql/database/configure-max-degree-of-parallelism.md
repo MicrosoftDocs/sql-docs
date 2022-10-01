@@ -1,19 +1,17 @@
 ---
 title: "Configure the max degree of parallelism (MAXDOP)"
-titleSuffix: Azure SQL Database 
-description: Learn about the max degree of parallelism (MAXDOP). 
-ms.date: "04/06/2022"
-services: sql-database
-dev_langs: 
- - "TSQL"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-ms.devlang: tsql
-ms.topic: conceptual
+titleSuffix: Azure SQL Database
+description: Learn about the max degree of parallelism (MAXDOP).
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
+ms.date: "04/06/2022"
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: conceptual
+dev_langs:
+  - "TSQL"
+ms.devlang: tsql
 ---
 # Configure the max degree of parallelism (MAXDOP) in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -117,7 +115,7 @@ $params = @{
   Invoke-SqlCmd @params
 ```
 
-This example is for use with Azure SQL Databases with [read scale-out replicas enabled](read-scale-out.md), [geo-replication](active-geo-replication-overview.md), and [Azure SQL Database hyperscale secondary replicas](service-tier-hyperscale.md). As an example, the primary replica is set to a different default MAXDOP as the secondary replica, anticipating that there may be differences between a read-write and a read-only workload.
+This example is for use with Azure SQL Databases with [read scale-out replicas enabled](read-scale-out.md), [geo-replication](active-geo-replication-overview.md), and [Azure SQL Database Hyperscale secondary replicas](service-tier-hyperscale.md). As an example, the primary replica is set to a different default MAXDOP as the secondary replica, anticipating that there may be differences between a read-write and a read-only workload.
 
 ```powershell
 $dbName = "sample" 

@@ -1,7 +1,7 @@
 ---
 title: "Open a mobile report with specific query string parameters | Microsoft Docs"
 description: For a Reporting Services mobile report with parameters and a data source, you can use query parameters in the report URL to open it with specified values.
-ms.date: 10/25/2016
+ms.date: 07/21/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -12,6 +12,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Open a mobile report with specific query string parameters | Reporting Services
+
+[!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
+
 If you have a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report with parameters and a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] data source, you can include query string parameters in the report URL so it opens automatically with values you've specified. 
 1.	Create a [mobile report with parameters](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
 

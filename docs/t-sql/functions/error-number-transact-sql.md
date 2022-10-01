@@ -1,28 +1,24 @@
 ---
+title: "ERROR_NUMBER (Transact-SQL)"
 description: "ERROR_NUMBER (Transact-SQL)"
-title: "ERROR_NUMBER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ERROR_NUMBER_TSQL"
   - "ERROR_NUMBER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [SQL Server], line number"
   - "messages [SQL Server], numbers"
   - "TRY...CATCH [SQL Server]"
   - "ERROR_NUMBER function"
   - "CATCH block"
-ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # ERROR_NUMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

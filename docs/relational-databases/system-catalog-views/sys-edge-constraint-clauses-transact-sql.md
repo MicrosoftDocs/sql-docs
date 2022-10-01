@@ -1,25 +1,23 @@
 ---
-description: "sys.edge_constraint_clauses (Transact-SQL)"
-title: "sys.edge_constraint_clauses (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.edge_constraint_clauses (Transact-SQL)"
+description: sys.edge_constraint_clauses (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.edge_constraint_clauses"
   - "edge_constraint_clauses"
   - "SQL Graph"
   - "edge_constraints_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.edge_constraint_clauses catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.edge_constraint_clauses (Transact-SQL)

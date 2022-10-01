@@ -6,11 +6,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 02/22/2022
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -30,11 +29,11 @@ On February 28, 2025, we will be retiring [!INCLUDE[ssbigdataclusters-ver15](../
 
 Related to the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] retirement are some features related to scale out queries.
 
-The PolyBase scale-out groups feature of Microsoft SQL Server has been retired. Scale-out group functionality will be removed from the product in SQL Server 2022. In-market SQL Server 2019, 2017, and 2016 will continue to support the functionality to the end of life of those products. PolyBase data virtualization will continue to be fully supported as a scale-up feature in SQL Server. 
+The PolyBase scale-out groups feature of Microsoft SQL Server has been retired. Scale-out group functionality will be removed from the product in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. In-market SQL Server 2019, 2017, and 2016 will continue to support the functionality to the end of life of those products. PolyBase data virtualization will continue to be fully supported as a scale-up feature in SQL Server. 
 
-Cloudera (CDP) and Hortonworks (HDP) external data sources will also be retired for all in-market versions of SQL Server and will not be included in SQL Server 2022. Moving forward, support for external data sources will be limited to product versions in mainstream support by the respective vendor. You are advised encouraged to use the new object storage integration available in SQL Server 2022. Integration with HDFS will also be added to SQL Server 2022 in a future CTP using a new webhdfs connector. 
+Cloudera (CDP) and Hortonworks (HDP) external data sources will also be retired for all in-market versions of SQL Server and will not be included in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Moving forward, support for external data sources will be limited to product versions in mainstream support by the respective vendor. You are advised encouraged to use the new object storage integration available in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Integration with HDFS will also be added to [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] in a future update using a new webhdfs connector. 
 
-Connectivity to HDFS and object storage will now use publicly documented REST APIs instead of a JAVA Hadoop client. In SQL Server 2022, users will need to configure their external data sources to use new connectors when connecting to Azure Storage. The table below summarizes the change: 
+Connectivity to HDFS and object storage will now use publicly documented REST APIs instead of a JAVA Hadoop client. In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], users will need to configure their external data sources to use new connectors when connecting to Azure Storage. The table below summarizes the change: 
 
 | External Data Source | From | To |
 |:--|:--|:--|
@@ -57,7 +56,6 @@ This architecture provides the following functionality mapping:
 |Data Pool | Provides data persistence for the cluster. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs.|
 |Storage Pool | The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a big data cluster are members of an HDFS cluster.|
 | App Pool | Enables the deployment of applications on a big data cluster by providing interfaces to create, manage, and run applications.|
-|||
 
 For more information on these functions, see [Introducing [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 
@@ -188,23 +186,23 @@ For more information on Microsoft Azure Databricks, see [What is Databricks Data
 
 ### Using SQL Server 2022 with Azure Synapse Link for SQL
 
-[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] contains a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, the [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). Azure Synapse Link for SQL Server 2022 provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. It provides near real-time analysis and hybrid  transactional and analytical processing with minimal impact on operational systems. Once the data is in Synapse, you can combine it with many different data sources regardless of their size, scale, or format and run powerful analytics over all of it using your choice of Azure Machine Learning, Spark, or Power BI. Since the automated change feeds only push what is new or different, data transfer happens much faster and now allows for near real-time insights, with minimal impact on the performance of the source database in SQL Server 2022.
+[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] contains a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, the [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). Azure Synapse Link for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. It provides near real-time analysis and hybrid  transactional and analytical processing with minimal impact on operational systems. Once the data is in Synapse, you can combine it with many different data sources regardless of their size, scale, or format and run powerful analytics over all of it using your choice of Azure Machine Learning, Spark, or Power BI. Since the automated change feeds only push what is new or different, data transfer happens much faster and now allows for near real-time insights, with minimal impact on the performance of the source database in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 For your operational and even much of your analytic workloads, SQL Server can handle massive database sizes - for more information on maximum capacity specifications for SQL Server, see [Compute capacity limits by edition of SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md). Using multiple SQL Server Instances on separate machines with partitioned T-SQL requests allow a scale-out environment for applications. 
 
-Using PolyBase enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based Instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. SQL Server 2022 also allows ad-hoc queries and backup/restore over Object-Store (using the S3-API) hardware or software storage options.
+Using PolyBase enables your SQL Server instance to query data with T-SQL directly from SQL Server, Oracle, Teradata, MongoDB, and Cosmos DB without separately installing client connection software. You can also use the generic ODBC connector on a Microsoft Windows-based Instance to connect to additional providers using third-party ODBC drivers. PolyBase allows T-SQL queries to join the data from external sources to relational tables in an instance of SQL Server. This allows the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server. [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] also allows ad-hoc queries and backup/restore over Object-Store (using the S3-API) hardware or software storage options.
 
 Two general reference architectures are to use SQL Server on a stand-alone server for structured data queries and a separate installation of a scale-out non-relational system (such as Apache Hadoop or Apache Spark) for on-premises Link to Synapse, and the other option is to use a set of containers in a Kubernetes cluster with all components for your solution.
 
 ### Microsoft SQL Server on Windows, Apache Spark, and Object Storage On-Premises
 
-You can install SQL Server on Windows or Linux, and scale up the hardware architecture, leveraging the SQL Server 2022 object-storage query capability and the PolyBase feature to enable queries across all data in your system.
+You can install SQL Server on Windows or Linux, and scale up the hardware architecture, leveraging the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] object-storage query capability and the PolyBase feature to enable queries across all data in your system.
 
-Installing and configuring a scale-out platform such as Apache Hadoop or Apache Spark allows for querying non-relational data at scale. Using a central set of Object-Storage systems that support the S3-API allows both SQL Server 2022 and Spark to access the same set of data across all systems.
+Installing and configuring a scale-out platform such as Apache Hadoop or Apache Spark allows for querying non-relational data at scale. Using a central set of Object-Storage systems that support the S3-API allows both [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and Spark to access the same set of data across all systems.
 
 The Microsoft Apache Spark connector for SQL Server and Azure SQL also has that allow you to query data directly from SQL Server using Spark Jobs. For more information on the Apache Spark connector for SQL Server and Azure SQL, see [Apache Spark connector: SQL Server & Azure SQL](../connect/spark/connector.md).
 
-You can also use the Kubernetes container orchestration system for your deployment. This allows a declarative-architecture that can run on-premises or in any Cloud that supports Kubernetes or the Red Hat OpenShift platform. To learn more about deploying SQL Server into a Kubernetes environment, see [Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS)](../linux/tutorial-sql-server-containers-kubernetes.md) or watch [Deploying SQL Server 2019 in Kubernetes](/shows/data-exposed/deploying-sql-server-2019-in-kubernetes).
+You can also use the Kubernetes container orchestration system for your deployment. This allows a declarative-architecture that can run on-premises or in any Cloud that supports Kubernetes or the Red Hat OpenShift platform. To learn more about deploying SQL Server into a Kubernetes environment, see [Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS)](../linux/quickstart-sql-server-containers-kubernetes.md) or watch [Deploying SQL Server 2019 in Kubernetes](/shows/data-exposed/deploying-sql-server-2019-in-kubernetes).
 
 Use SQL Server and Hadoop/Spark on-premises as a replacement for [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] when you need to:
 
@@ -261,7 +259,7 @@ Migrating your current data from [!INCLUDE[ssbigdataclusters-ver15](../includes/
 
 For on-premises to on-premises migrations, you can migrate the SQL Server data with a backup and restore strategy, or you can set up replication to move some or all your relational data. SQL Server Integration Services can also be used to copy data from SQL Server to another location. For more information about moving data with SSIS, see [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-For the HDFS data in your current SQL Server Big Data Cluster environment, the standard approach is to mount the data to a stand-alone Spark Cluster, and either use the Object Storage process to move the data so that a SQL Server 2022 Instance can access it or leave it as-is and continue to process it with Spark Jobs. 
+For the HDFS data in your current SQL Server Big Data Cluster environment, the standard approach is to mount the data to a stand-alone Spark Cluster, and either use the Object Storage process to move the data so that a [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] instance can access it or leave it as-is and continue to process it with Spark Jobs. 
 
 #### In-Cloud Data Migration
 

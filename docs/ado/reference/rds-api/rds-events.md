@@ -1,19 +1,15 @@
 ---
+title: "RDS Events"
 description: "RDS Events"
-title: "RDS Events | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "events [ADO], RDS"
-  - "RDS events [ADO]"
-ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "events [ADO], RDS"
+  - "RDS events [ADO]"
 ---
 # RDS Events
 > [!IMPORTANT]

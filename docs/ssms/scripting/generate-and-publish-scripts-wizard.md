@@ -216,7 +216,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 - **Script unique keys** - Scripts the creation of unique keys on tables. Unique keys prevent duplicate data from being entered. The default is **True**. For more information, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
 
-### <a name="Summary"></a> Summary Page
+### <a name="Summary"></a> Summary page
 
 ![GS Summary](media/generate-and-publish-scripts-wizard/summary.png)
 
@@ -224,11 +224,11 @@ This page summarizes the options that you have selected in this wizard. To chang
 
 **Review your selections** - Displays the selections you have made for each page of the wizard. Expand a node to see the selected options for the corresponding page.
 
-### <a name="SavePubScripts"></a> Save or Publish Scripts Page  
+### <a name="SavePubScripts"></a> Save or Publish Scripts page  
 
 Use this page to monitor the progress of the wizard as it occurs.
 
-**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps is complete, Select the value in the **Result** column to see the outcome of the corresponding step.
+**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps is complete, select the value in the **Result** column to see the outcome of the corresponding step.
 
 **Save Report** - Select to save the results of the wizard's progress to a file.
 
@@ -236,13 +236,13 @@ Use this page to monitor the progress of the wizard as it occurs.
 
 **Finish** - Select to close the wizard after processing has completed, or if an error occurs.
 
-### Save Scripts
+### Save scripts
 
 ![Finish](media/generate-and-publish-scripts-wizard/save-scripts-finish.png)
 
 If all the settings are correct, your configuration finishes successfully.
 
-## Generating Scripts on Azure Synapse Analytics
+## Generating scripts on Azure Synapse Analytics
 
 If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 
@@ -250,25 +250,26 @@ If the syntax generated when using "Script As..." does not look like [!INCLUDE[s
 
 In order to script objects with [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax, set the default scripting option to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as follows:
 
-1. Select **Tools** then **Options**.
-2. Under **General Scripting Options** set:
-    1. Script for the database engine type: **Microsoft Azure SQL Database**.
-    2. Script for the database engine edition: **Microsoft Azure SQL Data Warehouse Edition**.
-3. Select **OK**.
+1. Select **Tools** then **Options**. 
+1. Select **SQL Server Object Explorer**, and **Scripting**.
+1. Under **Version options**, set **Match script settings to source** to **False**.
+    1. Set **Script for database engine type** to **Microsoft Azure SQL Database Edition**.
+    1. For dedicated SQL pools in Azure Synapse Analytics, set **Script for the database engine edition** to **Microsoft Azure SQL Data Warehouse Edition**.
+1. Select **OK**.
 
-### How to Generate Scripts for SQL Data Warehouse when it is not the default scripting option
+### How to generate scripts for SQL Data Warehouse when it is not the default scripting option
 
 If you set [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as your default scripting option as shown above, these instructions can be ignored. However, if you choose to use different default scripting options, you may encounter an error. To avoid errors, follow these steps in order to Generate and Publish Scripts for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]:
 
-1. Right-click your SQL Data Warehouse database.
+1. In **Object Explorer**, right-click your dedicated SQL pool under **Databases**.
 2. Select **Generate Scripts**.
-3. Choose the Objects you wish to script.
+3. **Choose Objects** you wish to script.
 4. In **Scripting Options**, select **Advanced**. Under **General** set:
     1. Script for the database engine type: **Microsoft Azure SQL Database**.
     2. Script for the database engine edition: **Microsoft Azure SQL Data Warehouse Edition**.
 5. Select **Save or Publish Scripts** then **Finish**.
 
-The options set in Step 4 aren't remembered. If you prefer for these options to be remembered, follow the instructions in **How to set default scripting options to SQL Data Warehouse**.
+The options set in Step 4 aren't remembered. If you prefer for these options to be remembered, follow the instructions in [How to set default scripting options to SQL Data Warehouse](#how-to-set-default-scripting-options-to-sql-data-warehouse).
 
 ## See also
 

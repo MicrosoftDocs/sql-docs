@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_change_feed_errors (Transact-SQL) returns recent errors for the Azure Synapse Link feature."
 title: "sys.dm_change_feed_errors (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: sys.dm_change_feed_errors (Transact-SQL) returns recent errors for the Azure Synapse Link feature.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/24/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.dm_change_feed_errors_TSQL"
   - "sys.dm_change_feed_errors"
   - "dm_change_feed_errors_TSQL"
   - "dm_change_feed_errors"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_change_feed_errors dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-ver16||=azuresqldb-current"
 ---
 # sys.dm_change_feed_errors (Transact-SQL)
 

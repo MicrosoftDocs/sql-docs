@@ -1,16 +1,12 @@
 ---
 title: "Using bulk copy with the JDBC driver"
 description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
-ms.custom: ""
-ms.date: "08/24/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/24/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using bulk copy with the JDBC driver
 
@@ -151,7 +147,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;
 
 public class BulkCopySingle {
     public static void main(String[] args) {
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
         String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
         int countBefore, countAfter;
         ResultSet rsSourceData;
@@ -247,7 +243,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;
 
 public class BulkCopyMultiple {
     public static void main(String[] args) {
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
         String destinationHeaderTable = "dbo.BulkCopyDemoOrderHeader";
         String destinationDetailTable = "dbo.BulkCopyDemoOrderDetail";
         int countHeaderBefore, countDetailBefore, countHeaderAfter, countDetailAfter;
@@ -405,7 +401,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;
 
 public class BulkCopyNonTransacted {
     public static void main(String[] args) {
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
         String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
         int countBefore, countAfter;
         ResultSet rsSourceData;
@@ -509,7 +505,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;
 
 public class BulkCopyExistingTransactions {
     public static void main(String[] args) {
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
         String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
         int countBefore, countAfter;
         ResultSet rsSourceData;
@@ -599,7 +595,7 @@ public class BulkCopyExistingTransactions {
   
 3. For the Data Source, select the **Data source** that allows you to connect to your SQL Server (for example, SQL Server Native Client 11.0), check the configuration and then **Next**  
   
-4. For the Destination, Select the **Flat File Destination** and enter a **File Name** with a destination such as `C:\Test\TestBulkCSVExample.csv`. Check that the **Format** is Delimited, the **Text qualifier** is none, and enable **Column names in the first data row**, and then select **Next**  
+4. For the Destination, select the **Flat File Destination** and enter a **File Name** with a destination such as `C:\Test\TestBulkCSVExample.csv`. Check that the **Format** is Delimited, the **Text qualifier** is none, and enable **Column names in the first data row**, and then select **Next**  
   
 5. Select **Write a query to specify the data to transfer** and **Next**.  Enter your **SQL Statement** `SELECT ProductID, Name, ProductNumber FROM Production.Product`, and **Next**  
   
@@ -619,7 +615,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;
 
 public class BulkCopyCSV {
     public static void main(String[] args) {
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
         String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
         int countBefore, countAfter;
 

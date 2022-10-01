@@ -1,17 +1,17 @@
 ---
-title: Network Access Controls 
+title: Network Access Controls
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Overview of how to manage and control network access for Azure SQL Database and Azure Synapse Analytics.
-services: sql-database
-ms.service: sql-database
-ms.subservice: security
-ms.custom: sqldbrb=3, devx-track-azurepowershell
-ms.devlang: 
-ms.topic: conceptual
 author: rohitnayakmsft
 ms.author: rohitna
-ms.reviewer: kendralittle, vanto, mathoma
-ms.date: 03/09/2020
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 07/18/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=3"
+  - "devx-track-azurepowershell"
 ---
 
 # Azure SQL Database and Azure Synapse Analytics network access controls
@@ -33,7 +33,7 @@ You can also allow private access to the database from [virtual networks](/azure
 
 See the below video for a high-level explanation of these access controls and what they do:
 
-> [!VIDEO https://docs.microsoft.com/shows/Data-Exposed/Data-Exposed--SQL-Database-Connectivity-Explained/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--SQL-Database-Connectivity-Explained/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Allow Azure services
 
@@ -77,7 +77,7 @@ PS C:\> $sql.Properties.AddressPrefixes
 > [!TIP]
 > Get-AzNetworkServiceTag returns the global range for SQL Service Tag despite specifying the Location parameter. Be sure to filter it to the region that hosts the Hub database used by your sync group
 
-Note that the output of the PowerShell script is in Classless Inter-Domain Routing (CIDR) notation. This needs to be converted to a format of Start and End IP address using [Get-IPrangeStartEnd.ps1](https://gallery.technet.microsoft.com/scriptcenter/Start-and-End-IP-addresses-bcccc3a9) like this:
+Note that the output of the PowerShell script is in Classless Inter-Domain Routing (CIDR) notation. This needs to be converted to a format of Start and End IP address using [Get-IPrangeStartEnd.ps1](https://www.sqltechnet.com/2020/12/powershell-set-azure-sql-firewall-for.html) like this:
 
 ```powershell
 PS C:\> Get-IPrangeStartEnd -ip 52.229.17.93 -cidr 26
@@ -108,7 +108,7 @@ Ip based firewall is a feature of the logical SQL server in Azure that prevents 
 In addition to IP rules, the server firewall allows you to define *virtual network rules*.  
 To learn more, see [Virtual network service endpoints and rules for Azure SQL Database](vnet-service-endpoint-rule-overview.md) or watch this video:
 
-> [!VIDEO https://docs.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/shows/Data-Exposed/Data-Exposed--Demo--Vnet-Firewall-Rules-for-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 ### Azure Networking terminology
 

@@ -1,16 +1,16 @@
 ---
 title: Azure SQL Database file space management
 description: This page describes how to manage file space with single and pooled databases in Azure SQL Database, and provides code samples for how to determine if you need to shrink a single or a pooled database as well as how to perform a database shrink operation.
-services: sql-database
-ms.service: sql-database
-ms.subservice: deployment-configuration
-ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.devlang: 
-ms.topic: conceptual
 author: oslake
 ms.author: moslake
-ms.reviewer: kendralittle, wiassaf, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 1/4/2022
+ms.service: sql-database
+ms.subservice: deployment-configuration
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
 ---
 # Manage file space for databases in Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

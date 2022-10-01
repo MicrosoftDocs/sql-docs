@@ -1,13 +1,13 @@
 ---
-title: "Creating an Assembly | Microsoft Docs"
+title: "Creating an Assembly"
 description: Use CREATE ASSEMBLY to register an assembly in SQL Server and specify its security settings. Register an assembly to use its functionality.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "creating assemblies"
   - "UNSAFE assemblies"
   - "CREATE ASSEMBLY statement"
@@ -15,8 +15,6 @@ helpviewer_keywords:
   - "EXTERNAL_ACCESS assemblies"
   - "assemblies [CLR integration], creating"
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-author: rothja
-ms.author: jroth
 ---
 # Creating an Assembly
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

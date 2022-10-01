@@ -1,18 +1,16 @@
 ---
-title: "Supported .NET Framework Libraries | Microsoft Docs"
+title: "Supported .NET Framework Libraries"
 description: With the CLR hosted in SQL Server, you can author using supported .NET Framework class libraries and unsupported libraries that you register with a database.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "common language runtime [SQL Server], .NET Framework libraries"
   - ".NET Framework [CLR Integration]"
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
-author: rothja
-ms.author: jroth
 ---
 # Supported .NET Framework Libraries
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +43,7 @@ ms.author: jroth
 
 <!--
 Any modifications to the list above should be duplicated on the following page:
-https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+https://learn.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
 -->
 
 ## Unsupported Libraries  

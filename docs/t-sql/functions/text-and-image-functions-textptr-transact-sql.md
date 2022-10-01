@@ -1,26 +1,25 @@
 ---
+title: "TEXTPTR (Transact-SQL)"
 description: "Text and Image Functions - TEXTPTR (Transact-SQL)"
-title: "TEXTPTR (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "10/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "TEXTPTR_TSQL"
   - "TEXTPTR"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TEXTPTR function"
   - "viewing text pointer values"
   - "text-pointer values"
   - "displaying text pointer values"
-ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # Text and Image Functions - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

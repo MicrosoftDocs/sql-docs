@@ -2,14 +2,13 @@
 title: Analyze and prevent deadlocks
 titleSuffix: Azure SQL Database
 description: Learn how to analyze deadlocks and prevent them from reoccurring in Azure SQL Database
-author: LitKnd
-ms.author: kendralittle
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mathoma, dfurman
-services: sql-database
+ms.date: 4/8/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.date: 4/8/2022
 ---
 
 # Analyze and prevent deadlocks in Azure SQL Database
@@ -800,11 +799,11 @@ GO
 
 [Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer is a standalone application that simplifies working with event file targets stored in blobs in Azure Storage. You can use Storage Explorer to:
 
-- [Create a blob container](/azure/vs-azure-tools-storage-explorer-blobs.md#create-a-blob-container) to hold XEvent session data.
+- [Create a blob container](/azure/vs-azure-tools-storage-explorer-blobs#create-a-blob-container) to hold XEvent session data.
 - [Get the shared access signature (SAS)](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container) for a blob container. 
     - As mentioned in [Collect deadlock graphs in Azure SQL Database with Extended Events](#collect-deadlock-graphs-in-azure-sql-database-with-extended-events), the read, write, and list permissions are required. 
     - Remove any leading `?` character from the `Query string` to use the value as the secret when [creating a database scoped credential](?tabs=event-file#create-a-database-scoped-credential).
-- [View and download](/azure/vs-azure-tools-storage-explorer-blobs.md#view-a-blob-containers-contents) extended event files from a blob container.
+- [View and download](/azure/vs-azure-tools-storage-explorer-blobs#view-a-blob-containers-contents) extended event files from a blob container.
  
 [Download Azure Storage Explorer.](https://azure.microsoft.com/features/storage-explorer/).
 
@@ -816,5 +815,5 @@ Learn more about performance in Azure SQL Database:
 - [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
 - [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)
 - [Azure SQL Database: Improving Performance Tuning with Automatic Tuning](/Shows/Data-Exposed/Azure-SQL-Database-Improving-Performance-Tuning-with-Automatic-Tuning)
-- [Deliver consistent performance with Azure SQL](/learn/modules/azure-sql-performance/)
+- [Deliver consistent performance with Azure SQL](/training/modules/azure-sql-performance/)
 - [Retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors).

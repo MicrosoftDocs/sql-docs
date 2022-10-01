@@ -1,22 +1,20 @@
 ---
-description: "Query Store catalog views (Transact-SQL)"
 title: "Query Store catalog views (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: Query Store catalog views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
   - "query store [SQL Server], catalog views"
   - "catalog views [SQL Server], query store"
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store catalog views (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

@@ -44,7 +44,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], content manage
 Tools for managing report server content include [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and the web portal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] allows you to set defaults and enable features. The web portal is used to grant user access to report server items and operations, view and use reports and other content types, and view and use all shared items and report distribution features. The web portal is a updated site that allows for much of the functionality of the deprecated Report Manager. For more information, see [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
 ##  <a name="bkmk_ReportServerItems"></a> Report Server items  
- Report server items include reports, shared data sources, shared datasets, report parts, resources (items that are stored on but not processed by a report server), and folders. Items can depend on other items, for example, a report can depend on the shared data sources it references. If you move a dependent item, the report server updates the reference information automatically.  
+ Report server items include reports, shared data sources, shared datasets, resources (items that are stored on but not processed by a report server), and folders. Items can depend on other items, for example, a report can depend on the shared data sources it references. If you move a dependent item, the report server updates the reference information automatically.  
   
  You can move report server items to different folder locations in the report server folder hierarchy. When you move an item, all properties (including security settings) move with the item to the new location. When you move a folder, all the items in the folder move with it.  
   
@@ -74,7 +74,9 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
 -   Shared datasets  
   
--   Report Parts  
+-   Report Parts
+
+    [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
   
 -   KPIs  
   

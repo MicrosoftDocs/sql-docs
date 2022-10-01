@@ -23,7 +23,7 @@ ms.date: 01/19/2017
 
 SQL Server Management Studio provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use Management Studioto connect to:  
 
-- An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  
+- An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
 
 - [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
 
@@ -46,7 +46,7 @@ When you register a server, Management Studio saves the connection information i
 
 ### Save connections in Solution Explorer
 
-Solution Explorer allows you to store related queries, scripts, connections, and other associated information in a project. Each script project contains a node called **Connections**, where you can save one or more connections. To add a connection, right-select **Connections**, and then select **New Connection**. To access a saved connection, expand **Connections** and double-select the connection Management Studio opens a query window associated with that connection. When saved, scripts retain their association to a specific connection.  
+Solution Explorer allows you to store related queries, scripts, connections, and other associated information in a project. Each script project contains a node called **Connections**, where you can save one or more connections. To add a connection, right-click **Connections**, and then select **New Connection**. To access a saved connection, expand **Connections** and double-select the connection Management Studio opens a query window associated with that connection. When saved, scripts retain their association to a specific connection.  
   
 ## See also
 

@@ -1,16 +1,14 @@
 ---
-description: "Columnstore indexes - Data loading guidance"
-title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
-ms.custom: ""
+title: "Columnstore indexes - Data loading guidance"
+description: Columnstore indexes - Data loading guidance
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "12/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data loading guidance
@@ -61,7 +59,6 @@ These scenarios describe when loaded rows go directly to the columnstore or when
 |145,000|145,000<br /><br /> Rowgroup size: 145,000|0|  
 |1,048,577|1,048,576<br /><br /> Rowgroup size: 1,048,576.|1|  
 |2,252,152|2,252,152<br /><br /> Rowgroup sizes: 1,048,576, 1,048,576, 155,000.|0|  
-| &nbsp; | &nbsp; | &nbsp; |
   
  The following example shows the results of loading 1,048,577 rows into a table. The results show that one COMPRESSED rowgroup in the columnstore (as compressed column segments), and 1 row in the deltastore.  
   

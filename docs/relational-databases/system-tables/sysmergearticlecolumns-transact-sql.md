@@ -1,23 +1,21 @@
 ---
-description: "sysmergearticlecolumns (Transact-SQL)"
-title: "sysmergearticlecolumns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sysmergearticlecolumns (Transact-SQL)"
+description: sysmergearticlecolumns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysmergearticlecolumns"
   - "sysmergearticlecolumns_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysmergearticlecolumns system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
-author: LitKnd
-ms.author: kendralittle
 ---
 # sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

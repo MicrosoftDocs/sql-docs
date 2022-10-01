@@ -23,7 +23,7 @@ This tutorial explains how to configure SQL Server Always On availability group 
 > - Configure the DxEnterprise cluster
 > - Configure Read_Write_Routing_URL for listener functionality - Optional
 
-For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-availability-groups/).
+For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterpriseha_ms/).
 
 > [!NOTE]
 > Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
@@ -86,7 +86,7 @@ ENTRYPOINT ["/opt/dh2i/sbin/dxstart.sh"]
 On a Linux machine, run the following commands to build the image:
 
 ```bash
-$mkdir dockefiles 
+$mkdir dockerfiles 
 $cd dockerfiles 
 $nano Dockerfile  
 # paste the sample dockerfile content shared above 
@@ -138,7 +138,7 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
 1. Create the SA password secret on kubernetes before deploying the SQL Server containers using the following command:
 
     ```bash
-    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
+    kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="MyC0m9l&xP@ssw0rd"
     ```
 
     Replace `MyC0m9l&xP@ssw0rd` with your own complex password.
@@ -187,11 +187,11 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
               value: "Y" 
             - name: MSSQL_ENABLE_HADR 
               value: "1" 
-            - name: SA_PASSWORD 
+            - name: MSSQL_SA_PASSWORD 
               valueFrom: 
                 secretKeyRef: 
                   name: mssql 
-                  key: SA_PASSWORD 
+                  key: MSSQL_SA_PASSWORD 
             volumeMounts: 
             - name: dxe 
               mountPath: "/etc/dh2i" 
@@ -246,11 +246,11 @@ We'll deploy SQL Server containers as StatefulSet deployments; a sample deployme
               value: "Y" 
             - name: MSSQL_ENABLE_HADR 
               value: "1" 
-            - name: SA_PASSWORD 
+            - name: MSSQL_SA_PASSWORD 
               valueFrom: 
                 secretKeyRef: 
                   name: mssql 
-                  key: SA_PASSWORD 
+                  key: MSSQL_SA_PASSWORD 
             volumeMounts: 
             - name: dxe 
               mountPath: "/etc/dh2i" 
@@ -363,19 +363,19 @@ As you can see, we have three SQL Server instances, each with its own storage a
 
 ## Configure the DxEnterprise cluster on the containers deployed
 
-DxEnterprise is high availability clustering software from DH2i that supports SQL Server availability groups, including in containers. A fully featured [developer](https://dh2i.com/dxenterprise-dxodyssey-developer-edition) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
+DxEnterprise is high availability clustering software from DH2i that supports SQL Server availability groups, including in containers. A fully featured [developer](https://dh2i.com/dxenterprise-dxodyssey-developer-edition) edition is available for non-production use. To configure the DxEnterprise cluster in containers, follow the steps in this [DH2i guide](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group).
 
 With this, you should have an Always On availability group created and database(s) added to the group supporting high availability.
 
 > [!NOTE]
-> You can deploy [basic Always On availability group](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md) with SQL Server standard edition, but as you may be aware, one of the limitations of basic availability groups is that you are limited to only having two replicas and one additional configuration only replica required for successful automatic failover. Refer to the [documentation](./sql-server-linux-availability-group-overview.md#configuration-only-replica-and-quorum) for more information on failover with configuration only replica. You can add configuration only replica for containers as well, and to do so, please refer to the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration_only'.
+> You can deploy [basic Always On availability group](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md) with SQL Server standard edition, but as you may be aware, one of the limitations of basic availability groups is that you are limited to only having two replicas and one additional configuration only replica required for successful automatic failover. Refer to the [documentation](./sql-server-linux-availability-group-overview.md#configuration-only-replica-and-quorum) for more information on failover with configuration only replica. You can add configuration only replica for containers as well, and to do so, please refer to the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#configure-the-primary-and-create-the-availability-group), making sure to pass the availability mode in the 'dxcli add-ags-node' command as 'configuration_only'.
 
 
 ## Steps to configure Always On availability group listener: (Optional)
 
 You can also configure an Always On availability group listener; to do so, follow the steps below:
 
-1. Ensure you've created the AG listener using DxEnterprise as outlined in the optional step near the end of the [DH2i documentation](https://dh2i.com/wp-content/uploads/DxEnterprise-v21.0-Supplemental-Guide-for-Availability-Groups-in-Kubernetes.pdf).
+1. Ensure you've created the AG listener using DxEnterprise as outlined in the optional step near the end of the [DH2i documentation](https://support.dh2i.com/docs/guides/dxenterprise/azure/ms-k8s-supplemental-guide/#add-availability-group-databases-and-a-listener).
 
 2. In Kubernetes, you can optionally create static IP addresses. Creating static IP addresses ensures that if the listener service is deleted and recreated, the external IP address assigned to your listener service does not change and thus remains static. Follow the steps outlined [here](/azure/aks/static-ip#create-a-static-ip-address) to create a static IP address in Azure Kubernetes Service (AKS).
    
@@ -436,5 +436,5 @@ GO
 
 ## Next steps
 
-- [Deploy SQL Server containers on Azure Kubernetes Service](tutorial-sql-server-containers-kubernetes.md)
+- [Deploy SQL Server containers on Azure Kubernetes Service](quickstart-sql-server-containers-kubernetes.md)
 - [Deploy SQL Server Read Scale AG on SQL Server Linux based containers deployed on kubernetes](https://techcommunity.microsoft.com/t5/sql-server/configure-sql-server-ag-read-scale-for-sql-containers-deployed/ba-p/2224742)

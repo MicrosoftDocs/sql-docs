@@ -1,23 +1,19 @@
 ---
+title: "ActiveConnection Property (ADO MD)"
 description: "ActiveConnection Property (ADO MD)"
-title: "ActiveConnection Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "ActiveConnection"
   - "Cellset::ActiveConnection"
   - "Catalog::ActiveConnection"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ActiveConnection property [ADO MD]"
-ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # ActiveConnection Property (ADO MD)
 Indicates to which ADO [Connection](../ado-api/connection-object-ado.md) object the current cellset or catalog currently belongs.  

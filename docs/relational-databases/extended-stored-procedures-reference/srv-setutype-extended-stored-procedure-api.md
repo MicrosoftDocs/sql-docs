@@ -1,31 +1,27 @@
 ---
-title: "srv_setutype (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_setutype (Extended Stored Procedure API)"
 description: Learn about srv_setutype. srv_setutype sets the user-defined data type for a column in a row.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_setutype"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_setutype"
+apilocation: opends60.dll
+apiname: srv_setutype
+apitype: "DLLExport"
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_setutype (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Sets the user-defined data type for a column in a row.  
   

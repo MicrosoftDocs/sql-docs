@@ -1,15 +1,12 @@
 ---
-title: "Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server | Microsoft Docs"
+title: "Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server"
 description: Learn about using the OUTPUT clause in an INSERT, UPDATE, DELETE, or MERGE command in OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

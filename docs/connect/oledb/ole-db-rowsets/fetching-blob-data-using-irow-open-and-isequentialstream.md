@@ -1,20 +1,17 @@
 ---
-title: "Fetching BLOB Data Using IRow::Open and ISequentialStream | Microsoft Docs"
-description: Learn about fetching BLOB data using IRow::Open and ISequentialStream in OLE DB Driver for SQL Server with this example function.
-ms.custom: ""
+title: "Fetching BLOB Data Using IRow::Open and ISequentialStream"
+description: "Learn about fetching BLOB data using IRow::Open and ISequentialStream in OLE DB Driver for SQL Server with this example function."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fetching BLOB data"
   - "Open method"
   - "ISequentialStream interface"
   - "BLOBs, fetching"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Fetching BLOB Data Using IRow::Open and ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

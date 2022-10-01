@@ -1,16 +1,12 @@
 ---
 title: "Understanding concurrency control"
 description: "Learn about concurrency control and how to preserve database integrity when developing a multi-user application with the JDBC Driver for SQL Server."
-ms.custom: ""
-ms.date: "12/08/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "12/08/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Understanding concurrency control
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

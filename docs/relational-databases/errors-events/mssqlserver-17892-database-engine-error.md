@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SRV_LOGON_FAILED_BY_TRIGGER|
 |Message Text|Logon failed for login \<Login Name> due to trigger execution.|
-||
 
 ## Explanation
 
@@ -39,7 +38,7 @@ Logon failed for login \<Login Name> due to trigger execution.
 
 The problem could occur if there is an error when executing trigger code for that specific user account. Some of the scenarios include:
 
-- The trigger tires to insert data into a table that does not exist.
+- The trigger tries to insert data into a table that does not exist.
 - The login does not have permissions to the object that is referred to by the logon trigger.
 
 ## User action

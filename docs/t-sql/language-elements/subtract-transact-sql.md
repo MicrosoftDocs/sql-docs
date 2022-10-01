@@ -1,28 +1,27 @@
 ---
 title: "- (Subtraction) (Transact-SQL)"
 description: "- (Subtraction) (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "subtract"
   - "-"
   - "-_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "- (subtract)"
   - "subtract operator (-)"
   - "minus operator (-)"
   - "subtracting numbers"
-ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/15/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # - (Subtraction) (Transact-SQL)

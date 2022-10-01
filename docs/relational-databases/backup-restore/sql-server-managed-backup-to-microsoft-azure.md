@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # SQL Server managed backup to Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,11 +107,11 @@ ms.author: kendralittle
 >
   
 ##  <a name="support_limits"></a> Supportability  
- The following support limitations and considerations are specific to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
+ The following support limitations and considerations are specific to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:  
   
 -   Backup of **master**, **model**, and **msdb** system databases is supported. Backup of **tempdb** is not supported. 
   
--   For [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], all recovery models are supported (Full, Bulk-logged, and Simple).  
+-   All recovery models are supported (Full, Bulk-logged, and Simple).  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agent only supports database full and log backups. File backup automation is not supported.  
   

@@ -1,20 +1,18 @@
 ---
-description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
 title: "GRANT-DENY-REVOKE permissions"
 titleSuffix: "Azure Synapse Analytics"
-ms.custom: "seo-lt-2019​"
+description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+ms.custom: seo-lt-2019​
+dev_langs:
   - "TSQL"
-ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

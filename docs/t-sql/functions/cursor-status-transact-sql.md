@@ -1,25 +1,21 @@
 ---
+title: "CURSOR_STATUS (Transact-SQL)"
 description: "CURSOR_STATUS (Transact-SQL)"
-title: "CURSOR_STATUS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CURSOR_STATUS"
   - "CURSOR_STATUS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "status information [SQL Server], cursors"
   - "CURSOR_STATUS function"
   - "cursors [SQL Server], status information"
-ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

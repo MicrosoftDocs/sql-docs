@@ -1,21 +1,19 @@
 ---
 title: "Using SQLXML Bulk Load in the .NET Environment"
 description: Learn how to use the SQLXML 4.0 Bulk Load COM object in the .NET environment to bulk load XML data into a database.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQLXML, XML Bulk Load"
   - "XML Bulk Load [SQLXML], .NET environment"
   - ".NET Framework [SQLXML], XML Bulk Load"
   - "bulk load [SQLXML], .NET environment"
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-author: rothja
-ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using Bulk Load

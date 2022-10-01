@@ -1,27 +1,26 @@
 ---
+title: "ORIGINAL_LOGIN (Transact-SQL)"
 description: "ORIGINAL_LOGIN (Transact-SQL)"
-title: "ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "ORIGINAL_LOGIN_TSQL"
   - "ORIGINAL_LOGIN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logins [SQL Server], context switches"
   - "context switching [SQL Server], login names"
   - "original login names [SQL Server]"
   - "ORIGINAL_LOGIN function"
   - "names [SQL Server], logins"
-ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

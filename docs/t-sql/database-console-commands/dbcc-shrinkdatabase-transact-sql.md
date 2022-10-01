@@ -1,21 +1,20 @@
 ---
-description: "DBCC SHRINKDATABASE shrinks the size of the data and log files in the specified database."
 title: "DBCC SHRINKDATABASE (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
+description: "DBCC SHRINKDATABASE shrinks the size of the data and log files in the specified database."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: umajay, KevinConanMSFT, dplessMSFT
+ms.date: "08/30/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "DBCC_SHRINKDATABASE_TSQL"
   - "DBCC SHRINKDATABASE"
   - "SHRINKDATABASE_TSQL"
   - "SHRINKDATABASE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data shrinking [SQL Server]"
   - "shrinking files"
   - "shrinking databases"
@@ -25,9 +24,8 @@ helpviewer_keywords:
   - "database shrinking [SQL Server]"
   - "logs [SQL Server], shrinking"
   - "reducing database size"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: umajay, pmasl
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017|| =azure-sqldw-latest|| =azuresqldb-mi-current"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)
@@ -104,25 +102,25 @@ The wait at low priority feature reduces lock contention. For more information, 
 
 This feature is similar to the [WAIT_AT_LOW_PRIORITY with online index operations](../statements/alter-table-transact-sql.md#wait_at_low_priority), with some differences.
 
- - You cannot specify MAX_DURATION. The wait duration is 60000 milliseconds (1 minute).
- - You cannot specify ABORT_AFTER_WAIT option NONE.
+- You cannot modify MAX_DURATION. The wait duration is 60000 milliseconds (1 minute).
+- You cannot specify ABORT_AFTER_WAIT option NONE.
 
 #### WAIT_AT_LOW_PRIORITY
 
 When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requiring schema stability (Sch-S) locks are not blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60000 milliseconds (1 minute) and will exit with no error.
 
-
 If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60000 milliseconds (1 minute) and will exit with no error. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
 
-#### ABORT_AFTER_WAIT = [ { **SELF** | BLOCKERS } ]
+#### ABORT_AFTER_WAIT = [ **SELF** | BLOCKERS ]
 
 
 SELF
-SELF is the default option. Exit the online index rebuild DDL operation currently being executed without taking any action.
 
+SELF is the default option. Exit the shrink database operation currently being executed without taking any action.
 
 BLOCKERS
-Kill all user transactions that block the online index rebuild DDL operation so that the operation can continue. The BLOCKERS option requires the login to have ALTER ANY CONNECTION permission.
+
+Kill all user transactions that block the shrink database operation so that the operation can continue. The BLOCKERS option requires the login to have ALTER ANY CONNECTION permission.
 
 ## Result Sets  
 The following table describes the columns in the result set.
@@ -168,9 +166,11 @@ Assume you have a couple of log files, a data file, and a database named `mydb`.
 
 For example, if you specify a _target\_percent_ of 25 for shrinking `mydb`, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] calculates the target size for the data file to be 8 MB (6 MB of data plus 2 MB of free space). As such, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] moves any data from the data file's last 2 MB to any free space in the data file's first 8 MB and then shrinks the file.
   
-Assume the data file of `mydb` contains 7 MB of data. Specifying a _target\_percent_ of 30 allows for this data file to be shrunk to the free percentage of 30. However, specifying a _target\_percent_ of 40 doesn't shrink the data file because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] won't shrink a file to a size smaller than the data currently occupies. 
+Assume the data file of `mydb` contains 7 MB of data. Specifying a _target\_percent_ of 30 allows for this data file to be shrunk to the free percentage of 30. However, specifying a _target\_percent_ of 40 doesn't shrink the data file because not enough free space can be created in the current total size of the data file.
 
-You can also think of this issue another way: 40 percent wanted free space + 70 percent full data file (7 MB out of 10 MB) is more than 100 percent. Any _target\_size_ greater than 30 won't shrink the data file. It won't shrink because the percentage free you want plus the current percentage that the data file occupies is over 100 percent.
+
+You can think of this issue another way: 40 percent wanted free space + 70 percent full data file (7 MB out of 10 MB) is more than 100 percent. Any _target\_percentage_ greater than 30 won't shrink the data file. It won't shrink because the percentage free you want plus the current percentage that the data file occupies is over 100 percent.
+
   
 For log files, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses _target\_percent_ to calculate the target size for the whole log. That's why _target\_percent_ is the amount of free space in the log after the shrink operation. Target size for the whole log is then translated to a target size for each log file.
   
@@ -187,7 +187,7 @@ For more information on Sch-S and Sch-M locks, see [Transaction locking and row 
 ## Best Practices  
 Consider the following information when you plan to shrink a database:
 -   A shrink operation is most effective after an operation that creates unused space, such as a truncate table or a drop table operation.
-- Most databases require some free space to be available for regular day-to-day operations. If you shrink a database file repeatedly and notice that the database size grows again, this indicates that the free space is required for regular operations. In these cases, repeatedly shrinking the database file is a wasted operation. Autogrow events necessary to grow the database file a hinder performance.
+- Most databases require some free space to be available for regular day-to-day operations. If you shrink a database file repeatedly and notice that the database size grows again, this indicates that the free space is required for regular operations. In these cases, repeatedly shrinking the database file is a wasted operation. Autogrow events necessary to grow the database file hinder performance.
 -   A shrink operation doesn't preserve the fragmentation state of indexes in the database, and generally increases fragmentation to a degree. This result is another reason not to repeatedly shrink the database.  
 -   Unless you have a specific requirement, don't set the AUTO_SHRINK database option to ON.  
   

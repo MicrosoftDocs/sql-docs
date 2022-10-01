@@ -117,7 +117,6 @@ The following table shows which editions of [!INCLUDE [sssql19-md](../../include
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
-| &nbsp; | &nbsp; |
 
 ### Server core support
 
@@ -205,7 +204,7 @@ You can get relevant installation media from the following locations:
 - [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
 - [Most recent cumulative updates](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
-Alternatively, you can create an [Azure virtual machine already running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal) though [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on a virtual machine will be slower than running natively because of the overhead of virtualization.
+Alternatively, you can create an [Azure virtual machine already running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart) though [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  on a virtual machine will be slower than running natively because of the overhead of virtualization.
 
 
 ## Next steps

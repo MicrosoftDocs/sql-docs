@@ -92,7 +92,7 @@ Metadata about the DB2 database is not automatically refreshed. The metadata in 
 
      To view the definitions of the color coding, click the **Legend** button.
 
-5. [!INCLUDE[click OK](../../includes/clickok-md.md)]
+5. Select **OK**.
 
 ## Next Step
 

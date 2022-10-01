@@ -1,17 +1,16 @@
 ---
-description: "sys.workload_management_workload_groups (Transact-SQL)"
-title: "sys.workload_management_workload_groups (Transact-SQL) | Microsoft Docs"
-ms.custom:
+title: "sys.workload_management_workload_groups (Transact-SQL)"
+description: sys.workload_management_workload_groups (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: "wiassaf"
 ms.date: 11/05/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: "synapse-analytics"
-ms.reviewer: "jrasnick"
+ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: "ronortloff"
-ms.author: "rortloff"
 monikerRange: "=azure-sqldw-latest"
 ---
 # sys.workload_management_workload_groups (Transact-SQL)
@@ -33,7 +32,6 @@ monikerRange: "=azure-sqldw-latest"
 |query_wait_timeout_sec|**int**|INTERNAL||
 |create_time|**datetime**|Time the workload group was created. Is not nullable.||
 modify_time|**datetime**|Time the workload group was last modified. Is not nullable.||
-|&nbsp;||||
   
 ## Permissions
 

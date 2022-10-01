@@ -1,19 +1,18 @@
 ---
 title: "Event Tracing for Windows Target"
 description: Learn how to use Event Tracing for Windows (ETW) as a target. Use ETW tracing either together with Extended Events or as an Extended Events event consumer.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event tracing for windows target"
   - "ETW target"
   - "targets [SQL Server extended events], event tracing for windows target"
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Event Tracing for Windows Target
@@ -53,7 +52,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |default_etw_session_logfile_size_mb|Any unsigned integer. This value is optional.|The log file size, in megabytes (MB), for the Extended Events session. The default is 20 MB.|  
 |default_etw_session_buffer_size_kb|Any unsigned integer. This value is optional.|The in-memory buffer size, in kilobytes (KB), for the Extended Events session. The default is 128 KB.|  
 |retries|Any unsigned integer.|The number of times to retry publishing the event to the ETW subsystem before dropping the event. The default is 0.|  
-| &nbsp; | &nbsp; | &nbsp; |
 
  Configuring these settings is optional. The ETW target uses default values for these settings.  
   
@@ -76,7 +74,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   Managed Object Format (MOF) files are in *\<your install path>*\Microsoft SQL Server\Shared. For more information, see [Managed Object Format](/windows/win32/wmisdk/managed-object-format--mof-) on MSDN.
 
-<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+<!-- ?LinkId=92851  ==  https://learn.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->
 
 ## Adding the Target to a Session  

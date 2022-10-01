@@ -1,17 +1,20 @@
 ---
 title: CREATE STATISTICS (Transact-SQL)
-description: "CREATE STATISTICS (Transact-SQL)"
+description: CREATE STATISTICS (Transact-SQL)
+author: markingmyname
+ms.author: maghan
+ms.reviewer: "katsmith"
+ms.date: "05/24/2022"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "STATISTICS"
   - "STATISTICS_TSQL"
   - "CREATE STATISTICS"
   - "CREATE_STATISTICS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "query optimization statistics [SQL Server], creating"
   - "indexed views [SQL Server], statistics"
   - "FULLSCAN option"
@@ -19,18 +22,14 @@ helpviewer_keywords:
   - "filtered statistics [SQL Server]"
   - "creating statistics [SQL Server]"
   - "NORECOMPUTE clause"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: "katsmith"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # CREATE STATISTICS (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Creates query optimization statistics on one or more columns of a table, an indexed view, or an external table. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics with CREATE STATISTICS or modify the query design to improve query performance.  
   

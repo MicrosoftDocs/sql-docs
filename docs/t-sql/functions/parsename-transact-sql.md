@@ -1,28 +1,27 @@
 ---
+title: "PARSENAME (Transact-SQL)"
 description: "PARSENAME (Transact-SQL)"
-title: "PARSENAME (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "06/02/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "PARSENAME_TSQL"
   - "PARSENAME"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PARSENAME function"
   - "parsing [SQL Server], PARSENAME function"
   - "names [SQL Server], objects"
   - "objects [SQL Server], names"
   - "part of object names [SQL Server]"
-ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # PARSENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

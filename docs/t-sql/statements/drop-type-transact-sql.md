@@ -1,29 +1,26 @@
 ---
-description: "DROP TYPE (Transact-SQL)"
-title: "DROP TYPE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP TYPE (Transact-SQL)"
+description: DROP TYPE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP TYPE"
   - "DROP_TYPE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "user-defined types [SQL Server], deleting"
   - "UDTs [SQL Server], deleting"
   - "alias data types [SQL Server], removing"
   - "DROP TYPE statement"
-ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP TYPE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes an alias data type or a common language runtime (CLR) user-defined type from the current database.  
   

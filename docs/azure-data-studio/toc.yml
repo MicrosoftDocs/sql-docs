@@ -90,6 +90,8 @@
         href: extensions/sql-database-project-extension-build.md
       - name: Build a Project from the Command Line
         href: extensions/sql-database-project-extension-build-from-command-line.md
+      - name: Use SDK-style projects
+        href: extensions/sql-database-project-extension-sdk-style-projects.md 
     - name: SQL Server Agent
       href: extensions/sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
@@ -164,11 +166,13 @@
       href: deploy-azure-sql-edge.md
     - name: Deploy SQL Server on Azure Virtual Machines
       href: deploy-azure-sql-server-vm.md
+    - name: Deploy SQL Server in a container
+      href: deploy-sql-container.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets
     href: code-snippets.md
-  - name: Explorer Azure SQL resources
+  - name: Explore Azure SQL resources
     href: azure-resource-explorer.md
   - name: Keyboard shortcuts
     href: keyboard-shortcuts.md

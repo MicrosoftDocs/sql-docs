@@ -1,20 +1,19 @@
 ---
 title: "Template Caching (SQLXML)"
 description: Learn how to significantly improve performance when executing templates by using template caching in SQLXML 4.0.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "registry keys [SQLXML]"
   - "cache [SQLXML]"
   - "templates [SQLXML], caching"
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Template Caching (SQLXML 4.0)

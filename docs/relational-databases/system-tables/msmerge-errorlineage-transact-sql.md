@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_errorlineage (Transact-SQL)"
-title: "MSmerge_errorlineage (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_errorlineage (Transact-SQL)"
+description: MSmerge_errorlineage (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_errorlineage_TSQL"
   - "MSmerge_errorlineage"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_errorlineage system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

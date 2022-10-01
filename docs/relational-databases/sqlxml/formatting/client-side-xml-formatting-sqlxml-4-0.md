@@ -1,31 +1,31 @@
 ---
 title: "Client-side XML Formatting (SQLXML)"
 description: Learn about client-side XML formatting in SQLXML 4.0 using the FOR XML clause.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "FOR XML clause, formatting"
   - "middle tier XML formatting [SQLXML]"
   - "client-side XML formatting"
   - "client-side-xml attribute"
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side XML Formatting (SQLXML 4.0)
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic provides information about client-side XML formatting. Client-side formatting refers to the formatting of XML on the middle tier.  
   
 > [!NOTE]  
 >  This topic provides additional information about using the FOR XML clause on the client side, and assumes you are already familiar with the FOR XML clause. For more information about FOR XML, see [Constructing XML Using FOR XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
- **Important** To use client-side FOR XML functionality with the new **xml** data type, clients should always use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) data provider instead of the SQLOLEDB provider. SQLNCLI11 is the latest version of the SQL Server provider and fully understands data types introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The behavior for client side FOR XML with the SQLOLEDB provider will treat **xml** data types as strings.  
+ > [!IMPORTANT]  
+ > To use client-side FOR XML functionality with the new **xml** data type, clients should always use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) data provider instead of the SQLOLEDB provider. SQLNCLI11 is the latest version of the SQL Server provider and fully understands data types introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The behavior for client side FOR XML with the SQLOLEDB provider will treat **xml** data types as strings.  
   
 ## Formatting XML Documents on the Client Side  
  When a client application executes the following query:  

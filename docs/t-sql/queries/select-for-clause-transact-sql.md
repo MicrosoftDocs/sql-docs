@@ -25,7 +25,7 @@ ms.author: vanto
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Use the FOR clause to specify one of the following options for query results.
   

@@ -1,21 +1,17 @@
 ---
+title: "Append and CreateParameter Methods Example (VB)"
 description: "Append and CreateParameter Methods Example (VB)"
-title: "Append and CreateParameter Methods Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CreateParameter method [ADO], Visual Basic example"
-  - "Append method [ADO], Visual Basic example"
-ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "CreateParameter method [ADO], Visual Basic example"
+  - "Append method [ADO], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Append and CreateParameter Methods Example (VB)
 This example uses the [Append](./append-method-ado.md) and [CreateParameter](./createparameter-method-ado.md) methods to execute a stored procedure with an input parameter.  

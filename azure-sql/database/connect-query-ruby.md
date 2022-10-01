@@ -1,20 +1,19 @@
 ---
 title: Use Ruby with Azure SQL Database or SQL Managed Instance
 description: This quickstart shows you how to use Ruby to create a program that connects to a database and queries it using Transact-SQL statements.
-services: sql-database
-ms.service: sql-database
-ms.subservice: connect
-ms.custom:
-- sqldbrb=2
-- mode-other
-- kr2b-contr-experiment
-ms.devlang: ruby
-ms.topic: quickstart
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 05/10/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-database
+ms.subservice: connect
+ms.topic: quickstart
+ms.custom:
+  - "sqldbrb=2"
+  - "mode-other"
+  - "kr2b-contr-experiment"
+ms.devlang: ruby
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Quickstart: Use Ruby to query a database in Azure SQL Database or Azure SQL Managed Instance

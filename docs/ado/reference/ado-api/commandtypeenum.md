@@ -1,21 +1,17 @@
 ---
+title: "CommandTypeEnum"
 description: "CommandTypeEnum"
-title: "CommandTypeEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "CommandTypeEnum"
-helpviewer_keywords: 
-  - "CommandTypeEnum enumeration [ADO]"
-ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "CommandTypeEnum"
+helpviewer_keywords:
+  - "CommandTypeEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # CommandTypeEnum
 Specifies how a command argument should be interpreted.  

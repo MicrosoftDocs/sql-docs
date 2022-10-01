@@ -60,7 +60,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 
  <sup>1</sup> For more information on supported data sources in SQL Server Reporting Services (SSRS), see [Data sources supported by Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup> Requires SQL Server 2016 Reporting Services in SharePoint mode. For more information, see [Install SQL Server Reporting Services in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in SQL Server 2017 Reporting Services, integration with SharePoint is no longer available. 
+ <sup>2</sup> Requires SQL Server 2016 Reporting Services in SharePoint mode. For more information, see [Install SQL Server Reporting Services in SharePoint mode](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md). Starting in SQL Server 2017 Reporting Services, integration with SharePoint is no longer available. Power View support is no longer available after SQL Server 2017.
 
 <sup>3</sup> Only in Power BI Report Server and SQL Server 2017 Reporting Services and later.
 
@@ -90,7 +90,7 @@ The following software client applications are available on the Microsoft Downlo
   
 > [!NOTE]  
 > * The preceding table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools. However, these tools can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> * [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] is the single point for creation of mobile reports. Connect to an SSRS server to access data sources and create reports. Then publish them to the SSRS server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] stand alone with local data sources.  
+> * [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] is the single point for creation of mobile reports. Connect to an SSRS server to access data sources and create reports. Then publish them to the SSRS server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] stand alone with local data sources. However, SQL Server Mobile Report Publisher is deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
 > * Whether you use [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] on-premises, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in the cloud, or both as your report delivery solution, you only need one mobile app to access dashboards and mobile reports on mobile devices. The [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] apps are available for download from the Windows, iOS, or Android app stores.  
 
 ## Next steps

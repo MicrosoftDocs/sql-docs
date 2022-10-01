@@ -1,27 +1,24 @@
 ---
-description: "CREATE SERVER AUDIT (Transact-SQL)"
 title: CREATE SERVER AUDIT (Transact-SQL)
-ms.custom: ""
+description: CREATE SERVER AUDIT (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
+ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_SERVER_AUDIT_TSQL"
   - "SERVER AUDIT"
   - "SERVER_AUDIT_TSQL"
   - "CREATE SERVER AUDIT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "server audit [SQL Server]"
   - "CREATE SERVER AUDIT statement"
   - "audits [SQL Server], creating"
-ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-author: sravanisaluru
-ms.author: srsaluru
-ms.date: "03/23/2022"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

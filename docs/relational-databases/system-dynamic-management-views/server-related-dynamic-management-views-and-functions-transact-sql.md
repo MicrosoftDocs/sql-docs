@@ -1,17 +1,15 @@
 ---
-description: "Server-Related Dynamic Management Views and Functions (Transact-SQL)"
-title: "Server-Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
+title: "Server-Related Dynamic Management Views and Functions (Transact-SQL)"
+description: Server-Related Dynamic Management Views and Functions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/06/2017"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 ---
 # Server-Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,30 +1,26 @@
 ---
+title: "DBCC FREEPROCCACHE (Transact-SQL)"
 description: "DBCC FREEPROCCACHE (Transact-SQL)"
-title: "DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/13/2017"
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "9/30/2022"
 ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "FREEPROCCACHE_TSQL"
   - "FREEPROCCACHE"
   - "DBCC_FREEPROCCACHE_TSQL"
   - "DBCC FREEPROCCACHE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "freeing procedure cache"
   - "removing procedure cache elements"
   - "deleting procedure cache elements"
   - "DBCC FREEPROCCACHE statement"
   - "procedure cache [SQL Server]"
   - "clearing procedure cache"
-ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-author: pmasl
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DBCC FREEPROCCACHE (Transact-SQL)
@@ -38,7 +34,7 @@ Removes all elements from the plan cache, removes a specific plan from the plan 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL Database:
 
 ```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
@@ -111,6 +107,9 @@ The following reconfigure operations also clear the procedure cache:
 -   query wait  
 -   remote query timeout  
 -   user options  
+
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], DBCC FREEPROCCACHE acts on the database engine instance hosting the current database or elastic pool. Executing DBCC FREEPROCCACHE in a user database clears the plan cache for that database. If the database is in an elastic pool, it also clears the plan cache in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server. Executing this command in a database using Basic, S0, or S1 service objective may clear the plan cache in other databases using these service objectives on the same logical server.
+
   
 ## Result Sets  
 When the WITH NO_INFOMSGS clause is not specified, DBCC FREEPROCCACHE returns:
@@ -119,6 +118,9 @@ When the WITH NO_INFOMSGS clause is not specified, DBCC FREEPROCCACHE returns:
 ## Permissions  
 Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Requires ALTER SERVER STATE permission on the server.  
+
+Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+- Requires server administrator permissions.  
 
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Requires membership in the DB_OWNER fixed server role.  

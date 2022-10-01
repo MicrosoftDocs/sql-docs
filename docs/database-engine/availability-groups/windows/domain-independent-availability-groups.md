@@ -1,17 +1,15 @@
 ---
 title: "Create a domain-independent availability group"
 description: "Steps to create an availability group that uses a Workgroup Cluster. This allows SQL Server 2016 (and greater) to deploy an Always On availability group on top of a WSFC that does not require Active Directory Domain Services and therefore does not require each server to be part of the same domain."
-ms.custom: "seodec18"
-ms.date: "09/25/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-helpviewer_keywords: 
-- "Availability Groups [SQL Server], domain independent"
-ms.assetid: 
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "09/25/2017"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seodec18
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], domain independent"
 ---
 # Create a domain-independent availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,19 +1,19 @@
 ---
+title: "VERIFYSIGNEDBYCERT (Transact-SQL)"
 description: "VERIFYSIGNEDBYCERT (Transact-SQL)"
-title: "VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "VERIFYSIGNEDBYCERT"
   - "VERIFYSIGNEDBYCERT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "digitally signed data for changes [SQL Server]"
   - "verifying digitally signed data for changes"
   - "testing digitally signed data for changes"
@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "VERIFYSIGNEDBYCERT"
   - "signatures [SQL Server]"
   - "digital signatures [SQL Server]"
-ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,9 +1,9 @@
 ---
-title: "Query Store hints (preview)"
+title: "Query Store hints"
 description: "Learn about the Query Store hints feature, which can be used to shape query plans without changing application code."
 ms.custom:
 - event-tier1-build-2022
-ms.date: "5/24/2022"
+ms.date: 09/28/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -17,13 +17,12 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 
-# Query Store hints (preview)
-
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+# Query Store hints
+[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This article outlines how to apply query hints using the Query Store. Query Store hints provide an easy-to-use method for shaping query plans without changing application code. 
 
-Query Store hints are a preview feature in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Query Store hints are also a feature introduced to SQL Server in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
@@ -49,7 +48,7 @@ As the name suggests, this feature extends and depends on the [Query Store](moni
 Examples where Query Store hints can help with query-level performance issues:
 *    Recompile a query on each execution.
 *    Cap the memory grant size for a bulk insert operation.
-*    Limit the maximum degree of parallelism for a statistics update operation.
+*    Limit the maximum degree of parallelism when updating statistics.
 *    Use a Hash join instead of a Nested Loops join.
 *    Use [compatibility level](../databases/view-or-change-the-compatibility-level-of-a-database.md) 110 for a specific query while keeping everything else in the database at compatibility level 150.
 *    Disable row goal optimization for a SELECT TOP query.
@@ -84,16 +83,16 @@ To remove hints associated with a `query_id`, use [sys.sp_query_store_clear_hint
 
 ## Execution Plan XML attributes
 
-When hints are applied, the following result set appears in the StmtSimple element of the [Execution Plan](execution-plans.md) in [XML format](save-an-execution-plan-in-xml-format.md):
+When hints are applied, the following result set appears in the `StmtSimple` element of the [Execution Plan](execution-plans.md) in [XML format](save-an-execution-plan-in-xml-format.md):
 
 |**Attribute**| **Description**|
 |--|--|
-|QueryStoreStatementHintText|Actual Query Store hint(s) applied to the query|
-|QueryStoreStatementHintId|Unique identifier of a query hint|
-|QueryStoreStatementHintSource|Source of Query Store hint (ex: "User")|
+|`QueryStoreStatementHintText`|Actual Query Store hint(s) applied to the query|
+|`QueryStoreStatementHintId`|Unique identifier of a query hint|
+|`QueryStoreStatementHintSource`|Source of Query Store hint (ex: "User")|
 
 > [!Note]
-> During the Query Store hints preview, these XML elements will be available only via the output of the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
+> These XML elements are available via the output of the [!INCLUDE[tsql](../../includes/tsql-md.md)] commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
 
 
 ## Query Store hints and feature interoperability
@@ -102,16 +101,23 @@ When hints are applied, the following result set appears in the StmtSimple eleme
 *   Queries will always execute where any opposing Query Store hints, that would otherwise cause an error, will be ignored.
 *   If Query Store hints contradict, SQL Server will not block query execution and Query Store hint will not be applied.
 *   Simple parameterization - Query Store hints are not supported for statements that qualify for simple parameterization.
-*   Forced parameterization - The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, SQL Server will ignore the RECOMPILE hint and will apply any other hints if they are leveraged.
-    *    Additionally, SQL Server will issue a warning (error code 12460) stating that the RECOMPILE hint was ignored.
+*   Forced parameterization - The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, SQL Server will ignore the RECOMPILE hint and will apply any other hints if they are applied.
+    *    Additionally, SQL Server will issue a warning (error code 12461) stating that the RECOMPILE hint was ignored.
     *    For more information on forced parameterization use case considerations, see [Guidelines for Using Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
 *   Currently, Query Store hints can be applied against the primary replica of an Always On availability group.
+*   Manually created Query Store hints are exempt from cleanup. The hint and the query will not be cleaned up from Query Store by the automatic retention of the capture policy. 
+    *   Queries can be [manually removed by users](../system-stored-procedures/sp-query-store-remove-query-transact-sql.md), which would also remove the associated Query Store hint.
+    *   Query Store hints automatically generated by the [CE Feedback](intelligent-query-processing-details.md#cardinality-estimation-ce-feedback) are subject to clean up by the automatic retention of the capture policy. 
+    *   [DOP feedback](intelligent-query-processing-details.md#dop-feedback) and [memory grant feedback](intelligent-query-processing-details.md#memory-grant-feedback) shape query behavior without using Query Store hints. When queries are cleanup by automatic retention of the capture policy, DOP feedback and memory grant feedback data is also cleaned up. 
+    *   You can manually create the same Query Store hint that CE feedback implemented, and then the query with the hint would no longer be subject to clean up by the automatic retention of the capture policy.
+*   Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, Query Store hints are also replica-aware for secondary replicas in availability groups. Administrators can apply Query Store hints differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+
 
 ## Query Store hints best practices
 
 *    Complete index and statistics maintenance before evaluating queries for potential new Query Store hints.
-*    Test your application database on the latest [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), before leveraging Query Store hints.
-    * For example, Parameter Sensitive Plan (PSP) optimization was introduced in SQL Server 2022 (compatibility level 160), which leverages multiple active plans per query to address non-uniform data distributions. If your environment cannot use the latest compatibility level, Query Store hints using the RECOMPILE hint can be leveraged on any supporting compatibility level.
+*    Test your application database on the latest [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) before using Query Store hints.
+     * For example, Parameter Sensitive Plan (PSP) optimization was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (compatibility level 160), which leverages multiple active plans per query to address non-uniform data distributions. If your environment cannot use the latest compatibility level, Query Store hints using the RECOMPILE hint can be leveraged on any supporting compatibility level.
 *    Query Store hints override SQL Server query plan behavior. It is recommended to only leverage Query Store hints when it is necessary to address performance related issues.
 *    It is recommended to reevaluate Query Store hints, statement level hints, plan guides, and Query Store forced plans any time data distributions change and during database migrations projects. Changes in data distribution may cause Query Store hints to generate suboptimal execution plans.
 

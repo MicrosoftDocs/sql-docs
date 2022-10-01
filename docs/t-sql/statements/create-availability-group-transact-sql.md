@@ -1,31 +1,28 @@
 ---
-description: "CREATE AVAILABILITY GROUP (Transact-SQL)"
-title: "CREATE AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "CREATE AVAILABILITY GROUP (Transact-SQL)"
+description: CREATE AVAILABILITY GROUP (Transact-SQL)
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 ms.date: "10/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "AVAILABILITY GROUP"
   - "CREATE_AVAILABILITY_TSQL"
   - "CREATE_AVAILABILITY_GROUP_TSQL"
   - "CREATE AVAILABILITY GROUP"
   - "CREATE AVAILABILITY"
   - "AVAILABILITY_GROUP_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "CREATE AVAILABILITY GROUP statement"
   - "Availability Groups [SQL Server], creating"
   - "Availability Groups [SQL Server], Transact-SQL statements"
-ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+dev_langs:
+  - "TSQL"
 ---
 
 # CREATE AVAILABILITY GROUP (Transact-SQL)

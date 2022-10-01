@@ -30,11 +30,11 @@ This article shows you how can convert a regular table into a ledger table.
 
 ## Prerequisites
 
-- [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+- [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 ## Create an append-only or updatable ledger table
 
-Before you can use the [sys.sp_copy_data_in_batches](/sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql) stored procedure, you need to create an [append-only ledger table](ledger-append-only-ledger-tables.md) or [updatable ledger table](ledger-updatable-ledger-tables.md) with the same schema as the source table. The schema should be identical in terms of number of columns, column names, and their data types. `TRANSACTION ID`, `SEQUENCE NUMBER`, and [GENERATED ALWAYS](/sql/t-sql/statements/create-table-transact-sql#generate-always-columns) columns are ignored since they're system generated. Indexes between the tables can be different but the target table can only be a Heap table or have a clustered index. Non-clustered indexes should be created afterwards.
+Before you can use the [sys.sp_copy_data_in_batches](../../system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md) stored procedure, you need to create an [append-only ledger table](ledger-append-only-ledger-tables.md) or [updatable ledger table](ledger-updatable-ledger-tables.md) with the same schema as the source table. The schema should be identical in terms of number of columns, column names, and their data types. `TRANSACTION ID`, `SEQUENCE NUMBER`, and [GENERATED ALWAYS](../../../t-sql/statements/create-table-transact-sql.md#generate-always-columns) columns are ignored since they're system generated. Indexes between the tables can be different but the target table can only be a Heap table or have a clustered index. Non-clustered indexes should be created afterwards.
 
 Assume we have the following regular `Employees` table in the database.
 
@@ -67,12 +67,12 @@ The easiest way to create an [append-only ledger table](ledger-append-only-ledge
 
 ## Copy data from a regular table to a ledger table
 
-The stored procedure [sys.sp_copy_data_in_batches](/sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql) copies data from the source table to the target table after verifying that their schema is identical. The data is copied in batches in individual transactions. If the operation fails, the target table will be partially populated. The target table should also be empty.
+The stored procedure [sys.sp_copy_data_in_batches](../../system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md) copies data from the source table to the target table after verifying that their schema is identical. The data is copied in batches in individual transactions. If the operation fails, the target table will be partially populated. The target table should also be empty.
 
 In the script below, we're copying the data from the regular `Employees` table to the new updatable ledger table, `Employees_LedgerTable`. 
 
  ```sql
-sp_copy_data_in_batches @source_table_name = N'Employees' , @targe_table_name = N'Employees_LedgerTable'
+sp_copy_data_in_batches @source_table_name = N'Employees' , @target_table_name = N'Employees_LedgerTable'
 ```
 
 ## Next steps

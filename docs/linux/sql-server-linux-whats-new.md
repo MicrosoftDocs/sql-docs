@@ -18,7 +18,7 @@ ms.custom:
 This article describes the major features and services available for SQL Server 2017 running on Linux.
 
 > [!NOTE]
-> In addition to these capabilities in this article, cumulative updates are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
+> In addition to these capabilities in this article, cumulative updates are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2017.md).
 
 ## Ubuntu 18.04 supported
 
@@ -66,7 +66,7 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+- [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml). To see other improvements introduced in SQL Server 2017, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

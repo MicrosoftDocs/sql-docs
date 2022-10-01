@@ -1,27 +1,27 @@
 ---
 title: -- (Comment) (Transact-SQL)
 description: "-- (Comment) (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
+ms.date: "07/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "--_TSQL"
   - "Comment"
   - "--"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "nonexecuting text strings [SQL Server]"
   - "remarks [SQL Server]"
   - "-- (comment character)"
   - "comments [SQL Server]"
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "07/25/2019"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 
 # -- (Comment) (Transact-SQL)

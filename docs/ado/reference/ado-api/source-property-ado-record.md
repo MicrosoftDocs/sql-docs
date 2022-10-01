@@ -1,26 +1,22 @@
 ---
+title: "Source Property (ADO Record)"
 description: "Source Property (ADO Record)"
-title: "Source Property (ADO Record) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Record::Source"
   - "_Record::PutRefSource"
   - "_Record::GetSource"
   - "_Record::put_Source"
   - "_Record::putref_Source"
   - "_Record::get_Source"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Source property [ADO Record]"
-ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Source Property (ADO Record)
 Indicates the data source or object represented by the [Record](./record-object-ado.md).  

@@ -1,7 +1,7 @@
 ---
 title: "Access external data: MongoDB - PolyBase"
 description: The article explains how to use PolyBase on a SQL Server instance to query external data in MongoDB. Create external tables to reference the external data.
-ms.date: 03/05/2021
+ms.date: 06/06/2022
 ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -68,9 +68,17 @@ The following Transact-SQL commands are used in this section:
     [ ; ]
     ```
 
+1. Query the external schema in MongoDB.
+
+    You can use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md) to connect to and generate a CREATE EXTERNAL TABLE statement based on the schema detected by the PolyBase ODBC Driver for MongoDB driver. You can also manually customize a script based on the output of the system stored procedure [sp_data_source_objects (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-data-source-objects.md). The Data Virtualization extension for Azure Data Studio and `sp_data_source_table_columns` use the same internal stored procedures to query the external schema schema.
+
+    To create external tables to MongoDB collections that contain arrays, the recommendation is to use [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md). The flattening actions are performed automatically by the driver. The `sp_data_source_table_columns` stored procedure also automatically performs the flattening via the PolyBase ODBC Driver for MongoDB driver.
+
 1. Create an external table.
 
-    The following script creates an external table. For reference, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). Before you run the script update it for your environment:
+    If you use the [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md), you can skip this step, as the CREATE EXTERNAL TABLE statement is generated for you. To provide the schema manually, consider the following sample script to create an external table. For reference, see [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). 
+
+    Before you run the script, update it for your environment:
 
     - Update the fields with their name, collation, and if they are collections then specify the collection name and the field name. In the example, `friends` is a custom data type.
     - Update the location. Set the database name and the table name. Note three-part names are not allowed, so you can't create it for the `system.profile` table. Also you can't specify a view because it can't obtain the metadata from it.
@@ -177,5 +185,7 @@ CREATE EXTERNAL DATA SOURCE external_data_source_name
 ```
 
 ## Next steps
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
 To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).

@@ -1,22 +1,18 @@
 ---
+title: "CancelBatch Method (ADO)"
 description: "CancelBatch Method (ADO)"
-title: "CancelBatch Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::raw_CancelBatch"
-  - "Recordset15::CancelBatch"
-helpviewer_keywords: 
-  - "CancelBatch method [ADO]"
-ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::raw_CancelBatch"
+  - "Recordset15::CancelBatch"
+helpviewer_keywords:
+  - "CancelBatch method [ADO]"
+apitype: "COM"
 ---
 # CancelBatch Method (ADO)
 Cancels a pending batch update.  

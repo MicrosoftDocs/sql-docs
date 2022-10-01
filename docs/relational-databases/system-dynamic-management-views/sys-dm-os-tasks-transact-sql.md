@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_tasks (Transact-SQL)"
-title: "sys.dm_os_tasks (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_tasks (Transact-SQL)"
+description: sys.dm_os_tasks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_os_tasks"
   - "sys.dm_os_tasks_TSQL"
   - "dm_os_tasks_TSQL"
   - "dm_os_tasks"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_tasks dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_tasks (Transact-SQL)

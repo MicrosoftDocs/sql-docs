@@ -1,16 +1,14 @@
 ---
 title: Load data from CSV file into a database (bcp)
 description: For a small data size, uses bcp to import data into Azure SQL Database.
-services: sql-database
-ms.service: sql-database
-ms.subservice: data-movement
-ms.custom: sqldbrb=1
-ms.devlang:
-ms.topic: how-to
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: mathoma, kendralittle
 ms.date: 01/25/2019
+ms.service: sql-database
+ms.subservice: data-movement
+ms.topic: how-to
+ms.custom: sqldbrb=1
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Load data from CSV into Azure SQL Database or SQL Managed Instance (flat files)
@@ -74,7 +72,7 @@ Open Notepad and copy the following lines of data into a new text file and then 
 (Optional) To export your own data from a SQL Server database, open a command prompt and run the following command. Replace TableName, ServerName, DatabaseName, Username, and Password with your own information.
 
 ```cmd
-bcp <TableName> out C:\Temp\DimDate2_export.txt -S <ServerName> -d <DatabaseName> -U <Username> -P <Password> -q -c -t ,
+bcp <TableName> out C:\Temp\DimDate2_export.txt -S <ServerName> -d <DatabaseName> -U <Username> -P <Password> -q -c -t ","
 ```
 
 ## 3. Load the data
@@ -82,7 +80,7 @@ bcp <TableName> out C:\Temp\DimDate2_export.txt -S <ServerName> -d <DatabaseName
 To load the data, open a command prompt and run the following command, replacing the values for Server Name, Database name, Username, and Password with your own information.
 
 ```cmd
-bcp DimDate2 in C:\Temp\DimDate2.txt -S <ServerName> -d <DatabaseName> -U <Username> -P <password> -q -c -t  ,
+bcp DimDate2 in C:\Temp\DimDate2.txt -S <ServerName> -d <DatabaseName> -U <Username> -P <password> -q -c -t ","
 ```
 
 Use this command to verify the data was loaded properly

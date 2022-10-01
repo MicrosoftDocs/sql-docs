@@ -27,6 +27,7 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 |Upload report models through the web portal|
 |Manage report models through the web portal|
 |Customized style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
+|Install multiple instances of Reporting Services on a single server|
 
 ## Next steps
 

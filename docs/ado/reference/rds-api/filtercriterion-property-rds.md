@@ -1,19 +1,15 @@
 ---
+title: "FilterCriterion Property (RDS)"
 description: "FilterCriterion Property (RDS)"
-title: "FilterCriterion Property (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "FilterCriterion property [RDS]"
-ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "FilterCriterion property [RDS]"
+apitype: "COM"
 ---
 # FilterCriterion Property (RDS)
 Indicates the evaluation operator to use in the filter value.  

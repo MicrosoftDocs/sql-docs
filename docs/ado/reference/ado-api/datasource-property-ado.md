@@ -1,21 +1,17 @@
 ---
+title: "DataSource Property (ADO)"
 description: "DataSource Property (ADO)"
-title: "DataSource Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset20::DataSource"
-helpviewer_keywords: 
-  - "DataSource property [ADO]"
-ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset20::DataSource"
+helpviewer_keywords:
+  - "DataSource property [ADO]"
+apitype: "COM"
 ---
 # DataSource Property (ADO)
 Indicates an object that contains data to be represented as a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -1,25 +1,22 @@
 ---
-description: "ALTER MESSAGE TYPE (Transact-SQL)"
-title: "ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER MESSAGE TYPE (Transact-SQL)"
+description: ALTER MESSAGE TYPE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_MESSAGE_TYPE_TSQL"
   - "ALTER MESSAGE TYPE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER MESSAGE TYPE statement"
   - "modifying message types"
   - "message types [Service Broker], modifying"
-ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

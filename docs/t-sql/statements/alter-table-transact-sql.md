@@ -1,11 +1,16 @@
 ---
 title: ALTER TABLE (Transact-SQL)
-description: "ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers."
+description: ALTER TABLE modifies a table definition by altering, adding, or dropping columns and constraints. ALTER TABLE also reassigns and rebuilds partitions, or disables and enables constraints and triggers.
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "WAIT_AT_LOW_PRIORITY"
   - "ABORT_AFTER_WAIT"
   - "ABORT_AFTER_WAIT_TSQL"
@@ -13,9 +18,7 @@ f1_keywords:
   - "ALTER TABLE"
   - "WAIT_AT_LOW_PRIORITY_TSQL"
   - "ALTER_COLUMN_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "columns [SQL Server], resizing"
   - "changing column size"
   - "MAXDOP index option, ALTER TABLE statement"
@@ -54,12 +57,8 @@ helpviewer_keywords:
   - "dropping columns"
   - "data retention policy"
   - "table changes [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/24/2022
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
@@ -122,13 +121,13 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                 start_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID START
                    [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES],
-  	            end_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID END
+                  end_transaction_id_column_name bigint GENERATED ALWAYS AS TRANSACTION_ID END
                    [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES],
-  	            start_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER START
+                  start_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER START
                    [ HIDDEN ] NOT NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES],
-  	            end_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER END
+                  end_sequence_number_column_name bigint GENERATED ALWAYS AS SEQUENCE_NUMBER END
                    [ HIDDEN ] NULL [ CONSTRAINT constraint_name ]
             DEFAULT constant_expression [WITH VALUES]
         ]
@@ -562,6 +561,8 @@ ROWGUIDCOL doesn't enforce uniqueness of the values stored in the column and doe
 #### [ {ADD | DROP} PERSISTED ]  
 Specifies that the PERSISTED property is added to or dropped from the specified column. The column must be a computed column that's defined with a deterministic expression. For columns specified as PERSISTED, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] physically stores the computed values in the table and updates the values when any other columns on which the computed column depends are updated. By marking a computed column as PERSISTED, you can create indexes on computed columns defined on expressions that are deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
+`SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+
 Any computed column that's used as a partitioning column of a partitioned table must be explicitly marked PERSISTED.
 
 #### DROP NOT FOR REPLICATION  
@@ -933,6 +934,9 @@ Specifies the Windows-compatible FileTable directory name. This name should be u
 
 Enables or disables Stretch Database for a table. For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
+> [!IMPORTANT]  
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+
 **Enabling Stretch Database for a table**
 
 When you enable Stretch for a table by specifying `ON`, you also have to specify `MIGRATION_STATE = OUTBOUND` to begin migrating data immediately, or `MIGRATION_STATE = PAUSED` to postpone data migration. The default value is `MIGRATION_STATE = OUTBOUND`. For more information about enabling Stretch for a table, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
@@ -1019,13 +1023,13 @@ Requires **ALTER ANY CONNECTION** permission.
 Conditionally drops the column or constraint only if it already exists.
 
 #### <a id="resumable"></a> RESUMABLE = { ON | OFF} 
-**Applies to**: SQL Server 2022 and later.
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
-Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](/sql/t-sql/statements/alter-table-index-option-transact-sql) in the [ALTER TABLE table_constraint](/t-sql/statements/alter-table-table-constraint-transact-sql).
+Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. The `RESUMABLE` option can be used as part of the [ALTER TABLE index_option](./alter-table-index-option-transact-sql.md) in the [ALTER TABLE table_constraint](./alter-table-table-constraint-transact-sql.md).
 
 **MAX_DURATION** when used with `RESUMABLE = ON` (requires `ONLINE = ON`) indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
 
-For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](/sql/relational-databases/security/resumable-table-add-constraints).
+For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable table add constraints](../../relational-databases/security/resumable-add-table-constraints.md).
 
 ## Remarks
 
@@ -1146,7 +1150,6 @@ Adding or altering a column that updates the rows of the table requires **UPDATE
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 |[Online operations](#online)|ONLINE|
 |[System versioning](#system_versioning)|SYSTEM_VERSIONING|
-| &nbsp; | &nbsp; |
 
 ### <a name="add"></a>Adding columns and constraints
 

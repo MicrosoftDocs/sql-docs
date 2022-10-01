@@ -1,19 +1,16 @@
 ---
+title: "OBJECT_ID (Transact-SQL)"
 description: "OBJECT_ID (Transact-SQL)"
-title: "OBJECT_ID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OBJECT_ID"
   - "OBJECT_ID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "objects [SQL Server], IDs"
   - "identification numbers [SQL Server], database objects"
   - "checking object exists"
@@ -23,10 +20,9 @@ helpviewer_keywords:
   - "displaying object IDs"
   - "viewing object IDs"
   - "verifying object exists"
-ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

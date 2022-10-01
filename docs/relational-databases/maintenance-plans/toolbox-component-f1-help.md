@@ -1,18 +1,16 @@
 ---
-description: "Toolbox Component F1 Help"
-title: "Toolbox Component F1 Help | Microsoft Docs"
-ms.custom: ""
+title: "Toolbox Component F1 Help"
+description: Toolbox Component F1 Help
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Toolbox [SQL Server Management Studio]"
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Toolbox Component F1 Help
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

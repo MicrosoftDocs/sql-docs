@@ -1,23 +1,21 @@
 ---
-description: "MSreplication_options (Transact-SQL)"
-title: "MSreplication_options (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSreplication_options (Transact-SQL)"
+description: MSreplication_options (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSreplication_options"
   - "MSreplication_options_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSreplication_options system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSreplication_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

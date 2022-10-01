@@ -1,18 +1,16 @@
 ---
-description: "ALTER AUTHORIZATION (Transact-SQL)"
-title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER AUTHORIZATION (Transact-SQL)"
+description: ALTER AUTHORIZATION (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "02/01/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_AUTHORIZATION_TSQL"
   - "ALTER AUTHORIZATION"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "owners [SQL Server], transferring"
   - "modifying entity ownership"
@@ -23,9 +21,8 @@ helpviewer_keywords:
   - "transferring ownership"
   - "search property lists [SQL Server], permissions"
   - "TAKE OWNERSHIP"
-ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -128,27 +125,27 @@ ALTER AUTHORIZATION ON
 
 |Class|Product|
 |-|-|
-|OBJECT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
-|ASSEMBLY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|ASYMMETRIC KEY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|AVAILABILITY GROUP |**APPLIES TO**: SQL Server 2012 and later.|
-|CERTIFICATE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|CONTRACT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|DATABASE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information,see [ALTER AUTHORIZATION for databases](#alter-authorization-for-databases).|
-|ENDPOINT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|FULLTEXT CATALOG|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|FULLTEXT STOPLIST|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|MESSAGE TYPE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|REMOTE SERVICE BINDING|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|ROLE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|ROUTE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|SCHEMA|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
-|SEARCH PROPERTY LIST|**APPLIES TO**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|SERVER ROLE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|SERVICE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|SYMMETRIC KEY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|TYPE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|XML SCHEMA COLLECTION|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|OBJECT|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|ASSEMBLY|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|ASYMMETRIC KEY|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|AVAILABILITY GROUP |**Applies to:** SQL Server 2012 and later.|
+|CERTIFICATE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|CONTRACT|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
+|DATABASE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information,see [ALTER AUTHORIZATION for databases](#alter-authorization-for-databases).|
+|ENDPOINT|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
+|FULLTEXT CATALOG|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|FULLTEXT STOPLIST|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|MESSAGE TYPE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
+|REMOTE SERVICE BINDING|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
+|ROLE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|ROUTE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
+|SCHEMA|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|
+|SEARCH PROPERTY LIST|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|SERVER ROLE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
+|SERVICE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
+|SYMMETRIC KEY|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|TYPE|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|XML SCHEMA COLLECTION|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 
 *entity_name*
    Is the name of the entity.
@@ -179,7 +176,7 @@ If the target entity is not a database and the entity is being transferred to a 
  Also, note the following:
 
 > [!IMPORTANT]
-> The only reliable way to find the owner of a object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
+> The only reliable way to find the owner of an object is to query the **sys.objects** catalog view. The only reliable way to find the owner of a type is to use the TYPEPROPERTY function.
 
 ## Special Cases and Conditions
 
@@ -363,7 +360,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 
 ### F. Changing the owner of a database
 
- **APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
+ **Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
 
  The following example change the owner of the `Parts` database to the login `MichikoOsada`.
 

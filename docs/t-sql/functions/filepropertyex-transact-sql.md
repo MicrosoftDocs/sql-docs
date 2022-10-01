@@ -1,25 +1,23 @@
 ---
+title: "FILEPROPERTYEX (Transact-SQL)"
 description: "FILEPROPERTYEX (Transact-SQL)"
-title: "FILEPROPERTYEX (Transact-SQL) | Microsoft Docs"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/23/2019"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FILEPROPERTYEX_TSQL"
   - "FILEPROPERTYEX"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing file properties"
   - "displaying file properties"
   - "file properties [SQL Server]"
   - "FILEPROPERTYEX function"
   - "file names [SQL Server], FILEPROPERTYEX"
-author: stevestein
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

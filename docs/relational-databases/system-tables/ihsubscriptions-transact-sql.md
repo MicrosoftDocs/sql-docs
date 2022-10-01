@@ -1,23 +1,21 @@
 ---
-description: "IHsubscriptions (Transact-SQL)"
-title: "IHsubscriptions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHsubscriptions (Transact-SQL)"
+description: IHsubscriptions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHsubscriptions_TSQL"
   - "IHsubscriptions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHsubscriptions system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
-author: LitKnd
-ms.author: kendralittle
 ---
 # IHsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

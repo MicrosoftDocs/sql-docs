@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unprepare SQL Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The Unprepare SQL event class indicates that the SqlClient, ODBC, OLE DB, or DB-Library has unprepared (deleted) a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.  
   
 ## Unprepare SQL Event Class Data Columns  

@@ -1,17 +1,15 @@
 ---
-description: "Get started with Columnstore for real-time operational analytics"
-title: "Get started with Columnstore for real-time operational analytics | Microsoft Docs"
-ms.custom:
-  - intro-quickstart
+title: "Get started with Columnstore for real-time operational analytics"
+description: Get started with Columnstore for real-time operational analytics
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/08/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: quickstart
+ms.custom: intro-quickstart
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get started with Columnstore for real-time operational analytics

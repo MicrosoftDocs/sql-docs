@@ -1,29 +1,25 @@
 ---
-description: "DBCC INDEXDEFRAG (Transact-SQL)"
 title: DBCC INDEXDEFRAG (Transact-SQL)
-ms.custom: ""
+description: "DBCC INDEXDEFRAG (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "INDEXDEFRAG"
   - "DBCC INDEXDEFRAG"
   - "DBCC_INDEXDEFRAG_TSQL"
   - "INDEXDEFRAG_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "defragmenting indexes"
   - "DBCC INDEXDEFRAG statement"
   - "leaf level defragmenting"
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
-ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-author: pmasl
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC INDEXDEFRAG (Transact-SQL)
@@ -33,7 +29,7 @@ ms.author: umajay
 Defragments indexes of the specified table or view.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   

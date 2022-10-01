@@ -1,18 +1,15 @@
 ---
 title: Table-valued parameters (OLE DB driver)
 description: These articles describe support for table-valued parameters in OLE DB Driver for SQL Server, including parameter rowset creation and parameter type discovery.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "OLE DB, table-valued parameters"
-  - "table-valued parameters (OLE DB)"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "OLE DB, table-valued parameters"
+  - "table-valued parameters (OLE DB)"
 ---
 # Table-Valued Parameters (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

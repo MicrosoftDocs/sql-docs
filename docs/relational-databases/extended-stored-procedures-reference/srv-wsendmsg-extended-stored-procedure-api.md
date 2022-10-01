@@ -1,31 +1,27 @@
 ---
-title: "srv_wsendmsg (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_wsendmsg (Extended Stored Procedure API)"
 description: Learn how srv_wsendmsg in the Extended Stored Procedure API can send a Unicode message to the client.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_wsendmsg"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_wsendmsg"
+apilocation: opends60.dll
+apiname: srv_wsendmsg
+apitype: "DLLExport"
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_wsendmsg (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Sends a Unicode message to the client.  
   

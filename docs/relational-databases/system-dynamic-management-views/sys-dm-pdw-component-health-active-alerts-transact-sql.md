@@ -1,18 +1,17 @@
 ---
-description: "sys.dm_pdw_component_health_active_alerts (Transact-SQL)"
 title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL"
-ms.custom: seo-dt-2019
+description: sys.dm_pdw_component_health_active_alerts (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: conceptual
-dev_langs: 
+ms.custom: seo-dt-2019
+dev_langs:
   - "TSQL"
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: ">= aps-pdw-2016"
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_active_alerts (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

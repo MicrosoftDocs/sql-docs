@@ -1,23 +1,20 @@
 ---
-description: "DENY Server Permissions (Transact-SQL)"
-title: "DENY Server Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Server Permissions (Transact-SQL)"
+description: DENY Server Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "permissions [SQL Server], servers"
   - "denying permissions [SQL Server], servers"
   - "servers [SQL Server], permissions"
   - "DENY statement, servers"
-ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DENY Server Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

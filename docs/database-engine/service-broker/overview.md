@@ -1,13 +1,13 @@
-﻿---
+---
 title: Overview (Service Broker)
 description: "Service Broker helps database developers build reliable and scalable applications."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: 02/10/2022
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Service Broker Overview

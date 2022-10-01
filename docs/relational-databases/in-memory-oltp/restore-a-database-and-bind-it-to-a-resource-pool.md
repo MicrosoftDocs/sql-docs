@@ -1,16 +1,14 @@
 ---
-title: "Restore a Database and Bind it to a Resource Pool | Microsoft Docs"
+title: "Restore a Database and Bind it to a Resource Pool"
 description: Learn about restoring a database with memory-optimized tables in SQL Server. Follow best practices by binding the database to a named resource pool.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
-author: markingmyname
-ms.author: maghan
 ---
 # Restore a Database and Bind it to a Resource Pool
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

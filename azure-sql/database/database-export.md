@@ -2,16 +2,15 @@
 title: Export a database to a BACPAC file
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Export a database to a BACPAC file using the Azure portal or a CLI
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: data-movement
-author: LitKnd
-ms.custom: sqldbrb=2
-ms.author: kendralittle
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 12/10/2021
+ms.service: sql-db-mi
+ms.subservice: data-movement
 ms.topic: how-to
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.custom: sqldbrb=2
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Export to a BACPAC file - Azure SQL Database and Azure SQL Managed Instance
 
@@ -19,10 +18,13 @@ monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 When you need to export a database for archiving or for moving to another platform, you can export the database schema and data to a [BACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) file. A BACPAC file is a ZIP file with an extension of BACPAC containing the metadata and data from the database. A BACPAC file can be stored in Azure Blob storage or in local storage in an on-premises location and later imported back into [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), or a [SQL Server instance](/sql/database-engine/sql-server-database-engine-overview).
 
+> [!NOTE]
+> Export functionality on Azure SQL Hyperscale databases tier is now in preview.
+
 ## Considerations
 
 - For an export to be transactionally consistent, you must ensure either that no write activity is occurring during the export, or that you are exporting from a [transactionally consistent copy](database-copy.md) of your database.
-- If you are exporting to blob storage, the maximum size of a BACPAC file is 200 GB. To archive a larger BACPAC file, export to local storage.
+- If you are exporting to blob storage, the maximum size of a BACPAC file is 200 GB. To archive a larger BACPAC file, export to local storage with SqlPackage.exe.
 - Exporting a BACPAC file to Azure premium storage using the methods discussed in this article is not supported.
 - Storage behind a firewall is currently not supported.
 - Immutable storage is currently not supported.
@@ -64,13 +66,17 @@ Exporting a BACPAC of a database from [Azure SQL Managed Instance](../managed-in
 
 We recommend the use of the SQLPackage utility for scale and performance in most production environments. You can run multiple sqlpackage.exe commands in parallel for subsets of tables to speed up import/export operations.
 
-To export a database in SQL Database using the [SQLPackage](/sql/tools/sqlpackage) command-line utility, see [Export parameters and properties](/sql/tools/sqlpackage#export-parameters-and-properties). The SQLPackage utility ships with the latest versions of [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt), or you can download the latest version of [SQLPackage](/sql/tools/sqlpackage/sqlpackage-download) directly from the Microsoft download center.
+To export a database in SQL Database using the [SQLPackage](/sql/tools/sqlpackage) command-line utility, see [Export parameters and properties](/sql/tools/sqlpackage#export-parameters-and-properties). The [SQLPackage](/sql/tools/sqlpackage/sqlpackage-download) utility is available for Windows, macOS, and Linux.
 
 This example shows how to export a database using sqlpackage.exe with Active Directory Universal Authentication:
 
 ```cmd
 sqlpackage.exe /a:Export /tf:testExport.BACPAC /scs:"Data Source=apptestserver.database.windows.net;Initial Catalog=MyDB;" /ua:True /tid:"apptest.onmicrosoft.com"
 ```
+
+## Azure Data Studio
+
+[Azure Data Studio](/sql/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import.  See the extension's [documentation page](/sql/azure-data-studio/extensions/sql-server-dacpac-extension) for more information on installing and using the extension.
 
 ## SQL Server Management Studio (SSMS)
 

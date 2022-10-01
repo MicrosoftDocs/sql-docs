@@ -1,25 +1,22 @@
 ---
-description: "sys.dm_database_backups"
-title: "sys.dm_database_backups | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_database_backups"
+description: sys.dm_database_backups
+author: SudhirRaparla
+ms.author: nvraparl
 ms.date: "02/22/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_database_backups_TSQL"
   - "dm_database_backups"
   - "sys.dm_database_backups"
   - "sys.dm_database_backups_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_database_backups dynamic management view"
   - "sys.dm_database_backups dynamic management view"
-ms.assetid: 
-author: SudhirRaparla
-ms.author: nvraparl
-monikerRange: "= azuresqldb-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_database_backups
 

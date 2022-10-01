@@ -1,27 +1,23 @@
 ---
+title: "DBCC USEROPTIONS (Transact-SQL)"
 description: "DBCC USEROPTIONS (Transact-SQL)"
-title: "DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC USEROPTIONS"
   - "DBCC_USEROPTIONS_TSQL"
   - "USEROPTIONS_TSQL"
   - "USEROPTIONS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC USEROPTIONS statement"
   - "active SET options"
   - "SET statement, active SET options"
-ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
-author: pmasl
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 # DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

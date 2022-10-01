@@ -1,30 +1,29 @@
 ---
-description: "sys.dm_fts_outstanding_batches (Transact-SQL)"
-title: "sys.dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_fts_outstanding_batches (Transact-SQL)"
+description: sys.dm_fts_outstanding_batches (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_fts_outstanding_batches"
   - "dm_fts_outstanding_batches_TSQL"
   - "sys.dm_fts_outstanding_batches_TSQL"
   - "sys.dm_fts_outstanding_batches"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "sys.dm_fts_outstanding_batches dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-author: pmasl 
-ms.author: pelopes
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_outstanding_batches (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns information about each full-text indexing batch.  
   

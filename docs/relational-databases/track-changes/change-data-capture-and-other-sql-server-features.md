@@ -68,17 +68,21 @@ This topic describes how the following features interact with change data captur
  Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
  
 ##  <a name="Serverless"></a> Serverless databases  
-  If a serverless database enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
+  If a serverless database is enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
   
 ## <a name="AlwaysOn"></a> Availability groups 
  
  When you use Always On availability groups, change enumeration should be done on the secondary replica to reduce disk load on the primary.  
 
+## <a name="FailoverAzureSQLDB"></a> Failover (local & GeoDR) in Azure SQL Database 
+ 
+In case of local as well as GeoDR failover scenarios, if the database is enabled for change data capture (CDC), capture and cleanup happen automatically on the new primary, following the failover. 
+
 ##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database
 
-Running point-in-time-restore (PITR) on a Azure SQL Database that has change data capture enabled will not preserve the change data capture artifacts (e.g. system tables). After PITR, CDC artifacts will not be available.
+If you enabled change data capture (CDC) on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC as well in the restored DB, unless it is restored to sub-core SLO. If restored to sub-core SLO, CDC artifacts will not be available.
 
-If you enabled CDC on your database as an Azure AD user, PITR will not work and it will fail. PITR will only work when you enable CDC on your database as a SQL user.
+If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to sub-core SLO will fail as mentioned under [limitations](./about-change-data-capture-sql-server.md?#limitations).
 
 ##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database 
 

@@ -1,16 +1,17 @@
 ---
 title: "CREATE DATABASE (Transact-SQL)"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
-ms.custom:
-- references_regions
-- event-tier1-build-2022
-ms.date: 05/24/2022
+author: markingmyname
+ms.author: maghan
+ms.date: 06/01/2022
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom:
+  - "references_regions"
+  - "event-tier1-build-2022"
+f1_keywords:
   - "DATABASE_TSQL"
   - "DATABASE"
   - "CONTAINMENT_TSQL"
@@ -19,9 +20,7 @@ f1_keywords:
   - "CONTAINS_FILESTREAM_TSQL"
   - "CONTAINS FILESTREAM"
   - "CONTAINMENT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "snapshots [SQL Server database snapshots], creating"
   - "databases [SQL Server], creating"
   - "model database [SQL Server], database creation"
@@ -35,8 +34,8 @@ helpviewer_keywords:
   - "database creation [SQL Server], CREATE DATABASE statement"
   - "moving databases"
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016"
 ---
 # CREATE DATABASE
@@ -45,7 +44,7 @@ Creates a new database.
 
 Select one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -285,7 +284,7 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
 
 #### **LEDGER = {ON | OFF}**
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database).
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
 #### CREATE DATABASE ... FOR ATTACH [ WITH \< attach_database_option > ]
 
@@ -753,7 +752,7 @@ WHERE name = N'MyOptionsTest';
 GO
 ```
 
-### H. Attache a full-text catalog that has been moved
+### H. Attach a full-text catalog that has been moved
 
 The following example attaches the full-text catalog `AdvWksFtCat` along with the `AdventureWorks2012` data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
 
@@ -940,7 +939,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <with_options> ::=
 {
   CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
-  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' | 'GEOZONE'}
   | LEDGER = {ON | OFF}
 }
 
@@ -1026,7 +1025,7 @@ Specifies how the point-in-time restore and long-term retention backups for a da
 
 #### LEDGER = {ON | OFF}
 
-When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database).
+When set to `ON`, it creates a ledger database, in which the integrity of all user data is protected. Only ledger tables can be created in a ledger database. The default is `OFF`. The value of the `LEDGER` option cannot be changed once the database is created. For more information, see [Configure a ledger database](../../relational-databases/security/ledger/ledger-how-to-configure-ledger-database.md).
 
 #### MAXSIZE
 Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.
@@ -1460,13 +1459,17 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current&p
 
 ## Overview
 
-In Azure Synapse, this statement can be used with an Azure SQL Database server to create a SQL Analytics database. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
+In Azure Synapse, this statement can be used with an Azure SQL Database server to create a dedicated SQL pool. With this statement, you specify the database name, collation, maximum size, edition, and service objective.
+
+ - CREATE DATABASE is supported for standalone dedicated SQL pools (formerly SQL DW) using Gen2 service levels.
+ - CREATE DATABASE is not supported for dedicated SQL pools in an Azure Synapse Analytics workspace. Instead, [use the Azure portal](../../azure-data-studio/quickstart-sql-dw.md). 
+ - CREATE DATABASE is supported for serverless SQL pools in Azure Synapse Analytics.
 
 ## Syntax
 
-### [Dedicated SQL pool](#tab/sqlpool)
-
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+
+### [Dedicated SQL pool](#tab/sqlpool)
 
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
@@ -1479,15 +1482,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     ]
     EDITION = 'datawarehouse',
     SERVICE_OBJECTIVE = {
-         'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600'
-        | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000'
-        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
+          'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c'
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }
 )
 [;]
 ```
+
 ### [Serverless SQL pool](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
@@ -1520,7 +1522,7 @@ The maximum allowable size for rowstore data in the database. Data stored in row
 Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use `datawarehouse`.
 
 #### SERVICE_OBJECTIVE
-Specifies the compute size (service objective). For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+Specifies the compute size (service objective). The service levels for Gen2 are measured in compute data warehouse units (cDWU), for example `DW2000c`. Gen1 service levels are measured in DWUs, for example `DW2000`. For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective). Gen1 service objectives (no longer listed) are no longer supported, you may receive an error: `Azure SQL Data Warehouse Gen1 has been deprecated in this region. Please use SQL Analytics in Azure Synapse.`
 
 ## General Remarks
 
@@ -1552,19 +1554,28 @@ You cannot change the database collation after the database is created.
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
 ### A. Simple example
-A simple example for creating a data warehouse database. This creates the database with the smallest max size (10,240 GB), the default collation (SQL_Latin1_General_CP1_CI_AS), and the smallest compute power (DW100).
+A simple example for creating a standalone dedicated SQL pool (formerly SQL DW). This creates the database with the smallest max size (10,240 GB), the default collation (SQL_Latin1_General_CP1_CI_AS), and the smallest Gen2 service objective (DW100c).
 
 ```sql
 CREATE DATABASE TestDW
-(EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
+(EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100c');
 ```
 
 ### B. Create a data warehouse database with all the options
-An example of creating a 10-terabyte data warehouse.
+
+An example of creating a 10-terabyte standalone dedicated SQL pool (formerly SQL DW).
 
 ```sql
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
-(MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');
+(MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000c');
+```
+
+### C. Simple example in a Synapse Analytics serverless SQL pool
+
+This creates the database in the serverless pool, specifying a collation (Latin1_General_100_CI_AS_KS_WS).
+
+```sql
+CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ```
 
 ## See also

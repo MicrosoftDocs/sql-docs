@@ -1,19 +1,14 @@
 ---
 title: "VM size: Performance best practices & guidelines"
 description: Provides VM size guidelines and best practices to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-editor: ''
-tags: azure-service-management
+ms.author: pamela
+ms.reviewer: pamela
+ms.date: 12/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 12/10/2021
-ms.author: pamela
-ms.reviewer: pamela
+tags: azure-service-management
 ---
 
 # VM size: Performance best practices for SQL Server on Azure VMs
@@ -87,11 +82,11 @@ Some of the features of the M and Mv2-series attractive for SQL Server performan
 
 ## General purpose
 
-The [general purpose virtual machine sizes](/azure/virtual-machines/sizes-general) are designed to provide balanced memory-to-vCore ratios for smaller entry level workloads such as development and test, web servers, and smaller database servers.
+The [General Purpose virtual machine sizes](/azure/virtual-machines/sizes-general) are designed to provide balanced memory-to-vCore ratios for smaller entry level workloads such as development and test, web servers, and smaller database servers.
 
-Because of the smaller memory-to-vCore ratios with the general purpose virtual machines, it is important to carefully monitor memory-based performance counters to ensure SQL Server is able to get the buffer cache memory it needs. See [memory performance baseline](performance-guidelines-best-practices-collect-baseline.md#memory) for more information.
+Because of the smaller memory-to-vCore ratios with the General Purpose virtual machines, it is important to carefully monitor memory-based performance counters to ensure SQL Server is able to get the buffer cache memory it needs. See [memory performance baseline](performance-guidelines-best-practices-collect-baseline.md#memory) for more information.
 
-Since the starting recommendation for production workloads is a memory-to-vCore ratio of 8, the minimum recommended configuration for a general purpose VM running SQL Server is 4 vCPU and 32 GiB of memory. 
+Since the starting recommendation for production workloads is a memory-to-vCore ratio of 8, the minimum recommended configuration for a General Purpose VM running SQL Server is 4 vCPU and 32 GiB of memory. 
 
 ### Ddsv5 series
 

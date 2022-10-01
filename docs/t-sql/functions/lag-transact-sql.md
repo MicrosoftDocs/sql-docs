@@ -1,25 +1,21 @@
 ---
+title: "LAG (Transact-SQL)"
 description: "LAG (Transact-SQL)"
-title: "LAG (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "LAG_TSQL"
-  - "LAG"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "LAG function"
-  - "analytic functions, LAG"
-ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "11/09/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "LAG_TSQL"
+  - "LAG"
+helpviewer_keywords:
+  - "LAG function"
+  - "analytic functions, LAG"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # LAG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

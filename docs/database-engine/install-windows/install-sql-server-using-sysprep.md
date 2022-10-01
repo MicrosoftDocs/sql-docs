@@ -1,16 +1,13 @@
 ---
-title: "Install SQL Server Using SysPrep | Microsoft Docs"
+title: "Install SQL Server Using SysPrep"
 description: This article describes how to prepare and complete images by using SysPrep in SQL Server installation.
-ms.custom:
-  - intro-installation
-ms.date: "09/07/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "09/07/2017"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server with SysPrep
@@ -93,7 +90,9 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
      The **Prepare Image Type** page is displayed only when you have an existing un-configured prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine. You can choose to prepare a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or add sys prep supported features to an existing prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine. For more information on how to add features to a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] see [Add Features to a prepared instance](#AddFeatures). 
   
-8. On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
+8. On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].
+
+   [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 9. On the **Feature Selection** page, select the components for your installation:  
   

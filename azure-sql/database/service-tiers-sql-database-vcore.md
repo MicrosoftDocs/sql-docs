@@ -1,15 +1,17 @@
 ---
 title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database
-services: sql-database
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, sashan, moslake, mathoma
+ms.date: 09/26/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: kendralittle, sashan, moslake, mathoma
-ms.date: 04/22/2022
-ms.custom: references_regions, ignite-fall-2021
+ms.custom:
+  - "references_regions"
+  - "ignite-fall-2021"
+  - "azure-sql-split"
 ---
 # vCore purchasing model - Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -77,7 +79,7 @@ Compute tier options in the vCore model include the provisioned and [serverless]
 
 ## Hardware configuration
 
-Hardware configurations in the vCore model include Gen4, Gen5, M-series, Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
+Common hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
 
 Certain hardware configurations such as Gen5 may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 
@@ -85,34 +87,19 @@ For some workloads, a move to a different CPU type can change performance. SQL D
 
 Regardless of CPU type used, resource limits for a database or elastic pool remain the same as long as the database stays on the same service objective.
 
-### Gen4/Gen5
+### Gen5
 
-- Gen4/Gen5 hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series or M-series.
+- Gen5 hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series.
 
-For regions where Gen4/Gen5 is available, see [Gen4/Gen5 availability](#gen4gen5-1).
+For regions where Gen5 is available, see [Gen5 availability](#gen5).
 
 ### Fsv2-series
 
 - Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads.
 - Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Gen5, at lower cost.
-- Fsv2 provides less memory and tempdb per vCore than other hardware, so workloads sensitive to those limits may perform better on Gen5 or M-series.
+- Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5).
 
 Fsv2-series in only supported in the General Purpose tier. For regions where Fsv2-series is available, see [Fsv2-series availability](#fsv2-series-1).
-
-### M-series
-
-- M-series is a memory optimized hardware configuration for workloads demanding more memory and higher compute limits than provided by other types of hardware.
-- M-series provides 29 GB per vCore and up to 128 vCores, which increases the memory limit relative to Gen5 by 8x to nearly 4 TB.
-
-M-series is only supported in the Business Critical tier and does not support zone redundancy. For regions where M-series is available, see [M-series availability](#m-series-1).
-
-#### Azure offer types supported by M-series
-
-To create databases or elastic pools on M-series hardware, the subscription must be a paid offer type including Pay-As-You-Go or Enterprise Agreement (EA). For a complete list of Azure offer types supported by M-series, see [current offers without spending limits](https://azure.microsoft.com/support/legal/offer-details).
-
-<!--
-To enable M-series hardware for a subscription and region, a support request must be opened. The subscription must be a paid offer type including Pay-As-You-Go or Enterprise Agreement (EA).  If the support request is approved, then the selection and provisioning experience of M-series follows the same pattern as for other hardware generations. For regions where M-series is available, see [M-series availability](#m-series).
--->
 
 ### DC-series
 
@@ -155,9 +142,9 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 ### Hardware availability
 
-#### <a id="gen4gen5-1"></a> Gen4/Gen5
+For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
 
-Gen4 hardware is [being retired](https://azure.microsoft.com/updates/gen-4-hardware-on-azure-sql-database-approaching-end-of-life-in-2020/) and is no longer available for new deployments. All new databases must be deployed on other hardware configurations.
+#### <a id="gen4gen5-1"></a><a id="gen5"></a> Gen5
 
 Gen5 hardware is available in all public regions worldwide.
 
@@ -165,38 +152,6 @@ Gen5 hardware is available in all public regions worldwide.
 
 Fsv2-series is available in the following regions:
 Australia Central, Australia Central 2, Australia East, Australia Southeast, Brazil South, Canada Central, East Asia, East US, France Central, India Central, Korea Central, Korea South, North Europe, South Africa North, Southeast Asia, UK South, UK West, West Europe, West US 2.
-
-#### M-series
-
-M-series is available in the following regions:
-East US, North Europe, West Europe, West US 2.
-<!--
-M-series may also have limited availability in additional regions. You can request a different region than listed here, but fulfillment in a different region may not be possible.
-
-To enable M-series availability in a subscription, access must be requested by [filing a new support request](#create-a-support-request-to-enable-m-series).
-
-
-##### Create a support request to enable M-series: 
-
-1. Select **Help + support** in the portal.
-2. Select **New support request**.
-
-On the **Basics** page, provide the following:
-
-1. For **Issue type**, select **Service and subscription limits (quotas)**.
-2. For **Subscription** = select the subscription to enable M-series.
-3. For **Quota type**, select **SQL database**.
-4. Select **Next** to go to the **Details** page.
-
-On the **Details** page, provide the following:
-
-1. In the **PROBLEM DETAILS** section select the **Provide details** link. 
-2. For **SQL Database quota type** select **M-series**.
-3. For **Region**, select the region to enable M-series.
-    For regions where M-series is available, see [M-series availability](#m-series).
-
-Approved support requests are typically fulfilled within 5 business days.
--->
 
 #### DC-series
 
@@ -227,6 +182,21 @@ The following table compares compute resources in different hardware configurati
 \* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Broadwell, Skylake, Ice Lake, or Cascade Lake).
 
 For more information see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
+
+## Previous generation hardware
+
+### Gen4
+
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+
+### <a id="azure-offer-types-supported-by-m-series"></a> M-series
+
+> [!IMPORTANT]
+> For Azure SQL Database, M-series hardware has been retired and is not available for new deployments. 
+>
+> Existing customers should migrate to other hardware tiers before September 2023.
+
+M-series is only supported in the Business Critical tier and does not support zone redundancy. 
 
 ## Next steps
 

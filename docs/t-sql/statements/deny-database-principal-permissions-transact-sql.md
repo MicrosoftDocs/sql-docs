@@ -1,17 +1,16 @@
 ---
 title: "DENY Database Principal Permissions"
-description: Deny permissions on a database user, database role, or application role.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Deny permissions on a database user, database role, or application role.
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database roles [SQL Server], permissions"
   - "denying permissions [SQL Server], database roles"
   - "denying permissions [SQL Server], database users"
@@ -25,12 +24,11 @@ helpviewer_keywords:
   - "DENY statement, database users"
   - "denying permissions [SQL Server], application roles"
   - "application roles [SQL Server], permissions"
-ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DENY Database Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions granted on a database user, database role, or application role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 

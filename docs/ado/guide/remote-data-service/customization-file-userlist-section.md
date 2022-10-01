@@ -1,19 +1,15 @@
 ---
+title: "Customization File UserList Section"
 description: "Customization File UserList Section"
-title: "Customization File UserList Section | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "UserList section in rds [ADO]"
-  - "customization file in RDS [ADO]"
-ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "UserList section in rds [ADO]"
+  - "customization file in RDS [ADO]"
 ---
 # Customization File UserList Section
 The **userlist** section pertains to the **connect** section with the same section *identifier* parameter.  

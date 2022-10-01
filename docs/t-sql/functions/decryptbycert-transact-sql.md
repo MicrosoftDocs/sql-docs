@@ -1,25 +1,21 @@
 ---
+title: "DECRYPTBYCERT (Transact-SQL)"
 description: "DECRYPTBYCERT (Transact-SQL)"
-title: "DECRYPTBYCERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DecryptByCert_TSQL"
   - "DECRYPTBYCERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "certificates [SQL Server], decryption"
   - "decryption [SQL Server], certificates"
   - "DECRYPTBYCERT function"
-ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

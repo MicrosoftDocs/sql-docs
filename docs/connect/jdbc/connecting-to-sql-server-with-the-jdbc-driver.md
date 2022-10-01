@@ -1,16 +1,12 @@
 ---
 title: Connecting to SQL Server with the JDBC driver
 description: When connecting to the database using the Microsoft JDBC Driver for SQL Server, all interaction with the database goes through the SQLServerConnection object.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Connecting to SQL Server with the JDBC driver
 
@@ -36,7 +32,7 @@ The articles in this section describe how to make and work with a connection to 
 |[Working with a connection](working-with-a-connection.md)|Describes the various ways in which to create an instance of a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|
 |[Using connection pooling](using-connection-pooling.md)|Describes how the JDBC driver supports the use of connection pooling.|
 |[Using database mirroring &#40;JDBC&#41;](using-database-mirroring-jdbc.md)|Describes how the JDBC driver supports the use of database mirroring.|
-|[JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md)|Describes how to develop an application that will connect to an AlwaysOn  availability group.|
+|[JDBC driver support for High Availability, disaster recovery](jdbc-driver-support-for-high-availability-disaster-recovery.md)|Describes how to develop an application that will connect to an Always On availability group.|
 |[Using Kerberos Integrated Authentication to Connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Discusses a Java implementation for applications to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using Kerberos integrated authentication.|
 |[Connecting to an Azure SQL database](connecting-to-an-azure-sql-database.md)|Discusses connectivity issues for databases on Azure SQL.|
 

@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_tran_current_snapshot (Transact-SQL)"
-title: "sys.dm_tran_current_snapshot (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_tran_current_snapshot (Transact-SQL)"
+description: sys.dm_tran_current_snapshot (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_tran_current_snapshot_TSQL"
   - "dm_tran_current_snapshot"
   - "dm_tran_current_snapshot_TSQL"
   - "sys.dm_tran_current_snapshot"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_tran_current_snapshot dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_current_snapshot (Transact-SQL)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "pages [SQL Server], damaged"
   - "restoring [SQL Server], pages"
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Restore Pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -102,7 +102,7 @@ ms.author: kendralittle
  RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the **db_owner** fixed database role do not have RESTORE permissions.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Starting in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports page restores.  
+ Starting in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports page restores.  
   
 #### To restore pages  
   

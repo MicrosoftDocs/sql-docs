@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysjobstepslogs (Transact-SQL)"
-title: "dbo.sysjobstepslogs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysjobstepslogs (Transact-SQL)"
+description: dbo.sysjobstepslogs (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysjobstepslogs_TSQL"
   - "sysjobstepslogs_TSQL"
   - "sysjobstepslogs"
   - "dbo.sysjobstepslogs"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysjobstepslogs system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,7 +1,7 @@
 ---
-title: "SQL Server 2022 Release Notes | Microsoft Docs"
+title: "SQL Server 2022 Release Notes"
 description: Find information about SQL Server 2019 (16.x) limitations, known issues, help resources, and other release notes.
-ms.date: 05/24/2022
+ms.date: 09/22/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -13,9 +13,10 @@ ms.author: mikeray
 monikerRange: "= sql-server-ver16"
 ---
 # [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] community technology preview (CTP) 2.0.
+[!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
+
+This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release candidate (RC) 1.
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 
@@ -25,27 +26,26 @@ This release has the same hardware and software requirements as [SQL Server 2019
 
 - .NET Framework: 4.7.2. [Download](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
-## Linux
-
-SQL Server 2022 Preview on Linux images are coming soon.
-
 ## Feature notes
 
 This section identifies known issues you may experience with this product:
 
-### Query Store
+- If you choose to add the Azure extension for SQL Server to an existing instance, Setup currently requires that you also add at least 1 other feature from the **Feature Selection** page in order to complete adding the Arc extension feature.
 
-- **Issue and customer impact**: Query Store is not enabled by default.
-- **Workaround**: To experience intelligent query processing features, enable Query Store.
+- When you install Azure extension for SQL Server during setup, in some cases a timeout may occur. In this case, setup returns a timeout exception but setup should succeed and the extension should be installed.
 
-### Memory grant feedback
+- When you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting won't change the encryption and may cause errors.
 
-- **Issue and customer impact**: : Immediately after you enable Query Store, SQL Server may return an error (access violation) if the Query Store is still starting up and you try to use memory grant feedback.
-- **Workaround**: After you enable Query Store, wait for a period of time before you execute queries that are leveraging memory grant feedback. This happens most often with substantial concurrent workload.
+- [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is available for preview. It isn't available for use in production environments.
 
 ## Build number
 
-The CTP 2.0 build number for SQL Server 2022 Preview is `16.0.600.3`.
+| Preview build | Version number | Date |
+|:--|:--|:--|
+| RC 1    | 16.0.950.9 | September 22, 2022|
+| RC 0    | 16.0.900.6 | August 23, 2022|
+| CTP 2.1 | 16.0.700.4 | July 27, 2022 |
+| CTP 2.0 | 16.0.600.9 | May 20, 2022 |
 
 ## Next steps
 

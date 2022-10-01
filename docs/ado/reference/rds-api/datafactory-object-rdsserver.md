@@ -1,19 +1,15 @@
 ---
+title: "DataFactory Object (RDSServer)"
 description: "DataFactory Object (RDSServer)"
-title: "DataFactory Object (RDSServer) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "DataFactory object [ADO]"
-ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "DataFactory object [ADO]"
+apitype: "COM"
 ---
 # DataFactory Object (RDSServer)
 > [!IMPORTANT]

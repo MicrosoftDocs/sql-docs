@@ -1,15 +1,17 @@
 ---
-title: Copy a database 
+title: Copy a database
 description: Create a transactionally consistent copy of an existing database in Azure SQL Database on either the same server or a different server.
-services: sql-database
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
+ms.date: 6/14/2022
 ms.service: sql-database
 ms.subservice: data-movement
-ms.custom: sqldbrb=1, devx-track-azurepowershell, devx-track-azurecli
 ms.topic: how-to
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: mathoma
-ms.date: 1/19/2022
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+  - "devx-track-azurecli"
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 
@@ -19,7 +21,7 @@ Azure SQL Database provides several methods for creating a copy of an existing [
 
 ## Overview
 
-A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy, service tier and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same or a different service tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are  managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
+A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same service tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
 
 ## Database Copy for Azure SQL Hyperscale
 
@@ -107,13 +109,13 @@ Log in to the master database with the server administrator login or the login t
 
 This command copies Database1 to a new database named Database2 in an elastic pool named pool1. Depending on the size of your database, the copying operation might take some time to complete.
 
-Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a general purpose pool, but you can't copy a standard elastic db into a premium pool. 
+Database1 can be a single or pooled database. Copying between different tier pools is supported, but some cross-tier copies will not succeed. For example, you can copy a single or elastic standard db into a General Purpose pool, but you can't copy a standard elastic db into a premium pool. 
 
    ```sql
    -- Execute on the master database to start copying
    CREATE DATABASE Database2
    AS COPY OF Database1
-   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool1' ) );
+   (SERVICE_OBJECTIVE = ELASTIC_POOL( name = pool1 ));
    ```
 
 ### Copy to a different server
@@ -134,7 +136,7 @@ Similarly, the below command copies Database1 on server1 to a new database named
 
 ```sql
 -- Execute on the master database of the target server (server2) to start copying from Server1 to Server2
-CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = 'pool2' ) );
+CREATE DATABASE Database2 AS COPY OF server1.Database1 (SERVICE_OBJECTIVE = ELASTIC_POOL( name = pool2 ) );
 ```
 
 ### Copy to a different subscription

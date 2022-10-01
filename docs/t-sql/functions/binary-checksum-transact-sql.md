@@ -1,25 +1,21 @@
 ---
+title: "BINARY_CHECKSUM  (Transact-SQL)"
 description: "BINARY_CHECKSUM  (Transact-SQL)"
-title: "BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "BINARY_CHECKSUM"
-  - "BINARY_CHECKSUM_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "BINARY_CHECKSUM function"
-  - "binary [SQL Server], checksum values"
-ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "07/24/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "BINARY_CHECKSUM"
+  - "BINARY_CHECKSUM_TSQL"
+helpviewer_keywords:
+  - "BINARY_CHECKSUM function"
+  - "binary [SQL Server], checksum values"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

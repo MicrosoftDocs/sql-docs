@@ -1,32 +1,29 @@
 ---
-description: "SET FMTONLY (Transact-SQL)"
-title: "SET FMTONLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET FMTONLY (Transact-SQL)"
+description: SET FMTONLY (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FMTONLY_TSQL"
   - "FMTONLY"
   - "SET FMTONLY"
   - "SET_FMTONLY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "metadata [SQL Server], only metadata returned"
   - "SET FMTONLY statement"
   - "FMTONLY option"
-ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET FMTONLY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/tsql-appliesto-ss-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Returns only metadata to the client. Can be used to test the format of the response without actually running the query.  
 

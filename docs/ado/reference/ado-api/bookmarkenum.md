@@ -1,21 +1,17 @@
 ---
+title: "BookmarkEnum"
 description: "BookmarkEnum"
-title: "BookmarkEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "BookmarkEnum"
-helpviewer_keywords: 
-  - "BookMarkEnum enumeration [ADO]"
-ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "BookmarkEnum"
+helpviewer_keywords:
+  - "BookMarkEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # BookmarkEnum
 Specifies a bookmark indicating where the operation should begin.  

@@ -1,23 +1,21 @@
 ---
-description: "CREATE PARTITION FUNCTION (Transact-SQL)"
 title: "CREATE PARTITION FUNCTION (Transact-SQL)"
-ms.custom: ""
+description: CREATE PARTITION FUNCTION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "4/22/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE PARTITION FUNCTION"
   - "PARTITION"
   - "PARTITION FUNCTION"
   - "PARTITION_FUNCTION_TSQL"
   - "PARTITION_TSQL"
   - "CREATE_PARTITION_FUNCTION_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RANGE RIGHT partition functions"
   - "RANGE LEFT partition functions"
   - "partitioned indexes [SQL Server], functions"
@@ -25,9 +23,8 @@ helpviewer_keywords:
   - "partition functions [SQL Server], creating"
   - "partitioned tables [SQL Server], functions"
   - "CREATE PARTITION FUNCTION statement"
-ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

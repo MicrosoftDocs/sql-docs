@@ -1,21 +1,19 @@
 ---
 title: "Remove log shipping secondary"
 description: Learn how to remove a log shipping secondary partner by using SQL Server Management Studio or Transact-SQL in SQL Server.
-ms.custom: seo-lt-2019
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: log-shipping
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "deleting secondary databases"
   - "secondary databases [SQL Server], in log shipping"
   - "removing secondary databases"
   - "secondary data files [SQL Server], removing"
   - "log shipping [SQL Server], secondary databases"
-ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-author: LitKnd
-ms.author: kendralittle
 ---
 # Remove a Secondary Database from a Log Shipping Configuration (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

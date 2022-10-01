@@ -1,23 +1,21 @@
 ---
-description: "MSqreader_history (Transact-SQL)"
-title: "MSqreader_history (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSqreader_history (Transact-SQL)"
+description: MSqreader_history (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSqreader_history"
   - "MSqreader_history_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSqreader_history system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

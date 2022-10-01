@@ -1,17 +1,23 @@
 ---
 title: "Configure attestation for Always Encrypted using Azure Attestation"
-description: "Configure Azure Attestation for Always Encrypted with secure enclaves in Azure SQL Database."
-keywords: encrypt data, sql encryption, database encryption, sensitive data, Always Encrypted, secure enclaves, SGX, attestation
-services: sql-database
-ms.service: sql-database
-ms.subservice: security
-ms.devlang: 
-ms.topic: how-to
+description: Configure Azure Attestation for Always Encrypted with secure enclaves in Azure SQL Database.
 author: jaszymas
 ms.author: jaszymas
-ms.reviwer: vanto
-ms.date: 07/14/2021 
+ms.reviewer: vanto
+ms.date: 07/14/2021
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
 ms.custom: devx-track-azurepowershell
+keywords:
+  - "encrypt data"
+  - "sql encryption"
+  - "database encryption"
+  - "sensitive data"
+  - "Always Encrypted"
+  - "secure enclaves"
+  - "SGX"
+  - "attestation"
 ---
 
 # Configure attestation for Always Encrypted using Azure Attestation

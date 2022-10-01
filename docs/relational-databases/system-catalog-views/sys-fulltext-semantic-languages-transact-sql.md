@@ -1,25 +1,24 @@
 ---
-description: "sys.fulltext_semantic_languages (Transact-SQL)"
-title: "sys.fulltext_semantic_languages (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.fulltext_semantic_languages (Transact-SQL)"
+description: sys.fulltext_semantic_languages (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fulltext_semantic_languages"
   - "fulltext_semantic_languages_TSQL"
   - "sys.fulltext_semantic_languages"
   - "sys.fulltext_semantic_languages_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fulltext_semantic_languages catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

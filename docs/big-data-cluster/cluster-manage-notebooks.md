@@ -1,33 +1,33 @@
 ---
-title: Management notebooks for SQL Server Big Data Clusters
-titleSuffix: SQL Server Big Data Clusters
-description: Managing Big Data Clusters with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
+title: Big Data Cluster Management notebooks
+description: Manage Big Data Clusters with Jupyter notebooks and Azure Data Studio on SQL Server 2019.
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
-ms.date: 12/01/2021
-ms.topic: conceptual
+ms.date: 6/21/2022
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.custom: kr2b-contr-experiment
+ms.metadata: seo-lt-2019
 ---
 
-# Operational notebooks for SQL Server Big Data Clusters
+# An Index of Management notebooks for SQL Server Big Data Clusters
 
-This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in managing Big Data Clusters.
+This page is an index of notebooks for SQL Server Big Data Clusters. These executable notebooks (.ipynb) manage Big Data Clusters for SQL Server 2019.
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-Each notebook is designed to check for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon success return back to the original notebook, then click **Run all cells**.
+You can manage SQL Server Big Data Clusters with Jupyter notebooks. When you do, all notebooks check for their own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon successful completion, return to the original notebook and select **Run all cells**.
 
-Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
+When all dependencies are installed and **Run all cells** fails, each notebook analyzes the results. Where possible, a hyperlinked hint gives direction on how to resolve the issue.
 
 * For more information on using notebooks to manage SQL Server Big Data Clusters, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md).
 * For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).
 
-## Installing and uninstalling utilities on Big Data Clusters
+## Install and uninstall utilities on Big Data Clusters
 
-This section contains a set of notebooks useful for installing and uninstalling command-line tools and packages needed to manage SQL Server Big Data Clusters.
+The following is a set of notebooks that are useful for installing and uninstalling command-line tools. They also provide packages to manage SQL Server Big Data Clusters.
 
 |Name |Description |
 |---|---|
@@ -41,17 +41,17 @@ This section contains a set of notebooks useful for installing and uninstalling 
 |SOP062 - Install ipython-sql and pyodbc modules|Use this notebook to install ipython-sql and pyodbc modules.|
 |SOP069 - Install ODBC for SQL Server|Use this notebook to install ODBC driver since some subcommands in azdata require the SQL Server ODBC driver.|
 
-## Backup and restore from Big Data Clusters
+## Backup and restore Big Data Clusters
 
-This section contains a set of notebooks useful for backup and restore operations for SQL Server Big Data Clusters.
+The following is a set of notebooks that are useful for backup and restore operations on SQL Server Big Data Clusters.
 
 | Name | Description |
 |--|--|
 | SOP008 - Back up HDFS files to Azure Data Lake Store Gen2 with distcp | This Standard Operating Procedure (SOP) backs up data from the source big data cluster's HDFS filesystem to the Azure Data Lake Store Gen2 account you specify. Please ensure the Azure Data Lake Store Gen2 account is configured with "hierarchical namespace" enabled. |
 
-## Managing Certificates on Big Data Clusters
+## Manage Certificates on Big Data Clusters
 
-A set of notebooks to run a notebook for managing Certificates on Big Data Clusters.
+The following is a set of notebooks to manage Certificates on Big Data Clusters.
 
 |Name |Description |
 |---|---|
@@ -87,9 +87,9 @@ A set of notebooks to run a notebook for managing Certificates on Big Data Clust
 |CER102 - Configure Cluster with Self Signed Certificates using existing Big Data Cluster CA|This notebook will configure the cluster with self signed certificates using and existing Big Data Cluster CA. Read the notebook for detailed information.|
 |CER103 - Configure Cluster with externally signed certificates|The purpose of this notebook is to rotate the endpoint certificates with the ones generated and signed outside of the big data cluster. Read the notebook for detailed information.|
 
-## Encryption at Rest utilities on Big Data Clusters 
+## Encryption at Rest utilities on Big Data Clusters
 
-This section contains a set of notebooks useful for managing Encryption at Rest features on BDC.
+This section contains a set of notebooks to manage Encryption at Rest on BDC.
 
 |Name |Description |
 |---|---|
@@ -101,7 +101,7 @@ This section contains a set of notebooks useful for managing Encryption at Rest 
 
 ## Password rotation
 
-Notebooks for managing password rotation on Big Data Clusters.
+Notebooks to manage password rotation on Big Data Clusters.
 
 |Name |Description |
 |---|---|

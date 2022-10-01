@@ -1,21 +1,18 @@
 ---
-description: "DBCC CHECKIDENT (Transact-SQL)"
 title: DBCC CHECKIDENT (Transact-SQL)
-ms.custom: ""
+description: "DBCC CHECKIDENT (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/07/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "CHECKIDENT"
   - "DBCC CHECKIDENT"
   - "CHECKIDENT_TSQL"
   - "DBCC_CHECKIDENT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "checking identity values"
   - "reseeding identity values"
   - "resetting identity values"
@@ -26,9 +23,8 @@ helpviewer_keywords:
   - "DBCC CHECKIDENT statement"
   - "identity values [SQL Server], reseeding"
   - "reporting current identity values"
-ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-author: pmasl
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest"
 ---
 
@@ -36,7 +32,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Checks the current identity value for the specified table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and, if it's needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
+  Checks the current identity value for the specified table in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and, if it's needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
   
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

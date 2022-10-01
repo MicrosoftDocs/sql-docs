@@ -10,8 +10,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Back up Multiple Databases to Azure Blob Storage - PowerShell
 

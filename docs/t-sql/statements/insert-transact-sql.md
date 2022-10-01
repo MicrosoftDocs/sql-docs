@@ -1,19 +1,17 @@
 ---
-description: "INSERT (Transact-SQL)"
-title: "INSERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "INSERT (Transact-SQL)"
+description: INSERT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "INSERT_TSQL"
   - "INSERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserting multiple rows"
   - "user-defined types [SQL Server], inserting values"
   - "DML [SQL Server], INSERT statement"
@@ -29,9 +27,8 @@ helpviewer_keywords:
   - "INSERT INTO statement"
   - "data manipulation language [SQL Server], INSERT statement"
   - "inserting data"
-ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (Transact-SQL)

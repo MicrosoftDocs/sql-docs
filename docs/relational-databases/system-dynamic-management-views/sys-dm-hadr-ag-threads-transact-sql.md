@@ -1,28 +1,24 @@
 ---
-description: "sys.dm_hadr_ag_threads (Transact-SQL)"
-title: "sys.dm_hadr_ag_threads (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_hadr_ag_threads (Transact-SQL)"
+description: sys.dm_hadr_ag_threads (Transact-SQL)
+author: kfarlee
+ms.author: kfarlee
 ms.date: "02/08/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "sys.dm_hadr_ag_threads_TSQL"
   - "sys.dm_hadr_ag_threads"
   - "dm_hadr_ag_threads_TSQL"
   - "dm_hadr_ag_threads"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_ag_threads catalog view"
-ms.assetid: 
-author: kfarlee
-ms.author: kfarlee
-monikerRange:
+dev_langs:
+  - "TSQL"
 ---
 # sys.dm_hadr_ag_threads (Transact-SQL)
 

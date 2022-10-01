@@ -1,16 +1,14 @@
 ---
-title: Troubleshoot transaction log issues 
+title: Troubleshoot transaction log issues
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
-description: Provides steps to troubleshoot Azure SQL Database transaction log issues in Azure SQL Database or Azure SQL Managed Instance 
-services: sql-database
+description: Provides steps to troubleshoot Azure SQL Database transaction log issues in Azure SQL Database or Azure SQL Managed Instance
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 07/23/2021
 ms.service: sql-db-mi
 ms.subservice: development
 ms.topic: troubleshooting
-ms.custom: 
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
-ms.date: 07/23/2021
 ---
 
 # Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance

@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoredb.general.f1"
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 
 # Restore database (General page)
@@ -62,11 +62,11 @@ These options identify the location of the backup sets for the database and whic
   
 ## Compatibility support  
 
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can restore a user database from a database backup that was created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version. Backups of **master**, **model**, and **msdb** that were created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be restored by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Also, backups created in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+In [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and greater, you can restore a user database from a database backup that was created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version. Backups of **master**, **model**, and **msdb** that were created by using [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be restored by [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and greater. Also, backups created in newer versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] cannot be restored by any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses a different default path than earlier versions. To restore a database that was created in the default location of an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must use the MOVE option.  
+Newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use a different default path than versions prior to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. To restore a database that was created in the default location of an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must use the MOVE option.  
   
- After you restore an earlier version database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database internal version is automatically upgraded. Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending upon the amount of data being indexed, importing can take several hours, and rebuilding can take up to 10 times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt.  
+ After you restore an earlier version database to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the database internal version is automatically upgraded. Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending upon the amount of data being indexed, importing can take several hours, and rebuilding can take up to 10 times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt.  
   
 ## Restore from an encrypted backup  
 

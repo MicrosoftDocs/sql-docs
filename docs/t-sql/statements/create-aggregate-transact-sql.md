@@ -1,27 +1,24 @@
 ---
-description: "CREATE AGGREGATE (Transact-SQL)"
-title: "CREATE AGGREGATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE AGGREGATE (Transact-SQL)"
+description: CREATE AGGREGATE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_AGGREGATE_TSQL"
   - "CREATE AGGREGATE"
   - "AGGREGATE_TSQL"
   - "AGGREGATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CREATE AGGREGATE statement"
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"
-ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

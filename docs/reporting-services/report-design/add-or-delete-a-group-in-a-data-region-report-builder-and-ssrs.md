@@ -46,7 +46,7 @@ In paginated reports, add a group to a data region when you want to organize dat
   
 3.  In **Group expression**, type an expression or click the expression button (**fx**) to create an expression.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      A new group is added to the Grouping pane and a row or column on which to display group values is added to the tablix data region on the design surface.  
   
@@ -58,7 +58,7 @@ In paginated reports, add a group to a data region when you want to organize dat
   
 3.  Select **Show detail data**.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
      A new details group is added as a child group in the Grouping pane, and the row handle for the group you selected in step 1 displays the details group icon. For more information about handles, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
@@ -84,7 +84,7 @@ In paginated reports, add a group to a data region when you want to organize dat
   
 10. (Optional) Click **Variables** to define variables scoped to this group and accessible from any child groups.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. Select **OK**.
   
 ## To delete a group from a tablix data region  
   
@@ -96,7 +96,7 @@ In paginated reports, add a group to a data region when you want to organize dat
   
     -   **Delete group only** Choose this option to keep the structure of the tablix data region the same and delete only the group definition.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## To delete a details group from a tablix data region  
   
@@ -108,7 +108,7 @@ In paginated reports, add a group to a data region when you want to organize dat
   
     -   **Delete group only** Choose this option to keep the structure of the tablix data region the same and delete only the group definition.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
      The details group is deleted.  
   

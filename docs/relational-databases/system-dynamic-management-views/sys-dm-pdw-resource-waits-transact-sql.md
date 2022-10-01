@@ -1,18 +1,16 @@
 ---
-description: "sys.dm_pdw_resource_waits (Transact-SQL)"
-title: "sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_pdw_resource_waits (Transact-SQL)"
+description: sys.dm_pdw_resource_waits (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/26/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Create Indexed Views
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to create indexes on a view. The first index created on a view must be a unique clustered index. After the unique clustered index has been created, you can create more nonclustered indexes. Creating a unique clustered index on a view improves query performance because the view is stored in the database in the same way a table with a clustered index is stored. The query optimizer may use indexed views to speed up the query execution. The view does not have to be referenced in the query for the optimizer to consider that view for a substitution.
 
@@ -63,7 +63,6 @@ To make sure that the views can be maintained correctly and return consistent re
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
 |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
-|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> Setting `ANSI_WARNINGS` to ON implicitly sets `ARITHABORT` to ON.
 
@@ -99,7 +98,6 @@ The following requirements must also be met, in addition to the SET options and 
    |PRECISE = TRUE|Must be declared explicitly as an attribute of the .NET Framework method.|
    |DATA ACCESS = NO SQL|Determined by setting DataAccess attribute to DataAccessKind.None and SystemDataAccess attribute to SystemDataAccessKind.None.|
    |EXTERNAL ACCESS = NO|This property defaults to NO for CLR routines.|
-   |&nbsp;|&nbsp;|
 
 - The view must be created by using the `WITH SCHEMABINDING` option.
 - The view must reference only base tables that are in the same database as the view. The view cannot reference other views.

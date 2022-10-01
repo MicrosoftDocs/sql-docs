@@ -7,8 +7,8 @@ ms.prod_service: "search, sql-database"
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"

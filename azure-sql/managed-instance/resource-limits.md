@@ -2,16 +2,16 @@
 title: Resource limits
 titleSuffix: Azure SQL Managed Instance
 description: This article provides an overview of the resource limits for Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: references_regions, ignite-fall-2021
-ms.devlang: 
-ms.topic: reference
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
-ms.date: 04/06/2022
+ms.date: 06/02/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom:
+  - references_regions
+  - ignite-fall-2021
 ---
 # Overview of Azure SQL Managed Instance resource limits
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -30,13 +30,13 @@ This article provides an overview of the technical characteristics and resource 
 SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. SQL Managed Instance can be deployed on multiple hardware configurations.
 
 > [!NOTE]
-> The Gen5 hardware has been renamed to the **standard-series (Gen5)**. We are introducing two new hardware configurations in limited preview: **premium-series** and **memory optimized premium-series**.
+> The Gen5 hardware has been renamed to the **standard-series (Gen5)**.
 
 For information on previously available hardware, see [Previously available hardware](#previously-available-hardware) later in this article.
 
 Hardware configurations have different characteristics, as described in the following table:
 
-|    | **Standard-series (Gen5)** | **Premium-series (preview)** | **Memory optimized premium-series (preview)** | 
+|    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series** | 
 |:-- |:-- |:-- |:-- |
 | **CPU** |  Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake), and  Intel&reg; 8272CL (Cascade Lake) 2.5 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors |
 | **Number of vCores** <BR>vCore=1 LP (hyper-thread) | 4-80 vCores | 4-80 vCores | 4-64 vCores |
@@ -49,39 +49,15 @@ Hardware configurations have different characteristics, as described in the foll
 >[!NOTE]
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
-### Regional support for premium-series hardware (preview)
+### Regional support for memory optimized premium-series hardware
 
-Support for the premium-series hardware (public preview) is currently available only in these specific regions: <br>
-
-| Region | **Premium-series** | **Memory optimized premium-series** | 
-|:--- |:--- |:--- |
-| Australia Central | Yes | | 
-| Australia East | Yes | | 
-| Canada Central | Yes | | 
-| Canada East | Yes | | 
-| Central US | Yes | Yes | 
-| East US | Yes | Yes | 
-| Germany West Central | Yes | Yes | 
-| Japan East | Yes | | 
-| Japan West | Yes | | 
-| Korea Central | Yes | | 
-| North Central US | Yes | Yes | 
-| North Europe | Yes | Yes | 
-| Norway East | Yes | | 
-| South Africa West | Yes | | 
-| South Central US | Yes | Yes | 
-| Southeast Asia | Yes |  | 
-| Sweden Central | | Yes | 
-| Switzerland North | Yes | | 
-| Switzerland West | Yes | | 
-| UAE North | Yes | | 
-| UK South | Yes | Yes | 
-| UK West | Yes | | 
-| West Central US | Yes | | 
-| West Europe | Yes | Yes | 
-| West US | Yes | |  
-| West US 2 | Yes | Yes | 
-| West US 3 | Yes | Yes | 
+Support for the memory optimized premium-series hardware is currently available only in these specific regions:
+  
+| Geography | Regions supporting memory optimized premium-series HW |
+|:-- |:-- |
+| Europe, Middle East, Africa | France Central, Germany West Central, North Europe, Sweden Central, UK South, West Europe |
+| Americas | Brazil South, Canada Central, Central US, East US, East US 2, North Central US, South Central US, West US, West US 2, West US 3 |
+| Asia Pacific | Australia East, Australia Southeast, Central India, East Asia, Japan East, Southeast Asia |
 
 ### In-memory OLTP available space
 
@@ -112,6 +88,7 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 | Max instance storage size (reserved) | - 2 TB for 4 vCores<br/>- 8 TB for 8 vCores<br/>- 16 TB for other sizes <BR> | **Standard-series (Gen5)**: <br/>- 1 TB for 4, 8, 16 vCores<br/>- 2 TB for 24 vCores<br/>- 4 TB for 32, 40, 64, 80 vCores <BR> **Premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40, 64, 80 vCores<br/> **Memory optimized premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40 vCores<br/>- 16 TB for 64 vCores<br/> |
 | Max database size | Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
 | Max tempDB size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br/>Add more vCores to get more TempDB space.<br/> Log file size is limited to 120 GB.| Up to currently available instance storage size. |
+| Max number of tempDB files | 128 | 128 |
 | Max number of databases per instance | 100 user databases, unless the instance storage size limit has been reached. | 100 user databases, unless the instance storage size limit has been reached. |
 | Max number of database files per instance | Up to 280, unless the instance storage size or [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) limit has been reached. | 32,767 files per database, unless the instance storage size limit has been reached. |
 | Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. | Up to currently available instance size (depending on the number of vCores). |
@@ -134,6 +111,7 @@ A few additional considerations:
 - Throughput and IOPS in the General Purpose tier also depend on the [file size](#file-io-characteristics-in-general-purpose-tier) that is not explicitly limited by the SQL Managed Instance.
   You can create another readable replica in a different Azure region using [auto-failover groups](auto-failover-group-configure-sql-mi.md)
 - Max instance IOPS depend on the file layout and distribution of workload. As an example, if you create 7 x 1 TB files with max 5 K IOPS each and seven small files (smaller than 128 GB) with 500 IOPS each, you can get 38500 IOPS per instance (7x5000+7x500) if your workload can use all files. Note that some IOPS are also used for auto-backups.
+- Names of `tempdb`files cannot have more than 16 characters.
 
 Find more information about the [resource limits in SQL Managed Instance pools in this article](instance-pools-overview.md#resource-limitations).
 
@@ -141,9 +119,6 @@ Find more information about the [resource limits in SQL Managed Instance pools i
 
 The following factors affect the amount of storage used for data and log files, and apply to General Purpose and Business Critical tiers. 
 
-- Each compute size supports a maximum data size, with a default of 16 GB. For more information on resource limits in Azure SQL Managed Instance, see [resource-limits.md].
-- When you configure maximum data size, an additional 30 percent of storage is automatically added for log files.
-- You can select any maximum data size between 1 GB and the supported storage size maximum, in 1 GB increments.
 - In the General Purpose service tier, `tempdb` uses local SSD storage, and this storage cost is included in the vCore price.
 - In the Business Critical service tier, `tempdb` shares local SSD storage with data and log files, and `tempdb` storage cost is included in the vCore price.
 - The maximum storage size for a SQL Managed Instance must be specified in multiples of 32 GB.
@@ -206,7 +181,7 @@ Supported subscription types can contain a limited number of resources per regio
 
 The following table shows the **default regional limits** for supported subscription types (default limits can be extended using support request described below):
 
-|Subscription type| Max number of SQL Managed Instance subnets | Max number of vCore units* |
+|Subscription type| Default limit for SQL Managed Instance subnets | Default limit for vCore units* |
 | :---| :--- | :--- |
 |CSP |16 (30 in some regions**)|960 (1440 in some regions**)|
 |EA|16 (30 in some regions**)|960 (1440 in some regions**)|
@@ -239,8 +214,7 @@ If you need more instances in your current regions, send a support request to ex
 
 This section includes details on previously available hardware. Consider [moving your instance of SQL Managed Instance to the standard-series (Gen5)](../database/service-tiers-vcore.md) hardware to experience a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
 
-> [!IMPORTANT]
-> Gen4 hardware is being retired and is not available for new deployments.
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
 
 ### Hardware characteristics
 
@@ -254,6 +228,8 @@ This section includes details on previously available hardware. Consider [moving
 
 ### In-memory OLTP available space
 
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+  
 The amount of In-memory OLTP space in [Business Critical](../database/service-tier-business-critical.md) service tier depends on the number of vCores and hardware configuration. The following table lists limits of memory that can be used for In-memory OLTP objects.
 
 | In-memory OLTP space    |  **Gen4** |
@@ -265,26 +241,28 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 
 ### Service tier characteristics
 
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+  
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
-| Number of vCores\* | Gen4: 8, 16, 24 | Gen4: 8, 16, 24 <BR>\*Same number of vCores is dedicated for read-only queries. |
-| Max memory | Gen4: 56 GB - 168 GB (7GB/vCore)<br/>Add more vCores to get more memory. | Gen4: 56 GB - 168 GB (7GB/vCore)<br/>+ additional 20.4 GB - 408 GB (5.1GB/vCore) for read-only queries.<br/>Add more vCores to get more memory. |
-| Max instance storage size (reserved) | Gen4: 8 TB | Gen4: 1 TB  |
-| Max database size | Gen4: Up to currently available instance size (max 2 TB - 8 TB depending on the number of vCores). | Gen4: Up to currently available instance size (max 1 TB - 4 TB depending on the number of vCores). |
-| Max tempDB size | Gen4: Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br/>Add more vCores to get more TempDB space.<br/> Log file size is limited to 120 GB.| Gen4: Up to currently available instance storage size. |
-| Max number of databases per instance | Gen4: 100 user databases, unless the instance storage size limit has been reached. | Gen4: 100 user databases, unless the instance storage size limit has been reached. |
-| Max number of database files per instance | Gen4: Up to 280, unless the instance storage size or [Azure Premium Disk storage allocation space limit](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) has been reached. | Gen4: 32,767 files per database, unless the instance storage size limit has been reached. |
-| Max data file size | Gen4: Limited to currently available instance storage size (max 2 TB - 8 TB) and [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files). Use at least two data files for databases larger than 8 TB. | Gen4:  Limited to currently available instance storage size (up to 1 TB - 4 TB). |
-| Max log file size | Gen4: Limited to 2 TB and currently available instance storage size. | Gen4: Limited to 2 TB and currently available instance storage size. |
-| Data/Log IOPS (approximate) | Gen4: Up to 30-40 K IOPS per instance*, 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| Gen4: 16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. | 
-| Log write throughput limit (per instance) | Gen4: 3 MB/s per vCore<br/>Max 120 MB/s per instance<br/>22 - 65 MB/s per DB<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Gen4:  4 MB/s per vCore<br/>Max 96 MB/s |
-| Data throughput (approximate) | Gen4: 100 - 250 MB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Gen4: Not limited. |
-| Storage IO latency (approximate) | Gen4: 5-10 ms | Gen4: 1-2 ms |
-| In-memory OLTP | Gen4: Not supported | Gen4: Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
-| Max sessions | Gen4: 30000 | Gen4: 30000 |
-| Max concurrent workers | Gen4: 210 * number of vCores + 800 | Gen4: 210 * vCore count + 800 |
-| [Read-only replicas](../database/read-scale-out.md) | Gen4: 0 | Gen4: 1 (included in price) |
-| Compute isolation | Gen4: not supported | Gen4: not supported |
+| Number of vCores\* |  8, 16, 24 |  8, 16, 24 <BR>\*Same number of vCores is dedicated for read-only queries. |
+| Max memory |  56 GB - 168 GB (7GB/vCore)<br/>Add more vCores to get more memory. |  56 GB - 168 GB (7GB/vCore)<br/>+ additional 20.4 GB - 408 GB (5.1GB/vCore) for read-only queries.<br/>Add more vCores to get more memory. |
+| Max instance storage size (reserved) |  8 TB |  1 TB  |
+| Max database size |  Up to currently available instance size (max 2 TB - 8 TB depending on the number of vCores). |  Up to currently available instance size (max 1 TB - 4 TB depending on the number of vCores). |
+| Max tempDB size |  Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br/>Add more vCores to get more TempDB space.<br/> Log file size is limited to 120 GB.|  Up to currently available instance storage size. |
+| Max number of databases per instance |  100 user databases, unless the instance storage size limit has been reached. |  100 user databases, unless the instance storage size limit has been reached. |
+| Max number of database files per instance |  Up to 280, unless the instance storage size or [Azure Premium Disk storage allocation space limit](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) has been reached. |  32,767 files per database, unless the instance storage size limit has been reached. |
+| Max data file size |  Limited to currently available instance storage size (max 2 TB - 8 TB) and [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files). Use at least two data files for databases larger than 8 TB. |   Limited to currently available instance storage size (up to 1 TB - 4 TB). |
+| Max log file size |  Limited to 2 TB and currently available instance storage size. |  Limited to 2 TB and currently available instance storage size. |
+| Data/Log IOPS (approximate) |  Up to 30-40 K IOPS per instance*, 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)|  16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. | 
+| Log write throughput limit (per instance) |  3 MB/s per vCore<br/>Max 120 MB/s per instance<br/>22 - 65 MB/s per DB<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |   4 MB/s per vCore<br/>Max 96 MB/s |
+| Data throughput (approximate) |  100 - 250 MB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |  Not limited. |
+| Storage IO latency (approximate) |  5-10 ms |  1-2 ms |
+| In-memory OLTP |  Not supported |  Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
+| Max sessions |  30000 |  30000 |
+| Max concurrent workers |  210 * number of vCores + 800 |  210 * vCore count + 800 |
+| [Read-only replicas](../database/read-scale-out.md) |  0 |  1 (included in price) |
+| Compute isolation |  not supported |  not supported |
 
 
 ## Next steps

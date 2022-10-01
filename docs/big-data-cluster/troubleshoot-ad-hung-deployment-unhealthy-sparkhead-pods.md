@@ -1,17 +1,18 @@
 ---
-title: AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods
+title: "AD mode deployment becomes unresponsive: sparkhead pods"
 titleSuffix: SQL Server Big Data Cluster
-description: Troubleshooting unresponsive deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy `sparkhead` pods.
+description: Troubleshooting unresponsive deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy sparkhead pods.
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: wiassaf
-ms.date: 08/20/2020
-ms.topic: troubleshooting
+ms.date: 06/17/2022
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: troubleshooting
+ms.custom: kr2b-contr-experiment
 ---
 
-# AD mode deployment becomes unresponsive - unhealthy `sparkhead` pods
+# Active Directory mode deployment becomes unresponsive: sparkhead pods
 
 [!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
@@ -19,7 +20,7 @@ Deployment in Active Directory (AD) mode freezes. Check symptoms to see if the c
 
 ## Symptom
 
-You started deploying SQL Server Big Data Clusters with AD mode however the deployment is stuck and not moving forward.
+You started deploying SQL Server Big Data Clusters with AD mode. The deployment is stuck and not moving forward.
 
 The following example shows the deployment results in a bash shell.
 
@@ -49,7 +50,7 @@ Check the current deployed pods.
 kubectl get pods -n mssql-cluster
 ```
 
-The results indicate all the pods have been deployed, but the deployment is not reporting success.
+The results indicate that all the pods have been deployed, but the deployment isn't reporting success.
 
 ```output
 NAME              READY   STATUS    RESTARTS   AGE 
@@ -85,20 +86,19 @@ zookeeper-1       2/2     Running   0          3d13h 
 zookeeper-2       2/2     Running   0          3d13h 
 ```
 
-Inspect the health of the HDFS and Spark services. Look for `sparkhead` pods errors.
+Inspect the health of the HDFS and Spark services. Look for `sparkhead` pod errors.
 
-## Check the HDFS and Spark services 
+## Check the HDFS and Spark services
 
-From Azure Data Studio (ADS), connect to the controller and view the Big Data Cluster Dashboard. Confirm if both the HDFS and Spark services have unhealthy `sparkhead` pods.
+From Azure Data Studio, connect to the controller and view the Big Data Cluster dashboard. Confirm that the HDFS and Spark services have unhealthy `sparkhead` pods.
 
-![HDFS Spark services unhealthy `sparkhead` pods](./media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/hdfs_spark_unhealthy_sparkhead_pods.png)
+:::image type="content" source="./media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/hdfs_spark_unhealthy_sparkhead_pods.png" alt-text="Screenshot shows the Big Data Cluster overview with two sparkhead entries as unhealthy.":::
 
-Extract the logs and locate.
-
-`\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
+Extract the logs and locate this file: `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
 > There are multiple ways to collect the logs. Instead of copying the logs with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], you can use a notebook in Azure Data Studio.
+>
 > In Azure Data Studio, connect to the Kubernetes cluster, and run an appropriate troubleshooting notebook. The following are examples of notebooks.
 >
 > - TSG027 - Observe cluster deployment
@@ -108,7 +108,7 @@ Extract the logs and locate.
   
 ## Inspect the logs
 
-Locate the log. The following example points to a controller deployment log.
+Locate the log. The following example points to a controller deployment log:
 
 `<folderOfDebugCopyLog>\debuglogs-mssql-cluster-YYYYMMDD-HHMMSS\<namespace>\control-<identifier>\controller\control-<identifier>-controller-stdout.log`
 
@@ -137,7 +137,7 @@ StatefulSet sparkhead is not healthy: 
 {Property: hivemetastorehttp.readiness, Details: 'Health module returned error state. error: Post https://sparkhead-1.corpnet.contoso.com:9084/api/hms: dial tcp 10.244.1.24:9084: connect: connection refused'}}}}} 
 ```
 
-Inspect the `sparkhead` pods, paying attention to the container logs. THis example looks at `sparkhead-0`.
+Inspect the `sparkhead` pods, paying attention to the container logs. This example looks at `sparkhead-0`:
 
 ```output
 sparkhead-0\hadoop-hivemetastore\supervisor\log\hivemetastorehttp-stderr---supervisor-pZ1gdb 
@@ -203,19 +203,19 @@ at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2876) 
 
 ## Cause
 
-The reverse lookup zone entry for the domain controller in the DC's DNS server for the Kubernetes network is missing. For this example, the missing entry was `cni0 10.244`. The `sparkhead` pod containers were trying to use the IP address 10.244.1.30:9000 to reach nnnode-0-1, but the DNS was not able to resolve it.
+The reverse lookup zone entry for the domain controller in the domain controller's DNS server for the Kubernetes network is missing. For this example, the missing entry was `cni0 10.244`. The `sparkhead` pod containers were trying to use the IP address 10.244.1.30:9000 to reach `nnnode-0-1`, but the DNS wasn't able to resolve it.
 
-:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller.png" alt-text="Missing reverse lookup zone entry for the domain controller":::
+:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller.png" alt-text="Screenshot shows a console window with the I P address for c n i 0 highlighted.":::
 
 ## Resolution
 
 Add the missing reverse DNS entry (PTR record) for the zone referred in the logs. For this example, we added 244.10.
 
-:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller_add.png" alt-text="Add missing reverse lookup zone entry for the domain controller":::
+:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller_add.png" alt-text="Screenshot shows adding the missing reverse lookup zone entry for the domain controller.":::
 
 > [!NOTE]
 > Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server for all different networks of your cluster nodes.
 
 ## Next steps
 
-[Verify reverse DNS entry (PTR record) for domain controller](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).
+- [Verify reverse DNS entry for domain controller](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller)

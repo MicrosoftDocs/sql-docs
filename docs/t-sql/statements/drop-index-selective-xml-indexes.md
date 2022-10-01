@@ -1,23 +1,20 @@
 ---
-description: "DROP INDEX (Selective XML Indexes)"
-title: "DROP INDEX (Selective XML Indexes) | Microsoft Docs"
-ms.custom: ""
+title: "DROP INDEX (Selective XML Indexes)"
+description: DROP INDEX (Selective XML Indexes)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP XML INDEX statement"
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # DROP INDEX (Selective XML Indexes)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Drops an existing selective XML index or secondary selective XML index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   

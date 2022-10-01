@@ -1,19 +1,18 @@
 ---
-description: "sys.dm_xe_database_session_events (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_xe_database_session_events"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+description: sys.dm_xe_database_session_events (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "4/18/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.topic: "reference"
-dev_langs: 
+ms.custom: seo-lt-2019
+dev_langs:
   - "TSQL"
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
-ms.custom: seo-lt-2019
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database and Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

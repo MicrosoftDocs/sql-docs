@@ -1,29 +1,26 @@
 ---
-description: "CREATE CREDENTIAL (Transact-SQL)"
-title: "CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE CREDENTIAL (Transact-SQL)"
+description: CREATE CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "09/25/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREDENTIAL_TSQL"
   - "SQL13.SWB.CREDENTIAL.GENERAL.F1"
   - "CREATE CREDENTIAL"
   - "CREATE_CREDENTIAL_TSQL"
   - "CREDENTIAL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SECRET clause"
   - "authentication [SQL Server], credentials"
   - "CREATE CREDENTIAL statement"
   - "credentials [SQL Server], CREATE CREDENTIAL statement"
-ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE CREDENTIAL (Transact-SQL)

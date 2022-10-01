@@ -1,31 +1,27 @@
 ---
-title: "srv_paramset (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_paramset (Extended Stored Procedure API)"
 description: Learn how srv_paramset in the Extended Stored Procedure API sets the value of a remote stored procedure call return parameter.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_paramset"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_paramset"
+apilocation: opends60.dll
+apiname: srv_paramset
+apitype: "DLLExport"
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_paramset (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Sets the value of a remote stored procedure call return parameter. This function has been superseded by the **srv_paramsetoutput** function.  
   

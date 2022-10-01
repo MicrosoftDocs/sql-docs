@@ -1,23 +1,16 @@
 ---
 title: Configure a SQL Server Always On availability group across different regions
 description: This article explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region.
-services: virtual-machines
-documentationCenter: na
-author: rajeshsetlem
-editor: monicar
-tags: azure-service-management
-
-ms.assetid: 388c464e-a16e-4c9d-a0d5-bb7cf5974689
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma, randolphwest
+ms.date: 09/01/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: "05/02/2017"
-ms.author: rsetlem
-ms.custom: "seo-lt-2019"
-ms.reviewer: mathoma
+ms.custom: seo-lt-2019
+editor: monicar
+tags: azure-service-management
 ---
 
 # Configure a SQL Server Always On availability group across different Azure regions
@@ -25,6 +18,9 @@ ms.reviewer: mathoma
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 This article explains how to configure a SQL Server Always On availability group replica on Azure virtual machines in a remote Azure location. Use this configuration to support disaster recovery.
+
+> [!NOTE]  
+> You can use the same steps in this article to extend your on-premises availability group to Azure.
 
 This article applies to Azure Virtual Machines in Resource Manager mode.
 
@@ -159,14 +155,14 @@ The replica in the remote data center is part of the availability group but it i
 
 Preferably, update the cluster configuration to set `RegisterAllProvidersIP=1` and the client connection strings to set `MultiSubnetFailover=Yes`. See [Connecting With MultiSubnetFailover](/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery#Anchor_0).
 
-If you cannot modify the connection strings, you can configure name resolution caching. See [Time-out error and you cannot connect to a SQL Server 2012 AlwaysOn availability group listener in a multi-subnet environment](https://support.microsoft.com/help/2792139/time-out-error-and-you-cannot-connect-to-a-sql-server-2012-alwayson-av).
+If you cannot modify the connection strings, you can configure name resolution caching. See [Time-out error and you cannot connect to a SQL Server 2012 Always On availability group listener in a multi-subnet environment](https://support.microsoft.com/help/2792139/time-out-error-and-you-cannot-connect-to-a-sql-server-2012-alwayson-av).
 
 ## Fail over to remote region
 
 To test listener connectivity to the remote region, you can fail over the replica to the remote region. While the replica is asynchronous, failover is vulnerable to potential data loss. To fail over without data loss, change the availability mode to synchronous and set the failover mode to automatic. Use the following steps:
 
 1. In **Object Explorer**, connect to the instance of SQL Server that hosts the primary replica.
-1. Under **AlwaysOn Availability Groups**, **Availability Groups**, right-click your availability group and select **Properties**.
+1. Under **Always On Availability Groups**, **Availability Groups**, right-click your availability group and select **Properties**.
 1. On the **General** page, under **Availability Replicas**, set the secondary replica in the DR site to use **Synchronous Commit** availability mode and **Automatic** failover mode.
 1. If you have a secondary replica in same site as your primary replica for high availability, set this replica to **Asynchronous Commit** and **Manual**.
 1. Select OK.

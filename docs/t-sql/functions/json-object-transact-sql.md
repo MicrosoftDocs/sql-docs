@@ -1,23 +1,22 @@
 ---
+title: "JSON_OBJECT (Transact-SQL)"
 description: "JSON_OBJECT (Transact-SQL)"
-title: "JSON_OBJECT (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+author: "uc-msft"
+ms.author: "umajay"
 ms.date: 05/24/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "JSON_OBJECT"
   - "JSON_OBJECT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "JSON_OBJECT function"
   - "JSON, validating"
-author: "uc-msft"
-ms.author: "umajay"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-ver16||>= sql-server-linux-ver16"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 # JSON_OBJECT (Transact-SQL)
 

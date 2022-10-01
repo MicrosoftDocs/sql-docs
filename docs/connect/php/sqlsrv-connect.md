@@ -1,24 +1,19 @@
 ---
 title: "sqlsrv_connect"
 description: "Creates a connection resource and opens a connection using the sql_srv driver for PHP. By default, the connection is attempted using Windows Authentication."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "03/26/2018"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_connect"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connecting to the server"
   - "API Reference, sqlsrv_connect"
   - "connection pooling support"
   - "sqlsrv_connect"
-ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-author: David-Engel
-ms.author: v-davidengel
+apiname: "sqlsrv_connect"
+apitype: "NA"
 ---
 # sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +32,7 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
   
 Beginning in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can also specify a LocalDB instance with `"(localdb)\instancename"`. For more information, see [Support for LocalDB](php-driver-for-sql-server-support-for-localdb.md).  
   
-Also beginning in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can specify a virtual network name, to connect to an AlwaysOn availability group. For more information about [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support for [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
+Also beginning in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can specify a virtual network name, to connect to an Always On availability group. For more information about [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
   
 *$connectionInfo* [OPTIONAL]: An associative **array** that contains connection attributes (for example, **array**("Database" => "AdventureWorks")). See [Connection Options](connection-options.md) for a list of the supported keys for the array.  
   

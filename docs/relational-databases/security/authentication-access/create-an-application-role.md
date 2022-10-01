@@ -18,7 +18,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create an Application Role
-[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to create an application role in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Application roles restrict user access to a database except through specific applications. Application roles have no users, so the **Role Members** list is not displayed when **Application role** is selected.  
   
 > [!IMPORTANT]  
@@ -63,7 +63,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 8.  Under **Schemas owned by this role**, select or view schemas that will be owned by this role. A schema can be owned by only one schema or role.  
   
-9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+9. Select **OK**.
 
 ### Additional Options  
  The **Application Role - New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  

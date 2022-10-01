@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Object GDR Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **Audit Database Object GDR** event class occurs when a GRANT, REVOKE, or DENY has been issued for database objects, such as assemblies and schemas.  
   
 ## Audit Database Object GDR Event Class Data Columns  

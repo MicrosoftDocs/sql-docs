@@ -1,24 +1,21 @@
 ---
-description: "DROP EVENT SESSION (Transact-SQL)"
-title: "DROP EVENT SESSION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP EVENT SESSION (Transact-SQL)"
+description: DROP EVENT SESSION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_EVENT_SESSION_TSQL"
   - "DROP EVENT SESSION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "DROP EVENT SESSION statement"
-ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

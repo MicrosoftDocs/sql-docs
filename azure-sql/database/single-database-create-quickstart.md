@@ -1,17 +1,20 @@
 ---
 title: Create a single database
 description: Create a single database in Azure SQL Database using the Azure portal, PowerShell, or the Azure CLI.
-services: sql-database
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
+ms.date: 07/14/2022
 ms.service: sql-database
 ms.subservice: deployment-configuration
-ms.custom: contperf-fy21q1, devx-track-azurecli, devx-track-azurepowershell, mode-ui
 ms.topic: quickstart
-author: LitKnd
-ms.author: kendralittle
-ms.reviewer: mathoma
-ms.date: 01/26/2022 
+ms.custom:
+  - "contperf-fy21q1"
+  - "devx-track-azurecli"
+  - "devx-track-azurepowershell"
+  - "mode-ui"
 ---
-# Quickstart: Create an Azure SQL Database single database
+# Quickstart: Create a single database - Azure SQL Database
 
 In this quickstart, you create a [single database](single-database-overview.md) in Azure SQL Database using either the Azure portal, a PowerShell script, or an Azure CLI script. You then query the database using **Query editor** in the Azure portal.
 
@@ -37,7 +40,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. For **Resource group**, select **Create new**, enter *myResourceGroup*, and select **OK**.
 1. For **Database name**, enter *mySampleDatabase*.
 1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
-   - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like mysqlserver12345, and the portal lets you know if it's available or not.
+   - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like `mysqlserver12345`, and the portal lets you know if it's available or not.
    - **Location**: Select a location from the dropdown list.
    - **Authentication method**: Select **Use SQL authentication**.
    - **Server admin login**: Enter *azureuser*.
@@ -52,18 +55,24 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
       :::image type="content" source="./media/single-database-create-quickstart/configure-database.png" alt-text="configure serverless database" lightbox="media/single-database-create-quickstart/configure-database.png":::
 
+1. Under **Backup storage redundancy**, choose a redundancy option for the storage account where your backups will be saved. To learn more, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). 
 1. Select **Next: Networking** at the bottom of the page.
 
    :::image type="content" source="./media/single-database-create-quickstart/new-sql-database-basics.png" alt-text="New SQL database - Basic tab":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
+
+   :::image type="content" source="./media/single-database-create-quickstart/networking.png" alt-text="Screenshot that shows the networking tab for firewall rules.":::
+
+
+1. Under **Connection policy**, choose the **Default** [connection policy](connectivity-architecture.md#connection-policy), and leave the **Minimum TLS version** at the default of TLS 1.2. 
 1. Select **Next: Security** at the bottom of the page.
 
-   :::image type="content" source="./media/single-database-create-quickstart/networking.png" alt-text="Networking tab":::
+   :::image type="content" source="./media/single-database-create-quickstart/networking-connections.png" alt-text="Screenshot that shows the networking tab for policy and encryption.":::
   
-1. On the **Security tab**, you have the option to enable [Microsoft Defender for SQL](../database/azure-defender-for-sql.md). Select **Next: Additional settings** at the bottom of the page.
-1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an AdventureWorksLT sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database.
+1. On the **Security** page, you can choose to start a free trial of [Microsoft Defender for SQL](../database/azure-defender-for-sql.md), as well as configure [Ledger](/sql/relational-databases/security/ledger/ledger-overview), [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) and [Transparent data encryption (TDE)](transparent-data-encryption-byok-overview.md) if you desire.  Select **Next: Additional settings** at the bottom of the page.
+1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an AdventureWorksLT sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database. You can also configure [database collation](/sql/t-sql/statements/collations) and a [maintenance window](maintenance-window.md). 
 
 1. Select **Review + create** at the bottom of the page:
 
@@ -188,9 +197,9 @@ You can create a resource group, server, and single database using Azure PowerSh
 
 The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article. It has common Azure tools preinstalled and configured to use with your account.
 
-To open the Cloud Shell, just select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
+To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
 
-When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions will use Azure CLI in a Bash environment, Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
+When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions will use Azure CLI in a PowerShell environment. Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
 
 ### Set parameter values
 

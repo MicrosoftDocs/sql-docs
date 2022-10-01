@@ -1,25 +1,23 @@
 ---
-description: "sys.synonyms (Transact-SQL)"
-title: "sys.synonyms (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.synonyms (Transact-SQL)"
+description: sys.synonyms (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.synonyms_TSQL"
   - "synonyms_TSQL"
   - "sys.synonyms"
   - "synonyms"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.synonyms catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d6e88ca6-6e3d-4f56-bd3e-d85e26be5499
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.synonyms (Transact-SQL)

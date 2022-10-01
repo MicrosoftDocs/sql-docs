@@ -1,14 +1,13 @@
 ---
 title: Return codes (OLE DB driver)
 description: Learn about return codes for OLE DB Driver for SQL Server member functions and how to get more information about results besides success.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB error handling, return codes"
   - "OLE DB Driver for SQL Server, errors"
   - "failed function [OLE DB]"
@@ -20,8 +19,6 @@ helpviewer_keywords:
   - "S_OK"
   - "FAILED macro"
   - "errors [OLE DB], return codes"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Return Codes
 

@@ -1,11 +1,7 @@
 ---
+title: GROUP BY (Transact-SQL)
 description: "SELECT - GROUP BY- Transact-SQL"
-title: "GROUP BY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
 f1_keywords: 
@@ -29,16 +25,19 @@ helpviewer_keywords:
   - "table groups [SQL Server]"
   - "groups [SQL Server], tables divided into groups"
   - "summary values [SQL Server]"
-ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "10/12/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # SELECT - GROUP BY- Transact-SQL
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-A SELECT statement clause that divides the query result into groups of rows, usually for the purpose of performing one or more aggregations on each group. The SELECT statement returns one row per group.  
+A SELECT statement clause that divides the query result into groups of rows, usually for the purpose of performing one or more aggregations on each group. The SELECT statement returns one row per group.
   
 ## Syntax  
 

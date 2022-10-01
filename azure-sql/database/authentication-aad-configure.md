@@ -1,18 +1,20 @@
 ---
 title: Configure Azure Active Directory authentication
-titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics 
+titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to connect to SQL Database, SQL Managed Instance, and Azure Synapse Analytics by using Azure Active Directory authentication, after you configure Azure AD.
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom: azure-synapse, has-adal-ref, sqldbrb=2, devx-track-azurepowershell
-ms.devlang: 
-ms.topic: how-to
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/09/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: how-to
+ms.custom:
+  - "azure-synapse"
+  - "has-adal-ref"
+  - "sqldbrb=2"
+  - "devx-track-azurepowershell"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Configure and manage Azure AD authentication with Azure SQL
@@ -75,7 +77,7 @@ When using Azure Active Directory with geo-replication, the Azure Active Directo
 > [!IMPORTANT]
 > Only follow these steps if you are provisioning an Azure SQL Managed Instance. This operation can only be executed by Global Administrator or a Privileged Role Administrator in Azure AD.
 >
-> In **public preview**, you can assign the **Directory Readers** role to a group in Azure AD. The group owners can then add the managed instance identity as a member of this group, which would allow you to provision an Azure AD admin for the SQL Managed Instance. For more information on this feature, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
+> You can assign the **Directory Readers** role to a group in Azure AD. The group owners can then add the managed instance identity as a member of this group, which would allow you to provision an Azure AD admin for the SQL Managed Instance. For more information on this feature, see [Directory Readers role in Azure Active Directory for Azure SQL](authentication-aad-directory-readers-role.md).
 
 Your SQL Managed Instance needs permissions to read Azure AD to successfully accomplish tasks such as authentication of users through security group membership or creation of new users. For this to work, you need to grant the SQL Managed Instance permission to read Azure AD. You can do this using the Azure portal or PowerShell.
 

@@ -1,23 +1,21 @@
 ---
-description: "MSagentparameterlist (Transact-SQL)"
-title: "MSagentparameterlist (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSagentparameterlist (Transact-SQL)"
+description: MSagentparameterlist (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSagentparameterlist_TSQL"
   - "MSagentparameterlist"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Msagentparameterlist system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

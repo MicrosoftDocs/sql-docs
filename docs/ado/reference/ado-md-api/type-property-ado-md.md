@@ -1,22 +1,15 @@
 ---
+title: "Type Property (ADO MD)"
 description: "Type Property (ADO MD)"
-title: "Type Property (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Member::Type"
-  - "Type"
-helpviewer_keywords: 
-  - "Type property [ADO MD]"
-ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Type property [ADO MD]"
+apitype: "COM"
 ---
 # Type Property (ADO MD)
 Indicates the type of the current [member](./member-object-ado-md.md).  

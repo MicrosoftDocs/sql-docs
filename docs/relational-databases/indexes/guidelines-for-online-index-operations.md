@@ -1,13 +1,14 @@
 ---
-description: "Guidelines for online index operations"
-title: Guidelines for Online Index Operations | Microsoft Docs
-ms.custom: ""
+title: Guidelines for Online Index Operations
+description: Guidelines for online index operations
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 11/12/2019
 ms.prod: sql
-ms.reviewer: ""
+ms.prod_service: "table-view-index, sql-database"
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "clustered indexes, online operations"
   - "online index operations"
   - "indexes [SQL Server], online operations"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], online operations"
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.prod_service: "table-view-index, sql-database"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines for online index operations
@@ -83,7 +81,7 @@ Online index rebuilding may increase fragmentation when it is allowed to run wit
   
 ## Transaction log considerations
 
-Large-scale index operations, performed offline or online, can generate large data loads that can cause the transaction log to quickly fill. To make sure that the index operation can be rolled back, the transaction log cannot be truncated until the index operation has been completed; however, the log can be backed up during the index operation. Therefore, the transaction log must have sufficient space to store both the index operation transactions and any concurrent user transactions for the duration of the index operation. For more information, see [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
+Large-scale index operations, performed offline or online, can generate large data loads that can cause the transaction log to quickly fill. This is because both offline and online index rebuild operations are fully logged. To make sure that the index operation can be rolled back, the transaction log cannot be truncated until the index operation has been completed; however, the log can be backed up during the index operation. Therefore, the transaction log must have sufficient space to store both the index operation transactions and any concurrent user transactions for the duration of the index operation. For more information, see [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
 ## Resumable index considerations
 

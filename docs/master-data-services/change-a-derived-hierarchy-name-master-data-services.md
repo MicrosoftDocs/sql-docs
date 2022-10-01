@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "derived hierarchies, changing name"
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Change a Derived Hierarchy Name (Master Data Services)
 

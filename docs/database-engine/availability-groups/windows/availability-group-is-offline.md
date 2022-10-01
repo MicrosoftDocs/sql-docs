@@ -1,19 +1,17 @@
 ---
 title: "Availability group is offline"
 description: "Learn how to identify times when and possible reasons why an Always On availability group may go offline."
-ms.custom: "seodec18"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: end-user-help
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp2online.issues.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: end-user-help
+ms.custom: seodec18
+f1_keywords:
+  - "sql13.swb.agdashboard.agp2online.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Always On Availability group is offline
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

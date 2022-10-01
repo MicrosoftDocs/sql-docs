@@ -62,6 +62,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Requires **ALTER ANY ROLE** permission on the database, **ALTER** permission on the role, or membership in **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+
+> [!NOTE]
+> The two procedures in this section only apply to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].
   
 #### To add a member to a fixed server role  
   
@@ -77,7 +80,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 6.  In the **Select Server Login or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or server role to add to this server role. Alternately, click **Browse...** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Server Role Properties -**_server\_role\_name_ dialog box.  
   
-7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 #### To add a member to a user-defined database role  
   
@@ -91,7 +94,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  Expand the **Roles** folder.  
   
-6.  Expand the **Server Roles** folder.  
+6.  Expand the **Database Roles** folder.  
   
 7.  Right-click the role you want to edit and select **Properties**.  
   
@@ -99,7 +102,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 9. In the **Select Database User or Role** dialog box, under **Enter the object names to select (examples)**, enter the login or database role to add to this database role. Alternately, click **Browse...** and select any or all of the available objects in the **Browse for Objects** dialog box. Click **OK** to return to the **Database Role Properties -**_database\_role\_name_ dialog box.  
   
-10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+10. Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

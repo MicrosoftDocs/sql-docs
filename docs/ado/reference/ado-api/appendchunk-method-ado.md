@@ -1,22 +1,18 @@
 ---
+title: "AppendChunk Method (ADO)"
 description: "AppendChunk Method (ADO)"
-title: "AppendChunk Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_Parameter::AppendChunk"
-  - "Field20::AppendChunk"
-helpviewer_keywords: 
-  - "AppendChunk method [ADO]"
-ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_Parameter::AppendChunk"
+  - "Field20::AppendChunk"
+helpviewer_keywords:
+  - "AppendChunk method [ADO]"
+apitype: "COM"
 ---
 # AppendChunk Method (ADO)
 Appends data to a large text or binary data [Field](./field-object.md), or to a [Parameter](./parameter-object.md) object.  

@@ -1,23 +1,21 @@
 ---
-description: "IHpublishertables (Transact-SQL)"
-title: "IHpublishertables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHpublishertables (Transact-SQL)"
+description: IHpublishertables (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHpublishertables"
   - "IHpublishertables_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHpublishertables system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
-author: LitKnd
-ms.author: kendralittle
 ---
 # IHpublishertables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

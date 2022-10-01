@@ -1,16 +1,14 @@
 ---
 title: Connection events
 description: The connection events to retrieve informational messages from a data source and determine if its state is changed.
-ms.date: 11/13/2020
-dev_langs: 
-  - "csharp"
-ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 11/13/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Connection events
 

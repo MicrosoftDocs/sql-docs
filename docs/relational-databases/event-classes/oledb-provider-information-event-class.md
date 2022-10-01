@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB Provider Information Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The **OLEDB Provider Information** event class occurs when a distributed query is run and collects information corresponding to the provider connection.  
   
  This event class contains all the properties that are collected from the remote provider by using various property sets, including the following:  

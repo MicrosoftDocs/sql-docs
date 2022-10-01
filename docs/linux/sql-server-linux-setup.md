@@ -5,7 +5,7 @@ description: Install, update, and uninstall SQL Server on Linux. This article co
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
@@ -19,6 +19,9 @@ ms.technology: linux
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux.
+
+> [!TIP]  
+> For installing [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CTP 2.1 on Linux, see [Installation guidance for SQL Server 2022 (16.x) Preview on Linux](./sql-server-linux-setup-2022.md).
 
 For other deployment scenarios, see:
 
@@ -37,24 +40,19 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
-SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Platform | Supported version(s) | Get |
-|-----|-----|----- |
-| **Red Hat Enterprise Linux** | 7.7 - 7.9, 8.0 - 8.5  | [Get RHEL](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
-| **SUSE Linux Enterprise Server** | v12 SP3 - SP5 | [Get SLES v12](https://www.suse.com/products/server) |
-| **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](https://releases.ubuntu.com/bionic/) |
-| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started) |
+[!INCLUDE [linux-supported-platforms-2017](includes/linux-supported-platforms-2017.md)]
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15 "
 
-[!INCLUDE [linux-supported-platforms-2019](../includes/linux-supported-platforms-2019.md)]
+[!INCLUDE [linux-supported-platforms-2019](includes/linux-supported-platforms-2019.md)]
 
 ::: moniker-end
 
@@ -97,7 +95,7 @@ You can install SQL Server 2017 or SQL Server 2019 on Linux from the command lin
 | Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true) |
 | Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true) |
 
-You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
+You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json).
 
 After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
@@ -119,7 +117,7 @@ To upgrade SQL Server, first [change your configured repository](sql-server-linu
 
 To rollback or downgrade SQL Server to a previous release, use the following steps:
 
-1. Identify the version number for the SQL Server package you want to downgrade to. For a list of package numbers, see the [Release notes](../linux/sql-server-linux-release-notes.md).
+1. Identify the version number for the SQL Server package you want to downgrade to. For a list of package numbers, see the [Release notes](../linux/sql-server-linux-release-notes-2017.md).
 
 1. Downgrade to a previous version of SQL Server. In the following commands, replace `<version_number>` with the SQL Server version number you identified in step one.
 
@@ -188,7 +186,7 @@ If your Linux machine does not have access to the online repositories used in th
 > [!TIP]
 > If you successfully installed with the steps in the quick starts, you do not need to download or manually install the SQL Server package(s). This section is only for the offline scenario.
 
-1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](../linux/sql-server-linux-release-notes.md).
+1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](../linux/sql-server-linux-release-notes-2017.md).
 
 1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 

@@ -1,21 +1,18 @@
 ---
-description: "CREATE XML INDEX (Selective XML Indexes)"
-title: "CREATE XML INDEX (Selective XML Indexes) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE XML INDEX (Selective XML Indexes)"
+description: CREATE XML INDEX (Selective XML Indexes)
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
-ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # CREATE XML INDEX (Selective XML Indexes)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a new secondary selective XML index on a single path that is already indexed by an existing selective XML index. You can also create primary selective XML indexes. For information, see [Create, Alter, and Drop Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   

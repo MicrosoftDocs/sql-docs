@@ -1,29 +1,27 @@
 ---
 title: "CREATE DATABASE AUDIT SPECIFICATION"
-description: Create a database audit specification object using the SQL Server audit feature.
 titleSuffix: SQL Server (Transact-SQL)
-ms.custom: "seo-lt-2019"
+description: Create a database audit specification object using the SQL Server audit feature.
+author: sravanisaluru
+ms.author: srsaluru
 ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "CREATE DATABASE AUDIT"
   - "DATABASE_AUDIT_SPECIFICATION_TSQL"
   - "DATABASE AUDIT SPECIFICATION"
   - "CREATE_DATABASE_AUDIT_SPECIFICATION_TSQL"
   - "CREATE_DATABASE_AUDIT_TSQL"
   - "CREATE DATABASE AUDIT SPECIFICATION"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database audit specification"
   - "CREATE DATABASE AUDIT SPECIFICATION statement"
-ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
-author: sravanisaluru
-ms.author: srsaluru
+dev_langs:
+  - "TSQL"
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

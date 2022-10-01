@@ -1,27 +1,26 @@
 ---
-title: "^ (Bitwise Exclusive OR) (Transact-SQL) | Microsoft Docs"
+title: "^ (Bitwise Exclusive OR) (Transact-SQL)"
 description: "^ (Bitwise Exclusive OR) (Transact-SQL)"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "01/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "^_TSQL"
   - "^"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "^ (bitwise exclusive OR operator)"
   - "OR operator"
   - "exclusive OR mathematical operations"
   - "bitwise exclusive OR (^)"
-ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # ^ (Bitwise Exclusive OR) (Transact-SQL)
 

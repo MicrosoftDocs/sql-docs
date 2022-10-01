@@ -45,16 +45,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  If the person or group that needs to access the database does not have a login and if they only need access to one or few databases, create a **Windows user** or a **SQL user with password**. Also called a contained database user, it is not associated with a login in the master database. This is an excellent choice when you want to be able to easily move your database between instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To use this option on [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)], an administrator must first enable contained databases for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and the database be enabled for containment. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-> **IMPORTANT!** When connecting as a contained database user you must provide the name of the database as part of the connection string. To specify the database in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], in the **Connect to** dialog box, click **Options**, and then click the **Connection Properties** tab.  
+> [!IMPORTANT]  
+> When connecting as a contained database user you must provide the name of the database as part of the connection string. To specify the database in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], in the **Connect to** dialog box, click **Options**, and then click the **Connection Properties** tab.  
   
  Select **SQL user with password** or a **SQL user with login** based on a **SQL Server authentication login**, when the person connecting cannot authenticate with Windows. This is common when people outside of your organization (for example customers) are connecting to your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-> **TIP!** For people inside your organization, Windows authentication is a better choice, because they won't have to remember an additional password, and because Windows authentication offers additional security features such as Kerberos.  
+> [!TIP]  
+> For people inside your organization, Windows authentication is a better choice, because they won't have to remember an additional password, and because Windows authentication offers additional security features such as Kerberos.  
   
 ##  <a name="Restrictions"></a> Background  
  A user is a database level security principal. Logins must be mapped to a database user to connect to a database. A login can be mapped to different databases as different users but can only be mapped as one user in each database. In a partially contained database, a user can be created that does not have a login. For more information about contained database users, see [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). If the guest user in a database is enabled, a login that is not mapped to a database user can enter the database as the guest user.  
   
-> **IMPORTANT!** The guest user is ordinarily disabled. Do not enable the guest user unless it is necessary.  
+> [!IMPORTANT]  
+> The guest user is ordinarily disabled. Do not enable the guest user unless it is necessary.  
   
  As a security principal, permissions can be granted to users. The scope of a user is the database. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login.  
   
@@ -107,7 +110,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      **Asymmetric key name**  
      Enter the key to be used for the database user. Alternately, click the ellipsis **(...)** to open the **Select Asymmetric Key** dialog box. **Asymmetric key name** is available if you select **User mapped to an asymmetric key** from the **User type** list.  
   
-6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ### Additional Options  
  The **Database User - New** dialog box also offers options on four additional pages: **Owned Schemas**, **Membership**, **Securables**, and **Extended Properties**.  

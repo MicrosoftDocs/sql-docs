@@ -1,19 +1,15 @@
 ---
+title: "onError Event (RDS)"
 description: "onError Event (RDS)"
-title: "onError Event (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "onError event [ADO]"
-ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "onError event [ADO]"
+apitype: "COM"
 ---
 # onError Event (RDS)
 The **onError** event is called whenever an error occurs during an operation.  

@@ -1,15 +1,14 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of all user databases on a managed instance in Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: sql-db-mi-split
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
-ms.date: 05/09/2022
+ms.date: 09/09/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Managed Instance)
@@ -62,11 +61,11 @@ There is some overlap of content in the following articles, be sure to make chan
   
 - **Failover group read-write listener**
 
-  A DNS CNAME record that points to the current primary. It is created automatically when the failover group is created and allows the read-write workload to transparently reconnect to the primary when the primary changes after failover. When the failover group is created on a SQL Managed Instance, the DNS CNAME record for the listener URL is formed as `<fog-name>.<zone_id>.database.windows.net`.
+  A DNS CNAME record that points to the current primary. It's created automatically when the failover group is created and allows the read-write workload to transparently reconnect to the primary when the primary changes after failover. When the failover group is created on a SQL Managed Instance, the DNS CNAME record for the listener URL is formed as `<fog-name>.<zone_id>.database.windows.net`.
 
 - **Failover group read-only listener**
 
-  A DNS CNAME record that points to the current secondary. It is created automatically when the failover group is created and allows the read-only SQL workload to transparently connect to the secondary when the secondary changes after failover. When the failover group is created on a SQL Managed Instance, the DNS CNAME record for the listener URL is formed as `<fog-name>.secondary.<zone_id>.database.windows.net`.
+  A DNS CNAME record that points to the current secondary. It's created automatically when the failover group is created and allows the read-only SQL workload to transparently connect to the secondary when the secondary changes after failover. When the failover group is created on a SQL Managed Instance, the DNS CNAME record for the listener URL is formed as `<fog-name>.secondary.<zone_id>.database.windows.net`.
 
 [!INCLUDE [auto-failover-group-terminology](../includes/auto-failover-group-terminology.md)]  
 
@@ -81,20 +80,9 @@ The following diagram illustrates a typical configuration of a geo-redundant clo
 
 If your application uses SQL Managed Instance as the data tier, follow the general guidelines and best practices outlined in this article when designing for business continuity.
 
-
-> [!IMPORTANT]
-> If you deploy auto-failover groups in a hub-and-spoke network topology cross-region, replication traffic should go directly between the two managed instance subnets rather than directed through the hub networks.
-
-## Initial seeding 
-
-When adding managed instances to a failover group, there is an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive operation. Once initial seeding completes, data is synchronized, and then only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of your data, number of replicated databases, the load on primary databases, and the speed of the link between the primary and secondary. Under normal circumstances, possible seeding speed is up to 360 GB an hour for SQL Managed Instance. Seeding is performed for all databases in parallel.
-
-For SQL Managed Instance, consider the speed of the Express Route link between the two instances when estimating the time of the initial seeding phase. If the speed of the link between the two instances is slower than what is necessary, the time to seed is likely to be noticeably impacted. You can use the stated seeding speed, number of databases, total size of data, and the link speed to estimate how long the initial seeding phase will take before data replication starts. For example, for a single 100 GB database, the initial seed phase would take about 1.2 hours if the link is capable of pushing 84 GB per hour, and if there are no other databases being seeded. If the link can only transfer 10 GB per hour, then seeding a 100 GB database will take about 10 hours. If there are multiple databases to replicate, seeding will be executed in parallel, and, when combined with a slow link speed, the initial seeding phase may take considerably longer, especially if the parallel seeding of data from all databases exceeds the available link bandwidth. If the network bandwidth between two instances is limited and you are adding multiple managed instances to a failover group, consider adding multiple managed instances to the failover group sequentially, one by one. Given an appropriately sized gateway SKU between the two managed instances, and if corporate network bandwidth allows it, it's possible to achieve speeds as high as 360 GB an hour.  
-
-
 ## <a name="creating-the-secondary-instance"></a> Creating the geo-secondary instance
 
-To ensure non-interrupted connectivity to the primary SQL Managed Instance after failover, both the primary and secondary instances must be in the same DNS zone. It will guarantee that the same multi-domain (SAN) certificate can be used to authenticate client connections to either of the two instances in the failover group. When your application is ready for production deployment, create a secondary SQL Managed Instance in a different region and make sure it shares the DNS zone with the primary SQL Managed Instance. You can do it by specifying an optional parameter during creation. If you are using PowerShell or the REST API, the name of the optional parameter is `DNSZonePartner`. The name of the corresponding optional field in the Azure portal is *Primary Managed Instance*.
+To ensure non-interrupted connectivity to the primary SQL Managed Instance after failover, both the primary and secondary instances must be in the same DNS zone. It will guarantee that the same multi-domain (SAN) certificate can be used to authenticate client connections to either of the two instances in the failover group. When your application is ready for production deployment, create a secondary SQL Managed Instance in a different region and make sure it shares the DNS zone with the primary SQL Managed Instance. You can do it by specifying an optional parameter during creation. If you're using PowerShell or the REST API, the name of the optional parameter is `DNSZonePartner`. The name of the corresponding optional field in the Azure portal is *Primary Managed Instance*.
 
 > [!IMPORTANT]
 > The first managed instance created in the subnet determines DNS zone for all subsequent instances in the same subnet. This means that two instances from the same subnet cannot belong to different DNS zones.
@@ -105,22 +93,55 @@ For more information about creating the secondary SQL Managed Instance in the sa
 
 Deploy both managed instances to [paired regions](/azure/availability-zones/cross-region-replication-azure) for performance reasons. SQL Managed Instance failover groups in paired regions have better performance compared to unpaired regions.
 
-## <a name="enabling-replication-traffic-between-two-instances"></a> Enable geo-replication traffic between two instances
+## <a name="enabling-replication-traffic-between-two-instances"></a> Enable and optimize geo-replication traffic flow between the instances
 
-Because each managed instance is isolated in its own VNet, two-directional traffic between these VNets must be allowed. See [Azure VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+Connectivity between the virtual network subnets hosting primary and secondary instance must be established and maintained for uninterrupted geo-replication traffic flow. There are multiple ways to provide connectivity between the instances that you can choose among based on your network topology and policies:
 
+ * [Global virtual network peering](/azure/virtual-network/virtual-network-peering-overview)
+ * [VPN gateways](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+ * [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
 
+> [!IMPORTANT]
+> [Global virtual network peering (VNet peering) ](/azure/virtual-network/virtual-network-peering-overview) is the recommended way to establish connectivity between two instances in a failover group as it provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public internet, gateways, or additional encryption is required in the communication between the peered virtual networks.
+Global virtual network peering is [supported for instances hosted in subnets created starting 9/22/2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering).
+
+Regardless of the connectivity mechanism, there are requirements that must be fulfilled for geo-replication traffic to flow:
+- The Network Security Group (NSG) rules on the subnet hosting **primary** instance allow:
+  - **Inbound** traffic on port 5022 and port range 11000-11999 from the subnet hosting the secondary instance.
+  - **Outbound** traffic on port 5022 and port range 11000-11999 to the subnet hosting the secondary instance.
+- The Network Security Group (NSG) rules on the subnet hosting **secondary** instance allow:
+  - **Inbound** traffic on port 5022 and port range 11000-11999 from the subnet hosting the primary instance.
+  - **Outbound** traffic on port 5022 and port range 11000-11999 to the subnet hosting the primary instance.
+- IP address ranges of VNets hosting primary and secondary instance must not overlap.
+- There's no indirect overlap of IP address range between the VNets hosting primary and secondary instance and any other VNets they are peered with via local virtual network peering or other means 
+
+Additionally, if you're using other mechanisms for providing connectivity between the instances than the recommended [global virtual network peering](/azure/virtual-network/virtual-network-peering-overview), you need to ensure the following:
+- Any networking device used, like firewalls or network virtual appliances (NVAs), do not block the traffic described above.
+- Routing is properly configured, and asymmetric routing is avoided.
+- If you deploy auto-failover groups in a hub-and-spoke network topology cross-region, replication traffic should go directly between the two managed instance subnets rather than directed through the hub networks. It will help you avoid connectivity and replication speed issues.
+
+> [!IMPORTANT]
+> Alternative ways of providing connectivity between the instances involving additional networking devices may make troubleshooting process in case of connectivity or replication speed issues very difficult and require active involvement of network administrators and significantly prolong the resolution time.
+
+## Initial seeding 
+
+When establishing a failover group between managed instances, there's an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive part of the operation. Once initial seeding completes data is synchronized, and only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of data, number of replicated databases, workload intensity on the primary databases, and the speed of the link between the virtual networks hosting primary and secondary instance that mostly depends on the way connectivity is established. Under normal circumstances, and when connectivity is established using recommended global virtual network peering, seeding speed is up to 360 GB an hour for SQL Managed Instance. Seeding is performed for a batch of user databases in parallel - not necessarily for all databases at the same time. Multiple batches may be needed if there are many databases hosted on the instance.
+
+If the speed of the link between the two instances is slower than what is necessary, the time to seed is likely to be noticeably impacted. You can use the stated seeding speed, number of databases, total size of data, and the link speed to estimate how long the initial seeding phase will take before data replication starts. For example, for a single 100 GB database, the initial seed phase would take about 1.2 hours if the link is capable of pushing 84 GB per hour, and if there are no other databases being seeded. If the link can only transfer 10 GB per hour, then seeding a 100-GB database will take about 10 hours. If there are multiple databases to replicate, seeding will be executed in parallel, and, when combined with a slow link speed, the initial seeding phase may take considerably longer, especially if the parallel seeding of data from all databases exceeds the available link bandwidth.
+
+> [!IMPORTANT]
+> In case of an extremely low-speed or busy link causing the initial seeding phase to take days the creation of a failover group can time out. The creation process will be automatically canceled after 6 days.
 
 ## <a name="managing-failover-to-secondary-instance"></a> Manage geo-failover to a geo-secondary instance
 
-The failover group will manage geo-failover of all databases on the primary managed instance. When a group is created, each database in the instance will be automatically geo-replicated to the geo-secondary instance. You cannot use failover groups to initiate a partial failover of a subset of databases.
+The failover group will manage geo-failover of all databases on the primary managed instance. When a group is created, each database in the instance will be automatically geo-replicated to the geo-secondary instance. You can't use failover groups to initiate a partial failover of a subset of databases.
 
 > [!IMPORTANT]
 > If a database is dropped on the primary managed instance, it will also be dropped automatically on the geo-secondary managed instance.
 
 ## <a name="using-read-write-listener-for-oltp-workload"></a> Use the read-write listener (primary MI) 
 
-For read-write workloads, use `<fog-name>.zone_id.database.windows.net` as the server name. Connections will be automatically directed to the primary. This name does not change after failover. The geo-failover involves updating the DNS record, so the client connections are redirected to the new primary only after the client DNS cache is refreshed. Because the secondary instance shares the DNS zone with the primary, the client application will be able to reconnect to it using the same server-side SAN certificate. The read-write listener and read-only listener cannot be reached via the [public endpoint for managed instance](public-endpoint-configure.md). 
+For read-write workloads, use `<fog-name>.zone_id.database.windows.net` as the server name. Connections will be automatically directed to the primary. This name doesn't change after failover. The geo-failover involves updating the DNS record, so the new client connections are routed to the new primary only after the client DNS cache is refreshed. Because the secondary instance shares the DNS zone with the primary, the client application will be able to reconnect to it using the same server-side SAN certificate. The existing client connections need to be terminated and then recreated to be routed to the new primary. The read-write listener and read-only listener cannot be reached via the [public endpoint for managed instance](public-endpoint-configure.md). 
 
 ## <a name="using-read-only-listener-to-connect-to-the-secondary-instance"></a> Use the read-only listener (secondary MI) 
 
@@ -131,12 +152,12 @@ In the Business Critical tier, SQL Managed Instance supports the use of [read-on
 - To connect to a read-only replica in the primary location, use `ApplicationIntent=ReadOnly` and `<fog-name>.<zone_id>.database.windows.net`.   
 - To connect to a read-only replica in the secondary location, use `ApplicationIntent=ReadOnly` and `<fog-name>.secondary.<zone_id>.database.windows.net`.
 
-The read-write listener and read-only listener cannot be reached via [public endpoint for managed instance](public-endpoint-configure.md).
+The read-write listener and read-only listener can't be reached via [public endpoint for managed instance](public-endpoint-configure.md).
 
 
 ## Potential performance degradation after failover 
 
-A typical Azure application uses multiple Azure services and consists of multiple components. The automatic geo-failover of the failover group is triggered based on the state the Azure SQL components alone. Other Azure services in the primary region may not be affected by the outage and their components may still be available in that region. Once the primary databases switch to the secondary region, the latency between the dependent components may increase. To avoid the impact of higher latency on the application's performance, ensure the redundancy of all the application's components in the secondary region and fail over application components together with the database. 
+A typical Azure application uses multiple Azure services and consists of multiple components. The automatic geo-failover of the failover group is triggered based on the state of the Azure SQL components alone. Other Azure services in the primary region may not be affected by the outage and their components may still be available in that region. Once the primary databases switch to the secondary region, the latency between the dependent components may increase. Ensure the redundancy of all the application's components in the secondary region and fail over application components together with the database so that application's performance is not affected by higher cross-region latency. 
 
 ## Potential data loss after failover 
 
@@ -144,7 +165,7 @@ If an outage occurs in the primary region, recent transactions may not be able t
 
 ## DNS update
 
-The DNS update of the read-write listener will happen immediately after the failover is initiated. This operation will not result in data loss. However, the process of switching database roles can take up to 5 minutes under normal conditions. Until it is completed, some databases in the new primary instance will still be read-only. If a failover is initiated using PowerShell, the operation to switch the primary replica role is synchronous. If it is initiated using the Azure portal, the UI will indicate completion status. If it is initiated using the REST API, use standard Azure Resource Manager’s polling mechanism to monitor for completion.
+The DNS update of the read-write listener will happen immediately after the failover is initiated. This operation won't result in data loss. However, the process of switching database roles can take up to 5 minutes under normal conditions. Until it's completed, some databases in the new primary instance will still be read-only. If a failover is initiated using PowerShell, the operation to switch the primary replica role is synchronous. If it's initiated using the Azure portal, the UI will indicate completion status. If it's initiated using the REST API, use standard Azure Resource Manager’s polling mechanism to monitor for completion.
 
 > [!IMPORTANT]
 > Use manual planned failover to move the primary back to the original location once the outage that caused the geo-failover is mitigated.
@@ -167,10 +188,15 @@ To learn more, see [Replication of logins and agent jobs](https://techcommunity.
 
 Instances in a failover group remain separate Azure resources, and no changes made to the configuration of the primary instance will be automatically replicated to the secondary instance. Make sure to perform all relevant changes both on primary _and_ secondary instance. For example, if you change backup storage redundancy or long-term backup retention policy on primary instance, make sure to change it on secondary instance as well.
 
+## Scaling instances
+
+You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
+
+The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be re-seeded during an upgrade or downgrade process.
 
 ## <a name="using-failover-groups-and-virtual-network-rules"></a> Use failover groups and virtual network service endpoints
 
-If you are using [Virtual Network service endpoints and rules](../database/vnet-service-endpoint-rule-overview.md) to restrict access to your SQL Managed Instance, be aware that each virtual network service endpoint applies to only one Azure region. The endpoint does not enable other regions to accept communication from the subnet. Therefore, only the client applications deployed in the same region can connect to the primary database. 
+If you're using [Virtual Network service endpoints and rules](../database/vnet-service-endpoint-rule-overview.md) to restrict access to your SQL Managed Instance, note that each virtual network service endpoint applies to only one Azure region. The endpoint does not enable other regions to accept communication from the subnet. Therefore, only the client applications deployed in the same region can connect to the primary database. 
 
 ## <a name="preventing-the-loss-of-critical-data"></a> Prevent loss of critical data
 
@@ -180,7 +206,7 @@ There is some overlap in the following content, be sure to update all that's nec
 /azure-sql/managed-instance/auto-failover-group-sql-mi.md
 -->
 
-Due to the high latency of wide area networks, geo-replication uses an asynchronous replication mechanism. Asynchronous replication makes the possibility of data loss unavoidable if the primary fails. To protect critical transactions from data loss, an application developer can call the [sp_wait_for_database_copy_sync](/sql/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync) stored procedure immediately after committing the transaction. Calling `sp_wait_for_database_copy_sync` blocks the calling thread until the last committed transaction has been transmitted and hardened in the transaction log of the secondary database. However, it does not wait for the transmitted transactions to be replayed (redone) on the secondary. `sp_wait_for_database_copy_sync` is scoped to a specific geo-replication link. Any user with the connection rights to the primary database can call this procedure.
+Due to the high latency of wide area networks, geo-replication uses an asynchronous replication mechanism. Asynchronous replication makes the possibility of data loss unavoidable if the primary fails. To protect critical transactions from data loss, an application developer can call the [sp_wait_for_database_copy_sync](/sql/relational-databases/system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync) stored procedure immediately after committing the transaction. Calling `sp_wait_for_database_copy_sync` blocks the calling thread until the last committed transaction has been transmitted and hardened in the transaction log of the secondary database. However, it doesn't wait for the transmitted transactions to be replayed (redone) on the secondary. `sp_wait_for_database_copy_sync` is scoped to a specific geo-replication link. Any user with the connection rights to the primary database can call this procedure.
 
 > [!NOTE]
 > `sp_wait_for_database_copy_sync` prevents data loss after geo-failover for specific transactions, but does not guarantee full synchronization for read access. The delay caused by a `sp_wait_for_database_copy_sync` procedure call can be significant and depends on the size of the not yet transmitted transaction log on the primary at the time of the call.
@@ -188,8 +214,8 @@ Due to the high latency of wide area networks, geo-replication uses an asynchron
 ## Failover group status
 Auto-failover group reports its status describing the current state of the data replication:
 
-- Seeding - [Initial seeding](auto-failover-group-sql-mi.md#initial-seeding) is taking place after creation of the failover group, until all user databases are initialized on the secondary instance. Failover process cannot be initiated while auto-failover group is in the Seeding status, since user databases are not copied to secondary instance yet.
-- Synchronizing - the usual status of auto-failover group. It means that data changes on the primary instance are being replicated asynchronously to the secondary instance. This status doesn't guarantee that the data is fully synchronized at every moment. There may be data changes from primary still to be replicated to the secondary due to asynchronous nature of the replication process between instances in the auto-failover group. Both automatic and manual failovers can be initiated while the auto-failover group is in the Seeding status.
+- Seeding - [Initial seeding](auto-failover-group-sql-mi.md#initial-seeding) is taking place after creation of the failover group, until all user databases are initialized on the secondary instance. Failover process cannot be initiated while auto-failover group is in the Seeding status, since user databases aren't copied to secondary instance yet.
+- Synchronizing - the usual status of auto-failover group. It means that data changes on the primary instance are being replicated asynchronously to the secondary instance. This status doesn't guarantee that the data is fully synchronized at every moment. There may be data changes from primary still to be replicated to the secondary due to asynchronous nature of the replication process between instances in the auto-failover group. Both automatic and manual failovers can be initiated while the auto-failover group is in the Synchronizing status.
 - Failover in progress - this status indicates that either automatically or manually initiated failover process is in progress. No changes to the failover group or additional failovers can be initiated while the auto-failover group is in this status.
 
 ## Permissions
@@ -212,11 +238,13 @@ For specific permission scopes, review how to [configure auto-failover groups in
 
 Be aware of the following limitations:
 
-- Failover groups cannot be created between two instances in the same Azure region.
-- Failover groups cannot be renamed. You will need to delete the group and re-create it with a different name.
-- Database rename is not supported for databases in failover group. You will need to temporarily delete failover group to be able to rename a database.
-- System databases are not replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance, that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however will not be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
-- Failover groups cannot be created between instances if any of them are in an instance pool.
+- Failover groups can't be created between two instances in the same Azure region.
+- Failover groups can't be renamed. You will need to delete the group and re-create it with a different name.
+- A failover group contains exactly two managed instances. Adding additional instances to the failover group is unsupported. 
+- An instance can participate only in one failover group at any moment. 
+- Database rename isn't supported for databases in failover group. You will need to temporarily delete failover group to be able to rename a database.
+- System databases aren't replicated to the secondary instance in a failover group. Therefore, scenarios that depend on objects from the system databases such as Server Logins and Agent jobs, require objects to be manually created on the secondary instances and also manually kept in sync after any changes made on primary instance. The only exception is Service master Key (SMK) for SQL Managed Instance that is replicated automatically to secondary instance during creation of failover group. Any subsequent changes of SMK on the primary instance however will not be replicated to secondary instance. To learn more, see how to [Enable scenarios dependent on objects from the system databases](#enable-scenarios-dependent-on-objects-from-the-system-databases).
+- Failover groups can't be created between instances if any of them are in an instance pool.
 
 ## <a name="programmatically-managing-failover-groups"></a> Programmatically manage failover groups
 

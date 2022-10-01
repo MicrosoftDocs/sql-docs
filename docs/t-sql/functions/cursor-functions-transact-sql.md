@@ -1,21 +1,17 @@
 ---
+title: "Cursor Functions (Transact-SQL)"
 description: "Cursor Functions (Transact-SQL)"
-title: "Cursor Functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "functions [SQL Server], cursors"
-  - "cursor functions"
-ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
 author: markingmyname
 ms.author: maghan
+ms.date: "07/24/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "functions [SQL Server], cursors"
+  - "cursor functions"
+dev_langs:
+  - "TSQL"
 ---
 # Cursor Functions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

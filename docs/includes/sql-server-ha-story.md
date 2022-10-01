@@ -1,4 +1,4 @@
-﻿This article provides an overview of business continuity solutions for high availability and disaster recovery in SQL Server. 
+This article provides an overview of business continuity solutions for high availability and disaster recovery in SQL Server. 
 
 One common task everyone deploying SQL Server has to account for is making sure that all mission critical SQL Server instances and the databases within them are available when the business and end users need them, whether that is 9 to 5 or around the clock. The goal is to keep the business up and running with minimal or no interruption. This concept is also known as business continuity.
 
@@ -70,7 +70,7 @@ Each supported Linux distribution ships its own version of the Pacemaker cluster
 
 A WSFC and Pacemaker are more similar than different. Both provide a way to take individual servers and combine them in a configuration to provide availability, and have concepts of things like resources, constraints (even if implemented differently), failover, and so on. To support Pacemaker for both availability group and FCI configurations including things like automatic failover, Microsoft provides the mssql-server-ha package, which is similar to, but not exactly the same as the resource DLLs in a WSFC, for Pacemaker. One of the differences between a WSFC and Pacemaker is that there's no network name resource in Pacemaker, which is the component that helps to abstract the name of the listener (or the name of the FCI) on a WSFC. DNS provides that name resolution on Linux.
 
-Because of the difference in the cluster stack, some changes needed to be made for availability groups because SQL Server has to handle some of the metadata that is natively handled by a WSFC. The most [!IMPORTANT] change is the introduction of a cluster type for an availability group. This is stored in sys.availability_groups in the cluster_type and cluster_type_desc columns. There are three cluster types:
+Because of the difference in the cluster stack, some changes needed to be made for availability groups because SQL Server has to handle some of the metadata that is natively handled by a WSFC. **The most change is the introduction of a cluster type for an availability group.** This is stored in sys.availability_groups in the cluster_type and cluster_type_desc columns. There are three cluster types:
 
 * WSFC 
 * External

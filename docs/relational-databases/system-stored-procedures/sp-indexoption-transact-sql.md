@@ -27,7 +27,7 @@ ms.author: maghan
  The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically makes choices of page-, row-, or table-level locking. You do not have to set these options manually. **sp_indexoption** is provided for expert users who know with certainty that a particular type of lock is always appropriate.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Instead, use [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Instead, use [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

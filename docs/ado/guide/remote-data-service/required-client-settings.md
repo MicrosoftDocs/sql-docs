@@ -1,18 +1,14 @@
 ---
+title: "Required Client Settings"
 description: "Required Client Settings"
-title: "Required Client Settings | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DataFactory handler in RDS [ADO]"
-ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DataFactory handler in RDS [ADO]"
 ---
 # Required Client Settings
 > [!IMPORTANT]

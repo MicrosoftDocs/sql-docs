@@ -1,20 +1,16 @@
 ---
+title: "Status Property Example (Field) (VB)"
 description: "Status Property Example (Field) (VB)"
-title: "Status Property Example (Field) (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Status property [ADO Field], Visual Basic example"
-ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Status property [ADO Field], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Status Property Example (Field) (VB)
 The following example opens a document from a read/write folder using the [Internet Publishing Provider](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). The [Status](./status-property-ado-field.md) property of a [Field](./field-object.md) object of the [Record](./record-object-ado.md) will first be set to **adFieldPendingInsert**, then be updated to **adFieldOk**.  

@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_io_virtual_file_stats (Transact-SQL)"
-title: "sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_io_virtual_file_stats (Transact-SQL)"
+description: sys.dm_io_virtual_file_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/21/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_io_virtual_file_stats"
   - "sys.dm_io_virtual_file_stats_TSQL"
   - "sys.dm_io_virtual_file_stats"
   - "dm_io_virtual_file_stats_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_io_virtual_file_stats dynamic management function"
+dev_langs:
+  - "TSQL"
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +50,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
+ **Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
  ID of the database. *database_id* is int, with no default. Valid inputs are the ID number of a database or NULL. When NULL is specified, all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
   
@@ -60,7 +58,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
+**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
  
 ID of the file. *file_id* is int, with no default. Valid inputs are the ID number of a file or NULL. When NULL is specified, all files on the database are returned.  
   
@@ -97,7 +95,7 @@ The counters are initialized to empty whenever the SQL Server (MSSQLSERVER) serv
 
 ### A. Return statistics for a log file
 
-**Applies to:** SQL Server (starting with 2008), Azure SQL Database
+**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
  The following example returns statistics for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   

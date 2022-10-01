@@ -1,30 +1,28 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL)"
-description: "sys.dm_db_xtp_checkpoint_files displays information about In-Memory OLTP checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server."
+description: sys.dm_db_xtp_checkpoint_files displays information about In-Memory OLTP checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: in-memory-oltp
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_xtp_checkpoint_files"
   - "sys.dm_db_xtp_checkpoint_files_TSQL"
   - "dm_db_xtp_checkpoint_files_TSQL"
   - "sys.dm_db_xtp_checkpoint_files"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Displays information about [!INCLUDE[hek_2](../../includes/hek-2-md.md)] checkpoint files, including file size, physical location and the transaction ID.  
+  Displays information about [!INCLUDE[inmemory](../../includes/inmemory-md.md)] checkpoint files, including file size, physical location and the transaction ID.  
   
 > [!NOTE]
 > For the current checkpoint that has not closed, the state column of `sys.dm_db_xtp_checkpoint_files` will be UNDER CONSTRUCTION for new files. A checkpoint closes automatically when there is sufficient transaction log growth since the last checkpoint, or if you issue the `CHECKPOINT` command. For more information, see [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).  
@@ -80,7 +78,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |deleted_row_count|**bigint**|Number of deleted rows in the delta file.|  
 |drop_table_deleted_row_count|**bigint**|The number of rows in the data files affected by a drop table. Applies to data files when the state column equals 1.<br /><br /> Shows deleted row counts from dropped table(s). The drop_table_deleted_row_count statistics are compiled after the memory garbage collection of the rows from dropped table(s) is complete and a checkpoint is taken. If you restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before the drop tables statistics are reflected in this column, the statistics will be updated as part of recovery. The recovery process does not load rows from dropped tables. Statistics for dropped tables are compiled during the load phase and reported in this column when recovery completes.|  
 |state|**int**|0 - PRECREATED<br /><br /> 1 - UNDER CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 - MERGE TARGET<br /><br /> 4 - MERGED SOURCE<br /><br /> 5 - REQUIRED FOR BACKUP/HA<br /><br /> 6 - IN TRANSITION TO TOMBSTONE<br /><br /> 7 - TOMBSTONE|  
-|state_desc|**nvarchar(60)**|PRECREATED - A small set of data and delta file pairs, also known as checkpoint file pairs (CFPs) are kept pre-allocated to minimize or eliminate any waits to allocate new files as transactions are being executed. These are full sized with data file size of 128MB and delta file size of 8 MB but contain no data. The number of CFPs is computed as the number of logical processors or schedulers (one per core, no maximum) with a minimum of 8. This is a fixed storage overhead in databases with memory-optimized tables.<br /><br /> UNDER CONSTRUCTION - Set of CFPs that store newly inserted and possibly deleted data rows since the last checkpoint.<br /><br /> ACTIVE - These contain the inserted and deleted rows from previous closed checkpoints. These CFPs contain all required inserted and deleted rows required before applying the active part of the transaction log at the database restart. The size of these CFPs will be approximately 2 times the in-memory size of memory-optimized tables, assuming the merge operation is current with the transactional workload.<br /><br /> MERGE TARGET - The CFP stores the consolidated data rows from the CFP(s) that were identified by the merge policy. Once the merge is installed, the MERGE TARGET transitions into ACTIVE state.<br /><br /> MERGED SOURCE - Once the merge operation is installed, the source CFPs are marked as MERGED SOURCE. Note, the merge policy evaluator may identify multiple merges but a CFP can only participate in one merge operation.<br /><br /> REQUIRED FOR BACKUP/HA - Once the merge has been installed and the MERGE TARGET CFP is part of durable checkpoint, the merge source CFPs transition into this state. CFPs in this state are needed for operational correctness of the database with memory-optimized table.  For example, to recover from a durable checkpoint to go back in time. A CFP can be marked for garbage collection once the log truncation point moves beyond its transaction range.<br /><br /> IN TRANSITION TO TOMBSTONE - These CFPs are not needed by the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine and can they can be garbage collected. This state indicates that these CFPs are waiting for the background thread to transition them to the next state, which is TOMBSTONE.<br /><br /> TOMBSTONE - These CFPs are waiting to be garbage collected by the filestream garbage collector. ([sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|PRECREATED - A small set of data and delta file pairs, also known as checkpoint file pairs (CFPs) are kept pre-allocated to minimize or eliminate any waits to allocate new files as transactions are being executed. These are full sized with data file size of 128MB and delta file size of 8 MB but contain no data. The number of CFPs is computed as the number of logical processors or schedulers (one per core, no maximum) with a minimum of 8. This is a fixed storage overhead in databases with memory-optimized tables.<br /><br /> UNDER CONSTRUCTION - Set of CFPs that store newly inserted and possibly deleted data rows since the last checkpoint.<br /><br /> ACTIVE - These contain the inserted and deleted rows from previous closed checkpoints. These CFPs contain all required inserted and deleted rows required before applying the active part of the transaction log at the database restart. The size of these CFPs will be approximately 2 times the in-memory size of memory-optimized tables, assuming the merge operation is current with the transactional workload.<br /><br /> MERGE TARGET - The CFP stores the consolidated data rows from the CFP(s) that were identified by the merge policy. Once the merge is installed, the MERGE TARGET transitions into ACTIVE state.<br /><br /> MERGED SOURCE - Once the merge operation is installed, the source CFPs are marked as MERGED SOURCE. Note, the merge policy evaluator may identify multiple merges but a CFP can only participate in one merge operation.<br /><br /> REQUIRED FOR BACKUP/HA - Once the merge has been installed and the MERGE TARGET CFP is part of durable checkpoint, the merge source CFPs transition into this state. CFPs in this state are needed for operational correctness of the database with memory-optimized table.  For example, to recover from a durable checkpoint to go back in time. A CFP can be marked for garbage collection once the log truncation point moves beyond its transaction range.<br /><br /> IN TRANSITION TO TOMBSTONE - These CFPs are not needed by the [!INCLUDE[inmemory](../../includes/inmemory-md.md)] engine and can they can be garbage collected. This state indicates that these CFPs are waiting for the background thread to transition them to the next state, which is TOMBSTONE.<br /><br /> TOMBSTONE - These CFPs are waiting to be garbage collected by the filestream garbage collector. ([sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|The lower bound of transactions contained in the file. Null if the state column is other than 2, 3, or 4.|  
 |upper_bound_tsn|**bigint**|The upper bound of transactions contained in the file. Null if the state column is other than 2, 3, or 4.|  
 |last_backup_page_count|**int**|Logical page count that is determined at last backup. Applies when the state column is set to 2, 3, 4, or 5. NULL if page count not known.|  
@@ -93,7 +91,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
  Requires `VIEW DATABASE STATE` permission on the server.  
   
 ## Use Cases  
- You can estimate the total storage used by [!INCLUDE[hek_2](../../includes/hek-2-md.md)] as follows:  
+ You can estimate the total storage used by [!INCLUDE[inmemory](../../includes/inmemory-md.md)] as follows:  
   
 ```sql  
 -- total storage used by In-Memory OLTP  
@@ -120,6 +118,6 @@ ORDER BY state, file_type;
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)
   

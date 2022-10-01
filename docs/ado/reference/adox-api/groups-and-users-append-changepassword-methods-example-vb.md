@@ -1,21 +1,17 @@
 ---
+title: "Groups and Users Append, ChangePassword Methods Example (VB)"
 description: "Groups and Users Append, ChangePassword Methods Example (VB)"
-title: "Groups and Users Append, ChangePassword Methods Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ChangePassword method [ADOX], Visual Basic example"
-  - "Append method [ADOX], Visual Basic example"
-ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ChangePassword method [ADOX], Visual Basic example"
+  - "Append method [ADOX], Visual Basic example"
+dev_langs:
+  - "VB"
 ---
 # Groups and Users Append, ChangePassword Methods Example (VB)
 This example demonstrates the [Append](./append-method-adox-groups.md) method of [Groups](./groups-collection-adox.md), as well as the [Append](./append-method-adox-users.md) method of [Users](./users-collection-adox.md) by adding a new [Group](./group-object-adox.md) and a new [User](./user-object-adox.md) to the system. The new **Group** is appended to the **Groups** collection of the new **User**. Consequently, the new **User** is added to the **Group**. Also, the [ChangePassword](./changepassword-method-adox.md) method is used to specify the **User** password.  

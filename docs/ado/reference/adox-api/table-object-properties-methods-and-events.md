@@ -1,18 +1,14 @@
 ---
+title: "Table Object Properties, Methods, and Events"
 description: "Table Object Properties, Methods, and Events"
-title: "Table Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Table object [ADOX], members"
-ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Table object [ADOX], members"
 ---
 # Table Object Properties, Methods, and Events
 ## Properties/Collections  

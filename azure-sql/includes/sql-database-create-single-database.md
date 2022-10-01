@@ -1,14 +1,14 @@
 ---
 author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: vanto
+ms.date: 06/07/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: include
-ms.date: 04/06/2022
-ms.author: mathoma
-ms.reviewer: vanto
 ---
 
-In this step, you create a [logical SQL server](../database/logical-servers.md) and a [single database](../database/single-database-overview.md) that uses AdventureWorksLT sample data. You can create the database by using Azure portal menus and screens, or by using an Azure CLI or PowerShell script in the Azure Cloud Shell.
+In this step, you create a [logical SQL server](../database/logical-servers.md) and a [single database](../database/single-database-overview.md) that uses `AdventureWorksLT` sample data. You can create the database by using Azure portal menus and screens, or by using an Azure CLI or PowerShell script in the Azure Cloud Shell.
 
 All the methods include setting up a server-level firewall rule to allow the public IP address of the computer you're using to access the server. For more information about creating server-level firewall rules, see [Create a server-level firewall](../database/firewall-create-server-level-portal-quickstart.md). You can also set database-level firewall rules. See [Create a database-level firewall rule](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database).
 
@@ -20,12 +20,12 @@ To create a resource group, server, and single database in the Azure portal:
 1. From the Search bar, search for and select **Azure SQL**.
 1. On the **Azure SQL** page, select **Add**.
 
-   :::image type="content" source="./media/sql-database-create-single-database/sqldbportal.png" alt-text="Add to Azure SQL":::
+   :::image type="content" source="./media/sql-database-create-single-database/sqldbportal.png" alt-text="Screenshot of the Azure portal search screen, showing Azure SQL.":::
 
 1. On the **Select SQL deployment option** page, select the **SQL databases** tile, with **Single database** under **Resource type**. You can view more information about the different databases by selecting **Show details**.
 1. Select **Create**.
 
-   :::image type="content" source="./media/sql-database-create-single-database/create-single-database.png" alt-text="Create single database":::
+   :::image type="content" source="./media/sql-database-create-single-database/create-single-database.png" alt-text="Screenshot of the Select SQL deployment option page of the Azure portal.":::
 
 1. On the **Basics** tab of the **Create SQL database** form, under **Project details**, select the correct Azure **Subscription** if it isn't already selected.
 1. Under **Resource group**, select **Create new**, enter *myResourceGroup*, and select **OK**.
@@ -38,9 +38,9 @@ To create a resource group, server, and single database in the Azure portal:
 
    Select **OK**.
 
-   :::image type="content" source="./media/sql-database-create-single-database/new-server.png" alt-text="New server":::
+   :::image type="content" source="./media/sql-database-create-single-database/new-server.png" alt-text="Screenshot of the Create SQL Database Server page of the Azure portal.":::
 
-   Record the server admin login and password so you can log in to the server and its databases. If you forget your login or password, you can get the login name or reset the password on the **SQL server** page after database creation. To open the **SQL server** page, select the server name on the database **Overview** page.
+   Record the server admin login and password so you can sign in to the server and its databases. If you forget your login or password, you can get the login name or reset the password on the **SQL server** page after database creation. To open the **SQL server** page, select the server name on the database **Overview** page.
 
 1. Under **Compute + storage**, if you want to reconfigure the defaults, select **Configure database**.
 
@@ -53,13 +53,13 @@ To create a resource group, server, and single database in the Azure portal:
 
 1. Select **Next: Networking** at the bottom of the page.
 
-   :::image type="content" source="./media/sql-database-create-single-database/new-sql-database-basics.png" alt-text="New SQL database - Basic tab":::
+   :::image type="content" source="./media/sql-database-create-single-database/new-sql-database-basics.png" alt-text="Screenshot of the Create SQL Database page of the Azure portal, showing the basic tab.":::
 
 1. On the **Networking** tab, under **Connectivity method**, select **Public endpoint**.
 1. Under **Firewall rules**, set **Add current client IP address** to **Yes**.
 1. Select **Next: Additional settings** at the bottom of the page.
 
-   :::image type="content" source="./media/sql-database-create-single-database/networking.png" alt-text="Networking tab":::
+   :::image type="content" source="./media/sql-database-create-single-database/networking.png" alt-text="Screenshot of the Create SQL Database page of the Azure portal, showing the networking tab.":::
   
    For more information about firewall settings, see [Allow Azure services and resources to access this server](../database/network-access-controls-overview.md) and [Add a private endpoint](../database/private-endpoint-overview.md).
 
@@ -68,7 +68,7 @@ To create a resource group, server, and single database in the Azure portal:
 1. Optionally, set the [maintenance window](../database/maintenance-window.md) so planned maintenance is performed at the best time for your database.
 1. Select **Review + create** at the bottom of the page.
 
-   :::image type="content" source="./media/sql-database-create-single-database/additional-settings.png" alt-text="Additional settings tab":::
+   :::image type="content" source="./media/sql-database-create-single-database/additional-settings.png" alt-text="Screenshot of the Create SQL Database page of the Azure portal, showing the additional settings tab.":::
 
 1. After reviewing settings, select **Create**.
 
@@ -84,7 +84,7 @@ Follow the onscreen prompts to sign in to Azure and run the code.
 
 You can also use Azure Cloud Shell from the Azure portal, by selecting the Cloud Shell icon on the top bar.
 
-   :::image type="content" source="./media/sql-database-create-single-database/cloudshell.png" alt-text="Azure Cloud Shell":::
+   :::image type="content" source="./media/sql-database-create-single-database/cloudshell.png" alt-text="Screenshot of the Azure Cloud Shell location in the Azure portal.":::
 
 The first time you use Cloud Shell from the portal, select **PowerShell** on the **Welcome** dialog. Subsequent sessions will use PowerShell, or you can select it from the Cloud Shell control bar.
 
@@ -135,7 +135,7 @@ The following PowerShell code creates an Azure resource group, server, single da
       -FirewallRuleName "AllowedIPs" -StartIpAddress $startIp -EndIpAddress $endIp
    $serverFirewallRule
 
-   # Create General Purpose Gen4 database with 1 vCore
+   # Create General Purpose Gen5 database with 2 vCores
    Write-host "Creating a gen5 2 vCore database..."
    $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
       -ServerName $serverName `

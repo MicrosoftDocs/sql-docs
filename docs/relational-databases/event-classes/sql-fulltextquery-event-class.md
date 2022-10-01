@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:FullTextQuery Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The SQL:FullTextQuery event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a full text query. Include this event class in traces that are monitoring problems associated with full text catalogs.  
   
  When the SQL:FullTextQuery event class is included, the amount of overhead will be high. If such events occur frequently, the trace may significantly impede performance. To minimize this, limit the use of this event class to traces that monitor specific problems for brief periods of time.  

@@ -1,21 +1,20 @@
 ---
-description: "CREATE INDEX (Transact-SQL)"
 title: "CREATE INDEX (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: CREATE INDEX (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wiassaf, randolphwest
 ms.date: 05/09/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: wiassaf, randolphwest
 ms.technology: t-sql
 ms.topic: reference
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "CREATE INDEX"
   - "INDEX"
   - "INDEX_TSQL"
   - "CREATE_INDEX_TSQL"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "CREATE XML INDEX statement"
   - "PRIMARY XML INDEX statement"
@@ -52,8 +51,8 @@ helpviewer_keywords:
   - "page locks [SQL Server]"
   - "secondary indexes [SQL Server]"
   - "XML indexes [SQL Server], creating"
-author: pmasl
-ms.author: pelopes
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE INDEX (Transact-SQL)
@@ -487,7 +486,7 @@ In backward compatible syntax, `WITH DROP_EXISTING` is equivalent to `WITH DROP_
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is **OFF**.
 
 > [!IMPORTANT]  
-> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 ON  
 Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created. A Sch-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE can't be set to ON when an index is being created on a local temporary table.
@@ -580,7 +579,7 @@ Uses the actual number of processors or fewer based on the current system worklo
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 #### DATA_COMPRESSION
 

@@ -1,21 +1,17 @@
 ---
+title: "PageCount Property (ADO)"
 description: "PageCount Property (ADO)"
-title: "PageCount Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::PageCount"
-helpviewer_keywords: 
-  - "PageCount property [ADO]"
-ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::PageCount"
+helpviewer_keywords:
+  - "PageCount property [ADO]"
+apitype: "COM"
 ---
 # PageCount Property (ADO)
 Indicates how many pages of data the [Recordset](./recordset-object-ado.md) object contains.  

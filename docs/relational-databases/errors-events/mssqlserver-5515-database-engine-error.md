@@ -2,17 +2,15 @@
 description: "MSSQLSERVER_5515"
 title: "MSSQLSERVER_5515 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
+ms.date: "05/25/2022"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "5515 (Database Engine error)"
-ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
 author: MashaMSFT
 ms.author: mathoma
-robots: noindex,nofollow
 ---
 # MSSQLSERVER_5515
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_os_schedulers (Transact-SQL)"
-title: "sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_os_schedulers (Transact-SQL)"
+description: sys.dm_os_schedulers (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_schedulers"
   - "sys.dm_os_schedulers_TSQL"
   - "sys.dm_os_schedulers"
   - "dm_os_schedulers_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_schedulers dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_schedulers (Transact-SQL)

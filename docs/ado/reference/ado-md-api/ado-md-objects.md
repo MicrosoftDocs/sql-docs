@@ -1,19 +1,15 @@
 ---
+title: "ADO MD Objects"
 description: "ADO MD Objects"
-title: "ADO MD Objects | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "ADO MD, objects"
-  - "objects [ADO MD]"
-ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ADO MD, objects"
+  - "objects [ADO MD]"
 ---
 # ADO MD Objects
 

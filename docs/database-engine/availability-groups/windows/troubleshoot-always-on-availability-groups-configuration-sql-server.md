@@ -1,19 +1,17 @@
 ---
 title: "Troubleshoot Always On Availability Groups Configuration (SQL Server)"
 description: Troubleshoot typical problems with configuring server instances for Always On availability groups in SQL Server.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: troubleshooting
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "troubleshooting [SQL Server], deploying"
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], configuring"
-ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Troubleshoot Always On Availability Groups Configuration (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,10 +25,11 @@ ms.author: mathoma
   
 |Section|Description|  
 |-------------|-----------------|  
-|[Always On Availability Groups Is Not Enabled](#IsHadrEnabled)|If an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the instance doesn't support availability group creation and cannot host any availability replicas.|  
+|[Always On Availability Groups Isn't Enabled](#IsHadrEnabled)|If an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the instance doesn't support availability group creation and can't host any availability replicas.|  
 |[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running.|  
 |[Endpoints](#Endpoints)|Discusses how to diagnose issues with the database mirroring endpoint of a server instance.|  
 |[Network access](#NetworkAccess)|Documents the requirement that each server instance that is hosting an availability replica must be able to access the port of each of the other server instances over TCP.|  
+|[Listener](#Listener)|Documents how to establish the IP address and port of the listener and make sure it is running and listening for incoming connections|  
 |[Endpoint Access (SQL Server Error 1418)](#Msg1418)|Contains information about this [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error message.|  
 |[Join Database Fails (SQL Server Error 35250)](#JoinDbFails)|Discusses the possible causes and resolution of a failure to join secondary databases to an availability group because the connection to the primary replica isn't active.|  
 |[Read-Only Routing is Not Working Correctly](#ROR)||  
@@ -108,7 +107,7 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
     GO  
     ```  
   
-3.  For [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports.  
+3.  For [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it's listening on the correct ports.  
   
 4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   
@@ -129,6 +128,9 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
     ```  
   
      For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md).  
+     
+     >[!NOTE]
+     >In some cases, if the endpoint is started but the AG replicas are not communicating, you may try to stop and restart the endpoint. You can use ALTER ENDPOINT [Endpoint_Mirroring] STATE = STOPPED followed by ALTER ENDPOINT [Endpoint_Mirroring] STATE = STARTED
   
 5.  Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   
@@ -155,17 +157,20 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
     select endpoint_url from sys.availability_replicas
     ```
 
-    Next, compare the endpoint_url output to the server name (Netbios or FQDN).
-    To query the Netbios and FQDN, run the following command in a Command Prompt on the replica locally:
+    Next, compare the endpoint_url output to the server name (NetBIOS name or FQDN).
+    To query the server name, run the following commands in a PowerShell on the replica locally:
 
-    ```dos
-    hostname & echo %COMPUTERNAME%.%USERDNSDOMAIN%
+    ```PowerShell
+    $env:COMPUTERNAME
+    [System.Net.Dns]::GetHostEntry([string]$env:computername).HostName
     ```
 
-    For query the server name of a remote computer, run this command from a Command Prompt. Then compare the endpoint_url
+    To validate the server name on a remote computer, run this command from PowerShell. 
 
-    ```dos
-    ping -a servername_from_endpoint_url
+    ```PowerShell
+    $servername_from_endpoint_url = "server_from_endpoint_url_output"
+
+    Test-NetConnection -ComputerName $servername_from_endpoint_url
     ```
 
 
@@ -174,30 +179,79 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
 ##  <a name="NetworkAccess"></a> Network Access  
  Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that don't trust each other (untrusted domains).  Check if you can connect to the endpoints by following these steps:
 
-- Use Telnet to validate connectivity. Here are examples of commands you can use:
+- Use Test-NetConnection (equivalent to Telnet)  to validate connectivity. Here are examples of commands you can use:
 
-   ```DOS
-   telnet ServerName Port
-   telnet IP_Address Port
+   ```PowerShell
+   $server_name = "your_server_name"
+   $IP_address = "your_ip_address"
+   $port_number = "your_port_number"
 
-- If the Endpoint is listening and connection is successful, then you'll see a blank screen.  If not, you'll receive a connection error from Telnet
-- If Telnet connection to the IP address works but to the ServerName it doesn't, there's likely a DNS or name resolution issue
+   Test-NetConnection -ComputerName $server_name -Port $port_number
+   Test-NetConnection -ComputerName $IP_address -Port $port_number
+   ```
+
+- If the Endpoint is listening and connection is successful, you will see "TcpTestSucceeded : True". If not, you'll receive a "TcpTestSucceeded : False".
+- If Test-NetConnection (Telnet) connection to the IP address works but to the ServerName it doesn't, there's likely a DNS or name resolution issue
 - If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED", another instance may actually have the port bound and prevent the correct instance from listening and establishing TCP connections.
-- If Telnet fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
+- If Test-NetConnection fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
 Run the following PowerShell script to examine for disabled inbound traffic rules
-- If Telnet fails to connect, look for Firewall and/or antivirus software that may be blocking the endpoint port in question. If you're running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+- If you're running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, additionally you would need to [ensure Network Security Group (NSG) allows the traffic to endpoint port](/azure/virtual-machines/windows/nsg-quickstart-portal#create-an-inbound-security-rule). Check the firewall (and NSG, for Azure VM) setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
 
    ```powershell
    Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
+   ```
 
-- Capture a NETSTAT -a output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
+- Capture the output from Get-NetTCPConnection cmdlet (equivalent of NETSTAT -a) and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
 
-   ```dos
-   netstat -a
+   ```PowerShell
+   Get-NetTCPConnection 
+   ```
 
+
+##  <a name="Listener"></a> Listener
+
+For correct configuration of an Availability Group listener follow "[Configure a listener for an Always On availability group](create-or-configure-an-availability-group-listener-sql-server.md)"
+
+1. Once the listener is configured you can validate the IP address and port it is listening on by using the following query:
+
+   ```PowerShell
+   $server_name = $env:computername  #replace this with your sql instance "server\instance"
+
+   sqlcmd -E -S$server_name -Q"SELECT dns_name AS AG_listener_name, port, ip_configuration_string_from_cluster 
+   FROM sys.availability_group_listeners"
+   ```
+
+1. You can also find the listener information together with the SQL Server ports using this query:
+ 
+   ```PowerShell
+   $server_name = $env:computername      #replace this with your sql instance "server\instance"
+
+   sqlcmd -E -S($server_name) -Q("SELECT  convert(varchar(32), SERVERPROPERTY ('servername')) servername, convert(varchar(32),ip_address) ip_address, port, type_desc,state_desc, start_time 
+   FROM sys.dm_tcp_listener_states 
+   WHERE ip_address not in ('127.0.0.1', '::1') and type <> 2")
+   ```
+
+1. If you need to establish connectivity to the listener and suspect a port is blocked, you can perform a test using the PowerShell Test-NetConnection cmdlet (equivalent to telnet). 
+
+   ```PowerShell
+   $listener_name = "your_ag_listener"
+   $IP_address = "your_ip_address"
+   $port_number = "your_port_number"
+
+   Test-NetConnection -ComputerName $listener_name -Port $port_number
+   Test-NetConnection -ComputerName $IP_address -Port $port_number
+   ```
+
+1. Finally, check if the listener is listening on the specified port:
+
+   ```PowerShell
+   $port_number = "your_port_number"
+
+   Get-NetTCPConnection -LocalPort $port_number -State Listen
+   ```
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  
- This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or doesn't exist, and it suggests that you verify the network address name and reissue the command.  
+ This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL can't be reached or doesn't exist, and it suggests that you verify the network address name and reissue the command.  
   
 ##  <a name="JoinDbFails"></a> Join Database Fails (SQL Server Error 35250)  
  This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica isn't active. This is the full error message:
@@ -300,7 +354,7 @@ For **detailed** step-by-step instructions, refer to Engine error [MSSQLSERVER_3
    >[!NOTE]
    > If you are running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Azure VM, you must take additional configuration steps. Ensure that the network security group (NSG) of each replica VM allows traffic to the endpoint port and the DNN port, if you are using DNN listener. If you are using VNN listener, you must ensure the [load balancer is configured correctly](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).
 
-7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully-qualified domain name (FQDN) and port number. See:  
+7. Ensure that the READ_ONLY_ROUTING_URL (TCP://system-address:port) contains the correct fully qualified domain name (FQDN) and port number. See:  
    - [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson) 
    - [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)
    - [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 

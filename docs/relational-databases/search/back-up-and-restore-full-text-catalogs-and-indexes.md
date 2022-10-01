@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], restoring"
   - "restore operations [full-text search]"
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---

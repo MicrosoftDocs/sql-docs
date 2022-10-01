@@ -1,21 +1,19 @@
 ---
-description: "SQL Server Agent Tables (Transact-SQL)"
-title: "SQL Server Agent Tables (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Agent Tables (Transact-SQL)"
+description: SQL Server Agent Tables (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, system tables"
   - "system tables [SQL Server], SQL Server Agent"
+dev_langs:
+  - "TSQL"
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-author: LitKnd
-ms.author: kendralittle
 ---
 # SQL Server Agent Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

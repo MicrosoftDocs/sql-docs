@@ -1,16 +1,12 @@
 ---
+title: "SQLServerResultSet Fields"
 description: "SQLServerResultSet Fields"
-title: "SQLServerResultSet Fields | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 30b8fbee-8818-4217-95be-ab1aa9230062
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerResultSet Fields
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

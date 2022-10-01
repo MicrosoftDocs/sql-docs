@@ -1,25 +1,23 @@
 ---
-description: "sys.partition_functions (Transact-SQL)"
-title: "sys.partition_functions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.partition_functions (Transact-SQL)"
+description: sys.partition_functions (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.partition_functions_TSQL"
   - "partition_functions"
   - "sys.partition_functions"
   - "partition_functions_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.partition_functions catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_functions (Transact-SQL)

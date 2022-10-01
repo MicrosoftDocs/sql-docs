@@ -20,7 +20,7 @@ ms.date: "01/19/2017"
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[msCoName](../includes/msconame_md.md)] SQL Server Management Studio is a rich, integrated administrative client designed to meet the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Azure SQL Database administrator's server management requirements. In Management Studio, administrative tasks are accomplished using Object Explorer, which allows you to connect to any server in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] family and graphically browse its contents. A server can be an instance of the [!INCLUDE[ssDE](../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] or Azure SQL Database.  
+[!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server Management Studio is a rich, integrated administrative client designed to meet the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Azure SQL Database administrator's server management requirements. In Management Studio, administrative tasks are accomplished using Object Explorer, which allows you to connect to any server in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] family and graphically browse its contents. A server can be an instance of the [!INCLUDE[ssDE](../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] or Azure SQL Database.  
   
 The tool components of  Management Studio include Registered Servers, Object Explorer, Solution Explorer, Template Explorer, the Object Explorer Details page, and the document window. To display a tool, on the **View** menu, click the tool name. To display the Query Editor tool, click the **New Query** button on the toolbar.  
   
@@ -31,7 +31,7 @@ Use  Management Studio to:
   
 - Register servers.  
   
-- Connect to an instance of the [!INCLUDE[ssDE](../includes/ssde_md.md)], SSAS, [!INCLUDE[ssRS](../includes/ssrs.md)],  [!INCLUDE[ssIS](../includes/ssis_md.md)] or Azure SQL Database.  
+- Connect to an instance of the [!INCLUDE[ssDE](../includes/ssde_md.md)], SSAS, [!INCLUDE[ssRS](../includes/ssrs.md)],  [!INCLUDE[ssIS](../includes/ssis-md.md)] or Azure SQL Database.  
   
 - Configure server properties.  
   

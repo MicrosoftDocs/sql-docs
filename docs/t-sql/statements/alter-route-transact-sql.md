@@ -1,27 +1,24 @@
 ---
-description: "ALTER ROUTE (Transact-SQL)"
-title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER ROUTE (Transact-SQL)"
+description: ALTER ROUTE (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_ROUTE_TSQL"
   - "ALTER ROUTE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER ROUTE statement"
   - "dropping routes"
   - "modifying routes"
   - "removing routes"
   - "routes [Service Broker], modifying"
-ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER ROUTE (Transact-SQL)

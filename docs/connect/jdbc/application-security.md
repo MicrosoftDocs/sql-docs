@@ -1,16 +1,12 @@
 ---
 title: Application security
 description: Learn about application security and java policy permissions when developing an application using the JDBC driver.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Application security
 

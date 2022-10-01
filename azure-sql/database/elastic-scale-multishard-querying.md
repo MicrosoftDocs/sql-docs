@@ -1,15 +1,14 @@
 ---
 title: Query sharded databases
 description: Run queries across shards using the elastic database client library.
-services: sql-database
+author: scoriani
+ms.author: scoriani
+ms.reviewer: wiassaf, mathoma
+ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: how-to
 ms.custom: sqldbrb=1
-author: scoriani 
-ms.author: scoriani
-ms.reviewer: kendralittle, mathoma
-ms.date: 01/25/2019
 ---
 # Multi-shard querying using elastic database tools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

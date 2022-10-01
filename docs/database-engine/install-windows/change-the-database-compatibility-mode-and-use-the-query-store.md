@@ -1,19 +1,17 @@
 ---
 title: "Use Query Store after upgrade"
 description: This article explains the place of using the query store to establish a baseline and changing the database compatibility level in a SQL Server upgrade.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "query plans [SQL Server], migrating"
   - "upgrading SQL Server, migrating query plans"
   - "plan guides [SQL Server], migrating query plans"
-ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Change the Database Compatibility Level and use the Query Store

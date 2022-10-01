@@ -19,7 +19,8 @@ ms.author: chugu
 
   The **dtexec** command prompt utility is used to configure and execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The **dtexec** utility provides access to all the package configuration and execution features, such as parameters, connections, properties, variables, logging, and progress indicators. The **dtexec** utility lets you load packages from these sources: the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, an .ispac project file, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
   
-> **NOTE:** When you use the current version of the **dtexec** utility to run a package created by an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the utility temporarily upgrades the package to the current package format. However, you cannot use the **dtexec** utility to save the upgraded package. For more information about how to permanently upgrade a package to the current version, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
+> [!NOTE]  
+> When you use the current version of the **dtexec** utility to run a package created by an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the utility temporarily upgrades the package to the current package format. However, you cannot use the **dtexec** utility to save the upgraded package. For more information about how to permanently upgrade a package to the current version, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
  This topic includes the following sections:  
   
@@ -65,7 +66,8 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  By default, a 64-bit computer that has both the 64-bit and 32-bit versions of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] command prompt utility installed will run the 32-bit version at the command prompt. The 32-bit version runs because the directory path for the 32-bit version appears in the PATH environment variable before the directory path for the 64-bit version. (Typically, the 32-bit directory path is *\<drive>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, while the 64-bit directory path is *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
-> **NOTE:** If you use SQL Server Agent to run the utility, SQL Server Agent automatically uses the 64-bit version of the utility. SQL Server Agent uses the registry, not the PATH environment variable, to locate the correct executable for the utility.  
+> [!NOTE]  
+> If you use SQL Server Agent to run the utility, SQL Server Agent automatically uses the 64-bit version of the utility. SQL Server Agent uses the registry, not the PATH environment variable, to locate the correct executable for the utility.  
   
  To ensure that you run the 64-bit version of the utility at the command prompt, you can take one of the following actions:  
   
@@ -138,7 +140,8 @@ DECLARE @returncode int
 EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'  
 ```  
   
-> **IMPORTANT!!** In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+> [!IMPORTANT]  
+> In [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **xp_cmdshell** option is disabled by default on new installations. The option can be enabled by running the **sp_configure** system stored procedure. For more information, see [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
 
 ##  <a name="bash"></a> Using dtexec from Bash
 
@@ -184,7 +187,8 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Optional). Displays specified log entries to the console during package execution. If this option is omitted, no log entries are shown in the console. If the option is specified without parameters that limit the display, every log entry will display. To limit the entries that are displayed to the console, you can specify the columns to show by using the *displayoptions* parameter, and limit the log entry types by using the *list_options* parameter.  
   
-    > **NOTE:**  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the **/ISSERVER** parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
+    > [!NOTE]  
+    > When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the **/ISSERVER** parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
      The *displayoptions* values are as follows:  
   
@@ -240,7 +244,8 @@ dtexec /option [value] [/option [value]]...
   
      **/Dump** _error code_: By default, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores the debug dump files in the folder, *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
-    > **NOTE:** Debug dump files may contain sensitive information. Use an access control list (ACL) to restrict access to the files, or copy the files to a folder with restricted access. For example, before you send your debug files to Microsoft support services, we recommended that you remove any sensitive or confidential information.  
+    > [!NOTE]  
+    > Debug dump files may contain sensitive information. Use an access control list (ACL) to restrict access to the files, or copy the files to a folder with restricted access. For example, before you send your debug files to Microsoft support services, we recommended that you remove any sensitive or confidential information.  
   
      To apply this option to all packages that the **dtexec** utility runs, add a **DumpOnCodes** REG_SZ value to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS\Setup\DtsPath registry key. The data value in **DumpOnCodes** specifies the error code or codes that will trigger the system to create debug dump files. Multiple error codes must be separated by a semi-colon (;).  
   
@@ -252,7 +257,8 @@ dtexec /option [value] [/option [value]]...
   
      By default, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores the debug dump files in the folder, *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps folder.  
   
-    > **NOTE:** Debug dump files may contain sensitive information. Use an access control list (ACL) to restrict access to the files, or copy the files to a folder with restricted access. For example, before you send your debug files to Microsoft support services, we recommended that you remove any sensitive or confidential information.  
+    > [!NOTE]  
+    > Debug dump files may contain sensitive information. Use an access control list (ACL) to restrict access to the files, or copy the files to a folder with restricted access. For example, before you send your debug files to Microsoft support services, we recommended that you remove any sensitive or confidential information.  
   
      To apply this option to all packages that the **dtexec** utility runs, add a **DumpOnError** REG_DWORD value to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS\Setup\DtsPath registry key. The value of the **DumpOnError** REG_DWORD value determines whether the **/DumpOnError** option needs to be used with the **dtexec** utility:  
   
@@ -331,7 +337,8 @@ dtexec /option [value] [/option [value]]...
   
 -   **/P[assword]** _password_: (Optional). Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is used together with the **/User** option. If the **/Password** option is omitted and the **/User** option is used, a blank password is used. The *password* value may be quoted.  
   
-    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > [!IMPORTANT]  
+    > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Par[ameter]** [$Package:: | $Project:: | $ServerOption::] *parameter_name* [(data_type)]; *literal_value*: (Optional). Specifies parameter values. Multiple **/Parameter** options can be specified. The data types are CLR TypeCodes as strings. For a non-string parameter, the data type is specified in parenthesis, following the parameter name.  
   
@@ -427,7 +434,8 @@ dtexec /option [value] [/option [value]]...
   
      The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
-    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > [!IMPORTANT]  
+    > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 -   If the **/Server** option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
   
@@ -437,7 +445,8 @@ dtexec /option [value] [/option [value]]...
   
 -   **/U[ser]** _user_name_: (Optional). Allows the retrieval of a package that is protected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is used only when the **/SQL** option is specified. The *user_name* value can be quoted.  
   
-    > **IMPORTANT!!**  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > [!IMPORTANT]  
+    > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va[lidate]**: (Optional). Stops the execution of the package after the validatation phase, without actually running the package. During validation, use of the **/WarnAsError** option causes **dtexec** to treat a warning as an error; therefore the package fails if a warning occurs during validation.  
   
@@ -455,9 +464,11 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyS[igned]**: (Optional). Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
-    > **IMPORTANT!!** When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not check whether the package has been changed.  
+    > [!IMPORTANT]  
+    > When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not check whether the package has been changed.  
   
-    > **NOTE:** The optional **BlockedSignatureStates** registry value can specify a setting that is more restrictive than the digital signature option set in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or at the **dtexec** command line. In this situation, the more restrictive registry setting overrides the other settings.  
+    > [!NOTE]  
+    > The optional **BlockedSignatureStates** registry value can specify a setting that is more restrictive than the digital signature option set in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or at the **dtexec** command line. In this situation, the more restrictive registry setting overrides the other settings.  
   
 -   **/VerifyV[ersionID]** _versionID_: (Optional). Verifies the version GUID of a package to be executed by comparing it to the value specified in the *version_id* argument during package Validation Phase.  
   
@@ -533,7 +544,8 @@ dtexec /sq pkgOne /verifyv {c200e360-38c5-11c5-11ce-ae62-08002b2b79ef}
 dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"  
 ```  
   
-> **NOTE:** The *package_path* or *filespec* arguments of the /SQL, /DTS, or /FILE options must be enclosed in quotation marks if the path or file name contains a space. If the argument is not enclosed in quotation marks, the argument cannot contain white space.  
+> [!NOTE]  
+> The *package_path* or *filespec* arguments of the /SQL, /DTS, or /FILE options must be enclosed in quotation marks if the path or file name contains a space. If the argument is not enclosed in quotation marks, the argument cannot contain white space.  
   
  **Logging Option**  
   

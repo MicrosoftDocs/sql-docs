@@ -1,17 +1,17 @@
 ---
-title: Determine required subnet size & range 
-titleSuffix: Azure SQL Managed Instance 
+title: Determine required subnet size & range
+titleSuffix: Azure SQL Managed Instance
 description: This topic describes how to calculate the size of the subnet where Azure SQL Managed Instance will be deployed.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: seo-lt-2019, sqldbrb=1
-ms.devlang: 
-ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, srbozovi, wiassaf
 ms.date: 04/06/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
+ms.custom:
+  - seo-lt-2019
+  - sqldbrb=1
 ---
 # Determine required subnet size and range for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -44,8 +44,8 @@ Size your subnet according to your future needs for instance deployment and scal
 > [!IMPORTANT]
 > It's not possible to change the subnet address range if any resource exists in the subnet. Consider using bigger subnets rather than smaller ones to prevent issues in the future.
 
-GP = general purpose; 
-BC = business critical; 
+GP = General Purpose; 
+BC = Business Critical; 
 VC = virtual cluster
 
 | **Pricing tier** | **Azure usage** | **VC usage** | **Instance usage** | **Total** |
@@ -109,4 +109,4 @@ Example:
 - For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md).
 - Learn more about [connectivity architecture for SQL Managed Instance](connectivity-architecture-overview.md).
 - See how to [create a virtual network where you'll deploy SQL Managed Instance](virtual-network-subnet-create-arm-template.md).
-- For DNS issues, see [Configure a custom DNS](custom-dns-configure.md).
+- For DNS issues, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).

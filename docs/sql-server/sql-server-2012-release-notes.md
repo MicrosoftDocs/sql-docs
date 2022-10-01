@@ -403,7 +403,7 @@ Issue: You might receive the following error if you open a knowledge base in the
   
 This occurs because of the difference in the way DQS compares strings in the SQL Server database and C#. The string comparison in the SQL Server database is case insensitive whereas it is case sensitive in C#.  
   
-Let us illustrate this with an example. Consider a user, Domain\user1. The user logs on to the Data Quality Client computer using the "user1" account, and works on a knowledge base. DQS stores the recent knowledge base for each user as a record in the A_CONFIGURATION table in the DQS_MAIN database. In this case, the record will be stored with the following name: RecentList:KB:Domain\user1. Later, the user logs on the Data Quality Client computer as "User1" (note the U in upper case), and tries to open the knowledge base in the **Recent Knowledge Base** list for the domain management activity. The underlying code in DQS will compare the two strings, RecentList:KB:DOMAIN\user1 and DOMAIN\User1, and considering the case-sensitive string comparison in C#, the strings won't match and therefore DQS will attempt to insert a new record for the user (User1) in the A_CONFIGURATION table in the DQS_MAIN database. However, owing to the case-insensitive string comparison in SQL database, the string already exists in the A_CONFIGURATION table in the DQS_MAIN database, and the insert operation will fail.  
+Let us illustrate this with an example. Consider a user, Domain\user1. The user signs in to the Data Quality Client computer using the "user1" account, and works on a knowledge base. DQS stores the recent knowledge base for each user as a record in the A_CONFIGURATION table in the DQS_MAIN database. In this case, the record will be stored with the following name: RecentList:KB:Domain\user1. Later, the user logs on the Data Quality Client computer as "User1" (note the U in upper case), and tries to open the knowledge base in the **Recent Knowledge Base** list for the domain management activity. The underlying code in DQS will compare the two strings, RecentList:KB:DOMAIN\user1 and DOMAIN\User1, and considering the case-sensitive string comparison in C#, the strings won't match and therefore DQS will attempt to insert a new record for the user (User1) in the A_CONFIGURATION table in the DQS_MAIN database. However, owing to the case-insensitive string comparison in SQL database, the string already exists in the A_CONFIGURATION table in the DQS_MAIN database, and the insert operation will fail.  
   
 **Workaround:** To fix this issue, you can do one of the following:  
   
@@ -506,17 +506,17 @@ The following table summarizes driver support for Always On Availability Groups:
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
 |SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|No|  
-|ADO.NET with .NET Framework 4.0 with connectivity patch**\&#42;**|Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch **\&#42;\&#42;**|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 4.0 with connectivity patch <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch <sup>2</sup>|Yes|Yes|Yes|Yes|Yes|  
 |Microsoft JDBC driver 4.0 for SQL Server|Yes|Yes|Yes|Yes|Yes|  
   
-**\&#42;** Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
+<sup>1</sup> Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
+<sup>2</sup> Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
   
 **MultiSubnetFailover Keyword and Associated Features**  
   
-MultiSubnetFailover is a new connection string keyword used to enable faster failover with Always On Availability Groups and Always On Failover Cluster Instances in SQL Server 2012. The following three sub-features are enabled when MultiSubnetFailover=True is set in connection string:  
+MultiSubnetFailover is a new connection string keyword used to enable faster failover with Always On Availability Groups and Always On Failover Cluster Instances in SQL Server 2012. The following three subfeatures are enabled when MultiSubnetFailover=True is set in connection string:  
   
 -   Faster multi-subnet failover to a multi-subnet listener for an Always On Availability Group or Failover Cluster Instances.  
   
@@ -600,7 +600,7 @@ The CDC Service for Oracle is a Windows service that scans Oracle transaction lo
 ## <a name="MDS"></a>7.0 Master Data Services  
   
 ### 7.1 Fixing an MDS installation in a Cluster  
-**Issue:** If you install a clustered instance of the RTM version of SQL Server 2012 with the **Master Data Services** checkbox selected, MDS will be installed on a single node, but it will not be available and will not work on additional nodes that you add to the cluster.  
+**Issue:** If you install a clustered instance of the RTM version of SQL Server 2012 with the **Master Data Services** checkbox selected, MDS will be installed on a single node, but it will not be available and will not work on other nodes that you add to the cluster.  
   
 **Workaround**: To resolve this issue, you must install the SQL Server 2012 Cumulative Release 1 (CU1), performing the following steps:  
   
@@ -608,7 +608,7 @@ The CDC Service for Oracle is a Windows service that scans Oracle transaction lo
   
 2.  Download SQL Server 2012 CU1 into a local directory.  
   
-3.  Install SQL Server 2012 with the MDS feature on the primary cluster node, and then install SQL Server 2012 with the MDS feature on any additional cluster nodes.  
+3.  Install SQL Server 2012 with the MDS feature on the primary cluster node, and then install SQL Server 2012 with the MDS feature on any other cluster nodes.  
   
 For more information about the issues, and information about how to perform the above steps, see [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467).  
   
@@ -625,7 +625,7 @@ Connectivity from SQL Server 2012 Reporting Services to Microsoft SQL Server PDW
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information see the [Microsoft StreamInsight 2.1 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
+SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information, see the [Microsoft StreamInsight 2.1 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

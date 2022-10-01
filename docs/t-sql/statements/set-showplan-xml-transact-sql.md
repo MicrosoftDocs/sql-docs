@@ -1,19 +1,17 @@
 ---
-description: "SET SHOWPLAN_XML (Transact-SQL)"
-title: "SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET SHOWPLAN_XML (Transact-SQL)"
+description: SET SHOWPLAN_XML (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET SHOWPLAN_XML"
   - "SET_SHOWPLAN_XML_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statements [SQL Server], estimates"
   - "SET SHOWPLAN_XML statement"
   - "execution information and estimates [SQL Server]"
@@ -21,9 +19,8 @@ helpviewer_keywords:
   - "XML [SQL Server], statement execution information"
   - "SHOWPLAN_XML option"
   - "estimated execution information [SQL Server]"
-ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET SHOWPLAN_XML (Transact-SQL)

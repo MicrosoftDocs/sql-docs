@@ -1,16 +1,13 @@
 ---
 title: Resource management in Azure SQL Database
 description: This article provides an overview of resource management in Azure SQL Database with information about what happens when resource limits are reached.
-services: sql-database
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom:
-ms.devlang: 
-ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: kendralittle, mathoma
-ms.date: 03/31/2022
+ms.reviewer: wiassaf, mathoma
+ms.date: 09/13/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: reference
 ---
 
 # Resource management in Azure SQL Database
@@ -92,7 +89,7 @@ Sessions, workers, and requests are defined as follows:
 
 For more information about these concepts, see the [Thread and Task Architecture Guide](/sql/relational-databases/thread-and-task-architecture-guide).
 
-The maximum numbers of sessions and workers are determined by the service tier and compute size. New requests are rejected when session or worker limits are reached, and clients receive an error message. While the number of connections can be controlled by the application, the number of concurrent workers is often harder to estimate and control. This is especially true during peak load periods when database resource limits are reached and workers pile up due to longer running queries, large blocking chains, or excessive query parallelism.
+The maximum number of workers is determined by the service tier and compute size. New requests are rejected when session or worker limits are reached, and clients receive an error message. While the number of connections can be controlled by the application, the number of concurrent workers is often harder to estimate and control. This is especially true during peak load periods when database resource limits are reached and workers pile up due to longer running queries, large blocking chains, or excessive query parallelism.
 
 > [!NOTE]
 > The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error message 10928 in Azure SQL Database contains the wording "The request limit for the database is *N* and has been reached" for backwards compatibility purposes.  The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one. Learn more about error 10928 in [Resource governance errors](troubleshoot-common-errors-issues.md#resource-governance-errors).
@@ -140,7 +137,7 @@ Azure SQL Database requires compute resources to implement core service features
 
 Total CPU and memory consumption by user workloads and internal processes is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_instance_cpu_percent` and `avg_instance_memory_percent` columns. This data is also reported via the `sqlserver_process_core_percent` and `sqlserver_process_memory_percent` Azure Monitor metrics, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
 
-CPU and memory consumption by user workloads in each database is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_cpu_percent` and `avg_memory_usage_percent` columns. For elastic pools, pool-level resource consumption is reported in the [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) view. User workload CPU consumption is also reported via the `cpu_percent` Azure Monitor metric, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
+CPU and memory consumption by user workloads in each database is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_cpu_percent` and `avg_memory_usage_percent` columns. For elastic pools, pool-level resource consumption is reported in the [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) view (for historical reporting scenarios) and in [sys.dm_elastic_pool_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database) for real-time monitoring. User workload CPU consumption is also reported via the `cpu_percent` Azure Monitor metric, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
 
 A more detailed breakdown of recent resource consumption by user workloads and internal processes is reported in the [sys.dm_resource_governor_resource_pools_history_ex](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database) and [sys.dm_resource_governor_workload_groups_history_ex](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database) views. For details on resource pools and workload groups referenced in these views, see [Resource governance](#resource-governance). These views report on resource utilization by user workloads and specific internal processes in the associated resource pools and workload groups.
 
@@ -170,7 +167,7 @@ The IOPS and throughput max values returned by the [sys.dm_user_db_resource_gove
 
 For Basic, Standard, and General Purpose databases, which use data files in Azure Storage, the `primary_group_max_io` value may not be achievable if a database doesn't have enough data files to cumulatively provide this number of IOPS, or if data isn't distributed evenly across files, or if the performance tier of underlying blobs limits IOPS/throughput below the resource governance limits. Similarly, with small log IOs generated by frequent transaction commits, the `primary_max_log_rate` value may not be achievable by a workload due to the IOPS limit on the underlying Azure Storage blob. For databases using Azure Premium Storage, Azure SQL Database uses sufficiently large storage blobs to obtain needed IOPS/throughput, regardless of database size. For larger databases, multiple data files are created to increase total IOPS/throughput capacity.
 
-Resource utilization values such as `avg_data_io_percent` and `avg_log_write_percent`, reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database),  [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), and [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) views, are calculated as percentages of maximum resource governance limits. Therefore, when factors other than resource governance limit IOPS/throughput, it's possible to see IOPS/throughput flattening out and latencies increasing as the workload increases, even though reported resource utilization remains below 100%.
+Resource utilization values such as `avg_data_io_percent` and `avg_log_write_percent`, reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database),  [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database), [sys.dm_elastic_pool_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database), and [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) views, are calculated as percentages of maximum resource governance limits. Therefore, when factors other than resource governance limit IOPS/throughput, it's possible to see IOPS/throughput flattening out and latencies increasing as the workload increases, even though reported resource utilization remains below 100%.
 
 To determine read and write IOPS, throughput, and latency per database file, use the [sys.dm_io_virtual_file_stats()](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) function. This function surfaces all I/O against the database, including background I/O that isn't accounted towards `avg_data_io_percent`, but uses IOPS and throughput of the underlying storage, and can impact observed storage latency. The function reports additional latency that may be introduced by I/O resource governance for reads and writes, in the `io_stall_queued_read_ms` and `io_stall_queued_write_ms` columns respectively.
 

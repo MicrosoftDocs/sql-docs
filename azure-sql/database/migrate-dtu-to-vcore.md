@@ -1,15 +1,14 @@
 ---
 title: Migrate from DTU to vCore
 description: Migrate a database in Azure SQL Database from the DTU model to the vCore model. Migrating to vCore is similar to upgrading or downgrading between the standard and premium tiers.
-services: sql-database
+author: dimitri-furman
+ms.author: dfurman
+ms.reviewer: wiassaf, mathoma, moslake
+ms.date: 09/13/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom: sqldbrb=1
-author: dimitri-furman
-ms.author: dfurman
-ms.reviewer: kendralittle, mathoma, moslake
-ms.date: 05/10/2022
 ---
 # Migrate Azure SQL Database from the DTU-based model to the vCore-based model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -89,10 +88,10 @@ SELECT dtu_logical_cpus,
             WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.8
        END AS Fsv2_vcores,
        1.89 AS Fsv2_memory_per_core_gb,
-       CASE WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus * 1.4
-            WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.9
-       END AS M_vcores,
-       29.4 AS M_memory_per_core_gb
+       CASE WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.7
+             WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus
+       END AS DC_vcores,
+       4.5 AS DC_memory_per_core_gb
 FROM dtu_vcore_map;
 ```
 
@@ -175,13 +174,13 @@ The following table provides guidance for specific migration scenarios:
 |Current service tier|Target service tier|Migration type|User actions|
 |---|---|---|---|
 |Standard|General purpose|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Premium|Business critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
-|Standard|Business critical|Upgrade|Must migrate secondary first|
-|Business critical|Standard|Downgrade|Must migrate primary first|
+|Premium|Business Critical|Lateral|Can migrate in any order, but need to ensure appropriate vCore sizing as described above|
+|Standard|Business Critical|Upgrade|Must migrate secondary first|
+|Business Critical|Standard|Downgrade|Must migrate primary first|
 |Premium|General purpose|Downgrade|Must migrate primary first|
 |General purpose|Premium|Upgrade|Must migrate secondary first|
-|Business critical|General purpose|Downgrade|Must migrate primary first|
-|General purpose|Business critical|Upgrade|Must migrate secondary first|
+|Business Critical|General purpose|Downgrade|Must migrate primary first|
+|General purpose|Business Critical|Upgrade|Must migrate secondary first|
 
 
 ## Migrate failover groups

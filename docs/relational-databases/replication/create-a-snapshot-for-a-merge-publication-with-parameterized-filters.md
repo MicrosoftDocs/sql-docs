@@ -77,7 +77,7 @@ When parameterized row filters are used in merge publications, replication initi
   
 1.  On the **Data Partitions** page of the **Publication Properties - \<Publication>** dialog box, select **Automatically define a partition and generate a snapshot if needed when a new Subscriber tries to synchronize**.  
   
-2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Select **OK**.
   
 #### To generate and refresh snapshots  
   
@@ -95,7 +95,7 @@ When parameterized row filters are used in merge publications, replication initi
   
 5.  Select the partition in the property grid, and then click **Generate the selected snapshots now**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Using stored procedures and the Snapshot Agent, you can perform the following:  

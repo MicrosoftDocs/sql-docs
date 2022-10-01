@@ -1,24 +1,20 @@
 ---
+title: "NEWSEQUENTIALID (Transact-SQL)"
 description: "NEWSEQUENTIALID (Transact-SQL)"
-title: "NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "08/08/2015"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NEWSEQUENTIALID"
   - "NEWSEQUENTIALID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "NEWSEQUENTIALID function"
   - "GUIDs [SQL Server]"
-ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

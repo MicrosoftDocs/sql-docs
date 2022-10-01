@@ -1,18 +1,14 @@
 ---
+title: "Minimizing Log File Space Usage"
 description: "Minimizing Log File Space Usage"
-title: "Minimizing Log File Space Usage | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "log file space in RDS [ADO]"
-ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "log file space in RDS [ADO]"
 ---
 # Minimizing Log File Space Usage
 A log file may fill quickly (thus halting the server) if there is a large volume of activity on an SQL Server database. You can set the log file to **Truncate on Checkpoint** to significantly extend the life of the log file for a database.  

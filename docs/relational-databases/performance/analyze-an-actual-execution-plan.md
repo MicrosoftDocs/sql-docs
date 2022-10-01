@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "analyzing actual execution plans"
   - "execution plans [SQL Server], analyzing"
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-author: pmasl
-ms.author: pelopes
+author: rwestMSFT
+ms.author: randolphwest
 manager: amitban
 ---
 # Analyze an Actual Execution Plan

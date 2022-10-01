@@ -1,18 +1,18 @@
 ---
 title: Business Critical service tier
-titleSuffix:  Azure SQL Database & Azure SQL Managed Instance
-description: Learn about the Business Critical service tier for Azure SQL Database and Azure SQL Managed Instance. 
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: service-overview
-ms.custom: sqldbrb=2
-ms.devlang: 
-ms.topic: conceptual
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Learn about the Business Critical service tier for Azure SQL Database and Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
-ms.reviewer: kendralittle, mathoma, urmilano
+ms.reviewer: wiassaf, mathoma, urmilano
 ms.date: 04/13/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-db-mi
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom:
+  - "sqldbrb=2"
+  - "azure-sql-split"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Business Critical tier - Azure SQL Database and Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
@@ -27,9 +27,8 @@ The Business Critical service tier model is based on a cluster of database engin
 
 Azure upgrades and patches underlying operating system, drivers, and SQL Server database engine transparently with the minimal down-time for end users. 
 
-Premium availability is enabled in the Business Critical service tier and is designed for intensive workloads that can't tolerate reduced availability due to the ongoing maintenance operations.
 
-Compute and storage is integrated on the single node in the premium model. High availability in this architectural model is achieved by replication of compute (SQL Server database engine process) and storage (locally attached SSD) deployed to a  four node cluster, using technology similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+In the Business Critical model, compute and storage is integrated on each node. High availability is achieved by replication of data between database engine processes on each node of a four node cluster, with each node using locally attached SSD as data storage. This technology is similar to SQL Server [Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 ![Cluster of database engine nodes](./media/service-tier-business-critical/business-critical-service-tier.png)
 

@@ -1,27 +1,26 @@
 ---
+title: "SHUTDOWN (Transact-SQL)"
 description: "SHUTDOWN (Transact-SQL)"
-title: "SHUTDOWN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SHUTDOWN_TSQL"
   - "SHUTDOWN"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server, stopping"
   - "shutting down SQL Server"
   - "SHUTDOWN statement"
   - "stopping SQL Server"
   - "immediately stopping SQL Server"
-ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +42,7 @@ SHUTDOWN [ WITH NOWAIT ]
  Optional. Shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without performing checkpoints in every database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exits after attempting to terminate all user processes. When the server restarts, a rollback operation occurs for uncompleted transactions.  
   
 ## Remarks  
- Unless the WITHNOWAIT option is used, SHUTDOWN shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by:  
+ Unless the WITH NOWAIT option is used, SHUTDOWN shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by:  
   
 1.  Disabling logins (except for members of the **sysadmin** and **serveradmin** fixed server roles).  
   

@@ -20,7 +20,7 @@ landingContent:
       - text: Azure SQL for beginners
         url: /shows/azure-sql-for-beginners/
       - text: Azure SQL fundamentals 
-        url: /learn/paths/azure-sql-fundamentals/
+        url: /training/paths/azure-sql-fundamentals/
       - text: Azure SQL hands-on labs
         url: https://aka.ms/asqlworkshop
       - text: Azure SQL bootcamp 
@@ -35,9 +35,9 @@ landingContent:
     - linkListType: learn
       links:
       - text: Upgrade SQL Server
-        url: /learn/modules/introduction-upgrading-sql-server/
+        url: /training/modules/introduction-upgrading-sql-server/
       - text: Use the Query Tuning Assistant
-        url: /learn/modules/use-sql-server-query-tuning-assistant/
+        url: /training/modules/use-sql-server-query-tuning-assistant/
       - text: SQL Server workshops
         url: https://aka.ms/sqlworkshops
     - linkListType: quickstart
@@ -95,32 +95,32 @@ landingContent:
     - linkListType: quickstart
       links:
       - text: Create VM with portal
-        url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal
+        url: /azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart
       - text: Create VM with PowerShell
-        url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-powershell
+        url: /azure/azure-sql/virtual-machines/windows/sql-vm-create-powershell-quickstart
     - linkListType: how-to-guide
       links:
       - text: Register with resource provider
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider
+        url: /azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register
       - text: Configure availability group with Az CLI
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-availability-group-cli
+        url: /azure/azure-sql/virtual-machines/windows/availability-group-az-cli-configure
       - text: Create FCI using premium file share
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
+        url: /azure/azure-sql/virtual-machines/windows/failover-cluster-instance-premium-file-share-manually-configure
       - text: Use Azure Storage for backup & restore
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
+        url: /azure/azure-sql/virtual-machines/windows/azure-storage-sql-server-backup-restore-use
 
   - title: Azure SQL Database (PaaS)
     linkLists:
     - linkListType: learn
       links:
       - text: Choose data storage approach
-        url: /learn/modules/choose-storage-approach-in-azure/
+        url: /training/modules/choose-storage-approach-in-azure/
       - text: Secure SQL Database
-        url: /learn/modules/secure-your-azure-sql-database/
+        url: /training/modules/secure-your-azure-sql-database/
       - text: Geographically distributed app
-        url: /learn/modules/design-a-geographically-distributed-application/
+        url: /training/modules/design-a-geographically-distributed-application/
       - text: ASP.NET App to query SQL Database
-        url: /learn/modules/develop-app-that-queries-azure-sql/
+        url: /training/modules/develop-app-that-queries-azure-sql/
     - linkListType: quickstart
       links:
       - text: Create DB with portal or code 
@@ -147,13 +147,13 @@ landingContent:
     - linkListType: learn
       links:
       - text: Introduction
-        url: /learn/modules/introduction-sql-server-linux/
+        url: /training/modules/introduction-sql-server-linux/
       - text: Deploy
-        url: /learn/modules/deploy-sql-server-linux/
+        url: /training/modules/deploy-sql-server-linux/
       - text: Automatically tune
-        url: /learn/modules/automatically-tune-sql-server-linux/
+        url: /training/modules/automatically-tune-sql-server-linux/
       - text: Containers  
-        url: /learn/modules/run-sql-server-2017-linux-containers/
+        url: /training/modules/run-sql-server-2017-linux-containers/
     - linkListType: quickstart
       links:
       - text: Red Hat
@@ -165,7 +165,7 @@ landingContent:
       - text: Docker
         url: ../linux/quickstart-install-connect-docker.md
       - text: On Azure
-        url: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
+        url: /azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart
     - linkListType: tutorial
       links:
       - text: Migrate from Windows
@@ -183,7 +183,7 @@ landingContent:
       - text: Create & configure availability group
         url: ../linux/sql-server-linux-create-availability-group.md
       - text: Deploy on Kubernetes
-        url: ../linux/tutorial-sql-server-containers-kubernetes.md
+        url: ../linux/quickstart-sql-server-containers-kubernetes.md
       - text: Configure replication
         url: ../linux/sql-server-linux-replication-tutorial-tsql.md
 

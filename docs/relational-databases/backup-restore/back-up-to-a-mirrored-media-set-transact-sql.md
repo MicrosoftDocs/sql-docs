@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Back Up to a Mirrored Media Set (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

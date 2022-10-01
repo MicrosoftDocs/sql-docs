@@ -1,21 +1,15 @@
 ---
+title: "getWorkstationID Method (SQLServerDataSource)"
 description: "getWorkstationID Method (SQLServerDataSource)"
-title: "getWorkstationID Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.getWorkstationID"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDataSource.getWorkstationID"
+apitype: "Assembly"
 ---
 # getWorkstationID Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

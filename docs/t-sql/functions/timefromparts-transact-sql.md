@@ -1,24 +1,23 @@
 ---
+title: "TIMEFROMPARTS (Transact-SQL)"
 description: "TIMEFROMPARTS (Transact-SQL)"
-title: "TIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "TIMEFROMPARTS_TSQL"
   - "TIMEFROMPARTS"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TIMEFROMPARTS function"
-ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,20 +1,16 @@
 ---
+title: "Clone Method Example (VBScript)"
 description: "Clone Method Example (VBScript)"
-title: "Clone Method Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Clone method [ADO], VBScript example"
-ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Clone method [ADO], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # Clone Method Example (VBScript)
 This example uses the [Clone](./clone-method-ado.md) method to create copies of a [Recordset](./recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  

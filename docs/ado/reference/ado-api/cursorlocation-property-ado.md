@@ -1,22 +1,18 @@
 ---
+title: "CursorLocation Property (ADO)"
 description: "CursorLocation Property (ADO)"
-title: "CursorLocation Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Connection15::CursorLocation"
-  - "Recordset15::CursorLocation"
-helpviewer_keywords: 
-  - "CursorLocation property [ADO]"
-ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Connection15::CursorLocation"
+  - "Recordset15::CursorLocation"
+helpviewer_keywords:
+  - "CursorLocation property [ADO]"
+apitype: "COM"
 ---
 # CursorLocation Property (ADO)
 Indicates the location of the cursor service.  

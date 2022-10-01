@@ -1,23 +1,21 @@
 ---
-description: "MSpub_identity_range (Transact-SQL)"
-title: "MSpub_identity_range (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSpub_identity_range (Transact-SQL)"
+description: MSpub_identity_range (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSpub_identity_range_TSQL"
   - "MSpub_identity_range"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSpub_identity_range system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSpub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

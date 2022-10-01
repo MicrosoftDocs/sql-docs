@@ -1,16 +1,12 @@
 ---
 title: "Step 3: Connecting to SQL using pymssql"
 description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pymssql. The basic examples demonstrate selecting and inserting data."
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -39,7 +35,7 @@ The [cursor.execute](https://pypi.org/project/pymssql/) function can be used to 
     cursor.execute('SELECT c.CustomerID, c.CompanyName,COUNT(soh.SalesOrderID) AS OrderCount FROM SalesLT.Customer AS c LEFT OUTER JOIN SalesLT.SalesOrderHeader AS soh ON c.CustomerID = soh.CustomerID GROUP BY c.CustomerID, c.CompanyName ORDER BY OrderCount DESC;')  
     row = cursor.fetchone()  
     while row:  
-        print str(row[0]) + " " + str(row[1]) + " " + str(row[2])     
+        print(str(row[0]) + " " + str(row[1]) + " " + str(row[2]))     
         row = cursor.fetchone()  
 ```  
   
@@ -55,7 +51,7 @@ In this example you will see how to execute an [INSERT](../../../t-sql/statement
     cursor.execute("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES ('SQL Server Express', 'SQLEXPRESS', 0, 0, CURRENT_TIMESTAMP)")  
     row = cursor.fetchone()  
     while row:  
-        print "Inserted Product ID : " +str(row[0])  
+        print("Inserted Product ID : " +str(row[0]))
         row = cursor.fetchone()  
     conn.commit()
     conn.close()

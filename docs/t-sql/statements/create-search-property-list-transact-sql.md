@@ -1,33 +1,30 @@
 ---
-description: "CREATE SEARCH PROPERTY LIST (Transact-SQL)"
-title: "CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SEARCH PROPERTY LIST (Transact-SQL)"
+description: CREATE SEARCH PROPERTY LIST (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "04/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_SEARCH_PROPERTY_LIST_TSQL"
   - "CREATE SEARCH"
   - "CREATE_SEARCH_TSQL"
   - "CREATE_SEARCH_PROPERTY_TSQL"
   - "CREATE SEARCH PROPERTY"
   - "CREATE SEARCH PROPERTY LIST"
-  - sql13.swb.spl.newsearchpropertylist.f1
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+  - "sql13.swb.spl.newsearchpropertylist.f1"
+helpviewer_keywords:
   - "full-text search [SQL Server], search property lists"
   - "search property lists [SQL Server], creating"
   - "CREATE SEARCH PROPERTY LIST statement"
-ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a new search property list. A search property list is used to specify one or more search properties that you want to include in a full-text index.  
   

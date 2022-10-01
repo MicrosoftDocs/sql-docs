@@ -1,20 +1,16 @@
 ---
+title: "JScript Code Example to Return a Recordset"
 description: "JScript Code Example to Return a Recordset"
-title: "JScript Code Example to Return a Recordset | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "JScript"
-helpviewer_keywords: 
-  - "Recordset [ADO]"
-ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Recordset [ADO]"
+dev_langs:
+  - "JScript"
 ---
 # JScript Code Example to Return a Recordset
 ## JScript Code (rs.js)  

@@ -1,18 +1,14 @@
 ---
+title: "Level Object Properties, Methods, and Events"
 description: "Level Object Properties, Methods, and Events"
-title: "Level Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Level object [ADO MD], members"
-ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Level object [ADO MD], members"
 ---
 # Level Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -1,13 +1,13 @@
 ---
-title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
+title: "View and Read SQL Server Setup Log Files"
 description: This article describes the log files that SQL Server Setup creates. Log files are placed in a dated and time-stamped folder.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/09/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "viewing logs"
   - "displaying log files"
   - "Setup [SQL Server], logs"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "installing SQL Server, logs"
   - "errors [SQL Server], Setup"
   - "logs [SQL Server], Setup"
-ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # View and Read SQL Server Setup Log Files
@@ -80,7 +77,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   > Note that when patching there can be a number of sub folders (one for each instance being patched, and one for shared features) which contain a similar set of files (i.e. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### Location  
- The summary.txt is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
+ The summary.txt is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
  To find errors in the summary text file, search the file by using the "error" or "failed" keywords.
   
@@ -90,7 +87,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  The summary_engine base file is similar to the summary file and is generated during the main workflow.
   
 ### Location  
- The Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+ The Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
   
 ## Detail.txt file
@@ -99,7 +96,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  Detail.txt is generated for the main workflow such as install or upgrade, and provides the details of the execution. The logs in the file are generated based on the time when each action for the installation was invoked. The text file shows the order in which the actions were executed, as well as their dependencies.  
   
 ### Location  
- The detail.txt file is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
+ The detail.txt file is located within %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
  If an error occurs during the Setup process, the exception or error is logged at the end of this file. To find the errors in this file, first examine the end of the file followed by a search of the file for the "error" or "exception" keywords
     
@@ -115,7 +112,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### Location  
- The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
+ The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
  At the end of the file is a summary of the execution, which includes the success or failure status and properties. To find the error in the MSI file, search for "value 3" and review the text before and after.  
   
@@ -125,7 +122,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  The configuration file contains the input settings that are provided during installation. It can be used to restart the installation without having to enter the settings manually. However, passwords for the accounts, PID, and some parameters are not saved in the configuration file. The settings can be either added to the file or provided by using the command line or the Setup user interface. For more information, see [Install SQL Server 2016 Using a Configuration File](./install-sql-server-using-a-configuration-file.md).  
   
 ### Location  
- The ConfigurationFile.ini is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ The ConfigurationFile.ini is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## SystemConfigurationCheck_Report.htm file
   
@@ -133,7 +130,7 @@ The following sections describe [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  The system configuration check report contains a short description for each executed rule, and the execution status.
   
 ### Location  
-The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   

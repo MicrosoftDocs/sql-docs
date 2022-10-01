@@ -1,19 +1,18 @@
 ---
-description: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
-ms.custom: seo-dt-2019
+description: sys.pdw_nodes_column_store_segments (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+manager: jrj
 ms.date: "03/28/2018"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "reference"
+ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-author: LitKnd
-ms.author: kendralittle
-manager: jrj
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)
 
@@ -40,7 +39,6 @@ Contains a row for each column in a columnstore index.
 | **null_value**              | **bigint** | Value used to represent nulls.                               |
 | **on_disk_size**            | **bigint** | Size of segment in bytes.                                    |
 | **pdw_node_id**             | **int**    | Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node. |
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

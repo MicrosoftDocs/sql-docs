@@ -1,26 +1,24 @@
 ---
-description: "The sys.query_store_query_hints system catalog view returns Query Store hints."
 title: "sys.query_store_query_hints (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: The sys.query_store_query_hints system catalog view returns Query Store hints.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "SYS.QUERY_STORE_QUERY_HINTS"
   - "QUERY_STORE_QUERY_HINTS"
   - "SYS.QUERY_STORE_QUERY_HINTS_TSQL"
   - "QUERY_STORE_QUERY_HINTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.query_store_query_hints catalog view"
   - "query_store_query_hints catalog view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.query_store_query_hints (Transact-SQL)

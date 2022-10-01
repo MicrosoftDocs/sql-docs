@@ -83,7 +83,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Select **OK**.
   
 5.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
 
@@ -93,7 +93,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 2.  In the **Edit Filter** dialog box, modify the filter.  
   
-3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 #### To delete a static row filter  
   

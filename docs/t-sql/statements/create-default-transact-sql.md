@@ -1,30 +1,27 @@
 ---
-description: "CREATE DEFAULT (Transact-SQL)"
-title: "CREATE DEFAULT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE DEFAULT (Transact-SQL)"
+description: CREATE DEFAULT (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "11/25/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "CREATE_DEFAULT_TSQL"
   - "CREATE DEFAULT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "objects [SQL Server], default"
   - "default objects"
   - "CREATE DEFAULT statement"
   - "objects [SQL Server], creating"
   - "DEFAULT definition"
-ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE DEFAULT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
 Creates an object called a default. When bound to a column or an alias data type, a default specifies a value to be inserted into the column to which the object is bound (or into all columns, if of an alias data type), when no value is explicitly supplied during an insert.  
   

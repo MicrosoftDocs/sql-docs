@@ -1,16 +1,12 @@
 ---
+title: "Sending the Updates: UpdateBatch Method"
 description: "Sending the Updates: UpdateBatch Method"
-title: "Sending the Updates: UpdateBatch Method | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
 ---
 # Sending the Updates: UpdateBatch Method
 The following code opens a Recordset in batch mode by setting the LockType property to adLockBatchOptimistic and the CursorLocation to adUseClient. It adds two new records and changes the value of a field in an existing record, saving the original values, and then calls UpdateBatch to send the changes back to the data source.  

@@ -1,30 +1,28 @@
 ---
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
+description: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
+author: Madhumitatripathy
+ms.author: matripathy
+ms.reviewer: vanto
+ms.date: 04/19/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.author: matripathy
-author: Madhumitatripathy
-ms.reviewer: vanto
 f1_keywords:
   - "ADD SENSITIVITY CLASSIFICATION"
   - "ADD_SENSITIVITY_CLASSIFICATION"
-dev_langs: 
-  - "TSQL"
 helpviewer_keywords:
   - "ADD SENSITIVITY CLASSIFICATION statement"
   - "add labels"
-  - "adding labels"
   - "adding labels"
   - "classification [SQL]"
   - "labels [SQL]"
   - "information types"
   - "data classification"
   - "rank"
-ms.custom: ""
-ms.date: 04/19/2022
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-linux-ver15||>=sql-server-ver15||=azuresqldb-current||=azure-sqldw-latest"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)

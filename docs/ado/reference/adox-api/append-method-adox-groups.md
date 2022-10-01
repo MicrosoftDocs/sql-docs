@@ -1,22 +1,18 @@
 ---
+title: "Append Method (ADOX Groups)"
 description: "Append Method (ADOX Groups)"
-title: "Append Method (ADOX Groups) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Groups::raw_Append"
-  - "Groups::Append"
-helpviewer_keywords: 
-  - "Append method [ADOX]"
-ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Groups::raw_Append"
+  - "Groups::Append"
+helpviewer_keywords:
+  - "Append method [ADOX]"
+apitype: "COM"
 ---
 # Append Method (ADOX Groups)
 Adds a new [Group](./group-object-adox.md) object to the [Groups](./groups-collection-adox.md) collection.  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "expiration [SQL Server]"
   - "database backups [SQL Server], expiration dates"
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Set the Expiration Date on a Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

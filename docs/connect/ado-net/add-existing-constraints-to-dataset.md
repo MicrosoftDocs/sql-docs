@@ -1,16 +1,14 @@
 ---
 title: "Add existing constraints to a DataSet"
 description: Describes how to add existing constraints to a DataSet.
-ms.date: "11/30/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "11/30/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Add existing constraints to a DataSet
 

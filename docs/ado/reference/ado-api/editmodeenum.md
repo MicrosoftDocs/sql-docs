@@ -1,21 +1,17 @@
 ---
+title: "EditModeEnum"
 description: "EditModeEnum"
-title: "EditModeEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "EditModeEnum"
-helpviewer_keywords: 
-  - "EditModeEnum enumeration [ADO]"
-ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "EditModeEnum"
+helpviewer_keywords:
+  - "EditModeEnum enumeration [ADO]"
+apitype: "COM"
 ---
 # EditModeEnum
 Specifies the editing status of a record.  

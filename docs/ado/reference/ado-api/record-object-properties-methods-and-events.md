@@ -1,18 +1,14 @@
 ---
+title: "Record Object Properties, Methods, and Events"
 description: "Record Object Properties, Methods, and Events"
-title: "Record Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Record object [ADO], members"
-ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Record object [ADO], members"
 ---
 # Record Object Properties, Methods, and Events
 ## Properties/Collections  

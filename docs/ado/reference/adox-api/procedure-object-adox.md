@@ -1,21 +1,15 @@
 ---
+title: "Procedure Object (ADOX)"
 description: "Procedure Object (ADOX)"
-title: "Procedure Object (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Procedure"
-helpviewer_keywords: 
-  - "Procedure object [ADOX]"
-ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Procedure object [ADOX]"
+apitype: "COM"
 ---
 # Procedure Object (ADOX)
 Represents a stored procedure. When used in conjunction with the ADO [Command](../ado-api/command-object-ado.md) object, the **Procedure** object can be used for adding, deleting, or modifying stored procedures.  

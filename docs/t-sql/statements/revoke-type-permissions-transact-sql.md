@@ -1,25 +1,22 @@
 ---
-description: "REVOKE Type Permissions (Transact-SQL)"
-title: "REVOKE Type Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Type Permissions (Transact-SQL)"
+description: REVOKE Type Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "REVOKE statement, types"
   - "permissions [SQL Server], types"
   - "type permissions [SQL Server]"
-ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Type Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Revokes permissions on a type.  
   

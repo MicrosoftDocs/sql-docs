@@ -1,23 +1,21 @@
 ---
-description: "IHcolumns (Transact-SQL)"
-title: "IHcolumns (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "IHcolumns (Transact-SQL)"
+description: IHcolumns (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "IHcolumns_TSQL"
   - "IHcolumns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IHcolumns system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-author: LitKnd
-ms.author: kendralittle
 ---
 # IHcolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

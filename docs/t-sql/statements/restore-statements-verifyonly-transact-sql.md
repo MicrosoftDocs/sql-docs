@@ -1,32 +1,29 @@
 ---
-description: "RESTORE Statements - VERIFYONLY (Transact-SQL)"
-title: "RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "RESTORE VERIFYONLY (Transact-SQL)"
+description: RESTORE Statements - VERIFYONLY (Transact-SQL)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/30/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "VERIFYONLY"
   - "RESTORE VERIFYONLY"
   - "VERIFYONLY_TSQL"
   - "RESTORE_VERIFYONLY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "RESTORE VERIFYONLY statement"
   - "backups [SQL Server], verifying"
   - "verifying backups"
   - "checking backups"
-ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   Verifies the backup but does not restore it, and checks to see that the backup set is complete and the entire backup is readable. However, RESTORE VERIFYONLY does not attempt to verify the structure of the data contained in the backup volumes. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RESTORE VERIFYONLY has been enhanced to do additional checking on the data to increase the probability of detecting errors. The goal is to be as close to an actual restore operation as practical. For more information, see the Remarks.  
 

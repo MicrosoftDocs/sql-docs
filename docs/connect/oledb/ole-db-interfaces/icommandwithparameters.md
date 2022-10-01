@@ -1,15 +1,12 @@
 ---
-title: "ICommandWithParameters (OLE DB driver) | Microsoft Docs"
-description: Learn how improvements allow ICommandWithParameters::GetParameterInfo to obtain more accurate descriptions of expected results for OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
+title: "ICommandWithParameters (OLE DB driver)"
+description: "Learn how improvements allow ICommandWithParameters::GetParameterInfo to obtain more accurate descriptions of expected results for OLE DB Driver for SQL Server."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # ICommandWithParameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

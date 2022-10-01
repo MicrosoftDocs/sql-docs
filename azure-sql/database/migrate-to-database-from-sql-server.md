@@ -1,17 +1,20 @@
 ---
 title: SQL Server database migration to Azure SQL Database
 description: Learn about SQL Server database migration to Azure SQL Database.
-keywords: database migration,sql server database migration,database migration tools,migrate database,migrate sql database
-services: sql-database
+author: croblesm
+ms.author: roblescarlos
+ms.reviewer: wiassaf, mathoma
+ms.date: 02/11/2019
 ms.service: sql-database
 ms.subservice: migration
-ms.custom: sqldbrb=1
-ms.devlang: 
 ms.topic: how-to
-author: mokabiru
-ms.author: mokabiru
-ms.reviewer: kendralittle, mathoma
-ms.date: 02/11/2019
+ms.custom: sqldbrb=1
+keywords:
+  - "database migration"
+  - "sql server database migration"
+  - "database migration tools"
+  - "migrate database"
+  - "migrate sql database"
 ---
 # SQL Server database migration to Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

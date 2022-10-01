@@ -1,16 +1,14 @@
 ---
 title: Single-tenant SaaS tutorial
-description: "Deploy and explore a standalone single-tenant SaaS application, that uses Azure SQL Database."
-services: sql-database
-ms.service: sql-database
-ms.subservice: scenario
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: tutorial
-author: LitKnd
-ms.author: kendralittle
+description: Deploy and explore a standalone single-tenant SaaS application, that uses Azure SQL Database.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 11/07/2018
+ms.service: sql-database
+ms.subservice: scenario
+ms.topic: tutorial
+ms.custom: sqldbrb=1
 ---
 # Deploy and explore a standalone single-tenant application that uses Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

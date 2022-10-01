@@ -1,24 +1,22 @@
 ---
-description: "syscollector_collector_types (Transact-SQL)"
-title: "syscollector_collector_types (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "syscollector_collector_types (Transact-SQL)"
+description: syscollector_collector_types (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "syscollector_collector_types"
   - "syscollector_collector_types_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data collector view"
   - "syscollector_collector_types view"
+dev_langs:
+  - "TSQL"
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # syscollector_collector_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

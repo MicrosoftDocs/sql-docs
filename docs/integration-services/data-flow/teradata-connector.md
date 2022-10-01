@@ -15,7 +15,7 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-Microsoft connector for Teradata enables to export data from and load data into Teradata databases in an SSIS package.
+Microsoft connector for Teradata enables exporting data from and load data into Teradata databases in an SSIS package.
 
 This new connector supports databases with 1MB-enabled tables.
 
@@ -27,24 +27,11 @@ The following Microsoft SQL Server products are supported by Microsoft Connector
 - Microsoft SQL Server Data Tools (SSDT) 15.8.1 or later for Visual Studio 2017
 - Microsoft SQL Server Data Tools (SSDT) for Visual Studio 2019
 
-Microsoft connector for Teradata uses Teradata Parallel Transporter Application Programming Language Interface to load into and export data from the Teradata database. The following versions are supported during TTU lifecycle:
-
-- Teradata Tools and Utilities (TTU) 16.10 supports Teradata Database 14.00, 14.10, 15.00, 15.10, 16.10, 16.20 and 17.00/05
-- Teradata Tools and Utilities (TTU) 16.20 supports Teradata Database 14.10, 15.00, 15.10, 16.10, 16.20, 17.00/05 and 17.10
-
-Check [Teradata documentation](https://docs.teradata.com/) for details of Teradata Parallel Transporter Application programming interface programmer guide.
+Microsoft connector for Teradata uses ODBC Driver for Teradata and Teradata Parallel Transporter shipped with Teradata Tools and Utilities (TTU). Supported TTU versions are 16.20 and 17.10.
 
 ## Installation
 
-On 32-bit computers, install the following drivers from [Teradata Tools and Utilities - Windows Installation Package](https://downloads.teradata.com/download/tools/teradata-tools-and-utilities-windows-installation-package):
-
-- Teradata ODBC driver (32-bit)
-- Teradata PT API (32-bit)
-
-On 64-bit computers, install the following drivers:
-
-- Teradata ODBC driver (64-bit)
-- Teradata PT API (64-bit)
+Install TTU from [Teradata site](https://downloads.teradata.com/download/tools/teradata-tools-and-utilities-windows-installation-package). Make sure that ODBC Driver for Teradata and Teradata Parallel Transporter features is selected during the installation.
 
 To install the connector for Teradata database, download and run the installer from [the latest version of Microsoft connector for Teradata](https://www.microsoft.com/download/details.aspx?id=100599). Then follow the directions in the installation wizard.
 
@@ -93,10 +80,25 @@ You can run uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
 
+### Rev. 233
+
+**Bugfixes**
+- In a newly created Teradata Connection Manager, some required connection string properties like `DRIVER` are not populated by default.
+
+### Rev. 225
+
+**New Features**
+- Add support for TTU 17.10.
+
+**Bugfixes**
+- Incorrect data may be loaded by Teradata Source under certain circumstances.
+- Default error table in Teradata Destination is incorrectly named and may not be created in the database of destination table.
+- Options specified in the connection string property of Teradata Connection Manager may not be picked up and therefore do not take effect.
+
 ### Rev. 197
 
 **Bugfixes**
-1. When reading empty string data, Teradata Source would fail with error message "An error occurred when converting string to target codepage."
+- When reading empty string data, Teradata Source would fail with error message "An error occurred when converting string to target codepage."
 
 ## Next steps
 

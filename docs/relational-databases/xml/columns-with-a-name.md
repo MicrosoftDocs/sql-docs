@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Columns with a name
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:
 
@@ -85,7 +85,7 @@ SELECT
   ProductModelID,
   Name,
   Instructions.query(
-    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+    'declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
      /MI:root/MI:Location
     ') as ManuWorkCenterInformation
 FROM Production.ProductModel

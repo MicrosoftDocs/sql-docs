@@ -1,25 +1,24 @@
 ---
+title: "SQUARE (Transact-SQL)"
 description: "SQUARE (Transact-SQL)"
-title: "SQUARE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SQUARE"
   - "SQUARE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQUARE"
   - "square values"
-ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SQUARE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

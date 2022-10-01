@@ -1,25 +1,22 @@
 ---
-description: "ALTER SERVER AUDIT  (Transact-SQL)"
-title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "ALTER_SERVER_AUDIT_TSQL"
-  - "ALTER SERVER AUDIT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "server audit [SQL Server]"
-  - "audits [SQL Server], specification"
-  - "ALTER SERVER AUDIT statement"
-ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
+title: "ALTER SERVER AUDIT  (Transact-SQL)"
+description: ALTER SERVER AUDIT  (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
+ms.prod: sql
+ms.prod_service: "sql-database"
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "ALTER_SERVER_AUDIT_TSQL"
+  - "ALTER SERVER AUDIT"
+helpviewer_keywords:
+  - "server audit [SQL Server]"
+  - "audits [SQL Server], specification"
+  - "ALTER SERVER AUDIT statement"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)

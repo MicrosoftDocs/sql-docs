@@ -1,16 +1,15 @@
 ---
 title: "REST API: Sync between multiple databases"
 description: Use a REST API example script to sync between multiple databases.
-services: sql-database
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 03/12/2019
 ms.service: sql-database
 ms.subservice: sql-data-sync
+ms.topic: sample
 ms.custom: sqldbrb=1
 ms.devlang: rest-api
-ms.topic: sample
-author: rothja 
-ms.author: jroth
-ms.reviewer: kendralittle, mathoma
-ms.date: 03/12/2019
 ---
 
 # Use REST API to sync data between multiple databases 
@@ -22,7 +21,7 @@ This REST API example configures SQL Data Sync to sync data between multiple dat
 For an overview of SQL Data Sync, see [Sync data across multiple cloud and on-premises databases with SQL Data Sync in Azure](../sql-data-sync-data-sql-server-sql-database.md).
 
 > [!IMPORTANT]
-> SQL Data Sync does not support Azure SQL Managed Instance at this time.
+> SQL Data Sync does not support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 ## Create sync group
 

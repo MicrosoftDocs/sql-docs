@@ -1,16 +1,14 @@
 ---
-description: "Collation Precedence"
-title: "Collation Precedence | Microsoft Docs"
-ms.custom: ""
+title: "Collation Precedence"
+description: Collation Precedence
+author: markingmyname
+ms.author: maghan
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "coercible-default collation label"
   - "precedence [SQL Server], collations"
   - "collation sensitive"
@@ -23,9 +21,8 @@ helpviewer_keywords:
   - "collation labels"
   - "collation coercion rules"
   - "rules [SQL Server], collations"
-ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Precedence

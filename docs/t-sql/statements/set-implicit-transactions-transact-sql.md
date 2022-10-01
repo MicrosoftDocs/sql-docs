@@ -1,29 +1,26 @@
 ---
-description: "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"
-title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"
+description: SET IMPLICIT_TRANSACTIONS (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "IMPLICIT_TRANSACTIONS"
   - "SET IMPLICIT_TRANSACTIONS"
   - "IMPLICIT_TRANSACTIONS_TSQL"
   - "SET_IMPLICIT_TRANSACTIONS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "implicit transactions"
   - "transactions [SQL Server], implicit"
   - "connections [SQL Server], implicit transaction mode"
   - "SET IMPLICIT_TRANSACTIONS statement"
   - "IMPLICIT_TRANSACTIONS option"
-ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET IMPLICIT_TRANSACTIONS (Transact-SQL)

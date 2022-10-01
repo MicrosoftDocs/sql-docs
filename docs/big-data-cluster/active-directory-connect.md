@@ -6,9 +6,9 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 09/30/2020
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
 ---
 
 # Connect [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]: Active Directory mode

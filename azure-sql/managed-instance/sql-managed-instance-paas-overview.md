@@ -1,16 +1,14 @@
 ---
 title: What is Azure SQL Managed Instance?
 description: Learn about how Azure SQL Managed Instance provides near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: overview
 author: niko-neugebauer
 ms.author: nneugebauer
 ms.reviewer: mathoma, vanto
 ms.date: 04/06/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: overview
+ms.custom: sqldbrb=1
 ---
 
 # What is Azure SQL Managed Instance?
@@ -19,7 +17,7 @@ ms.date: 04/06/2022
 Azure SQL Managed Instance is the intelligent, scalable cloud database service that combines the broadest SQL Server database engine compatibility with all the benefits of a fully managed and evergreen platform as a service. SQL Managed Instance has near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine, providing a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation that addresses common security concerns, and a [business model](https://azure.microsoft.com/pricing/details/sql-database/) favorable for existing SQL Server customers. SQL Managed Instance allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal application and database changes. At the same time, SQL Managed Instance preserves all PaaS capabilities (automatic patching and version updates, [automated backups](../database/automated-backups-overview.md), [high availability](../database/high-availability-sla.md)) that drastically reduce management overhead and TCO.
 
 If you're new to Azure SQL Managed Instance, check out the *Azure SQL Managed Instance* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners/?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
-> [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/Azure-SQL-Managed-Instance-Overview-6-of-61/player]
+> [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/Azure-SQL-Managed-Instance-Overview-6-of-61/player]
 
 > [!IMPORTANT]
 > For a list of regions where SQL Managed Instance is currently available, see [Supported regions](resource-limits.md#supported-regions).
@@ -85,7 +83,7 @@ Find more information about the difference between hardware configurations in [S
 SQL Managed Instance is available in two service tiers:
 
 - **General purpose**: Designed for applications with typical performance and I/O latency requirements.
-- **Business critical**: Designed for applications with low I/O latency requirements and minimal impact of underlying maintenance operations on the workload.
+- **Business Critical**: Designed for applications with low I/O latency requirements and minimal impact of underlying maintenance operations on the workload.
 
 Both service tiers guarantee 99.99% availability and enable you to independently select storage size and compute capacity. For more information on the high availability architecture of Azure SQL Managed Instance, see [High availability and Azure SQL Managed Instance](../database/high-availability-sla.md).
 
@@ -155,7 +153,7 @@ Migration of an encrypted database to SQL Managed Instance is supported via Azur
 
 ## Azure Active Directory integration
 
-SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Azure AD. Azure AD server principals (logins) (**public preview**) are an Azure cloud version of on-premises database logins that you are using in your on-premises environment. Azure AD server principals (logins) enable you to specify users and groups from your Azure AD tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
+SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Azure AD. Azure AD server principals (logins) are an Azure cloud version of on-premises database logins that you are using in your on-premises environment. Azure AD server principals (logins) enable you to specify users and groups from your Azure AD tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
 
 A new syntax is introduced to create Azure AD server principals (logins), **FROM EXTERNAL PROVIDER**. For more information on the syntax, see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true), and review the [Provision an Azure Active Directory administrator for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) article.
 
@@ -190,7 +188,7 @@ SQL Managed Instance targets user scenarios with mass database migration from on
 
 The migration approach leverages SQL backups to Azure Blob storage. Backups stored in an Azure storage blob can be directly restored into a managed instance using the [T-SQL RESTORE command](/sql/t-sql/statements/restore-statements-transact-sql?preserve-view=true&view=azuresqldb-mi-current).
 
-- For a quickstart showing how to restore the Wide World Importers - Standard database backup file, see [Restore a backup file to a managed instance](restore-sample-database-quickstart.md). This quickstart shows that you have to upload a backup file to Azure Blob storage and secure it using a shared access signature (SAS) key.
+- For a quickstart showing how to restore the Wide World Importers - Standard database backup file, see [Restore a backup file to a managed instance](restore-sample-database-quickstart.md). This quickstart shows that you have to upload a backup file to Azure Blob Storage and secure it using a shared access signature (SAS).
 - For information about restore from URL, see [Native RESTORE from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md#backup-and-restore).
 
 > [!IMPORTANT]

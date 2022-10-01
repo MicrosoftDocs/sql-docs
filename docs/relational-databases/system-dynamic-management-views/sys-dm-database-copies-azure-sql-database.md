@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_database_copies (Azure SQL Database)"
 title: "sys.dm_database_copies (Azure SQL Database)"
-ms.custom: ""
+description: sys.dm_database_copies (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/30/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_database_copies_TSQL"
   - "sys.dm_database_copies"
   - "dm_database_copies"
   - "sys.dm_database_copies_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_database_copies"
   - "sys.dm_database_copies"
+dev_langs:
+  - "TSQL"
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]

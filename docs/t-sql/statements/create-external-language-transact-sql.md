@@ -1,15 +1,14 @@
 ---
-description: "CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
-title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
-ms.custom:
+title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
+description: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
+author: VanMSFT
+ms.author: vanto
+manager: cgronlun
 ms.date: 04/03/2020
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
-author: rothja
-ms.author: jroth
-manager: cgronlun
-dev_langs: 
+dev_langs:
   - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---

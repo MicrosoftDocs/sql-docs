@@ -1,21 +1,17 @@
 ---
+title: "MarshalOptions Property (ADO)"
 description: "MarshalOptions Property (ADO)"
-title: "MarshalOptions Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Recordset15::MarshalOptions"
-helpviewer_keywords: 
-  - "MarshalOptions property [ADO]"
-ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Recordset15::MarshalOptions"
+helpviewer_keywords:
+  - "MarshalOptions property [ADO]"
+apitype: "COM"
 ---
 # MarshalOptions Property (ADO)
 Indicates which records of the [Recordset](./recordset-object-ado.md) are to be marshaled back to the server.  

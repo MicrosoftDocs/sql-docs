@@ -9,9 +9,9 @@ helpviewer_keywords:
   - "relationships [SQL Server], creating"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: "vanto"
+ms.reviewer: vanto, randolphwest
 ms.custom: FY22Q2Fresh
-ms.date: "12/20/2021"
+ms.date: 07/25/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Foreign Key Relationships
@@ -39,6 +39,9 @@ Creating a foreign key in an existing table requires [ALTER](../../t-sql/stateme
   - Greater than 253 foreign key references are supported for DELETE and UPDATE DML operations. MERGE operations aren't supported.
   - A table with a foreign key reference to itself is still limited to 253 foreign key references.
   - Greater than 253 foreign key references aren't currently available for columnstore indexes, memory-optimized tables, or Stretch Database.
+
+  > [!IMPORTANT]  
+  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
 
 - FOREIGN KEY constraints aren't enforced on temporary tables.
 - If a foreign key is defined on a CLR user-defined type column, the implementation of the type must support binary ordering. For more information, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).

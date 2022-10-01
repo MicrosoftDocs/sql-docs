@@ -1,21 +1,17 @@
 ---
+title: "Append Method (ADO)"
 description: "Append Method (ADO)"
-title: "Append Method (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "_DynaCollection::Append"
-helpviewer_keywords: 
-  - "Append method [ADO]"
-ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "_DynaCollection::Append"
+helpviewer_keywords:
+  - "Append method [ADO]"
+apitype: "COM"
 ---
 # Append Method (ADO)
 Appends an object to a collection. If the collection is [Fields](./fields-collection-ado.md), a new [Field](./field-object.md) object can be created before it is appended to the collection.  

@@ -1,23 +1,19 @@
 ---
+title: "Source Property (ADO Error)"
 description: "Source Property (ADO Error)"
-title: "Source Property (ADO Error) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "Error::get_Source"
   - "Error::Source"
   - "Error::GetSource"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Source property [ADO Error]"
-ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Source Property (ADO Error)
 Indicates the name of the object or application that originally generated an error.  

@@ -1,23 +1,21 @@
 ---
-description: "MSrepl_errors (Transact-SQL)"
-title: "MSrepl_errors (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSrepl_errors (Transact-SQL)"
+description: MSrepl_errors (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSrepl_errors"
   - "MSrepl_errors_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSrepl_errors system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSrepl_errors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

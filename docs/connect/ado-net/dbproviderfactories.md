@@ -1,15 +1,13 @@
 ---
 title: "DbProviderFactories"
 description: Describes the provider factory model and demonstrates how to use the base classes in the `System.Data.Common` namespace.
-ms.date: "12/22/2020"
-ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "12/22/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # DbProviderFactories
 

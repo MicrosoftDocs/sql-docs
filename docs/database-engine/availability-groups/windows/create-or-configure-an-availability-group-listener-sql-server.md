@@ -1,21 +1,19 @@
 ---
 title: "Configure availability group listener"
 description: "Describes the steps to take when configuring a listener for an Always On availability group using PowerShell or SQL Server Management Studio. "
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.newaglistener.general.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], listeners"
-  - "Availability Groups [SQL Server], client connectivity"
-ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.availabilitygroup.newaglistener.general.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], listeners"
+  - "Availability Groups [SQL Server], client connectivity"
 ---
 # Configure a listener for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,8 +60,8 @@ manager: erikre
   
 |Permissions|Link|  
 |-----------------|----------|  
-|The cluster name object (CNO) of WSFC cluster that is hosting the availability group must have **Create Computer objects** permission.<br /><br /> In Active Directory, a CNO by default does not have **Create Computer objects** permission explicitly and can create 10 virtual computer objects (VCOs). After 10 VCOs are created, the creation of additional VCOs will fail. You can avoid this by granting the permission explicitly to the WSFC cluster's CNO. Note that VCOs for availability groups that you have deleted are not automatically deleted in Active Directory and count against your 10 VCO default limit unless they are manually deleted.<br /><br /> Note: In some organizations, the security policy prohibits granting **Create Computer objects** permission to individual user accounts.|*Steps for configuring the account for the person who installs the cluster* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/#BKMK_steps_precreating)|  
-|If your organization requires that you prestage the computer account for a listener virtual network name, you will need membership in the **Account Operator** group or your domain administrator's assistance.|*Steps for prestaging an account for a clustered service or application* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/#BKMK_steps_precreating2).|  
+|The cluster name object (CNO) of WSFC cluster that is hosting the availability group must have **Create Computer objects** permission.<br /><br /> In Active Directory, a CNO by default does not have **Create Computer objects** permission explicitly and can create 10 virtual computer objects (VCOs). After 10 VCOs are created, the creation of additional VCOs will fail. You can avoid this by granting the permission explicitly to the WSFC cluster's CNO. Note that VCOs for availability groups that you have deleted are not automatically deleted in Active Directory and count against your 10 VCO default limit unless they are manually deleted.<br /><br /> Note: In some organizations, the security policy prohibits granting **Create Computer objects** permission to individual user accounts.|*Steps for configuring the account for the person who installs the cluster* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)#BKMK_steps_precreating)|  
+|If your organization requires that you prestage the computer account for a listener virtual network name, you will need membership in the **Account Operator** group or your domain administrator's assistance.|*Steps for prestaging an account for a clustered service or application* in [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)#BKMK_steps_precreating2).|  
   
 > [!TIP]  
 >  Generally, it is simplest not to prestage the computer account for a listener virtual network name. If you can, let the account to be created and configured automatically when you run the WSFC High Availability wizard.  

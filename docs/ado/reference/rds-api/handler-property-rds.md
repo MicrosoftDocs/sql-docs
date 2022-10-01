@@ -1,19 +1,15 @@
 ---
+title: "Handler Property (RDS)"
 description: "Handler Property (RDS)"
-title: "Handler Property (RDS) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Handler property [ADO]"
-ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Handler property [ADO]"
+apitype: "COM"
 ---
 # Handler Property (RDS)
 Indicates the name of a server-side customization program (handler) that extends the functionality of the [RDSServer.DataFactory](./datafactory-object-rdsserver.md), and any parameters used by the *handler*.  

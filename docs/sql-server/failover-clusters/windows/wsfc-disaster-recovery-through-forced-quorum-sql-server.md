@@ -37,7 +37,7 @@ ms.author: mathoma
 > [!WARNING]  
 >  The user should be well-informed on the concepts and interactions of Windows Server Failover Clustering, WSFC Quorum Models, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and the environment's specific deployment configuration.  
 >   
->  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC Quorum Modes and Voting Configuration (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  For more information, see:  [Windows Server Failover Clustering (WSFC) with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md), [WSFC Quorum Modes and Voting Configuration (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ###  <a name="Security"></a> Security  
  The user must be a domain account that is member of the local Administrators group on each node of the WSFC cluster.  
@@ -84,6 +84,9 @@ ms.author: mathoma
 5.  **Recover availability group database replicas as needed.** Non-availability group databases should recover and come back online on their own as part of the regular SQL Server startup process.  
   
      You can minimize potential data loss and recovery time for the availability group replicas by bringing them back online in this sequence:  primary replica, synchronous secondary replicas, asynchronous secondary replicas.  
+     
+   > [!NOTE]
+   > After using forced quorum it is necessary to perform a forced failover with possible data loss to bring the availability group back online. For more information, review [Perform a forced manual failover of an availability group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).
   
 6.  **Repair or replace failed components and re-validate cluster.** Now that you have recovered from the initial disaster and quorum failure, you should repair or replace the failed nodes and adjust related WSFC and Always On configurations accordingly.  This can include dropping availability group replicas, evicting nodes from the cluster, or flattening and re-installing software on a node.  
   

@@ -1,15 +1,13 @@
 ---
-description: "BACKUP SYMMETRIC KEY (Transact-SQL)"
 title: "BACKUP SYMMETRIC KEY (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
+description: BACKUP SYMMETRIC KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
+ms.date: "05/24/2022"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+ms.custom: event-tier1-build-2022
 ---
 
 # BACKUP SYMMETRIC KEY (Transact-SQL)
@@ -17,7 +15,7 @@ ms.author: vanto
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
 > [!NOTE]
-> SQL Server 2022 introduces support for exporting and importing symmetric keys, either to or from Azure Blob storage or file.
+> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces support for exporting and importing symmetric keys, either to or from Azure Blob storage or file.
 
 Exports the symmetric key.
 
@@ -50,10 +48,10 @@ BACKUP SYMMETRIC KEY key_name TO
 In order to back up the symmetric key to an Azure Blob storage, you need to:
 
 1. Have an [Azure storage account](/azure/storage/common/storage-account-create).
-1. [Create stored access policy and shared access storage](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage).
-1. [Create a SQL Server credential using a shared access signature](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#2---create-a-sql-server-credential-using-a-shared-access-signature).
+1. [Create stored access policy and shared access storage](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
+1. [Create a SQL Server credential using a shared access signature](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).
 
-For more information, see [Tutorial: Use Azure Blob Storage with SQL Server](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016).
+For more information, see [Tutorial: Use Azure Blob Storage with SQL Server](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
 ## Permissions
 

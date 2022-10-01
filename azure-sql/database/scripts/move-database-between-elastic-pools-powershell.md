@@ -1,16 +1,17 @@
 ---
-title: "PowerShell: Move a database between elastic pools" 
-description: Use an Azure PowerShell example script to move a database in SQL Database between two elastic pools. 
-services: sql-database
+title: "PowerShell: Move a database between elastic pools"
+description: Use an Azure PowerShell example script to move a database in SQL Database between two elastic pools.
+author: arvindshmicrosoft
+ms.author: arvindsh
+ms.reviewer: wiassaf, mathoma
+ms.date: 03/12/2019
 ms.service: sql-database
 ms.subservice: elastic-pools
-ms.custom: sqldbrb=1, devx-track-azurepowershell
-ms.devlang: PowerShell
 ms.topic: sample
-author: arvindshmicrosoft 
-ms.author: arvindsh
-ms.reviewer: kendralittle, mathoma
-ms.date: 03/12/2019
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+ms.devlang: PowerShell
 ---
 
 # Use PowerShell to create elastic pools and move a database between them

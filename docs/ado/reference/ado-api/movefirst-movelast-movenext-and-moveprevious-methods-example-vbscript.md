@@ -1,23 +1,19 @@
 ---
+title: "Move Record Pointer of Recordset Example (VBScript)"
 description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VBScript)"
-title: "Move Record Pointer of Recordset Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MoveLast method [ADO], VBScript example"
   - "MoveNext method [ADO], VBScript example"
   - "MovePrevious method [ADO], VBScript example"
   - "MoveFirst method [ADO], VBScript example"
-ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VBScript)
 This example uses the [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), and [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) methods to move the record pointer of a [Recordset](./recordset-object-ado.md) based on the supplied command.  

@@ -1,18 +1,16 @@
 ---
-description: "System Catalog Views (Transact-SQL)"
-title: "Catalog Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Catalog Views (Transact-SQL)"
+description: System Catalog Views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql13.SysViewExpandPortal.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "catalog metadata [SQL Server]"
   - "system views [SQL Server], catalog"
   - "metadata [SQL Server], views"
@@ -20,9 +18,9 @@ helpviewer_keywords:
   - "catalog views [SQL Server]"
   - "Database Engine [SQL Server], metadata"
   - "catalog views [SQL Server], about catalog views"
+dev_langs:
+  - "TSQL"
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Catalog Views (Transact-SQL)

@@ -1,25 +1,23 @@
 ---
-description: "sys.xml_schema_types (Transact-SQL)"
-title: "sys.xml_schema_types (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.xml_schema_types (Transact-SQL)"
+description: sys.xml_schema_types (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.xml_schema_types_TSQL"
   - "xml_schema_types_TSQL"
   - "sys.xml_schema_types"
   - "xml_schema_types"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.xml_schema_types catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.xml_schema_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

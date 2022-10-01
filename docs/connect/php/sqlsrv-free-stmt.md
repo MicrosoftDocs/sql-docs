@@ -1,22 +1,17 @@
 ---
+title: "sqlsrv_free_stmt"
 description: "sqlsrv_free_stmt"
-title: "sqlsrv_free_stmt | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "sqlsrv_free_stmt"
-apitype: "NA"
-helpviewer_keywords: 
-  - "sqlsrv_free_stmt"
-  - "API Reference, sqlsrv_free_stmt"
-ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "sqlsrv_free_stmt"
+  - "API Reference, sqlsrv_free_stmt"
+apiname: "sqlsrv_free_stmt"
+apitype: "NA"
 ---
 # sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,25 +1,22 @@
 ---
-description: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)"
-title: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)"
+description: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
+author: sravanisaluru
+ms.author: srsaluru
 ms.date: "03/23/2022"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_DATABASE_AUDIT_SPECIFICATION_TSQL"
   - "ALTER DATABASE AUDIT SPECIFICATION"
   - "ALTER_DATABASE_AUDIT_TSQL"
   - "ALTER DATABASE AUDIT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER DATABASE AUDIT SPECIFICATION statement"
-ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-author: sravanisaluru
-ms.author: srsaluru
+dev_langs:
+  - "TSQL"
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

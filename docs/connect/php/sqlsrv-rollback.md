@@ -1,23 +1,18 @@
 ---
+title: "sqlsrv_rollback"
 description: "sqlsrv_rollback"
-title: "sqlsrv_rollback | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "03/26/2018"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_rollback"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction support"
   - "API Reference, sqlsrv_rollback"
   - "sqlsrv_rollback"
-ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-author: David-Engel
-ms.author: v-davidengel
+apiname: "sqlsrv_rollback"
+apitype: "NA"
 ---
 # sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

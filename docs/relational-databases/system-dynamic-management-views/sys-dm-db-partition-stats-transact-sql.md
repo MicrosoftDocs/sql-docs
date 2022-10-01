@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_db_partition_stats (Transact-SQL)"
-title: "sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.dm_db_partition_stats (Transact-SQL)"
+description: sys.dm_db_partition_stats (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_db_partition_stats"
   - "dm_db_partition_stats_TSQL"
   - "sys.dm_db_partition_stats_TSQL"
   - "sys.dm_db_partition_stats"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_db_partition_stats dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_partition_stats (Transact-SQL)

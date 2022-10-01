@@ -1,22 +1,19 @@
 ---
-description: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL)"
-title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL)"
+description: ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
+manager: cgronlund
 ms.date: "08/06/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: machine-learning-services
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_EXTERNAL_RESOURCE_POOL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER EXTERNAL RESOURCE POOL statement"
-ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-author: rothja
-ms.author: jroth
-manager: cgronlund
+dev_langs:
+  - "TSQL"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)

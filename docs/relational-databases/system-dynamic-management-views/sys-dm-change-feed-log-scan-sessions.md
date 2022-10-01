@@ -1,25 +1,23 @@
 ---
-description: "sys.dm_change_feed_log_scan_sessions (Transact-SQL) shows activity for the Azure Synapse Link feature."
 title: "sys.dm_change_feed_log_scan_sessions (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: sys.dm_change_feed_log_scan_sessions (Transact-SQL) shows activity for the Azure Synapse Link feature.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/24/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.dm_change_feed_log_scan_sessions_TSQL"
   - "sys.dm_change_feed_log_scan_sessions"
   - "dm_change_feed_log_scan_sessions_TSQL"
   - "dm_change_feed_log_scan_sessions"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_change_feed_log_scan_sessions dynamic management view"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-ver16||=azuresqldb-current"
 ---
 # sys.dm_change_feed_log_scan_sessions (Transact-SQL)
 

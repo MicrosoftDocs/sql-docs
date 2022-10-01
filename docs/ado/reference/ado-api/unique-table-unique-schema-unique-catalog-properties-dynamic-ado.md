@@ -1,21 +1,17 @@
 ---
+title: "Control Changes to Recordset Base Table (ADO)"
 description: "Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)"
-title: "Control Changes to Recordset Base Table (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Unique Table property [ADO]"
   - "Unique Schema property [ADO]"
   - "Unique Catalog property [ADO]"
-ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
 Enables you to closely control modifications to a particular base table in a [Recordset](./recordset-object-ado.md) that was formed by a JOIN operation on multiple base tables.  

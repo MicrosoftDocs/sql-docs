@@ -1,25 +1,23 @@
 ---
-description: "sys.servers (Transact-SQL)"
-title: "sys.servers (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.servers (Transact-SQL)"
+description: sys.servers (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
-  - servers_TSQL
-  - sys.servers_TSQL
-  - servers
-  - sys.servers
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+f1_keywords:
+  - "servers_TSQL"
+  - "sys.servers_TSQL"
+  - "servers"
+  - "sys.servers"
+helpviewer_keywords:
   - "sys.servers catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # sys.servers (Transact-SQL)

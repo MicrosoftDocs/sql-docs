@@ -1,28 +1,26 @@
 ---
-description: "Azure Synapse Analytics and Parallel Data Warehouse Catalog Views"
 title: Catalog Views
-titleSuffix: Azure Synapse Analytics and Parallel Data Warehouse
-ms.date: 10/29/2019
+titleSuffix: Azure Synapse Analytics and Analytics Platform System (PDW)
+description: Azure Synapse Analytics and Analytics Platform System (PDW) catalog views
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 05/25/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.technology: system-objects
-ms.reviewer: jrasnick
 ms.topic: language-reference
-dev_langs: 
-  - "TSQL"
-ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
-# Azure Synapse Analytics and Parallel Data Warehouse Catalog Views
+# Azure Synapse Analytics and Analytics Platform System (PDW) catalog views
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
  This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
   
-## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views  
+## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views  
  The following catalog views apply to both [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.pdw_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
@@ -57,7 +55,7 @@ ms.custom: seo-dt-2019
   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Catalog Views
+## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] catalog views
 
  The following catalog views apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] only:
 
@@ -75,7 +73,7 @@ ms.custom: seo-dt-2019
   
  [sys.workload_management_workload_groups &#40;Transact-SQL&#41;](./sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 
-## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views
+## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views
 
  The following catalog views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:
 
@@ -99,6 +97,6 @@ ms.custom: seo-dt-2019
   
  [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database backups [SQL Server], full backups"
   - "restoring databases [SQL Server], full backups"
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
-author: LitKnd
-ms.author: kendralittle
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Restore a database backup under the simple recovery model (Transact-SQL)
 
@@ -34,9 +34,9 @@ ms.author: kendralittle
 -   For security purposes, we recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
 ## Database Compatibility Level After Upgrade  
- The compatibility levels of the **tempdb**, **model**, **msdb** and **Resource** databases are set to the compatibility level of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] after upgrade. The **master** system database retains the compatibility level it had before upgrade, unless that level was less than 100. If the compatibility level of **master** was less than 100 before upgrade, it is set to 100 after upgrade.  
+ The compatibility levels of the **tempdb**, **model**, **msdb** and **Resource** databases are set to the compatibility level of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] after upgrade. The **master** system database retains the compatibility level it had before upgrade, unless that level was less than 100. If the compatibility level of **master** was less than 100 before upgrade, it is set to 100 after upgrade.  
   
- If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and greater.  
   
 > [!NOTE]  
 >  New user databases will inherit the compatibility level of the **model** database.  
@@ -61,7 +61,7 @@ ms.author: kendralittle
     -   The FILE clause to identify the backup set on the backup device to restore.  
   
 > [!NOTE]  
->  If you restore an earlier version database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database is automatically upgraded. Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the  **upgrade_option** server property. If the upgrade option is set to import (**upgrade_option** = 2) or rebuild (**upgrade_option** = 0), the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to import, the associated full-text indexes are rebuilt if a full-text catalog is not available. To change the setting of the **upgrade_option** server property, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+>  If you restore an earlier version database to a newer version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the database is automatically upgraded. Typically, the database becomes available immediately. However, if a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the  **upgrade_option** server property. If the upgrade option is set to import (**upgrade_option** = 2) or rebuild (**upgrade_option** = 0), the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to import, the associated full-text indexes are rebuilt if a full-text catalog is not available. To change the setting of the **upgrade_option** server property, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ## Example  
   

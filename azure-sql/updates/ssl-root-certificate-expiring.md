@@ -4,10 +4,10 @@ description: Learn about the upcoming changes of root certificate changes that w
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: kendralittle, mathoma, vanto
+ms.date: 09/13/2020
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-ms.date: 09/13/2020
 ---
 
 # Understanding the changes in the Root CA change for Azure SQL Database & SQL Managed Instance
@@ -20,7 +20,7 @@ Azure SQL Database & SQL Managed Instance will be changing the root certificate 
 
 As per the industry’s compliance requirements, CA vendors began revoking CA certificates for non-compliant CAs, requiring servers to use certificates issued by compliant CAs, and signed by CA certificates from those compliant CAs. Since Azure SQL Database & SQL Managed Instance currently use one of these non-compliant certificates, which client applications use to validate their SSL connections, we need to ensure that appropriate actions are taken (described below) to minimize the potential impact to your Azure SQL servers.
 
-The new certificate will be used starting October 26, 2020. If you use full validation of the server certificate when connecting from a SQL client (TrustServerCertificate=true), you need to ensure that your SQL client would be able to validate new root certificate before October 26, 2020.
+The new certificate will be used starting October 26, 2020. If you use full validation of the server certificate when connecting from a SQL client (TrustServerCertificate=false), you need to ensure that your SQL client would be able to validate new root certificate before October 26, 2020.
 
 ## How do I know if my application might be affected?
 

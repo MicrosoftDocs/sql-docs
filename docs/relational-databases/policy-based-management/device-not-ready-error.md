@@ -2,7 +2,7 @@
 description: "Device Not Ready Error"
 title: "Device Not Ready Error | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "09/08/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -21,11 +21,6 @@ ms.author: vanto
 ## Best Practices Recommendations  
  Review the following Microsoft Knowledge Base articles for more information about how to troubleshoot this error:  
   
--   Microsoft Knowledge Base article 259237
+-   [Microsoft Knowledge Base article 259237](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/259237)  
   
--   Microsoft Knowledge Base article 154690  
-  
-<!-- See this user story for info on why these links were commented out: https://mseng.visualstudio.com/TechnicalContent/_workitems/edit/1665680
--   [Microsoft Knowledge Base article 259237](https://go.microsoft.com/fwlink/?linkid=117746)
--   [Microsoft Knowledge Base article 154690](https://go.microsoft.com/fwlink/?linkid=117747)  
--->
+-   [Microsoft Knowledge Base article 154690](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/154690) 

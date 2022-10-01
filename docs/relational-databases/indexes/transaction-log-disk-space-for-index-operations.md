@@ -1,22 +1,20 @@
 ---
-description: "Transaction Log Disk Space for Index Operations"
-title: "Transaction Log Disk Space for Index Operations | Microsoft Docs"
-ms.custom: ""
+title: "Transaction Log Disk Space for Index Operations"
+description: Transaction Log Disk Space for Index Operations
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "index disk space [SQL Server]"
   - "space [SQL Server], indexes"
   - "transaction logs [SQL Server], disk space"
   - "disk space [SQL Server], transaction logs"
   - "space [SQL Server], transaction logs"
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Transaction Log Disk Space for Index Operations
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

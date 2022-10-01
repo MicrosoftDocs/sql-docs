@@ -1,25 +1,23 @@
 ---
-description: "sys.system_views (Transact-SQL)"
-title: "sys.system_views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.system_views (Transact-SQL)"
+description: sys.system_views (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.system_views_TSQL"
   - "system_views"
   - "system_views_TSQL"
   - "sys.system_views"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.system_views catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.system_views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

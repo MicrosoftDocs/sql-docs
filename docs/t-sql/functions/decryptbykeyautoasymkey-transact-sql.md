@@ -1,23 +1,19 @@
 ---
+title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
 description: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
-title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/09/2015"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "DECRYPTBYKEYAUTOASYMKEY_TSQL"
-  - "DECRYPTBYKEYAUTOASYMKEY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "DECRYPTBYKEYAUTOASYMSKEY function"
-ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
+ms.date: "09/09/2015"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "DECRYPTBYKEYAUTOASYMKEY_TSQL"
+  - "DECRYPTBYKEYAUTOASYMKEY"
+helpviewer_keywords:
+  - "DECRYPTBYKEYAUTOASYMSKEY function"
+dev_langs:
+  - "TSQL"
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

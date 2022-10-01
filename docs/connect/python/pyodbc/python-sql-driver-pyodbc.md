@@ -1,17 +1,16 @@
 ---
 title: "Python SQL Driver - pyodbc"
 description: "This guide describes installing Python, the ODBC Driver for SQL Server, and pyodbc. Sample code shows how to connect to and interact with a SQL database."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "03/24/2022"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Python SQL Driver - pyodbc
 
-![Download-DownArrow-Circled](../../../ssms/media/download-icon.png)[Install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 This article provides step-by-step guidance for installing and using the Python SQL Driver, pyODBC.
 

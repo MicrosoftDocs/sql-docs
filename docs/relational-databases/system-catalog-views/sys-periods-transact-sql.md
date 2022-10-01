@@ -1,18 +1,16 @@
 ---
-description: "sys.periods (Transact-SQL)"
-title: "sys.periods (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.periods (Transact-SQL)"
+description: sys.periods (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.periods (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

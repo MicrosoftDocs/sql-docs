@@ -1,21 +1,17 @@
 ---
+title: "The Significance of Cursor Location"
 description: "The Significance of Cursor Location"
-title: "The Significance of Cursor Location | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "server-side cursors [ADO]"
   - "cursors [ADO], client-side"
   - "client-side cursors [ADO]"
   - "cursors [ADO], server-side"
-ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-author: rothja
-ms.author: jroth
 ---
 # The Significance of Cursor Location
 Every cursor uses temporary resources to hold its data. These resources can be memory, a disk paging file, temporary disk files, or even temporary storage in the database. The cursor is called a *client-side* cursor when these resources are located on the client computer. The cursor is called a *server-side* cursor when these resources are located on the server.  

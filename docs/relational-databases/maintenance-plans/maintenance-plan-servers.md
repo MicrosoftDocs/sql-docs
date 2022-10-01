@@ -1,19 +1,17 @@
 ---
-description: "Maintenance Plan (Servers)"
-title: "Maintenance Plan (Servers) | Microsoft Docs"
-ms.custom: ""
+title: "Maintenance Plan (Servers)"
+description: Maintenance Plan (Servers)
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.servers.f1"
   - "sql13.swb.maint.maintplanproperties.server.f1"
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Maintenance Plan (Servers)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

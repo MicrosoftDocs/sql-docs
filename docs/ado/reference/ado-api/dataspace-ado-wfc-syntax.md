@@ -1,19 +1,15 @@
 ---
+title: "DataSpace (ADO - WFC Syntax)"
 description: "DataSpace (ADO - WFC Syntax)"
-title: "DataSpace (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "DataSpace collection [ADO], ADO/WFC syntax"
-ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "DataSpace collection [ADO], ADO/WFC syntax"
+apitype: "COM"
 ---
 # DataSpace (ADO - WFC Syntax)
 The **createObject** method of the **DataSpace** class specifies both a business object to process client application requests (*progid*) and the communications protocol and server (*connection*). **createObject** returns an [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) object that represents the server.  

@@ -1,22 +1,22 @@
 ---
 title: "What is an Always On availability group?"
 description: "An introduction to the concepts that are central for configuring and managing Always On availability groups."
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: randolphwest
+ms.date: 07/04/2022
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
   - intro-overview
-ms.date: "01/28/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], data movement"
   - "Availability Groups [SQL Server]"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # What is an Always On availability group?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.author: mathoma
 > [!NOTE]  
 >  For information about the relationship of SQL Server Always On components to the WSFC cluster, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
- The following illustration shows an availability group that contains one primary replica and four secondary replicas. Up to eight secondary replicas are supported, including one primary replica and two synchronous-commit secondary replicas.  
+ The following illustration shows an availability group that contains one primary replica and four secondary replicas. Up to eight secondary replicas are supported, including one primary replica and four synchronous-commit secondary replicas.  
   
  ![Availability group with five replicas](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Availability group with five replicas")  
   
@@ -95,7 +95,7 @@ The availability mode is a property of each availability replica. The availabili
   
     -   **Automatic failover** (without data loss)  
   
-         An automatic failover occurs in response to a failure that causes a synchronized secondary replica to transition to the primary role (with guaranteed data protection). When the former primary replica becomes available, it transitions to the secondary role. Automatic failover requires that both the primary replica and the target secondary replica are running under synchronous-commit mode with the failover mode set to "Automatic". In addition, the secondary replica must already be synchronized, have WSFC quorum, and meet the conditions specified by the [flexible failover policy](./configure-flexible-automatic-failover-policy.md)of the availability group.  
+         An automatic failover occurs in response to a failure that causes a synchronized secondary replica to transition to the primary role (with guaranteed data protection). When the former primary replica becomes available, it transitions to the secondary role. Automatic failover requires that both the primary replica and the target secondary replica are running under synchronous-commit mode with the failover mode set to "Automatic". In addition, the secondary replica must already be synchronized, have WSFC quorum, and meet the conditions specified by the [flexible failover policy](./configure-flexible-automatic-failover-policy.md) of the availability group.  
   
         > [!IMPORTANT]  
         >  SQL Server Failover Cluster Instances (FCIs) do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can only be configured for manual failover.  
@@ -113,7 +113,7 @@ The availability mode is a property of each availability replica. The availabili
  An availability group listener is associated with a unique DNS name that serves as a virtual network name (VNN), one or more virtual IP addresses (VIPs), and a TCP port number. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 > [!TIP]  
->  If an availability group possesses only two availability replicas and is not configured to allow read-access to the secondary replica, clients can connect to the primary replica by using a [database mirroring connection string](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md). This approach can be useful temporarily after you migrate a database from database mirroring to [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Before you add additional secondary replicas, you will need to create an availability group listener the availability group and update your applications to use the network name of the listener.  
+>  If an availability group possesses only two availability replicas and is not configured to allow read-access to the secondary replica, clients can connect to the primary replica by using a [database mirroring connection string](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md). This approach can be useful temporarily after you migrate a database from database mirroring to [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Before you add additional secondary replicas, you will need to create an availability group listener for the availability group and update your applications to use the network name of the listener.  
   
 ## <a name="ActiveSecondaries"></a> Active secondary replicas  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports active secondary replicas. Active secondary capabilities include support for:  

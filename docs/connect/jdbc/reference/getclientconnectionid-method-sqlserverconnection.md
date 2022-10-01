@@ -1,16 +1,12 @@
 ---
+title: "getClientConnectionID Method (SQLServerConnection)"
 description: "getClientConnectionID Method (SQLServerConnection)"
-title: "getClientConnectionID Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getClientConnectionID Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

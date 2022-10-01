@@ -2,14 +2,14 @@
 title: "Manage SQL Server Big Data Clusters with Azure Data Studio notebooks"
 titleSuffix: SQL Server Big Data Clusters
 description: Use a notebook from Azure Data Studio to manage and troubleshoot SQL Server Big Data Clusters.
-author: yualan
-ms.author: alanyu
-ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: erinstellato
 ms.date: 07/16/2021
-ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: how-to
+ms.metadata: seo-lt-2019
 ---
 
 # Manage SQL Server Big Data Clusters with Azure Data Studio notebooks

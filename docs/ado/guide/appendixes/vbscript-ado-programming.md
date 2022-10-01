@@ -1,21 +1,17 @@
 ---
+title: "VBScript ADO Programming"
 description: "VBScript ADO Programming"
-title: "VBScript ADO Programming | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/08/2018
-ms.reviewer: ""
-ms.topic: conceptual
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ADO, VBScript"
-  - "VBScript [ADO]"
-ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
+ms.date: 11/08/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "ADO, VBScript"
+  - "VBScript [ADO]"
+dev_langs:
+  - "VB"
 ---
 # VBScript ADO Programming
 ## Creating an ADO Project  

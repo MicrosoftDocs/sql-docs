@@ -1,28 +1,26 @@
 ---
-title: "SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs"
-description: "Transact-SQL reference for the SET IDENTITY_INSERT statement. When set to ON, this permits inserting explicit values into the identity column of a table."
+title: "SET IDENTITY_INSERT (Transact-SQL)"
+description: Transact-SQL reference for the SET IDENTITY_INSERT statement. When set to ON, this permits inserting explicit values into the identity column of a table.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET IDENTITY_INSERT"
   - "SET_IDENTITY_INSERT_TSQL"
   - "IDENTITY_INSERT_TSQL"
   - "IDENTITY_INSERT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IDENTITY_INSERT option"
   - "SET IDENTITY_INSERT statement"
   - "identity values [SQL Server], explicit values"
   - "identity columns [SQL Server], explicit values"
-ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange:  "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,27 +1,23 @@
 ---
-description: "Adding an Extended Stored Procedure to SQL Server"
-title: "Adding an Extended Stored Procedure to SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Adding an Extended Stored Procedure to SQL Server"
+description: Adding an Extended Stored Procedure to SQL Server
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "extended stored procedures [SQL Server], adding"
   - "adding extended stored procedures"
   - "collations [SQL Server], extended stored procedures"
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
-author: LitKnd
-ms.author: kendralittle
 ---
 # Adding an Extended Stored Procedure to SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR Integration instead.  
   
  A DLL that contains extended stored procedure functions acts as an extension to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To install the DLL, copy the file to a directory, such as the one that contains the standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL files (C:\Program Files\Microsoft SQL Server\MSSQL12.0.*x*\MSSQL\Binn by default).  
   

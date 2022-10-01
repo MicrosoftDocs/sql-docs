@@ -1,18 +1,14 @@
 ---
-description: "sys.sensitivity_classifications (Transact-SQL)"
-title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
+title: "sys.sensitivity_classifications (Transact-SQL)"
+description: sys.sensitivity_classifications (Transact-SQL)
+author: Madhumitatripathy
+ms.author: matripathy
 ms.date: 04/19/2022
-ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "reference"
-ms.custom: ""
-ms.author: matripathy
-author: Madhumitatripathy
 f1_keywords:
   - "sys.sensitivity_classifications "
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "sys.sensitivity_classifications statement"
   - "dropping labels"
@@ -23,7 +19,9 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "rank"
-monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=sql-server-ver15||=azuresqldb-current||=azure-sqldw-latest"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -42,7 +40,6 @@ Returns a row for each classified item in the database.
 |**information_type_id**|**sysname**|An ID associated with the information type, which can be used by an information protection system such as Azure Information Protection (AIP)|  
 |**rank**|**int**|A numerical value of the rank: <br><br>0 for NONE<br>10 for LOW<br>20 for MEDIUM<br>30 for HIGH<br>40 for CRITICAL| 
 |**rank_desc**|**sysname**|Textual representation of the rank:  <br><br>NONE, LOW, MEDIUM, HIGH, CRITICAL|  
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Remarks  
 

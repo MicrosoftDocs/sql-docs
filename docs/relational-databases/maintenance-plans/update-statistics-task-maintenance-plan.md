@@ -1,20 +1,18 @@
 ---
-title: "Update Statistics Task (Maintenance Plan) | Microsoft Docs"
+title: "Update Statistics Task (Maintenance Plan)"
 description: Learn how to update SQL Server information about the data in the tables and indexes by using the Use the Update Statistics Task.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.maint.statistics.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Updates Statistics Task dialog box"
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Update Statistics Task (Maintenance Plan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -25,6 +25,8 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
+> [!IMPORTANT]
+> Data mining was deprecated in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Analysis Services and now discontinued in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Analysis Services. Documentation is not updated for deprecated and discontinued features. To learn more, see [Analysis Services backward compatibility](/analysis-services/analysis-services-backward-compatibility).
 
   The Data Mining Model Training destination trains data mining models by passing the data that the destination receives through the data mining model algorithms. Multiple data mining models can be trained by one destination if the models are built on the same data mining structure. For more information, see [Mining Structure Columns](/analysis-services/data-mining/mining-structure-columns) and [Mining Model Columns](/analysis-services/data-mining/mining-model-columns).  
   

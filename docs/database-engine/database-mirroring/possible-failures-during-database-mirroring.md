@@ -1,14 +1,13 @@
 ---
-title: "Possible Failures During Database Mirroring | Microsoft Docs"
+title: "Possible Failures During Database Mirroring"
 description: Learn about failures in database mirroring sessions caused by physical, operating system, or SQL Server problems, and how to respond to errors.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "time-out period [SQL Server database mirroring]"
   - "soft errors [SQL Server]"
   - "database mirroring [SQL Server], troubleshooting"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], database mirroring"
   - "hard errors"
   - "failed database mirroring sessions [SQL Server]"
-ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Possible Failures During Database Mirroring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

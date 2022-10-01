@@ -1,27 +1,24 @@
 ---
-description: "DROP FULLTEXT CATALOG (Transact-SQL)"
-title: "DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP FULLTEXT CATALOG (Transact-SQL)"
+description: DROP FULLTEXT CATALOG (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP_FULLTEXT_CATALOG_TSQL"
   - "DROP FULLTEXT CATALOG"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dropping full-text catalogs"
   - "removing full-text catalogs"
   - "full-text catalogs [SQL Server], removing"
   - "deleting full-text catalogs"
   - "DROP FULLTEXT CATALOG statement"
-ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

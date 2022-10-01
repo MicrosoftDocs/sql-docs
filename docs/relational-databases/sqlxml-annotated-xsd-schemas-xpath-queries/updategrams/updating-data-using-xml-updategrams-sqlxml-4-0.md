@@ -1,32 +1,22 @@
 ---
 title: "Updating Data Using XML Updategrams (SQLXML)"
-description: Learn how to update existing data using an XML updategram in SQLXML 4.0. 
+description: Learn how to update existing data using an XML updategram in SQLXML 4.0.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "IDREF type attribute [SQLXML]"
   - "before attribute"
   - "<sync> block"
   - "<after> block"
   - "id attribute"
   - "<before> block"
-  - "updg:after attribute"
-  - "mapping-schema attribute"
-  - "IDREFS type attribute [SQLXML]"
-  - "updg:id attribute"
-  - "multiple record updates"
-  - "after attribute"
-  - "updategrams [SQLXML], updating data"
-  - "updg:before attribute"
-  - "record updates [SQLXML]"
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating Data Using XML Updategrams (SQLXML 4.0)

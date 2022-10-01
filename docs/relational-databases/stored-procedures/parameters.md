@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], parameters"
   - "user-defined functions [SQL Server], parameters"
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
-author: "pmasl"
-ms.author: "pelopes"
+author: rwestMSFT
+ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Parameters

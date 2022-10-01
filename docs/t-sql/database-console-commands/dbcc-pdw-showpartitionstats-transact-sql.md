@@ -1,16 +1,14 @@
 ---
-description: "DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)"
 title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
-ms.custom: ""
-ms.date: "07/17/2017"
+description: "DBCC PDW_SHOWPARTITIONSTATS displays the size and number of rows for each partition of a table in Azure Synapse Analytics or the Analytics Platform System (PDW)."
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 06/14/2022
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: "language-reference"
-dev_langs: 
+dev_langs:
   - "TSQL"
-author: pmasl
-ms.author: umajay
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 
@@ -34,6 +32,7 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 > [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
+
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  The one, two, or three-part name of the table to be displayed.  For two or three-part table names, the name must be enclosed with double quotes (""). Using quotes around a one-part table name is optional.  
   
@@ -52,9 +51,10 @@ This set is the results for the DBCC PDW_SHOWPARTITIONSTATS command.
 |pdw_node_id|int|Compute node for the data.|  
 |distribution_id|int|Distribution identifier for the data.|  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+  
 ### A. DBCC PDW_SHOWPARTITIONSTATS Basic Syntax Examples  
-The following examples display the space used and number of rows by partition for the FactInternetSales table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
+The following examples display the space used and number of rows by partition for the `FactInternetSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
   
 ```sql
 DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");  
@@ -66,3 +66,4 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 
 - [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 - [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
+- [Table size queries](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-overview#table-size-queries)

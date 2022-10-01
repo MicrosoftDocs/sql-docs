@@ -1,25 +1,23 @@
 ---
-description: "sys.availability_replicas (Transact-SQL)"
-title: "sys.availability_replicas (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.availability_replicas (Transact-SQL)"
+description: sys.availability_replicas (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 03/17/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "availability_replicas_TSQL"
   - "availability_replicas"
   - "sys.availability_replicas"
   - "sys.availability_replicas_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_replicas catalog view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.availability_replicas (Transact-SQL)
 

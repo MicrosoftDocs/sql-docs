@@ -1,21 +1,19 @@
 ---
-description: "SET ARITHABORT (Transact-SQL)"
-title: "SET ARITHABORT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET ARITHABORT (Transact-SQL)"
+description: SET ARITHABORT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "12/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ARITHABORT_TSQL"
   - "ARITHABORT"
   - "SET ARITHABORT"
   - "SET_ARITHABORT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "terminating queries"
   - "queries [SQL Server], terminating"
   - "overflow errors [SQL Server]"
@@ -24,9 +22,8 @@ helpviewer_keywords:
   - "SET ARITHABORT statement"
   - "ending queries [SQL Server]"
   - "stopping queries"
-ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ARITHABORT (Transact-SQL)

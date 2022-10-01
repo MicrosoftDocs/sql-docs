@@ -1,23 +1,21 @@
 ---
-description: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL)"
-title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL)"
+description: cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "cdc"
   - "cdc_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cdc.<capture_instance>_CT"
+dev_langs:
+  - "TSQL"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: LitKnd
-ms.author: kendralittle
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

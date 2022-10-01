@@ -1,11 +1,11 @@
 ---
 title: Auto-failover group overview
-description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for auto-failover groups that overlap between both products. 
-ms.topic: include
+description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for auto-failover groups that overlap between both products.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: kendralittle, emlisa, mlandzic
 ms.date: 03/01/2022
+ms.topic: include
 ---
 
 - **Automatic failover policy**
@@ -29,6 +29,9 @@ ms.date: 03/01/2022
   - Perform disaster recovery (DR) drills in production when data loss is not acceptable
   - Relocate the databases to a different region
   - Return the databases to the primary region after the outage has been mitigated (failback)
+  
+  > [!NOTE]
+  > If a database contains in-memory OLTP objects, the primary databases and the target secondary geo-replica databases should have matching service tiers, as in-memory OLTP objects are always hydrated in memory. A lower service tier on the target geo-replica database may result in out-of-memory issues. If this happens, the affected geo-secondary database replica may be put into a limited read-only mode called **in-memory OLTP checkpoint-only** mode. Read-only table queries are allowed, but read-only in-memory OLTP table queries are disallowed on the affected geo-secondary database replica. Planned failover is blocked if all replicas in the geo-secondary database are in checkpoint only mode. Unplanned failover may fail due to out-of-memory issues. To avoid this, upgrade the service tier of the secondary database to match the primary database during the planned failover, or drill. Service tier upgrades can be size-of-data operations, and may take a while to finish.
 
 - **Unplanned failover**
 

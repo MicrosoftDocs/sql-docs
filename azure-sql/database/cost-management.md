@@ -1,14 +1,14 @@
 ---
 title: Plan and manage costs
 description: Learn how to plan for and manage costs for Azure SQL Database by using cost analysis in the Azure portal.
-author: LitKnd
-ms.author: kendralittle
-ms.custom: subject-cost-optimization
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma
+ms.date: 06/30/2021
 ms.service: sql-database
 ms.subservice: service-overview
-ms.reviewer: mathoma
 ms.topic: how-to
-ms.date: 06/30/2021
+ms.custom: subject-cost-optimization
 ---
 
 # Plan and manage costs for Azure SQL Database
@@ -67,7 +67,7 @@ Billing depends on the SKU of your product, the generation hardware of your SKU,
 - Standard (S)
 - Premium (P)
 - General purpose (GP)
-- Business critical (BC)
+- Business Critical (BC)
 - And for storage: geo-redundant storage (GRS), locally redundant storage (LRS), and zone-redundant storage (ZRS)
 - It's also possible to have a deprecated SKU from deprecated resource offerings
 
@@ -129,7 +129,7 @@ From here, you can explore costs on your own. For more and information about the
 
 ## Create budgets
 
-You can create [budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) to manage costs and create [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) that automatically notify stakeholders of spending anomalies and overspending risks. Alerts are based on spending compared to budget and cost thresholds. Budgets and alerts are created for Azure subscriptions and resource groups, so they're useful as part of an overall cost monitoring strategy. 
+You can create [budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) to manage costs and create [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) that automatically notify stakeholders of spending anomalies and overspending risks. Alerts are based on spending compared to budget and cost thresholds. Budgets and alerts are created for Azure subscriptions and resource groups, so they're useful as part of an overall cost monitoring strategy.
 
 Budgets can be created with filters for specific resources or services in Azure if you want more granularity present in your monitoring. Filters help ensure that you don't accidentally create new resources. For more about the filter options when you create a budget, see [Group and filter options](/azure/cost-management-billing/costs/group-filter?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
 
@@ -143,10 +143,9 @@ Azure SQL Database also enables you to scale resources up or down to control cos
 
 Save money by committing to a reservation for compute resources for one to three years. For details, see [Save costs for resources with reserved capacity](reserved-capacity-overview.md).
 
-
 ## Next steps
 
 - Learn [how to optimize your cloud investment with Azure Cost Management](/azure/cost-management-billing/costs/cost-mgt-best-practices?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
 - Learn more about managing costs with [cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
 - Learn about how to [prevent unexpected costs](/azure/cost-management-billing/cost-management-billing-overview?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
-- Take the [Cost Management](/learn/paths/control-spending-manage-bills?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) guided learning course.
+- Take the [Cost Management](/training/paths/control-spending-manage-bills?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) guided learning course.

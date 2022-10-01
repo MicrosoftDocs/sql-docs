@@ -1,23 +1,21 @@
 ---
-title: "Context Connection | Microsoft Docs"
+title: "Context Connection"
 description: In Microsoft SQL Server, the context connection lets you run Transact-SQL statements in the same context where your code was invoked.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "context connections [CLR integration]"
   - "database objects [CLR integration], connections"
   - "connections [CLR integration]"
   - "context [CLR integration]"
+dev_langs:
+  - "VB"
+  - "CSharp"
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
-author: rothja
-ms.author: jroth
 ---
 # Context Connection
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

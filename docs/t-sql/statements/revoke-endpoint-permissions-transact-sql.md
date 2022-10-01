@@ -1,22 +1,19 @@
 ---
-description: "REVOKE Endpoint Permissions (Transact-SQL)"
-title: "REVOKE Endpoint Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Endpoint Permissions (Transact-SQL)"
+description: REVOKE Endpoint Permissions (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "endpoints [SQL Server], permissions"
   - "REVOKE statement, endpoints"
   - "permissions [SQL Server], endpoints"
-ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # REVOKE Endpoint Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

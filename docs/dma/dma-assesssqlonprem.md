@@ -2,19 +2,16 @@
 title: "Perform a SQL Server migration assessment"
 titleSuffix: Data Migration Assistant
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
-ms.date: "01/15/2020"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
-ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
-  - "Data Migration Assistant, Assess"
-ms.assetid: ""
 author: rajeshsetlem
 ms.author: rajpo
-ms.custom: "seo-lt-2019"
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.prod: sql
+ms.technology: dma
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Data Migration Assistant, Assess"
 ---
 
 # Perform a SQL Server migration assessment with Data Migration Assistant
@@ -127,7 +124,7 @@ You can review compatibility issues by analyzing the affected object, its detail
 
 Similarly, you can review feature recommendation across **Performance**, **Storage**, and **Security** areas.
 
-Feature recommendations cover different kinds of features such as In-Memory OLTP, Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
+Feature recommendations cover different kinds of features such as In-Memory OLTP, columnstore, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
 
 ![View feature recommendations](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 

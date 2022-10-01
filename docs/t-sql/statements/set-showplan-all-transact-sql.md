@@ -1,21 +1,19 @@
 ---
-description: "SET SHOWPLAN_ALL (Transact-SQL)"
-title: "SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET SHOWPLAN_ALL (Transact-SQL)"
+description: SET SHOWPLAN_ALL (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET SHOWPLAN_ALL"
   - "SET_SHOWPLAN_ALL_TSQL"
   - "SHOWPLAN_ALL"
   - "SHOWPLAN_ALL_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statements [SQL Server], estimates"
   - "execution information and estimates [SQL Server]"
   - "statements [SQL Server], information without processing"
@@ -24,12 +22,11 @@ helpviewer_keywords:
   - "canceling statement execution"
   - "stopping statement execution"
   - "estimated execution information [SQL Server]"
-ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # SET SHOWPLAN_ALL (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns detailed information about how the statements are executed and provides estimates of the resource requirements for the statements.  
   
@@ -75,7 +72,6 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**:::no-loc text="Type":::**|Node type. For the parent node of each query, this is the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement type (for example, SELECT, INSERT, EXECUTE, and so on). For subnodes representing execution plans, the type is PLAN_ROW.|  
 |**Parallel**|**0** = Operator is not running in parallel.<br /><br /> **1** = Operator is running in parallel.|  
 |**EstimateExecutions**|Estimated number of times this operator will be executed while running the current query.|  
-|||
 
  *Cost units are based on an internal measurement of time, not wall-clock time. They are used for determining the relative cost of a plan in comparison to other plans.  
   

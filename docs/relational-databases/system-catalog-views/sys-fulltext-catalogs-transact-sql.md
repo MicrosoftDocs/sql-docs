@@ -1,25 +1,24 @@
 ---
-description: "sys.fulltext_catalogs (Transact-SQL)"
-title: "sys.fulltext_catalogs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.fulltext_catalogs (Transact-SQL)"
+description: sys.fulltext_catalogs (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fulltext_catalogs_TSQL"
   - "sys.fulltext_catalogs"
   - "fulltext_catalogs"
   - "fulltext_catalogs_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fulltext_catalogs catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-author: pmasl
-ms.author: pelopes
-ms.reviewer: mikeray
 ---
 # sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

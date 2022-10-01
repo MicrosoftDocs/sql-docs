@@ -18,19 +18,19 @@ monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
 
 Strict connection encryption enforces good security practices and makes SQL Server traffic manageable by standard network appliances.
 
-In this article, we'll show you how to connect to SQL Server 2022 using the strict connection type.
+In this article, we'll show you how to connect to [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] using the strict connection type.
 
 ## Prerequisite
 
-- SQL Server 2022
+- [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
 - ODBC or OLE DB Driver for SQL Server
-  - [ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) version 18.0.1.1 or higher
-  - [OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server) version 19.0.0 or higher
-- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine)
+  - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.0.1.1 or higher
+  - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.0.0 or higher
+- Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
 
 ## Connect to SQL Server using a .NET application
 
-For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](/sql/relational-databases/security/networking/tds-8-and-tls-1-3#additional-changes-to-connection-string-encryption-properties).
+For information on building and connecting to SQL Server using the `strict` encryption type, see [Connection String Syntax](/dotnet/framework/data/adonet/connection-string-syntax) on how to properly build the connection string. For more information on the new connection string properties, see [Additional changes to connection string encryption properties](./tds-8-and-tls-1-3.md#additional-changes-to-connection-string-encryption-properties).
 
 ## Connect using an ODBC DSN
 
@@ -46,7 +46,7 @@ You can test a connection with the `Strict` connection encryption type using an 
 
 1. In the **System DSN** tab, select **Add** to create a DSN. Then select the **ODBC Driver 18 for SQL Server**. Select **Finish**. We're going to use this to test our connection.
 
-1. In the **Create a New Data Source to SQL Server** window, provide a name for this data source, and add your SQL Server 2022 server name to **Server**. Select **Next**.
+1. In the **Create a New Data Source to SQL Server** window, provide a name for this data source, and add your [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] server name to **Server**. Select **Next**.
 
    :::image type="content" source="media/create-data-source.png" alt-text="Screenshot of creating a data source using the O D B C driver.":::
 
@@ -89,6 +89,9 @@ If you see `SSL certificate validation failed`, validate that:
 - At least one of the following is true:
   - Provider SQL Server matches CA name or one of the DNS names in the certificate.
   - `HostNameInCertificate` connection string property matches CA name or one of the DNS names in the certificate.
+
+> [!IMPORTANT]
+> Although TLS 1.3 is supported for [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
 
 ## See also
 

@@ -1,23 +1,19 @@
 ---
+title: "Read, ReadText, Write, and WriteText Methods Example (VB)"
 description: "Read, ReadText, Write, and WriteText Methods Example (VB)"
-title: "Read, ReadText, Write, and WriteText Methods Example (VB) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ReadText method [ADO], Visual Basic example"
   - "Write method [ADO], Visual Basic example"
   - "Read method [ADO], Visual Basic example"
   - "WriteText method [ADO], Visual Basic example"
-ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "VB"
 ---
 # Read, ReadText, Write, and WriteText Methods Example (VB)
 This example demonstrates how to read the contents of a text box into both a text [Stream](./stream-object-ado.md) and a binary **Stream**. Other properties and methods shown include [Position](./position-property-ado.md), [Size](./size-property-ado-parameter.md), [Charset](./charset-property-ado.md), and [SetEOS](./seteos-method.md).  

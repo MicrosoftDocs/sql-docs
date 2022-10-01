@@ -5,11 +5,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 04/07/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom:
-  - intro-installation
+ms.topic: conceptual
+ms.custom: intro-installation
 ---
 
 # Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with apt
@@ -25,7 +24,7 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
 ## Install with apt
 
 >[!IMPORTANT]
-> The RPM package of the `azdata-cli` depends on the python3 package. On your system, this may be a Python version which predates the requirement of *Python 3.6.x*. If this poses an issue for you, find a replacement python3 package or follow the manual install instructions that use [`pip`](../install/deploy-install-azdata-pip.md).
+> The Debian package of `azdata-cli` depends on the `python3` package. On your system, this may be a Python version which predates the requirement of *Python 3.6.x*. If this poses an issue for you, find a replacement `python3` package or follow the manual installation instructions that use [`pip`](../install/deploy-install-azdata-pip.md).
 
 1. Install dependencies necessary to install `azdata-cli`.
 

@@ -1,19 +1,14 @@
 ---
+title: "SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)"
 description: "SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)"
-title: "SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid:
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apitype: "Assembly"
 ---
 # SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

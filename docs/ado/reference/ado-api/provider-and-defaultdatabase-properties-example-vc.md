@@ -1,21 +1,17 @@
 ---
+title: "Provider and DefaultDatabase Properties Example (VC++)"
 description: "Provider and DefaultDatabase Properties Example (VC++)"
-title: "Provider and DefaultDatabase Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "provider property [ADO], VC++ example"
-  - "DefaultDatabase property [ADO], VC++ example"
-ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "provider property [ADO], VC++ example"
+  - "DefaultDatabase property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # Provider and DefaultDatabase Properties Example (VC++)
 This example demonstrates the [Provider](./provider-property-ado.md) property by opening three [Connection](./connection-object-ado.md) objects using different providers. It also uses the [DefaultDatabase](./defaultdatabase-property.md) property to set the default database for the Microsoft ODBC Provider.  

@@ -1,22 +1,19 @@
 ---
 title: "OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery"
 description: "Learn about OLE DB Driver for SQL Server support for high availability and disaster recovery when connecting to databases with those features configured."
-ms.custom: ""
-ms.date: "06/12/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/12/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This article discusses *OLE DB Driver for SQL Server* support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  This article discusses *OLE DB Driver for SQL Server* support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  You can specify the availability group listener of a given availability group in the connection string. If an OLE DB Driver for SQL Server application is connected to a database in an availability group that fails over, the original connection is broken, and the application must open a new connection to continue work after the failover.  
   

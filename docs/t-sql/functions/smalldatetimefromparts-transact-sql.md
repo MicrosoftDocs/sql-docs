@@ -1,23 +1,23 @@
 ---
-description: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
 title: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
-ms.custom: ""
+description: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
 ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "SMALLDATETIMEFROMPARTS"
   - "SMALLDATETIMEFROMPARTS_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SMALLDATETIMEFROMPARTS function"
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

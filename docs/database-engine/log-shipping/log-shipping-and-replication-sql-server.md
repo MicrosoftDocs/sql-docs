@@ -1,18 +1,15 @@
 ---
-title: "Log Shipping and Replication (SQL Server) | Microsoft Docs"
+title: "Log Shipping and Replication (SQL Server)"
 description: Learn how log shipping applies the transaction log from every insertion, update, or deletion made on the primary database to the secondary database.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: log-shipping
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "replication [SQL Server], log shipping and"
   - "log shipping [SQL Server], replication and"
-ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-author: LitKnd
-ms.author: kendralittle
 ---
 # Log Shipping and Replication (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

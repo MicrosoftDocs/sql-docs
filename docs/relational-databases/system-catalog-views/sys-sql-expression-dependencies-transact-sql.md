@@ -1,25 +1,23 @@
 ---
-description: "sys.sql_expression_dependencies (Transact-SQL)"
-title: "sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.sql_expression_dependencies (Transact-SQL)"
+description: sys.sql_expression_dependencies (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.sql_expression_dependencies"
   - "sql_expression_dependencies_TSQL"
   - "sql_expression_dependencies"
   - "sys.sql_expression_dependencies_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sql_expression_dependencies catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)

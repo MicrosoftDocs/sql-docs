@@ -1,20 +1,16 @@
 ---
+title: "Server Property Example (VBScript)"
 description: "Server Property Example (VBScript)"
-title: "Server Property Example (VBScript) | Microsoft Docs"
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: 
-ms.prod: sql
-ms.prod_service: connectivity
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Server property [RDS], VBScript example"
-ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Server property [RDS], VBScript example"
+dev_langs:
+  - "VB"
 ---
 # Server Property Example (VBScript)
 > [!IMPORTANT]

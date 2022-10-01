@@ -1,23 +1,26 @@
 ---
-title: What is SQL Data Sync for Azure? 
-description: This overview introduces SQL Data Sync for Azure, which allows you to sync data across multiple cloud and on-premises databases. 
-services: sql-database
+title: What is SQL Data Sync for Azure?
+description: This overview introduces SQL Data Sync for Azure, which allows you to sync data across multiple cloud and on-premises databases.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: wiassaf, mathoma
+ms.date: 07/15/2022
 ms.service: sql-database
 ms.subservice: sql-data-sync
-ms.custom: data sync, sqldbrb=1, fasttrack-edit
-ms.devlang: 
 ms.topic: conceptual
-author: rothja 
-ms.author: jroth
-ms.reviewer: kendralittle, mathoma
-ms.date: 2/2/2022
+ms.custom:
+  - "data sync"
+  - "sqldbrb=1"
+  - "fasttrack-edit"
 ---
 # What is SQL Data Sync for Azure?
+
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 SQL Data Sync is a service built on Azure SQL Database that lets you synchronize the data you select bi-directionally across multiple databases, both on-premises and in the cloud. 
 
 > [!IMPORTANT]
-> Azure SQL Data Sync does not support Azure SQL Managed Instance at this time.
+> Azure SQL Data Sync does not support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
 
 ## Overview 
@@ -28,7 +31,7 @@ Data Sync uses a hub and spoke topology to synchronize data. You define one of t
 
 - The **Hub Database** must be an Azure SQL Database.
 - The **member databases** can be either databases in Azure SQL Database or in instances of SQL Server.
-- The **Sync Metadata Database** contains the metadata and log for Data Sync. The Sync Metadata Database has to be an Azure SQL Database located in the same region as the Hub Database. The Sync Metadata Database is customer created and customer owned. You can only have one Sync Metadata Database per region and subscription. Sync Metadata Database cannot be deleted or renamed while sync groups or sync agents exist. Microsoft recommends to create a new, empty database for use as the Sync Metadata Database. Data Sync creates tables in this database and runs a frequent workload.
+- The **Sync Metadata Database** contains the metadata and log for Data Sync. The Sync Metadata Database has to be an Azure SQL Database located in the same region as the Hub Database. The Sync Metadata Database is customer created and customer owned. You can only have one Sync Metadata Database per region and subscription. Sync Metadata Database cannot be deleted or renamed while sync groups or sync agents exist. Microsoft recommends creating a new, empty database for use as the Sync Metadata Database. Data Sync creates tables in this database and runs a frequent workload.
 
 > [!NOTE]
 > If you're using an on premises database as a member database, you have to [install and configure a local sync agent](sql-data-sync-sql-server-configure.md#add-on-prem).
@@ -136,23 +139,24 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 
 - Snapshot isolation must be enabled for both Sync members and hub. For more info, see [Snapshot Isolation in SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server).
 
-- In order to use Data Sync private link, both the member and hub databases must be hosted in Azure (same or different regions), in the same cloud type (e.g. both in public cloud or both in government cloud). Additionally, to use private link, Microsoft.Network resource providers must be Registered for the subscriptions that host the hub and member servers. Lastly, you must manually approve the private link for Data Sync during the sync configuration, within the “Private endpoint connections” section in the Azure portal or through PowerShell. For more details on how to approve the private link, see [Set up SQL Data Sync](./sql-data-sync-sql-server-configure.md). Once you approve the service managed private endpoint, all communication between the sync service and the member/hub databases will happen over the private link. Existing sync groups can be updated to have this feature enabled.
+- In order to use Data Sync private link, both the member and hub databases must be hosted in Azure (same or different regions), in the same cloud type (for example, both in public cloud or both in government cloud). Additionally, to use private link, `Microsoft.Network` resource providers must be Registered for the subscriptions that host the hub and member servers. Lastly, you must manually approve the private link for Data Sync during the sync configuration, within the "Private endpoint connections" section in the Azure portal or through PowerShell. For more information on how to approve the private link, see [Set up SQL Data Sync](./sql-data-sync-sql-server-configure.md). Once you approve the service managed private endpoint, all communication between the sync service and the member/hub databases will happen over the private link. Existing sync groups can be updated to have this feature enabled.
 
 ### General limitations
 
 - A table can't have an identity column that isn't the primary key.
 - A primary key can't have the following data types: sql_variant, binary, varbinary, image, xml.
 - Be cautious when you use the following data types as a primary key, because the supported precision is only to the second: time, datetime, datetime2, datetimeoffset.
-- The names of objects (databases, tables, and columns) can't contain the printable characters period (.), left square bracket ([), or right square bracket (]).
-- A table name can't contain printable characters: ! " # $ % ' ( ) * + - space
+- The names of objects (databases, tables, and columns) can't contain the printable characters period (`.`), left square bracket (`[`), or right square bracket (`]`).
+- A table name can't contain printable characters: `! " # $ % ' ( ) * + -` or space.
 - Azure Active Directory authentication isn't supported.
-- If there are tables with the same name but different schema (for example, dbo.customers and sales.customers) only one of the tables can be added into sync.
-- Columns with User-Defined Data Types aren't supported
+- If there are tables with the same name but different schema (for example, `dbo.customers` and `sales.customers`) only one of the tables can be added into sync.
+- Columns with user-defined data types aren't supported.
 - Moving servers between different subscriptions isn't supported. 
-- If two primary keys are only different in case (e.g. Foo and foo), Data Sync won't support this scenario.
+- If two primary keys are only different in case (for example, `Foo` and `foo`), Data Sync won't support this scenario.
 - Truncating tables is not an operation supported by Data Sync (changes won't be tracked).
-- Using a Hyperscale database as a Hub or Sync Metadata database is not supported. However, a Hyperscale database can be a member database in a Data Sync topology.
+- Using an Azure SQL Hyperscale database as a Hub or Sync Metadata database is not supported. However, a Hyperscale database can be a member database in a Data Sync topology.
 - Memory-optimized tables are not supported.
+- Schema changes aren't automatically replicated. A custom solution can be created to [automate the replication of schema changes](./sql-data-sync-update-sync-schema.md).
 
 #### Unsupported data types
 
@@ -188,7 +192,7 @@ Data Sync can't sync read-only or system-generated columns. For example:
 > [!NOTE]
 > If you use Sync private link, these network requirements do not apply. 
 
-When the sync group is established, the Data Sync service needs to connect to the hub database. At the time when you establish the sync group, the Azure SQL server must have the following configuration in its `Firewalls and virtual networks` settings:
+When the sync group is established, the Data Sync service needs to connect to the hub database. When establishing the sync group, the Azure SQL server must have the following configuration in its `Firewalls and virtual networks` settings:
 
  * *Deny public network access* must be set to *Off*.
  * *Allow Azure services and resources to access this server* must be set to *Yes*, or you must create IP rules for the [IP addresses used by Data Sync service](network-access-controls-overview.md#data-sync).
@@ -227,9 +231,9 @@ Yes. You can configure sync between databases that belong to resource groups own
 - If the subscriptions belong to the same tenant and you have permission to all subscriptions, you can configure the sync group in the Azure portal.
 - Otherwise, you have to use PowerShell to add the sync members.
 
-### Can I setup Data Sync to sync between databases in SQL Database that belong to different clouds (like Azure Public Cloud and Azure China 21Vianet)
+### Can I set up Data Sync to sync between databases in SQL Database that belong to different clouds (like Azure Public Cloud and Azure China 21Vianet)
 
-Yes. You can setup sync between databases that belong to different clouds. You have to use PowerShell to add the sync members that belong to the different subscriptions.
+Yes. You can set up sync between databases that belong to different clouds. You have to use PowerShell to add the sync members that belong to the different subscriptions.
 
 ### Can I use Data Sync to seed data from my production database to an empty database, and then sync them
 

@@ -1,13 +1,15 @@
 ---
 title: "Execute XPath queries with namespaces (SQLXMLOLEDB)"
 description: Learn how to specify namespaces in SQLXML 4.0 when executing XPath queries with the SQLXMLOLEDB Provider.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "SQLXMLOLEDB Provider, executing XPath queries"
   - "namespaces property"
   - "queries [SQLXML], SQLXMLOLEDB Provider"
@@ -15,9 +17,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "namespaces [SQLXML], XPath queries"
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: rothja
-ms.author: jroth
-ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)

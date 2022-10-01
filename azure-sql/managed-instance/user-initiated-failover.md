@@ -1,16 +1,17 @@
 ---
 title: Manually initiate a failover on SQL Managed Instance
-description: Learn how to manually failover primary and secondary replicas on Azure SQL Managed Instance. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: seo-lt-2019, sqldbrb=1, devx-track-azurepowershell
-ms.devlang: 
-ms.topic: how-to
+description: Learn how to manually failover primary and secondary replicas on Azure SQL Managed Instance.
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 02/27/2021
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: how-to
+ms.custom:
+  - seo-lt-2019
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ---
 
 # User-initiated manual failover on SQL Managed Instance
@@ -131,7 +132,7 @@ To monitor the progress of user initiated failover for your BC instance, execute
 SELECT DISTINCT replication_endpoint_url, fabric_replica_role_desc FROM sys.dm_hadr_fabric_replica_states
 ```
 
-Before initiating the failover, your output will indicate the current primary replica on BC service tier containing one primary and three secondaries in the AlwaysOn Availability Group. Upon execution of a failover, running this query again would need to indicate a change of the primary node.
+Before initiating the failover, your output will indicate the current primary replica on BC service tier containing one primary and three secondaries in the Always On Availability Group. Upon execution of a failover, running this query again would need to indicate a change of the primary node.
 
 You will not be able to see the same output with GP service tier as the one above shown for BC. This is because GP service tier is based on a single node only. 
 You can use alternative T-SQL query showing the time SQL process started on the node for GP service tier instance:

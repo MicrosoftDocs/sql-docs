@@ -1,18 +1,16 @@
 ---
-description: "sys.pdw_health_component_status_mappings (Transact-SQL)"
-title: "sys.pdw_health_component_status_mappings (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_health_component_status_mappings (Transact-SQL)"
+description: sys.pdw_health_component_status_mappings (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/12/2022"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: reference
-dev_langs: 
+dev_langs:
   - "TSQL"
 ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
-author: ronortloff
-ms.author: rortloff
-monikerRange: ">= aps-pdw-2016"
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_health_component_status_mappings (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -1,20 +1,16 @@
 ---
+title: "Move Method Example (VBScript)"
 description: "Move Method Example (VBScript)"
-title: "Move Method Example (VBScript) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Move method, VBScript example"
-ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Move method, VBScript example"
+dev_langs:
+  - "VB"
 ---
 # Move Method Example (VBScript)
 This example uses the [Move](./move-method-ado.md) method to position the record pointer, based on user input.  

@@ -1,15 +1,13 @@
 ---
 title: "SQL Server features and ADO.NET"
 description: "Describes SQL Server features that are useful for ADO.NET application developers."
-ms.date: "07/09/2020"
-ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "07/09/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SQL Server features and ADO.NET
 
@@ -42,7 +40,7 @@ Describes how .NET applications can request notification from SQL Server when da
 Describes support for snapshot isolation, a row versioning mechanism designed to reduce blocking in transactional applications.  
   
 [SqlClient support for high availability, disaster recovery](sqlclient-support-high-availability-disaster-recovery.md)  
-Describes SqlClient support for high-availability, disaster recovery (AlwaysOn) availability groups.  
+Describes SqlClient support for high-availability, disaster recovery (Always On) availability groups.  
   
 [SqlClient support for LocalDB](sqlclient-support-localdb.md)  
 Describes SqlClient support for LocalDB databases.

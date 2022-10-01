@@ -1,21 +1,19 @@
 ---
-title: "PowerShell Cmdlet for Migration Evaluation | Microsoft Docs"
+title: "PowerShell Cmdlet for Migration Evaluation"
 description: Learn about Save-SqlMigrationReport, which evaluates the migration fitness of objects in a SQL Server database for In-Memory OLTP.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
-author: LitKnd
-ms.author: kendralittle
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PowerShell Cmdlet for Migration Evaluation
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The `Save-SqlMigrationReport` cmdlet is a tool that evaluates the migration fitness of multiple objects in a SQL Server database.
 
@@ -63,7 +61,6 @@ Conversely, if you do _not_ specify `-InputObject`, then you must specify `-Serv
 | Schema | The name of the schema that owns the object to be reported about.<br/><br/> Optional. |
 | Server | The name of the target SQL Server instance. Mandatory in Windows Powershell environment if `-InputObject` parameter is not supplied.<br/><br/> Optional in SQLPS. |
 | Username | Required when connecting through SQL Server Authentication, as opposed to Windows Authentication. Otherwise omit. |
-| &nbsp; | &nbsp; |
 
 ## Prerequisites
 
@@ -182,7 +179,6 @@ And next is an approximation of what the table looks like.
 | No unsupported triggers are defined on this table. | Succeeded |
 | Post migration row size does not exceed the row size limit of memory-optimized tables. | Succeeded |
 | Table is not partitioned or replicated. | Succeeded |
-| &nbsp; | &nbsp; |
 
 ## Related links
 

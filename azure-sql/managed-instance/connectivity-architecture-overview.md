@@ -1,17 +1,15 @@
 ---
 title: Connectivity architecture
-titleSuffix: Azure SQL Managed Instance 
+titleSuffix: Azure SQL Managed Instance
 description: Learn about Azure SQL Managed Instance communication and connectivity architecture as well as how the components direct traffic to a managed instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: fasttrack-edit
-ms.devlang: 
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova
 ms.date: 04/29/2021
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom: fasttrack-edit
 ---
 
 # Connectivity architecture for Azure SQL Managed Instance
@@ -63,7 +61,7 @@ Let's take a deeper dive into connectivity architecture for SQL Managed Instance
 
 ![Connectivity architecture of the virtual cluster](./media/connectivity-architecture-overview/connectivityarch003.png)
 
-Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. This host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable. The `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster. For more information, see [Use auto failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-configure-sql-mi.md#enabling-geo-replication-between-managed-instances-and-their-vnets).
+Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. This host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable. The `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster. For more information, see [Use auto failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-mi.md#terminology-and-capabilities).
 
 This private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to the SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name to redirect traffic to the correct SQL engine service.
 
@@ -131,9 +129,9 @@ These rules are necessary to ensure outbound management traffic flow. See [parag
 ### Mandatory user defined routes with service-aided subnet configuration
 These routes are necessary to ensure that management traffic is routed directly to a destination. See [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
-|Name|Address prefix|Next hop|
+|Name|Address prefix|Next hop <sup>2</sup>|
 |----|--------------|-------|
-|subnet-to-vnetlocal|MI SUBNET|Virtual network|
+|subnet-to-vnetlocal|MI SUBNET <sup>1</sup>|Virtual network|
 |mi-azurecloud-REGION-internet|AzureCloud.REGION|Internet|
 |mi-azurecloud-REGION_PAIR-internet|AzureCloud.REGION_PAIR|Internet|
 |mi-azuremonitor-internet|AzureMonitor|Internet|
@@ -148,13 +146,13 @@ These routes are necessary to ensure that management traffic is routed directly 
 |mi-azureactivedirectory-internet|AzureActiveDirectory|Internet|
 
 
-\* MI SUBNET refers to the IP address range for the subnet in the form x.x.x.x/y. You can find this information in the Azure portal, in subnet properties.
+<sup>1</sup> MI SUBNET refers to the IP address range for the subnet in the form x.x.x.x/y. You can find this information in the Azure portal, in subnet properties.
 
-\** If the destination address is for one of Azure's services, Azure routes the traffic directly to the service over Azure's backbone network, rather than routing the traffic to the Internet. Traffic between Azure services does not traverse the Internet, regardless of which Azure region the virtual network exists in, or which Azure region an instance of the Azure service is deployed in. For more details check [UDR documentation page](/azure/virtual-network/virtual-networks-udr-overview).
+<sup>2</sup> If the destination address is for one of Azure's services, Azure routes the traffic directly to the service over Azure's backbone network, rather than routing the traffic to the Internet. Traffic between Azure services does not traverse the Internet, regardless of which Azure region the virtual network exists in, or which Azure region an instance of the Azure service is deployed in. For more details check [UDR documentation page](/azure/virtual-network/virtual-networks-udr-overview).
 
 In addition, you can add entries to the route table to route traffic that has on-premises private IP ranges as a destination through the virtual network gateway or virtual network appliance (NVA).
 
-If the virtual network includes a custom DNS, the custom DNS server must be able to resolve public DNS records. Using additional features like Azure AD Authentication might require resolving additional FQDNs. For more information, see [Set up a custom DNS](custom-dns-configure.md).
+If the virtual network includes a custom DNS, the custom DNS server must be able to resolve public DNS records. Using additional features like Azure AD Authentication might require resolving additional fully qualified domain names (FQDNs). For more information, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
 
 ### Networking constraints
 

@@ -1,27 +1,24 @@
 ---
 title: "Start Database Mirroring Monitor (SSMS)"
-description: Describes how to start the Database Mirroring Monitor within the SQL Server Management Studio (SSMS) GUI. 
-ms.custom: seo-lt-2019
+description: Describes how to start the Database Mirroring Monitor within the SQL Server Management Studio (SSMS) GUI.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "monitoring database mirroring [SQL Server]"
   - "Database Mirroring Monitor [SQL Server], starting"
   - "database mirroring [SQL Server], monitoring"
-ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Start Database Mirroring Monitor (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The Database Mirroring Monitor is part of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Monitor, which is launched from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]
->  Database Mirroring Monitor is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Database Mirroring Monitor is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ### To launch the Database Mirroring Monitor  
   

@@ -1,19 +1,15 @@
 ---
+title: "RDS Scenario"
 description: "RDS Scenario"
-title: "RDS Scenario | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "address book application scenario [ADO]"
-  - "RDS scenarios [ADO]"
-ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "address book application scenario [ADO]"
+  - "RDS scenarios [ADO]"
 ---
 # RDS Scenario
 > [!IMPORTANT]

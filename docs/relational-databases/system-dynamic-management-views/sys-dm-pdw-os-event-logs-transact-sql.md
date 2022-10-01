@@ -1,18 +1,16 @@
 ---
-description: "sys.dm_pdw_os_event_logs (Transact-SQL)"
-title: "sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
+title: "sys.dm_pdw_os_event_logs (Transact-SQL)"
+description: sys.dm_pdw_os_event_logs (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: ">= aps-pdw-2016"
+ms.date: "03/07/2017"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+dev_langs:
+  - "TSQL"
+ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
+monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

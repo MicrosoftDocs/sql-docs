@@ -1,28 +1,27 @@
 ---
-description: "Percent character (Wildcard - Character(s) to Match) (Transact-SQL)"
 title: "Wildcard search (%)"
-ms.custom: "seo-lt-2019"
+description: "Percent character (Wildcard - Character(s) to Match) (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: "seo-lt-2019"
+f1_keywords:
   - "%"
   - "%_TSQL"
   - "wildcard"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "conditions [SQL Server], wildcards"
   - "% (wildcard - character(s) to match)"
   - "matching conditions [SQL Server]"
   - "wildcard characters [SQL Server]"
   - "characters [SQL Server], wildcard"
-ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

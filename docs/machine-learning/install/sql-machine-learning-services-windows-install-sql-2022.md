@@ -3,7 +3,7 @@ title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows. You can use Machine Learning Services to execute Python, R, or Java scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 05/24/2022
+ms.date: 08/23/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver16"
 Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
 > [!NOTE]
-> These instructions are specific to SQL Server 2022 on Windows. To install SQL Server Machine Learning Services on Windows for SQL Server 2016, SQL Server 2017, or SQL Server 2019, see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+> These instructions are specific to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Windows. To install SQL Server Machine Learning Services on Windows for SQL Server 2016, SQL Server 2017, or SQL Server 2019, see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -52,7 +52,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
 If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder. For example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`.
 
-1. Start the setup wizard for SQL Server.
+1. Start the SQL Setup wizard for SQL Server.
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
@@ -66,45 +66,55 @@ If you encounter any installation errors during setup, check the summary log in 
      
     This option installs the database services that support R and Python script execution.
 
-    This screenshot shows the minimum **Instance Features** to check when installing SQL Server 2022 Machine Learning Services.
+    This screenshot shows the minimum **Instance Features** to check when installing [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Machine Learning Services.
 
     :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
 
-4. **Next steps vary from previous versions:** Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
+4. **Next steps vary from previous versions:** Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
 
     - [Install R](#install-r)
     - [Install Python](#install-python)
     - [Install Java](#install-java)
 
+**Continue to the instructions to [install R](#install-r) or [install Python](#install-python).**
+
 ## Install R
 
 5. Download the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/) for Windows, and install.
 
-6. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
+6. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
 
-  - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
-  - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
-
-    The following sample scripts can be adapted for the installation:
-    
     ```r
-    R CMD INSTALL "c:\temp\CompatibilityAPI.zip"
-    R CMD INSTALL "c:\temp\RevoScaleR.zip"
+    # R Terminal
+    install.packages("iterators")
+    install.packages("foreach")
+    install.packages("R6")
+    install.packages("jsonlite")
+    ```
+    
+7. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
+
+   - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
+   - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
+
+    Assuming you have installed version 4.2.0 of R in its default location, for example `C:\Program Files\R\R-4.2.0`, and downloaded the required packages in `C:\temp` directory, the following sample scripts can be adapted for the installation:
+
+    ```cmd
+    cd C:\Program Files\R\R-4.2.0\bin
+    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\CompatibilityAPI.zip"
+    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\RevoScaleR.zip"
     ```
 
-7. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
+8. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder depending on the installation, usually in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
-- Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
-- User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
-
-  The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+   The following script can be used to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
   ```cmd
   .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
   ```
 
-8. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
+9. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
@@ -117,9 +127,9 @@ If you encounter any installation errors during setup, check the summary log in 
     EXEC sp_configure  'external scripts enabled';
     ```
 
-9. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. You can restart the service using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+10. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. You can restart the service using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-10. Verify the installation by executing a simple T-SQL command to return the version of R:
+11. Verify the installation by executing a simple T-SQL command to return the version of R:
 
     ```sql
     EXEC sp_execute_external_script @script=N'print(R.version)',@language=N'R';
@@ -129,16 +139,26 @@ If you encounter any installation errors during setup, check the summary log in 
 
 ## Install Python
 
-5. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/) for Windows, and install.
+5. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/) for Windows. Install using the following options:
+    1. Launch the Python Setup application and choose **Customize installation**. 
+    1. Verify the box is checked next to the option to **Install launcher for all users (recommended)**.
+    1. Select all **Optional Features** options, or as desired.
+    1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. It is recommended that the Python installation path is accessible by all users such as `C:\Program Files\Python310 `and it is not specific to a single user.
 
-6. Install the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924).
+6. Download the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924) and install revoscalepy from the Python custom install location. For example: 
 
-7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the user's application library folder, for example:  `C:\Users\<alias>\AppData\Local\Programs\Python\Python310\Lib\site-packages\revoscalepy\rxLibs`.
+    ```cmd
+    cd C:\Program Files\Python310\
+    python -m pip install C:\Users\%username%\Downloads\revoscalepy-10.0.0-py3-none-any.whl
+    ```
+
+7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the custom install location, for example: `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`.
 
     The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
     
     ```cmd
-    .\RegisterRext.exe /configure /pythonhome:"C:\Users\<alias>\AppData\Local\Programs\Python\Python310" /instance:"MSSQLSERVER"
+    cd C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs
+    .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"MSSQLSERVER"
     ```
 
 8. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:

@@ -1,18 +1,16 @@
 ---
 title: Configure multi-factor authentication
-titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics 
+titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to use multi-factored authentication with SSMS for Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics.
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: security
-ms.custom: sqldbrb=3
-ms.devlang: 
-ms.topic: how-to
 author: GithubMirek
 ms.author: mireks
-ms.reviewer: kendralittle, vanto, mathoma
+ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 08/27/2019
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-db-mi
+ms.subservice: security
+ms.topic: how-to
+ms.custom: sqldbrb=3
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Configure multi-factor authentication for SQL Server Management Studio and Azure AD

@@ -1,21 +1,17 @@
 ---
+title: "CubeDef Object (ADO MD)"
 description: "CubeDef Object (ADO MD)"
-title: "CubeDef Object (ADO MD) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "CubeDef"
-helpviewer_keywords: 
-  - "CubeDef object [ADO MD]"
-ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "CubeDef"
+helpviewer_keywords:
+  - "CubeDef object [ADO MD]"
+apitype: "COM"
 ---
 # CubeDef Object (ADO MD)
 Represents a cube from a multidimensional schema, containing a set of related dimensions.  

@@ -1,24 +1,21 @@
 ---
 title: "LEAST (Transact-SQL)"
 description: "The LEAST logical functions returns the minimum value from a list of one or more expressions."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "03/11/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "LEAST"
   - "LEAST_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "LEAST function"
-author: WilliamDAssafMSFT 
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom:
-- event-tier1-build-2022
-ms.date: "03/11/2022"
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || =azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest"
 ---
 # Logical Functions - LEAST (Transact-SQL)
 

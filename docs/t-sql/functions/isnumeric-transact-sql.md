@@ -1,29 +1,25 @@
 ---
+title: "ISNUMERIC (Transact-SQL)"
 description: "ISNUMERIC (Transact-SQL)"
-title: "ISNUMERIC (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ISNUMERIC"
   - "ISNUMERIC_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "expressions [SQL Server], valid numeric type"
   - "numeric data"
   - "ISNUMERIC function"
   - "verifying valid numeric type"
   - "valid numeric type [SQL Server]"
   - "checking valid numeric type"
-ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
 ---
 # ISNUMERIC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

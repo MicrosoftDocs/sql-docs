@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 01/23/2020
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -97,10 +97,12 @@ After you have configured the subscription, complete the following steps to conf
 ### Configure Pacemaker
 
 After you register the subscription, complete the following steps to configure Pacemaker:
-   
-[!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
-After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster. 
+[!INCLUDE [RHEL-Configure-Pacemaker](includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
+
+After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster.
+
+[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
 
 ## Configure fencing (STONITH)
 
@@ -158,7 +160,7 @@ For information on Pacemaker cluster properties, see [Pacemaker Clusters Propert
 
 ## Create a SQL Server login for Pacemaker
 
-[!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [SQL-Create-SQL-Login](includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Create availability group resource
 
@@ -178,7 +180,7 @@ With the availability of **RHEL 8**, the create syntax has changed. If you are u
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
 ```
 
-[!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
 <a name="createIP"></a>
 

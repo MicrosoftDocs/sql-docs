@@ -1,25 +1,23 @@
 ---
-description: "sys.master_files (Transact-SQL)"
-title: "sys.master_files (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.master_files (Transact-SQL)"
+description: sys.master_files (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.master_files"
   - "master_files_TSQL"
   - "sys.master_files_TSQL"
   - "master_files"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.master_files catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.master_files (Transact-SQL)

@@ -1,31 +1,27 @@
 ---
-title: "srv_got_attention (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_got_attention (Extended Stored Procedure API)"
 description: Learn how srv_got_attention checks if the current connection or task needs to be aborted and returns TRUE if the connection is killed or the batch is aborted.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_got_attention"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_got_attention"
+apilocation: opends60.dll
+apiname: srv_got_attention
+apitype: "DLLExport"
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_got_attention (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Checks whether the current connection or task needs to be aborted and returns TRUE if the connection is killed or the batch is aborted  
   

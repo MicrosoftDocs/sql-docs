@@ -17,7 +17,7 @@ ms.metadata:
 # Virtualize parquet file in a S3-compatible object storage with PolyBase
  [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-SQL Server 2022 can virtualize data from parquet files. This process allows the data to stay in its original location, but can be queried from a SQL Server instance with T-SQL commands, like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] can virtualize data from parquet files. This process allows the data to stay in its original location, but can be queried from a SQL Server instance with T-SQL commands, like any other table. This feature uses PolyBase connectors, and minimizes the need for ETL processes.
 
 In the example below, we'll virtualize a parquet file stored on S3-compatible object storage.
 
@@ -28,7 +28,7 @@ For more information on data virtualization, see [Introducing data virtualizatio
 To use the S3-compatible object storage integration features, you will need the following tools and resources:
 
 * Install the PolyBase feature for SQL Server.
-* Install [SQL Server Management Studio (SSMS)](https://aka.ms/ssms) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
+* Install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 * S3-compatible storage.
 * An S3 bucket created. Buckets cannot be created or configured from SQL Server.
 * A user (`Access Key ID`) has been configured and the secret (`Secret Key ID`) and that user is known to you. You will need both to authenticate against the S3 object storage endpoint.

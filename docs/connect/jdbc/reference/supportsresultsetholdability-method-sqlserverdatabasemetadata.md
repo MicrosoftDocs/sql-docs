@@ -1,21 +1,15 @@
 ---
+title: "supportsResultSetHoldability Method (SQLServerDatabaseMetaData)"
 description: "supportsResultSetHoldability Method (SQLServerDatabaseMetaData)"
-title: "supportsResultSetHoldability Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsResultSetHoldability"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsResultSetHoldability"
+apitype: "Assembly"
 ---
 # supportsResultSetHoldability Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

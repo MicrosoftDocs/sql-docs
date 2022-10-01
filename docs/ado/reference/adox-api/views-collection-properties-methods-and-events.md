@@ -1,18 +1,14 @@
 ---
+title: "Views Collection Properties, Methods, and Events"
 description: "Views Collection Properties, Methods, and Events"
-title: "Views Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-helpviewer_keywords: 
-  - "Views collection [ADOX], members"
-ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Views collection [ADOX], members"
 ---
 # Views Collection Properties, Methods, and Events
 ## Properties  

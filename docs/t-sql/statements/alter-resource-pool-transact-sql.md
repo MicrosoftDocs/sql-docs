@@ -1,23 +1,20 @@
 ---
-description: "ALTER RESOURCE POOL (Transact-SQL)"
-title: "ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER RESOURCE POOL (Transact-SQL)"
+description: ALTER RESOURCE POOL (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER_RESOURCE_POOL_TSQL"
   - "ALTER RESOURCE POOL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ALTER RESOURCE POOL"
-ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

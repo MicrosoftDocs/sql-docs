@@ -15,7 +15,7 @@ ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # User-Configurable Event Class
-[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Use the User-Configurable event category to monitor user-defined events. Create user-defined event classes to monitor events that cannot be monitored by the system-supplied event classes in other event categories. For example, a user-defined event can be created to monitor the progress of the application you are testing. As the application runs, it can generate events at predefined points, allowing you to determine the current execution point in your application.  
   
 ## User-Configurable Event Class Data Columns  

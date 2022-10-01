@@ -1,26 +1,22 @@
 ---
+title: "APPLOCK_MODE (Transact-SQL)"
 description: "APPLOCK_MODE (Transact-SQL)"
-title: "APPLOCK_MODE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "APPLOCK_MODE_TSQL"
   - "APPLOCK_MODE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "locking [SQL Server], applications"
   - "applications [SQL Server], locks"
   - "sessions [SQL Server], application locks"
   - "APPLOCK_MODE function"
-ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

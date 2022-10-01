@@ -47,7 +47,7 @@ sp_grant_proxy_to_subsystem
   
 |Value|Description|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script<br /><br /> **\*\* Important \*\*** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script<br /><br /> **\*\* Important \*\*** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
 |**3**|Operating System (**CmdExec**)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|Replication Log Reader Agent|  
@@ -58,7 +58,6 @@ sp_grant_proxy_to_subsystem
 |**10**|Analysis Services Command|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution|  
 |**12**|PowerShell Script|  
-| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to grant access to. The **subsystem_name** is **sysname**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
@@ -76,7 +75,6 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services Command|  
 |**Dts**|SSIS package execution|  
 |**PowerShell**|PowerShell Script|  
-| &nbsp; | &nbsp; |
   
 ## Remarks  
  Granting a proxy access to a subsystem does not change the permissions for the principal specified in the proxy.  

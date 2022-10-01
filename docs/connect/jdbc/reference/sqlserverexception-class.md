@@ -1,16 +1,12 @@
 ---
+title: "SQLServerException Class"
 description: "SQLServerException Class"
-title: "SQLServerException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: af5ef257-7cf6-4db3-b1ee-07d22d82bef1
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerException Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

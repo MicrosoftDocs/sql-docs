@@ -1,18 +1,15 @@
 ---
 title: "Configure Security Wizard: Service Accounts"
 description: "Describes the 'Service Accounts' page of the 'Configure Database Mirroring Security Wizard' in SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.serviceaccounts.f1"
-ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.configdbmsecurwiz.serviceaccounts.f1"
 ---
 # Configure Database Mirroring Security Wizard: Service Accounts
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

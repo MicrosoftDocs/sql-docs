@@ -1,18 +1,15 @@
 ---
 title: "Set up database mirroring (Windows Authentication)"
-description: Learn how to set up a database mirroring session with Windows Authentication using SQL Server Management Studio. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database mirroring [SQL Server], sessions"
-ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
+description: Learn how to set up a database mirroring session with Windows Authentication using SQL Server Management Studio.
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "database mirroring [SQL Server], sessions"
 ---
 # Establish Database Mirroring Session - Windows Authentication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +22,7 @@ ms.author: mikeray
 -   The principal and mirror server instances must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-either Standard or Enterprise. Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
   
     > [!NOTE]  
-    >  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+    >  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   The mirror database must exist and be current.  
   

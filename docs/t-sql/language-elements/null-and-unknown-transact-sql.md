@@ -1,18 +1,17 @@
 ---
+title: "NULL and UNKNOWN (Transact-SQL)"
 description: "NULL and UNKNOWN (Transact-SQL)"
-title: "NULL and UNKNOWN (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current || =azure-sqldw-latest"
+ms.reviewer: ""
+ms.date: "03/06/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+ms.custom: ""
+dev_langs:
+  - "TSQL"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || = azure-sqldw-latest"
 ---
 # NULL and UNKNOWN (Transact-SQL)
 

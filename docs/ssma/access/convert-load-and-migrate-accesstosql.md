@@ -14,6 +14,9 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: cpichuka 
 ms.author: cpichuka 
+f1_keywords: 
+  - "ssma.access.convert.f1"
+
 ---
 # Convert, Load, and Migrate (AccessToSQL)
 

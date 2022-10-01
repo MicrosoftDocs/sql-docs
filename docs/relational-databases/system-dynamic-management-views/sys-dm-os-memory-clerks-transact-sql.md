@@ -1,24 +1,22 @@
 ---
-description: "sys.dm_os_memory_clerks (Transact-SQL)"
 title: "sys.dm_os_memory_clerks (Transact-SQL)"
-ms.custom: ""
+description: sys.dm_os_memory_clerks (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "02/18/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dm_os_memory_clerks"
   - "sys.dm_os_memory_clerks"
   - "dm_os_memory_clerks_TSQL"
   - "sys.dm_os_memory_clerks_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_memory_clerks dynamic management view"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_clerks (Transact-SQL)
@@ -124,7 +122,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_HOST     |    This memory clerk is used for allocations by SQL OS functionality.     |
 |MEMORYCLERK_LANGSVC     |     This memory clerk is used for allocations by SQL T-SQL statements and commands (parser, algebrizer, etc.)    |
 |MEMORYCLERK_LWC     |   This memory clerk is used for allocations by Full-Text [Semantic Search](../search/semantic-search-sql-server.md) engine       |
-|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [Polybase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
+|MEMORYCLERK_POLYBASE     |    This memory clerk keeps track of memory allocations for [PolyBase](../polybase/polybase-guide.md) functionality inside SQL Server.     |
 |MEMORYCLERK_QSRANGEPREFETCH     |  This memory clerk is used for allocations during query execution for query scan range prefetch.      |
 |MEMORYCLERK_QUERYDISKSTORE     |     This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.    |
 |MEMORYCLERK_QUERYDISKSTORE_HASHMAP     |   This memory clerk is used by [Query Store](../performance/monitoring-performance-by-using-the-query-store.md) memory allocations inside SQL Server.      |

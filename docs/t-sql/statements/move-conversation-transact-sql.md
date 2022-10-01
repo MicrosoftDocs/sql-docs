@@ -1,29 +1,26 @@
 ---
-description: "MOVE CONVERSATION (Transact-SQL)"
-title: "MOVE CONVERSATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MOVE CONVERSATION (Transact-SQL)"
+description: MOVE CONVERSATION (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "MOVE_CONVERSATION_TSQL"
   - "MOVE CONVERSATION"
   - "MOVE_TSQL"
   - "MOVE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "moving conversations"
   - "MOVE CONVERSATION statement"
   - "relocating conversations"
   - "conversations [Service Broker], groups"
   - "conversations [Service Broker], moving"
-ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

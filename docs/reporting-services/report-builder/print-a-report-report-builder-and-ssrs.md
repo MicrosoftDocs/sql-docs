@@ -75,7 +75,7 @@ ms.author: maggies
   
 1.  Right-click outside of the report body and click **Report Properties**.  
   
-2.  In **Page Setup**, select a value from the **Paper Size** list. Each option populates the **Width** and **Height** properties. You can also specify a custom size by typing numeric values in the **Width** and **Height** boxes. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  In **Page Setup**, select a value from the **Paper Size** list. Each option populates the **Width** and **Height** properties. You can also specify a custom size by typing numeric values in the **Width** and **Height** boxes. Select **OK**.
   
     > [!NOTE]  
     >  Size values have a default unit based on the user's locale settings. To designate a different unit, type a physical unit designator such as cm, mm, pt, or pc after the numeric value.  

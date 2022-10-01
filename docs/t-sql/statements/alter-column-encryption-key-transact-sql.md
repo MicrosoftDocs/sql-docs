@@ -1,26 +1,23 @@
 ---
-description: "ALTER COLUMN ENCRYPTION KEY (Transact-SQL)"
-title: "ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER COLUMN ENCRYPTION KEY (Transact-SQL)"
+description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
+author: jaszymas
+ms.author: jaszymas
 ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "ALTER COLUMN ENCRYPTION"
   - "ALTER_COLUMN_ENCRYPTION_TSQL"
   - "ALTER COLUMN ENCRYPTION KEY"
   - "ALTER_COLUMN_ENCRYPTION_KEY_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "column encryption key, alter"
   - "ALTER COLUMN ENCRYPTION KEY statement"
-ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: jaszymas
-ms.author: jaszymas
+dev_langs:
+  - "TSQL"
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 

@@ -1,19 +1,17 @@
 ---
-description: "REVOKE (Transact-SQL)"
-title: "REVOKE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE (Transact-SQL)"
+description: REVOKE (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "REVOKE_TSQL"
   - "REVOKE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "schema-level securables [SQL Server]"
   - "REVOKE statement, Transact-SQL syntax"
   - "removing permissions"
@@ -26,9 +24,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], removing"
   - "permissions [SQL Server], revoking"
   - "dropping permissions"
-ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE (Transact-SQL)
@@ -198,7 +195,7 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 ## Examples  
   
 ### A. Grant and revoke
- **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 The following example creates a schema, a contained database user, and a new role on a user database. It adds the user to the role, grants SELECT permission on the schema to the role, and then removes (`REVOKE`) that permission to the role.
 

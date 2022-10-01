@@ -1,31 +1,28 @@
 ---
-description: "CREATE SPATIAL INDEX (Transact-SQL)"
-title: "CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE SPATIAL INDEX (Transact-SQL)"
+description: CREATE SPATIAL INDEX (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: "04/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SPATIAL INDEX"
   - "CREATE SPATIAL INDEX"
   - "CREATE_SPATIAL_INDEX_TSQL"
   - "SPATIAL_INDEX_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "spatial indexes [SQL Server], creating"
   - "index creation [SQL Server], spatial indexes"
   - "CREATE SPATIAL INDEX statement"
   - "CREATE INDEX statement"
-ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Creates a spatial index on a specified table and column in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An index can be created before there is data in the table. Indexes can be created on tables or views in another database by specifying a qualified database name. Spatial indexes require the table to have a clustered primary key. Spatial indexes cannot be specified on indexed views. For information about spatial indexes, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -429,7 +426,7 @@ MAXDOP =*max_degree_of_parallelism*
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
-> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]

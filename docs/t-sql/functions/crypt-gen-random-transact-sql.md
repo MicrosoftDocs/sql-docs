@@ -1,23 +1,19 @@
 ---
+title: "CRYPT_GEN_RANDOM (Transact-SQL)"
 description: "CRYPT_GEN_RANDOM (Transact-SQL)"
-title: "CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "CRYPT_GEN_RANDOM_TSQL"
-  - "CRYPT_GEN_RANDOM"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CRYPT_GEN_RANDOM function"
-ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
+ms.date: "07/24/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: reference
+f1_keywords:
+  - "CRYPT_GEN_RANDOM_TSQL"
+  - "CRYPT_GEN_RANDOM"
+helpviewer_keywords:
+  - "CRYPT_GEN_RANDOM function"
+dev_langs:
+  - "TSQL"
 ---
 # CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

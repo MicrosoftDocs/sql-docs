@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Master Data Services, overview"
   - "Master Data Services"
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Master Data Services Overview (MDS)
 

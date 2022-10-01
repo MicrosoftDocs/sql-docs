@@ -1,19 +1,17 @@
 ---
-description: "Filestream and FileTable Dynamic Management Views (Transact-SQL)"
-title: "Filestream and FileTable Dynamic Management Views (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], dynamic management views"
-ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
+title: "Filestream and FileTable Dynamic Management Views (Transact-SQL)"
+description: Filestream and FileTable Dynamic Management Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/03/2017"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "FileTables [SQL Server], dynamic management views"
+dev_langs:
+  - "TSQL"
+ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 ---
 # Filestream and FileTable Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

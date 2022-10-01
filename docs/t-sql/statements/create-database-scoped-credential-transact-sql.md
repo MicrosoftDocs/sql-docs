@@ -1,14 +1,14 @@
 ---
-description: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
-title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)"
+description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "04/13/2022"
 ms.prod: sql
 ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DATABASE SCOPED CREDENTIAL"
   - "DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_TSQL"
@@ -16,14 +16,11 @@ f1_keywords:
   - "CREATE_DATABASE_SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL_TSQL"
   - "SCOPED_CREDENTIAL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
-ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -47,10 +44,12 @@ WITH IDENTITY = 'identity_name'
 
 ## Arguments
 
-*credential_name*
+#### *credential_name*
+
 Specifies the name of the database scoped credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.
 
-IDENTITY **='**_identity\_name_**'**
+#### IDENTITY **='**_identity\_name_**'**
+
 Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into Azure Synapse Analytics, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY argument. It should just be the account name.
 
 > [!IMPORTANT]
@@ -59,8 +58,10 @@ Specifies the name of the account to be used when connecting outside the server.
 > [!NOTE]
 > WITH IDENTITY is not required if the container in Azure Blob storage is enabled for anonymous access. For an example querying Azure Blob storage, see [Importing into a table from a file stored on Azure Blob storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
 
-SECRET **='**_secret_**'**
+#### SECRET **='**_secret_**'**
+
 Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into Azure Synapse Analytics or Parallel Data Warehouse, the Secret must be the Azure Storage Key.
+
 > [!WARNING]
 > The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.
 
@@ -71,6 +72,9 @@ A database scoped credential is a record that contains the authentication inform
 Before creating a database scoped credential, the database must have a master key to protect the credential. For more information, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).
 
 When IDENTITY is a Windows user, the secret can be the password. The secret is encrypted using the service master key. If the service master key is regenerated, the secret is re-encrypted using the new service master key.
+
+When granting permissions for a shared access signatures (SAS) for use with a PolyBase external table, select both **Container** and **Object** as allowed resource types. If not granted, you may receive error 16535 or 16561 when attempting to access the external table.
+
 
 Information about database scoped credentials is visible in the [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) catalog view.
 

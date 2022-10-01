@@ -1,20 +1,16 @@
 ---
+title: "AddNew Method Example (VC++)"
 description: "AddNew Method Example (VC++)"
-title: "AddNew Method Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddNew method [ADO], VC++ example"
-ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "AddNew method [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # AddNew Method Example (VC++)
 This example uses the [AddNew](./addnew-method-ado.md) method to create a new record with the specified name.  

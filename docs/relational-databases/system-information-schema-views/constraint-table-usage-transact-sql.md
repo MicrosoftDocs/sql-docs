@@ -22,19 +22,19 @@ ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONSTRAINT_TABLE_USAGE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each table in the current database that has a constraint defined on the table. This information schema view returns information about the objects to which the current user has permissions.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA**.*view_name*.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Table qualifier.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> **Important:** Don't use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of an object is to query the `sys.objects` catalog view.|  
 |**TABLE_NAME**|**sysname**|Table name.|  
 |**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|Constraint qualifier.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the constraint.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the constraint.<br /><br /> **Important:** Don't use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of an object is to query the `sys.objects` catalog view.|  
 |**CONSTRAINT_NAME**|**sysname**|Constraint name.|  
   
 ## See Also  

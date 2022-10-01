@@ -1,26 +1,22 @@
 ---
+title: "@@LOCK_TIMEOUT (Transact-SQL)"
 description: "@@LOCK_TIMEOUT (Transact-SQL)"
-title: "@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "09/19/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "@@LOCK_TIMEOUT"
   - "@@LOCK_TIMEOUT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "timeout options [SQL Server], locks"
   - "@@LOCK_TIMEOUT function"
   - "current lock time-out setting"
   - "locking [SQL Server], time-outs"
-ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

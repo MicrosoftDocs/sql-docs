@@ -29,7 +29,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies the columns to be returned by the query.  
   
@@ -51,8 +51,8 @@ SELECT [ ALL | DISTINCT ]
           | udt_column_name [ { . | :: } { { property_name | field_name }   
             | method_name ( argument [ ,...n] ) } ]  
           | expression  
-          [ [ AS ] column_alias ]   
          }  
+        [ [ AS ] column_alias ]   
       | column_alias = expression   
     } [ ,...n ]   
 ```  

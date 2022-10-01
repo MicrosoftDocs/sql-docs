@@ -1,16 +1,14 @@
 ---
 title: Stream data using Azure Stream Analytics integration (preview)
 description: Use Azure Stream Analytics integration to stream data into Azure SQL Database.
-services: sql-database
-ms.service: sql-database
-ms.subservice: development
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: how-to
 author: ajetasin
 ms.author: ajetasi
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 11/04/2019
+ms.service: sql-database
+ms.subservice: development
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 
 # Stream data into Azure SQL Database using Azure Stream Analytics integration (preview)

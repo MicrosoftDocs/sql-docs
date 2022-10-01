@@ -1,15 +1,13 @@
 ---
+title: "ActiveConnection Property (ADOX)"
 description: "ActiveConnection Property (ADOX)"
-title: "ActiveConnection Property (ADOX) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: reference
-apitype: "COM"
-f1_keywords: 
+f1_keywords:
   - "_Catalog::put_ActiveConnection"
   - "_Catalog::PutRefActiveConnection"
   - "_Catalog::get_ActiveConnection"
@@ -17,11 +15,9 @@ f1_keywords:
   - "_Catalog::putref_ActiveConnection"
   - "_Catalog::ActiveConnection"
   - "_Catalog::GetActiveConnection"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ActiveConnection property [ADOX]"
-ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-author: rothja
-ms.author: jroth
+apitype: "COM"
 ---
 # ActiveConnection Property (ADOX)
 Indicates the ADO [Connection](../ado-api/connection-object-ado.md) object to which the [Catalog](./catalog-object-adox.md) belongs.  

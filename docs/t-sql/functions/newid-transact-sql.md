@@ -1,24 +1,21 @@
 ---
+title: "NEWID (Transact-SQL)"
 description: "NEWID (Transact-SQL)"
-title: "NEWID (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "NEWID"
   - "NEWID_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "uniqueidentifier data type"
   - "NEWID function"
-author: LitKnd
-ms.author: kendralittle
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current || azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || azure-sqldw-latest"
 ---
 
 # NEWID (Transact-SQL)

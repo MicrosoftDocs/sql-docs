@@ -26,7 +26,7 @@ If you haven't installed PolyBase, see [PolyBase installation](polybase-installa
 
 ### SQL Server 2022 
 
-In SQL Server 2022 Preview, configure your external data sources to use new connectors when you connect to Azure Storage. The table below summarizes the change:
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], configure your external data sources to use new connectors when you connect to Azure Storage. The table below summarizes the change:
 
 | External Data Source | From | To |
 | -------------------- | ---- | -- |
@@ -202,6 +202,8 @@ In SSMS, external tables are displayed in a separate folder **External Tables**.
 ![PolyBase objects in SSMS](media/polybase-management.png)  
 
 ## Next steps
+
+For more tutorials on creating external data sources and external tables to a variety of data sources, see [PolyBase Transact-SQL reference](polybase-t-sql-objects.md).
 
 Explore more ways to use and monitor PolyBase in the following articles:
 

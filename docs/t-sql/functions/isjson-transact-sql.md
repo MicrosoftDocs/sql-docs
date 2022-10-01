@@ -1,24 +1,22 @@
 ---
+title: "ISJSON (Transact-SQL)"
 description: "ISJSON (Transact-SQL)"
-title: "ISJSON (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+author: "uc-msft"
+ms.author: "umajay"
 ms.date: 04/26/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "ISJSON"
   - "ISJSON_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ISJSON function"
   - "JSON, validating"
-ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
-author: "uc-msft"
-ms.author: "umajay"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # ISJSON (Transact-SQL)
 
@@ -42,6 +40,9 @@ ISJSON ( expression [, json_type_constraint] )
  *json_type_constraint*
 
   Specifies the JSON type to check in the input. Valid values are VALUE, ARRAY, OBJECT or SCALAR. Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+
+> [!NOTE]
+> The argument *json_type_constraint* is not supported in Azure Synapse Analytics
 
 ## Return value
 

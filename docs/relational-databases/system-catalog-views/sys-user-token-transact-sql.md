@@ -1,33 +1,31 @@
 ---
-description: "sys.user_token (Transact-SQL)"
-title: "sys.user_token (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.user_token (Transact-SQL)"
+description: sys.user_token (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/27/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.user_token"
   - "user_token"
   - "sys.user_token_TSQL"
   - "user_token_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logins [SQL Server], security tokens"
   - "sys.user_token catalog view"
   - "user tokens [SQL Server]"
   - "tokens [SQL Server]"
   - "user_token catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
-author: VanMSFT
-ms.author: vanto
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017|| = azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # sys.user_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Returns one row for every database principal that is part of the user token in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

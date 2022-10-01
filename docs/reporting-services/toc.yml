@@ -121,7 +121,7 @@
   items:
   - name: Choosing BI tools for analysis and reporting
     href: ../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
-  - name: Browser support for Reporting Services and Power View
+  - name: Browser support for Reporting Services
     href: ../reporting-services/browser-support-for-reporting-services-and-power-view.md
   - name: Plan for report design and report deployment
     href: ../reporting-services/plan-for-report-design-and-report-deployment-reporting-services.md
@@ -238,7 +238,7 @@
       href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
     - name: Upgrade Reports
       href: ../reporting-services/install-windows/upgrade-reports.md
-    - name: Backup and Restore Operations for Reporting Services
+    - name: Back up and Restore Operations for Reporting Services
       href: ../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
 - name: Web portal
   href: ../reporting-services/web-portal-ssrs-native-mode.md
@@ -399,7 +399,7 @@
     items:
     - name: Site collection features - Reporting Services
       href: ../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md
-    - name: Site collection features - Report Server and Power View
+    - name: Site collection features - Report Server
       href: ../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md
     - name: Site settings and features - Reporting Services
       href: ../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md
@@ -432,9 +432,9 @@
     href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: Pin to Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
-- name: Report Builder in Reporting Services (SSRS)
+- name: Microsoft Report Builder (SSRS)
   items:
-  - name: Report Builder in SQL Server Overview
+  - name: Microsoft Report Builder Overview
     href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
   - name: Start Report Builder
     href: ../reporting-services/report-builder/start-report-builder.md
@@ -459,6 +459,8 @@
       href: ../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md
     - name: Save a Report to a SharePoint Library
       href: ../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md
+  - name: Report Builder support policy
+    href: ../reporting-services/report-builder/report-builder-support-policy.md
 - name: Finding, Viewing, and Managing Reports
   href: ../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md
   items:

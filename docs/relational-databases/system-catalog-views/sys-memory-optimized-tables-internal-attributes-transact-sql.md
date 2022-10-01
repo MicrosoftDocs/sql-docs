@@ -1,25 +1,23 @@
 ---
-description: "sys.memory_optimized_tables_internal_attributes (Transact-SQL)"
-title: "sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.memory_optimized_tables_internal_attributes (Transact-SQL)"
+description: sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+author: "kevin-farlee"
+ms.author: "kfarlee"
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.memory_optimized_tables_internal_attributes"
   - "sys.memory_optimized_tables_internal_attributes_TSQL"
   - "memory_optimized_tables_internal_attributes"
   - "memory_optimized_tables_internal_attributes_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.memory_optimized_tables_internal_attributes catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-author: "kevin-farlee"
-ms.author: "kfarlee"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)

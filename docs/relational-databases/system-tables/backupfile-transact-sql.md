@@ -1,24 +1,22 @@
 ---
-description: "backupfile (Transact-SQL)"
-title: "backupfile (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "backupfile (Transact-SQL)"
+description: backupfile (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "backupfile"
   - "backupfile_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "file backups [SQL Server], backupfile system table"
   - "backupfile system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: LitKnd
-ms.author: kendralittle
 ---
 # backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

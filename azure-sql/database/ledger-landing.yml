@@ -14,7 +14,7 @@ metadata:
   author: VanMSFT
   ms.author: vanto
   ms.reviewer: kendralittle, mathoma
-  ms.date: 05/25/2021
+  ms.date: 07/22/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -46,6 +46,8 @@ landingContent:
             url: /sql/relational-databases/security/ledger/ledger-digest-management
           - text: Database verification
             url: /sql/relational-databases/security/ledger/ledger-database-verification
+          - text: Monitor digest uploads
+            url: /sql/relational-databases/security/ledger/ledger-monitor-digest-uploads
 
 
   # Card 
@@ -83,7 +85,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Current ledger limitations
-            url: ledger-limits.md
+            url: /sql/relational-databases/security/ledger/ledger-limits
           - text: Ledger whitepaper
             url: https://aka.ms/sql-ledger-whitepaper
 
@@ -118,3 +120,14 @@ landingContent:
             url: /sql/relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-from-digest-storage-transact-sql
           - text: sys.sp_copy_data_in_batches (Transact-SQL)
             url: /sql/relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql
+
+
+  # Card 
+  - title: Ledger video references
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Bringing the power of blockchain to Azure SQL Database and SQL Server with ledger | Data Exposed
+            url: /shows/data-exposed/bringing-the-power-of-blockchain-to-azure-sql-database-and-sql-server-with-ledger-data-exposed
+          - text: Learn how Lenovo reinforces trust using ledger in Azure SQL Database
+            url: https://videos.microsoft.com/customer-stories/watch/xEenNHQerYdRyYqwdYLyXi

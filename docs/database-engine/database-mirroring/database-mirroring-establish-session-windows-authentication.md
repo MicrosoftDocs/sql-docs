@@ -1,19 +1,16 @@
 ---
 title: "Configure database mirroring"
 description: "Steps to configure a database mirroring relationship between a principal and mirror using Windows authentication."
-ms.custom: "seo-lt-2019"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Windows authentication [SQL Server]"
-  - "database mirroring [SQL Server], security"
-ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Windows authentication [SQL Server]"
+  - "database mirroring [SQL Server], security"
 ---
 # Configure database mirroring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +24,7 @@ ms.author: mikeray
 >  We recommend that you configure database mirroring during off-peak hours because configuring mirroring can impact performance.  
 > 
 > [!NOTE]
->  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the principal server instance. Database mirroring is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
+>  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the principal server instance. Database mirroring is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
   
 ### To establish a database mirroring session  
   

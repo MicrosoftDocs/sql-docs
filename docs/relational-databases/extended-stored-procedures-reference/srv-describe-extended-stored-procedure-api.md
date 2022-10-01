@@ -1,31 +1,27 @@
 ---
-title: "srv_describe (Extended Stored Procedure API) | Microsoft Docs"
+title: "srv_describe (Extended Stored Procedure API)"
 description: Learn how srv_describe in the Extended Stored Procedure API defines the column name and source and destination data types for a specific column in a row.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "reference"
-apiname: 
+helpviewer_keywords:
   - "srv_describe"
-apilocation: 
-  - "opends60.dll"
-apitype: "DLLExport"
-dev_langs: 
+dev_langs:
   - "C++"
-helpviewer_keywords: 
-  - "srv_describe"
+apilocation: opends60.dll
+apiname: srv_describe
+apitype: "DLLExport"
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
-author: LitKnd
-ms.author: kendralittle
 ---
 # srv_describe (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Defines the column name and source and destination data types for a specific column in a row.  
   

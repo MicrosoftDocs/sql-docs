@@ -1,66 +1,62 @@
 ---
-title: Configure Azure Defender for SQL
-titleSuffix: SQL Server on Azure Arc-enabled servers
-description: Configure Azure Defender for an instance of SQL Server on Azure Arc-enabled servers.
+title: Protect Azure Arc-enabled SQL Server with Configure Microsoft Defender for Cloud 
+titleSuffix: Azure Arc-enabled SQL Server
+description: Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud
 author: anosov1960
-ms.author: sashan 
-ms.reviewer: mikeray
-ms.date: 07/30/2021
-ms.topic: conceptual
+ms.author: sashan
+ms.reviewer: mikeray, randolphwest
+ms.date: 09/12/2022
 ms.prod: sql
+ms.topic: conceptual
 ---
-# Configure Azure Defender for SQL Server on Azure Arc-enabled servers
+# Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud 
 
-You can enable Azure Defender for your SQL Server instances on-premises by following these steps.
+You can configure your instance connected to Azure with Microsoft Defender for Cloud by following these steps.
 
 ## Prerequisites
 
-* Your Windows-based SQL Server instance is connected to Azure Arc. Follow the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
+- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions to [onboard your SQL Server instance to Azure Arc-enabled SQL Server](connect.md).
 
    > [!NOTE]
-   > Azure Defender is only supported for SQL Server instances on Windows machines. This will not work for SQL Server on Linux machines.
+   > Microsoft Defender for Cloud is only supported for SQL Server instances on Windows machines. This will not work for SQL Server on Linux machines.
 
-* Your user account is assigned one of the [Security Center Roles (RBAC)](/azure/security-center/security-center-permissions)
+- Your user account is assigned one of the [Security Center Roles (RBAC)](/azure/security-center/security-center-permissions)
 
 ## Create a Log Analytics workspace
 
-1. Search for __Log Analytics workspaces__ resource type and add a new one through the creation blade.
-
-   ![Create new workspace](media/configure-advanced-data-security/create-new-log-analytics-workspace.png)
+1. Search for **Log Analytics workspaces** resource type and add a new one through the creation pane.
 
    > [!NOTE]
-   > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your __Server - Azure Arc__ resource is created.
+   > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your Azure Arc-enabled SQL Server resource is created.
 
-1. Go to the overview page of the Log Analytics workspace resource and select **Windows, Linux, and other sources**. Copy the workspace ID and primary key for later use.
+1. Go to **Agents management > Log Analytics agent instructions**  and copy Workspace ID and Primary key for later use.
 
-   ![Log analytics workspace blade](media/configure-advanced-data-security/log-analytics-workspace-blade.png)
+## Install Log Analytics Agent
 
-## Install Microsoft Monitoring Agent (MMA)
+The next step is needed only if you haven't yet configured MMA on the remote machine.
 
-The next step is needed only if you have not yet configured MMA on the remote machine.
+1. Go to **Azure Arc > Servers** and open  the Azure Arc-enabled server resource for the machine where the SQL Server instance is installed. 
 
-1. Select the __Server - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.
+1. Open the **Extensions** blade and click **+ Add**. 
 
-   ![Install MMA](media/configure-advanced-data-security/install-mma-extension.png)
+1. Select **Log Analytics Agent - Azure Arc** and click **Next**. 
 
-1. After validation succeeds, click **Create** to start the MMA Arc Extension deployment workflow. When the deployment completes, the status updates to **Succeeded**.
+1. Set the Workspace ID and Workspace key using the values you saved in the previous step.
 
-1. For more information, see [Extension management with Azure Arc](/azure/azure-arc/servers/manage-vm-extensions).
+1. After validation succeeds, select **Create** to install the agent. When the deployment completes, the status updates to *Succeeded*.
 
-## Enable Azure Defender
+For more information, see [Extension management with Azure Arc](/azure/azure-arc/servers/manage-vm-extensions).
 
-Next, you need to enable Azure Defender for SQL Server instance.
+## Enable Microsoft Defender for Cloud
 
-1. Go to Security Center and open the **Pricing & settings** page from the sidebar.
+1. Go to **Azure Arc > SQL Servers** and open  the Azure Arc-enabled SQL server resource for the instance that you want to protect. 
 
-1. Select the workspace that you have configured for the MMA extension in the previous step
+1. Click on the **Microsoft Defender for Cloud** tile and then on **Enable Microsoft Defender for Cloud**.
 
-1. Select **Azure Defender On**. Make sure the option for **SQL servers on machines** is turned on.
-
-   ![Upgrade workspace](media/configure-advanced-data-security/enable-azure-defender.png)
-
- > [!NOTE]
-   > The first scan to generate the vulnerability assessment happens within 24 hours after enabling Azure Defender for SQL. After that, auto scans are be performed every week on Sunday.
+1. Follow the steps documented in [Enable Microsoft Defender for SQL servers on machines](/azure/defender-for-cloud/defender-for-sql-usage#set-up-microsoft-defender-for-sql-servers-on-machines).
+ 
+> [!NOTE]
+   > The first scan to generate the vulnerability assessment happens within 24 hours after enabling Microsoft Defender for Cloud. After that, auto scans are be performed every week on Sunday.
 
 ## Explore
 
@@ -68,24 +64,23 @@ Explore security anomalies and threats in Azure Security Center.
 
 1. Open your SQL Server – Azure Arc resource and select **Security** in the left menu. to see the recommendations and alerts for that instance.
 
-   ![Select security heading](media/configure-advanced-data-security/security-heading-sql-server-arc.png)
+   :::image type="content" source="media/configure-advanced-data-security/security-heading-sql-server-arc.png" alt-text="Screenshot showing how to select security heading.":::
 
-1. Click on any of the recommendations to see the vulnerability details in __Security Center__ .
+1. Select any of the recommendations to see the vulnerability details in **Security Center**.
 
-   ![Vulnerability report](media/configure-advanced-data-security/vulnerabilities-report.png)
+   :::image type="content" source="media/configure-advanced-data-security/vulnerabilities-report.png" alt-text="Screenshot showing the Vulnerability report.":::
 
-1. Click on any security alert for full details and further explore the attack in [Azure Sentinel](/azure/sentinel/overview). The following diagram is an example of the brute force alert.
+1. Select any security alert for full details and further explore the attack in [Azure Sentinel](/azure/sentinel/overview). The following diagram is an example of the brute force alert.
 
-   ![Brute force alert](media/configure-advanced-data-security/brute-force-alert.png)
+   :::image type="content" source="media/configure-advanced-data-security/brute-force-alert.png" alt-text="Screenshot showing a brute force alert.":::
 
-1. Click on **Take action** to mitigate the alert.
+1. Select **Take action** to mitigate the alert.
 
-   ![Alert mitigation](media/configure-advanced-data-security/brute-force-alert-mitigation.png)
+   :::image type="content" source="media/configure-advanced-data-security/brute-force-alert-mitigation.png" alt-text="Screenshot showing alert mitigation.":::
 
 > [!NOTE]
-> The general __Security Center__ link at the top of the page does not use the preview portal URL so your __SQL Server - Azure Arc__ resources are not be visible there. Follow the links for the individual recommendations or alerts.
+> The general **Security Center** link at the top of the page does not use the preview portal URL so your **SQL Server - Azure Arc** resources are not be visible there. Follow the links for the individual recommendations or alerts.
 
 ## Next steps
 
-* To configure Azure Defender for SQL Server at scale, see [Enable Azure Defender for SQL servers on machines](/azure/security-center/defender-for-sql-usage).
-* You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details,see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).
+- You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details, see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).

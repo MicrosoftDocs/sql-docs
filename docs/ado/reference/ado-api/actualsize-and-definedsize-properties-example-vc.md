@@ -1,21 +1,17 @@
 ---
+title: "ActualSize and DefinedSize Properties Example (VC++)"
 description: "ActualSize and DefinedSize Properties Example (VC++)"
-title: "ActualSize and DefinedSize Properties Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActualSize property [ADO], VC++ example"
-  - "DefinedSize property [ADO], VC++ example"
-ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "ActualSize property [ADO], VC++ example"
+  - "DefinedSize property [ADO], VC++ example"
+dev_langs:
+  - "C++"
 ---
 # ActualSize and DefinedSize Properties Example (VC++)
 This example uses the [ActualSize](./actualsize-property-ado.md) and [DefinedSize](./definedsize-property.md) properties to display the defined size and actual size of a field.  

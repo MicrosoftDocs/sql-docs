@@ -1,25 +1,23 @@
 ---
-description: "sys.sql_dependencies (Transact-SQL)"
-title: "sys.sql_dependencies (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.sql_dependencies (Transact-SQL)"
+description: sys.sql_dependencies (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sql_dependencies"
   - "sql_dependencies_TSQL"
   - "sys.sql_dependencies_TSQL"
   - "sys.sql_dependencies"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sql_dependencies catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # sys.sql_dependencies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,9 +1,9 @@
 ---
 title: "Resumable add table constraints"
-description: New resumable capabilities to support pausing and resuming a running ALTER TABLE ADD CONSTRAINT operation. 
+description: New resumable capabilities to support pausing and resuming a running ALTER TABLE ADD CONSTRAINT operation for SQL Server 2022 and Azure SQL. 
 ms.custom:
 - event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: 09/19/2022
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: security
@@ -11,13 +11,17 @@ ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
+titleSuffix: SQL Server & Azure SQL
 ---
 
 # Resumable add table constraints
 
-[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-Starting with SQL Server 2022, resumable operations for online index creation and rebuild are supported. The resumable operations allow index operations to be executed while the table is [online](/sql/t-sql/statements/alter-table-transact-sql#with--online--on--off-as-applies-to-altering-a-column) (`ONLINE=ON`) and also:
+> [!NOTE]
+> The resumable add table constraints feature is in public preview for Azure SQL Database and Azure SQL Managed Instance.
+
+The resumable operation for online index creation and rebuild are already supported for SQL Server 2019, Azure SQL Database, and Azure SQL Managed Instance. The resumable operations allow index operations to be executed while the table is [online](../../t-sql/statements/alter-table-transact-sql.md#with--online--on--off-as-applies-to-altering-a-column) (`ONLINE=ON`) and also:
 
 - Pause and restart an index create or rebuild operation multiple times to fit a maintenance window
 
@@ -25,9 +29,12 @@ Starting with SQL Server 2022, resumable operations for online index creation an
 
 - Enable truncation of transaction logs during an index creation or rebuild operation.
 
-- When an index operation is paused, both the original index and the newly created one require disk space and need to be updated during [Data Manipulation Language (DML)](/sql/t-sql/statements/statements#data-manipulation-language) operations.
+- When an index operation is paused, both the original index and the newly created one require disk space and need to be updated during [Data Manipulation Language (DML)](../../t-sql/statements/statements.md#data-manipulation-language) operations.
 
-The new SQL Server extensions allow a resumable operation for the [Data Definition Language (DDL)](/sql/t-sql/statements/statements#data-definition-language) command [ALTER TABLE ADD CONSTRAINT](/sql/t-sql/statements/alter-table-transact-sql) and adding a Primary or Unique Key. For more information on adding a Primary or Unique Key, see [ALTER TABLE table_constraint](/sql/t-sql/statements/alter-table-table-constraint-transact-sql).
+The new extensions for SQL Server 2022, SQL Database, and Managed Instance allow a resumable operation for the [Data Definition Language (DDL)](../../t-sql/statements/statements.md#data-definition-language) command [ALTER TABLE ADD CONSTRAINT](../../t-sql/statements/alter-table-transact-sql.md) and adding a Primary or Unique Key. For more information on adding a Primary or Unique Key, see [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).
+
+> [!NOTE]
+> Resumable add table constraints apply only to PRIMARY KEY and UNIQUE KEY constraints. Resumable add table constraints is not supported for FOREIGN KEY constraints.
 
 ## Resumable operations
 
@@ -50,19 +57,19 @@ This feature is especially useful for large tables.
 
 ## T-SQL Syntax for ALTER TABLE
 
-For information on the syntax used to enable resumable operations on a table constraint, see the syntax and options in [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql#resumable).
+For information on the syntax used to enable resumable operations on a table constraint, see the syntax and options in [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md#resumable).
 
 ### Remarks for ALTER TABLE
 
-- A new clause **WITH <resumable_options** have been added to the current T-SQL syntax in [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql).
+- A new clause **WITH <resumable_options** have been added to the current T-SQL syntax in [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).
 
-- The option **RESUMABLE** is new and has been added to the existing [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql) syntax.
+- The option **RESUMABLE** is new and has been added to the existing [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) syntax.
 
 - `MAX_DURATION` = *time* \[MINUTES\] used with `RESUMABLE = ON` (requires `ONLINE = ON`). `MAX_DURATION` indicates time (an integer value specified in minutes) that a resumable online add constraint operation is executed before being paused. If not specified, the operation continues until completion.
 
 ## T-SQL syntax for ALTER INDEX
 
-To pause, resume, or abort the resumable table constraint operation for `ALTER TABLE ADD CONSTRAINT`, use the T-SQL syntax [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).
+To pause, resume, or abort the resumable table constraint operation for `ALTER TABLE ADD CONSTRAINT`, use the T-SQL syntax [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).
 
 For resumable constraints the existing ALTER INDEX ALL command is used.
 
@@ -101,17 +108,17 @@ ALTER INDEX ALL ON <table_name>
 
 `WAIT_AT_LOW_PRIORITY` used with `RESUMABLE=ON` and `ONLINE = ON`
 
-- Resuming an online add table constraint operation after a pause must wait for blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the add table constraint operation will wait for low priority locks, allowing other operations to proceed while the resumable operation is waiting. Omitting the `WAIT_AT_LOW_PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. For more information, see [WAIT_AT_LOW_PRIORITY](/sql/t-sql/statements/alter-index-transact-sql#wait-at-low-priority).
+- Resuming an online add table constraint operation after a pause must wait for blocking operations on this table. `WAIT_AT_LOW_PRIORITY` indicates that the add table constraint operation will wait for low priority locks, allowing other operations to proceed while the resumable operation is waiting. Omitting the `WAIT_AT_LOW_PRIORITY` option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. For more information, see [WAIT_AT_LOW_PRIORITY](../../t-sql/statements/alter-index-transact-sql.md#wait-at-low-priority).
 
 `ALTER INDEX ALL ON <Table> ABORT`
 
 - Abort a running or paused add table constraint operation that was declared as resumable. The abort operation must be explicitly executed as an `ABORT` command to terminate a resumable constraint operation. Failure or pausing a resumable table constraint operation doesn't terminate its execution. Rather, it leaves the operation in an indefinite paused state.
 
-For more information on `PAUSE`, `RESUME`, and `ABORT` options available for resumable operations, see [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).
+For more information on `PAUSE`, `RESUME`, and `ABORT` options available for resumable operations, see [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).
 
 ## View the status for resumable operation
 
-To view the status for the resumable table constraint operation, use the view [sys.index_resumable_operations](/sql/relational-databases/system-catalog-views/sys-index-resumable-operations).
+To view the status for the resumable table constraint operation, use the view [sys.index_resumable_operations](../system-catalog-views/sys-index-resumable-operations.md).
 
 ## Permissions
 
@@ -178,10 +185,10 @@ Here's the result set:
 
 ## See also
 
-- [Guidelines for Online Index Operations](/sql/relational-databases/indexes/guidelines-for-online-index-operations)
-- [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)
-- [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)
-- [sys.index_resumable_operations](/sql/relational-databases/system-catalog-views/sys-index-resumable-operations)
-- [WAIT_AT_LOW_PRIORITY](/sql/t-sql/statements/alter-index-transact-sql#wait-at-low-priority)
-- [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)
-- [ALTER TABLE index_option](/sql/t-sql/statements/alter-table-index-option-transact-sql)
+- [Guidelines for Online Index Operations](../indexes/guidelines-for-online-index-operations.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
+- [sys.index_resumable_operations](../system-catalog-views/sys-index-resumable-operations.md)
+- [WAIT_AT_LOW_PRIORITY](../../t-sql/statements/alter-index-transact-sql.md#wait-at-low-priority)
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [ALTER TABLE index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)

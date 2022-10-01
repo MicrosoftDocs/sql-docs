@@ -1,23 +1,21 @@
 ---
-description: "MSmerge_articlehistory (Transact-SQL)"
-title: "MSmerge_articlehistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "MSmerge_articlehistory (Transact-SQL)"
+description: MSmerge_articlehistory (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: replication
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "MSmerge_articlehistory"
   - "MSmerge_articlehistory_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MSmerge_articlehistory system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
-author: LitKnd
-ms.author: kendralittle
 ---
 # MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

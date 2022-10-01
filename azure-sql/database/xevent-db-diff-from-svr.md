@@ -1,17 +1,15 @@
 ---
 title: Extended events
 description: Describes extended events (XEvents) in Azure SQL Database, and how event sessions differ slightly from event sessions in Microsoft SQL Server.
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: reference
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: wiassaf, mathoma
 ms.date: 04/27/2022
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: reference
+ms.custom: sqldbrb=1
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Extended events in Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

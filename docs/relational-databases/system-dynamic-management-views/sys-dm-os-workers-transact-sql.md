@@ -1,26 +1,24 @@
 ---
-description: "sys.dm_os_workers (Transact-SQL)"
-title: "sys.dm_os_workers (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "sys.dm_os_workers (Transact-SQL)"
+description: sys.dm_os_workers (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "dm_os_workers_TSQL"
   - "sys.dm_os_workers_TSQL"
   - "dm_os_workers"
   - "sys.dm_os_workers"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_os_workers dynamic management view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_workers (Transact-SQL)

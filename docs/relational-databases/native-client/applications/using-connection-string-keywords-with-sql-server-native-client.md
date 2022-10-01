@@ -91,7 +91,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**UseProcForPrepare**|This keyword is deprecated, and its setting is ignored by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC Driver.|  
 |**WSID**|The workstation ID. Typically, this is the network name of the computer on which the application resides (optional). If specified, this value is stored in the **master.dbo.sysprocesses** column **hostname** and is returned by [sp_who](../../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) and the [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) function.|  
   
-> **NOTE:** Regional conversion settings apply to currency, numeric, date, and time data types. The conversion setting is only applicable to output conversion and is only visible when currency, numeric, date, or time values are converted to character strings.  
+> [!NOTE]  
+> Regional conversion settings apply to currency, numeric, date, and time data types. The conversion setting is only applicable to output conversion and is only visible when currency, numeric, date, or time values are converted to character strings.  
   
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver uses the locale registry settings for the current user. The driver does not honor the current thread's locale if the application sets it after connection by, for example, calling **SetThreadLocale**.  
   

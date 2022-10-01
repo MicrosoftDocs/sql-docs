@@ -1,25 +1,23 @@
 ---
-description: "Sending Result Sets to the Server (Extended Stored Procedure API)"
 title: "Sending Result Sets to the Server (Extended Stored Procedure API)"
+description: Sending Result Sets to the Server (Extended Stored Procedure API)
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: seo-dt-2019
+helpviewer_keywords:
   - "extended stored procedures [SQL Server], sending result sets"
   - "result sets [SQL Server], extended stored procedures"
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
-author: LitKnd
-ms.author: kendralittle
-ms.custom: seo-dt-2019
 ---
 # Sending Result Sets to the Server (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR Integration instead.  
   
  When sending a result set to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the extended stored procedure should call the appropriate API as follows:  
   

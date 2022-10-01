@@ -1,16 +1,12 @@
 ---
-description: Learn how to define things like the default database in the Data Source Wizard to create a new ODBC connection to SQL Server.
 title: Data Source Wizard Screen 3 (ODBC Driver for SQL Server)
-ms.custom: ""
-ms.date: "09/27/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
+description: Learn how to define things like the default database in the Data Source Wizard to create a new ODBC connection to SQL Server.
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "09/27/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Data Source Wizard Screen 3
 
@@ -62,7 +58,7 @@ Declares the application workload type when connecting to a server. Possible val
 
 ### Multi-subnet failover
 
-If your application is connecting to a high-availability, disaster recovery (AlwaysOn Availability Groups) availability group (AG) on different subnets, enabling **Multi-subnet failover.** configures ODBC Driver for SQL Server to provide faster detection of and connection to the (currently) active server.
+If your application is connecting to a high-availability, disaster recovery (Always On Availability Groups) availability group (AG) on different subnets, enabling **Multi-subnet failover.** configures ODBC Driver for SQL Server to provide faster detection of and connection to the (currently) active server.
 
 ### Transparent Network IP Resolution
 

@@ -28,7 +28,7 @@ ms.author: mikeray
 ---
 # Compare typed XML to untyped XML
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can create variables, parameters, and columns of the **xml** type. You can optionally associate a collection of XML schemas with a variable, parameter, or column of **xml** type. In this case, the **xml** data type instance is called *typed*. Otherwise, the XML instance is called *untyped*.
 

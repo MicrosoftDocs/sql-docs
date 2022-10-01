@@ -1,16 +1,17 @@
 ---
 title: Performance counters to track shard map manager
 description: ShardMapManager class and data dependent routing performance counters
-services: sql-database
+author: scoriani
+ms.author: scoriani
+ms.reviewer: wiassaf, mathoma
+ms.date: 02/07/2019
 ms.service: sql-database
 ms.subservice: scale-out
-ms.custom: seoapril2019, seo-lt-2019, sqldbrb=1
-ms.devlang:
 ms.topic: how-to
-author: scoriani 
-ms.author: scoriani
-ms.reviewer: kendralittle, mathoma
-ms.date: 02/07/2019
+ms.custom:
+  - "seoapril2019"
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 ---
 # Create performance counters to track performance of shard map manager
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -1,21 +1,19 @@
 ---
-description: "SET ROWCOUNT (Transact-SQL)"
-title: "SET ROWCOUNT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET ROWCOUNT (Transact-SQL)"
+description: SET ROWCOUNT (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SET_ROWCOUNT_TSQL"
   - "ROWCOUNT_TSQL"
   - "SET ROWCOUNT"
   - "ROWCOUNT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "row return limitations [SQL Server]"
   - "SET ROWCOUNT statement"
   - "number of rows affected by statement"
@@ -24,9 +22,8 @@ helpviewer_keywords:
   - "stopping queries"
   - "limiting rows returned"
   - "queries [SQL Server], stopping"
-ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ROWCOUNT (Transact-SQL)

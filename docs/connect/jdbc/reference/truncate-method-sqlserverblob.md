@@ -1,21 +1,15 @@
 ---
+title: "truncate Method (SQLServerBlob)"
 description: "truncate Method (SQLServerBlob)"
-title: "truncate Method (SQLServerBlob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerBlob.truncate"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerBlob.truncate"
+apitype: "Assembly"
 ---
 # truncate Method (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

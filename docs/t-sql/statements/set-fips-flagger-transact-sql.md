@@ -1,30 +1,27 @@
 ---
-description: "SET FIPS_FLAGGER (Transact-SQL)"
-title: "SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "SET FIPS_FLAGGER (Transact-SQL)"
+description: SET FIPS_FLAGGER (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FIPS_FLAGGER"
   - "SET_FIPS_FLAGGER_TSQL"
   - "FIPS_FLAGGER_TSQL"
   - "SET FIPS_FLAGGER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SET FIPS_FLAGGER statement"
   - "FIPS 127-2 standard"
   - "FIPS_FLAGGER option"
-ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # SET FIPS_FLAGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies checking for compliance with the FIPS 127-2 standard. This is based on the ISO standard. For information about SQL Server FIPS compliance, see [How to use SQL Server 2016 in FIPS 140-2-compliant mode](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
   

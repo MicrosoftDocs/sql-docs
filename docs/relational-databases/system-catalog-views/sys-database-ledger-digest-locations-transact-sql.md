@@ -1,18 +1,16 @@
 ---
-description: "sys.database_ledger_digest_locations (Transact-SQL)"
-title: "sys.database_ledger_digest_locations (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
+title: "sys.database_ledger_digest_locations (Transact-SQL)"
+description: sys.database_ledger_digest_locations (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+ms.date: "05/24/2022"
+ms.prod: sql
+ms.technology: system-objects
+ms.topic: "reference"
+ms.custom: event-tier1-build-2022
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.database_ledger_digest_locations (Transact-SQL)
 
@@ -34,6 +32,6 @@ Requires the **VIEW LEDGER CONTENT** permission.
 
 ## See also
 
-- [Digest Management](/sql/relational-databases/security/ledger/ledger-digest-management)
-- [Configure automatic database digests](/sql/relational-databases/security/ledger/ledger-how-to-configure-automatic-database-digest)
-- [Ledger Overview](/sql/relational-databases/security/ledger/ledger-overview)
+- [Digest Management](../security/ledger/ledger-digest-management.md)
+- [Configure automatic database digests](../security/ledger/ledger-how-to-enable-automatic-digest-storage.md)
+- [Ledger Overview](../security/ledger/ledger-overview.md)

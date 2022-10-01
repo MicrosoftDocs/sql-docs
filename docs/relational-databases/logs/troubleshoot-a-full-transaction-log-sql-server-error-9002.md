@@ -63,7 +63,7 @@ A very common solution to this problem is to ensure transaction log backups are 
 
 ### Log truncation explained
 
-There is a difference between truncating a transaction log and shrinking a transaction log. [Log Truncation](the-transaction-log-sql-server.md#Truncation) occurs normally during a transaction log backup, and is a logical operation which removes committed records inside the log, whereas [log shrinking](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md#shrinking-a-log-file) reclaims physical space on the file system by reducing the file size. Log truncation occurs on a [virtual-log-file (VLF)](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) boundary, and a log file may contain many VLFs. A log file can be shrunk only if there is empty space inside the log file to reclaim. Shrinking a log file alone cannot solve the problem of a full log file, instead, you must discover why the log file is full and cannot be truncated.
+There's a difference between truncating a transaction log and shrinking a transaction log. [Log Truncation](the-transaction-log-sql-server.md#Truncation) occurs normally during a transaction log backup, and is a logical operation which removes committed records inside the log, whereas [log shrinking](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md#shrinking-a-log-file) reclaims physical space on the file system by reducing the file size. Log truncation occurs on a [virtual-log-file (VLF)](../sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) boundary, and a log file may contain many VLFs. A log file can be shrunk only if there's empty space inside the log file to reclaim. Shrinking a log file alone can't solve the problem of a full log file, instead, you must discover why the log file is full and can't be truncated.
 
 > [!WARNING]
 > Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and might slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  For more information, see [Shrink a database](../databases/shrink-a-database.md).
@@ -72,7 +72,7 @@ There is a difference between truncating a transaction log and shrinking a trans
 
 To discover what is preventing log truncation in a given case, use the `log_reuse_wait` and `log_reuse_wait_desc` columns of the `sys.databases` catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
 
-The following set of T-SQL commands will help you identify if a database transaction log is not truncated and the reason for it. The following script will also recommend steps to resolve the issue:
+The following set of T-SQL commands will help you identify if a database transaction log isn't truncated and the reason for it. The following script will also recommend steps to resolve the issue:
 
 
 ```tsql
@@ -166,7 +166,7 @@ SELECT * FROM #CannotTruncateLog_Db
 
 
 DECLARE no_truncate_db CURSOR FOR
-    SELECT log_reuse_wait, log_reuse_wait_desc, dbname, database_id, recovery_model_desc FROM #CannotTruncateLog_Db;
+    SELECT log_reuse_wait, log_reuse_wait_desc, DbName, database_id, recovery_model_desc FROM #CannotTruncateLog_Db;
 
 
 OPEN no_truncate_db
@@ -187,7 +187,7 @@ BEGIN
     END
     else if (@log_reuse_wait = 2)
     BEGIN
-        select 'Is '+ @recovery_model_desc +' recovery model the intended choice for ''' + @dbname+ ''' database? Review recovery models and determine if you need to change it. https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server' as RecoveryModelChoice
+        select 'Is '+ @recovery_model_desc +' recovery model the intended choice for ''' + @dbname+ ''' database? Review recovery models and determine if you need to change it. https://learn.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server' as RecoveryModelChoice
         select 'To truncate the log consider performing a transaction log backup on database ''' + @dbname+ ''' which is in ' + @recovery_model_desc +' recovery model. Be mindful of any existing log backup chains that could be broken' as Recommendation
         select 'BACKUP LOG [' + @dbname + '] TO DISK = ''some_volume:\some_folder\' + @dbname + '_LOG.trn ''' as BackupLogCommand
     END
@@ -225,7 +225,7 @@ BEGIN
         select 'select availability_group=cast(ag.name as varchar(30)), primary_replica=cast(ags.primary_replica as varchar(30)),primary_recovery_health_desc=cast(ags.primary_recovery_health_desc as varchar(30)), synchronization_health_desc=cast(ags.synchronization_health_desc as varchar(30)),ag.failure_condition_level, ag.health_check_timeout, automated_backup_preference_desc=cast(ag.automated_backup_preference_desc as varchar(10))  from sys.availability_groups ag join sys.dm_hadr_availability_group_states ags on ag.group_id=ags.group_id' as CheckAGHealth
         select 'SELECT  group_name=cast(arc.group_name as varchar(30)), replica_server_name=cast(arc.replica_server_name as varchar(30)), node_name=cast(arc.node_name as varchar(30)),role_desc=cast(ars.role_desc as varchar(30)), ar.availability_mode_Desc, operational_state_desc=cast(ars.operational_state_desc as varchar(30)), connected_state_desc=cast(ars.connected_state_desc as varchar(30)), recovery_health_desc=cast(ars.recovery_health_desc as varchar(30)), synhcronization_health_desc=cast(ars.synchronization_health_desc as varchar(30)), ars.last_connect_error_number, last_connect_error_description=cast(ars.last_connect_error_description as varchar(30)), ars.last_connect_error_timestamp, primary_role_allow_connections_desc=cast(ar.primary_role_allow_connections_desc as varchar(30)) from sys.dm_hadr_availability_replica_cluster_nodes arc join sys.dm_hadr_availability_replica_cluster_states arcs on arc.replica_server_name=arcs.replica_server_name join sys.dm_hadr_availability_replica_states ars on arcs.replica_id=ars.replica_id join sys.availability_replicas ar on ars.replica_id=ar.replica_id join sys.availability_groups ag on ag.group_id = arcs.group_id and ag.name = arc.group_name ORDER BY cast(arc.group_name as varchar(30)), cast(ars.role_desc as varchar(30))' as CheckReplicaHealth
         select 'select database_name=cast(drcs.database_name as varchar(30)), drs.database_id, drs.group_id, drs.replica_id, drs.is_local,drcs.is_failover_ready,drcs.is_pending_secondary_suspend, drcs.is_database_joined, drs.is_suspended, drs.is_commit_participant, suspend_reason_desc=cast(drs.suspend_reason_desc as varchar(30)), synchronization_state_desc=cast(drs.synchronization_state_desc as varchar(30)), synchronization_health_desc=cast(drs.synchronization_health_desc as varchar(30)), database_state_desc=cast(drs.database_state_desc as varchar(30)), drs.last_sent_lsn, drs.last_sent_time, drs.last_received_lsn, drs.last_received_time, drs.last_hardened_lsn, drs.last_hardened_time,drs.last_redone_lsn, drs.last_redone_time, drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate, drs.filestream_send_rate, drs.end_of_log_lsn, drs.last_commit_lsn, drs.last_commit_time, drs.low_water_mark_for_ghosts, drs.recovery_lsn, drs.truncation_lsn, pr.file_id, pr.error_type, pr.page_id, pr.page_status, pr.modification_time from sys.dm_hadr_database_replica_cluster_states drcs join sys.dm_hadr_database_replica_states drs on drcs.replica_id=drs.replica_id and drcs.group_database_id=drs.group_database_id left outer join sys.dm_hadr_auto_page_repair pr on drs.database_id=pr.database_id  order by drs.database_id' as LogMovementHealth
-        select 'For more information see https://docs.microsoft.com/en-us/troubleshoot/sql/availability-groups/error-9002-transaction-log-large' as OnlineDOCResource
+        select 'For more information see https://learn.microsoft.com/troubleshoot/sql/availability-groups/error-9002-transaction-log-large' as OnlineDOCResource
     END    
     else if (@log_reuse_wait in (10, 11, 12, 14))
     BEGIN
@@ -339,7 +339,7 @@ Sometimes you just have to end the transaction; you may have to use the [KILL](.
 
 ### AVAILABILITY_REPLICA log_reuse_wait
 
-When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow , and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
+When transaction changes at primary Availability replica are not yet hardened on the secondary replica, the transaction log on the primary replica cannot be  truncated. This can cause the log to grow, and can occur whether the secondary replica is set for synchronous or asynchronous commit mode. For information on how to troubleshoot this type of issue see [Error 9002. The transaction log for database is full due to AVAILABILITY_REPLICA error](/troubleshoot/sql/availability-groups/error-9002-transaction-log-large)
 
 ### CHECKPOINT log_reuse_wait
 
@@ -354,7 +354,7 @@ select * from sys.dm_db_log_info(db_id('dbname'))
 
 ### For more information on log_reuse_wait factors
 
-For a more details see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)
+For more details see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)
 
 ## 2. Resolve full disk volume
 
@@ -384,7 +384,7 @@ For more information see [Add Data or Log Files to a Database](../../relational-
 ### Utility script for recommended actions
 
 
-These steps can be partly-automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
+These steps can be partly automated by running this T-SQL script which will identify logs files that using a large percentage of disk space and suggest actions:
 
 
 ```tsql
@@ -434,7 +434,7 @@ BEGIN
         SELECT 'Consider using one of the below commands to shrink the "' + @log_name_filled_disk +'" transaction log file size or add a new file to a NEW volume' AS Recommendation
         SELECT 'DBCC SHRINKFILE(''' + @log_name_filled_disk + ''')' AS Shrinkfile_Command
         SELECT 'ALTER DATABASE ' + @db_name_filled_disk + ' ADD LOG FILE ( NAME = N''' + @log_name_filled_disk + '_new'', FILENAME = N''NEW_VOLUME_AND_FOLDER_LOCATION\' + @log_name_filled_disk + '_NEW.LDF'', SIZE = 81920KB , FILEGROWTH = 65536KB )' AS AddNewFile
-        SELECT 'If shrink does not reduce the file size, likely it is because it has not been truncated. Please review next section below. See https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql' AS TruncateFirst
+        SELECT 'If shrink does not reduce the file size, likely it is because it has not been truncated. Please review next section below. See https://learn.microsoft.com/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql' AS TruncateFirst
         SELECT 'Can you free some disk space on this volume? If so, do this to allow for the log to continue growing when needed.' AS FreeDiskSpace
 
 

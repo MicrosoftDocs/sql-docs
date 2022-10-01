@@ -1,8 +1,8 @@
 ---
 title: DacFx and SqlPackage release notes
-description: Release notes for Microsoft sqlpackage.
+description: Release notes for Microsoft SqlPackage.
 ms.custom: "tools|sos"
-ms.date: 01/25/2022
+ms.date: 09/22/2022
 ms.prod: sql
 ms.reviewer: "llali"
 ms.prod_service: sql-tools
@@ -10,13 +10,93 @@ ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ---
-# Release notes for SqlPackage.exe
+# Release notes for SqlPackage
 
 **[Download the latest version](sqlpackage-download.md)**
 
-This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
+This article lists the features and fixes delivered by the released versions of SqlPackage.
 
-## 19.0 sqlpackage
+
+## 19.2 SqlPackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2209512)|September 22, 2022|19.2|16.0.6296.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)|September 22, 2022| 19.2|16.0.6296.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)|September 22, 2022| 19.2|16.0.6296.0|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)|September 22, 2022| 19.2|16.0.6296.0|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Connection pooling | Enables connection pooling for all connections if the environment variable `CONNECTION_POOLING_ENABLED` is set to True.  This is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling. |
+| Deployment options | Surfaces friendly names for deployment options in DacFx .NET APIs. |
+| Dynamic Data Masking | Adds support for [granular UNMASK permissions](/sql/relational-databases/security/dynamic-data-masking#granular) in Import/Export and Extract/Publish.|
+| Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, does not import or publish the history table to a database. |
+| Platform | SqlPackage is now built with .NET 6 |
+| SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](/sql/relational-databases/security/permissions-database-engine).|
+| XML compression | [XML compression](/sql/t-sql/statements/create-table-transact-sql#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation](/sql/relational-databases/xml/xml-data-sql-server). |
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Export | Fixes an issue where export would fail when a table had stats with computed columns |
+| Import | Fixes an issue where the import would get stuck at 95% |
+| ScriptDOM | Fixes an issue where STRING_SPLIT would not support a NULL ordinal value |
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+| XML compression | XML compression of an XML index is not yet supported in SqlPackage. | N/A |
+
+## 19.1 SqlPackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|May 24, 2022|19.1|16.0.6161.0|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)|May 24, 2022| 19.1|16.0.6161.0|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)|May 24, 2022| 19.1|16.0.6161.0|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)|May 24, 2022| 19.1|16.0.6161.0|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Azure Synapse Analytics | Adds support for [Native external data source](/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=native#syntax-for-create-external-data-source). |
+| Extract | Adds support for `ExtractTarget` property on extract operations.  Extract now supports extracting to .sql as a file per object organized in a single folder, object type, schema, or object type and schema. |
+| ScriptDOM | Adds support for `IS NOT DISTINCT FROM` syntax. |
+
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Azure Synapse Analytics | Fixes publish operation for table name change where table name includes '/' character. |
+| Export | Fixes export of a SQL ledger history table with dependencies. |
+| Extract | Fixes extract operation failure where an offset clause using a function is used in a stored procedure. |
+| Extract | Fixes warnings on extract operation for ledger tables. |
+| General | Fixes issue where command timeout setting was not properly applied. |
+| Import | Fixes issue where full text index gets disabled on import. |
+| Publish | Fixes issue where publish operation would drop and create a clustered columnstore index when a column is added. |
+| Publish | Fixes issue where graph tables fail to deploy when a partition function includes leading zeros. |
+| ScriptDOM | Fixes an issue where `IIF` condition is enclosed in parenthesis fails to parse. |
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
+|Deployment|SqlPackage.exe on .NET Core for Windows, macOS, and Linux fails during a publish operation with an error message "Unrecognized configuration section system.diagnostics" when in-place encryption is used for Always Encrypted with secure enclaves.|Remove the file `sqlpackage.dll.config` from the SqlPackage folder.|
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
+
+## 19.0 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -56,12 +136,11 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details | Workaround |
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
-| Deployment | The Azure SQL ledger table feature isn't yet supported for extract and publish. | N/A |
-| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-service-principal)|
+| Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 
-## 18.8 sqlpackage
+## 18.8 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -112,7 +191,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported | N/A |
 | Deployment | The Azure SQL ledger table feature isn't yet supported | N/A |
 
-## 18.7.1 sqlpackage
+## 18.7.1 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -134,7 +213,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Export | Fixed an issue where exporting a table with text or image in the first column would fail without a clustered index. |
 | Export | Fixed an issue where exporting a table  without a clustered index that has the order of columns in a statistic in a different order than the table create script would fail. |
 
-## 18.7 sqlpackage
+## 18.7 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -146,7 +225,7 @@ This article lists the features and fixes delivered by the released versions of 
 ### Features
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Extract/Publish Big Data to/from Azure Storage. For more info, see [SqlPackage for Big Data](sqlpackage-for-azure-synapse-analytics.md) |
+| Deployment | Extract/Publish Big Data to/from Azure Storage. For more info, see [SqlPackage for Big Data](SqlPackage-for-azure-synapse-analytics.md) |
 | Azure Synapse Analytics | Row level security support (inline table-valued function, security policy, security predicate)  |
 | Azure Synapse Analytics | Workload classification support |
 | Azure SQL Edge | External streaming job support |
@@ -182,7 +261,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported | N/A |
 | Deployment | In an incremental deploy scenario, when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procedures etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table that is a pre-req for dropping the table, but the order of generated steps is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
 
-## 18.6 sqlpackage
+## 18.6 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -194,21 +273,21 @@ This article lists the features and fixes delivered by the released versions of 
 ### Features
 | Feature | Details |
 | :------ | :------ |
-| Platform | Updated sqlpackage for .NET Core version to .NET Core 3.1 |
+| Platform | Updated SqlPackage for .NET Core version to .NET Core 3.1 |
 | Always Encrypted | Added support for secure enclave import and export for SQL Server 2019 |
 | Deployment | Added support to ignore change data capture enabled tables when exporting from Azure SQL Database |
 | Deployment | Added support for index option OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL Database |
 | Deployment | Added support for identity columns for Azure Synapse Analytics | 
-| Help | Output the sqlpackage version in the help (/?) and support the /version parameter | 
+| Help | Output the SqlPackage version in the help (/?) and support the /version parameter | 
 
 ### Fixes
 | Feature | Details |
 | :------ | :------ | 
 | Deployment | Fixed an incorrect deployment script generated when targeting Azure SQL Managed Instance as a non-sysadmin user  | 
 | Deployment | Fixed loading deployment contributors when running script actions | 
-| Help | Output correct elapsed time in sqlpackage when operation take longer than 1 day | 
+| Help | Output correct elapsed time in SqlPackage when operation take longer than 1 day | 
 | Deployment | Fixed dacpac registration when deploying for .NET Core | 
-| Deployment | Fixed sqlpackage on .NET Core handling of the /accessToken (/at) parameter | 
+| Deployment | Fixed SqlPackage on .NET Core handling of the /accessToken (/at) parameter | 
 | Deployment | Allow ALTER TABLE statements in stored procedures as non-top level statements | 
 | Deployment | Fixed Azure Synapse Analytics validation of materialized views to be case insensitive | 
 
@@ -217,7 +296,7 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported | 
 
-## 18.5.1 sqlpackage
+## 18.5.1 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -231,7 +310,7 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 | Deployment | Fixed a regression that was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
 
-## 18.5 sqlpackage
+## 18.5 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -251,8 +330,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
 | Deployment | Add support for copy command in Azure Synapse Analytics |
 | Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure Synapse Analytics |
-| .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of sqlpackage |
-| &nbsp; | &nbsp; |
+| .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of SqlPackage |
 
 ### Fixes
 | Fix | Details |
@@ -266,17 +344,15 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Fix update script should move data to a new table when changing the distribution column type (data loss scenario) for Azure Synapse Analytics |
 | ScriptDom | Fix ScriptDom bug where it couldn't recognize inline constraints defined after an inline index |
 | ScriptDom | Fix ScriptDom SYSTEM_TIME missing closing parenthesis when in a batch statement |
-| Always Encrypted | Fix #tmpErrors table failing to drop if sqlpackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
-| &nbsp; | &nbsp; |
+| Always Encrypted | Fix #tmpErrors table failing to drop if SqlPackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
 
 ### Known Issues
 | Feature | Details |
 | :------ | :------ |
-| Deployment |  A regression was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
-| .NET Core | Importing bacpacs with sensitivity classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
-| &nbsp; | &nbsp; |
+| Deployment |  A regression was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use SqlPackage 18.4 and it will be fixed in the next SqlPackage release. | 
+| .NET Core | Importing bacpacs with sensitivity classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next SqlPackage release. |
 
-## 18.4.1 sqlpackage
+## 18.4.1 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -289,16 +365,14 @@ This article lists the features and fixes delivered by the released versions of 
 | Fix | Details |
 | :-- | :------ |
 | ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail.
-| &nbsp; | &nbsp; |
 
 ### Known Issues 
 
 | Feature | Details |
 | :------ | :------ |
-| Deployment |  A regression was introduced in 18.4.1 causing there to be an "Object reference not set to an instance of an object." error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
-| &nbsp; | &nbsp; |
+| Deployment |  A regression was introduced in 18.4.1 causing there to be an "Object reference not set to an instance of an object." error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use SqlPackage 18.4 and it will be fixed in the next SqlPackage release. | 
 
-## 18.4 sqlpackage
+## 18.4 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -312,32 +386,29 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Add support to deploy to Azure Synapse Analytics. | 
-| Platform | sqlpackage .NET Core generally available for macOS, Linux, and Windows. | 
+| Platform | SqlPackage .NET Core generally available for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
 | Deployment | Add Managed Instance support for Azure Active Directory user and groups. |
-| Deployment | Support the /AccessToken parameter for sqlpackage on .NET Core. |
-| &nbsp; | &nbsp; |
+| Deployment | Support the /AccessToken parameter for SqlPackage on .NET Core. |
 
 ### Known Issues 
 
 | Feature | Details |
 | :------ | :------ |
-| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail. This will be fixed in the next sqlpackage release. | 
-| &nbsp; | &nbsp; |
+| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail. This will be fixed in the next SqlPackage release. | 
 
 ### Known Issues for .NET Core
 
 | Feature | Details |
 | :------ | :------ |
-| Import |  For .bacpac files with compressed files over 4GB in size, you might need to use the .NET Core version of sqlpackage to perform the import.  This behavior is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of sqlpackage. | 
+| Import |  For .bacpac files with compressed files over 4GB in size, you might need to use the .NET Core version of SqlPackage to perform the import.  This behavior is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of SqlPackage. | 
 | Deployment | The parameter /p:Storage=File isn't supported. Only Memory is supported on .NET Core. | 
-| Always Encrypted | sqlpackage .NET Core doesn't support Always Encrypted columns. | 
-| Security | sqlpackage .NET Core doesn't support the /ua parameter for multi-factor authentication. | 
+| Always Encrypted | SqlPackage .NET Core doesn't support Always Encrypted columns. | 
+| Security | SqlPackage .NET Core doesn't support the /ua parameter for multi-factor authentication. | 
 | Deployment | Older V2 dacpac and bacpac files that use json data serialization aren't supported. |
-| &nbsp; | &nbsp; |
 
-## 18.3.1 sqlpackage
+## 18.3.1 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -351,12 +422,11 @@ This article lists the features and fixes delivered by the released versions of 
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Add support to deploy to Azure Synapse Analytics (preview). | 
-| Deployment | Add /p:DatabaseLockTimeout=(INT32 '60') parameter to sqlpackage. | 
-| Deployment | Add /p:LongRunningCommandTimeout=(INT32) parameter to sqlpackage. |
-| Export/Extract | Add /p:TempDirectoryForTableData=(STRING) parameter to sqlpackage. |
-| Deployment | Allow deployment contributors to be loaded from additional locations. Deployment contributors will be loaded from the same directory as the target .dacpac being deployed, the Extensions directory relative to the sqlpackage.exe binary, and the /p:AdditionalDeploymentContributorPaths=(STRING) parameter added to sqlpackage where additional directory locations can be specified. |
+| Deployment | Add /p:DatabaseLockTimeout=(INT32 '60') parameter to SqlPackage. | 
+| Deployment | Add /p:LongRunningCommandTimeout=(INT32) parameter to SqlPackage. |
+| Export/Extract | Add /p:TempDirectoryForTableData=(STRING) parameter to SqlPackage. |
+| Deployment | Allow deployment contributors to be loaded from additional locations. Deployment contributors will be loaded from the same directory as the target .dacpac being deployed, the Extensions directory relative to the SqlPackage.exe binary, and the /p:AdditionalDeploymentContributorPaths=(STRING) parameter added to SqlPackage where additional directory locations can be specified. |
 | Deployment | Add support for OPTIMIZE_FOR_SEQUENTIAL_KEY. |
-| &nbsp; | &nbsp; |
 
 ### Fixes
 
@@ -371,9 +441,8 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Fix to honor command timeouts when retrieving constraints. | 
 | .NET Core (preview) | Fix diagnostic logging to a file. | 
 | .NET Core (preview) | Use streaming to export table data to support large tables. | 
-| &nbsp; | &nbsp; |
 
-## 18.2 sqlpackage
+## 18.2 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
@@ -387,7 +456,6 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 | Graph | Add graph table support for edge constraints and edge constraint clauses. |
 | Deployment | Enabled model validation rule to support 32 columns for index keys for SQL Server 2016 and up. |
-| &nbsp; | &nbsp; |
 
 ### Fixes
 
@@ -398,9 +466,8 @@ This article lists the features and fixes delivered by the released versions of 
 | ScriptDom | Fix ScriptDom parsing regression where the 'URL' string was interpreted as a top level token. |
 | Deployment | Fix a null reference exception when parsing an alter table add index statement. | 
 | Schema Compare | Fixed schema compare for nullable persisted computed columns always showing as different.|
-| &nbsp; | &nbsp; |
 
-## 18.1 sqlpackage
+## 18.1 SqlPackage
 
 Release date: &nbsp; February 1, 2019  
 Build: &nbsp; 15.0.4316.1  
@@ -414,7 +481,6 @@ Preview release.
 | Deployment | Enabled nonclustered columnstore indexes on an indexed view. |
 | Platform | Moved to .NET Core 2.2. | 
 | Schema Compare | Use memory backed storage for schema compare on .NET Core. |
-| &nbsp; | &nbsp; |
 
 ### Fixes
 
@@ -425,20 +491,18 @@ Preview release.
 | Schema Compare | Fixed the schema drift detection logic to ignore certain extended event (xevent) sessions. |
 | Graph | Fixed import ordering for graph tables. | 
 | Export | Fixed exporting external tables with object permissions. |
-| &nbsp; | &nbsp; |
 
 ### Known issues
 
-This release includes cross-platform preview builds of sqlpackage that target .NET Core 2.2. The sqlpackage can run on macOS and Linux.
+This release includes cross-platform preview builds of SqlPackage that target .NET Core 2.2. The SqlPackage can run on macOS and Linux.
 
 | Known issue | Details |
 | :---------- | :------ |
 | Deployment | For .NET Core, build and deployment contributors aren't supported. | 
 | Deployment | For .NET Core, older dacpac and bacpac files that use json data serialization aren't supported. | 
 | Deployment | For .NET Core referenced dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
-| &nbsp; | &nbsp; |
 
-## 18.0 sqlpackage
+## 18.0 SqlPackage
 
 Release date: &nbsp; October 24, 2018  
 Build: &nbsp; 15.0.4200.1
@@ -454,7 +518,6 @@ Build: &nbsp; 15.0.4200.1
 | Import | Added support to stream BLOB/CLOB data types for imports. | 
 | Deployment | Added support for scalar UDF 'INLINE' option. | 
 | Graph | Added support for graph table 'MERGE' syntax. |
-| &nbsp; | &nbsp; |
 
 ### Fixes
 
@@ -463,9 +526,8 @@ Build: &nbsp; 15.0.4200.1
 | Graph | Fixed unresolved pseudo-column for graph tables. |
 | Deployment | Fixed creating a database with memory optimized file groups when memory optimized tables are used. |
 | Deployment | Fixed including extended properties on external tables. |
-| &nbsp; | &nbsp; |
 
-## 17.8 sqlpackage
+## 17.8 SqlPackage
 
 Release date: &nbsp; June 22, 2018  
 Build: &nbsp; 14.0.4079.2
@@ -476,7 +538,6 @@ Build: &nbsp; 14.0.4079.2
 | :------ | :------ |
 | Diagnostics | Improved error messages for connection failures, including the SqlClient exception message. |
 | Deployment | Support index compression on single partition indexes for import/export. |
-| &nbsp; | &nbsp; |
 
 ### Fixes
 
@@ -484,9 +545,8 @@ Build: &nbsp; 14.0.4079.2
 | :-- | :------ |
 | Deployment | Fixed a reverse engineering issue for XML column sets with SQL 2017 and later. | 
 | Deployment | Fixed an issue where scripting the database compatibility level 140 was ignored for Azure SQL Database. |
-| &nbsp; | &nbsp; |
 
-## 17.4.1 sqlpackage
+## 17.4.1 SqlPackage
 
 Release date: &nbsp; January 25, 2018  
 Build: &nbsp; 14.0.3917.1
@@ -497,7 +557,6 @@ Build: &nbsp; 14.0.3917.1
 | :------ | :------ |
 | Import/Export | Added ThreadMaxStackSize command-line parameter to parse Transact-SQL with a large number of nested statements. |
 | Deployment | Database catalog collation support. | 
-| &nbsp; | &nbsp; |
 
 ### Fixes
 
@@ -506,9 +565,8 @@ Build: &nbsp; 14.0.3917.1
 | Import | When importing an Azure SQL Database bacpac to an on-premises instance, fixed errors due to _Database master keys without password are not supported in this version of SQL Server_. |
 | Graph | Fixed an unresolved pseudo column error for graph tables. |
 | Schema Compare | Fixed SQL authentication to compare schemas. | 
-| &nbsp; | &nbsp; |
 
-## 17.4.0 sqlpackage
+## 17.4.0 SqlPackage
 
 Release date: &nbsp; December 12, 2017  
 Build: &nbsp; 14.0.3881.1
@@ -518,9 +576,8 @@ Build: &nbsp; 14.0.3881.1
 | Feature | Details |
 | :------ | :------ |
 | Deployment |  Added support for _temporal retention policy_ on SQL 2017+ and Azure SQL Database. | 
-| Diagnostics | Added /DiagnosticsFile:"C:\Temp\sqlpackage.log" command-line parameter to specify a file path to save diagnostic information. | 
+| Diagnostics | Added /DiagnosticsFile:"C:\Temp\SqlPackage.log" command-line parameter to specify a file path to save diagnostic information. | 
 | Diagnostics | Added /Diagnostics command-line parameter to log diagnostic information to the console. |
-| &nbsp; | &nbsp; |
 
 ### Fixes
 

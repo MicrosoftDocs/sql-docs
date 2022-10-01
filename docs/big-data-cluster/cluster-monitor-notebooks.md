@@ -5,11 +5,11 @@ description: Monitoring cluster with Jupyter notebooks and Azure Data Studio on 
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.metadata: seo-lt-2019
 ms.date: 07/16/2021
-ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: conceptual
+ms.metadata: seo-lt-2019
 ---
 
 # Monitor Big Data Clusters by using Jupyter Notebooks and Azure Data Studio

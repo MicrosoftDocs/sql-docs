@@ -1,16 +1,12 @@
 ---
 title: System Requirements, Installation, and Driver Files
 description: This article describes the system requirements for the Microsoft ODBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 02/17/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # System requirements, installation, and driver files
 
@@ -24,7 +20,9 @@ Compatibility indicates that a driver was tested for compatibility against exist
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
 |----|---|---|---|---|---|---|---|---|---|---|---|
+|18.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |   |
 |18.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.10|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |17.9|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |17.8|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |17.7|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
@@ -38,7 +36,6 @@ Compatibility indicates that a driver was tested for compatibility against exist
 |13.1|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|   |
 |13  |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|   |
 |11  |   |   |   |   |   |   |Yes|Yes|Yes|Yes|Yes|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### Connection string details
 
@@ -55,7 +52,9 @@ The following matrix indicates driver version support for Windows operating syst
 
 |Operating system&nbsp;&#8594;<br />&#8595; Driver version|Windows Server 2022|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 11|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
 |----|---|---|---|---|---|---|---|---|---|---|---|
+|18.1|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |   |
 |18.0|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |   |
+|17.10|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |   |
 |17.9|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |   |
 |17.8|   |Yes|Yes|Yes|Yes|   |   |Yes|Yes|   |   |
 |17.7|   |Yes|Yes|Yes|Yes|   |   |Yes|Yes|   |   |
@@ -69,7 +68,6 @@ The following matrix indicates driver version support for Windows operating syst
 |13.1|   |   |Yes|Yes|Yes|Yes|   |Yes|Yes|Yes|   |
 |13  |   |   |   |   |Yes|Yes|   |   |Yes|Yes|   |
 |11  |   |   |   |   |Yes|Yes|   |   |   |Yes|Yes|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## Installing Microsoft ODBC Driver for SQL Server
 
@@ -134,7 +132,6 @@ The ODBC driver on Windows contains the following components:
 |s13ch_msodbcsql.chm or <br/> s11ch_msodbcsql.chm |The Data Source Wizard help file that documents how to create a data source for the driver. This file is installed in %SYSTEMROOT%\System32\1033 <br /> <br /> **NOTE:** There is no chm file for ODBC Driver 17 and above. |  
 |msodbcsql.h|The header file that contains all of the new definitions needed to use the driver.<br /><br /> **Note:**  You cannot reference msodbcsql.h and odbcss.h in the same program.<br /><br /> msodbcsql.h for ODBC Driver 18 is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\180\SDK. <br /> msodbcsql.h for ODBC Driver 17 is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\170\SDK. <br /> msodbcsql.h for ODBC Driver 13 is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h for ODBC Driver 11 is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
 |msodbcsql18.lib or <br/> msodbcsql17.lib or <br/> msodbcsql13.lib or <br/> msodbcsql11.lib|The library file needed to call the **bcp** utility functions that are part of the driver.<br /><br /> **Note:**  If you do reference this library file in your program, make sure that it is in your system path and in the system path of those that use the application.<br /><br /> msodbcsql18.lib is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\180\SDK.<br /> msodbcsql17.lib is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\170\SDK.<br /> msodbcsql13.lib is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
-| &nbsp; | &nbsp; |
 
 ## See also
 

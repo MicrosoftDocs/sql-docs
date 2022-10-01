@@ -1,25 +1,23 @@
 ---
-description: "dbo.sysjobsteps (Transact-SQL)"
-title: "dbo.sysjobsteps (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "dbo.sysjobsteps (Transact-SQL)"
+description: dbo.sysjobsteps (Transact-SQL)
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "dbo.sysjobsteps"
   - "dbo.sysjobsteps_TSQL"
   - "sysjobsteps"
   - "sysjobsteps_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sysjobsteps system table"
+dev_langs:
+  - "TSQL"
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-author: LitKnd
-ms.author: kendralittle
 ---
 # dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

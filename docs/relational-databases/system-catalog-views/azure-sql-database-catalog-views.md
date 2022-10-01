@@ -1,23 +1,20 @@
 ---
-description: "Azure SQL Database Catalog Views"
-title: "Azure SQL Database Catalog Views | Microsoft Docs"
-ms.custom: 
-ms.date: "08/20/2015"
-ms.service: sql-database 
-ms.reviewer: ""
-ms.prod_service: sql-database
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Azure SQL Database catalog views"
-ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
+title: "Azure SQL Database Catalog Views"
+description: Azure SQL Database Catalog Views
 author: rwestMSFT
 ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+ms.date: 08/09/2022
+ms.service: sql-database
+ms.prod_service: sql-database
+ms.topic: "reference"
+helpviewer_keywords:
+  - "Azure SQL Database catalog views"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current"
 ---
 # Azure SQL Database Catalog Views
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 The following catalog views are available in this section.  
 
@@ -29,9 +26,8 @@ The following catalog views are available in this section.
 
         [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)
 
-        [sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)
-
         [sys.elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
+
     :::column-end:::
     :::column:::
         [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)

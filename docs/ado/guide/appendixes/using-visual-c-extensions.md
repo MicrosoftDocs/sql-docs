@@ -1,21 +1,17 @@
 ---
+title: "Using Visual C++ Extensions"
 description: "Using Visual C++ Extensions"
-title: "Using Visual C++ Extensions | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: 11/08/2018
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
-dev_langs:
-  - "C++"
 helpviewer_keywords:
   - "Visual C++ [ADO], using VC++ extensions"
   - "ADO, Visual C++"
-ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "C++"
 ---
 # Visual C++ Extensions
 ## The IADORecordBinding Interface

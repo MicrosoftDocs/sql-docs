@@ -1,26 +1,25 @@
 ---
 title: "sys.dm_exec_requests (Transact-SQL)"
-description: "sys.dm_exec_requests (Transact-SQL)"
+description: sys.dm_exec_requests (Transact-SQL)
+author: akatesmith
+ms.author: katsmith
+ms.reviewer: mikeray
+ms.date: 1/18/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "sys.dm_exec_requests_TSQL"
   - "sys.dm_exec_requests"
   - "dm_exec_requests_TSQL"
   - "dm_exec_requests"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_exec_requests dynamic management view"
-author: akatesmith
-ms.author: katsmith
-ms.reviewer: mikeray
-ms.custom:
-- event-tier1-build-2022
-ms.date: 1/18/2022
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current|| = azure-sqldw-latest"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
 # sys.dm_exec_requests (Transact-SQL)
@@ -46,7 +45,7 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |database_id|**smallint**|ID of the database the request is executing against. Isn't nullable.|  
 |user_id|**int**|ID of the user who submitted the request. Isn't nullable.|  
 |connection_id|**uniqueidentifier**|ID of the connection on which the request arrived. Is nullable.|  
-|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL or equal to 0, the request isn't blocked, or the session information of the blocking session isn't available (or can't be identified). For more information, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner couldn't be determined at this time because of internal latch state transitions.<br /><br /> -5 = Session ID of the blocking latch owner couldn't be determined because it'sn't tracked for this latch type (for example, for an SH latch).<br /><br />By itself, blocking_session_id -5 doesn't indicate a performance problem. -5 is an indication that the session is waiting on an asynchronous action to complete. Before -5 was introduced, the same session would have shown blocking_session_id 0, even though it was still in a wait state.<br /><br />Depending on workload, observing -5 as blocking_session_id may be a common occurrence.|  
+|blocking_session_id|**smallint**|ID of the session that is blocking the request. If this column is NULL or equal to 0, the request isn't blocked, or the session information of the blocking session isn't available (or can't be identified). For more information, see [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking).<br /><br /> -2 = The blocking resource is owned by an orphaned distributed transaction.<br /><br /> -3 = The blocking resource is owned by a deferred recovery transaction.<br /><br /> -4 = Session ID of the blocking latch owner couldn't be determined at this time because of internal latch state transitions.<br /><br /> -5 = Session ID of the blocking latch owner couldn't be determined because it isn't tracked for this latch type (for example, for an SH latch).<br /><br />By itself, blocking_session_id -5 doesn't indicate a performance problem. -5 is an indication that the session is waiting on an asynchronous action to complete. Before -5 was introduced, the same session would have shown blocking_session_id 0, even though it was still in a wait state.<br /><br />Depending on workload, observing -5 as blocking_session_id may be a common occurrence.|  
 |wait_type|**nvarchar(60)**|If the request is currently blocked, this column returns the type of wait. Is nullable.<br /><br /> For information about types of waits, see [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|If the request is currently blocked, this column returns the duration in milliseconds, of the current wait. Isn't nullable.|  
 |last_wait_type|**nvarchar(60)**|If this request has previously been blocked, this column returns the type of the last wait. Isn't nullable.|  
@@ -95,7 +94,6 @@ Returns information about each request that is executing in [!INCLUDE[ssNoVersio
 |is_resumable |**bit** |**Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] and later.<br /><br /> Indicates whether the request is a resumable index operation. |  
 |page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Applies to**: Azure SQL Database Hyperscale<br /><br /> Number of page server reads performed by this request. isn't nullable.|  
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Remarks
 

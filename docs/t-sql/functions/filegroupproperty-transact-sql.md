@@ -1,26 +1,22 @@
 ---
+title: "FILEGROUPPROPERTY (Transact-SQL)"
 description: "FILEGROUPPROPERTY (Transact-SQL)"
-title: "FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FILEGROUPPROPERTY_TSQL"
   - "FILEGROUPPROPERTY"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filegroups [SQL Server], property values"
   - "FILEGROUPPROPERTY function"
   - "viewing filegroup properties"
   - "displaying filegroup properties"
-ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]

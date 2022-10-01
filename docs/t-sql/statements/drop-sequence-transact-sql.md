@@ -1,27 +1,24 @@
 ---
-description: "DROP SEQUENCE (Transact-SQL)"
-title: "DROP SEQUENCE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DROP SEQUENCE (Transact-SQL)"
+description: DROP SEQUENCE (Transact-SQL)
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "DROP SEQUENCE"
   - "DROP_SEQUENCE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DROP SEQUENCE statement"
   - "sequence number object, dropping"
-ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # DROP SEQUENCE (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Removes a sequence object from the current database.  
   

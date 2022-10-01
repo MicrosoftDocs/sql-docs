@@ -1,17 +1,13 @@
 ---
 title: Reporting queries across multiple databases
-description: "Cross-tenant reporting using distributed queries."
-services: sql-database
+description: Cross-tenant reporting using distributed queries.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: scenario
-ms.custom: sqldbrb=1
-ms.devlang: 
 ms.topic: tutorial
-author: LitKnd
-ms.author: kendralittle
-
-ms.reviewers: 
-ms.date: 01/25/2019
+ms.custom: sqldbrb=1
 ---
 # Cross-tenant reporting using distributed queries
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

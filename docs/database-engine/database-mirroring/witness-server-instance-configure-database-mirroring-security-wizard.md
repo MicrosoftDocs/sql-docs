@@ -1,25 +1,22 @@
 ---
 title: "Configure Security Wizard: Witness Server Instance"
 description: "Describes the 'Witness Server Instance' page of the 'Configure Database Mirroring Security Wizard'. "
-ms.custom: "seo-lt-2019"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
-ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to specify information about the server instance that is to serve as the witness for the session.  
   
 > [!NOTE]
->  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  A witness server instance is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **To configure database mirroring by using SQL Server Management Studio**  
   

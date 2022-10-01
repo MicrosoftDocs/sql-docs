@@ -1,26 +1,24 @@
 ---
-description: "sys.all_columns (Transact-SQL)"
-title: "sys.all_columns (Transact-SQL) | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
+title: "sys.all_columns (Transact-SQL)"
+description: sys.all_columns (Transact-SQL)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "all_columns_TSQL"
   - "all_columns"
   - "sys.all_columns_TSQL"
   - "sys.all_columns"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.all_columns catalog view"
+dev_langs:
+  - "TSQL"
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_columns (Transact-SQL)
@@ -56,9 +54,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |is_sparse|bit|1 = Column is a sparse column. For more information, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|bit|1 = Column is a column set. For more information, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).|  
 |generated_always_type|**tinyint**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 7, 8, 9, 10 only applies to [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Identifies when the column value is generated (will always be 0 for columns in system tables):<br /><br /> 0 = NOT_APPLICABLE<br /> 1 = AS_ROW_START<br /> 2 = AS_ROW_END<br />7 = AS_TRANSACTION_ID_START<br />8 = AS_TRANSACTION_ID_END<br />9 = AS_SEQUENCE_NUMBER_START<br />10 = AS_SEQUENCE_NUMBER_END<br /><br /> For more information, see [Temporal Tables &#40;Relational databases&#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Textual description of `generated_always_type`'s value (always NOT_APPLICABLE for columns in system tables) <br /><br /> NOT_APPLICABLE<br /> AS_ROW_START<br /> AS_ROW_END<br /><br />**Applies to**: Starting with SQL Server 2022, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]<br /><br />AS_TRANSACTION_ID_START<br />AS_TRANSACTION_ID_END<br />AS_SEQUENCE_NUMBER_START<br />AS_SEQUENCE_NUMBER_END|   
-|ledger_view_column_type|**tinyint**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, indicates the type of a column in a ledger view:<br /><br /> 1 = TRANSACTION_ID<br /> 2 = SEQUENCE_NUMBER<br /> 3 = OPERATION_TYPE<br /> 4 = OPERATION_TYPE_DESC<br/><br/>For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).|
-|ledger_view_column_type_desc|**nvarchar(60)**|**Applies to**: Starting with SQL Server 2022, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, contains a textual description of the the type of a column in a ledger view:<br /><br /> TRANSACTION_ID<br /> SEQUENCE_NUMBER<br /> OPERATION_TYPE<br /> OPERATION_TYPE_DESC|
+|generated_always_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Textual description of `generated_always_type`'s value (always NOT_APPLICABLE for columns in system tables) <br /><br /> NOT_APPLICABLE<br /> AS_ROW_START<br /> AS_ROW_END<br /><br />**Applies to**: Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]<br /><br />AS_TRANSACTION_ID_START<br />AS_TRANSACTION_ID_END<br />AS_SEQUENCE_NUMBER_START<br />AS_SEQUENCE_NUMBER_END|   
+|ledger_view_column_type|**tinyint**|**Applies to**: Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, indicates the type of a column in a ledger view:<br /><br /> 1 = TRANSACTION_ID<br /> 2 = SEQUENCE_NUMBER<br /> 3 = OPERATION_TYPE<br /> 4 = OPERATION_TYPE_DESC<br/><br/>For more information on database ledger, see [Ledger](/azure/azure-sql/database/ledger-overview).|
+|ledger_view_column_type_desc|**nvarchar(60)**|**Applies to**: Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> If not NULL, contains a textual description of the the type of a column in a ledger view:<br /><br /> TRANSACTION_ID<br /> SEQUENCE_NUMBER<br /> OPERATION_TYPE<br /> OPERATION_TYPE_DESC|
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

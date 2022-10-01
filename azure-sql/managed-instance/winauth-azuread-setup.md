@@ -1,20 +1,18 @@
 ---
-title: How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)
+title: How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to set up Windows Authentication access to Azure SQL Managed Instance using Azure Active Directory and Kerberos.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: conceptual
 ---
 
 
-# How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)
+# How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos 
 
 This article gives an overview of how to set up infrastructure and managed instances to implement [Windows Authentication for Azure AD principals on Azure SQL Managed Instance](winauth-azuread-overview.md).
 
@@ -59,10 +57,11 @@ The following prerequisites are required to implement the modern interactive aut
 |Clients must be joined to Azure AD or Hybrid Azure AD. |  You can determine if this prerequisite is met by running the [dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd): `dsregcmd.exe /status` |
 |Application must connect to the managed instance via an interactive session. | This supports applications such as SQL Server Management Studio (SSMS) and web applications, but won't work for applications that run as a service. |
 |Azure AD tenant. |         |
+|Azure subscription under the same Azure AD tenant you plan to use for authentication.|         |
 |Azure AD Connect installed. | Hybrid environments where identities exist both in Azure AD and AD. |
 
 
-See [How to set up Windows Authentication for Azure Active Directory with the modern interactive flow (Preview)](winauth-azuread-setup-modern-interactive-flow.md) for steps to enable this authentication flow.
+See [How to set up Windows Authentication for Azure Active Directory with the modern interactive flow](winauth-azuread-setup-modern-interactive-flow.md) for steps to enable this authentication flow.
 
 ### Incoming trust-based authentication flow
 
@@ -78,7 +77,7 @@ The following prerequisites are required to implement the incoming trust-based a
 |Azure AD Connect installed. | Hybrid environments where identities exist both in Azure AD and AD. |
 
 
-See [How to set up Windows Authentication for Azure Active Directory with the incoming trust based flow (Preview)](winauth-azuread-setup-incoming-trust-based-flow.md) for instructions on enabling this authentication flow.
+See [How to set up Windows Authentication for Azure Active Directory with the incoming trust based flow](winauth-azuread-setup-incoming-trust-based-flow.md) for instructions on enabling this authentication flow.
 
 
 ## Configure Azure SQL Managed Instance
@@ -121,8 +120,8 @@ dsregcmd.exe /RefreshPrt
 
 Learn more about implementing Windows Authentication for Azure AD principals on Azure SQL Managed Instance:
 
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? (Preview)](winauth-azuread-overview.md)
-- [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos (Preview)](winauth-implementation-aad-kerberos.md)
-- [How to set up Windows Authentication for Azure Active Directory with the modern interactive flow (Preview)](winauth-azuread-setup-modern-interactive-flow.md)
-- [How to set up Windows Authentication for Azure AD with the incoming trust-based flow (Preview)](winauth-azuread-setup-incoming-trust-based-flow.md)
-- [Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory (Preview)](winauth-azuread-kerberos-managed-instance.md)
+- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
+- [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos](winauth-implementation-aad-kerberos.md)
+- [How to set up Windows Authentication for Azure Active Directory with the modern interactive flow](winauth-azuread-setup-modern-interactive-flow.md)
+- [How to set up Windows Authentication for Azure AD with the incoming trust-based flow](winauth-azuread-setup-incoming-trust-based-flow.md)
+- [Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory](winauth-azuread-kerberos-managed-instance.md)

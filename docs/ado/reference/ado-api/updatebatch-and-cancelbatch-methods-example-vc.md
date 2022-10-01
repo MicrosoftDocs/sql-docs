@@ -1,21 +1,17 @@
 ---
+title: "UpdateBatch and CancelBatch Methods Example (VC++)"
 description: "UpdateBatch and CancelBatch Methods Example (VC++)"
-title: "UpdateBatch and CancelBatch Methods Example (VC++) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UpdateBatch method [ADO]"
-  - "CancelBatch method [ADO]"
-ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "UpdateBatch method [ADO]"
+  - "CancelBatch method [ADO]"
+dev_langs:
+  - "C++"
 ---
 # UpdateBatch and CancelBatch Methods Example (VC++)
 This example demonstrates the [UpdateBatch](./updatebatch-method.md) method in conjunction with the [CancelBatch](./cancelbatch-method-ado.md) method.  

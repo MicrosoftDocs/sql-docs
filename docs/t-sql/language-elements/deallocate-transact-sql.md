@@ -1,27 +1,26 @@
 ---
+title: "DEALLOCATE (Transact-SQL)"
 description: "DEALLOCATE (Transact-SQL)"
-title: "DEALLOCATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+ms.custom: ""
+f1_keywords:
   - "DEALLOCATE"
   - "DEALLOCATE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "locking [SQL Server], cursors"
   - "DEALLOCATE statement"
   - "deallocations [SQL Server]"
   - "deleting cursor references"
   - "removing cursor references"
-ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-author: LitKnd
-ms.author: kendralittle
+dev_langs:
+  - "TSQL"
 ---
 # DEALLOCATE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

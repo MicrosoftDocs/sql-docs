@@ -1,23 +1,21 @@
 ---
-description: "CREATE FUNCTION (Transact-SQL)"
-title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "CREATE FUNCTION (Transact-SQL)"
+description: CREATE FUNCTION (Transact-SQL)
+author: markingmyname
+ms.author: maghan
 ms.date: 03/16/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "FUNCTION"
   - "CREATE FUNCTION"
   - "CREATE_FUNCTION_TSQL"
   - "FUNCTION_TSQL"
   - "TVF"
   - "MSTVF"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "invoking functions"
   - "extended stored procedures [SQL Server], functions"
   - "table-valued parameters"
@@ -38,9 +36,8 @@ helpviewer_keywords:
   - "MSTVF"
   - "TVF"
   - "functions [SQL Server], invoking"
-ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+dev_langs:
+  - "TSQL"
 ---
 # CREATE FUNCTION (Transact-SQL)
 

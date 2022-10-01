@@ -1,19 +1,15 @@
 ---
+title: "Command (ADO - WFC Syntax)"
 description: "Command (ADO - WFC Syntax)"
-title: "Command (ADO - WFC Syntax) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-helpviewer_keywords: 
-  - "Command collection [ADO], ADO/WFC syntax"
-ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+helpviewer_keywords:
+  - "Command collection [ADO], ADO/WFC syntax"
+apitype: "COM"
 ---
 # Command (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

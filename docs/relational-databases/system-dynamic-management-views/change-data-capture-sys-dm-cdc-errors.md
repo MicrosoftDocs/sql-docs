@@ -1,28 +1,26 @@
 ---
-description: "The Change Data Capture DMV sys.dm_cdc_errors returns one row for each error encountered during the change data capture log scan session.  "
 title: "sys.dm_cdc_errors (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
+description: The Change Data Capture DMV sys.dm_cdc_errors returns one row for each error encountered during the change data capture log scan session.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/10/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: event-tier1-build-2022
+f1_keywords:
   - "dm_cdc_errors_TSQL"
   - "dm_cdc_errors"
   - "sys.dm_cdc_errors"
   - "sys.dm_cdc_errors_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.dm_cdc_errors dynamic management view"
   - "change data capture [SQL Server], error reporting"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # Change Data Capture - sys.dm_cdc_errors
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns one row for each error encountered during the change data capture log scan session.  
  

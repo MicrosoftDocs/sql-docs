@@ -2,13 +2,12 @@
 title: What is the local development experience for Azure SQL Database?
 titleSuffix: Azure SQL Database
 description: Learn about the local development experience for Azure SQL Database.
-services: sql-database
-ms.service: sql-database
 author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
-ms.topic: overview 
 ms.date: 05/24/2022
+ms.service: sql-database
+ms.topic: overview
 ---
 
 # What is the local development experience for Azure SQL Database?

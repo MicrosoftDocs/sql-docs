@@ -1,16 +1,16 @@
 ---
 title: Database advisor performance recommendations for Azure SQL Database
 description: Azure SQL Database provides recommendations for databases that can improve query performance in Azure SQL Database.
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: fasttrack-edit, sqldbrb=1
-ms.devlang: 
-ms.topic: conceptual
 author: NikaKinska
 ms.author: nnikolic
-ms.reviewer: kendralittle, mathoma, wiassaf
+ms.reviewer: wiassaf, mathoma
 ms.date: 03/10/2020
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: conceptual
+ms.custom:
+  - "fasttrack-edit"
+  - "sqldbrb=1"
 ---
 # Database Advisor performance recommendations for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

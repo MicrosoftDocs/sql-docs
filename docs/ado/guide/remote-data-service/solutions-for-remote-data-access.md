@@ -1,18 +1,14 @@
 ---
+title: "Solutions for Remote Data Access"
 description: "Solutions for Remote Data Access"
-title: "Solutions for Remote Data Access | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: 11/09/2018
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "RDS [ADO]"
-ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
+ms.date: 11/09/2018
+ms.prod: sql
+ms.technology: ado
+ms.topic: conceptual
+helpviewer_keywords:
+  - "RDS [ADO]"
 ---
 # Solutions for Remote Data Access
 ## The Issue  

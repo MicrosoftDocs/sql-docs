@@ -1,21 +1,20 @@
 ---
 title: "SELECTs and JOINs from system views for Extended Events"
 description: There are system views of Extended Events in SQL Server and Azure SQL Database. Learn how event session information is represented in different perspectives.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
-ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-author: LitKnd
-ms.author: kendralittle
 ms.custom: seo-lt-2019
+ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 
 This article explains the two sets of system views that relate to Extended Events in SQL Server and in Azure SQL Database. The article illustrates:

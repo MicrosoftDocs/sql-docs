@@ -1,15 +1,15 @@
 ---
 title: Azure Policy for Azure Active Directory only authentication
-description: This article provides information on how to enforce an Azure policy to create an Azure SQL Database or Azure SQL Managed Instance with Azure Active Directory (Azure AD) only authentication enabled
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: This article provides information on how to enforce an Azure policy to create an Azure SQL Database or Azure SQL Managed Instance with Azure Active Directory (Azure AD) only authentication enabled
+author: GithubMirek
+ms.author: mireks
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 11/02/2021
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
-author: GithubMirek
-ms.author: mireks
-ms.reviewer: kendralittle, vanto, mathoma
-ms.date: 11/02/2021
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Azure Policy for Azure Active Directory only authentication with Azure SQL

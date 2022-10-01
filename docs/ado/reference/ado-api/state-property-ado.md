@@ -1,21 +1,17 @@
 ---
+title: "State Property (ADO)"
 description: "State Property (ADO)"
-title: "State Property (ADO) | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "Command25::State"
-helpviewer_keywords: 
-  - "State property [ADO]"
-ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "Command25::State"
+helpviewer_keywords:
+  - "State property [ADO]"
+apitype: "COM"
 ---
 # State Property (ADO)
 Indicates for all applicable objects whether the state of the object is open or closed. If the object is executing an asynchronous method, indicates whether the current state of the object is connecting, executing, or retrieving.  

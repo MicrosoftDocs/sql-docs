@@ -1,19 +1,15 @@
 ---
+title: "Accessing Rows in a Hierarchical Recordset"
 description: "Accessing Rows in a Hierarchical Recordset (Example)"
-title: "Accessing Rows in a Hierarchical Recordset | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
+author: rothja
+ms.author: jroth
 ms.date: "01/19/2017"
-ms.reviewer: ""
+ms.prod: sql
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "hierarchical Recordsets [ADO]"
   - "data shaping [ADO], hierarchical Recordsets"
-ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-author: rothja
-ms.author: jroth
 ---
 # Accessing Rows in a Hierarchical Recordset (Example)
 The following example shows the steps necessary to access rows in a hierarchical [Recordset](../../reference/ado-api/recordset-object-ado.md):

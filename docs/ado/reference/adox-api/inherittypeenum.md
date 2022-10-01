@@ -1,21 +1,17 @@
 ---
+title: "InheritTypeEnum"
 description: "InheritTypeEnum"
-title: "InheritTypeEnum | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: ado
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.topic: reference
-apitype: "COM"
-f1_keywords: 
-  - "InheritTypeEnum"
-helpviewer_keywords: 
-  - "InheritTypeEnum enumeration [ADOX]"
-ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: rothja
 ms.author: jroth
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: ado
+ms.topic: reference
+f1_keywords:
+  - "InheritTypeEnum"
+helpviewer_keywords:
+  - "InheritTypeEnum enumeration [ADOX]"
+apitype: "COM"
 ---
 # InheritTypeEnum
 Specifies how objects will inherit permissions set with [SetPermissions](./setpermissions-method-adox.md).  

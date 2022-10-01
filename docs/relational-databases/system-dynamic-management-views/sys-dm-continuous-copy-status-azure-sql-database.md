@@ -1,26 +1,25 @@
 ---
-description: "sys.dm_continuous_copy_status (Azure SQL Database and Azure SQL Managed Instance)"
 title: "sys.dm_continuous_copy_status"
 titleSuffix: Azure SQL Database and Azure SQL Managed Instance
+description: sys.dm_continuous_copy_status (Azure SQL Database and Azure SQL Managed Instance)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "4/18/2022"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+ms.custom: seo-dt-2019
+f1_keywords:
   - "sys.dm_continuous_copy_status_TSQL"
   - "dm_continuous_copy_status_TSQL"
   - "dm_continuous_copy_status"
   - "sys.dm_continuous_copy_status"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "dm_continuous_copy_status"
   - "sys.dm_continuous_copy_status"
+dev_langs:
+  - "TSQL"
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
-ms.custom: seo-dt-2019
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

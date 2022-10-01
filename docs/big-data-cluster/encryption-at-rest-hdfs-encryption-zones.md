@@ -6,9 +6,9 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 06/14/2021
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
+ms.topic: tutorial
 ms.custom: kr2b-contr-experiment
 ---
 

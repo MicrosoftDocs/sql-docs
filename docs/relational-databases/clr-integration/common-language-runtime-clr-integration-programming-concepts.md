@@ -1,21 +1,20 @@
 ---
 title: "Common Language Runtime (CLR) Programming"
 description: This article provides resources for using CLR integration with SQL Server, which allows you to write server-side modules using any .NET Framework language.
-ms.custom: "seo-lt-2019"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: clr
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: "seo-lt-2019"
+helpviewer_keywords:
   - "CLR [SQL Server] See common language runtime [SQL Server]"
   - "Database Engine [SQL Server], .NET Framework"
   - ".NET Framework [SQL Server], Database Engine programming"
   - "common language runtime [SQL Server]"
   - ".NET Framework [SQL Server]"
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
-author: rothja
-ms.author: jroth
 ---
 # Common Language Runtime (CLR) Integration Programming Concepts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

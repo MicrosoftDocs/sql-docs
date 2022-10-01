@@ -1,26 +1,24 @@
 ---
-description: "sys.event_log (Azure SQL Database)"
 title: "sys.event_log (Azure SQL Database)"
-ms.custom: ""
+description: sys.event_log (Azure SQL Database)
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "04/18/2022"
 ms.service: sql-database
 ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "event_log"
   - "sys.event_log_TSQL"
   - "event_log_TSQL"
   - "sys.event_log"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event_log"
   - "sys.event_log"
+dev_langs:
+  - "TSQL"
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: rwestMSFT
-ms.author: randolphwest
-monikerRange: "= azuresqldb-current"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.event_log (Azure SQL Database)
 

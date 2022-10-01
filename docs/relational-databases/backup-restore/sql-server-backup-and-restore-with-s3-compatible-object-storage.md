@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 This article introduces the concepts, requirements and components necessary to use S3-compatible object storage as a backup destination. 
 
 > [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of SQL Server 2022.
+> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
   
 ## Overview
 
@@ -42,7 +42,7 @@ The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support t
 
 There are many providers of S3-compatible object storage in the market today. Object storage is either provided as software-defined, as hardware appliances, or as a combination for hybrid cloud scenarios.
 
-The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of SQL Server 2022.
+The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 | **Vendor (alphabetical)**       | **Offering**                  | 
 |---------------------------------|-------------------------------|
@@ -53,7 +53,7 @@ The following table provides a non-exhaustive summary of object storage provider
 | [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform      |
 | [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric       |
 | [MinIO][minio_webs]             | Multi-Cloud Object Storage    |
-| [Netapp][netapp_webs]           | StorageGrid                   |
+| [NetApp][netapp_webs]           | StorageGRID<br>ONTAP          |
 | [Nutanix][nutanix_webs]         | Nutanix Object Storage        |
 | [Pure Storage][pure_webs]       | Pure FlashBlade               |
 | [Red Hat][redhat_webs]          | OpenShift Container Storage   |
@@ -80,11 +80,12 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 
 ## Next steps
 
- - [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- - [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
  - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
+ - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
+ - [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+ - [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
  - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- - [Tutorial: Using S3-compatible object storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+ - [Tutorial: Use Azure Blob Storage with SQL Server 2016 - SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 <!-- Table links -->
 [aws_docs]:  https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html
@@ -105,7 +106,7 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 
 [hitachi_docs]:  https://knowledge.hitachivantara.com/Documents/Storage/HCP_for_Cloud_Scale/2.3.x/Administration/01_Getting_started
 [hitachi_sheet]: https://www.hitachivantara.com/pdf/white-paper/content-platform-architecture-fundamentals-whitepaper.pdf
-[hitachi_webs]:  https://www.hitachivantara.com/products/storage/object-storage/content-platform.html
+[hitachi_webs]:  https://www.hitachivantara.com/en-us/products/storage/object-storage/content-platform.html
 
 [hpe_docs]:  https://docs.datafabric.hpe.com/62/MapRObjectStore/s3-gateway.html
 [hpe_sheet]: https://www.hpe.com/us/en/collaterals/collateral.a50001592enw.html
@@ -139,4 +140,4 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 [weka_sheet]: https://www.weka.io/wp-content/uploads/files/2020/03/WekaFS-DS-W01R14DS201808.pdf
 [weka_webs]:  https://weka.io
 
-[Azure block blobs]: (https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)
+[Azure block blobs]: /rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs

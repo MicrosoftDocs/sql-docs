@@ -11,11 +11,9 @@ ms.topic: dms
 
 # Azure SQL migration extension for Azure Data Studio
 
-The Azure SQL migration extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to use the SQL Server assessment and migration capability in Azure Data Studio.
-
 [!INCLUDE [database-migration-services-ads](../../includes/database-migration-services-ads.md)]
 
-This article describes how to install the Azure SQL migration extension through Azure Data Studio.
+This article describes installing the Azure SQL migration extension through Azure Data Studio.
 
 ## Prerequisites
 
@@ -74,11 +72,9 @@ The following migration modes are supported for the corresponding Azure SQL targ
 
 | Azure SQL target | Migration mode |
 |-----------------|----------------|
-| Azure SQL Managed Instance | Online |
-| Azure SQL Managed Instance | Offline |
-| SQL Server on Azure VM | Online |
-| SQL Server on Azure VM | Offline |
-| SQL Server Database (Preview) | Offline |
+Azure SQL Managed Instance| [Online](/azure/dms/tutorial-sql-server-managed-instance-online-ads) / [Offline](/azure/dms/tutorial-sql-server-managed-instance-offline-ads)
+SQL Server on Azure Virtual Machine|[Online](/azure/dms/tutorial-sql-server-to-virtual-machine-online-ads) / [Offline](/azure/dms/tutorial-sql-server-to-virtual-machine-offline-ads)
+Azure SQL Database (Preview)| [Offline](/azure/dms/tutorial-sql-server-azure-sql-database-offline-ads)
 
 > [!TIP]
 > For information on pre-requisites, features and migration workflow, see [Migration using Azure Data Studio](/azure/dms/migration-using-azure-data-studio)

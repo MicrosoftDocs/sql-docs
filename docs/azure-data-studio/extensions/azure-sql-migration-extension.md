@@ -6,7 +6,9 @@ ms.author: roblescarlos
 ms.reviewer:
 ms.date: 09/01/2021
 ms.prod: azure-data-studio
-ms.topic: dms
+ms.service: dms
+ms.workload: data-services
+ms.topic: conceptual
 ---
 
 # Azure SQL migration extension for Azure Data Studio
@@ -65,8 +67,8 @@ The Azure SQL migration extension supports assessment and generates Azure recomm
 
 The following migration modes are supported for the corresponding Azure SQL targets.
 
-- **Online** - The source SQL Server database is available for read and write activity while database backups are continuously restored on target Azure SQL. Application downtime is limited to duration for the cutover at the end of migration. 
-- **Offline** - The source database can't be used for write activity while database backup files are restored on the target Azure SQL database (Preview). Application downtime persists through the start until the completion of the migration process.
+- **Online** - The source SQL Server database is available for reading and writing activity, while database backups are continuously restored on target Azure SQL. Application downtime is limited to the duration of the cutover at the end of migration. 
+- **Offline** - The source database can't be used for writing activity while backup files are restored on the target Azure SQL database (Preview). Application downtime persists from the start until the completion of the migration process.
 
 ### Support matrix
 
@@ -83,7 +85,7 @@ Azure SQL Database (Preview)| [Offline](/azure/dms/tutorial-sql-server-azure-sql
 
 You can raise a support request to get Microsoft support assistance if you encounter issues or errors with your database migrations using the Azure SQL Migration extension.
 
-Click on the **New support request** button in the upper section of the extension, it will automatically take you to the Azure portal where you can fill the details and then submit a support request.
+Click on the **New support request** button in the upper section of the extension. It will automatically take you to the Azure portal, where you can fill in the details and then submit a support request.
 :::image type="content" source="media/azure-sql-migration-extension/extension-support.png" alt-text="Get help from Microsoft support for the extension":::
 
 You can submit ideas/suggestions for improvement, and other feedback, including bugs, in the [Azure Community forum — Azure Database Migration Service](https://feedback.azure.com/d365community/forum/2dd7eb75-ef24-ec11-b6e6-000d3a4f0da0).

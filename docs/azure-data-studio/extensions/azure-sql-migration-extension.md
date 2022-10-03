@@ -6,7 +6,6 @@ ms.author: roblescarlos
 ms.reviewer:
 ms.date: 09/01/2021
 ms.prod: azure-data-studio
-ms.service: dms
 ms.workload: data-services
 ms.topic: conceptual
 ---

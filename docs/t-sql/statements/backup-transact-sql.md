@@ -1141,6 +1141,10 @@ Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssN
 
 For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
 
+> [!NOTE]
+> MAXTRANSFERSIZE specifies the largest unit of transfer, and doesn't guarantee that every write operation will transfer the specified largest size.
+> MAXTRANSFERSIZE for write operations of striped transaction log backups is set to 64 KB.
+
 ### Error management options
 
 These options allow you to determine whether backup checksums are enabled for the backup operation and whether the operation stops on encountering an error.

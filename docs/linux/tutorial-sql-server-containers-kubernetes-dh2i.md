@@ -86,7 +86,7 @@ ENTRYPOINT ["/opt/dh2i/sbin/dxstart.sh"]
 On a Linux machine, run the following commands to build the image:
 
 ```bash
-$mkdir dockefiles 
+$mkdir dockerfiles 
 $cd dockerfiles 
 $nano Dockerfile  
 # paste the sample dockerfile content shared above 

@@ -96,13 +96,13 @@ Congratulations! You have successfully built and run your first sharded applicat
 
 ## Key pieces of the code sample
 
-* **Managing shards and shard maps**: The code illustrates how to work with shards, ranges, and mappings in the *ShardManagementUtils.cs* file. For more information, see [Scale out databases with the shard map manager](https://go.microsoft.com/?linkid=9862595).  
+* **Managing shards and shard maps**: The code illustrates how to work with shards, ranges, and mappings in the *ShardManagementUtils.cs* file. For more information, see [Scale out databases with the shard map manager](elastic-scale-shard-map-management.md).  
 
-* **Data-dependent routing**: Routing of transactions to the right shard is shown in the *DataDependentRoutingSample.cs* file. For more information, see [Data-dependent routing](https://go.microsoft.com/?linkid=9862596).
+* **Data-dependent routing**: Routing of transactions to the right shard is shown in the *DataDependentRoutingSample.cs* file. For more information, see [Data-dependent routing](elastic-scale-data-dependent-routing.md).
 
-* **Querying over multiple shards**: Querying across shards is illustrated in the *MultiShardQuerySample.cs* file. For more information, see [Multi-shard querying](https://go.microsoft.com/?linkid=9862597).
+* **Querying over multiple shards**: Querying across shards is illustrated in the *MultiShardQuerySample.cs* file. For more information, see [Multi-shard querying](elastic-scale-multishard-querying.md).
 
-* **Adding empty shards**: The iterative adding of new empty shards is performed by the code in the *CreateShardSample.cs* file. For more information, see [Scale out databases with the shard map manager](https://go.microsoft.com/?linkid=9862595).
+* **Adding empty shards**: The iterative adding of new empty shards is performed by the code in the *CreateShardSample.cs* file. For more information, see [Scale out databases with the shard map manager](elastic-scale-shard-map-management.md).
 
 ## Other elastic scale operations
 

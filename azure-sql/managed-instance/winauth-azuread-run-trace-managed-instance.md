@@ -20,7 +20,7 @@ This article shares two options to run a trace against a managed instance: you c
 
 To use Windows Authentication to connect to and run a trace against a managed instance, you must first meet the following prerequisites:
 
-- [Set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)](winauth-azuread-setup.md).
+- [Set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md).
 - Install [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) on the client that is connecting to the managed instance. The SSMS installation includes SQL Server Profiler and built-in components to create and run extended events traces.
 - Enable tooling on your client machine to connect to the managed instance. This may be done by any of the following:
     - [Configure an Azure VM to connect to Azure SQL Managed Instance](connect-vm-instance-configure.md).
@@ -68,7 +68,7 @@ To run a trace with SQL Server Profiler against a managed instance using Windows
 
 Learn more about Windows Authentication for Azure AD principals with Azure SQL Managed Instance:
 
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? (Preview)](winauth-azuread-overview.md)
+- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
 - [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md)
 - [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos](winauth-implementation-aad-kerberos.md)
 - [Extended Events](/sql/relational-databases/extended-events/extended-events)

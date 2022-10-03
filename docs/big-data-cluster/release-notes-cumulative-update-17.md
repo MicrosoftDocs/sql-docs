@@ -25,7 +25,7 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
 SQL Server Big Data Clusters CU17 includes important changes and capabilities. The following known issue has been resolved: 
 
-- When you use the AZDATA BDC ROTATE command to rotate the password of a big data cluster that uses Active Directory, you receive the following error message: `Failed to update password for existing AD account '<Account Name>'. Error code: 30`. This issue has been resolved.
+- When you use the `AZDATA BDC ROTATE` command to rotate the password of a big data cluster that uses Active Directory, you receive the following error message: `Failed to update password for existing AD account '<Account Name>'. Error code: 30`. This issue has been resolved.
 
 For detailed SQL Server engine changes, check the [official SQL Server 2019 CU17 knowledge base article KB5016394](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).
 

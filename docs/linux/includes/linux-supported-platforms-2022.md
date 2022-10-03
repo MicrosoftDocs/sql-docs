@@ -10,7 +10,7 @@ ms.topic: include
 | Platform | File System | Installation Guide | Get |
 | --- | --- | --- | --- |
 | Red Hat Enterprise Linux 8.0 - 8.5 Server | XFS or EXT4 | [Installation guide](../quickstart-install-connect-red-hat.md) | [Get RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
-| SUSE Enterprise Linux Server v12 (SP3 - SP5) or v15 | XFS or EXT4 | [Installation guide](../quickstart-install-connect-suse.md) | [Get SLES v15](https://www.suse.com/products/server) |
+| SUSE Enterprise Linux Server v15 (SP1 - SP3) | XFS or EXT4 | [Installation guide](../quickstart-install-connect-suse.md) | [Get SLES v15](https://www.suse.com/products/server) |
 | Ubuntu 20.04 LTS | XFS or EXT4 | [Installation guide](../quickstart-install-connect-ubuntu.md) | [Get Ubuntu 20.04](https://releases.ubuntu.com/20.04/) |
 | Docker Engine 1.8+ on Linux | N/A | [Installation guide](../quickstart-install-connect-docker.md) | [Get Docker](https://www.docker.com/get-started) |
 

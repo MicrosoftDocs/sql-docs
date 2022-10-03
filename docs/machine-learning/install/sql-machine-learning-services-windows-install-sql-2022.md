@@ -140,10 +140,10 @@ If you encounter any installation errors during setup, check the summary log in 
     1. Select all **Optional Features** options, or as desired.
     1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. It is recommended that the Python installation path is accessible by all users such as `C:\Program Files\Python310 `and it is not specific to a single user.
 
-6. Download and install the latest version of RevoScalePY package and its dependencies.
+6. Download and install the latest version of revoscalepy package and its dependencies.
 
     ```cmd
-    cd C:\Program Files\Python310\
+    cd "C:\Program Files\Python310\"
     python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 

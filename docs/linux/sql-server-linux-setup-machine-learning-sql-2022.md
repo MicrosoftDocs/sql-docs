@@ -74,26 +74,26 @@ The following commands register the repository providing the R language platform
 
 3. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
 
-4. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
+4. Install CompatibilityAPI and RevoScaleR dependencies. From an admin R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
     install.packages("iterators")
     install.packages("foreach")
     install.packages("R6")
-    install.packages("jsonlite")
+    install.packages("jsonlite", lib="/usr/lib/R/library")
     ```
 
 5. Download and Install CompatibilityAPI for Linux.
 
     ```r
-    install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1. 0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL)
+    install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1.0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
     ```
 
 6. Download and Install RevoScaleR for Linux.
 
     ```r
-    install.packages("https://aka.ms/sqlml/r4.2/linux/RevoScaleR_10.0.1_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL)
+    install.packages("https://aka.ms/sqlml/r4.2/linux/RevoScaleR_10.0.1_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
     ```
 
 15. Verify RevoScaleR installation from the R terminal.

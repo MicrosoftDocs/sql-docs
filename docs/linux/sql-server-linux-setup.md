@@ -21,7 +21,7 @@ ms.technology: linux
 This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux.
 
 > [!TIP]  
-> For installing [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CTP 2.1 on Linux, see [Installation guidance for SQL Server 2022 (16.x) Preview on Linux](./sql-server-linux-setup-2022.md).
+> For installing [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, see [Installation guidance for SQL Server 2022 (16.x) Preview on Linux](./sql-server-linux-setup-2022.md).
 
 For other deployment scenarios, see:
 

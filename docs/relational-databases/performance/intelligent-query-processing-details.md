@@ -162,7 +162,7 @@ INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
 OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 ```
 
-A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
+A USE HINT query hint takes precedence over a [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) or trace flag setting.
 
 ## Scalar UDF inlining
 
@@ -231,7 +231,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
+Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information on PSP optimization, see [Parameter Sensitive Plan optimization](parameter-sensitivity-plan-optimization.md). For more information on surrounding topics of parameterization and parameter sensitivity, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
 ## Approximate query processing
 
@@ -315,7 +315,7 @@ There are queries that batch mode isn't used for even with columnstore indexes. 
 
 ### Configure batch mode on rowstore
 
-The `BATCH_MODE_ON_ROWSTORE` database scoped configuration is ON by default.
+The `BATCH_MODE_ON_ROWSTORE` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#batch_mode_on_rowstore---on--off-) is ON by default.
 
 You can disable batch mode on rowstore without changing the database compatibility level:
 
@@ -327,7 +327,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
 
-You can disable batch mode on rowstore via database scoped configuration. But you can still override the setting at the query level by using the `ALLOW_BATCH_MODE` query hint. The following example enables batch mode on rowstore even with the feature disabled via database scoped configuration:
+You can disable batch mode on rowstore via [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). But you can still override the setting at the query level by using the `ALLOW_BATCH_MODE` query hint. The following example enables batch mode on rowstore even with the feature disabled via database scoped configuration:
 
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
@@ -381,6 +381,7 @@ For information about optimized plan forcing with Query Store, visit [Optimized 
 - [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes)
 - [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md)
 - [Showplan logical and physical operators reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
+- [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
 - [What's new in SQL Server 2017](../../sql-server/what-s-new-in-sql-server-2017.md)
 - [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-2019.md)
 - [What's new in SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md)
@@ -397,3 +398,4 @@ For information about optimized plan forcing with Query Store, visit [Optimized 
 - [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 - [Monitor performance by using the Query Store](monitoring-performance-by-using-the-query-store.md)
 - [Best practices with Query Store](best-practice-with-the-query-store.md)
+

@@ -139,7 +139,7 @@ Update the connection string for any application that needs to connect to the DN
 
 The following is an example of a connection string for listener name **DNN_Listener** and port 6789: 
 
-`DataSource=DNN_Listener,6789,MultiSubnetFailover=True`
+`DataSource=DNN_Listener,6789;MultiSubnetFailover=True`
 
 ## Test failover
 

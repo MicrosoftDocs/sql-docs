@@ -53,7 +53,7 @@ To create a replica in a remote data center, do the following steps:
 
 1. [Create a virtual network in the new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network).
 
-   Select the subnet network, Cluster IP, and AG Listener IP addresses to be used for the local and remote region. The step listed here are using the following:
+   Select the subnet network, Cluster IP, and AG Listener IP addresses to be used for the local and remote region. The step listed here is using the following:
 
    | Type | Local | Remote Region
    | ----- | ----- | ----------

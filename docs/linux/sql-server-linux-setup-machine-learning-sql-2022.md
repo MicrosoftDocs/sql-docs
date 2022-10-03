@@ -27,7 +27,7 @@ You can install ML Services on a Docker container running a Linux distribution. 
 For more information, see [the Supported platforms section in the installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
 > [!IMPORTANT]
-> This article refers to [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md). <BR />For SQL Server on Windows, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md).
+> This article refers to [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. For SQL Server 2019 on Linux, see to [Install SQL Server 2019 Machine Learning Services (Python and R) on Linux](sql-server-linux-setup-machine-learning.md). For SQL Server on Windows, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](../machine-learning/install/sql-machine-learning-services-windows-install-sql-2022.md).
 
 ## Pre-install checklist
 
@@ -56,14 +56,14 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
 The following commands register the repository providing the R language platform. 
 
-1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package mssql-server-extensibility.
+1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package `mssql-server-extensibility`.
 
     **Ubuntu**
     ```bash
     apt-get install mssql-server-extensibility
     ```
 
-    **Redhat**
+    **RHEL**
     ```bash
     yum install mssql-server-extensibility
     ```
@@ -92,13 +92,13 @@ The following commands register the repository providing the R language platform
     install.packages("jsonlite", lib="/usr/lib/R/library")
     ```
 
-5. Download and Install CompatibilityAPI for Linux.
+5. Download and install CompatibilityAPI for Linux.
 
     ```r
     install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1.0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
     ```
 
-6. Download and Install RevoScaleR for Linux.
+6. Download and install RevoScaleR for Linux.
 
     ```r
     install.packages("https://aka.ms/sqlml/r4.2/linux/RevoScaleR_10.0.1_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
@@ -140,9 +140,9 @@ The following commands register the repository providing the R language platform
     GO
     ```
 
-### Setup Python support
+### Set up Python support
 
-1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package mssql-server-extensibility.
+1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package `mssql-server-extensibility`.
 
     **Ubuntu**
     ```bash
@@ -168,7 +168,7 @@ The following commands register the repository providing the R language platform
     pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
-7. Verify the revoscalepy installation from the python terminal. Verify the library can be imported.
+7. Verify the revoscalepy installation from the Python terminal. Verify the library can be imported.
 
     ```python
     import revoscalepy

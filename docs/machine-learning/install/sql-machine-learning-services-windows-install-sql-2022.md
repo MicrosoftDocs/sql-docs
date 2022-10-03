@@ -143,7 +143,7 @@ If you encounter any installation errors during setup, check the summary log in 
 6. Download and install the latest version of revoscalepy package and its dependencies.
 
     ```cmd
-    cd C:\Program Files\Python310\
+    cd "C:\Program Files\Python310\"
     python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 

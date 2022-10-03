@@ -80,7 +80,7 @@ The following commands register the repository providing the R language platform
 
 3. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
 
-4. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
+4. Install CompatibilityAPI and RevoScaleR dependencies. From an admin R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
@@ -88,7 +88,6 @@ The following commands register the repository providing the R language platform
     install.packages("foreach", lib="/usr/lib/R/library")
     install.packages("R6", lib="/usr/lib/R/library")
     install.packages("jsonlite", lib="/usr/lib/R/library")
-
     ```
 
 5. Download and Install CompatibilityAPI for Linux.

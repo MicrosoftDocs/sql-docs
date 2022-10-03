@@ -342,11 +342,11 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ---
 
-## Retrieve the managed identities 
+## Retrieve the managed identities
 
-To retrieve the user-assigned managed identity (SMI) or user-assigned managed identity or identities (UMI) of an Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md#managing-a-managed-identity-for-a-server-or-instance).
+To retrieve the user-assigned managed identity (SMI) or user-assigned managed identity or identities (UMI) of an Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md#manage-a-managed-identity-for-a-server-or-instance).
 
-## See also
+## Next steps
 
 - [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 - [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md).

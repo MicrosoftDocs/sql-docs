@@ -40,9 +40,9 @@ For more information, see [the Supported platforms section in the installation g
 
   * You can use [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), a free database tool that runs on Linux, Windows, and macOS.
 
-## Package list
+* Restarting the SQL Server instance during this installation process will be required.
 
-On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages, but for R and Python, you specify packages that provide either the full feature installation or the minimum feature installation.
+## Package list
 
 Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux:
 
@@ -72,28 +72,35 @@ The following commands register the repository providing the R language platform
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
     ```
 
+    To complete acceptance of the EULA, the SQL Server instance must be restarted. 
+
+    ```bash
+    sudo systemctl restart mssql-server
+    ```
+
 3. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
 
 4. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
-    install.packages("iterators")
-    install.packages("foreach")
-    install.packages("R6")
-    install.packages("jsonlite")
+    install.packages("iterators", lib="/usr/lib/R/library")
+    install.packages("foreach", lib="/usr/lib/R/library")
+    install.packages("R6", lib="/usr/lib/R/library")
+    install.packages("jsonlite", lib="/usr/lib/R/library")
+
     ```
 
 5. Download and Install CompatibilityAPI for Linux.
 
     ```r
-    install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1. 0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL)
+    install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1.0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
     ```
 
 6. Download and Install RevoScaleR for Linux.
 
     ```r
-    install.packages("https://aka.ms/sqlml/r4.2/linux/RevoScaleR_10.0.1_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL)
+    install.packages("https://aka.ms/sqlml/r4.2/linux/RevoScaleR_10.0.1_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
     ```
 
 15. Verify RevoScaleR installation from the R terminal.
@@ -106,8 +113,8 @@ The following commands register the repository providing the R language platform
 
 
     ```bash  
-    /opt/mssql/bin/mssql-conf set extensibility rbinpath /path/to/RFolderVersion/lib/R/bin/R
-    /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/RFolderVersion/
+    /opt/mssql/bin/mssql-conf set extensibility rbinpath /usr/lib/R/bin/R
+    /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib/R
     ```
 
 17. Restart the Launchpad service.

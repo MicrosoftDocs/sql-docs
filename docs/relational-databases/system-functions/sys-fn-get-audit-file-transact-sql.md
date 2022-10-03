@@ -166,7 +166,7 @@ fn_get_audit_file ( file_pattern,
   This example reads all audit logs from servers that begin with `Sh`: 
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
+  SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh*',default,default);
   GO  
   ```
 

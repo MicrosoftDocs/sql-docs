@@ -44,6 +44,8 @@ For more information, see [the Supported platforms section in the installation g
 
 ## Package list
 
+On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system.
+
 Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux:
 
 | Package name | Applies-to | Description |

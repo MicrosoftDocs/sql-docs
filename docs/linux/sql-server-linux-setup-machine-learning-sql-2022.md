@@ -68,7 +68,7 @@ The following commands register the repository providing the R language platform
     yum install mssql-server-extensibility
     ```
 
-2. Review and accept the End User License Agreement (EULA) for SQL ML Services.
+2. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
@@ -149,12 +149,12 @@ The following commands register the repository providing the R language platform
     apt-get install mssql-server-extensibility
     ```
 
-    **Redhat**
+    **RHEL**
     ```bash
     yum install mssql-server-extensibility
     ```
 
-2. Review and accept the End User License Agreement (EULA) for SQL ML Services.
+2. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y

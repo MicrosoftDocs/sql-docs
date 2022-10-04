@@ -120,7 +120,7 @@ Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE
 - Requires ALTER SERVER STATE permission on the server.  
 
 Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-- Requires server administrator permissions.  
+- Requires membership in server role `##MS_ServerStateManager##`.  
 
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Requires membership in the DB_OWNER fixed server role.  

@@ -160,13 +160,12 @@ The following commands register the repository providing the R language platform
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
     ```
 
-3. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime.
+3. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime. Also, install the shared python runtime library for the desired runtime version. e.g. for Ubuntu, `sudo apt-get install libpython3.10`.
 
 4. Download and install revoscalepy for the root user.
 
     ```bash  
-    sudo pip install --target=/usr/lib/python3.10/dist-packages
- https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl
+    sudo pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl --target=/usr/lib/python3.10/dist-packages
     ```
 
 7. Verify the revoscalepy installation from the Python terminal. Verify the library can be imported.
@@ -175,19 +174,19 @@ The following commands register the repository providing the R language platform
     import revoscalepy
     ```
 
-8. Configure the installed Python runtime with SQL Server, where `/path/to` is the path to the python installation binary, and `pythonFolderVersion` is the desired version of Python installed, for example, `python3.10`. Use the following script with your actual installation path:
+8. Configure the installed Python runtime with SQL Server, where `pythonbinbath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
 
     ```bash
-    /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /path/to/pythonFolderVersion
-    /opt/mssql/bin/mssql-conf set extensibility datadirectories /path/to/:/path/to/lib/pythonFolderVersion/dist-packages/
+    /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
+    /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib:/usr/lib/python3.10/dist-packages
     ```
 
-9. Restart the Launchpad service.
+9. Restart the Launchpadd service.
 
     ```bash
     systemctl restart mssql-launchpadd.service
     ```
-    
+   
 10. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
 
     ```sql

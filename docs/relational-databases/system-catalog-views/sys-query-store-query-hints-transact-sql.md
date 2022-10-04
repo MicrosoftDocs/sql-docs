@@ -22,7 +22,7 @@ dev_langs:
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sys.query_store_query_hints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
  Returns query hints from [Query Store hints](../../relational-databases/performance/query-store-hints.md).
   

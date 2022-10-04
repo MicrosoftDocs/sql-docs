@@ -105,7 +105,7 @@ SELECT TOP 1000
        , q.context_settings_id
        , c.set_options
        , c.status
-    ROM sys.query_store_plan p
+    FROM sys.query_store_plan p
     JOIN sys.query_store_query q ON p.query_id = q.query_id
        JOIN sys.query_context_settings c ON c.context_settings_id = q.context_settings_id
        LEFT JOIN sys.query_store_query_text t ON q.query_text_id = t.query_text_id

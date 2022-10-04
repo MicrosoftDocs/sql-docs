@@ -350,7 +350,7 @@ Undocumented DBCC statements that are enabled in SQL Server aren't supported in 
 
 ### Distributed transactions
 
-Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is currently in public preview. Distributed transactions are supported under following conditions (all of them must be met):
+Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is generally available. Distributed transactions are supported under following conditions (all of them must be met):
 * all transaction participants are Azure SQL Managed Instances that are part of the [Server trust group](./server-trust-group-overview.md).
 * transactions are initiated either from .NET (TransactionScope class) or Transact-SQL.
 

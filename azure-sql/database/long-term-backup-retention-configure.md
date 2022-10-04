@@ -323,6 +323,11 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 ## Limitations
 - When restoring from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created.
 - You need to specify the target service level objective, when restoring from an LTR backup, which was created when the database was in an elastic pool. 
+- LGR on hyperscale is in a limited public preview phase
+
+> [!NOTE]
+> LTR on Hyperscale is in a limited public preview phase. Currently Hyperscale databases created or migrated after June 2022 can enable LTR. Over the next several weeks we will allow enabling of LTR on all databases. If you encounter this error below and need to enable long-term retention please create a support ticket “Long Term Retention is not supported: Long-term retention on Hyperscale is currently in limited preview and cannot be enabled as yet for your database. To enable long-term retention please reach out to Microsoft support.” 
+
 
 ## Next steps
 

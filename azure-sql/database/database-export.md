@@ -5,7 +5,7 @@ description: Export a database to a BACPAC file using the Azure portal or a CLI
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 12/10/2021
+ms.date: 9/29/2022
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
@@ -116,6 +116,11 @@ or the PowerShell [Stop-AzSqlDatabaseActivity command](/powershell/module/az.sql
 ```cmd
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId
 ```
+
+> [!NOTE]
+> To cancel export operation you will need to have one of the following roles:
+> - The [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role or 
+> - A [custom Azure RBAC role](/azure/role-based-access-control/custom-roles) with `Microsoft.Sql/servers/databases/operations` permission
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: This article describes the different types of secondary replicas av
 author: yorek
 ms.author: damauri
 ms.reviewer: wiassaf, mathoma
-ms.date: 9/24/2021
+ms.date: 10/04/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview
@@ -194,7 +194,6 @@ Geo-replicas are used to maintain a transactionally consistent copy of the datab
 Geo-replication for Hyperscale database has following current limitations:
 - Only one geo-replica can be created (in the same or different region).
 - Point in time restore of the geo-replica is not supported.
-- Creating a database copy of the geo-replica is not supported. 
 - Secondary of a secondary (also known as "geo-replica chaining") is not supported. 
 
 ## Next steps

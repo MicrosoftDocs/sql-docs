@@ -34,9 +34,6 @@ This article provides details of features supported by the various editions of [
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-> [!IMPORTANT]  
-> SUSE Linux Enterprise Server **is not supported** for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux CTP 2.1, and will follow in a later release.
-
 For the latest release notes and what's new information, see [SQL Server 2022 Preview on Linux release notes](sql-server-linux-release-notes-2022.md)
 
 For a list of SQL Server features not available on Linux, see [Unsupported features and services](#unsupported-features-and-services).

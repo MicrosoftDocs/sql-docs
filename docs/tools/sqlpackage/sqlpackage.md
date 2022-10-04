@@ -37,78 +37,30 @@ The **SqlPackage.exe** command line tool allows you to specify these actions alo
   
 ## Command-Line Syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
+**SqlPackage.exe** initiates the actions specified using the [parameters](#parameters), [properties](#properties), and SQLCMD variables specified on the command line.  
   
-```cmd
-SqlPackage {parameters}{properties}{SQLCMD Variables}  
+```bash
+SqlPackage {parameters} {properties} {SQLCMD variables}
 ```
 
-### Usage examples
+### Exit codes
+
+SqlPackage commands return the following exit codes:
+
+- 0 = success
+- non-zero = failure
+
+### Usage example
 
 Further examples are available on the individual action pages.
 
-**Generate a comparison between databases by using .dacpac files with a SQL script output**
-
-Start by creating a .dacpac file of your latest database changes:
+**Creating a .dacpac file of the current database schema:**
 
 ```cmd
 sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
 ```
 
-Create a .dacpac file of your database target (that has no changes):
-
-```cmd
-sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
-```
-
-Create a SQL script that generates the differences of two .dacpac files:
-
-```cmd
-sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
-```
-
-
-## Support
-
- The DacFx library and the SqlPackage CLI tool have adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). All security updates, fixes, and new features will be released only in the latest point version of the major version. Maintaining your DacFx or SqlPackage installations to the current version helps ensure that you will receive all applicable bug fixes in a timely manner.
-
-### Supported SQL offerings
-
-SqlPackage and DacFx supports all [supported SQL versions](/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14th 2022 supports all supported versions of SQL in January 14th 2022. For more on SQL support policies, see [the SQL support policy](/troubleshoot/sql/general/support-policy-sql-server#support-policy).
-
-
-
-
-## Version
-
-Displays the sqlpackage version as a build number.  Can be used in interactive prompts as well as in [automated pipelines](sqlpackage-pipelines.md).
-
-```cmd
-sqlpackage.exe /Version
-```
-
-## Help
-
-You can display SqlPackage usage information by using `/?` or `/help:True`.
-
-```cmd
-sqlpackage.exe /?
-```
-
-For parameter and property information specific to a particular action, use the help parameter in addition to that action's parameter.
-
-```cmd
-sqlpackage.exe /Action:Publish /?
-```
-
-## Exit codes
-
-Commands that return the following exit codes:
-
-- 0 = success
-- non-zero = failure
-
-## Parameters
+### Parameters
 
 Some parameters are shared between the SqlPackage actions. Below is a table summarizing the parameters, for more information click into the specific action pages.
 
@@ -149,134 +101,68 @@ Some parameters are shared between the SqlPackage actions. Below is a table summ
 |**/UniversalAuthentication:**|**/ua**| x | x | x | x | x | x | x |
 |**/Variables:**|**/v**| | | | | x | | x |
 
-## Properties
+### Properties
 
-Some properties are shared between the SqlPackage actions.  Below is a table summarizing the properties, for more information click into the specific action pages.
+SqlPackage actions support a large number of properties to modify the default behavior of an action.  For more information click into the specific action pages.
 
-| Property | [Extract](sqlpackage-extract.md#properties-specific-to-the-extract-action) | [Publish](sqlpackage-publish.md#properties-specific-to-the-publish-action) | [Export](sqlpackage-export.md#properties-specific-to-the-export-action) | [Import](sqlpackage-import.md#properties-specific-to-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-properties) | [Script](sqlpackage-script.md#properties-specific-to-the-script-action) |
-|---|---|---|---|---|---|---|
-|AdditionalDeploymentContributorArguments=(STRING)| | x | | | x | x |
-|AdditionalDeploymentContributors=(STRING)| | x | | | x | x |
-|AdditionalDeploymentContributorPaths=(STRING)| | x | | | x | x |
-|AllowDropBlockingAssemblies=(BOOLEAN)| | x | | | x | x |
-|AllowIncompatiblePlatform=(BOOLEAN)| | x | | | x | x |
-|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)| | x | | | x | x |
-|AzureSharedAccessSignatureToken=(STRING)| | x | | | | |
-|AzureStorageBlobEndpoint=(STRING)| x | x | | | | |
-|AzureStorageContainer=(STRING)| x | x | | | | |
-|AzureStorageKey=(STRING)| x | x | | | | |
-|AzureStorageRootPath=(STRING)| x | x | | | | |
-|BackupDatabaseBeforeChanges=(BOOLEAN)| | x | | | x | x |
-|BlockOnPossibleDataLoss=(BOOLEAN 'True')| | x | | | x | x |
-|BlockWhenDriftDetected=(BOOLEAN 'True')| | x | | | x | x |
-|CommandTimeout=(INT32 '60')| x | x | x | x | x | x |
-|CommentOutSetVarDeclarations=(BOOLEAN)| | x | | | x | x |
-|CompareUsingTargetCollation=(BOOLEAN)| | x | | | x | x |
-|CompressionOption=(ENUM 'Normal')| x | | x | | | |
-|CreateNewDatabase=(BOOLEAN)| | x | | | x | x |
-|DacApplicationDescription=(STRING)| x | | | | | |
-|DacApplicationName=(STRING)| x | | | | | |
-|DacMajorVersion=(INT32 '1')| x | | | | | |
-|DacMinorVersion=(INT32 '0')| x | | | | | |
-|DatabaseEdition=(ENUM 'Default')| | x | | x | x | x |
-|DatabaseLockTimeout=(INT32 '60')| x | x | x | | x | x |
-|DatabaseMaximumSize=(INT32)| | x | | x | x | x |
-|DatabaseServiceObjective=(STRING)| | x | | x | x | x |
-|DeployDatabaseInSingleUserMode=(BOOLEAN)| | x | | | x | x |
-|DisableAndReenableDdlTriggers=(BOOLEAN 'True')| | x | | | x | x |
-|DisableIndexesForDataPhase=(BOOLEAN 'True')| | | | x | | |
-|DoNotAlterChangeDataCaptureObjects=(BOOLEAN 'True')| | x | | | x | x |
-|DoNotAlterReplicatedObjects=(BOOLEAN 'True')| | x | | | x | x |
-|DoNotDropObjectType=(STRING)| | x | | | x | x |
-|DoNotDropObjectTypes=(STRING)| | x | | | x | x |
-|DropConstraintsNotInSource=(BOOLEAN 'True')| | x | | | x | x |
-|DropDmlTriggersNotInSource=(BOOLEAN 'True')| | x | | | x | x |
-|DropExtendedPropertiesNotInSource=(BOOLEAN 'True')| | x | | | x | x |
-|DropIndexesNotInSource=(BOOLEAN 'True')| | x | | | x | x |
-|DropObjectsNotInSource=(BOOLEAN)| | x | | | x | x |
-|DropPermissionsNotInSource=(BOOLEAN)| | x | | | x | x |
-|DropRoleMembersNotInSource=(BOOLEAN)| | x | | | x | x |
-|DropStatisticsNotInSource=(BOOLEAN 'True')| | x | | | x | x |
-|EnclaveAttestationProtocol=(STRING)| | x | | | | |
-|EnclaveAttestationUrl=(STRING)| | x | | | | |
-|ExcludeObjectType=(STRING)| | x | | | x | x |
-|ExcludeObjectTypes=(STRING)| | x | | | x | x |
-|ExtractAllTableData=(BOOLEAN)| x | | | | | |
-|ExtractApplicationScopedObjectsOnly=(BOOLEAN 'True')| x | | | | | |
-|ExtractReferencedServerScopedElements=(BOOLEAN 'True')| x | | | | | |
-|ExtractUsageProperties=(BOOLEAN)| x | | | | | |
-|GenerateSmartDefaults=(BOOLEAN)| | x | | | x | x |
-|IgnoreAnsiNulls=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreAuthorizer=(BOOLEAN)| | x | | | x | x |
-|IgnoreColumnCollation=(BOOLEAN)| | | | | x | x |
-|IgnoreColumnOrder=(BOOLEAN)| | x | | | x | x |
-|IgnoreComments=(BOOLEAN)| | x | | | x | x |
-|IgnoreCryptographicProviderFilePath=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreDdlTriggerOrder=(BOOLEAN)| | x | | | x | x |
-|IgnoreDdlTriggerState=(BOOLEAN)| | x | | | x | x |
-|IgnoreDefaultSchema=(BOOLEAN)| | x | | | x | x |
-|IgnoreDmlTriggerOrder=(BOOLEAN)| | x | | | x | x |
-|IgnoreDmlTriggerState=(BOOLEAN)| | x | | | x | x |
-|IgnoreExtendedProperties=(BOOLEAN)| x | x | | | x | x |
-|IgnoreFileAndLogFilePath=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreFilegroupPlacement=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreFileSize=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreFillFactor=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreFullTextCatalogFilePath=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreIdentitySeed=(BOOLEAN)| | x | | | x | x |
-|IgnoreIncrement=(BOOLEAN)| | x | | | x | x |
-|IgnoreIndexOptions=(BOOLEAN)| | x | | | x | x |
-|IgnoreIndexPadding=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreKeywordCasing=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreLockHintsOnIndexes=(BOOLEAN)| | x | | | x | x |
-|IgnoreLoginSids=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreNotForReplication=(BOOLEAN)| | x | | | x | x |
-|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')| | x | | | x | x |
-|IgnorePartitionSchemes=(BOOLEAN)| | x | | | x | x |
-|IgnorePermissions=(BOOLEAN 'True')| x | x | | | x | x |
-|IgnoreQuotedIdentifiers=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreRoleMembership=(BOOLEAN)| | x | | | x | x |
-|IgnoreRouteLifetime=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreTableOptions=(BOOLEAN)| | x | | | x | x |
-|IgnoreTablePartitionOptions=(BOOLEAN)| | x | | | x | x |
-|IgnoreUserLoginMappings=(BOOLEAN)| x | | | | | |
-|IgnoreUserSettingsObjects=(BOOLEAN)| | x | | | x | x |
-|IgnoreWhitespace=(BOOLEAN 'True')| | x | | | x | x |
-|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)| | x | | | x | |
-|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)| | x | | | x | |
-|ImportContributorArguments=(STRING)| | | | x | | |
-|ImportContributors=(STRING)| | | | x | | |
-|ImportContributorPaths=(STRING)| | | | x | | |
-|IncludeCompositeObjects=(BOOLEAN)| | x | | | x | x |
-|IncludeTransactionalScripts=(BOOLEAN)| | x | | | x | x |
-|LongRunningCommandTimeout=(INT32 '0')| x | x | x | x | x | x |
-|NoAlterStatementsToChangeClrTypes=(BOOLEAN)| | x | | | x | x |
-|PopulateFilesOnFileGroups=(BOOLEAN 'True')| | x | | | x | x |
-|RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')| | | | x | | |
-|RegisterDataTierApplication=(BOOLEAN)| | x | | | x | x |
-|RunDeploymentPlanExecutors=(BOOLEAN)| | x | | | x | x |
-|ScriptDatabaseCollation=(BOOLEAN)| | x | | | x | x |
-|ScriptDatabaseCompatibility=(BOOLEAN)| | x | | | x | x |
-|ScriptDatabaseOptions=(BOOLEAN 'True')| | x | | | x | x |
-|ScriptDeployStateChecks=(BOOLEAN)| | x | | | x | x |
-|ScriptFileSize=(BOOLEAN)| | x | | | x | x |
-|ScriptNewConstraintValidation=(BOOLEAN 'True')| | x | | | x | x |
-|ScriptRefreshModule=(BOOLEAN 'True')| | x | | | x | x |
-|Storage=({File&#124;Memory})| x | x | x | x | x | x |
-|TableData=(STRING)| x | | x | | | |
-|TargetEngineVersion=(ENUM 'Latest')| | | x | | | |
-|TempDirectoryForTableData=(STRING)| x | | x | | | |
-|TreatVerificationErrorsAsWarnings=(BOOLEAN)| | x | | | x | x |
-|UnmodifiableObjectWarnings=(BOOLEAN 'True')| | x | | | x | x |
-|VerifyCollationCompatibility=(BOOLEAN 'True')| | x | | | x | x |
-|VerifyDeployment=(BOOLEAN 'True')| | x | | | x | x |
-|VerifyExtraction=(BOOLEAN)| x | | | | | |
-|VerifyFullTextDocumentTypesSupported=(BOOLEAN)| | | x | | | |
+
+## Utility commands
+
+### Version
+
+Displays the sqlpackage version as a build number.  Can be used in interactive prompts as well as in [automated pipelines](sqlpackage-pipelines.md).
+
+```cmd
+sqlpackage.exe /Version
+```
+
+### Help
+
+You can display SqlPackage usage information by using `/?` or `/help:True`.
+
+```cmd
+sqlpackage.exe /?
+```
+
+For parameter and property information specific to a particular action, use the help parameter in addition to that action's parameter.
+
+```cmd
+sqlpackage.exe /Action:Publish /?
+```
+
+## Environment variables
+
+### Connection pooling
+
+Connection pooling can be enabled for all connections made by SqlPackage by setting the `CONNECTION_POOLING_ENABLED` environment variable to `True`.  This setting is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling.
+
+
+### Temporary files
+
+During SqlPackage operations the table data is written to temporary files before compression or after decompression. For large databases these temporary files can take up a significant amount of disk space but their location can be specified.  The export and extract operations include an optional property to specify `/p:TempDirectoryForTableData` to override the SqlPackage's default value.
+
+The default value is established by [GetTempPath](/dotnet/api/system.io.path.gettemppath) within SqlPackage.
+
+For Windows, the following environment variables are checked in the following order and the first path that exists is used:
+1. The path specified by the TMP environment variable.
+2. The path specified by the TEMP environment variable.
+3. The path specified by the USERPROFILE environment variable.
+4. The Windows directory.
+
+For Linux and macOS, if the path is not specified in the TMPDIR environment variable, the default path /tmp/ is used.
 
 ## SqlPackage and database users
 
 [Contained database users](../../relational-databases/security/contained-database-users-making-your-database-portable.md) are included in SqlPackage operations.  However, the password portion of the definition is set to a randomly generated string by SqlPackage, the existing value is not transferred. It is recommended that the new user's password is reset to a secure value following the import of a `.bacpac` or the deployment of a `.dacpac`.  In an automated environment the password values can be retrieved from a secure keystore, such as Azure Key Vault, in a step following SqlPackage.
+
+
+## Support
+
+ The DacFx library and the SqlPackage CLI tool have adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy). All security updates, fixes, and new features will be released only in the latest point version of the major version. Maintaining your DacFx or SqlPackage installations to the current version helps ensure that you will receive all applicable bug fixes in a timely manner.
+
+### Supported SQL offerings
+
+SqlPackage and DacFx supports all [supported SQL versions](/lifecycle/products/?products=sql-server) at time of the SqlPackage/DacFx release. For example, a SqlPackage release on January 14th 2022 supports all supported versions of SQL in January 14th 2022. For more on SQL support policies, see [the SQL support policy](/troubleshoot/sql/general/support-policy-sql-server#support-policy).
 
 ## Next steps
 

@@ -1,16 +1,12 @@
 ---
+title: "User defined types"
 description: "User defined types"
-title: "User defined types | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # User defined types

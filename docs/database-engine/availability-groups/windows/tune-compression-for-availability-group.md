@@ -1,14 +1,12 @@
 ---
-title: "Tune compression for availability group | Microsoft Docs"
+title: "Tune compression for availability group"
 description: Learn how SQL Server compresses data streams for availability groups, which reduces network traffic, increases CPU load, and may induce latency.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "06/22/2016"
 ms.prod: sql
 ms.technology: availability-groups
 ms.topic: conceptual
-ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Tune compression for availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

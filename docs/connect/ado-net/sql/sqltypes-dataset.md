@@ -1,17 +1,15 @@
 ---
 title: "SqlTypes and the DataSet"
-description: "Describes type support for SqlTypes in the DataSet."  
-ms.date: "08/15/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
+description: "Describes type support for SqlTypes in the DataSet."
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # SqlTypes and the DataSet
 

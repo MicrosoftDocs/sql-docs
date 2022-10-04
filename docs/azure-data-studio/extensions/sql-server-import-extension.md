@@ -1,14 +1,12 @@
 ---
 title: SQL Server Import Extension
 description: Learn how to install and use the SQL Server Import extension for Azure Data Studio, a wizard that converts .txt and .csv files into a SQL table.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
-ms.custom: 
 ms.date: 10/28/2021
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # SQL Server Import extension
@@ -20,11 +18,11 @@ To learn more about the SSMS version of this feature, you can read [this article
 ## Install the SQL Server Import extension
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
-2. Select an available extension to view its details.
+2. In the search box, search for **SQL Server Import**. Select the extension to view its details.
 
-   ![import extension manager](media/sql-server-import-extension/import-wizard-install.png)
+   ![Screenshot showing the import extension manager.](media/sql-server-import-extension/import-wizard-install.png)
 
-3. Select the extension you want and **Install** it.
+3. Select **Install**.
 
 ## Start Import Wizard
 

@@ -1,15 +1,13 @@
 ---
 title: "Availability group lease health check timeout"
 description: "Mechanics and guidelines for the lease, cluster, and health check times for Always On availability groups."
-ms.custom: seo-lt-2019
-ms.date: "05/02/2018"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-ms.assetid:
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/02/2018"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seo-lt-2019
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 

@@ -1,16 +1,12 @@
 ---
+title: "getNClob Method (SQLServerCallableStatement)"
 description: "getNClob Method (SQLServerCallableStatement)"
-title: "getNClob Method (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 9a86daeb-03b2-45ef-82d3-495f33fb0113
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getNClob Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

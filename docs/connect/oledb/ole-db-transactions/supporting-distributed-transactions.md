@@ -1,14 +1,13 @@
 ---
 title: Supporting distributed transactions (OLE DB driver)
-description: Learn how OLE DB Driver for SQL Server consumers can use the ITransactionJoin::JoinTransaction method to participate in a distributed transaction.
-ms.custom: ""
+description: "Learn how OLE DB Driver for SQL Server consumers can use the ITransactionJoin::JoinTransaction method to participate in a distributed transaction."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, transactions"
   - "distributed transactions [OLE DB]"
   - "MS DTC"
@@ -16,8 +15,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, transactions"
   - "ITransactionJoin interface"
   - "MS DTC, about distributed transaction support"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Supporting Distributed Transactions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -41,7 +41,8 @@ You can filter gauge values by connecting them to navigators on the mobile repor
 
 4. [optional] To change the aggregation, select **Options** and select a different aggregation.
    
-   >**Note**: When you change the aggregation for the main value, you probably also want to change the aggregation for the comparison value, though in some cases you may want to mix aggregation methods.  
+   > [!NOTE]  
+   > When you change the aggregation for the main value, you probably also want to change the aggregation for the comparison value, though in some cases you may want to mix aggregation methods.  
 
 ## Filter a gauge
   

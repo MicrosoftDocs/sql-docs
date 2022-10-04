@@ -1,21 +1,15 @@
 ---
+title: "othersInsertsAreVisible Method (SQLServerDatabaseMetaData)"
 description: "othersInsertsAreVisible Method (SQLServerDatabaseMetaData)"
-title: "othersInsertsAreVisible Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.othersInsertsAreVisible"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.othersInsertsAreVisible"
+apitype: "Assembly"
 ---
 # othersInsertsAreVisible Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

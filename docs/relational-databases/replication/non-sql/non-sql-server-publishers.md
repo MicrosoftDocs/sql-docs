@@ -32,7 +32,6 @@ Publishing data from non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
   |:-----------|:---------------|:-------------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |
-  | &nbsp; | &nbsp; | &nbsp; |
 
 
  Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

@@ -3,13 +3,10 @@ title: "CURRENT_REQUEST_ID (Transact-SQL)"
 description: "CURRENT_REQUEST_ID (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "CURRENT_REQUEST_ID_TSQL"
   - "CURRENT_REQUEST_ID"

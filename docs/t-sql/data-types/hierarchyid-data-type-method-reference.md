@@ -1,24 +1,20 @@
 ---
+title: "hierarchyid (Transact-SQL)"
 description: "hierarchyid data type method reference"
-title: "hierarchyid (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "hierarchyid"
-  - "hierarchyid_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Hierarchy data type"
-  - "hierarchyid data type"
-ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "hierarchyid"
+  - "hierarchyid_TSQL"
+helpviewer_keywords:
+  - "Hierarchy data type"
+  - "hierarchyid data type"
+dev_langs:
+  - "TSQL"
 ---
 # hierarchyid data type method reference
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -59,7 +55,7 @@ The **hierarchyid** data type can be converted to other data types as follows:
 -   To transmit **hierarchyid** parameters through SOAP first cast them as strings.  
   
 ## Upgrading databases
-When a database is upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the new assembly and the **hierarchyid** data type will automatically be installed. Upgrade advisor rules detect any user type or assemblies with conflicting names. The upgrade advisor will advise renaming of any conflicting assembly, and either renaming any conflicting type, or using two-part names in the code to refer to that preexisting user type.
+When a database is upgraded to a newer version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the new assembly and the **hierarchyid** data type will automatically be installed. Upgrade advisor rules detect any user type or assemblies with conflicting names. The upgrade advisor will advise renaming of any conflicting assembly, and either renaming any conflicting type, or using two-part names in the code to refer to that preexisting user type.
   
 If a database upgrade detects a user assembly with conflicting name, it will automatically rename that assembly and put the database into suspect mode.
   
@@ -70,14 +66,14 @@ Columns of type **hierarchyid** can be used on any replicated table. The require
   
 ### One-directional replication
 One-directional replication includes snapshot replication, transactional replication, and merge replication in which changes are not made at the Subscriber. How **hierarchyid** columns work with one directional replication depends on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the Subscriber is running.
--   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Publisher can replicate **hierarchyid** columns to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Subscriber without any special considerations.  
--   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Publisher must convert **hierarchyid** columns to replicate them to a Subscriber that is running [!INCLUDE[ssEW](../../includes/ssew-md.md)] or an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not support **hierarchyid** columns. If you are using one of these versions, you can still replicate data to a Subscriber. To do this, you must set a schema option or the publication compatibility level (for merge replication) so the column can be converted to a compatible data type.  
+-   A [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Publisher can replicate **hierarchyid** columns to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Subscriber of the same version without any special considerations.  
+-   A [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Publisher must convert **hierarchyid** columns to replicate them to a Subscriber that is running [!INCLUDE[ssEW](../../includes/ssew-md.md)] or an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not support **hierarchyid** columns. If you are using one of these versions, you can still replicate data to a Subscriber. To do this, you must set a schema option or the publication compatibility level (for merge replication) so the column can be converted to a compatible data type.  
   
 Column filtering is supported in both of these scenarios. This includes filtering out **hierarchyid** columns. Row filtering is supported as long as the filter does not include a **hierarchyid** column.
   
 ### Bi-directional replication
 Bi-directional replication includes transactional replication with updating subscriptions, peer-to-peer transactional replication, and merge replication in which changes are made at the Subscriber. Replication lets you configure a table with **hierarchyid** columns for bi-directional replication. Note the following requirements and considerations.
--   The Publisher and all Subscribers must be running [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   The Publisher and all Subscribers must be running the same version of [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] or later.  
 -   Replication replicates the data as bytes and does not perform any validation to assure the integrity of the hierarchy.  
 -   The hierarchy of the changes that were made at the source (Subscriber or Publisher) is not maintained when they replicate to the destination.  
 -   The hash values for **hierarchyid** columns are specific to the database in which they are generated. Therefore, the same value could be generated on the Publisher and Subscriber, but it could be applied to different rows. Replication does not check for this condition, and there is no built-in way to partition **hierarchyid** column values as there is for IDENTITY columns. Applications must use constraints or other mechanisms to avoid such undetected conflicts.  

@@ -1,18 +1,15 @@
 ---
 title: "Change transaction safety (mirrored database)"
 description: Change the transaction safety attribute for a SQL Server database mirroring session using Transact-SQL.
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "transaction safety [SQL Server database mirroring]"
-ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/04/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "transaction safety [SQL Server database mirroring]"
 ---
 # Change Transaction Safety in a Database Mirroring Session (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

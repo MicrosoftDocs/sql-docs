@@ -16,12 +16,12 @@ monikerRange: "= sql-server-2017"
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes.md)
+- [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes-2017.md)
 - [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu) for information about the latest cumulative update (CU) release
 
 **Try SQL Server!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- :::image type="icon" source="../includes/media/download.svg"::: [Download SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
+- :::image type="icon" source="../includes/media/azure-vm.svg"::: [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
 > SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](./what-s-new-in-sql-server-2019.md?preserve-view=true&view=sql-server-ver15).
@@ -46,7 +46,7 @@ On the user permissions page, when granting permission to the root level in the 
   - Grant permission on the sub nodes in the tree view instead of the root level.
 
 ### Analysis Services
-- **Issue and customer impact:** Data connectors for the following sources are not yet avaialble for tabular models at the 1400 compatibility level.
+- **Issue and customer impact:** Data connectors for the following sources are not yet available for tabular models at the 1400 compatibility level.
   - Amazon Redshift
   - IBM Netezza
   - Impala
@@ -61,7 +61,7 @@ On the user permissions page, when granting permission to the root level in the 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
-There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](../linux/sql-server-linux-release-notes.md).
+There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](../linux/sql-server-linux-release-notes-2017.md).
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)

@@ -1,17 +1,14 @@
 ---
 title: How-to topics (OLE DB driver)
 description: Use these how-to articles to understand how the OLE DB Driver for SQL Server connects to a server, runs a command, and processes results.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "OLE DB, how-to topics"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "OLE DB, how-to topics"
 ---
 # OLE DB How-to Topics
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

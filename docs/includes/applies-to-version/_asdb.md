@@ -1,10 +1,10 @@
 ---
 author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 06/11/2020
 ms.service: sql
 ms.topic: include
-ms.date: 06/11/2020
-ms.author: mikeray
 ---
 
-![Yes](../media/yes-icon.png)[!INCLUDE [ssazure_md](../ssazure_md.md)]
+:::image type="icon" source="../media/yes-icon.svg" border="false"::: [!INCLUDE [ssazure_md](../ssazure_md.md)]
 

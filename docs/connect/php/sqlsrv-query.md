@@ -1,23 +1,18 @@
 ---
 title: "sqlsrv_query"
 description: "The sqlsrv_query function provides a method to execute a query with a minimum amount of code and can be used to execute parameterized queries."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "04/11/2019"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_query"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sqlsrv_query"
   - "executing queries"
   - "API Reference, sqlsrv_query"
-ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-author: David-Engel
-ms.author: v-davidengel
+apiname: "sqlsrv_query"
+apitype: "NA"
 ---
 # sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

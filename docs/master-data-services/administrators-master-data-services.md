@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "administrators [Master Data Services]"
   - "models [Master Data Services], administrators"
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Administrators (Master Data Services)
 

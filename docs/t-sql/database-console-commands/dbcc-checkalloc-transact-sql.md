@@ -1,21 +1,18 @@
 ---
+title: "DBCC CHECKALLOC (Transact-SQL)"
 description: "DBCC CHECKALLOC (Transact-SQL)"
-title: "DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "CHECKALLOC_TSQL"
   - "DBCC CHECKALLOC"
   - "DBCC_CHECKALLOC_TSQL"
   - "CHECKALLOC"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC CHECKALLOC statement"
   - "checking database space allocation"
   - "database space allocation [SQL Server]"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "allocation checks"
   - "disk space [SQL Server], allocation consistency checks"
   - "space allocation [SQL Server], checking"
-ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC CHECKALLOC (Transact-SQL)

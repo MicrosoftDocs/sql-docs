@@ -1,15 +1,12 @@
 ---
 title: "Microsoft Drivers for PHP Support Matrix"
 description: "This page contains the support matrix and support lifecycle policy for the Microsoft PHP Drivers for SQL Server."
-ms.custom: ""
-ms.date: 01/24/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 01/24/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Microsoft PHP Drivers for SQL Server Support Matrix
 
@@ -34,7 +31,6 @@ The following Microsoft PHP Drivers are supported, until the indicated End of Su
 |Microsoft PHP Drivers 5.3 for SQL Server|5.3|July 20, 2023|
 |Microsoft PHP Drivers 5.2 for SQL Server|5.2|February 9, 2023|
 |Microsoft PHP Drivers 4.3 for SQL Server|4.3|July 6, 2022|
-| &nbsp; | &nbsp; | &nbsp; |
 
 The following Microsoft PHP Drivers are no longer supported.
 
@@ -46,7 +42,6 @@ The following Microsoft PHP Drivers are no longer supported.
 |Microsoft PHP Drivers 3.0 for SQL Server|3.0|March 6, 2017|
 |Microsoft PHP Drivers 2.0 for SQL Server|2.0|August 10, 2015|
 |Microsoft PHP Drivers 1.0 for SQL Server|1.0|April 28, 2014|
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## SQL Server Version Certified Compatibility
  The following matrix lists database versions that have been tested and certified as compatible with the corresponding driver version. We strive to maintain backward compatibility with previous driver versions, but only the latest supported driver is tested and certified with new SQL Server versions as SQL Server is released.
@@ -63,7 +58,6 @@ The following Microsoft PHP Drivers are no longer supported.
 |SQL Server 2012           |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |SQL Server 2008 R2        |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
 |SQL Server 2008           |   |   |   |   |   |   |   |Yes|Yes|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 For information about using PHP with Azure SQL Database, see [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
 
@@ -83,7 +77,6 @@ The following versions of PHP are supported with the listed version of the Micro
 |5.6|   |   |   |   |   |   |   |   |5.6.4+ |
 |5.5|   |   |   |   |   |   |   |   |5.5.16+|
 |5.4|   |   |   |   |   |   |   |   |5.4.32 |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
 
@@ -107,7 +100,6 @@ The following Windows operating system versions are supported with the listed ve
 |Windows 8                           |   |   |   |   |   |   |Yes|Yes|Yes|
 |Windows 7 SP1                       |   |   |   |   |   |   |   |Yes|Yes|
 |Windows Vista SP2                   |   |   |   |   |   |   |   |Yes|Yes|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 The following Linux and macOS operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
 
@@ -144,7 +136,6 @@ The following Linux and macOS operating system versions (64-bit only) are suppor
 |macOS High Sierra (64-bit)          |   |   |Yes|Yes|Yes|   |   |   |   |
 |macOS Sierra (64-bit)               |   |   |   |Yes|Yes|Yes|Yes|   |   |
 |macOS El Capitan (64-bit)           |   |   |   |   |Yes|Yes|Yes|   |   |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Alpine Linux support is experimental for version 5.8.0. Version 5.8.1 introduces production support.
 

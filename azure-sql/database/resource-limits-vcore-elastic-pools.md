@@ -1,18 +1,16 @@
 ---
 title: Elastic pool vCore resource limits
 description: This page describes some common vCore resource limits for elastic pools in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: elastic-pools
-ms.custom:
-  - "sqldbrb=1"
-  - "references_regions"
-ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/14/2022
+ms.service: sql-database
+ms.subservice: elastic-pools
+ms.topic: reference
+ms.custom:
+  - "sqldbrb=1"
+  - "references_regions"
 ---
 # Resource limits for elastic pools using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -1,21 +1,15 @@
 ---
+title: "supportsSubqueriesInQuantifieds Method (SQLServerDatabaseMetaData)"
 description: "supportsSubqueriesInQuantifieds Method (SQLServerDatabaseMetaData)"
-title: "supportsSubqueriesInQuantifieds Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsSubqueriesInQuantifieds"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsSubqueriesInQuantifieds"
+apitype: "Assembly"
 ---
 # supportsSubqueriesInQuantifieds Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,18 +1,17 @@
 ---
 title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, sashan, moslake, mathoma
-ms.date: 04/22/2022
+ms.date: 09/26/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: conceptual
 ms.custom:
   - "references_regions"
   - "ignite-fall-2021"
+  - "azure-sql-split"
 ---
 # vCore purchasing model - Azure SQL Database 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -88,11 +87,11 @@ For some workloads, a move to a different CPU type can change performance. SQL D
 
 Regardless of CPU type used, resource limits for a database or elastic pool remain the same as long as the database stays on the same service objective.
 
-### Gen4/Gen5
+### Gen5
 
-- Gen4/Gen5 hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series or M-series.
+- Gen5 hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series.
 
-For regions where Gen4/Gen5 is available, see [Gen4/Gen5 availability](#gen4gen5-1).
+For regions where Gen5 is available, see [Gen5 availability](#gen5).
 
 ### Fsv2-series
 
@@ -101,23 +100,6 @@ For regions where Gen4/Gen5 is available, see [Gen4/Gen5 availability](#gen4gen5
 - Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5).
 
 Fsv2-series in only supported in the General Purpose tier. For regions where Fsv2-series is available, see [Fsv2-series availability](#fsv2-series-1).
-
-### M-series
-
-- M-series is a memory optimized hardware configuration for workloads demanding more memory and higher compute limits than provided by other types of hardware.
-- M-series provides 29 GB per vCore and up to 128 vCores, which increases the memory limit relative to Gen5 by 8x to nearly 4 TB.
-
-M-series is only supported in the Business Critical tier and does not support zone redundancy. For regions where M-series is available, see [M-series availability](#m-series-1).
-
-#### Azure offer types supported by M-series
-
-For regions where M-series is available, see [M-series availability](#m-series).
-
-There are two subscription requirements for M-series hardware:
-
-1. To create databases or elastic pools on M-series hardware, the subscription must be a paid offer type including Pay-As-You-Go or Enterprise Agreement (EA). For a complete list of Azure offer types supported by M-series, see [current offers without spending limits](https://azure.microsoft.com/support/legal/offer-details).
-
-1. To enable M-series hardware for a subscription and region, a support request must be opened. In the Azure portal, create a New Support Request to [Request a quota increase](quota-increase-request.md) for your subscription. Use the "M-series region access" quota type request to indicate access to M-series hardware.
 
 ### DC-series
 
@@ -160,9 +142,9 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 ### Hardware availability
 
-#### <a id="gen4gen5-1"></a> Gen4/Gen5
+For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
 
-[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+#### <a id="gen4gen5-1"></a><a id="gen5"></a> Gen5
 
 Gen5 hardware is available in all public regions worldwide.
 
@@ -170,12 +152,6 @@ Gen5 hardware is available in all public regions worldwide.
 
 Fsv2-series is available in the following regions:
 Australia Central, Australia Central 2, Australia East, Australia Southeast, Brazil South, Canada Central, East Asia, East US, France Central, India Central, Korea Central, Korea South, North Europe, South Africa North, Southeast Asia, UK South, UK West, West Europe, West US 2.
-
-#### M-series
-
-To enable M-series hardware for a subscription and region, a support request must be opened. In the Azure portal, create a New Support Request to [Request a quota increase](quota-increase-request.md) for your subscription. Use the "M-series region access" quota type request to indicate access to M-series hardware.
-
-With approved access, M-series is available in the following regions: East US, North Europe, West Europe, West US 2.
 
 #### DC-series
 
@@ -206,6 +182,21 @@ The following table compares compute resources in different hardware configurati
 \* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Broadwell, Skylake, Ice Lake, or Cascade Lake).
 
 For more information see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
+
+## Previous generation hardware
+
+### Gen4
+
+[!INCLUDE[azure-sql-gen4-hardware-retirement](../includes/azure-sql-gen4-hardware-retirement.md)]
+
+### <a id="azure-offer-types-supported-by-m-series"></a> M-series
+
+> [!IMPORTANT]
+> For Azure SQL Database, M-series hardware has been retired and is not available for new deployments. 
+>
+> Existing customers should migrate to other hardware tiers before September 2023.
+
+M-series is only supported in the Business Critical tier and does not support zone redundancy. 
 
 ## Next steps
 

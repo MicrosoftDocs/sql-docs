@@ -1,21 +1,15 @@
 ---
+title: "isSigned Method (SQLServerParameterMetaData)"
 description: "isSigned Method (SQLServerParameterMetaData)"
-title: "isSigned Method (SQLServerParameterMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerParameterMetaData.isSigned"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerParameterMetaData.isSigned"
+apitype: "Assembly"
 ---
 # isSigned Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

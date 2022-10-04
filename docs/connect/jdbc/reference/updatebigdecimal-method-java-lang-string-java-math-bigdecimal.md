@@ -1,21 +1,15 @@
 ---
+title: "updateBigDecimal Method (java.lang.String, java.math.BigDecimal)"
 description: "updateBigDecimal Method (java.lang.String, java.math.BigDecimal)"
-title: "updateBigDecimal Method (java.lang.String, java.math.BigDecimal) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateBigDecimal (java.lang.String, java.math.BigDecimal)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateBigDecimal (java.lang.String, java.math.BigDecimal)"
+apitype: "Assembly"
 ---
 # updateBigDecimal Method (java.lang.String, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

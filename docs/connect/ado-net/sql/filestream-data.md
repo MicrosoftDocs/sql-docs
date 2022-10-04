@@ -1,15 +1,13 @@
 ---
 title: FILESTREAM data
 description: Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.
-ms.date: 04/20/2021
-ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # FILESTREAM data
@@ -66,7 +64,7 @@ namespace FileStreamTest
     {
         static void Main(string[] args)
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;database=myDB");
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;Encrypt=True;database=myDB");
             ReadFileStream(builder);
             OverwriteFileStream(builder);
             InsertFileStream(builder);

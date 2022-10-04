@@ -346,7 +346,7 @@ EXEC master.dbo.sp_addlinkedserver
 @server     = N'MyLinkedServer',
 @srvproduct = N'',
 @provider   = N'MSOLEDBSQL',
-@datasrc    = N'Server=mi.35e5bd1a0e9b.database.windows.net,1433';
+@datasrc    = N'mi.35e5bd1a0e9b.database.windows.net,1433';
 ```  
 
 With pass-through authentication, security context of the local login is carried over to a remote instance.

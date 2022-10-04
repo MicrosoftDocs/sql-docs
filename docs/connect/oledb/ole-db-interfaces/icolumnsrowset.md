@@ -1,15 +1,12 @@
 ---
-title: "IColumnsRowset (OLE DB driver) | Microsoft Docs"
+title: "IColumnsRowset (OLE DB driver)"
 description: "The DBCOLUMN_BASETABLEINSTANCE column in IColumnsRowset::GetColumnRowset is reserved for use by Microsoft in OLE DB Driver for SQL Server."
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # IColumnsRowset
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

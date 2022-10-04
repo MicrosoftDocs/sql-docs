@@ -1,14 +1,13 @@
 ---
 title: "System.Transactions integration with SQL Server"
 description: "Describes System.Transactions integration with SQL Server for working with distributed transactions."
-ms.date: "11/25/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # System.Transactions integration with SQL Server
 

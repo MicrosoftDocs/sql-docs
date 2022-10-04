@@ -1,15 +1,13 @@
 ---
 title: "Using Commands to modify data"
 description: Describes how to use a data provider to execute stored procedures or data definition language (DDL) statements.
-ms.date: "11/25/2020"
-ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using commands to modify data
 

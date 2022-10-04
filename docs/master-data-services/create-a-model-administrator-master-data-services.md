@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], creating"
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Model Administrator (Master Data Services)
 

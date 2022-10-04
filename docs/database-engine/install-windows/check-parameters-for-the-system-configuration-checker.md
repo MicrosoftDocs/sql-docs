@@ -1,13 +1,14 @@
 ---
 title: "Check Parameters System Configuration Checker"
-description: During SQL Server Setup, the System Configuration Checker for conditions that prevent a successful SQL Server installation. 
-ms.custom: "seo-lt-2019"
+description: During SQL Server Setup, the System Configuration Checker for conditions that prevent a successful SQL Server installation.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "12/13/2019"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "installing SQL Server, system configuration checks"
   - "failed system configuration checks [SQL Server]"
   - "verifying configuration before installation"
@@ -19,9 +20,6 @@ helpviewer_keywords:
   - "parameters [SQL Server], system configuration checker"
   - "configuration checkers [SQL Server]"
   - "Setup [SQL Server], system configuration checker"
-ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Check parameters for the System Configuration Checker

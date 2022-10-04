@@ -3,13 +3,10 @@ title: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
-ms.date: "03/03/2017"
+ms.date: "09/30/2022"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "ENCRYPTBYPASSPHRASE"
   - "ENCRYPTBYPASSPHRASE_TSQL"
@@ -24,6 +21,9 @@ dev_langs:
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Encrypt data with a passphrase using the TRIPLE DES algorithm with a 128 key bit length.  
+  
+  > [!NOTE]
+  > SQL Server 2017 and later versions encrypts data with a passphrase using an AES256 key.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|BAD_MEMORY_CLEAN_DATABASE_PAGE|
 |Message Text|SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page|
-||
 
 ## Explanation
 

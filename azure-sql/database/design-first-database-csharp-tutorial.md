@@ -1,17 +1,17 @@
 ---
 title: "Design your first relational database C#"
 description: "Learn to design your first relational database in Azure SQL Database with C# using ADO.NET."
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: development
-ms.custom:
-  - "seo-lt-2019, sqldbrb=1, devx-track-csharp"
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 07/29/2019
+ms.service: sql-database
+ms.subservice: development
+ms.topic: tutorial
+ms.custom:
+  - seo-lt-2019
+  - sqldbrb=1
+  - devx-track-csharp
 ---
 # Tutorial: Design a relational database in Azure SQL Database C&#x23; and ADO.NET
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -30,7 +30,7 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 *If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
 
 > [!TIP]
-> This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.
+> This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/training/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.
 
 ## Prerequisites
 

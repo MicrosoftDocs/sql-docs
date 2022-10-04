@@ -1,15 +1,12 @@
 ---
-description: "Importing and Exporting Knowledge"
 title: "Importing and Exporting Knowledge"
-ms.date: "07/31/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
+description: "Importing and Exporting Knowledge"
 author: swinarko
 ms.author: sawinark
+ms.date: "07/31/2012"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
 ---
 # Importing and Exporting Knowledge
 

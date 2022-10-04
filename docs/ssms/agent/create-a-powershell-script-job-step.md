@@ -37,7 +37,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To create a PowerShell Script job step  
   
-1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
+1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and then expand that instance.  
   
 2.  Expand **SQL Server Agent**, create a new job or right-click an existing job, and then click **Properties**. For more information on creating a job, see [Creating Jobs](../../ssms/agent/create-jobs.md).  
   

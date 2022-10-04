@@ -1,17 +1,14 @@
 ---
-title: "Large CLR User-Defined Types (OLE DB) | Microsoft Docs"
+title: "Large CLR User-Defined Types (OLE DB)"
 description: Learn about the changes to OLE DB in OLE DB Driver for SQL Server to support large common language runtime user-defined types.
-ms.custom: ""
-ms.date: "06/12/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "large CLR user-defined types [OLE DB]"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/12/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "large CLR user-defined types [OLE DB]"
 ---
 # Large CLR User-Defined Types (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

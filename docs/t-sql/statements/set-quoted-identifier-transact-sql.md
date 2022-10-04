@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "SET QUOTED_IDENTIFIER statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)

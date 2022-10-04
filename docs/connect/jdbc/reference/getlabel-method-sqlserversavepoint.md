@@ -1,21 +1,15 @@
 ---
+title: "getLabel Method (SQLServerSavepoint)"
 description: "getLabel Method (SQLServerSavepoint)"
-title: "getLabel Method (SQLServerSavepoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerSavepoint.getLabel"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerSavepoint.getLabel"
+apitype: "Assembly"
 ---
 # getLabel Method (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

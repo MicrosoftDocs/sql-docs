@@ -1,17 +1,21 @@
 ---
 title: "What is Azure SQL?"
-description: "Learn about the different options within the Azure SQL family of services: Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VM." 
-services: sql-database
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom: sqldbrb=4
-ms.devlang: 
-ms.topic: overview
-keywords: SQL Server cloud, SQL Server in the cloud, PaaS database, cloud SQL Server, DBaaS, IaaS
+description: "Learn about the different options within the Azure SQL family of services: Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VM."
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: kendralittle
 ms.date: 03/18/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: overview
+ms.custom: sqldbrb=4
+keywords:
+  - SQL Server cloud
+  - SQL Server in the cloud
+  - PaaS database
+  - cloud SQL Server
+  - DBaaS
+  - IaaS
 ---
 # What is Azure SQL? 
 [!INCLUDE[appliesto-asf](includes/appliesto-asf.md)]
@@ -27,7 +31,7 @@ Azure SQL is built upon the familiar SQL Server engine, so you can migrate appli
 Learn how each product fits into Microsoft's Azure SQL data platform to match the right option for your business requirements. Whether you prioritize cost savings or minimal administration, this article can help you decide which approach delivers against the business requirements you care about most.
 
 If you're new to Azure SQL, check out the *What is Azure SQL* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners/?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
-> [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/What-is-Azure-SQL-3-of-61/player]
+> [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/What-is-Azure-SQL-3-of-61/player]
 
 
 

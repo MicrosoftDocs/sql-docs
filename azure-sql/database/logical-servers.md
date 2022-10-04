@@ -1,35 +1,32 @@
 ---
 title: What is a server in Azure SQL Database and Azure Synapse Analytics?
 description: Learn about logical SQL servers used by Azure SQL Database and Azure Synapse Analytics, and how to manage them.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom:
-  - "devx-track-azurecli"
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 03/12/2019
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom: devx-track-azurecli
 ---
 # What is a logical SQL server in Azure SQL Database and Azure Synapse?
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
-In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](./auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [auto-failover groups](auto-failover-group-sql-db.md) . A server can be in a different region than its resource group. The server must exist before you can create a database in Azure SQL Database or a data warehouse database in Azure Synapse Analytics. All databases managed by a single server are created within the same region as the server.
+In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the logical server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](./auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [auto-failover groups](auto-failover-group-sql-db.md). A logical server can be in a different region than its resource group. The logical server must exist before you can create a database in Azure SQL Database or a dedicated SQL pool in Azure Synapse Analytics. All databases managed by a single logical server are created within the same region as the logical server.
 
-This server is distinct from a SQL Server instance that you may be familiar with in the on-premises world. Specifically, there are no guarantees regarding location of the databases or data warehouse database in relation to the server that manages them. Furthermore, neither Azure SQL Database nor Azure Synapse expose any instance-level access or features. In contrast, the instance databases in a managed instance are all physically co-located - in the same way that you are familiar with SQL Server in the on-premises or virtual machine world.
+This logical server is distinct from a SQL Server instance that you may be familiar with in the on-premises world. Specifically, there are no guarantees regarding location of the databases or dedicated SQL pool in relation to the server that manages them. Furthermore, neither Azure SQL Database nor Azure Synapse expose any instance-level access or features. In contrast, the instance databases in a managed instance are all physically co-located - in the same way that you are familiar with SQL Server in the on-premises or virtual machine world.
 
-When you create a server, you provide a server login account and password that has administrative rights to the master database on that server and all databases created on that server. This initial account is a SQL login account. Azure SQL Database and Azure Synapse Analytics support SQL authentication and Azure Active Directory Authentication for authentication. For information about logins and authentication, see [Managing Databases and Logins in Azure SQL Database](logins-create-manage.md). Windows Authentication is not supported.
+When you create a logical server, you provide a server login account and password that has administrative rights to the master database on that server and all databases created on that server. This initial account is a SQL login account. Azure SQL Database and Azure Synapse Analytics support SQL authentication and Azure Active Directory Authentication for authentication. For information about logins and authentication, see [Managing Databases and Logins in Azure SQL Database](logins-create-manage.md). Windows Authentication is not supported.
 
-A server in SQL Database and Azure Synapse:
+A logical server in SQL Database and Azure Synapse Analytics:
 
 - Is created within an Azure subscription, but can be moved with its contained resources to another subscription
-- Is the parent resource for databases, elastic pools, and data warehouses
-- Provides a namespace for databases, elastic pools, and data warehouse database
+- Is the parent resource for databases, elastic pools, and dedicated SQL pools
+- Provides a namespace for databases, elastic pools, and dedicated SQL pools
 - Is a logical container with strong lifetime semantics - delete a server and it deletes its databases, elastic pools, and SQK pools
-- Participates in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) - databases, elastic pools, and data warehouse database within a server inherit access rights from the server
-- Is a high-order element of the identity of databases, elastic pools, and data warehouse database for Azure resource management purposes (see the URL scheme for databases and pools)
+- Participates in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) - databases, elastic pools, and dedicated SQL pools within a server inherit access rights from the server
+- Is a high-order element of the identity of databases, elastic pools, and dedicated SQL pools for Azure resource management purposes (see the URL scheme for databases and pools)
 - Collocates resources in a region
 - Provides a connection endpoint for database access (`<serverName>`.database.windows.net)
 - Provides access to metadata regarding contained resources via DMVs by connecting to a master database
@@ -46,21 +43,21 @@ To create a managed instance, see [Create a managed instance](../managed-instanc
 
 ## Manage servers, databases, and firewalls
 
-You can manage servers, databases, and firewalls by using the Azure portal, Azure PowerShell, the Azure CLI, Transact-SQL (T-SQL) and REST API. 
+You can manage logical servers, databases, dedicated SQL pools, and firewalls by using the Azure portal, Azure PowerShell, the Azure CLI, Transact-SQL (T-SQL) and REST API. 
 
 ### [Portal](#tab/portal)
 
-You can create the resource group for a server ahead of time or while creating the server itself. There are multiple methods for getting to a new SQL server form, either by creating a new SQL server or as part of creating a new database.
+You can create the resource group for a logical server ahead of time or while creating the server itself. There are multiple methods for getting to a new SQL server form, either by creating a new SQL server or as part of creating a new database.
 
 ### Create a blank server
 
-To create a server (without a database, elastic pool, or data warehouse database) using the [Azure portal](https://portal.azure.com), navigate to a blank SQL server (logical SQL server) form.
+To create a blank logical server (without a database, elastic pool, or dedicated SQL pool) using the [Azure portal](https://portal.azure.com), navigate to a blank SQL server (**logical SQL server**) form.
 
 ### Create a blank or sample database in Azure SQL Database
 
-To create a database in SQL Database using the [Azure portal](https://portal.azure.com), navigate to a blank SQL Database form and provide the requested information. You can create the resource group and server ahead of time or while creating the database itself. You can create a blank database or create a sample database based on Adventure Works LT.
+To create a database in SQL Database using the [Azure portal](https://portal.azure.com), navigate to create a new **SQL Database** and provide the requested information. You can create the resource group and server ahead of time or while creating the database itself. You can create a blank database or create a sample database based on `AdventureWorksLT`.
 
-  ![create database-1](./media/logical-servers/create-database-1.png)
+  ![Screenshot of the first steps to create a new SQL Database in the Azure portal.](./media/logical-servers/create-database-1.png)
 
 > [!IMPORTANT]
 > For information on selecting the pricing tier for your database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
@@ -160,9 +157,9 @@ To create and manage servers, databases, and firewalls with Transact-SQL, use th
 | Command | Description |
 | --- | --- |
 |[CREATE DATABASE (Azure SQL Database)](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true) | Creates a new database in Azure SQL Database. You must be connected to the master database to create a new database.|
-|[CREATE DATABASE (Azure Synapse)](/sql/t-sql/statements/create-database-transact-sql?view=azure-sqldw-latest&preserve-view=true) | Creates a new data warehouse database in Azure Synapse. You must be connected to the master database to create a new database.|
+|[CREATE DATABASE (Azure Synapse)](/sql/t-sql/statements/create-database-transact-sql?view=azure-sqldw-latest&preserve-view=true) | Creates a new dedicated SQL pool in Azure Synapse. You must be connected to the master database to create a new database.|
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true) |Modifies database or elastic pool. |
-|[ALTER DATABASE (Azure Synapse Analytics)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=sqlpool)|Modifies a data warehouse database in Azure Synapse.|
+|[ALTER DATABASE (Azure Synapse Analytics)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=sqlpool)|Modifies a dedicated SQL pool in Azure Synapse.|
 |[DROP DATABASE (Transact-SQL)](/sql/t-sql/statements/drop-database-transact-sql)|Deletes a database.|
 |[sys.database_service_objectives (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database)|Returns the edition (service tier), service objective (pricing tier), and elastic pool name, if any, for a database. If logged on to the master database for a server, returns information on all databases. For Azure Synapse, you must be connected to the master database.|
 |[sys.dm_db_resource_stats (Azure SQL Database)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database)| Returns CPU, IO, and memory consumption for a database in Azure SQL Database. One row exists for every 15 seconds, even if there is no activity in the database.|

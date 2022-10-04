@@ -66,7 +66,7 @@ This script starts by declaring a number of variables to specify the names for t
   
 The script completes by generating the appropriate CREATE CREDENTIAL statement that you will use in [2 - Create a SQL Server credential using a shared access signature](#2---create-a-sql-server-credential-using-a-shared-access-signature). This statement is copied to your clipboard for you and is output to the console for you to see.  
   
-To create a policy on the container and generate a Shared Access Signature (SAS) key, follow these steps:  
+To create a policy on the container and generate a Shared Access Signature (SAS), follow these steps:  
   
 1.  Open Window PowerShell or Windows PowerShell ISE (see version requirements above).  
   

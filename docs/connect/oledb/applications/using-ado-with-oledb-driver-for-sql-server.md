@@ -1,11 +1,10 @@
 ---
 title: Using ADO with OLE DB Driver
 description: Learn how to use ADO with OLE DB Driver, including new features like multiple active result sets, query notifications, user-defined types, or the xml data type.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 03/30/2022
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
@@ -13,8 +12,6 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], ADO"
   - "ADO [OLE DB Driver for SQL Server]"
   - "MSOLEDBSQL, ADO"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Using ADO with OLE DB Driver for SQL Server
 

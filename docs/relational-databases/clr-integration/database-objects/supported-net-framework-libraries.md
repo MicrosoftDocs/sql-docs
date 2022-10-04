@@ -43,7 +43,7 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 
 <!--
 Any modifications to the list above should be duplicated on the following page:
-https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+https://learn.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
 -->
 
 ## Unsupported Libraries  

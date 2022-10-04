@@ -1,19 +1,17 @@
 ---
 title: "Availability replica is disconnected in an availability group"
 description: "Identify possible causes for why a replica is disconnected within an Always On availability group."
-ms.custom: "seodec18"
-ms.date: "07/28/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: troubleshooting
-f1_keywords: 
-  - "sql13.swb.agdashboard.arp2connected.issues.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "07/28/2022"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: troubleshooting
+ms.custom: seodec18
+f1_keywords:
+  - "sql13.swb.agdashboard.arp2connected.issues.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 
 # Availability replica is disconnected within an Always On availability group
@@ -56,7 +54,7 @@ The following are possible solutions for this issue:
    Run the following commands to diagnose port issue:
    
    ```PowerShell  
-   $server_name = "server_instance"  #replace with your instance
+   $server_name = "server_instance"  #replace with your SQL Server instance
    Sqlcmd -S $server_name -E -Q "SELECT type_desc, port FROM sys.tcp_endpoints WHERE type_desc = 'DATABASE_MIRRORING'; "
    ```
    The above command will return the port number that you have to use in below command.
@@ -72,7 +70,7 @@ The following are possible solutions for this issue:
    Run this on both servers and compare the encryption and make sure both are same:
 
    ```PowerShell
-   $server_name = "server_instance"  #replace with your instance
+   $server_name = "server_instance"  #replace with your SQL Server instance
    sqlcmd -S $server_name -E -Q "SELECT name, state_desc, encryption_algorithm_desc, protocol_desc, type_desc  FROM sys.database_mirroring_endpoints"
    ```
 
@@ -81,20 +79,24 @@ The following are possible solutions for this issue:
    Run the following command if the mirroring endpoint exits and is started.
 	
    ```PowerShell
-   $server_name = "…."
+   $server_name = "server_instance" #replace with your SQL Server instance
    Sqlcmd -S $server_name -E -Q "SELECT name, state_desc, encryption_algorithm_desc, protocol_desc, type_desc  FROM sys.database_mirroring_endpoints"
    ```
 
    Run the below command if you suspect that endpoint is not responding to connections or is not running. 
   
-   ```SQL
-   ALTER ENDPOINT hadr_endpoint   
-   STATE = stopped
-
-   ALTER ENDPOINT hadr_endpoint   
-   STATE = started
-   ```
-
+  
+   ```PowerShell
+   $server_name = "server_instance" #use your SQL Server instance here
+   $server_name = "hadr_endpoint" #replace with your endpoint name
+   Sqlcmd -S $server_name -E -Q "ALTER ENDPOINT hadr_endpoint STATE = stopped"
+   Sqlcmd -S $server_name -E -Q "ALTER ENDPOINT hadr_endpoint STATE = started"
+  ```
+  >[!WARNING]
+  >Running the command with `STATE = stopped` will stop your endpoint and temporarily interrupt Always On traffic flow.
+  
+  
+   
 - There are network /connectivity issues or Ports are blocked at the firewall
 
    Use the following commands to test connectivity in both directions from Node1 to Node2 and Node2 to Node1:

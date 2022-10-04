@@ -1,21 +1,15 @@
 ---
+title: "getUnicodeStream Method (int)"
 description: "getUnicodeStream Method (int)"
-title: "getUnicodeStream Method (int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getUnicodeStream (int)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getUnicodeStream (int)"
+apitype: "Assembly"
 ---
 # getUnicodeStream Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,22 +1,15 @@
 ---
 title: Configure a load balancer & availability group listener (Azure portal)
 description: Step-by-step instructions for creating a listener for an Always On availability group for SQL Server in Azure virtual machines
-services: virtual-machines
-documentationcenter: na
-author: adbadram
-editor: monicar
-
-ms.assetid: d1f291e9-9af2-41ba-9d29-9541e3adcfcf
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram 
-ms.custom: "seo-lt-2019"
-ms.reviewer: mathoma
+ms.custom: seo-lt-2019
+editor: monicar
 ---
 # Configure a load balancer & availability group listener (SQL Server on Azure VMs)
 
@@ -294,7 +287,7 @@ If an availability group participates in a distributed availability group, the l
 
 1. On each server that participates in the distributed availability group, create an inbound rule on the distributed availability group listener TCP port. In many examples, documentation uses 5022. 
 
-1. In the Azure portal, select on the load balancer and select **Load balancing rules**, and then select **+Add**. 
+1. In the Azure portal, select the load balancer and select **Load balancing rules**, and then select **+Add**. 
 
 1. Create the load balancing rule with the following settings:
 

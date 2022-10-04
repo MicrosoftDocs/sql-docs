@@ -1,21 +1,15 @@
 ---
+title: "updateDouble Method (java.lang.String, double)"
 description: "updateDouble Method (java.lang.String, double)"
-title: "updateDouble Method (java.lang.String, double) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateDouble (java.lang.String, double)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateDouble (java.lang.String, double)"
+apitype: "Assembly"
 ---
 # updateDouble Method (java.lang.String, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

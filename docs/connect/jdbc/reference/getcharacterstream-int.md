@@ -1,21 +1,15 @@
 ---
+title: "getCharacterStream (int)"
 description: "getCharacterStream (int)"
-title: "getCharacterStream (int) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.getCharacterStream(int paramIndex)"
-apilocation: 
-  - "SQLServerCallableStatement.getCharacterStream(int paramIndex)"
-apitype: "Assembly"
-ms.assetid: eb20714b-52bc-4b6c-b23f-c9c3c9d73783
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "SQLServerCallableStatement.getCharacterStream(int paramIndex)"
+apiname: "SQLServerCallableStatement.getCharacterStream(int paramIndex)"
+apitype: "Assembly"
 ---
 # getCharacterStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

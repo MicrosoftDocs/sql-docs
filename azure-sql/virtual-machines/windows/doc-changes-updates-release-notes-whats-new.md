@@ -1,19 +1,15 @@
 ---
 title: Documentation changes for SQL Server on Azure Virtual Machines
 description: Learn about the new features and improvements for different releases of SQL Server on Azure Virtual Machines.
-services: virtual-machines-windows
 author: MashaMSFT
 ms.author: mathoma
-tags: azure-service-management
-ms.assetid: 2fa5ee6b-51a6-4237-805f-518e6c57d11b
+ms.reviewer: randolphwest
+ms.date: 05/24/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/24/2022
-ms.reviewer: randolphwest
 ms.custom: ignite-fall-2021
+tags: azure-service-management
 ---
 # Documentation changes for SQL Server on Azure Virtual Machines
 
@@ -127,7 +123,7 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
 * [Provision SQL Server on a Windows VM](create-sql-vm-portal.md)
-* [Migrate a database to SQL Server on an Azure VM](migrate-to-vm-from-sql-server.md)
+* [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)
 * [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md)
 * [Performance best practices for SQL Server on Azure Virtual Machines](./performance-guidelines-best-practices-checklist.md)
 * [Application patterns and development strategies for SQL Server on Azure Virtual Machines](application-patterns-development-strategies.md)

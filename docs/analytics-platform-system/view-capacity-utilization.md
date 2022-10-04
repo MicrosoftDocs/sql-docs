@@ -1,16 +1,16 @@
 ---
 title: View capacity utilization
 description: Learn how to view capacity utilization in Analytics Platform System by using the Admin Console and by using queries.
-author: WilliamDAssafMSFT 
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: martinle
+ms.date: 05/06/2022
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: how-to
-ms.date: 05/06/2022
-ms.author: wiassaf
-ms.reviewer: martinle
 ms.custom:
- - seo-dt-2019
- - kr2b-contr-experiment
+  - seo-dt-2019
+  - kr2b-contr-experiment
 ---
 
 # View Capacity Utilization in Analytics Platform System

@@ -1,27 +1,23 @@
 ---
+title: "DBCC PROCCACHE (Transact-SQL)"
 description: "DBCC PROCCACHE (Transact-SQL)"
-title: "DBCC PROCCACHE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC PROCCACHE"
   - "DBCC_PROCCACHE_TSQL"
   - "PROCCACHE_TSQL"
   - "PROCCACHE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "procedure cache [SQL Server]"
   - "displaying procedure cache information"
   - "DBCC PROCCACHE statement"
-ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-author: rwestMSFT
-ms.author: umajay
+dev_langs:
+  - "TSQL"
 ---
 
 # DBCC PROCCACHE (Transact-SQL)

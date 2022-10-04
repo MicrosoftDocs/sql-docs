@@ -1,21 +1,15 @@
 ---
+title: "setTransactionIsolation Method (SQLServerConnection)"
 description: "setTransactionIsolation Method (SQLServerConnection)"
-title: "setTransactionIsolation Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerConnection.setTransactionIsolation"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerConnection.setTransactionIsolation"
+apitype: "Assembly"
 ---
 # setTransactionIsolation Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

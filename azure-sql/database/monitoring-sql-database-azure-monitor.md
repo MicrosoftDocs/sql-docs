@@ -3,13 +3,12 @@ title: Monitoring Azure SQL Database with Azure Monitor
 description: Start here to learn how to monitor Azure SQL Database with Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.topic: conceptual
 ms.reviewer: mathoma
+ms.date: 07/29/2022
 ms.service: sql-database
 ms.subservice: performance
-ms.custom:
-  - "subject-monitoring"
-ms.date: 07/29/2022
+ms.topic: conceptual
+ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
@@ -135,7 +134,7 @@ Azure Monitor alerts proactively notify you when important conditions are found 
 
 If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) may offer additional types of alerts.
 
-You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](/azure/azure-sql/database/scripts/monitor-and-scale-database-powershell).
+You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](./scripts/monitor-and-scale-database-powershell.md).
 
 The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchase model.
 

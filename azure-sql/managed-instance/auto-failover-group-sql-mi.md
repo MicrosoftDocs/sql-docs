@@ -1,15 +1,14 @@
 ---
 title: Auto-failover groups overview & best practices
 description: Auto-failover groups let you manage geo-replication and automatic / coordinated failover of all user databases on a managed instance in Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: sql-db-mi-split
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: kendralittle, mathoma
-ms.date: 07/08/2022
+ms.date: 09/09/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: azure-sql-split
 ---
 
 # Auto-failover groups overview & best practices (Azure SQL Managed Instance)
@@ -103,8 +102,8 @@ Connectivity between the virtual network subnets hosting primary and secondary i
  * [Azure ExpressRoute](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager)
 
 > [!IMPORTANT]
-> [Global virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is the recommended way for establishing connectivity between two instances in a failover group. It provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public Internet, gateways, or additional encryption is required in the communication between the peered virtual networks.
-Global virtual network peering is supported for instances hosted in subnets created since 9/22/2020. To be able to use global virtual network peering for SQL managed instances hosted in subnets created before 9/22/2020, consider configuring non-default [maintenance window](../database/maintenance-window.md) on the instance, as it will move the instance into a new virtual cluster that supports global virtual network peering.
+> [Global virtual network peering (VNet peering) ](/azure/virtual-network/virtual-network-peering-overview) is the recommended way to establish connectivity between two instances in a failover group as it provides a low-latency, high-bandwidth private connection between the peered virtual networks using the Microsoft backbone infrastructure. No public internet, gateways, or additional encryption is required in the communication between the peered virtual networks.
+Global virtual network peering is [supported for instances hosted in subnets created starting 9/22/2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering).
 
 Regardless of the connectivity mechanism, there are requirements that must be fulfilled for geo-replication traffic to flow:
 - The Network Security Group (NSG) rules on the subnet hosting **primary** instance allow:
@@ -129,6 +128,9 @@ Additionally, if you're using other mechanisms for providing connectivity betwee
 When establishing a failover group between managed instances, there's an initial seeding phase before data replication starts. The initial seeding phase is the longest and most expensive part of the operation. Once initial seeding completes data is synchronized, and only subsequent data changes are replicated. The time it takes for the initial seeding to complete depends on the size of data, number of replicated databases, workload intensity on the primary databases, and the speed of the link between the virtual networks hosting primary and secondary instance that mostly depends on the way connectivity is established. Under normal circumstances, and when connectivity is established using recommended global virtual network peering, seeding speed is up to 360 GB an hour for SQL Managed Instance. Seeding is performed for a batch of user databases in parallel - not necessarily for all databases at the same time. Multiple batches may be needed if there are many databases hosted on the instance.
 
 If the speed of the link between the two instances is slower than what is necessary, the time to seed is likely to be noticeably impacted. You can use the stated seeding speed, number of databases, total size of data, and the link speed to estimate how long the initial seeding phase will take before data replication starts. For example, for a single 100 GB database, the initial seed phase would take about 1.2 hours if the link is capable of pushing 84 GB per hour, and if there are no other databases being seeded. If the link can only transfer 10 GB per hour, then seeding a 100-GB database will take about 10 hours. If there are multiple databases to replicate, seeding will be executed in parallel, and, when combined with a slow link speed, the initial seeding phase may take considerably longer, especially if the parallel seeding of data from all databases exceeds the available link bandwidth.
+
+> [!IMPORTANT]
+> In case of an extremely low-speed or busy link causing the initial seeding phase to take days the creation of a failover group can time out. The creation process will be automatically canceled after 6 days.
 
 ## <a name="managing-failover-to-secondary-instance"></a> Manage geo-failover to a geo-secondary instance
 

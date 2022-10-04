@@ -3,13 +3,10 @@ title: "Metadata Functions (Transact-SQL)"
 description: "Metadata Functions (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "metadata [SQL Server], functions"
   - "functions [SQL Server], metadata"

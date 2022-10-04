@@ -21,7 +21,7 @@ monikerRange: " = azuresqldb-current || = azuresqldb-mi-current"
 ---
 # sys.server_resource_stats (Azure SQL Managed Instance)
 
-[!INCLUDE[Azure SQL Managed Instance](../../includes/applies-to-version/_asdbmi.md)]
+[!INCLUDE[Azure SQL Managed Instance](../../includes/applies-to-version/_asmi.md)]
 
 Returns CPU usage, IO, and storage data for Azure SQL Managed Instance. The data is collected, aggregated and updated within 5 to 10 minutes intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and SKU. Historical data is retained for approximately 14 days.
 

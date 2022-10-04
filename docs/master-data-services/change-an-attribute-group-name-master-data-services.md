@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "attribute groups [Master Data Services], changing name"
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Change an Attribute Group Name (Master Data Services)
 

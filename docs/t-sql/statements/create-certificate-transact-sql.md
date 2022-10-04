@@ -25,7 +25,6 @@ helpviewer_keywords:
   - "CREATE CERTIFICATE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE CERTIFICATE (Transact-SQL)
@@ -36,7 +35,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all certificates before exporting.  
 
 > [!NOTE]
-> In SQL Server 2022, certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format. All system-generated certificates have a minimum strength of RSA-3072 in SQL Server 2022.
+> In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format. All system-generated certificates have a minimum strength of RSA-3072 in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 >
 > The PKCS #12 or PFX format is a binary format for storing the server certificate, any intermediate certificates, and the private key in one file. PFX files usually have extensions such as `.pfx` and `.p12`. This makes it easier for customers to adhere to the current security best practice guidelines and compliance standards that prohibit RC4 encryption, by eliminating the need to use conversion tools such as PVKConverter (for the PVK or DER format).
   
@@ -136,7 +135,7 @@ CREATE CERTIFICATE certificate_name
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  WITH FORMAT = *'PFX'*   
- **Applies to:** SQL Server 2022 or later   
+ **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later   
  Specifies generating a certificate from a PFX file. This clause is optional.
 
  WITH PRIVATE KEY  

@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Business Rules Extension (Master Data Services)
 

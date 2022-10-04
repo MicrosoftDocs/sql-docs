@@ -1,24 +1,20 @@
 ---
 title: Connecting with bcp
 description: Learn the options and commands available in the bcp utility, available in the mssql-tools package on Linux and macOS.
-ms.custom: ""
-ms.date: 02/15/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "bcp"
-ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 02/15/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "bcp"
 ---
 # Connecting with bcp
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](../../../tools/bcp-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the [Windows version of bcp](../../../tools/bcp-utility.md).
+The [bcp](../../../tools/bcp-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the [Windows version of bcp](../../../tools/bcp-utility.md).
 
 - The field terminator is a tab ("\t").
 

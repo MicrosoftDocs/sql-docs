@@ -1,16 +1,13 @@
 ---
-title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
+title: "Step 1: Configure development environment for ADO.NET development"
 description: "Describes how to configure the environment for ADO.NET development."
-ms.custom: ""
-ms.date: "08/15/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Step 1: Configure development environment for ADO.NET development
 
@@ -24,7 +21,7 @@ Our current code example uses ADO.NET of the .NET Framework, for Windows. The .N
 
 ### ADO.NET, for Windows
 
-- :::image type="icon" source="../../ssms/media/download-icon.png"::: [To download and install .NET Framework, including ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../includes/media/download.svg" border="false"::: [To download and install .NET Framework, including ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - Install Visual Studio Community, or a similar integrated development environment (IDE) for writing and compiling C# source code. Microsoft now provides Visual Studio Community for *free*.  
     - [Download Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -35,4 +32,4 @@ Our current code example uses ADO.NET of the .NET Framework, for Windows. The .N
 
 Links to download .NET Core, for a variety of operating systems, are available at:
 
-- :::image type="icon" source="../../ssms/media/download-icon.png"::: [To download and install .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- :::image type="icon" source="../../includes/media/download.svg" border="false"::: [To download and install .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

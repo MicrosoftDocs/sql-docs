@@ -36,6 +36,8 @@ landingContent:
             url: quickstart-sql-database.md
           - text: Connect and query data in Azure Synapse Analytics
             url: quickstart-sql-dw.md
+          - text: Connect and query data in MySQL
+            url: quickstart-mysql.md
           - text: Connect and query data in  PostgreSQL
             url: quickstart-postgres.md
 
@@ -81,6 +83,8 @@ landingContent:
             url:  extensions/notebook-extension.md
           - text: Azure SQL migration extension
             url:  extensions/azure-sql-migration-extension.md
+          - text: MySQL extension
+            url:  extensions/mysql-extension.md
           - text: PostgreSQL extension
             url:  extensions/postgres-extension.md
           - text: PowerShell Editor Support

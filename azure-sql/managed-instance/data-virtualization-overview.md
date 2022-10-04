@@ -461,7 +461,7 @@ Issues with query execution are typically caused by managed instance not being a
 
 ## Known issues
 
-When [parameterization for Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-query-columns-ssms?view=sql-server-ver16#param) is enabled in SQL Server Management Studio (SSMS), data virtualization queries fail with "Incorrect syntax near 'PUSHDOWN'" error message.
+When [parameterization for Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-query-columns-ssms#param) is enabled in SQL Server Management Studio (SSMS), data virtualization queries fail with "Incorrect syntax near 'PUSHDOWN'" error message.
 
 ## Next steps
 

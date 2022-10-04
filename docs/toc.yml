@@ -10142,8 +10142,6 @@ items:
       items:
       - name: Install SQL Server
         href: linux/sql-server-linux-setup.md
-      - name: Install SQL Server 2022 Preview
-        href: linux/sql-server-linux-setup-2022.md
       - name: Install SQL Server tools
         href: linux/sql-server-linux-setup-tools.md
       - name: Install SQL Server Agent

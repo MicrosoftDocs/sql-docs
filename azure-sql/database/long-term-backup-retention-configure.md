@@ -4,7 +4,7 @@ description: Learn how to store and restore automated backups for Azure SQL Data
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/20/2022
+ms.date: 10/4/2022
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -323,6 +323,11 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 ## Limitations
 - When restoring from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created.
 - You need to specify the target service level objective, when restoring from an LTR backup, which was created when the database was in an elastic pool. 
+- LTR in the Hyperscale service tier is in limited public preview
+
+> [!NOTE]
+> LTR can be enabled for Hyperscale databases created or migrated from other service tiers after June 2022. LTR support for all other Hyperscale databases will be added over the next several weeks. If you attempt to enable LTR for a Hyperscale database where it is not yet supported, you will receive the following error: “Long Term Retention is not supported: Long-term retention on Hyperscale is currently in limited preview and cannot be enabled as yet for your database. To enable long-term retention please reach out to Microsoft support.” Please create a support ticket to resolve this, or wait until LTR support is enabled for your database.
+
 
 ## Next steps
 

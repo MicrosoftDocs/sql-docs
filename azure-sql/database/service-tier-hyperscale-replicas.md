@@ -194,7 +194,6 @@ Geo-replicas are used to maintain a transactionally consistent copy of the datab
 Geo-replication for Hyperscale database has following current limitations:
 - Only one geo-replica can be created (in the same or different region).
 - Point in time restore of the geo-replica is not supported.
-- Creating a database copy of the geo-replica is not supported. 
 - Secondary of a secondary (also known as "geo-replica chaining") is not supported. 
 
 ## Next steps

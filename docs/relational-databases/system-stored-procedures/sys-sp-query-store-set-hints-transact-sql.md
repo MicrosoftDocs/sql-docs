@@ -24,7 +24,7 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_set_hints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asdbmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
  Creates or updates [Query Store hints](../performance/query-store-hints.md) for a given `query_id`.
   

@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "ALTER DATABASE AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

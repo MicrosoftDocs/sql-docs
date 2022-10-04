@@ -1,15 +1,12 @@
 ---
 title: "Always Encrypted with secure enclaves with the PHP Drivers"
 description: "Learn how to use Always Encrypted with secure enclaves with the Microsoft Drivers for PHP for SQL Server."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 01/31/2020
 ms.prod: sql
-ms.prod_service: connectivity
-ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: ""
-ms.author: v-davidengel
-author: David-Engel
 ---
 # Using Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
 
@@ -240,7 +237,7 @@ function getResults($stmt)
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
 // Otherwise, the local Windows Certificate Store will be used
-$options = "sqlsrv:server=$myServer;database=$myDatabase;driver={ODBC Driver 17 for SQL Server};";
+$options = "sqlsrv:server=$myServer;database=$myDatabase;driver={ODBC Driver 18 for SQL Server};";
 $options .= "ColumnEncryption=VBS-HGS,http://myattestationserver.mydomain/Attestation",
 
 $conn = new PDO($options, $myUsername, $myPassword);

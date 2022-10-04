@@ -1,21 +1,15 @@
 ---
+title: "SQLServerDriver Constructor ()"
 description: "SQLServerDriver Constructor ()"
-title: "SQLServerDriver Constructor () | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDriver"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6dc1273c-bb42-414f-8e11-bb4673e7423a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDriver"
+apitype: "Assembly"
 ---
 # SQLServerDriver Constructor ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

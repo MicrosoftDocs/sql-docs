@@ -46,7 +46,7 @@ For more information, see [Hash Indexes for Memory-Optimized Tables](../../relat
 |empty_bucket_count|**bigint**|The number of empty hash buckets in the index.|  
 |avg_chain_length|**bigint**|The average length of the row chains over all the hash buckets in the index.|  
 |max_chain_length|**bigint**|The maximum length of the row chains in the hash buckets.|  
-|xtp_object_id|**bigint**|The [!INCLUDE[hek_2](../../includes/hek-2-md.md)] object ID that corresponds to the memory-optimized table.|  
+|xtp_object_id|**bigint**|The [!INCLUDE[inmemory](../../includes/inmemory-md.md)] object ID that corresponds to the memory-optimized table.|  
   
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the server.  
@@ -124,6 +124,6 @@ This query is not expected to return any rows unless you are using a feature tha
 
 ## Next steps 
 
-- [[!INCLUDE[hek_2](../../includes/hek-2-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
+- [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
 - [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)
 - [Troubleshooting Hash Indexes for Memory-Optimized Tables](../in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)

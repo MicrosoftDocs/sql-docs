@@ -7,7 +7,6 @@ ms.date: 04/13/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "OPENJSON"
   - "OPENJSON_TSQL"
@@ -93,7 +92,6 @@ SELECT * FROM OpenJson(@json);
 | Null_value                         | NULL                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
 | Object_value                       | {"obj":"ect"}         | 5 |
-| &nbsp; | &nbsp; | &nbsp; |
 
 - The DoublePrecisionFloatingPoint_value conforms to IEEE-754.
 

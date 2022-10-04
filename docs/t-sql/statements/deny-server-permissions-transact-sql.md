@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "DENY statement, servers"
 dev_langs:
   - "TSQL"
-ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 ---
 # DENY Server Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,17 +1,15 @@
 ---
 title: Create a virtual network
-titleSuffix: Azure SQL Managed Instance 
+titleSuffix: Azure SQL Managed Instance
 description: This article describes how to create a virtual network configured to support deploying Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova
 ms.date: 09/12/2019
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 # Create a virtual network for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -33,7 +31,7 @@ Azure SQL Managed Instance must be deployed within an Azure [virtual network](/a
 > After a managed instance is created, moving the managed instance or virtual network to another resource group or subscription is not supported. 
  
 > [!IMPORTANT]
-> You can [move the instance to another subnet inside the Vnet](vnet-subnet-move-instance.md).
+> You can [move the instance to another subnet inside the Vnet](vnet-subnet-move-instance.md). Moving a managed instance from one subnet to another within the same VNET is allowed and supported. Moving a managed instance across VNET is not supported.
 
 ## Create a virtual network
 
@@ -62,4 +60,4 @@ The easiest way to create and configure a virtual network is to use an Azure Res
 - Learn about [connectivity architecture in SQL Managed Instance](connectivity-architecture-overview.md).
 - Learn how to [modify an existing virtual network for SQL Managed Instance](vnet-existing-add-subnet.md).
 - For a tutorial that shows how to create a virtual network, create a managed instance, and restore a database from a database backup, see [Create a managed instance](instance-create-quickstart.md).
-- For DNS issues, see [Configure a custom DNS](custom-dns-configure.md).
+- For DNS issues, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).

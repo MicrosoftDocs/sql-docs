@@ -1,21 +1,15 @@
 ---
+title: "isSameRM Method (SQLServerXAResource)"
 description: "isSameRM Method (SQLServerXAResource)"
-title: "isSameRM Method (SQLServerXAResource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerXAResource.isSameRM"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerXAResource.isSameRM"
+apitype: "Assembly"
 ---
 # isSameRM Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

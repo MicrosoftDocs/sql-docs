@@ -1,16 +1,12 @@
 ---
 title: "PDOStatement::bindParam"
 description: "API reference for the PDOStatement::bindParam function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

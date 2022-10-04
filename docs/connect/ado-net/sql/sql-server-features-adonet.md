@@ -1,15 +1,13 @@
 ---
 title: "SQL Server features and ADO.NET"
 description: "Describes SQL Server features that are useful for ADO.NET application developers."
-ms.date: "07/09/2020"
-ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "07/09/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SQL Server features and ADO.NET
 

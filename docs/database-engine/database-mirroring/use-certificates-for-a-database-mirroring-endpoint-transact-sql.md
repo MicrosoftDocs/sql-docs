@@ -1,22 +1,18 @@
 ---
-description: "Use Certificates for a Database Mirroring Endpoint (Transact-SQL)"
 title: "Use certificates for a database mirroring endpoint"
-descriptoin: "Steps to configure the use of a certificate on both inbound and outbound connections for a SQL Server database mirroring endpoint." 
-ms.custom: "seo-lt-2019"
+description: "Use Certificates for a Database Mirroring Endpoint (Transact-SQL)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
   - "certificates [SQL Server], database mirroring"
   - "authentication [SQL Server], database mirroring"
   - "database mirroring [SQL Server], security"
-ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use Certificates for a Database Mirroring Endpoint (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

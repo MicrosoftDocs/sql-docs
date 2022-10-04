@@ -22,7 +22,7 @@ ms.date: "03/2/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction locking and row versioning guide
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes the locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
 
@@ -69,61 +69,20 @@ An explicit transaction is one in which you explicitly define both the start and
   
 You can use all [!INCLUDE[tsql](../includes/tsql-md.md)] statements in an explicit transaction, except for the following statements:  
   
-:::row:::
-    :::column:::
-        ALTER DATABASE
-    :::column-end:::
-    :::column:::
-        CREATE DATABASE
-    :::column-end:::
-    :::column:::
-        DROP FULLTEXT INDEX
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        ALTER FULLTEXT CATALOG
-    :::column-end:::
-    :::column:::
-        CREATE FULLTEXT CATALOG
-    :::column-end:::
-    :::column:::
-        RECONFIGURE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        ALTER FULLTEXT INDEX
-    :::column-end:::
-    :::column:::
-        CREATE FULLTEXT INDEX
-    :::column-end:::
-    :::column:::
-        RESTORE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        BACKUP
-    :::column-end:::
-    :::column:::
-        DROP DATABASE
-    :::column-end:::
-    :::column:::
-        Full-text system stored procedures
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        CREATE DATABASE
-    :::column-end:::
-    :::column:::
-        DROP FULLTEXT CATALOG
-    :::column-end:::
-    :::column:::
-        sp_dboption to set database options or any system procedure that modifies the master database inside explicit or implicit transactions.
-    :::column-end:::
-:::row-end:::
+- CREATE DATABASE
+- ALTER DATABASE
+- DROP DATABASE
+- CREATE FULLTEXT CATALOG
+- ALTER FULLTEXT CATALOG
+- DROP FULLTEXT CATALOG
+- DROP FULLTEXT INDEX
+- ALTER FULLTEXT INDEX
+- CREATE FULLTEXT INDEX
+- BACKUP
+- RESTORE
+- RECONFIGURE
+- Full-text system stored procedures
+- `sp_dboption` to set database options or any system procedure that modifies the `master` database inside explicit or implicit transactions.
 
 > [!NOTE]  
 > UPDATE STATISTICS can be used inside an explicit transaction. However, UPDATE STATISTICS commits independently of the enclosing transaction and cannot be rolled back.  
@@ -136,50 +95,18 @@ When a connection is operating in implicit transaction mode, the instance of the
   
 After implicit transaction mode has been set on for a connection, the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatically starts a transaction when it first executes any of these statements:  
   
-:::row:::
-    :::column:::
-        ALTER TABLE
-    :::column-end:::
-    :::column:::
-        FETCH
-    :::column-end:::
-    :::column:::
-        REVOKE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        CREATE
-    :::column-end:::
-    :::column:::
-        GRANT
-    :::column-end:::
-    :::column:::
-        SELECT
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        DELETE
-    :::column-end:::
-    :::column:::
-        INSERT
-    :::column-end:::
-    :::column:::
-        TRUNCATE TABLE
-    :::column-end:::
-:::row-end:::  
-:::row:::
-    :::column:::
-        DROP
-    :::column-end:::
-    :::column:::
-        OPEN
-    :::column-end:::
-    :::column:::
-        UPDATE
-    :::column-end:::
-:::row-end:::
+- ALTER TABLE
+- CREATE
+- DELETE
+- DROP
+- FETCH
+- GRANT
+- INSERT
+- OPEN
+- REVOKE
+- SELECT
+- TRUNCATE TABLE
+- UPDATE
 
 -  **Batch-scoped Transactions**  
    Applicable only to multiple active result sets (MARS), a [!INCLUDE[tsql](../includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that is not committed or rolled back when a batch completes is automatically rolled back by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -802,7 +729,7 @@ In most cases, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] delivers the best
   
     ```sql
     BEGIN TRAN
-    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    SELECT * FROM mytable WITH (UPDLOCK, HOLDLOCK) WHERE 1=0
     WAITFOR DELAY '1:00:00'
     COMMIT TRAN
     ```
@@ -2020,7 +1947,7 @@ GO
   
 The only lock taken that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
 
-In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).
+In [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).
 
 ###  <a name="Customize"></a> Customizing locking for an index  
 

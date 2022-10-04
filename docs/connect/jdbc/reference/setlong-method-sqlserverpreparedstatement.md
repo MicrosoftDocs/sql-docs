@@ -1,21 +1,15 @@
 ---
+title: "setLong Method (SQLServerPreparedStatement)"
 description: "setLong Method (SQLServerPreparedStatement)"
-title: "setLong Method (SQLServerPreparedStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerPreparedStatement.setLong"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerPreparedStatement.setLong"
+apitype: "Assembly"
 ---
 # setLong Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

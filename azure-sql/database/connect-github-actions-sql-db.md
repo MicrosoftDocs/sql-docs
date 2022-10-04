@@ -2,17 +2,15 @@
 title: "Quickstart: Connect to Azure SQL Database with GitHub Actions"
 description: Use Azure SQL from a GitHub Actions workflow
 author: juliakm
-services:
-  - "sql-database"
+ms.author: jukullam
+ms.reviewer: wiassaf, mathoma
+ms.date: 09/22/2022
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
-ms.author: jukullam
-ms.date: 05/10/2022
 ms.custom:
   - "github-actions-azure"
   - "mode-other"
-ms.reviewer: wiassaf, mathoma
 ---
 
 # Use GitHub Actions to connect to Azure SQL Database
@@ -234,14 +232,14 @@ You need to provide your application's **Client ID**, **Tenant ID**, and **Subsc
   
   ---
 
-1. Use the Azure SQL Deploy action to connect to your SQL instance. Replace `SQL_SERVER_NAME` with the name of your server. You should have a dacpac package (`Database.dacpac`) at the root level of your repository. 
+1. Use the Azure SQL Deploy action to connect to your SQL instance. You should have a dacpac package (`Database.dacpac`) at the root level of your repository. 
 
     ```yaml
-    - uses: azure/sql-action@v1
+    - uses: azure/sql-action@v2
       with:
-        server-name: SQL_SERVER_NAME
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-        dacpac-package: './Database.dacpac'
+        path: './Database.dacpac'
+        action: 'Publish'
     ```
 
 1. Complete your workflow by adding an action to logout of Azure. Here's the completed workflow. The file will appear in the `.github/workflows` folder of your repository.
@@ -267,11 +265,11 @@ You need to provide your application's **Client ID**, **Tenant ID**, and **Subsc
         with:
             creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - uses: azure/sql-action@v1
+    - uses: azure/sql-action@v2
       with:
-        server-name: SQL_SERVER_NAME
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-        dacpac-package: './Database.dacpac'
+        path: './Database.dacpac'
+        action: 'Publish'
 
         # Azure logout 
     - name: logout
@@ -301,11 +299,11 @@ You need to provide your application's **Client ID**, **Tenant ID**, and **Subsc
             client-id: ${{ secrets.AZURE_CLIENT_ID }}
             tenant-id: ${{ secrets.AZURE_TENANT_ID }}
             subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-    - uses: azure/sql-action@v1
+    - uses: azure/sql-action@v2
       with:
-        server-name: SQL_SERVER_NAME
         connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-        dacpac-package: './Database.dacpac'
+        path: './Database.dacpac'
+        action: 'Publish'
 
         # Azure logout 
     - name: logout

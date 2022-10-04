@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "transferring Service Master Keys"
 dev_langs:
   - "TSQL"
-ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

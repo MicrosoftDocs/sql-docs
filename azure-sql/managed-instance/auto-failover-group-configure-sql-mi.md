@@ -1,16 +1,16 @@
 ---
 title: Configure an auto-failover group
-description: Learn how to configure an auto-failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: high-availability
-ms.custom: devx-track-azurecli, sql-db-mi-split
-ms.topic: how-to
-ms.devlang: 
+description: Learn how to configure an auto-failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: mathoma
 ms.date: 07/09/2022
+ms.service: sql-managed-instance
+ms.subservice: high-availability
+ms.topic: how-to
+ms.custom:
+  - devx-track-azurecli
+  - "azure-sql-split"
 ---
 # Configure an auto-failover group for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -240,10 +240,14 @@ The listener endpoint is in the form of `fog-name.database.windows.net`, and is 
 
 ## <a name="creating-a-failover-group-between-managed-instances-in-different-subscriptions"></a> Create group between instances in different subscriptions
 
-You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Azure Active Directory Tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology). When using PowerShell API, you can do it by specifying the `PartnerSubscriptionId` parameter for the secondary SQL Managed Instance. When using REST API, each instance ID included in the `properties.managedInstancePairs` parameter can have its own Subscription ID.
+You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Azure Active Directory Tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology). 
+
+- When using PowerShell API, you can do it by specifying the `PartnerSubscriptionId` parameter for the secondary SQL Managed Instance. 
+- When using REST API, each instance ID included in the `properties.managedInstancePairs` parameter can have its own Subscription ID.
+- Azure portal does not support creation of failover groups across different subscriptions. 
   
 > [!IMPORTANT]
-> Azure portal does not support creation of failover groups across different subscriptions. Also, for the existing failover groups across different subscriptions and/or resource groups, failover can't be initiated manually via portal from the primary SQL Managed Instance. Initiate it from the geo-secondary instance instead.
+> Azure portal does not support creation of failover groups across different subscriptions. For failover groups across different subscriptions and/or resource groups, failover can't be initiated manually via the Azure portal from the primary SQL managed instance. Initiate it from the geo-secondary instance instead.
 
 ## Change the secondary region
 

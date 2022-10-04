@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "service master key [SQL Server], exporting"
 dev_langs:
   - "TSQL"
-ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 ---
 # BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

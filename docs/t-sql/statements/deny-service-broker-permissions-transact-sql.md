@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "services [Service Broker], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 ---
 # DENY Service Broker Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

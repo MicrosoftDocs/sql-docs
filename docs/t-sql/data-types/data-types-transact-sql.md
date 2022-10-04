@@ -1,21 +1,18 @@
 ---
-title: "Data types (Transact-SQL) | Microsoft Docs"
+title: "Data types (Transact-SQL)"
 description: "This article provides a summary of the different data types available in SQL Server."
-ms.date: "09/13/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
- - "system data types [SQL Server]" 
- - "data types [SQL Server]"
- - "data types [SQL Server], about data types"
-ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "09/13/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "system data types [SQL Server]"
+  - "data types [SQL Server]"
+  - "data types [SQL Server], about data types"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data types (Transact-SQL)

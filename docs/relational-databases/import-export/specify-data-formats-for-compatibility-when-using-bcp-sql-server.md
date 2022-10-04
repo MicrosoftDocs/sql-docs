@@ -1,23 +1,21 @@
 ---
 title: "Specify compatibility data formats with bcp"
 description: For bulk exports in SQL Server with bcp, data formats might be incompatible with expected layout. A non-xml format file specifies compatibility data formats.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "bulk exporting [SQL Server], compatibility"
   - "bulk importing [SQL Server], compatibility"
   - "compatibility [SQL Server], data formats"
   - "data formats [SQL Server], compatibility"
   - "bcp utility [SQL Server], compatibility"
-ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Specify compatibility data formats when using bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

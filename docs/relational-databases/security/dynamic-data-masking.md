@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Data Masking"
 description: Learn about dynamic data masking, which limits sensitive data exposure by masking it to non-privileged users. It can greatly simplify security in SQL Server.
-ms.date: "05/24/2022"
+ms.date: "09/27/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
@@ -40,7 +40,7 @@ Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql1
 |Email|Masking method that exposes the first letter of an email address and the constant suffix ".com", in the form of an email address. `aXXX@XXXX.com`.|Example definition syntax: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Example of alter syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Random|A random masking function for use on any numeric type to mask the original value with a random value within a specified range.|Example definition syntax: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Example of alter syntax: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Custom String|Masking method that exposes the first and last letters and adds a custom padding string in the middle. `prefix,[padding],suffix`<br /><br /> Note: If the original value is too short to complete the entire mask, part of the prefix or suffix won't be exposed.|Example definition syntax: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Example of alter syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Additional example:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|
-|Datetime	| **Applies to:** SQL Server 2022<br/>Masking method for column defined with data type `datetime`, `datetime2`, `date`, `time`, `datetimeoffset`, `smalldatetime`. It helps masking the `year => datetime("Y")`, `month=> datetime("M")` , `day=>datetime("D")`, `hour=>datetime("h")`, `minute=>datetime("m")`, or `seconds=>datetime("s")` portion of the day. | Example of how to mask the year of the `datetime` value: <br/><br/> `ALTER COLUMN BirthDay ADD MASKED WITH (FUNCTION = 'datetime("Y")')`<br/><br/> Example of how to mask the month of the `datetime` value: <br/><br/> `ALTER COLUMN BirthDay ADD MASKED WITH (FUNCTION = 'datetime("M")')` <br/><br/> Example of how to mask the minute of the `datetime` value: <br/><br/> `ALTER COLUMN BirthDay ADD MASKED WITH (FUNCTION = 'datetime("m")')`|
+|Datetime	| **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]<br/>Masking method for column defined with data type `datetime`, `datetime2`, `date`, `time`, `datetimeoffset`, `smalldatetime`. It helps masking the `year => datetime("Y")`, `month=> datetime("M")` , `day=>datetime("D")`, `hour=>datetime("h")`, `minute=>datetime("m")`, or `seconds=>datetime("s")` portion of the day. | Example of how to mask the year of the `datetime` value: <br/><br/> `ALTER COLUMN BirthDay ADD MASKED WITH (FUNCTION = 'datetime("Y")')`<br/><br/> Example of how to mask the month of the `datetime` value: <br/><br/> `ALTER COLUMN BirthDay ADD MASKED WITH (FUNCTION = 'datetime("M")')` <br/><br/> Example of how to mask the minute of the `datetime` value: <br/><br/> `ALTER COLUMN BirthDay ADD MASKED WITH (FUNCTION = 'datetime("m")')`|
   
 ## Permissions  
  You don't need any special permission to create a table with a dynamic data mask, only the standard **CREATE TABLE** and **ALTER** on schema permissions.  
@@ -119,7 +119,7 @@ It's important to properly manage the permissions on the database, and to always
 
 ## <a id="granular"></a> Granular permissions introduced in SQL Server 2022
 
-Starting with SQL Server 2022, you can prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke **UNMASK** permission at the database-level, schema-level, table-level or at the column-level to a user. This enhancement provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke **UNMASK** permission at the database-level, schema-level, table-level or at the column-level to a user. This enhancement provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
   
 ## Examples  
   
@@ -265,7 +265,7 @@ ALTER COLUMN LastName DROP MASKED;
        MemberID int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED, 
        Feedback varchar(100) MASKED WITH (FUNCTION = 'default()') NULL, 
        Rating int MASKED WITH (FUNCTION='default()'), 
-       Received_On datetime) 
+       Received_On datetime 
        );
    ```
 

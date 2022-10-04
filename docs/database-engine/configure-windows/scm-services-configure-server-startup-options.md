@@ -1,14 +1,13 @@
 ---
-title: "Configure Server Startup Options (SQL Server Configuration Manager) | Microsoft Docs"
+title: "Configure Server Startup Options (SQL Server Configuration Manager)"
 description: Learn how to set options that the SQL Server Database Engine uses when it starts. View limitations and restrictions on making changes to startup parameters.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "11/23/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parameters [SQL Server], startup options"
   - "SQL Server, startup options"
   - "SQL Server, startup parameters"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "startup parameters [SQL Server]"
   - "SQL Server services, setting startup options"
   - "SQL Server services, setting startup parameters"
-ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # SCM Services - Configure Server Startup Options
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +59,7 @@ ms.author: randolphwest
   
      For example, to start in single-user mode, type **-m** in the **Specify a startup parameter** box and then click **Add**. (When you restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first and prevent you from connecting as a second user.)  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+5.  Select **OK**.  
   
 6.  Restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

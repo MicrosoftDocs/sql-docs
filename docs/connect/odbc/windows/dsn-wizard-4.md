@@ -1,16 +1,12 @@
 ---
-description: Learn how to define advanced options in the Data Source Wizard to create a new ODBC connection to SQL Server.
 title: Data Source Wizard Screen 4 (ODBC Driver for SQL Server)
-ms.custom: ""
-ms.date: 02/15/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
+description: Learn how to define advanced options in the Data Source Wizard to create a new ODBC connection to SQL Server.
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Data Source Wizard Screen 4
 
@@ -33,6 +29,10 @@ Declares the connection encryption mode to be used when connections are made usi
 ### Trust server certificate
 
 This option is applicable only when **Use strong encryption for data** is enabled (ODBC Driver 17 and older), or when **Connection Encryption** is set to **Optional** or **Mandatory** (ODBC Driver 18 and newer). When selected, the server's certificate won't be validated to have the correct hostname of the server and be issued by a trusted certificate authority. The server's certificate will always be validated when using the **Strict** encryption mode.
+
+### Server certificate (optional)
+
+Specifies the server certificate (PEM, DER, or CER format) to match against the certificate returned by the server during encryption negotiation. When specified, certificate validation is done by checking if the server's certificate is an exact match against the certificate specified. The **Hostname in certificate** option is ignored when a server certificate is specified. This option is applicable only when **Connection Encryption** is set to **Strict** and is available in ODBC Driver 18.1 and newer.
 
 ### Hostname in certificate (optional)
 

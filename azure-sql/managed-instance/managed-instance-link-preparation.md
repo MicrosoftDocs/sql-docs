@@ -1,17 +1,14 @@
 ---
 title: Prepare environment for Managed Instance link
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.custom: 
-ms.devlang: 
-ms.topic: guide
+description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 07/06/2022
+ms.date: 08/30/2022
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: guide
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -56,7 +53,7 @@ Ensure that your SQL Server version has the appropriate servicing update install
 | SQL Server Version  | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
 |[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise or Developer | Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above |
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
@@ -179,11 +176,14 @@ For the link to work, you must have network connectivity between SQL Server and 
 
 Deploying SQL Server on Azure Virtual Machines in the same Azure virtual network that hosts SQL Managed Instance is the simplest method, because network connectivity will automatically exist between the two instances. To learn more, see the detailed tutorial [Deploy and configure an Azure VM to connect to Azure SQL Managed Instance](./connect-vm-instance-configure.md). 
 
-If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, either connect the two Azure virtual networks by using [global virtual network peering](https://techcommunity.microsoft.com/t5/azure-sql/new-feature-global-vnet-peering-support-for-azure-sql-managed/ba-p/1746913) or configure [VPN gateways](/azure/vpn-gateway/tutorial-create-gateway-portal). 
+If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, you need to make a connection between both virtual networks. The virtual networks don't have to be in the same subscription for this scenario to work.
 
->[!NOTE]
-> Global virtual network peering is enabled by default on managed instances provisioned after November 2020. [Raise a support ticket](../database/quota-increase-request.md) to enable global virtual network peering on older instances. 
+There are two options for connecting virtual networks:
 
+- [Azure VNet peering](/azure/virtual-network/virtual-network-peering-overview)
+- VNet-to-VNet VPN gateway ([Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-cli))
+
+Peering is preferable because it uses the Microsoft backbone network, so from the connectivity perspective, there is no noticeable difference in latency between virtual machines in a peered virtual network and in the same virtual network. Virtual network peering is supported between the networks in the same region. Global virtual network peering is [supported for instances hosted in subnets created starting 9/22/2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering).
 
 ### SQL Server outside Azure 
 
@@ -296,7 +296,7 @@ EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper',
     @enabled=1,
     @description=N'Test Managed Instance to SQL Server network connectivity on port 5022.',
     @category_name=N'[Uncategorized (Local)]',
-    @owner_login_name=N'cloudSA', @job_id = @jobId OUTPUT
+    @owner_login_name=N'sa', @job_id = @jobId OUTPUT
 
 EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'TNC network probe from MI to SQL Server',
     @step_id=1,
@@ -403,7 +403,7 @@ If you're migrating a SQL Server database protected by Transparent Data Encrypti
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 

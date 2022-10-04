@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: "mds"
 ms.technology: master-data-services
 ms.topic: quickstart
-author: chugugrace
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ms.custom:
   - intro-quickstart
 ---
 # Master Data Services Installation and Configuration
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article covers how to install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 R2 machine, set up the MDS database and website, and deploy the sample models and data. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) enables your organization to manage a trusted version of data.   
   
@@ -64,7 +64,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
 ## <a name="InstallIIS"></a> Installing and Configuring IIS
   
-1.  In [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)], click the **Server Manager** icon on the taskbar on the **Desktop**.  
+1.  In [!INCLUDE[winserver2012r2](../includes/winserver2012r2-md.md)], click the **Server Manager** icon on the taskbar on the **Desktop**.  
   
      ![Icon for the Server Manager in Windows Server 2012 taskbar](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icon for the Server Manager in Windows Server 2012 taskbar")  
   
@@ -82,14 +82,14 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. On the **Features** page, confirm that the following features are selected, and then click **Next**. These features are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
+9. On the **Features** page, confirm that the following features are selected, and then click **Next**. These features are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winserver2012r2_md](../includes/winserver2012r2-md.md)].
   
     |Features|Features|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. In the left-hand pane, click **Web Server Role (IIS)** and then click **Role Services**.
-11. On the **Role Services** page, confirm that the following services are selected, and then click **Next**. These services are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
+11. On the **Role Services** page, confirm that the following services are selected, and then click **Next**. These services are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winserver2012r2](../includes/winserver2012r2-md.md)].
 
     > [!WARNING]  
     >  Do not install the WebDAV Publishing role service. WebDAV Publishing is not compatible with [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -98,7 +98,6 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
     |-----------------------------|-----------------------------|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_PerformSecurity](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-performsecurity.png)|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage_AppDevsection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-appdevsection.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_ManageToolssection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-managetoolssection.png)|  
-    |||  
   
      For a list of the required features and roles services on other operating systems, see [Web Application Requirements &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md) .   
   

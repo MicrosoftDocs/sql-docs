@@ -1,16 +1,12 @@
 ---
+title: "isWrapperFor Method (SQLServerCallableStatement)"
 description: "isWrapperFor Method (SQLServerCallableStatement)"
-title: "isWrapperFor Method (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # isWrapperFor Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

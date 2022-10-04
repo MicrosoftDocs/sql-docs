@@ -1,21 +1,15 @@
 ---
+title: "position Method (java.lang.String, long)"
 description: "position Method (java.lang.String, long)"
-title: "position Method (java.lang.String, long) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerClob.position (java.lang.String, long)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerClob.position (java.lang.String, long)"
+apitype: "Assembly"
 ---
 # position Method (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

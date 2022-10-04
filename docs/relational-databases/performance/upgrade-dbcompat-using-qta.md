@@ -85,7 +85,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] open the Object Explorer and connect to [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-2. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select on **New Database Upgrade Session**.
+2. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select **New Database Upgrade Session**.
 
 3. In the QTA Wizard window, two steps are required to configure a session:
 
@@ -117,9 +117,9 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
 ### Executing the database upgrade workflow
 
-1. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select on **Monitor Sessions**.
+1. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select **Monitor Sessions**.
 
-2. The **session management** page lists current and past sessions for the database in scope. Select the desired session, and select on **Details**.
+2. The **session management** page lists current and past sessions for the database in scope. Select the desired session, and select **Details**.
 
     > [!NOTE]
     > If the current session isn't present, select the **Refresh** button.
@@ -226,4 +226,4 @@ Requires membership of **db_owner** role.
 - [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
-- [Use the SQL Server Query Tuning Assistant](/learn/modules/use-sql-server-query-tuning-assistant/)
+- [Use the SQL Server Query Tuning Assistant](/training/modules/use-sql-server-query-tuning-assistant/)

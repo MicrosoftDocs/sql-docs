@@ -1,25 +1,21 @@
 ---
-description: "DBCC FLUSHAUTHCACHE (Transact-SQL)"
 title: DBCC FLUSHAUTHCACHE (Transact-SQL)
-ms.custom: ""
+description: "DBCC FLUSHAUTHCACHE (Transact-SQL)"
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "DBCC FLUSHAUTHCACHE"
   - "FLUSHAUTHCACHE"
   - "DBCC_FLUSHAUTHCACHE_TSQL"
   - "FLUSHAUTHCACHE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DBCC FLUSHAUTHCACHE"
-ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
 ---
 

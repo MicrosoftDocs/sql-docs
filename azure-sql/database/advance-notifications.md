@@ -1,15 +1,13 @@
 ---
 title: Advance notifications (Preview) for planned maintenance events
 description: Get notification before planned maintenance for Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: service-overview
-ms.topic: how-to
 author: scott-kim-sql
 ms.author: scottkim
 ms.reviewer: wiassaf, mathoma, urosmil
 ms.date: 04/04/2022
+ms.service: sql-db-mi
+ms.subservice: service-overview
+ms.topic: how-to
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Advance notifications for planned maintenance events (Preview)
@@ -66,18 +64,18 @@ The following table shows the general-information notifications you may receive:
 
 |Status|Description|
 |:---|:---|
-|**Planned Deployment**| Received 24 hours prior to the maintenance event. Maintenance is planned on DATE between 5pm - 8am (local time) for DB xyz.|
-|**In-Progress** | Maintenance for database *xyz* is starting.| 
-|**Complete** | Maintenance of database *xyz* is complete. |
+|**Planned**| Received 24 hours prior to the maintenance event. Maintenance is planned on DATE between 5pm - 8am<sup>1</sup> (local time) in region *xyz*. |
+|**InProgress** | Maintenance for database(s) in region *xyz* is starting. | 
+|**Complete** | Maintenance of database(s) in region *xyz* is complete. |
+
+<sup>1</sup> Start and end time depend on the selected [maintenance window](maintenance-window.md). 
 
 The following table shows additional notifications that may be sent while maintenance is ongoing: 
 
 |Status|Description|
 |:---|:---|
-|**Extended** | Maintenance is in progress but didn't complete for database *xyz*. Maintenance will continue at the next maintenance window.| 
-|**Canceled**| Maintenance for database *xyz* is canceled and will be rescheduled later. |
-|**Blocked**|There was a problem during maintenance for database *xyz*. We'll notify you when we resume.| 
-|**Resumed**|The problem has been resolved and maintenance will continue at the next maintenance window.|
+|**Rescheduled** | 1) Maintenance is in progress but didn't complete inside maintenance window. 2) there was a problem during maintenance and it could not start. 3)  Planned maintenance has started but couldn't progress to the end and will continue in next maintenance window. | 
+|**Canceled**| Maintenance for database(s) in region *xyz* is canceled and will be rescheduled for later. |
 
 ## Permissions
 
@@ -104,6 +102,16 @@ resources
 ) on resource
 | project resource, status, resourceGroup, location, startTimeUtc, endTimeUtc, impactType
 ```
+
+In Azure Resource Graph (ARG) explorer you might find values for the status of deployment that are bit different than the ones displayed in the notification content.
+
+|Status|Description|
+|:---|:---|
+|**Pending**| 1) Maintenance is planned on upcoming date. 2) Previously planned maintenance was rescheduled and is waiting to start in the next window. 3) Maintenance started but didn't complete in previous window and will continue in the next one. |
+|**InProgress** | Maintenance for resource *xyz* is starting or is in progress. | 
+|**Completed** | Maintenance for resource *xyz* is complete. |
+|**NoUpdatesPending** | Previously planned maintenance for resource *xyz* is canceled and will be rescheduled for later. |
+|**RetryLater** | Planned maintenance for resource *xyz* has started but couldn't progress to the end and will continue in next maintenance window. |
 
 For the full reference of the sample queries and how to use them across tools like PowerShell or Azure CLI, visit [Azure Resource Graph sample queries for Azure Service Health](/azure/service-health/resource-graph-samples).
 

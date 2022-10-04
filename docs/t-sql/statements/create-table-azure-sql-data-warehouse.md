@@ -1,10 +1,10 @@
 ---
 title: CREATE TABLE (Azure Synapse Analytics)
 description: "CREATE TABLE (Azure Synapse Analytics) creates a new table in Azure Synapse Analytics or Analytics Platform System (PDW)."
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: vanto, xiaoyul
-ms.date: 07/25/2022
+ms.date: 09/12/2022
 ms.prod: sql
 ms.prod_service: "synapse-analytics, pdw"
 ms.topic: reference
@@ -616,4 +616,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)

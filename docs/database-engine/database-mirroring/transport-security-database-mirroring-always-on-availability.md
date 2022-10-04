@@ -1,14 +1,14 @@
 ---
 title: "Transport Security: Availability groups & database mirroring"
 description: Learn how to secure messages between databases participating in an Always On availability group or in a database mirroring session hosted on SQL Server.
-ms.custom: seo-lt-2019
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "sessions [SQL Server], database mirroring"
   - "cryptography [SQL Server], database mirroring"
   - "certificates [SQL Server], database mirroring"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "authentication [SQL Server], database mirroring"
   - "transport security"
   - "database mirroring [SQL Server], security"
-ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Transport Security - Database Mirroring - Always On Availability
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +65,7 @@ ms.author: mikeray
   
 |ALGORITHM value|Description|  
 |---------------------|-----------------|  
-|RC4|Specifies that the endpoint must use the RC4 algorithm. This is the default.<br /><br /> <strong>\*\* Warning \*\*</strong> The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.|  
+|RC4|Specifies that the endpoint must use the RC4 algorithm. This is the default.<br /><br /> <strong>\*\* Warning \*\*</strong> The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use AES.|  
 |AES|Specifies that the endpoint must use the AES algorithm.|  
 |AES RC4|Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the AES algorithm.|  
 |RC4 AES|Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the RC4 algorithm.|  

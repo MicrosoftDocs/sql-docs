@@ -1,16 +1,12 @@
 ---
+title: "Using holdability"
 description: "Using holdability"
-title: "Using holdability | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using holdability
@@ -27,7 +23,7 @@ The holdability of a result set is the holdability of the SQLServerConnection ob
 
 For server cursors, when connected to SQL Server 2005 or later, setting the holdability affects only the holdability of new result sets that are yet to be created on that connection. It means that setting holdability has no impact on the holdability of any result sets that were previously created and are already open on that connection.
 
-In the following example, the result set holdability is set while performing a local transaction consisting of two separate statements in the `try` block. The statements are run against the Production.ScrapReason table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. First, the example switches to manual transaction mode by setting the auto-commit to `false`. Once auto-commit mode is disabled, no SQL Statements will be committed until the application calls the [commit](../../connect/jdbc/reference/commit-method-sqlserverconnection.md) method explicitly. The code in the catch block rolls back the transaction if an exception is thrown.
+In the following example, the result set holdability is set while performing a local transaction consisting of two separate statements in the `try` block. The statements are run against the Production.ScrapReason table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. First, the example switches to manual transaction mode by setting the auto-commit to `false`. Once auto-commit mode is disabled, no SQL Statements will be committed until the application calls the [commit](../../connect/jdbc/reference/commit-method-sqlserverconnection.md) method explicitly. The code in the catch block rolls back the transaction if an exception is thrown.
 
 [!code[JDBC#UsingHoldability1](../../connect/jdbc/codesnippet/Java/using-holdability_1.java)]
 

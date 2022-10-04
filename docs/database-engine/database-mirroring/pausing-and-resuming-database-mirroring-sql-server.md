@@ -1,22 +1,19 @@
 ---
 title: "Pause & resume database mirror"
-description: Learn how to pause and later resume a SQL Server database mirroring session to preserve the session state while suspending mirroring. 
-ms.custom: seo-lt-2019
+description: Learn how to pause and later resume a SQL Server database mirroring session to preserve the session state while suspending mirroring.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "sessions [SQL Server], database mirroring"
   - "resuming database mirroring"
   - "database mirroring [SQL Server], pausing"
   - "database mirroring [SQL Server], resuming"
   - "pausing database mirroring"
-ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Pausing and Resuming Database Mirroring (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "entities [Master Data Services], permissions"
   - "permissions [Master Data Services], entities"
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Entity Permissions (Master Data Services)
 

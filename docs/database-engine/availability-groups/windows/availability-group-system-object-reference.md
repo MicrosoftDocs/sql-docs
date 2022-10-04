@@ -1,14 +1,13 @@
 ---
 title: "Availability group system object reference"
-description: "A reference of various system objects that can be used when working with Always On availability groups." 
-ms.custom: "seo-lt-2019"
-ms.date: "04/03/2010"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: reference
+description: "A reference of various system objects that can be used when working with Always On availability groups."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/03/2010"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: reference
+ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # Always On availability group system object reference
@@ -28,7 +27,6 @@ This topic serves as a reference page to all the various system objects that can
 | [sys.availability_groups_cluster](../../../relational-databases/system-catalog-views/sys-availability-groups-cluster-transact-sql.md)    | Returns a row for each Always On availability group in the Windows Server Failover Clustering (WSFC) . Each row contains the availability group metadata from the WSFC cluster. |
 | [sys.availability_read_only_routing_lists](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)    | Returns a row for the read only routing list of each availability replica in an Always On availability group in the WSFC failover cluster. |
 | [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)    | Returns a row for each of the availability replicas that belong to any Always On availability group in the WSFC failover cluster. |
-| &nbsp; | &nbsp; |
 
 ## System dynamic management views
 
@@ -48,7 +46,6 @@ This topic serves as a reference page to all the various system objects that can
 | [sys.dm_hadr_instance_node_map](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md)    | For every instance of SQL Server that hosts an availability replica that is joined to its Always On availability group, returns the name of the Windows Server Failover Cluster (WSFC) node that hosts the server instance. |
 | [sys.dm_hadr_name_id_map](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md)    | Shows the mapping of Always On availability groups that the current instance of SQL Server has joined to three unique IDs: an availability group ID, a WSFC resource ID, and a WSFC Group ID. |
 | [sys.dm_tcp_listener_states](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)    | Returns a row containing dynamic-state information for each TCP listener. |
-| &nbsp; | &nbsp; |
 
 ## System functions
 
@@ -58,7 +55,6 @@ This topic serves as a reference page to all the various system objects that can
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | Used to determine if the current replica is the primary replica. |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | Used to determine if the current replica is the preferred backup replica. |
 | [sys.fn_hadr_distributed_ag_replica](../../../relational-databases/system-functions/sys-fn-hadr-distributed-ag-replica-transact-sql.md)    | Used to map a replica in a distributed availability group to the local availability group. |
-| &nbsp; | &nbsp; |
 
 
   

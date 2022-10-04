@@ -1,21 +1,15 @@
 ---
+title: "supportsPositionedUpdate Method (SQLServerDatabaseMetaData)"
 description: "supportsPositionedUpdate Method (SQLServerDatabaseMetaData)"
-title: "supportsPositionedUpdate Method (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDatabaseMetaData.supportsPositionedUpdate"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDatabaseMetaData.supportsPositionedUpdate"
+apitype: "Assembly"
 ---
 # supportsPositionedUpdate Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

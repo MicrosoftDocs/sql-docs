@@ -58,7 +58,7 @@ The standby-server solutions, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], d
 
 In an **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] scenario**, every update to a database, the primary replica, is immediately reproduced in separate, full copies of the database, the secondary replicas. The primary replica sends each log record immediately to the secondary replicas, that applies the incoming log records to availability group databases, continually rolling it forward. For more information, see [Always On Failover Cluster Instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-In a **log shipping scenario**, the primary server sends the active transaction log of the primary database to one or more destinations. Each secondary server restores the log to its local secondary database. For more information, see [About Log Shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
+In a **log shipping scenario**, the primary server sends the transaction log backups of the primary database to one or more destinations. Each secondary server restores the log backups to its local secondary database. For more information, see [About Log Shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 
 In a **database mirroring scenario**, every update to a database, the principal database, is immediately reproduced in a separate, full copy of the database, the mirror database. The principal server instance sends each log record immediately to the mirror server instance, which applies the incoming log records to the mirror database, continually rolling it forward. For more information, see [Database Mirroring](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
@@ -83,6 +83,7 @@ To avoid running out of space, unless log truncation is delayed for some reason,
   
 - Under the simple recovery model, after a checkpoint.  
 - Under the full recovery model or bulk-logged recovery model, if a checkpoint has occurred since the previous backup, truncation occurs after a log backup (unless it is a copy-only log backup).  
+- When you first create a database using the FULL recovery model, the transaction log will be reused as needed (similar to a SIMPLE recovery database), up until the time you create a full database backup.
   
  For more information, see [Factors that can delay log truncation](#FactorsThatDelayTruncation), later in this topic.  
   

@@ -1,18 +1,16 @@
 ---
 title: "Change metadata: Cross-cluster availability group migration"
 description: "When doing a cross-cluster migration, change which cluster manages the metadata for availability replicas within an Always On availability group by changing the HADR cluster context for an instance of SQL Server."
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], WSFC clusters"
-  - "Availability replicas [SQL Server], change WSFC cluster context"
-ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: how-to
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], WSFC clusters"
+  - "Availability replicas [SQL Server], change WSFC cluster context"
 monikerRange: ">=sql-server-2016"
 ---
 # Change which cluster manages the metadata for replicas in an Always On availability group
@@ -21,7 +19,7 @@ monikerRange: ">=sql-server-2016"
 
   This topic describes how to switch the HADR cluster context of an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] and later versions. The *HADR cluster context* determines which Windows Server Failover Clustering (WSFC) cluster manages the metadata for availability replicas hosted by the server instance.  
   
- Switch the HADR cluster context only during a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] on a new WSFC cluster. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] with minimal downtime of availability groups. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](/previous-versions/sql/sql-server-2012/jj873730(v=msdn.10)).  
+ Switch the HADR cluster context only during a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] on a new WSFC cluster. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[winserver2012](../../../includes/winserver2012-md.md)] with minimal downtime of availability groups. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](/previous-versions/sql/sql-server-2012/jj873730(v=msdn.10)).  
   
 > [!CAUTION]  
 >  Switch the HADR cluster context only during cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deployments.  

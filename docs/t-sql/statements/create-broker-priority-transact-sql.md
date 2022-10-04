@@ -1,8 +1,8 @@
 ---
 title: "CREATE BROKER PRIORITY (Transact-SQL)"
 description: CREATE BROKER PRIORITY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -23,7 +23,6 @@ helpviewer_keywords:
   - "CREATE BROKER PRIORITY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

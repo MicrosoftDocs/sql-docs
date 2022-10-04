@@ -1,21 +1,15 @@
 ---
+title: "updateTimestamp Method (java.lang.String, java.sql.Timestamp)"
 description: "updateTimestamp Method (java.lang.String, java.sql.Timestamp)"
-title: "updateTimestamp Method (java.lang.String, java.sql.Timestamp) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.updateTimestamp (java.lang.String, java.sql.Timestamp)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 6d468357-bf73-484c-9a30-3671e399cf26
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.updateTimestamp (java.lang.String, java.sql.Timestamp)"
+apitype: "Assembly"
 ---
 # updateTimestamp Method (java.lang.String, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,15 @@
 ---
+title: "getFetchSize Method (SQLServerResultSet)"
 description: "getFetchSize Method (SQLServerResultSet)"
-title: "getFetchSize Method (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getFetchSize"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 7bc96930-b0c9-42f6-8df9-1d8d824408b3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getFetchSize"
+apitype: "Assembly"
 ---
 # getFetchSize Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

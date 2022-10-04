@@ -1,17 +1,14 @@
 ---
 title: Disaster recovery
 description: Learn how to recover a database from a regional data center outage or failure with the Azure SQL Database active geo-replication, and geo-restore capabilities.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: high-availability
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: conceptual
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/21/2019
+ms.service: sql-database
+ms.subservice: high-availability
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Restore your Azure SQL Database or failover to a secondary
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -109,6 +106,9 @@ For more information about database alert rules, see [Receive Alert Notification
 ### Enable auditing
 
 If auditing is required to access your database, you need to enable Auditing after the database recovery. For more information, see [Database auditing](./auditing-overview.md).
+
+> [!NOTE]
+> If you plan to use Geo-restore as disaster-recovery solution, it is recommended to conduct periodic drills to verify application tolerance to any loss of recent data modifications, as well as all operational aspects of the recovery procedure.
 
 ## Next steps
 

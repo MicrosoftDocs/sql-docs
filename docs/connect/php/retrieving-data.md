@@ -1,16 +1,12 @@
 ---
+title: "Retrieving Data"
 description: "Retrieving Data"
-title: "Retrieving Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Retrieving Data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

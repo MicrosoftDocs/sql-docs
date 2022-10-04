@@ -25,8 +25,9 @@ This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../includes/ssma
 2.  Right-click on Databases, select **New Database...**.  
   
 3.  In the New Database dialog box, in **Database Name**, type *Subscribers*. 
-4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
-  
+
+4.  Select **OK**.
+
 5.  Click the **New Query** button on the toolbar.  
   
 6.  Copy the following [!INCLUDE[tsql](../includes/tsql-md.md)] statements into the empty query:  

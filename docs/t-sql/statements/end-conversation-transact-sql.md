@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "ending conversations [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 ---
 # END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

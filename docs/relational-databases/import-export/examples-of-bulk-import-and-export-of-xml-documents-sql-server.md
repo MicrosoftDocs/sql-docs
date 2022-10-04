@@ -1,13 +1,15 @@
 ---
 title: "Bulk import & export of XML documents"
 description: "Examples of bulk importing and exporting of XML documents with SQL Server"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "field terminators [SQL Server]"
   - "bulk importing [SQL Server], data formats"
   - "row terminators [SQL Server]"
@@ -15,10 +17,6 @@ helpviewer_keywords:
   - "terminators [SQL Server]"
   - "bulk exporting [SQL Server], data formats"
   - "XML bulk load [SQL Server]"
-ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-author: MashaMSFT
-ms.author: mathoma
-ms.custom: "seo-lt-2019"
 ---
 # Examples of bulk import and export of XML documents (SQL Server)
 

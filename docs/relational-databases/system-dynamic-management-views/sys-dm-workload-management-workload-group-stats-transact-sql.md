@@ -32,7 +32,6 @@ Returns workload group statistics and the effective values of the workload group
 |effective_cap_percentage_resource|**tinyint**|The effective cap_percentage_resource for the workload group.  If there are other workload groups with min_percentage_resource > 0, the effective_cap_percentage_resource is lowered proportionally.||
 |effective_request_min_resource_grant_percent|**decimal(5,2)**|The effective runtime value for request_min_resource_grant_percent of the workload group. The effective value considering the service level and how the workload group is configured.  If min_percentage_resource is adjusted because of the service level, effective_request_min_resource_grant_percent will be adjusted accordingly.||
 |effective_request_max_resource_grant_percent|**decimal(5,2)**|The effective runtime value for request_max_resource_grant_percent of the workload group considering the configuration of the all workload groups.||
-|||||
 
 ## See also
 

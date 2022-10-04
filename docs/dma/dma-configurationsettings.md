@@ -6,7 +6,6 @@ ms.author: rajpo
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
 ms.prod: sql
-ms.prod_service: "dma"
 ms.technology: dma
 ms.topic: conceptual
 ms.custom: seo-lt-2019
@@ -88,7 +87,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 ## Stretch Database: Recommendation threshold
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssnotedepfuturedontuse-md](../includes/ssnotedepfuturedontuse-md.md)]
+> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../includes/ssnotedepfutureavoid-md.md)]
 
 With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. The Stretch Database recommendation is no longer available as an advisor option.
 

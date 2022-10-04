@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], symmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)

@@ -1,21 +1,15 @@
 ---
+title: "getObject Method (java.lang.String, java.util.Map) (SQLServerResultSet)"
 description: "getObject Method (java.lang.String, java.util.Map) (SQLServerResultSet)"
-title: "getObject Method (java.lang.String, java.util.Map) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getObject (java.lang.String, java.util.Map)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getObject (java.lang.String, java.util.Map)"
+apitype: "Assembly"
 ---
 # getObject Method (java.lang.String, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

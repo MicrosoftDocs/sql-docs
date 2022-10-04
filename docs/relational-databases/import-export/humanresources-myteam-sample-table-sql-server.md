@@ -1,20 +1,17 @@
 ---
-title: "HumanResources.myTeam Sample Table (SQL Server) | Microsoft Docs"
+title: "HumanResources.myTeam Sample Table (SQL Server)"
 description: To run code examples for importing and exporting bulk data in SQL Server, you need to create a test table named myTeam in the HumanResources schema.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "myTeam sample table [SQL Server]"
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
-ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)

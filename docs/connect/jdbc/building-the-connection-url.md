@@ -1,16 +1,12 @@
 ---
 title: Building the connection URL
 description: Learn the format of the connection string used by the Microsoft JDBC Driver for SQL Server. Samples of connection strings are included in the examples section.
-ms.custom: ""
-ms.date: 08/06/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/06/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Building the connection URL
 
@@ -46,7 +42,7 @@ For a detailed list of properties that can be set in the connection string, see 
 
 Connect to the default database on the local computer by using a user name and password:
 
-`jdbc:sqlserver://localhost;user=MyUserName;password=*****;`
+`jdbc:sqlserver://localhost;encrypt=true;user=MyUserName;password=*****;`
 
 > [!NOTE]
 > Although the previous example uses a username and password in the connection string, you should use integrated security as it is more secure. For more information, see the [Connecting with Integrated Authentication](#Connectingintegrated) section later in this topic.
@@ -54,24 +50,24 @@ Connect to the default database on the local computer by using a user name and p
 The following connection string shows an example of how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using integrated authentication and Kerberos from an application running on any operating system supported by the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:
 
 ```java
-jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos
+jdbc:sqlserver://;servername=server_name;encrypt=true;integratedSecurity=true;authenticationScheme=JavaKerberos
 ```
 
 Connect to the default database on the local computer by using integrated authentication:
 
-`jdbc:sqlserver://localhost;integratedSecurity=true;`
+`jdbc:sqlserver://localhost;encrypt=true;integratedSecurity=true;`
 
 Connect to a named database on a remote server:
 
-`jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;`
+`jdbc:sqlserver://localhost;encrypt=true;databaseName=AdventureWorks;integratedSecurity=true;`
 
 Connect on the default port to the remote server:
 
-`jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedSecurity=true;`
+`jdbc:sqlserver://localhost:1433;encrypt=true;databaseName=AdventureWorks;integratedSecurity=true;`
 
 Connect by specifying a customized application name:
 
-`jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`
+`jdbc:sqlserver://localhost;encrypt=true;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`
 
 ## Named and multiple SQL Server instances
 
@@ -79,11 +75,11 @@ Connect by specifying a customized application name:
 
 To specify a port number, use the following format:
 
-`jdbc:sqlserver://localhost:1433;integratedSecurity=true;<more properties as required>;`
+`jdbc:sqlserver://localhost:1433;encrypt=true;integratedSecurity=true;<more properties as required>;`
 
 To use a JDBC URL property, use the following format:
 
-`jdbc:sqlserver://localhost;instanceName=instance1;integratedSecurity=true;<more properties as required>;`
+`jdbc:sqlserver://localhost;encrypt=true;instanceName=instance1;integratedSecurity=true;<more properties as required>;`
 
 ## Escaping values in the connection URL
 
@@ -93,7 +89,7 @@ Before version 8.4, escaped values can contain special characters (especially '=
 
 In version 8.4 and above, escaped values can contain special characters, including braces. However, closing braces must be escaped. For example, with a password of `pass";{}word`, a connection string would need to escape the password as follows:
 
-`jdbc:sqlserver://localhost;username=MyUsername;password={pass";{}}word};`
+`jdbc:sqlserver://localhost;encrypt=true;username=MyUsername;password={pass";{}}word};`
 
 > [!NOTE]
 > White space inside the braces is literal and not trimmed.
@@ -121,7 +117,7 @@ The JDBC driver supports the use of IPv6 addresses with the connection propertie
 
 **To use the serverName property:**
 
-`jdbc:sqlserver://;serverName=3ffe:8311:eeee:f70f:0:5eae:10.203.31.9\\instance1;integratedSecurity=true;`
+`jdbc:sqlserver://;serverName=3ffe:8311:eeee:f70f:0:5eae:10.203.31.9\\instance1;encrypt=true;integratedSecurity=true;`
 
 **To use the properties collection:**
 
@@ -129,7 +125,7 @@ The JDBC driver supports the use of IPv6 addresses with the connection propertie
 
 `pro.setProperty("serverName", "serverName=3ffe:8311:eeee:f70f:0:5eae:10.203.31.9\\instance1");`
 
-`Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`
+`Connection con = DriverManager.getConnection("jdbc:sqlserver://;encrypt=true;integratedSecurity=true;", pro);`
 
 ## See also
 

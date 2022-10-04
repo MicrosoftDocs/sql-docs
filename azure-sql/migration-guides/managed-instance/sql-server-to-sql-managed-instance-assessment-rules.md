@@ -1,15 +1,14 @@
 ---
 title: "Assessment rules for SQL Server to Azure SQL Managed Instance migration"
 description: Assessment rules to identify issues with the source SQL Server instance that must be addressed before migrating to Azure SQL Managed Instance.
-ms.service: sql-managed-instance
-ms.subservice: migration-guide
-ms.custom: ignite-fall-2021
-ms.devlang: 
-ms.topic: how-to
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: mathoma
 ms.date: 04/06/2022
+ms.service: sql-managed-instance
+ms.subservice: migration-guide
+ms.topic: how-to
+ms.custom: ignite-fall-2021
 ---
 # Assessment rules for SQL Server to  Azure SQL Managed Instance migration
 [!INCLUDE[appliesto--sqlmi](../../includes/appliesto-sqlmi.md)]
@@ -248,9 +247,9 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported (Currently in preview). Alternatively, migrate to SQL Server on Azure Virtual Machine.
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance). 
 
-More information: [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance)
+Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
 ## Homogenous MS DTC<a id="MIHomogeneousMSDTCTransactSQL"></a>
 
@@ -262,10 +261,9 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported (Currently in preview). Alternatively, migrate to SQL Server on Azure Virtual Machine. 
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 
-More information: [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance)
-
+Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
 ## Linked server (non-SQL provider)<a id="LinkedServerWithNonSQLProvider"></a>
 

@@ -1,16 +1,12 @@
 ---
 title: "Working with result sets"
 description: "Learn how to work with data using result sets in the JDBC Driver for SQL Server in these sample applications."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Working with result sets
 

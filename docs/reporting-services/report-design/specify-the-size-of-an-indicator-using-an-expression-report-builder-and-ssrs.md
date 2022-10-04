@@ -54,9 +54,9 @@ ms.author: maggies
   
      For more information, see [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Select **OK**.
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ## See Also  
  [Indicators &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

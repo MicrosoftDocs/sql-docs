@@ -146,12 +146,12 @@ The following commands register the repository providing the R language platform
 
     **Ubuntu**
     ```bash
-    apt-get install mssql-server-extensibility
+    sudo apt-get install mssql-server-extensibility
     ```
 
     **RHEL**
     ```bash
-    yum install mssql-server-extensibility
+    sudo yum install mssql-server-extensibility
     ```
 
 2. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
@@ -165,7 +165,8 @@ The following commands register the repository providing the R language platform
 4. Download and install revoscalepy for the root user.
 
     ```bash  
-    pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl
+    sudo pip install --target=/usr/lib/python3.10/dist-packages
+ https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
 7. Verify the revoscalepy installation from the Python terminal. Verify the library can be imported.

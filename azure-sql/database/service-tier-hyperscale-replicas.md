@@ -4,7 +4,7 @@ description: This article describes the different types of secondary replicas av
 author: yorek
 ms.author: damauri
 ms.reviewer: wiassaf, mathoma
-ms.date: 9/24/2021
+ms.date: 10/04/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview

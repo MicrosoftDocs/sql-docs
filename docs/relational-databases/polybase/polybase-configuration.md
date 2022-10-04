@@ -7,7 +7,7 @@ ms.date: 10/04/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-monikerRange: "= sql-server-2016 | = sql-server-2017| = sql-server-ver15"
+monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=azuresqldb-mi-current"
 ---
 
 # PolyBase configuration and security for Hadoop

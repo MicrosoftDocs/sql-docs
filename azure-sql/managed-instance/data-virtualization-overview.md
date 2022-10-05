@@ -247,8 +247,8 @@ FROM OPENROWSET(
 --List all paths:
 SELECT DISTINCT filerows.filepath(1) as [Year_Folder], filerows.filepath(2) as [Month_Folder]
 FROM OPENROWSET(
- BULK 'taxi/year=*/month=*/*.parquet',
- DATA_SOURCE = 'NYCTaxiDemoDataSource',
+ BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = 'NYCTaxiExternalDataSource',
  FORMAT = 'parquet') AS filerows
 ```
 
@@ -456,7 +456,12 @@ Issues with query execution are typically caused by managed instance not being a
 - SAS key permissions allowed: Read at minimum, and List if wildcards are used
 - Blocked inbound traffic on the storage account. Check [Managing virtual network rules for Azure Storage](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-virtual-network-rules) for more details and make sure that access from managed instance VNet is allowed.
 - Outbound traffic blocked on the managed instance using [storage endpoint policy](service-endpoint-policies-configure.md#configure-policies). Allow outbound traffic to the storage account.
-- Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.  
+- Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.
+- Compatibility level of the database must be 130 or higher for data virtualization queries to work.  
+
+## Known issues
+
+When [parameterization for Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-query-columns-ssms#param) is enabled in SQL Server Management Studio (SSMS), data virtualization queries fail with "Incorrect syntax near 'PUSHDOWN'" error message.
 
 ## Next steps
 

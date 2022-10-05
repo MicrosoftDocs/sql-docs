@@ -26,12 +26,12 @@ Returns a row for each database in a suspended state. For more information, see 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**db_id**|**int**|ID of the database. Maps to the **database_id** field in the **sys.databases** catalog view|  
-|**db_name**|**sysname**|Name of the database. Same as the **name** field in the **sys.databases** catalog view.|  
-|**suspend_session_id**|**tinyint**|Identifies the session that initiated the suspension for the database.|  
-|**suspend_time_ms**|**bigint**|Identifies the amount of time that the database has been suspended, in milliseconds.|  
-|**is_diff_map_cleared**|**bit**||  
-|**is_write_io_frozen**|**bit**||  
+|**db_id**|**int**|ID of the database that is suspended for snapshot backup.|  
+|**db_name**|**sysname**|Name of the database suspended for snapshot backup.|  
+|**suspend_session_id**|**tinyint**|Identifies the session that suspended the database for snapshot backup.|  
+|**suspend_time_ms**|**bigint**|Time elapsed (in milliseconds) since the database has been suspended for snapshot backup.|  
+|**is_diff_map_cleared**|**bit**|`false` if the database has been suspended for snapshot backup in COPY_ONLY mode, `true` otherwise.|  
+|**is_write_io_frozen**|**bit**|`true` if the write io on the database has been frozen when the database is suspended for snapshot backup, `false` otherwise.|  
   
 ## Permissions  
 

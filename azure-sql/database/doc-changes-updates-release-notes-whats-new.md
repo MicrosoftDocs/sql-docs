@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 10/03/2022
+ms.date: 10/04/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -21,7 +21,7 @@ ms.custom:
 > * [Azure SQL Database](doc-changes-updates-release-notes-whats-new.md)
 > * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md)
 
-This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). To learn more about Azure SQL Database, see the [overview](sql-database-paas-overview.md).
+This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). To learn more about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md).
 
 ## Preview
 
@@ -69,6 +69,13 @@ The following table lists the features of Azure SQL Database that have transitio
 
 Learn about significant changes to the Azure SQL Database documentation.
 
+### October 2022
+
+| Changes | Details |
+| --- | --- |
+| **Database copy of Hyperscale geo secondary replicas** | Database copy from a Hyperscale geo secondary replica is now supported. For more information, see [Hyperscale service tier](service-tier-hyperscale.md). |
+
+
 ### September 2022
 
 | Changes | Details |
@@ -102,7 +109,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | **Local development experience** | The Azure SQL Database local development experience is a combination of tools and procedures that empowers application developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases directly on their workstation using an Azure SQL Database containerized environment. To learn more, see [Local development experience for Azure SQL Database](local-dev-experience-overview.md). |
 | **SQL Database emulator** | The Azure SQL Database emulator provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. The SQL Database emulator is currently in preview. Review [SQL Database emulator](local-dev-experience-sql-database-emulator.md) to learn more.  |
 | **SDK-style SQL projects**| Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or Visual Studio Code. This feature is currently in preview. To learn more, see [SDK-style SQL projects](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects). |
-| **Azure Synapse Link for Azure SQL Database** | Azure Synapse Link enables near real-time analytics over operational data in SQL Server 2022 and Azure SQL Database. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Synapse Link for SQL? (Preview)](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).
+| **Azure Synapse Link for Azure SQL Database** | Azure Synapse Link enables near real-time analytics over operational data in SQL Server 2022 and Azure SQL Database. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Azure Synapse Link for SQL? (Preview)](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).
 
 ### April 2022
 
@@ -140,7 +147,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | **Change data capture** | Using change data capture (CDC) with Azure SQL Database is now in preview. To learn more, see [Change data capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server). |
 | **SQL Database ledger** | SQL Database ledger is in preview, and introduces the ability to cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. To learn more, see [Ledger](/sql/relational-databases/security/ledger/ledger-overview). |
 | **Maintenance window** | The maintenance window feature allows you to configure a maintenance schedule for your Azure SQL Database, currently in preview. To learn more, see [maintenance window](maintenance-window.md).|
-| **SQL insights** | SQL Insights is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance. To learn more, see [SQL insights](/azure/azure-monitor/insights/sql-insights-overview). |
+| **SQL Insights** | SQL Insights is a comprehensive solution for monitoring any product in the Azure SQL family. The SQL Insights solution uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance. To learn more, see [SQL Insights](/azure/azure-monitor/insights/sql-insights-overview). |
 
 ## Contribute to content
 

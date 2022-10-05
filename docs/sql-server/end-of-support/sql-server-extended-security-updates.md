@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/25/2022
+ms.date: 10/05/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016"
 This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
 
 > [!WARNING]  
-> Effective July 12, 2022, the SQL Registry portal will be retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
+> Effective July 12, 2022, the SQL Registry portal has been retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
@@ -199,6 +199,10 @@ Now you can continue to the [Confirmation](#confirmation) section.
     :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png" alt-text="Screenshot of two registered SQL Server instances on the Azure Arc portal.":::
 
 ### Link ESU invoice to registered servers
+
+Customers can use the **Purchase Order Number** under Invoice Summary in their Microsoft invoice (as shown in the screenshot below) to link the ESU purchase with the registration of SQL Server instances.
+
+:::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-sample.png" alt-text="Sample invoice with Purchase Order Number highlighted.":::
 
 Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances to get access to extended updates. This example includes both **Connected** and **Registered** servers.
 

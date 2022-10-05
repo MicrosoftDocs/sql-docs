@@ -303,7 +303,9 @@ Consider the scenario when a two-node cluster is created and brought online:
 You can avoid this scenario by assigning an unused static IP address to the cluster network name in order to bring the cluster network name online and add the IP address to [Azure Load Balancer](availability-group-load-balancer-portal-configure.md).
 
 If the SQL Server database engine, Always On availability group listener, failover cluster instance health probe, database mirroring endpoint, cluster core IP resource, or any other SQL resource is configured to use a port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Doing so will prevent other system process from being dynamically assigned the same port. The following example creates an exclusion for port 59999: 
+
 `netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
+
 It is important to configure the port exclusion when the port is not in use, otherwise the command will fail with a message like “The process cannot access the file because it is being used by another process.”
 
 To confirm that the exclusions have been configured correctly, use the following command: `netsh int ipv4 show excludedportrange tcp`  

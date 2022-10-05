@@ -22,6 +22,9 @@ You can connect your existing SQL Server instance to Azure Arc by following thes
 * Your machine has at least one instance of SQL Server installed
 * The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers have been registered.
 
+> [!NOTE]
+> SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances. 
+
 To register the resource providers, use one of the methods below:  
 
 # [Azure portal](#tab/azure)

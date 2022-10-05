@@ -105,7 +105,7 @@ Provides the connectivity protocol and path to the external data source.
 | Cloudera CDH or Hortonworks HDP | `hdfs`  | `<Namenode>[:port]`           | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]  | Anonymous or basic authentication |
 | Azure Storage account(V2) | `wasb[s]`  | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<br />Hierarchical Namespace **not** supported |  Azure Storage account key |
 
-#### Location path
+Location path:
 
 - `<Namenode>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.defaultFS` configuration parameter. The default is 8020.
@@ -371,7 +371,7 @@ Provides the connectivity protocol and path to the external data source.
 | Azure Storage account(V2) | `wasb[s]`     | `<container>@<storage_account>.blob.core.windows.net` | Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]<br />Hierarchical Namespace **not** supported | Azure Storage account key |
 | Bulk Operations         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        | Shared access signature (SAS)|
 
-#### Location path
+Location path:
 
 - `<`Namenode`>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.defaultFS` configuration parameter. The default is 8020.
@@ -697,7 +697,7 @@ Provides the connectivity protocol and path to the external data source.
 | [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  data pool | `sqldatapool` | `sqldatapool://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)] | Basic authentication only |
 | [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]  storage pool | `sqlhdfs` | `sqlhdfs://controller-svc/default` | Only supported in [!INCLUDE[ssbigdataclusters-ver15](../../includes/ssbigdataclusters-ver15.md)]  |Basic authentication only |
 
-#### Location path
+Location path:
 
 - `<Namenode>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.defaultFS` configuration parameter. The default is 8020.
@@ -2615,19 +2615,25 @@ For more examples, see [Data virtualization with Azure SQL Managed Instance](/az
 For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
 
 1. Create the database master key, if it doesn't exist.
-1. Create the database scoped credential using a SAS token. You can also use a managed identity.
-1. Create the external data source using the credential.
 
     ```sql
     -- Optional: Create MASTER KEY if it doesn't exist in the database:
-    -- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Some Very Strong Password Here>'
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Strong Password>'
     GO
-    
+    ```
+ 
+1. Create the database scoped credential using a SAS token. You can also use a managed identity.
+
+    ```sql    
     CREATE DATABASE SCOPED CREDENTIAL MyCredential
     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
     SECRET = '<KEY>' ; --Removing leading '?'
     GO
-    
+    ```
+
+1. Create the external data source using the credential.
+
+    ```sql
     --Create external data source pointing to the file path, and referencing database-scoped credential:
     CREATE EXTERNAL DATA SOURCE MyPrivateExternalDataSource
     WITH (

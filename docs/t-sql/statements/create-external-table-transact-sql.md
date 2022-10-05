@@ -116,9 +116,9 @@ In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder i
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a file in a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
+In the following image example, if `LOCATION='/webdata/'`, a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a file in a hidden subfolder. And it won't return `_hidden.txt` because it's a hidden file.
 
-:::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="Recursive data for external tables.":::
+:::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of folders and file data for external tables.":::
 
 To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf` with SqlBinRoot the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn`.
 
@@ -952,9 +952,9 @@ Specifies the folder or the file path and file name for the actual data in Azure
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
+In the following image example, if `LOCATION='/webdata/'`, a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's in a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
-:::image type="content" source="../../t-sql/statements/media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="Recursive data for external tables.":::
+:::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of folders and file data for external tables.":::
 
 #### DATA_SOURCE = *external_data_source_name*
 
@@ -1238,9 +1238,9 @@ In Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-exter
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if `LOCATION='/webdata/'`, a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
+In the following image example, if `LOCATION='/webdata/'`, a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's in a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
-:::image type="content" source="../../t-sql/statements/media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="Recursive data for external tables.":::
+:::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of folders and file data for external tables.":::
 
 To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the `core-site.xml` configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -1484,9 +1484,6 @@ The one to three-part name of the table to create. For an external table, only t
 
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
-> [!NOTE]  
-> `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
-
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
 #### LOCATION = '*folder_or_filepath*'
@@ -1495,9 +1492,9 @@ Specifies the folder or the file path and file name for the actual data in Azure
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
-In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
+In the following image example, if `LOCATION='/webdata/'`, a PolyBase query will return rows from `mydata.txt` and `mydata2.txt`. It won't return `mydata3.txt` because it's in a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
-:::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of recursive data for external tables.":::
+:::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of folders and file data for external tables.":::
 
 #### DATA_SOURCE = *external_data_source_name*
 
@@ -1587,19 +1584,25 @@ Shared lock on the SCHEMARESOLUTION object.
 For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
 
 1. Create the database master key, if it doesn't exist.
-1. Create the database scoped credential using a SAS token. You can also use a managed identity.
-1. Create the external data source using the credential.
 
     ```sql
     -- Optional: Create MASTER KEY if it doesn't exist in the database:
-    -- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Some Very Strong Password Here>'
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Strong Password>'
     GO
-    
+    ```
+
+1. Create the database scoped credential using a SAS token. You can also use a managed identity.
+
+    ```sql    
     CREATE DATABASE SCOPED CREDENTIAL MyCredential
     WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
     SECRET = '<KEY>' ; --Removing leading '?'
     GO
-    
+    ```
+
+1. Create the external data source using the credential.
+
+    ```sql    
     --Create external data source pointing to the file path, and referencing database-scoped credential:
     CREATE EXTERNAL DATA SOURCE MyPrivateExternalDataSource
     WITH (
@@ -1662,6 +1665,7 @@ For more examples, see [Create external data source](create-external-data-source
 
 Learn more about external tables and related concepts in the following articles:
 
+- [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md)
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)

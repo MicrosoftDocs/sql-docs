@@ -76,18 +76,16 @@ Once you get familiar with querying public data sets, consider switching to non-
 
 A user that is logged into a managed instance must be authorized to access and query files stored in a non-public storage account. Authorization steps depend on how the managed instance authenticates to the storage. The type of authentication and any related parameters are not provided directly with each query. They are encapsulated in the database scoped credential object stored in the user database. The credential is used by the database to access the storage account anytime the query executes.  Azure SQL Managed Instance supports the following authentication types:
 
-### [Managed Identity](#tab/managed-identity)
+### [Managed identity](#tab/managed-identity)
 
-**Managed Identity**, also known as MSI, is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services - like Azure SQL Managed Instance - with an automatically managed identity in Azure AD. This identity can be used to authorize requests for data access in non-public storage accounts.
+A **managed identity** is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services - like Azure SQL Managed Instance - with an automatically managed identity in Azure AD. This identity can be used to authorize requests for data access in non-public storage accounts. Services like Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more user assigned managed identities.
 
-Before accessing the data, the Azure storage administrator must grant permissions to Managed Identity to access the data. Granting permissions to Managed Identity of the managed instance is done the same way as granting permission to any other Azure AD user.
-
-For example:
+Before accessing the data, the Azure storage administrator must grant permissions to managed identity to access the data. Granting permissions to the system assigned managed identity of the managed instance is done the same way as granting permission to any other Azure AD user. For example:
 
 1. In the Azure portal, in the **Access Control (IAM)** page of a storage account, select **Add role assignment**.  
 1. Choose the **Reader** Azure RBAC role to the system assigned managed service identity of the Azure SQL Managed Instance to the necessary Azure Blob Storage containers. 
 1. On the next page, select **Assign access to** **Managed identity**. **+ Select members**, and under the **Managed identity** drop-down list, select the desired managed identity. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
-1. Then, creating the database scoped credential for managed identity authentication is simple:
+1. Then, creating the database scoped credential for managed identity authentication is simple. Note in the following example that `'Managed Identity'` is a hard-coded string.
 
 ```sql
 -- Optional: Create MASTER KEY if it doesn't exist in the database:

@@ -21,6 +21,8 @@ ms.author: arupp
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
+**Note:** SQL Server TDE Extensible Key Management by using Azure Key Vault is currently unsupported for SQL Server on Linux.
+
 In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.  
   
 ## Prerequisites

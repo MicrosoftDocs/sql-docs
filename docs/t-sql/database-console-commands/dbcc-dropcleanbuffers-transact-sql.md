@@ -3,7 +3,7 @@ title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 description: "DBCC DROPCLEANBUFFERS (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "11/5/2021"
+ms.date: "9/30/2022"
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -34,7 +34,7 @@ Removes all clean buffers from the buffer pool, and columnstore objects from the
   
 ## Syntax
 
-Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
@@ -60,6 +60,8 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 ## Remarks  
 Use DBCC DROPCLEANBUFFERS to test queries with a cold buffer cache without shutting down and restarting the server.
 To drop clean buffers from the buffer pool and columnstore objects from the columnstore object pool, first use CHECKPOINT to produce a cold buffer cache. CHECKPOINT forces all dirty pages for the current database to be written to disk and cleans the buffers. After you checkpoint the database, you can issue DBCC DROPCLEANBUFFERS command to remove all buffers from the buffer pool.
+
+In Azure SQL Database, DBCC DROPCLEANBUFFERS acts on the database engine instance hosting the current database or elastic pool. Executing DBCC DROPCLEANBUFFERS in a user database drops clean buffers for that database. If the database is in an elastic pool, it also drops clean buffers in all other databases in that elastic pool. Executing the command in the `master` database has no effect on other databases on the same logical server. Executing this command in a database using Basic, S0, or S1 service objective may drop clean buffers in other databases using these service objectives on the same logical server.
   
 ## Result Sets  
 DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns:
@@ -69,8 +71,14 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## Permissions  
-Requires membership in the `sysadmin` fixed server role for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-Requires membership in the `DB_OWNER` fixed server role for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
+Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+- Requires ALTER SERVER STATE permission on the server.  
+
+Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+- Requires membership in server role `##MS_ServerStateManager##`.  
+
+Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+- Requires membership in the DB_OWNER fixed server role.  
   
 ## See Also  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

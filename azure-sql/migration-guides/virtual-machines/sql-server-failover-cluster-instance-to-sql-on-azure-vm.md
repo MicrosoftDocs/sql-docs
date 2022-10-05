@@ -338,7 +338,7 @@ After your VMs have migrated, reconfigure the cluster. Follow these steps:
 
 1. Start the migrated servers in Azure and login to any node. 
 
-1. Copy the `ClusterConfig.csv` file and run the `Update-ClusterConfig.ps1` script passing the CSV as a parameter. This will ensure the cluster resources are updated with the new configuration for the cluster to work in Azure. 
+1. Copy the `Cluster-Config.csv` file and run the `Update-ClusterConfig.ps1` script passing the CSV as a parameter. This will ensure the cluster resources are updated with the new configuration for the cluster to work in Azure. 
 
    ```powershell
    ./Update-ClusterConfig.ps1 -ConfigFilePath $filepath

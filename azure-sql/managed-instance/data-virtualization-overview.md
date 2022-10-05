@@ -5,7 +5,7 @@ description: Learn about data virtualization capabilities of Azure SQL Managed I
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, MashaMSFT
-ms.date: 09/12/2022
+ms.date: 10/04/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -123,7 +123,7 @@ When accessing non-public storage accounts, along with the location, you also ne
 
 ```sql
 --Create external data source pointing to the file path, and referencing database-scoped credential:
-CREATE EXTERNAL DATA SOURCE DemoPrivateExternalDataSource
+CREATE EXTERNAL DATA SOURCE MyPrivateExternalDataSource
 WITH (
 	LOCATION = 'abs://public@pandemicdatalake.blob.core.windows.net/curated/covid-19/bing_covid-19_data/latest'
     	CREDENTIAL = [MyCredential] 
@@ -143,7 +143,7 @@ When using `OPENROWSET` provide the format of the file, such as the following ex
 SELECT TOP 10 *
 FROM OPENROWSET(
  BULK 'bing_covid-19_data.parquet',
- DATA_SOURCE = 'DemoPublicExternalDataSource',
+ DATA_SOURCE = 'MyExternalDataSource',
  FORMAT = 'parquet'
 ) AS filerows
 ```
@@ -155,11 +155,16 @@ The `OPENROWSET` command also allows querying multiple files or folders by using
 The following example uses the [NYC yellow taxi trip records open data set](/azure/open-datasets/dataset-taxi-yellow):
 
 ```sql
+--Create the data source first:
+CREATE EXTERNAL DATA SOURCE NYCTaxiExternalDataSource
+WITH (
+	LOCATION = 'abs://nyctlc@azureopendatastorage.blob.core.windows.net'
+)
 --Query all files with .parquet extension in folders matching name pattern:
 SELECT TOP 10 *
 FROM OPENROWSET(
- BULK 'taxi/year=*/month=*/*.parquet',
- DATA_SOURCE = 'NYCTaxiDemoDataSource',--You need to create the data source first
+ BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = 'NYCTaxiExternalDataSource',
  FORMAT = 'parquet'
 ) AS filerows
  ```
@@ -178,11 +183,11 @@ Use the [sp_describe_first_results_set](/sql/relational-databases/system-stored-
 ```sql
 EXEC sp_describe_first_result_set N'
  SELECT
- vendor_id, pickup_datetime, passenger_count
+ vendorID, tpepPickupDateTime, passengerCount
  FROM 
  OPENROWSET(
-  BULK ''taxi/*/*/*'',
-  DATA_SOURCE = ''NYCTaxiDemoDataSource'',
+  BULK ''yellow/*/*/*.parquet'',
+  DATA_SOURCE = ''NYCTaxiExternalDataSource'',
   FORMAT=''parquet''
  ) AS nyc';
  ```
@@ -191,35 +196,38 @@ Once you know the data types, you can then specify them using the `WITH` clause 
 
 ```sql
 SELECT TOP 100
- vendor_id, pickup_datetime, passenger_count
+ vendorID, tpepPickupDateTime, passengerCount
 FROM
 OPENROWSET(
- BULK 'taxi/*/*/*',
- DATA_SOURCE = 'NYCTaxiDemoDataSource',
+ BULK 'yellow/*/*/*.parquet',
+ DATA_SOURCE = 'NYCTaxiExternalDataSource',
  FORMAT='PARQUET'
  )
 WITH (
-vendor_id varchar(4), -- we're using length of 4 instead of the inferred 8000
-pickup_datetime datetime2,
-passenger_count int
+vendorID varchar(4), -- we're using length of 4 instead of the inferred 8000
+tpepPickupDateTime datetime2,
+passengerCount int
 ) AS nyc;
 ```
 
-Since the schema of CSV files can't be automatically determined, explicitly specify columns using the `WITH` clause: 
+Since the schema of CSV files can't be automatically determined, columns must be always specified using the `WITH` clause: 
 
 
 ```sql
-SELECT TOP 10 *
+SELECT TOP 10 id, updated, confirmed, confirmed_change
 FROM OPENROWSET(
- BULK 'population/population.csv',
- DATA_SOURCE = 'PopulationDemoDataSourceCSV',
- FORMAT = 'CSV')
+ BULK 'bing_covid-19_data.csv',
+ DATA_SOURCE = 'MyExternalDataSource',
+ FORMAT = 'CSV',
+ FIRSTROW = 2
+)
 WITH (
- [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,
- [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,
- [year] smallint,
- [population] bigint
-) AS filerows
+ id int,
+ updated date,
+ confirmed int,
+ confirmed_change int
+)AS filerows
+
 ```
 
 ### File metadata functions
@@ -233,14 +241,14 @@ When querying multiple files or folders, you can use `Filepath` and `Filename` f
 SELECT TOP 10 filerows.filepath(1) as [Year_Folder], filerows.filepath(2) as [Month_Folder],
 filerows.filename() as [File_name], filerows.filepath() as [Full_Path], *
 FROM OPENROWSET(
- BULK 'taxi/year=*/month=*/*.parquet',
- DATA_SOURCE = 'NYCTaxiDemoDataSource',
+ BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = 'NYCTaxiExternalDataSource',
  FORMAT = 'parquet') AS filerows
 --List all paths:
 SELECT DISTINCT filerows.filepath(1) as [Year_Folder], filerows.filepath(2) as [Month_Folder]
 FROM OPENROWSET(
- BULK 'taxi/year=*/month=*/*.parquet',
- DATA_SOURCE = 'NYCTaxiDemoDataSource',
+ BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = 'NYCTaxiExternalDataSource',
  FORMAT = 'parquet') AS filerows
 ```
 
@@ -257,8 +265,8 @@ SELECT
  ,r.filepath(2) AS [month]
  ,COUNT_BIG(*) AS [rows]
 FROM OPENROWSET(
- BULK 'taxi/year=*/month=*/*.parquet',
-DATA_SOURCE = 'NYCTaxiDemoDataSource',
+ BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+DATA_SOURCE = 'NYCTaxiExternalDataSource',
 FORMAT = 'parquet'
  ) AS r
 WHERE
@@ -280,8 +288,8 @@ You can create and use views to wrap OPENROWSET queries so that you can easily r
 CREATE VIEW TaxiRides AS
 SELECT *
 FROM OPENROWSET(
- BULK 'taxi/year=*/month=*/*.parquet',
- DATA_SOURCE = 'NYCTaxiDemoDataSource',
+ BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = 'NYCTaxiExternalDataSource',
  FORMAT = 'parquet'
 ) AS filerows
 ```
@@ -295,8 +303,8 @@ SELECT *
  ,filerows.filepath(1) AS [year]
  ,filerows.filepath(2) AS [month]
 FROM OPENROWSET(
- BULK 'taxi/year=*/month=*/*.parquet',
- DATA_SOURCE = 'NYCTaxiDemoDataSource',
+ BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = 'NYCTaxiExternalDataSource',
  FORMAT = 'parquet'
 ) AS filerows
 ```
@@ -317,23 +325,32 @@ GO
 
 --Create external table:
 CREATE EXTERNAL TABLE tbl_TaxiRides(
- vendor_id VARCHAR(100) COLLATE Latin1_General_BIN2,
- pickup_datetime DATETIME2,
- dropoff_datetime DATETIME2,
- passenger_count INT,
- trip_distance FLOAT,
- fare_amount FLOAT,
+ vendorID VARCHAR(100) COLLATE Latin1_General_BIN2,
+ tpepPickupDateTime DATETIME2,
+ tpepDropoffDateTime DATETIME2,
+ passengerCount INT,
+ tripDistance FLOAT,
+ puLocationId VARCHAR(8000),
+ doLocationId VARCHAR(8000),
+ startLon FLOAT,
+ startLat FLOAT,
+ endLon FLOAT,
+ endLat FLOAT,
+ rateCodeId SMALLINT,
+ storeAndFwdFlag VARCHAR(8000),
+ paymentType VARCHAR(8000),
+ fareAmount FLOAT,
  extra FLOAT,
- mta_tax FLOAT,
- tip_amount FLOAT,
- tolls_amount FLOAT,
- improvement_surcharge FLOAT,
- total_amount FLOAT
+ mtaTax FLOAT,
+ improvementSurcharge VARCHAR(8000),
+ tipAmount FLOAT,
+ tollsAmount FLOAT, 
+ totalAmount FLOAT
 )
 WITH (
- LOCATION = 'taxi/year=*/month=*/*.parquet',
- DATA_SOURCE = DemoDataSource,
- FILE_FORMAT = DemoFileFormat
+ LOCATION = 'yellow/puYear=*/puMonth=*/*.parquet',
+ DATA_SOURCE = NYCTaxiExternalDataSource,
+ FILE_FORMAT = MyFileFormat
 );
 GO
 ```
@@ -364,14 +381,12 @@ SELECT
     ,r.filepath(2) AS [month]
     ,COUNT_BIG(*) AS [rows]
 FROM OPENROWSET(
-        BULK 'csv/taxi/yellow_tripdata_*-*.csv',
-        DATA_SOURCE = 'SqlOnDemandDemo',
-        FORMAT = 'CSV',
-        PARSER_VERSION = '2.0',        
-        FIRSTROW = 2
+        BULK 'yellow/puYear=*/puMonth=*/*.parquet',
+        DATA_SOURCE = 'NYCTaxiExternalDataSource',
+        FORMAT = 'parquet'
     )
 WITH (
-    vendor_id INT
+    vendorID INT
 ) AS [r]
 WHERE
     r.filepath(1) IN ('2017')
@@ -441,7 +456,12 @@ Issues with query execution are typically caused by managed instance not being a
 - SAS key permissions allowed: Read at minimum, and List if wildcards are used
 - Blocked inbound traffic on the storage account. Check [Managing virtual network rules for Azure Storage](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-virtual-network-rules) for more details and make sure that access from managed instance VNet is allowed.
 - Outbound traffic blocked on the managed instance using [storage endpoint policy](service-endpoint-policies-configure.md#configure-policies). Allow outbound traffic to the storage account.
-- Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.  
+- Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.
+- Compatibility level of the database must be 130 or higher for data virtualization queries to work.  
+
+## Known issues
+
+When [parameterization for Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-query-columns-ssms#param) is enabled in SQL Server Management Studio (SSMS), data virtualization queries fail with "Incorrect syntax near 'PUSHDOWN'" error message.
 
 ## Next steps
 

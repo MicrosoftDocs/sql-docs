@@ -71,19 +71,17 @@ If you encounter any installation errors during setup, check the summary log in 
     :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
 
-4. **Next steps vary from previous versions:** Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
+4. **Next steps vary from previous versions:** Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5 in one of the following:
 
     - [Install R](#install-r)
     - [Install Python](#install-python)
     - [Install Java](#install-java)
 
-**Continue to the instructions to [install R](#install-r) or [install Python](#install-python).**
-
 ## Install R
 
 5. Download the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/) for Windows, and install.
 
-6. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
+6. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From the R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
@@ -93,7 +91,7 @@ If you encounter any installation errors during setup, check the summary log in 
     install.packages("jsonlite")
     ```
     
-7. Download and install the latest version of RevoScaleR package and its dependencies.
+7. Download and install the latest version of `CompatibilityAPI` and `RevoScaleR` packages.
 
     ```r
     install.packages("https://aka.ms/sqlml/r4.2/windows/CompatibilityAPI_1.1.0.zip", repos=NULL)
@@ -140,7 +138,7 @@ If you encounter any installation errors during setup, check the summary log in 
     1. Select all **Optional Features** options, or as desired.
     1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. It is recommended that the Python installation path is accessible by all users such as `C:\Program Files\Python310 `and it is not specific to a single user.
 
-6. Download and install the latest version of revoscalepy package and its dependencies.
+6. Download and install the latest version of `revoscalepy` package and its dependencies.
 
     ```cmd
     cd "C:\Program Files\Python310\"

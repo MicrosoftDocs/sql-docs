@@ -68,7 +68,7 @@ The following commands register the repository providing the R language platform
     yum install mssql-server-extensibility
     ```
 
-2. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
+1. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
@@ -80,9 +80,9 @@ The following commands register the repository providing the R language platform
     sudo systemctl restart mssql-server
     ```
 
-3. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
+1. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
 
-4. Install CompatibilityAPI and RevoScaleR dependencies. From an admin R terminal of the version you have installed, run the following:
+1. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From an admin R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
@@ -92,39 +92,38 @@ The following commands register the repository providing the R language platform
     install.packages("jsonlite", lib="/usr/lib/R/library")
     ```
 
-5. Download and install CompatibilityAPI for Linux.
+1. Download and install `CompatibilityAPI` for Linux.
 
     ```r
     install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1.0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
     ```
 
-6. Download and install RevoScaleR for Linux.
+1. Download and install `RevoScaleR` for Linux.
 
     ```r
     install.packages("https://aka.ms/sqlml/r4.2/linux/RevoScaleR_10.0.1_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
     ```
 
-15. Verify RevoScaleR installation from the R terminal.
+1. Verify `RevoScaleR` installation from the R terminal.
 
     ```r
     library("RevoScaleR")
     ```
 
-16. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the R binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
-
+1. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the R binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
 
     ```bash  
     /opt/mssql/bin/mssql-conf set extensibility rbinpath /usr/lib/R/bin/R
     /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib/R
     ```
 
-17. Restart the Launchpad service.
+1. Restart the `Launchpadd` service.
 
     ```bash
     systemctl restart mssql-launchpadd.service
     ```
 
-18. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
+1. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
 
     ```sql
     EXEC sp_configure 'external scripts enabled', 1;
@@ -133,7 +132,7 @@ The following commands register the repository providing the R language platform
     GO
     ```
 
-19. Verify the installation by executing a simple T-SQL command to return the version of R:
+1. Verify the installation by executing a simple T-SQL command to return the version of R:
 
     ```sql
     EXEC sp_execute_external_script @script=N'print(R.version)',@language=N'R';
@@ -154,40 +153,40 @@ The following commands register the repository providing the R language platform
     sudo yum install mssql-server-extensibility
     ```
 
-2. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
+1. Review and accept the End User License Agreement (EULA) for SQL Server ML Services.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
     ```
 
-3. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime. Also, install the shared python runtime library for the desired runtime version. e.g. for Ubuntu, `sudo apt-get install libpython3.10`.
+1. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime. Also, install the shared python runtime library for the desired runtime version. For example, to install `libpython3.10` for Ubuntu: `sudo apt-get install libpython3.10`.
 
-4. Download and install revoscalepy for the root user.
+1. Download and install `revoscalepy` for the root user.
 
     ```bash  
     sudo pip install https://aka.ms/sqlml/python3.10/linux/revoscalepy-10.0.1-py3-none-any.whl --target=/usr/lib/python3.10/dist-packages
     ```
 
-7. Verify the revoscalepy installation from the Python terminal. Verify the library can be imported.
+1. Verify the `revoscalepy` installation from the Python terminal. Verify the library can be imported.
 
     ```python
     import revoscalepy
     ```
 
-8. Configure the installed Python runtime with SQL Server, where `pythonbinbath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
+1. Configure the installed Python runtime with SQL Server, where `pythonbinbath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
 
     ```bash
     /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
     /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib:/usr/lib/python3.10/dist-packages
     ```
 
-9. Restart the Launchpadd service.
+1. Restart the `Launchpadd` service.
 
     ```bash
     systemctl restart mssql-launchpadd.service
     ```
    
-10. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
+1. Configure SQL Server for Linux to allow external scripts using the `sp_configure` system stored procedure.
 
     ```sql
     EXEC sp_configure 'external scripts enabled', 1;
@@ -196,7 +195,7 @@ The following commands register the repository providing the R language platform
     GO
     ```
 
-11. Verify the installation by executing a simple T-SQL command to return the version of python:
+1. Verify the installation by executing a simple T-SQL command to return the version of python:
 
     ```sql
     EXEC sp_execute_external_script @script=N'import sys;print(sys.version)',@language=N'Python';
@@ -210,7 +209,7 @@ To install the Java language extension, see [Install SQL Server Java Language Ex
 
 ## Verify installation
 
-To validate installation:
+To validate installation, use any of the following methods:
 
 * Run a T-SQL script that executes a system stored procedure invoking Python or R using a query tool. 
 

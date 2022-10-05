@@ -46,7 +46,7 @@ public class RetrieveResultSet {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
             createTable(stmt);

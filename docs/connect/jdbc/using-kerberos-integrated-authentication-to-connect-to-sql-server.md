@@ -179,7 +179,7 @@ Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 Beginning in Microsoft JDBC Driver 6.2, the driver can establish a Kerberos connection using the Principal Name and Password passed in the connection string.
 
 ```java
-jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
+jdbc:sqlserver://servername=server_name;encrypt=true;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
 
 The username property does not require a REALM if the user belongs to the default_realm set in krb5.conf file. When `userName` and `password` are set along with `integratedSecurity=true;` and the `authenticationScheme=JavaKerberos;` property, the connection is established with a value of userName as the Kerberos Principal along with the password supplied.
@@ -187,7 +187,7 @@ The username property does not require a REALM if the user belongs to the defaul
 Beginning in Microsoft JDBC Driver 9.4, the user can specify the realm for Kerberos authentication in the connection string.
 
 ```java
-jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user;password=****;realm=REALM
+jdbc:sqlserver://servername=server_name;encrypt=true;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user;password=****;realm=REALM
 ```
 
 ## Using Kerberos authentication from Unix Machines on the same domain

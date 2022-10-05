@@ -1,18 +1,16 @@
 ---
 title: "Failed availability group add-file operation"
-description: Troubleshoot failed add-file operations in an Always On availability group. File paths can differ between systems that host the primary and secondary replicas. 
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: troubleshooting
-helpviewer_keywords: 
-  - "secondary databases [SQL Server], Availability Groups"
-  - "Availability Groups [SQL Server], troubleshooting"
-ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
+description: Troubleshoot failed add-file operations in an Always On availability group. File paths can differ between systems that host the primary and secondary replicas.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.prod: sql
+ms.technology: availability-groups
+ms.topic: troubleshooting
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "secondary databases [SQL Server], Availability Groups"
+  - "Availability Groups [SQL Server], troubleshooting"
 ---
 # Troubleshoot a Failed Add-File Operation (Always On Availability Groups)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

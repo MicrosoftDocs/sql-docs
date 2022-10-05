@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
   This article includes best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
   
 > [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of SQL Server 2022.
+> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
  For more information about using Azure Blob Storage for SQL Server backup or restore operations, see:  
   

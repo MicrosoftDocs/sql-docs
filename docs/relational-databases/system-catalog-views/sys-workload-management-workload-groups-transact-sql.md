@@ -32,7 +32,6 @@ monikerRange: "=azure-sqldw-latest"
 |query_wait_timeout_sec|**int**|INTERNAL||
 |create_time|**datetime**|Time the workload group was created. Is not nullable.||
 modify_time|**datetime**|Time the workload group was last modified. Is not nullable.||
-|&nbsp;||||
   
 ## Permissions
 

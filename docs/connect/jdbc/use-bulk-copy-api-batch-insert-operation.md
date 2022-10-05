@@ -32,7 +32,7 @@ There are three ways to enable Bulk Copy API for batch insert.
 Adding **useBulkCopyForBatchInsert=true;** to the connection string enables this feature.
 
 ```java
-Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
+Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;encrypt=true;useBulkCopyForBatchInsert=true;");
 ```
 
 ### 2. Enabling with setUseBulkCopyForBatchInsert() method from SQLServerConnection object
@@ -69,7 +69,7 @@ This is an example that demonstrates the use case for a batch insert operation o
         String tableName = "batchTest";
         String tableNameBulkCopyAPI = "batchTestBulk";
 
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement();

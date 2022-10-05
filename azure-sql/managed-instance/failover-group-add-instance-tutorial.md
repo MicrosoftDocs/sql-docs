@@ -378,7 +378,7 @@ Create your resource group and the primary managed instance using PowerShell.
    # Create the primary managed instance
    
    Write-host "Creating primary SQL Managed Instance..."
-   Write-host "This will take some time, see https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
+   Write-host "This will take some time, see https://learn.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
    New-AzSqlInstance -Name $primaryInstance `
                          -ResourceGroupName $resourceGroupName `
                          -Location $location `
@@ -705,7 +705,7 @@ Create the secondary managed instance using PowerShell.
    
    
    Write-host "Creating secondary SQL Managed Instance..."
-   Write-host "This will take some time, see https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
+   Write-host "This will take some time, see https://learn.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-management-operations or more information."
    New-AzSqlInstance -Name $secondaryInstance `
                      -ResourceGroupName $resourceGroupName `
                      -Location $drLocation `
@@ -1021,5 +1021,3 @@ Advance to the next quickstart on how to connect to SQL Managed Instance, and ho
 > [!div class="nextstepaction"]
 > [Connect to SQL Managed Instance](connect-vm-instance-configure.md)
 > [Restore a database to SQL Managed Instance](restore-sample-database-quickstart.md)
-
-

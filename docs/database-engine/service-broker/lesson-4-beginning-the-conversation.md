@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 4: Beginning the Conversation'
+title: "Lesson 4: Beginning the Conversation"
 description: "In this lesson, you will learn to start a conversation that spans two instances of the Database Engine and send a request message from the initiator instance to the target instance."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 4: Beginning the Conversation

@@ -1,30 +1,28 @@
 ---
 title: "Database-level health detection"
 description: Learn about the database-level health detection feature available for SQL Server Always On availability groups.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 01/19/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "AlwaysOn"
   - "DB_FAILOVER"
   - "Always On"
   - "High Availability"
   - "SQL Server"
-ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Availability group database level health detection failover option
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On availability group. The database level health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group.
+Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On availability group. The database level health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group. Examples that may trigger the health detection include database in suspect mode, database is offline, database in recovery (failed to recover). For more information see [State column in sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 The database level health detection is enabled for the availability group as a whole, therefore database level health detection monitors every database in the availability group. It cannot be enabled selectively for specific databases in the availability group.
 
 ## Benefits of database level health detection option
----
+
 The availability group database level health detection option is widely recommended as a good option to help guarantee the high availability for your databases. You should consider turning it on for all availability groups. If your application depends on several databases to be highly available, group them into an availability group with the database health option turned on.
 
 For example, with database level health detection option on, if SQL Server was unable to write to the transaction log file for one of the databases, the status of that database would change to indicate failure, and the availability group would soon fail over, and your application could reconnect and continue working with minimal interruption once the databases are online again.
@@ -67,11 +65,11 @@ There are several easy ways to enable database level health detection setting:
 
 ### Caveats
 
-It is important to note that the Database Level Heath Detection option currently does not cause SQL Server to monitor disk uptime and SQL Server does not directly monitor database file availability. Should a disk drive fail or become unavailable, that alone will not necessarily trigger the availability group to automatically failover.
+It is important to note that the Database Level Heath Detection option currently does not cause SQL Server to monitor disk uptime and SQL Server does not directly monitor database file availability. Should a disk drive fail or become unavailable, that alone will not necessarily trigger the availability group to automatically fail over.
 
-As an example, when a database is idle with no active transactions, and with no physical writes occurring, should some of the database files become inaccessible, SQL Server may not do any read or write IO to the files, and may not change the status for that database immediately, so no failover would be triggered. Later, when a database checkpoint occurs, or a physical read or write occurs for fulfilling a query, then SQL Server may then notice the file issue, and react by changing the database status, and subsequently the availability group with database level health detection set on would failover due to the database health change.
+As an example, when a database is idle with no active transactions, and with no physical writes occurring, should some of the database files become inaccessible, SQL Server may not do any read or write IO to the files, and may not change the status for that database immediately, so no failover would be triggered. Later, when a database checkpoint occurs, or a physical read or write occurs for fulfilling a query, then SQL Server may then notice the file issue, and react by changing the database status, and subsequently the availability group with database level health detection set on would fail over due to the database health change.
 
-As another example, when the SQL Server database engine needs to read a data page to fulfill a query, if the data page is cached in the buffer pool memory, then no disk read with physical access may be required to fulfill the query request. Therefore, a missing or unavailable data file may not immediately trigger an automatic failover even when database health option is enabled, since database status is not immediately.
+As another example, when the SQL Server database engine needs to read a data page to fulfill a query, if the data page is cached in the buffer pool memory, then no disk read with physical access may be required to fulfill the query request. Therefore, a missing or unavailable data file may not immediately trigger an automatic failover even when database health option is enabled, since database status is not immediately updated.
 
 
 ## Database failover is separate from flexible failover policy
@@ -155,7 +153,7 @@ Explanation of the fields:
 |database_name |The name of the database reporting the fault.|
 |database_replica_id |The ID of the availability replica database.|
 |failover_ready_replicas |The number of automatic failover secondary replicas that are synchronized.|
-|fault_type  | The fault id reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown|
+|fault_type  | The fault ID reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown|
 |is_critical | This  value should always return true for the XEvent as of SQL Server 2016.|
 
 

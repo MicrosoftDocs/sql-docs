@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DBCC_CHECKCAT_DIRECT_UPDATE|
 |Message Text|Warning: The system catalog was updated directly in database ID \%d, most recently at %S_DATE|
-||
 
 ## Explanation
 

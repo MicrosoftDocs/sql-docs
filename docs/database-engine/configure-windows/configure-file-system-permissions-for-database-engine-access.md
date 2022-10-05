@@ -1,15 +1,12 @@
 ---
 title: Configure File System Permissions for Database Engine Access
 description: Learn about per-service SIDs. See how to grant them access permission to the database file location so that the Database Engine can access the database files.
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "01/31/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Configure File System Permissions for Database Engine Access

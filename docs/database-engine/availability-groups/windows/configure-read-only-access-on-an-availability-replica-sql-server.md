@@ -1,21 +1,19 @@
 ---
 title: "Configure read-only access to secondary availability group replica"
 description: "Configure your secondary replica to allow only read access for your Always On availability group. "
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "connection access to availability replicas"
   - "Availability Groups [SQL Server], readable secondary replicas"
   - "active secondary replicas [SQL Server], read-only access to"
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
-ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Configure read-only access to a secondary replica of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

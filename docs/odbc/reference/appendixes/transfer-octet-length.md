@@ -39,6 +39,5 @@ The transfer octet length of a column is the maximum number of bytes returned to
 |SQL_TYPE_TIMESTAMP|16 (the size of the SQL_TIMESTAMP_STRUCT structure).|  
 |All interval data types|34 (the size of the interval structure).|  
 |SQL_GUID|16 (the size of the GUID structure).|  
-| &nbsp; | &nbsp; |
 
  [a]   If the driver cannot determine the column or parameter length for variable types, it returns SQL_NO_TOTAL.

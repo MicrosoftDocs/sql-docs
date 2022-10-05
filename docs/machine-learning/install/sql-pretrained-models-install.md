@@ -21,7 +21,7 @@ This article applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!
 
 This article explains how to use PowerShell to add free pre-trained machine learning models for *sentiment analysis* and *image featurization* to a SQL Server instance having R or Python integration. The pre-trained models are built by Microsoft and ready-to-use, added to an instance as a post-install task. For more information about these models, see the [Resources](#bkmk_resources) section of this article.
 
-Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
 
 Once installed, the pre-trained models are considered an implementation detail that power specific functions in the MicrosoftML (R) and microsoftml (Python) libraries. You should not (and cannot) view, customize, or retrain the models, nor can you treat them as an independent resource in custom code or paired other functions. 
 

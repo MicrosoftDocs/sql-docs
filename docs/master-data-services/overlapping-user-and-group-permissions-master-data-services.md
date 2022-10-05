@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], user and group overlaps"
   - "groups [Master Data Services], resolving permissions"
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Overlapping User and Group Permissions (Master Data Services)
 

@@ -1558,7 +1558,7 @@ It is recommended to not exceed no more than 30k files per folder. When too many
 
 ### Table width limitations
 
-PolyBase in Azure Data Warehouse has a row width limit of 1 MB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 1 MB, PolyBase can't query the data.
+PolyBase in Azure SQL Managed Instance has a row width limit of 1 MB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 1 MB, PolyBase can't query the data.
 
 ### Data type limitations
 

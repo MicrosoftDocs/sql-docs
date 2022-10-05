@@ -79,7 +79,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Purge the query plan cache from each Compute node and from the Control node.  
 
 > [!NOTE]
-> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope.
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` can be used to clear the procedure (plan) cache for the current database.
 
 ## Remarks  
 Use DBCC FREEPROCCACHE to clear the plan cache carefully. Clearing the procedure (plan) cache causes all plans to be evicted, and incoming query executions will compile a new plan, instead of reusing any previously cached plan. 
@@ -120,7 +120,7 @@ Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE
 - Requires ALTER SERVER STATE permission on the server.  
 
 Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-- Requires server administrator permissions.  
+- Requires membership in server role `##MS_ServerStateManager##`.  
 
 Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - Requires membership in the DB_OWNER fixed server role.  

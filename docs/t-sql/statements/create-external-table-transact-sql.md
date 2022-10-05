@@ -1499,7 +1499,7 @@ If you specify LOCATION to be a folder, a PolyBase query that selects from the e
 
 In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
-![Recursive data for external tables](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Recursive data for external tables")
+![A diagram of recursive data for external tables.](media/create-external-table-transact-sql/aps-polybase-folder-traversal.png "A diagram of recursive data for external tables.")
 
 #### DATA_SOURCE = *external_data_source_name*
 Specifies the name of the external data source that contains the location of the external data. This location is in Azure Data Lake. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).

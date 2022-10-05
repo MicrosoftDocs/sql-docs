@@ -2722,7 +2722,7 @@ For more examples, see [Create external data source](create-external-data-source
 
 ## Next steps
 
-- [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md)
+- [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]

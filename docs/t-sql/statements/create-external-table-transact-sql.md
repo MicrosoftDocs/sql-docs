@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 09/09/2022
+ms.date: 10/05/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -208,12 +208,9 @@ Requires these user permissions:
 - **ALTER ANY EXTERNAL FILE FORMAT** (only applies to Hadoop and Azure Storage external data sources)
 - **CONTROL DATABASE** (only applies to Hadoop and Azure Storage external data sources)
 
-
 Note, the remote login specified in the DATABASE SCOPED CREDENTIAL used in the CREATE EXTERNAL TABLE command must have read permission for the path/table/collection on the external data source specified in the LOCATION parameter. If you're planning to use this EXTERNAL TABLE to export data to a Hadoop or Azure Storage external data source, then the login specified must have write permission on the path specified in LOCATION. Note that Hadoop is not currently supported in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
-
 For Azure Blob Storage, when configuring the access keys and shared access signature (SAS) in the Azure portal, the Azure Blob Storage or ADLS Gen2 storage accounts, configure the **Allowed permissions** to grant at least **Read** and **Write** permissions. **List** permission might also be required when searching across folders. You must also select both **Container** and **Object** as the allowed resource types.
-
 
 > [!IMPORTANT]  
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
@@ -676,24 +673,24 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 ## Syntax
 
 ```syntaxsql
--- Create a table for use with elastic query  
+-- Create a table for use with elastic query
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( <column_definition> [ ,...n ] )  
-    WITH ( <sharded_external_table_options> )  
-[;]  
+    ( <column_definition> [ ,...n ] )
+    WITH ( <sharded_external_table_options> )
+[;]
 
 <column_definition> ::=
 column_name <data_type>
     [ COLLATE collation_name ]
     [ NULL | NOT NULL ]
   
-<sharded_external_table_options> ::=  
+<sharded_external_table_options> ::=
         DATA_SOURCE = external_data_source_name,
-        SCHEMA_NAME = N'nonescaped_schema_name',  
-        OBJECT_NAME = N'nonescaped_object_name',  
-        [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
-    )  
-[;]  
+        SCHEMA_NAME = N'nonescaped_schema_name',
+        OBJECT_NAME = N'nonescaped_object_name',
+        [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]
+    )
+[;]
 ```
 
 ## Arguments
@@ -892,42 +889,42 @@ For more guidance and examples on using external tables with Azure Synapse, see 
 ### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( <column_definition> [ ,...n ] )  
+    ( <column_definition> [ ,...n ] )
     WITH (
-        LOCATION = 'hdfs_folder_or_filepath',  
-        DATA_SOURCE = external_data_source_name,  
-        FILE_FORMAT = external_file_format_name  
-        [ , <reject_options> [ ,...n ] ]  
-    )  
-[;]  
+        LOCATION = 'hdfs_folder_or_filepath',
+        DATA_SOURCE = external_data_source_name,
+        FILE_FORMAT = external_file_format_name
+        [ , <reject_options> [ ,...n ] ]
+    )
+[;]
 
 <column_definition> ::=
 column_name <data_type>
     [ COLLATE collation_name ]
     [ NULL | NOT NULL ]
   
-<reject_options> ::=  
-{  
-    | REJECT_TYPE = value | percentage,  
-    | REJECT_VALUE = reject_value,  
+<reject_options> ::=
+{
+    | REJECT_TYPE = value | percentage,
+    | REJECT_VALUE = reject_value,
     | REJECT_SAMPLE_VALUE = reject_sample_value,
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
-}  
+}
 ```
 ### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
 ```syntaxsql
-CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name } 
-    ( <column_definition> [ ,...n ] )   
-    WITH ( 
-        LOCATION = 'folder_or_filepath',   
-        DATA_SOURCE = external_data_source_name,   
-        FILE_FORMAT = external_file_format_name,   
-        TABLE_OPTIONS = table_options_json     
-    )   
-[;]   
-<column_definition> ::= 
-column_name <data_type> 
-    [ COLLATE collation_name ] 
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
+    ( <column_definition> [ ,...n ] )
+    WITH (
+        LOCATION = 'folder_or_filepath',
+        DATA_SOURCE = external_data_source_name,
+        FILE_FORMAT = external_file_format_name,
+        TABLE_OPTIONS = table_options_json
+    )
+[;]
+<column_definition> ::=
+column_name <data_type>
+    [ COLLATE collation_name ]
 ```
 ---
 
@@ -1110,8 +1107,7 @@ Shared lock on the SCHEMARESOLUTION object.
 For examples for Gen ADLS Gen 1, see [Create external data source](create-external-data-source-transact-sql.md).
 
 ```sql
-
--- These values come from your Azure Active Directory Application used to authenticate to ADLS Gen 2. 
+-- These values come from your Azure Active Directory Application used to authenticate to ADLS Gen 2.
 CREATE DATABASE SCOPED CREDENTIAL ADLUser
 WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
 SECRET = '<KEY>' ;
@@ -1196,27 +1192,27 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( <column_definition> [ ,...n ] )  
+    ( <column_definition> [ ,...n ] )
     WITH (
-        LOCATION = 'hdfs_folder_or_filepath',  
-        DATA_SOURCE = external_data_source_name,  
-        FILE_FORMAT = external_file_format_name  
-        [ , <reject_options> [ ,...n ] ]  
-    )  
-[;]  
+        LOCATION = 'hdfs_folder_or_filepath',
+        DATA_SOURCE = external_data_source_name,
+        FILE_FORMAT = external_file_format_name
+        [ , <reject_options> [ ,...n ] ]
+    )
+[;]
 
 <column_definition> ::=
 column_name <data_type>
     [ COLLATE collation_name ]
     [ NULL | NOT NULL ]
 
-<reject_options> ::=  
-{  
-    | REJECT_TYPE = value | percentage,  
-    | REJECT_VALUE = reject_value,  
+<reject_options> ::=
+{
+    | REJECT_TYPE = value | percentage,
+    | REJECT_VALUE = reject_value,
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
-}  
+}
 ```
 
 ## Arguments
@@ -1258,7 +1254,7 @@ Specifies the name of the external file format object that stores the file type 
 
 #### Reject Options
 
-This option can be used only with external data sources where TYPE = HADOOP. 
+This option can be used only with external data sources where TYPE = HADOOP.
 
 You can specify reject parameters that determine how PolyBase will handle *dirty* records it retrieves from the external data source. A data record is considered 'dirty' if it actual data types or the number of columns don't match the column definitions of the external table.
 
@@ -1435,7 +1431,7 @@ Learn more about external tables in Analytics Platform System in the following a
         [Azure SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        **_\* Azure SQL Managed Instance \*_** &nbsp;        
+        **_\* Azure SQL Managed Instance \*_** &nbsp;  
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -1454,57 +1450,61 @@ Creates an external data table in [!INCLUDE[ssazuremi_md](../../includes/ssazure
 
 Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and to query them with T-SQL statements, even combine data with locally stored relational data using joins.
 
-See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
+See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).
 
 ## Syntax
 
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( <column_definition> [ ,...n ] )  
+    ( <column_definition> [ ,...n ] )
     WITH (
-        LOCATION = 'filepath',  
-        DATA_SOURCE = external_data_source_name,  
-        FILE_FORMAT = external_file_format_name  
-    )  
-[;]  
+        LOCATION = 'filepath',
+        DATA_SOURCE = external_data_source_name,
+        FILE_FORMAT = external_file_format_name
+    )
+[;]
 
 <column_definition> ::=
 column_name <data_type>
     [ COLLATE collation_name ]
     [ NULL | NOT NULL ]
   
-
 ```
 
 ## Arguments
 
 #### *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
+
 The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake or Azure blob storage. No actual data is moved or stored when external tables are created.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 #### \<column_definition> [ ,...*n* ]
+
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
-> [!NOTE]
+> [!NOTE]  
 > `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
 #### LOCATION = '*folder_or_filepath*'
+
 Specifies the folder or the file path and file name for the actual data in Azure Data Lake or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source. The [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
 In this example, if LOCATION='/webdata/', a PolyBase query will return rows from mydata.txt and mydata2.txt. It won't return mydata3.txt because it's a subfolder of a hidden folder. And it won't return `_hidden.txt` because it's a hidden file.
 
-![A diagram of recursive data for external tables.](media/create-external-table-transact-sql/aps-polybase-folder-traversal.png "A diagram of recursive data for external tables.")
+:::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of recursive data for external tables.":::
 
 #### DATA_SOURCE = *external_data_source_name*
+
 Specifies the name of the external data source that contains the location of the external data. This location is in Azure Data Lake. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 #### FILE_FORMAT = *external_file_format_name*
+
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
 ## Permissions
@@ -1516,19 +1516,19 @@ Requires these user permissions:
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
 
-> [!NOTE]
+> [!NOTE]  
 > CONTROL DATABASE permissions are required to create only the MASTER KEY, DATABASE SCOPED CREDENTIAL, and EXTERNAL DATA SOURCE
 
 Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
 ## Error handling
 
 While executing the CREATE EXTERNAL TABLE statement, PolyBase attempts to connect to the external data source. If the attempt to connect fails, the statement will fail and the external table won't be created. It can take a minute or more for the command to fail since PolyBase retries the connection before eventually failing the query.
 
-## General remarks
+## Remarks
 
 In ad-hoc query scenarios, such as SELECT FROM EXTERNAL TABLE, PolyBase stores the rows that are retrieved from the external data source in a temporary table. After the query completes, PolyBase removes and deletes the temporary table. No permanent data is stored in SQL tables.
 
@@ -1589,7 +1589,7 @@ For more examples, see [Create external data source](create-external-data-source
 1. Create the database master key, if it doesn't exist.
 1. Create the database scoped credential using a SAS token. You can also use a managed identity.
 1. Create the external data source using the credential.
-    
+
     ```sql
     -- Optional: Create MASTER KEY if it doesn't exist in the database:
     -- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Some Very Strong Password Here>'
@@ -1604,13 +1604,13 @@ For more examples, see [Create external data source](create-external-data-source
     CREATE EXTERNAL DATA SOURCE MyPrivateExternalDataSource
     WITH (
         LOCATION = 'abs://public@pandemicdatalake.blob.core.windows.net/curated/covid-19/bing_covid-19_data/latest'
-            CREDENTIAL = [MyCredential] 
+            CREDENTIAL = [MyCredential]
     )
     GO
     ```
 
 1. Create an EXTERNAL FILE FORMAT and an EXTERNAL TABLE, to query the data as if it were a local table.
-    
+
     ```sql
     -- Or, create an EXTERNAL FILE FORMAT and an EXTERNAL TABLE
     
@@ -1642,7 +1642,7 @@ For more examples, see [Create external data source](create-external-data-source
      mtaTax FLOAT,
      improvementSurcharge VARCHAR(8000),
      tipAmount FLOAT,
-     tollsAmount FLOAT, 
+     tollsAmount FLOAT,
      totalAmount FLOAT
     )
     WITH (

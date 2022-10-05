@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) Creates an external fil
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/09/2022
+ms.date: 10/05/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -162,7 +162,7 @@ Specifies the format of the external data.
 
   Specifies a Parquet format.
 
-- ORC  
+- ORC
 
   Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
 
@@ -357,7 +357,7 @@ Details:
 
  Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. The default value is FALSE.
 
-- TRUE  
+- TRUE
 
   When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:
 

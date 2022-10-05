@@ -46,7 +46,7 @@ adls://<container>@<storage_account>.dfs.core.windows.net/<path>/<file_name>.par
 > The provided Location type prefix is used to choose the optimal protocol for communication and to leverage any advanced capabilities offered by the particular storage type.
 > Using the generic `https://` prefix is disabled. Always use endpoint-specific prefixes.
 
-## Getting started
+## Get started
 
 If you're new to data virtualization and want to quickly test functionality, start by querying public data sets available in [Azure Open Datasets](/azure/open-datasets/dataset-catalog), like the [Bing COVID-19 dataset](/azure/open-datasets/dataset-bing-covid-19?tabs=azure-storage) allowing anonymous access.
 

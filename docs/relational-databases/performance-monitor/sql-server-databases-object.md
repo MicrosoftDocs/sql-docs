@@ -2,7 +2,7 @@
 title: "SQL Server, Databases object"
 description: Learn about the SQLServer:Databases object, which provides counters for bulk copy operations, backup and restore throughput, and transaction log activities.
 ms.custom: ""
-ms.date: "07/12/2021"
+ms.date: "10/05/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -29,7 +29,7 @@ ms.author: wiassaf
 |**Active parallel redo threads**|Count of active parallel redo threads.|
 |**Active Transactions**|Number of active transactions for the database.|  
 |**Avg Dist From EOL/LP Request**|Average distance in bytes from end of log per log pool request, for requests in the last VLF.| 
-|**Backup/Restore Throughput/sec**|Read/write throughput for backup and restore operations of a database per second. For example, you can measure how the performance of the database backup operation changes when more backup devices are used in parallel or when faster devices are used. Throughput of a database backup or restore operation allows you to determine the progress and performance of your backup and restore operations.|  
+|**Backup/Restore Throughput/sec**|Read/write throughput for backup and restore operations of a database. Bytes per second. For example, you can measure how the performance of the database backup operation changes when more backup devices are used in parallel or when faster devices are used. Throughput of a database backup or restore operation allows you to determine the progress and performance of your backup and restore operations.|  
 |**Bulk Copy Rows/sec**|Number of rows bulk copied per second.|  
 |**Bulk Copy Throughput/sec**|Amount of data bulk copied (in kilobytes) per second.|  
 |**Commit table entries**|The size (row count) of the in-memory portion of the commit table for the database. For more information, see [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  

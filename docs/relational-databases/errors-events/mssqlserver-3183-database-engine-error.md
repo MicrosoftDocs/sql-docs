@@ -29,10 +29,7 @@ ms.author: mathoma
 ## Explanation
 
  
-This error is raised if a page validation fails when restoring a database backup that was performed with the CHECKSUM option. SQL Server terminates the restore operation and reports an error that looks like the following:
-
-A database page could be damaged due to a number of reasons including hardware failures and OS issues 
-
+This error is raised if a page validation fails when restoring a database backup that was performed with the CHECKSUM option. SQL Server terminates the restore operation and reports an error that looks like this:
 
 ```output
 Msg 3183, Level 16, State 1, Line 1
@@ -41,9 +38,14 @@ Msg 3013, Level 16, State 1, Line 1
 RESTORE DATABASE is terminating abnormally.
 ```
 
+
+A database page could be damaged due to many reasons including hardware failures and OS issues 
+
+
+
  
 ## User Action  
 
 - Use a last know good backup or use the CONTINUE_AFTER_ERROR clause to restore, then use DBCC CHECKDB to check. See [To specify whether a restore operation continues or stops after encountering an error](/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error#to-specify-whether-a-restore-operation-continues-or-stops-after-encountering-an-error)
 
-- Investigate the hardware where the backup was initially taken and where it was stored to ensure no other database backups are impacted and that this issue does not occur in the future. 
+- Investigate the hardware where the backup was initially taken and where it was stored.  This action is to ensure no other database backups are impacted and that this issue doesn't occur in the future. 

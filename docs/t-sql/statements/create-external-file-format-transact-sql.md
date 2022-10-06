@@ -31,11 +31,11 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Does not apply to Azure Synapse Analytics.
+  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
 - **Hive ORC**
 
-  Does not apply to Azure Synapse Analytics.
+  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
 - **Parquet**
 
@@ -45,7 +45,7 @@ The following file formats are supported:
 
 - **Delta**
 
-  Applies to the [serverless SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-delta-lake-format) and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+  Applies only to [serverless SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-delta-lake-format) and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Syntax
 

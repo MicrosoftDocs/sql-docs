@@ -2733,20 +2733,11 @@ For more examples, see [Create external data source](create-external-data-source
 
 <!-- links to external pages -->
 <!-- SQL Docs -->
-[bulk_insert]: ./bulk-insert-transact-sql.md
-[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-import-data-from-a-file-in-azure-blob-storage
-[openrowset]: ../functions/openrowset-transact-sql.md
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_etb]: /sql/t-sql/statements/create-external-data-source
 [alter_eds]: ./alter-external-data-source-transact-sql.md
 [cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
-<!-- PolyBase docs -->
-[intro_pb]: ../../relational-databases/polybase/polybase-guide.md
-[mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
-[connectivity_pb]:../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
-[hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Azure Docs -->
-[azure_ad]: /azure/data-lake-store/data-lake-store-authenticate-using-active-directory
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end

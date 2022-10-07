@@ -34,7 +34,7 @@ We'll create a `KeyCardEvents` table with the following schema.
 | Timestamp | datetime2 | The date and time the employee accessed the building |
 
 > [!IMPORTANT]
-> Creating append-only ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions). 
+> Creating append-only ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
 1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
 

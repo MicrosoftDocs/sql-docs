@@ -2655,7 +2655,7 @@ For more examples, see [Create external data source](create-external-data-source
     ) AS filerows
     ```
 
-1. Or, query data using OPENROWSET the WITH clause, instead of relying on schema inference, which may will query execution cost. On a CSV, schema inference is not supported.
+1. Or, query data using OPENROWSET the WITH clause, instead of relying on schema inference, which may query execution cost. On a CSV, schema inference is not supported.
 
     ```sql
     --Or, query data using the WITH clause on a CSV, where schema inference is not supported

@@ -1,8 +1,8 @@
 ---
 title: Configure a SQL Server Always On availability group across different regions
 description: This article explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region.
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
 ms.date: 09/01/2022
 ms.service: virtual-machines-sql
@@ -52,6 +52,14 @@ When availability group replicas are on Azure virtual machines in different Azur
 To create a replica in a remote data center, do the following steps:
 
 1. [Create a virtual network in the new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network).
+
+   Select the subnet network, Cluster IP, and AG Listener IP addresses to be used for the local and remote region. The step listed here is using the following:
+
+   | Type | Local | Remote Region
+   | ----- | ----- | ----------
+   | Subnet Network | 192.168.15.0/24 | 10.36.1.0/24
+   | Cluster IP | 192.168.15.200 | 10.36.1.200
+   | AG Listener IP | 192.168.15.201 | 10.36.1.201
 
 1. Connect the Virtual Networks in the two Azure regions using one of the following methods:
    

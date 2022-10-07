@@ -131,4 +131,4 @@ If you do not need your SQL VM to run continually, you can avoid unnecessary cha
 In this quickstart, you created a SQL Server virtual machine in the Azure portal. To learn more about how to migrate your data to the new SQL Server, see the following article.
 
 > [!div class="nextstepaction"]
-> [Migrate a database to a SQL VM](migrate-to-vm-from-sql-server.md)
+> [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)

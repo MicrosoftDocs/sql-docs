@@ -1967,6 +1967,8 @@ items:
       href: relational-databases/views/rename-views.md
     - name: Delete
       href: relational-databases/views/delete-views.md
+    - name: Use DMVs to determine performance of Views
+      href: relational-databases/performance/use-dmvs-determine-usage-performance-views.md
   - name: XML data
     href: relational-databases/xml/xml-data-sql-server.md
     items:
@@ -10056,7 +10058,15 @@ items:
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
       - name: SQL Server 2017
-        href: linux/sql-server-linux-release-notes.md
+        href: linux/sql-server-linux-release-notes-2017.md
+    - name: Release history
+      items:
+      - name: SQL Server 2022 Preview
+        href: linux/sql-server-linux-release-history-2022.md
+      - name: SQL Server 2019
+        href: linux/sql-server-linux-release-history-2019.md
+      - name: SQL Server 2017
+        href: linux/sql-server-linux-release-history-2017.md
     - name: Editions & Features
       items:
       - name: SQL Server 2022 Preview
@@ -10132,8 +10142,6 @@ items:
       items:
       - name: Install SQL Server
         href: linux/sql-server-linux-setup.md
-      - name: Install SQL Server 2022 Preview
-        href: linux/sql-server-linux-setup-2022.md
       - name: Install SQL Server tools
         href: linux/sql-server-linux-setup-tools.md
       - name: Install SQL Server Agent
@@ -10374,6 +10382,8 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Cumulative Update 18
+          href: big-data-cluster/release-notes-cumulative-update-18.md
         - name: Cumulative Update 17
           href: big-data-cluster/release-notes-cumulative-update-17.md
         - name: Cumulative Update 16
@@ -10410,6 +10420,8 @@ items:
         href: big-data-cluster/deployment-custom-configuration.md
       - name: Configure storage
         href: big-data-cluster/concept-data-persistence.md
+      - name: Configure Apache Spark
+        href: big-data-cluster/configure-spark-hdfs.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
       - name: Deploy with high availability
@@ -12036,6 +12048,8 @@ items:
         href: relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md
       - name: sys.database_usage
         href: relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md
+      - name: sys.dm_elastic_pool_resource_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database.md
       - name: sys.elastic_pool_resource_stats
         href: relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md
       - name: sys.event_log
@@ -12420,10 +12434,14 @@ items:
         href: relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md
       - name: sys.query_store_plan
         href: relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md
+      - name: sys.query_store_plan_forcing_locations
+        href: relational-databases/system-catalog-views/sys-plan-forcing-locations.md
       - name: sys.query_store_query
         href: relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md
       - name: sys.query_store_query_text
         href: relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md
+      - name: sys.query_store_replicas
+        href: relational-databases/system-catalog-views/sys-query-store-replicas.md
       - name: sys.query_store_runtime_stats
         href: relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md
       - name: sys.query_store_wait_stats

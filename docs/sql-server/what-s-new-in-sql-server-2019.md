@@ -8,7 +8,7 @@ ms.technology: release-landing
 ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-ver15"
+monikerRange: ">= sql-server-2016"
 ms.custom:
   - intro-whats-new
 ---

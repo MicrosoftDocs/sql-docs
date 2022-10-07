@@ -5,7 +5,7 @@ description: Install, update, and uninstall SQL Server on Linux. This article co
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 07/25/2022
+ms.date: 10/03/2022
 ms.topic: conceptual
 ms.prod: sql
 ms.custom:
@@ -18,10 +18,7 @@ ms.technology: linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], and [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Linux.
-
-> [!TIP]  
-> For installing [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] CTP 2.1 on Linux, see [Installation guidance for SQL Server 2022 (16.x) Preview on Linux](./sql-server-linux-setup-2022.md).
+This article provides guidance for installing, updating, and uninstalling [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], [!INCLUDE [sssql19-md](../includes/sssql19-md.md)], and [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux.
 
 For other deployment scenarios, see:
 
@@ -50,9 +47,16 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15 "
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 [!INCLUDE [linux-supported-platforms-2019](includes/linux-supported-platforms-2019.md)]
+
+::: moniker-end
+
+<!--SQL Server 2022 on Linux-->
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+[!INCLUDE [linux-supported-platforms-2022](includes/linux-supported-platforms-2022.md)]
 
 ::: moniker-end
 
@@ -68,7 +72,7 @@ SQL Server has the following system requirements for Linux:
 ||Requirement|
 |-----|-----|
 | **Memory** | 2 GB |
-| **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
+| **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are not supported) |
 | **Disk space** | 6 GB |
 | **Processor speed** | 2 GHz |
 | **Processor cores** | 2 cores |
@@ -76,24 +80,24 @@ SQL Server has the following system requirements for Linux:
 
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
-- Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as fallocate and sparse file creation, common to modern file systems.
-- Locate only the **/var/opt/mssql** directories on the NFS mount. Other files, such as the SQL Server system binaries, are not supported.
+- Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as `fallocate` and sparse file creation, common to modern file systems.
+- Locate only the `/var/opt/mssql` directories on the NFS mount. Other files, such as the SQL Server system binaries, are not supported.
 - Ensure that NFS clients use the 'nolock' option when mounting the remote share.
 
 ## <a id="repositories"></a> Configure source repositories
 
-When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. The quickstarts use the Cumulative Update **CU** repository for SQL Server. But you can instead configure a **GDR** repository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. The quickstarts use the Cumulative Update **CU** repository for SQL Server. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 ## <a id="platforms"></a> Install SQL Server
 
-You can install SQL Server 2017 or SQL Server 2019 on Linux from the command line. For step-by-step instructions, see one of the following quickstarts:
+You can install SQL Server on Linux from the command line. For step-by-step instructions, see one of the following quickstarts:
 
 | Platform | Installation quickstarts |
 |---|---|
-| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true) |
-| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true) |
-| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true) |
-| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true) |
+| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true) \| [2022](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver16&preserve-view=true) |
+| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true) \| [2022](quickstart-install-connect-suse.md?view=sql-server-linux-ver16&preserve-view=true) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true) \| [2022](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver16&preserve-view=true) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true) \| [2022](quickstart-install-connect-docker.md?view=sql-server-linux-ver16&preserve-view=true) |
 
 You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?toc=/sql/toc/toc.json).
 
@@ -117,7 +121,7 @@ To upgrade SQL Server, first [change your configured repository](sql-server-linu
 
 To rollback or downgrade SQL Server to a previous release, use the following steps:
 
-1. Identify the version number for the SQL Server package you want to downgrade to. For a list of package numbers, see the [Release notes](../linux/sql-server-linux-release-notes.md).
+1. Identify the version number for the SQL Server package you want to downgrade to. For a list of package numbers, see the [Release notes](../linux/sql-server-linux-release-notes-2017.md).
 
 1. Downgrade to a previous version of SQL Server. In the following commands, replace `<version_number>` with the SQL Server version number you identified in step one.
 
@@ -186,7 +190,7 @@ If your Linux machine does not have access to the online repositories used in th
 > [!TIP]
 > If you successfully installed with the steps in the quick starts, you do not need to download or manually install the SQL Server package(s). This section is only for the offline scenario.
 
-1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](../linux/sql-server-linux-release-notes.md).
+1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](../linux/sql-server-linux-release-notes-2017.md).
 
 1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** command.
 

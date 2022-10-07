@@ -8,42 +8,45 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 10/05/2022
 ms.prod: sql
 ms.topic: conceptual
+monikerRange: ">= sql-server-2022"
 ---
 
 # Billing through Microsoft Azure
 
-Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option of purchasing the SQL Server software license. This is an alternative to using the traditional license agreement with Microsoft. Starting with SQL Server 2022, this option is incudied with SQL Server setup and allows you to activate your SQL Server instance for use in production without supplying a Product key. See [SQL Server installation guide] (https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server) for details.
+[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+
+Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option to purchasing the SQL Server software license. This option is an alternative to using the traditional license agreement with Microsoft. Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], this option is included with SQL Server setup and allows you to activate your SQL Server instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
 
 ## Overview
 
-You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased Product key. This option requires that you have an active Azure subscription. Once your SQL Server instance is connected to Azure and the Azure extesnsion for SQL Server is installed on the hosting server, the SQL Server isntance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
+You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased product key. This option requires that you have an active Azure subscription. Once your SQL Server instance is connected to Azure and the Azure extension for SQL Server is installed on the hosting server, the SQL Server instance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
 
-The billing granualarity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in logical cores (vCores) whether  the SQL Server instance is installed on the physical server or virtual machine. 
+The billing granuLarity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in logical cores (vCores) whether the SQL Server instance is installed on the physical server or virtual machine.
 
 When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following principles to select instance to be licensed:
 
-1. The instance with the highest edition of all instances installed on the same OS determines the required license. 
-1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a Product key, i.e. is pre-paid, pay-as-you-go instance is ignored to minimize the customer cost.
+1. The instance with the highest edition of all instances installed on the same operating system determines the required license.
+1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
 
 The pay-as-you-go billing requires that the following conditions are met:
 
-1. The host is in a Running state. E.g. the virtual machine is fully up.
+1. The host is in a running state. For example, the virtual machine is fully up.
 1. The hosting server is onboarded to Azure Arc.
-1. SQL Server instance and Azure extension for SQL Server are installed.
-1. The pay-as-you-go option is selected during the SQL Server installation or enabled in Azure portal. 
+1. The SQL Server instance and Azure extension for SQL Server are installed.
+1. The pay-as-you-go option is selected during the SQL Server installation, or enabled in Azure portal. 
 
-If any of these conditions is not met, the pay-as-you-go billing will stop until they are met again.   
+If any of these conditions is not met, the pay-as-you-go billing will stop until they are met again.
 
 > [!IMPORTANT]
-> Intermittent internet connectivity does not stop the pay-as-y ou-go billing. The missed usage will be reported and accoounted for by the billing logic when the connectivity is restored. 
+> Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
 
 ## Licence types
 
-Any installed instace of SQL server can be connect to Azure. The only exceptions are Express and Web editions. When they are connected their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licences in *Cost Management + Billing* portal but only the pay-as-you-go instances  generate the actual charges. This way you can manage you license poistion and maintain compliance. The following table shows the different license types.
+Any installed instance of SQL server can be connected to Azure. The only exceptions are Express and Web editions. When they are connected, their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licences in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage you license position and maintain compliance. The following table shows the different license types.
 
 | Installed edition | Activation choice  | License type  |  
 |---|---|---|
-| Enterprise Core | Product key with Software Assurance or Subscription | Paid | 
+| Enterprise Core | Product key with Software Assurance or Subscription | Paid |
 | Enterprise Core | Pay-as-you-go | PAYG | 
 | Standard | Product key with Software Assurance or Subscription | Paid | 
 | Standard | Pay-as-you-go | PAYG |
@@ -53,7 +56,7 @@ Any installed instace of SQL server can be connect to Azure. The only exceptions
 | Evaluation | Free edition | Free | 
 | Developer | Free edition | Free | 
 
-Example of the instance proprties of SQL Server 2022 in JSON:
+Example of the instance properties of [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] in JSON:
 
 ```json
     "properties": {
@@ -67,8 +70,8 @@ Example of the instance proprties of SQL Server 2022 in JSON:
         ...
     }
 ```
- 
- One of the benefits of Software Assurance or SQL subscription is free fail-over servers for high availability. See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details of this benefit.  Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an Avaiolability Group. In that case it reports it with a license type `HADR`, which does not require a separate license. The  following table shows the conditions when this license type is set.
+
+One of the benefits of Software Assurance or SQL subscription is free fail-over servers for high availability. See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details of this benefit.  Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group. In that case, it reports it with a license type `HADR`, which does not require a separate license. The  following table shows the conditions when this license type is set.
 
 | Installed edition | Activation choice  | AG replica | License type  |  
 |---|---|---|---|
@@ -82,8 +85,7 @@ Example of the instance proprties of SQL Server 2022 in JSON:
 
 <sup>1</sup> *Server/CAL license does not include free fail-over servers for high availability.*
 
-
 ## Next steps
 
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
-- [Install SQL Server 2022 using the pay-as-you-go activation option](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server)
+- [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)

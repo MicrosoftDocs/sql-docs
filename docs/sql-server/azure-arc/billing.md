@@ -40,9 +40,9 @@ If any of these conditions is not met, the pay-as-you-go billing will stop until
 > [!IMPORTANT]
 > Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
 
-## Licence types
+## License types
 
-Any installed instance of SQL server can be connected to Azure. The only exceptions are Express and Web editions. When they are connected, their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licences in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage you license position and maintain compliance. The following table shows the different license types.
+Any installed instance of SQL server can be connected to Azure. The only exceptions are Express and Web editions. When they are connected, their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licences in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage your license position and maintain compliance. The following table shows the different license types.
 
 | Installed edition | Activation choice  | License type  |  
 |---|---|---|

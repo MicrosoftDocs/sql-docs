@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for elastic p
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 07/14/2022
+ms.date: 10/06/2022
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
@@ -77,7 +77,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS per pool <sup>3</sup>|800|1600|2400|3200|4000|
+|Max data IOPS per pool <sup>3</sup>|1,400|2,800|4,200|5,600|7,000|
 |Max log rate per pool (MBps)|12|24|36|48|60|
 |Max concurrent workers per pool <sup>4</sup>|210|420|630|840|1050|
 |Max concurrent logins per pool <sup>4</sup>|210|420|630|840|1050|
@@ -112,7 +112,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS per pool <sup>3</sup>|4,800|5,600|6,400|7,200|8,000|
+|Max data IOPS per pool <sup>3</sup>|8,400|9,800|11,200|12,600|14,000|
 |Max log rate per pool (MBps)|62.5|62.5|62.5|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|1260|1470|1680|1890|2100|
 |Max concurrent logins per pool <sup>4</sup>|1260|1470|1680|1890|2100|
@@ -148,7 +148,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS per pool <sup>3</sup> |9,600|12,800|16,000|32,000|40,000|
+|Max data IOPS per pool <sup>3</sup> |16,800|22,400|28,000|32,000|40,000|
 |Max log rate per pool (MBps)|62.5|62.5|62.5|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|2520|3360|4200|8400|13,440|
 |Max concurrent logins per pool <sup>4</sup>|2520|3360|4200|8400|8400|
@@ -187,7 +187,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS per pool <sup>3</sup>|2560|3200|3840|4480|5120|
+|Max data IOPS per pool <sup>3</sup>|5,600|7,000|8,400|9,800|11,200|
 |Max log rate per pool (MBps)|48|60|62.5|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|400|500|600|700|800|
 |Max concurrent logins per pool <sup>4</sup>|800|1000|1200|1400|1600|
@@ -222,7 +222,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS per pool <sup>3</sup>|5760|6400|7680|10,240|11,520|12,800|
+|Max data IOPS per pool <sup>3</sup>|12,600|14,000|16,800|22,400|25,200|31,200|
 |Max log rate per pool (MBps)|62.5|62.5|62.5|62.5|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|900|1000|1200|1600|1800|3600|
 |Max concurrent logins per pool <sup>4</sup>|1800|2000|2400|3200|3600|7200|
@@ -257,7 +257,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Storage type|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|Premium (Remote) Storage|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS per pool <sup>3</sup>|800|1600|2400|3200|
+|Max data IOPS per pool <sup>3</sup>|1,400|2,800|4,200|5,600|
 |Max log rate per pool (MBps)|12|24|36|48|
 |Max concurrent workers per pool <sup>4</sup>|168|336|504|672|
 |Max concurrent logins per pool <sup>4</sup>|168|336|504|672|

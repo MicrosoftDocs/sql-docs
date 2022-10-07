@@ -141,7 +141,7 @@ The connection retry settings (ConnectRetryCount and ConnectRetryInterval) apply
 
 - Open connection resiliency refers to the initial SqlConnection.Open/OpenAsync() method. The first connection attempt is counted as try zero. ConnectRetryCount applies to retry numbers above that. So, when connection zero fails (might not be immediate), ConnectRetryInterval is applied first followed by subsequent ConnectRetryCount (and ConnectRetryInterval) attempts. To take advantage of all retry attempts, the Connection Timeout must allow time for all attempts.
 
-- Idle connection resiliency refers to the automatic detection and reconnection of existing idle connections that have been broken. The first attempt at reconnecting a broken idle connection counts as the first retry attempt. To take advantage of all retry attempts, the `Command Timeout` must allow time for all attempts.
+- Idle connection resiliency refers to the automatic detection and reconnection of existing idle connections that have been broken. The first attempt at reconnecting a broken idle connection counts as the first retry attempt. To take advantage of all retry attempts, the Command Timeout must allow time for all attempts.
 
 Example:
 Assume the following values for ConnectRetryCount and ConnectRetryInterval parameters:
@@ -169,8 +169,11 @@ For example, if the count is 3 and the interval is 10 seconds, a timeout of only
 `ConnectRetryCount -3, ConnectRetryInterval - 10 seconds`
 
 4:10:00 - Broken connection detected on command execution
+
 4:10:00 - Retry 1 -->First retry happens immediately
+
 4:10:10 - Retry 2
+
 4:10:20 - Retry 3
 
 This isn't an initial connection, so Connection Timeout doesn't apply. However, because the  connection recovery happens during command execution, the Command Timeout setting does apply. The Command Timeout default is 30 seconds. While connection recovery is fast in normal circumstances, if there is an intermittent outage, recovery could take up some of the command execution time.

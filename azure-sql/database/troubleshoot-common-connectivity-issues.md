@@ -154,9 +154,13 @@ See how these values are used for the following two scenarios:
 **Scenario: New connection**
 
 4:10:00 - Connection.Open() - zero attempt
+
 4:10:01 - Connection failure detected
+
 4:10:11 - Retry 1 --> First retry happens after ConnectRetryInterval
+
 4:10:21 - Retry 2
+
 4:10:31 - Retry 3  
 
 So, for this scenario your chosen values should satisfy the following condition:  

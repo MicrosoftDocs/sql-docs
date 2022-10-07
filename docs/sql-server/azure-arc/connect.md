@@ -54,7 +54,7 @@ If the machine with SQL Server is already connected to Azure Arc, you can regist
 
 > [!IMPORTANT]
 >1. The Managed System Identity used by the Azure connected machine agent must have the *Azure Connected SQL Server Onboarding* role at resource group level.
->2. The Azure resource with type `SQL Server - Azurde Arc` representing the SQL Server instance installed installed on teh machine machine will use the same region and the resource group as the Azure resources for Arc-enabled servers.
+>2. The Azure resource with type `SQL Server - Azure Arc` representing the SQL Server instance installed installed on teh machine machine will use the same region and the resource group as the Azure resources for Arc-enabled servers.
 
 # [Azure portal](#tab/azure)
 

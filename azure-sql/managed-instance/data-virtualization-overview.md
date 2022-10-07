@@ -5,7 +5,7 @@ description: Learn about data virtualization capabilities of Azure SQL Managed I
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, wiassaf
-ms.date: 10/06/2022
+ms.date: 10/07/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -84,7 +84,7 @@ Before accessing the data, the Azure storage administrator must grant permission
 
 1. In the Azure portal, in the **Access Control (IAM)** page of a storage account, select **Add role assignment**.  
 1. Choose the **Storage Blob Data Contributor** built-in Azure RBAC role. This will provide read access to the managed identity for the necessary Azure Blob Storage containers.
-    - Instead of granting the managed identity the **Storage Blob Data Contributor** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl.md).
+    - Instead of granting the managed identity the **Storage Blob Data Contributor** Azure RBAC role, you can also grant more granular permissions on a subset of files. All users who need access to **Read** individual files some data in this container also must have **Execute** permission on all parent folders up to the root (the container). Learn more about how to [set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl.md). Currently, data virtualization with Azure SQL Managed Instance is read-only.
 1. On the next page, select **Assign access to** **Managed identity**. **+ Select members**, and under the **Managed identity** drop-down list, select the desired managed identity. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 1. Then, creating the database scoped credential for managed identity authentication is simple. Note in the following example that `'Managed Identity'` is a hard-coded string.
 
@@ -104,6 +104,8 @@ You can get an SAS token multiple ways:
     - Navigate to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
     - [Create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container).
     - You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json).
+
+Grant **Read** and **List** permissions via the SAS to access external data. Currently, data virtualization with Azure SQL Managed Instance is read-only.
 
 When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. To use the token, you must remove the question mark ('?') when creating a credential. For example:
 

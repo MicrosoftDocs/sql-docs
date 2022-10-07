@@ -174,7 +174,8 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|AASC<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER| 
+|DATABASE|ALTER LEDGER|ALR|SERVER|CONTROL| 
 |DATABASE|AUTHENTICATE|AUTH|SERVER|AUTHENTICATE SERVER|  
 |DATABASE|BACKUP DATABASE|BADB|SERVER|CONTROL SERVER|  
 |DATABASE|BACKUP LOG|BALO|SERVER|CONTROL SERVER|  
@@ -207,9 +208,11 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER| 
+|DATABASE|ENABLE LEDGER|EL|SERVER|CONTROL|
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current).|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current).|SERVER|CONTROL SERVER| 
+|DATABASE|GENERATE LEDGER DIGEST|GLD|SERVER|CONTROL|
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Only applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
@@ -224,6 +227,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|VIEW DATABASE SECURITY STATE|VDS|SERVER|VIEW SERVER SECURITY STATE|
 |DATABASE|VIEW DATABASE PERFORMANCE STATE|VDP|SERVER|VIEW SERVER PERFORMANCE STATE| 
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|
+|DATABASE|VIEW LEDGER CONTENT|VLC|SERVER|CONTROL|
 |DATABASE|VIEW SECURITY DEFINITION|VWS|SERVER|VIEW ANY SECURITY DEFINITION|
 |DATABASE|VIEW PERFORMANCE DEFINITION|VWP|SERVER|VIEW ANY PERFORMANCE DEFINITION|
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
@@ -361,17 +365,6 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|
 
-## <a name="asdbpermissions"></a> Azure SQL Database permissions
-
-These permissions currently only apply to Azure SQL Database, but are not the only permissions for Azure SQL Database. See the [Permission](#_permissions) section above for additional Azure SQL Database permissions.
-
-| Base securable | Granular permissions on base securable | Permission type code | Securable that contains base securable | Permission on container securable that implies granular permission on base securable |Description |
-|--|--|--|--|--|--|
-|DATABASE|ENABLE LEDGER|EL|SERVER|CONTROL|Enables the grantee to create new ledger tables.|
-|DATABASE|ALTER LEDGER|ALR|SERVER|CONTROL|Enables the grantee to drop ledger tables.|
-|DATABASE|VIEW LEDGER CONTENT|VLC|SERVER|CONTROL|Enables the grantee to view database-level ledger catalog views and invoke verification.|
-|DATABASE|GENERATE LEDGER DIGEST|GLD|SERVER|CONTROL|Enables the grantee to generate a ledger digest.|
-  
 ##  <a name="_algorithm"></a> Summary of the permission check algorithm  
  Checking permissions can be complex. The permission check algorithm includes overlapping group memberships and ownership chaining, both explicit and implicit permission, and can be affected by the permissions on securable classes that contain the securable entity. The general process of the algorithm is to collect all the relevant permissions. If no blocking DENY is found, the algorithm searches for a GRANT that provides sufficient access. The algorithm contains three essential elements, the **security context**, the **permission space**, and the **required permission**.  
   

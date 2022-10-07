@@ -43,26 +43,47 @@ Any installed instace of SQL server can be connect to Azure. The only exceptions
 
 | Installed edition | Activation choice  | License type  |  
 |---|---|---|
-| Enterprise Core | Product key with Software Assurance or SQL Subscription | Paid | 
+| Enterprise Core | Product key with Software Assurance or Subscription | Paid | 
 | Enterprise Core | Pay-as-you-go | PAYG | 
-| Standard | Product key with Software Assurance or SQL Subscription | Paid | 
+| Standard | Product key with Software Assurance or Subscription | Paid | 
 | Standard | Pay-as-you-go | PAYG |
-| Enterprise Core | Product key without Software Assurance | LicenseOnly | 
-| Standard | Product key without Software Assurance | LicenseOnly | 
+| Enterprise Core | Product key without Software Assurance or Subscription | LicenseOnly | 
+| Standard | Product key without Software Assurance or Subscription | LicenseOnly | 
 | Enterprise | Product key, Server/CAL  | ServerCAL | 
 | Evaluation | Free edition | Free | 
 | Developer | Free edition | Free | 
 
-One of teh benefits of Software Assurance or SQL subscription is free replicas.
+Example of the instance proprties of SQL Server 2022 in JSON:
 
-
-
-
-
-
-
-
-
-
+```json
+    "properties": {
+        "version": "SQL Server 2022",
+        "edition": "Enterprise",
+        ...
+        "vCore": "8",
+        "status": "Connected",
+        ...
+        "licenseType": "PAYG",
+        ...
+    }
+```
  
+ One of the benefits of Software Assurance or Subscription is free fail-over servers for high availability. See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details of this benefit.  Azure extension for SQL Server support free fail-over servers by automatically detecting if the instance is a replica in an Avaiolability Group. In that case it reports it with a license type `HADR`, which does not require a separate license. The  following table shows the conditions when this license type is set.
+
+| Installed edition | Activation choice  | AG replica | License type  |  
+|---|---|---|---|
+| Enterprise Core | Product key with Software Assurance or Subscription | Yes | HADR | 
+| Enterprise Core | Pay-as-you-go | Yes | HADR | 
+| Enterprise Core | Product key without Software Assurance or Subscription | Yes | LicenseOnly | 
+| Enterprise | Product key, Server/CAL  | Yes | ServerCAL<sup>1</sup> 
+| Standard | Product key with Software Assurance or Subscription | Yes | HADR | 
+| Standard | Pay-as-you-go | Yes | HADR | 
+| Standard | Product key without Software Assurance or Subscription | Yes | LicenseOnly | 
+
+<sup>1</sup> *Server/CAL license does not include free fail-over servers for high availability.*
+
+
 ## Next steps
+
+- [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
+- [Install SQL Server 2022 using the pay-as-you-go activation option](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server)

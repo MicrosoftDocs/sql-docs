@@ -16,14 +16,14 @@ Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option of purchas
 
 ## Overview
 
-You can select pay-as-you-go billing through Microsoft Azure when installing a Standard or Enterprise edition. This option requires that you have an active Azure subscription. Once your SQL Server instance is connected to Azure and the Azure extesnsion for SQL Server is installed on the hosting server, the SQL Server isntance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource. 
+You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased Product key. This option requires that you have an active Azure subscription. Once your SQL Server instance is connected to Azure and the Azure extesnsion for SQL Server is installed on the hosting server, the SQL Server isntance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). 
 
 The billing granualarity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in physical cores if the SQL Server instance is installed on a physical machine, or in virtual cores if it is installed on a virtual machine. 
 
-If multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server). The billing logic picks that instance using the following principles:
+When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic that picks the instance to be licesed, it uses the following principles:
 
-1. The instance with the highest edition of all instances installed on the same OS determines the license cost. 
-1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is pre-paid, i.e. is installed using a Product key, pay-as-you-go instance is ignored to minimize the customer cost.
+1. The instance with the highest edition of all instances installed on the same OS determines the required license. 
+1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a Product key, i.e. is pre-paid, pay-as-you-go instance is ignored to minimize the customer cost.
 
 The pay-as-you-go billing requires that the following conditions are met:
 
@@ -32,8 +32,37 @@ The pay-as-you-go billing requires that the following conditions are met:
 1. SQL Server instance and Azure extension for SQL Server are installed.
 1. The pay-as-you-go option is selected during the SQL Server installation or enabled in Azure portal. 
 
+If any of these conditions is not met, the pay-as-you-go billing will stop until they are met again.   
+
 > [!IMPORTANT]
-> Intermittent internet connectivity does not stop billing. The missed usage will be reported and accoounted for by the billing logic when the connectivity is restored. 
+> Intermittent internet connectivity does not stop the pay-as-y ou-go billing. The missed usage will be reported and accoounted for by the billing logic when the connectivity is restored. 
+
+## Licence types
+
+Any installed instace of SQL server can be connect to Azure. The only exceptions are Express and Web editions. When they are connected their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licence in *Cost Management + Billing* portal but only the pay-as-you-go instances  generate the actual charges. This way you can manage you license poistion and maintain compliance. The following table shows the different license types.
+
+| Installed edition | Activation choice  | License type  |  
+|---|---|---|
+| Enterprise Core | Product key with Software Assurance or SQL Subscription | Paid | 
+| Enterprise Core | Pay-as-you-go | PAYG | 
+| Standard | Product key with Software Assurance or SQL Subscription | Paid | 
+| Standard | Pay-as-you-go | PAYG |
+| Enterprise Core | Product key without Software Assurance | LicenseOnly | 
+| Standard | Product key without Software Assurance | LicenseOnly | 
+| Enterprise | Product key, Server/CAL  | ServerCAL | 
+| Evaluation | Free edition | Free | 
+| Developer | Free edition | Free | 
+
+One of teh benefits of Software Assurance or SQL subscription is free replicas.
+
+
+
+
+
+
+
+
+
 
  
 ## Next steps

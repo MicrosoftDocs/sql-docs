@@ -33,7 +33,7 @@ We'll create an account balance table with the following schema.
 | Balance     | decimal (10,2) | Account balance                     |
 
 > [!IMPORTANT]
-> Creating updatable ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions). 
+> Creating updatable ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
 1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[Account].[Balance]`.
 

@@ -132,13 +132,55 @@ If your client program connects to your database in SQL Database by using the .N
 
 When you build the [connection string](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) for your **SqlConnection** object, coordinate the values among the following parameters:
 
-- **ConnectRetryCount**:&nbsp;&nbsp;Default is 1. Range is 0 through 255.
-- **ConnectRetryInterval**:&nbsp;&nbsp;Default is 10 seconds. Range is 1 through 60.
-- **Connection Timeout**:&nbsp;&nbsp;Default is 15 seconds. Range is 0 through 2147483647.
+- **ConnectRetryCount**:&nbsp;&nbsp;Default is 1. The range is 0 through 255.
+- **ConnectRetryInterval**:&nbsp;&nbsp;Default is 10 seconds. The range is 1 through 60.
+- **Connection Timeout**:&nbsp;&nbsp;Default is 15 seconds. The range is 0 through 2147483647.
+- **Command Timeout**:&nbsp;&nbsp;Default is 30 seconds. The range is 0 through 2147483647.
 
-Specifically, your chosen values should make the following equality true: Connection Timeout = ConnectRetryCount * ConnectionRetryInterval
+The connection retry settings (ConnectRetryCount and ConnectRetryInterval) apply to connection resiliency. Connection resiliency encompasses the following two distinct scenarios:
 
-For example, if the count equals 3 and the interval equals 10 seconds, a timeout of only 29 seconds doesn't give the system enough time for its third and final retry to connect: 29 < 3 * 10.
+- Open connection resiliency refers to the initial `SqlConnection.Open/OpenAsync()` method. The first connection attempt is counted as try zero. ConnectRetryCount applies to retry numbers above that. So, when connection zero fails (might not be immediate), ConnectRetryInterval is applied first followed by subsequent ConnectRetryCount (and ConnectRetryInterval) attempts. To take advantage of all retry attempts, the Connection Timeout must allow time for all attempts.
+
+- Idle connection resiliency refers to the automatic detection and reconnection of existing idle connections that have been broken. The first attempt at reconnecting a broken idle connection counts as the first retry attempt. To take advantage of all retry attempts, the Command Timeout must allow time for all attempts.
+
+Example:
+Assume the following values for ConnectRetryCount and ConnectRetryInterval parameters:
+
+ConnectRetryCount: 3
+ConnectRetryInterval: 10 seconds
+
+See how these values are used for the following two scenarios: 
+
+**Scenario: New connection**
+
+4:10:00 - Connection.Open() - zero attempt
+4:10:01 - Connection failure detected
+4:10:11 - Retry 1 --> First retry happens after ConnectRetryInterval
+4:10:21 - Retry 2
+4:10:31 - Retry 3  
+
+So, for this scenario your chosen values should satisfy the following condition:  
+`Connection Timeout > = ConnectRetryCount * ConnectionRetryInterval`
+
+For example, if the count is 3 and the interval is 10 seconds, a timeout of only 29 seconds doesn't give the system enough time for its third and final retry to connect: 29 < 3 * 10.
+
+**Scenario: Idle connection**
+
+`ConnectRetryCount -3, ConnectRetryInterval - 10 seconds`
+
+4:10:00 - Broken connection detected on command execution
+4:10:00 - Retry 1 -->First retry happens immediately
+4:10:10 - Retry 2
+4:10:20 - Retry 3
+
+This isn't an initial connection, so Connection Timeout doesn't apply. However, because the  connection recovery happens during command execution, the Command Timeout setting does apply. The Command Timeout default is 30 seconds. While connection recovery is fast in normal circumstances, if there is an intermittent outage, recovery could take up some of the command execution time.
+
+For this scenario, if you want to take full advantage of idle connection recovery retries, your chosen values should satisfy the following condition:  
+`Command Timeout > (ConnectRetryCount - 1) * ConnectionRetryInterval`
+
+For example, if the count is 3 and the interval is 10 seconds, a command timeout lower than 20 seconds wouldn't give enough time for the third and final retry to connect. (3 - 1) * 10 = 20  Also, consider that the command itself needs time to execute after the connection has been recovered.
+
+
 
 <a id="connection-versus-command" name="connection-versus-command"></a>
 

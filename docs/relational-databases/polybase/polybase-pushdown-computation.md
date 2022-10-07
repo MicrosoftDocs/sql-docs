@@ -48,7 +48,7 @@ This table summarizes pushdown computation support on different external data so
 
 \*\* See [Pushdown computation and Hadoop providers](#pushdown-computation-and-hadoop-providers).
 
-\*\*\* Pushdown support for aggregations and filters for the Azure Cosmos DB API for MongoDB were introduced with SQL Server 2019 CU18.
+\*\*\* Pushdown support for aggregations and filters for the MongoDB ODBC connector for SQL Server 2019 was introduced with SQL Server 2019 CU18.
 
 > [!NOTE]
 > Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).

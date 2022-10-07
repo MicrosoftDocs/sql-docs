@@ -28,7 +28,7 @@ Because the ledger verification recomputes all of the hashes for transactions in
 You accomplish database verification through two stored procedures, depending on whether you [use automatic digest storage](#database-verification-that-uses-automatic-digest-storage) or you [manually manage digests](#database-verification-that-uses-manual-digest-storage).
 
 > [!IMPORTANT]
-> Database verification requires the *View Ledger Content* permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions).
+> Database verification requires the *View Ledger Content* permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md).
 
 ### Database verification that uses automatic digest storage
 

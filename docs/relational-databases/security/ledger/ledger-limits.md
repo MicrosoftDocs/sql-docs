@@ -90,7 +90,7 @@ Updatable ledger tables are based on the technology of [temporal tables](../../t
 
 ### Adding columns
 
-Adding nullable columns is supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger will modify the schema of the ledger and history tables to include the new column, however, this doesn't impact the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
+Adding nullable columns is supported. Adding non-nullable columns is not supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger will modify the schema of the ledger and history tables to include the new column, however, this doesn't impact the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
 
 ### Dropping columns and tables
 

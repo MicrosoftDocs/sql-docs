@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option to purchasing the SQL Server software license. This option is an alternative to using the traditional license agreement with Microsoft. Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], this option is included with SQL Server setup and allows you to activate your SQL Server instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
+Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option to purchasing the SQL Server software license. This option is an alternative to using the traditional license agreement with Microsoft. Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], setup includes this option and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
 
 ## Overview
 

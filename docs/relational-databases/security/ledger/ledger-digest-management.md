@@ -76,7 +76,7 @@ If you use **Azure SQL Database**, make sure that your logical server (System Id
 You can also generate a database digest on demand so that you can manually store the digest in any service or device that you consider a trusted storage destination. For example, you might choose an on-premises write once, read many (WORM) device as a destination. You manually generate a database digest by running the [sys.sp_generate_database_ledger_digest](../../system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md) stored procedure in either [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
 > [!IMPORTANT]
-> Generating database digests requires the **GENERATE LEDGER DIGEST** permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md#asdbpermissions). 
+> Generating database digests requires the **GENERATE LEDGER DIGEST** permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
 ```sql
 EXECUTE sp_generate_database_ledger_digest;

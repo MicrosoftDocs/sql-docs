@@ -190,14 +190,6 @@ If the specified path doesn't exist, PolyBase will create one on your behalf. A 
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
 
-#### SCHEMA_NAME
-
-The SCHEMA_NAME clause provides the ability to map the external table definition to a table in a different schema on the remote database. Use this clause to disambiguate between schemas that exist on both the local and remote databases.
-
-#### OBJECT_NAME
-
-The OBJECT_NAME clause provides the ability to map the external table definition to a table with a different name on the remote database. Use this clause to disambiguate between object names that exist on both the local and remote databases.
-
 ## Permissions
 
 Requires these user permissions:

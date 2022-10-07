@@ -32,7 +32,7 @@ You can receive Extended Security Updates in several ways:
 
 - **Azure Arc**. Purchased for your on-premises or hosted environment. You'll download updates when they're available. There are two ways to use Azure Arc:
 
-  - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [SQL Server on Azure Arc-enabled servers](../azure-arc/overview.md) provides.
+  - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [Azure Arc-enabled SQL Server](../azure-arc/overview.md) provides.
 
   - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state.
 

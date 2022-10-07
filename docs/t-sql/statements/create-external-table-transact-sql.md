@@ -1550,7 +1550,7 @@ Constructs and operations not supported:
 
 ### Table width limitations
 
-PolyBase in Azure SQL Managed Instance has a row width limit of 1 MB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 1 MB, PolyBase can't query the data.
+The row width limit of 1 MB is based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 1 MB, data virtualization queries will fail.
 
 ### Data type limitations
 

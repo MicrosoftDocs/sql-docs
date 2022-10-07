@@ -8,7 +8,6 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 10/05/2022
 ms.prod: sql
 ms.topic: conceptual
-monikerRange: ">= sql-server-2022"
 ---
 
 # Billing through Microsoft Azure

@@ -81,7 +81,7 @@ With PolyBase pushdown computation, you can delegate computation tasks to extern
 
 ### Pushdown of joins
 
-In many cases, PolyBase can facilitate pushdown of the join operator which will greatly improve performance.  
+In many cases, PolyBase can facilitate pushdown of the join operator, which will greatly improve performance.  
 
 If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
 

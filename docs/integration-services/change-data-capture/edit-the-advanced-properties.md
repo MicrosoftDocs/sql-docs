@@ -16,9 +16,6 @@ ms.author: chugu
 ---
 # Edit the Advanced Properties
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   Use the **Advanced** tab to add special properties to the CDC instance.  
   
 #### To add advanced properties to the CDC instance  

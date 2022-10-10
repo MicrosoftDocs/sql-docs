@@ -167,6 +167,8 @@ Invoke-SqlCmd -ConnectionString $connectionString -Query $query
 
 ## Step 2: Encrypt columns
 
+
+
 In this step, you will provision a column master key and a column encryption key for Always Encrypted, and then you will encrypt the **SSN** and **Salary** columns in the **Employees** table.
 
 # [SSMS](#tab/ssms)

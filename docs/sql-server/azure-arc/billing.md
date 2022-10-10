@@ -5,9 +5,10 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/05/2022
+ms.date: 10/10/2022
 ms.prod: sql
 ms.topic: conceptual
+monikerRange: ">= sql-server-2022"
 ---
 
 # Billing through Microsoft Azure
@@ -18,9 +19,9 @@ Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option to purchas
 
 ## Overview
 
-You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased product key. This option requires that you have an active Azure subscription. Once your SQL Server instance is connected to Azure and the Azure extension for SQL Server is installed on the hosting server, the SQL Server instance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
+You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased product key. This option requires that you have an active [Azure subscription](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions). Once your SQL Server instance is connected to Azure and the [Azure extension for SQL Server](connect.md) is installed on the hosting server, the SQL Server instance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
 
-The billing granuLarity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in logical cores (vCores) whether the SQL Server instance is installed on the physical server or virtual machine.
+The billing granularity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in logical cores (vCores) whether the SQL Server instance is installed on the physical server or virtual machine.
 
 When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following principles to select instance to be licensed:
 
@@ -70,7 +71,7 @@ Example of the instance properties of [!INCLUDE[sql-server-2022](../../includes/
     }
 ```
 
-One of the benefits of Software Assurance or SQL subscription is free fail-over servers for high availability. See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details of this benefit.  Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group. In that case, it reports it with a license type `HADR`, which does not require a separate license. The  following table shows the conditions when this license type is set.
+One of the benefits of Software Assurance or SQL subscription is free fail-over servers for high availability and disaster recovery as long as they are passive replicas. See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details of this benefit.  Azure extension for SQL Server supports free fail-over servers by automatically detecting if the instance is a replica in an availability group. In that case, it reports it with a license type `HADR`, which does not require a separate license. The  following table shows the conditions when this license type is set.
 
 | Installed edition | Activation choice  | AG replica | License type  |  
 |---|---|---|---|
@@ -83,6 +84,24 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 | Standard | Product key without Software Assurance or SQL subscription| Yes | LicenseOnly | 
 
 <sup>1</sup> *Server/CAL license does not include free fail-over servers for high availability.*
+
+## FAQ
+
+### Do I get charged if my SQL Server instance is stopped
+
+TBC
+
+### Do I get charged if my virtual machine is stopped
+
+When the VM is stopped, the usage data is not be collected. Therefore you will not be charged for the time the VM was stopped.  
+
+### If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges. 
+
+Whe you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
+
+### Can I switch from pay-as-you-go to license and visa-versa
+
+Yes, you change you selection by running the setup again, choosing the **Maintanance** tab, then **Edition Upgrade**. 
 
 ## Next steps
 

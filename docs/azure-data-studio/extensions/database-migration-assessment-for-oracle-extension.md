@@ -13,6 +13,9 @@ ms.topic: conceptual
 
 The Database Migration Assessment for Oracle extension in Azure Data Studio helps you assess an Oracle workload for migrating to Azure SQL and Azure database for PostgreSQL. The extension identifies an appropriate Azure SQL or PostgreSQL target with right-sizing recommendations, and how complex the migration can be.
 
+>[!Note]
+> Try , the latest Oracle to Azure database for PostgreSQL workload and code assessment.
+
 ## Pre-requisites
 
 - An [Oracle database](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) running version 10 g or higher.
@@ -32,6 +35,21 @@ Follow the steps below to install the Database Migration Assessment for Oracle e
 4. Select **Install**.
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/install-database-migration-assessment-for-oracle-extension.png" alt-text="install extension":::
+
+## Configure extension settings
+
+There are few extension settings that can be configured after installing the extension or updated later.
+
+1. Go to extensions and select **Database Migration Assessment for Oracle** , click on manage settings icon and then select extension settings.
+
+ :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmaof-extension-manage.png" alt-text="extension manage settings":::
+
+1. Under extension settings, edit any extension settings to meet the environment's requirement.
+
+>[!Note]
+> To perform Oracle to PostgreSQL assessment, Oracle client home path or Ora2pg installation path are mandatory parameters.
+
+ :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmaof-extension-settings-edit.png" alt-text="extension properties settings":::
 
 ## Run assessment
 

@@ -110,7 +110,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
     
     If  Oracle client and\or Ora2pg is not installed in the Azure data studio tool machine, either manually install them or use the script available here. - [Ora2pg installation script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install)
 
-    If Oracle client and Ora2pg is installed, ensure that the Oracle client home path and Ora2pg installation path is updated in the extension settings.
+    If Oracle client and Ora2pg are installed, ensure that the Oracle client home path and Ora2pg installation path are updated in the extension settings.
 
 10. Now, you see the new assessment in the last five assessments section.
 
@@ -134,7 +134,7 @@ When you click on view detail report, it first shows the summary of the Assessme
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="card sections":::
 
-If the target selected is Database for Azure PostgreSQL, either database details tab or Code assessment tab will be visible based on the assessment type selection.
+If the target selected is Database for Azure PostgreSQL, either database details tab or Code assessment tab will be visible, based on the assessment type selection.
 
 The following database details tab provides the breakup per schema basis. It shows the list of schemas are discovered, the migration feasibility, and the estimated time to convert schema in hours.
 
@@ -159,9 +159,9 @@ The code compatibility (_PostgreSQL target only_) provides a summary of schema o
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmao-code-compatibility-pg.png" alt-text="code compatibility report":::
 
-The report shows the total number of objects and  conversion effort hours required for migrating code to database for Azure PostgreSQL. The graphical image provides the breakup for each schema object type such as tables, views,cluster etc. The effort are categorized as Ready - Automatically converted, Needs review and not ready - requires manual conversion.
+The report shows the total number of objects and  conversion effort hours required for migrating code to database for Azure PostgreSQL. The graphical image provides the breakup for each schema object type such as tables, views, cluster etc. The efforts are categorized as Ready - Automatically converted, Needs review and not ready - requires manual conversion.
 
-There is a further drill down for not ready and need review section. It provides the list of remediation tasks and the  effort hours for each task.
+There is a drill-down for not ready and need review section. It provides the list of remediation tasks and the  effort hours for each task.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmao-remediation-pg.png" alt-text="remediation task":::
 

@@ -99,7 +99,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-assessment-details.png" alt-text="assessment details":::
 
-9. When the target is PostgreSQL , there are two types of assessment
+9. When the target is PostgreSQL, there are two types of assessment
 
     - Workload Assessment - In this assessment, the Oracle assessment module performs a lightweight discovery of the schema objects and categorize the schema complexity for migration to various categories with a high level estimated conversion hours.
 
@@ -155,7 +155,7 @@ The SKU  recommendation evaluates various performance metrics - CPU, memory, IOP
 > [!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
 
-The code compatibility (_PostgreSQL target only_) provides a summary of schema objects that can be converted to Azure target. The report provides the breakup of the objects that can be converted automatically, ready with conditions and those objects that need manual intervention or actions to resolve and convert them manually.
+The code compatibility (_PostgreSQL target only_) provides a summary of schema objects that can be converted to Azure target. The report provides the breakup of the objects that can be converted automatically, ready with conditions and need to be remediated and converted manually.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmao-code-compatibility-pg.png" alt-text="code compatibility report":::
 

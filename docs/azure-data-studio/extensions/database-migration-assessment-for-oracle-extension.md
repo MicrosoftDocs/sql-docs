@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Database Migration Assessment for Oracle extension (Preview)
 
-The Database Migration Assessment for Oracle extension in Azure Data Studio helps you assess an Oracle workload for migrating to Azure SQL and Azure database for PostgreSQL. The extension identifies an appropriate Azure SQL target with right-sizing recommendations, and how complex the migration can be.
+The Database Migration Assessment for Oracle extension in Azure Data Studio helps you assess an Oracle workload for migrating to Azure SQL and Azure database for PostgreSQL. The extension identifies an appropriate Azure SQL or PostgreSQL target with right-sizing recommendations, and how complex the migration can be.
 
 ## Pre-requisites
 

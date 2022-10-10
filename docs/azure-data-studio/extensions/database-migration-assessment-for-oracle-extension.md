@@ -89,7 +89,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
     1. Enter your **Assessment setting**.
         1. In the **Target Platform** field, enter the destination migration database.Currently, it supports SQL and PostgreSQL as target.
         1. In the **Performance data collection** section, either select run performance data collection on Oracle database (connected) or add AWR report.
-        The recommendation is to use connected option if you are running this tool during peak or realistic load. Otherwise, provide the AWR reports generated in past for performance and sizing recommendation.
+        The recommendation is to use connected option if running this tool during peak or realistic load. Otherwise, provide the AWR reports generated in past for performance and sizing recommendation.
         1. In the **Scale factor** field, enter the multiplier value.
             1. If the recommended SKU needs to consider other peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
 
@@ -108,7 +108,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
         >[!Note]
         > For code assessment, the extension uses open source Ora2pg schema convertor.
     
-    If  Oracle client and\or Ora2pg is not installed in the Azure data studio tool machine, either manually install them or use the script available here. - [Ora2pg installation script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install)
+    If  Oracle client and\or Ora2pg isn't installed in the Azure data studio tool machine, either manually install them or use the script available here. - [Ora2pg installation script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install)
 
     If Oracle client and Ora2pg are installed, ensure that the Oracle client home path and Ora2pg installation path are updated in the extension settings.
 
@@ -161,7 +161,7 @@ The code compatibility (_PostgreSQL target only_) provides a summary of schema o
 
 The report shows the total number of objects and  conversion effort hours required for migrating code to database for Azure PostgreSQL. The graphical image provides the breakup for each schema object type such as tables, views, cluster etc. The efforts are categorized as Ready - Automatically converted, Needs review and not ready - requires manual conversion.
 
-There is a drill-down for not ready and need review section. It provides the list of remediation tasks and the  effort hours for each task.
+There's a drill-down for not ready and need review section. It provides the list of remediation tasks and the  effort hours for each task.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmao-remediation-pg.png" alt-text="remediation task":::
 

@@ -88,7 +88,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
         1. For example, *demo1*.
     1. Enter your **Assessment setting**.
         1. In the **Target Platform** field, enter the destination migration database.Currently, it supports SQL and PostgreSQL as target.
-        1. In the **Performance data collection** section, either select run performance data collection on Oracle database (connected) or Add AWR report.
+        1. In the **Performance data collection** section, either select run performance data collection on Oracle database (connected) or add AWR report.
         The recommendation is to use connected option if you are running this tool during peak or realistic load. Otherwise, provide the AWR reports generated in past for performance and sizing recommendation.
         1. In the **Scale factor** field, enter the multiplier value.
             1. If the recommended SKU needs to consider other peak load, the scale factor multiplier should be greater than 1. Example: Burst Load, Seasonal usage, future capacity planning etc. Whereas when  partial Oracle schema workload is considered  migrated, then the multiplier should be less than 1.
@@ -105,9 +105,9 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     - Code Assessment - The code assessment performs a deep assessment of the Oracle schema objects and then suggests an overall readiness of the code objects with ready, need review and not ready object types at granular level and its associated conversion hours with higher accuracy.
 
-    >[!Note]
-    > For code assessment, the extension uses open source Ora2pg schema convertor.
-
+        >[!Note]
+        > For code assessment, the extension uses open source Ora2pg schema convertor.
+    
     If  Oracle client and\or Ora2pg is not installed in the Azure data studio tool machine, either manually install them or use the script available here. - [Ora2pg installation script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install)
 
     If Oracle client and Ora2pg is installed, ensure that the Oracle client home path and Ora2pg installation path is updated in the extension settings.
@@ -155,7 +155,7 @@ The SKU  recommendation evaluates various performance metrics - CPU, memory, IOP
 > [!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
 
-The code compatibility provides a summary of schema objects that can be converted to Azure target. The report provides the breakup of the objects that can be converted automatically, ready with conditions and those objects that need manual intervention or actions to resolve and convert them manually.
+The code compatibility (_PostgreSQL target only_) provides a summary of schema objects that can be converted to Azure target. The report provides the breakup of the objects that can be converted automatically, ready with conditions and those objects that need manual intervention or actions to resolve and convert them manually.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmao-code-compatibility-pg.png" alt-text="code compatibility report":::
 

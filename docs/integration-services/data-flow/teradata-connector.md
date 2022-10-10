@@ -1,15 +1,13 @@
 ---
+title: "Microsoft connector for Teradata"
 description: "Microsoft connector for Teradata"
-title: "Microsoft connector for Teradata | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
+ms.reviewer: maghan
+ms.date: 10/10/2022
+ms.prod: sql
+ms.technology: integration-services
+ms.topic: conceptual
 ---
 # Microsoft connector for Teradata
 
@@ -31,7 +29,7 @@ Microsoft connector for Teradata uses ODBC Driver for Teradata and Teradata Para
 
 ## Installation
 
-Install TTU from [Teradata site](https://downloads.teradata.com/download/tools/teradata-tools-and-utilities-windows-installation-package). Make sure that ODBC Driver for Teradata and Teradata Parallel Transporter features is selected during the installation.
+Install TTU from [Teradata site](https://downloads.teradata.com/download/database/teradata-tools-and-utilities-13-10). Make sure that ODBC Driver for Teradata and Teradata Parallel Transporter features is selected during the installation.
 
 To install the connector for Teradata database, download and run the installer from [the latest version of Microsoft connector for Teradata](https://www.microsoft.com/download/details.aspx?id=100599). Then follow the directions in the installation wizard.
 
@@ -43,11 +41,11 @@ Microsoft Connector for Teradata provides similar user experience with Attunity 
 
 Teradata source and destination are under Common category.
 
-![The Teradata Component](media/teradata-component.png)
+:::image type="content" source="media/teradata-component.png" alt-text="The Teradata Component.":::
 
 Teradata connection manager is displayed as "TERADATA".
 
-![The Teradata connection manager type](media/teradata-connection-manager-type.png)
+:::image type="content" source="media/teradata-connection-manager-type.png" alt-text="The Teradata connection manager type.":::
 
 Existing SSIS packages that have been designed with Attunity Teradata Connector will be automatically upgraded to use Microsoft Connector for Teradata. The icons will be changed as well.
 
@@ -64,7 +62,7 @@ To design SSIS package in SSDT *targeting SQL Server 2017 and below*, you will n
 
 - Teradata Source/Destination Editor, **Default database** property does not take effective. As work-around, type database name in dropdown box to filter table or view.
 
-- Teradata Source/Destination Editor, Mapping step does not work when type \<database>.<table/view>. As work-around, type \<database>.<table/view>, then click the drop-down button.
+- Teradata Source/Destination Editor, Mapping step does not work when type \<database>.<table/view>. As work-around, type \<database>.<table/view>, then select the drop-down button.
 
 - Teradata Source Editor, view cannot be displayed when Data access mode is "Table Name – TPT Export". As work-around, use Advanced Editor of Teradata Source.
 

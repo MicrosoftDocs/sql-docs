@@ -105,12 +105,12 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
     - Code Assessment - The code assessment performs a deep assessment of the Oracle schema objects and then suggests an overall readiness of the code objects with ready, ready with conditions and not ready object types at granular level and its associated conversion hours with higher accuracy.
 
->[!Note]
-> For code assessment, the tool uses open source Ora2pg schema convertor.
+    >[!Note]
+    > For code assessment, the extension uses open source Ora2pg schema convertor.
 
 10. Now, you see the new assessment in the last five assessments section.
 
-    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-demo.png" alt-text="name the assessment demo1":::
+    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-demo.png" alt-text="name the assessment demo":::
 
 11. On Click on the assessment link to view assessment details page. You can view the latest assessment status.
 
@@ -120,15 +120,17 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
 ## View assessment
 
-Once the Assessment is complete, a consolidated output is generated for either each Azure SQL target. Currently, these targets include **SQL Server on Azure Virtual Machines**, **Azure SQL Database**, and **Azure SQL Managed Instance** or database for Azure PostgreSQL - Flexible server.
+Once the Assessment is complete, a consolidated output is generated for either each Azure SQL target:  **SQL Server on Azure Virtual Machines**, **Azure SQL Database**, and **Azure SQL Managed Instance** or **Azure database for PostgreSQL - Flexible server**.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-view-assessment.png" alt-text="view assessment":::
 
-Each card has multiple sections. The card shows the overall feasibility of the migration to the SQL target.  Also drills down on various workloads under various migration complexity categories. The feature compatibility section that provides the feature assessment review result. SKU recommendation provides the proper sizing of the target.
+Each card has multiple sections. The card shows the overall feasibility of the migration to the  target.  Also drills down on various workloads under various migration complexity categories. The feature compatibility section that provides the feature assessment review result. SKU recommendation provides the proper sizing of the target. The code assessment provides the code complexity of database objects.
 
 When you click on view detail report, it first shows the summary of the Assessment.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="card sections":::
+
+If the target selected is Database for Azure PostgreSQL, either database details tab or Code assessment tab will be visible based on the assessment type selection.
 
 The following database details tab provides the breakup per schema basis. It shows the list of schemas are discovered, the migration feasibility, and the estimated time to convert schema in hours.
 
@@ -140,18 +142,20 @@ This estimation is based on a statistical model that applies to the object count
 >The following system or Oracle built-in schemas are excluded in the workload assessment
 'SYSTEM','CTXSYS','DBSNMP','EXFSYS','LBACSYS','MDSYS','MGMT_VIEW' 'OLAPSYS','ORDDATA','OWBSYS','ORDPLUGINS','ORDSYS','OUTLN','SI_INFORMTN_SCHEMA','SYS 'SYSMAN','WK_TEST','WKSYS','WKPROXY','WMSYS','XDB','DIP','MDDATA','ORACLE_OCM', 'SPATIAL_CSW_ADMIN_USR','SPATIAL_WFS_ADMIN_USR','XS$NULL','PERFSTAT','SQLTXPLAIN','DMSYS','TSMSYS','WKSYS','DVSYS','OJVMSYS','GSMADMIN_INTERNAL','APPQOSSYS','DVSYS','DVF','AUDSYS','MGMT_VIEW','ODM','ODM_MTR','TRACESRV','MTMSYS','OWBSYS_AUDIT','WEBSYS','WK_PROXY','OSE$HTTP$ADMIN','DBMS_PRIVILEGE_CAPTURE','CSMIG','MGDSYS','SDE','DBSFWUSER','APEX','FLOW_'
 
-The SKU recommendation provides the suitable Azure SQL target, its service tier and the metric thresholds that have been used to provide the recommended SKU.
+The SKU recommendation provides the suitable Azure target, its service tier and the metric thresholds that have been used to provide the recommended SKU.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-skus.png" alt-text="Sku recommendations":::
 
-The SKU  recommendation evaluates various performance metrics - CPU, memory, IOPS, latency and storage. Based on the usage and the configuration data, the recommender provides the suitable SQL target and the appropriate service tier.
+The SKU  recommendation evaluates various performance metrics - CPU, memory, IOPS, latency and storage. Based on the usage and the configuration data, the recommender provides the suitable target and the appropriate service tier.
 
 > [!Note]
 > If automatic workload repository (AWR) feature is enabled at Oracle instance, then SKU recommender will use the DBA_HIST_ views to gather the performance metrics metadata. Otherwise, the recommender will use server configuration and other system views information for sizing the Azure SQL target.
 
-The code assessment provides a summary of schema objects that can be converted to Azure target. The report provides the breakup of the objects that can be converted automatically, ready with conditions and those objects that need manual intervention or actions to resolve and convert them manually.
+The code compatibility provides a summary of schema objects that can be converted to Azure target. The report provides the breakup of the objects that can be converted automatically, ready with conditions and those objects that need manual intervention or actions to resolve and convert them manually.
 
-The feature assessment provides the Oracle to Azure SQL mapped features and the effort required for migrating those capabilities to Azure SQL target.
+:::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmao-code-compatibility-pg.png" alt-text="code compatibility report":::
+
+The feature assessment provides the Oracle to Azure data target mapped features and the effort required for migrating those capabilities to Azure  target.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-mapped-assessment.png" alt-text="Mapped assessment":::
 

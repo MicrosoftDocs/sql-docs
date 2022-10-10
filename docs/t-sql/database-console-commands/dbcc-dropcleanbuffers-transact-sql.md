@@ -71,9 +71,14 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## Permissions  
-Requires membership in the `sysadmin` fixed server role for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-Requires server administrator permissions in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-Requires membership in the `DB_OWNER` fixed server role for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
+Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+- Requires ALTER SERVER STATE permission on the server.  
+
+Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+- Requires membership in server role `##MS_ServerStateManager##`.  
+
+Applies to: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+- Requires membership in the DB_OWNER fixed server role.  
   
 ## See Also  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

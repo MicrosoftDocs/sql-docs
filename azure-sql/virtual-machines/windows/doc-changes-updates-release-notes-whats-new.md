@@ -8,7 +8,7 @@ ms.date: 10/14/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
-ms.custom: 
+ms.custom: ignite-2022
 tags: azure-service-management
 ---
 # Documentation changes for SQL Server on Azure Virtual Machines

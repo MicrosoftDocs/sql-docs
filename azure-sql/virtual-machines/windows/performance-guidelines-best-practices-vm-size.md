@@ -9,6 +9,7 @@ ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
 tags: azure-service-management
+ms.custom: ignite-2022
 ---
 
 # VM size: Performance best practices for SQL Server on Azure VMs

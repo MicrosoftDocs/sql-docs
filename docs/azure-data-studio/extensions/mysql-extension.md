@@ -7,6 +7,7 @@ ms.reviewer: erinstellato
 ms.date: 10/12/2022
 ms.prod: azure-data-studio
 ms.topic: conceptual
+ms.custom: ignite-2022
 ---
 
 # MySQL extension (Preview)

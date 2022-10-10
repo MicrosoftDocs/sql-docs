@@ -24,7 +24,7 @@ Hyperscale databases follow a different approach. Hyperscale separates the query
 
 High availability and named replicas share the same storage components, so no data copy is required to spin up a new replica.
 
-The following diagram illustrates the different types of nodes in a Hyperscale database:
+The following diagram illustrates the functional Hyperscale architecture:
 
 :::image type="content" source="./media/service-tier-hyperscale/hyperscale-architecture.png" alt-text="Diagram that shows that Hyperscale's compute tier consists of a primary compute note and secondary compute nodes, each with RBPEX data cache. The log service communicates both with compute notes and page servers. Page servers exist in their own tier, and also have RBPEX data cache." lightbox="./media/service-tier-Hyperscale/Hyperscale-architecture.png":::
 

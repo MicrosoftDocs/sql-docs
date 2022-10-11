@@ -179,6 +179,9 @@ Install-Module -Name AzureADHybridAuthenticationManagement -AllowClobber
     CloudKeyUpdatedOn   : 2/24/2022 9:03:15 AM
     CloudTrustDisplay   : Microsoft.AzureAD.Kdc.Service.TrustDisplay
     ```
+    
+    > [!NOTE] 
+    > Azure sovereign clouds require setting propety `TopLevelNames`. That property is set to `windows.net` by default. Azure sovereign cloud deployments of SQL Managed Instance use a different top level domain name, such as `usgovcloudapi.net` for Azure US Government. Set your Trusted Domain Object to that top level domain name using PowerShell `Set-AzureADKerberosServer -Domain $domain -DomainCredential $domainCred -CloudCredential $cloudCred -SetupCloudTrust -TopLevelNames "usgovcloudapi.net,windows.net"`. You can verify the setting with PowerShell `Get-AzureAdKerberosServer -Domain $domain -DomainCredential $domainCred -UserPrincipalName $cloudUserName | Select-Object -ExpandProperty CloudTrustDisplay`
 
 ## Configure the Group Policy Object (GPO) 
 

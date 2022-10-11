@@ -6573,8 +6573,6 @@ items:
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Optimized plan forcing
         href: relational-databases/performance/optimized-plan-forcing-query-store.md
-      - name: In-Memory OLTP
-        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:

@@ -35,9 +35,7 @@ The feedback features discussed in this article are:
 
 ## Memory grant feedback
 
-Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
-
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, memory grant feedback is also replica-aware for secondary replicas in availability groups. Memory grant feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the Query Store and an improved algorithm known as percentile grant.
 
 ### Batch mode memory grant feedback
 
@@ -267,6 +265,8 @@ Given feedback data is now persisted in the Query Store, there's some increase i
 
 Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the last execution-only but on an observation of the several past executions, this could increase memory usage for oscillating workloads with wide variance in memory grant requirements between executions.
 
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, memory grant feedback is replica-aware for secondary replicas in availability groups. Memory grant feedback can apply feedback differently on a primary replica and on a secondary replica. However, memory grant feedback is not persisted on secondary replicas, and on failover, the memory grant feedback from the old primary replica is applied to the new primary replica. Any feedback applied to the secondary replica when it becomes the primary replica is lost. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+
 ## Degree of parallelism (DOP) feedback
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
@@ -290,8 +290,8 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 - To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-).
 
 - To disable DOP feedback at the query level, use the `DISABLE_DOP_FEEDBACK` query hint.
- 
-- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, DOP feedback is also replica-aware for secondary replicas in availability groups. DOP feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+
+- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, DOP feedback is also replica-aware for secondary replicas in availability groups. DOP feedback can apply feedback differently on a primary replica and on a secondary replica. However, DOP feedback is not persisted on secondary replicas, and on failover, the DOP feedback from the old primary replica is applied to the new primary replica. Any feedback applied to the secondary replica when it becomes the primary replica is lost. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
 
 ### DOP feedback implementation
 
@@ -333,7 +333,7 @@ Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Ca
 
 Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Feedback is applied when significant model estimation errors resulting in performance drops are found.
 
-- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback is also replica-aware for secondary replicas in availability groups. CE feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback is not replica-aware for secondary replicas in availability groups. CE feedback currently only benefits primary replicas. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
 
 ### Understand Cardinality Estimation
 

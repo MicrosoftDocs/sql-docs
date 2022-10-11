@@ -182,6 +182,8 @@ desired_state | desired_state_desc | actual_state | actual_state_desc | readonly
 --------------|--------------------|--------------|-------------------|-----------------
 4|READ_CAPTURE_SECONDARY|4|READ_CAPTURE_SECONDARY|8
 
+Once enabled, you can use [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md) to verify the health of the Query Store on the secondary replica.
+
 ### Performance considerations for Query Store for secondary replicas
 
 The channel used by secondary replicas to send query information back to the primary replica is the same channel used to keep secondary replicas up to date. Data is stored in the same tables on the primary replica that Query Store uses for queries executed on the primary replica, which causes the size of Query Store to grow.

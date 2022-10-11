@@ -26,8 +26,8 @@ When multiple instances of SQL Server are installed on the same OS, only one ins
 
 1. The instance with the highest edition of all instances installed on the same operating system determines the required license.
 1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
-1. If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billied. 
-1. If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billied. 
+1. If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed. 
+1. If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billed. 
 
 The pay-as-you-go billing requires that the following conditions are met:
 
@@ -102,7 +102,7 @@ Whe you run your SQL Server instance on a virtual or physical machine, you are r
 
 ### Can I switch from pay-as-you-go to license and visa-versa
 
-Yes, you change you selection by running the setup again, choosing the **Maintanance** tab, then **Edition Upgrade**. 
+Yes, you change you selection by running the setup again, choosing the **Maintenance** tab, then **Edition Upgrade**. 
 
 ## Next steps
 

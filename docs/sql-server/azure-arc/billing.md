@@ -22,10 +22,12 @@ You can select pay-as-you-go billing through Microsoft Azure to install a Standa
 
 The billing granularity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in logical cores (vCores) whether the SQL Server instance is installed on the physical server or virtual machine.
 
-When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following principles to select instance to be licensed:
+When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following rules to select instance to be licensed:
 
 1. The instance with the highest edition of all instances installed on the same operating system determines the required license.
 1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
+1. If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billied. 
+1. If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billied. 
 
 The pay-as-you-go billing requires that the following conditions are met:
 

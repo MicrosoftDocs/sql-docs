@@ -34,7 +34,7 @@ PSP optimization automatically enables multiple, active cached plans for a singl
 
 ## Understanding parameterization
 
-In the SQL Server Database Engine, using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new Transact-SQL statements with existing, previously-compiled execution plans and promote plan reutilization. For more information, see [Simple Parameterization](../query-processing-architecture-guide.md#simple-parameterization).
+In the SQL Server Database Engine, using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new Transact-SQL statements with existing, previously compiled execution plans and promote plan reutilization. For more information, see [Simple Parameterization](../query-processing-architecture-guide.md#simple-parameterization).
 
 You can also override the default simple parameterization behavior of SQL Server by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized subject to certain limitations. For more information, see [Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
 
@@ -62,9 +62,9 @@ For each query variant mapping to a given dispatcher:
 
 To enable PSP optimization, enable database compatibility level 160 for the database you are connected to when executing the query.
 
-For additional insights into the PSP optimization feature, we recommend that Query Store integration also be enabled by ensuring that the Query Store is turned on.  The following example will turn on the Query Store for a database called my_psp_database:
+For additional insights into the PSP optimization feature, we recommend that Query Store integration also be enabled by ensuring that the Query Store is turned on.  The following example will turn on the Query Store for a database called `my_psp_database`:
 
-`ALTER DATABASE my_psp_database  SET QUERY_STORE (QUERY_CAPTURE_MODE = auto);`
+`ALTER DATABASE my_psp_database  SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);`
 
 To disable PSP optimization at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = OFF` database scoped configuration.
 

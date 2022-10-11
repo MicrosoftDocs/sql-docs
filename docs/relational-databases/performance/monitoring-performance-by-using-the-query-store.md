@@ -118,7 +118,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together.
+The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together. Currently, when the Query Store for secondary replicas is enabled, it is enabled for all secondary replicas.
 
 > [!NOTE]  
 > **Replica set** or **replica group**: A replica set is defined as being all unnamed replicas that share a role (primary, secondary, geo secondary, geo primary), or as being an individual named replica.
@@ -152,7 +152,7 @@ ALTER DATABASE [Database_Name] SET QUERY_STORE
 ( OPERATION_MODE = READ_WRITE );
 ```
 
-To enable the Query Store on all secondary replicas, connect to the primary replica and execute the following for each desired database. Currently, the Query Store is enabled for all secondary replicas.
+To enable the Query Store on all secondary replicas, connect to the primary replica and execute the following for each desired database. Currently, when the Query Store for secondary replicas is enabled, it is enabled for all secondary replicas.
 
 ```sql
 ALTER DATABASE [Database_Name]

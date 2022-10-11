@@ -74,7 +74,7 @@ Transact-SQL syntax for stored procedures in SQL Server and Azure SQL Database:
 CREATE [ OR ALTER ] { PROC | PROCEDURE }
     [schema_name.] procedure_name [ ; number ]
     [ { @parameter_name [ type_schema_name. ] data_type }
-        [ VARYING ] [ = default ] [ OUT | OUTPUT | [READONLY]
+        [ VARYING ] [ NULL ] [ = default ] [ OUT | OUTPUT | [READONLY]
     ] [ ,...n ]
 [ WITH <procedure_option> [ ,...n ] ]
 [ FOR REPLICATION ]

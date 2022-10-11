@@ -3,16 +3,16 @@ title: "sys.query_store_replicas (Transact-SQL)"
 description: "The sys.query_store_replicas system view contains information about Query Store replicas."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 09/19/2022
+ms.date: 10/11/2022
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"
 ms.custom:
 f1_keywords:
-  - "SYS.QUERY_STORE_RUNTIME_STATS_TSQL"
-  - "QUERY_STORE_RUNTIME_STATS_TSQL"
-  - "SYS.QUERY_STORE_RUNTIME_STATS"
-  - "QUERY_STORE_RUNTIME_STATS"
+  - "SYS.QUERY_STORE_REPLICAS_TSQL"
+  - "QUERY_STORE_REPLICAS_TSQL"
+  - "SYS.QUERY_STORE_REPLICAS"
+  - "QUERY_STORE_REPLICAS"
 helpviewer_keywords:
   - "query_store_replicas catalog view"
   - "sys.query_store_replicas catalog view"
@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-curr
 
 [!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
-Contains information about Query Store replicas, when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled. You can use this information to determine what `replica_group_id` to use when using Query Store to force or un-force a plan on a secondary replica.
+Contains information about Query Store replicas, when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled. You can use this information to determine what `replica_group_id` to use when using Query Store to force or un-force a plan on a secondary replica with [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|

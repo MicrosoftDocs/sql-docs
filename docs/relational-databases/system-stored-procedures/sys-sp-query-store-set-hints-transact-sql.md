@@ -35,8 +35,39 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 ```syntaxsql
 sp_query_store_set_hints
     @query_id bigint,
-    @query_hints nvarchar(max) [;]  
+    @query_hints nvarchar(max) 
+    [, @query_hints_comment nvarchar(MAX)]
+    [, @override_plan_guide_and_hints  ]
+    [, @fail_execution_on_error   ]
+    [, @query_hint_scope   ] [;]  
 ```  
+
+## Arguments
+
+#### @query_id
+
+Bigint. Required. The Query Store `query_id` from [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md).
+
+#### @query_hints
+
+Nvarchar(max). String of query options beginning with `'OPTION`. For more information, see [Supported query hints](#supported-query-hints) in this article.
+
+#### [ @query_hints_comment ]
+
+Nvarchar(max). User-editable comment on query hint. Use to provide context, application, event, or other information useful to yourself and other administrators in the future.
+
+#### [ @override_plan_guide_and_hints ]
+
+Bit. Defaults to `1`. Controls whether the new Query Store hint will override an existing plan guide or an in-place hint in the code.
+
+#### [ @fail_execution_on_error ] 
+
+Bit. Default is `0`. Controls whether errors in applying a query hint will be surfaced to the client. The default for this argument is `0` which matches the existing Query Store plan forcing overall behavior where failing operations are silently logged and do not block query execution.
+
+#### [ query_hint_scope ] 
+
+Tinyint. Defaults is `0`. Determines the scope at which the hint will be applied, as per the `replica_group_id` column in [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md). `0` indicates a global scope.
+
 
 ## Return Values  
  0 (success) or 1 (failure)  

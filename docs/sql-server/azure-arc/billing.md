@@ -88,7 +88,7 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 
 ### Do I get charged if my SQL Server instance is stopped
 
-TBC
+The billing and usage collection is based on the time the instance is installed on the virtual machine, not on the time it is in the active state.  
 
 ### Do I get charged if my virtual machine is stopped
 

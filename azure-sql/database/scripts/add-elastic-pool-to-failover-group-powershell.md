@@ -2,7 +2,7 @@
 title: "PowerShell: Add an elastic pool to an auto-failover group"
 description: Azure PowerShell example script to create an Azure SQL Database elastic pool, add it to an auto-failover group, and test failover.
 author: AbdullahMSFT
-author: amamun
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/16/2019
 ms.service: sql-database

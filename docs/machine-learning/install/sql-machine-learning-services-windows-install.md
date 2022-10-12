@@ -1,6 +1,6 @@
 ---
-title: Install on Windows
-description: Learn how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+title: Install SQL Server Machine Learning Services on Windows
+description: Learn how to install SQL Server Machine Learning Services on Windows to run Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 05/24/2022
@@ -17,35 +17,35 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15"
 
 [!INCLUDE [SQL Server 2016 2017 2019](../../includes/applies-to-version/sqlserver2016-2019-only.md)]
 
-Learn how to install [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+Learn how to install [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to run Python and R scripts in-database.
 
 > [!IMPORTANT]
 > These instructions apply to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], and [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], refer to [Install SQL Server 2022 Machine Learning Services on Windows](sql-machine-learning-services-windows-install-sql-2022.md).
 
-## <a name="bkmk_prereqs"> </a> Pre-install checklist
+## <a name="bkmk_prereqs"> </a> Pre-installation checklist
 
 + A database engine instance is required. You can't install just Python or R features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
++ For business continuity, [Always On availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
 
-+ Installing Machine Learning Services *isn't supported* on an [Always On Failover Cluster Instance (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2017. It's supported with SQL Server 2019 and later.
++ Installing Machine Learning Services *is not supported* on an [Always On failover cluster instance](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2017. It's supported with SQL Server 2019 and later.
  
 + Don't install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
-+ Don't install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running a database instance. A stand-alone server will compete for the same resources, diminishes the performance of both installations.
++ Don't install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer that's running a database instance. A stand-alone server will compete for the same resources, diminishing the performance of both installations.
 
-+ Side-by-side installation with other versions of Python and R is supported but isn't recommended. It's supported because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. It isn't recommended because running code that uses Python and R on a SQL Server computer outside SQL Server can lead to various problems:
++ Side-by-side installation with other versions of Python and R is supported, but we don't recommend it. It's supported because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. We don't recommend it because running code that uses Python and R on a computer outside SQL Server can lead to problems:
     
-  + Using a different library and executable files will create inconsistent results, than what you are running in SQL Server.
-  + R and Python scripts running in external libraries can't be managed by SQL Server, leading to resource contention.
+  + Using a different library and different executable files will create results that are inconsistent with what you're running in SQL Server.
+  + SQL Server can't manage R and Python scripts that run in external libraries, leading to resource contention.
 
 ::: moniker range=">=sql-server-ver15"
 > [!NOTE]
-> Machine Learning Services is installed by default on **SQL Server Big Data Clusters**. You don't need to follow the steps in this article if you use a **Big Data Cluster**. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+> Machine Learning Services is installed by default on *SQL Server Big Data Clusters*. You don't need to follow the steps in this article if you use a Big Data Cluster. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
+> After you finish setup, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts and adding accounts that are required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
 
 ## Get the installation media
 
@@ -68,11 +68,11 @@ For local installations, you must run the setup as an administrator. If you inst
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
    ::: moniker range="=sql-server-2017"
-   ![New SQL Server stand-alone installation](media/2017setup-installation-page-mlsvcs.png)
+   ![Screenshot that shows the option for creating a SQL Server standalone installation or adding features to an existing installation.](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
    ::: moniker range="=sql-server-ver15"
-   ![New SQL Server stand-alone installation](media/2019setup-installation-page-mlsvcs.png)
+   ![Screenshot that shows the option for using a new SQL Server standalone installation or adding features to an existing installation.](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. On the **Feature Selection** page, select these options:
@@ -81,7 +81,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
    - **Database Engine Services**
      
-     To use R and Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+     To use R and Python with SQL Server, you must install an instance of the database engine. You can use either a default instance or a named instance.
 
    - **Machine Learning Services (In-Database)**
      
@@ -93,9 +93,9 @@ For local installations, you must run the setup as an administrator. If you inst
 
    - **Database Engine Services**
      
-     To use R or Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+     To use R or Python with SQL Server, you must install an instance of the database engine. You can use either a default instance or a named instance.
 
-   - **Machine Learning Services (In-Database)**
+   - **Machine Learning Services and Language Extension**
      
      This option installs the database services that support R and Python script execution.
 
@@ -103,84 +103,84 @@ For local installations, you must run the setup as an administrator. If you inst
 
    - **R**
      
-     Check this option to add the Microsoft R packages, interpreter, and open-source R. 
+     Select this option to add the Microsoft R packages, interpreter, and open-source R. 
      
    - **Python**
      
-     Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
+     Select this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
      
    ::: moniker range="=sql-server-ver15"
-   For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
+   For information on installing and using Java, see [Install SQL Server Java Language Extension on Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017"
-   ![Feature options for R and Python](media/2017setup-features-page-mls-rpy.PNG "Setup options for R and Python")
+   ![Screenshot that shows feature options for R and Python.](media/2017setup-features-page-mls-rpy.PNG "Setup options for R and Python")
    ::: moniker-end
    
    ::: moniker range="=sql-server-ver15"
-   ![Feature options for R and Python](media/2019setup-features-page-mls-rpy.png "Setup options for R and Python")
+   ![Screenshot that shows selecting feature options for R and Python.](media/2019setup-features-page-mls-rpy.png "Setup options for R and Python")
    ::: moniker-end
    
    > [!NOTE]
-   > 
    > Don't select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
 
 ::: moniker range="=sql-server-2017"
 
-4. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. 
+1. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. 
 
-The license agreement covers:
-+ Microsoft R Open
-+ Open-source R base packages and tools
-+ Enhanced R packages and connectivity providers from the Microsoft development team.
+   The license agreement covers:
+   
+   + Microsoft R Open.
+   + Open-source R base packages and tools.
+   + Enhanced R packages and connectivity providers from the Microsoft development team.
 
-1. On the **Consent to Install Python** page, select **Accept** and then **Next**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
+1. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source license agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
    > [!NOTE]
-   >  If the computer you are using doesn't have internet access, you can pause setup at this point to download the installers separately. For more information, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
+   > If the computer that you're using doesn't have internet access, you can pause setup at this point to download the installers separately. For more information, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
 
-1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
+1. On the **Ready to Install** page, verify that these selections are included, and then select **Install**:.
   
    + Database Engine Services
-   + Machine Learning Services (In-Database)
-   + R or Python, or both
+   + Machine Learning Services (in-database)
+   + R, Python, or both
 
-   Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
+   Note the location of the folder under the path *..\Setup Bootstrap\Log* where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
 
-1. After setup is complete, if you are instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you have finished with setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you finish setup. For more information, see [View and read SQL Server setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
 
-1. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
+1. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
 
-2. On the **Consent to Install Python** page, select **Accept** and then **Next**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
+1. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
-3. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
+1. On the **Ready to Install** page, verify that these selections are included, and then select **Install**:
   
    + Database Engine Services
-   + Machine Learning Services (In-Database)
-   + R and/or Python
+   + Machine Learning Services (in-database)
+   + R, Python, or both
 
-   Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
+   Note the location of the folder under the path *..\Setup Bootstrap\Log* where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
 
-4. After setup is complete, if you're instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you've finished with setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the installation wizard when you finish setup. For more information, see [View and read SQL Server setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
 ## Set environment variables
 
-For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+For R feature integration only, you should set the `MKL_CBWR` environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
 
 1. In Control Panel, select **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
 
-2. Create a new User or System variable. 
+1. Create a new user or system variable. 
 
-   + Set variable name to `MKL_CBWR`
-   + Set the variable value to `AUTO`
+   + Set variable name to `MKL_CBWR`.
+   + Set the variable value to `AUTO`.
 
-This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
+This step requires a server restart. If you're about to enable script execution, you can hold off on the restart until all of the configuration work is done.
 
 <a name="bkmk_enableFeature"></a>
 
@@ -188,7 +188,7 @@ This step requires a server restart. If you are about to enable script execution
 
 1. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services.
   
-2. Connect to the instance where you installed Machine Learning Services, select **New Query** to open a query window, and run the following command:
+1. Connect to the instance where you installed Machine Learning Services, select **New Query** to open a query window, and run the following command:
 
     ```sql
     EXEC sp_configure
@@ -196,7 +196,7 @@ This step requires a server restart. If you are about to enable script execution
 
     The value for the property, `external scripts enabled`, should be **0** at this point. The feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
     
-3.  To enable the external scripting feature, run the following statement:
+1.  To enable the external scripting feature, run the following statement:
     
     ```sql
     EXEC sp_configure  'external scripts enabled', 1
@@ -225,9 +225,9 @@ Use the following steps to verify that all components used to launch external sc
 
    The **run_value** is set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
+1. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    
-3. If Launchpad is running, you can run simple Python and R scripts to verify that external scripting runtimes can communicate with SQL Server.
+1. If Launchpad is running, you can run simple Python and R scripts to verify that external scripting runtimes can communicate with SQL Server.
 
    Open a new **Query** window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then run a script such as:
    + For R
@@ -307,15 +307,15 @@ Disconnected servers require extra steps. For more information, see [Install on 
 
 1. Start with a baseline instance already installed: SQL Server initial release.
 
-2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+1. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
-3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
+1. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
-4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features. Setup downloads the CAB files necessary to update all features.
+1. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features. Setup downloads the CAB files necessary to update all features.
 
    ![Summary of installed features](media/cumulative-update-feature-selection.png)
 
-5. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
+1. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
 
 ::: moniker-end
 

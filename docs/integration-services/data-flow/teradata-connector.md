@@ -9,7 +9,8 @@ ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
 ---
-# Microsoft connector for Teradata
+
+# Microsoft connector for Teradata (SSIS)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -41,11 +42,11 @@ Microsoft Connector for Teradata provides similar user experience with Attunity 
 
 Teradata source and destination are under Common category.
 
-:::image type="content" source="media/teradata-component.png" alt-text="The Teradata Component.":::
+:::image type="content" source="media/teradata-connection-manager.png" alt-text="Screenshot the Teradata Component.":::
 
 Teradata connection manager is displayed as "TERADATA".
 
-:::image type="content" source="media/teradata-connection-manager-type.png" alt-text="The Teradata connection manager type.":::
+:::image type="content" source="media/teradata-connector/teradata-connection-manager-type.png" alt-text="Screenshot of the Teradata connection manager type":::
 
 Existing SSIS packages that have been designed with Attunity Teradata Connector will be automatically upgraded to use Microsoft Connector for Teradata. The icons will be changed as well.
 

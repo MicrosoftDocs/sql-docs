@@ -90,7 +90,7 @@ Tuning an appropriate custom capture policy for your environment should be consi
 
 ### [SSMS](#tab/ssms)
 
-:::image type="icon" source="../includes/media/download.svg" border="false":::**[Use the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
+:::image type="icon" source="../../includes/media/download.svg" border="false":::**[Use the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
 
 To view current settings in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]:
 
@@ -173,7 +173,7 @@ View the current Query Store settings in [!INCLUDE[ssManStudioFull](../../includ
 
 ### [SSMS](#tab/ssms)
 
-:::image type="icon" source="../includes/media/download.svg" border="false":::**[Use the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
+:::image type="icon" source="../../includes/media/download.svg" border="false":::**[Use the latest version of SQL Server Management Studio (SSMS)](https://aka.ms/ssms)**
 
 To view current settings in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]:
 

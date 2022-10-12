@@ -182,7 +182,7 @@ If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE
 
 ## <a id="RelatedContent"></a> Related Content
 
-- [Windows Server Technologies: Failover Clusters](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server)
+- [Windows Server Failover Clustering with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)
 
 - [Storage Spaces Direct \(S2D\) Overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 

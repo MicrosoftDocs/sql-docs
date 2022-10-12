@@ -178,7 +178,7 @@ If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE
 
 - [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)
 
-- [Force a WSFC Cluster to Start Without a Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum)
+- [Force a WSFC Cluster to Start Without a Quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)
 
 ## <a id="RelatedContent"></a> Related Content
 

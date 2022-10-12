@@ -16,9 +16,6 @@ ms.author: chugu
 ---
 # Edit Tables
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   Use the **Tables** tab to make changes to the tables and columns that you selected from the Oracle source database. This tab has the following elements:  
   
  **Table list**  

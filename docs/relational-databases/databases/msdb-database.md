@@ -18,7 +18,11 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 # msdb Database
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+
+> [!div class="op_single_selector"]
+> * [SQL Server](msdb-database.md)
+> * [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/msdb-database-sql-mi)
 
   The **msdb** database is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling alerts and jobs and by other features such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] and Database Mail.  
   

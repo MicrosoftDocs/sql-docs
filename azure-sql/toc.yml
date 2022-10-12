@@ -282,7 +282,7 @@
         - name: Use Spring Data R2DBC
           href: /azure/developer/java/spring-framework/configure-spring-data-r2dbc-with-azure-sql-server?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
 
-- name: SQL Database (SQL DB)
+- name: Azure SQL Database (SQL DB)
   items:
   - name: Documentation
     href: database/index.yml
@@ -1058,6 +1058,8 @@
       href: managed-instance/connectivity-architecture-overview.md
     - name: Automated backups
       href: managed-instance/automated-backups-overview.md 
+    - name: The msdb database
+      href: managed-instance/msdb-database-sql-mi.md
     - name: Auto-failover groups
       href: managed-instance/auto-failover-group-sql-mi.md
     - name: T-SQL differences

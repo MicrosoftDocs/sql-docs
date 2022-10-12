@@ -54,7 +54,7 @@ The Hyperscale architecture does not require full, differential, or log backups.
 
 ## Backup storage redundancy
 
-By default, Azure SQL Database stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
+By default, Azure SQL Database stores backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. These events might include transient hardware failure, network or power outages, or massive natural disasters. 
 

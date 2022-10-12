@@ -107,7 +107,7 @@
           href: database/authentication-azure-ad-only-authentication.md
         - name: Azure Policy for Azure AD-only authentication
           href: database/authentication-azure-ad-only-authentication-policy.md
-        - name: User-assigned managed identity
+        - name: Managed identity
           href: database/authentication-azure-ad-user-assigned-managed-identity.md
       - name: Transparent Data Encryption (TDE)
         items:

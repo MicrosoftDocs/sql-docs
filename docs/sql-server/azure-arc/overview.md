@@ -45,6 +45,9 @@ Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one 
 > [!NOTE]
 > Azure Arc-enabled SQL Server does not support container images with SQL Server.
 
+> [!NOTE]
+> SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances. 
+
 ### Required permissions
 
 To connect the SQL Server instances and the hosting machine to Azure Arc, you must have a user account or Azure service principal with privileges to perform the following actions:

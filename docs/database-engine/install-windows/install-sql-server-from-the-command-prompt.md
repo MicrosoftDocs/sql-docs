@@ -930,7 +930,7 @@ To install specific features, use the /FEATURES parameter and specify the parent
 ||Conn|Installs connectivity components.|
 ||DREPLAY_CTLR|Installs Distributed Replay controller|
 ||DREPLAY_CLT|Installs Distributed Replay client|
-||SNAC_SDK|Installs SDK for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Native Client|
+||SNAC_SDK|Installs SDK for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Native Client. Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], this feature is not available. |
 ||SDK|Installs the software development kit.|
 ||LocalDB**|Installs LocalDB, an execution mode of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] targeted to program developers.|
 

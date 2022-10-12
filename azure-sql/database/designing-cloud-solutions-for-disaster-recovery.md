@@ -1,7 +1,7 @@
 ---
 title: Design globally available services
 description: Learn about application design for highly available services using Azure SQL Database.
-author: rajeshsetlem
+author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/28/2020

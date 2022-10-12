@@ -41,7 +41,7 @@ This table is stored in the `msdb` database.
 |**run_status**|**int**|Status of the job execution:<br /><br />**0** = Failed<br /><br />**1** = Succeeded<br />**2** = Retry<br />**3** = Canceled<br />**4** = In Progress|
 |**run_date**|**int**|Date the job or step started execution, in `YYYYMMDD` format. For an In Progress history, this is the date/time the history was written.|
 |**run_time**|**int**|Time the job or step started in `HHMMSS` format.|
-|**run_duration**|**int**|Elapsed time in the execution of the job or step in `HHMMSS` format for time periods up to 24 hours. Find code to translate longer run durations in the[example](#example).|
+|**run_duration**|**int**|Elapsed time in the execution of the job or step in `HHMMSS` format for time periods up to 24 hours. Find code to translate longer run durations in the [example](#example).|
 |**operator_id_emailed**|**int**|ID of the operator notified when the job completed.|
 |**operator_id_netsent**|**int**|ID of the operator notified by a message when the job completed.|
 |**operator_id_paged**|**int**|ID of the operator notified by pager when the job completed.|

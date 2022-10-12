@@ -52,6 +52,7 @@ Hardware configurations have different characteristics, as described in the foll
 ### Regional support for memory optimized premium-series hardware
 
 Support for the memory optimized premium-series hardware is currently available only in these specific regions:
+  
 | Geography | Regions supporting memory optimized premium-series HW |
 |:-- |:-- |
 | Europe, Middle East, Africa | France Central, Germany West Central, North Europe, Sweden Central, UK South, West Europe |

@@ -139,23 +139,23 @@ Here are some examples of actions that you can perform using **adutil**. To see 
 ```bash
 $ adutil --help
 adutil - A general AD utility
-Usage:
-  adutil [account|delegation|group|keytab|machine|ou|spn|user|config]
-Subcommands:
-  account      Functions for generic account operations
-  delegation   Functions for configuring delegation permissions
-  group        Functions for group management
-  keytab       Functions for keytab management
-  machine      Functions for managing machine accounts
-  ou           Functions for managing organizational units
-  spn          Functions for service principal name (SPN) management
-  user         Functions for user account management
-  config       Functions for modifying adutil configuration
-Flags:
-      --version       Displays the program version string.
-  -h --help          Displays help with available flag, subcommand, and positional value parameters.
-  -d --debug         Display additional debugging information when making LDAP/Kerberos calls.
-      --accept-eula   Accepts the current EULA for adutil. This has no effect if the EULA has already been accepted.
+  Usage:
+    adutil [account|delegation|group|keytab|machine|ou|spn|user|config]
+  Subcommands:
+    account      Functions for generic account operations
+    delegation   Functions for configuring delegation permissions
+    group        Functions for group management
+    keytab       Functions for keytab management
+    machine      Functions for managing machine accounts
+    ou           Functions for managing organizational units
+    spn          Functions for service principal name (SPN) management
+    user         Functions for user account management
+    config       Functions for modifying adutil configuration
+  Flags:
+       --version       Displays the program version string.
+    -h --help          Displays help with available flag, subcommand, and positional value parameters.
+    -d --debug         Display additional debugging information when making LDAP/Kerberos calls.
+       --accept-eula   Accepts the current EULA for adutil. This has no effect if the EULA has already been accepted.
 ```
 
 To seek help with the next level of commands, you can further run the help option as shown below:
@@ -201,21 +201,21 @@ Each command is documented so you can get started right away. Here are some of t
 
 - Create an account in Active Directory:
 
-    ```bash
-    adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM
-    ```
+  ```bash
+  adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM
+  ```
 
 - Create SPNs associated with an account or service:
 
-    ```bash
-    adutil spn addauto -n sqluser -s MSSQLSvc -H mymachine.contoso.com -p 1433
-    ```
+  ```bash
+  adutil spn addauto -n sqluser -s MSSQLSvc -H mymachine.contoso.com -p 1433
+  ```
 
 - Create keytabs using **adutil**:
 
-    ```bash
-    adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H mymachine.contoso.com --password 'P@ssw0rd' -s MSSQLSvc
-    ```
+  ```bash
+  adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H mymachine.contoso.com --password 'P@ssw0rd' -s MSSQLSvc
+  ```
 
 You can refer to the reference manual page of **adutil** using the command `man adutil`.
 

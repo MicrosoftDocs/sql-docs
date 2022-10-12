@@ -107,7 +107,7 @@
           href: database/authentication-azure-ad-only-authentication.md
         - name: Azure Policy for Azure AD-only authentication
           href: database/authentication-azure-ad-only-authentication-policy.md
-        - name: User-assigned managed identity
+        - name: Managed identity
           href: database/authentication-azure-ad-user-assigned-managed-identity.md
       - name: Transparent Data Encryption (TDE)
         items:
@@ -1440,6 +1440,8 @@
       - name: ARM template
         displayName: Resource Manager
         href: virtual-machines/windows/create-sql-vm-resource-manager-template.md
+
+        
     - name: Concepts
       items:
       - name: Business continuity
@@ -1491,6 +1493,8 @@
           href: virtual-machines/windows/create-sql-vm-portal.md
         - name: Use Azure PowerShell
           href: virtual-machines/windows/create-sql-vm-powershell.md
+        - name: on Azure confidential VMs
+          href: virtual-machines/windows/sql-vm-create-confidential-vm-how-to.md
 
       - name: Manage
         items: 
@@ -1525,8 +1529,6 @@
             href: virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk.md
       - name: Migrate
         items:
-        - name: SQL Server database to VM
-          href: virtual-machines/windows/migrate-to-vm-from-sql-server.md
         - name: VM to a new region
           href: virtual-machines/windows/move-sql-vm-different-region.md
       - name: Business continuity

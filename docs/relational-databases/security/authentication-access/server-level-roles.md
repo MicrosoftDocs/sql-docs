@@ -66,7 +66,7 @@ The following table shows the fixed server-level roles and their capabilities.
 The following table shows additional fixed server-level roles that are introduced with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and their capabilities.
 
 > [!NOTE]
-> These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics. **##MS_PerformanceDefinitionReader##**, **##MS_ServerPerformanceStateReader##**, and **##MS_ServerSecurityStateReader##** is introduced in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] CTP 2.1, and are not available in Azure SQL Database.
+> These server-level permissions are not available for Azure SQL Managed Instance or Azure Synapse Analytics. **##MS_PerformanceDefinitionReader##**, **##MS_ServerPerformanceStateReader##**, and **##MS_ServerSecurityStateReader##** is introduced in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], and are not available in Azure SQL Database.
 
 |Fixed server-level role |Description |
 |------------------------------|-----------------|  

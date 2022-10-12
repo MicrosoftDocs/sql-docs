@@ -9,7 +9,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 05/16/2022
+ms.date: 10/12/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -141,7 +141,7 @@ Several switches and behaviors are altered from [sqlcmd](sqlcmd-utility.md) in g
 - Some behaviors that were kept to maintain compatibility with `OSQL` may be changed, such as alignment of column headers for some data types.
 - All commands must fit on one line, even `EXIT`. Interactive mode won't check for open parentheses or quotes for commands and prompt for successive lines. The ODBC sqlcmd allows the query run by `EXIT(query)` to span multiple lines.
 
-Connections from go-sqlcmd are only TCP/IP connections. Named pipes are not supported due to a limitation in the go-mssqldb driver.
+Connections from go-sqlcmd are limited to TCP connections. Named pipes are not supported at this time in the go-mssqldb driver.
 
 ## Enhancements
 

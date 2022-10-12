@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # How to Edit the CDC Instance Properties
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   This procedure describes how to use the CDC Designer Console to edit the configuration properties for a CDC instance.  
   
 ### To edit the CDC instance configuration properties  

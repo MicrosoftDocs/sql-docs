@@ -46,7 +46,7 @@ On the user permissions page, when granting permission to the root level in the 
   - Grant permission on the sub nodes in the tree view instead of the root level.
 
 ### Analysis Services
-- **Issue and customer impact:** Data connectors for the following sources are not yet avaialble for tabular models at the 1400 compatibility level.
+- **Issue and customer impact:** Data connectors for the following sources are not yet available for tabular models at the 1400 compatibility level.
   - Amazon Redshift
   - IBM Netezza
   - Impala

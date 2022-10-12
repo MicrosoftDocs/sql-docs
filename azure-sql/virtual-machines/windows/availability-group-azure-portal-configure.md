@@ -3,8 +3,8 @@ title: Configure an availability group (Azure portal)
 description: "Use the Azure portal to create the Windows failover cluster, the availability group listener, and the internal load balancer on a SQL Server VM in Azure."
 author: tarynpratt
 ms.author: tarynpratt
-ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.reviewer: mathoma, randolphwest
+ms.date: 09/30/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: article
@@ -14,55 +14,56 @@ ms.custom:
   - devx-track-azurepowershell
 tags: azure-resource-manager
 ---
-# Use Azure portal to configure an availability group (Preview) for SQL Server on Azure VM 
+# Use Azure portal to configure an availability group (Preview) for SQL Server on Azure VM
+
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-> [!TIP]
-> Eliminate the need for an Azure Load Balancer for your Always On availability (AG) group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+> [!TIP]  
+> If you prefer to eliminate the need for an Azure Load Balancer for your availability group (AG), create your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network. This configuration is not currently supported for deployment via the Azure portal, so you will need to configure the AG manually.
 
-This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs within a single subnet. 
+This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs within a single subnet.
 
-Use the Azure portal to create a new cluster or onboard an existing cluster, and then create the availability group, listener, and internal load balancer. 
+Use the Azure portal to create a new cluster or onboard an existing cluster, and then create the availability group, listener, and internal load balancer.
 
-This feature is currently in preview. 
+This feature is currently in preview.
 
-While this article uses the Azure portal to configure the availability group environment, it is also possible to do so using [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), [Azure Quickstart templates](availability-group-quickstart-template-configure.md), or [Manually](availability-group-manually-configure-tutorial-single-subnet.md) as well. 
+While this article uses the Azure portal to configure the availability group environment, it is also possible to do so using [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), [Azure Quickstart Templates](availability-group-quickstart-template-configure.md), or [Manually](availability-group-manually-configure-tutorial-single-subnet.md) as well.
 
-> [!NOTE]
-> It's now possible to lift and shift your availability group solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate availability group](../../migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md) to learn more. 
-
+> [!NOTE]  
+> It's now possible to lift and shift your availability group solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate availability group](../../migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md) to learn more.
 
 ## Prerequisites
 
-To configure an Always On availability group using the Azure portal, you must have the following prerequisites: 
+To configure an Always On availability group using the Azure portal, you must have the following prerequisites:
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
 - A resource group with a domain controller. 
+- A storage account within the same resource group.
 - One or more domain-joined [VMs in Azure running SQL Server 2016 (or later) Enterprise edition](./create-sql-vm-portal.md) in the *same* availability set or *different* availability zones that have been [registered with the SQL IaaS Agent extension in full manageability mode](sql-agent-extension-manually-register-single-vm.md) and are using the same domain account for the SQL Server service on each VM.
 - Two available (not used by any entity) IP addresses. One is for the internal load balancer. The other is for the availability group listener within the same subnet as the availability group. If you're using an existing load balancer, you only need one available IP address for the availability group listener. 
+- WinRM ports 5985/5986 open in the NSG.
 
 ## Permissions
 
-You need the following account permissions to configure the availability group by using the Azure portal: 
+You need the following account permissions to configure the availability group by using the Azure portal:
 
-- An existing domain user account that has **Create Computer Object** permission in the domain. For example, a domain admin account typically has sufficient permission (for example: account@domain.com). _This account should also be part of the local administrator group on each VM to create the cluster._
-- The domain user account that controls SQL Server. This should be the same account for every SQL Server VM you intend to add to the availability group. 
+- An existing domain user account that has **Create Computer Object** permission in the domain. For example, a domain admin account typically has sufficient permission (for example: account@domain.com). This account should also be part of the local administrator group on each VM to create the cluster.
+- The domain user account that controls SQL Server. This should be the same account for every SQL Server VM you intend to add to the availability group.
 
 ## Configure cluster
 
 Configure the cluster by using the Azure portal. You can either create a new cluster, or if you already have an existing cluster, you can onboard it to the SQL IaaS Agent extension to for portal manageability.
 
-
 ### Create a new cluster
 
-If you already have a cluster, skip this section and move to [Onboard existing cluster](#onboard-existing-cluster) instead. 
+If you already have a cluster, skip this section and move to [Onboard existing cluster](#onboard-existing-cluster) instead.
 
-If you do not already have an existing cluster, create it by using the Azure portal with these steps:
+If you don't already have an existing cluster, create it by using the Azure portal with these steps:
 
 1. Sign into the [Azure portal](https://portal.azure.com). 
-1. Navigate to your [SQL virtual machines](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) resource. 
-1. Select **High Availability** under **Settings**. 
-1. Select **+ New Windows Server failover cluster** to open the **Configure Windows Failover cluster** page.  
+1. Navigate to your [SQL virtual machines](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) resource.
+1. Select **High Availability** under **Settings**.
+1. Select **+ New Windows Server failover cluster** to open the **Configure Windows Failover cluster** page.
 
    :::image type="content" source="media/availability-group-az-portal-configure/create-new-cluster.png" alt-text="Create new cluster by selecting the + new cluster in the portal":::
 
@@ -70,7 +71,7 @@ If you do not already have an existing cluster, create it by using the Azure por
 
    :::image type="content" source="media/availability-group-az-portal-configure/configure-new-cluster-1.png" alt-text="Provide name, storage account, and credentials for the cluster":::
 
-1. Expand **Windows Server Failover Cluster credentials** to provide [credentials](/rest/api/sqlvm/2021-11-01-preview/sql-virtual-machine-groups/create-or-update#wsfcdomainprofile) for the SQL Server service account, as well as the cluster operator and bootstrap accounts if they're different than the account used for the SQL Server service. 
+1. Expand **Windows Server Failover Cluster credentials** to provide [credentials](/rest/api/sqlvm/2021-11-01-preview/sql-virtual-machine-groups/create-or-update#wsfcdomainprofile) for the SQL Server service account, as well as the cluster operator and bootstrap accounts if they're different than the account used for the SQL Server service.
 
    :::image type="content" source="media/availability-group-az-portal-configure/configure-new-cluster-2.png" alt-text="Provide credentials for the SQL Service account, cluster operator account and cluster bootstrap account":::
 
@@ -78,11 +79,9 @@ If you do not already have an existing cluster, create it by using the Azure por
 1. Select **Apply** to create the cluster. You can check the status of your deployment in the **Activity log** which is accessible from the bell icon in the top navigation bar. 
 1. For a failover cluster to be supported by Microsoft, it must pass cluster validation. Connect to the VM using your preferred method (such as Remote Desktop Protocol (RDP)) and validate that your cluster passes validation before proceeding further. Failure to do so leaves your cluster in an unsupported state. You can validate the cluster using Failover Cluster Manager (FCM) or the following PowerShell command:
 
-    ```powershell
-    Test-Cluster –Node ("<node1>","<node2>") –Include "Inventory", "Network", "System Configuration"
-    ```
-    
-
+   ```powershell
+   Test-Cluster –Node ("<node1>","<node2>") –Include "Inventory", "Network", "System Configuration"
+   ```
 
 ### Onboard existing cluster
 
@@ -93,7 +92,7 @@ To do so, follow these steps:
 1. Sign into the [Azure portal](https://portal.azure.com). 
 1. Navigate to your [SQL virtual machines](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) resource. 
 1. Select **High Availability** under **Settings**. 
-1. Select **Onboard existing Windows Server Failover Cluster** to open the **Onboard Windows Server Failover Cluster** page. 
+1. Select **Onboard existing Windows Server Failover Cluster** to open the **Onboard Windows Server Failover Cluster** page.
 
    :::image type="content" source="media/availability-group-az-portal-configure/onboard-existing-cluster.png" alt-text="Onboard an existing cluster from the High Availability page on your SQL virtual machines resource":::
 
@@ -112,30 +111,29 @@ After your cluster was either created or onboarded, create the availability grou
    :::image type="content" source="media/availability-group-az-portal-configure/create-new-availability-group.png" alt-text="Select new always on availability group to open the create availability group page.":::
 
 1. Enter a name for the availability group. 
-1. Select **Configure listener** to open the **Configure availability group listener** page. 
+1. Select **Configure listener** to open the **Configure availability group listener** page.
 
    :::image type="content" source="media/availability-group-az-portal-configure/create-availability-group.png" alt-text="Provide a name for the availability group and configure a listener":::
 
-1. Fill out the values, and either use an existing load balancer, or select **Create new** to create a new load balancer.  Select **Apply** to save your settings and create your listener and load balancer. 
+1. Fill out the values, and either use an existing load balancer, or select **Create new** to create a new load balancer.  Select **Apply** to save your settings and create your listener and load balancer.
 
    :::image type="content" source="media/availability-group-az-portal-configure/configure-new-listener.png" alt-text="Fill out the values in the form to create your new listener and load balancer":::
 
 1. Choose **+ Select replica** to open the **Configure availability group replicas** page.
-1. Select the virtual machines you want to add to the availability group, and choose the availability group settings that best suit your business needs. Select **Apply** to save your settings. 
+1. Select the virtual machines you want to add to the availability group, and choose the availability group settings that best suit your business needs. Select **Apply** to save your settings.
 
    :::image type="content" source="media/availability-group-az-portal-configure/add-replicas.png" alt-text="Choose VMs to add to your availability group and configure settings appropriate to your business":::
 
-1. Verify your availability group settings and then select **Apply** to create your availability group. 
+1. Verify your availability group settings and then select **Apply** to create your availability group.
 
-You can check the status of your deployment in the **Activity log** which is accessible from the bell icon in the top navigation bar. 
+You can check the status of your deployment in the **Activity log** which is accessible from the bell icon in the top navigation bar.
 
-  > [!NOTE]
-  > Your **Synchronization health** on the **High Availability** page of the Azure portal will show as **Not healthy** until you add databases to your availability group. 
-
+> [!NOTE]  
+> Your **Synchronization health** on the **High Availability** page of the Azure portal will show as **Not healthy** until you add databases to your availability group.
 
 ## Add database to availability group
 
-Add your databases to your availability group after deployment completes. The below steps use SQL Server Management Studio (SSMS) but you can use [Transact-SQL or PowerShell](/sql/database-engine/availability-groups/windows/availability-group-add-a-database) as well. 
+Add your databases to your availability group after deployment completes. The below steps use SQL Server Management Studio (SSMS) but you can use [Transact-SQL or PowerShell](/sql/database-engine/availability-groups/windows/availability-group-add-a-database) as well.
 
 To add databases to your availability group using SQL Server Management Studio, follow these steps:
 
@@ -149,50 +147,48 @@ To add databases to your availability group using SQL Server Management Studio, 
 
 1. Follow the prompts to select the database(s) you want to add to your availability group. 
 1. Select **OK** to save your settings and add your database to the availability group. 
-1. After the database is added, refresh **Object Explorer** to confirm the status of your database as `synchronized`. 
+1. After the database is added, refresh **Object Explorer** to confirm the status of your database as `synchronized`.
 
-After databases are added, you can check the status of your availability group in the Azure portal: 
+After databases are added, you can check the status of your availability group in the Azure portal:
 
 :::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Check the status of your availability group from the high availability page from the Azure portal after databases are synchronized":::
 
 ## Add more VMs
 
-To add more SQL Server VMs to the cluster, follow these steps: 
+To add more SQL Server VMs to the cluster, follow these steps:
 
 1. Sign into the [Azure portal](https://portal.azure.com). 
 1. Navigate to your [SQL virtual machines](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines) resource. 
 1. Select **High Availability** under **Settings**. 
-1. Select **Configure Windows Server Failover Cluster** to open the **Configure Windows Server Failover Cluster** page. 
+1. Select **Configure Windows Server Failover Cluster** to open the **Configure Windows Server Failover Cluster** page.
 
    :::image type="content" source="media/availability-group-az-portal-configure/configure-existing-cluster.png" alt-text="Select Configure Windows Server Failover Cluster to add VMs to your cluster.":::
 
 1. Expand **Windows Server Failover Cluster credentials** and enter in the accounts used for the SQL Server service, cluster operator and cluster bootstrap accounts. 
 1. Select the SQL Server VMs you want to add to the cluster. 
-1. Select **Apply**. 
+1. Select **Apply**.
 
-You can check the status of your deployment in the **Activity log** which is accessible from the bell icon in the top navigation bar. 
+You can check the status of your deployment in the **Activity log** which is accessible from the bell icon in the top navigation bar.
 
 ## Configure quorum
 
-Although the disk witness is the most resilient quorum option, it requires an Azure shared disk which imposes some limitations to the availability group. As such, the cloud witness is the recommended quorum solution for clusters hosting availability groups for SQL Server on Azure VMs. 
+Although the disk witness is the most resilient quorum option, it requires an Azure shared disk, which imposes some limitations to the availability group. As such, the cloud witness is the recommended quorum solution for clusters hosting availability groups for SQL Server on Azure VMs.
 
-If you have an even number of votes in the cluster, configure the [quorum solution](hadr-cluster-quorum-configure-how-to.md) that best suits your business needs. For more information, see [Quorum with SQL Server VMs](hadr-windows-server-failover-cluster-overview.md#quorum). 
+If you have an even number of votes in the cluster, configure the [quorum solution](hadr-cluster-quorum-configure-how-to.md) that best suits your business needs. For more information, see [Quorum with SQL Server VMs](hadr-windows-server-failover-cluster-overview.md#quorum).
 
+## Modify availability group
 
-## Modify availability group 
-
-
-You can **Add more replicas** to the availability group, **Configure the Listener**, or **Delete the Listener** from the **High Availability** page in the Azure portal by selecting the ellipses (...) next to your availability group: 
+You can **Add more replicas** to the availability group, **Configure the Listener**, or **Delete the Listener** from the **High Availability** page in the Azure portal by selecting the ellipses (...) next to your availability group:
 
 :::image type="content" source="media/availability-group-az-portal-configure/configure-listener.png" alt-text="Select the ellipses next to the availability group and then select add replica to add more replicas to the availability group.":::
 
 ## Remove cluster
 
-Remove all of the SQL Server VMs from the cluster to destroy it, and then remove the cluster metadata from the SQL IaaS Agent extension. You can do so by using the latest version of the [Azure CLI](/cli/azure/install-azure-cli) or PowerShell. 
+Remove all of the SQL Server VMs from the cluster to destroy it, and then remove the cluster metadata from the SQL IaaS Agent extension. You can do so by using the latest version of the [Azure CLI](/cli/azure/install-azure-cli) or PowerShell.
 
 # [Azure CLI](#tab/azure-cli)
 
-First, remove all of the SQL Server VMs from the cluster. This will physically remove the nodes from the cluster, and destroy the cluster:  
+First, remove all of the SQL Server VMs from the cluster. This will physically remove the nodes from the cluster, and destroy the cluster:
 
 ```azurecli-interactive
 # Remove the VM from the cluster metadata
@@ -202,9 +198,9 @@ az sql vm remove-from-group --name <VM1 name>  --resource-group <resource group 
 az sql vm remove-from-group --name <VM2 name>  --resource-group <resource group name>
 ```
 
-If these are the only VMs in the cluster, then the cluster will be destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs will not be removed and the cluster will not be destroyed. 
+If these are the only VMs in the cluster, then the cluster will be destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs won't be removed and the cluster won't be destroyed.
 
-Next, remove the cluster metadata from the SQL IaaS Agent extension: 
+Next, remove the cluster metadata from the SQL IaaS Agent extension:
 
 ```azurecli-interactive
 # Remove the cluster from the SQL VM RP metadata
@@ -215,7 +211,7 @@ az sql vm group delete --name <cluster name> --resource-group <resource group na
 
 # [PowerShell](#tab/azure-powershell)
 
-First, remove all of the SQL Server VMs from the cluster. This will physically remove the nodes from the cluster, and destroy the cluster: 
+First, remove all of the SQL Server VMs from the cluster. This will physically remove the nodes from the cluster, and destroy the cluster:
 
 ```powershell-interactive
 # Remove the SQL VM from the cluster
@@ -229,10 +225,9 @@ $sqlvm = Get-AzSqlVM -Name <VM Name> -ResourceGroupName <Resource Group Name>
    Update-AzSqlVM -ResourceId $sqlvm -SqlVM $sqlvm
 ```
 
-If these are the only VMs in the cluster, then the cluster will be destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs will not be removed and the cluster will not be destroyed. 
+If these are the only VMs in the cluster, then the cluster will be destroyed. If there are any other VMs in the cluster apart from the SQL Server VMs that were removed, the other VMs won't be removed and the cluster won't be destroyed.
 
-
-Next, remove the cluster metadata from the SQL IaaS Agent extension: 
+Next, remove the cluster metadata from the SQL IaaS Agent extension:
 
 ```powershell-interactive
 # Remove the cluster metadata
@@ -243,9 +238,9 @@ Remove-AzSqlVMGroup -ResourceGroupName "<resource group name>" -Name "<cluster n
 
 ---
 
-## Troubleshooting
+## Troubleshoot
 
-If you run into issues, you can check the deployment history, and review the common errors as well as their resolutions. 
+If you run into issues, you can check the deployment history, and review the common errors as well as their resolutions.
 
 ### Check deployment history
 
@@ -256,28 +251,26 @@ To view the logs for the deployment, and check the deployment history, follow th
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Navigate to your resource group.
 1. Select **Deployments** under **Settings**.
-1. Select the deployment of interest to learn more about the deployment. 
-
+1. Select the deployment of interest to learn more about the deployment.
 
    :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Select the deployment you're interested in learning more about." :::
 
 ### Common errors
 
-Review the following common errors and their resolutions. 
+Review the following common errors and their resolutions.
 
-#### The account which is used to start up sql service is not a domain account
+#### The account which is used to start up SQL service isn't a domain account
 
-This is an indication that the resource provider could not access the SQL Server service with the provided credentials. Some common resolutions:
+This is an indication that the resource provider couldn't access the SQL Server service with the provided credentials. Some common resolutions:
+
 - Ensure your domain controller is running.
-- Validate the credentials provided in the portal match those of the SQL Server service. 
+- Validate the credentials provided in the portal match those of the SQL Server service.
 
+## See also
+
+Once the availability group is deployed, consider optimizing the [HADR settings for SQL Server on Azure VMs](hadr-cluster-best-practices.md).
 
 ## Next steps
-
-Once the availability group is deployed, consider optimizing the [HADR settings for SQL Server on Azure VMs](hadr-cluster-best-practices.md). 
-
-
-To learn more, see:
 
 - [Windows Server Failover Cluster with SQL Server on Azure VMs](hadr-windows-server-failover-cluster-overview.md)
 - [Always On availability groups with SQL Server on Azure VMs](availability-group-overview.md)

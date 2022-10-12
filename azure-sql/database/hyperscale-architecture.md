@@ -54,7 +54,7 @@ The log service accepts transaction log records that correspond to data changes 
 
 Finally, transaction log records are pushed out to long-term storage in Azure Storage, which is a virtually infinite storage repository. This mechanism removes the need for frequent log truncation. The log service has local memory and SSD caches to speed up access to log records.
 
-The log on Hyperscale is practically infinite, with the restriction that a single transaction cannot generate more than 1 TB of log. Additionally, if using [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server), at most 1 TB of log can be generated since the start of the oldest active transaction. Avoid unnecessarily large transactions to stay below this limit.
+The log-on Hyperscale is practically infinite, with the restriction that a single transaction cannot generate more than 1 TB of log. Additionally, if using [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server), at most 1 TB of log can be generated since the start of the oldest active transaction. Avoid unnecessarily large transactions to stay below this limit.
 
 ## Azure storage
 

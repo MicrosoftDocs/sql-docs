@@ -34,12 +34,12 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
   
 ```syntaxsql
 sp_query_store_set_hints
-    @query_id bigint,
-    @query_hints nvarchar(max) 
-    [, @query_hints_comment nvarchar(MAX)]
-    [, @override_plan_guide_and_hints  ]
-    [, @fail_execution_on_error   ]
-    [, @query_hint_scope   ] [;]  
+    @query_id = 'query_id',
+    @query_hints = 'query_hints'
+    [, @query_hints_comment = 'query_hints_comment' ]
+    [, @override_plan_guide_and_hints = 'override_plan_guide_and_hints' ]
+    [, @fail_execution_on_error = 'fail_execution_on_error' ]
+    [, @query_hint_scope = 'query_hint_scope' ] [;]  
 ```  
 
 ## Arguments
@@ -64,17 +64,16 @@ Bit. Defaults to `1`. Controls whether the new Query Store hint will override an
 
 Bit. Default is `0`. Controls whether errors in applying a query hint will be surfaced to the client. The default for this argument is `0` which matches the existing Query Store plan forcing overall behavior where failing operations are silently logged and do not block query execution.
 
-#### [ query_hint_scope ] 
+#### [ @query_hint_scope ] 
 
-Tinyint. Defaults is `0`. Determines the scope at which the hint will be applied, as per the `replica_group_id` column in [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md). `0` indicates a global scope.
-
+Tinyint. By default, the scope of a new Query Store hint is the local replica only. Determines the scope at which the hint will be applied, as per the `replica_group_id` column in [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
 
 ## Return Values  
  0 (success) or 1 (failure)  
   
 ## Remarks  
 
-Hints are specified in a valid T-SQL string format `N'OPTION (..)'`. 
+Hints are specified in a valid T-SQL string format `N'OPTION (..)'`.
 
 * If no Query Store hint exists for a specific `query_id`, a new Query Store hint will be created. 
 * If a Query Store hint already exists for a specific `query_id`, the last value provided will override previously specified values for the associated query. 
@@ -192,6 +191,7 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 ```
 
 ## Next steps
+
 - [Query Store hints](../performance/query-store-hints.md)
 - [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
 - [sp_query_store_clear_hints (Transact-SQL)](sys-sp-query-store-clear-hints-transact-sql.md)   

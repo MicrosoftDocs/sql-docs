@@ -32,6 +32,10 @@ Contains information about Query Store replicas, when [Query Store for secondary
 |**role_id**|**tinyint**|1 = Primary<BR />2= Secondary<BR />3=Geo-Primary<BR />4=Geo-Secondary |
 |**replica_name**|**nvarchar(max)**|Provided at the time of configuration of the availability group. `NULL` for replicas in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |
 
+## Remarks
+
+This catalog view will return the same row data on all replicas. The catalog view will contain a row per replica for every `role_id` where it has been observed. For example, a two-replica availability group will initially contain two rows. After a failover, it will contain four rows: one row for each replica in both the primary and secondary roles.
+
 ## Permissions
 
 Requires the `VIEW DATABASE STATE` permission.

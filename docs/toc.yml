@@ -10356,7 +10356,9 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: SQL Server on Azure Arc-enabled servers
+  - name: Azure Arc-enabled data services >
+    href: /azure/azure-arc/data/overview
+- name: Azure Arc-enabled SQL Server
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
@@ -13243,6 +13245,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services
         href: relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md
+      - name: sys.dm_server_suspend_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-suspend-status.md
       - name: sys.dm_server_registry
         href: relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md
     - name: Service Broker

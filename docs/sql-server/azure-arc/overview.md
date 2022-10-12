@@ -1,6 +1,6 @@
 ---
-title: SQL Server on Azure Arc-enabled servers
-description: Manage instances of SQL Server on Azure Arc-enabled servers
+title: Azure Arc-enabled SQL Server
+description: Manage instances of Azure Arc-enabled SQL Server
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -43,7 +43,7 @@ Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 > [!NOTE]
-> SQL Server on Azure Arc-enabled servers does not support container images with SQL Server.
+> Azure Arc-enabled SQL Server does not support container images with SQL Server.
 
 ### Required permissions
 

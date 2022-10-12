@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # How to Manage a CDC Instance
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   This procedure describes how to use the CDC Designer Console to manage CDC instance operations at runtime.  
   
 ### To manage CDC instance operations  

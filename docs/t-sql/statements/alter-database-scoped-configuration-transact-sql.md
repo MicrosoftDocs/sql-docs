@@ -57,7 +57,7 @@ The following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssd
 - Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specify the number of minutes that a paused resumable index operation is paused before it is automatically aborted by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
 - Enable or disable waiting for locks at low priority for asynchronous statistics update.
-- Enable or disable uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger.
+- Enable or disable uploading ledger digests to Azure Blob Storage.
 
 This setting is only available in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
 
@@ -488,7 +488,7 @@ Parameter sensitivity plan (PSP) optimization addresses the scenario where a sin
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Enables or disables uploading ledger digests to Azure Blob Storage or Azure Confidential Ledger. To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account or a ledger in Azure Confidential Ledger. To disable uploading ledger digests, set the option value to OFF. The default is OFF.
+Enables or disables uploading ledger digests to Azure Blob Storage. To enable uploading ledger digests, specify the endpoint of an Azure Blob storage account. To disable uploading ledger digests, set the option value to OFF. The default is OFF.
 
 #### FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }
 
@@ -708,13 +708,6 @@ This example enables uploading ledger digests to an Azure storage account.
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION
 SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://mystorage.blob.core.windows.net'
-```
-
-This example enables uploading ledger digests to a ledger in Azure Confidential Ledger.
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION
-SET LEDGER_DIGEST_STORAGE_ENDPOINT = 'https://myledger.confidential-ledger.azure.com'
 ```
 
 This example disables uploading ledger digests.

@@ -51,10 +51,10 @@ For more information, see [Extension management with Azure Arc](/azure/azure-arc
 
 1. Go to **Azure Arc > SQL Servers** and open  the Azure Arc-enabled SQL server resource for the instance that you want to protect. 
 
-1. Click on the **Microsoft Defender for Cloud** tile. If Enablement Status shows **"Disabled at the subscription-level"** ,follow the steps documented in [Enable Microsoft Defender for SQL servers on machines]https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-usage#step-3-enable-the-optional-plan-in-defender-for-clouds-environment-settings-page).
- 
+1. Click on the **Microsoft Defender for Cloud** tile. If Enablement Status shows **"Disabled at the subscription-level"** ,follow the steps documented in [Enable Microsoft Defender for SQL servers on machines]https://learn.microsoft.com/azure/defender-for-cloud/defender-for-sql-usage#step-3-enable-the-optional-plan-in-defender-for-clouds-environment-settings-page).
+
 > [!NOTE]
-   > The first scan to generate the vulnerability assessment happens within 24 hours after enabling Microsoft Defender for Cloud. After that, auto scans are be performed every week on Sunday.
+> The first scan to generate the vulnerability assessment happens within 24 hours after enabling Microsoft Defender for Cloud. After that, auto scans are be performed every week on Sunday.
 
 ## Explore
 

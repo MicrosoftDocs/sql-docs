@@ -58,7 +58,7 @@ This article describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features tha
 
 - SQL Server PolyBase scale-out groups will be retired. Scale out group functionality is removed from the product in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. PolyBase data virtualization continues to be fully supported as a scale-up feature in SQL Server. See [Changes to PolyBase support in SQL Server](../big-data-cluster/big-data-options.md#changes-to-polybase-support-in-sql-server).
 
-- Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop external data sources are no longer supported. It is required to manually recreate external data sources previously created with `TYPE = HADOOP`, and any external table that uses this external data source. Users will also need to configure their external data sources to use new connectors when connecting to Azure Storage.
+- Starting in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], Hadoop external data sources are no longer supported. It is required to manually recreate external data sources previously created with `TYPE = HADOOP`, and any external table that uses this external data source. Users will also need to configure their external data sources to use new connectors when connecting to Azure Storage.
 
 | External Data Source | From | To |
 |:--|:--|:--|

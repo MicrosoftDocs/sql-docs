@@ -1,16 +1,12 @@
 ---
+title: "updateDateTimeOffset(int) (SQLServerResultSet)"
 description: "updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)"
-title: "updateDateTimeOffset(int) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

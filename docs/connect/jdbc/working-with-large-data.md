@@ -1,16 +1,12 @@
 ---
 title: "Working with large data"
 description: "Learn how to work with large data types in the JDBC Driver for SQL Server in these sample applications."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Working with large data
 

@@ -1,21 +1,15 @@
 ---
+title: "setLogWriter Method (SQLServerDataSource)"
 description: "setLogWriter Method (SQLServerDataSource)"
-title: "setLogWriter Method (SQLServerDataSource) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerDataSource.setLogWriter"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerDataSource.setLogWriter"
+apitype: "Assembly"
 ---
 # setLogWriter Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -6,8 +6,8 @@ helpviewer_keywords:
   - "troublshooting, tde akv"
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
-author: shohamMSFT
-ms.author: shohamd
+author: rwestMSFT
+ms.author: randolphwest
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto

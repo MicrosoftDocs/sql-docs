@@ -1,15 +1,12 @@
 ---
+title: "Suppress recovery model errors - server configuration option"
 description: "Suppress recovery model errors - server configuration option"
-title: "Suppress recovery model errors - server configuration option | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/20/2020"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
+ms.date: "07/20/2020"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Suppress recovery model errors server configuration option

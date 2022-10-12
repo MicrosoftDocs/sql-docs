@@ -1,21 +1,15 @@
 ---
+title: "setDate Method to date and calendar - string"
 description: "setDate Method (java.lang.String, java.sql.Date, java.util.Calendar)"
-title: "setDate Method to date and calendar - string | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerCallableStatement.setDate (java.lang.String, java.sql.Date, java.util.Calendar)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerCallableStatement.setDate (java.lang.String, java.sql.Date, java.util.Calendar)"
+apitype: "Assembly"
 ---
 # setDate Method (java.lang.String, java.sql.Date, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

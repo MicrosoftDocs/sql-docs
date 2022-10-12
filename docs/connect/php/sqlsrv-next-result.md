@@ -1,24 +1,19 @@
 ---
+title: "sqlsrv_next_result"
 description: "sqlsrv_next_result"
-title: "sqlsrv_next_result | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_next_result"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "multiple result sets"
   - "sqlsrv_next_result"
   - "stored procedure support"
   - "API Reference, sqlsrv_next_result"
-ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-author: David-Engel
-ms.author: v-davidengel
+apiname: "sqlsrv_next_result"
+apitype: "NA"
 ---
 # sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

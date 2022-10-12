@@ -1,23 +1,20 @@
 ---
 title: "Open, unlock, rename, and delete a data quality project"
-description: Learn how to open, unlock, rename, and delete a data quality project using SQL Server Data Quality Services. 
-ms.custom: seo-lt-2019
+description: Learn how to open, unlock, rename, and delete a data quality project using SQL Server Data Quality Services.
+author: swinarko
+ms.author: sawinark
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.dqs.dqproject.opendqproject.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data quality project,delete"
   - "data quality project,rename"
   - "data quality project,unlock"
   - "data quality project,open"
-ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: swinarko
-ms.author: sawinark
 ---
 # Open, unlock, rename, and delete a Data Quality Project - Data Quality Services (DQS)
 

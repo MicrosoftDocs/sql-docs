@@ -1,16 +1,12 @@
 ---
 title: "PDO::errorCode"
 description: "API reference for the PDO::errorCode function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
-ms.custom: ""
-ms.date: "08/10/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/10/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

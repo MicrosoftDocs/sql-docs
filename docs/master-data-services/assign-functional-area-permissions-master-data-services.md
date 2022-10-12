@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], assigning functional area permissions"
   - "functional area permissions [Master Data Services], assigning"
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Assign Functional Area Permissions (Master Data Services)
 

@@ -1,22 +1,17 @@
 ---
+title: "sqlsrv_configure"
 description: "sqlsrv_configure"
-title: "sqlsrv_configure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "sqlsrv_configure"
-apitype: "NA"
-helpviewer_keywords: 
-  - "sqlsrv_configure"
-  - "API Reference, sqlsrv_configure"
-ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "sqlsrv_configure"
+  - "API Reference, sqlsrv_configure"
+apiname: "sqlsrv_configure"
+apitype: "NA"
 ---
 # sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -108,7 +108,7 @@ column_name <data_type>
     [ IDENTITY [ ( seed , increment ) ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER } { START | END } [ HIDDEN ] ]
-    [ NULL | NOT NULL ]
+    [ [ CONSTRAINT constraint_name ] {NULL | NOT NULL} ]
     [ ROWGUIDCOL ]
     [ ENCRYPTED WITH
         ( COLUMN_ENCRYPTION_KEY = key_name ,
@@ -816,10 +816,10 @@ An optional keyword that indicates the start of the definition of a PRIMARY KEY,
 
 - WITH FILLFACTOR = *fillfactor*
 
-Specifies how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value isn't specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.
+  Specifies how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make each index page that is used to store the index data. User-specified *fillfactor* values can be from 1 through 100. If a value isn't specified, the default is 0. Fill factor values 0 and 100 are the same in all respects.
 
-> [!IMPORTANT]  
-> Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases.
+  > [!IMPORTANT]  
+  > Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases.
 
 #### *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 
@@ -1130,7 +1130,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
 
 #### <a id="generate-always-columns"></a> LEDGER = ON ( <ledger_option> [ ,... *n* ] ) | OFF
 
-**Applies to:** SQL Server 2022, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]  
 > If the statement creates a ledger table, the `ENABLE LEDGER` permission is required.

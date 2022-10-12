@@ -1,15 +1,12 @@
 ---
-description: "Data Cleansing"
 title: "Data Cleansing"
-ms.date: "10/01/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
+description: "Data Cleansing"
 author: swinarko
 ms.author: sawinark
+ms.date: "10/01/2012"
+ms.prod: sql
+ms.technology: data-quality-services
+ms.topic: conceptual
 ---
 # Data Cleansing
 

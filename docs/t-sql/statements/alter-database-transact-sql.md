@@ -34,7 +34,7 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -254,7 +254,7 @@ GO
 
 ### B. Changing the collation of a database
 
-The following example creates a database named `testdb` with the `SQL_Latin1_General_CP1_CI_A`S collation, and then changes the collation of the `testdb` database to `COLLATE French_CI_AI`.
+The following example creates a database named `testdb` with the `SQL_Latin1_General_CP1_CI_AS` collation, and then changes the collation of the `testdb` database to `COLLATE French_CI_AI`.
 
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
 

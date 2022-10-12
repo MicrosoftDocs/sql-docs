@@ -1,16 +1,12 @@
 ---
+title: "updateNClob Method (int, java.io.Reader)"
 description: "updateNClob Method (int, java.io.Reader)"
-title: "updateNClob Method (int, java.io.Reader) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 17adafd4-3ac3-4ff0-af9d-f087cc5ef936
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # updateNClob Method (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

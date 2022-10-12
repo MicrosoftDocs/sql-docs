@@ -1,16 +1,12 @@
 ---
 title: "Using a stored procedure with no parameters"
 description: "The JDBC driver provides the SQLServerStatement class, which can be used to call stored procedures that take no parameters and process the data that it returns."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Using a stored procedure with no parameters

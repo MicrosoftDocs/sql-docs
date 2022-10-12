@@ -1,8 +1,8 @@
 ---
 title: Preview features in Azure Data Studio
 description: Learn more about Azure Data Studio preview features and how to enable and use them.
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 10/14/2020
 ms.prod: azure-data-studio

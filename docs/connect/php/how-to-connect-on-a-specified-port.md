@@ -1,18 +1,14 @@
 ---
 title: "How to: Connect on a Specified Port"
 description: "Learn how to connect to a database configured on a specific port using the Microsoft SQLSRV and PDO_SQLSRV Drivers for PHP for SQL Server."
-ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connecting to the server, specifying a port"
-ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connecting to the server, specifying a port"
 ---
 # How to: Connect on a Specified Port
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

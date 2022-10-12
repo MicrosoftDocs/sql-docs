@@ -1,8 +1,8 @@
 ---
 title: "Tutorial: Prerequisites for a single-subnet availability group"
 description: "This tutorial shows how to configure the prerequisites for creating a SQL Server Always On availability group on Azure Virtual Machines in a single subnet."
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 11/10/2021
 ms.service: virtual-machines-sql

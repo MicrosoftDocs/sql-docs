@@ -1,14 +1,13 @@
 ---
-title: "Configure the recovery interval Server Configuration Option | Microsoft Docs"
+title: "Configure the recovery interval Server Configuration Option"
 description: Learn about the recovery interval option. See how its value affects how often SQL Server issues automatic checkpoints on a database.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restoring recovery interval [SQL Server]"
   - "checkpoints [SQL Server]"
   - "recovery interval option [SQL Server]"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "interval for recovery [SQL Server]"
   - "maximum number of minutes per database recovery"
   - "recovery [SQL Server], recovery interval option"
-ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure the recovery interval Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

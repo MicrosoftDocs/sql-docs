@@ -218,7 +218,7 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 
 `DATEPART` can be used in the select list, WHERE, HAVING, GROUP BY, and ORDER BY clauses.
   
-DATEPART implicitly casts string literals as a **datetime2** type in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This means that DATENAME doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+DATEPART implicitly casts string literals as a **datetime2** type in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later. This means that DATENAME doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
 ## Examples
 

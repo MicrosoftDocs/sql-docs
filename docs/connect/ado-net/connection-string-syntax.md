@@ -45,11 +45,11 @@ Each of the following forms of syntax uses Windows Authentication to connect to 
 
 ```csharp  
 "Persist Security Info=False;Integrated Security=true;  
-    Initial Catalog=AdventureWorks;Server=MSSQL1"  
+    Initial Catalog=AdventureWorks;Server=MSSQL1;Encrypt=True;"  
 "Persist Security Info=False;Integrated Security=SSPI;  
-    database=AdventureWorks;server=(local)"  
+    database=AdventureWorks;server=(local);Encrypt=True;"  
 "Persist Security Info=False;Trusted_Connection=True;  
-    database=AdventureWorks;server=(local)"  
+    database=AdventureWorks;server=(local);Encrypt=True;"  
 ```  
 
 ### SQL Server authentication with SqlClient
@@ -57,7 +57,7 @@ Each of the following forms of syntax uses Windows Authentication to connect to 
 Windows Authentication is preferred for connecting to SQL Server. However, if SQL Server Authentication is required, use the following syntax to specify a user name and password. In this example, asterisks are used to represent a valid user name and password.
 
 ```csharp  
-"Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
+"Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer;Encrypt=True;"  
 ```  
 
 When you connect to Azure SQL Database or to Azure Synapse Analytics and provide a username in the format `user@servername`, make sure that the `servername` value in the username matches the value provided for `Server=`.

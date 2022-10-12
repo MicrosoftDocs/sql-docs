@@ -51,8 +51,8 @@ When using Wireshark the following is expected:
 
 Learn more about implementing Windows Authentication for Azure AD principals on Azure SQL Managed Instance:
 
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? (Preview)](winauth-azuread-overview.md)
-- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)](winauth-azuread-setup.md)
-- [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos (Preview)](winauth-implementation-aad-kerberos.md)
-- [How to set up Windows Authentication for Azure Active Directory with the modern interactive flow (Preview)](winauth-azuread-setup-modern-interactive-flow.md)
-- [How to set up Windows Authentication for Azure AD with the incoming trust-based flow (Preview)](winauth-azuread-setup-incoming-trust-based-flow.md)
+- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
+- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md)
+- [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos](winauth-implementation-aad-kerberos.md)
+- [How to set up Windows Authentication for Azure Active Directory with the modern interactive flow](winauth-azuread-setup-modern-interactive-flow.md)
+- [How to set up Windows Authentication for Azure AD with the incoming trust-based flow](winauth-azuread-setup-incoming-trust-based-flow.md)

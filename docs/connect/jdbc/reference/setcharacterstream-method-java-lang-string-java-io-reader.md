@@ -1,16 +1,12 @@
 ---
+title: "setCharacterStream Method (java.lang.String, java.io.Reader)"
 description: "setCharacterStream Method (java.lang.String, java.io.Reader)"
-title: "setCharacterStream Method (java.lang.String, java.io.Reader) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 43acac5b-5a8a-4685-bee6-7194d2d03a52
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # setCharacterStream Method (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

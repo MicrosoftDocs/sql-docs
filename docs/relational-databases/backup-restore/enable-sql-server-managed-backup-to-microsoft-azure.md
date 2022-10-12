@@ -99,7 +99,6 @@ If the URL is included, separate it from the SAS token at the question mark (do 
 |-|-|  
 |**Container URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
 |**SAS token**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
-|||
   
 Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview).  
   

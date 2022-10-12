@@ -32,7 +32,6 @@ Use the web portal for these and other tasks:
 - Download common tools such as [Report Builder](install-windows/install-report-builder.md).
 - [Create KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
 - Create [branding for the web portal](../reporting-services/branding-the-web-portal.md).
-- Create [KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
 - Work with [shared datasets](../reporting-services/work-with-shared-datasets-web-portal.md).
 - Send feedback or make feature requests.
 

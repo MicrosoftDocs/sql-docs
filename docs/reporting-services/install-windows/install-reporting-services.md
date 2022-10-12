@@ -1,7 +1,7 @@
 ---
 description: "Install SQL Server Reporting Services"
 title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 08/15/2022
+ms.date: 09/16/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.custom:
 SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.
 
 ::: moniker range="=sql-server-ver16"
-Download and run the .exe file for [**SQL Server 2022 Reporting Services**](https://download.microsoft.com/download/8/3/2/832616ff-af64-42b5-a0b1-5eb07f71dec9/SQLServerReportingServices.exe) from the Microsoft Download Center.
+Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
 ::: moniker-end
 

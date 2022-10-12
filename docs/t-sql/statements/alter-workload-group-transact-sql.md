@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
+[!INCLUDE [alter-workload-group](../includes/alter-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
@@ -61,7 +61,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
+[!INCLUDE [alter-workload-group](../includes/alter-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"

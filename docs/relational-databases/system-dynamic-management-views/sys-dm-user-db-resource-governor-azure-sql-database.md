@@ -80,7 +80,6 @@ Returns actual configuration and capacity settings used by resource governance m
 |**volume_type_external_xstore_iops**|int|Internal use only.|
 |**volume_pfs_iops**|int|Internal use only.|
 |**volume_type_pfs_iops**|int|Internal use only.|
-|||
 
 ## Permissions
 

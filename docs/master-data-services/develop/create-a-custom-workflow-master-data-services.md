@@ -10,8 +10,8 @@ ms.technology: master-data-services
 
 ms.topic: "reference"
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Custom Workflow (Master Data Services)
 

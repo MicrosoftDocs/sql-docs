@@ -15,9 +15,9 @@ ms.topic: how-to
 
 This article describes how to implement the modern interactive authentication flow to allow enlightened clients running Windows 10 20H1, Windows Server 2022, or a higher version of Windows to authenticate to Azure SQL Managed Instance using Windows Authentication. Clients must be joined to Azure Active Directory (Azure AD) or Hybrid Azure AD.
 
-Enabling the modern interactive authentication flow is one step in [setting up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)](winauth-azuread-setup.md). The [incoming trust-based flow (Preview)](winauth-azuread-setup-incoming-trust-based-flow.md) is available for AD joined clients running Windows 10 / Windows Server 2012 and higher.
+Enabling the modern interactive authentication flow is one step in [setting up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md). The [incoming trust-based flow](winauth-azuread-setup-incoming-trust-based-flow.md) is available for AD joined clients running Windows 10 / Windows Server 2012 and higher.
 
-With this preview, Azure AD is now its own independent Kerberos realm. Windows 10 21H1 clients are already enlightened and will redirect clients to access Azure AD Kerberos to request a Kerberos ticket. The capability for clients to access Azure AD Kerberos is switched off by default and can be enabled by modifying group policy. Group policy can be used to deploy this feature in a staged manner by choosing specific clients you want to pilot on and then expanding it to all the clients across your environment.
+With this feature, Azure AD is now its own independent Kerberos realm. Windows 10 21H1 clients are already enlightened and will redirect clients to access Azure AD Kerberos to request a Kerberos ticket. The capability for clients to access Azure AD Kerberos is switched off by default and can be enabled by modifying group policy. Group policy can be used to deploy this feature in a staged manner by choosing specific clients you want to pilot on and then expanding it to all the clients across your environment.
 
 ## Prerequisites
 
@@ -63,8 +63,8 @@ dsregcmd.exe /RefreshPrt
 
 Learn more about implementing Windows Authentication for Azure AD principals on Azure SQL Managed Instance:
 
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? (Preview)](winauth-azuread-overview.md)
-- [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos (Preview)](winauth-implementation-aad-kerberos.md)
-- [How to set up Windows Authentication for Azure AD with the incoming trust-based flow (Preview)](winauth-azuread-setup-incoming-trust-based-flow.md)
-- [Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory (Preview)](winauth-azuread-kerberos-managed-instance.md)
+- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
+- [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos](winauth-implementation-aad-kerberos.md)
+- [How to set up Windows Authentication for Azure AD with the incoming trust-based flow](winauth-azuread-setup-incoming-trust-based-flow.md)
+- [Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory](winauth-azuread-kerberos-managed-instance.md)
 - [Troubleshoot Windows Authentication for Azure AD principals on Azure SQL Managed Instance](winauth-azuread-troubleshoot.md)

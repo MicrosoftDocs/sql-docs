@@ -64,7 +64,7 @@ Estimating the cost of using Azure Services is an important matter in the decisi
 
 To use Azure page blobs for SQL Server data files:
 
-- Create a policy on a container and also generate a shared access signature (SAS) key.
+- Create a policy on a container and also generate a shared access signature (SAS).
 
 - For each container used by a data or a log file, create a SQL Server credential whose name matches the container path.
 

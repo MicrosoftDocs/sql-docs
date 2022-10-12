@@ -1,19 +1,15 @@
 ---
-title: "Start SQL Server with Minimal Configuration | Microsoft Docs"
+title: "Start SQL Server with Minimal Configuration"
 description: Become familiar with the minimal configuration startup option in SQL Server. See when and how to use it, and learn about how it limits functionality.
-ms.custom: ""
-ms.date: "01/20/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "minimal configuration [SQL Server]"
-  - "starting SQL Server, minimal configuration"
-ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "01/20/2017"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "minimal configuration [SQL Server]"
+  - "starting SQL Server, minimal configuration"
 ---
 # Start SQL Server with Minimal Configuration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

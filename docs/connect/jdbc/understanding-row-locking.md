@@ -1,16 +1,12 @@
 ---
-description: Learn how row locking is used to control how concurrent users access data at the same time from different connections.
 title: Understanding row locking
-ms.custom: ""
-ms.date: "12/08/2020"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
+description: Learn how row locking is used to control how concurrent users access data at the same time from different connections.
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "12/08/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Understanding row locking

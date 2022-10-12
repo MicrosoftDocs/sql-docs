@@ -1,19 +1,15 @@
 ---
+title: "sqlsrv_has_rows"
 description: "sqlsrv_has_rows"
-title: "sqlsrv_has_rows | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "API Reference, sqlsrv_has_rows"
-  - "sqlsrv_has_rows"
-ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "API Reference, sqlsrv_has_rows"
+  - "sqlsrv_has_rows"
 ---
 # sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

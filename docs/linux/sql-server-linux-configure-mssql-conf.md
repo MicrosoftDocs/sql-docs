@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to configure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/23/2022
+ms.date: 09/27/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -82,7 +82,7 @@ ms.topic: conceptual
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] for Red Hat Enterprise Linux, and Ubuntu. You can use this utility to set the following parameters:
 
 |Parameter|Description|
 |---|---|
@@ -125,6 +125,24 @@ ms.topic: conceptual
 - For the shared disk cluster scenario, don't attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
 
 - These examples run **mssql-conf** by specifying the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run **mssql-conf** in the context of the current directory: `./mssql-conf`.
+
+- If you want to modify the `mssql.conf` file inside of a container, create a `mssql.conf` file on the host where you have the container running with your desired settings, and then redeploy your container. For example, the following addition to the `mssql.conf` file enables SQL Server Agent.
+
+  ```ini
+  [sqlagent]
+  enabled = true
+  ```
+
+  You can deploy your container with the following commands:
+  
+  ```bash
+  docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" \
+  -p 5433:1433 --name sql1 \
+  -v /container/sql1:/var/opt/mssql \
+  -d mcr.microsoft.com/mssql/server:2019-latest
+  ```
+  
+  For more information, see [Create the config files to be used by the SQL Server container](sql-server-linux-containers-ad-auth-adutil-tutorial.md#create-the-config-files-to-be-used-by-the-sql-server-container).
 
 ## <a id="agent"></a> Enable SQL Server Agent
 
@@ -751,26 +769,27 @@ The following options configure TLS for an instance of SQL Server running on Lin
 |**network.tlscert** |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlsprotocols** |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client doesn't support any allowed protocol, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejects the connection attempt. For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0). If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
-|**network.tlsciphers** |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**network.tlsciphers** |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Path to the Kerberos keytab file |
 
 For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
 
 ## <a id="network"></a> Network settings
 
-See [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) for comprehensive information on using AD authentication with SQL Server on Linux.
+See [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) for comprehensive information on using Active Directory authentication with SQL Server on Linux.
 
 The following options are additional network settings configurable using `mssql-conf`.
 
 |Option |Description |
 |--- |--- |
-| **network.disablesssd** | Disable querying SSSD for AD account information and default to LDAP calls. Values can be `true` or `false`. |
+| **network.disablesssd** | Disable querying SSSD for Active Directory account information and default to LDAP calls. Values can be `true` or `false`. |
 | **network.enablekdcfromkrb5conf** | Enable looking up KDC information from krb5.conf. Values can be `true` or `false`. |
 | **network.forcesecureldap** | Force using LDAPS to contact domain controller. Values can be `true` or `false`. |
 | **network.ipaddress** | IP address for incoming connections. |
 | **network.kerberoscredupdatefrequency** | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer.|
-| **network.privilegedadaccount** | Privileged AD user to use for AD authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
+| **network.privilegedadaccount** | Privileged Active Directory user to use for Active Directory authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
 | **uncmapping** | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+| **ldaphostcanon** | Set whether OpenLDAP should canonicalize hostnames during the bind step. Values can be `true` or `false`. |
 
 ## <a id="traceflags"></a> Enable/Disable trace flags
 

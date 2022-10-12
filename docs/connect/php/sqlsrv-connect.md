@@ -1,24 +1,19 @@
 ---
 title: "sqlsrv_connect"
 description: "Creates a connection resource and opens a connection using the sql_srv driver for PHP. By default, the connection is attempted using Windows Authentication."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "03/26/2018"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: reference
-apiname: 
-  - "sqlsrv_connect"
-apitype: "NA"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "connecting to the server"
   - "API Reference, sqlsrv_connect"
   - "connection pooling support"
   - "sqlsrv_connect"
-ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-author: David-Engel
-ms.author: v-davidengel
+apiname: "sqlsrv_connect"
+apitype: "NA"
 ---
 # sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

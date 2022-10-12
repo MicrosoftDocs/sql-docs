@@ -2,7 +2,7 @@
 description: "Integration Services (SSIS) Development and Management Tools"
 title: "Development and Management Tools | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "10/08/2022"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -46,7 +46,7 @@ ms.author: chugu
   
 -   Save copies of packages to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system.  
   
- For more information about [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [SQL Server Data Tools](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103)).  
+ For more information about [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [SQL Server Data Tools](/ssdt/download-sql-server-data-tools-ssdt#ssdt-for-visual-studio-2019).  
   
 ## SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service that you use to manage packages, monitor running packages, and determine impact and data lineage for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  

@@ -186,7 +186,7 @@ If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE
 
 - [Storage Spaces Direct \(S2D\) Overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
-- [View Events and Logs for a Failover Cluster](/sql/sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log)
+- [View and Read Failover Cluster Instance Diagnostics Log](view-and-read-failover-cluster-instance-diagnostics-log.md)
 
 - [Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))
 

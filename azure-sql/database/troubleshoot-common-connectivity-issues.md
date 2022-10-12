@@ -146,8 +146,8 @@ The connection retry settings (ConnectRetryCount and ConnectRetryInterval) apply
 Example:
 Assume the following values for the **ConnectRetryCount** and **ConnectRetryInterval** parameters:
 
-ConnectRetryCount: 3
-ConnectRetryInterval: 10 seconds
+**ConnectRetryCount**: 3
+**ConnectRetryInterval**: 10 seconds
 
 Notice how these values are used in the following scenarios:
 
@@ -157,7 +157,7 @@ Notice how these values are used in the following scenarios:
 
 4:10:01 - Connection failure detected
 
-4:10:11 - Retry 1 --> First retry occurs after ConnectRetryInterval
+4:10:11 - Retry 1 --> First retry occurs after **ConnectRetryInterval**
 
 4:10:21 - Retry 2
 
@@ -180,7 +180,7 @@ For example, if the count is 3 and the interval is 10 seconds, a timeout of only
 
 4:10:20 - Retry 3
 
-This isn't the initial connection. Therefore, so **Connection Timeout** wouldn't ordinarily apply. However, because the connection recovery occurs during command execution, the Command Timeout setting does apply. The **Command Timeout** default is 30 seconds. Although, connection recovery is fast in typical circumstances, an intermittent outage, could cause the recovery could to take some of the command execution time.
+This isn't the initial connection. Therefore, so **Connection Timeout** wouldn't ordinarily apply. However, because the connection recovery occurs during command execution, the **Command Timeout** setting does apply. The **Command Timeout** default is 30 seconds. Although, connection recovery is fast in typical circumstances, an intermittent outage, could cause the recovery to take some of the command execution time.
 
 For this scenario, if you want to take full advantage of idle connection recovery retries, your chosen values should satisfy the following condition:  
 `Command Timeout > (ConnectRetryCount - 1) * ConnectionRetryInterval`

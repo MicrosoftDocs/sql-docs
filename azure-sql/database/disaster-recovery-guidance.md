@@ -2,7 +2,7 @@
 title: Disaster recovery
 description: Learn how to recover a database from a regional data center outage or failure with the Azure SQL Database active geo-replication, and geo-restore capabilities.
 author: AbdullahMSFT
-author: amamun
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 06/21/2019
 ms.service: sql-database

@@ -3,7 +3,7 @@ title: Advanced Threat Protection
 titleSuffix: Azure SQL Database, SQL Managed Instance, & Azure Synapse Analytics
 description: Advanced Threat Protection detects anomalous database activities indicating potential security threats in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 ms.author: cesanu
-ms.author: CESANU
+author: CESANU
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 06/09/2021
 ms.service: sql-db-mi

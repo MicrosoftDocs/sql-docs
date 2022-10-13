@@ -113,7 +113,7 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | **Azure storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
 | **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
-| **Restoring a new database in another subscription** |  Not supported  |  Not supported\*\*\* | Not supported\*\*\*  |
+| **Restoring a new database in another subscription** |  Supported  |  Not supported\*\*\* | Not supported\*\*\*  |
 | **Restoring via Azure portal**|Yes|Yes|Yes|
 | **Restoring via PowerShell** |Yes|Yes|Yes|
 | **Restoring via Azure CLI** |Yes|Yes|Yes|

@@ -176,6 +176,36 @@ Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name
    -TargetInstanceName $targetInstanceName 
 ```
 
+## Restore to a different subscription 
+
+Restore your database to a specific point to a managed instance in a different subscription than the original managed instance by using the Azure portal. 
+
+### Limitations
+
+Restoring a PITR backup across subscriptions has the following limitations: 
+
+- Both subscriptions must be in the same region. 
+- The restore operation can only be performed on the primary instance. 
+- Backups that have geo-redundancy enabled are not currently supported for cross-subscription restores. 
+- The user performing the restore must either be part of the contributor role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
+
+
+### Restore database 
+
+To restore your database to an instance in a different subscription by using the Azure portal, follow these steps: 
+
+### API call 
+
+
+The API call underlying the restore action must contain the `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and `crossSubscriptionSourceDatabaseId` **OR** `crossSubscriptionRestorableDroppedDatabaseId`. 
+
+The following is an example API call: 
+
+`PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}?api-version=2022-05-01-previe`
+
+> [!NOTE]
+> The [link to api call?] is being deprecated. Starting with January 2022, use the replacement API call for all database restore operations. 
+
 ## Overwrite an existing database
 
 To overwrite an existing database, you must:

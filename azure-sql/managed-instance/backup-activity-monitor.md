@@ -5,7 +5,7 @@ description: Learn how to monitor Azure SQL Managed Instance backup activity usi
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: mathoma, nvraparl
-ms.date: 12/14/2018
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: quickstart

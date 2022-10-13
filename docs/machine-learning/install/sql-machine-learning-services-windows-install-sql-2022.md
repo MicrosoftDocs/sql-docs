@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to run Python and R scripts in-database.
+This article shows you how to install [SQL Server 2022 Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to run Python and R scripts in-database.
 
 > [!NOTE]
 > These instructions are specific to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Windows. To install SQL Server Machine Learning Services on Windows for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], or [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). 
@@ -191,7 +191,7 @@ If the external script verification step was successful, you can run R or Python
 
 Whether the additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
 
-If you got an error when running the command, you might need to make additional configurations to the service or database. At the instance level, additional configuration might include:
+If you got an error when you ran the command, you might need to make additional configurations to the service or database. At the instance level, additional configurations might include:
 
 * [Configure a firewall for SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md)
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
@@ -204,7 +204,7 @@ Starting with SQL Server 2019 on Windows, the isolation mechanism has changed. T
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
-On the database, you might need the configuration updates. For more information, see [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md).
+On the database, you might need configuration updates. For more information, see [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md).
 
 ## Suggested optimizations
 
@@ -214,10 +214,10 @@ Now that you have everything working, you might also want to optimize the server
 
 The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that the database engine supports. These services might include:
 
-- Extract, transform, and load (ETL) processes
-- Reporting
-- Auditing
-- Applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data 
+- Extract, transform, and load (ETL) processes.
+- Reporting.
+- Auditing.
+- Applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data.
 
 Under the default settings, resources for machine learning are sometimes restricted or throttled, particularly in memory-intensive operations.
 
@@ -235,11 +235,11 @@ If you're using Standard Edition and don't have Resource Governor, you can use d
 
 The Python and R solutions that you create for SQL Server can call:
 
-- Basic functions
-- Functions from the proprietary packages installed with SQL Server
+- Basic functions.
+- Functions from the proprietary packages installed with SQL Server.
 - Third-party packages that are compatible with the version of open-source Python and R that SQL Server installs.
 
-Packages that you want to use from SQL Server must be installed in the default library used by the instance. If you have a separate installation of Python or R on the computer, or if you installed packages to user libraries, you can't use those packages from T-SQL.
+Packages that you want to use from SQL Server must be installed in the default library that the instance uses. If you have a separate installation of Python or R on the computer, or if you installed packages to user libraries, you can't use those packages from T-SQL.
 
 To install and manage additional packages, you can set up user groups to share packages on a per-database level. Or you can configure database roles to enable users to install their own packages. For more information, see [Install Python packages](../package-management/install-additional-python-packages-on-sql-server.md) and [Install new R packages](../package-management/install-additional-r-packages-on-sql-server.md).
 

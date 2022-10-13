@@ -165,31 +165,6 @@ Create the failover group for your managed instances using PowerShell.
 
 ---
 
-## Set up license-free DR replica 
-
-You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To learn more, review [Free DR replica](auto-failover-group-sql-mi.md#save-on-costs-with-free-dr-replica). 
-
-You can use the Azure portal, and Azure PowerShell to configure your secondary managed instance as DR-only. 
-
-# [Portal](#tab/azure-portal)
-
-Use the Azure portal to configure your secondary instance as DR-only either while you're creating your failover group, or after your failover group is already deployed. 
-
-### New failover group
-
-### Existing failover group
-
-
-
-# [PowerShell](#tab/azure-powershell)
-
-Use the Azure PowerShell to configure your secondary instance as DR-only either while you're creating your failover group, or after your failover group is already deployed. 
-
-### New failover group
-
-### Existing failover group
-
----
 
 ## Test failover
 

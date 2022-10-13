@@ -115,7 +115,7 @@ END
 
 ### Distributed transactions can be executed after removing managed instance from Server Trust Group
 
-[Server Trust Groups](../managed-instance/server-trust-group-overview.md) are used to establish trust between managed instances that is prerequisite for executing [distributed transactions](../database/elastic-transactions-overview.md). After removing managed instance from Server Trust Group or deleting the group, you still might be able to execute distributed transactions. There's a workaround you can apply to be sure that distributed transactions are disabled and that is [user-initiated manual failover](../managed-instance/user-initiated-failover.md) on managed instance.
+[Server Trust Groups](../managed-instance/server-trust-group-overview.md) are used to establish trust between managed instances that is prerequisite for executing [distributed transactions](../database/elastic-transactions-overview.md). After removing managed instance from Server Trust Group or deleting the group, you still might be able to execute distributed transactions. There's a workaround you can apply to be sure that distributed transactions are disabled and that is [user-initiated manual failover](../managed-instance/user-initiated-failover.md) on the managed instance.
 
 ### Distributed transactions cannot be executed after managed instance scaling operation
 

@@ -540,6 +540,7 @@ The SQLCMD connection automatically connects to whichever instance of SQL Server
 ## Next steps
 
 - [Add an IP address to a load balancer for a second availability group](availability-group-listener-powershell-configure.md#Add-IP).
+- [Configure automatic or manual failover](/sql/database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server).
 
 To learn more, see:
 

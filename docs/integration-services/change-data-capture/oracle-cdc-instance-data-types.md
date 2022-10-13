@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # Oracle CDC Instance Data Types
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   The Oracle CDC Instance supports most Oracle data types. The following sections describe the supported data types and the non-supported data types.  
   
 ## Supported Data Types  

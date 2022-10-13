@@ -87,19 +87,11 @@ For some workloads, a move to a different CPU type can change performance. SQL D
 
 Regardless of CPU type used, resource limits for a database or elastic pool, such as the number of cores, memory, max data IOPS, max log rate, and max concurrent workers, remain the same as long as the database stays on the same service objective.
 
-<<<<<<< HEAD
-### Gen4/standard-series (Gen5)
-
-- Gen4/standard-series (Gen5) hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series or M-series.
-
-For regions where Gen4/standard-series (Gen5) is available, see [Gen4/standard-series (Gen5) availability](#gen4gen5-1).
-=======
 ### Gen5
 
 - Gen5 hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series.
 
 For regions where Gen5 is available, see [Gen5 availability](#gen5).
->>>>>>> 12dd3d2b5ac9c8907f6beeb6eacdc0f01d581230
 
 ### Fsv2-series
 
@@ -109,26 +101,6 @@ For regions where Gen5 is available, see [Gen5 availability](#gen5).
 
 Fsv2-series in only supported in the General Purpose tier. For regions where Fsv2-series is available, see [Fsv2-series availability](#fsv2-series-1).
 
-<<<<<<< HEAD
-### M-series
-
-- M-series is a memory optimized hardware configuration for workloads demanding more memory and higher compute limits than provided by other types of hardware.
-- M-series provides 29 GB per vCore and up to 128 vCores, which increases the memory limit relative to standard-series (Gen5) by 8x to nearly 4 TB.
-
-M-series is only supported in the Business Critical tier and does not support zone redundancy. For regions where M-series is available, see [M-series availability](#m-series-1).
-
-#### Azure offer types supported by M-series
-
-For regions where M-series is available, see [M-series availability](#m-series).
-
-There are two subscription requirements for M-series hardware:
-
-1. To create databases or elastic pools on M-series hardware, the subscription must be a paid offer type including Pay-As-You-Go or Enterprise Agreement (EA). For a complete list of Azure offer types supported by M-series, see [current offers without spending limits](https://azure.microsoft.com/support/legal/offer-details).
-
-1. To enable M-series hardware for a subscription and region, a support request must be opened. In the Azure portal, create a New Support Request to [Request a quota increase](quota-increase-request.md) for your subscription. Use the "M-series region access" quota type request to indicate access to M-series hardware.
-
-=======
->>>>>>> 12dd3d2b5ac9c8907f6beeb6eacdc0f01d581230
 ### DC-series
 
 - DC-series hardware uses Intel processors with Software Guard Extensions (Intel SGX) technology.
@@ -170,11 +142,7 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 ### Hardware availability
 
-<<<<<<< HEAD
-#### <a id="gen4gen5-1"></a> Gen4/standard-series (Gen5)
-=======
 For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
->>>>>>> 12dd3d2b5ac9c8907f6beeb6eacdc0f01d581230
 
 #### <a id="gen4gen5-1"></a><a id="gen5"></a> Gen5
 

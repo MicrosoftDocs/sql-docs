@@ -88,17 +88,10 @@ SELECT dtu_logical_cpus,
             WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus * 0.8
        END AS Fsv2_vcores,
        1.89 AS Fsv2_memory_per_core_gb,
-<<<<<<< HEAD
        CASE WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus * 1.4
             WHEN dtu_hardware_gen = 'standard_series' THEN dtu_logical_cpus * 0.9
        END AS M_vcores,
        29.4 AS M_memory_per_core_gb
-=======
-       CASE WHEN dtu_hardware_gen = 'Gen5' THEN dtu_logical_cpus * 0.7
-             WHEN dtu_hardware_gen = 'Gen4' THEN dtu_logical_cpus
-       END AS DC_vcores,
-       4.5 AS DC_memory_per_core_gb
->>>>>>> 12dd3d2b5ac9c8907f6beeb6eacdc0f01d581230
 FROM dtu_vcore_map;
 ```
 

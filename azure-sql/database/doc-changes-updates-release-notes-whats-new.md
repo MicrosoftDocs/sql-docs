@@ -83,7 +83,6 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
-
 | **Cross-subscription failover group with Azure PowerShell** | It's now possible to deploy your auto-failover group for a single database across subscriptions by using Azure PowerShell. To learn more, review [Configure auto-failover group](auto-failover-group-configure-sql-db.md?view=azuresql&tabs=azure-powershell&pivots=azure-sql-single-db&preserve-view=true#create-failover-group). |
 | **Hyperscale databases LTR preview** | It's now possible to store your Hyperscale database backups for up to 10 years using the long-term retention (LTR) capability. This feature is now in preview. To learn more, review [long-term retention](long-term-retention-overview.md).  | 
 | **Hyperscale RA-GZRS preview** | It's now possible to choose read access geo-zone-redundancy (RA-GZRS) as a backup storage redundancy for Hyperscale databases. This feature is currently in preview. To learn more, review [Hyperscale backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy). |

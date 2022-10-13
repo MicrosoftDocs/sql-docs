@@ -124,7 +124,7 @@ For local installations, you must run the setup as an administrator. If you inst
    > [!NOTE]
    > Don't select the **Machine Learning Server (Standalone)** option under **Shared Features**. That option is intended for use on a separate computer.
 
-::: moniker range="=sql-server-2017"
+   ::: moniker range="=sql-server-2017"
 
 1. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. 
 

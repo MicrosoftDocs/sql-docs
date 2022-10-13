@@ -45,7 +45,7 @@ public class DataDiscoveryAndClassification {
         String tableName = "JDBC_SQL_DATA_DISCOVERY_CLASSIFICATION";
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;username=<user>;password=<password>;";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<database>;username=<user>;password=<password>;";
 
         // Establish the connection.
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement()) {

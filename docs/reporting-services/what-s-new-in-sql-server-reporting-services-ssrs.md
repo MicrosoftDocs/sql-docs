@@ -10,7 +10,7 @@ ms.author: maggies
 ms.reviewer: ""
 ms.custom:
   - intro-whats-new
-ms.date: 08/09/2022
+ms.date: 09/16/2022
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -25,17 +25,19 @@ For information about Power BI Report Server, see [What's new in Power BI Report
 
 ## SQL Server 2022 Reporting Services
 
-This release introduces the new SQL Server 2022 Reporting Services (SSRS). We continue to innovate, create, and design in a way that gives everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, we've done a lot of accessibility work to make sure we're empowering people to achieve more. The release includes enhanced Windows Narrator support for the new Windows OS (Operating Systems) and Windows Server, security enhancements, browser performance improvements with Angular, accessibility bug fixes, support for SQL Server 2022 instances report server catalog and reliability updates.
+This release introduces the new [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services (SSRS). We continue to innovate, create, and design in a way that gives everyone the ability to achieve more. Designing for inclusivity reflects how people adapt to the world around them. In this new release of SSRS, we've done a lot of accessibility work to make sure we're empowering people to achieve more. The release includes enhanced Windows Narrator support for the new Windows OS (Operating Systems) and Windows Server, security enhancements, browser performance improvements with Angular, accessibility bug fixes, support for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] instances report server catalog and reliability updates.
+
+Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
 ### Updated web portal
 
 The web portal received a face lift.
 
-:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot showing new updated SQL Server 2022 Reporting Services web portal.":::
+:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot showing new updated [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Reporting Services web portal.":::
 
 ### Deprecated features
 
-In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-sql-server-2019-reporting-services-ssrs.md). These features will be removed from versions of SQL Server starting with SQL Server 2022 and will no longer be supported. Only the last three releases, SQL Server 2016, SQL Server 2017, and SQL Server 2019, will be supported in maintenance mode until EOL (End of Life) for existing customers.
+In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-sql-server-2019-reporting-services-ssrs.md). These features will be removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and will no longer be supported. Only the last three releases, SQL Server 2016, SQL Server 2017, and SQL Server 2019, will be supported in maintenance mode until EOL (End of Life) for existing customers.
 
 When we mark a feature as deprecated, it means:
 

@@ -1,16 +1,12 @@
 ---
-description: Using spatial data types
 title: Learn how to use spatial data types with the Microsoft JDBC Driver for SQL Server.
-ms.custom: ""
-ms.date: 07/31/2020
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 
+description: Using spatial data types
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 07/31/2020
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using spatial data types
 

@@ -3,7 +3,7 @@ title: Adding additional functionality through extensibility
 description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu"
+ms.reviewer: erinstellato
 ms.date: "09/24/2018"
 ms.prod: azure-data-studio
 ms.topic: conceptual

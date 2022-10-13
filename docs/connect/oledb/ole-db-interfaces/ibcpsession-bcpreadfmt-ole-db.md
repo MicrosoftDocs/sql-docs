@@ -1,20 +1,16 @@
 ---
-title: "IBCPSession::BCPReadFmt (OLE DB driver) | Microsoft Docs"
+title: "IBCPSession::BCPReadFmt (OLE DB driver)"
 description: The BCPReadFmt method in the OLE DB Driver for SQL Server reads data from a format file that specifies the format of data in the data file.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "IBCPSession::BCPReadFmt (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPReadFmt method"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "BCPReadFmt method"
+apiname: "IBCPSession::BCPReadFmt (OLE DB)"
+apitype: "COM"
 ---
 # IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,5 @@
 ---
-title: "Create a T-SQL Backup | Microsoft Docs"
+title: "Create a Transact-SQL snapshot backup | Microsoft Docs"
 description: This article shows you how to create a Transact-SQL backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
 ms.date: 07/25/2022
 ms.prod: sql
@@ -21,13 +21,13 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article explains what, why, and how to use Transact-SQL snapshot backups. Transact-SQL snapshot backups are new in SQL Server 2022 Preview.
+This article explains what, why, and how to use Transact-SQL snapshot backups. Transact-SQL snapshot backups are new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 Databases are getting larger and larger every day. Traditionally, SQL Server backups are streaming backups. A streaming backup depends on the size of the database. Backup operations consume resources (CPU, memory, I/O, network) which impact throughput of the concurrent OLTP workload for the duration of the backup. One way to make the backup performance constant, rather than depend on the size of data, is by performing a snapshot backup using mechanisms provided by the underlying storage hardware or service.
 
 Because the backup itself happens at the hardware level, this is not a pure SQL Server solution. SQL Server must first prepare the data and log files for the snapshot so that the files are guaranteed to be in a state that can later be restored. Once this is done, I/O is frozen on SQL Server and control is handed over to the backup application to complete the snapshot. Once the snapshot has successfully completed, the application must return control back to SQL Server where I/O is then resumed. Because we must freeze I/O for the duration of the snapshot operation, it is essential that the snapshot happen quickly (ideally less than a second), so that the workload on the server is not interrupted for an extended period. In the past, users have relied on third-party solutions that were built on top of the SQL Writer service to complete snapshot backups. The SQL Writer service depends on Windows VSS (Volume Shadow Service) along with SQL Server VDI (Virtual Device Interface) to perform the orchestration between SQL Server and the disk-level snapshot. Backup clients based on the SQL Writer service tend to be complex, and they only work on Windows. With T-SQL snapshot backups, the SQL Server side of the orchestration can be handled with a series of T-SQL commands. This allows users to create their own simple backup applications that can run on either Windows or Linux, or even scripted solutions if the underlying storage supports a scripting interface to initiate a snapshot.
 
-Here is a [sample PowerShell script](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/t-sql-snapshot-backup/snapshot-backup-restore-azurevm-single-db.ps1) that demonstrates an end-to-end solution of backing up and restoring a database in an Azure SQL IaaS Virtual Machine using the T-SQL snapshot backup capabilities introduced in SQL Server 2022 (and higher).
+Here is a [sample PowerShell script](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/t-sql-snapshot-backup/snapshot-backup-restore-azurevm-single-db.ps1) that demonstrates an end-to-end solution of backing up and restoring a database in an Azure SQL IaaS Virtual Machine using the T-SQL snapshot backup capabilities introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (and higher).
 
 ## Workflow
 
@@ -73,23 +73,20 @@ WITH METADATA_ONLY, FORMAT
 
 ### Suspend multiple user databases for snapshot backup
 
-The databases presumably reside on the same underlying disk. In this example, you might record the snapshot backup of multiple databases into a single backup set.
+If multiple databases on the same underlying disk, you could suspend multiple databases with the following command.
 
 ```sql
-ALTER DATABASE testdb1
-SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON
-
-ALTER DATABASE testdb2
-SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON
+ALTER SERVER CONFIGURATION
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON (GROUP=(testdb1, testdb2))
 
 BACKUP GROUP testdb1, testdb2
 TO DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY, FORMAT
 ```
 
-### Suspend the server to freeze all user databases and perform snapshot
+### Suspend all user databases on the server for snapshot backup
 
-Record snapshot of all the user databases on the server into a single backup set:
+If all the user databases on the server need to be suspended, use the following command.
 
 ```sql
 ALTER SERVER CONFIGURATION
@@ -99,6 +96,8 @@ BACKUP SERVER
 TO DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY, FORMAT
 ```
+> [!NOTE]
+> None of these commands support suspending system databases: master, model, and msdb for snapshot backup.
 
 ### Suspend multiple user databases with a single command
 
@@ -121,6 +120,7 @@ WITH METADATA_ONLY, FORMAT
 Since the differential bitmap is cleared prior to freeze, SUSPEND_FOR_SNAPSHOT_BACKUP provides an option (COPY_ONLY) to not clear the differential bitmap prior to freeze.
 
 ```sql
+
 ALTER DATABASE testdb1
 SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON (MODE=COPY_ONLY)
 
@@ -129,44 +129,43 @@ TO DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY, FORMAT
 
 ALTER SERVER CONFIGURATION
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON (GROUP=(testdb1, testdb2), MODE=COPY_ONLY)
+
+BACKUP GROUP testdb1, testdb2
+TO DISK='d:\temp\db.bkm'
+WITH METADATA_ONLY, FORMAT
+
+ALTER SERVER CONFIGURATION
 SET SUSPEND_FOR_SNAPSHOT_BACKUP = ON (MODE=COPY_ONLY)
 
 BACKUP SERVER
 TO DISK='d:\temp\db.bkm'
-WITH METADATA_ONLY
+WITH METADATA_ONLY, FORMAT
 ```
+
+> [!NOTE]
+> It is not necessary to use COPY_ONLY on the BACKUP command, as it is already specified when suspending the database for snapshot backup.
+
+### Tagging the backupset
+
+You may use the MEDIANAME and MEDIADESCRIPTION options in the backup command to tag the URI associated with the snapshot. This use allows the backup file to carry the underlying snapshot information along with the database metadata. You can also use the NAME and DESCRIPTION options to tag the URI with the individual backupset snapshot.   
+
+SQL Server will not interpret the LABEL information in any way, it will however help the user to view the URI associated with the snapshot backup with RESTORE LABELONLY command.  
+
+You could then attach the snapshot disks located at the URI to the VM to restore the snapshot. The snapshot URI stored in the MEDIANAME and MEDIADESCRIPTION will also be available for viewing subsequently in the msdb database table `msdb.dbo.backupmediaset`.
+
+[backupmediaset (Transact-SQL) - SQL Server | Microsoft Docs](../system-tables/backupmediaset-transact-sql.md)
+[BACKUP (Transact-SQL) - SQL Server | Microsoft Docs](../../t-sql/statements/backup-transact-sql.md) <BR />
 
 ### Output of snapshot backup with RESTORE HEADERONLY
 
 The output with RESTORE HEADERONLY looks like the following if the database, group and server are executed in sequence and written to the same output file:
 
 ```sql
-BACKUP DATABASE testdb1
-TO DISK='d:\temp\db.bkm'
-WITH METADATA_ONLY, FORMAT
-
-BACKUP GROUP testdb1, testdb2
-TO DISK='d:\temp\db.bkm'
-WITH METADATA_ONLY
-
-BACKUP SERVER
-TO DISK='d:\temp\db.bkm'
-WITH METADATA_ONLY
-
 RESTORE HEADERONLY
 FROM DISK='d:\temp\db.bkm'
 WITH METADATA_ONLY
 ```
-### Tagging the backupset
-
-You may use the MEDIANAME and MEDIADESCRIPTION switches in the backup command to store the URI associated with the snapshot. This use allows the backupset to carry the underlying snapshot information along with the database metadata.  
-
-SQL Server will not interpret the LABEL information in any way, it will however help the user to view the URI associated with the snapshot backup with RESTORE LABELONLY command.  
-
-You could then attach the snapshot disks located at the URI to the VM to restore the snapshot. The snapshot URI stored in the MEDIANAME and MEDIADESCRIPTION will also be available for viewing subsequently in the msdb database table `msdb.dbo.backupmediaset`.
-
-[BACKUP (Transact-SQL) - SQL Server | Microsoft Docs](../../t-sql/statements/backup-transact-sql.md)
-[backupmediaset (Transact-SQL) - SQL Server | Microsoft Docs](../system-tables/backupmediaset-transact-sql.md)
 
 ### Output of snapshot backup with RESTORE FILELISTONLY
 
@@ -273,5 +272,43 @@ sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition,
 
 ```sql
 SELECT SERVERPROPERTY('SuspendedDatabaseCount')
+SELECT SERVERPROPERTY('IsServerSuspendedForSnapshotBackup')
 SELECT DATABASEPROPERTYEX('db1', 'IsDatabaseSuspendedForSnapshotBackup’)
+```
+
+### Sample T-SQL troubleshooting script
+
+The following sample T-SQL script can be used to detect suspended databases on the server and unsuspend them if required. 
+
+```sql
+IF (SERVERPROPERTY('IsServerSuspendedForSnapshotBackup') = 1) 
+    BEGIN
+    --full server suspended, requires server level thaw
+    PRINT 'Full server is suspended, requires server level thaw'
+    ALTER SERVER CONFIGURATION SET SUSPEND_FOR_SNAPSHOT_BACKUP = OFF
+    END
+ELSE
+    BEGIN
+    IF (SERVERPROPERTY('SuspendedDatabaseCount') > 0)
+        BEGIN
+                DECLARE @curdb sysname
+                DECLARE @sql nvarchar(500)
+                DECLARE mycursor CURSOR FAST_FORWARD FOR SELECT db_name FROM sys.dm_server_suspend_status ;
+                OPEN mycursor
+                FETCH next FROM mycursor INTO @curdb
+                WHILE @@FETCH_STATUS = 0  
+                BEGIN  
+                    PRINT 'unfreezing DB '+ @curdb 
+                    SET @sql = 'ALTER DATABASE ' + @curdb +' SET SUSPEND_FOR_SNAPSHOT_BACKUP = OFF'
+                    EXEC sp_executesql @SQL
+                    FETCH next FROM mycursor INTO @curdb
+                END  
+                PRINT 'All DB unfrozen'
+                CLOSE mycursor;  
+                DEALLOCATE mycursor;  
+        END
+    ELSE
+        -- no suspended database, thus no user action needed.
+        PRINT 'No database/server is suspended for snapshot backup'
+END
 ```

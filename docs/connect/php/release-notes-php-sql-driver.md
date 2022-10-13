@@ -1,18 +1,15 @@
 ---
 title: Release Notes for the Microsoft Drivers for PHP
 description: This page discusses what was changed in each version of the Microsoft Drivers for PHP for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
+ms.reviewer: v-davidengel
 ms.date: 06/16/2022
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
-ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Release Notes for the Microsoft Drivers for PHP for SQL Server
 
@@ -99,7 +96,6 @@ Fixed issues in 5.10.1:
 | Improved performance when handling decimal numbers as inputs or outputs and removed unnecessary conversions for numeric values. | &nbsp; |
 | Improved performance when fetching numbers using client buffers. | &nbsp; |
 | Set query timeout without using LOCK TIMEOUT, which saves an extra trip to the server. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 <sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
 
@@ -121,7 +117,6 @@ This release only applies to Linux and macOS.
 | Bug fix | Fixed default locale issues in Alpine Linux. |
 | Bug fix | Removed unnecessary data structure to support Client-Side Cursors feature in Alpine Linux. |
 | Bug fix | Fixed logging issues when both drivers are enabled in Alpine Linux. |
-| &nbsp; | &nbsp; |
 
 ## 5.8
 
@@ -149,7 +144,6 @@ This release only applies to Linux and macOS.
 | Support for Always Encrypted with secure enclaves. | Requires ODBC Driver 17.4 or above. |
 | Support configurable options for locale settings in Linux and macOS. |
 | Improved performance by caching metadata on fetches and omitting redundant calls. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 <sup>1</sup> Alpine Linux support is experimental for version 5.8.
 
@@ -170,7 +164,6 @@ This release only applies to Linux and macOS.
 | Bug fix | Fixed assumptions made when calculating field or column metadata which may have resulted in application termination. |
 | Bug fix | Modified sqlsrv config file such that it can be compiled independently of pdo_sqlsrv. |
 | Bug fix | Fixed PDOStatement::getColumnMeta() to return false when something goes wrong. |
-| &nbsp; | &nbsp; |
 
 ## 5.6
 
@@ -197,7 +190,6 @@ This release only applies to Linux and macOS.
 | New fetch functionalities | &bull; &nbsp; New PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE flag for pdo_sqlsrv to return datetime as objects.<br/><br/>&bull; &nbsp; Add ReturnDatesAsStrings option to statement level for sqlsrv.<br/><br/>&bull; &nbsp; New options at connection and statement levels for both drivers for formatting decimal values in the fetched results. |
 | Support for static compilation of drivers if users choose to build from source. | &nbsp; |
 | Improved performance by caching metadata on fetches and speeding up Unicode string conversions. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 5.3
 

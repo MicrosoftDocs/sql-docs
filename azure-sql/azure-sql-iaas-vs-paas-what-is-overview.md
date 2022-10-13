@@ -31,7 +31,7 @@ Azure SQL is built upon the familiar SQL Server engine, so you can migrate appli
 Learn how each product fits into Microsoft's Azure SQL data platform to match the right option for your business requirements. Whether you prioritize cost savings or minimal administration, this article can help you decide which approach delivers against the business requirements you care about most.
 
 If you're new to Azure SQL, check out the *What is Azure SQL* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners/?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
-> [!VIDEO https://docs.microsoft.com/shows/Azure-SQL-for-Beginners/What-is-Azure-SQL-3-of-61/player]
+> [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/What-is-Azure-SQL-3-of-61/player]
 
 
 
@@ -71,7 +71,7 @@ There are several factors that can influence your decision to choose between the
 
 As seen in the diagram, each service offering can be characterized by the level of administration you have over the infrastructure, and by the degree of cost efficiency.
 
-In Azure, you can have your SQL Server workloads running as a hosted service ([PaaS](https://azure.microsoft.com/overview/what-is-paas/)), or a hosted infrastructure ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)). Within PaaS, you have multiple product options, and service tiers within each option. The key question that you need to ask when deciding between PaaS or IaaS is do you want to manage your database, apply patches, and take backups, or do you want to delegate these operations to Azure?
+In Azure, you can have your SQL Server workloads running as a hosted service ([PaaS](https://azure.microsoft.com/overview/what-is-paas/)), or a hosted infrastructure ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) supporting the software layer, such as Software-as-a-Service (SaaS) or an application. Within PaaS, you have multiple product options, and service tiers within each option. The key question that you need to ask when deciding between PaaS or IaaS is do you want to manage your database, apply patches, and take backups, or do you want to delegate these operations to Azure?
 
 ### Azure SQL Database
 

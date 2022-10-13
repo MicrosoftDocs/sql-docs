@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "members [Master Data Services], applying permissions immediately"
   - "permissions [Master Data Services], applying member permissions immediately"
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Immediately apply member permissions (Master Data Services)
 

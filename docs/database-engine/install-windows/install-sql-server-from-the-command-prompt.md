@@ -1,9 +1,15 @@
 ---
 title: "SQL Server installation - Command Prompt parameters"
 description: This article describes command parameters for SQL Server installation. You can specify features to install and configure.
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
+ms.custom:
+  - intro-installation
+  - event-tier1-build-2022
 helpviewer_keywords:
   - "installing SQL Server, command prompt"
   - "installation scripts [SQL Server]"
@@ -78,14 +84,6 @@ helpviewer_keywords:
   - "INSTALLSQLDIR parameter"
   - "nodes [Faillover Clustering], command prompt"
   - "INSTALLSQLSHAREDDIR parameter"
-ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom:
-- intro-installation
-- event-tier1-build-2022
-ms.date: 07/25/2022
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -173,7 +171,7 @@ Use the parameters in the following table to develop command-line scripts for in
 |-----------------------------------------|---------------|-----------------|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ACTION<br /><br /> **Required**|Required to indicate the installation workflow.<br /><br /> Supported values: **Install**.|
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Suppresses the privacy notice statement. By using this flag, you are agreeing with the [privacy notice](../../sql-server/sql-server-privacy.md). |
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.<br/><br/>Beginning with SQL Server 2022, read the Microsoft SQL Server Software License Terms at [aka.ms/sql2022prerelease](https://aka.ms/sql2022prerelease).|
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Setup Control|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations.**|Required to acknowledge acceptance of the license terms.<br/><br/>Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], read the Microsoft SQL Server Software License Terms at [aka.ms/sql2022prerelease](https://aka.ms/sql2022prerelease).|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python Setup Control|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Anaconda Python package.**|Required to acknowledge acceptance of the license terms.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R Setup Control|/IACCEPTROPENLICENSETERMS <br /><br /> **Required only when the /Q or /QS parameter is specified for unattended installations that include the Microsoft R Open package.**|Required to acknowledge acceptance of the license terms.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/ENU<br /><br /> **Optional**|Use this parameter to install the English version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a localized operating system when the installation media includes language packs for both English and the language corresponding to the operating system.|
@@ -264,7 +262,7 @@ Use the parameters in the following table to develop command-line scripts for in
 |Python/Machine Learning Services (In-Database)|/MPYCACHEDIRECTORY|Reserved for future use. Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection. |
 |R/Machine Learning Services (In-Database)|/MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](../../machine-learning/install/sql-ml-component-install-without-internet-access.md).|
 |Java/Language Extensions| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Optional** | Starting with SQL Server 2019, specifies installing Java with Language Extensions. If /SQL_INST_JAVA is provided without the /SQLJAVADIR parameter, it's assumed you want to install the Zulu Open JRE that is provided by the installation media. <br /><br /> Providing a path for /SQLJAVADIR indicates you would like to use an already-installed JRE or JDK. |
-|Azure Arc agent extension |/FEATURES=ARC<br/><br/>**Optional**| Connect the instance to Azure Arc. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
+|Azure Arc agent extension |/FEATURES=AZUREEXTENSION<br/><br/>**Optional**| Connect the instance to Azure Arc. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 |Azure Arc agent extension |/AZURESUBSCRIPTIONID<br/><br/>**Optional**|Azure subscription the SQL Server instance resource will be created. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 |Azure Arc agent extension |/AZURERESOURCEGROUP<br/><br/>**Optional**| Azure resource group where the SQL Server instance resource will be created. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
 |Azure Arc agent extension |/AZUREREGION<br/><br/>**Optional**| Azure region where the SQL Server instance resource will be created. Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].|
@@ -288,13 +286,13 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you can ins
 The following example deploys a SQL Server instance that is connected to Azure Arc. Before you run the example, replace the information in angle brackets ( `< ... >` ) with your information.
 
 ```console
-setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ARC /INSTANCENAME=<instance name> /SQLSYSADMINACCOUNTS="<sysadmin account>" /IACCEPTSQLSERVERLICENSETERMS /ONBOARDSQLTOARC /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
+setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,AZUREEXTENSION /INSTANCENAME=<instance name> /SQLSYSADMINACCOUNTS="<sysadmin account>" /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<Azure tenant ID>" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
 ```
 
 The following example installs the Azure Arc agent and SQL Server extension to manage an existing SQL Server instance and any other SQL Server instances that are installed.
 
 ```console
-setup.exe /qs /ACTION=Install /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<00000000-0000-0000-0000-000000000000" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
+setup.exe /qs /ACTION=Install /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<Azure tenant ID>" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
 ```
 
 The following example shows how to remove the SQL Server extension for Azure Arc agent from setup.
@@ -303,12 +301,12 @@ The following example shows how to remove the SQL Server extension for Azure Arc
 > This command will not physically uninstall the SQL Server extension. Instead, the command will mark this feature as not selected in the setup. To remove the Azure resource for this instance, go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/sqlServers) and delete.
 
 ```console
-setup.exe /qs /ACTION=Uninstall /FEATURES=ARC  /IACCEPTSQLSERVERLICENSETERMS
+setup.exe /qs /ACTION=Uninstall /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 For more information about connecting to Azure Arc, see:
 
-- [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)
+- [Azure Arc-enabled SQL Server](../../sql-server/azure-arc/overview.md)
 - [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md)
 
 ## <a name="SysPrep"></a> SysPrep parameters
@@ -932,7 +930,7 @@ To install specific features, use the /FEATURES parameter and specify the parent
 ||Conn|Installs connectivity components.|
 ||DREPLAY_CTLR|Installs Distributed Replay controller|
 ||DREPLAY_CLT|Installs Distributed Replay client|
-||SNAC_SDK|Installs SDK for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Native Client|
+||SNAC_SDK|Installs SDK for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Native Client. Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], this feature is not available. |
 ||SDK|Installs the software development kit.|
 ||LocalDB**|Installs LocalDB, an execution mode of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] targeted to program developers.|
 

@@ -334,7 +334,6 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 | 1.2.0 | 1.0.19269.1+ <br/> 2.1.0+ | .NET Framework 4.6+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
 | 1.1.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
 | 1.0.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
-|||
 
 Starting with **v3.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` supports column encryption key caching capabilities when registering the provider using [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) or [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) APIs.
 

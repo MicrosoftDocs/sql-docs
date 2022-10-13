@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 This article introduces the concepts, requirements and components necessary to use S3-compatible object storage as a backup destination. 
 
 > [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of SQL Server 2022.
+> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
   
 ## Overview
 
@@ -42,7 +42,7 @@ The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support t
 
 There are many providers of S3-compatible object storage in the market today. Object storage is either provided as software-defined, as hardware appliances, or as a combination for hybrid cloud scenarios.
 
-The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of SQL Server 2022.
+The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 | **Vendor (alphabetical)**       | **Offering**                  | 
 |---------------------------------|-------------------------------|

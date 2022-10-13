@@ -1,19 +1,16 @@
 ---
 title: Transactions (OLE DB driver)
 description: Learn how the OLE DB Driver for SQL Server supports local transactions. Use the Microsoft Distributed Transaction Coordinator for distributed transactions.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, transactions"
   - "transactions [OLE DB]"
   - "OLE DB Driver for SQL Server, transactions"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Transactions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -394,11 +394,15 @@ sections:
           
           ### What is the recommended way to connect managed instances placed in different regions?
           
-          Express Route circuit peering is the preferred way to do that. Global virtual network peering is supported with the limitation described in the note below.  
+          Global virtual network peering (VNet peering) is the recommended method to connect two managed instances in different regions. Express Route circuit peering is an alternative option. If neither option is possible in your environment, the only other connectivity method is a Site-to-Site VPN connection. Configure Site-to-Site VPN by using the [Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), or the [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)
           
-          In September 2020, we announced [global virtual network peering for newly created virtual clusters](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/). That means that global virtual network peering is supported for managed instances created in empty subnets after the announcement date, as well for all the subsequent managed instances created in those subnets. For all the other managed instances, peering support is limited to the networks in the same region due to the [constraints of global virtual network peering](/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints). See also the relevant section of the [Azure Virtual Networks frequently asked questions](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers) article for more details. 
+          ### Does SQL Managed Instance support Global VNet Peering?
           
-          If Express Route circuit peering and global virtual network peering is not possible, the only other option is to create Site-to-Site VPN connection ([Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)).
+          Support for [global virtual network peering (VNet peering) for newly created virtual clusters](https://azure.microsoft.com/updates/global-virtual-network-peering-support-for-azure-sql-managed-instance-now-available/) was added to Azure SQL Managed Instance on September 22, 2020. As such, virtual network peering is supported for managed instances created in empty subnets after 09/22/2020. For instances deployed before this date, peering support is limited to networks within the same region due to the [constraints of global virtual network peering](/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints).  For more information, review the relevant section of the [Azure Virtual Networks frequently asked questions](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers).
+          
+          To use global VNet peering with instances created before 09/2020, considering configuring a [maintenance window](../database/maintenance-window.md) or [moving the instance to a new subnet](./vnet-subnet-move-instance.md) as either option will move the instance to a new virtual cluster that supports global virtual network peering.    
+          
+          See [how to check if global virtual network peering is supported on the virtual cluster](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-check-if-global-virtual-network-peering-is-supported-on/ba-p/3636546) if needed.
           
       - question: |
           Mitigate data exfiltration risks  
@@ -418,13 +422,13 @@ sections:
       - question: |
           DNS
         answer: |
-          ### Can I configure a custom DNS for SQL Managed Instance?
+          ### Can I configure a custom DNS resolver for SQL Managed Instance?
           
-          Yes. See [How to configure a Custom DNS for Azure SQL Managed Instance](./custom-dns-configure.md).
+          Yes. See [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
           
-          ### Can I do DNS refresh?
+          ### Can I do a DNS refresh?
           
-          Yes. See [Synchronize virtual network DNS servers setting on SQL Managed Instance virtual cluster](./synchronize-vnet-dns-servers-setting-on-virtual-cluster.md).
+          Yes. See [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
           
       - question: |
           Change time zone

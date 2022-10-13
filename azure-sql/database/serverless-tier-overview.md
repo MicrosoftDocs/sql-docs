@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/06/2022
+ms.date: 09/30/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -395,6 +395,8 @@ Azure Hybrid Benefit (AHB) and reserved capacity discounts do not apply to the s
 ## Available regions
 
 The serverless compute tier is available worldwide except the following regions: China East, China North, Germany Central, Germany Northeast, and US Gov Central (Iowa).
+
+All regions where serverless is available support up to 40 max vcores.  Additionally, 80 max vcores is also supported in the following regions with more regions planned: Australia East, Australia Southeast, Canada Central, Central US, East Asia, East US, East US 2, France Central, France South, India Central, Japan East, Japan West, North Central US, North Europe, Norway East, Qatar Central, South Africa North, South Central US, Switzerland North, UK South, UK West, West Europe, West US, West US 2, West US 3.
 
 ## Next steps
 

@@ -1,16 +1,12 @@
 ---
 title: "Using SQL escape sequences in JDBC"
 description: "The Microsoft JDBC Driver for SQL Server supports the use of SQL escape sequences, as defined by the JDBC API."
-ms.custom: ""
-ms.date: "08/12/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "08/12/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using SQL escape sequences
 

@@ -1,8 +1,8 @@
 ---
 title: "SQL Server to Azure SQL Database: Migration guide"
 description: Follow this guide to migrate your SQL Server databases to Azure SQL Database.
-author: mokabiru
-ms.author: mokabiru
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma, kendralittle
 ms.date: 03/19/2021
 ms.service: sql-database

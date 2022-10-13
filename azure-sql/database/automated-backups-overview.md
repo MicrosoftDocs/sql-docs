@@ -32,8 +32,6 @@ This article describes the automated backup feature for Azure SQL Database.
 
 To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [Recover using automated database backups](recovery-using-backups.md). 
 
-[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
-
 ## What is a database backup?
 
 Database backups are an essential part of any business continuity and disaster recovery strategy, because they help protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](long-term-retention-overview.md) for both single and pooled databases.
@@ -56,7 +54,7 @@ The Hyperscale architecture does not require full, differential, or log backups.
 
 ## Backup storage redundancy
 
-By default, Azure SQL Database stores data in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
+By default, Azure SQL Database stores backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. These events might include transient hardware failure, network or power outages, or massive natural disasters. 
 
@@ -211,14 +209,11 @@ If you delete a database, the system keeps backups in the same way that it would
 
 For SQL Database, you can configure full LTR backups for up to 10 years in Azure Blob Storage. After the LTR policy is configured, full backups are automatically copied to a different storage container weekly. 
 
-To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md).  
+To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md). 
 
 Updating the backup storage redundancy for an existing database applies the change only to subsequent backups taken in the future and not for existing backups. All existing LTR backups for the database will continue to reside in the existing storage blob. New backups will be replicated based on the configured backup storage redundancy. 
 
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) to estimate the cost of LTR storage.
-
-> [!NOTE]
-> Long-term retention for Hyperscale databases is currently in preview.
 
 ## Backup storage costs
 
@@ -311,7 +306,8 @@ All database backups are taken with the CHECKSUM option to provide additional ba
 
 When you migrate your database from a DTU-based service tier to a vCore-based service tier, the PITR retention is preserved to ensure that your application's data recovery policy isn't compromised. If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy).
 
-[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
+> [!NOTE]
+> The [Change automated backup settings](automated-backups-change-settings.md) article provides steps about how to delete personal data from the device or service and can be used to support your obligations under the GDPR. For general information about GDPR, see the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview) and the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## Use Azure Policy to enforce backup storage redundancy
 

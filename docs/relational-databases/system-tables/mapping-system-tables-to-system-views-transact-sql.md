@@ -21,7 +21,7 @@ ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 
   This topic shows the mapping between the system tables and functions and system views and functions.  
   
- The following table maps the system tables to their corresponding system views or functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The following table maps the system tables to their corresponding system views or functions in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].  
   
 |System table|System views or functions|Type of view or function|  
 |------------------|-------------------------------|------------------------------|  
@@ -44,7 +44,7 @@ ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 |sysremotelogins|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|Catalog view|  
 |sysservers|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|Catalog view|  
   
- The following table maps the system tables or functions that are in every database in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] to their corresponding system views or functions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The following table maps the system tables or functions that are in every database in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] to their corresponding system views or functions in [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)] and later.  
   
 |System table or function|System view or function|Type of view or function|  
 |------------------------------|-----------------------------|------------------------------|  

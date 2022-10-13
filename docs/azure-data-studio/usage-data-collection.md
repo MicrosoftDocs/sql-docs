@@ -1,8 +1,8 @@
 ---
 title: Enable or disable usage data collection and crash reporting
 description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: wopeter
 ms.date: 05/17/2021
 ms.prod: azure-data-studio

@@ -1,15 +1,12 @@
 ---
-title: "Metadata Discovery | Microsoft Docs"
+title: "Metadata Discovery"
 description: Learn how metadata discovery improvements allow OLE DB Driver for SQL Server applications to ensure metadata compatibility.
-ms.custom: ""
-ms.date: "06/12/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/12/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
 ---
 # Metadata Discovery
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

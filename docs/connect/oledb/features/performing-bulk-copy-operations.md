@@ -1,20 +1,17 @@
 ---
 title: "Performing Bulk Copy Operations"
 description: "Learn about performing bulk copy operations using OLE DB Driver for SQL Server and how it enables fast transfer of data into the database."
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [OLE DB Driver for SQL Server]"
   - "data access [OLE DB Driver for SQL Server], bulk copy operations"
   - "OLE DB Driver for SQL Server, bulk copy operations"
   - "MSOLEDBSQL, bulk copy operations"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Performing Bulk Copy Operations
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

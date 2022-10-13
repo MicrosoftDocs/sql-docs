@@ -1,25 +1,23 @@
 ---
-description: "PolyBase features and limitations"
 title: "PolyBase features and limitations"
-descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 12/03/2021
+description: "PolyBase features available for SQL Server products and services, including a list of T-SQL operators supported for pushdown and known limitations."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 08/30/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: 
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
 
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-This article is a summary of PolyBase features available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products and services.  
-  
+This article is a summary of PolyBase features available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products and services.
+
 ## Feature summary for product releases
 
-This table lists the key features for PolyBase and the products in which they're available.  
+This table lists the key features for PolyBase and the products in which they're available.
 
 |**Feature** |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (Beginning with 2016) |**Azure SQL Database** |**[!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]** |**Parallel Data Warehouse** |
 |---------|---------|---------|---------|---------|
@@ -35,7 +33,6 @@ This table lists the key features for PolyBase and the products in which they're
 |Run PolyBase queries from Microsoft BI tools|Yes|No|Yes|Yes|
 
 <sup>*</sup> Introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], see [Examples of bulk access to data in Azure Blob storage](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
-
 
 
 ## Known limitations
@@ -59,6 +56,10 @@ PolyBase has the following limitations:
 - If you have a default SQL Server instance that is configured to listen on TCP port other than 1433, you cannot use it as a head node in a PolyBase scale-out group. When executing `sp_polybase_join_group`, if you pass 'MSSQLSERVER' as the instance name, SQL Server will assume port 1433 is the listener port, so the Data Movement service will be unable to connect to the head node when starting.
 
 - Oracle synonyms are not supported for usage with PolyBase.
+
+- UTF-8 collations are not supported for Hadoop external data sources.
+
+- Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Hadoop is no longer supported.
 
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "

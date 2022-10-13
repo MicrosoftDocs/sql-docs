@@ -1,20 +1,18 @@
 ---
 title: "Availability group wizard: Summary Page"
 description: "Describes the options of the 'Summary' page of the Always On Availability Group Wizard in SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.newagwizard.summary.f1"
   - "sql13.swb.adddatabasewizard.summary.f1"
   - "sql13.swb.addreplicawizard.summary.f1"
   - "sql13.swb.failoverwizard.summary.f1"
-ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Summary Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

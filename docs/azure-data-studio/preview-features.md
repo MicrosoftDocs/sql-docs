@@ -1,12 +1,13 @@
 ---
 title: Preview features in Azure Data Studio
 description: Learn more about Azure Data Studio preview features and how to enable and use them.
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 10/14/2020
 ms.prod: azure-data-studio
 ms.topic: conceptual
+ms.custom: ignite-2022
 ---
 
 # Preview features in Azure Data Studio
@@ -60,6 +61,7 @@ You can enable or disable preview features anytime in your Settings.
 * Kusto
 * Managed Instance Dashboard
 * Oracle
+* MySQL
 * PostgreSQL
 * Query History
 * SandDance for Azure Data Studio

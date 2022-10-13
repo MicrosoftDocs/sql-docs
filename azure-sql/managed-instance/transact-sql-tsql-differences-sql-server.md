@@ -226,6 +226,7 @@ For more information, see [ALTER DATABASE SET PARTNER and SET WITNESS](/sql/t-sq
 The following limitations apply to `CREATE DATABASE`:
 
 - Files and filegroups can't be defined. 
+- A memory-optimized filegroup and file are automatically added and are called XTP.
 - The `CONTAINMENT` option isn't supported. 
 - `WITH` options aren't supported. 
    > [!TIP]
@@ -242,6 +243,7 @@ Some file properties can't be set or changed:
 
 - A file path can't be specified in the `ALTER DATABASE ADD FILE (FILENAME='path')` T-SQL statement. Remove `FILENAME` from the script because SQL Managed Instance automatically places the files. 
 - A file name can't be changed by using the `ALTER DATABASE` statement.
+- Altering XTP file or filegroup is not allowed.
 
 The following options are set by default and can't be changed:
 
@@ -348,7 +350,7 @@ Undocumented DBCC statements that are enabled in SQL Server aren't supported in 
 
 ### Distributed transactions
 
-Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is currently in public preview. Distributed transactions are supported under following conditions (all of them must be met):
+Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is generally available. Distributed transactions are supported under following conditions (all of them must be met):
 * all transaction participants are Azure SQL Managed Instances that are part of the [Server trust group](./server-trust-group-overview.md).
 * transactions are initiated either from .NET (TransactionScope class) or Transact-SQL.
 

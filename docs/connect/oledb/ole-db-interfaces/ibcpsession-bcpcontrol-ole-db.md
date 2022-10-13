@@ -1,20 +1,16 @@
 ---
-title: "IBCPSession::BCPControl (OLE DB driver) | Microsoft Docs"
-description: Learn how IBCPSession::BCPControl sets the options for a bulk-copy operation in OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "06/04/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "IBCPSession::BCPControl (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPControl method"
+title: "IBCPSession::BCPControl (OLE DB driver)"
+description: "Learn how IBCPSession::BCPControl sets the options for a bulk-copy operation in OLE DB Driver for SQL Server."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/04/2021"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "BCPControl method"
+apiname: "IBCPSession::BCPControl (OLE DB)"
+apitype: "COM"
 ---
 # IBCPSession::BCPControl (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

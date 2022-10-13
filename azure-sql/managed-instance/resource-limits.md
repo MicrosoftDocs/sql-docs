@@ -2,16 +2,16 @@
 title: Resource limits
 titleSuffix: Azure SQL Managed Instance
 description: This article provides an overview of the resource limits for Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: references_regions, ignite-fall-2021
-ms.devlang: 
-ms.topic: reference
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
 ms.date: 06/02/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom:
+  - references_regions
+  - ignite-fall-2021
 ---
 # Overview of Azure SQL Managed Instance resource limits
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -30,13 +30,13 @@ This article provides an overview of the technical characteristics and resource 
 SQL Managed Instance has characteristics and resource limits that depend on the underlying infrastructure and architecture. SQL Managed Instance can be deployed on multiple hardware configurations.
 
 > [!NOTE]
-> The Gen5 hardware has been renamed to the **standard-series (Gen5)**. We are introducing the **memory optimized premium-series** hardware configuration in limited preview.
+> The Gen5 hardware has been renamed to the **standard-series (Gen5)**.
 
 For information on previously available hardware, see [Previously available hardware](#previously-available-hardware) later in this article.
 
 Hardware configurations have different characteristics, as described in the following table:
 
-|    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series (preview)** | 
+|    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series** | 
 |:-- |:-- |:-- |:-- |
 | **CPU** |  Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake), and  Intel&reg; 8272CL (Cascade Lake) 2.5 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors |
 | **Number of vCores** <BR>vCore=1 LP (hyper-thread) | 4-80 vCores | 4-80 vCores | 4-64 vCores |
@@ -49,10 +49,15 @@ Hardware configurations have different characteristics, as described in the foll
 >[!NOTE]
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
-### Regional support for memory optimized premium-series hardware (preview)
+### Regional support for memory optimized premium-series hardware
 
-Support for the memory optimized premium-series hardware (preview) is currently available only in these specific regions:
-Australia East, Australia Southeast, Brazil South, Canada Central, Central US, East US, East US 2, France Central, Germany West Central, India Central, Japan East, North Central US, North Europe, South Central US, Sweden Central, UK South, West Europe, West US, West US 2, West US 3
+Support for the memory optimized premium-series hardware is currently available only in these specific regions:
+  
+| Geography | Regions supporting memory optimized premium-series HW |
+|:-- |:-- |
+| Europe, Middle East, Africa | France Central, Germany West Central, North Europe, Sweden Central, UK South, West Europe |
+| Americas | Brazil South, Canada Central, Central US, East US, East US 2, North Central US, South Central US, West US, West US 2, West US 3 |
+| Asia Pacific | Australia East, Australia Southeast, Central India, East Asia, Japan East, Southeast Asia |
 
 ### In-memory OLTP available space
 
@@ -83,6 +88,7 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 | Max instance storage size (reserved) | - 2 TB for 4 vCores<br/>- 8 TB for 8 vCores<br/>- 16 TB for other sizes <BR> | **Standard-series (Gen5)**: <br/>- 1 TB for 4, 8, 16 vCores<br/>- 2 TB for 24 vCores<br/>- 4 TB for 32, 40, 64, 80 vCores <BR> **Premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40, 64, 80 vCores<br/> **Memory optimized premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40 vCores<br/>- 16 TB for 64 vCores<br/> |
 | Max database size | Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
 | Max tempDB size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br/>Add more vCores to get more TempDB space.<br/> Log file size is limited to 120 GB.| Up to currently available instance storage size. |
+| Max number of tempDB files | 128 | 128 |
 | Max number of databases per instance | 100 user databases, unless the instance storage size limit has been reached. | 100 user databases, unless the instance storage size limit has been reached. |
 | Max number of database files per instance | Up to 280, unless the instance storage size or [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) limit has been reached. | 32,767 files per database, unless the instance storage size limit has been reached. |
 | Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. | Up to currently available instance size (depending on the number of vCores). |
@@ -105,6 +111,7 @@ A few additional considerations:
 - Throughput and IOPS in the General Purpose tier also depend on the [file size](#file-io-characteristics-in-general-purpose-tier) that is not explicitly limited by the SQL Managed Instance.
   You can create another readable replica in a different Azure region using [auto-failover groups](auto-failover-group-configure-sql-mi.md)
 - Max instance IOPS depend on the file layout and distribution of workload. As an example, if you create 7 x 1 TB files with max 5 K IOPS each and seven small files (smaller than 128 GB) with 500 IOPS each, you can get 38500 IOPS per instance (7x5000+7x500) if your workload can use all files. Note that some IOPS are also used for auto-backups.
+- Names of `tempdb`files cannot have more than 16 characters.
 
 Find more information about the [resource limits in SQL Managed Instance pools in this article](instance-pools-overview.md#resource-limitations).
 

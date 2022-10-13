@@ -1,8 +1,8 @@
 ---
 title: "ALTER ASSEMBLY (Transact-SQL)"
 description: ALTER ASSEMBLY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "09/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "ALTER ASSEMBLY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 ---
 # ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

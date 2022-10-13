@@ -1,16 +1,12 @@
 ---
 title: Basic data types sample
 description: This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use result set methods to retrieve and update values in the database.
-ms.custom: ""
-ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 04/20/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Basic data types sample
@@ -64,7 +60,7 @@ public class DatatypesTest {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);) {

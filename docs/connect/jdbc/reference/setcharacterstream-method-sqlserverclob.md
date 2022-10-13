@@ -1,21 +1,15 @@
 ---
+title: "setCharacterStream Method (SQLServerClob)"
 description: "setCharacterStream Method (SQLServerClob)"
-title: "setCharacterStream Method (SQLServerClob) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerClob.setCharacterStream"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerClob.setCharacterStream"
+apitype: "Assembly"
 ---
 # setCharacterStream Method (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

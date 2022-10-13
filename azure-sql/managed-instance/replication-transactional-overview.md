@@ -1,17 +1,15 @@
 ---
 title: Transactional replication
 titleSuffix: Azure SQL Managed Instance
-description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance (Preview). 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: conceptual
+description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance (Preview).
 author: MashaMSFT
-ms.author:  mathoma
+ms.author: mathoma
 ms.reviewer: mathoma
 ms.date: 05/10/2020
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Transactional replication with Azure SQL Managed Instance (Preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

@@ -1,16 +1,12 @@
 ---
+title: "SQLServerConnectionPoolDataSource Class"
 description: "SQLServerConnectionPoolDataSource Class"
-title: "SQLServerConnectionPoolDataSource Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerConnectionPoolDataSource Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

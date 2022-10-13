@@ -32,7 +32,6 @@ Contains a row for each trusted assembly for the server.
 |description |nvarchar(4000) |Optional user-defined description of the assembly. Microsoft recommends using the canonical name that encodes the simple name, version number, culture, public key, and architecture of the assembly to trust. This value uniquely identifies the assembly on the common language runtime (CLR) side and is the same as the clr_name value in sys.assemblies. |
 |create_date |datetime2 |Date the assembly was added to the list of trusted assemblies. |
 |created_by |nvarchar(128) |Login name of the principal who added the assembly to the list. |
-| | | |
 
 ### Permissions  
  Requires VIEW SERVER STATE permission on the server.  

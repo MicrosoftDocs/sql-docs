@@ -1,19 +1,15 @@
 ---
 title: HADR configuration best practices
-description: "Learn about the supported cluster configurations when you configure high availability and disaster recovery (HADR) for SQL Server on Azure Virtual Machines, such as supported quorums or connection routing options." 
-services: virtual-machines
-documentationCenter: na
-author: adbadram
-editor: monicar
-tags: azure-service-management
+description: "Learn about the supported cluster configurations when you configure high availability and disaster recovery (HADR) for SQL Server on Azure Virtual Machines, such as supported quorums or connection routing options."
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 11/10/2021
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 11/10/2021
-ms.author: adbadram
-ms.reviewer: mathoma
+editor: monicar
+tags: azure-service-management
 ---
 
 # HADR configuration best practices (SQL Server on Azure VMs)
@@ -262,7 +258,7 @@ Use Transact-SQL (T-SQL) to modify the **session timeout** for an availability g
 
 ```sql
 ALTER AVAILABILITY GROUP AG1
-MODIFY REPLICA ON 'INSTANCE01' WITH (SESSION_TIMEOUT = 15);
+MODIFY REPLICA ON 'INSTANCE01' WITH (SESSION_TIMEOUT = 20);
 ```
 
 **Max failures in specified period**
@@ -305,6 +301,27 @@ Consider the scenario when a two-node cluster is created and brought online:
 6. NODE1 can send packets to NODE2, but NODE2 can't reply. NODE1 loses quorum and shuts down the cluster.
 
 You can avoid this scenario by assigning an unused static IP address to the cluster network name in order to bring the cluster network name online and add the IP address to [Azure Load Balancer](availability-group-load-balancer-portal-configure.md).
+
+If the SQL Server database engine, Always On availability group listener, failover cluster instance health probe, database mirroring endpoint, cluster core IP resource, or any other SQL resource is configured to use a port between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Doing so will prevent other system processes from being dynamically assigned the same port. The following example creates an exclusion for port 59999: 
+
+`netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
+
+It is important to configure the port exclusion when the port is not in use, otherwise the command will fail with a message like “The process cannot access the file because it is being used by another process.”
+
+To confirm that the exclusions have been configured correctly, use the following command: `netsh int ipv4 show excludedportrange tcp`. 
+
+Setting this exclusion for the AG role IP probe port should prevent events such as **Event ID: 1069** with status 10048. This event can be seen in the Windows Failover cluster events with the following message:
+```
+Cluster resource '<IP name in AG role>' of type 'IP Address' in cluster role '<AG Name>' failed.
+```
+An Event ID: 1069 with status 10048 can be identified from cluster logs with events like: 
+```
+Resource IP Address 10.0.1.0 called SetResourceStatusEx: checkpoint 5. Old state OnlinePending, new state OnlinePending, AppSpErrorCode 0, Flags 0, nores=false
+IP Address <IP Address 10.0.1.0>: IpaOnlineThread: **Listening on probe port 59999** failed with status **10048**
+```
+Status [**10048**](/win32/desktop-src/WinSock/windows-sockets-error-codes-2) refers to: **This error occurs** if an application attempts to bind a socket to an **IP address/port that has already been used** for an existing socket.
+This can be caused by an internal process taking the same port defined as probe port. Remember that probe port is used to check the status of a backend pool instance from the Azure Load Balancer. 
+If the **health probe fails** to get a response from a backend instance, then **no new connections will be sent to that backend instance** until the health probe succeeds again.
 
 ## Known issues
 

@@ -1,17 +1,14 @@
 ---
 title: Database-per-tenant SaaS tutorial
 description: Deploy and explore the Wingtip Tickets SaaS multitenant application that demonstrates the database-per-tenant pattern and other SaaS patterns by using Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scenario
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 01/25/2019
+ms.service: sql-database
+ms.subservice: scenario
+ms.topic: tutorial
+ms.custom: sqldbrb=1
 ---
 # Deploy and explore a multitenant SaaS app that uses the database-per-tenant pattern with Azure SQL Database
 

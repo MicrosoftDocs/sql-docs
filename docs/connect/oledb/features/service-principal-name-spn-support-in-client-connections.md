@@ -1,19 +1,16 @@
 ---
 title: Service Principal Name (SPN) Support in Client Connections
 description: Learn about how SQL Server supports Service Principal Name in client connections. See the most common usage scenarios.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 04/20/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB Driver for SQL Server, SPNs"
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Service Principal Name (SPN) Support in Client Connections
 

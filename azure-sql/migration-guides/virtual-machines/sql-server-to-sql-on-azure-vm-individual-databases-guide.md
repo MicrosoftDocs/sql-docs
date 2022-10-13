@@ -2,15 +2,13 @@
 title: "SQL Server to SQL Server on Azure Virtual Machines: Migration guide"
 titleSuffix: SQL Server on Azure VMs
 description: In this guide, you learn how to migrate your individual SQL Server databases to SQL Server on Azure Virtual Machines.
-ms.custom: ""
-ms.service: virtual-machines-sql
-ms.subservice: migration-guide
-ms.devlang:
-ms.topic: how-to
 author: markjones-msft
 ms.author: markjon
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/24/2022
+ms.date: 09/27/2022
+ms.service: virtual-machines-sql
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 
 # Migration guide: SQL Server to SQL Server on Azure Virtual Machines
@@ -104,7 +102,13 @@ For deprecated features, you can choose to run your user databases in their orig
 
 After you've completed the pre-migration steps, you're ready to migrate the user databases and components. Migrate your databases by using your preferred [migration method](sql-server-to-sql-on-azure-vm-migration-overview.md#migrate).
 
-The following sections provide steps for performing either a migration by using backup and restore or a minimal downtime migration by using backup and restore along with log shipping.
+The following sections provide options for performing a migration in order of preference by using:
+
+- backup and restore
+- minimal downtime migration by using backup and restore along with log shipping
+- detach and attach from a URL
+- convert to a VM
+- ship a hard drive
 
 ### Migrate using the Azure SQL migration extension for Azure Data Studio (minimal downtime)
 
@@ -136,6 +140,29 @@ To perform a standard migration by using backup and restore:
 1. Copy your on-premises backup files to your VM by using a remote desktop, [Azure Data Explorer](/azure/data-explorer/data-explorer-overview), or the [AzCopy command-line utility](/azure/storage/common/storage-use-azcopy-v10). (Greater than 2-TB backups are recommended.)
 1. Restore full database backups to the SQL Server on Azure Virtual Machines.
 
+### Detach and attach from a URL
+
+Detach your database and log files and transfer them to [Azure Blob storage](/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure). Then attach the database from the URL on your Azure VM. Use this method if you want the physical database files to reside in Blob storage, which might be useful for very large databases. Use the following general steps to migrate a user database using this manual method:
+
+1. Detach the database files from the on-premises database instance.
+1. Copy the detached database files into Azure Blob storage using the [AZCopy command-line utility](/azure/storage/common/storage-use-azcopy-v10).
+1. Attach the database files from the Azure URL to the SQL Server instance in the Azure VM.
+
+### <a id="convert-vm"></a> Convert to a VM, upload to a URL, and deploy as a new VM
+
+Use this method to migrate all system and user databases in an on-premises SQL Server instance to an Azure virtual machine. Use the following general steps to migrate an entire SQL Server instance using this manual method:
+
+1. Convert physical or virtual machines to Hyper-V VHDs.
+1. Upload VHD files to Azure Storage by using the [Add-AzureVHD cmdlet](/previous-versions/azure/dn495173(v=azure.100)).
+1. Deploy a new virtual machine by using the uploaded VHD.
+
+> [!NOTE]  
+> To migrate an entire application, consider using [Azure Site Recovery](/azure/site-recovery/site-recovery-overview).
+
+### Ship a hard drive
+
+Use the [Windows Import/Export Service method](/azure/import-export/storage-import-export-service) to transfer large amounts of file data to Azure Blob storage in situations where uploading over the network is prohibitively expensive or not feasible. With this service, you send one or more hard drives containing that data to an Azure data center where your data will be uploaded to your storage account.
+
 ### Migrate objects outside user databases
 
 More SQL Server objects might be required for the seamless operation of your user databases post migration.
@@ -146,7 +173,7 @@ The following table provides a list of components and recommended migration meth
 | --- | --- | --- |
 | **Databases** | Model | Script with SQL Server Management Studio. |
 || TempDB | Plan to move tempDB onto [Azure VM temporary disk (SSD)](../../virtual-machines/windows/performance-guidelines-best-practices-checklist.md#storage)) for best performance. Be sure to pick a VM size that has a sufficient local SSD to accommodate your tempDB. |
-|| User databases with FileStream | Use the [Backup and restore](../../virtual-machines/windows/migrate-to-vm-from-sql-server.md#back-up-and-restore) methods for migration. Data Migration Assistant doesn't support databases with FileStream. |
+|| User databases with FileStream | Use the [Backup and restore](sql-server-to-sql-on-azure-vm-individual-databases-guide.md#backup-and-restore) methods for migration. Data Migration Assistant doesn't support databases with FileStream. |
 | **Security** | SQL Server and Windows logins | Use Data Migration Assistant to [migrate user logins](/sql/dma/dma-migrateserverlogins). |
 || SQL Server roles | Script with SQL Server Management Studio. |
 || Cryptographic providers | Recommend [converting to use Azure Key Vault](../../virtual-machines/windows/azure-key-vault-integration-configure.md). This procedure uses the [SQL VM resource provider](../../virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md). |

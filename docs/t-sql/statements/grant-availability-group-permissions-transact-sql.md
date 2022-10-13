@@ -9,7 +9,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Availability Groups [SQL Server], permissions"
   - "GRANT statement, availability groups"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "permissions [SQL Server], availability group"
 dev_langs:
   - "TSQL"
-ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

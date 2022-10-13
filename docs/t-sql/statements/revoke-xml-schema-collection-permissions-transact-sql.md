@@ -8,14 +8,13 @@ ms.prod: sql
 ms.prod_service: "pdw, sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "REVOKE statement, XML schema collections"
   - "XML schema collections [SQL Server], permissions"
   - "schema collections [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE XML Schema Collection Permissions (Transact-SQL)

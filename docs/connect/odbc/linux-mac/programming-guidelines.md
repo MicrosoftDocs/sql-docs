@@ -1,22 +1,19 @@
 ---
 title: Programming guidelines
-
 description: The programming features of the ODBC Driver for SQL Server on macOS and Linux contain some differences from the Windows versions.
-ms.custom: ""
-ms.date: 02/17/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: v-davidengel
-ms.technology: connectivity
-ms.topic: conceptual
 author: v-makouz
 ms.author: v-makouz
+ms.reviewer: v-davidengel
+ms.date: 02/17/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Programming Guidelines
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)).
+The programming features of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)).
 
 An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific items that you would use in your Windows ODBC applications.
 

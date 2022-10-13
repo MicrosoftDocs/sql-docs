@@ -20,11 +20,10 @@ helpviewer_keywords:
   - "backup header information [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - HEADERONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   Returns a result set containing all the backup header information for all backup sets on a particular backup device in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
@@ -140,7 +139,8 @@ FROM <backup_device>
 |**containment**|**tinyint** not NULL|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Indicates the containment status of the database.<br /><br /> 0 = database containment is off<br /><br /> 1 = database is in partial containment|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The encryption algorithm used to encrypt the backup. NO_Encryption indicates that the backup was not encrypted. When the correct value cannot be determined the value should be NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. When the backup was not encrypted, this value is NULL.|  
-|**EncryptorType**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The type of encryptor used: Certificate or Asymmetric Key. When the backup was not encrypted, this value is NULL.|  
+|**EncryptorType**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The type of encryptor used: Certificate or Asymmetric Key. When the backup was not encrypted, this value is NULL.|
+|**CompressionAlgorithm**|**nvarchar(32)**|**Applies beginning with**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Identifies the compression algorithm used to compress the backup file. Default is MS_XPRESS. See [BACKUP (Transact-SQL)](backup-transact-sql.md#compression).|
   
 > [!NOTE]  
 >  If passwords are defined for the backup sets, RESTORE HEADERONLY shows complete information for only the backup set whose password matches the specified PASSWORD option of the command. RESTORE HEADERONLY also shows complete information for unprotected backup sets. The **BackupName** column for the other password-protected backup sets on the media is set to '**_Password Protected_**', and all other columns are NULL.  

@@ -1,19 +1,16 @@
 ---
 title: SSVARIANT structure (OLE DB driver)
 description: "SSVARIANT structure in OLE DB Driver for SQL Server"
-ms.custom: ""
-ms.date: "06/15/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-f1_keywords: 
-  - "SSVARIANT"
-helpviewer_keywords: 
-  - "SSVARIANT struct"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/15/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+f1_keywords:
+  - "SSVARIANT"
+helpviewer_keywords:
+  - "SSVARIANT struct"
 ---
 # SSVARIANT Structure
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +70,6 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BinaryVal|No corresponding OLE DB type indicator.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Supports the **binary** and **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types.<br /><br /> Includes the following members:<br /><br /> *sActualLength* (**SHORT**) Specifies the actual length for the data to which *prgbBinaryVal* points.<br /><br /> *sMaxLength* (**SHORT**) Specifies the maximum length for the data to which *prgbBinaryVal* points.<br /><br /> *prgbBinaryVal* (**BYTE** \*) Pointer to the binary data.<br /><br /> Unused member: *dwReserved*.|  
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## Known issues
 ### Possible narrow string data corruption
@@ -111,12 +107,12 @@ If your application experiences issues retrieving data from a `sql_variant` colu
         Schema is named [dbo].
         The corrupted value is stored in a column of type sql_variant named [YourColumn].
         The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
-            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
+            https://learn.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
 */
 
 -- Base type in sql_variant can hold a maximum of 8000 bytes
 -- For details see: 
---  https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
+--  https://learn.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
 DECLARE @bin VARBINARY(8000)
 
 -- In the following lines we convert the sql_variant base type to binary.

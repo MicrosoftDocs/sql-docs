@@ -1,17 +1,14 @@
 ---
-title: "Enumerate OLE DB data sources (OLE DB driver) | Microsoft Docs"
+title: "Enumerate OLE DB data sources (OLE DB driver)"
 description: Learn how to use the MSOLEDBSQL enumerator to list the OLE DB Driver for SQL Server data sources available with this example.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "data sources [OLE DB]"
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: "reference"
+helpviewer_keywords:
+  - "data sources [OLE DB]"
 ---
 # Enumerate OLE DB Data Sources (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

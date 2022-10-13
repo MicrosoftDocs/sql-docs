@@ -1,20 +1,16 @@
 ---
-title: "Database Mirroring - Use Certificates for Outbound Connections | Microsoft Docs"
+title: "Database Mirroring - Use Certificates for Outbound Connections"
 description: Learn how to configure server instances to use certificates to authenticate inbound connections for database mirroring, after you set up outbound connections.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "certificates [SQL Server], database mirroring"
   - "outbound connections [SQL Server]"
   - "database mirroring [SQL Server], security"
-ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Database Mirroring - Use Certificates for Outbound Connections
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

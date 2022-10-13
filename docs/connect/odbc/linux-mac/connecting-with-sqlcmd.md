@@ -1,24 +1,20 @@
 ---
 title: Connecting with sqlcmd
 description: Learn the options and commands available in the sqlcmd utility, available in the mssql-tools package on Linux and macOS.
-ms.custom: ""
-ms.date: 02/15/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "sqlcmd"
-ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 02/15/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+helpviewer_keywords:
+  - "sqlcmd"
 ---
 # Connecting with sqlcmd
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [sqlcmd](../../../tools/sqlcmd-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+The [sqlcmd](../../../tools/sqlcmd-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
 
 The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
 

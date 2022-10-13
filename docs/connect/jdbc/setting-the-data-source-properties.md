@@ -1,16 +1,12 @@
 ---
 title: Setting the data source properties
 description: Learn about data sources in JDBC and how to set their properties to configure database access with Java.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 
 # Setting the data source properties

@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "search property lists [SQL Server], deleting"
 dev_langs:
   - "TSQL"
-ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

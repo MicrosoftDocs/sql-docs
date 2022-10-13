@@ -5,7 +5,7 @@ description: This article describes the SQL Server 2019 Big Data Clusters Cumula
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 08/15/2022
+ms.date: 09/13/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
@@ -23,6 +23,10 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
    > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
    > <br/> This __doesn't affect new deployments__ of SQL Server 2019 Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
 
+SQL Server Big Data Clusters CU17 includes important changes and capabilities. The following known issue has been resolved: 
+
+- When you use the `AZDATA BDC ROTATE` command to rotate the password of a big data cluster that uses Active Directory, you receive the following error message: `Failed to update password for existing AD account '<Account Name>'. Error code: 30`. This issue has been resolved.
+
 For detailed SQL Server engine changes, check the [official SQL Server 2019 CU17 knowledge base article KB5016394](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).
 
 ## Tested configurations for CU17
@@ -36,7 +40,7 @@ For detailed SQL Server engine changes, check the [official SQL Server 2019 CU17
 Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
 * [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
-* [SQL Server 2019 Big Data Clusters partners](../sql-server/partner-big-data-cluster.md)
+* [SQL Server 2019 Big Data Clusters partners](partner-big-data-cluster.md)
 
 ## System environment
 

@@ -1,21 +1,15 @@
 ---
+title: "getBytes Method (java.lang.String) (SQLServerResultSet)"
 description: "getBytes Method (java.lang.String) (SQLServerResultSet)"
-title: "getBytes Method (java.lang.String) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerResultSet.getBytes (java.lang.String)"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerResultSet.getBytes (java.lang.String)"
+apitype: "Assembly"
 ---
 # getBytes Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -2,17 +2,15 @@
 title: Understand and resolve Azure SQL blocking problems
 titleSuffix: Azure SQL Database
 description: An overview of Azure SQL database-specific topics on blocking and troubleshooting.
-services:
-  - "sql-database"
-dev_langs:
-  - "TSQL"
-ms.service: sql-database
-ms.subservice: performance
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 4/8/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: conceptual
+dev_langs:
+  - "TSQL"
 ---
 # Understand and resolve Azure SQL Database blocking problems
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -451,7 +449,7 @@ The Waittype, Open_Tran, and Status columns refer to information returned by [sy
 ## Next steps
 
 * [Azure SQL Database: Improving Performance Tuning with Automatic Tuning](/Shows/Data-Exposed/Azure-SQL-Database-Improving-Performance-Tuning-with-Automatic-Tuning)
-* [Deliver consistent performance with Azure SQL](/learn/modules/azure-sql-performance/)
+* [Deliver consistent performance with Azure SQL](/training/modules/azure-sql-performance/)
 * [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md)
 * [Transient Fault Handling](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling)
 * [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](configure-max-degree-of-parallelism.md)

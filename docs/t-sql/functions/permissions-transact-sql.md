@@ -30,7 +30,8 @@ dev_langs:
 
   Returns a value containing a bitmap that indicates the statement, object, or column permissions of the current user.  
   
- **Important** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) and [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) instead. Continued use of the PERMISSIONS function may result in slower performance.  
+ > [!IMPORTANT]  
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) and [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md) instead. Continued use of the PERMISSIONS function may result in slower performance.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

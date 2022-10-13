@@ -1,19 +1,15 @@
 ---
 title: Extend support for SQL Server
 description: Extend support for SQL Server 2008, 2008 R2, and 2012 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
-services: virtual-machines-windows
-documentationcenter: ''
 author: bluefooted
-tags: azure-service-management
+ms.author: pamela
+ms.reviewer: mathoma, randolphwest
+ms.date: 05/24/2022
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 05/24/2022
-ms.author: pamela
-ms.reviewer: mathoma, randolphwest
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
+tags: azure-service-management
 ---
 # Extend support for SQL Server with Azure
 
@@ -86,7 +82,7 @@ Extended security updates for SQL Server VMs are delivered through the Microsoft
 
 ## Next steps
 
-- [Migrate a SQL Server database to SQL Server in an Azure VM](migrate-to-vm-from-sql-server.md)
+- [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)
 - [Create a SQL Server VM in the Azure portal](sql-vm-create-portal-quickstart.md)
 - [FAQ for SQL Server on Azure Virtual Machines](frequently-asked-questions-faq.yml)
 

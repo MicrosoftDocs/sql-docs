@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "column_constraint"
 dev_langs:
   - "TSQL"
-ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 ---
 # ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -193,7 +193,7 @@ ms.author: maggies
 ##  <a name="bkmk_tshoot_native"></a> Troubleshoot problems with the native mode installations  
   
 ###  <a name="PerfCounters"></a> Performance counters are not visible after upgrading to Windows Vista or Windows Server 2008  
- If you upgrade the operating system to [!INCLUDE[winvista](../../includes/winvista-md.md)] or [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] on a computer that runs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters will not be set after the upgrade.  
+ If you upgrade the operating system to [!INCLUDE[winvista](../../includes/winvista-md.md)] or [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] on a computer that runs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters will not be set after the upgrade.  
   
 #### To reinstate Reporting Services performance counters  
   

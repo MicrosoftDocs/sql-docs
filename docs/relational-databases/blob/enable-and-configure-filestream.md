@@ -75,7 +75,6 @@ ms.author: mikeray
 |RAID 5|Normal|Normal|Excellent|Performance is better than one disk or JBOD; and less than RAID 0 or RAID 5 with striping.|  
 |RAID 0|Excellent|Excellent|None||  
 |RAID 5 + striping|Excellent|Excellent|Excellent|Most expensive option.|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> Physical database design  

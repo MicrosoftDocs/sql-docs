@@ -1,14 +1,12 @@
 ---
 title: Data Virtualization Extension
 description: Data Virtualization extension for Azure Data Studio
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
-ms.custom: 
 ms.date: 11/04/2019
+ms.prod: azure-data-studio
+ms.topic: conceptual
 ---
 
 # Data Virtualization extension for Azure Data Studio
@@ -95,7 +93,7 @@ Other improvements and fixes include:
 
 * When opening a Notebook, the install python dialog appears. Canceling this install results in the Kernels and Attach To dropdowns not showing expected values. The workaround is to complete the Python installation.
 * When a notebook is opened with a kernel that isn't supported, the kernels and _attach to_ dropdowns causes Azure Data Studio to stop responding. Close Azure Data Studio and ensure you use a kernel that is supported (Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
-* Spark UI link fails when using PySpark3 or other Spark kernels against the SQL Server endpoint. As a workaround, select on Spark UI from the Dashboard, or connect using the SQL Server big data cluster connection type as this has the correct Spark UI hyperlink.
+* Spark UI link fails when using PySpark3 or other Spark kernels against the SQL Server endpoint. As a workaround, select Spark UI from the Dashboard, or connect using the SQL Server big data cluster connection type as this has the correct Spark UI hyperlink.
 
 ### Extensibility improvements
 

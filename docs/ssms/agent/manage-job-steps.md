@@ -41,7 +41,7 @@ A job step is an action that the job takes on a database or a server. Every job 
   
 -   PowerShell scripts.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] ActiveX scripts.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX scripts.  
   
 -   Replication tasks.  
   
@@ -51,7 +51,7 @@ A job step is an action that the job takes on a database or a server. Every job 
   
 Every job step runs in a specific security context. If the job step specifies a proxy, the job step runs in the security context of the credential for the proxy. If a job step does not specify a proxy, the job step runs in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. Only members of the sysadmin fixed server role can create jobs that do not explicitly specify a proxy.  
   
-Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security and Protection (Database Engine)](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+Because job steps run in the context of a specific [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user, that user must have the permissions and configuration necessary for the job step to execute. For example, if you create a job that requires a drive letter or a Universal Naming Convention (UNC) path, the job steps may run under your Windows user account while testing the tasks. However, the Windows user for the job step must also have the necessary permissions, drive letter configurations, or access to the required drive. Otherwise, the job step fails. To prevent this problem, ensure that the proxy for each job step has the necessary permissions for the task that the job step performs. For more information, see [Security and Protection (Database Engine)](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## Job Step Logs  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can write output from some job steps either to an operating system file or to the sysjobstepslogs table in the msdb database. The following job step types can write output to both destinations:  
@@ -107,7 +107,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell s
 ## ActiveX Scripting Job Steps  
   
 > [!IMPORTANT]
-> The ActiveX scripting job step will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+> The ActiveX scripting job step will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
 When you create an ActiveX scripting job step, you must:  
   

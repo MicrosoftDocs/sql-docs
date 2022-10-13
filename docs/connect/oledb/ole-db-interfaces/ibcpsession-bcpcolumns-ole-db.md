@@ -1,19 +1,16 @@
 ---
-title: "IBCPSession::BCPColumns (OLE DB driver) | Microsoft Docs"
-description: Learn how the IBCPSession::BCPColumns method sets the number of fields to be bound to the columns in a SQL Server table in OLE DB Driver for SQL Server.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "IBCPSession::BCPColumns (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPColumns method"
+title: "IBCPSession::BCPColumns (OLE DB driver)"
+description: "Learn how the IBCPSession::BCPColumns method sets the number of fields to be bound to the columns in a SQL Server table in OLE DB Driver for SQL Server."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "BCPColumns method"
+apiname: "IBCPSession::BCPColumns (OLE DB)"
+apitype: "COM"
 ---
 # IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

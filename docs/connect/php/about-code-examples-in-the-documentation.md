@@ -1,16 +1,12 @@
 ---
 title: "About Code Examples in the Documentation"
 description: "There are several points to note when you execute the code examples in the Microsoft Drivers for PHP for SQL Server documentation."
-ms.custom: ""
-ms.date: "03/26/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # About Code Examples in the Documentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

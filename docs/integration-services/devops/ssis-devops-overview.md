@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # SQL Server Integration Services (SSIS) DevOps Tools Azure DevOps extension
 
-[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
+[SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace. SSIS DevOps supports **Azure DevOps Services**, **Azure DevOps Server 2019** and above.
 
 If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension).
 
@@ -172,7 +172,7 @@ SSIS Deploy task currently doesn't support the following scenarios:
   1. Connect to the on-premises SQL Server instance and select the database **Gallery_Configuration**.
   1. Run the query `INSERT INTO dbo.tbl_RegistryItems VALUES (1,'#\Configuration\Service\Gallery\LargeExtensionUpload\SSIS\','MaxPackageSizeMB\',50)`. Change `50` to a higher number if the extension is larger than 50 MBs.
   1. After you run the query, restart Internet Information Services. Try again to upload the extension.
-  1. If the error persists, please contact Azure DevOps support. 
+  1. If the error persists, please contact the SQL Server support team. 
 
 
 ## SSIS Deploy task version 1.* 

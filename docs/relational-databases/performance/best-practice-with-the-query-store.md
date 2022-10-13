@@ -52,7 +52,6 @@ To adjust these options as your workload grows, see [Keep Query Store adjusted t
 | SIZE_BASED_CLEANUP_MODE |Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit |AUTO |Enforced for all databases |
 | QUERY_CAPTURE_MODE |Specifies whether all queries or only a subset of queries are tracked |AUTO |Enforced for all databases |
 | DATA_FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
-| | | | |
 
 > [!IMPORTANT]
 > These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. After it's enabled, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] won't change configuration values that are set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
@@ -236,7 +235,7 @@ It takes some time until Query Store collects the data set that accurately repre
 
 The following graphic shows how to locate Query Store views:
 
-![Query Store views](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")
+![Query Store views](../../relational-databases/performance/media/monitoring-performance-by-using-the-query-store/objectexplorerquerystore_sql17.png "Query Store views")
 
 The following table explains when to use each of the Query Store views:
 

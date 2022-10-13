@@ -1,17 +1,15 @@
 ---
 title: SqlClient driver support lifecycle
 description: Product support lifecycle information for the Microsoft.Data.SqlClient .NET library.
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 08/12/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 dev_langs:
   - "csharp"
   - "vb"
-ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SqlClient driver support lifecycle
 
@@ -68,6 +66,7 @@ Current releases are supported for three months after a subsequent Current or LT
 
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
 |---|---|---|---|---|---|---|---|---|
+|5.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |4.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |4.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |3.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|

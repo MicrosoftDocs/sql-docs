@@ -1,16 +1,12 @@
 ---
+title: "SQLServerConnectionPoolDataSource Members"
 description: "SQLServerConnectionPoolDataSource Members"
-title: "SQLServerConnectionPoolDataSource Members | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # SQLServerConnectionPoolDataSource Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

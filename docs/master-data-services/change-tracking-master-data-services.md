@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server]"
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Change Tracking (Master Data Services)
 

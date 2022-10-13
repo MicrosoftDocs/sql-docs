@@ -1,19 +1,17 @@
 ---
 title: "What is a contained availability group?"
 description: "An overview of the contained availability group feature of Always On availability groups within SQL Server."
+author: kfarlee
+ms.author: kfarlee
+ms.reviewer: mathoma
 ms.date: "05/11/2020"
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords: 
+ms.custom: event-tier1-build-2022
+helpviewer_keywords:
   - "availability groups [SQL Server], contained availability groups"
   - "availability groups [SQL Server], configuring"
-ms.assetid: 
-author: kfarlee
-ms.author: kfarlee
-ms.reviewer: mathoma
 monikerRange: ">=sql-server-ver16"
 ---
 
@@ -94,7 +92,7 @@ This connection string would get you connected to the readable secondary which i
 - When connected to contained AG, users will only see databases in the contained AG, plus tempdb.
 - At instance level, contained AG master and msdb names will be [contained AG]_master, and [contained AG]_msdb. Inside contained AG, their names are master and msdb.
 - Database ID for contained AG master is 1 from inside contained AG, but something else when connected to the instance.
-- While users will not see databases outside of the contained AG in sys.databases when connected in a contained AG connection, they will be able to access those databases by four part name or through the _use_ command.
+- While users will not see databases outside of the contained AG in sys.databases when connected in a contained AG connection, they will be able to access those databases by three part name or through the _use_ command.
 - Server configuration through sp_configure can be read from contained AG connection but can only be written from instance level.
 - From contained AG connections, sysadmin is able to perform instance level operations, such as shutting down SQL Server.
 - Most DB level, end point level, or AG level operations can only be performed from instance connections, not contained AG connections.

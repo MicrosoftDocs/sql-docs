@@ -1,22 +1,19 @@
 ---
 title: Supporting local transactions (OLE DB driver)
 description: Learn how the OLE DB Driver for SQL Server supports local transactions and how to use ITransactionLocal for more precise control over local transaction scope.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB, transactions"
   - "autocommit mode"
   - "transactions [OLE DB]"
   - "ITransactionLocal interface"
   - "OLE DB Driver for SQL Server, transactions"
   - "local transactions [OLE DB]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Supporting Local Transactions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

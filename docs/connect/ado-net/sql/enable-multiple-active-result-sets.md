@@ -1,17 +1,15 @@
 ---
 title: "Enabling Multiple Active Result Sets"
 description: "Discusses how to use MARS with SQL Server."
-ms.date: "09/30/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/30/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Enabling Multiple Active Result Sets
 

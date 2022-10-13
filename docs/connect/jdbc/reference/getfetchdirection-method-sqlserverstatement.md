@@ -1,21 +1,15 @@
 ---
+title: "getFetchDirection Method (SQLServerStatement)"
 description: "getFetchDirection Method (SQLServerStatement)"
-title: "getFetchDirection Method (SQLServerStatement) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-apiname: 
-  - "SQLServerStatement.getFetchDirection"
-apilocation: 
-  - "sqljdbc.jar"
-apitype: "Assembly"
-ms.assetid: ceb4ae68-decc-46d3-83f1-0bbd23aaf58c
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+apilocation: "sqljdbc.jar"
+apiname: "SQLServerStatement.getFetchDirection"
+apitype: "Assembly"
 ---
 # getFetchDirection Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

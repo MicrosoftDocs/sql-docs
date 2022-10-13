@@ -1,19 +1,17 @@
 ---
 title: Implement a geo-distributed solution
 description: Learn to configure your database in Azure SQL Database and client application for failover to a replicated database, and test failover.
-services:
-  - "sql-database"
+author: AbdullahMSFT
+ms.author: amamun
+ms.reviewer: wiassaf, mathoma
+ms.date: 03/12/2019
 ms.service: sql-database
 ms.subservice: high-availability
+ms.topic: conceptual
 ms.custom:
   - "sqldbrb=1"
   - "devx-track-azurecli"
   - "devx-track-azurepowershell"
-ms.topic: conceptual
-author: rajeshsetlem
-ms.author: rsetlem
-ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
 ---
 # Tutorial: Implement a geo-distributed database (Azure SQL Database)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

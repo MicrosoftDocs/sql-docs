@@ -16,9 +16,6 @@ ms.author: chugu
 ---
 # Change Data Capture Designer for Oracle by Attunity
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   The CDC Designer Console is used to develop and maintain Oracle CDC Instances. The CDC Designer Console is a Microsoft Management Console snap-in that contains the following elements:  
   
 -   New Instance Wizard: This wizard creates a new Oracle CDC Instance. For information on using the New Instance Wizard, see [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
@@ -60,6 +57,4 @@ ms.author: chugu
   
 -   [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [SQL Server Connection Required Permissions for the CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
-  
-  
+-   [SQL Server Connection Required Permissions for the CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)

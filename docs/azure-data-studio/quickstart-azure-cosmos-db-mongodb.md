@@ -1,15 +1,13 @@
 ---
 title: "Quickstart: Connect and query Azure Cosmos DB API for MongoDB (preview)"
 description: Use Azure Data Studio to connect to Azure Cosmos DB for MongoDB API, and then query a collection.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: quickstart
-ms.custom:
-- event-tier1-build-2022
 author: seesharprun
 ms.author: sidandrews
 ms.reviewer: esarroyo
 ms.date: 05/10/2022
+ms.prod: azure-data-studio
+ms.topic: quickstart
+ms.custom: event-tier1-build-2022
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query Azure Cosmos DB API for MongoDB (Preview)

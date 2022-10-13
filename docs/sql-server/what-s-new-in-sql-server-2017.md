@@ -8,14 +8,13 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: conceptual
-ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">= sql-server-2017"
+monikerRange: ">= sql-server-2016"
 ---
 # What's new in SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux Documentation](/sql/linux/)
+SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux](../linux/sql-server-linux-overview.md).
 
 :::image type="icon" source="../includes/media/download.svg"::: **Try it out:** [Download SQL Server 2017 Release - October 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 

@@ -28,7 +28,7 @@ The following features are not supported in this release of SSIS on Linux:
   - Hadoop and HDFS support
   - Microsoft Connector for SAP BW
 
-For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes.md#ssis).
+For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md#ssis).
 
 ## <a name="components"></a> Supported and unsupported components
 
@@ -54,7 +54,6 @@ The following built-in Integration Services components are supported on Linux. S
 | Script task | Only supports standard .NET Framework APIs. |
 | Send Mail task | Only supports anonymous user mode. |
 | Transfer Database task | UNC paths are not supported. |
-| | |
 
 ## Supported and unsupported maintenance plan tasks
 
@@ -92,7 +91,6 @@ The following maintenance plan tasks are supported on Linux:
 | OData source | Only supports Basic authentication. |
 | ODBC source and destination | Supports 64-bit Unicode ODBC drivers on Linux. Depends on the UnixODBC driver manager on Linux. |
 | OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
-| | |
 
 ## Supported data flow transformations
 - Aggregate
@@ -125,7 +123,6 @@ The following maintenance plan tasks are supported on Linux:
 |------------|---|
 | OLE DB Command transformation | Same limitations as the OLE DB source and destination. |
 | Script component | Only supports standard .NET Framework APIs. |
-| | |
 
 ## Supported and unsupported log providers
 All the built-in SSIS log providers are supported on Linux except the Windows Event Log provider.

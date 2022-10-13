@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)

@@ -1,14 +1,12 @@
 ---
 title: Machine Learning extension
 description: The Machine Learning extension for Azure Data Studio enables you to manage packages, import machine learning models, make predictions, and create notebooks to run experiments for your SQL databases.
+author: rothja
+ms.author: jroth
+ms.date: 05/19/2020
 ms.prod: azure-data-studio
 ms.technology: machine-learning
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-ms.reviewer:
-ms.custom: 
-ms.date: 05/19/2020
 ---
 
 # Machine Learning extension for Azure Data Studio (Preview)
@@ -65,9 +63,9 @@ To change the settings for the Machine Learning extension, follow the steps belo
 
 1. Find the **Machine Learning** extension under **enabled** extensions.
 
-1. Select on the **Manage** icon.
+1. Select the **Manage** icon.
 
-1. Select on the **Extension Settings** icon.
+1. Select the **Extension Settings** icon.
 
 The extensions settings look like this:
 

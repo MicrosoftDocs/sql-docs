@@ -1,17 +1,15 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (macOS)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on macOS clients to enable database connectivity.
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords:
-  - "driver, installing"
 author: David-Engel
 ms.author: v-davidengel
-ms.custom:
-  - intro-installation
+ms.date: 09/20/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+ms.custom: intro-installation
+helpviewer_keywords:
+  - "driver, installing"
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (macOS)
@@ -32,7 +30,7 @@ To install Microsoft ODBC driver 18 for SQL Server on macOS, run the following c
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
+HOMEBREW_ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
 ```
 
 ## Previous versions
@@ -47,7 +45,7 @@ To install Microsoft ODBC driver 17 for SQL Server on macOS, run the following c
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
+HOMEBREW_ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 ```
 
 > [!IMPORTANT]

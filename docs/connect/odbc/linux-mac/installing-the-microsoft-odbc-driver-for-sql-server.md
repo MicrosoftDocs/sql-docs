@@ -1,18 +1,15 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity.
-ms.date: 08/08/2022
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
-helpviewer_keywords:
-  - "driver, installing"
-ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-davidengel
-ms.custom:
-  - intro-installation
+ms.date: 08/08/2022
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+ms.custom: intro-installation
+helpviewer_keywords:
+  - "driver, installing"
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (Linux)
@@ -561,7 +558,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ### Offline installation
 
-If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 to be installed on a computer with no internet connection, you'll need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 has the following direct dependencies:
+If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 to be installed on a computer with no internet connection, you'll need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 has the following direct dependencies:
 
 - Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
@@ -569,7 +566,7 @@ If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)]
 
 Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
-It's also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
+It's also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 package.
 
 #### Red Hat Linux Enterprise Server 7
 
@@ -601,7 +598,7 @@ zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install 
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
-After you've completed the package installation, you can verify that the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 can find all its dependencies by running ldd and inspecting its output for missing libraries:
+After you've completed the package installation, you can verify that the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ODBC Driver 13 can find all its dependencies by running ldd and inspecting its output for missing libraries:
 
 ```bash
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*

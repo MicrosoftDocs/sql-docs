@@ -26,11 +26,10 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|DSK_BAD_FCB_FILEID|
 |Message Text|Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.|
-||
 
 ## Explanation
 
-A query or operation may fail with an error 5180 when an invalid file ID is referenced by the [!INCLUDE[ssDENoVersion](../../includes/ssdenoversion_md.md)]. This is an example:
+A query or operation may fail with an error 5180 when an invalid file ID is referenced by the [!INCLUDE[ssDENoVersion](../../includes/ssdenoversion-md.md)]. This is an example:
 
 > Msg 5180, Level 22, State 1, Line 1  
 Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.

@@ -1,18 +1,15 @@
 ---
-title: "include file" 
-description: "include file" 
-services: virtual-machines-windows
+title: "include file"
+description: "include file"
 author: rothja
-manager: craigg
-tags: azure-service-management
-ms.service: virtual-machines-sql
-ms.devlang: na
-ms.topic: "include"
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 04/30/2018
 ms.author: jroth
-ms.custom: "include file"
+manager: craigg
+ms.date: 04/30/2018
+ms.service: virtual-machines-sql
+ms.topic: "include"
+ms.custom: include file
+ms.devlang: na
+tags: azure-service-management
 ---
 ## Prepare for AKV Integration
 To use Azure Key Vault Integration to configure your SQL Server VM, there are several prerequisites: 

@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # How to Create the SQL Server Change Database Instance
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   This procedure describes how to use the CDC Designer Console to create CDC instances.  
   
 ### To create CDC instances  

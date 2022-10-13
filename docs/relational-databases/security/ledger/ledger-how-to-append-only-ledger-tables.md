@@ -33,9 +33,6 @@ We'll create a `KeyCardEvents` table with the following schema.
 | AccessOperationDescription | nvarchar (MAX) | The access operation of the employee |
 | Timestamp | datetime2 | The date and time the employee accessed the building |
 
-> [!IMPORTANT]
-> Creating append-only ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
-
 1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[AccessControl].[KeyCardEvents]`.
 
    ```sql
@@ -93,6 +90,9 @@ We'll create a `KeyCardEvents` table with the following schema.
    You'll receive an error message that states the updates aren't allowed for your append-only ledger table.
 
    :::image type="content" source="media/ledger/append-only-how-to-1.png" alt-text="Screenshot that shows the append-only error message.":::
+
+## Permissions
+Creating append-only ledger tables requires the `ENABLE LEDGER` permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
 ## Next steps
 

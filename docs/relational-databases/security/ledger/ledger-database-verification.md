@@ -27,9 +27,6 @@ Because the ledger verification recomputes all of the hashes for transactions in
 
 You accomplish database verification through two stored procedures, depending on whether you [use automatic digest storage](#database-verification-that-uses-automatic-digest-storage) or you [manually manage digests](#database-verification-that-uses-manual-digest-storage).
 
-> [!IMPORTANT]
-> Database verification requires the *View Ledger Content* permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md).
-
 ### Database verification that uses automatic digest storage
 
 > [!NOTE]
@@ -88,6 +85,9 @@ Return codes for `sp_verify_database_ledger` and `sp_verify_database_ledger_from
 Ideally, you want to minimize or even eliminate the gap between the time the attack occurred and the time it was detected. Microsoft recommends scheduling the ledger verification] regularly to avoid a restore of the database from days or months ago after [tampering was detected](ledger-how-to-recover-after-tampering.md). The interval of the verification should be decided by the customer, but be aware that ledger verification can be resource consuming. We recommend running this during a maintenance window or off peak hours.
 
 Scheduling database verification can be done with Elastic Jobs or Azure Automation.
+
+### Permissions
+Database verification requires the `VIEW LEDGER CONTENT` permission. For details on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md).
 
 ## Next steps
 

@@ -109,7 +109,7 @@ In `sp_rename` (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresyn
 
 ## Permissions
 
-To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles
+To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles. To rename a ledger table, ALTER LEDGER permission is required.
 
 ## Examples
 

@@ -100,7 +100,7 @@ The vCore-based service tiers are differentiated based on database availability 
 
 Hyperscale separates the query processing engine from the components that provide long-term storage and durability for the data. This architecture provides the ability to smoothly scale storage capacity as far as needed (initial target is 100 TB), and the ability to scale compute resources rapidly.
 
-The following diagram illustrates the different types of nodes in a Hyperscale database:
+The following diagram illustrates the functional Hyperscale architecture:
 
 ![architecture](./media/service-tier-Hyperscale/Hyperscale-architecture.png)
 

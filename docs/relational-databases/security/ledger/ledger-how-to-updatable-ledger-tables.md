@@ -32,9 +32,6 @@ We'll create an account balance table with the following schema.
 | FirstName   | varchar (50)   | Customer first name                 |
 | Balance     | decimal (10,2) | Account balance                     |
 
-> [!IMPORTANT]
-> Creating updatable ledger tables requires the **ENABLE LEDGER** permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
-
 1. Use [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) to create a new schema and table called `[Account].[Balance]`.
 
    ```sql
@@ -141,6 +138,9 @@ We'll create an account balance table with the following schema.
     The ledger view shows that updating the ledger table is a `DELETE` of the original row with `50`. The balance with a corresponding `INSERT` of a new row with `100` shows the new balance for `Nick`.
 
    :::image type="content" source="media/ledger/sql-updatable-how-to-3.png" alt-text="Screenshot that shows ledger table example 3.":::
+
+## Permissions
+Creating updatable ledger tables requires the `ENABLE LEDGER` permission. For more information on permissions related to ledger tables, see [Permissions](../permissions-database-engine.md). 
 
 ## Next steps
 

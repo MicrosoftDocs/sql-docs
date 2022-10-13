@@ -230,7 +230,7 @@ ms.author: mathoma
      If you decide to use more than one IP address configured for the same subnet, you may experience client connection failures during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] startup.  
   
 #### Related Content  
- For more information about [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] multi-site failover, see [Windows Server 2008 R2 Failover Clustering Site](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) and [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197430(v=ws.10)).  
+ For more information about [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] multi-site failover, see [Windows Server 2008 R2 Failover Clustering Site](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff182338(v=ws.10)) and [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197430(v=ws.10)).  
   
 ##  <a name="WSFC"></a> Configure Windows Server Failover Cluster  
   

@@ -736,6 +736,38 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux
 
+### <a id="modprobe"></a> Firewall rule creation error in `modprobe` when running `mssql-launchpadd` on Linux
+
+When viewing the logs of `mssql-launchpadd` using `sudo journalctl -a -u mssql-launchpadd`, you might see a firewall rule creation error similar to the following output.
+
+```output
+-- Logs begin at Sun 2021-03-28 12:03:30 PDT, end at Wed 2022-10-12 13:20:17 PDT. --
+Mar 22 16:57:51 sqlVm systemd[1]: Started Microsoft SQL Server Extensibility Launchpad Daemon.
+Mar 22 16:57:51 sqlVm launchpadd[195658]: 2022/03/22 16:57:51 [launchpadd] INFO: Extensibility Log Header: <timestamp> <process> <sandboxId> <sessionId> <message>
+Mar 22 16:57:51 sqlVm launchpadd[195658]: 2022/03/22 16:57:51 [launchpadd] INFO: No extensibility section in /var/opt/mssql/mssql.conf file. Using default settings.
+Mar 22 16:57:51 sqlVm launchpadd[195658]: 2022/03/22 16:57:51 [launchpadd] INFO: DataDirectories =  /bin:/etc:/lib:/lib32:/lib64:/sbin:/usr/bin:/usr/include:/usr/lib:/usr/lib32:/usr/lib64:/usr/libexec/gcc:/usr/sbin:/usr/share:/var/lib:/opt/microsoft:/opt/mssql-extensibility:/opt/mssql/mlservices:/opt/mssql/lib/zulu-jre-11:/opt/mssql-tools
+Mar 22 16:57:51 sqlVm launchpadd[195658]: 2022/03/22 16:57:51 [launchpadd] INFO: [RG] SQL Extensibility Cgroup initialization is done.
+Mar 22 16:57:51 sqlVm launchpadd[195658]: 2022/03/22 16:57:51 [launchpadd] INFO: Found 1 IP address(es) from the bridge.
+Mar 22 16:57:51 sqlVm launchpadd[195676]: modprobe: ERROR: could not insert 'ip6_tables': Operation not permitted
+Mar 22 16:57:51 sqlVm launchpadd[195673]: ip6tables v1.8.4 (legacy): can't initialize ip6tables table `filter': Table does not exist (do you need to insmod?)
+Mar 22 16:57:51 sqlVm launchpadd[195673]: Perhaps ip6tables or your kernel needs to be upgraded.
+Mar 22 16:57:51 sqlVm launchpadd[195678]: modprobe: ERROR: could not insert 'ip6_tables': Operation not permitted
+Mar 22 16:57:51 sqlVm launchpadd[195677]: ip6tables v1.8.4 (legacy): can't initialize ip6tables table `filter': Table does not exist (do you need to insmod?)
+Mar 22 16:57:51 sqlVm launchpadd[195677]: Perhaps ip6tables or your kernel needs to be upgraded.
+Mar 22 16:57:51 sqlVm launchpadd[195670]: 2022/03/22 16:57:51 [setnetbr] ERROR: Failed to set firewall rules: exit status 3
+```
+
+#### Workaround
+
+Run the following commands to configure `modprobe`, and restart the SQL Server Launchpad service:
+
+```bash
+sudo modprobe ip6_tables
+sudo systemctl restart mssql-launchpadd
+```
+
+**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later on Linux
+
 ### <a id="tensorflow"></a> Can't install `tensorflow` package using `sqlmlutils`
 
 The [sqlmlutils package](../package-management/install-additional-python-packages-on-sql-server.md) is used to install Python packages in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. You need to download, install, and update the [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/). However, the `tensorflow` package can't be installed using sqlmlutils. The `tensorflow` package depends on a newer version of `numpy` than the version installed in SQL Server. However, `numpy` is a preinstalled system package that `sqlmlutils` can't update when trying to install `tensorflow`.

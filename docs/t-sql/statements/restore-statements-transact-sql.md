@@ -3,9 +3,8 @@ title: "RESTORE (Transact-SQL)"
 description: RESTORE Statements restore SQL database backups taken using the BACKUP command.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 08/17/2022
+ms.date: 10/12/2022
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
@@ -84,7 +83,7 @@ This command enables you to perform the following restore scenarios:
 
 ## Syntax
 
-- For more information about descriptions of the arguments, see [RESTORE Arguments](../../t-sql/statements/restore-statements-arguments-transact-sql.md). 
+- For more information about descriptions of the arguments, see [RESTORE Arguments](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
 
 ```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
@@ -114,7 +113,7 @@ RESTORE DATABASE { database_name | @database_name_var }
       [  , <general_WITH_options> [ ,...n ]
        | , \<point_in_time_WITH_options-RESTORE_DATABASE>
       ] [ ,...n ]
-[;]  
+[;]
   
 --To Restore Specific Files or Filegroups:
 RESTORE DATABASE { database_name | @database_name_var }
@@ -125,7 +124,7 @@ RESTORE DATABASE { database_name | @database_name_var }
       [ RECOVERY | NORECOVERY ]
       [ , <general_WITH_options> [ ,...n ] ]
    } [ ,...n ]
-[;]  
+[;]
   
 --To Restore Specific Pages:
 RESTORE DATABASE { database_name | @database_name_var }
@@ -282,12 +281,12 @@ For descriptions of the arguments, see [RESTORE Arguments](../../t-sql/statement
 
 - Online Restore
 
-  > [!NOTE]
+  > [!NOTE]  
   > Online restore is allowed only in Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Where online restore is supported, if the database is online, file restores and page restores are automatically online restores and, also, restores of secondary filegroup after the initial stage of a piecemeal restore.
 
-  > [!NOTE]
+  > [!NOTE]  
   > Online restores can involve [deferred transactions](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).
 
 For more information, see [Online Restore](../../relational-databases/backup-restore/online-restore-sql-server.md).
@@ -308,13 +307,14 @@ The following keywords were discontinued in [!INCLUDE[ssKatmai](../../includes/s
 
 RESTORE LOG can include a file list to allow for creation of files during rollforward. This is used when the log backup contains log records written when a file was added to the database.
 
-> [!NOTE]
+> [!NOTE]  
 > For a database using the full or bulk-logged recovery model, in most cases you must back up the tail of the log before restoring the database. Restoring a database without first backing up the tail of the log results in an error, unless the RESTORE DATABASE statement contains either the WITH REPLACE or the WITH STOPAT clause, which must specify a time or transaction that occurred after the end of the data backup. For more information about tail-log backups, see [Tail-Log Backups](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
 ### Comparison of RECOVERY and NORECOVERY
+
 Rollback is controlled by the RESTORE statement through the [ RECOVERY | NORECOVERY ] options:
 
-- NORECOVERY specifies that rollback doesn't occur. This allows rollforward to continue with the next statement in the sequence. 
+- NORECOVERY specifies that rollback doesn't occur. This allows rollforward to continue with the next statement in the sequence.
 
   In this case, the restore sequence can restore other backups and roll them forward.
 
@@ -326,7 +326,7 @@ Rollback is controlled by the RESTORE statement through the [ RECOVERY | NORECOV
 
 Backups of `master`, `model` and `msdb` that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
-> [!NOTE]
+> [!NOTE]  
 > No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup can be restored to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than the version on which the backup was created.
 
 Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a different default path than earlier versions. Therefore, to restore a database that was created in the default location for earlier version backups, you must use the MOVE option. For information about the new default path, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
@@ -336,6 +336,7 @@ After you restore an earlier version database to [!INCLUDE[ssnoversion](../../in
 When a database is first attached or restored to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key (encrypted by the service master key) is not yet stored in the server. You must use the **OPEN MASTER KEY** statement to decrypt the database master key (DMK). Once the DMK has been decrypted, you have the option of enabling automatic decryption in the future by using the **ALTER MASTER KEY REGENERATE** statement to provision the server with a copy of the DMK, encrypted with the service master key (SMK). When a database has been upgraded from an earlier version, the DMK should be regenerated to use the newer AES algorithm. For more information about regenerating the DMK, see [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). The time required to regenerate the DMK key to upgrade to AES depends upon the number of objects protected by the DMK. Regenerating the DMK key to upgrade to AES is only necessary once, and has no impact on future regenerations as part of a key rotation strategy.
 
 ## Remarks
+
 During an offline restore, if the specified database is in use, RESTORE forces the users off after a short delay. For online restore of a non-primary filegroup, the database can stay in use except when the filegroup being restored is being taken offline. Any data in the specified database is replaced by the restored data.
 
 Cross-platform restore operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.
@@ -346,13 +347,13 @@ RESTORE is not allowed in an explicit or implicit transaction.
 
 Restoring a damaged `master` database is performed using a special procedure. For more information, see [Back Up and Restore of System Databases](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
-Restoring a database clears the plan cache for the database being restored. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. 
+Restoring a database clears the plan cache for the database being restored. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance.
 
 To restore an availability database, first restore the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then add the database to the availability group.
 
 ### Integrated acceleration and offloading for backup compression and decompression
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. For more information, see [Backup COMPRESSION](backup-transact-sql.md#compression). 
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. For more information, see [Backup COMPRESSION](backup-transact-sql.md#compression).
 
 For more information, see [Restore operations](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md#restore-operations)
 
@@ -386,10 +387,10 @@ Full-text data is restored together with other database data during a complete r
 
 The RESTORE statement also can be used to perform restores to alternate locations, differential restores, file and filegroup restores, and differential file and filegroup restores of full-text data. In addition, RESTORE can restore full-text files only, as well as with database data.
 
-> [!NOTE]
+> [!NOTE]  
 > Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).
 
-### Restore to SQL Server 2022
+### Restore to SQL Server 2022 and the AUTO_DROP feature
 
 When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, it is recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics AUTO_DROP feature. For more information, see [AUTO_DROP option](../../relational-databases/statistics/statistics.md#auto_drop-option).
 
@@ -401,7 +402,8 @@ When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes backup and restore history tables that track the backup and restore activity for each server instance. When a restore is performed, the backup history tables are also modified. For information on these tables, see [Backup History and Header Information](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).
 
-## <a name="REPLACEoption"></a> REPLACE option impact
+## <a id="REPLACEoption"></a> REPLACE option impact
+
 REPLACE should be used rarely and only after careful consideration. Restore normally prevents accidentally overwriting a database with a different database. If the database specified in a RESTORE statement already exists on the current server and the specified database family GUID differs from the database family GUID recorded in the backup set, the database is not restored. This is an important safeguard.
 
 The REPLACE option overrides several important safety checks that restore normally performs. The overridden checks are as follows:
@@ -409,7 +411,7 @@ The REPLACE option overrides several important safety checks that restore normal
 - Restoring over an existing database with a backup taken of another database.
 
   With the REPLACE option, restore allows you to overwrite an existing database with whatever database is in the backup set, even if the specified database name differs from the database name recorded in the backup set. This can result in accidentally overwriting a database by a different database.
-  
+
 - Restoring over a database using the full or bulk-logged recovery model where a tail-log backup has not been taken and the `STOPAT` option is not used.
 
   With the REPLACE option, you can lose committed work, because the log written most recently has not been backed up.
@@ -418,12 +420,14 @@ The REPLACE option overrides several important safety checks that restore normal
 
   For example, a mistake could allow overwriting files of the wrong type, such as .xls files, or that are being used by another database that is not online. Arbitrary data loss is possible if existing files are overwritten, although the restored database is complete.
 
-## Redoing a restore
+## Redo a restore
+
 Undoing the effects of a restore is not possible; however, you can negate the effects of the data copy and rollforward by starting over on a per-file basis. To start over, restore the desired file and perform the rollforward again. For example, if you accidentally restored too many log backups and overshot your intended stopping point, you would have to restart the sequence.
 
 A restore sequence can be aborted and restarted by restoring the entire contents of the affected files.
 
-## Reverting a database to a database snapshot
+## Revert a database to a database snapshot
+
 A *revert database operation* (specified using the DATABASE_SNAPSHOT option) takes a full source database back in time by reverting it to the time of a database snapshot, that is, overwriting the source database with data from the point in time maintained in the specified database snapshot. Only the snapshot to which you are reverting can currently exist. The revert operation then rebuilds the log (therefore, you cannot later rollforward a reverted database to the point of user error).
 
 Data loss is confined to updates to the database since the snapshot's creation. The metadata of a reverted database is the same as the metadata at the time of snapshot creation. However, reverting to a snapshot drops all the full-text catalogs.
@@ -431,6 +435,7 @@ Data loss is confined to updates to the database since the snapshot's creation. 
 Reverting from a database snapshot is not intended for media recovery. Unlike a regular backup set, the database snapshot is an incomplete copy of the database files. If either the database or the database snapshot is corrupted, reverting from a snapshot is likely to be impossible. Furthermore, even when possible, reverting in the event of corruption is unlikely to correct the problem.
 
 ### Restrictions on reverting
+
 Reverting is unsupported under the following conditions:
 
 - The source database contains any read-only or compressed filegroups.
@@ -440,22 +445,23 @@ Reverting is unsupported under the following conditions:
 For more information, see [Revert a Database to a Database Snapshot](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).
 
 ## Security
+
 A backup operation may optionally specify passwords for a media set, a backup set, or both. When a password has been defined on a media set or backup set, you must specify the correct password or passwords in the RESTORE statement. These passwords prevent unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools. However, password-protected media can be overwritten by the BACKUP statement's FORMAT option.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > The protection provided by this password is weak. It is intended to prevent an incorrect restore using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools by authorized or unauthorized users. It does not prevent the reading of the backup data by other means or the replacement of the password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] The best practice for protecting backups is to store backup tapes in a secure location or back up to disk files that are protected by adequate access control lists (ACLs). The ACLs should be set on the directory root under which backups are created.
 
 - For information specific to SQL Server backup and restore with the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
 - Backup and restore to S3-compatible object storage was introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]. [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md). For more information, see [SQL Server backup to URL for S3-compatible object storage](../../relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
 
-
 ### Permissions
+
 If the database being restored does not exist, the user must have `CREATE DATABASE` permissions to be able to execute RESTORE. If the database exists, RESTORE permissions default to members of the `sysadmin` and `dbcreator` fixed server roles and the owner (`dbo`) of the database (for the `FROM DATABASE_SNAPSHOT` option, the database always exists).
 
 RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the `db_owner` fixed database role do not have RESTORE permissions.
 
-## <a name="examples"></a> Examples
+## <a id="examples"></a> Examples
 
 All the examples assume that a full database backup has been performed.
 
@@ -473,10 +479,10 @@ The RESTORE examples include the following:
 - J. [Reverting from a database snapshot](#reverting_from_db_snapshot)
 - K. [Restoring from the Microsoft Azure Blob Storage](#Azure_Blob)
 
-> [!NOTE]
+> [!NOTE]  
 > For additional examples, see the restore how-to topics that are listed in [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
-### <a name="restoring_full_db"></a> A. Restoring a full database
+### <a id="restoring_full_db"></a> A. Restore a full database
 
 The following example restores a full database backup from the `AdventureWorksBackups` logical backup device. For an example of creating this device, see [Backup Devices](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
@@ -485,12 +491,12 @@ RESTORE DATABASE AdventureWorks2012
   FROM AdventureWorks2012Backups;
 ```
 
-> [!NOTE]
+> [!NOTE]  
 > For a database using the full or bulk-logged recovery model, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires in most cases that you back up the tail of the log before restoring the database. For more information, see [Tail-Log Backups](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> B. Restoring full and differential database backups
+### <a id="restoring_full_n_differential_db_backups"></a> B. Restore full and differential database backups
 
 The following example restores a full database backup followed by a differential backup from the `Z:\SQLServerBackups\AdventureWorks2012.bak` backup device, which contains both backups. The full database backup to be restored is the sixth backup set on the device (`FILE = 6`), and the differential database backup is the ninth backup set on the device (`FILE = 9`). As soon as the differential backup is recovered, the database is recovered.
 
@@ -507,7 +513,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> C. Restoring a database using RESTART syntax
+### <a id="restoring_db_using_RESTART"></a> C. Restore a database using RESTART syntax
 
 The following example uses the `RESTART` option to restart a `RESTORE` operation interrupted by a server power failure.
 
@@ -522,7 +528,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="restoring_db_n_move_files"></a> D. Restoring a database and move files
+### <a id="restoring_db_n_move_files"></a> D. Restore a database and move files
 
 The following example restores a full database and transaction log and moves the restored database into the `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` directory.
 
@@ -541,7 +547,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="copying_db_using_bnr"></a> E. Copying a database using BACKUP and RESTORE
+### <a id="copying_db_using_bnr"></a> E. Copy a database using BACKUP and RESTORE
 
 The following example uses both the `BACKUP` and `RESTORE` statements to make a copy of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The `MOVE` statement causes the data and log file to be restored to the specified locations. The `RESTORE FILELISTONLY` statement is used to determine the number and names of the files in the database being restored. The new copy of the database is named `TestDB`. For more information, see [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
 
@@ -561,7 +567,7 @@ GO
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> F. Restoring to a point-in-time using STOPAT
+### <a id="restoring_to_pit_using_STOPAT"></a> F. Restore to a point-in-time using STOPAT
 
 The following example restores a database to its state as of `12:00 AM` on `April 15, 2020` and shows a restore operation that involves multiple log backups. On the backup device, `AdventureWorksBackups`, the full database backup to be restored is the third backup set on the device (`FILE = 3`), the first log backup is the fourth backup set (`FILE = 4`), and the second log backup is the fifth backup set (`FILE = 5`).
 
@@ -578,12 +584,11 @@ RESTORE LOG AdventureWorks2012
     FROM AdventureWorksBackups
     WITH FILE=5, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
 RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
-
 ```
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. Restoring the transaction log to a mark
+### <a id="restoring_transaction_log_to_mark"></a> G. Restore the transaction log to a mark
 
 The following example restores the transaction log to the mark in the marked transaction named `ListPriceUpdate`.
 
@@ -622,7 +627,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. Restoring using TAPE syntax
+### <a id="restoring_using_TAPE"></a> H. Restore using TAPE syntax
 
 The following example restores a full database backup from a `TAPE` backup device.
 
@@ -633,13 +638,13 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. Restoring using FILE and FILEGROUP syntax
+### <a id="restoring_using_FILE_n_FG"></a> I. Restore using FILE and FILEGROUP syntax
 
 The following example restores a database named `MyDatabase` that has two files, one secondary filegroup, and one transaction log. The database uses the full recovery model.
 
 The database backup is the ninth backup set in the media set on a logical backup device named `MyDatabaseBackups`. Next, three log backups, which are in the next three backup sets (`10`, `11`, and `12`) on the `MyDatabaseBackups` device, are restored by using `WITH NORECOVERY`. After restoring the last log backup, the database is recovered.
 
-> [!NOTE]
+> [!NOTE]  
 > Recovery is performed as a separate step to reduce the possibility of you recovering too early, before all of the log backups have been restored. For more information about the recovery process, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 In the `RESTORE DATABASE`, notice that there are two types of `FILE` options. The `FILE` options preceding the backup device name specify the logical file names of the database files that are to be restored from the backup set; for example, `FILE = 'MyDatabase_data_1'`. This backup set is not the first database backup in the media set; therefore, its position in the media set is indicated by using the `FILE` option in the `WITH` clause, `FILE=9`.
@@ -653,7 +658,7 @@ RESTORE DATABASE MyDatabase
     WITH
       FILE = 9,
       NORECOVERY;
-GO  
+GO
 -- Restore the log backups
 RESTORE LOG MyDatabase
     FROM MyDatabaseBackups
@@ -677,11 +682,11 @@ GO
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. Revert from a database snapshot
+### <a id="reverting_from_db_snapshot"></a> J. Revert from a database snapshot
 
 The following example reverts a database to a database snapshot. The example assumes that only one snapshot currently exists on the database. For an example of how to create this database snapshot, see [Create a Database Snapshot](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).
 
-> [!NOTE]
+> [!NOTE]  
 > Reverting to a snapshot drops all the full-text catalogs.
 
 ```sql
@@ -694,11 +699,11 @@ For more information, see [Revert a Database to a Database Snapshot](../../relat
 
 [&#91;Top of examples&#93;](#examples)
 
-### <a name="Azure_Blob"></a> K. Restore from the Microsoft Azure Blob Storage
+### <a id="Azure_Blob"></a> K. Restore from the Microsoft Azure Blob storage
 
 The three examples below involve the use of the Microsoft Azure storage service. The storage Account name is `mystorageaccount`. The container for data files is called `myfirstcontainer`. The container for backup files is called `mysecondcontainer`. A stored access policy has been created with read, write, delete, and list, rights for each container. SQL Server credentials were created using Shared Access Signatures that are associated with the Stored Access Policies. For information specific to SQL Server backup and restore with the Microsoft Azure Blob Storage, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
-**K1. Restore a full database backup from the Microsoft Azure storage service**    
+**K1. Restore a full database backup from the Microsoft Azure storage service**  
 A full database backup, located at `mysecondcontainer`, of `Sales` will be restored to `myfirstcontainer`. `Sales` does not currently exist on the server.
 
 ```sql
@@ -734,19 +739,19 @@ RESTORE DATABASE Sales
 
 ## Next steps
 
- - [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
- - [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
- - [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
- - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
- - [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
- - [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
- - [BACKUP](../../t-sql/statements/backup-transact-sql.md)      
- - [Media Sets, Media Families, and Backup Sets](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
- - [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
- - [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
- - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
- - [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
- - [Backup History and Header Information](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
+- [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)
+- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+- [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
+- [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
+- [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
+- [BACKUP](../../t-sql/statements/backup-transact-sql.md)
+- [Media Sets, Media Families, and Backup Sets](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
+- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
+- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
+- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
+- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
+- [Backup History and Header Information](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
@@ -776,7 +781,7 @@ For other supported RESTORE commands, see:
 - [RESTORE LABELONLY ONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > To restore from SQL Managed Instance automatic backups, see [SQL Database Restore](/azure/sql-database/sql-database-recovery-using-backups).
 
 ## Syntax
@@ -786,7 +791,6 @@ For other supported RESTORE commands, see:
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
 [;]
-
 ```
 
 ## Arguments
@@ -799,13 +803,13 @@ Specifies the target database.
 
 Specifies one or more backup devices placed on URLs that will be used for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
 *n*
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.
 
-## General Remarks
+## Remarks
 
 As a prerequisite, you need to create a credential with the name that matches the blob storage account url, and Shared Access Signature placed as secret. RESTORE command will look up credentials using the blob storage url to find the information required to read the backup device.
 
@@ -833,9 +837,11 @@ These limitations apply:
 For more information, see [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)
 
 ## Restore an encrypted database
+
 To restore a database that is encrypted, you must have access to the certificate or asymmetric key that was used to encrypt the database. Without the certificate or asymmetric key, the database cannot be restored. As a result, the certificate that is used to encrypt the database encryption key must be retained as long as the backup is needed. For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 
 ## Permissions
+
 The user must have `CREATE DATABASE` permissions to be able to execute RESTORE.
 
 ```sql
@@ -845,14 +851,13 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged, which is not always the case when RESTORE is executed, members of the `db_owner` fixed database role do not have RESTORE permissions.
 
-## <a name="examples"></a> Examples
+## <a id="examples"></a> Examples
 
 The following examples restore a copy only database backup from URL, including the creation of a credential.
 
-### <a name="restore-mi-database"></a> A. Restore database from four backup devices
+### <a id="restore-mi-database"></a> A. Restore database from four backup devices
 
 ```sql
-
 -- Create credential
 CREATE CREDENTIAL [https://mybackups.blob.core.windows.net/wide-world-importers]
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
@@ -866,14 +871,9 @@ URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/02-WideWorl
 URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
 ```
 
-The following error is shown if the database already exists:
+The following error is shown if the database already exists: `Msg 1801, Level 16, State 1, Line 9 Database 'WideWorldImportersStandard' already exists. Choose a different database name.`
 
-```
-Msg 1801, Level 16, State 1, Line 9
-Database 'WideWorldImportersStandard' already exists. Choose a different database name.
-```
-
-### <a name="restore-mi-database-variables"></a> B. Restore database specified via variable
+### <a id="restore-mi-database-variables"></a> B. Restore database specified via variable
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -883,7 +883,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> C. Track progress of restore statement
+### <a id="restore-mi-database-progress"></a> C. Track progress of restore statement
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,
@@ -893,7 +893,7 @@ FROM sys.dm_exec_requests r
 WHERE r.command = 'RESTORE DATABASE'
 ```
 
-> [!Note]
+> [!NOTE]  
 > This view will probably show two restore requests. One is original RESTORE statement sent by the client, and the another one is background RESTORE statement that is executing even if the client connection fails.
 
 ::: moniker-end
@@ -917,13 +917,12 @@ WHERE r.command = 'RESTORE DATABASE'
 
 Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.
 
-> [!NOTE]
+> [!NOTE]  
 > Restoring the `master` system database includes restoring appliance login information. To restore the `master` database, use the [Restore the master Database](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation. For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 ## Syntax
 
 ```syntaxsql
-
 -- Restore the master database
 -- Use the Configuration Manager tool.
 
@@ -947,11 +946,13 @@ RESTORE HEADERONLY
 ## Arguments
 
 #### RESTORE DATABASE *database_name*
+
 Specifies to restore a user database to a database called *database_name*. The restored database can have a different name than the source database that was backed up. *database_name* cannot already exist as a database on the destination appliance. For more information on permitted database names, see "Object Naming Rules" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Restoring a user database restores a full database backup and then optionally restores a differential backup to the appliance. A restore of a user database includes restoring database users, and database roles.
 
 #### FROM DISK = '\\\\*UNC_path*\\*backup_directory*'
+
 The network path and directory from which [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] will restore the backup files. For example, FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
 
 *backup_directory*
@@ -969,11 +970,13 @@ Specifies the name of the directory that contains the differential backup.
 - The server or host must be specified as an IP address.
 
 #### RESTORE HEADERONLY
+
 Specifies to return only the header information for one user database backup. Among other fields, the header includes the text description of the backup, and the backup name. The backup name does not need to be the same as the name of the directory that stores the backup files.
 
 RESTORE HEADERONLY results are patterned after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY results. The result has over 50 columns, which are not all used by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. For a description of the columns in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY results, see [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).
 
 ## Permissions
+
 Requires the `CREATE ANY DATABASE` permission.
 
 Requires a Windows account that has permission to access and read from the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
@@ -1021,6 +1024,7 @@ For these limitations and restrictions, the source appliance is the appliance fr
 - You cannot restore a backup that was created on an appliance that has SQL Server 2012 PDW hardware to an appliance that has SQL Server 2008 R2 hardware. This holds true even if the appliance was originally purchased with the SQL Server 2008 R2 PDW hardware and is now running SQL Server 2012 PDW software.
 
 ## Locking
+
 Takes an exclusive lock on the DATABASE object.
 
 ## Examples
@@ -1045,7 +1049,6 @@ RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]
-
 ```
 
 ### C. Restore the backup header
@@ -1061,7 +1064,7 @@ RESTORE HEADERONLY
 You can use the header information to check the contents of a backup, or to make sure the target restoration appliance is compatible with the source backup appliance before attempting to restore the backup.
 
 ## Next steps
- 
- - [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
+
+- [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 
 ::: moniker-end

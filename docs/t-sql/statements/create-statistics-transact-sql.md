@@ -223,7 +223,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 
 #### AUTO_DROP = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
 
 Prior to [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 
@@ -360,10 +360,17 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
 
 ### I. Use CREATE STATISTICS with AUTO_DROP
 
-To use Auto Drop statistics, just add the following to the "WITH" clause of statistics create or update.
+To use [auto drop statistics](#auto_drop---on--off-), just add the following to the "WITH" clause of statistics create or update.
 
 ```sql
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH AUTO_DROP = ON
+```
+
+To evaluate the auto drop setting on existing statistics, use the `auto_drop` column in [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md):
+
+```sql
+SELECT object_id, [name], auto_drop
+FROM sys.stats;
 ```
 
 ## Next steps

@@ -390,9 +390,9 @@ The RESTORE statement also can be used to perform restores to alternate location
 > [!NOTE]  
 > Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).
 
-### Restore to SQL Server 2022 and the AUTO_DROP feature
+### Restore to SQL Server 2022 and the auto drop feature
 
-When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, it is recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics AUTO_DROP feature. For more information, see [AUTO_DROP option](../../relational-databases/statistics/statistics.md#auto_drop-option).
+When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, it is recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics auto drop feature. For more information, see [statistics auto drop option](../../relational-databases/statistics/statistics.md#auto_drop-option).
 
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
 

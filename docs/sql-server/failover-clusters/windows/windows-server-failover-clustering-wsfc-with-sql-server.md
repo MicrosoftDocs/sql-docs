@@ -176,19 +176,17 @@ If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE
 
 ## <a id="RelatedTasks"></a> Related Tasks
 
-- [View Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings)
+- [View Cluster Quorum NodeWeight Settings](view-cluster-quorum-nodeweight-settings.md)
 
-- [Configure Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings)
-
-- [Force a WSFC Cluster to Start Without a Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum)
+- [Force a WSFC Cluster to Start Without a Quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)
 
 ## <a id="RelatedContent"></a> Related Content
 
-- [Windows Server Technologies: Failover Clusters](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server)
+- [Windows Server Failover Clustering with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)
 
 - [Storage Spaces Direct \(S2D\) Overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
-- [View Events and Logs for a Failover Cluster](/sql/sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log)
+- [View and Read Failover Cluster Instance Diagnostics Log](view-and-read-failover-cluster-instance-diagnostics-log.md)
 
 - [Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))
 

@@ -6087,6 +6087,8 @@ items:
         href: relational-databases/accelerated-database-recovery-management.md
       - name: Troubleshooting
         href: relational-databases/accelerated-database-recovery-troubleshoot.md        
+    - name: Manage the Query Store
+      href: relational-databases/performance/manage-the-query-store.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -6573,8 +6575,6 @@ items:
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Optimized plan forcing
         href: relational-databases/performance/optimized-plan-forcing-query-store.md
-      - name: In-Memory OLTP
-        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:

@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, sashan, moslake, mathoma
-ms.date: 09/26/2022
+ms.date: 10/12/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -85,7 +85,7 @@ Certain hardware configurations such as Gen5 may use more than one type of proce
 
 For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance if a database or pool moves to a different CPU type.
 
-Regardless of CPU type used, resource limits for a database or elastic pool remain the same as long as the database stays on the same service objective.
+Regardless of CPU type used, resource limits for a database or elastic pool, such as the number of cores, memory, max data IOPS, max log rate, and max concurrent workers, remain the same as long as the database stays on the same service objective.
 
 ### Gen5
 

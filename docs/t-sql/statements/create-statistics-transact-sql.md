@@ -3,7 +3,7 @@ title: CREATE STATISTICS (Transact-SQL)
 description: CREATE STATISTICS (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.reviewer: "katsmith"
+ms.reviewer: katsmith, wiassaf
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.technology: t-sql
@@ -225,12 +225,14 @@ Uses the actual number of processors or fewer based on the current system worklo
 
 **Applies to**: [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)] and later.
 
-Currently, if statistics are created by a third party tool on a customer database, those statistics objects can block or interfere with schema changes the customer may desire.
+Prior to [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 
-Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), this feature allows the creation of statistics objects in a mode such that a schema change will *not* be blocked by the statistics, but instead the statistics will be dropped. In this way, auto drop statistics behave like auto created statistics.
+Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], the AUTO_DROP option is enabled by default on all new and migrated databases. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will *not* be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually-created statistics with AUTO_DROP enabled behave like auto-created statistics.
 
-> [!Note]
-> Trying to set or unset the *Auto_Drop* property on auto created statistics may raise errors - auto created statistics always uses auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto created statistics always behave like auto drop statistics.
+> [!NOTE]
+> Trying to set or unset the *Auto_Drop* property on auto-created statistics may raise errors. Auto-created statistics always uses auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto-created statistics always behave like auto drop statistics. When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, it is recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics AUTO_DROP feature.
+
+For more information, see [AUTO_DROP option](../../relational-databases/statistics/statistics.md#auto_drop-option).
 
 ## Permissions
 

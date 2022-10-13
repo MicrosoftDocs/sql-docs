@@ -306,7 +306,7 @@ Auto-failover groups can also be managed programmatically using Azure PowerShell
 
 ## Next steps
 
-- For detailed tutorials, review [Add a SQL Managed Instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md)
+- For instructions to configure a failover group, review the [how to guide](auto-failover-group-configure-sql-mi.md) or the detailed [tutorial](failover-group-add-instance-tutorial.md). 
 - For a sample script, review: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md)
 - To learn how to save on licensing costs, see [Configure DR-only replica](auto-failover-group-dr-only-replica-how-to-configure.md). 
 - For a business continuity overview and scenarios, review [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)

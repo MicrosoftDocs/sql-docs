@@ -47,13 +47,15 @@ The following table describes the functional capabilities of a DR-only secondary
 |Backup / restore| There is no difference in backup and restore behavior between a DR-only replica and a readable secondary managed instance.         |
 |Monitoring     | All monitoring operations that are supported by a readable secondary replica are supported by the DR-only replica.         |
 |RPO & RTO| The DR-only replica provides the same RPO and RTO as a readable secondary replica.          |
-|Removing failover group  | If the failover group is removed (using something like [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup?view=azps-8.2.0)), the DR-only replica becomes a read-write standalone instance and will now be charged the license price.      |
+|Removing failover group  | If the failover group is removed (using something like [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup)), the DR-only replica becomes a read-write standalone instance and will now be charged the license price.      |
 
 ## Configure DR-only replica 
 
 You can designate your secondary instance as DR-only when you create your auto-failover group, or update the configuration for an existing auto-failover group by using the Azure portal and Azure PowerShell. 
 
 ### New failover group
+
+For instructions to configure a failover group, review the [how to guide](auto-failover-group-configure-sql-mi.md) or the detailed [tutorial](failover-group-add-instance-tutorial.md). 
 
 #### [Portal](#tab/azure-portal)
 
@@ -78,8 +80,8 @@ You can designate your secondary instance as DR-only when you create your auto-f
 
 ## Next steps
 
-- For detailed tutorials, see [Add a SQL Managed Instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md)
-- For a sample script, see: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md)
-- For a business continuity overview and scenarios, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
+- For a detailed tutorial, see [Add a SQL Managed Instance to a failover group](failover-group-add-instance-tutorial.md).
+- For a sample script, see: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
+- For a business continuity overview and scenarios, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - To learn about automated backups, see [SQL Database automated backups](../database/automated-backups-overview.md).
 - To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).

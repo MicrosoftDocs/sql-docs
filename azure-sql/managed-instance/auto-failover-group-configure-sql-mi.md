@@ -341,6 +341,6 @@ The following table lists specific permission scopes for Azure SQL Managed Insta
 
 ## Next steps
 
-For detailed steps configuring a failover group, see the [Add a managed instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md) tutorial. 
+For detailed steps configuring a failover group, see the [Add a managed instance to a failover group](failover-group-add-instance-tutorial.md) tutorial. 
 
 For an overview of the feature, see [Auto-failover groups](auto-failover-group-sql-mi.md). To learn how to save on licensing costs, see [Configure DR-only replica](auto-failover-group-dr-only-replica-how-to-configure.md). 

@@ -3,7 +3,7 @@ title: "Monitor performance by using the Query Store"
 description: Query Store provides insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. Query Store captures history of queries, plans, and runtime statistics.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 09/30/2022
+ms.date: 10/12/2022
 ms.prod: sql
 ms.technology: performance
 ms.topic: conceptual
@@ -350,7 +350,7 @@ Stored procedures configure the Query Store.
 
 <sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], if this happens, Query Store can be recovered by executing the `sp_query_store_consistency_check` stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the `actual_state_desc` column description.
 
-## <a name="Scenarios"></a><a name="OptionMgmt"></a> Query Store Maintenance
+## <a name="Scenarios"></a><a name="OptionMgmt"></a> Query Store maintenance
 
 Best practices and recommendations for maintenance and management of the Query Store have been expanded in this article: [Best practices for managing the Query Store](manage-the-query-store.md).
 

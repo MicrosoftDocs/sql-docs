@@ -153,7 +153,7 @@ The default maximum size value of the Query Store is 1000 MB, starting in [!INCL
 For more information, see the [ALTER DATABASE SET OPTION MAX_STORAGE_SIZE_MB](../../t-sql/statements/alter-database-transact-sql-set-options.md#max_storage_size_mb) option.
 
 
-## Data Flush Interval (Minutes)
+## Data Flush Interval (minutes)
 
 The Data Flush Interval defines the frequency before collected runtime statistics are persisted to disk. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the value is in minutes, but in [!INCLUDE[tsql](../../includes/tsql-md.md)] it's expressed in seconds. The default is 15 minutes (900 seconds).
 
@@ -309,7 +309,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a id="Scenarios"></a> <a id="OptionMgmt"></a> Query Store Maintenance
+## <a id="Scenarios"></a> <a id="OptionMgmt"></a> Query Store maintenance
 
 This section provides some guidelines on managing Query Store feature itself.
 

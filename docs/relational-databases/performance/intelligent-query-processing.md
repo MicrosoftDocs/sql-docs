@@ -12,7 +12,7 @@ ms.reviewer: "wiassaf"
 ms.custom:
 - seo-dt-2019
 - event-tier1-build-2022
-ms.date: 09/30/2022
+ms.date: 10/12/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -98,7 +98,7 @@ Several of the suite of [intelligent query processing features](intelligent-quer
 | [Memory Grant, CE, and DOP feedback persistence](intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback) | No |
 | [Optimized plan forcing](optimized-plan-forcing-query-store.md) | Yes |
 | [Scalar UDF Inlining](intelligent-query-processing-details.md#scalar-udf-inlining) | No | 
-| [Parameter Sensitivity Plan Optimization](parameter-sensitivity-plan-optimization.md) | No, but recomemended |
+| [Parameter Sensitivity Plan Optimization](parameter-sensitivity-plan-optimization.md) | No, but recommended |
 | [Table Variable Deferred Compilation](intelligent-query-processing-details.md#table-variable-deferred-compilation) | No |
 
 ## See also

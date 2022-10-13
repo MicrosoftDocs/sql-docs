@@ -213,7 +213,7 @@ Restarting the service also automatically restarts the related [!INCLUDE[rsql_la
 
 You can restart the service by using the right-click **Restart** command for the instance in SSMS, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-## Verify the installation
+## Verify installation
 
 Use the following steps to verify that all components used to launch external scripts are running:
 

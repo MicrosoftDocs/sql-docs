@@ -3,7 +3,7 @@ title: "backupmediafamily (Transact-SQL)"
 description: Reference for backupmediafamily, which contains one row for each media family.
 author: VanMSFT
 ms.author: vanto
-ms.date: "06/10/2016"
+ms.date: "11/16/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
@@ -16,10 +16,11 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupmediafamily system table"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||=azuresqldb-mi-current"
 ---
 # backupmediafamily (Transact-SQL)
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Contains one row for each media family. If a media family resides in a mirrored media set, the family has a separate row for each mirror in the media set. This table is stored in the **msdb** database.  
     

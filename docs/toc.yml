@@ -10258,26 +10258,25 @@ items:
       - name: Availability groups
         href: linux/sql-server-linux-availability-group-overview.md
         items:
-        - name: Create for high availability
-          href: linux/sql-server-linux-availability-group-ha.md
+        - name: High availability
           items:
-          - name: Configure AG
+          - name: Create for high availability
+            href: linux/sql-server-linux-availability-group-ha.md
+          - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-ha.md
-          - name: Configure on RHEL
-            href: linux/sql-server-linux-availability-group-cluster-rhel.md
-          - name: Configure on SLES
-            href: linux/sql-server-linux-availability-group-cluster-sles.md
-          - name: Configure on Ubuntu
-            href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-          - name: Failover
+          - name: Configure Pacemaker
+            items:
+            - name: Configure on RHEL, SLES, and Ubuntu
+              href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
+          - name: Configure failover
             href: linux/sql-server-linux-availability-group-failover-ha.md
-          - name: Operate
+          - name: Operate an AG
             href: linux/sql-server-linux-availability-group-operate-ha.md
           - name: Configure multiple subnets for availability
             href: linux/sql-server-linux-configure-multiple-subnet.md
         - name: Create for read-scale only
           items:
-          - name: Configure AG
+          - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-rs.md
         - name: Configure cross-platform (Windows & Linux)
           href: linux/sql-server-linux-availability-group-cross-platform.md

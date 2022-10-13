@@ -52,7 +52,7 @@ This article shows you how to install [SQL Server 2022 Machine Learning Services
 
 For local installations, you must run the setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder. For example: *%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt*.
+If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder (for example, *%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt*).
 
 1. Start the SQL Server 2022 Setup wizard.
   
@@ -74,7 +74,7 @@ If you encounter any installation errors during setup, check the summary log in 
 
 ## Install runtimes and packages
 
-Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, use the following sections to install your custom runtimes and packages. 
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java are no longer shipped or installed with SQL Server setup. Instead, use the following sections to install your custom runtimes and packages. 
 
 ### Install R
 
@@ -106,7 +106,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
     ```
 
-1. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and run the following command to enable the external scripting feature:
+1. By using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
@@ -121,7 +121,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 1. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. 
 
-   You can restart the service by using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+   You can restart the service by using the right-click **Restart** command for the instance in SSMS Object Explorer, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 1. Verify the installation by running a simple T-SQL command to return the version of R:
 
@@ -137,7 +137,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     1. Open the Python Setup application and select **Customize installation**. 
     1. Verify that the **Install launcher for all users (recommended)** checkbox is selected.
     1. For **Optional Features**, select the features that you want (or select them all).
-    1. On the **Advanced Options** page, select **Install for all users**, accept other default options, and select **Install**. 
+    1. On the **Advanced Options** page, select **Install for all users**, accept other default options, and then select **Install**. 
     
        We recommend using a Python installation path that all users can access (such as *C:\Program Files\Python310*), and not one that's specific to a single user.
 
@@ -157,7 +157,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"MSSQLSERVER"
     ```
 
-1. Use [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and run the following command to enable the external scripting feature:
+1. Use [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
@@ -172,7 +172,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
 1. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. 
 
-   You can restart the service by using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+   You can restart the service by using the right-click **Restart** command for the instance in SSMS Object Explorer, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
    
 1. Verify the installation by running a simple command to return the version of Python:
 

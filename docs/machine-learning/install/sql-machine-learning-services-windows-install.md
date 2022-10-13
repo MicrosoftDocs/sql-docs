@@ -122,7 +122,7 @@ For local installations, you must run the setup as an administrator. If you inst
    ::: moniker-end
    
    > [!NOTE]
-   > Don't select the **Machine Learning Server (Standalone)** option. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
+   > Don't select the **Machine Learning Server (Standalone)** option under **Shared Features**. That option is intended for use on a separate computer.
 
 ::: moniker range="=sql-server-2017"
 
@@ -155,7 +155,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
 1. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools. It also includes enhanced R packages and connectivity providers from the Microsoft development team.
 
-1. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
+1. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source license agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
 1. On the **Ready to Install** page, verify that these selections are included, and then select **Install**:
   
@@ -171,7 +171,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
 ## Set environment variables
 
-For R feature integration only, you should set the `MKL_CBWR` environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+For R feature integration only, you should set the `MKL_CBWR` environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations:
 
 1. In Control Panel, select **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
 
@@ -188,15 +188,13 @@ This procedure requires a server restart. If you're about to enable script execu
 
 1. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services.
   
-1. Connect to the instance where you installed Machine Learning Services, select **New Query** to open a query window, and run the following command:
+1. Select **New Query** to open a query window, and then run the following command:
 
     ```sql
     EXEC sp_configure
     ```
 
-    The value for the property `external scripts enabled` should be `0` at this point. The feature is turned off by default. An administrator must explicitly enable the feature before you can run R or Python scripts.
-    
-1.  To enable the external scripting feature, run the following statement:
+1.  The value for the property `external scripts enabled` should be `0` at this point. The feature is turned off by default. To turn it on so you can run R or Python scripts, run the following statement:
     
     ```sql
     EXEC sp_configure  'external scripts enabled', 1
@@ -207,11 +205,13 @@ This procedure requires a server restart. If you're about to enable script execu
 
 ## Restart the service
 
-When the installation is complete, restart the database engine.
+When the installation is complete, restart the database engine. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
-Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+You can restart the service by using any of these methods:
 
-You can restart the service by using the right-click **Restart** command for the instance in SSMS, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+- The right-click **Restart** command for the instance in SSMS
+- The **Services** item in Control Panel
+- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
 
 ## Verify installation
 
@@ -276,7 +276,7 @@ Use the following steps to verify that all components used to launch external sc
 
 If you've added Machine Learning Services to an existing SQL Server instance and have previously applied a cumulative update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This difference might result in unexpected behavior or errors because *launchpad.exe* and *sqlservr.exe* have different versions. 
 
-Follow these steps to bring the Machine Learning Services to the same version as your database engine:
+Follow these steps to bring Machine Learning Services to the same version as your database engine:
 
 1. Determine the cumulative update that you have for the database engine. Run this T-SQL statement:
 
@@ -302,7 +302,7 @@ Follow these steps to bring the Machine Learning Services to the same version as
 
 If you install Machine Learning Services with a new installation of the SQL Server database engine, we recommend that you apply the latest cumulative update to both the database engine and machine learning components.
 
-On internet-connected devices, cumulative updates are typically applied through Windows Update. But you can also use the following steps for controlled updates. When you apply the update for the database engine, Setup pulls cumulative updates for any Python or R features that you installed on the same instance. 
+On internet-connected devices, cumulative updates are typically applied through Windows Update. But you can also use the following steps for controlled updates. When you apply the update for the database engine, setup pulls cumulative updates for any Python or R features that you installed on the same instance. 
 
 Disconnected servers require extra steps. For more information, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
 
@@ -312,7 +312,7 @@ Disconnected servers require extra steps. For more information, see [Install on 
 
 1. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
-1. Run Setup and accept the licensing terms. 
+1. Run Setup and accept the license terms. 
 
 1. On the **Feature selection** page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features. Setup downloads the CAB files that are necessary to update all features.
 

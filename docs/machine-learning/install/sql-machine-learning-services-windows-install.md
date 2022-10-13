@@ -3,7 +3,7 @@ title: Install SQL Server Machine Learning Services on Windows
 description: Learn how to install SQL Server Machine Learning Services on Windows to run Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 05/24/2022
+ms.date: 10/12/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -274,7 +274,7 @@ Use the following steps to verify that all components used to launch external sc
 
 ### Existing installation
 
-If you've added Machine Learning Services to an existing SQL Server instance and have previously applied a cumulative update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This difference might result in unexpected behavior or errors. 
+If you've added Machine Learning Services to an existing SQL Server instance and have previously applied a cumulative update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This difference might result in unexpected behavior or errors because *launchpad.exe* and *sqlservr.exe* have different versions. 
 
 Follow these steps to bring the Machine Learning Services to the same version as your database engine:
 
@@ -294,7 +294,9 @@ Follow these steps to bring the Machine Learning Services to the same version as
 
 1. Download the [cumulative update](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) that you installed for the database engine.
 
-1. Run the installation of the cumulative update, and follow the instructions to install it for Machine Learning Services.
+1. Run the installation of the cumulative update, and follow the instructions to install it for Machine Learning Services again. Select the existing instance where Machine Learning Services is installed. The upgrade status shows **Incompletely Installed** on the **Feature Selection** page. 
+
+1. Select **Next** and continue with installation.
 
 ### New installation
 

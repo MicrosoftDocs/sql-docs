@@ -77,10 +77,10 @@ The following example creates a named replica `WideWorldImporters_NamedReplica` 
 # [Portal](#tab/portal)
 
 1. In the [Azure portal](https://portal.azure.com), browse to the database for which you want to create the named replica.
-1. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
+1. On the **SQL Database** page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
 
     :::image type="content" source="./media/named-replicas-configure-portal\azure-create-named-replicas.png" alt-text="Screenshot that shows create named replica step.":::
-1. Choose **Named replica** under Replica configuration, select or create the server for the named replica, enter named replica database name and configure the **Compute + storage** options if necessary.
+1. Choose **Named replica** under **Replica configuration**, select or create the server for the named replica, enter named replica database name and configure the **Compute + storage** options if necessary.
 
     :::image type="content" source="./media/named-replicas-configure-portal/azure-choose-named-replica.png" alt-text="Screenshot that shows configuration of named replica.":::
 

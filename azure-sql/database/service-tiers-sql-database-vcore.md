@@ -124,17 +124,17 @@ For detailed information, see [Create a SQL Database](single-database-create-qui
 
 On the **Basics** tab, select the **Configure database** link in the **Compute + storage** section, and then select the **Change configuration** link:
 
-:::image type="content" source="./media/service-tiers-vcore/configure-sql-database.png" alt-text="configure SQL database" loc-scope="azure-portal":::
+:::image type="content" source="./media/service-tiers-vcore/configure-sql-database.png" alt-text="A screenshot of the Azure portal Create SQL Database deployment, on the Configure page. The Change configuration button is highlighted." loc-scope="azure-portal":::
 
 Select the desired hardware configuration:
 
-:::image type="content" source="./media/service-tiers-vcore/select-hardware.png" alt-text="select hardware for SQL database" loc-scope="azure-portal":::
+:::image type="content" source="./media/service-tiers-vcore/select-hardware.png" alt-text="A screenshot of the Azure portal on the SQL hardware confiugration page for a SQL database." loc-scope="azure-portal":::
 
 **To change hardware configuration of an existing SQL Database or pool**
 
 For a database, on the Overview page, select the **Pricing tier** link:
 
-:::image type="content" source="./media/service-tiers-vcore/change-hardware.png" alt-text="change hardware for SQL Database" loc-scope="azure-portal":::
+:::image type="content" source="./media/service-tiers-vcore/change-hardware.png" alt-text="A screenshot of the Azure portal on the overview page of the adventure-works SQL database. The pricing tier 'General Purpose: Gen4, 1 vCore' is highlighted." loc-scope="azure-portal":::
 
 For a pool, on the Overview page, select **Configure**.
 
@@ -165,7 +165,7 @@ If you need DC-series in a currently unsupported region, [submit a support ticke
 1. For **Problem type**, select **Security, Private and Compliance**.
 1. For **Problem subtype**, select **Always Encrypted**.
 
-:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="Request DC-series in a new region" loc-scope="azure-portal":::
+:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to Request DC-series in a new region." loc-scope="azure-portal":::
 
 ## Compute resources (CPU and memory)
 
@@ -179,7 +179,7 @@ The following table compares compute resources in different hardware configurati
 |M-series     |- Intel&reg; E7-8890 v3 2.5 GHz and Intel&reg; 8280M 2.7 GHz (Cascade Lake) processors<br>- Provision up to 128 vCores (hyper-threaded)|- 29 GB per vCore<br>- Provision up to 3.7 TB|
 |DC-series     | - Intel&reg; XEON E-2288G processors<br>- Featuring Intel Software Guard Extension (Intel SGX)<br>- Provision up to 8 vCores (physical) | 4.5 GB per vCore |
 
-\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD Milan appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake or AMD Milan).
+\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake or AMD Milan).
 
 For more information see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
 

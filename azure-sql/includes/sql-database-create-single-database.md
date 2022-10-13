@@ -66,7 +66,6 @@ To create a resource group, server, and single database in the Azure portal:
 1. Optionally, enable [Microsoft Defender for SQL](../database/azure-defender-for-sql.md). Leave the other settings disabled by default. 
 1. Select **Next: Additional settings** at the bottom of the page.
 1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**.
-1. 
 1. Optionally, set the [maintenance window](../database/maintenance-window.md) so planned maintenance is performed at the best time for your database.
 1. Select **Review + create** at the bottom of the page.
 

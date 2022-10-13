@@ -229,8 +229,6 @@ Test failover of your failover group using PowerShell.
 
 ---
 
-
-
 ## Locate listener endpoint
 
 Once your failover group is configured, update the connection string for your application to the listener endpoint. It will keep your application connected to the failover group listener, rather than the primary database, elastic pool, or instance database. That way, you don't have to manually update the connection string every time your database entity fails over, and traffic is routed to whichever entity is currently primary.
@@ -343,6 +341,6 @@ The following table lists specific permission scopes for Azure SQL Managed Insta
 
 ## Next steps
 
-For detailed steps configuring a failover group, see the [Add a managed instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md) tutorial
+For detailed steps configuring a failover group, see the [Add a managed instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md) tutorial. 
 
-For an overview of the feature, see [Auto-failover groups](auto-failover-group-sql-mi.md).
+For an overview of the feature, see [Auto-failover groups](auto-failover-group-sql-mi.md). To learn how to save on licensing costs, see [Configure DR-only replica](auto-failover-group-dr-only-replica-how-to-configure.md). 

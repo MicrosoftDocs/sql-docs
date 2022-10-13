@@ -47,7 +47,7 @@ The following table lists the features of Azure SQL Managed Instance that have t
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-| [License-free DR replica](auto-failover-group-license-free-dr-only-how-to-configure.md) | November 2022 | Save on licensing costs when you designate your secondary replica as **DR-only**. | 
+| [License-free DR replica](auto-failover-group-dr-only-replica-how-to-configure.md) | November 2022 | Save on licensing costs when you designate your secondary replica as **DR-only**. | 
 |[TempDB configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of TempDB files and their growth increments to tune the performance of your instance even more. |
 | [Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
 | [16 TB support in Business Critical](resource-limits.md#service-tier-characteristics) | September 2022 |Support for allocation up to 16 TB of space on SQL Managed Instance in the Business Critical service tier using the new memory optimized premium-series hardware. | 
@@ -72,7 +72,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Free license for DR-only replica** | It's now possible to designate your secondary stand-by instance for DR-only, saving on licensing costs. This feature is generally available. To learn more, review [Configure DR-only replica](auto-failover-group-dr-only-replica-how-to-configure.md)
+| **Free license for DR-only replica** | It's now possible to designate your secondary stand-by instance for DR-only, saving on licensing costs. This feature is generally available. To learn more, review [Configure DR-only replica](auto-failover-group-dr-only-replica-how-to-configure.md). 
 
 ### September 2022
 

@@ -1,18 +1,18 @@
 ---
-title: User-assigned managed identity in Azure AD for Azure SQL
+title: Managed identity in Azure AD for Azure SQL
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Learn how to use user-assigned managed identities in Azure AD (Azure AD) for Azure SQL Database and SQL Managed Instance.
+description: Learn about system assigned and user assigned managed identities in Azure AD (Azure AD) for Azure SQL Database and SQL Managed Instance.
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, wiassaf
-ms.date: 10/03/2022
+ms.date: 10/11/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
-# User-assigned managed identity in Azure AD for Azure SQL
+# Managed identities in Azure AD for Azure SQL
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
@@ -66,7 +66,7 @@ The following sample PowerShell script grants the necessary permissions for a UM
 
 To run the script, you must sign in as a user with a Global Administrator or Privileged Role Administrator role.
 
-The script grants the User.Read.All, GroupMember.Read.All, and Application.Read.ALL permissions to a UMI or an SMI to access [Microsoft Graph](/graph/auth/auth-concepts#microsoft-graph-permissions).
+The script grants the `User.Read.All`, `GroupMember.Read.All`, and `Application.Read.ALL` permissions to a UMI or an SMI to access [Microsoft Graph](/graph/auth/auth-concepts#microsoft-graph-permissions).
 
 ```powershell
 # Script to assign permissions to the UMI "umiservertest"
@@ -179,11 +179,11 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
 - To obtain the system-assigned and user-assigned MI's for managed instances, use the [az sql mi show](/cli/azure/sql/mi#az-sql-mi-show) command.
     - For example, to retrieve the UMI(s) for a managed instance, look for the `principalId` of each:
     ```azurecli
-    az sql mi show --resource-group "resourcegroupnamehere" --name "midocssample" --query identity.userAssignedIdentities
+    az sql mi show --resource-group "resourcegroupnamehere" --name "sql-mi-name-here" --query identity.userAssignedIdentities
     ``` 
     - To retrieve the SMI of a managed instance:
     ```azurecli
-    az sql mi show --resource-group "resourcegroupnamehere" --name "midocssample" --query identity.principalId
+    az sql mi show --resource-group "resourcegroupnamehere" --name "sql-mi-name-here" --query identity.principalId
     ``` 
 - To update the UMI's managed instance setting, use the [az sql mi update](/cli/azure/sql/mi#az-sql-mi-update) command.
 

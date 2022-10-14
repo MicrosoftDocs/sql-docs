@@ -209,9 +209,9 @@ When the installation is complete, restart the database engine. Restarting the s
 
 You can restart the service by using any of these methods:
 
-- The right-click **Restart** command for the instance in SSMS
-- The **Services** item in Control Panel
-- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
+- The right-click **Restart** command for the instance in Object Explorer in SSMS
+- The **Services** Microsoft Management Console (MMC) in Control Panel
+- [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md) 
 
 ## Verify installation
 

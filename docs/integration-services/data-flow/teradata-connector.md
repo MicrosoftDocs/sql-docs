@@ -42,7 +42,7 @@ Microsoft Connector for Teradata provides similar user experience with Attunity 
 
 Teradata source and destination are under Common category.
 
-:::image type="content" source="media/teradata-connection-manager.png" alt-text="Screenshot the Teradata Component.":::
+:::image type="content" source="media/teradata-connector/teradata-component.png" alt-text="Screenshot the Teradata Component.":::
 
 Teradata connection manager is displayed as "TERADATA".
 

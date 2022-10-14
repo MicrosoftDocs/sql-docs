@@ -1,12 +1,11 @@
 ---
 title: "SQL Server force failover for availability groups"
 description: "Force failover for availability groups with cluster type of NONE"
-services: ""
 author: MikeRayMSFT
-ms.topic: "include"
-ms.date: 02/05/2018
 ms.author: mikeray
-ms.custom: "include file"
+ms.date: 02/05/2018
+ms.topic: "include"
+ms.custom: include file
 ---
 Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In a typical availability group, the cluster manager automates the failover process. In an availability group with cluster type NONE, the failover process is manual.
 

@@ -145,7 +145,7 @@ For local installations, you must run the setup as an administrator. If you inst
    + Machine Learning Services (in-database)
    + R, Python, or both
 
-   Note the location of the folder under the path *..\Setup Bootstrap\Log* where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
+   Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
 
 1. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the Installation Wizard when you finish setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
@@ -163,7 +163,7 @@ For local installations, you must run the setup as an administrator. If you inst
    + Machine Learning Services (in-database)
    + R, Python, or both
 
-   Note the location of the folder under the path *..\Setup Bootstrap\Log* where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
+   Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
 
 1. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the installation wizard when you finish setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
@@ -210,7 +210,7 @@ When the installation is complete, restart the database engine. Restarting the s
 You can restart the service by using any of these methods:
 
 - The right-click **Restart** command for the instance in Object Explorer in SSMS
-- The **Services** Microsoft Management Console (MMC) in Control Panel
+- The **Services** Microsoft Management Console (MMC) item in Control Panel
 - [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md) 
 
 ## Verify installation
@@ -274,7 +274,7 @@ Use the following steps to verify that all components used to launch external sc
 
 ### Existing installation
 
-If you've added Machine Learning Services to an existing SQL Server instance and have previously applied a cumulative update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This difference might result in unexpected behavior or errors because *launchpad.exe* and *sqlservr.exe* have different versions. 
+If you've added Machine Learning Services to an existing SQL Server instance and have previously applied a cumulative update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This difference might result in unexpected behavior or errors because `launchpad.exe` and `sqlservr.exe` have different versions. 
 
 Follow these steps to bring Machine Learning Services to the same version as your database engine:
 

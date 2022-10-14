@@ -22,6 +22,8 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 
 ## Discontinued functionality in SQL Server 2022 Reporting Services
 
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2022-and-later](../includes/ssrs-appliesto-2022-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
+
 These features are discontinued and no longer available in SQL Server 2022 Reporting Services.
 
 | Deprecated feature | Replacement |

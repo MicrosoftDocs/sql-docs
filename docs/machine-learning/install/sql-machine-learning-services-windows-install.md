@@ -126,7 +126,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
 ::: moniker range="=sql-server-2017"
 
-1. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. 
+4. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. 
 
    The license agreement covers:
    

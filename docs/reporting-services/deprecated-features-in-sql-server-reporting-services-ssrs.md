@@ -28,13 +28,13 @@ When we mark a feature as deprecated, it means:
 - We strive not to remove a deprecated feature from future releases, to make upgrades easier. However, in rare situations, we may choose to permanently remove the feature from Reporting Services if it limits future innovations.
 - For new development work, we don't recommend using deprecated features.
 - 
-::: moniker range: ">=sql-server-ver16"
+::: moniker range=">=sql-server-ver16"
 ## Deprecated features in SQL Server 2022 Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2022-and-later](../includes/ssrs-appliesto-2022-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
 
-::: moniker range: ">= sql-server-ver15"
+::: moniker range=">= sql-server-ver15"
 ## Deprecated features in SQL Server 2019 Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2019-and-later](../includes/ssrs-appliesto-2019-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
@@ -53,7 +53,7 @@ SQL Server Reporting Services supports the following features in the next versio
 
 ::: moniker-end
 
-::: moniker range: ">= sql-server-2017"
+::: moniker range=">= sql-server-2017"
 ## Deprecated features in SQL Server 2017 Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017](../includes/ssrs-appliesto-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]

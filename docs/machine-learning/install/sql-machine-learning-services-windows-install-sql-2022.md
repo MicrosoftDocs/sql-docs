@@ -52,7 +52,7 @@ This article shows you how to install [SQL Server 2022 Machine Learning Services
 
 For local installations, you must run the setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder (for example, *%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt*).
+If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder (for example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`).
 
 1. Start the SQL Server 2022 Setup wizard.
   
@@ -98,9 +98,9 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     install.packages("https://aka.ms/sqlml/r4.2/windows/RevoScaleR_10.0.1.zip", repos=NULL)
     ```
 
-1. Configure the installed R runtime with SQL Server. You can change the default version by using the *RegisterRext.exe* command-line utility. The utility is in an R application folder that depends on the installation. Usually, it's in *%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64*.
+1. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder that depends on the installation. Usually, it's in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
-   You can use the following script to configure the installed R runtime from the installation folder location of *RegisterRext.exe*. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+   You can use the following script to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
     ```cmd
     .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
@@ -139,7 +139,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     1. For **Optional Features**, select the features that you want (or select them all).
     1. On the **Advanced Options** page, select **Install for all users**, accept other default options, and then select **Install**. 
     
-       We recommend using a Python installation path that all users can access (such as *C:\Program Files\Python310*), and not one that's specific to a single user.
+       We recommend using a Python installation path that all users can access (such as `C:\Program Files\Python310`), and not one that's specific to a single user.
 
 1. Download and install the latest version of the `revoscalepy` package and its dependencies:
 
@@ -148,9 +148,9 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
-1. Configure the installed Python runtime with SQL Server. You can change the default version by using the *RegisterRext.exe* command-line utility. The utility is in the custom installation location (for example, *C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs*).
+1. Configure the installed Python runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in the custom installation location (for example, `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`).
 
-    You can use the following script to configure the installed Python runtime from the installation folder location of *RegisterRext.exe*. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+    You can use the following script to configure the installed Python runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
     
     ```cmd
     cd "C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs"

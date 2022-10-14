@@ -2,10 +2,10 @@
 title: Customer-managed transparent data encryption (TDE)
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database and Azure Synapse Analytics. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/18/2022
+ms.date: 10/17/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -148,12 +148,9 @@ Rotating the TDE protector for a server means to switch to a new asymmetric key 
 
 [Rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md) can either be done manually or by using the automated rotation feature.
 
-Automated rotation of the TDE protector can be enabled when configuring the TDE protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.
+[Automated rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation) can be enabled when configuring the TDE protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.
 
 When used with [automated key rotation in Azure Key Vault](/azure/key-vault/keys/how-to-configure-key-rotation), this feature enables end-to-end zero-touch rotation for the TDE protector on Azure SQL Database and Azure SQL Managed Instance.
-
-> [!NOTE]
-> Automated rotation of the TDE protector feature is currently in public preview for SQL Database and Managed Instance.
 
 ### Geo-replication considerations when configuring automated rotation of the TDE protector
 

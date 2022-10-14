@@ -1,10 +1,10 @@
 ---
 title: Customer-managed transparent data encryption using user-assigned managed identity
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) using user-assigned managed identity (UMI)
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: vanto
-ms.date: 12/16/2021
+ms.date: 10/17/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -14,17 +14,12 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Managed identities for transparent data encryption with BYOK
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-> [!NOTE]
-> Assigning a user-assigned managed identity for Azure SQL logical servers and Managed Instances is in **public preview**.
-
 Managed identities in Azure Active Directory (Azure AD) provide Azure services with an automatically managed identity in Azure AD. This identity can be used to authenticate to any service that supports Azure AD authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without any credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure. 
 
 Managed Identities can be of two types:
 
 - **System-assigned**
-- **User-assigned**
-
-Enabling system-assigned managed identity for Azure SQL logical servers and Managed Instances are already supported today. [Assigning user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md) to the server is now in public preview.
+- [**User-assigned**](authentication-azure-ad-user-assigned-managed-identity.md)
 
 For [TDE with customer-managed key (CMK)](transparent-data-encryption-byok-overview.md) in Azure SQL, a managed identity on the server is used for providing access rights to the server on the key vault. For instance, the system-assigned managed identity of the server should be provided with [key vault permissions](transparent-data-encryption-byok-overview.md#how-customer-managed-tde-works) prior to enabling TDE with CMK on the server. 
 

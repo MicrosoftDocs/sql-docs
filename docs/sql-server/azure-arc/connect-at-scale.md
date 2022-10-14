@@ -164,7 +164,7 @@ This means the machine is no longer recognized as a connected server. [Onboard t
 ### Server managed identity has insufficient permissions
 
 Check the extension log for the following record:
-`[7/14/2021 5:16:14 PM UTC] [INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc post request failed with error: Forbidden message: {"ErrorDescription":{"ErrorCode":6,"Message":"The user has no access to the provided Azure resource."},"ResponseUrl":null}`
+`[INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc post request failed with error: Forbidden message: {"ErrorDescription":{"ErrorCode":6,"Message":"The user has no access to the provided Azure resource."},"ResponseUrl":null}`
 
 Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [Initiate the connection from Azure](./connect.md#initiate-the-connection-from-azure) for the role assignment instructions.
 

@@ -292,7 +292,7 @@ Follow these steps to bring Machine Learning Services to the same version as you
 
    For more information, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
 
-1. Download the [cumulative update](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) that you installed for the database engine.
+1. If necessary, download the [cumulative update](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) that you installed for the database engine.
 
 1. Run the installation of the cumulative update, and follow the instructions to install it for Machine Learning Services again. Select the existing instance where Machine Learning Services is installed. The upgrade status shows **Incompletely Installed** on the **Feature Selection** page. 
 

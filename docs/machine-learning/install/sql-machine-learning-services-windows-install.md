@@ -65,7 +65,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
 1. Start the setup wizard for SQL Server.
   
-1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
    ::: moniker range="=sql-server-2017"
    ![Screenshot that shows the option for creating a SQL Server standalone installation or adding features to an existing installation.](media/2017setup-installation-page-mlsvcs.png)
@@ -75,7 +75,7 @@ For local installations, you must run the setup as an administrator. If you inst
    ![Screenshot that shows the option for using a new SQL Server standalone installation or adding features to an existing installation.](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-1. On the **Feature Selection** page, select these options:
+3. On the **Feature Selection** page, select these options:
 
    ::: moniker range="=sql-server-2017"
 
@@ -134,12 +134,12 @@ For local installations, you must run the setup as an administrator. If you inst
    + Open-source R base packages and tools.
    + Enhanced R packages and connectivity providers from the Microsoft development team.
 
-1. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source license agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
+5. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source license agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
    > [!NOTE]
    > If the computer that you're using doesn't have internet access, you can pause setup at this point to download the installers separately. For more information, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
 
-1. On the **Ready to Install** page, verify that these selections are included, and then select **Install**:
+6. On the **Ready to Install** page, verify that these selections are included, and then select **Install**:
   
    + Database Engine Services
    + Machine Learning Services (in-database)
@@ -147,17 +147,17 @@ For local installations, you must run the setup as an administrator. If you inst
 
    Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
 
-1. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the Installation Wizard when you finish setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+7. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the Installation Wizard when you finish setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
 
-1. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools. It also includes enhanced R packages and connectivity providers from the Microsoft development team.
+4. On the **Consent to Install Microsoft R Open** page, select **Accept** > **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools. It also includes enhanced R packages and connectivity providers from the Microsoft development team.
 
-1. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source license agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
+5. On the **Consent to Install Python** page, select **Accept** > **Next**. The Python open-source license agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
-1. On the **Ready to Install** page, verify that these selections are included, and then select **Install**:
+6. On the **Ready to Install** page, verify that these selections are included, and then select **Install**:
   
    + Database Engine Services
    + Machine Learning Services (in-database)
@@ -165,7 +165,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
    Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
 
-1. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the installation wizard when you finish setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+7. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the installation wizard when you finish setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 

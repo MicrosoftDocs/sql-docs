@@ -111,7 +111,7 @@ This example shows you how to manually add your SQL Server instances in a discon
 
 1. Assign the `Azure Connected SQL Server Onboarding` role. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
-2. Assign the `Microsoft.AzureArcData` namespace to your Azure subscription:
+2. Register the `Microsoft.AzureArcData` resource provider in your Azure subscription:
 
    - Sign in to the Azure portal.
 

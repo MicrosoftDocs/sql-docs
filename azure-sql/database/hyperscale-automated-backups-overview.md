@@ -122,7 +122,7 @@ The following screenshot shows an example cost analysis.
 
 Hyperscale supports configurable storage redundancy. When you're creating a Hyperscale database, you can choose your preferred storage type:  read-access geo-zone-redundant storage (RA-GZRS), read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS). 
 
-- **Geo-zone-redundant storage**: Copies your backups synchronously across three Azure availability zones in the primary region. similar to zone-redundant storage(ZRS).  In addition,copies your data asynchronously three times to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage).
+- **Geo-zone-redundant storage**: Copies your backups synchronously across three Azure availability zones in the primary region. similar to zone-redundant storage(ZRS).  In addition,copies your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage).
 
 To learn how the backups are replicated for other storage types, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy)
 

@@ -16,9 +16,6 @@ ms.author: chugu
 ---
 # Add Tables to a CDC Instance
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   Use the Table Selection dialog box to add additional tables from the Oracle source to the CDC instance. The tables selected are added to the list in the **Tables** tab of the Properties editor.  
   
  By default, no tables are included in the list of tables in this dialog box. You can select the **(Select All)** check box or search for specific tables.  

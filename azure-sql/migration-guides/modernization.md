@@ -144,7 +144,7 @@ Yes, qualifying subscription licenses can be used to pay Azure SQL services at a
 
 #### I'm using SQL Server CAL licenses. How can I move to Azure SQL?
 
-SQL Server CAL licenses with appropriate license mobility rights can be used on Azure SQL VMs, and on Azure SQL Dedicated Host.
+SQL Server CAL licenses with appropriate [license mobility](https://www.microsoft.com/licensing/licensing-programs/software-assurance-license-mobility) rights can be used on Azure SQL VMs, and on Azure SQL Dedicated Host.
 
 #### What is Azure Hybrid Benefit (AHB)?
 

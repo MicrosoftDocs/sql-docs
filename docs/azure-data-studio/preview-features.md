@@ -7,6 +7,7 @@ ms.reviewer: maghan
 ms.date: 10/14/2020
 ms.prod: azure-data-studio
 ms.topic: conceptual
+ms.custom: ignite-2022
 ---
 
 # Preview features in Azure Data Studio
@@ -60,6 +61,7 @@ You can enable or disable preview features anytime in your Settings.
 * Kusto
 * Managed Instance Dashboard
 * Oracle
+* MySQL
 * PostgreSQL
 * Query History
 * SandDance for Azure Data Studio

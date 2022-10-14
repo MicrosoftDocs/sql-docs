@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # How to Manage a Local CDC Service
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   This procedure describes how to use the CDC Service Configuration Console to manage specific CDC services.  
   
 ### To manage a specific CDC Service  

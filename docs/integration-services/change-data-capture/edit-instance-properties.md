@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # Edit Instance Properties
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   Use the Properties editor to make changes to the CDC instance after you create the initial configurations. You can do the following in the Properties editor.  
   
 -   [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  

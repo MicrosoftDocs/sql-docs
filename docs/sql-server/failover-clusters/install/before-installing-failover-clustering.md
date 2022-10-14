@@ -254,6 +254,61 @@ Before you install a SQL Server failover cluster, you must select the hardware a
 
 - Use the local machine's installed instance of MSDTC
 
+<<<<<<< HEAD
+=======
+  
+##  <a name="MultiSubnet"></a> Additional Considerations for Multi-Subnet Configurations  
+ The sections below describe the requirements to keep in mind when installing a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster. A multi-subnet configuration involves clustering across multiple subnets, therefore involves using multiple IP addresses and changes to IP address resource dependencies.  
+  
+### [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Edition and Operating System Considerations  
+  
+-   For information about the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that support a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  
+-   To create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster, you must first create the [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] multi-site failover cluster on multiple subnets.  
+  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster depends on the Windows Server failover cluster to make sure that the IP dependency conditions are valid if there is a failover.  
+  
+-   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] requires that all the cluster servers must be in the same Active Directory domain. Therefore, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster requires that all the cluster nodes be in the same Active Directory domain even if they are in different subnets.  
+  
+#### IP Address and IP Address Resource Dependencies  
+  
+1.  The IP Address resource dependency is set to OR in a multi-subnet configuration. For more information, see [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+  
+2.  Mixed AND-OR IP address dependencies are not supported. For example, \<IP1> AND \<IP2> OR \<IP3> is not supported.  
+  
+3.  More than one IP address per subnet is not supported.  
+  
+     If you decide to use more than one IP address configured for the same subnet, you may experience client connection failures during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] startup.  
+  
+#### Related Content  
+ For more information about [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] multi-site failover, see [Windows Server 2008 R2 Failover Clustering Site](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff182338(v=ws.10)) and [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197430(v=ws.10)).  
+  
+##  <a name="WSFC"></a> Configure Windows Server Failover Cluster  
+  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (WSFC) must be configured on at least one node of your server cluster. You must also run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence, or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard in conjunction with WSFC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise support failover clusters with up to 16 nodes. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard supports two-node failover clusters.  
+  
+-   The resource DLL for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service exports two functions used by WSFC Cluster Manager to check for availability of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource. For more information, see [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+  
+-   WSFC must be able to verify that the failover clustered instance is running by using the IsAlive check. This requires connecting to the server by using a trusted connection. By default, the account that runs the cluster service is not configured as an administrator on nodes in the cluster, and the BUILTIN\Administrators group does not have permission to log into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. These settings change only if you change permissions on the cluster nodes.  
+  
+-   Configure Domain Name Service (DNS) or Windows Internet Name Service (WINS). A DNS server or WINS server must be running in the environment where your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster will be installed. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup requires dynamic domain name service registration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP interface virtual reference. DNS server configuration should allow cluster nodes to dynamically register an online IP address map to Network Name. If the dynamic registration cannot be completed, Setup fails and the installation is rolled back. For more information, see [this knowledgebase article](https://mskb.pkisolutions.com/kb/947048)  
+  
+##  <a name="MSDTC"></a> Install [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
+ Before installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on a failover cluster, determine whether the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MSDTC) cluster resource must be created. If you are installing only the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], the MSDTC cluster resource is not required. If you are installing the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] and SSIS, Workstation Components, or if you will use distributed transactions, you must install MSDTC. Note that MSDTC is not required for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-only instances.  
+  
+ On [!INCLUDE[winserver2008](../../../includes/winserver2008-md.md)] and [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], you can install multiple instances of MSDTC on a single failover cluster. The first instance of MSDTC that is installed will be the cluster default instance of MSDTC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will take advantage of an instance of MSDTC installed to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] local cluster resource group by automatically using the instance of MSDTC. However, individual applications can be mapped to any instance of MSDTC on the cluster.  
+  
+ The following rules are applied for an instance of MSDTC to be chosen by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  
+-   Use MSDTC installed to the local group, else  
+  
+-   Use the mapped instance of MSDTC, else  
+  
+-   Use the cluster's default instance of MSDTC, else  
+  
+-   Use the local machine's installed instance of MSDTC  
+  
+>>>>>>> 8b4d72e3d2fca231471723587b048f974a6d813f
 > [!IMPORTANT]  
 >  If the MSDTC instance that is installed to the local cluster group of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fails, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not automatically attempt to use the default cluster instance or the local machine instance of MSDTC. You would need to completely remove the failed instance of MSDTC from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] group to use another instance of MSDTC. Likewise, if you create a mapping for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and the mapped instance of MSDTC fails, your distributed transactions will also fail. If you want [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use a different instance of MSDTC, you must either add an instance of MSDTC to the local cluster group of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or delete the mapping.
 

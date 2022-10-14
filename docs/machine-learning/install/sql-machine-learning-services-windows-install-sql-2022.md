@@ -212,12 +212,7 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Optimize the server for script execution
 
-The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that the database engine supports. These services might include:
-
-- Extract, transform, and load (ETL) processes.
-- Reporting.
-- Auditing.
-- Applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data.
+The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of other services and applications.
 
 Under the default settings, resources for machine learning are sometimes restricted or throttled, particularly in memory-intensive operations.
 

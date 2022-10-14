@@ -1,10 +1,10 @@
 ---
 title: Connect to SQL using Azure Active Directory (Azure AD) with SSMS 18.6 and later
 description: Message to explain starting December 2021, you can only use Azure Active Directory (Azure AD) with SSMS 18.6 and later
-ms.topic: include
 author: markingmyname
 ms.author: maghan
 ms.reviewer: drskwier
+ms.topic: include
 ---
 
 > [!NOTE]

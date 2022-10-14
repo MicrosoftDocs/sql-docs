@@ -1,9 +1,9 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 06/30/2021
 ms.prod: mlserver
 ms.topic: include
-ms.date: 06/30/2021
 ---
 
 > [!IMPORTANT]

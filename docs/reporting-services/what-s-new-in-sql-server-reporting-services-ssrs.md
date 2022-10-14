@@ -37,7 +37,7 @@ The web portal received a face lift.
 
 ### Deprecated features
 
-In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-sql-server-2019-reporting-services-ssrs.md). These features will be removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and will no longer be supported. Only the last three releases, SQL Server 2016, SQL Server 2017, and SQL Server 2019, will be supported in maintenance mode until EOL (End of Life) for existing customers.
+In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features will be removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and will no longer be supported. Only the last three releases, SQL Server 2016, SQL Server 2017, and SQL Server 2019, will be supported in maintenance mode until EOL (End of Life) for existing customers.
 
 When we mark a feature as deprecated, it means:
 

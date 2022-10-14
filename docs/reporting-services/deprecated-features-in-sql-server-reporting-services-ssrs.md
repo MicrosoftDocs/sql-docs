@@ -20,7 +20,7 @@ ms.author: maggies
 
 # Deprecated features in SQL Server Reporting Services
 
-This article describes the deprecated SQL Server 2016 Reporting Services features. The features are still available in the release in which they are deprecated; however the features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.
+This article describes deprecated features in the different versions of SQL Server Reporting Services. The features are still available in the release in which they are deprecated; however the features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.
 
 When we mark a feature as deprecated, it means:
 

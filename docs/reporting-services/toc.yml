@@ -19,8 +19,6 @@
     items:
     - name: Deprecated features
       href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Discontinued functionality in 2019
-      href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
     - name: Discontinued functionality
       href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
     - name: Breaking changes in 2016

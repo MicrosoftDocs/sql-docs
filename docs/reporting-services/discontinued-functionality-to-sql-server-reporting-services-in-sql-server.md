@@ -12,7 +12,7 @@ ms.custom: seodec18
 ms.date: 10/14/2022
 ---
 
-# Discontinued Functionality in SQL Server Reporting Services (SSRS)
+# Discontinued functionality in SQL Server Reporting Services (SSRS)
 
 This article describes SQL Server Reporting Services features that are no longer available in different versions of SQL Server. It doesn't include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS). For more information about system prerequisites, see [Planning a SQL Server Installation](../sql-server/install/planning-a-sql-server-installation.md).
 

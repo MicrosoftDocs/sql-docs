@@ -47,7 +47,7 @@ Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one 
 
 ### Required permissions
 
-To connect the SQL Server instances and the hosting machine to Azure Arc, you must have a user account or Azure service principal with [Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#contributor) role for the resource group in which the SQL Server will be managed.
+To connect the SQL Server instances and the hosting machine to Azure Arc, you must have a user account or Azure service principal with [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role for the resource group in which the SQL Server will be managed.
 
 Deploying the Connected Machine agent on a SQL Server machine requires that you have administrator permissions to install and configure the agent. On Linux this is done by using the root account, and on Windows, with an account that is a member of the Local Administrators group
 

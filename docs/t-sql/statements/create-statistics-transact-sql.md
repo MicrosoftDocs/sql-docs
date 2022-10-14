@@ -161,7 +161,7 @@ SAMPLE is useful for special cases in which the query plan, based on default sam
 
 SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.
 
-We recommend against specifying 0 PERCENT or 0 ROWS. When 0 PERCENT or ROWS is specified, the statistics object is created but does not contain statistics data.
+We recommend against specifying `0 PERCENT` or `0 ROWS`. When `0 PERCENT` or `0 ROWS` is specified, the statistics object is created, but does not contain statistics data.
 
 #### PERSIST_SAMPLE_PERCENT = { ON | OFF }  
 When **ON**, the statistics will retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**.
@@ -227,7 +227,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 
 Prior to [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 
-Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the AUTO_DROP option is enabled by default on all new and migrated databases. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will *not* be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually-created statistics with AUTO_DROP enabled behave like auto-created statistics.
+Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the AUTO_DROP option is enabled by default on all new and migrated databases. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will *not* be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually created statistics with AUTO_DROP enabled behave like auto-created statistics.
 
 > [!NOTE]  
 > Trying to set or unset the *Auto_Drop* property on auto-created statistics may raise errors. Auto-created statistics always uses auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto-created statistics always behave like auto drop statistics. When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, it is recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics AUTO_DROP feature.

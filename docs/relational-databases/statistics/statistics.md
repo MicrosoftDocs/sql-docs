@@ -192,7 +192,7 @@ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull]
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 
-Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the auto drop option is enabled by default on all new and migrated databases. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will *not* be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually-created statistics with auto drop enabled behave like auto-created statistics.
+Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the auto drop option is enabled by default on all new and migrated databases. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will *not* be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually created statistics with auto drop enabled behave like auto-created statistics.
 
 > [!NOTE]  
 > Trying to set or unset the auto drop property on auto-created statistics may raise errors. Auto-created statistics always uses auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto-created statistics always behave like auto drop statistics. When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, it is recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics auto drop feature.
@@ -393,7 +393,7 @@ Certain query implementations, such as local variables and complex expressions i
 To improve cardinality estimates for expressions, follow these guidelines:
 
 - Whenever possible, simplify expressions with constants in them. The Query Optimizer does not evaluate all functions and expressions containing constants prior to determining cardinality estimates. For example, simplify the expression `ABS(-100)` to `100`.  
-- If the expression uses multiple variables, consider creating a computed column for the expression and then create statistics or an index on the computed column. For example, the query predicate `WHERE PRICE + Tax > 100` might have a better cardinality estimate if you create a computed column for the expression `Price + Tax`.
+- If the expression uses multiple variables, consider creating a computed column for the expression, and then create statistics or an index on the computed column. For example, the query predicate `WHERE PRICE + Tax > 100` might have a better cardinality estimate if you create a computed column for the expression `Price + Tax`.
 
 ### <a id="improving-cardinality-estimates-for-variables-and-functions"></a>  Improve cardinality estimates for variables and functions
 

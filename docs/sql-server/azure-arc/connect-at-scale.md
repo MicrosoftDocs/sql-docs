@@ -166,7 +166,7 @@ This means the machine is no longer recognized as a connected server. [Onboard t
 Check the extension log for the following record:
 `[INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc post request failed with error: Forbidden message: {"ErrorDescription":{"ErrorCode":6,"Message":"The user has no access to the provided Azure resource."},"ResponseUrl":null}`
 
-Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [Initiate the connection from Azure](./connect.md#initiate-the-connection-from-azure) for the role assignment instructions.
+Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [When machine already connected to Arc-enabled Server](connect.md#when-machine-already-connected-to-arc-enabled-server) role assignment instructions.
 
 ### The user didn't migrate the Arc-enabled SQL Server resource to the new resource provider
 

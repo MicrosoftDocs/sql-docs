@@ -201,7 +201,7 @@ This step requires a server restart. If you're about to enable script execution,
     RECONFIGURE WITH OVERRIDE
     ```
     
-    If you've already enabled the feature for the R language, don't run `RECONFIGURE` a second time for Python. The underlying extensibility platform supports both languages.
+    If you've already enabled the feature for the R language, you don't need to run `RECONFIGURE` a second time for Python. The underlying extensibility platform supports both languages.
 
 ## Restart the service
 

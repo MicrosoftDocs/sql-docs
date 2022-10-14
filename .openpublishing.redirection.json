@@ -59469,6 +59469,26 @@
       "source_path": "docs/linux/sql-server-linux-release-notes.md",
       "redirect_url": "/sql/linux/sql-server-linux-release-notes-2017",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-setup-2022.md",
+      "redirect_url": "/sql/linux/sql-server-linux-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-rhel.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-sles.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-ubuntu.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
     }
   ]
 }

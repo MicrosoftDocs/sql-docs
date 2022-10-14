@@ -35,10 +35,10 @@ This article provides a list of the rules used to assess the feasibility of migr
  | FileStream | Database | Issue | [Filestream and Filetable are not supported in Azure SQL Managed Instance.](#FileStream) | 
  | LinkedServerWithNonSQLProvider | Database | Issue | [Linked server with non-SQL Server Provider isn't supported in Azure SQL Managed Instance.](#LinkedServerWithNonSQLProvider) | 
  | MergeJob | Instance | Warning | [Merge job step isn't supported in Azure SQL Managed Instance.](#MergeJob) | 
- | MIDatabaseSize | Database | Issue | [Azure SQL Managed Instance does not support database size greater than 8 TB.](#MIDatabaseSize<) | 
+ | MIDatabaseSize | Database | Issue | [Azure SQL Managed Instance does not support database size greater than 16 TB.](#MIDatabaseSize) | 
  | MIHeterogeneousMSDTCTransactSQL | Database | Issue | [BEGIN DISTRIBUTED TRANSACTION with non-SQL Server remote server isn't supported in Azure SQL Managed Instance.](#MIHeterogeneousMSDTCTransactSQL) | 
  | MIHomogeneousMSDTCTransactSQL | Database | Issue | [BEGIN DISTRIBUTED TRANSACTION is supported across multiple servers for Azure SQL Managed Instance.](#MIHomogeneousMSDTCTransactSQL) | 
- | MIInstanceSize | Instance | Warning | [Maximum instance storage size in Azure SQL Managed Instance cannot be greater than 8 TB.](#MIInstanceSize<) | 
+ | MIInstanceSize | Instance | Warning | [Maximum instance storage size in Azure SQL Managed Instance cannot be greater than 8 TB.](#MIInstanceSize) | 
  | MultipleLogFiles | Database | Issue | [Azure SQL Managed Instance does not support databases with multiple log files.](#MultipleLogFiles<) | 
  | NextColumn | Database | Issue | [Tables and Columns named NEXT will lead to an error In Azure SQL Managed Instance.](#NextColumn) | 
  | NonANSILeftOuterJoinSyntax | Database | Warning | [Non-ANSI style left outer join is no longer supported and has been removed.](#NonANSILeftOuterJoinSyntax) | 
@@ -247,9 +247,9 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported (Currently in preview). Alternatively, migrate to SQL Server on Azure Virtual Machine.
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance). 
 
-More information: [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance)
+Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
 ## Homogenous MS DTC<a id="MIHomogeneousMSDTCTransactSQL"></a>
 
@@ -261,10 +261,9 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported (Currently in preview). Alternatively, migrate to SQL Server on Azure Virtual Machine. 
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 
-More information: [Transactions across multiple servers for Azure SQL Managed Instance](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance)
-
+Alternatively, migrate to SQL Server on Azure Virtual Machine. 
 
 ## Linked server (non-SQL provider)<a id="LinkedServerWithNonSQLProvider"></a>
 
@@ -301,9 +300,9 @@ Review impacted objects section in Azure Migrate to see all jobs using Merge job
 More information: [SQL Server Agent differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#sql-server-agent)
 
 
-## MI database size<a id="MIDatabaseSize<"></a>
+## MI database size<a id="MIDatabaseSize"></a>
 
-**Title: Azure SQL Managed Instance does not support database size greater than 8 TB.**   
+**Title: Azure SQL Managed Instance does not support database size greater than 16 TB.**   
 **Category**: Issue   
 
 **Description**   
@@ -317,7 +316,7 @@ More information: [Hardware characteristics of Azure SQL Managed Instance ](../.
 
 
 
-## MI instance size<a id="MIInstanceSize<"></a>
+## MI instance size<a id="MIInstanceSize"></a>
 
 **Title: Maximum instance storage size in Azure SQL Managed Instance cannot be greater than 8 TB.**   
 **Category**: Warning   

@@ -16,9 +16,6 @@ ms.author: chugu
 ---
 # Finish 
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   The **Finish** page summarizes the wizard process. Click **Finish** to close the wizard and generate all of the tables you defined in the Create CDC Instance wizard.  
   
 ## See Also  

@@ -231,6 +231,12 @@ To restore your on-premises database from Azure Blob storage, modify the followi
 USE [master]
 RESTORE DATABASE [SQLTestDB] FROM 
 URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak'
+
+--- Enable TDE
+USE [SQLTestDB];
+GO
+ALTER DATABASE [SQLTestDB] SET ENCRYPTION ON;
+GO
 ```
 
 ---

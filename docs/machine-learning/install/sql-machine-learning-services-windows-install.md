@@ -180,7 +180,7 @@ For R feature integration only, you should set the `MKL_CBWR` environment variab
    + Set the variable name to `MKL_CBWR`.
    + Set the variable value to `AUTO`.
 
-This procedure requires a server restart. If you're about to enable script execution, you can hold off on the restart until all of the configuration work is done.
+This step requires a server restart. If you're about to enable script execution, you can hold off on the restart until all of the configuration work is done.
 
 <a name="bkmk_enableFeature"></a>
 

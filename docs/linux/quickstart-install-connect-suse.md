@@ -4,7 +4,7 @@ description: This quickstart shows how to install SQL Server on SUSE Linux Enter
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 10/03/2022
+ms.date: 10/13/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -25,7 +25,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 <!--SQL Server 2019+ on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-In this quickstart, you install [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SUSE Linux Enterprise Server (SLES) v15. Then you can connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SUSE Linux Enterprise Server (SLES) v15 (SP3). Then you can connect with **sqlcmd** to create your first database and run queries.
 
 For more information on supported platforms, see [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md).
 
@@ -33,7 +33,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on SUSE Linux Enterprise Server (SLES) v15. Then you can connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on SUSE Linux Enterprise Server (SLES) v15 (SP3). Then you can connect with **sqlcmd** to create your first database and run queries.
 
 For more information on supported platforms, see [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md).
 

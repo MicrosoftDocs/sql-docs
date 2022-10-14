@@ -3,7 +3,7 @@ title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows. You can use Machine Learning Services to execute Python, R, or Java scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/23/2022
+ms.date: 09/26/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver16"
 Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
 > [!NOTE]
-> These instructions are specific to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Windows. To install SQL Server Machine Learning Services on Windows for SQL Server 2016, SQL Server 2017, or SQL Server 2019, see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+> These instructions are specific to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Windows. To install SQL Server Machine Learning Services on Windows for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], or [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). <BR />For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -38,7 +38,7 @@ Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-m
   + R and Python scripts running in external libraries can't be managed by SQL Server, leading to resource contention.
 
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
+> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps may include enabling SQL Server to use external scripts and other steps. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
 
 ## Get the installation media
 
@@ -71,19 +71,17 @@ If you encounter any installation errors during setup, check the summary log in 
     :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
 
-4. **Next steps vary from previous versions:** Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
+4. **Next steps vary from previous versions:** Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5 in one of the following:
 
     - [Install R](#install-r)
     - [Install Python](#install-python)
     - [Install Java](#install-java)
 
-**Continue to the instructions to [install R](#install-r) or [install Python](#install-python).**
-
 ## Install R
 
 5. Download the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/) for Windows, and install.
 
-6. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
+6. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From the R terminal of the version you have installed, run the following:
 
     ```r
     # R Terminal
@@ -93,26 +91,21 @@ If you encounter any installation errors during setup, check the summary log in 
     install.packages("jsonlite")
     ```
     
-7. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
+7. Download and install the latest version of `CompatibilityAPI` and `RevoScaleR` packages.
 
-   - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
-   - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
+    ```r
+    install.packages("https://aka.ms/sqlml/r4.2/windows/CompatibilityAPI_1.1.0.zip", repos=NULL)
 
-    Assuming you have installed version 4.2.0 of R in its default location, for example `C:\Program Files\R\R-4.2.0`, and downloaded the required packages in `C:\temp` directory, the following sample scripts can be adapted for the installation:
-
-    ```cmd
-    cd C:\Program Files\R\R-4.2.0\bin
-    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\CompatibilityAPI.zip"
-    R.exe CMD INSTALL -l "C:\Program Files\R\R-4.2.0\library" "C:\temp\RevoScaleR.zip"
+    install.packages("https://aka.ms/sqlml/r4.2/windows/RevoScaleR_10.0.1.zip", repos=NULL)
     ```
 
 8. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder depending on the installation, usually in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
    The following script can be used to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
-  ```cmd
-  .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
-  ```
+    ```cmd
+    .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
+    ```
 
 9. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
 
@@ -145,11 +138,11 @@ If you encounter any installation errors during setup, check the summary log in 
     1. Select all **Optional Features** options, or as desired.
     1. On the **Advanced Options** page, check **Install for all users**, accept other default options, and select **Install**. It is recommended that the Python installation path is accessible by all users such as `C:\Program Files\Python310 `and it is not specific to a single user.
 
-6. Download the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924) and install revoscalepy from the Python custom install location. For example: 
+6. Download and install the latest version of `revoscalepy` package and its dependencies.
 
     ```cmd
-    cd C:\Program Files\Python310\
-    python -m pip install C:\Users\%username%\Downloads\revoscalepy-10.0.0-py3-none-any.whl
+    cd "C:\Program Files\Python310\"
+    python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
 7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the custom install location, for example: `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`.
@@ -157,7 +150,7 @@ If you encounter any installation errors during setup, check the summary log in 
     The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
     
     ```cmd
-    cd C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs
+    cd "C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs"
     .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"MSSQLSERVER"
     ```
 
@@ -240,10 +233,10 @@ To install and manage additional packages, you can set up user groups to share p
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
-+ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../tutorials/python-clustering-model.md)
+- [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
+- [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../tutorials/python-clustering-model.md)
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)
+- [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
+- [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)

@@ -42,12 +42,13 @@ Returns one row for each column segment in a columnstore index. There is one col
 |**null_value**|**bigint**|Value used to represent nulls.|  
 |**on_disk_size**|**bigint**|Size of segment in bytes.|  
 |**collation_id**|**int** |**Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]** and later.<BR>Current collation when the segment was created. Maps to an internal id. **Currently internal only and not for development.** |
-|**min_deep_data**|**varbinary(18)**| **Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]** and later.<BR>Min value used for string and other data types used for segment elimination.<sup>1</sup> |
-|**max_deep_data** |**varbinary(18)**| **Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**  and later.<BR>Min value used for string and other data types used for segment elimination.<sup>1</sup> |
+|**min_deep_data**|**varbinary(18)**| **Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]** and later.<BR>Used for segment elimination.<sup>1</sup> For internal use only. |
+|**max_deep_data** |**varbinary(18)**| **Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**  and later.<BR>Used for segment elimination.<sup>1</sup> For internal use only. |
 
-<sup>1</sup> After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), `min_deep_data` and `max_deep_data` will be `NULL` until after the columnstore index is rebuilt for the first time using a REBUILD or DROP/CREATE. After a rebuild, the segments that contain data types that can benefit from string min/max segment elimination will contain data.
+<sup>1</sup> After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), `min_deep_data` and `max_deep_data` will be `NULL` until after the columnstore index is rebuilt, using a REBUILD or DROP/CREATE. After a rebuild, the segments that contain data types that can benefit from string min/max segment elimination will contain data.
 
-## Remarks  
+## Remarks
+
 The columnstore segment encoding type is selected by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] with the goal of achieving the lowest storage cost, by analyzing the segment data. If data is mostly distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses value-based encoding. If data is mostly not distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses hash-based encoding. The choice between string-based and value-based encoding is related to the type of data being stored, whether string data or binary data. All encodings take advantage of bit-packing and run-length encoding when possible.
 
 Columnstore segment elimination applies to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. Segment elimination does not apply to LOB data types such as the (max) data type lengths.

@@ -3,7 +3,7 @@ title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
 description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index."
 author: markingmyname
 ms.author: maghan
-ms.date: 07/25/2022
+ms.date: 10/14/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -34,10 +34,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Convert a rowstore table to a clustered columnstore index, or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload, or to improve data compression and query performance for data warehousing workloads.  
   
-> [!NOTE]
-> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. It's no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.  
+Follow [What's new in columnstore indexes](../../relational-databases/indexes/columnstore-indexes-what-s-new.md) for the latest improvements to this feature.
 
-For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
+ - Ordered clustered columnstore indexes were introduced in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order).
+
+ - Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. It's no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.  
+
+ - For information on columnstore index design guidelines, see [Columnstore indexes - Design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
+
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,11 +129,15 @@ Specifies the one-, two-, or three-part name of the table to be stored as a clus
 
 *Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later*
 
-An ordered clustered columnstore index can be created on columns of any data type except for string columns. Use the `column_store_order_ordinal` column in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) to determine the order of the column(s) for a clustered columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
+Use the `column_store_order_ordinal` column in [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) to determine the order of the column(s) for a clustered columnstore index. This aids with [segment elimination](../../relational-databases/indexes/columnstore-indexes-query-performance.md#segment-elimination), especially with string data. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
-To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index.
+To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index. Use the `DROP_EXISTING` option.
 
 LOB data types (the (max) length data types) cannot be the key of an ordered clustered columnstore index.
+
+When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting and fastest performance of the CREATE INDEX statement.
+
+When an ordered clustered columnstore index is created, the key columns are indicated by the `column_store_order_ordinal` column in `sys.index_columns`.
 
 ### WITH options
 
@@ -840,12 +848,28 @@ ORDER (PRODUCTKEY,SHIPDATE)
 WITH (DROP_EXISTING = ON);
 ```
 
-## Next steps
+### J. Create an ordered clustered columnstore index
 
-Go to scenarios:  
-- [Columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
-- [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
-  
-Learn more:  
+***Applies to:*** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+
+You can create a clustered columnstore index with ordering keys. When creating an ordered clustered columnstore index, it is recommended to apply the query hint `MAXDOP = 1` for maximum quality of sorting and shortest duration.
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX [OrderedCCI] ON dbo.FactResellerSalesPartCategoryFull
+ORDER (EnglishProductSubcategoryName, EnglishProductName)
+WITH (MAXDOP = 1, DROP_EXISTING = ON);
+```
+
+## See also
+
 - [Columnstore indexes: Overview](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 - [Columnstore indexes feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
+- [What's new in columnstore indexes](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
+
+## Next steps
+
+- [Columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+- [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+- [Columnstore indexes - Query performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)
+- [Columnstore indexes - Design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)
+  

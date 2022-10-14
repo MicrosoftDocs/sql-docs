@@ -165,7 +165,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
    Note the location of the folder under the path *..\Setup Bootstrap\Log* where the configuration files are stored. When setup is complete, you can review the installed components in the summary file.
 
-1. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the installation wizard when you finish setup. For more information, see [View and read SQL Server setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+1. After setup is complete, if you're instructed to restart the computer, do so. It's important to read the message from the installation wizard when you finish setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 

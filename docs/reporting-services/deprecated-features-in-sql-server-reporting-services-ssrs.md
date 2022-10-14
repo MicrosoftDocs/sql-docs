@@ -33,6 +33,7 @@ When we mark a feature as deprecated, it means:
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2022-and-later](../includes/ssrs-appliesto-2022-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
+::: moniker-end
 
 ::: moniker range=">= sql-server-ver15"
 ## Deprecated features in SQL Server 2019 Reporting Services

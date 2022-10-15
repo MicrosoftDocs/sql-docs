@@ -1179,7 +1179,9 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
     [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
-    [ [ , ] CREDENTIAL = <credential_name> ])
+    [ [ , ] CREDENTIAL = <credential_name> ]
+    [ [ , ] PUSHDOWN = { ON | OFF } ]
+  )
 [ ; ]
 ```
 
@@ -1243,7 +1245,6 @@ The `key_value_pair` is the keyword and the value for a specific connection opti
 
 Possible key value pairs are specific to the driver. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
-<!---
 #### PUSHDOWN = ON | OFF
 
 **Applies to: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.** States whether computation can be pushed down to the external data source. It is on by default.
@@ -1252,7 +1253,6 @@ Possible key value pairs are specific to the driver. For more information for ea
 
 Enabling or disabling push-down at the query level is achieved through a [hint][hint_pb].
 
--->
 #### CREDENTIAL = *credential_name*
 
 Specifies a database-scoped credential for authenticating to the external data source.
@@ -1355,7 +1355,7 @@ Users will also need to configure their external data sources to use new connect
 | External Data Source | From | To |
 |:--|:--|:--|
 | Azure Blob Storage | wasb[s] | abs |
-| ADLS Gen 2 | abfs[s] | adls |
+| ADLS Gen2 | abfs[s] | adls |
 
 ## Examples
 
@@ -1396,32 +1396,7 @@ CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
 CREDENTIAL = [OracleProxyCredential]);
 ```
 
-For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
-
-### B. Create external data source to access data in Azure Storage using the abs:// interface
-
-Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `abs` for Azure Storage Account v2. The `abs` prefix also supports authentication using Shared Access Signature. The `abs` prefix replaces `wasb`, used in previous versions. Since HADOOP is not longer supported, there is no more need to use `TYPE = BLOB_STORAGE`.
-
-The Azure storage account key is no longer needed, instead using SAS Token as we can see in the following example:
-
-```sql
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
-GO
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredentialv2
-WITH
-  IDENTITY = 'SHARED ACCESS SIGNATURE', -- to use SAS the identity must be fixed as-is
-  SECRET = '<Blob_SAS_Token>' ;
-GO
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage
-WITH
-  ( LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>' ,
-    CREDENTIAL = AzureStorageCredentialv2,
-  ) ;
-```
-
-### C. Create external data source to reference a SQL Server named instance via PolyBase connectivity
+### B. Create external data source to reference a SQL Server named instance via PolyBase connectivity
 
 **Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
 
@@ -1455,7 +1430,7 @@ WITH (
 ) ;
 ```
 
-### D. Create external data source to reference a readable secondary replica of Always On availability group
+### C. Create external data source to reference a readable secondary replica of Always On availability group
 
 **Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
 
@@ -1525,7 +1500,7 @@ SELECT [name] FROM dbo.vw_sys_servers_rw; --should return primary replica instan
 GO
 ```
 
-### E. Create external data source to query a parquet file in S3-compatible object storage via PolyBase
+### D. Create external data source to query a parquet file in S3-compatible object storage via PolyBase
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
@@ -1563,7 +1538,74 @@ FROM    OPENROWSET
         ) AS [cc];
 ```
 
-### F. Create external data source to access data in Azure Data Lake Gen2
+### E. Create external data source using generic ODBC to PostgreSQL
+
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the server.
+
+In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
+
+```sql
+CREATE EXTERNAL DATA SOURCE POSTGRES1
+WITH
+(
+ LOCATION = 'odbc://POSTGRES1.domain:5432'
+,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
+,CREDENTIAL = postgres_credential
+)
+```
+
+### Azure Storage
+
+#### CREATE A SHARED ACCESS SIGNATURE TOKEN
+
+For both Azure Blob Storage and Azure Data Lake Gen2 the supported authentication method is shared access signature (SAS). To generate a shared access signature token follow the steps below:
+
+1. Navigate to Azure Portal, and the desired Storage Account.
+2. Navigate to your desired Container under Data Storage menu.
+3. Select Shared access tokens.
+4. Choose the appropriate permission based on the desired action, for reference use the table bellow:
+
+|    Action    |    Permission    |
+|    ------    |    ----------    |
+|    Read  data from a file    |    Read    |
+|    Read data from multiple files and subfolders    |    Read and List    |
+|    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
+
+5. Choose the token expiration date.
+6. Generate SAS token and URL.
+7. Copy the SAS token.
+
+
+### F. Create external data source to access data in Azure Blob Storage using the abs:// interface
+
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `abs` for Azure Storage Account v2. The `abs` prefix supports authentication using `SHARED ACCESS SIGNATURE`. The `abs` prefix replaces `wasb`, used in previous versions. HADOOP is not longer supported, there is no more need to use `TYPE = BLOB_STORAGE`.
+
+The Azure storage account key is no longer needed, instead using SAS Token as we can see in the following example:
+
+```sql
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
+GO
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredentialv2
+WITH
+  IDENTITY = 'SHARED ACCESS SIGNATURE', -- to use SAS the identity must be fixed as-is
+  SECRET = '<Blob_SAS_Token>' ;
+GO
+-- Create an external data source with CREDENTIAL option.
+CREATE EXTERNAL DATA SOURCE MyAzureStorage
+WITH
+  ( LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>' ,
+    CREDENTIAL = AzureStorageCredentialv2,
+  ) ;
+```
+
+For a more detailed example on how to access CSV files stored in Azure Blob Storage, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
+
+### G. Create external data source to access data in Azure Data Lake Gen2
+
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
 Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `adls` for Azure Data Lake Gen2, replacing `abfs` used in previous versions. The `adls` prefix also supports SAS token as authentication method as shown in the example below:
 
@@ -1581,52 +1623,9 @@ LOCATION = 'adls://<storage_account>.dfs.core.windows.net'
 )
 ```
 
-### G. Create external data source to access data in a CSV file
+For a more detailed example on  how to access delta files stored on Azure Data Lake Gen2, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
 
-As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. In this example, the CSV file resides in Azure Blob Storage. Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], so use prefix `abs` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
-
-```sql
-CREATE EXTERNAL DATA SOURCE Blob_CSV
-WITH
-(
- LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>'
-,CREDENTIAL = blob_storage
-);
-```
-
-### H. Create external data source to access data in a CSV file
-
-As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source.
-
-In this example, the delta table resides in Azure Data Lake Storage Gen2, so use prefix `adls` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
-
-For example, if your storage account is named `delta_lake_sample` and the container is named `sink`, the code would be:
-
-```sql
-CREATE EXTERNAL DATA SOURCE Delta_ED
-WITH
-(
- LOCATION = 'abs://delta_lake_sample.dfs.core.windows.net/sink'
-,CREDENTIAL = delta_storage_dsc
-)
-```
-
-### I. Create external data source using generic ODBC to PostgreSQL
-
-As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the server.
-
-In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
-
-```sql
-CREATE EXTERNAL DATA SOURCE POSTGRES1
-WITH
-(
- LOCATION = 'odbc://POSTGRES1.domain:5432'
-,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
-,CREDENTIAL = postgres_credential
-)
-```
-
+<!---
 ## Examples: Bulk Operations
 
 > [!IMPORTANT]  
@@ -1654,6 +1653,7 @@ WITH
 ```
 
 To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
+-->
 
 ## Next steps
 
@@ -2036,7 +2036,7 @@ Provides the connectivity protocol and path to the external data source.
 | External Data Source        | Connector location prefix | Location path                                         |
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
 | Azure V2 Storage account    | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Location path:
@@ -2058,7 +2058,7 @@ Specifies a database-scoped credential for authenticating to the external data s
 
 Additional notes and guidance when creating a credential:
 
-- To load data from Azure Storage or Azure Data Lake Store (ADLS) Gen 2 into [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], use an Azure Storage Key.
+- To load data from Azure Storage or Azure Data Lake Store (ADLS) Gen2 into [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], use an Azure Storage Key.
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
@@ -2067,7 +2067,7 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
-Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen 2.
+Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen2.
 
 For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal).
 
@@ -2144,9 +2144,9 @@ WITH
     TYPE = HADOOP
   ) ;
 
--- For Gen 2 - Create an external data source
+-- For Gen2 - Create an external data source
 -- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
--- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- LOCATION: Provide Data Lake Storage Gen2 account name and URI
 -- CREDENTIAL: Provide the credential created in the previous step
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
@@ -2157,7 +2157,7 @@ WITH
   ) ;
 ```
 
-### C. Create external data source to reference Azure Data Lake Store Gen 2 using the storage account key
+### C. Create external data source to reference Azure Data Lake Store Gen2 using the storage account key
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -2171,7 +2171,7 @@ WITH
   SECRET = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
--- Note this example uses a Gen 2 secured endpoint (abfss)
+-- Note this example uses a Gen2 secured endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( LOCATION = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net' ,
@@ -2180,7 +2180,7 @@ WITH
   ) ;
 ```
 
-### D. Create external data source to reference PolyBase connectivity to Azure Data Lake Store Gen 2 using abfs://
+### D. Create external data source to reference PolyBase connectivity to Azure Data Lake Store Gen2 using abfs://
 
 There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview) mechanism.
 

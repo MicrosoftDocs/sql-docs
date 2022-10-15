@@ -91,7 +91,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_force_plan @query_id = 3, @plan_id = 3;
 ```
 
-Use [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md), joined with [sys.query_store_replicas](sys-query-store-replicas-transact-sql.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md).
+Use [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md), joined with [sys.query_store_replicas](sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md).
 
 ```sql
 SELECT query_plan 

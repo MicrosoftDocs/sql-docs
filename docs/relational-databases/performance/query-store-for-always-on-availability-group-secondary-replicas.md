@@ -12,11 +12,9 @@ helpviewer_keywords:
   - "Query Store secondary replicas"
 monikerRange: ">=sql-server-ver16"
 ---
-# Monitor performance by using the Query Store
+# Query Store for Always On availability group secondary replicas
 
-[!INCLUDE [SQL Server 2022](../../includes/sqlserver2022.md)]
-
-## Query Store for secondary replicas
+[!INCLUDE [SQL Server 2022](../../includes/applies-to-version/_ss2022.md)]
 
 The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together. Currently, Query Store for secondary replicas is available with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] instances configured in availability groups.
 

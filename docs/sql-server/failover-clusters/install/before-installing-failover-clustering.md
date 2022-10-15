@@ -103,8 +103,8 @@ ms.author: mathoma
   
   - The clustered installations of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] are limited to the number of available drive letters. Assuming that you use only one drive letter for the operating system, and all other drive letters are available as normal cluster drives or cluster drives hosting mount points, you are limited to a maximum of 25 instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per failover cluster.  
   
-        > [!TIP]  
-        >  The 25 instance limit can be overcome by using SMB file share option. If you use SMB file share as the storage option, you can install up to 50 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instances.  
+      > [!TIP]  
+      >  The 25 instance limit can be overcome by using SMB file share option. If you use SMB file share as the storage option, you can install up to 50 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instances.  
   
   - Formatting a drive after mounting additional drives is not supported.  
   

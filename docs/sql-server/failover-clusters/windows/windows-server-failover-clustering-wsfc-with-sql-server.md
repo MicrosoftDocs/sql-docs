@@ -167,11 +167,11 @@ ms.author: mathoma
  The WSFC monitors health and manages configuration for a group of servers.  
  The WSFC mechanisms propagate changes to WSFC configuration metadata and status to all nodes in the WSFC. If a disk witness is used, the metadata is also stored there. By default, each node of the WSFC gets a vote towards quorum and a witness will be used if necessary and is configured.
 
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster.  
- If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original WSFC. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster.  
+If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original WSFC. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
- ![SQL Server Always On Component Context Diagram](../../../sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif "SQL Server Always On Component Context Diagram")  
-  
+:::image type="content" source="media/windows-server-failover-clustering-wsfc-with-sql-server/alwaysoncomponentcontextdiagram.gif" alt-text="Screenshot of Windows Server failover cluster.":::
+
 ## <a name="RelatedTasks"></a> Related Tasks  
   
 - [View Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  

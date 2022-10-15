@@ -2534,9 +2534,9 @@ WITH
 
 [!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asdbmi](../../includes/applies-to-version/_asmi.md)]
 
-Creates an external data source in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
+Creates an external data source in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md).
 
-Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats via the [OPENROWSET T-SQL syntax](/azure/azure-sql/managed-instance/data-virtualization-overview.md#query-data-sources-using-openrowset) or the [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md) T-SQL syntax.
+Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats via the [OPENROWSET T-SQL syntax](../../../azure-sql/managed-instance/data-virtualization-overview.md#query-data-sources-using-openrowset) or the [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md) T-SQL syntax.
 
 ## <a id="syntax"></a> Syntax
 
@@ -2608,11 +2608,11 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 ## Examples
 
-For more examples, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
+For more examples, see [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md).
 
 ### A. Query external data from Azure SQL Managed Instance with OPENROWSET or an external table
 
-For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
+For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md).
 
 1. Create the database master key, if it doesn't exist.
 
@@ -2725,7 +2725,7 @@ For more examples, see [Create external data source](create-external-data-source
 
 ## Next steps
 
-- [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md)
+- [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]

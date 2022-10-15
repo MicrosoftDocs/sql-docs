@@ -40,7 +40,7 @@ sp_query_store_flush_db [;]
 
 ## Remarks
 
-If [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled, when `sys.sp_query_store_flush_db` is executed on a secondary replica, that secondary replica's cache is forced to be flushed to the cache on the primary replica. This can accelerate the Query Store cache data being synced to the primary replica if the secondary replica cache flush is otherwise delayed under heavy workload.
+If [Query Store for secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md) is enabled, when `sys.sp_query_store_flush_db` is executed on a secondary replica, that secondary replica's cache is forced to be flushed to the cache on the primary replica. This can accelerate the Query Store cache data being synced to the primary replica if the secondary replica cache flush is otherwise delayed under heavy workload.
 
 ## Permissions
 
@@ -59,7 +59,7 @@ EXEC sp_query_store_flush_db;
 Learn more about Query Store in the following articles:
 
 - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)
+- [Query Store for secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md)
 - [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)

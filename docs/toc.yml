@@ -6565,11 +6565,14 @@ items:
       - name: Schedule Traces
         href: relational-databases/sql-trace/schedule-traces.md
     - name: Query Store
-      href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
+      - name: Monitor performance by using the Query Store
+        href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md      
       - name: Best Practices for Monitoring
         href: relational-databases/performance/best-practice-with-the-query-store.md
-      - name: How Query Store Collects Data
+      - name: Query Store for secondary replicas
+        href: relational-databases/performance/query-store-for-always-on-availability-group-secondary-replicas.md
+      - name: How Query Store collects data
         href: relational-databases/performance/how-query-store-collects-data.md
       - name: In-Memory OLTP
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
@@ -12440,7 +12443,7 @@ items:
       - name: sys.query_store_plan
         href: relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md
       - name: sys.query_store_plan_forcing_locations
-        href: relational-databases/system-catalog-views/sys-plan-forcing-locations.md
+        href: relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md
       - name: sys.query_store_query
         href: relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md
       - name: sys.query_store_query_text

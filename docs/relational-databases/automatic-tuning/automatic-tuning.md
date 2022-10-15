@@ -185,6 +185,7 @@ Without automatic index management, a user or DBA would need to manually query t
 - [sys.dm_db_tuning_recommendations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
 - [sys.dm_db_missing_index_details (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)
 - [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)
 - [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.dm_os_sys_info  (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)

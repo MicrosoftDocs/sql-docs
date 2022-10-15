@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver16"
 
 ## Query Store for secondary replicas
 
-The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together. Currently, Query Store for secondary replicas are available with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] instances configured in availability groups.
+The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together. Currently, Query Store for secondary replicas is available with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] instances configured in availability groups.
 
 > [!IMPORTANT]  
 > Query Store for secondary replicas is a *preview* feature. It is not intended for production deployments. See: [SQL Server 2022 (16.0) release notes](../../sql-server/sql-server-2022-release-notes.md).
@@ -32,7 +32,7 @@ The Query Store for secondary replicas feature enables the same Query Store func
 
 ### Enable Query Store for secondary replicas
 
-Before using Query Store for secondary replicas, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) set up and configured. Then, enable Query Store for secondary replicas using [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+Before using Query Store for secondary replicas, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). Then, enable Query Store for secondary replicas using [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 If Query Store is not already enabled and in READ_WRITE mode on the primary replica of the availability group, it must be before proceeding. Execute the following for each desired database on the primary replica instance:
 
@@ -94,8 +94,6 @@ A **replica set** is defined as being all unnamed replicas that share a role (pr
 The channel used by secondary replicas to send query information back to the primary replica is the same channel used to keep secondary replicas up to date. Data is stored in the same tables on the primary replica that Query Store uses for queries executed on the primary replica, which causes the size of Query Store to grow.
 
 Thus, when a system is under significant load, you may notice some slowdown because of the channel being overloaded. Further, the same adhoc query capture issues that exist for Query Store today will continue for workloads run on secondary replicas. Learn more about how to [Keep the most relevant data in Query Store](best-practice-with-the-query-store.md#keep-the-most-relevant-data-in-query-store).
-
-
 
 ## See also
 

@@ -1,16 +1,13 @@
 ---
 title: "SQL Server backup to URL for S3-compatible object storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the S3-compatible object storage as a backup destination.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 08/26/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 10/15/2022
+ms.prod: sql
+ms.technology: backup-restore
+ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # SQL Server backup to URL for S3-compatible object storage
@@ -21,7 +18,7 @@ This article introduces the concepts, requirements and components necessary to [
 
 For information on supported platforms, see [providers of S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md#providers-of-s3-compatible-object-storage).
 
-> [!NOTE]
+> [!NOTE]  
 > SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 ## Overview
@@ -32,14 +29,14 @@ URLs pointing to S3-compatible resources are prefixed with `s3://` to denote tha
 
 ## Part numbers and file size limitations
 
-To storage data the S3-compatible object storage provider must split files in multiple blocks called parts, similarly to [Azure block blobs](/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs) when using Azure Blob Storage.
+To store data, the S3-compatible object storage provider must split files in multiple blocks called parts. This is similar to [block blobs](/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs) in Azure Blob Storage.
 
-Each file can be split up to 10,000 parts, each part size will range from 5 MB to 20 MB, this range is controlled by the T-SQL BACKUP command through the parameter `MAXTRANSFERSIZE`. The default value of `MAXTRANSFERSIZE` is 10 MB, therefore the default size of each part is 10 MB.
+Each file can be split up to 10,000 parts, each part size will range from 5 MB to 20 MB, this range is controlled by the T-SQL BACKUP command through the parameter [MAXTRANSFERSIZE](../../t-sql/statements/backup-transact-sql.md#with-options). The default value of `MAXTRANSFERSIZE` is 10 MB, therefore the default size of each part is 10 MB.
 
 The maximum supported size of a single file is the result of *10,000 parts \* `MAXTRANSFERSIZE`*, if it is required to backup a bigger file it must split/striped up to 64 URLs. The final maximum supported size of a file is *10,000 parts \* `MAXTRANSFERSIZE` \* URLs*.
 
-> [!NOTE]
-> The use of COMPRESSION is required in order to change MAXTRANSFERSIZE values
+> [!NOTE]  
+> The use of COMPRESSION is required in order to change `MAXTRANSFERSIZE` values.
 
 ## Prerequisites for the S3 endpoint
 
@@ -69,21 +66,21 @@ On the storage layer, the user (`Access Key ID`) must have both **ListBucket** a
 
 ## Supported features
 
-High-level overview of the supported features for `BACKUP` and `RESTORE`
+High-level overview of the supported features for `BACKUP` and `RESTORE`:
 
 1. A single backup file can be up to 200,000 MiB per URL (with `MAXTRANSFERSIZE` set to 20 MB).
-2. Backups can be striped across a maximum of 64 URLs.
-3. Mirroring is supported, but only across URLs. Mirroring using both URL and DISK is not supported.
-4. Compression is supported and recommended.
-5. Encryption is supported.
-6. Restore from URL with S3-compatible object storage has no size limitation.
-7. When restoring a database the `MAXTRANSFERSIZE` is determined by value assigned during the backup phase.
-7. URLs can be specified either in virtual host or path style format.
-8. `WITH CREDENTIAL` is supported.
-9. `REGION` is supported and the default value is `us-east-1` .
-10. `MAXTRANSFERSIZE` will range from 5 MB to 20 MB. 10 MB is the default value for the S3 connector.
+1. Backups can be striped across a maximum of 64 URLs.
+1. Mirroring is supported, but only across URLs. Mirroring using both URL and DISK is not supported.
+1. Compression is supported and recommended.
+1. Encryption is supported.
+1. Restore from URL with S3-compatible object storage has no size limitation.
+1. When restoring a database, the `MAXTRANSFERSIZE` is determined by value assigned during the backup phase.
+1. URLs can be specified either in virtual host or path style format.
+1. `WITH CREDENTIAL` is supported.
+1. `REGION` is supported and the default value is `us-east-1`.
+1. `MAXTRANSFERSIZE` will range from 5 MB to 20 MB. 10 MB is the default value for the S3 connector.
 
-### Supported Arguments for Backup
+### Supported arguments for backup
 
 | WITH options | S3 Endpoint | Notes |
 | --- | --- | --- |
@@ -108,7 +105,7 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`
 | REGION | Y | Default value is *'us-east-1'*, must be used with *`BACKUP_OPTIONS`*|
 | STATS | Y |  |
 
-### Supported Arguments for Restore
+### Supported arguments for restore
 
 | WITH options | S3 Endpoint | Notes |
 | --- | --- | --- |
@@ -187,14 +184,14 @@ If no value is declared *us-east-1* will be assigned as default.
 Backup example:
 ```sql
 WITH
-    BACKUP_OPTION = '{"s3": {"region":"us-west-1"}}' 
+    BACKUP_OPTION = '{"s3": {"region":"us-west-1"}}'
 ```
 
 Restore example:
 
 ```sql
 WITH
-    RESTORE_OPTION = '{"s3": {"region":"us-west-1"}}' 
+    RESTORE_OPTION = '{"s3": {"region":"us-west-1"}}'
 ```
 
 ### Linux support
@@ -221,25 +218,17 @@ Only super user should be able to write in the folder, while the `mssql` user mu
 The following are the current limitations of backup and restore with S3-compatible object storage:
 
 1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compliant object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks will continue to persist in the S3-compliant object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are removed automatically by the object store to form the final backup file. Some S3-providers will handle this through their garbage collector system.
-2. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. Consequently, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
-3. The SQL credential name is limited by 128 characters in UTF-16 format.
-4. Secret key ID only supports alphanumeric values.
+1. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. Consequently, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
+1. The SQL credential name is limited by 128 characters in UTF-16 format.
+1. Secret key ID only supports alphanumeric values.
 
-### Path style and Virtual host style
+### Path style and virtual host style
 
 Backup to S3 supports the URL to be written in both path style or virtual host style.
 
-Path style example:
+Path style example: `s3://<endpoint>:<port>/<bucket>/<backup_file_name>`
 
-```sql
-    [s3://<endpoint>:<port>/<bucket>/<backup_file_name>]
-```
-
-Virtual host example:
-
-```sql
-    [s3://<bucket>.<domain>/<backup_file_name>]
-```
+Virtual host example: `s3://<bucket>.<domain>/<backup_file_name>`
 
 ## Examples
 
@@ -255,7 +244,7 @@ The following examples create SQL Server credentials for authentication with the
 
 ```sql
 CREATE CREDENTIAL   [s3://<endpoint>:<port>/<bucket>]
-WITH    
+WITH
         IDENTITY    = 'S3 Access Key',
         SECRET      = '<AccessKeyID>:<SecretKeyID>';
 ```
@@ -288,7 +277,7 @@ FROM    URL = 's3://<endpoint>:<port>/<bucket>/<database>_01.bak'
 --
 ,       URL = 's3://<endpoint>:<port>/<bucket>/<database>_64.bak'
 WITH    REPLACE -- overwrite
-,       STATS               = 10;
+,       STATS  = 10;
 ```
 
 ### Options for encryption and compression
@@ -315,7 +304,7 @@ FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
 WITH REPLACE
 ```
 
-### Using region for backup and restore
+### Use region for backup and restore
 
 The following example shows how to back up and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
 
@@ -323,27 +312,17 @@ The following example shows how to back up and restore the AdventureWorks2019 da
 -- Backup Database
 BACKUP DATABASE AdventureWorks2019
 TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
-WITH BACKUP_OPTIONS = '{"s3": {"region":"us-east-1"}}' 
+WITH BACKUP_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 
 -- Restore Database
 RESTORE DATABASE AdventureWorks2019
 FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
 WITH MOVE 'AdventureWorks2019' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.mdf'
 , MOVE 'AdventureWorks2019_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.ldf'
-, RESTORE_OPTIONS = '{"s3": {"region":"us-east-1"}}' 
+, RESTORE_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 ```
 
 ## Next steps
 
 - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
 - [SQL Server back up to URL for Microsoft Azure Blob Storage best practices and troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)
-
-<!-- -[Tutorial: SQL Backup and restore with object storage](sql-server-backup-to-url-s3-compatible-storage.md)-->
-
-<!-- Internal LInks -->
-
-<!-- Public Links -->
-[docs_backup_best]: ./sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
-[MAXTRANSFERSIZE]: ../../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15#with-options
-
-[Azure block blobs]: /rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs

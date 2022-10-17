@@ -4,7 +4,7 @@ description: Use Azure Data Studio to connect to a MySQL server (hosted on-premi
 author: shreyaaithal
 ms.author: shaithal
 ms.reviewer: erinstellato
-ms.date: 09/28/2022
+ms.date: 10/12/2022
 ms.prod: azure-data-studio
 ms.topic: quickstart
 ms.custom: intro-quickstart, ignite-2022
@@ -20,7 +20,7 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
 
 - [Install Azure Data Studio](./download-azure-data-studio.md).
 - [Install the MySQL extension for Azure Data Studio](./extensions/mysql-extension.md).
-- A MySQL server. You can either create a managed MySQL server on Azure using [Azure Database for MySQL - Flexible Server](/azure/mysql/flexible-server/quickstart-create-server-portal.md) or [install MySQL locally](https://dev.mysql.com/downloads/mysql/).
+- A MySQL server. You can either create a managed MySQL server on Azure using [Azure Database for MySQL - Flexible Server](/azure/mysql/flexible-server/quickstart-create-server-portal) or [install MySQL locally](https://dev.mysql.com/downloads/mysql/).
 
 > [!NOTE]
 > The extension is currently available in Azure Data Studio (ADS) insider build only. It will be available in the next ADS stable build soon.

@@ -1438,7 +1438,7 @@ Learn more about external tables in Analytics Platform System in the following a
 
 ## Overview: Azure SQL Managed Instance
 
-Creates an external data table in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md).
+Creates an external data table in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats in Azure Data Lake Storage Gen2 or Azure Blob Storage, and to query them with T-SQL statements, even combine data with locally stored relational data using joins.
 
@@ -1567,7 +1567,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ### A. Query external data from Azure SQL Managed Instance with an external table
 
-For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md).
+For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 1. Create the database master key, if it doesn't exist.
 
@@ -1651,7 +1651,7 @@ For more examples, see [Create external data source](create-external-data-source
 
 Learn more about external tables and related concepts in the following articles:
 
-- [Data virtualization with Azure SQL Managed Instance](../../../azure-sql/managed-instance/data-virtualization-overview.md)
+- [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview)
 - [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md)

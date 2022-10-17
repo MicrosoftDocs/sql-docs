@@ -122,16 +122,12 @@ Now the database or data warehouse has TDE enabled with an encryption key in Key
 
 ## Check the encryption state and encryption activity
 
-Use the [Get-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryption) to get the encryption state and the [Get-AzSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryptionactivity) to check the encryption progress for a database or data warehouse.
+Use the [Get-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryption) to get the encryption state for a database or data warehouse.
 
 ```powershell
-# get the encryption state
+# get the encryption state of the database
 Get-AzSqlDatabaseTransparentDataEncryption -ResourceGroupName <SQLDatabaseResourceGroupName> `
    -ServerName <LogicalServerName> -DatabaseName <DatabaseName> `
-
-# check the encryption progress for a database or data warehouse
-Get-AzSqlDatabaseTransparentDataEncryptionActivity -ResourceGroupName <SQLDatabaseResourceGroupName> `
-   -ServerName <LogicalServerName> -DatabaseName <DatabaseName>  
 ```
 
 # [The Azure CLI](#tab/azure-cli)

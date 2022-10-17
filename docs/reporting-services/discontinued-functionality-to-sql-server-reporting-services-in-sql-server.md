@@ -9,7 +9,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: seodec18
-ms.date: 10/14/2022
+ms.date: 10/17/2022
 ---
 
 # Discontinued functionality in SQL Server Reporting Services (SSRS)
@@ -26,11 +26,13 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 
 These features are discontinued and no longer available in SQL Server 2022 Reporting Services.
 
-| Deprecated feature | Replacement |
-| --- | --- |
-| Mobile Reports functionality | Power BI reports in Power BI Report Server offer mobile capabilities.|
-| Pin2PowerBI functionality ||
-| Report Parts support ||
+| **Category** | **Deprecated feature** | **Replacement** |
+| --- | --- | --- |
+| Report Server | Report Part Gallery | None |
+| Report Server | Mobile Reports and Mobile Report Publisher | Power BI reports in Power BI Report Server offer mobile capabilities. |
+| Report Server | XLS and DOC render formats | XLSX and DOCX formats are available and supported. |
+| Report Server | Atom Data Feed | oData feed support is available for shared datasets in SSRS and Power BI Report Server. |
+| Report Server | Pin to Power BI | Paginated report support is now available directly in the Power BI service.  |
 
 ::: moniker-end
 

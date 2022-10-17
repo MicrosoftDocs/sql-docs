@@ -112,7 +112,7 @@ ms.author: mathoma
   
 ## <a name="AlwaysOnWsfcHealth"></a> WSFC Health Monitoring and Failover  
 
- High availability for an Always On solution is accomplished though proactive health monitoring of physical and logical WSFC cluster resources, together with automatic failover onto and re-configuration of redundant hardware.  A system administrator can also initiate a *manual failover* of an availability group or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance from one node to another.  
+ High availability for an Always On solution is accomplished through proactive health monitoring of physical and logical WSFC cluster resources, together with automatic failover onto and re-configuration of redundant hardware.  A system administrator can also initiate a *manual failover* of an availability group or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance from one node to another.  
   
 ### Failover Policies for Nodes, Failover Cluster Instances, and Availability Groups  
 

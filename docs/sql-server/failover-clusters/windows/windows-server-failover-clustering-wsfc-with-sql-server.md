@@ -170,7 +170,7 @@ ms.author: mathoma
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster.  
 If you delete and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original WSFC. For more information, see [Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-:::image type="content" source="media/windows-server-failover-clustering-wsfc-with-sql-server/alwaysoncomponentcontextdiagram.gif" alt-text="Screenshot of Windows Server failover cluster.":::
+:::image type="content" source="media/windows-server-failover-clustering-wsfc-with-sql-server/always-on-component-context-diagram.gif" alt-text="Screenshot of Windows Server failover cluster.":::
 
 ## <a name="RelatedTasks"></a> Related Tasks  
   

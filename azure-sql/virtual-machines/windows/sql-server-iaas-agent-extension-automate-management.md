@@ -43,7 +43,7 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
 
 - **Free**: The extension in all three manageability modes is completely free. There is no additional cost associated with the extension, or with changing management modes. 
 
-- **Simplified license management**: The extension simplifies SQL Server license management, and allows you to quickly identify SQL Server VMs with the Azure Hybrid Benefit enabled using the [Azure portal](manage-sql-vm-portal.md),  PowerShell or the Azure CLI: 
+- **Simplified license management**: The extension simplifies SQL Server license management, and allows you to quickly identify SQL Server VMs with the Azure Hybrid Benefit enabled using the [Azure portal](manage-sql-vm-portal.md), PowerShell or the Azure CLI: 
 
    # [PowerShell](#tab/azure-powershell)
 
@@ -67,6 +67,33 @@ The SQL Server IaaS Agent extension unlocks a number of feature benefits for man
 The following table details these benefits: 
 
 [!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-feature-benefits.md)]
+
+
+## Permissions
+
+There are two permission models for the SQL Server IaaS agent extension - either full sysadmin rights, or the principle of least privilege. The least privileged permission model grants the minimum permissions required for each feature used by the extension that a customer enables. Each feature that a customer uses is assigned a custom role, and the custom role only has the required permissions to perform actions related to the feature. 
+
+The principle of least privilege model is enabled by default for SQL Server VMs deployed via Azure marketplace after October 2022. Existing SQL Server VMs deployed prior to this date, or ones with SQL Server self-installed, can enable the least privileged permissions model in the Azure portal. To do so, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Additional features** under **Settings** and then check the box next to **SQL IaaS extension least privilege mode**: 
+
+
+
+The following table defines the permissions and custom roles used by each feature of the extension: 
+
+
+|Feature  |Permissions  |Custom role (Server / DB)  |
+|---------|---------|---------|
+|[SQL best practices assessment](../virtual-machines/windows/sql-assessment-for-sql-vm.md) | Server permission - CONTROL SERVER         | SqlIaaSExtension_Assessment   |
+|[Automated backups](automated-backup.md) |  Server permission - CONTROL SERVER  </br> Database permission -   `db_ddladmin` on master,  `db_backupoperator` on msdb  | SqlIaaSExtension_AutoBackup         |
+|Row3     |         |         |
+|Row4     |         |         |
+|Row5     |         |         |
+|Row6     |         |         |
+|Row7     |         |         |
+|Row8     |         |         |
+|Row9     |         |         |
+|Row10     |         |         |
+|Row11     |         |         |
+|Row12     |         |         |
 
 
 

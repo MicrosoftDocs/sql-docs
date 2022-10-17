@@ -7,5 +7,5 @@ ms.topic: include
 ---
 
 > [!NOTE]
-> In October 2022, the least privileged permissions model was introduced for the SQL Server IaaS agent extension. To learn more, review [SQL IaaS extension permissions](../virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md#permissions)
+> October 2022 introduced the least privileged model for the SQL Server IaaS Agent extension. SQL Server VMs deployed via the Azure marketplace after this date have the least privileged model enabled by default. To learn more, review [SQL IaaS extension permissions](../virtual-machines/windows/sql-server-iaas-agent-extension-automate-management.md#permissions)
 

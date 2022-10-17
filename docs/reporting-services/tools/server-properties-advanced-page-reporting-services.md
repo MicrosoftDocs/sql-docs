@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 09/23/2022
+ms.date: 10/17/2022
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -136,8 +136,8 @@ Branding option to add a custom hyperlink. Default values are **empty**.
 
 |Values |Description  |
 |---------|---------|
-| CustomUrlLabel | It defines what string will be shown as URL label in the top left of subnavbar. |
-| CustomUrlValue  | Defines the URL. | 
+| CustomUrlLabel | Defines the text shown as the URL label in the top right navigation bar in the web portal (for example, `Go to Contoso`) |
+| CustomUrlValue  | Defines the URL (for example, `http://www.contoso.com`) | 
 
 ### EditSessionCacheLimit
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  

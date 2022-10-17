@@ -295,9 +295,11 @@ sections:
         answer: |
              Yes, registering with the SQL IaaS Agent extension in full manageability mode installs an agent to the VM. Registering in lightweight, or NoAgent mode does not. 
           
-             Registering with the SQL IaaS Agent extension in lightweight mode only copies the SQL IaaS Agent extension *binaries* to the VM, it does not install the agent. These binaries are then used to install the agent when the management mode is upgraded to full.
+             Registering with the SQL IaaS Agent extension in lightweight mode only copies the SQL IaaS Agent extension *binaries* to the VM, it does not install the agent. These binaries are then used to install the agent when the management mode is upgraded to full.          
           
-          
+      - question: | 
+           What permissions does the SQL Server IaaS agent extension use? 
+        answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions) to learn more. 
       - question: |
           Will registering with the SQL IaaS Agent extension restart SQL Server on my VM?
         answer:    Starting in September 2021, restarting the SQL Server service is no longer required when registering with the [SQL IaaS extension](sql-server-iaas-agent-extension-automate-management.md) in [full management mode](sql-agent-extension-manually-register-single-vm.md).  

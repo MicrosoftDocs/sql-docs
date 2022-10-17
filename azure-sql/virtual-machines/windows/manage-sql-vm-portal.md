@@ -100,6 +100,10 @@ Use the **Backups** page of the SQL virtual machines resource to configure your 
 
 To learn more, see, [Automated patching](automated-backup.md). 
 
+## Additional features
+
+
+
 
 ## High availability (Preview)
 

@@ -84,16 +84,15 @@ The following table defines the permissions and custom roles used by each featur
 |---------|---------|---------|
 |[SQL best practices assessment](../virtual-machines/windows/sql-assessment-for-sql-vm.md) | Server permission - CONTROL SERVER         | SqlIaaSExtension_Assessment   |
 |[Automated backups](automated-backup.md) |  Server permission - CONTROL SERVER  </br> Database permission -   `db_ddladmin` on master,  `db_backupoperator` on msdb  | SqlIaaSExtension_AutoBackup         |
-|Row3     |         |         |
-|Row4     |         |         |
-|Row5     |         |         |
-|Row6     |         |         |
-|Row7     |         |         |
-|Row8     |         |         |
-|Row9     |         |         |
-|Row10     |         |         |
-|Row11     |         |         |
-|Row12     |         |         |
+|[Azure Backup Service](/azure/backup/backup-overview) | Sysadmin         |         |
+|[Credential management](azure-key-vault-integration-configure.md)  | Server permission - CONTROL SERVER|SqlIaaSExtension_CredentialMgmt          |
+|[Availability group portal management](manage-sql-vm-portal.md#high-availability-preview) |sysdmin|         |
+|[R Service](manage-sql-vm-portal.md#additional-features)| Server permission - ALTER SETTINGS        |         |
+|[SQL authentication](manage-sql-vm-portal.md#security-configuration) | sysadmin        |         |
+|[SQL Server instance settings](manage-sql-vm-portal.md#license-and-edition)|Server permission - ALTER ANY LOGIN, ALTER SETTINGS | SqlIaaSExtension_SqlInstanceSetting          |
+|[Storage configuration](storage-configuration.md)|Server permission - ALTER ANY DATABASE|SqlIaaSExtension_StorageConfig       |
+|[Status reporting](manage-sql-vm-portal.md#access-the-resource) |Server permission - VIEW ANY DEFINITION, VIEW SERVER STATE, ALTER ANY LOGIN, CONNECT SQL         | SqlIaaSExtension_StatusReporting          |
+
 
 
 

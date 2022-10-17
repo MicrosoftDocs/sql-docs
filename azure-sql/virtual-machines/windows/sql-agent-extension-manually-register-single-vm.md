@@ -25,8 +25,7 @@ Register your SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-
 
 This article teaches you to register a single SQL Server VM with the SQL IaaS Agent extension. Alternatively, you can register all SQL Server VMs in a subscription [automatically](sql-agent-extension-automatic-registration-all-vms.md) or [multiple VMs in bulk using a script](sql-agent-extension-manually-register-vms-bulk.md).
 
-> [!NOTE]
-> Starting in September 2021, registering with the SQL IaaS extension in full mode no longer requires restarting the SQL Server service. 
+[!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-iaas-extension-permissions.md)]
 
 ## Overview
 

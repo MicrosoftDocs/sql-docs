@@ -132,16 +132,16 @@ If your client program connects to your database in the Azure SQL Database by us
 
 When you build the [connection string](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) for your **SqlConnection** object, coordinate the values among the following parameters:
 
-- **ConnectRetryCount**:&nbsp;&nbsp;Default is 1. Range is 0 through 255.
-- **ConnectRetryInterval**:&nbsp;&nbsp;Default is 10 seconds. Range is 1 through 60.
-- **Connection Timeout**:&nbsp;&nbsp;Default is 15 seconds. Range is 0 through 2,147,483,647.
-- **Command Timeout**:&nbsp;&nbsp;Default is 30 seconds. Range is 0 through 2,147,483,647.
+- **ConnectRetryCount**:&nbsp;&nbsp;Default is **1**. The range is **0** through **255**.
+- **ConnectRetryInterval**:&nbsp;&nbsp;Default is **10** seconds. The range is **1** through **60**.
+- **Connection Timeout**:&nbsp;&nbsp;Default is **15** seconds. The range is **0** through **2147483647**.
+- **Command Timeout**:&nbsp;&nbsp;Default is **30** seconds. The range is **0** through **2147483647**.
 
-The connection retry settings (ConnectRetryCount and ConnectRetryInterval) apply to connection resiliency. Connection resiliency includes the following distinct scenarios:
+The connection retry settings (**ConnectRetryCount** and **ConnectRetryInterval**) apply to connection resiliency. Connection resiliency includes the following distinct types:
 
 - Open connection resiliency refers to the initial **SqlConnection.Open** or **OpenAsync()** method. The first connection attempt is counted as try zero. **ConnectRetryCount** applies to subsequent retries. Therefore, if connection zero fails (this might not occur immediately), **ConnectRetryInterval** is applied first followed by subsequent **ConnectRetryCount** (and **ConnectRetryInterval**) attempts. To take advantage of all retry attempts, the **Connection Timeout** property must provide time for all attempts.
 
-- Idle connection resiliency refers to the automatic detection and reconnection of existing idle connections that were broken. The first attempt to reconnect a broken idle connection is counted as the first retry attempt. To take advantage of all retry attempts, the **Command Timeout** property must provide time for all attempts.
+- Idle connection resiliency refers to the automatic detection and reconnection of existing idle connections that were broken. The first attempt to reconnect a broken idle connection is counted as the first retry attempt. To take advantage of all retry attempts, the **Command Timeout** must provide time for all attempts.
 
 Example:
 Assume the following values for the **ConnectRetryCount** and **ConnectRetryInterval** parameters:
@@ -149,7 +149,7 @@ Assume the following values for the **ConnectRetryCount** and **ConnectRetryInte
 **ConnectRetryCount**: 3
 **ConnectRetryInterval**: 10 seconds
 
-Notice how these values are used in the following scenarios:
+See how these values are used in the following scenarios:
 
 **Scenario: New connection**
 
@@ -166,7 +166,9 @@ Notice how these values are used in the following scenarios:
 For this scenario your chosen values should satisfy the following condition:  
 `Connection Timeout > = ConnectRetryCount * ConnectionRetryInterval`
 
-For example, if the count is 3 and the interval is 10 seconds, a timeout of only 29 seconds doesn't provide enough time for the system's third and final retry to connect: 29 < 3 * 10
+For example, if the count is 3 and the interval is 10 seconds, a timeout of only 29 seconds doesn't provide enough time for the system's third and final retry to connect:
+
+29 < 3 * 10
 
 **Scenario: Idle connection**
 
@@ -180,17 +182,17 @@ For example, if the count is 3 and the interval is 10 seconds, a timeout of only
 
 4:10:20 - Retry 3
 
-This isn't the initial connection. Therefore, so **Connection Timeout** wouldn't ordinarily apply. However, because the connection recovery occurs during command execution, the **Command Timeout** setting does apply. The **Command Timeout** default is 30 seconds. Although, connection recovery is fast in typical circumstances, an intermittent outage, could cause the recovery to take some of the command execution time.
+This isn't the initial connection. Therefore, so **Connection Timeout** doesn't apply. However, because the connection recovery occurs during command execution, the **Command Timeout** setting does apply. The **Command Timeout** default is 30 seconds. Although, connection recovery is fast in typical circumstances, an intermittent outage, could cause the recovery to take some of the command execution time.
 
 For this scenario, if you want to take full advantage of idle connection recovery retries, your chosen values should satisfy the following condition:  
 `Command Timeout > (ConnectRetryCount - 1) * ConnectionRetryInterval`
 
-For example, if the count is 3 and the interval is 10 seconds, a **Command Timeout** value of less than 20 seconds wouldn't provide enough time for the third and final retry: (3 - 1) * 10 = 20`
+For example, if the count is 3 and the interval is 10 seconds, a command timeout value lower than 20 seconds wouldn't give enough time for the third and final retry to connect: (3 - 1) * 10 = 20`
 
-Also, consider that the command itself requires time to run after the connection is recovered.
+Also, consider that the command itself requires time to execute after the connection is recovered.
 
 > [!NOTE]
-> The duration that's provided in these scenarios are only for demonstration. The detection times in both scenarios depend on the underlying infrastructure.
+> The duration values that are provided in these scenarios are for demonstration only. The actual detection times in both scenarios depend on the underlying infrastructure.
 
 <a id="connection-versus-command" name="connection-versus-command"></a>
 

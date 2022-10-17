@@ -39,11 +39,11 @@ Here is a summary of the options and recommendations.
 
 | Columnstore option | Recommendations for when to use | Compression |
 | :----------------- | :------------------- | :---------- |
-| Clustered columnstore index | Use for:<br /><br />1) Traditional data warehouse workload with a star or snowflake schema<br /><br />2) Internet of Things (IOT) workloads that insert large volumes of data with minimal updates and deletes. | Average of 10x |
-| Ordered clustered columnstore index | *Applies to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] and above*<br />Use when a clustered columnstore index is queried via a single ordered predicate column or column set. This guidance is similar to choosing the key column(s) for a rowstore clustered index, though the compressed underlying rowgroups behave differently. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). | Average of 10x |
-| Nonclustered B-tree indexes on a clustered columnstore index | Use to:<br /><br />   1. Enforce primary key and foreign key constraints on a clustered columnstore index.<br /><br />   2. Speed up queries that search for specific values or small ranges of values.<br /><br />   3. Speed up updates and deletes of specific rows.| 10x on average plus some additional storage for the NCIs.|
-| Nonclustered columnstore index on a disk-based heap or B-tree index | Use for:<br /><br />1) An OLTP workload that has some analytics queries. You can drop B-tree indexes created for analytics and replace them with one nonclustered columnstore index.<br /><br />2) Many traditional OLTP workloads that perform Extract Transform and Load (ETL) operations to move data to a separate data warehouse. You can eliminate ETL and a separate data warehouse by creating a nonclustered columnstore index on some of the OLTP tables. | NCCI is an additional index that requires 10% more storage on average.|
-| Columnstore index on an in-memory table | Same recommendations as nonclustered columnstore index on a disk-based table, except the base table is an in-memory table. | Columnstore index is an additional index.|
+| [Clustered columnstore index](#use-a-clustered-columnstore-index-for-large-data-warehouse-tables) | Use for:<br /><br />1) Traditional data warehouse workload with a star or snowflake schema<br /><br />2) Internet of Things (IOT) workloads that insert large volumes of data with minimal updates and deletes. | Average of 10x |
+| [Ordered clustered columnstore index](#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables) | *Applies to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] and above*<br />Use when a clustered columnstore index is queried via a single ordered predicate column or column set. This guidance is similar to choosing the key column(s) for a rowstore clustered index, though the compressed underlying rowgroups behave differently. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order) and [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci). | Average of 10x |
+| [Nonclustered B-tree indexes on a clustered columnstore index](#add-b-tree-nonclustered-indexes-for-efficient-table-seeks) | Use to:<br /><br />   1. Enforce primary key and foreign key constraints on a clustered columnstore index.<br /><br />   2. Speed up queries that search for specific values or small ranges of values.<br /><br />   3. Speed up updates and deletes of specific rows.| 10x on average plus some additional storage for the NCIs.|
+| [Nonclustered columnstore index on a disk-based heap or B-tree index](#add-b-tree-nonclustered-indexes-for-efficient-table-seeks) | Use for:<br /><br />1) An OLTP workload that has some analytics queries. You can drop B-tree indexes created for analytics and replace them with one nonclustered columnstore index.<br /><br />2) Many traditional OLTP workloads that perform Extract Transform and Load (ETL) operations to move data to a separate data warehouse. You can eliminate ETL and a separate data warehouse by creating a nonclustered columnstore index on some of the OLTP tables. | NCCI is an additional index that requires 10% more storage on average.|
+| [Columnstore index on an in-memory table](#use-a-nonclustered-columnstore-index-for-real-time-analytics) | Same recommendations as nonclustered columnstore index on a disk-based table, except the base table is an in-memory table. | Columnstore index is an additional index.|
 
 ## Use a clustered columnstore index for large data warehouse tables
 
@@ -68,12 +68,13 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 *Applies to:* [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
-Consider using an ordered clustered columnstore index when:
+Consider using an ordered clustered columnstore index in the following scenarios:
 
 - When data is relatively static (without frequently writes and deletes) and the ordered clustered columnstore index key is static, ordered clustered columnstore indexes can provide significant performance advantages over non-ordered clustered columnstore indexes or rowstore clustered indexes for analytical workloads.
 - The more distinct values in the first column of the ordered clustered columnstore index key, the better the performance gains may be for ordered clustered columnstore indexes. This is due to improved segment elimination for string data. For more information, see [segment elimination](columnstore-indexes-query-performance.md#segment-elimination).
 - Choose an ordered clustered columnstore index key that will be frequently queried and can benefit from segment elimination, especially the first column of the key. Performance gains due to segment elimination on other columns in the table will be less predictable.
 - Use cases where only the most recent analytical data must be queried, for example, the last 15 seconds, ordered clustered columnstore indexes can provide segment elimination for older data. The first column in the key of the ordered clustered columnstore data must be the date/time data, such as an inserted or created date/time. The segment elimination would be more effective in an ordered clustered columnstore index than in an unordered clustered columnstore index.
+- Consider ordered clustered columnstore indexes on tables containing keys with GUID data, where the uniqueidentifier data type can now be used for [segment elimination](columnstore-indexes-query-performance.md#segment-elimination).
 
 A ordered clustered columnstore index may not be as effective in these scenarios:
 
@@ -188,7 +189,7 @@ To preserve the sorted order during conversion:
 
 Each rowgroup contains one column segment for every column in the table. Each column segment is compressed together and stored on physical media.
 
-There is metadata with each segment to allow for fast elimination of segments without reading them. Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index. For more information, see [Segment elimination](columnstore-indexes-query-performance.md#segment-elimination).
+There is metadata with each segment to allow for fast elimination of segments without reading them. Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index. For more information, see [segment elimination](columnstore-indexes-query-performance.md#segment-elimination).
 
 ## Related Tasks
 

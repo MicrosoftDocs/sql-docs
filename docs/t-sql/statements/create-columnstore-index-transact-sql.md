@@ -132,7 +132,7 @@ To convert to an ordered clustered column store index, the existing index must b
 
 LOB data types (the (max) length data types) cannot be the key of an ordered clustered columnstore index.
 
-When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting and fastest performance of the CREATE INDEX statement.
+When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting with the `CREATE INDEX` statement, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, do not limit MAXDOP, and use all the parallel threading the server can provide. The highest quality of compression and sorting could aid queries on the columnstore index.
 
 When an ordered clustered columnstore index is created, the key columns are indicated by the `column_store_order_ordinal` column in `sys.index_columns`.
 

@@ -171,18 +171,20 @@ Data type choices may have a significant impact on query performance based commo
 
 In columnstore data, row groups are made up of column segments. There is metadata with each segment to allow for fast elimination of segments without reading them. This segment elimination applies to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two.
 
-After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), the columnstore index will not benefit until it is rebuilt using a REBUILD or DROP/CREATE.
+After upgrading to a version of SQL Server that supports string min/max segment elimination ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later), the columnstore index will not benefit this feature until it is rebuilt using a REBUILD or DROP/CREATE.
 
 Segment elimination does not apply to LOB data types, such as the (max) data type lengths.
 
-Currently, only [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later supports clustered columnstore rowgroup elimination for the prefix of `LIKE` predicates, for example `column LIKE 'string%'`. Segment elimination is not supported for use of LIKE such as `column LIKE '%string'`.
+Currently, only [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later supports clustered columnstore rowgroup elimination for the prefix of `LIKE` predicates, for example `column LIKE 'string%'`. Segment elimination is not supported for non-prefix use of `LIKE`, such as `column LIKE '%string'`.
 
 In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can create ordered clustered columnstore indexes, which allow for ordering by columns to aid segment elimination, especially for string columns. In ordered clustered columnstore indexes, segment elimination on the first column in the index key is most effective, because it is sorted. Performance gains due to segment elimination on other columns in the table will be less predictable. For more on ordered clustered columnstore indexes, see [Use an ordered clustered columnstore index for large data warehouse tables](columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).
 
-Using the query connection option [SET STATISTICS IO](../../t-sql/statements/set-statistics-io-transact-sql.md), you can view segment elimination. Look for output such as the following to indicate that segment elimination has occurred. Row groups are made up of column segments, so this may indicate segment elimination. The below SET STATISTICS IO output example of a query, 83% of segments were skipped by the query.
+Using the query connection option [SET STATISTICS IO](../../t-sql/statements/set-statistics-io-transact-sql.md), you can view segment elimination in action. Look for output such as the following to indicate that segment elimination has occurred. Row groups are made up of column segments, so this may indicate segment elimination. The below SET STATISTICS IO output example of a query, roughly 83% data was skipped by the query:
 
 ```output
+...
 Table 'FactResellerSalesPartCategoryFull'. Segment reads 16, segment skipped 83.
+...
 ```
 
 ## Next steps

@@ -73,7 +73,7 @@ monikerRange: ">=sql-server-2016"
 
  To upgrade [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployed in SharePoint 2013, do the following:
 
- :::image type="content" source="media/upgrade-power-pivot-for-sharepoint/as-powepivot-upgrade-flow-sharepoint-2013.png" alt-text="Powerpivot for sharepoint 2013 upgrade.":::
+ :::image type="content" source="media/upgrade-power-pivot-for-sharepoint/as-power-pivot-upgrade-flow-sharepoint-2013.png" alt-text="Powerpivot for sharepoint 2013 upgrade.":::
 
 1. Run [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup on backend server(s) that run [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode. If the server hosts multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], upgrade at least the **POWERPIVOT** instance. The following list is a summary of setup wizard steps related to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] upgrade:
 

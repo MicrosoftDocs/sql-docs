@@ -421,7 +421,7 @@ To configure the load balancer, you need to create a backend pool, a probe, and 
 
 1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
 
-1. Under **Virtual machine** choose the virtual machines that will the virtual machines that will host availability group replicas. Do not include the file share witness server.
+1. Under **Virtual machine** choose the virtual machines that will host availability group replicas. Do not include the file share witness server.
 
    >[!NOTE]
    >If both virtual machines are not specified, connections will only succeed to the primary replica.

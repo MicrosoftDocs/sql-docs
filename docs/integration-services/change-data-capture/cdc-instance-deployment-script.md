@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # CDC Instance Deployment Script
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   The CDC Instance Deployment Script dialog box that displays the CDC instance deployment script. This script can be used to re-create the CDC database with all of its artifacts on a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
  At the completion of the deployment script, you should make sure of the following:  

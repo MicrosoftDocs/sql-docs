@@ -1,13 +1,13 @@
 ---
-title: 'How to: Pause Service Broker Networking (Transact-SQL)'
+title: "How to: Pause Service Broker Networking (Transact-SQL)"
 description: "Service Broker sends and receives messages over the network while any endpoint for Service Broker is in the STARTED state."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # How to: Pause Service Broker Networking (Transact-SQL)

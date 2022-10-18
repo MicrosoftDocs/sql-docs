@@ -1,15 +1,14 @@
 ---
 title: Known issues for the ODBC driver on Linux and macOS
 description: "Learn about known issues with the Microsoft ODBC Driver for SQL Server on Linux and macOS and steps for troubleshooting connectivity issues."
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 02/17/2022
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "known issues"
-author: David-Engel
-ms.author: v-davidengel
 ---
 
 # Known issues for the ODBC driver on Linux and macOS
@@ -53,7 +52,7 @@ If you get another connection failure and don't see a log file, there (possibly)
         Entry:
             Connection = 0x17c858e0
             Window Hdl = (nil)
-            Str In = [DRIVER={ODBC Driver 17 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]
+            Str In = [DRIVER={ODBC Driver 18 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]
             Str Out = (nil)
             Str Out Max = 0
             Str Out Ptr = (nil)

@@ -1,22 +1,19 @@
 ---
 title: Update data in cursors (OLE DB driver)
 description: Learn how an OLE DB Driver for SQL Server consumer application works with requests in a modifiable rowset by using SQL Server cursors.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "updating data [SQL Server]"
   - "isolation levels [SQL Server]"
   - "delayed update mode [OLE DB]"
   - "immediate update mode [OLE DB]"
   - "cursors [OLE DB]"
   - "data updates [SQL Server], OLE DB"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Updating Data in SQL Server Cursors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,16 +1,12 @@
 ---
 title: Diagnosing problems with the JDBC driver
 description: Learn how to diagnose and troubleshoot problems like error handling, checking the driver version and tracing.
-ms.custom: ""
-ms.date: 08/12/2019
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 08/12/2019
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Diagnosing problems with the JDBC driver
 

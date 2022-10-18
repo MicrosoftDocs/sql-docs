@@ -3,13 +3,10 @@ title: "LOGINPROPERTY (Transact-SQL)"
 description: "LOGINPROPERTY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.technology: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "BadPasswordCount_TSQL"
   - "BadPasswordTime_TSQL"
@@ -64,7 +61,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**DefaultDatabase**|Returns the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login default database as stored in metadata or **master** if no database is specified. Returns NULL for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provisioned users (for example, Windows authenticated users).|  
 |**DefaultLanguage**|Returns the login default language as stored in metadata. Returns NULL for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provisioned users, for example, Windows authenticated users.|  
 |**HistoryLength**|Returns the number of passwords tracked for the login, using the password-policy enforcement mechanism. 0 if the password policy is not enforced. Resuming password policy enforcement restarts at 1.|  
-|**IsExpired**|Indicates whether the login has expired.|  
+|**IsExpired**|Indicates whether the login's password has expired.|  
 |**IsLocked**|Indicates whether the login is locked.|  
 |**IsMustChange**|Indicates whether the login must change its password the next time it connects.|  
 |**LockoutTime**|Returns the date when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login was locked out because it had exceeded the permitted number of failed login attempts.|  
@@ -108,7 +105,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 -   NULL if the login is not a valid SQL Server login  
   
 ## Remarks  
- This built-in function returns information about the password policy settings of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The names of the properties are not case sensitive, so property names such as **BadPasswordCount** and **badpasswordcount** are equivalent. The values of the **PasswordHash, PasswordHashAlgorithm**, and **PasswordLastSetTime** properties are available on all supported configurations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the other properties are only available when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] and both CHECK_POLICY and CHECK_EXPIRATION are enabled. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
+ This built-in function returns information about the password policy settings of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The names of the properties are not case sensitive, so property names such as **BadPasswordCount** and **badpasswordcount** are equivalent. The values of the **PasswordHash, PasswordHashAlgorithm**, and **PasswordLastSetTime** properties are available on all supported configurations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the other properties are only available when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on [!INCLUDE[winserver2003](../../includes/winserver2003-md.md)] and both CHECK_POLICY and CHECK_EXPIRATION are enabled. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## Permissions  
  Requires VIEW permission on the login. When requesting the password hash, also requires CONTROL SERVER permission.  

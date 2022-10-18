@@ -44,11 +44,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 4.  In the **Results** pane, locate the row to be changed or deleted. To delete the row, right-click the row and select **Delete**. To change data in one or more columns, modify the data in the column.  
   
-    > **IMPORTANT!!** You cannot delete a row if the view references more than one base table. You can only update columns that belong to a single base table.  
+    > [!IMPORTANT]  
+    > You cannot delete a row if the view references more than one base table. You can only update columns that belong to a single base table.  
   
 5.  To insert a row, scroll down to the end of the rows and insert the new values.  
 
-    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
+    > [!IMPORTANT]  
+    > You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

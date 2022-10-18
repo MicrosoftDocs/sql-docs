@@ -1,15 +1,14 @@
 ---
 title: Secure Azure SQL Managed Instance public endpoints
 description: "Securely use public endpoints in Azure SQL Managed Instance"
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: sqldbrb=1
-ms.topic: conceptual
 author: srdan-bozovic-msft
 ms.author: srbozovi
-ms.reviewer: vanto, sstein
+ms.reviewer: vanto
 ms.date: 05/08/2019
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: sqldbrb=1
 ---
 # Use Azure SQL Managed Instance securely with public endpoints
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -38,7 +37,7 @@ The following diagram shows the recommended security configurations:
 
 ![Security configurations for locking down inbound and outbound connectivity](./media/public-endpoint-overview/managed-instance-vnet.png)
 
-A managed instance has a public endpoint address that is dedicated to a customer. This endpoint shares the IP with the [management endpoint](management-endpoint-find-ip-address.md) but uses a different port. In the client-side outbound firewall and in the network security group rules, set this public endpoint IP address to limit outbound connectivity.
+A managed instance has a public endpoint address that is dedicated to a customer. This endpoint shares the IP address with the [management endpoint](management-endpoint-find-ip-address.md) but uses a different port. Similar to a local endpoint, the public endpoint may change after certain management operations. Always determine the public endpoint address by resolving the endpoint FQDN record, such as, for example, when configuring application-level firewall rules. 
 
 To ensure traffic to the managed instance is coming from trusted sources, we recommend connecting from sources with well-known IP addresses. Use a network security group to limit access to the managed instance public endpoint on port 3342.
 

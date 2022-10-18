@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "table_constraint"
 dev_langs:
   - "TSQL"
-ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 ---
 # ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -187,7 +186,7 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
   
  Each PRIMARY KEY and UNIQUE constraint generates an index. The number of UNIQUE and PRIMARY KEY constraints cannot cause the number of indexes on the table to exceed 999 nonclustered indexes and 1 clustered index. Foreign key constraints do not automatically generate an index. However, foreign key columns are frequently used in join criteria in queries by matching the column or columns in the foreign key constraint of one table with the primary or unique key column or columns in the other table. An index on the foreign key columns enables the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to quickly find related data in the foreign key table.  
 
- SQL Server 2022 introduces resumable operations for adding table constraints for primary key and unique key constraints. For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](../../relational-databases/security/resumable-add-table-constraints.md).
+ [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces resumable operations for adding table constraints for primary key and unique key constraints. For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](../../relational-databases/security/resumable-add-table-constraints.md).
   
 ## Examples  
  For examples, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  

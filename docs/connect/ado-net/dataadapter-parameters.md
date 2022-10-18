@@ -1,16 +1,14 @@
 ---
 title: "DataAdapter parameters"
 description: Learn about the properties of DbDataAdapter that return data from a data source and manage changes to the data source.
-ms.date: "11/30/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "11/30/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # DataAdapter parameters
 

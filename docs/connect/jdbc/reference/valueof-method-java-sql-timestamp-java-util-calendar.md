@@ -1,16 +1,12 @@
 ---
+title: "valueOf Method (java.sql.Timestamp, java.util.Calendar)"
 description: "valueOf Method (java.sql.Timestamp, java.util.Calendar)"
-title: "valueOf Method (java.sql.Timestamp, java.util.Calendar) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # valueOf Method (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

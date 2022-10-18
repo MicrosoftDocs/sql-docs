@@ -16,9 +16,6 @@ ms.author: chugu
 ---
 # Review and Generate Supplemental Logging Scripts
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   Use the **Scripts** tab to run or re-run a script on the Oracle source database that sets up supplemental logging.  
   
  Before you run the scripts select one of the following:  

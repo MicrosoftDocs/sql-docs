@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database [Master Data Services], object security"
   - "security [Master Data Services], database objects"
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Database Object Security (Master Data Services)
 

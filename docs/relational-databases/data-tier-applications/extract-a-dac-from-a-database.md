@@ -92,7 +92,8 @@ Select the reference data that you want to include in your data-tier application
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  On this page, the wizard validates that all database objects are supported by a data-tier application (DAC). It also checks dependencies across database objects to determine the set of objects that can be successfully included in the DAC. After that, it displays the validation report and summarizes the options that you have selected in this wizard. To change an option, click **Previous**. To begin extracting a DAC, click **Next**.  
   
-> **NOTE!**If one or more objects are not supported by a DAC, then the **Next** button is disabled and the extraction process may not continue. In such cases, it is recommended to remove the non-supported objects and then run this wizard again.  
+> [!NOTE]  
+> If one or more objects are not supported by a DAC, then the **Next** button is disabled and the extraction process may not continue. In such cases, it is recommended to remove the non-supported objects and then run this wizard again.  
   
  **Summary** - A summary of the options you have selected are listed under **DAC properties**. The results of the validation are listed under **DAC objects**. There are three types of results from the validation:  
   

@@ -55,7 +55,6 @@ You configure the Scale Out Master service by using the `<drive>:\Program Files\
 |DealWithExpiredTasksIntervalInMs|The interval for dealing with expired execution jobs, in milliseconds.|300000|
 |MasterHeartbeatIntervalInMs|The interval for the Scale Out Master heartbeat, in milliseconds. This property specifies the interval at which Scale Out Master updates its online status in the SSISDB catalog.|30000|
 |SqlConnectionTimeoutInSecs|The SQL connection timeout in seconds when connecting to SSISDB.|15|
-||||    
 
 ## View the Scale Out Master service log
 

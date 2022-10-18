@@ -1,16 +1,12 @@
 ---
+title: "Support for High Availability, Disaster Recovery for the Microsoft Drivers for PHP for SQL Server"
 description: "Support for High Availability, Disaster Recovery for the Microsoft Drivers for PHP for SQL Server"
-title: "Support for High Availability, Disaster Recovery for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2018"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "07/31/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Support for High Availability, Disaster Recovery
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

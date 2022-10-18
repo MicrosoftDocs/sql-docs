@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

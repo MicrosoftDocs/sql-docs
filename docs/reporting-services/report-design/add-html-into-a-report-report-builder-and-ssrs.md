@@ -37,7 +37,7 @@ ms.author: maggies
   
 6.  Click **HTML - Interpret HTML tags as styles**. This causes the field to be evaluated as HTML.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ## See Also  
  [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   

@@ -1,17 +1,15 @@
 ---
 title: "Obtaining a single value from a database"
 description: Learn how to return a single value in ADO.NET. This example code returns the identity column value for an inserted record.
-ms.date: "11/25/2020"
-dev_langs: 
-  - "csharp"
-ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-chmalh
+ms.date: "11/25/2020"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Obtaining a single value from a database
 

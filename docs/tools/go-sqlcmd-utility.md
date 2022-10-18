@@ -9,7 +9,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 05/16/2022
+ms.date: 10/12/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
- The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt and uses the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver for go language.  go-sqlcmd aims to be a complete port of [sqlcmd](sqlcmd-utility.md) to the go language and compiles to executable binaries for Windows, macOS, and Linux on both x64 and arm64 architectures.  Using go-sqlcmd in place of sqlcmd removes the ODBC driver dependency, increases options for Azure Active Directory authentication types, and adds [additional enhancements](#enhancements).
+ The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, system procedures, and script files at the command prompt and uses the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver for go language.  go-sqlcmd aims to be a complete port of [sqlcmd](sqlcmd-utility.md) to the go language and compiles to executable binaries for Windows, macOS, and Linux on both x64 and arm64 architectures.  [Download and install](#download-and-install-go-sqlcmd) the go-sqlcmd binaries to get started without additional dependencies.  Using go-sqlcmd in place of sqlcmd removes the ODBC driver dependency, increases options for Azure Active Directory authentication types, and adds [additional enhancements](#enhancements).
 
  **go-sqlcmd** is open source under the MIT license and available on [GitHub](https://github.com/microsoft/go-sqlcmd). As a CLI, go-sqlcmd is ideal for pipelines and edge applications as it has no additional dependencies and supports a wide variety of environment configurations. The capabilities of go-sqlcmd expand beyond the ODBC-based [sqlcmd](sqlcmd-utility.md) to incorporate a [vertical output format](#enhancements) and extensive [Azure Active Directory authentication](#azure-active-directory-authentication) options.
 
@@ -76,12 +76,38 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ### Windows
 
+#### Winget (Windows Package Manager Client)
+
+1. Install the [Windows Package Manager Client](/windows/package-manager/winget) if you don't already have it.
+2. Run the following command to install go-sqlcmd.
+
+    ```bash
+    winget install sqlcmd
+    ```
+
+#### Direct download
+
 1. Download the corresponding `-windows-x64.zip` or `-windows-arm.zip` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of go-sqlcmd from the GitHub code repository. 
 
 2. Extract the `sqlcmd.exe` file from the downloaded zip folder.
 
 
 ### macOS
+
+#### Homebrew
+
+1. Install Homebrew if you don't already have it.
+
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+2. Install sqlcmd with Homebrew.
+
+    ```bash
+    brew install sqlcmd
+    ```
+
+#### Direct download
 
 1. Download the `-darwin-x64.zip` asset from the [latest](https://github.com/microsoft/go-sqlcmd/releases/latest) release of go-sqlcmd from the GitHub code repository. 
 
@@ -114,6 +140,8 @@ Several switches and behaviors are altered from [sqlcmd](sqlcmd-utility.md) in g
 - `-u` The generated Unicode output file will have the UTF16 Little-Endian Byte-order mark (BOM) written to it.
 - Some behaviors that were kept to maintain compatibility with `OSQL` may be changed, such as alignment of column headers for some data types.
 - All commands must fit on one line, even `EXIT`. Interactive mode won't check for open parentheses or quotes for commands and prompt for successive lines. The ODBC sqlcmd allows the query run by `EXIT(query)` to span multiple lines.
+
+Connections from go-sqlcmd are limited to TCP connections. Named pipes are not supported at this time in the go-mssqldb driver.
 
 ## Enhancements
 
@@ -172,7 +200,7 @@ These environment variables can be set to configure some aspects of Azure Active
 `SQLCMDCLIENTID` - set this environment variable to the identifier of an application registered in your Azure Active Directory, which is authorized to authenticate to Azure SQL Database. Applies to `ActiveDirectoryInteractive` and `ActiveDirectoryPassword` methods.
 
 ## Next steps
-- [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-mssqldb)
+- [Learn more about go-sqlcmd on GitHub](https://github.com/microsoft/go-sqlcmd)
 - [Run on Docker](../linux/quickstart-install-connect-docker.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

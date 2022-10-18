@@ -1,16 +1,13 @@
 ---
-description: Learn how to establish secure communication channels using TLS encryption with your SQL database connections.
 title: Using encryption
-ms.custom: ""
-ms.date: 03/31/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: vanto
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
+description: Learn how to establish secure communication channels using TLS encryption with your SQL database connections.
 author: David-Engel
 ms.author: v-davidengel
+ms.reviewer: vanto
+ms.date: 03/31/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Using encryption
 

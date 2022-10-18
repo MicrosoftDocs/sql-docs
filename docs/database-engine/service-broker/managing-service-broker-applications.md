@@ -1,13 +1,13 @@
-﻿---
+---
 title: Managing Service Broker Applications
 description: "For a Service Broker application that is in production, most day-to-day management occurs as a normal part of database maintenance."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Managing Service Broker Applications

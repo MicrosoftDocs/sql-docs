@@ -1,19 +1,17 @@
 ---
 title: DTU resource limits single databases
 description: This page describes some common DTU resource limits for single databases in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom:
-  - "references_regions"
-  - "seo-lt-2019"
-  - "sqldbrb=1"
-ms.topic: reference
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 01/31/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom:
+  - "references_regions"
+  - "seo-lt-2019"
+  - "sqldbrb=1"
 ---
 # Resource limits for single databases using the DTU purchasing model - Azure SQL Database
 
@@ -55,7 +53,9 @@ The following tables show the resources available for a single database at each 
 
 
 > [!IMPORTANT]
-> The Basic service tier provides less than one vCore (CPU).  For CPU-intensive workloads, a service tier of S3 or greater is recommended.
+> The Basic service tier provides less than one vCore (CPU).  For CPU-intensive workloads, a service tier of S3 or greater is recommended. 
+> 
+> Database restore operations can be CPU-intensive and may require a service objective of S3 or greater. Once restored, a database can be scaled down to a lower service objective if required.
 >
 >Regarding data storage, the Basic service tier is placed on Standard Page Blobs. Standard Page Blobs use hard disk drive (HDD)-based storage media and are best suited for development, testing, and other infrequently accessed workloads that are less sensitive to performance variability.
 >
@@ -76,6 +76,8 @@ The following tables show the resources available for a single database at each 
 
 > [!IMPORTANT]
 > The Standard S0, S1 and S2 tiers provide less than one vCore (CPU).  For CPU-intensive workloads, a service tier of S3 or greater is recommended.
+>
+> Restoration operations can be CPU-intensive and often require a service tier of S3 or greater. 
 >
 >Regarding data storage, the Standard S0 and S1 service tiers are placed on Standard Page Blobs. Standard Page Blobs use hard disk drive (HDD)-based storage media and are best suited for development, testing, and other infrequently accessed workloads that are less sensitive to performance variability.
 >

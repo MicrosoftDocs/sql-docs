@@ -1,8 +1,8 @@
 ---
 title: "ALTER DATABASE SET HADR (Transact-SQL)"
 description: ALTER DATABASE SET HADR (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 dev_langs:
   - "TSQL"
-ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

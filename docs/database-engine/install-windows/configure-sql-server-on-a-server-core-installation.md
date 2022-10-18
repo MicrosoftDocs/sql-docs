@@ -1,17 +1,16 @@
 ---
 title: "Configure Server Core Installation"
 description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
-ms.custom: "seo-lt-2019"
-ms.date: "09/15/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "IsHadrEnabled server property"
-  - "Server Core Installation [SQL Server]"
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "09/15/2021"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "IsHadrEnabled server property"
+  - "Server Core Installation [SQL Server]"
 monikerRange: ">=sql-server-2016"
 ---
 # Configure SQL Server on a Server Core Installation
@@ -58,6 +57,8 @@ Specify the UpdateEnabled, and UpdateSource parameters to include the latest pro
 ```  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 ###  <a name="bkmk_alreadyInstall"></a> Installing Updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] After It Has Been Installed  
 On an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], we recommend that you apply the latest security updates and critical updates including General Distribution Releases (GDRs), and Service Packs (SPs). Individual Cumulative updates and security updates should be adopted on a case-by-case, "as-needed" basis. Evaluate the update; if it's needed, then apply it.  

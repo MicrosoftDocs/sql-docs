@@ -1,23 +1,16 @@
 ---
 title: Configure a SQL Server Always On availability group across different regions
 description: This article explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region.
-services: virtual-machines
-documentationCenter: na
-author: adbadram
-editor: monicar
-tags: azure-service-management
-
-ms.assetid: 388c464e-a16e-4c9d-a0d5-bb7cf5974689
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma, randolphwest
+ms.date: 09/01/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: "05/02/2017"
-ms.author: adbadram
-ms.custom: "seo-lt-2019"
-ms.reviewer: mathoma
+ms.custom: seo-lt-2019
+editor: monicar
+tags: azure-service-management
 ---
 
 # Configure a SQL Server Always On availability group across different Azure regions
@@ -25,6 +18,9 @@ ms.reviewer: mathoma
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 This article explains how to configure a SQL Server Always On availability group replica on Azure virtual machines in a remote Azure location. Use this configuration to support disaster recovery.
+
+> [!NOTE]  
+> You can use the same steps in this article to extend your on-premises availability group to Azure.
 
 This article applies to Azure Virtual Machines in Resource Manager mode.
 
@@ -56,6 +52,14 @@ When availability group replicas are on Azure virtual machines in different Azur
 To create a replica in a remote data center, do the following steps:
 
 1. [Create a virtual network in the new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network).
+
+   Select the subnet network, Cluster IP, and AG Listener IP addresses to be used for the local and remote region. The step listed here is using the following:
+
+   | Type | Local | Remote Region
+   | ----- | ----- | ----------
+   | Subnet Network | 192.168.15.0/24 | 10.36.1.0/24
+   | Cluster IP | 192.168.15.200 | 10.36.1.200
+   | AG Listener IP | 192.168.15.201 | 10.36.1.201
 
 1. Connect the Virtual Networks in the two Azure regions using one of the following methods:
    

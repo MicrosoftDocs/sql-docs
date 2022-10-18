@@ -1,14 +1,14 @@
 ---
 title: "How a witness affects database availability"
 description: Learn how database mirroring affects quorum and database availability. Quorum makes sure that a database is owned by only one partner at a time.
-ms.custom: "seo-lt-2019"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "quorum [SQL Server], database mirroring"
   - "running exposed in database mirroring [SQL Server]"
   - "witness-to-partner quorum [SQL Server]"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "mirror database [SQL Server]"
   - "full quorum [SQL Server]"
   - "high-availability mode [SQL Server]"
-ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Quorum: How a witness affects database availability (database mirroring)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

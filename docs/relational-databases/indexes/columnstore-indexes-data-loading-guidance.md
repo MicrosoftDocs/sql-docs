@@ -59,7 +59,6 @@ These scenarios describe when loaded rows go directly to the columnstore or when
 |145,000|145,000<br /><br /> Rowgroup size: 145,000|0|  
 |1,048,577|1,048,576<br /><br /> Rowgroup size: 1,048,576.|1|  
 |2,252,152|2,252,152<br /><br /> Rowgroup sizes: 1,048,576, 1,048,576, 155,000.|0|  
-| &nbsp; | &nbsp; | &nbsp; |
   
  The following example shows the results of loading 1,048,577 rows into a table. The results show that one COMPRESSED rowgroup in the columnstore (as compressed column segments), and 1 row in the deltastore.  
   

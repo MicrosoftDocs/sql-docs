@@ -1,23 +1,19 @@
 ---
+title: "GetReparentedValue (Database Engine)"
 description: "GetReparentedValue (Database Engine)"
-title: "GetReparentedValue (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: "reference"
-f1_keywords: 
-  - "Reparent_TSQL"
-  - "Reparent"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Reparent [Database Engine]"
-ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "07/22/2017"
+ms.prod: sql
+ms.technology: t-sql
+ms.topic: "reference"
+f1_keywords:
+  - "Reparent_TSQL"
+  - "Reparent"
+helpviewer_keywords:
+  - "Reparent [Database Engine]"
+dev_langs:
+  - "TSQL"
 ---
 # GetReparentedValue (Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "5120 (Database Engine error)"
 ms.assetid: 
 author: PijoCoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

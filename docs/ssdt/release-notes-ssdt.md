@@ -41,7 +41,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog aren't affected. |
-| &nbsp; | &nbsp; |
 
 ## 15.9.9,&nbsp; SSDT for VS 2017
 
@@ -62,7 +61,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog aren't affected. |
-| &nbsp; | &nbsp; |
 
 ## 15.9.8,&nbsp; SSDT for VS 2017
 
@@ -85,7 +83,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
-| &nbsp; | &nbsp; |
 
 ## 15.9.7,&nbsp; SSDT for VS 2017
 
@@ -113,7 +110,6 @@ _SSDT for Visual Studio 2017._
 | Known issue | Details |
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
-| &nbsp; | &nbsp; |
 
 ## 15.9.6,&nbsp; SSDT for VS 2017
 
@@ -142,7 +138,6 @@ _SSDT for Visual Studio 2017._
 | Power Query Source might not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source might not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source isn't localized. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 15.9.5,&nbsp; SSDT for VS 2017
 
@@ -179,7 +174,6 @@ _SSDT for Visual Studio 2017._
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source isn't localized | &nbsp; |
 | When targeting SQL Server 2017 and SxS with SQL Server 2017 patched with CU19 or later CU, debugging packages containing Script Task/Component with breakpoints hangs if Run64BitRuntime is set to true. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 15.9.4,&nbsp; SSDT for VS 2017
 
@@ -212,7 +206,6 @@ _SSDT for Visual Studio 2017._
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source isn't localized | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 15.9.3,&nbsp; SSDT for VS 2017
 
@@ -245,7 +238,6 @@ _SSDT for Visual Studio 2017._
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source isn't localized | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 15.9.2,&nbsp; SSDT for VS 2017
 
@@ -273,7 +265,6 @@ _SSDT for Visual Studio 2017._
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source isn't localized | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 15.9.1,&nbsp; SSDT for VS 2017
 
@@ -302,7 +293,6 @@ _SSDT for Visual Studio 2017._
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source isn't localized. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 15.9.0,&nbsp; SSDT for VS 2017
 
@@ -317,7 +307,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Add Power Query Source (Preview) for SSIS in ADF 2017. |
 | Integration Services (SSIS) | Add back the support for SQL Server 2012. |
 | Integration Services (SSIS) | Add Oracle source and destination for SQL Server 2019. |
-| Integration Services (SSIS) | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT. <br/></br> To design package targeting server version 2017 or below, download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/></br> [Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017 ](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016 ](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014 ](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012 ](https://www.microsoft.com/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT.<br/><br/>To design package targeting server version 2017 or below, download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine.<br/><br/>[Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)<br/>[Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)<br/>[Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)<br/>[Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283) |
 | Integration Services (SSIS) | Fix an issue that Script Task/Component can't be loaded when migrating from earlier SSIS versions. |
 | Integration Services (SSIS) | Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. |
 | Integration Services (SSIS) | Fix an issue that, in some cases, saving the package causes Visual Studio to crash. |
@@ -334,7 +324,6 @@ _SSDT for Visual Studio 2017._
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source isn't localized. | &nbsp; |
-| &nbsp; | &nbsp; |
 
 ## 15.8.2,&nbsp; SSDT for VS 2017
 

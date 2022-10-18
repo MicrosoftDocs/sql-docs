@@ -1,17 +1,15 @@
 ---
 title: "Authentication in SQL Server"
 description: "Learn about logins and authentication in SQL Server when using ADO.NET and where to find additional resources."
-ms.date: "09/26/2019"
-dev_langs: 
-  - "csharp"
-ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "09/26/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
+dev_langs:
+  - "csharp"
 ---
 # Authentication in SQL Server
 
@@ -29,7 +27,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 With Windows authentication, users are already logged onto Windows and do not have to log on separately to SQL Server. The following `SqlConnection.ConnectionString` specifies Windows authentication without requiring users to provide a user name or password.  
   
 ```csharp
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;Encrypt=True;"
 ```  
   
 > [!NOTE]

@@ -1,15 +1,13 @@
 ---
 title: "SQL Server binary and large-value data"
 description: "Describes how to work with large value data in SQL Server."
-ms.date: "08/15/2019"
-ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
+ms.date: "08/15/2019"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # SQL Server binary and large-value data
 

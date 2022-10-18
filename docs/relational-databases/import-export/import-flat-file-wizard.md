@@ -1,17 +1,16 @@
 ---
-title: "Import Flat File to SQL | Microsoft Docs"
+title: "Import Flat File to SQL"
 description: Import Flat File Wizard is a simple way to copy data from a .csv or .txt file to a new database table. This article shows you how and when to use the wizard.
-ms.custom: ""
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan
 ms.date: "09/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: data-movement
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.importflatfile.f1"
-author: yualan
-ms.author: alayu
-ms.reviewer: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard

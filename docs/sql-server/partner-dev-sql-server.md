@@ -58,4 +58,4 @@ To learn more about some of our other partners, see [High availability, and disa
 [click2cloud_twitter]:https://twitter.com/click2cloudinc 
 
 <!--Supported Systems-->
-[idera_requirements]:https://www.idera.com/rapid-sql-ide/systemrequirements
+[idera_requirements]:https://www.idera.com/productssolutions/freetools/rapid-database-extractor/systemrequirements/

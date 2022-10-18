@@ -1,8 +1,8 @@
 ---
 title: "CREATE FULLTEXT CATALOG (Transact-SQL)"
 description: CREATE FULLTEXT CATALOG (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/24/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "CREATE FULLTEXT CATALOG statement"
 dev_langs:
   - "TSQL"
-ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 ---
 
 # CREATE FULLTEXT CATALOG (Transact-SQL)

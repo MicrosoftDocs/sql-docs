@@ -1,14 +1,14 @@
 ---
+title: "Understanding the DMX Select Statement"
 description: "Understanding the DMX Select Statement"
-title: "Understanding the DMX Select Statement | Microsoft Docs"
+author: minewiskan
+ms.author: owend
+ms.reviewer: owend
 ms.date: 02/17/2022
 ms.prod: sql
 ms.technology: analysis-services
-ms.custom: dmx
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
-author: minewiskan
+ms.custom: dmx
 ---
 # Understanding the DMX Select Statement
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +37,8 @@ author: minewiskan
   
      In that case, you need to drill through to the mining structure, which is your data domain, and look at individual rows in columns such as Gender, Bike Buyer, and so on.  
   
- **IMPORTANT:** Anything that is included in the expression list or in the **WHERE** clause must come from the data domain that is defined by the **FROM** clause. You cannot mix data domains.  
+> [!IMPORTANT]  
+> Anything that is included in the expression list or in the **WHERE** clause must come from the data domain that is defined by the **FROM** clause. You cannot mix data domains.  
   
 ##  <a name="Select_Types"></a> SELECT Types  
  The syntax of **SELECT** statement supports many different tasks. Use the following patterns to perform these tasks:  

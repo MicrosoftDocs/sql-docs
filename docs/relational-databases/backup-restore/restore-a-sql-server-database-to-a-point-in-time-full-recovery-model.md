@@ -86,7 +86,7 @@ ms.author: mathoma
   
 7.  In the **Restore to** section, click **Specific date and time**.  
   
-8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  Use either the **Date** and **Time** boxes or the slider bar to specify a specific date and time to where the restore should stop. Select **OK**.
   
     > [!NOTE]  
     >  Use the **Timeline Interval** box to change the amount of time displayed on the timeline.  

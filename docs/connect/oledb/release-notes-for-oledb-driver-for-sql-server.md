@@ -1,12 +1,12 @@
 ---
 title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 03/02/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
@@ -21,10 +21,38 @@ See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
 
+## 19.1.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2206472)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2206473)  
+
+Released: August 31, 2022
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2206472&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2206473&clcid=0x40a)
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Application-Layer Protocol Negotiation (ALPN) extension | The driver implements the Application-Layer Protocol Negotiation (ALPN) extension when the TDS 8.0 protocol is used. |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed an issue where the `SSPROP_INIT_AUTOTRANSLATE` property was ignored for `SSVARIANT` narrow string values. | Fixed a bug where setting `SSPROP_INIT_AUTOTRANSLATE` to `VARIANT_FALSE` would result in character translations for `SSVARIANT` narrow string values. |
+| Fixed an issue with missing digital signatures. | Added digital signatures for the installer custom action dynamic-link libraries. |
+| Fixed an issue with HostnameInCertificate property being passed through the Server Name Indication (SNI) TLS extension. | The HostnameInCertificate value is no longer present in the Server Name Indication (SNI) TLS extension. |
+| Restored the functionality of the Protocol Order and the TCP Keep-Alive registry properties. | The driver now adjusts the TCP Keep-Alive and the Protocol Order properties based on the values set for the corresponding [registry entries](features/registry-settings.md#tcp-keep-alive-and-protocol-order-registry-properties). |
+
+## Previous releases
+
 ## 19.0.0
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186934)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2186855)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186934)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2186855)  
 
 Released: February 15, 2022
 
@@ -40,12 +68,28 @@ If you need to download the installer in a language other than the one detected 
 | Secure by default | **BREAKING CHANGE**<br />The driver now defaults to secure-by-default options. Encrypted connections are enabled by default. The server certificate is now validated when client-side encryption is off but the server requires encryption.<br /><br />To restore previous version behavior, you need to opt-in to non-encrypted connections (`Encrypt` or `Use Encryption for Data` option) and trust the server certificate (`Trust Server Certificate` option), if the server uses a self-signed certificate. For more information, see [Encryption and certificate validation](features/encryption-and-certificate-validation.md). |
 | Support for the `Host Name In Certificate` connection string keyword, and the `SSPROP_INIT_HOST_NAME_CERTIFICATE` initialization property. | The user may now specify the host name to be used when validating the SQL Server TLS/SSL certificate. |
 
-## Previous releases
+## 18.6.4
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2206347)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2206348)  
+
+Released: August 31, 2022
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2206347&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2206348&clcid=0x40a)
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed an issue where the `SSPROP_INIT_AUTOTRANSLATE` property was ignored for `SSVARIANT` narrow string values. | Fixed a bug where setting `SSPROP_INIT_AUTOTRANSLATE` to `VARIANT_FALSE` would result in character translations for `SSVARIANT` narrow string values. |
+| Fixed an issue with missing digital signatures. | Added digital signatures for the installer custom action dynamic-link libraries. |
 
 ## 18.6.3
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2183083)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2183084)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2183083)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2183084)  
 
 Released: December 15, 2021
 
@@ -68,8 +112,8 @@ If you need to download the installer in a language other than the one detected 
 
 ## 18.6.0
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2164384)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2164408)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2164384)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2164408)  
 
 Released: June 18, 2021
 
@@ -94,8 +138,8 @@ If you need to download the installer in a language other than the one detected 
 
 ## 18.5.0
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2135577)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2135722)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2135577)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2135722)  
 
 Released: December 1, 2020
 
@@ -121,8 +165,8 @@ If you need to download the installer in a language other than the one detected 
 
 ## 18.4.0
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2129954)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2131003)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2129954)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2131003)  
 
 Released: May 2020
 
@@ -151,8 +195,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 ## 18.3.0
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2117517)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2117515)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 Released: October 2019
 
@@ -166,21 +210,19 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Azure Active Directory authentication support (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`) | [Using Azure Active Directory](features/using-azure-active-directory.md) |
 | Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the OLE DB installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
-| &nbsp; | &nbsp; |
 
 ### Bugs fixed
 
 | Bug fixed | Details |
 | :-------- | :------ |
 | Fixed drop index logic in [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)). | Previous versions of the OLE DB driver can't drop a primary key index when the schema ID and the user ID of the owner of the index aren't equal. |
-| &nbsp; | &nbsp; |
 
 Download previous OLE DB Driver versions by clicking the download links in the following sections:
 
 ## 18.2.3
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2119738)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2119554)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 Released: June 2019
 
@@ -193,12 +235,11 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Support for driver upgrades from the SQL Server removable media | This improvement allows driver upgrades directly from the SQL Server removable media. |
-| &nbsp; | &nbsp; |
 
 ## 18.2.2
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118415)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118512)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 Released: May 2019
 
@@ -211,12 +252,11 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Bug fixed | Details |
 | :-------- | :------ |
 | Fixed non-interactive Azure Active Directory authentication in multithreaded apartment (MTA). | The OLE DB Driver 18.2.1 incorrectly tries to change the COM concurrency model on an apartment that was previously initialized as multithreaded (MTA). As a result, in an application that makes more than one subsequent call to [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) or [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) prior to calling the [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) interface, the driver fails to connect when using any of the Azure Active Directory authentication modes. |
-| &nbsp; | &nbsp; |
 
 ## 18.2.1
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118278)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118511)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 Released: February 2019
 
@@ -230,12 +270,11 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------------ | :------ |
 | Support for UTF-8 server encoding | [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
 | Azure Active Directory authentication support | [Using Azure Active Directory](features/using-azure-active-directory.md) |
-| &nbsp; | &nbsp; |
 
 ## 18.1.0
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118509)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118506)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 Released: July 2018
 
@@ -248,19 +287,17 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Support for the `UseFMTONLY` connection string keyword, and for the `SSPROP_INIT_USEFMTONLY` initialization property | `UseFMTONLY` controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and newer.<br/><br/>For more information, see: [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
-| &nbsp; | &nbsp; |
 
 ### Bugs fixed in 18.1.0
 
 | Bug fixed | Details |
 | :-------- | :------ |
 | Fixed incorrect version of the BCP format file. | The OLE DB Driver 18.0 incorrectly sets the version of the BCP format file to 18.0, instead of to 11.0.<br/>Format files generated by the OLE DB Driver 18.0 cannot be read by the OLE DB Driver 18.1.<br/>If you need to use format files generated by the previous version of the driver with the new driver, you can manually edit the files to change the version to 11.0. |
-| &nbsp; | &nbsp; |
 
 ## 18.0.2
 
-![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118277)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2118504)  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 Released: March 2018
 
@@ -273,7 +310,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Feature added | Details |
 | :------------ | :------ |
 | Support for the `MultiSubnetFailover` connection string keyword, and the `SSPROP_INIT_MULTISUBNETFAILOVER` initialization property. | For more information, see:<br/>&bull; &nbsp; [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md),<br/>&bull; &nbsp; [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
-| &nbsp; | &nbsp; |
 
 ## See also
 

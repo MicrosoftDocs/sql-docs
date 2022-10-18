@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 6: Receiving the Reply and Ending the Conversation'
+title: "Lesson 6: Receiving the Reply and Ending the Conversation"
 description: "In this lesson, you will learn to receive the reply message from the target service and end the conversation."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 6: Receiving the Reply and Ending the Conversation

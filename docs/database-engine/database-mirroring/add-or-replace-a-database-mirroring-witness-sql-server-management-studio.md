@@ -1,19 +1,16 @@
 ---
 title: "Add or replace a mirror witness (SSMS)"
 description: Learn how to add or replace a database mirroring witness using SQL Server Management Studio when the database mirroring endpoints use Windows Authentication.
-ms.custom: seo-lt-2019
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "witness [SQL Server], establishing"
-  - "database mirroring [SQL Server], witness"
-ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/07/2017"
+ms.prod: sql
+ms.technology: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "witness [SQL Server], establishing"
+  - "database mirroring [SQL Server], witness"
 ---
 # Add or Replace a Database Mirroring Witness (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

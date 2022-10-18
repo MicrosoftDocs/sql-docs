@@ -1,18 +1,17 @@
 ---
-title: Configure availability groups for SQL Server on RHEL virtual machines in Azure - Linux virtual machines | Microsoft Docs
+title: Configure availability groups for SQL Server on RHEL virtual machines in Azure - Linux virtual machines
 description: Learn about setting up high availability in an RHEL cluster environment and set up STONITH
-ms.service: virtual-machines-sql
-ms.subservice: 
-ms.topic: tutorial
 author: VanMSFT
 ms.author: vanto
 ms.date: 06/25/2020
+ms.service: virtual-machines-sql
+ms.topic: tutorial
 ---
 # Tutorial: Configure availability groups for SQL Server on RHEL virtual machines in Azure 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!NOTE]
-> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure the pacemake cluster and availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
+> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure the pacemake cluster and availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-pacemaker?tabs=rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
 
 In this tutorial, you learn how to:
 
@@ -279,7 +278,7 @@ Type `exit` to leave the SSH session.
 > [!IMPORTANT]
 > In order to complete this portion of the tutorial, you must have a subscription for RHEL and the High Availability Add-on. If you are using an image recommended in the previous section, you do not have to register another subscription.
  
-Connect to each VM node and follow the guide below to enable HA. For more information, see [enable high availability subscription for RHEL](/sql/linux/sql-server-linux-availability-group-cluster-rhel#enable-the-high-availability-subscription-for-rhel).
+Connect to each VM node and follow the guide below to enable HA. For more information, see [enable high availability subscription for RHEL](/sql/linux/sql-server-linux-availability-group-cluster-pacemaker?tabs=rhel#enable-the-high-availability-subscription-for-rhel).
 
 > [!TIP]
 > It will be easier if you open an SSH session to each of the VMs simultaneously as the same commands will need to be run on each VM throughout the article.
@@ -668,7 +667,7 @@ You should see the following output:
 ● mssql-server.service - Microsoft SQL Server Database Engine
    Loaded: loaded (/usr/lib/systemd/system/mssql-server.service; enabled; vendor preset: disabled)
    Active: active (running) since Thu 2019-12-05 17:30:55 UTC; 20min ago
-     Docs: https://docs.microsoft.com/en-us/sql/linux
+     Docs: https://learn.microsoft.com/sql/linux
  Main PID: 11612 (sqlservr)
    CGroup: /system.slice/mssql-server.service
            ├─11612 /opt/mssql/bin/sqlservr

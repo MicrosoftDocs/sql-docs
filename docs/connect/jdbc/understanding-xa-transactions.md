@@ -1,16 +1,12 @@
 ---
 title: Understanding XA transactions
 description: The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions.
-ms.custom: ""
-ms.date: 06/01/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 06/01/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Understanding XA transactions
 
@@ -199,7 +195,7 @@ public class testXA {
         String user = "UserName";
         String password = "*****";
 
-        String connectionUrl = prefix + serverName + ":" + portNumber + ";databaseName=" + databaseName + ";user="
+        String connectionUrl = prefix + serverName + ":" + portNumber + ";encrypt=true;databaseName=" + databaseName + ";user="
                 + user + ";password=" + password;
 
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

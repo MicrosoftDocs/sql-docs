@@ -2,16 +2,16 @@
 title: Configure & manage content reference
 titleSuffix: Azure SQL Managed Instance
 description: A reference guide of content that teaches you how to configure and manage Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.custom: sqldbrb=1, ignite-fall-2021
-ms.devlang: 
-ms.topic: guide
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, danil
 ms.date: 03/22/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: guide
+ms.custom:
+  - sqldbrb=1
+  - ignite-fall-2021
 ---
 # Azure SQL Managed Instance content reference
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -37,8 +37,8 @@ In this article you can find a content reference to various guides, scripts, and
   Verify network requirements and configure your existing virtual network and subnet to deploy SQL Managed Instance.
 - [Configure service endpoint policies for Azure Storage (Preview)](service-endpoint-policies-configure.md):
   Secure your subnet against erroneous or malicious data exfiltration into unauthorized Azure Storage accounts.
-- [Configure custom DNS](custom-dns-configure.md):
-  Configure custom DNS to grant external resource access to  custom domains from SQL Managed Instance via a linked server of db mail profiles. 
+- [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md):
+  Configure custom DNS servers to establish access from SQL Managed Instance to an external resource, such as scenarios involving linked servers or database mail.
 - [Find the management endpoint IP address](management-endpoint-find-ip-address.md): 
   Determine the public endpoint that SQL Managed Instance is using for management purposes. 
 - [Verify built-in firewall protection](management-endpoint-verify-built-in-firewall.md):
@@ -79,7 +79,7 @@ In this article you can find a content reference to various guides, scripts, and
 ## Monitoring and tuning
 
 - [Manual tuning](../database/performance-guidance.md)
-- [Use DMVs to monitor performance](../database/monitoring-with-dmvs.md)
+- [Use DMVs to monitor performance](monitoring-with-dmvs.md)
 - [Use Query Store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store#Insight)
 - [Troubleshoot performance with Intelligent Insights](../database/intelligent-insights-troubleshoot-performance.md)
 - [Use the Intelligent Insights diagnostics log](../database/intelligent-insights-use-diagnostics-log.md)

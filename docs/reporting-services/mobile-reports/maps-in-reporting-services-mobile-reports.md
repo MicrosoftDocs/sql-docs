@@ -57,7 +57,8 @@ To display real data in your map, you need to set values for at least two of the
   
 2. Select **Add Data**, then either **Local Excel** or **SSRS Server**.  
   
-   > **Tip**: Make sure the [data is in a format that works for mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
+   > [!TIP]  
+   > Make sure the [data is in a format that works for mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Select the worksheets you want and select **Import**.  
    You see your data in the [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  

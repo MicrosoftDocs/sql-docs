@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # Working with the Oracle CDC Service
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   This section describes some important concepts of the Oracle CDC Service. The concepts included in this section are:  
   
 -   [The MSXDBCDC Database](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_MSXDBCDC)  
@@ -108,7 +105,6 @@ ms.author: chugu
 |active_service_node|The name of the Windows node that currently handles the CDC service. When the service is stopped correctly, this column is set to null, indicating that there is no longer an active service.|  
 |active_service_heartbeat|This item tracks the current CDC service to determine if it still active.<br /><br /> This item is updated with the current database UTC timestamp for the active CDC service at regular intervals. The default interval is 30 seconds, however the interval is configurable.<br /><br /> When a pending CDC service detects that the heartbeat was not updated after the configured interval has passed, the pending service attempts to take over the active CDC service role.|  
 |options|This item specifies the secondary options, such as tracing or tuning. It is written in the form of **name[=value][; ]**. The options string uses the same semantics as the ODBC connection string. If the option is Boolean (with a value of yes/no), the value can include the name only.<br /><br /> trace has the following possible values.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> The default value is **false**.<br /><br /> **service_heartbeat_interval** is the time interval (in seconds) for the service to update the active_service_heartbeat column. The default value is **30**. The maximum value is **3600**.<br /><br /> **service_config_polling_interval** is the polling interval (in seconds) for the CDC service to check for configuration changes. The default value is **30**. The maximum value is **3600**.<br /><br /> **sql_command_timeout** is the command timeout that works with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default value is **1**. The maximum value is **3600**.|  
-||  
   
 ### The MSXDBCDC Database Stored Procedures  
  This section describes the following stored procedures in the MSXDBCDC database.  

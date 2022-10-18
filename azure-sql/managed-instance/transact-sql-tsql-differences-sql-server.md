@@ -1,16 +1,16 @@
 ---
-title: T-SQL differences between SQL Server & Azure SQL Managed Instance 
-description: This article discusses the Transact-SQL (T-SQL) differences between an Azure SQL Managed Instance and SQL Server. 
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.devlang: 
-ms.topic: reference
+title: T-SQL differences between SQL Server & Azure SQL Managed Instance
+description: This article discusses the Transact-SQL (T-SQL) differences between an Azure SQL Managed Instance and SQL Server.
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, bonova, danil
-ms.date: 04/19/2022
-ms.custom: seoapril2019, sqldbrb=1
+ms.date: 08/15/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom:
+  - seoapril2019
+  - sqldbrb=1
 ---
 
 # T-SQL differences between SQL Server & Azure SQL Managed Instance
@@ -226,6 +226,7 @@ For more information, see [ALTER DATABASE SET PARTNER and SET WITNESS](/sql/t-sq
 The following limitations apply to `CREATE DATABASE`:
 
 - Files and filegroups can't be defined. 
+- A memory-optimized filegroup and file are automatically added and are called XTP.
 - The `CONTAINMENT` option isn't supported. 
 - `WITH` options aren't supported. 
    > [!TIP]
@@ -242,6 +243,7 @@ Some file properties can't be set or changed:
 
 - A file path can't be specified in the `ALTER DATABASE ADD FILE (FILENAME='path')` T-SQL statement. Remove `FILENAME` from the script because SQL Managed Instance automatically places the files. 
 - A file name can't be changed by using the `ALTER DATABASE` statement.
+- Altering XTP file or filegroup is not allowed.
 
 The following options are set by default and can't be changed:
 
@@ -311,7 +313,7 @@ The following table types aren't supported:
 
 - [FILESTREAM](/sql/relational-databases/blob/filestream-sql-server)
 - [FILETABLE](/sql/relational-databases/blob/filetables-sql-server)
-- [EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql) (except Polybase, in preview)
+- [EXTERNAL TABLE](/sql/t-sql/statements/create-external-table-transact-sql) (except PolyBase)
 - [MEMORY_OPTIMIZED](/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) (not supported only in General Purpose tier)
 
 For information about how to create and alter tables, see [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) and [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).
@@ -348,7 +350,7 @@ Undocumented DBCC statements that are enabled in SQL Server aren't supported in 
 
 ### Distributed transactions
 
-Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is currently in public preview. Distributed transactions are supported under following conditions (all of them must be met):
+Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is generally available. Distributed transactions are supported under following conditions (all of them must be met):
 * all transaction participants are Azure SQL Managed Instances that are part of the [Server trust group](./server-trust-group-overview.md).
 * transactions are initiated either from .NET (TransactionScope class) or Transact-SQL.
 
@@ -404,8 +406,7 @@ Linked servers on Azure SQL Managed Instance support SQL authentication and [Azu
 
 ### PolyBase
 
-Work on enabling Polybase support in SQL Managed Instance is [in progress](https://feedback.azure.com/d365community/idea/ccc44856-3425-ec11-b6e6-000d3a4f0f84). In the meantime, as a workaround you can use linked servers to [a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/) or SQL Server to query data from files stored in Azure Data Lake or Azure Storage.   
-For general information about PolyBase, see [PolyBase](/sql/relational-databases/polybase/polybase-guide).
+[Data virtualization with Azure SQL Managed Instance](data-virtualization-overview.md) enables you to execute Transact-SQL (T-SQL) queries against data from files stored in Azure Data Lake Storage Gen2 or Azure Blob Storage, and combine it with locally stored relational data using joins. Parquet and delimited text (CSV) file formats are directly supported. The JSON file format is indirectly supported by specifying the CSV file format where queries return every document as a separate row. It's possible to parse rows further using `JSON_VALUE` and `OPENJSON`. For general information about PolyBase, see [PolyBase](/sql/relational-databases/polybase/polybase-guide).
 
 ### Replication
 

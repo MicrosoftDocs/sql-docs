@@ -1,14 +1,13 @@
 ---
 title: Configurable retry logic configuration file with SqlClient
 description: Learn how to use a configuration file to specify default retry logic providers and customize retry logic options in Microsoft.Data.SqlClient.
-ms.date: 03/22/2021
-ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: connectivity
-ms.topic: conceptual
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-deshtehari
+ms.date: 03/22/2021
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 ---
 # Configurable retry logic configuration file with SqlClient
 

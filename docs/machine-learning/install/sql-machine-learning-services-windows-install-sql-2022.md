@@ -1,9 +1,9 @@
 ---
 title: Install SQL Server 2022 Machine Learning Services on Windows
-description: Learn how to install SQL Server 2022 Machine Learning Services on Windows. You can use Machine Learning Services to execute Python, R, or Java scripts in-database.
+description: Learn how to install SQL Server 2022 Machine Learning Services on Windows to run Python, R, or Java scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 05/24/2022
+ms.date: 09/26/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -17,28 +17,30 @@ monikerRange: ">=sql-server-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
+This article shows you how to install [SQL Server 2022 Machine Learning Services](../sql-server-machine-learning-services.md) on Windows. You can use Machine Learning Services to run Python and R scripts in-database.
 
 > [!NOTE]
-> These instructions are specific to SQL Server 2022 on Windows. To install SQL Server Machine Learning Services on Windows for SQL Server 2016, SQL Server 2017, or SQL Server 2019, see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+> These instructions are specific to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Windows. To install SQL Server Machine Learning Services on Windows for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], or [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], see [Install SQL Server Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install.md). 
+>
+> For Linux, see [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
-## <a name="bkmk_prereqs"> </a> Pre-install checklist
+## <a name="bkmk_prereqs"> </a> Pre-installation checklist
 
 + A database engine instance is required. You can't install just Python or R features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node. 
++ For business continuity, [Always On availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node. 
 
-+ Installing Machine Learning Services is also supported on an [Always On Failover Cluster Instance (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2019 and later.
++ Installing Machine Learning Services is also supported on an [Always On failover cluster instance](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2019 and later.
  
 + Don't install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
-+ Side-by-side installation with other versions of Python and R is supported but isn't recommended. It's supported because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. It isn't recommended because running code that uses Python and R on a SQL Server computer outside SQL Server can lead to various problems:
++ Side-by-side installation with other versions of Python and R is supported, but we don't recommend it. It's supported because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. We don't recommend it because running code that uses Python and R on a computer outside SQL Server can lead to problems:
     
-  + Using a different library and executable files will create inconsistent results, than what you are running in SQL Server.
-  + R and Python scripts running in external libraries can't be managed by SQL Server, leading to resource contention.
+  + Using a different library and different executable files will create results that are inconsistent with what you're running in SQL Server.
+  + SQL Server can't manage R and Python scripts that run in external libraries, leading to resource contention.
 
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
+> After you finish setup, be sure to complete the post-configuration steps described in this article. These steps might include enabling SQL Server to use external scripts. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
 
 ## Get the installation media
 
@@ -50,38 +52,35 @@ Learn how to install [SQL Server 2022 Machine Learning Services](../sql-server-m
 
 For local installations, you must run the setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder. For example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`.
+If you encounter any installation errors during setup, check the summary log in the Setup Bootstrap log folder (for example, `%ProgramFiles%\Microsoft SQL Server\160\Setup Bootstrap\Log\Summary.txt`).
 
-1. Start the setup wizard for SQL Server.
+1. Start the SQL Server 2022 Setup wizard.
   
-2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-3. On the **Feature Selection** page, select these options:
+1. On the **Feature Selection** page, select these options:
  
-  - **Database Engine Services**
+   - **Database Engine Services**
      
-    To use R or Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+     To use R or Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
 
-  - **Machine Learning Services (In-Database)**
+   - **Machine Learning Services and Language**
      
-    This option installs the database services that support R and Python script execution.
+      This option installs the database services that support R and Python script execution.
 
-    This screenshot shows the minimum **Instance Features** to check when installing SQL Server 2022 Machine Learning Services.
+   This screenshot shows the minimum instance features to check when you're installing [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Machine Learning Services.
 
-    :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
+   :::image type="content" source="media/machine-learning-services-windows-install-sql-2022/sql-server-2022-machine-learning-services-feature-selection.png" alt-text="Screenshot of feature selection showing check boxes next to Database Engine Services and Machine Learning Services and Language.":::
 
+## Install runtimes and packages
 
-4. **Next steps vary from previous versions:** Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer shipped or installed within SQL Setup. Instead, install your desired R and/or Python custom runtime(s) and packages. See the next sections and continue to step 5:
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java are no longer shipped or installed with SQL Server setup. Instead, use the following sections to install your custom runtimes and packages. 
 
-    - [Install R](#install-r)
-    - [Install Python](#install-python)
-    - [Install Java](#install-java)
+### Install R
 
-## Install R
+1. Download and install the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/).
 
-5. Download the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/) for Windows, and install.
-
-6. Install CompatibilityAPI and RevoScaleR dependencies. From the R terminal of the version you have installed, run the following:
+1. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From the R terminal of the version that you installed, run the following commands:
 
     ```r
     # R Terminal
@@ -91,91 +90,100 @@ If you encounter any installation errors during setup, check the summary log in 
     install.packages("jsonlite")
     ```
     
-7. Install the latest version of RevoScaleR package and its dependencies. Download links available here:
+1. Download and install the latest version of `CompatibilityAPI` and `RevoScaleR` packages:
 
-   - [CompatibilityAPI Windows](https://go.microsoft.com/fwlink/?LinkID=2193827)
-   - [RevoScaleR package for Windows](https://go.microsoft.com/fwlink/?LinkID=2193828)
-
-    The following sample scripts can be adapted for the installation:
-    
     ```r
-    R CMD INSTALL "c:\temp\CompatibilityAPI.zip"
-    R CMD INSTALL "c:\temp\RevoScaleR.zip"
+    install.packages("https://aka.ms/sqlml/r4.2/windows/CompatibilityAPI_1.1.0.zip", repos=NULL)
+
+    install.packages("https://aka.ms/sqlml/r4.2/windows/RevoScaleR_10.0.1.zip", repos=NULL)
     ```
 
-8. Configure the installed R runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in an R application folder depending on the installation, usually in one of these two locations: 
+1. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder that depends on the installation. Usually, it's in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
-   - Application installation path: `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64` 
-   - User library path: `%localappdata%\R\win-library\4.2\RevoScaleR\rxLibs\x64`
+   You can use the following script to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
 
-   The following script can be used to configure the installed R runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+    ```cmd
+    .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
+    ```
 
-  ```cmd
-  .\RegisterRext.exe /configure /rhome:"%ProgramFiles%\R\R-4.2.0" /instance:"MSSQLSERVER"
-  ```
-
-9. Using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
+1. By using [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
     RECONFIGURE WITH OVERRIDE
     ```
 
-    If you have already enabled the feature for another language, you don't need run reconfigure a second time for R. The underlying extensibility platform supports both languages. To verify, confirm that the following output returns a `config_value` and `run_value` of `1`:
+    If you've already enabled the feature for another language, you don't need to run `RECONFIGURE` a second time for R. The underlying extensibility platform supports both languages. To verify, confirm that the following command returns `1` for `config_value` and `run_value`:
 
     ```sql
     EXEC sp_configure  'external scripts enabled';
     ```
 
-10. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. You can restart the service using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+1. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. 
 
-11. Verify the installation by executing a simple T-SQL command to return the version of R:
+   You can restart the service by using the right-click **Restart** command for the instance in SSMS Object Explorer, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
+1. Verify the installation by running a simple T-SQL command to return the version of R:
 
     ```sql
     EXEC sp_execute_external_script @script=N'print(R.version)',@language=N'R';
     GO
     ```
 
+### Install Python
 
-## Install Python
-
-5. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/) for Windows, and install.
-
-6. Install the latest version of RevoScalePY package and its dependencies: [revoscalepy Python Windows](https://go.microsoft.com/fwlink/?LinkID=2193924).
-
-7. Configure the installed Python runtime with SQL Server. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is in the user's application library folder, for example:  `C:\Users\<alias>\AppData\Local\Programs\Python\Python310\Lib\site-packages\revoscalepy\rxLibs`.
-
-    The following script can be used to configure the installed Python runtime from the installation folder location of **RegisterRext.exe**. The instance name is "MSSQLSERVER" for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/). Install it by using the following options:
     
+    1. Open the Python Setup application and select **Customize installation**. 
+    1. Verify that the **Install launcher for all users (recommended)** checkbox is selected.
+    1. For **Optional Features**, select the features that you want (or select them all).
+    1. On the **Advanced Options** page, select **Install for all users**, accept other default options, and then select **Install**. 
+    
+       We recommend using a Python installation path that all users can access (such as `C:\Program Files\Python310`), and not one that's specific to a single user.
+
+1. Download and install the latest version of the `revoscalepy` package and its dependencies:
+
     ```cmd
-    .\RegisterRext.exe /configure /pythonhome:"C:\Users\<alias>\AppData\Local\Programs\Python\Python310" /instance:"MSSQLSERVER"
+    cd "C:\Program Files\Python310\"
+    python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
 
-8. Use [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and **Execute*** the following command to enable the external scripting feature:
+1. Configure the installed Python runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in the custom installation location (for example, `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`).
+
+    You can use the following script to configure the installed Python runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
+    
+    ```cmd
+    cd "C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs"
+    .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Python310" /instance:"MSSQLSERVER"
+    ```
+
+1. Use [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to the instance where you installed SQL Server Machine Learning Services. Select **New Query** to open a query window, and then run the following command to enable the external scripting feature:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1;
     RECONFIGURE WITH OVERRIDE
     ```
 
-    If you have already enabled the feature for another language, you don't need run reconfigure a second time for R. The underlying extensibility platform supports both languages. To verify, confirm that the following output returns a `config_value` and `run_value` of `1`:
+    If you've already enabled the feature for another language, you don't need to run `RECONFIGURE` a second time for R. The underlying extensibility platform supports both languages. To verify, confirm that the following command returns `1` for `config_value` and `run_value`:
 
     ```sql
     EXEC sp_configure  'external scripts enabled';
     ```
 
-9. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. You can restart the service using the right-click **Restart** command for the instance in the SSMS Object Explorer, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+1. Restart the SQL Server service. Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. 
 
-10. Verify the installation by executing a simple command to return the version of Python:
+   You can restart the service by using the right-click **Restart** command for the instance in SSMS Object Explorer, or by using the **Services** item in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+   
+1. Verify the installation by running a simple command to return the version of Python:
 
     ```sql
     EXEC sp_execute_external_script @script=N'import sys;print(sys.version)',@language=N'Python'
     GO
     ```
 
-## Install Java
+### Install Java
 
-For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
+For information on installing and using Java, see [Install SQL Server Java Language Extension on Windows](../../language-extensions/install/windows-java.md).
 
 ## Additional configuration
 
@@ -183,22 +191,20 @@ If the external script verification step was successful, you can run R or Python
 
 Whether the additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
 
-If you got an error when running the command, review the additional configuration steps in this section. You might need to make additional appropriate configurations to the service or database.
+If you got an error when you ran the command, you might need to make additional configurations to the service or database. At the instance level, additional configurations might include:
 
-At the instance level, additional configuration might include:
-
-* [Firewall configuration for SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md)
+* [Configure a firewall for SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md)
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Create a login for SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* [Manage disk quotas](/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
+* [Manage disk quotas](/windows/desktop/fileio/managing-disk-quotas) to prevent external scripts from running tasks that exhaust disk space
 
-Starting with SQL Server 2019 on Windows, the isolation mechanism has changed. This mechanism affects **SQLRUserGroup**, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).
+Starting with SQL Server 2019 on Windows, the isolation mechanism has changed. This mechanism affects *SQLRUserGroup*, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
-On the database, you might need the following configuration updates: [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md).
+On the database, you might need configuration updates. For more information, see [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md).
 
 ## Suggested optimizations
 
@@ -206,7 +212,9 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Optimize the server for script execution
 
-The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that are supported by the database engine, which might include extract, transform, and load (ETL) processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Under the default settings, resources for machine learning are sometimes restricted or throttled, particularly in memory-intensive operations.
+The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of other services and applications.
+
+Under the default settings, resources for machine learning are sometimes restricted or throttled, particularly in memory-intensive operations.
 
 To ensure that machine learning jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory that's allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts that run under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
@@ -214,26 +222,30 @@ To ensure that machine learning jobs are prioritized and resourced appropriately
   
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).
+- To change the number of R accounts that [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] can start, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).
 
-If you are using Standard Edition and don't have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources.
+If you're using Standard Edition and don't have Resource Governor, you can use dynamic management views, SQL Server Extended Events, and Windows event monitoring to help manage the server resources.
 
 ### Install additional Python and R packages
 
-The Python and R solutions you create for SQL Server can call basic functions, functions from the proprietary packages installed with SQL Server, and third-party packages compatible with the version of open-source Python and R installed by SQL Server.
+The Python and R solutions that you create for SQL Server can call:
 
-Packages that you want to use from SQL Server must be installed in the default library used by the instance. If you have a separate installation of Python or R on the computer, or if you installed packages to user libraries, you can't use those packages from T-SQL.
+- Basic functions.
+- Functions from the proprietary packages installed with SQL Server.
+- Third-party packages that are compatible with the version of open-source Python and R that SQL Server installs.
 
-To install and manage additional packages, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install Python packages](../package-management/install-additional-python-packages-on-sql-server.md) and [Install new R packages](../package-management/install-additional-r-packages-on-sql-server.md).
+Packages that you want to use from SQL Server must be installed in the default library that the instance uses. If you have a separate installation of Python or R on the computer, or if you installed packages to user libraries, you can't use those packages from T-SQL.
+
+To install and manage additional packages, you can set up user groups to share packages on a per-database level. Or you can configure database roles to enable users to install their own packages. For more information, see [Install Python packages](../package-management/install-additional-python-packages-on-sql-server.md) and [Install new R packages](../package-management/install-additional-r-packages-on-sql-server.md).
 
 ## Next steps
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
-+ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../tutorials/python-clustering-model.md)
+- [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)
+- [Python tutorial: Categorize customers by using k-means clustering with SQL Server Machine Learning Services](../tutorials/python-clustering-model.md)
 
-R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+R developers can get started with some simple examples and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)
+- [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
+- [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)

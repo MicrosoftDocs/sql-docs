@@ -48,7 +48,7 @@ PWDCOMPARE ( 'clear_text_password'
  Obsolete parameter that can be set to 1 if *password_hash* represents a value from a login earlier than [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] that was migrated to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later but never converted to the [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] system. *version* is **int**.  
   
 > [!CAUTION]  
->  This parameter is provided for backwards compatibility, but is ignored because password hash blobs now contain their own version descriptions. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
+>  This parameter is provided for backwards compatibility, but is ignored because password hash blobs now contain their own version descriptions. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## Return Types  
  **int**  

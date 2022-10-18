@@ -1,16 +1,12 @@
 ---
+title: "getClientInfo Method (SQLServerConnection)"
 description: "getClientInfo Method (SQLServerConnection)"
-title: "getClientInfo Method (SQLServerConnection) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
 ---
 # getClientInfo Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

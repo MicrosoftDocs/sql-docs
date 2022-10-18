@@ -1,19 +1,18 @@
 ---
 title: Troubleshoot SQL Insights (preview)
 description: Learn how to troubleshoot SQL Insights (preview) in Azure Monitor.
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: 
-ms.date: 06/15/2022
-services:
-  - "sql-database"
+ms.date: 07/29/2022
 ms.service: sql-db-mi
+ms.topic: conceptual
 ms.custom: subject-monitoring
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
 # Troubleshoot SQL Insights (preview)
+[!INCLUDE [sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
 To troubleshoot data collection issues in SQL Insights (preview), check the status of the monitoring machine on the **Manage profile** tab. The statuses are:
 
 - **Collecting** 
@@ -43,13 +42,13 @@ Check if any logs from Telegraf help identify the root cause the problem. If the
 
 If there are no log entries, check the logs on the monitoring virtual machine for the following services installed by two virtual machine extensions:
 
-- Microsoft.Azure.Monitor.AzureMonitorLinuxAgent 
+- `Microsoft.Azure.Monitor.AzureMonitorLinuxAgent` 
   - Service: mdsd 
-- Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension 
+- `Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension`
   - Service: wli 
   - Service: ms-telegraf 
   - Service: td-agent-bit-wli 
-  - Extension log to check installation failures: /var/log/azure/Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension/wlilogs.log 
+  - Extension log to check installation failures: `/var/log/azure/Microsoft.Azure.Monitor.Workloads.Workload.WLILinuxExtension/wlilogs.log`
 
 ### wli service logs 
 
@@ -57,11 +56,8 @@ Service logs: `/var/log/wli.log`
 
 To see recent logs: `tail -n 100 -f /var/log/wli.log`
  
-If you see the following error log, there's a problem with the mdsd service.
+If you see the following error log, there's a problem with the `mdsd` service: `2021-01-27T06:09:28Z [Error] Failed to get config data. Error message: dial unix /var/run/mdsd/default_fluent.socket: connect: no such file or directory `.
 
-```
-2021-01-27T06:09:28Z [Error] Failed to get config data. Error message: dial unix /var/run/mdsd/default_fluent.socket: connect: no such file or directory 
-```
 
 ### Telegraf service logs 
 
@@ -77,7 +73,7 @@ If a bad configuration is generated, the ms-telegraf service might fail to start
 
 To see error messages from the telegraf service, run it manually by using the following command: 
 
-```
+```bash
 /usr/bin/ms-telegraf --config /etc/ms-telegraf/telegraf.conf --config-directory /etc/ms-telegraf/telegraf.d/wli --test 
 ```
 
@@ -164,7 +160,7 @@ At runtime, all parameters and secrets will be resolved and merged with the prof
 > The parameter names of `sqlAzureConnections`, `sqlVmConnections`, and `sqlManagedInstanceConnections` are all required in configuration, even if you don't provide connection strings for some of them.
 
 ## Status: Collecting with errors
-The monitoring machine will have the status **Collecting with errors** if there's at least one recent *InsightsMetrics* log but there are also errors in the *Operation* table.
+The monitoring machine will have the status **Collecting with errors** if there's at least one recent *InsightsMetrics* log but there are also errors in the `Operation` table.
 
 SQL Insights uses the following queries to retrieve this information:
 
@@ -191,7 +187,9 @@ For common cases, we provide troubleshooting tips in our logs view:
 
 During preview of SQL Insights, you may encounter the following known issues.
 
-* **'Login failed' error connecting to server or database**. Using certain special characters in SQL authentication passwords saved in the monitoring VM configuration or in Key Vault may prevent the monitoring VM from connecting to a SQL server or database. This set of characters includes parentheses, square and curly brackets, the dollar sign, forward and back slashes, and dot (`[ { ( ) } ] $ \ / .`).
+* **'Login failed' error connecting to server or database**
+
+    Using certain special characters in SQL authentication passwords saved in the monitoring VM configuration or in Key Vault may prevent the monitoring VM from connecting to a SQL server or database. This set of characters includes parentheses, square and curly brackets, the dollar sign, forward and back slashes, and dot (`[ { ( ) } ] $ \ / .`).
 * Spaces in the database connection string attributes may be replaced with special characters, leading to database connection failures. For example, if the space in the `User Id` attribute is replaced with a special character, connections will fail with the **Login failed for user ''** error. To resolve, edit the monitoring profile configuration, and delete every special character appearing in place of a space. Some special characters may look indistinguishable from a space, thus you may want to delete every space character, type it again, and save the configuration.
 * Data collection and visualization may not work if the OS computer name of the monitoring VM is different from the monitoring VM name.
 

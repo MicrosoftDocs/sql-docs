@@ -1,19 +1,15 @@
 ---
-title: "Configure the remote proc trans Server Configuration Option | Microsoft Docs"
-description: 'Find out about the "remote proc trans" option. See how it helps protect the actions of a server-to-server procedure through an MS DTC transaction.'
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "remote proc trans option"
-  - "distributed transactions [SQL Server], enforcing"
-ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
+title: "Configure the remote proc trans Server Configuration Option"
+description: "Find out about the remote proc trans option. See how it helps protect the actions of a server-to-server procedure through an MS DTC transaction."
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.prod: sql
+ms.technology: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "remote proc trans option"
+  - "distributed transactions [SQL Server], enforcing"
 ---
 # Configure the remote proc trans Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -23,7 +19,7 @@ ms.author: randolphwest
  Set the value of **remote proc trans** to 1 to provide an MS DTC-coordinated distributed transaction that protects the ACID (atomic, consistent, isolated, and durable) properties of transactions. Sessions begun after setting this option to 1 inherit the configuration setting as their default.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  **In This Topic**  
   

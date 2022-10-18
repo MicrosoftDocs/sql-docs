@@ -1,14 +1,14 @@
 ---
 title: How to use distributed transactions with SQL Server Linux containers
 description: Learn to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Linux.
-ms.custom: seo-lt-2019
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 03/16/2022
-ms.topic: conceptual
+ms.date: 09/21/2022
 ms.prod: sql
 ms.technology: linux
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 
 # How to use distributed transactions with SQL Server Linux containers
@@ -19,8 +19,8 @@ This article explains how to set up SQL Server Linux containers for distributed 
 
 SQL Server container images can use the Microsoft Distributed Transaction Coordinator (MSDTC), which is required for distributed transactions. To understand the communications requirements for MSDTC, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md).
 
-> [!NOTE]
-> SQL Server 2017 run in root containers by default, whereas SQL Server 2019 containers run as a non-root user.
+> [!NOTE]  
+> [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] runs in root containers by default, whereas [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and later containers run as a non-root user.
 
 ## Configuration
 
@@ -57,9 +57,9 @@ docker run `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-The following example shows how to use these environment variables to pull and run a single SQL Server 2019 container configured for MSDTC. This allows it to communicate with any application on any hosts.
+The following example shows how to use these environment variables to pull and run a single [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] container configured for MSDTC. This allows it to communicate with any application on any hosts.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Please use `MSSQL_SA_PASSWORD` instead.
@@ -88,7 +88,7 @@ The RPC Endpoint Mapper and MSDTC port don't have to be the same on the host and
 
 ## Configure the firewall
 
-In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that the SQL Server container exposes for external communication. In the previous example, this would be ports 135, 51433, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if RPC Endpoint mapper port 51000 of the container was mapped to the host's port 51001, then port 51001 (not 51000) should be opened in the firewall for communication with the host.
+In order to communicate with and through the host, you must also configure the firewall on the host server for the containers. Open the firewall for all ports that the SQL Server container exposes for external communication. In the previous example, this would be ports 135, 51433, and 51000. These are the ports on the host itself and not the ports they map to in the container. So, if RPC endpoint mapper port 51000 of the container was mapped to the host's port 51001, then port 51001 (not 51000) should be opened in the firewall for communication with the host.
 
 The following example shows how to create these rules on Ubuntu.
 
@@ -115,9 +115,37 @@ Also, if you decide to map the container's port 135 to a different port on the h
 
 For more information about routing ports, see [Configure port routing](sql-server-linux-configure-msdtc.md#configure-port-routing).
 
-## Deploy SQL Server containers with MSDTC configured on a Kubernetes platform
+## SQL Server containers with MSDTC on Kubernetes
 
-If you're deploying SQL Server containers on a Kubernetes platform, see the example YAML deployment manifest below. In this example, the Kubernetes platform is Azure Kubernetes Service (AKS). Before running the sample deployment YAML script, create the necessary secret to store the `sa` password. A typical command is as shown below:
+If you're deploying SQL Server containers on a Kubernetes platform, see the example YAML deployment manifest below. In this example, the Kubernetes platform is Azure Kubernetes Service (AKS).
+
+### Scenario 1: MSDTC client connecting to SQL Server in a Kubernetes container
+
+The following diagram shows the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container on Kubernetes.
+
+:::image type="content" source="media/sql-server-linux-configure-msdtc-docker/msdtc-single.png" alt-text="Diagram showing the process when an MSDTC client connects to MSDTC on SQL Server running inside a Linux container.":::
+
+1. The MSDTC client makes a connection to port 135 on the Kubernetes host.
+1. The connection is forwarded to port 135 on the container.
+1. The container forwards the connection to the RPC endpoint mapper, which is on port 13500 in this example.
+1. The endpoint mapper tells the MSDTC client which port MSDTC is running inside the container (port 51000 in this example).
+1. The MSDTC client makes a connection directly to MSDTC by connecting to the host on port 51000, which is forwarded to SQL Server inside the container.
+
+### Scenario 2: SQL Server connecting to SQL Server in a Kubernetes container
+
+The following diagram shows the process when one SQL Server Linux container connects to MSDTC on a second SQL Server Linux container, on Kubernetes.
+
+:::image type="content" source="media/sql-server-linux-configure-msdtc-docker/msdtc-double.svg" alt-text="Diagram showing the process when one SQL Server Linux container connects to MSDTC on a second SQL Server Linux container.":::
+
+1. The first SQL Server instance makes a connection to port 135 on the Kubernetes host of the second SQL Server instance.
+1. The connection is forwarded to port 135 on the second instance's container.
+1. The container forwards the connection to the RPC endpoint mapper, which is on port 13500 in this example.
+1. The endpoint mapper tells the first SQL Server instance which port MSDTC is running inside the second container (port 51000 in this example).
+1. The first SQL Server instance makes a connection directly to MSDTC on the second instance by connecting to the second host on port 51000, which is forwarded to SQL Server inside the container.
+
+### Deploy SQL Server containers with MSDTC configured on a Kubernetes platform
+
+Before running the sample deployment YAML script, create the necessary secret to store the `sa` password. A typical command is as shown below:
 
 ```bash
 kubectl create secret generic mssql --from-literal=MSSQL_SA_PASSWORD="MyC0m9l&xP@ssw0rd"
@@ -220,7 +248,7 @@ spec:
     targetPort: 51000
     name: dtctcpport
   - protocol: TCP
-    port: 135 
+    port: 135
     targetPort: 13500
     name: nonrootport
 ---

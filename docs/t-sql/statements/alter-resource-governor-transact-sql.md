@@ -1,8 +1,8 @@
 ---
 title: "ALTER RESOURCE GOVERNOR (Transact-SQL)"
 description: ALTER RESOURCE GOVERNOR (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "RECONFIGURE, ALTER RESOURCE GOVERNOR"
 dev_langs:
   - "TSQL"
-ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

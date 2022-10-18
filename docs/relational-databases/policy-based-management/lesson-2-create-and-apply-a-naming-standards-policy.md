@@ -72,7 +72,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
     > [!NOTE]  
     > You might have to tab out of the **Value** box to enable the **OK** button.  
   
-11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+11. Select **OK**.
   
 ## Create the Finance policy category  
   
@@ -84,7 +84,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 
     ![Manage policy categories](Media/lesson-2-create-and-apply-a-naming-standards-policy/manage-policy-categories.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
 
 ## Subscribe to the Finance policy category  
   
@@ -96,7 +96,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 
    ![Subscribed to finance policy](Media/lesson-2-create-and-apply-a-naming-standards-policy/subscribe-to-finance.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Select **OK**.
   
 ## Test the enforcement of the Finance Name policy  
   
@@ -143,7 +143,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
   
 2.  In the **Manage Policy Categories** dialog box, locate the Finance category, and select the **Mandate Database Subscriptions** checkbox for the Finance category.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Now the Finance category applies to all databases, but the condition that you have created restricts the Finance Name policy to the Finance database. This shows how you can use complex combinations of conditions to target policies in ways that will apply correctly on many servers.  
+3.  Select **OK**. Now the Finance category applies to all databases, but the condition that you have created restricts the Finance Name policy to the Finance database. This shows how you can use complex combinations of conditions to target policies in ways that will apply correctly on many servers.  
   
 ## Summary  
 This tutorial has shown you how to create Policy-Based Management conditions, policies and policy groups, and how to apply filters and check the compliance of Policy-Based Management targets.  

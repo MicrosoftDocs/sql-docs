@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-This article includes detail on how the Azure Synapse Link change feed works. This new SQL Server 2022 and Azure SQL Database feature is currently in preview. 
+This article includes detail on how the Azure Synapse Link change feed works. This new [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and Azure SQL Database feature is currently in preview. 
 
 [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link for SQL. Azure Synapse Link for SQL provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. 
 
@@ -30,6 +30,9 @@ This article includes detail on how the Azure Synapse Link change feed works. Th
     - [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
 
 This feature is not currently available for Azure SQL Managed Instance.
+
+> [!NOTE]
+> Enabling Azure Synapse Link for SQL will create a `changefeed` database user, a `changefeed` schema, and several tables within the `changefeed` schema in your source database. Please do not alter any of these objects - they are system-managed.
 
 ## Landing zone
 
@@ -54,7 +57,7 @@ Capturing changes for Azure Synapse Link is similar to the existing Change Data 
 CDC works by harvesting the transaction log to capture all modifications performed on the source table(s). 
 
 - In CDC, the change data is populated internally to a sibling table in the database.
-- In Azure Synapse Link, the data will read directly from the database transaction log, cached in memory, and eventually written to the landing zone in Azure Storage. 
+- In Azure Synapse Link, the data will be read directly from the database transaction log, cached in memory, and eventually written to the landing zone in Azure Storage. 
 
 If a storage outage occurs, it can cause the landing zone to become unavailable, which will block publications to that landing zone. Similar to the behavior if the SQL Server CDC log reader agent fails or is not running, the source database transaction log cannot be truncated. In the case of a prolonged storage outage or storage configuration change that causes it to become inaccessible, stop the Synapse Link through the Synapse Studio.
 

@@ -1,20 +1,17 @@
 ---
-description: "Perform Knowledge Discovery"
 title: "Perform Knowledge Discovery"
+description: "Perform Knowledge Discovery"
+author: swinarko
+ms.author: sawinark
 ms.date: "06/04/2013"
 ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dqs.kb.kbterms.f1"
   - "sql13.dqs.kb.viewselectcd.f1"
   - "sql13.dqs.kb.kbanalyze.f1"
   - "sql13.dqs.kb.kbmap.f1"
-ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: swinarko
-ms.author: sawinark
 ---
 # Perform Knowledge Discovery
 

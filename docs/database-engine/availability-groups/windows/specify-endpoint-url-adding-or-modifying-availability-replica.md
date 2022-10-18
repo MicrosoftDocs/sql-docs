@@ -1,21 +1,19 @@
 ---
 title: "Specify Endpoint URL for availability replica"
-description: Learn how to specify the endpoint URL when adding or modifying a replica within an Always On availability group on SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to specify the endpoint URL when adding or modifying a replica within an Always On availability group on SQL Server.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
   - "endpoints [SQL Server], Always On Availability Groups"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], endpoint"
   - "Endpoint URLs (HADR)"
-ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Specify Endpoint URL - Adding or Modifying Availability Replica
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

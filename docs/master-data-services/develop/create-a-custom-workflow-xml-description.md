@@ -10,8 +10,8 @@ ms.technology: master-data-services
 
 ms.topic: "reference"
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Custom Workflow - XML Description
 

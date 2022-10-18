@@ -1,17 +1,14 @@
 ---
-title: "IBCPSession2 (OLE DB driver) | Microsoft Docs"
-description: Learn about the IBCPSession2 interface in OLE DB Driver for SQL Server, which provides BCPSetBulkMode, an alternative to IBCPSession::BCPColFmt per column.
-ms.custom: ""
-ms.date: "06/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: reference
-helpviewer_keywords: 
-  - "IBCPSession2 interface"
+title: "IBCPSession2 (OLE DB driver)"
+description: "Learn about the IBCPSession2 interface in OLE DB Driver for SQL Server, which provides BCPSetBulkMode, an alternative to IBCPSession::BCPColFmt per column."
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "06/14/2018"
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: reference
+helpviewer_keywords:
+  - "IBCPSession2 interface"
 ---
 # IBCPSession2 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

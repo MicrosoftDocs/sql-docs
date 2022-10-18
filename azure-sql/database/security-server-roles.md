@@ -2,13 +2,13 @@
 title: Server roles
 titleSuffix: Azure SQL Database
 description: This article provides an overview of server roles for the logical server of Azure SQL Database
-ms.service: sql-database
-ms.subservice: security
 author: AndreasWolter
 ms.author: anwolter
-ms.topic: conceptual
-ms.date: 07/12/2022
 ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 07/12/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
 ---
 
 # Azure SQL Database server roles for permission management
@@ -55,7 +55,7 @@ The following table shows the fixed server-level roles and their capabilities.
 
 ## Permissions of fixed server roles
 
-Each fixed server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the inherited database-level permissions as long as the user can connect to individual databases.
+Each fixed server-level role has certain permissions assigned to it. The following table shows the permissions assigned to the server-level roles. It also shows the database-level permissions which are inherited as long as the user can connect to individual databases.
   
 |Fixed server-level role|Server-level permissions|Database-level permissions (if a database user matching the login exists)  
 |-------------|----------|-----------------|  

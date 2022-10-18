@@ -1,20 +1,16 @@
 ---
-title: "Configure the query governor cost limit Server Configuration Option | Microsoft Docs"
-description: Learn about the query governor cost limit option. See how to use it to limit execution of queries. 
-ms.custom: ""
+title: "Configure the query governor cost limit Server Configuration Option"
+description: Learn about the query governor cost limit option. See how to use it to limit execution of queries.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], time to execute"
   - "query governor cost limit option [SQL Server]"
   - "time [SQL Server], query run time"
-ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure the query governor cost limit Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

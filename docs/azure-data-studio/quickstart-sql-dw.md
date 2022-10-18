@@ -1,17 +1,16 @@
 ---
 title: Connect and query with Azure Synapse Analytics
 description: This quickstart shows connecting to a dedicated SQL pool in Azure Synapse Analytics using Azure Data Studio.
-ms.prod: azure-data-studio
-ms.technology: azure-data-studio
-ms.topic: quickstart
-author: yualan
-ms.author: alayu
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan, wiassaf
+ms.date: 08/24/2022
+ms.prod: azure-data-studio
+ms.topic: quickstart
 ms.custom:
   - seodec18
   - seo-lt-2019
   - intro-quickstart
-ms.date: 5/31/2022
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query data using a dedicated SQL pool in Azure Synapse Analytics
@@ -23,9 +22,7 @@ To complete this quickstart, you need Azure Data Studio, and a dedicated SQL poo
 
 - [Install Azure Data Studio](./download-azure-data-studio.md).
 
-If you don't already have an Azure Synapse Analytics dedicated SQL pool, see [Quickstart: Create a dedicated SQL pool using Synapse Studio](/azure/synapse-analytics/quickstart-create-sql-pool-studio). For a standalone dedicated SQL pool (formerly SQL DW) outside of an Azure Synapse workspace, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
-
-Remember the server name, and login credentials!
+If you don't already have a dedicated SQL pool in Azure Synapse Analytics workspace, see [Quickstart: Create a dedicated SQL pool using Synapse Studio](/azure/synapse-analytics/quickstart-create-sql-pool-studio). For a standalone dedicated SQL pool (formerly SQL DW) outside of an Azure Synapse workspace, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision). Remember the server name, and login credentials! For more information on the differences, see [What's the difference between Azure Synapse dedicated SQL pools (formerly SQL DW) and dedicated SQL pools in an Azure Synapse Analytics workspace?](https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/msft-docs-what-s-the-difference-between-synapse-formerly-sql-dw/ba-p/3597772).
 
 ## Connect to your dedicated SQL pool
 
@@ -39,13 +36,13 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
    |   Setting    | Suggested value | Description |
    |--------------|-----------------|-------------| 
-   | **Server name** | The fully qualified server name | For example the name should look like to this: `myworkpsace.sql.azuresynapse.net` for a dedicated SQL endpoint in a Synapse workspace (recommended), or for a standalone dedicated SQL pool outside of an Azure Synapse Analytics workspace, use the Azure SQL logical server: `sqlpoolservername.database.windows.net` . |
+   | **Server name** | The fully qualified server name | For example the name should look like to this: `myworkpsace.sql.azuresynapse.net` for a dedicated SQL endpoint in an Azure Synapse Analytics workspace (recommended), or for a standalone dedicated SQL pool (formerly SQL DW) outside of an Azure Synapse Analytics workspace, use the Azure SQL logical server: `sqlpoolservername.database.windows.net`. |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | Select Yes if you don't want to enter the password each time. |
    | **Database name** | *leave blank* | |
-   | **Server Group** | *leave blank* | | 
+   | **Server Group** | *leave blank* | |
 
 3. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](/azure/sql-database/sql-database-firewall-configure).
 

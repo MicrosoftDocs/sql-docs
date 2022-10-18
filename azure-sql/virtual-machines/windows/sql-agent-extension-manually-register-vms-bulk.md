@@ -1,20 +1,15 @@
 ---
 title: Register multiple SQL VMs in Azure with the SQL IaaS Agent extension
-description: Bulk register SQL Server VMs with the SQL IaaS Agent extension to improve manageability. 
-services: virtual-machines-windows
-documentationcenter: na
+description: Bulk register SQL Server VMs with the SQL IaaS Agent extension to improve manageability.
 author: adbadram
-tags: azure-resource-manager
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021
-ms.author: adbadram
-ms.reviewer: mathoma 
 ms.custom: devx-track-azurepowershell
-
+tags: azure-resource-manager
 ---
 # Register multiple SQL VMs in Azure with the SQL IaaS Agent extension
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -41,7 +36,7 @@ To register your SQL Server VM with the extension, you'll need the following:
 
 - An [Azure subscription](https://azure.microsoft.com/free/) that has been [registered with the **Microsoft.SqlVirtualMachine** resource provider](sql-agent-extension-manually-register-single-vm.md#register-subscription-with-rp) and contains unregistered SQL Server virtual machines. 
 - The client credentials used to register the virtual machines exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
-- The latest version of [Az PowerShell (5.0 minimum)](/powershell/azure/new-azureps-module-az). 
+- [Az PowerShell 5.0](/powershell/azure/new-azureps-module-az) - versions higher than 5.0 currently only support MFA and are not compatible with the script to register multiple VMs. 
 
 
 ## Get started
@@ -229,6 +224,7 @@ When you register SQL Server VMs with the extension by using the provided script
 
 - Registration with the extension requires a guest agent running on the SQL Server VM. Windows Server 2008 images do not have a guest agent, so these virtual machines will fail and must be registered manually using the [NoAgent management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes).
 - There is retry logic built-in to overcome transparent errors. If the virtual machine is successfully registered, then it is a rapid operation. However, if the registration fails, then each virtual machine will be retried.  As such, you should allow significant time to complete the registration process -  though actual time requirement is dependent on the type and number of errors. 
+
 
 ## Full script
 

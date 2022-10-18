@@ -21,7 +21,7 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use CLR integration instead.  
   
  Returns information about a database connection.  
   
@@ -68,7 +68,6 @@ len
 |SRV_STATUS|The current status of *srvproc*: running or closed|  
 |SRV_TYPE|The connection type of *srvproc*. If server is returned, *srvproc* is from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If client is returned, *srvproc* is from a DB-Library or ODBC client.|  
 |SRV_USER|The user name of the connection.|  
-|||  
   
  *len*  
  Is a pointer to an **int** variable that contains the length of the returned *field* value. If *len* is NULL, the length of the string is not returned.  

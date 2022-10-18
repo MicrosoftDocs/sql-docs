@@ -42,7 +42,7 @@ ms.author: maggies
   
 6.  (Optional) Click **Yes** for **Omit border on page break** to prevent a border from being rendered in the middle of the subreport if the subreport spans more than one page.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+7.  Select **OK**.
   
 ### To specify parameters to pass to a subreport  
   

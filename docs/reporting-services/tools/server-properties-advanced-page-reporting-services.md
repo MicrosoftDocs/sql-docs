@@ -193,17 +193,6 @@ Enable Power BI Report Server data export from Power BI visuals. Values are True
 
 Indicates whether or not a customer can export underlying data from Power BI visuals on Power BI Report Server. A value of True indicates that the feature is enabled.
 
-### EnablePowerBIReportMigrate  
-
-*Power BI Report Server, Reporting Services 2022 and later only*
-
-Enables .rdl report migrations to Power BI using the publish feature in the web portal. The default is **false**. The valid values are as follows:
-
-|Values |Description  |
-|---------|---------|
-|**True** | Migrate RDL reports is on |
-| **False** | Migrate RDL reports is off |
-
 ### EnableRemoteErrors
 Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
@@ -268,12 +257,6 @@ Set for how long you want the office access token to expire in seconds. *Default
 *Power BI Report Server only*
 
 Set the address of your Office Online Server instance for viewing Excel Workbooks.
-
-### PowerBIMigrateUrl  
-
-*Power BI Report Server, Reporting Services 2022 and later only*
-
-URL used to define the Power BI cloud endpoint to use. Default is `https://app.powerbi.com`.
 
 ### RDLXReportTimetout
 RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.

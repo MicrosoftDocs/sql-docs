@@ -37,7 +37,7 @@ sections:
           
       - question: What's new in PolyBase 2019? 
         answer: |
-          PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be store as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
+          PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be stored as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
           
           **Compatible Data Sources**
           
@@ -87,7 +87,7 @@ sections:
 
           | Source platform | Reference | 
           | ---- | ---- |
-          | Microsoft SQL Server | [Ports Used By SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-)| 
+          | Microsoft SQL Server | [Ports Used By SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-sql-server)| 
           | Hortonworks HDP | [Administering HDFS](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/administration/content/hdfs-ports.html)|
           | Cloudera CDH | [Ports Used by CDH Components](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ports.html)| 
           | | | 

@@ -119,7 +119,7 @@ This example shows you how to manually add your SQL Server instances in a discon
 
    - If the `Microsoft.AzureArcData` resource provider isn't listed, you can add it to your subscription using the **Register** option.
 
-3. If you are using Azure policies that only allow the creation of specific resource types, you will need to whitelist the `Microsoft.AzureArcData/sqlServerInstances` resource type. If it is not allowed, the SQLServerInstances_Update operation will fail with a **'deny' Policy action** log entry in the activity log of the subscription.
+3. If you are using Azure policies that only allow the creation of specific resource types, you will need to allow the `Microsoft.AzureArcData/sqlServerInstances` resource type. If it is not allowed, the `SQLServerInstances_Update` operation will fail with a **'deny' Policy action** log entry in the activity log of the subscription.
 
 You can either register a [single SQL Server instance](#single-sql-server-instance), or upload a CSV file to register [multiple SQL Server instances in bulk](#multiple-sql-server-instances-in-bulk).
 

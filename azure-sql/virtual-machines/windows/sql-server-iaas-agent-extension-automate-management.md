@@ -75,13 +75,12 @@ There are two permission models for the SQL Server IaaS agent extension - either
 
 The principle of least privilege model is enabled by default for SQL Server VMs deployed via Azure marketplace after October 2022. Existing SQL Server VMs deployed prior to this date, or ones with SQL Server self-installed, use the sysadmin model and can enable the least privileged permissions model in the Azure portal. 
 
+To enable the least privilege permissions model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Additional features** under **Settings** and then check the box next to **SQL IaaS extension least privilege mode**: 
 
-To enable the least privilege model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Additional features** under **Settings** and then check the box next to **SQL IaaS extension least privilege mode**: 
-
+:::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Additional features page, enable least privilege highlighted.":::
 
 
 The following table defines the permissions and custom roles used by each feature of the extension: 
-
 
 |Feature  |Permissions  |Custom role (Server / DB)  |
 |---------|---------|---------|
@@ -90,13 +89,11 @@ The following table defines the permissions and custom roles used by each featur
 |[Azure Backup Service](/azure/backup/backup-overview) | Sysadmin         |         |
 |[Credential management](azure-key-vault-integration-configure.md)  | Server permission - CONTROL SERVER|SqlIaaSExtension_CredentialMgmt          |
 |[Availability group portal management](manage-sql-vm-portal.md#high-availability-preview) |sysdmin|         |
-|[R Service](manage-sql-vm-portal.md#additional-features)| Server permission - ALTER SETTINGS        | SqlIaaSExtension_RService         |
+|[R Service](/sql/machine-learning/r/sql-server-r-services)| Server permission - ALTER SETTINGS        | SqlIaaSExtension_RService         |
 |[SQL authentication](manage-sql-vm-portal.md#security-configuration) | sysadmin        |         |
 |[SQL Server instance settings](manage-sql-vm-portal.md#license-and-edition)|Server permission - ALTER ANY LOGIN, ALTER SETTINGS | SqlIaaSExtension_SqlInstanceSetting          |
 |[Storage configuration](storage-configuration.md)|Server permission - ALTER ANY DATABASE|SqlIaaSExtension_StorageConfig       |
 |[Status reporting](manage-sql-vm-portal.md#access-the-resource) |Server permission - VIEW ANY DEFINITION, VIEW SERVER STATE, ALTER ANY LOGIN, CONNECT SQL         | SqlIaaSExtension_StatusReporting          |
-
-
 
 
 ## Management modes

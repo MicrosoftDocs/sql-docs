@@ -154,11 +154,9 @@ For example,
 EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 ```
 
-## Use trace flags to capture cleanup failures
- 
-  *Applies to [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and later*
+## Capture cleanup failures
 
-  Trace flag 4025 can be enabled to record ADR PVS cleanup behavior in the SQL Server error log. Typically this would result in a new log event recorded every 10 minutes. For more information, see [DBCC TRACEON (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
+Beginning with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], SQL Server records ADR PVS cleanup behavior in the SQL Server error log. Typically this would result in a new log event recorded every 10 minutes.
 
 ## See also
 

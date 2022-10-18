@@ -79,6 +79,13 @@ You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
 
+### Rev. 240
+
+**Bug fixes**
+
+- When processing tabular data with 24 or more columns, an error will occur with message `[Teradata][ODBC] (10670) Invalid descriptor index, descriptor record does not exist, or descriptor record was not properly initialized.`
+- A newly created Teradata Connection Manager will default to latest version Teradata ODBC driver installed even when it is not supported.
+
 ### Rev. 233
 
 **Bug fixes**

@@ -43,10 +43,12 @@ Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 > [!NOTE]
-> Azure Arc-enabled SQL Server does not support container images with SQL Server.
-
-> [!NOTE]
-> SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances. 
+> Azure Arc-enabled SQL Server does not support the following configurations currently:
+> - SQL Server running in containers.
+> - SQL Server Failover Cluster Instances (FCI).
+> - SQL Server roles other than the database engine such as Analysis Servicess (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).
+> - SQL Server editions: Express, Web, Business Intelligence.
+> - SQL Server versions: 2008/2008 R2 or older.
 
 ### Required permissions
 

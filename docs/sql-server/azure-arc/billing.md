@@ -18,7 +18,7 @@ Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option to purchas
 
 ## Overview
 
-You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased product key. This option requires that you have an active [Azure subscription](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions). Once your SQL Server instance is connected to Azure and the [Azure extension for SQL Server](connect.md) is installed on the hosting server, the SQL Server instance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
+You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased product key. This option requires that you have an active [Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions). Once your SQL Server instance is connected to Azure and the [Azure extension for SQL Server](connect.md) is installed on the hosting server, the SQL Server instance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
 
 The billing granularity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in logical cores (vCores) whether the SQL Server instance is installed on the physical server or virtual machine.
 

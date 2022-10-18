@@ -70,7 +70,7 @@ Fixed issues in 5.10.1:
 
 ### Known issues
 
-- If string parameters are bound as short short string and later reused to bind longer strings, a string truncation error will occur.
+- If string parameters are bound as short string and later reused to bind longer strings, a string truncation error will occur.
 
 ## Previous releases
 

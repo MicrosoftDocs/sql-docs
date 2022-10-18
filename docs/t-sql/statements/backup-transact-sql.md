@@ -369,7 +369,7 @@ Explicitly enables backup compression.
 NO_COMPRESSION    
 Explicitly disables backup compression.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. The default is `MS_XPRESS`. If you have configured [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel&reg; QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md, the following example completes the back up with the accelerator solution, with QATzip library using `QZ_DEFLATE` with the compression level 1.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. The default is `MS_XPRESS`. If you have configured [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel&reg; QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md), the following example completes the back up with the accelerator solution, with QATzip library using `QZ_DEFLATE` with the compression level 1.
 
 ```sql
 BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE) 

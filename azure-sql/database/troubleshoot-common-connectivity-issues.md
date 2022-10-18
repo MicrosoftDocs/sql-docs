@@ -172,7 +172,8 @@ For example, if the count is 3 and the interval is 10 seconds, a timeout of only
 
 **Scenario: Idle connection**
 
-`ConnectRetryCount -3, ConnectRetryInterval - 10 seconds`
+**ConnectRetryCount**: 3
+**ConnectRetryInterval**: 10 seconds
 
 4:10:00 - Broken connection detected on command execution
 

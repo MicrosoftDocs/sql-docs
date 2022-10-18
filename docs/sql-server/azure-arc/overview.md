@@ -49,6 +49,7 @@ Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one 
 > - SQL Server roles other than the database engine such as Analysis Servicess (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).
 > - SQL Server editions: Express, Web, Business Intelligence.
 > - SQL Server versions: 2008/2008 R2 or older.
+> - Installing the Arc agent and SQL Server extension cannot be done as part of sysprep image creation.
 
 ### Required permissions
 

@@ -183,7 +183,7 @@ For example, if the count is 3 and the interval is 10 seconds, a timeout of only
 
 4:10:20 - Retry 3
 
-This isn't the initial connection. Therefore, so **Connection Timeout** doesn't apply. However, because the connection recovery occurs during command execution, the **Command Timeout** setting does apply. The **Command Timeout** default is 30 seconds. Although, connection recovery is fast in typical circumstances, an intermittent outage, could cause the recovery to take some of the command execution time.
+This isn't the initial connection. Therefore, **Connection Timeout** doesn't apply. However, because the connection recovery occurs during command execution, the **Command Timeout** setting does apply. The **Command Timeout** default is 30 seconds. Although, connection recovery is fast in typical circumstances, an intermittent outage, could cause the recovery to take some of the command execution time.
 
 For this scenario, if you want to take full advantage of idle connection recovery retries, your chosen values should satisfy the following condition:  
 `Command Timeout > (ConnectRetryCount - 1) * ConnectionRetryInterval`

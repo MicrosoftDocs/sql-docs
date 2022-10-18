@@ -392,7 +392,7 @@ A load balancer in Azure can be either a Standard Load Balancer or a Basic Load 
 
    - **Name**: A name that identifies the frontend IP configuration
    - **Virtual network**: The same network as the virtual machines.
-   - **Subnet**: The subnet subnet as the virtual machines.
+   - **Subnet**: The subnet as the virtual machines.
    - **IP address assignment**: Static.
    - **IP address**: Use an available address from subnet. Use this address for your availability group listener. Note that this is different from your cluster IP address.
    - **Availability zone**: Optionally choose and availability zone to deploy your IP to.
@@ -426,7 +426,7 @@ To configure the load balancer, you need to create a backend pool, a probe, and 
    >[!NOTE]
    >If both virtual machines are not specified, connections will only succeed to the primary replica.
 
-1. Select Select **Add** to add the virtual machines to the backend pool.
+1. Select **Add** to add the virtual machines to the backend pool.
 
 1. Select **Save** to create the backend pool.
 

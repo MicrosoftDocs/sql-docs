@@ -69,7 +69,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    - **Name**: A name that identifies the frontend IP configuration
    - **Virtual network**: The same network as the virtual machines.
-   - **Subnet**: The subnet subnet as the virtual machines.
+   - **Subnet**: The subnet as the virtual machines.
    - **IP address assignment**: Static.
    - **Private IP address**: The IP address that you assigned to the clustered network resource.
    - **Availability zone**: Optionally choose and availability zone to deploy your IP to.
@@ -97,7 +97,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
 1. Under **Virtual machine** choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the FCI. Only add the primary IP address of each VM, do not add any secondary IP addresses.
 
-1. Select Select **Add** to add the virtual machines to the backend pool.
+1. Select **Add** to add the virtual machines to the backend pool.
 
 1. Select **Save** to create the backend pool.
 

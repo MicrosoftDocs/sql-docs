@@ -43,7 +43,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**thumbprint**|**varbinary(32)**|SHA-1 hash of the certificate. The SHA-1 hash is globally unique.|  
 |**attested_by**|**nvarchar(260)**|System use only.|  
 |**pvt_key_last_backup_date**|**datetime**|The date and time the certificate's private key was last exported.|  
-|**key_length**|**int**|The certificate's key length. Added in SQL Server version 2016|  
+|**key_length**|**int**|The certificate's key length. Applies to SQL Server 2016 and later.|  
+
 
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

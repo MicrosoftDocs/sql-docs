@@ -56,13 +56,13 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    The following image shows the **Create load balancer** UI:
 
-   ![Set up the load balancer](./media/failover-cluster-instance-premium-file-share-manually-configure/30-load-balancer-create.png)
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-createloadbalancer.png" alt-text="Create Load Balancer UI.":::
 
 1. Select **Next: Frontend IP Configuration**
 
 1. Select **Add a frontend IP Configuration**
 
-   ![Add a frontend IP configuration](./media/failover-cluster-instance-premium-file-share-manually-configure/add-fe-ip-config.png)
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Add a frontend IP configuration":::
 
 1. Set up the frontend IP using the following values:
 
@@ -75,7 +75,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    The following image shows the **Add frontend IP Configuration** UI:
 
-   ![Add a frontend IP configuration details](./media/failover-cluster-instance-premium-file-share-manually-configure/add-fe-ip-config-details.png)
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Add a frontend IP configuration details":::
 
 1. Select **Add** to create the frontend IP.
 

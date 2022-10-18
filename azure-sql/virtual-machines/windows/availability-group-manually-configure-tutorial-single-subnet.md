@@ -380,13 +380,13 @@ A load balancer in Azure can be either a Standard Load Balancer or a Basic Load 
 
    The Azure portal blade should look like this:
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-createloadbalancer.png" alt-text="Create Load Balancer UI":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-createloadbalancer.png" alt-text="Screenshot of the create Load Balancer UI.":::
 
 1. Select **Next: Frontend IP Configuration**
 
 1. Select **Add a frontend IP Configuration**
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Add a frontend IP configuration":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of add a frontend IP configuration.":::
 
 1. Set up the frontend IP using the following values:
 
@@ -399,7 +399,7 @@ A load balancer in Azure can be either a Standard Load Balancer or a Basic Load 
 
    The following image shows the **Add frontend IP Configuration** UI:
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Add a frontend IP configuration details":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade.":::
 
 1. Select **Add** to create the frontend IP.
 
@@ -411,7 +411,7 @@ To configure the load balancer, you need to create a backend pool, a probe, and 
 
 1. In the Azure portal, go to your availability group. You might need to refresh the view to see the newly created load balancer.
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/86-findloadbalancer.png" alt-text="Find Load Balancer in Resource Group":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/86-findloadbalancer.png" alt-text="Screenshot of finding the Load Balancer in a Resource Group.":::
 
 1. Select the load balancer, select **Backend pools**, and select **+Add**.
 

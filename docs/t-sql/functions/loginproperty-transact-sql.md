@@ -61,7 +61,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**DefaultDatabase**|Returns the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login default database as stored in metadata or **master** if no database is specified. Returns NULL for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provisioned users (for example, Windows authenticated users).|  
 |**DefaultLanguage**|Returns the login default language as stored in metadata. Returns NULL for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provisioned users, for example, Windows authenticated users.|  
 |**HistoryLength**|Returns the number of passwords tracked for the login, using the password-policy enforcement mechanism. 0 if the password policy is not enforced. Resuming password policy enforcement restarts at 1.|  
-|**IsExpired**|Indicates whether the login has expired.|  
+|**IsExpired**|Indicates whether the login's password has expired.|  
 |**IsLocked**|Indicates whether the login is locked.|  
 |**IsMustChange**|Indicates whether the login must change its password the next time it connects.|  
 |**LockoutTime**|Returns the date when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login was locked out because it had exceeded the permitted number of failed login attempts.|  

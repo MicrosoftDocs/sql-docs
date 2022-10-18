@@ -124,7 +124,7 @@ To make this test practical, your program recognizes a runtime parameter that ca
 
 ## .NET SqlConnection parameters for connection retry
 
-If your client program connects to your database in the Azure SQL Database by using the .NET Framework class **System.Data.SqlClient.SqlConnection**, use .NET 4.6.1 or a later version (or .NET Core) so that you can use its connection retry feature. For more information about this feature, see [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true).
+If your client program connects to your database in Azure SQL Database by using the .NET Framework class **System.Data.SqlClient.SqlConnection**, use .NET 4.6.1 or a later version (or .NET Core) so that you can use its connection retry feature. For more information about this feature, see [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true).
 
 <!--
 2015-11-30, FwLink 393996 points to dn632678.aspx, which links to a downloadable .docx related to SqlClient and SQL Server 2014.

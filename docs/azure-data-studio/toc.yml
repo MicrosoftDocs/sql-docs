@@ -20,6 +20,8 @@
     href: quickstart-sql-dw.md
   - name: Connect & query Azure Cosmos DB API for MongoDB
     href: quickstart-azure-cosmos-db-mongodb.md
+  - name: Connect & query MySQL
+    href: quickstart-mysql.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md
   - name: Connect & explore Oracle
@@ -72,6 +74,8 @@
         href: extensions/machine-learning-extension-import-view-models.md
     - name: Managed Instance extension
       href: extensions/azure-sql-managed-instance-extension.md
+    - name: MySQL extension
+      href: extensions/mysql-extension.md
     - name: PostgreSQL extension
       href: extensions/postgres-extension.md
     - name: PowerShell extension

@@ -113,7 +113,7 @@ This section provides information and guidelines to consider when you use peer-t
   
 - A publication must be enabled for peer-to-peer replication before any subscriptions are created.  
   
-- Subscriptions must be initialized by using a backup or with the `replication support only`' option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+- Subscriptions must be initialized by using a backup or with the `replication support only` option. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 - Do not use identity columns. When using identities, you must manually manage the ranges assigned to the tables at each participating database. For more information, see [Assigning ranges for manual identity range management](../publish/replicate-identity-columns.md#assigning-ranges-for-manual-identity-range-management).  
   

@@ -6087,6 +6087,8 @@ items:
         href: relational-databases/accelerated-database-recovery-management.md
       - name: Troubleshooting
         href: relational-databases/accelerated-database-recovery-troubleshoot.md        
+    - name: Manage the Query Store
+      href: relational-databases/performance/manage-the-query-store.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -6573,8 +6575,6 @@ items:
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Optimized plan forcing
         href: relational-databases/performance/optimized-plan-forcing-query-store.md
-      - name: In-Memory OLTP
-        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
@@ -10258,26 +10258,25 @@ items:
       - name: Availability groups
         href: linux/sql-server-linux-availability-group-overview.md
         items:
-        - name: Create for high availability
-          href: linux/sql-server-linux-availability-group-ha.md
+        - name: High availability
           items:
-          - name: Configure AG
+          - name: Create for high availability
+            href: linux/sql-server-linux-availability-group-ha.md
+          - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-ha.md
-          - name: Configure on RHEL
-            href: linux/sql-server-linux-availability-group-cluster-rhel.md
-          - name: Configure on SLES
-            href: linux/sql-server-linux-availability-group-cluster-sles.md
-          - name: Configure on Ubuntu
-            href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-          - name: Failover
+          - name: Configure Pacemaker
+            items:
+            - name: Configure on RHEL, SLES, and Ubuntu
+              href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
+          - name: Configure failover
             href: linux/sql-server-linux-availability-group-failover-ha.md
-          - name: Operate
+          - name: Operate an AG
             href: linux/sql-server-linux-availability-group-operate-ha.md
           - name: Configure multiple subnets for availability
             href: linux/sql-server-linux-configure-multiple-subnet.md
         - name: Create for read-scale only
           items:
-          - name: Configure AG
+          - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-rs.md
         - name: Configure cross-platform (Windows & Linux)
           href: linux/sql-server-linux-availability-group-cross-platform.md
@@ -10356,7 +10355,9 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: SQL Server on Azure Arc-enabled servers
+  - name: Azure Arc-enabled data services >
+    href: /azure/azure-arc/data/overview
+- name: Azure Arc-enabled SQL Server
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
@@ -11060,6 +11061,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
         - name: 3023
           href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
+        - name: 3043
+          href: relational-databases/errors-events/mssqlserver-3043-database-engine-error.md          
         - name: 3056
           href: relational-databases/errors-events/mssqlserver-3056-database-engine-error.md
         - name: 3151
@@ -11076,6 +11079,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3176-database-engine-error.md
         - name: 3181
           href: relational-databases/errors-events/mssqlserver-3181-database-engine-error.md
+        - name: 3183
+          href: relational-databases/errors-events/mssqlserver-3183-database-engine-error.md
         - name: 3201
           href: relational-databases/errors-events/mssqlserver-3201-database-engine-error.md
         - name: 3260
@@ -13245,6 +13250,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services
         href: relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md
+      - name: sys.dm_server_suspend_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-suspend-status.md
       - name: sys.dm_server_registry
         href: relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md
     - name: Service Broker

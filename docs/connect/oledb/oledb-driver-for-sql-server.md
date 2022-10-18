@@ -66,7 +66,7 @@ The new OLE DB provider is called the Microsoft OLE DB Driver for SQL Server (MS
 [When to use OLE DB Driver for SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
 Discusses how OLE DB Driver for SQL Server fits in with Microsoft data access technologies, how it compares to Windows DAC and ADO.NET, and provides pointers for deciding which data access technology to use.
 
-[OLE DB Driver for SQL Server features](../oledb/features/oledb-driver-for-sql-server-features.md )  
+[OLE DB Driver for SQL Server features](../oledb/features/oledb-driver-for-sql-server-features.md)  
 Describes the features supported by OLE DB Driver for SQL Server.
 
 [Building applications with OLE DB Driver for SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

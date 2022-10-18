@@ -86,9 +86,9 @@ The following table defines the permissions and custom roles used by each featur
 |---------|---------|---------|
 |[SQL best practices assessment](sql-assessment-for-sql-vm.md) | Server permission - CONTROL SERVER         | SqlIaaSExtension_Assessment   |
 |[Automated backups](automated-backup.md) |  Server permission - CONTROL SERVER  </br> Database permission -   `db_ddladmin` on master,  `db_backupoperator` on msdb  | SqlIaaSExtension_AutoBackup         |
-|[Azure Backup Service](/azure/backup/backup-overview) | Sysadmin         |         |
+|[Azure Backup Service](/azure/backup/backup-overview) | sysadmin         |         |
 |[Credential management](azure-key-vault-integration-configure.md)  | Server permission - CONTROL SERVER|SqlIaaSExtension_CredentialMgmt          |
-|[Availability group portal management](manage-sql-vm-portal.md#high-availability-preview) |sysdmin|         |
+|[Availability group portal management](manage-sql-vm-portal.md#high-availability-preview) |sysadmin|         |
 |[R Service](/sql/machine-learning/r/sql-server-r-services)| Server permission - ALTER SETTINGS        | SqlIaaSExtension_RService         |
 |[SQL authentication](manage-sql-vm-portal.md#security-configuration) | sysadmin        |         |
 |[SQL Server instance settings](manage-sql-vm-portal.md#license-and-edition)|Server permission - ALTER ANY LOGIN, ALTER SETTINGS | SqlIaaSExtension_SqlInstanceSetting          |

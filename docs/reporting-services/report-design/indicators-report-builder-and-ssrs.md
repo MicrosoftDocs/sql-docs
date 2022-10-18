@@ -56,7 +56,7 @@ ms.author: maggies
  Depending on how you want to depict the data value, gauges might be more effective than indicators. For more information, see [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ##  <a name="ChoosingIndicatorTypes"></a> Choosing the Indicator Type to Use  
- Using the right indicator set is key to instantly communicating the meaning of the data, whether the data is in a detail row or row or column group in a table or matrix, or by itself in the report body or dashboard. The built-in indicator sets have three or more icons. The icons can vary by shape, color, or both. Each icon communicates a different data state.  
+ Using the right indicator set is key to instantly communicating the meaning of the data, whether the data is in a detail row, or in a row or column group in a table or matrix, or by itself in the report body or dashboard. The built-in indicator sets have three or more icons. The icons can vary by shape, color, or both. Each icon communicates a different data state.  
   
  The following table lists the built-in indicator sets and describes some common uses of them.  
   
@@ -67,7 +67,7 @@ ms.author: maggies
 |![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Shape: indicates conditions using commonly shapes such as traffic signs and diamond shapes.|  
 |![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|Ratings: indicates ratings by using common recognized shapes and symbols that show progressive values such as number of quadrants in a square.|  
   
- After you choose a indicator set, you can customize the appearance of each indicator icon in the set by setting its properties in the dialog boxes for indicators or the Properties pane. You can use the built-in colors, icons, and sizes or expressions to configure indicators.  
+ After you choose an indicator set, you can customize the appearance of each indicator icon in the set by setting its properties in the dialog boxes for indicators or the Properties pane. You can use the built-in colors, icons, and sizes or expressions to configure indicators.  
   
 ##  <a name="CustomizingIndicators"></a> Customizing Indicators  
  Indicators can be customized to suit your needs. You can modify the indicators sets as well as individual indicator icon within a set in the following ways:  

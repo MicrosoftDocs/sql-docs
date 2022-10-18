@@ -57,7 +57,7 @@ ms.author: maggies
   
  ![Total row added to table](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "Total row added to table")  
   
- In Preview, the report displays the header row and the details row once for every row in the dataset query result set, and it displays the totals row. The follow figure shows the last few rows of the table including the total row.  
+ In Preview, the report displays the header row and the details row once for every row in the dataset query result set, and it displays the totals row. The following figure shows the last few rows of the table including the total row.  
   
  ![Preview with table and total row](../../reporting-services/report-design/media/rs-basictabledetailstotalpreview.gif "Preview with table and total row")  
   
@@ -70,7 +70,7 @@ ms.author: maggies
   
  ![Table grouped by Date and Order](../../reporting-services/report-design/media/rs-basictablegroupsdesign.gif "Table grouped by Date and Order")  
   
- In Preview, the report displays the order data grouped first by date, and then by order, as shown in the follow figure.  
+ In Preview, the report displays the order data grouped first by date, and then by order, as shown in the following figure.  
   
  ![Table grouped by date and then order](../../reporting-services/media/rs-basictablegroupspreview.png "Table grouped by date and then order")  
   

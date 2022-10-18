@@ -31,6 +31,9 @@ This article includes detail on how the Azure Synapse Link change feed works. Th
 
 This feature is not currently available for Azure SQL Managed Instance.
 
+> [!NOTE]
+> Enabling Azure Synapse Link for SQL will create a `changefeed` database user, a `changefeed` schema, and several tables within the `changefeed` schema in your source database. Please do not alter any of these objects - they are system-managed.
+
 ## Landing zone
 
 For more information on the landing zone for Azure Synapse Link for SQL Server, see [Azure Synapse Link for SQL Server landing zone](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link#landing-zone).

@@ -797,7 +797,7 @@ GO
 
 ## Use Azure Storage Explorer
 
-[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer is a standalone application that simplifies working with event file targets stored in blobs in Azure Storage. You can use Storage Explorer to:
+[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer) is a standalone application that simplifies working with event file targets stored in blobs in Azure Storage. You can use Storage Explorer to:
 
 - [Create a blob container](/azure/vs-azure-tools-storage-explorer-blobs#create-a-blob-container) to hold XEvent session data.
 - [Get the shared access signature (SAS)](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container) for a blob container. 

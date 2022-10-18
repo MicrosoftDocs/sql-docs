@@ -68,6 +68,10 @@ Fixed issues in 5.10.1:
 
 <sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
 
+### Known issues
+
+- If string parameters are bound as short short string and later reused to bind longer strings, a string truncation error will occur.
+
 ## Previous releases
 
 ## 5.9

@@ -2,7 +2,7 @@
 title: "Tutorial: Getting started with Always Encrypted"
 description: This tutorial teaches you how to encrypt columns using Always Encrypted and how to query encrypted columns.
 ms.custom:
-ms.date: 11/15/2022
+ms.date: 11/17/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto

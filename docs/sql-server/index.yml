@@ -54,7 +54,7 @@ landingContent:
     linkLists:
     - linkListType: whats-new
       links:
-      - text: SQL Server 2022 Preview
+      - text: SQL Server 2022
         url: ./what-s-new-in-sql-server-2022.md
       - text: SQL Server 2019 
         url: ./what-s-new-in-sql-server-2019.md

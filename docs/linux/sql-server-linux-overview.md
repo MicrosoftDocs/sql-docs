@@ -25,7 +25,7 @@ Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], SQL Server run
 [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] runs on Linux. It's the same SQL Server database engine, with many similar features and services regardless of your operating system. To find out more about this release, see [What's new in SQL Server 2019 for Linux](sql-server-linux-whats-new-2019.md).
 
 > [!TIP]  
-> [SQL Server 2022 Preview](sql-server-linux-overview.md?view=sql-server-ver16&preserve-view=true) is available! To find out what's new for Linux in the latest release, see [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](../sql-server/what-s-new-in-sql-server-2022.md).
+> [SQL Server 2022](sql-server-linux-overview.md?view=sql-server-ver16&preserve-view=true) is available! To find out what's new for Linux in the latest release, see [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](../sql-server/what-s-new-in-sql-server-2022.md).
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver16 || >= sql-server-linux-ver16"
@@ -67,7 +67,7 @@ If you're already familiar with [!INCLUDE [ssnoversion-md](../includes/ssnoversi
 
 - [SQL Server 2017 release notes](sql-server-linux-release-notes-2017.md)
 - [SQL Server 2019 release notes](sql-server-linux-release-notes-2019.md)
-- [SQL Server 2022 Preview release notes](sql-server-linux-release-notes-2022.md)
+- [SQL Server 2022 release notes](sql-server-linux-release-notes-2022.md)
 
 Then look at what's new:
 

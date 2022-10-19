@@ -2083,7 +2083,7 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-Shared Access Signature (SAS) keys are supported for authenticating to Azure Data Lake Store Gen 2 Storage Accounts. Customers that want to authenticate using a Shared Access Signature must create a database scoped credential where IDENTITY = "Shared Access Signature" and enter a SAS token as the secret. Customers that want to authenticate using a Storage Account Key must use a database scoped credential where IDENTITY = “Storage Account Key” and use a storage key as the secret. 
+Shared Access Signature (SAS) keys are supported for authenticating to Azure Data Lake Store Gen 2 Storage Accounts. Customers that want to authenticate using a Shared Access Signature must create a database scoped credential where `IDENTITY = "Shared Access Signature"` and enter a SAS token as the secret. 
 
 If you create a database scoped credential where `IDENTITY = "Shared Access Signature"` and uses a storage key value as the secret, you will get the following error message: 
 

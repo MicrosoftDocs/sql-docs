@@ -16,7 +16,7 @@ monikerRange: "= sql-server-ver16"
 
 [!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)].
+This article describes requirements, limitations and known issues for [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)].
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 

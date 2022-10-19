@@ -106,7 +106,7 @@ The four key components of ADR are:
 
 - **Persisted version store (PVS)**
 
-  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There is one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], there is one PVS cleaner thread per database.
+  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There is one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], SQL Server has one PVS cleaner thread per database.
 
 - **Logical Revert**
 
@@ -153,23 +153,16 @@ There are several improvements to address persistent version store (PVS) storage
   This improvement allows ADR to clean up versions belonging to committed transactions independent of whether there are aborted transactions in the system. With this improvement persisted version store (PVS) pages can be deallocated, even if the cleanup cannot complete a successful sweep in order to trim the aborted transaction map. 
   
   The result of this improvement is reduced persisted version store (PVS) growth even if ADR cleanup is slow or fails.
- 
+
 - **Multi-threaded version cleanup**  
   
-  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. 
+  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance.
   
-  In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], CTP 2.0, you can also enable multi-threaded version cleanup at the database level with trace flag 3515. This allows multiple threads for cleanup per database. This improvement is valuable when you have multiple large databases.
+  Beginning with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this process uses multi-threaded version cleanup at the database level. This allows multiple threads for cleanup for each database. This improvement is valuable when you have multiple large databases.
 
-  To enable trace flag 3515 for the instance, run the following command:
+  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`.
 
-   ```sql
-   DBCC TRACEON(3515, -1)
-   GO 
-   ```
-
-  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`.   
-
-  The example below changes the thread count to 4: 
+  The example below changes the thread count to 4:
 
   ```sql
   EXEC sp_configure 'ADR Cleaner Thread Count', '4'

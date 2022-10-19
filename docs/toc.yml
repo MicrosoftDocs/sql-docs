@@ -13722,7 +13722,7 @@ items:
       href: relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md
       items:
       - name: sys.sp_flush_commit_table
-        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-table-transact-sql.md       
+        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-transact-sql.md       
       - name: sys.sp_flush_commit_table_on_demand
         href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-on-demand-transact-sql.md       
       - name: sys.sp_flush_CT_internal_table_on_demand

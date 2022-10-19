@@ -44,7 +44,7 @@ To get started, install SQL Server on Linux using one of the following quickstar
 
 ### Container images
 
-The SQL Server container images are published and available on the Microsoft Container Registry (MCR), and also catalogued at the following locations, based on the operating system image that was used when creating the container image:
+The SQL Server container images are published and available on the Microsoft Container Registry (MCR), and also cataloged at the following locations, based on the operating system image that was used when creating the container image:
 
 - For RHEL-based SQL Server container images, see [SQL Server Red Hat Containers](https://catalog.redhat.com/software/containers/mssql/rhel/server/61f2f612f385723914ed60bc).
 - For Ubuntu-based SQL Server images, see [SQL Server on Docker Hub](https://hub.docker.com/_/microsoft-mssql-server).

@@ -47,7 +47,7 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-|[Backup transparency](msdb-database-sql-mi.md) | November 2022 |  Query the msdb database to identify your automated backup history. | 
+|[Backup transparency](msdb-database-sql-mi.md) | November 2022 |  Query the msdb database to explore your automated backup history. | 
 |[Tempdb configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of tempdb files and their growth increments to tune the performance of your instance even more. |
 |[Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
 |[16 TB support in Business Critical](resource-limits.md#service-tier-characteristics) | September 2022 |Support for allocation up to 16 TB of space on SQL Managed Instance in the Business Critical service tier using the new memory optimized premium-series hardware. | 
@@ -73,7 +73,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Backup transparency with msdb** | For the purpose of backup transparency, it's now possible to query the msdb database to explore backup history. This feature is generally available. To learn more, review [backup transparency](msdb-database-sql-mi.md). | 
+| **Backup transparency with msdb** | For the purpose of backup transparency, it's now possible to query the msdb database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](msdb-database-sql-mi.md). | 
 
 ### September 2022
 

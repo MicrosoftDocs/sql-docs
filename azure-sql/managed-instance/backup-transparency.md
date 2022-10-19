@@ -1,5 +1,5 @@
 ---
-title: The msdb database
+title: Backup transparency
 description: "Learn about the msdb database when working with Azure SQL Managed Instance"
 author: MilanMSFT
 ms.author: mlazic
@@ -9,18 +9,14 @@ ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom:
 ---
-# The msdb database in Azure SQL Managed Instance
+# Backup transparency in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-> [!div class="op_single_selector"]
-> * [SQL Server](/sql/relational-database/databases/msdb-database)
-> * [Azure SQL Managed Instance](msdb-database-sql-mi.md)
-
-This article describes the msdb database in Azure SQL Managed Instance and how it differs from the traditional msdb database in SQL Server. 
+This article describes backup transparency in Azure SQL Managed Instance. 
 
 ## Overview 
 
-In SQL Server, the [msdb database](/sql/relational-databases/databases/msdb-database) is a system database used for a number of system objects and features, such as the SQL Server Agent, Service Broker and Database mail. In Azure SQL Managed Instance, the msdb database is used solely for backup history and transparency. There are a number of differences between the msdb database in Azure SQL Managed Instance and the msdb database in SQL Server, such as what information is visible, what tables are supported, and what fields are available. 
+The [msdb database](/sql/relational-databases/databases/msdb-database) enables backup transparency in Azure SQL Managed Instance by making backup history tables queryable. However, there are a few key differences between the backup tables in a traditional SQL Server msdb database, and the msdb database in Azure SQL Managed Instance, such as what information is visible, what tables are supported, and what fields are available. 
 
 ## Visible information 
 
@@ -30,12 +26,10 @@ The msdb database in SQL Managed Instance displays the following backup informat
 - The replica where the backup was taken, such as the primary, or secondary. The ability to take backups from the secondary replica is currently in private preview. 
 - Metadata information about the backup such as the status, size, time, and location 
 
+The msdb database **does not** have information about the following: 
 
-The msdb database **will not** have the following: 
-
-- Information about backups stored for long-term retention, as this is done by copying out files at the storage level, and is not visible to the managed instance. 
-- Information about native backups taken manually. 
-
+- Backups stored for long-term retention, as this is done by copying out files at the storage level, and is not visible to the managed instance. 
+- Native backups taken manually. 
 
 ## Supported tables
 

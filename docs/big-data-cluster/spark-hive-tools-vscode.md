@@ -172,7 +172,7 @@ You can submit interactive PySpark queries by following the steps below:
 
 ## Apache Livy configuration
 
-[Apache Livy](https://livy.incubator.apache.org/) configuration is supported, it can be set at the **.VSCode\settings.json** in the work space folder. Currently, Livy configuration only supports Python script. More details, see [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ).
+[Apache Livy](https://livy.incubator.apache.org/) configuration is supported, it can be set at the **.VSCode\settings.json** in the work space folder. Currently, Livy configuration only supports Python script. More details, see [Livy README](https://github.com/cloudera/livy/blob/master/README.rst).
 
 ### <a id="triggerlivyconf"></a>**How to trigger Livy configuration**
 

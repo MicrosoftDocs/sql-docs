@@ -1,9 +1,9 @@
 ---
-ms.date: 05/21/2019
-ms.topic: include
-ms.prod: sql
 author: rothja
 ms.author: jroth
+ms.date: 05/21/2019
+ms.prod: sql
+ms.topic: include
 ---
 
 ## :::image type="icon" source="../media/info-tip.png" border="false"::: Get help for SQL tools

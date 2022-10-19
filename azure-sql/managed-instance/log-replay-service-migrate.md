@@ -13,10 +13,10 @@ ms.custom:
   - devx-track-azurepowershell
 ---
 
-# Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service (Preview)
+# Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article explains how to manually configure database migration from SQL Server 2008-2019 to Azure SQL Managed Instance by using Log Replay Service (LRS), currently in public preview. LRS is a free of charge cloud service enabled for Azure SQL Managed Instance based on SQL Server log-shipping technology.
+This article explains how to manually configure database migration from SQL Server 2008-2019 to Azure SQL Managed Instance by using Log Replay Service (LRS). LRS is a free of charge cloud service enabled for Azure SQL Managed Instance based on SQL Server log-shipping technology.
 
 [Azure Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance) and LRS use the same underlying migration technology and APIs. LRS further enables complex custom migrations and hybrid architectures between on-premises SQL Server and SQL Managed Instance.
 
@@ -44,7 +44,7 @@ Consider using LRS in the following cases:
 
 Building a custom solution to migrate databases to the cloud with LRS requires several orchestration steps, as shown in the diagram and a table later in this section.
 
-Migration consists of making database backups on SQL Server with `CHECKSUM` enabled, and copying backup files to Azure Blob Storage. Full, log, and differential backups are supported. LRS cloud service is used to restore backup files from Azure Blob Storage to SQL Managed Instance. Blob Storage serves as an intermediary storage between SQL Server and SQL Managed Instance.
+Migration consists of taking database backups on SQL Server, and copying backup files to Azure Blob Storage. Full, log, and differential backups are supported. The LRS cloud service is then used to restore backup files from Azure Blob Storage to SQL Managed Instance. Blob Storage serves as an intermediary storage between SQL Server and SQL Managed Instance.
 
 LRS monitors Blob Storage for any new differential or log backups added after the full backup has been restored. LRS then automatically restores these new files. You can use the service to monitor the progress of backup files being restored to SQL Managed Instance, and stop the process if necessary.
 
@@ -56,6 +56,8 @@ If you're migrating several databases, you need to:
 - Don't use nested folders inside database folders as this structure isn't supported. For example, don't use subfolders: `blobcontainer/database1/subfolder/files`.
 - Start LRS separately for each database.
 - Specify different URI paths to separate database folders on Azure Blob Storage. 
+
+While having `CHECKSUM` enabled for backups is not required, it is recommended. Restoring databases without `CHECKSUM` will take longer, as SQL Managed Instance performs an integrity check on backups restored without `CHECKSUM` enabled. 
 
 ### Autocomplete versus Continuous mode migration
 
@@ -105,20 +107,22 @@ Make sure you have the following requirements for SQL Server:
 - Full backup of databases (one or multiple files)
 - Differential backup (one or multiple files)
 - Log backup (not split for a transaction log file)
-- `CHECKSUM` enabled for backups (mandatory)
+
+While having `CHECKSUM` enabled for backups is not required, it is recommended for faster restore operations. 
 
 ### Azure 
 
 Make sure you have the following requirements for Azure: 
 
-- PowerShell Az.SQL module version 2.16.0 or later ([installed](https://www.powershellgallery.com/packages/Az.Sql/) or accessed through [Azure Cloud Shell](/azure/cloud-shell/))
-- Azure CLI version 2.19.0 or later ([installed](/cli/azure/install-azure-cli))
-- Azure Blob Storage container provisioned
-- Shared access signature (SAS) security token with read and list permissions generated for the Blob Storage container
+- PowerShell Az.SQL module version 2.16.0 or later ([installed](https://www.powershellgallery.com/packages/Az.Sql/) or accessed through [Azure Cloud Shell](/azure/cloud-shell/)).
+- Azure CLI version 2.19.0 or later ([installed](/cli/azure/install-azure-cli)).
+- Provisioned Azure Blob Storage container.
+- Shared access signature (SAS) security token with read and list permissions generated for the Blob Storage container or a managed identity that can access the container. 
 
 ### Azure RBAC permissions
 
 Running LRS through the provided clients requires one of the following Azure roles:
+
 - Subscription Owner role
 - [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role
 - Custom role with the following permission: `Microsoft.Sql/managedInstances/databases/*`
@@ -126,28 +130,29 @@ Running LRS through the provided clients requires one of the following Azure rol
 ## Requirements
 
 Ensure the following requirements are met:
+
 - Use the full recovery model on SQL Server (mandatory).
-- Use `CHECKSUM` for backups on SQL Server (mandatory).
 - Place backup files for an individual database inside a separate folder in a flat-file structure (mandatory). Nested folders inside database folders aren't supported.
 
 ## Best practices
 
 We recommend the following best practices:
+
 - Run [Data Migration Assistant](/sql/dma/dma-overview) to validate that your databases are ready to be migrated to SQL Managed Instance. 
 - Split full and differential backups into multiple files, instead of using a single file.
 - Enable backup compression to help the network transfer speeds.
 - Use Cloud Shell to run PowerShell or CLI scripts, because it will always be updated to the latest cmdlets released.
 - Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. This configuration will help achieve a more predictable time of database migrations, as impactful system upgrades interrupt migration in progress.
-- Plan to complete a single LRS migration job within a maximum of 30 days. On expiry of this timeframe, the LRS job will be automatically canceled.
+- Plan to complete a single LRS migration job within a maximum of 30 days. On expiry of this time frame, the LRS job will be automatically canceled.
+- Enable `CHECKSUM` when taking your backups for a faster database restore. SQL Managed Instance performs an integrity check on backups without `CHECKSUM`, increasing restore time. 
+
+System updates on managed instance will take precedence over database migrations in progress. All pending LRS migrations in case of a system update on Managed Instance will be suspended and resumed once the update has been applied. This system behavior might prolong migration time, especially in cases of large databases. To achieve a predictable time of database migrations, consider configuring [maintenance window](../database/maintenance-window.md) allowing scheduling of system updates at a specific day/time, and consider running and completing migration jobs outside of the scheduled maintenance window day/time.
+
 
 > [!IMPORTANT]
 > - You can't use databases being restored through LRS until the migration process completes. 
 > - LRS doesn't support read-only access to databases during the migration.
 > - After the migration completes, the migration process is finalized and can't be resumed with additional differential backups.
-
-> [!TIP]
-> System updates on managed instance will take precedence over database migrations in progress. All pending LRS migrations in case of a system update on Managed Instance will be suspended and resumed once the update has been applied. This system behavior might prolong migration time, especially in cases of large databases. To achieve a predictable time of database migrations, consider configuring [maintenance window](../database/maintenance-window.md) allowing scheduling of system updates at a specific day/time, and consider running and completing migration jobs outside of the scheduled maintenance window day/time.
-> 
 
 ## Steps to migrate
 
@@ -170,7 +175,7 @@ SET RECOVERY FULL
 GO
 ```
 
-To manually make full, differential, and log backups of your database to local storage, use the following sample T-SQL scripts. Ensure the `CHECKSUM` option is enabled, as it's mandatory for LRS.
+To manually make full, differential, and log backups of your database to local storage, use the following sample T-SQL scripts. `CHECKSUM` is not required, but recommended. 
 
 
 The following example takes a full database backup to the local disk: 
@@ -281,6 +286,8 @@ https://<mystorageaccountname>.blob.core.windows.net/<containername>/<database3>
 
 ### Generate a Blob Storage SAS authentication token for LRS
 
+Access Azure Blob storage either using an SAS token or a managed identity. If you're using a managed identity, skip this step. 
+
 Azure Blob Storage is used as intermediary storage for backup files between SQL Server and SQL Managed Instance. Generate an SAS authentication token for LRS  with only list and read permissions. The token enables LRS to access Blob Storage and uses the backup files to restore them to SQL Managed Instance. 
 
 Follow these steps to generate the token:
@@ -314,6 +321,8 @@ The SAS authentication is generated with the time validity that you specified. Y
    > Using SAS tokens created with permissions set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported at this time. Follow the instructions in this article to manually specify **Read** and **List** permissions for the SAS token.
 
 ### Copy parameters from the SAS token
+
+Access Azure Blob storage either using an SAS token or a managed identity. If you're using a managed identity, skip this step. 
 
 Before you use the SAS token to start LRS, you need to understand its structure. The URI of the generated SAS token consists of two parts separated with a question mark (`?`), as shown in this example:
 
@@ -371,7 +380,16 @@ Ensure that the entire backup chain has been uploaded to Azure Blob Storage. Thi
 
 To start LRS in autocomplete mode, use PowerShell or Azure CLI commands. Specify the last backup file name by using the `-LastBackupName` parameter. After restore of the last specified backup file has completed, the service automatically initiates a cutover.
 
-The following PowerShell example starts LRS in autocomplete mode: 
+Restore your database from Azure storage either using the SAS token, or a managed identity. 
+
+> [!IMPORTANT]
+> - Ensure that the entire backup chain has been uploaded to Azure Blob Storage prior to starting the migration in autocomplete mode. This mode doesn't allow new backup files to be added once the migration is in progress.
+> - Ensure that you have specified the last backup file correctly, and that you have not uploaded more files after it. If the system detects more backup files beyond the last specified backup file, the migration will fail.
+>
+
+### [SAS token](#tab/sas-token)
+
+The following PowerShell example starts LRS in autocomplete mode using an SAS token: 
 
 ```PowerShell
 Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
@@ -384,7 +402,7 @@ Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
 	-LastBackupName "last_backup.bak"
 ```
 
-The following Azure CLI example starts LRS in autocomplete mode: 
+The following Azure CLI example starts LRS in autocomplete mode using an SAS token: 
 
 ```CLI
 az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb -a --last-bn "backup.bak"
@@ -392,10 +410,16 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb -a --last
 	--storage-sas "sv=2019-02-02&ss=b&srt=sco&sp=rl&se=2023-12-02T00:09:14Z&st=2019-11-25T16:09:14Z&spr=https&sig=92kAe4QYmXaht%2Fgjocqwerqwer41s%3D"
 ```
 
-> [!IMPORTANT]
-> - Ensure that the entire backup chain has been uploaded to Azure Blob Storage prior to starting the migration in autocomplete mode. This mode doesn't allow new backup files to be added once the migration is in progress.
-> - Ensure that you have specified the last backup file correctly, and that you have not uploaded more files after it. If the system detects more backup files beyond the last specified backup file, the migration will fail.
->
+### [Managed identity](#tab/managed-identity)
+
+The following PowerShell example starts LRS in autocomplete mode using a managed identity: 
+
+The following Azure CLI example starts LRS in autocomplete mode using managed identity: 
+
+
+---
+
+
 
 ### Start LRS in continuous mode
 
@@ -502,7 +526,7 @@ Consider the following limitations of LRS:
 
 - During the migration process, databases being migrated can't be used for read-only access on SQL Managed Instance.
 - Configure [maintenance window](../database/maintenance-window.md) to allow scheduling of system updates at a specific day/time. Plan to run and complete migrations outside of the scheduled maintenance window.
-- LRS requires databases on SQL Server to be backed up with the `CHECKSUM` option enabled.
+- Database backups taken without `CHECKSUM` take longer to restore than databases with `CHECKSUM` enabled. 
 - The SAS token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have **Read** and **List** permissions only. For example, if you grant **Read**, **List** and **Write** permissions, LRS won't be able to start because of the extra **Write** permission.
 - Using SAS tokens created with permissions set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. Follow the instructions in this article to manually specify **Read** and **List** permissions for the SAS token.
 - Backup files containing % and $ characters in the file name can't be consumed by LRS. Consider renaming such file names.
@@ -521,7 +545,6 @@ Consider the following limitations of LRS:
 After you start LRS, use the monitoring cmdlet (PowerShell: `get-azsqlinstancedatabaselogreplay` or Azure CLI: `az_sql_midb_log_replay_show`) to see the status of the operation. If LRS fails to start after some time and you get an error, check for the most common issues:
 
 - Does an existing database on SQL Managed Instance have the same name as the one you're trying to migrate from SQL Server? Resolve this conflict by renaming one of the databases.
-- Was the database backup on SQL Server made via the `CHECKSUM` option?
 - Are the permissions granted for the SAS **token Read** and **List** _only_?
 - Did you copy the SAS token for LRS after the question mark (`?`), with content starting like this: `sv=2020-02-10...`? 
 - Is the SAS token validity time applicable for the time window of starting and completing the migration? There might be mismatches due to the different time zones used for SQL Managed Instance and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.

@@ -32,7 +32,6 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
 |[Managed Instance link](managed-instance-link-feature-overview.md)| Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. |
 |[Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications (preview) for databases configured to use a non-default [maintenance window](../database/maintenance-window.md). Advance notifications are in preview for Azure SQL Managed Instance. |
-|[Migrate with Log Replay Service](log-replay-service-migrate.md) | Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service. |
 |[SDK-style SQL project](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or VS Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.| 
 |[Service Broker cross-instance message exchange](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker on Azure SQL Managed Instance. |
 |[SQL Database Projects extension](/sql/azure-data-studio/extensions/sql-database-project-extension) | An extension to develop databases for Azure SQL Database with Azure Data Studio and VS Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. | 
@@ -47,6 +46,7 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+|[Migrate with Log Replay Service](log-replay-service-migrate.md) | November 2022 |  Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service. |
 |[TempDB configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of TempDB files and their growth increments to tune the performance of your instance even more. |
 |[Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
 |[16 TB support in Business Critical](resource-limits.md#service-tier-characteristics) | September 2022 |Support for allocation up to 16 TB of space on SQL Managed Instance in the Business Critical service tier using the new memory optimized premium-series hardware. | 
@@ -67,6 +67,14 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation.
+
+### November 2022
+
+| Changes | Details |
+| --- | --- |
+| **Log Replay Service GA** | Migrate your databases to Azure SQL Managed Instance using the Log Replay Service. This feature is now generally available. To learn more, review [Migrate with Log Replay Service](log-replay-service-migrate.md). | 
+
+
 
 ### September 2022
 

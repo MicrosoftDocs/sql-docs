@@ -34,7 +34,7 @@ You can receive Extended Security Updates in several ways:
 
   - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [Azure Arc-enabled SQL Server](../azure-arc/overview.md) provides.
 
-  - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state.
+  - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state. See [below] (#prerequisites) for required prerequisites.
 
 - **Azure services**. Free and enabled by default when migrating on-premises servers to one of the following Azure services:
 
@@ -109,7 +109,7 @@ This example shows you how to manually add your SQL Server instances in a discon
 
 ### Prerequisites
 
-1. Assign the `Azure Connected SQL Server Onboarding` role. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+1. Assign the `Azure Connected SQL Server Onboarding` role on the *resource group* that you are using to register your SQL Server instances. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
 2. Register the `Microsoft.AzureArcData` resource provider in your Azure subscription:
 
@@ -118,6 +118,8 @@ This example shows you how to manually add your SQL Server instances in a discon
    - Navigate to your subscription, and select **Resource providers**.
 
    - If the `Microsoft.AzureArcData` resource provider isn't listed, you can add it to your subscription using the **Register** option.
+
+3. If you are using Azure policies that only allow the creation of specific resource types, you will need to allow the `Microsoft.AzureArcData/sqlServerInstances` resource type. If it is not allowed, the `SQLServerInstances_Update` operation will fail with a **'deny' Policy action** log entry in the activity log of the subscription.
 
 You can either register a [single SQL Server instance](#single-sql-server-instance), or upload a CSV file to register [multiple SQL Server instances in bulk](#multiple-sql-server-instances-in-bulk).
 
@@ -227,7 +229,7 @@ Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances
 - Values are comma-separated
 - Values aren't single or double-quoted
 - Values can include letters, numbers, hyphens (`-`), and underscores (`_`). No other special characters can be used. If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`.
-- Column names are case-insensitive but must be named as follows:
+- Column names are case-sensitive and must be named as follows:
 
   - name
   - version

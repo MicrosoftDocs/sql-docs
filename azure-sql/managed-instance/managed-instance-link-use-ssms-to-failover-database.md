@@ -17,10 +17,11 @@ ms.topic: guide
 
 This article teaches you how to fail over a database from SQL Server to Azure SQL Managed Instance by using [the link feature](managed-instance-link-feature-overview.md) in SQL Server Management Studio (SSMS). 
 
-Failing over your database from SQL Server to SQL Managed Instance breaks the link between the two databases. It stops replication and leaves both databases in an independent state, ready for individual read/write workloads. 
+Failing over your database from SQL Server 2019 or earlier to SQL Managed Instance breaks the link between the two databases. It stops replication and leaves both databases in an independent state, ready for individual read/write workloads. Failing over from SQL Server 2022 does not break the link, and fail back to SQL Server 2022 is supported - this is currently in preview. 
 
 > [!NOTE]
-> The link is a feature of Azure SQL Managed Instance and is currently in preview. 
+> - Some functionality of the link is generally available, while some is currently in preview. Review the [release status](managed-instance-link-feature-overivew.md#release-status) to learn more. 
+> -  You can also use a [T-SQL and PowerShell](managed-instance-link-use-scripts-to-failover-database.md) to failover a database with the link. 
 
 ## Prerequisites 
 
@@ -35,7 +36,7 @@ To fail over your databases to SQL Managed Instance, you need the following prer
 
 ## Fail over a database
 
-In the following steps, you use the **Failover database to Managed Instance** wizard in SSMS to fail over your database from SQL Server to SQL Managed Instance. The wizard takes you through failing over your database, breaking the link between the two instances in the process. 
+In the following steps, you use the **Failover database to Managed Instance** wizard in SSMS to fail over your database from SQL Server to SQL Managed Instance. The wizard takes you through failing over your database, breaking the link between the two instances in the process if you're on SQL Server 2019 or earlier. 
 
 > [!CAUTION]
 > If you're performing a planned manual failover, stop the workload on the source SQL Server database to allow the SQL Managed Instance replicated database to completely catch up and failover without data loss. If you're performing a forced failover, you might lose data. 

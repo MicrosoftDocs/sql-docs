@@ -24,11 +24,12 @@ If you have product improvement suggestions, comments, or you want to report iss
 
 To use the link feature, you'll need a supported version of SQL Server. The following table lists the supported versions.
 
-| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+| SQL Server Version  | [Release status](#release-status) | Editions  | Host OS | Servicing update requirement |
 |---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+|One-way replication from [!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | GA |  Windows Server  | Windows Server | SQL Server 2022 RTM | 
+|Fail back to [!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Preview | | Enterprise, Standard, or Developer | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] |Preview | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Preview |  Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 In addition to the supported version, you'll need:
 
@@ -83,6 +84,10 @@ The link feature also facilitates migrating from SQL Server to SQL Managed Insta
 
 Since the link feature enables minimum downtime migration, you can migrate to your managed instance while maintaining your primary workload online. While online migration was possible to achieve previously with other solutions when migrating to the General Purpose service tier, the link feature now also allows for true online migrations to the Business Critical service tier as well. 
 
+### Disaster recovery 
+
+SQL Server 2022 customers can use the Managed Instance link for the purpose of disaster recovery, where, in the event of a disaster, you can fail your workload over to Azure SQL Managed Instance. Once the disaster is mitigated, you can fail back over to your SQL Server 2022 instance. This feature is currently in preview. 
+
 ## How it works
 
 The underlying technology behind the link feature for SQL Managed Instance is distributed availability groups. The solution supports single-node systems without existing availability groups, or multiple node systems with existing availability groups.  
@@ -95,7 +100,7 @@ There could exist up to 100 links from the same, or various SQL Server sources t
 
 ## Use the link feature
 
-To help you set up initial environment, we've prepared the following online guide on how to prepare your SQL Server environment to use with the link feature for SQL Managed Instance:
+To help you set up the initial environment, review the guide how to prepare your SQL Server environment to use with the link feature for SQL Managed Instance:
 
 - [Prepare environment for the link](managed-instance-link-preparation.md)
 
@@ -112,6 +117,25 @@ If and when you're ready to migrate a database to Azure with a minimum downtime,
 
 * [Failover database with link feature in SSMS](managed-instance-link-use-ssms-to-failover-database.md), or alternatively
 * [Failover (migrate) database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-failover-database.md)
+
+## Release status
+
+The release status of the Managed Instance feature depends on the link functionality and version of SQL Server used to establish a link with SQL Managed Instance. 
+
+The link feature currently offers the following functionality:
+
+- **One-way replication**: Use the link feature to replicate data one way from SQL Server to Azure SQL Managed Instance. While manual fail over to SQL MI is available in the event of a disaster, doing so breaks the link, and failing back is not supported. 
+- **Disaster recovery**: Use the link feature to replicate data from SQL Server to Azure SQL Managed Instance, automatically failover to SQL MI in the event of a disaster, and fail back to SQL Server once the disaster is mitigated. 
+
+The following table describes the release status based on the functionality of the link feature and version of SQL Server : 
+
+
+| Version of SQL Server | One-way replication | Disaster recovery | 
+|---------|---------|---------| --------|
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] |Generally available | Preview | 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] |Preview | Not supported |  
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Preview |  Not supported |
+
 
 ## Limitations
 

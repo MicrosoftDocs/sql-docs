@@ -18,7 +18,8 @@ ms.topic: guide
 This article teaches you how to use Transact-SQL (T-SQL) and PowerShell scripts and a [Managed Instance link](managed-instance-link-feature-overview.md) to fail over (migrate) your database from SQL Server to SQL Managed Instance.
 
 > [!NOTE]
-> - The link is a feature of Azure SQL Managed Instance and is currently in preview. You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to failover a database with the link. 
+> - Some functionality of the link is generally available, while some is currently in preview. Review the [release status](managed-instance-link-feature-overivew.md#release-status) to learn more. 
+> - You can also use a [SQL Server Management Studio (SSMS) wizard](managed-instance-link-use-ssms-to-failover-database.md) to failover a database with the link. 
 
 ## Prerequisites 
 
@@ -32,7 +33,7 @@ To replicate your databases to SQL Managed Instance, you need the following prer
 
 ## Database failover 
 
-Database failover from SQL Server to SQL Managed Instance breaks the link between the two databases. Failover stops replication and leaves both databases in an independent state, ready for individual read/write workloads. 
+Database failover from SQL Server 2019 and earlier to SQL Managed Instance breaks the link between the two databases. Failover stops replication and leaves both databases in an independent state, ready for individual read/write workloads.  Failing over from SQL Server 2022 does not break the link, and fail back to SQL Server 2022 is supported - this is currently in preview. 
 
 To start migrating your database to SQL Managed Instance, first stop any application workloads on SQL Server during your maintenance hours. This enables SQL Managed Instance to catch up with database replication and migrate to Azure while mitigating data loss. 
 
@@ -218,7 +219,7 @@ Verify once again that your workload is stopped on SQL Server. Check that LSNs o
 
 ## Start database failover and migration to Azure
 
-Run the below script in Azure Cloud Shell to finalize your migration to Azure. The script breaks the link and ends replication to SQL Managed Instance. The replicated database becomes read/write on the managed instance. Replace:
+Run the below script in Azure Cloud Shell to finalize your migration to Azure. The script breaks the link and ends replication to SQL Managed Instance for SQL Server 2019 and earlier. The replicated database becomes read/write on the managed instance. Replace:
 - `<ManagedInstanceName>` with the name of your managed instance. 
 - `<DAGName>` with the name of the link you're failing over (output of the property `Name` from `Get-AzSqlInstanceLink` command executed earlier above).
 

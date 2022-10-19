@@ -2085,7 +2085,7 @@ PolyBase supports proxy based authentication for most external data sources. Cre
 
 Shared Access Signature (SAS) keys are supported for authenticating to Azure Data Lake Store Gen 2 Storage Accounts. Customers that want to authenticate using a Shared Access Signature must create a database scoped credential where IDENTITY = "Shared Access Signature" and enter a SAS token as the secret. Customers that want to authenticate using a Storage Account Key must use a database scoped credential where IDENTITY = “Storage Account Key” and use a storage key as the secret. 
 
-If a customer creates a database scoped credential where IDENTITY = ‘Shared Access Signature’ and uses a storage key value as the secret, they will get the following error: 
+If you create a database scoped credential where `IDENTITY = "Shared Access Signature"` and uses a storage key value as the secret, you will get the following error message: 
 
 `'HdfsBridge::isDirExist - Unexpected error encountered checking whether directory exists or not: AbfsRestOperationException: Operation failed: "Server failed to authenticate the request. Please refer to the information in the www-authenticate header.", 401, HEAD, [Storage path URL]'`
 

@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: migration
-ms.topic: how-to
+ms.topic: conceptual
 ms.custom:
   - devx-track-azurecli
   - devx-track-azurepowershell

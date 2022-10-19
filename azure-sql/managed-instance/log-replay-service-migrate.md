@@ -30,7 +30,7 @@ The following sources are supported:
 
 ## Requirements
 
-Considering the following requirements for both SQL Server on Azure. 
+Considering the following requirements for both SQL Server and Azure. 
 
 ### SQL Server 
 
@@ -212,7 +212,7 @@ https://<mystorageaccountname>.blob.core.windows.net/<containername>/<database3>
 
 ## Authenticate to Blob Storage
 
-Use either an SAS token or a managed identity authenticate access to the storage Azure Blob Storage account. 
+Use either an SAS token or a managed identity to access to the storage Azure Blob Storage account. 
 
 ### [SAS token](#tab/sas-token)
 

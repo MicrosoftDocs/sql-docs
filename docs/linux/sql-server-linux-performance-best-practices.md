@@ -52,8 +52,8 @@ For SQL Server, it is recommended to use RAID configurations. The deployed files
 # Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
 mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=6 /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf
 
-mkfs.xfs /dev/sda1 -f -L log 
-meta-data=/dev/sda1              isize=512    agcount=32, agsize=18287648 blks 
+mkfs.xfs /dev/md3 -f -L log 
+meta-data=/dev/md3              isize=512    agcount=32, agsize=18287648 blks 
          =                       sectsz=4096  attr=2, projid32bit=1 
          =                       crc=1        finobt=1, sparse=1, rmapbt=0 
          =                       reflink=1 

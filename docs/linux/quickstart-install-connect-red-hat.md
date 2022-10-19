@@ -47,7 +47,7 @@ For more information on supported platforms, see [Release notes for [!INCLUDE[ss
 
 ## Prerequisites
 
-You must have a RHEL 8.0 - 8.5 machine with **at least 2 GB** of memory.
+You must have a RHEL 8.0 - 8.6 machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 

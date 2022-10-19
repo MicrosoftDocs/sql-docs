@@ -1066,6 +1066,8 @@
       href: managed-instance/replication-transactional-overview.md
     - name: Managed Instance link
       href: managed-instance/managed-instance-link-feature-overview.md
+    - name: Log Replay Service (LRS)
+      href: managed-instance/log-replay-service-overview.md      
     - name: Instance pools
       href: managed-instance/instance-pools-overview.md
     - name: Data virtualization 

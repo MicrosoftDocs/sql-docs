@@ -19,6 +19,7 @@ You can migrate SQL Server running on-premises or on:
 
 - SQL Server on Virtual Machines  
 - Amazon Web Services (AWS) EC2
+- Amazon Web Services (AWS) RDS
 - Compute Engine (Google Cloud Platform - GCP)  
 - Cloud SQL for SQL Server (Google Cloud Platform – GCP) 
 

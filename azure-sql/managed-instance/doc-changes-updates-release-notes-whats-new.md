@@ -72,7 +72,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Log Replay Service GA** | Migrate your databases to Azure SQL Managed Instance using the Log Replay Service. This feature is now generally available. To learn more, review [Migrate with Log Replay Service](log-replay-service-migrate.md). | 
+| **Log Replay Service GA** | Migrate your databases to Azure SQL Managed Instance using the Log Replay Service (LRS). This feature is now generally available. To learn more, review [Log Replay Service overview](log-replay-service-overview.md). To get started, review [Migrate with LRS](log-replay-service-migrate.md) | 
 
 
 

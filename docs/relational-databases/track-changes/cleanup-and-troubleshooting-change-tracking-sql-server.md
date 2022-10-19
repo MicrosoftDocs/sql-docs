@@ -64,7 +64,7 @@ The sp_flush_CT_internal_table_on_demand stored procedure will do the following:
 
 Note: Extended Events Are Not Available With Azure SQL Database
 
-[Extended Events](https://learn.microsoft.com/sql/relational-databases/extended-events/extended-events) can be used for monitoring and alerting with Change Tracking and can be created with [SQL Server Management Studio (SSMS)](https://learn.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server).
+[Extended Events](../../relational-databases/extended-events/extended-events.md) can be used for monitoring and alerting with Change Tracking and can be created with [SQL Server Management Studio (SSMS)](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 Change Tracking has two events you can capture with Extended Events:
 
@@ -108,7 +108,7 @@ A result of this could be that seeing the side tables need to clean up and could
 
 ### Auto-cleanup not able to keep up with transactions
 
-If it's discovered that the auto-cleanup job is able to clean up the side tables and syscommittab using the 30-minute interval, run a manual cleanup job with greater frequency to aid in the process. For SQL Server and Azure SQL Managed Instances, [create a background job](https://learn.microsoft.com/sql/ssms/agent/create-a-job) using sp_flush_CT_internal_table_on_demand with shorter internal than the default 30 minutes. For Azure SQL, [Azure Logic Apps](https://learn.microsoft.com/azure/connectors/connectors-create-api-sqlazure) can be used to schedule these jobs.
+If it's discovered that the auto-cleanup job is able to clean up the side tables and syscommittab using the 30-minute interval, run a manual cleanup job with greater frequency to aid in the process. For SQL Server and Azure SQL Managed Instances, [create a background job](../../ssms/agent/create-a-job.md) using sp_flush_CT_internal_table_on_demand with shorter internal than the default 30 minutes. For Azure SQL, [Azure Logic Apps](/azure/connectors/connectors-create-api-sqlazure.md) can be used to schedule these jobs.
 
 The follow is a sample script that can be used to create a job to help clean up the side tables for Change Tracking:
 

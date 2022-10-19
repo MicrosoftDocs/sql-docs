@@ -103,14 +103,14 @@ In this step, you will create the **HR** schema and the **Employees** table. The
 
 # [PowerShell](#tab/powershell)
 
-In a PowerShell session, execute the following commands. Make sure you use a connection string that is valid for your database.
+In a PowerShell session, execute the following commands. Make sure you update the connection string with the address of your server and authentication settings that are valid for your database. 
 
 
 ```powershell
 Import-Module "SqlServer"
 
 # Set your database connection string
-$connectionString = "<your connection string>"
+$connectionString = "Server = myServerAddress; Database = ContosoHR; ..."
 
 # Create a new table, named Employees.
 $query = @'
@@ -214,7 +214,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     1. If you're using Azure Key Vault, execute the below commands to create an asymetric key in your key vault. Make sure you provide the correct id of your subscription, the name of the resource group containing your key vault, and your key vault name.
 
     ```powershell
-    Import-Module Az
+    Import-Module "Az"
     Connect-AzAccount
     $subscriptionId = "<your Azure subscription id"
     $resourceGroup = "your resource group name containing your key vault"
@@ -222,7 +222,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     $keyVaultKeyName = "HRCMK"
 
     # Switch to your subscription.
-    $azureCtx = Set-AzConteXt -SubscriptionId $SubscriptionId
+    Set-AzConteXt -SubscriptionId $subscriptionId
 
     # To validate the above key vault settings, get the key vault properties.
     Get-AzKeyVault -VaultName $keyVaultName -ResourceGroupName $resourceGroup 
@@ -242,7 +242,6 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 1. Connect to your database, using the SqlServer PowerShell module. Make sure you provide a valid connection string for your database.
 
     ```powershell
-    Import-Module "SqlServer"
     $database = Get-SqlDatabase -ConnectionString $connectionString
     $database
     ```
@@ -301,10 +300,10 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 1. Connect to your database with Always Encrypted disabled for your connection.
     1. Open a new query window.
     1. Right click anywhere in the query window and select **Connection** > **Change Connection**. This will open the **Connect to Database Engine** dialog.
-    1. Select **Options >>***. This will show additional tabs in the **Connect to Database Engine** dialog.
+    1. Select **Options <<**. This will show additional tabs in the **Connect to Database Engine** dialog.
     1. Select the **Always Encrypted** tab.
     1. Make sure **Enable Always Encrypted (column encryption)** is not selected.
-    1. Click **Connect**
+    1. Click **Connect**.
 
     ![SSMS - Connecting to a database with Always Encrypted disabled](.\media\always-encrypted-database-engine\allways-encrypted-ssms-connect-disabled.png)
 1. Paste in and execute the following query. The query should return binary encrypted data.
@@ -317,7 +316,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 
 1. Connect to your database with Always Encrypted enabled for your connection.
     1. Right click anywhere in the query window and select **Connection** > **Change Connection**. This will open the **Connect to Database Engine** dialog.
-    1. Select **Options >>**. This will show additional tabs in the **Connect to Database Engine** dialog.
+    1. Select **Options <<**. This will show additional tabs in the **Connect to Database Engine** dialog.
     1. Select the **Always Encrypted** tab.
     1. Select **Enable Always Encrypted (column encryption)**.
     1. Click **Connect**.
@@ -370,6 +369,9 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     $query = "SELECT [SSN], [Salary] FROM [HR].[Employees]"
     Invoke-SqlCmd -ConnectionString "$connectionString; Column Encryption Setting = Enabled" -Query $query
     ```
+
+> [!NOTE]
+> **Invoke-SqlCmd** doesn't support queries are required to filter by or insert data to encrypted columns. Such queries need to be parameterized, and Invoke-SqlCmd doesn't support parameterized queries.
 
 ---
 

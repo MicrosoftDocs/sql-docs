@@ -53,7 +53,7 @@ The error you will see when running R script includes the following messages:
 
 > *Unable to communicate with the runtime for 'R' script. Please check the requirements of 'R' runtime.*
 >
-> STDERR message(s) from external script:  
+> STDERR message(s) from external script:
 >
 > *Fatal error: cannot create 'R_TempDir'*
 
@@ -174,7 +174,7 @@ As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security
 
 When you run R jobs from a remote data-science workstation by using Integrated Windows authentication, SQL Server uses *implied authentication* to generate any local ODBC calls that might be required by the script. However, this feature didn't work in the RTM build of [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] Express edition.
 
-To fix the issue, we recommend that you upgrade to a later service release. If upgrade isn't feasible, as a workaround, use  a SQL login to run remote R jobs that might require embedded ODBC calls.
+To fix the issue, we recommend that you upgrade to a later service release. If upgrade isn't feasible, as a workaround, use a SQL login to run remote R jobs that might require embedded ODBC calls.
 
 **Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] R Services Express edition
 
@@ -184,7 +184,7 @@ It is possible to call the machine learning libraries that are installed for SQL
 
 For example, even if you are using the Enterprise edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
-In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client or [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md).
+In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same libraries that are in SQL Server, you can install Microsoft R Client or [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ### SQL Server Data Tools doesn't support permissions required by external scripts
 
@@ -274,9 +274,9 @@ The following limitations apply on [!INCLUDE[sssql17-md](../../includes/sssql17-
 
 The best solution is to upgrade to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]. Alternatively you can continue to use [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] with runtime upgrade configured using [RegisterRext.exe /configure](../install/change-default-language-runtime-version.md), after you complete the following tasks.
 
-   1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared` or the instance shared directory, as configured.
-   1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi140.dll` from the folder `C:\Program Files\Microsoft SQL Server\140\Shared` to the newly created folder.
-   1. Rename the `instapi140.dll` to `instapi150.dll` in the new folder `C:\Program Files\Microsoft SQL Server\150\Shared`.
+1. Edit registry to create a key `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\150` and add a value `SharedCode` with data `C:\Program Files\Microsoft SQL Server\150\Shared` or the instance shared directory, as configured.
+1. Create a folder `C:\Program Files\Microsoft SQL Server\150\Shared and copy instapi140.dll` from the folder `C:\Program Files\Microsoft SQL Server\140\Shared` to the newly created folder.
+1. Rename the `instapi140.dll` to `instapi150.dll` in the new folder `C:\Program Files\Microsoft SQL Server\150\Shared`.
 
 > [!IMPORTANT]  
 > If you do the steps above, you must manually remove the added key prior to upgrading to a later version of SQL Server.
@@ -337,7 +337,7 @@ For example, the following statement would result in an error if the column CRSD
 
 ```R
 data <- RxSqlServerData(
-  sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall",
+  sqlQuery = "SELECT CRSDepTimeStr, ArrDelay FROM AirlineDemoSmall",
   connectionString = connectionString,
   colClasses = c(CRSDepTimeStr = "integer"))
 ```
@@ -352,7 +352,7 @@ When you save a model to a SQL Server table, you must serialize the model and sa
 
 If you need to use larger models, the following workarounds are available:
 
-- Take steps to reduce the size of your model. Some open source R packages include a great deal of information in the model object, and much of this information can be removed for deployment.  
+- Take steps to reduce the size of your model. Some open source R packages include a great deal of information in the model object, and much of this information can be removed for deployment.
 - Use feature selection to remove unnecessary columns.
 - If you are using an open source algorithm, consider a similar implementation using the corresponding algorithm in MicrosoftML or RevoScaleR. These packages have been optimized for deployment scenarios.
 - After the model has been rationalized and the size reduced using the preceding steps, see if the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R can be used to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2-GB limit.
@@ -381,13 +381,13 @@ You can't use in an R script the following types of query results:
 
 - Data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that references masked columns.
 
-     If you need to use masked data in an R script, a possible workaround is to make a copy of the data in a temporary table and use that data instead.
+  If you need to use masked data in an R script, a possible workaround is to make a copy of the data in a temporary table and use that data instead.
 
 ### Use of strings as factors can lead to performance degradation
 
 Using string type variables as factors can greatly increase the amount of memory used for R operations. This is a known issue with R in general, and there are many articles on the subject. For example, see [Factors aren't first-class citizens in R, by John Mount, in R-bloggers)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) or [stringsAsFactors: An unauthorized biography](https://simplystats.github.io/2015/07/24/stringsasfactors-an-unauthorized-biography/), by Roger Peng.
 
-Although the issue isn't specific to SQL Server, it can greatly affect performance of R code run in SQL Server. Strings are typically stored as varchar or nvarchar, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
+Although the issue isn't specific to SQL Server, it can greatly affect performance of R code run in SQL Server. Strings are typically stored as **varchar** or **nvarchar**, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
 
 If you don't absolutely require a string data type for other operations, mapping the string values to a numeric (integer) data type as part of data preparation would be beneficial from a performance and scale perspective.
 
@@ -403,11 +403,11 @@ Not all data types that are supported in SQL can be used in R. As a workaround, 
 
 For more information, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
-### Possible string corruption using unicode strings in varchar columns
+### Possible string corruption using Unicode strings in varchar columns
 
-Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python.
+Passing Unicode data in **varchar** columns from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these Unicode strings in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations may not match with the default UTF-8 encoding used in R/Python.
 
-To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) or use nvarchar type for the same.
+To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) or use **nvarchar** type for the same.
 
 ### Only one value of type `raw` can be returned from `sp_execute_external_script`
 
@@ -555,7 +555,7 @@ Don't run the library install in parallel to the long-running query. Or rerun th
 
 Executing an R script with `sp_execute_external_script` allows money, numeric, decimal, and bigint data types as input data. However, because they are converted to R's numeric type, they suffer a precision loss with values that are very high or have decimal point values.
 
-- **money**: Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.  
+- **money**: Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.
 - **numeric/decimal**: `sp_execute_external_script` with an R script doesn't support the full range of those data types and would alter the last few decimal digits especially those with fraction.
 - **bigint**: R only support up to 53-bit integers and then it will start to have precision loss.
 
@@ -580,13 +580,13 @@ When you pass a model to a remote SQL Server instance, and try to read the binar
 
 > *NameError: name 'rx_unserialize_model' is not defined*
 
-This error is raised if you saved the model using a recent version of the serialization function, but the SQL Server instance where you deserialize the model doesn't recognize the  serialization API.
+This error is raised if you saved the model using a recent version of the serialization function, but the SQL Server instance where you deserialize the model doesn't recognize the serialization API.
 
 To resolve the issue, upgrade the [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] instance to CU 3 or later.
 
 ### Failure to initialize a varbinary variable causes an error in `BxlServer`
 
-If you run Python code in SQL Server using `sp_execute_external_script`, and the code has output variables of type varbinary(max), varchar(max) or similar types, the variable must be initialized or set as part of your script. Otherwise, the data exchange component, BxlServer, raises an error and stops working.
+If you run Python code in SQL Server using `sp_execute_external_script`, and the code has output variables of type **varbinary(max)**, **varchar(max)** or similar types, the variable must be initialized or set as part of your script. Otherwise, the data exchange component, BxlServer, raises an error and stops working.
 
 This limitation will be fixed in an upcoming service release. As a workaround, make sure that the variable is initialized within the Python script. Any valid value can be used, as in the following examples:
 
@@ -776,11 +776,11 @@ The [sqlmlutils package](../package-management/install-additional-python-package
 
 Using a command prompt in administrator mode, run the following command, replacing "MSSQLSERVER" with the name of your SQL instance:
 
-   ```cmd
-   "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade tensorflow
-   ```
+```cmd
+"C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade tensorflow
+```
 
-   If you get a "TLS/SSL" error, see [7. Unable to install Python packages using pip](#python-pip) earlier in this article.
+If you get a "TLS/SSL" error, see [7. Unable to install Python packages using pip](#python-pip) earlier in this article.
 
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Windows
 

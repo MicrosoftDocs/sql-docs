@@ -2,8 +2,8 @@
 title: High availability
 titleSuffix: Azure SQL Database and SQL Managed Instance
 description: Learn about the Azure SQL Database and SQL Managed Instance service high availability capabilities and features
-author: rajeshsetlem
-ms.author: rsetlem
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma, emlisa
 ms.date: 04/13/2022
 ms.service: sql-db-mi
@@ -58,7 +58,7 @@ The zone-redundant version of the high availability architecture for the General
 ![Zone redundant configuration for General Purpose](./media/high-availability-sla/zone-redundant-for-general-purpose.png)
 
 > [!IMPORTANT]
-> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, and France Central. This is in preview in the following regions: East US, East US 2, Southeast Asia, Australia East, Japan East, and UK South. 
+> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central and East US 2. This is in preview in the following regions: East US, Southeast Asia, Australia East, Japan East, and UK South. 
 
 > [!NOTE]
 > Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the Gen5 hardware is selected.

@@ -1,9 +1,9 @@
 ---
 author: MikeRayMSFT
+ms.author: mikeray
+ms.date: 08/23/2021
 ms.service: sql
 ms.topic: include
-ms.date: 08/23/2021
-ms.author: mikeray
 ---
 
 Analytics Platform System (PDW)

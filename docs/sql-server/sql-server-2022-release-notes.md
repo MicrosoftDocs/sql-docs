@@ -16,7 +16,7 @@ monikerRange: "= sql-server-ver16"
 
 [!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release candidate (RC) 1.
+This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)].
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 
@@ -42,6 +42,7 @@ This section identifies known issues you may experience with this product:
 
 | Preview build | Version number | Date |
 |:--|:--|:--|
+| General availability | 16.0.1000.6  | November 16, 2022 |
 | RC 1    | 16.0.950.9 | September 22, 2022|
 | RC 0    | 16.0.900.6 | August 23, 2022|
 | CTP 2.1 | 16.0.700.4 | July 27, 2022 |

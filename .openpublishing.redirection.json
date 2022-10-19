@@ -43681,6 +43681,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md",
+      "redirect_url": "/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md",
+      "redirect_url": "/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md",
+      "redirect_url": "/sql/reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/reporting-services/report-builder/glossary-report-builder.md",
       "redirect_url": "/sql/reporting-services/reporting-services-concepts-ssrs",
       "redirect_document_id": false
@@ -59468,6 +59483,26 @@
     {
       "source_path": "docs/linux/sql-server-linux-release-notes.md",
       "redirect_url": "/sql/linux/sql-server-linux-release-notes-2017",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-setup-2022.md",
+      "redirect_url": "/sql/linux/sql-server-linux-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-rhel.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-sles.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-ubuntu.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
       "redirect_document_id": false
     }
   ]

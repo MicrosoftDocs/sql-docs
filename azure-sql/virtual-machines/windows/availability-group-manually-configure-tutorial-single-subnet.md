@@ -371,20 +371,39 @@ A load balancer in Azure can be either a Standard Load Balancer or a Basic Load 
 
    | Setting | Field |
    | --- | --- |
-   | **Name** |Use a text name for the load balancer, for example **sqlLB**. |
-   | **Type** |Internal |
-   | **Virtual network** |Use the name of the Azure virtual network. |
-   | **Subnet** |Use the name of the subnet that the virtual machine is in.  |
-   | **IP address assignment** |Static |
-   | **IP address** |Use an available address from subnet. Use this address for your availability group listener. Note that this is different from your cluster IP address.  |
    | **Subscription** |Use the same subscription as the virtual machine. |
-   | **Location** |Use the same location as the virtual machine. |
+   | **Resource Group** |Use the same resource group as the virtual machine. |
+   | **Name** |Use a text name for the load balancer, for example **sqlLB**. |
+   | **Region** |Use the same region as the virtual machine. |
+   | **SKU** |Standard |
+   | **Type** |Internal |
 
    The Azure portal blade should look like this:
 
-   ![Create Load Balancer](./media/availability-group-manually-configure-tutorial-single-subnet/84-createloadbalancer.png)
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-createloadbalancer.png" alt-text="Screenshot of the create Load Balancer UI.":::
 
-1. Select **Create**, to create the load balancer.
+1. Select **Next: Frontend IP Configuration**
+
+1. Select **Add a frontend IP Configuration**
+
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of add a frontend IP configuration.":::
+
+1. Set up the frontend IP using the following values:
+
+   - **Name**: A name that identifies the frontend IP configuration
+   - **Virtual network**: The same network as the virtual machines.
+   - **Subnet**: The subnet as the virtual machines.
+   - **IP address assignment**: Static.
+   - **IP address**: Use an available address from subnet. Use this address for your availability group listener. Note that this is different from your cluster IP address.
+   - **Availability zone**: Optionally choose and availability zone to deploy your IP to.
+
+   The following image shows the **Add frontend IP Configuration** UI:
+
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade.":::
+
+1. Select **Add** to create the frontend IP.
+
+1. Choose **Review + Create** to create the load balancer and the frontend IP.
 
 To configure the load balancer, you need to create a backend pool, a probe, and set the load balancing rules. Do these in the Azure portal.
 
@@ -392,20 +411,24 @@ To configure the load balancer, you need to create a backend pool, a probe, and 
 
 1. In the Azure portal, go to your availability group. You might need to refresh the view to see the newly created load balancer.
 
-   ![Find Load Balancer in Resource Group](./media/availability-group-manually-configure-tutorial-single-subnet/86-findloadbalancer.png)
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/86-findloadbalancer.png" alt-text="Screenshot of finding the Load Balancer in a Resource Group.":::
 
 1. Select the load balancer, select **Backend pools**, and select **+Add**.
 
-1. Type a name for the backend pool.
+1. Provide a **Name** for the Backend pool.
 
-1. Associate the backend pool with the availability set that contains the VMs.
+1. Select **NIC** for Backend Pool Configuration.
 
-1. Under **Target network IP configurations**, check **VIRTUAL MACHINE** and choose both of the virtual machines that will host availability group replicas. Do not include the file share witness server.
+1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
+
+1. Under **Virtual machine** choose the virtual machines that will host availability group replicas. Do not include the file share witness server.
 
    >[!NOTE]
    >If both virtual machines are not specified, connections will only succeed to the primary replica.
 
-1. Select **OK** to create the backend pool.
+1. Select **Add** to add the virtual machines to the backend pool.
+
+1. Select **Save** to create the backend pool.
 
 ### Set the probe
 
@@ -419,9 +442,8 @@ To configure the load balancer, you need to create a backend pool, a probe, and 
    | **Protocol** | Choose TCP | TCP |
    | **Port** | Any unused port | 59999 |
    | **Interval**  | The amount of time between probe attempts in seconds |5 |
-   | **Unhealthy threshold** | The number of consecutive probe failures that must occur for a virtual machine to be considered unhealthy  | 2 |
 
-1. Select **OK** to set the health probe.
+1. Select **Add** to set the health probe.
 
 ### Set the load balancing rules
 
@@ -433,10 +455,11 @@ To configure the load balancer, you need to create a backend pool, a probe, and 
    | --- | --- |---
    | **Name** | Text | SQLAlwaysOnEndPointListener |
    | **Frontend IP address** | Choose an address |Use the address that you created when you created the load balancer. |
+   | **Backend pool** | Choose the backend pool |Select the backend pool containing the virtual machines targeted for the load balancer. |
    | **Protocol** | Choose TCP |TCP |
    | **Port** | Use the port for the availability group listener | 1433 |
    | **Backend Port** | This field is not used when Floating IP is set for direct server return | 1433 |
-   | **Probe** |The name you specified for the probe | SQLAlwaysOnEndPointProbe |
+   | **Health Probe** |The name you specified for the probe | SQLAlwaysOnEndPointProbe |
    | **Session Persistence** | Drop down list | **None** |
    | **Idle Timeout** | Minutes to keep a TCP connection open | 4 |
    | **Floating IP (direct server return)** | |Enabled |
@@ -445,7 +468,7 @@ To configure the load balancer, you need to create a backend pool, a probe, and 
    > Direct server return is set during creation. It cannot be changed.
    >
 
-1. Select **OK** to set the listener load balancing rules.
+1. Select **Save** to set the listener load balancing rules.
 
 ### Add the cluster core IP address for the Windows Server Failover Cluster (WSFC)
 
@@ -463,9 +486,8 @@ The WSFC IP address also needs to be on the load balancer.
    | **Protocol** | Choose TCP | TCP |
    | **Port** | Any unused port | 58888 |
    | **Interval**  | The amount of time between probe attempts in seconds |5 |
-   | **Unhealthy threshold** | The number of consecutive probe failures that must occur for a virtual machine to be considered unhealthy  | 2 |
 
-1. Select **OK** to set the health probe.
+1. Select **Add** to set the health probe.
 
 1. Set the load balancing rules. Select **Load balancing rules**, and select **+Add**.
 
@@ -475,6 +497,7 @@ The WSFC IP address also needs to be on the load balancer.
    | --- | --- |---
    | **Name** | Text | WSFCEndPoint |
    | **Frontend IP address** | Choose an address |Use the address that you created when you configured the WSFC IP address. This is different from the listener IP address |
+   | **Backend pool** | Choose the backend pool |Select the backend pool containing the virtual machines targeted for the load balancer. |
    | **Protocol** | Choose TCP |TCP |
    | **Port** | Use the port for the cluster IP address. This is an available port that is not used for the listener probe port. | 58888 |
    | **Backend Port** | This field is not used when Floating IP is set for direct server return | 58888 |
@@ -540,6 +563,7 @@ The SQLCMD connection automatically connects to whichever instance of SQL Server
 ## Next steps
 
 - [Add an IP address to a load balancer for a second availability group](availability-group-listener-powershell-configure.md#Add-IP).
+- [Configure automatic or manual failover](/sql/database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server).
 
 To learn more, see:
 

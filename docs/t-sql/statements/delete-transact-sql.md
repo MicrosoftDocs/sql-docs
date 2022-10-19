@@ -503,7 +503,7 @@ SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 
 ### P. Delete based on the result of joining with another table
 
-This example shows how to delete from a table based on the result from joining wiht another table.
+This example shows how to delete from a table based on the result from joining with another table.
 
 ```sql
 CREATE TABLE dbo.Table1   

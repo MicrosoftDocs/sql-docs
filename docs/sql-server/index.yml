@@ -64,7 +64,7 @@ landingContent:
         url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: SQL Server on Linux
         url: ../linux/sql-server-linux-overview.md
-      - text: SQL Server on Azure Arc-enabled servers
+      - text: Azure Arc-enabled SQL Server
         url: azure-arc/overview.md
     - linkListType: quickstart
       links:

@@ -4,11 +4,12 @@ description: Provides VM size guidelines and best practices to optimize the perf
 author: bluefooted
 ms.author: pamela
 ms.reviewer: pamela
-ms.date: 12/10/2021
+ms.date: 10/14/2022
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
 tags: azure-service-management
+ms.custom: ignite-2022
 ---
 
 # VM size: Performance best practices for SQL Server on Azure VMs
@@ -72,6 +73,12 @@ The largest virtual machine in this group is the [Standard_E104ids_v5](/azure/vi
 
 The Edsv5-series virtual machines support [premium storage](/azure/virtual-machines/premium-storage-performance), and [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching).
 
+### ECadsv5-series 
+
+The [ECadsv5-series](/azure/virtual-machines/ecasv5-ecadsv5-series) virtual machine sizes are **memory-optimized Azure confidential VMs** with a temporary disk. Review [confidential VMs](security-considerations-best-practices.md#confidential-vms) for information about the security benefits of Azure confidential VMs. 
+
+As the security features of Azure confidential VMs may introduce performance overheads, test your workload and select a VM size that meets your performance requirements. 
+
 ### M and Mv2 series
 
 The [M-series](/azure/virtual-machines/m-series) offers vCore counts and memory for some of the largest SQL Server workloads.  
@@ -80,7 +87,7 @@ The [Mv2-series](/azure/virtual-machines/mv2-series) has the highest vCore count
 
 Some of the features of the M and Mv2-series attractive for SQL Server performance include [premium storage](/azure/virtual-machines/premium-storage-performance) and [premium storage caching](/azure/virtual-machines/premium-storage-performance#disk-caching) support, [ultra-disk](/azure/virtual-machines/disks-enable-ultra-ssd) support, and [write acceleration](/azure/virtual-machines/how-to-enable-write-accelerator).
 
-## General purpose
+## General Purpose
 
 The [General Purpose virtual machine sizes](/azure/virtual-machines/sizes-general) are designed to provide balanced memory-to-vCore ratios for smaller entry level workloads such as development and test, web servers, and smaller database servers.
 
@@ -102,6 +109,12 @@ The [Ddsv5-series](/azure/virtual-machines/ddv5-ddsv5-series#ddsv5-series) virtu
 
 > [!NOTE]
 > The [Ddsv5-series](/azure/virtual-machines/ddv5-ddsv5-series#ddsv5-series) does not have the memory-to-vCore ratio of 8 that is recommended for SQL Server workloads. As such, consider using these virtual machines for small applications and development workloads only.
+
+### DCadsv5-series 
+
+The [DCadsv5-series](/azure/virtual-machines/dcasv5-dcadsv5-series) virtual machine sizes are **general purpose Azure confidential VMs** with temporary disk. Review [confidential VMs](security-considerations-best-practices.md#confidential-vms) for information about the security benefits of Azure confidential VMs. 
+
+As the security features of Azure confidential VMs may introduce performance overheads, test your workload and select a VM size that meets your performance requirements. 
 
 ### B-series
 

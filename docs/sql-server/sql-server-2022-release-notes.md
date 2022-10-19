@@ -42,7 +42,7 @@ This section identifies known issues you may experience with this product:
 
 | Preview build | Version number | Date |
 |:--|:--|:--|
-| General availability | 16.0.1000.6  | November 16, 2022 |
+| General release to market (RTM) | 16.0.1000.6  | November 16, 2022 |
 | RC 1    | 16.0.950.9 | September 22, 2022|
 | RC 0    | 16.0.900.6 | August 23, 2022|
 | CTP 2.1 | 16.0.700.4 | July 27, 2022 |

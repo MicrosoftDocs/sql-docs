@@ -1,6 +1,6 @@
 ---
-description: "Editions and supported features of SQL Server 2022 Preview on Linux"
-title: "Editions and supported features of SQL Server 2022 Preview - Linux"
+description: "Editions and supported features of SQL Server 2022 on Linux"
+title: "Editions and supported features of SQL Server 2022 - Linux"
 ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: linux
@@ -34,7 +34,7 @@ This article provides details of features supported by the various editions of [
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-For the latest release notes and what's new information, see [SQL Server 2022 Preview on Linux release notes](sql-server-linux-release-notes-2022.md)
+For the latest release notes and what's new information, see [SQL Server 2022 on Linux release notes](sql-server-linux-release-notes-2022.md)
 
 For a list of SQL Server features not available on Linux, see [Unsupported features and services](#unsupported-features-and-services).
 
@@ -239,7 +239,7 @@ The following features and services are not available for [!INCLUDE[sssql22](../
 
 ## See also
 
-- [Editions and supported features for SQL Server 2022 Preview - Linux](sql-server-linux-editions-and-components-2022.md)
+- [Editions and supported features for SQL Server 2022 - Linux](sql-server-linux-editions-and-components-2022.md)
 - [Editions and supported features for SQL Server 2019 - Linux](sql-server-linux-editions-and-components-2019.md)
 - [Editions and supported features for SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)
 - [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] - Windows](../sql-server/what-s-new-in-sql-server-2022.md)

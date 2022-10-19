@@ -19,6 +19,8 @@ items:
       href: sql-server/what-s-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2022
+      href: sql-server/editions-and-components-of-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/editions-and-components-of-sql-server-2019.md
     - name: SQL Server 2017

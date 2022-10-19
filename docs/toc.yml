@@ -9,7 +9,7 @@ items:
   items:
   - name: What's New
     items:
-    - name: SQL Server 2022 Preview
+    - name: SQL Server 2022
       href: sql-server/what-s-new-in-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-2019.md
@@ -19,6 +19,8 @@ items:
       href: sql-server/what-s-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2022
+      href: sql-server/editions-and-components-of-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/editions-and-components-of-sql-server-2019.md
     - name: SQL Server 2017
@@ -10053,7 +10055,7 @@ items:
         href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
-      - name: SQL Server 2022 Preview
+      - name: SQL Server 2022
         href: linux/sql-server-linux-release-notes-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
@@ -10061,7 +10063,7 @@ items:
         href: linux/sql-server-linux-release-notes-2017.md
     - name: Release history
       items:
-      - name: SQL Server 2022 Preview
+      - name: SQL Server 2022
         href: linux/sql-server-linux-release-history-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-history-2019.md
@@ -10069,7 +10071,7 @@ items:
         href: linux/sql-server-linux-release-history-2017.md
     - name: Editions & Features
       items:
-      - name: SQL Server 2022 Preview
+      - name: SQL Server 2022
         href: linux/sql-server-linux-editions-and-components-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-editions-and-components-2019.md

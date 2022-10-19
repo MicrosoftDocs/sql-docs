@@ -127,10 +127,10 @@ WHERE pvss.database_id = DB_ID();
 
 6. Check `min_transaction_timestamp` (or `online_index_min_transaction_timestamp` if the online PVS is holding up) and based on that check `sys.dm_tran_active_snapshot_database_transactions` for the column `transaction_sequence_num` to find the session that has the old snapshot transaction holding up PVS cleanup.
 
-7. If none of the above applies, then it means that the cleanup is held by aborted transactions. Check the last time the `aborted_version_cleaner_last_start_time`  and `aborted_version_cleaner_last_end_time` to see if the aborted transaction cleanup has completed. The `oldest_aborted_transaction_id` should be moving higher after the aborted transaction cleanup completes. If the `oldest_aborted_transaction_id` is much smaller than `oldest_active_transaction_id`, and `current_abort_transaction_count` has a great value, there is an old aborted transaction preventing PVS cleanup. To address:
+7. If none of the above applies, then it means that the cleanup is held by aborted transactions. Check the last time the `aborted_version_cleaner_last_start_time`  and `aborted_version_cleaner_last_end_time` to see if the aborted transaction cleanup has completed. The `oldest_aborted_transaction_id` should be moving higher after the aborted transaction cleanup completes. If the `oldest_aborted_transaction_id` is much less than `oldest_active_transaction_id`, and `current_abort_transaction_count` has a greater value, there is an old aborted transaction preventing PVS cleanup. To address:
 
-    - If possible, stop the workload to let version cleaner making progress. 
-    - Optimize the workload to reduce object level lock usage. 
+    - If possible, stop the workload to let version cleaner making progress.
+    - Optimize the workload to reduce object level lock usage.
     - Review the application to see any high transaction abort issue. Deadlock, duplicate key and other constraint violations may trigger high abort rate.  
     - If on SQL Server, disable ADR as an emergency-only step to control both PVS size and abort transaction number. See [Disable the ADR feature](accelerated-database-recovery-management.md#to-disable-the-adr-feature).
 
@@ -154,11 +154,9 @@ For example,
 EXEC sys.sp_persistent_version_cleanup [WideWorldImporters];
 ```
 
-## Use trace flags to capture cleanup failures
- 
-  *Applies to [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] and later*
+## Capture cleanup failures
 
-  Trace flag 4025 can be enabled to record ADR PVS cleanup behavior in the SQL Server error log. Typically this would result in a new log event recorded every 10 minutes. For more information, see [DBCC TRACEON (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
+Beginning with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], SQL Server records ADR PVS cleanup behavior in the SQL Server error log. Typically this would result in a new log event recorded every 10 minutes.
 
 ## See also
 

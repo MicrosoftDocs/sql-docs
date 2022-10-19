@@ -32,16 +32,11 @@ This article provides information on configuring a [ledger database](ledger-over
 
 # [Portal](#tab/Portal)
 
-1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) if you don't already have one.
-1. In the **Security** tab, select the **Ledger** option. 
-
-   :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
-
-1. In the **Ledger** pane, select **Enable for all future tables in this database**. 
-
-   :::image type="content" source="media/ledger/enable-ledger-database.png" alt-text="Screenshot that shows the selection for enabling a ledger database.":::
-
-1. Select **Apply** to save this setting.
+1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) .
+1. On the Security tab, select Configure ledger.
+1. On the Configure ledger screen, select the option to Enabled for all future tables in this database
+1. If you want to use automatic digest storage, leave that box selected and configure. 
+1. Select Apply. 
 
 # [T-SQL](#tab/t-sql)
 

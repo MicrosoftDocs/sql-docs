@@ -106,7 +106,7 @@ The four key components of ADR are:
 
 - **Persisted version store (PVS)**
 
-  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There is one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], there is one PVS cleaner thread per database.
+  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There is one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], SQL Server has one PVS cleaner thread per database.
 
 - **Logical Revert**
 

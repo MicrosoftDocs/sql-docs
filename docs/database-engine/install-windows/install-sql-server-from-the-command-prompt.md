@@ -3,7 +3,7 @@ title: "SQL Server installation - Command Prompt parameters"
 description: This article describes command parameters for SQL Server installation. You can specify features to install and configure.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/25/2022
+ms.date: 10/20/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -97,12 +97,12 @@ Installing a new instance of SQL Server at the command prompt enables you to spe
 
 To install from the command prompt, open an administrative command prompt and navigate to where setup.exe is located within the [SQL Server setup media](https://www.microsoft.com/sql-server/sql-server-downloads). Run the `setup.exe` command, along with the required and optional parameters that accomplish what you're trying to do:
 
-`C:\SQLMedia\SQLServer2019> setup.exe /[Option] /[Option] = {value}`
+`C:\SQLMedia\SQLServer2022> setup.exe /[Option] /[Option] = {value}`
 
 The following example installs the SQL Server database engine, SQL Server Analysis Services, SQL Server Integration Services, and SQL Server tools in quiet mode:
 
 ```console
-C:\SQLMedia\SQLServer2019> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /PID="AAAAA-BBBBB-CCCCC-DDDDD-EEEEE" /FEATURES=SQL,AS,IS,Tools
+C:\SQLMedia\SQLServer2022> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /PID="AAAAA-BBBBB-CCCCC-DDDDD-EEEEE" /FEATURES=SQL,AS,IS,Tools
 /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="MyDomain\MyAccount"
 /SQLSVCPASSWORD="************" /SQLSYSADMINACCOUNTS="MyDomain\MyAccount "
 /AGTSVCACCOUNT="MyDomain\MyAccount" /AGTSVCPASSWORD="************"
@@ -114,7 +114,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION="i
 To view a list of all possible commands within the console, run the executable with the /help flag:
 
 ```console
-C:\SQLMedia\SQLServer2019> setup.exe /help
+C:\SQLMedia\SQLServer2022> setup.exe /help
 ```
 
 The rest of the article provides a detailed description of the available parameters.
@@ -913,7 +913,7 @@ To install specific features, use the /FEATURES parameter and specify the parent
 ||AdvancedAnalytics |Installs [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) or [SQL Server 2016 R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md).|
 ||SQL_INST_MR |Applies to [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 and 2019) and [SQL Server 2016 R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md). Pair with **AdvancedAnalytics** to install R Open and proprietary R packages.|
 ||SQL_INST_MPY|Applies to [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 and 2019). Pair with **AdvancedAnalytics** to install Anaconda and proprietary Python packages.|
-||SQL_INST_JAVA |Applies to [SQL Server Java Language Extension](../../language-extensions/install/windows-java.md) (2019 and later). Pair with **AdvancedAnalytics** to install extensions that enable integration with Java using standard T-SQL statements.|
+||SQL_INST_JAVA |Applies to [SQL Server Java Language Extension](../../language-extensions/install/windows-java.md) (2019 only). Pair with **AdvancedAnalytics** to install extensions that enable integration with Java using standard T-SQL statements.|
 |AS||Installs all [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components.|
 |RS||Installs all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components. Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this feature is not available.|
 |RS_SHP||Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components for SharePoint. Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], this feature is not available.|

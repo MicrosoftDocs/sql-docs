@@ -278,6 +278,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Famagusta                           | GTB Standard Time                        |
 | Asia/Gaza                                | West Bank Standard Time                  |
 | Asia/Hebron                              | West Bank Standard Time                  |
+| Asia/Ho Chi Minh City                    | SE Asia Standard Time                    |
 | Asia/Hong_Kong                           | China Standard Time                      |
 | Asia/Hovd                                | W. Mongolia Standard Time                |
 | Asia/Irkutsk                             | North Asia East Standard Time            |
@@ -311,7 +312,6 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Qyzylorda                           | Qyzylorda Standard Time                  |
 | Asia/Rangoon                             | Myanmar Standard Time                    |
 | Asia/Riyadh                              | Arab Standard Time                       |
-| Asia/Saigon                              | SE Asia Standard Time                    |
 | Asia/Sakhalin                            | Sakhalin Standard Time                   |
 | Asia/Samarkand                           | West Asia Standard Time                  |
 | Asia/Seoul                               | Korea Standard Time                      |

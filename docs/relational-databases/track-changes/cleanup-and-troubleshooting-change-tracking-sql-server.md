@@ -19,20 +19,27 @@ ms.author: bspendolini
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article describes how Change Tracking does clean up and troubleshooting common issues.  
+This article describes how Change Tracking performs cleanup operations and how to troubleshoot common issues.  
   
 ## Change Tracking Cleanup
 
-Change Tracking cleanup is invoked automatically every 30 minutes. When this background process wakes up, it purges expired records(records beyond retention period) from the change tracking side tables. The default retention period is two days and can be set for the Change Tracking automatic cleanup process as shown below:
+Change Tracking cleanup is invoked automatically every 30 minutes. When this background process wakes up, it purges expired records(records beyond the retention period) from the change tracking side tables. The default retention period is two days and can be set for the Change Tracking automatic cleanup process as shown below:
 
 ```sql
 ALTER DATABASE <DBNAME>
 SET CHANGE_TRACKING = ON (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)
 ```
 
+The retention period can also be changed with the following command without having to disable and re-enable Change Tracking:
+
+```sql
+ALTER DATABASE <DBNAME> 
+SET CHANGE_TRACKING (CHANGE_RETENTION = 90 MINUTES)
+```
+
 ### Auto Cleanup
 
-There are two cleanup versions that the auto-cleanup process maintains over the course of the cleanup action; invalid cleanup version and hardened cleanup version. When the Change Tracking background thread wakes up, it determines the invalid cleanup version. The invalid cleanup version is the change tracking version which marks the point until which the auto cleanup task will perform the cleanup for the side tables. The auto-cleanup thread traverses through the tables that are enabled for change tracking and calls an internal stored procedure. This procedure contains a loop, which deletes records in batches of approximately 5000. The loop is terminated only when all the expired records in the side table are removed. This delete query then uses the syscommittab table (an in-memory rowstore) to identify the transaction IDs that have a commit timestamp less than the invalid cleanup version. The auto-cleanup process is repeated until the cleanup is done with all change tracking side tables for that particular database. Once the process is done with the final change tracking side table, it updates the hardened cleanup version number to the invalid cleanup version number.
+There are two cleanup version numbers that the auto-cleanup process maintains over the course of the cleanup action; invalid cleanup version and hardened cleanup version. When the Change Tracking background thread wakes up, it determines the invalid cleanup version. The invalid cleanup version is the change tracking version which marks the point until which the auto cleanup task will perform the cleanup for the side tables. The auto-cleanup thread traverses through the tables that are enabled for change tracking and calls an internal stored procedure. This procedure contains a loop, which deletes records in batches of approximately 5000. The loop is terminated only when all the expired records in the side table are removed. This delete query then uses the syscommittab table (an in-memory rowstore) to identify the transaction IDs that have a commit timestamp less than the invalid cleanup version. The auto-cleanup process is repeated until the cleanup is done with all change tracking side tables for that particular database. Once the process is done with the final change tracking side table, it updates the hardened cleanup version number to the invalid cleanup version number.
   
 ### Manual Cleanup
 
@@ -104,7 +111,7 @@ If side table cleanup is failing because the process couldn't get lock on the ba
 A result of this could be that seeing the side tables need to clean up and could block syscommittab from being cleaned up, syscommittab will grow large and cause performance issues. To remedy this situation, the following two solutions can be attempted to remove the lock:
 
 1. Disable auto cleanup then manually clean-up side tables
-2. Disable auto cleanup and failover to another instance. This will kill the process and you can clean and fail back
+2. Disable auto cleanup and failover to another instance. This will kill the process and you can clean the tables and then fail back
 
 ### Auto-cleanup not able to keep up with transactions
 

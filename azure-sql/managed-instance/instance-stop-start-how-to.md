@@ -25,6 +25,7 @@ Save on billing costs by stopping your managed instance when you're not using it
 Stopping an instance clears all cached data. 
 
 This features introduces three new managed instance states:
+
 - Stopping
 - Stopped
 - Starting
@@ -46,7 +47,7 @@ You can also create a schedule with one or more multiple points of time when a s
 
 ## Billing
 
-Stopped instances don't get billed for vCores and the SQL license, they are only charged for storage and backup storage. However, instance vCores and license billing is charged for every **started** hour, meaning that at 12:01, you will be charged for the entire hour, even if the instance is stopped within the hour. 
+Stopped instances don't get billed for vCores and the SQL license, they are only charged for storage and backup storage. However, vCores and license billing is charged for every **started** hour, meaning that at 12:01, you will be charged for the entire hour, even if the instance is stopped within the hour. 
 
 ### Azure Hybrid Benefit
 
@@ -64,7 +65,9 @@ To stop and start your instance, you need the latest version of the [Az.Sql](/po
 
 ## Define parameters
 
-First, define the parameters, whether you're executing manual stop and start commands, or you're creating a schedule. To do so, update the relevant values in the **USER CONFIGURABLE VALUES** section, and then run the following script:
+First, define the parameters, whether you're executing manual stop and start commands, or you're creating a schedule. 
+
+To do so, update the relevant values in the **USER CONFIGURABLE VALUES** section, and then run the following script:
 
 ```powershell
 # ===============================================================
@@ -224,7 +227,6 @@ Invoke-WebRequest -Method Put -Headers $authHeader -Uri $instanceCreateScheduleU
 Checking the schedule uses the following API call: 
 
 `GET
-GET
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
 providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2021-08-01-preview`
 

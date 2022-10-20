@@ -4,13 +4,13 @@ description: This quickstart shows how to install SQL Server 2017 or SQL Server 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/20/2022
-ms.topic: conceptual
+ms.date: 10/20/2022
 ms.prod: sql
+ms.technology: linux
+ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
   - intro-installation
-ms.technology: linux
 ---
 # Quickstart: Install SQL Server and create a database on Ubuntu
 
@@ -23,8 +23,24 @@ In this quickstart, you install [!INCLUDE [sssql17-md](../includes/sssql17-md.md
 
 For more information on supported platforms, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes-2017.md).
 
-> [!TIP]
+> [!TIP]  
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+
+If you choose to have a pre-installed SQL Server VM on Ubuntu ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
+
+## Azure Marketplace images
+
+You can create your VM based on the following Azure Marketplace image:
+
+- [Ubuntu 18.04](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ubuntupro1804)
+
+When you use this image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on Ubuntu Pro using the above Marketplace images, are fully supported by both Microsoft and Canonical.
+
+You can configure SQL Server on Linux with **mssql-conf**, using the following command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup
+```
 
 ## Prerequisites
 
@@ -90,8 +106,25 @@ In this quickstart, you install [!INCLUDE [sssql19-md](../includes/sssql19-md.md
 
 For more information on supported platforms, see [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md).
 
-> [!TIP]
+> [!TIP]  
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+
+If you choose to have a pre-installed SQL Server VM on Ubuntu ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
+
+## Azure Marketplace images
+
+You can create your VM based on one of the following two Azure Marketplace images:
+
+- [Ubuntu 20.04](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ubuntupro2004)
+- [Ubuntu 18.04](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ubuntupro1804)
+
+When you use these images, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on Ubuntu Pro using the above Marketplace images, are fully supported by both Microsoft and Canonical.
+
+You can configure SQL Server on Linux with **mssql-conf**, using the following command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup
+```
 
 ## Prerequisites
 
@@ -155,8 +188,24 @@ In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md
 
 For more information on supported platforms, see [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
 
-> [!TIP]
+> [!TIP]  
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+
+If you choose to have a pre-installed SQL Server VM on Ubuntu ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
+
+## Azure Marketplace images
+
+You can create your VM based on the following Azure Marketplace image (currently SQL Server 2019 only):
+
+- [Ubuntu 20.04](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ubuntupro2004)
+
+When you use this image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on Ubuntu Pro using the above Marketplace images, are fully supported by both Microsoft and Canonical.
+
+You can configure SQL Server on Linux with **mssql-conf**, using the following command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup
+```
 
 ## Prerequisites
 
@@ -221,8 +270,8 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 Use the following steps to install the **mssql-tools** on Ubuntu. If **curl** isn't installed, you can run this code:
 
 ```bash
-sudo apt-get update 
-sudo apt install curl 
+sudo apt-get update
+sudo apt install curl
 ```
 
 <!--SQL Server 2017 on Linux-->
@@ -243,15 +292,15 @@ sudo apt install curl
 1. Update the sources list and run the installation command with the `unixODBC` developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
-   sudo apt-get update 
+   sudo apt-get update
    sudo apt-get install mssql-tools unixodbc-dev
    ```
 
    You can update to the latest version of **mssql-tools** using the following commands:
 
    ```bash
-   sudo apt-get update 
-   sudo apt-get install mssql-tools 
+   sudo apt-get update
+   sudo apt-get install mssql-tools
    ```
 
 1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
@@ -290,15 +339,15 @@ sudo apt install curl
 1. Update the sources list and run the installation command with the `unixODBC` developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
-   sudo apt-get update 
+   sudo apt-get update
    sudo apt-get install mssql-tools unixodbc-dev
    ```
 
    You can update to the latest version of **mssql-tools** using the following commands:
 
    ```bash
-   sudo apt-get update 
-   sudo apt-get install mssql-tools 
+   sudo apt-get update
+   sudo apt-get install mssql-tools
    ```
 
 1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.
@@ -337,15 +386,15 @@ sudo apt install curl
 1. Update the sources list and run the installation command with the `unixODBC` developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
-   sudo apt-get update 
+   sudo apt-get update
    sudo apt-get install mssql-tools unixodbc-dev
    ```
 
    You can update to the latest version of **mssql-tools** using the following commands:
 
    ```bash
-   sudo apt-get update 
-   sudo apt-get install mssql-tools 
+   sudo apt-get update
+   sudo apt-get install mssql-tools
    ```
 
 1. For convenience, add `/opt/mssql-tools/bin/` to your `PATH` environment variable, to make **sqlcmd** or **bcp** accessible from the bash shell.

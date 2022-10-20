@@ -46,6 +46,9 @@ For more information on supported platforms, see [Release notes for [!INCLUDE[ss
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 If you choose to have a pre-installed SQL Server VM on RHEL ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
 ## Azure Marketplace images
 
 You can create your VM based on the following Azure Marketplace image:
@@ -59,6 +62,8 @@ You can configure SQL Server on Linux with **mssql-conf**, using the following c
 ```bash
 sudo /opt/mssql/bin/mssql-conf setup
 ```
+
+::: moniker-end
 
 ## Prerequisites
 

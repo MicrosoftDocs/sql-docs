@@ -20,7 +20,7 @@ You can upgrade instances of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 
 
 Check out what's new in each version of the product:
 
-- [SQL Server 2022 (Preview) Release Notes](../../sql-server/sql-server-2022-release-notes.md)
+- [SQL Server 2022 Release Notes](../../sql-server/sql-server-2022-release-notes.md)
 - [SQL Server 2019 Release Notes](../../sql-server/sql-server-2019-release-notes.md)
 - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md)
 - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md)

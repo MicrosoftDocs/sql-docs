@@ -4298,6 +4298,8 @@ items:
       href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Hardware & software requirements
       items:
+      - name: SQL Server 2022
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md
       - name: SQL Server 2019
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md
       - name: SQL Server 2016 & 2017

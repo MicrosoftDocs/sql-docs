@@ -77,17 +77,20 @@ What's new in:
 - [SQL Server 2016](../what-s-new-in-sql-server-2016.md)
 - [SQL Server 2017](../what-s-new-in-sql-server-2017.md)
 - [SQL Server 2019](../what-s-new-in-sql-server-2019.md)
+- [SQL Server 2022](../what-s-new-in-sql-server-2022.md)
 
 Hardware requirements:
 
 - [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
+- [SQL Server 2022](../install/hardware-and-software-requirements-for-installing-sql-server-2022.md)
 
 Supported version and edition upgrades:
 
 - [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true)
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md)
+- [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2022.md)
 
 Tools:
 

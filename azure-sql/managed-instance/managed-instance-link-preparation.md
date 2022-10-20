@@ -260,7 +260,7 @@ We will use SQL Agent on SQL Server to run connectivity tests from SQL Server to
 
    :::image type="content" source="./media/managed-instance-link-preparation/test-connectivity-parameters-output.png" alt-text="Screenshot that shows the output of the script that generates parameter values for testing connectivity in SSMS.":::
 
-   Save the result to be used in next steps. Note that the parameters we just generated may change after any failover on SQL Managed Instance, be sure to generate them again if needed.
+   Save the result to be used in the next steps. Note that the parameters we just generated may change after any failover on SQL Managed Instance, be sure to generate them again if needed.
 
 1. Connect to SQL Server
 
@@ -324,7 +324,7 @@ We will use SQL Agent on SQL Server to run connectivity tests from SQL Server to
 1. Verify the results:
 
    - The outcome of each test at TcpTestSucceeded should be `TcpTestSucceeded : True`.
-   - The RemoteAddresses should belong the IP range for the Managed Instance subnet.
+   - The RemoteAddresses should belong to the IP range for the Managed Instance subnet.
 
    If the response is unsuccessful, verify the following network settings:
    - There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 

@@ -69,7 +69,8 @@ The sp_flush_CT_internal_table_on_demand stored procedure will do the following:
 
 ## Creating Extended Events for Change Tracking
 
-Note: Extended Events Are Not Available With Azure SQL Database
+> [!NOTE]
+> Extended Events Are Not Available With Azure SQL Database
 
 [Extended Events](../../relational-databases/extended-events/extended-events.md) can be used for monitoring and alerting with Change Tracking and can be created with [SQL Server Management Studio (SSMS)](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 

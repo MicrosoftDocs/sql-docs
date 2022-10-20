@@ -30,7 +30,7 @@ This article summarizes the new features and enhancements for [!INCLUDE[sql-serv
 
 ## Get [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
 
-[Get SQL Server 2022 Release Candidate (RC 1) Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126). Build number: 16.0.950.9.
+[Get SQL Server 2022 Evaluation Edition](https://go.microsoft.com/fwlink/?linkid=2162126). Build number: 16.0.1000.6.
 
 For more information and known issues, see [[!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] release notes](sql-server-2022-release-notes.md).
 

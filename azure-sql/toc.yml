@@ -1054,8 +1054,6 @@
 
   - name: Concepts
     items:
-    - name: Start & stop instance
-      href: managed-instance/instance-stop-start-overview.md
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
     - name: Automated backups

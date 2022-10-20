@@ -46,12 +46,15 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
+
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2016 and SQL Server 2017 on the Windows operating system.  
 
 For hardware and software requirements for other versions of SQL Server, see:
-- [SQL Server 2019](./hardware-and-software-requirements-for-installing-sql-server-2019.md)
+
+- [SQL Server 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
+- [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-2019.md)
 - [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
 
 ## Hardware requirements

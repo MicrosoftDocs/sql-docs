@@ -32,8 +32,8 @@ This article provides information on configuring a [ledger database](ledger-over
 
 # [Portal](#tab/Portal)
 
-1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) if you don't already have one.
-1. In the **Security** tab, select the **Ledger** option. 
+1. Open the [Azure portal](https://portal.azure.com/) and [create an Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal) .
+1. In the **Security** tab, click on the link **Configure ledger**. 
 
    :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
 

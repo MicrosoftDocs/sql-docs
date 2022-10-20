@@ -290,7 +290,35 @@ sections:
           ### Is native restore (from .bak files) to SQL Managed Instance supported?
           
           Yes, it is supported and available for SQL Server 2005+ versions.  To use native restore, upload your .bak file to Azure blob storage and execute T-SQL commands. For more information, see [Native restore from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
+
+          ### Is an instance with [backup portability](restore-database-to-sql-server-backup-portability) enabled a separate deployment option or SKU? 
           
+          No. Backup portability is just an instance property. You can mix and match instances with and without the property enabled as your business needs. 
+
+          ### What are the benefits of enabling backup portability? And of disabling it? 
+
+          To ensure backup portability, instances with the option enabled may not have access to some newly introduced features of the SQL Server database engine that would break backup file compatibility with SQL Server. With the backup portability feature disabled, you can instantly start using and benefit from all newly introduced features. Once disabled, you will no longer be able to restore your database directly to SQL Server from SQL MI, but can still copy or move your databases to SQL Server by using technologies like BACPAC, and transactional replication. Once disabled, the backup feature cannot be enabled again for that instance. 
+
+          ### How do I enable backup portability? 
+
+          Backup portability is enabled by default for all existing and newly created instances starting November 2022. 
+
+          ### Can I turn backup portability off? 
+
+          Yes, you can disable it at any time, but you cannot reenable it once it's been disabled. This is because disabling backup portability irrevocably upgrades internal database structures, making it indecipherable to the SQL Server when trying to restore the backup. 
+
+          ### What happens when a new version of SQL Server is released? 
+
+          ### Does my licensing model change when I enable backup portability? 
+
+          No. There are no licensing changes with the introduction of the backup portability feature. 
+
+          ### Why is the backup portability option enabled by default on my instance? 
+
+          This is because you can easily disable the feature at any time, but, once disabled, it cannot be enabled again on the instance.  
+
+
+
       - question: |
           Business continuity
         answer: |

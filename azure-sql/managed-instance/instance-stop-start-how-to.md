@@ -16,6 +16,8 @@ ms.custom:
 
 This article teaches you to stop and start your instance to save on billing costs when using Azure SQL Managed Instance. Start and stop your instance by using Azure PowerShell. 
 
+The ability to stop and start your instance is currently in preview. 
+
 ## Overview
 
 Save on billing costs by stopping your managed instance when you're not using it. Stopping an instance is similar to deallocating a virtual machine. When an instance is in a stopped state, you're no longer billed for compute and licensing costs while still billed for storage and backup storage. 

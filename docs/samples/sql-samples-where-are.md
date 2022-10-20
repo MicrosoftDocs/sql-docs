@@ -25,7 +25,7 @@ Email questions to: sqlserversamples@microsoft.com.
 
 ## WideWorldImporters sample database
 
-WideWorldImporters (WWI) is a sample database that showcases database design using current features, tools and design techniques. WideWorldImporters downloads include an OLTP and an OLAP database which are built to run on SQL Server 2016 and later.
+WideWorldImporters (WWI) is a sample database that showcases database design using current features, tools and design techniques. WideWorldImporters downloads include an OLTP and an OLAP database, which are built to run on SQL Server 2016 and later.
 
 The database downloads and samples are in the [SQL Server samples](https://github.com/microsoft/sql-server-samples) GitHub repository.
 
@@ -42,4 +42,4 @@ AdventureWorks databases can be found on the [installation](adventureworks-insta
 There are several Azure code samples and examples available on GitHub in .NET, Java, Python, Node.js, PHP and Ruby. Additionally, Azure Resource Manager allows you to provision your applications using a declarative template. In a single template, you can deploy multiple services along with their dependencies. You use the same template to repeatedly deploy your application during every stage of the application lifecycle.
 
 - [Azure samples](https://github.com/Azure-Samples)
-- [Azure Quickstart templates](https://azure.microsoft.com/resources/templates/)
+- [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/)

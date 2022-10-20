@@ -63,16 +63,16 @@ The following memory and processor requirements apply to all editions of [!INCLU
 
 |Component|Requirement|
 |---------------|-----------------|
-|Storage|[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard drive space.<br/><br/> Disk space requirements will vary with the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|
+|Storage|[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard drive space.<br /><br />Disk space requirements will vary with the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|
 |Monitor|[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|
 |Internet|Internet functionality requires Internet access (fees may apply).|
-|Memory<sup>1</sup>|**Minimum:**<br/><br/> Express Editions: 512 MB<br/><br/> All other editions: 1 GB<br/><br/> **Recommended:**<br/><br/> Express Editions: 1 GB<br/><br/> All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|
-|Processor Speed|**Minimum:** x64 Processor: 1.4 GHz<br/><br/> **Recommended:** 2.0 GHz or faster|
+|Memory<sup>1</sup>|**Minimum:**<br /><br />Express Editions: 512 MB<br /><br />All other editions: 1 GB<br /><br />**Recommended:**<br /><br />Express Editions: 1 GB<br /><br />All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|
+|Processor Speed|**Minimum:** x64 Processor: 1.4 GHz<br /><br />**Recommended:** 2.0 GHz or faster|
 |Processor Type|x64 Processor: AMD Opteron, AMD Athlon 64, Intel Xeon with Intel EM64T support, Intel Pentium IV with EM64T support|
 
 <sup>1</sup> The minimum memory required for installing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] component in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) is 2 GB of RAM, which is different from the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] minimum memory requirement. For information about installing DQS, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).
 
-> [!NOTE]
+> [!NOTE]  
 > Installation of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is supported on x64 processors only. It is no longer supported on x86 processors.
 
 ## <a id="hwswr"></a> Software requirements
@@ -81,19 +81,19 @@ The following requirements apply to all installations:
 
 |Component|Requirement|
 |---------------|-----------------|
-|Operating system|Windows 10 TH1 1507 or greater<br/><br>Windows Server 2016 or greater<br/><br/>
-|.NET Framework|Minimum operating systems includes minimum .NET framework.|
-|Network Software|Supported operating systems for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, and TCP/IP.<br/><br/> |
+|Operating system|Windows 10 TH1 1507 or greater<br /><br />Windows Server 2016 or greater.|
+|.NET Framework|Minimum operating systems include minimum .NET framework.|
+|Network Software|Supported operating systems for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, and TCP/IP.|
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup support files
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > There are additional hardware and software requirements for the PolyBase feature. For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).
 
-## Operating system support
+## Operate system support
 
 The following table shows which editions of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] are compatible with which versions of Windows:
 

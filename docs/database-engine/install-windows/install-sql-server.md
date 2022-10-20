@@ -40,7 +40,7 @@ Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[s
 
 - **Requirements**: Review hardware and software installation requirements for [SQL Server 2016 and SQL Server 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2022](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), or [SQL Server on Linux](../../linux/sql-server-linux-setup.md), as well as system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)
 
-- **Sample databases and sample code** aren't installed as part of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup by default, but can be installed for non-Express editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For mor information, see [Microsoft SQL samples](../../samples/sql-samples-where-are.md).
+- **Sample databases and sample code** aren't installed as part of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup by default, but can be installed for non-Express editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Microsoft SQL samples](../../samples/sql-samples-where-are.md).
 
 ## Installation media
 

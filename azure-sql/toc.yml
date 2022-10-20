@@ -1054,6 +1054,8 @@
 
   - name: Concepts
     items:
+    - name: Start & stop instance
+      href: managed-instance/instance-stop-start-overview.md
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
     - name: Automated backups
@@ -1295,6 +1297,8 @@
     items:
     - name: How-to documentation
       href: managed-instance/how-to-content-reference-guide.md      
+    - name: Start & stop instance
+      href: managed-instance/instance-stop-start-how-to.md
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
     - name: Job automation with SQL Agent 

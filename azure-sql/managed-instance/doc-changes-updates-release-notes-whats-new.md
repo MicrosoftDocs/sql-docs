@@ -30,6 +30,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 | ---| --- |
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
+|[Instance stop](instance-stop-start-overview.md) | Stop and start your managed instance to save billing costs. To get started, review [How to stop and start your instance](instance-stop-start-how-to.md) | 
 |[Managed Instance link](managed-instance-link-feature-overview.md)| Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. |
 |[Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications (preview) for databases configured to use a non-default [maintenance window](../database/maintenance-window.md). Advance notifications are in preview for Azure SQL Managed Instance. |
 |[Migrate with Log Replay Service](log-replay-service-migrate.md) | Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service. |
@@ -67,6 +68,14 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation.
+
+### November
+
+| Changes | Details |
+| --- | --- |
+| **Instance stop preview** | It's now possible to stop your Azure SQL Managed Instance when you're not using it to save on costs. To learn more, review [stop and start instance](instance-stop-start-overview.md). To get started, review [stop instance](instance-stop-start-how-to.md). 
+
+
 
 ### September 2022
 

@@ -103,7 +103,6 @@ Use the following cmdlets for Azure SQL Database and Azure Synapse:
 | --- | --- |
 | [Set-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/set-azsqldatabasetransparentdataencryption) |Enables or disables transparent data encryption for a database.|
 | [Get-AzSqlDatabaseTransparentDataEncryption](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryption) |Gets the transparent data encryption state for a database. |
-| [Get-AzSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/az.sql/get-azsqldatabasetransparentdataencryptionactivity) |Checks the encryption progress for a database. |
 | [Add-AzSqlServerKeyVaultKey](/powershell/module/az.sql/add-azsqlserverkeyvaultkey) |Adds a Key Vault key to a server. |
 | [Get-AzSqlServerKeyVaultKey](/powershell/module/az.sql/get-azsqlserverkeyvaultkey) |Gets the Key Vault keys for a server  |
 | [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) |Sets the transparent data encryption protector for a server. |

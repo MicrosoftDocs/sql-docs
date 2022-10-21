@@ -1,10 +1,10 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 02/22/2022
 ms.prod: sql
 ms.technology: polybase
 ms.topic: include
-ms.date: 02/22/2022
 ---
 
 > [!IMPORTANT]

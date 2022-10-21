@@ -33,7 +33,10 @@ For SQL Server, the landing zone is customer-managed and visible, but it is not 
 
 Currently, only a member of the sysadmin server role in SQL Server or the db_owner database role can execute these procedures. 
 
-The SQL Server or the Azure SQL Database will maintain metadata specific to each table group. 
+The SQL Server or the Azure SQL Database will maintain metadata specific to each table group.
+
+> [!NOTE]
+> Enabling Azure Synapse Link for SQL will create a `changefeed` database user, a `changefeed` schema, and several tables within the `changefeed` schema in your source database. Please do not alter any of these objects - they are system-managed.
 
 ## Monitor Azure Synapse Link for SQL Server and Azure SQL Database
 

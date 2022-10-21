@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/25/2022
+ms.date: 10/05/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016"
 This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
 
 > [!WARNING]  
-> Effective July 12, 2022, the SQL Registry portal will be retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
+> Effective July 12, 2022, the SQL Registry portal has been retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
@@ -32,9 +32,9 @@ You can receive Extended Security Updates in several ways:
 
 - **Azure Arc**. Purchased for your on-premises or hosted environment. You'll download updates when they're available. There are two ways to use Azure Arc:
 
-  - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [SQL Server on Azure Arc-enabled servers](../azure-arc/overview.md) provides.
+  - **Connected**. Install the Azure Connected Machine agent along with the Azure extension for SQL Server, with direct connectivity to Azure. You'll benefit from the features that [Azure Arc-enabled SQL Server](../azure-arc/overview.md) provides.
 
-  - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state.
+  - **Registered**. Manually add your instance using a process similar to the deprecated SQL Server registry. The instance will be added in a *disconnected* state. See [below](#prerequisites) for required prerequisites.
 
 - **Azure services**. Free and enabled by default when migrating on-premises servers to one of the following Azure services:
 
@@ -109,15 +109,17 @@ This example shows you how to manually add your SQL Server instances in a discon
 
 ### Prerequisites
 
-1. Assign the `Azure Connected SQL Server Onboarding` role. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+1. Assign the `Azure Connected SQL Server Onboarding` role on the *resource group* that you are using to register your SQL Server instances. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
-2. Assign the `Microsoft.AzureArcData` namespace to your Azure subscription:
+2. Register the `Microsoft.AzureArcData` resource provider in your Azure subscription:
 
    - Sign in to the Azure portal.
 
    - Navigate to your subscription, and select **Resource providers**.
 
    - If the `Microsoft.AzureArcData` resource provider isn't listed, you can add it to your subscription using the **Register** option.
+
+3. If you are using Azure policies that only allow the creation of specific resource types, you will need to allow the `Microsoft.AzureArcData/sqlServerInstances` resource type. If it is not allowed, the `SQLServerInstances_Update` operation will fail with a **'deny' Policy action** log entry in the activity log of the subscription.
 
 You can either register a [single SQL Server instance](#single-sql-server-instance), or upload a CSV file to register [multiple SQL Server instances in bulk](#multiple-sql-server-instances-in-bulk).
 
@@ -200,6 +202,10 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 ### Link ESU invoice to registered servers
 
+Customers can use the **Purchase Order Number** under Invoice Summary in their Microsoft invoice (as shown in the screenshot below) to link the ESU purchase with the registration of SQL Server instances.
+
+:::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-sample.png" alt-text="Sample invoice with Purchase Order Number highlighted.":::
+
 Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances to get access to extended updates. This example includes both **Connected** and **Registered** servers.
 
 1. Sign into the [Azure portal](https://portal.azure.com).
@@ -223,7 +229,7 @@ Follow these steps to link an ESU invoice to your Azure Arc SQL Server instances
 - Values are comma-separated
 - Values aren't single or double-quoted
 - Values can include letters, numbers, hyphens (`-`), and underscores (`_`). No other special characters can be used. If you have a named instance, you must replace the backslash (`\`) with a hyphen (`-`). For example, `MyServer\Instance01` will become `MyServer-Instance01`.
-- Column names are case-insensitive but must be named as follows:
+- Column names are case-sensitive and must be named as follows:
 
   - name
   - version

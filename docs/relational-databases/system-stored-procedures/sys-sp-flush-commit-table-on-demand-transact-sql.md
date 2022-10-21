@@ -41,7 +41,7 @@ sys.sp_flush_commit_table_on_demand [ @numrows = ] numrows
 
 ## Arguments
 
-'[@numrows = ] numrows' is the number of rows you want to delete from syscommittab. flush_ts is a bigint and cannot be NULL.
+'[@numrows = ] numrows' is the number of rows you want to delete from syscommittab. numrows is a bigint and cannot be NULL.
 
 ## Return Code Values
 

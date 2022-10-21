@@ -96,7 +96,7 @@ select * from sys.change_tracking_tables
 Next, get history of change tracking from the history system table with the following SQL:
 
 ```sql
-select * from dba.MSchange_tracking_history
+select * from dbo.MSchange_tracking_history
 ```
 
 Identify any tables that are causing issues as indicated in the history table and manually run a cleanup using the following stored procedure for each table, one at a time. The TABLE_NAME parameter is the table that is having issues.

@@ -291,7 +291,7 @@ sections:
           
           Yes, it is supported and available for SQL Server 2005+ versions.  To use native restore, upload your .bak file to Azure blob storage and execute T-SQL commands. For more information, see [Native restore from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
 
-          ### Is an instance with [backup portability](restore-database-to-sql-server-backup-portability) enabled a separate deployment option or SKU? 
+          ### Is an instance with [backup portability](restore-database-to-sql-server-backup-portability.md) enabled a separate deployment option or SKU? 
           
           No. Backup portability is just an instance property. You can mix and match instances with and without the property enabled as your business needs. 
 

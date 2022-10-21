@@ -53,9 +53,9 @@ Consider the following limitations:
 
 Additionally, in the future, instances that have backup portability enabled may not get SQL Server 2022 database engine updates that impact the backup portability feature. Customers can disable the backup portability feature to get all the latest updates, but should consider the trade off to their business between gaining the new feature while losing the ability to restore their database to SQL Server. 
 
-The following table details the type of updates that may be impacted with the backup portability feature enabled: 
+The following table details the type of updates that will occur if the portability feature is on or off: 
 
-|Type of upgrade | Portability ON | Portability off | 
+|Type of upgrade | Portability ON | Portability OFF | 
 | ----------- | ------------------ | ------------- | 
 | Security patches| Yes<sup>1</sup>| Yes | 
 | Bug fixes | Yes<sup>1</sup> | Yes | 
@@ -63,7 +63,7 @@ The following table details the type of updates that may be impacted with the ba
 | New SQL engine features with no on-disk metadata changes | Subject to triage<sup>2</sup> | Yes
 | New SQL engine features with DB version bump | No | Yes | 
 
-<sup>1</sup> Everything from SQL Server Cumulative  Updates, as well as updates specific to Azure SQL. 
+<sup>1</sup> Everything from SQL Server Cumulative  Updates, as well as updates specific to Azure SQL.   
 <sup>2/sup> Subject to review and triage by the product group, as it requires porting. 
 
 

@@ -35,7 +35,8 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
         , [ @publication = ] 'publication'  
         , [ @subscriber = ] 'subscriber'  
         , [ @subscriber_db = ] 'subscriber_db'   
-        , [ @subscription_type = ] subscription_type  
+        , [ @subscription_type = ] subscription_type
+        , [ @subdb_version = ] subdb_version  
 ```  
   
 ## Arguments  
@@ -61,7 +62,10 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**0**|Push subscription|  
 |**1**|Pull subscription|  
-  
+
+[ @subdb_version = ] subdb_version is the dbversion of subscription database. _subdb_version_ is an optional parameter of type **int**, with default value of 0.
+
+
 ## Result Sets  
   
 |Column name|Data type|Description|  
@@ -73,7 +77,14 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_replmonitorsubscriptionpendingcmds** is used with transactional replication.  
+ **sp_replmonitorsubscriptionpendingcmds** is used with transactional replication.
+ 
+ sp_replmonitorsubscriptionpendingcmds is not compatible with peer-to-peer replication and returns the incorrect number of pending commands when used against peer-to-peer replication. Starting SQL 2019 CU 17, we are making sp_replmonitorsubscriptionpendingcmds compatible with peer-to-peer publications. 
+ 
+Even in SQL 2019 CU 17 or more recent editions, sp_replmonitorsubscriptionpendingcmds may report incorrect number of pending commands when used with peer-to-peer replication and if the table MSrepl_originators contains stale entries. To correct this, delete the stale entries from MSrepl_originators or pass the correct dbversion of subscription database as the subdb_version argument to sp_replmonitorsubscriptionpendingcmds. 
+
+Please review [<KB article>](https://support.microsoft.com/en-us/topic/kb5017009-fix-sp-replmonitorsubscriptionpendingcmds-returns-incorrect-pending-commands-for-p2p-replication-a20ede99-fe59-40f2-a0a8-118c73088f44) for details on how to determine dbversion.
+
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor or members of the **db_owner** fixed database role in the distribution database can execute **sp_replmonitorsubscriptionpendingcmds**. Members of the publication access list for a publication that uses the distribution database can execute **sp_replmonitorsubscriptionpendingcmds** to return pending commands for that publication.  

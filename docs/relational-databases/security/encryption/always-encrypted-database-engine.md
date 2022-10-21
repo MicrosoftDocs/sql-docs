@@ -22,9 +22,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 :::image type="content" source="media/always-encrypted-database-engine/always-encrypted.png" alt-text="Diagram of Always Encrypted.":::
 
-Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Azure SQL Managed Instance, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access - on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted enables customers to confidently store their sensitive data in the cloud and to reduce the likelihood of data theft by their own malicious high-privileged users.
+Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Azure SQL Managed Instance, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access - on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted enables customers to confidently store their sensitive data in the cloud and to reduce the likelihood of data theft by malicious insiders.
 
-Always Encrypted can be configured to support limited confidential queries on encrypted data - the queries that involve equality comparisons, for example: point lookup-searches or equality joins. This is achieved by leveraging deterministic encryption (see below for more details)
+Always Encrypted can be configured to support limited confidential queries on encrypted data - the queries that involve equality comparisons, for example: point lookup-searches or equality joins. Such queries leverage deterministic encryption (see below for more details)
 
 > [!NOTE]  
 > Secure enclaves extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. For more details, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
@@ -39,8 +39,8 @@ To set up Always Encrypted in your database, you need to:
 
 1. **Provision cryptographic keys to protect your data**. Always Encrypted uses two types of keys:
 
-    - column encryption keys
-    - column master keys
+    - Column encryption keys.
+    - Column master keys.
 
     A column encryption key is used to encrypt data in an encrypted column. A column master key is a key-protecting key that encrypts one or more column encryption keys.
 
@@ -49,12 +49,16 @@ To set up Always Encrypted in your database, you need to:
     Then, you need provision column encryption keys and encrypt each of them with a column master key.
 
     Finally, you need to store the metadata about the keys in your database.
-      - The column master key metadata captures the location of teh column master key. 
+      - The column master key metadata captures the location of the column master key. 
       - The column encryption key metadata contains the encrypted value of the column encryption key. Note that the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] never stores or uses the keys of either type in plaintext.
 
-    For more information, [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
+    For more information about managing Always Encrypted keys, see [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
 
-1. **Configure encryption for selected database columns** that contain sensitive data to be protected. This can involve creating new tables with encrypted columns or encrypting existing database columns and existing data. When setting up encryption for a column, you specify the information about an encryption algorithm, a column encryption key to protect the data in the column, and an encryption type. Always Encrypted supports two encryption types: 
+1. **Configure encryption for selected database columns** that contain sensitive data to be protected. This can involve creating new tables with encrypted columns or encrypting existing database columns and existing data. When setting up encryption for a column, you specify the information about an encryption algorithm, a column encryption key to protect the data in the column, and an encryption type.
+
+## <a name="param"></a>
+
+    Always Encrypted supports two encryption types: 
 
     - Deterministic encryption always generates the same encrypted value for a given plaintext value. Using deterministic encryption allows point lookups, equality joins, grouping and indexing on encrypted columns. However, it may also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column, especially if there's a small set of possible encrypted values, such as True/False, or North/South/East/West region. 
 
@@ -73,7 +77,7 @@ To ensure Always Encrypted keys and protected sensitive data are never revealed 
 
 ## How queries against encrypted columns work
 
-To run a query on encrypted database columns - to insert data to encrypted columns, retrieve plaintext values from encrypted columns, or perform supported operations (e.g., point lookup searches) on columns using deterministic encryption - users and applications issuing the query must to meet the following prerequisites:
+To run a query on encrypted database columns - to insert data to encrypted columns, retrieve plaintext values from encrypted columns, or perform supported operations (e.g., point lookup searches) on columns using deterministic encryption - a user or an application issuing the query must to meet the following prerequisites:
 
 - Have access to the column master key protecting the data. Key access is required in addition to the database-level permissions, such as SELECT on the table containing the data.
 - Connect to the database with Always Encrypted enabled in the database connection. Most SQL tools and SQL client drivers support enabling Always Encrypted for database connections.
@@ -88,9 +92,9 @@ Here is how queries on encrypted columns work:
 1. The driver uses the obtained plaintext column encryption keys to encrypt the query parameters corresponding to encrypted columns.
 1. The driver substitutes the plaintext values of the parameters targeting encrypted columns with their encrypted values, and it sends the query to the  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] for processing.
 1. The  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] executes the query, which may involve equality comparisons on columns using deterministic encryption.
-1. If query results include data from encrypted columns, the !INCLUDE[ssDE](../../../includes/ssde-md.md)] attaches encryption metadata for each column, including the information about the encryption algorithm, the encryption type and key metadata, to the result set. 
-1. The !INCLUDE[ssDE](../../../includes/ssde-md.md)] sends the result set to the client application.
-1. For each encrypted columns in the reveived result set, the driver first tries to find the plaintext column encryption key in the local cache, and only makes a round trip to a key store holding the column master key, if it can't find the key in the cache. 
+1. If query results include data from encrypted columns, the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] attaches encryption metadata for each column, including the information about the encryption algorithm, the encryption type and key metadata, to the result set. 
+1. The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] sends the result set to the client application.
+1. For each encrypted column in the received result set, the driver first tries to find the plaintext column encryption key in the local cache, and only makes a round trip to a key store holding the column master key, if it can't find the key in the cache. 
 1. The driver decrypts the results and returns plaintext values to the application.
 
 A client driver interacts with a key store, containing a column master key, using a column master key store provider, which is a client-side software component that encapsulates a key store containing the column master key. Providers for common types of key stores are available in client-side driver libraries from Microsoft or as standalone downloads. You can also implement your own provider. Always Encrypted capabilities, including built-in column master key store providers vary by a driver library and its version.
@@ -113,17 +117,26 @@ The following limitations apply to queries on encrypted columns:
 - Query statements that trigger computations involving both plaintext and encrypted data are not allowed. For example:
 
   - Comparing an encrypted column to a plaintext column or a literal.
-  - Copying data from a plaintext column to an encrypted columns (or the other way around) UPDATE, BULK INSERT, SELECT INTO, or INSERT..SELECT.
+  - Copying data from a plaintext column to an encrypted columns (or the other way around) **UPDATE**, **BULK INSERT**, **SELECT INTO**, or **INSERT..SELECT**.
   - Inserting literals to encrypted columns.
 
   Such statements result in operand clash errors like this:
+
     ```output
     Msg 206, Level 16, State 2, Line 89
         Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
     ```
-- Applications must use parameterized queries to insert data to encrypted columns or filter by encrypted columns. Inserting or filtering by literals is not supported. To issue such queries in SQL tools you need to use Parameterization for Always Encrypted available in [Azure Data Studio](always-encrypted-query-columns-ads.md#parameterization-for-always-encrypted) [SSMS](always-encrypted-query-columns-ssms.md#param).
+
+- Applications must use parameterized queries to insert data to encrypted columns or filter by encrypted columns. Inserting or filtering by literals is not supported. To issue such queries in SQL tools you need to use Parameterization for Always Encrypted available in [Azure Data Studio](always-encrypted-query-columns-ads.md#parameterization-for-always-encrypted) and [SSMS](always-encrypted-query-columns-ssms.md#param).
+
+- Queries using the following clauses are not supported:
+
+  - [FOR XML (SQL Server)](../../xml/for-xml-sql-server.md)
+  - [FOR JSON (SQL Server)](../../json/format-query-results-as-json-with-for-json-sql-server.md)
+
 
 - After changing the definition of an encrypted column, execute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the Always Encrypted metadata for the object.
+
 
 Always Encrypted isn't supported for the columns with the below characteristics:
 
@@ -131,7 +144,7 @@ Always Encrypted isn't supported for the columns with the below characteristics:
 - [FILESTREAM](../../../t-sql/statements/create-table-transact-sql.md#filestream) columns
 - Columns with the [IDENTITY](../../../t-sql/statements/create-table-transact-sql.md#identity) property.
 - Columns with [ROWGUIDCOL](../../../t-sql/statements/create-table-transact-sql.md#rowguidcol) property.
-- String (**varchar**, **char**, etc.) columns with non-bin2 collations when using deterministic encryption.
+- String (**varchar**, **char**, etc.) columns with collations other than _BIN2 when using deterministic encryption.
 - Columns that are keys for clustered and nonclustered indices when using randomized encryption (indices on columns using deterministic encryption are supported).
 - Columns included in full-text indexes (Always Encrypted does not support [Full Text Search](../../../relational-databases/search/full-text-search.md)).
 - [Computed columns](../../tables/specify-computed-columns-in-a-table.md).
@@ -155,11 +168,6 @@ Always Encrypted isn't supported for the columns with the below characteristics:
 - Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported).
 - Table-valued parameters targeting encrypted columns aren't supported.
 
-The following clauses can't be used for encrypted columns:
-
-- [FOR XML (SQL Server)](../../xml/for-xml-sql-server.md)
-- [FOR JSON (SQL Server)](../../json/format-query-results-as-json-with-for-json-sql-server.md)
-
 The following features don't work on encrypted columns:
 
 - [SQL Server Replication](../../replication/sql-server-replication.md) (transactional, merge, or snapshot replication). Physical replication features, including [Always](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md), are supported.
@@ -168,6 +176,8 @@ The following features don't work on encrypted columns:
 
 
 ## Always Encrypted Transact-SQL reference
+
+Always Encrypted uses the following Transact-SQL statements, system catalog views, system stored procedures and permissions.
 
 ### Statements
 

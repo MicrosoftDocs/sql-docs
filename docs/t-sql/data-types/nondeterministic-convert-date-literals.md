@@ -71,13 +71,13 @@ And if **ymd** was specified, there is no guarantee of what the output would be.
 The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
-#### Specific countries
+#### Specific countries/regions
 
 In Japan and China, the DATEFORMAT of **ymd** is used. The format's parts are in a sensible sequence of largest unit to smallest. Consequently, this format sorts well. This format is considered to be the _international_ format. It is international because the four digits of the year are unambiguous, and no country on Earth uses the archaic format of **ydm**.
 
-In other countries such as Germany and France, the DATEFORMAT is **dmy**, meaning **'dd-mm-yyyy'**. The **dmy** format does not sort well, but it is a sensible sequence of smallest unit to largest.
+In other countries/regions such as Germany and France, the DATEFORMAT is **dmy**, meaning **'dd-mm-yyyy'**. The **dmy** format does not sort well, but it is a sensible sequence of smallest unit to largest.
 
-The United States, and the Federated States of Micronesia, are the only countries that use **mdy**, which does not sort. The format's mixed sequence matches a pattern of verbal speech in spoken dates.
+The United States, and the Federated States of Micronesia, are the only countries/regions that use **mdy**, which does not sort. The format's mixed sequence matches a pattern of verbal speech in spoken dates.
 
 #### Code example of SET DATEFORMAT: *mdy* versus *dmy*
 

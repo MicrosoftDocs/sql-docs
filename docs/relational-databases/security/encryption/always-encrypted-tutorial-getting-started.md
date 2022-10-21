@@ -206,8 +206,31 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 
     ![Always Encrypted wizard - summary page](.\media\always-encrypted-database-engine\always-encrypted-wizard-summary.png)
 
-1. (Optional.) You can check out the metadata objects, the wizard has created for your keys, by expanding **ContosoHR** > **Security** > **Always Encrypted Keys**.
+1. (Optional) Explore the changes, the wizard has made in your database.
+    1. Expand **ContosoHR** > **Security** > **Always Encrypted Keys** to explore the metadata objects for the column master key and the column encryption, the wizard created.
+    1. You can also run the below queries against the system catalog views that contain key metadata.
 
+    ```sql
+    SELECT * FROM sys.column_master_keys;
+    SELECT * FROM sys.column_encryption_keys
+    SELECT * FROM sys.column_encryption_key_values
+    ```
+
+    1. In Object Explorer, right-click the **Employees** table and select **Script Table as** > **CREATE To** > **New Query Editor Window**. This will open a new query window with the **CREATE TABLE** statement for the **Employees** table. Note the **ENCRYPTED WITH** clauses that appears in the definitions of the **SSN** and **Salary** columns.
+
+    1. You can also run the below query against **sys.columns** to retrieve column-level encryption metadata for the two encrypted columns.
+
+    ```sql
+    SELECT
+    [name]
+    , [encryption_type]
+    , [encryption_type_desc]
+    , [encryption_algorithm_name]
+    , [column_encryption_key_id]
+    FROM sys.columns
+    WHERE [encryption_type] IS NOT NULL;
+    ```
+     
 # [PowerShell](#tab/powershell)
 
 1. Create a column master key in your key store.
@@ -285,11 +308,41 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     ```powershell
     # Encrypt the SSN and Salary columns 
     $ces = @()
-    $ces += New-SqlColumnEncryptionSettings -ColumnName "HR.Emeployees.SSN" -EncryptionType "Deterministic" -EncryptionKey $cekName
+    $ces += New-SqlColumnEncryptionSettings -ColumnName "HR.Employees.SSN" -EncryptionType "Deterministic" -EncryptionKey $cekName
     $ces += New-SqlColumnEncryptionSettings -ColumnName "HR.Employees.Salary" -EncryptionType "Randomized" -EncryptionKey $cekName
     Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -LogFileDirectory .
 
    ```
+
+1. (Optional) Explore the changes, you've made in your database.
+    1. Run the below commands to query system catalog views that contain metadata about the column master key and the column encryption key, you created.
+
+    ```powershell
+    $query = @'
+    SELECT * FROM sys.column_master_keys;
+    SELECT * FROM sys.column_encryption_keys
+    SELECT * FROM sys.column_encryption_key_values
+    '@
+
+    Invoke-SqlCmd -ConnectionString $connectionString -Query $query
+    ```
+
+    1. Run the below commands to query **sys.columns**  to retrieve column-level encryption metadata for the two encrypted columns.
+
+    ```powershell
+    $query = @'
+    1. You can also run the below queries against the system catalog views that contain key metadata.
+
+    ```sql
+    SELECT
+    [name]
+    , [encryption_type]
+    , [encryption_type_desc]
+    , [encryption_algorithm_name]
+    , [column_encryption_key_id]
+    FROM sys.columns
+    WHERE [encryption_type] IS NOT NULL;
+    ```
 
 ---
 

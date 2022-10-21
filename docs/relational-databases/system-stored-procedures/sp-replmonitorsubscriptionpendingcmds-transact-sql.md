@@ -1,6 +1,6 @@
 ---
 title: "sp_replmonitorsubscriptionpendingcmds (T-SQL)"
-description: Describes the sp_replmonitorsubscriptionpendingcmds stored procedure which returns information on the number of pending commands for a subscription to a transactional publication. 
+description: Describes the sp_replmonitorsubscriptionpendingcmds stored procedure that returns information on the number of pending commands for a subscription to a transactional publication. 
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -63,7 +63,8 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |**0**|Push subscription|  
 |**1**|Pull subscription|  
 
-[ @subdb_version = ] subdb_version is the dbversion of subscription database. _subdb_version_ is an optional parameter of type **int**, with default value of 0.
+`[ @subdb_version = ] subdb_version`
+ Is the dbversion of subscription database. _subdb_version_ is an optional parameter of type **int**, with default value of 0.
 
 
 ## Result Sets  
@@ -79,12 +80,12 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## Remarks  
  **sp_replmonitorsubscriptionpendingcmds** is used with transactional replication.
  
- sp_replmonitorsubscriptionpendingcmds is not compatible with peer-to-peer replication and returns the incorrect number of pending commands when used against peer-to-peer replication. Starting SQL 2019 CU 17, we are making sp_replmonitorsubscriptionpendingcmds compatible with peer-to-peer publications. 
+ Prior to SQL Server 2019 CU17, `sp_replmonitorsubscriptionpendingcmds` wasn't supported with peer-to-peer replication, and returned an incorrect number of pending commands when used to query peer-to-peer replication topology. In SQL Server 2019 CU 17, support was added to make `sp_replmonitorsubscriptionpendingcmds` compatible with peer-to-peer publications. 
+
  
-Even in SQL 2019 CU 17 or more recent editions, sp_replmonitorsubscriptionpendingcmds may report incorrect number of pending commands when used with peer-to-peer replication and if the table MSrepl_originators contains stale entries. To correct this, delete the stale entries from MSrepl_originators or pass the correct dbversion of subscription database as the subdb_version argument to sp_replmonitorsubscriptionpendingcmds. 
+However, even with SQL Server 2019 CU17 or later, `sp_replmonitorsubscriptionpendingcmds` could report an incorrect number of pending commands when used with peer-to-peer replication if the table `MSrepl_originators` contains a stale entry of an incorrect version of the subscription database. To correct the problem, either delete all the stale entries from `MSrepl_originators` or pass the correct dbversion of the subscription database when using the `subdb_version` argument for the `sp_replmonitorsubscriptionpendingcmds` stored procedure. 
 
-Please review [<KB article>](https://support.microsoft.com/en-us/topic/kb5017009-fix-sp-replmonitorsubscriptionpendingcmds-returns-incorrect-pending-commands-for-p2p-replication-a20ede99-fe59-40f2-a0a8-118c73088f44) for details on how to determine dbversion.
-
+See [KB5017009](https://support.microsoft.com/help/5017009) for details on how to determine `dbversion`.
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor or members of the **db_owner** fixed database role in the distribution database can execute **sp_replmonitorsubscriptionpendingcmds**. Members of the publication access list for a publication that uses the distribution database can execute **sp_replmonitorsubscriptionpendingcmds** to return pending commands for that publication.  

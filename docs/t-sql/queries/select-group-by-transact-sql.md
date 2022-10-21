@@ -262,7 +262,7 @@ GROUP BY CUBE (Country, Region);
 SQL does not consolidate duplicate groups generated for a GROUPING SETS list. For example, in `GROUP BY ( (), CUBE (Country, Region) )`, both elements return a row for the grand total and both rows will be listed in the results. 
 
  ### GROUP BY ()  
-Specifies the empty group which generates the grand total. This is useful as one of the elements of a GROUPING SET. For example, this statement gives the total sales for each country and then gives the grand-total for all countries.
+Specifies the empty group which generates the grand total. This is useful as one of the elements of a GROUPING SET. For example, this statement gives the total sales for each country/region and then gives the grand-total for all countries/regions.
 
 ```sql
 SELECT Country, SUM(Sales) AS TotalSales

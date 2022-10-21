@@ -216,7 +216,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     SELECT * FROM sys.column_encryption_key_values
     ```
 
-    1. In Object Explorer, right-click the **Employees** table and select **Script Table as** > **CREATE To** > **New Query Editor Window**. This will open a new query window with the **CREATE TABLE** statement for the **Employees** table. Note the **ENCRYPTED WITH** clauses that appears in the definitions of the **SSN** and **Salary** columns.
+    1. In Object Explorer, right-click the **Employees** table and select **Script Table as** > **CREATE To** > **New Query Editor Window**. This will open a new query window with the **CREATE TABLE** statement for the **Employees** table. Note the **ENCRYPTED WITH** clause that appears in the definitions of the **SSN** and **Salary** columns.
 
     1. You can also run the below query against **sys.columns** to retrieve column-level encryption metadata for the two encrypted columns.
 
@@ -331,9 +331,6 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 
     ```powershell
     $query = @'
-    1. You can also run the below queries against the system catalog views that contain key metadata.
-
-    ```sql
     SELECT
     [name]
     , [encryption_type]
@@ -342,6 +339,9 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     , [column_encryption_key_id]
     FROM sys.columns
     WHERE [encryption_type] IS NOT NULL;
+    '@
+
+    Invoke-SqlCmd -ConnectionString $connectionString -Query $query
     ```
 
 ---

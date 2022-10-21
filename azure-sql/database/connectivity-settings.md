@@ -129,6 +129,9 @@ Error 47072
 Login failed with invalid TLS version
 ```
 
+> [!NOTE]
+> When you configure a minimum TLS version, that minimum version is enforced at the application layer. Tools that attempt to determine TLS support at the protocol layer may return TLS versions in addition to the minimum required version when run directly against the SQL Database endpoint.
+
 ### [Portal](#tab/azure-portal)
 
 In the [Azure portal](https://portal.azure.com), go to your **SQL server** resource. Under the **Security** settings, select **Networking** and then choose the **Connectivity** tab. Select the **Minimum TLS Version** desired for all databases associated with the server, and select **Save**.

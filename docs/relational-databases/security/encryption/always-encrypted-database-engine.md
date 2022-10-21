@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Always Encrypted is a feature designed to protect sensitive data, such as credit card numbers or national identification numbers (for example, U.S. social security numbers), stored in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Azure SQL Managed Instance, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases. Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. This provides a separation between those who own the data and can view it, and those who manage the data but should have no access - on-premises database administrators, cloud database operators, or other high-privileged unauthorized users. As a result, Always Encrypted enables customers to confidently store their sensitive data in the cloud and to reduce the likelihood of data theft by their own malicious high-privileged users.
 
-Always Encrypted can be configured to support limited confidential queries on encrypted data - the queries that involve equality comparisons, for example: point lookup-searches or equality joins. This is achieved by leveraging deterministic encryption. See [Selecting Deterministic or Randomized Encryption](#selecting--deterministic-or-randomized-encryption).
+Always Encrypted can be configured to support limited confidential queries on encrypted data - the queries that involve equality comparisons, for example: point lookup-searches or equality joins. This is achieved by leveraging deterministic encryption (see below for more details)
 
 > [!NOTE]  
 > Secure enclaves extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. For more details, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
@@ -33,9 +33,11 @@ Always Encrypted makes encryption transparent to applications. An Always Encrypt
 
 ## Configure Always Encrypted
 
+This section provides an overview of setting up Always Encrypted. For details and to get started, see [Tutorial: Getting started with Always Encrypted](always-encrypted-tutorial-getting-started.md).
+
 To set up Always Encrypted in your database, you need to:
 
-1. Provision cryptographic keys to protect your data. Always Encrypted uses two types of keys:
+1. **Provision cryptographic keys to protect your data**. Always Encrypted uses two types of keys:
 
     - column encryption keys
     - column master keys
@@ -50,7 +52,9 @@ To set up Always Encrypted in your database, you need to:
       - The column master key metadata captures the location of teh column master key. 
       - The column encryption key metadata contains the encrypted value of the column encryption key. Note that the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] never stores or uses the keys of either type in plaintext.
 
-1. Configure encryption for selected database columns that contain sensitive data to be protected. This can involve creating new tables with encrypted columns or encrypting existing database columns and existing data. When setting up encryption for a column, you specify the information about an encryption algorithm, a column encryption key to protect the data in the column, and an encryption type. Always Encrypted supports two encryption types: 
+    For more information, [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
+
+1. **Configure encryption for selected database columns** that contain sensitive data to be protected. This can involve creating new tables with encrypted columns or encrypting existing database columns and existing data. When setting up encryption for a column, you specify the information about an encryption algorithm, a column encryption key to protect the data in the column, and an encryption type. Always Encrypted supports two encryption types: 
 
     - Deterministic encryption always generates the same encrypted value for a given plaintext value. Using deterministic encryption allows point lookups, equality joins, grouping and indexing on encrypted columns. However, it may also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column, especially if there's a small set of possible encrypted values, such as True/False, or North/South/East/West region. 
 
@@ -172,7 +176,7 @@ The following features don't work on encrypted columns:
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 - [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
 - [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md)
-- [CREATE TABLE (ENCRYPTED WITH)](../../../t-sql/statements/create-table-transact-sql?view=sql-server-ver16#encrypted-with.md)
+- [CREATE TABLE (ENCRYPTED WITH)](../../../t-sql/statements/create-table-transact-sql.md?#encrypted-with)
 
 ### System catalog views and stored procedures
 

@@ -424,7 +424,7 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
     ```
 
 > [!NOTE]
-> **Invoke-SqlCmd** doesn't support queries are required to filter by or insert data to encrypted columns. Such queries need to be parameterized, and Invoke-SqlCmd doesn't support parameterized queries.
+> **Invoke-SqlCmd** doesn't support queries that can filter by or insert data to encrypted columns. Such queries need to be parameterized, and **Invoke-SqlCmd** doesn't support parameterized queries.
 
 ---
 

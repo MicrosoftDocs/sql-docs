@@ -162,7 +162,7 @@ The following examples demonstrate filtering data based on encrypted values, and
 - All values printed by the program are in plaintext, since the driver transparently decrypts the data retrieved from the SSN and BirthDate columns.
 
 > [!NOTE]
-> Queries can perform equality comparisons on encrypted columns only if the encryption is deterministic. For more information, see [Configure Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#configure-always-encrypted).
+> Queries can perform equality comparisons on encrypted columns only if the encryption is [deterministic](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV:
 

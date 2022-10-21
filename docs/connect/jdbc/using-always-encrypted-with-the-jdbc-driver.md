@@ -660,7 +660,7 @@ The following example demonstrates filtering data based on encrypted values and 
 - All values printed by the program will be in plaintext, as the Microsoft JDBC Driver for SQL Server will transparently decrypt the data retrieved from the SSN and BirthDate columns.
 
 > [!NOTE]
-> if columns are encrypted with deterministic encryption, queries can perform equality comparisons on them. For more information, see [Configure Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#configure-always-encrypted).
+> if columns are encrypted with deterministic encryption, queries can perform equality comparisons on them. For more information, see [deterministic encryption](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ```java
 // <Insert keystore-specific code here>

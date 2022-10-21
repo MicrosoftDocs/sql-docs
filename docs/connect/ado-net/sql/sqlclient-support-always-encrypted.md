@@ -207,7 +207,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 >
 > - All values printed by the program will be in plaintext, as the **Microsoft .NET Data Provider for SQL Server** will transparently decrypt the data retrieved from the `SSN` and `BirthDate` columns.
 >
-> - Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see [Configure Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#configure-always-encrypted).
+> - Queries can perform equality comparisons on columns if they are encrypted using [deterministic] encryption](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ### Retrieving encrypted data example
 

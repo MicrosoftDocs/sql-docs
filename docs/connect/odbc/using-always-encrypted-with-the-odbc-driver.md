@@ -187,7 +187,7 @@ The following example demonstrates filtering data based on encrypted values, and
 - All values printed by the program will be in plaintext, since the driver will transparently decrypt the data retrieved from the SSN and BirthDate columns.
 
 > [!NOTE]
-> Queries can perform equality comparisons on encrypted columns only if the encryption is deterministic, or if the secure enclave is enabled. For more information, see [Configure Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#configure-always-encrypted).
+> Queries can perform equality comparisons on encrypted columns only if the encryption is [deterministic](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption), or if the secure enclave is enabled.
 
 ```cpp
 SQLCHAR SSN[12];

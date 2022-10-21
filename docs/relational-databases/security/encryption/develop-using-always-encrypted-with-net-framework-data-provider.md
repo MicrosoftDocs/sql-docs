@@ -22,7 +22,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Prerequisites
 
-- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](always-encrypted-tutorial-getting-started.md).
 - If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) for additional prerequisites.
 - Ensure .NET Framework version 4.6.1 or higher is installed on your development machine. For details, see [.NET Framework 4.6](/dotnet/framework/). You also need to ensure .NET Framework version 4.6 or higher is configured as the target .NET Framework version in your development environment. If you're using Visual Studio, please refer to [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
 
@@ -592,5 +592,4 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## See Also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

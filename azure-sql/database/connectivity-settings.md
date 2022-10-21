@@ -5,7 +5,7 @@ description: This article explains the Transport Layer Security (TLS) version ch
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 10/20/2022
+ms.date: 10/21/2022
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: how-to

@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-A SELECT statement clause that divides the query result into groups of rows, usually for the purpose of performing one or more aggregations on each group. The SELECT statement returns one row per group.
+A SELECT statement clause that divides the query result into groups of rows, usually by performing one or more aggregations on each group. The SELECT statement returns one row per group.
   
 ## Syntax  
 
@@ -262,7 +262,7 @@ GROUP BY CUBE (Country, Region);
 SQL does not consolidate duplicate groups generated for a GROUPING SETS list. For example, in `GROUP BY ( (), CUBE (Country, Region) )`, both elements return a row for the grand total and both rows will be listed in the results. 
 
  ### GROUP BY ()  
-Specifies the empty group which generates the grand total. This is useful as one of the elements of a GROUPING SET. For example, this statement gives the total sales for each country and then gives the grand-total for all countries.
+Specifies the empty group, which generates the grand total. This is useful as one of the elements of a GROUPING SET. For example, this statement gives the total sales for each country/region and then gives the grand-total for all countries/regions.
 
 ```sql
 SELECT Country, SUM(Sales) AS TotalSales
@@ -314,7 +314,7 @@ ORDER BY clause:
 - Use the ORDER BY clause to order the result set. The GROUP BY clause does not order the result set. 
   
 NULL values:
-- If a grouping column contains NULL values, all NULL values are considered equal and they are collected into a single group.   
+- If a grouping column contains NULL values, all NULL values are considered equal, and they are collected into a single group.   
   
 ## Limitations and Restrictions
 
@@ -330,7 +330,7 @@ For a GROUP BY clause that uses ROLLUP, CUBE, or GROUPING SETS, the maximum numb
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
--   The following example generates 4097 (2<sup>12</sup> + 1) groups and will fail. Both `CUBE ()` and the `()` grouping set produce a grand total row and duplicate grouping sets are not eliminated.  
+-   The following example generates 4097 (2<sup>12</sup> + 1) groups and will fail. Both `CUBE ()` and the `()` grouping set produce a grand total row and duplicate grouping sets aren't eliminated.  
   
     ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
@@ -342,17 +342,17 @@ For a GROUP BY clause that uses ROLLUP, CUBE, or GROUPING SETS, the maximum numb
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
-	For backwards compatible GROUP BY clauses that do not contain CUBE or ROLLUP, the number of group by items is limited by the GROUP BY column sizes, the aggregated columns, and the aggregate values involved in the query. This limit originates from the limit of 8,060 bytes on the intermediate worktable that is needed to hold intermediate query results. A maximum of 12 grouping expressions is permitted when CUBE or ROLLUP is specified.
+	For backwards compatible GROUP BY clauses that don't contain CUBE or ROLLUP, the number of group by items is limited by the GROUP BY column sizes, the aggregated columns, and the aggregate values involved in the query. This limit originates from the limit of 8,060 bytes on the intermediate worktable that is needed to hold intermediate query results. A maximum of 12 grouping expressions is permitted when CUBE or ROLLUP is specified.
 
 ### Support for ISO and ANSI SQL-2006 GROUP BY Features
 
 The GROUP BY clause supports all GROUP BY features that are included in the SQL-2006 standard with the following syntax exceptions:  
   
--   Grouping sets are not allowed in the GROUP BY clause unless they are part of an explicit GROUPING SETS list. For example, `GROUP BY Column1, (Column2, ...ColumnN`) is allowed in the standard but not in Transact-SQL.  Transact-SQL supports `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` and `GROUP BY Column1, Column2, ... ColumnN`, which are semantically equivalent. These are semantically equivalent to the previous `GROUP BY` example. This is to avoid the possibility that `GROUP BY Column1, (Column2, ...ColumnN`) might be misinterpreted as `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, which are not semantically equivalent.  
+-   Grouping sets aren't allowed in the GROUP BY clause unless they are part of an explicit GROUPING SETS list. For example, `GROUP BY Column1, (Column2, ...ColumnN`) is allowed in the standard but not in Transact-SQL.  Transact-SQL supports `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` and `GROUP BY Column1, Column2, ... ColumnN`, which are semantically equivalent. These are semantically equivalent to the previous `GROUP BY` example. This is to avoid the possibility that `GROUP BY Column1, (Column2, ...ColumnN`) might be misinterpreted as `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, which aren't semantically equivalent.  
   
--   Grouping sets are not allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
+-   Grouping sets aren't allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
   
--   GROUP BY [ALL/DISTINCT] is only allowed in a simple GROUP BY clause that contains column expressions. It is not allowed with the GROUPING SETS, ROLLUP, CUBE, WITH CUBE or WITH ROLLUP constructs. ALL is the default and is implicit. It is also only allowed in the backwards compatible syntax.
+-   GROUP BY [ALL/DISTINCT] is only allowed in a simple GROUP BY clause that contains column expressions. It isn't allowed with the GROUPING SETS, ROLLUP, CUBE, WITH CUBE or WITH ROLLUP constructs. ALL is the default and is implicit. It is also only allowed in the backwards compatible syntax.
   
 ### Comparison of Supported GROUP BY Features  
  The following table describes the GROUP BY features that are supported based upon SQL versions and database compatibility level.  

@@ -50,15 +50,12 @@ Always Encrypted uses one of the two enclave technologies, depending on the envi
 
 Enclave attestation is a workflow that allows a client application to establish trust with a secure enclave for the database, the application is connected to, before sharing cryptographic keys and using the enclave for processing sensitive data. The attestation workflow verifies the enclave is a genuine VBS or Intel SGX enclave and the code running inside it is the genuine Microsoft-signed enclave library for Always Encrypted. Enclave attestation can help detect attacks that involve tampering with the enclave code or it's environment by malicious administrators.
 
-To attest the enclave, both a client driver within the application and [!INCLUDE[ssde-md](../../../includes/ssde-md.md)], the application is connected to, communicate with an external attestation service using a client-specified endpoint. 
+To attest the enclave, both the client driver within the application and the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)], the application is connected to, communicate with an external attestation service using a client-specified endpoint. 
 
 A valid attestation service depends on the enclave type and your database environment:
 
 - VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] require [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) using Host Guardian Service (HGS) as an attestation service. See [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md) for more information.
 - Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (DC-series databases) require [Microsoft Azure Attestation](/azure/attestation/overview). See [Plan for Intel SGX enclaves and attestation in Azure SQL Database](../../../../azure-sql/database/always-encrypted-enclaves-plan.md) for more information.
-
-> [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later does not support Microsoft Azure Attestation. Host Guardian Service is the only attestation solution supported for VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later.
 
 ## Supported client drivers
 
@@ -106,7 +103,7 @@ Confidential queries are [DML queries](../../../t-sql/queries/queries.md) that i
 
 The operations supported inside the secure enclaves are:
 
-| Operation| [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | 
+| Operation| [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)] | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | 
 |:---|:---|:---| :---|
 | [Comparison Operators](../../../mdx/comparison-operators.md) | Supported | Supported | Supported |
 | [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md) | Supported | Supported | Supported |
@@ -118,7 +115,7 @@ The operations supported inside the secure enclaves are:
 | [SELECT - GROUP BY- Transact-SQL](../../../t-sql/queries/select-group-by-transact-sql.md) | Supported | Supported | Not supported |
 
 > [!NOTE]
-> The above operations are supported on enclave-enabled columns that use randomized encryption. Deterministic encryption is not supported.
+> The above operations inside secure enclaves require randomized encryption. Deterministic encryption is not supported. Equality comparison remains the operation available for columns using deterministic encryption.
 
 > [!NOTE]
 > In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 

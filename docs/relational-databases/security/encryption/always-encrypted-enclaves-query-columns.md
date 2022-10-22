@@ -47,8 +47,9 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
 
 > [!NOTE]
 > Operations on indexes and confidential DML queries using enclaves are only supported on enclave-enabled columns that use randomized encryption. Deterministic encryption is not supported.
->
-> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or later, confidential queries using enclaves on character string columns (`char`, `nchar`) require a binary2 sort order (BIN2) collation configured for the column. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], using BIN2 or UTF-8 collations is required.
+
+> [!NOTE]
+> In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 
 
 ### DBCC commands using secure enclaves
 

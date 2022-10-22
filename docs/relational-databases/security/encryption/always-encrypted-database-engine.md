@@ -58,9 +58,9 @@ To set up Always Encrypted in your database, you need to:
 
 1. **Configure encryption for selected database columns** that contain sensitive data to be protected. This can involve creating new tables with encrypted columns or encrypting existing database columns and existing data. When setting up encryption for a column, you specify the information about an encryption algorithm, a column encryption key to protect the data in the column, and an encryption type. Always Encrypted supports two encryption types: 
 
-    - Deterministic encryption always generates the same encrypted value for a given plaintext value. Using deterministic encryption allows point lookups, equality joins, grouping and indexing on encrypted columns. However, it may also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column, especially if there's a small set of possible encrypted values, such as True/False, or North/South/East/West region. 
+    - **Deterministic encryption** always generates the same encrypted value for a given plaintext value. Using deterministic encryption allows point lookups, equality joins, grouping and indexing on encrypted columns. However, it may also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column, especially if there's a small set of possible encrypted values, such as True/False, or North/South/East/West region. 
 
-    - Randomized encryption uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents searching, grouping, indexing, and joining on encrypted columns.
+    - **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents searching, grouping, indexing, and joining on encrypted columns.
 
     Use deterministic encryption for columns that will be used as search or grouping parameters. For example, a government ID number. Use randomized encryption for data such as confidential investigation comments, which aren't grouped with other records and aren't used to join tables.
 For details on Always Encrypted cryptographic algorithms, see [Always Encrypted cryptography](../../../relational-databases/security/encryption/always-encrypted-cryptography.md).

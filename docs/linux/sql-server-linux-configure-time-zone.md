@@ -266,7 +266,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Beirut                              | Middle East Standard Time                |
 | Asia/Bishkek                             | Central Asia Standard Time               |
 | Asia/Brunei                              | Singapore Standard Time                  |
-| Asia/Calcutta                            | India Standard Time                      |
+| Asia/Kolkata                             | India Standard Time                      |
 | Asia/Chita                               | Transbaikal Standard Time                |
 | Asia/Choibalsan                          | Ulaanbaatar Standard Time                |
 | Asia/Colombo                             | Sri Lanka Standard Time                  |
@@ -336,7 +336,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Atlantic/Azores                          | Azores Standard Time                     |
 | Atlantic/Bermuda                         | Atlantic Standard Time                   |
 | Atlantic/Canary                          | GMT Standard Time                        |
-| Atlantic/Cape_Verde                      | Cape Verde Standard Time                 |
+| Atlantic/Cabo_Verde                      | Cabo Verde Standard Time                 |
 | Atlantic/Faeroe                          | GMT Standard Time                        |
 | Atlantic/Madeira                         | GMT Standard Time                        |
 | Atlantic/Reykjavik                       | Greenwich Standard Time                  |
@@ -358,7 +358,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | CST6CDT                                  | Central Standard Time                    |
 | EST5EDT                                  | Eastern Standard Time                    |
 | Etc/GMT                                  | UTC                                      |
-| Etc/GMT+1                                | Cape Verde Standard Time                 |
+| Etc/GMT+1                                | Cabo Verde Standard Time                 |
 | Etc/GMT+10                               | Hawaiian Standard Time                   |
 | Etc/GMT+11                               | UTC-11                                   |
 | Etc/GMT+12                               | Dateline Standard Time                   |
@@ -730,7 +730,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Beirut                              | Middle East Standard Time                |
 | Asia/Bishkek                             | Central Asia Standard Time               |
 | Asia/Brunei                              | Singapore Standard Time                  |
-| Asia/Calcutta                            | India Standard Time                      |
+| Asia/Kolkatav                            | India Standard Time                      |
 | Asia/Chita                               | Transbaikal Standard Time                |
 | Asia/Choibalsan                          | Ulaanbaatar Standard Time                |
 | Asia/Colombo                             | Sri Lanka Standard Time                  |
@@ -798,7 +798,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Atlantic/Azores                          | Azores Standard Time                     |
 | Atlantic/Bermuda                         | Atlantic Standard Time                   |
 | Atlantic/Canary                          | GMT Standard Time                        |
-| Atlantic/Cape_Verde                      | Cape Verde Standard Time                 |
+| Atlantic/Cabo_Verde                      | Cabo Verde Standard Time                 |
 | Atlantic/Faeroe                          | GMT Standard Time                        |
 | Atlantic/Madeira                         | GMT Standard Time                        |
 | Atlantic/Reykjavik                       | Greenwich Standard Time                  |
@@ -820,7 +820,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | CST6CDT                                  | Central Standard Time                    |
 | EST5EDT                                  | Eastern Standard Time                    |
 | Etc/GMT                                  | UTC                                      |
-| Etc/GMT+1                                | Cape Verde Standard Time                 |
+| Etc/GMT+1                                | Cabo Verde Standard Time                 |
 | Etc/GMT+10                               | Hawaiian Standard Time                   |
 | Etc/GMT+11                               | UTC-11                                   |
 | Etc/GMT+12                               | Dateline Standard Time                   |

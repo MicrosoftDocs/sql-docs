@@ -104,12 +104,16 @@ You can also query encrypted columns using SQL tools, for example [Azure Data St
 
 The following limitations apply to queries on encrypted columns:
 
-- Queries can perform equality comparison on columns encrypted using deterministic encryption, but no other operations (for example, greater/less than, pattern matching using the LIKE operator, or arithmetical operations). Deterministic encryption requires a column to have one of the [binary-code point (_BIN2) collations](../../../relational-databases/collations/collation-and-unicode-support.md).
+- Deterministic encryption supports the following operations involving equality comparisons - no other operations are allowed.
+  - [= (Equals)](../../../t-sql/language-elements/equals-transact-sql.md) in point lookup searches.
+  - [IN](../../../t-sql/language-elements/in-transact-sql.md).
+  - [SELECT - GROUP BY](../../../t-sql/queries/select-group-by-transact-sql.md).
+  - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select).
 
-- No computations on on column encrypted using randomized encryption are allowed. 
+- No computations on columns encrypted using randomized encryption are allowed. 
 
-    > [!NOTE]  
-    > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) relaxes the above restriction by allowing pattern matching, comparison operators, sorting, and indexing on columns using randomized encryption. Such operations are allowed on string columns using both _BIN2 and UTF-8 collations.
+  > [!NOTE]  
+  > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) relaxes the above restriction by allowing pattern matching, comparison operators, sorting, and indexing on columns using randomized encryption.
 
 - Query statements that trigger computations involving both plaintext and encrypted data are not allowed. For example:
 
@@ -124,13 +128,16 @@ The following limitations apply to queries on encrypted columns:
         Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
     ```
 
-- Applications must use parameterized queries to insert data to encrypted columns or filter by encrypted columns. Inserting or filtering by literals is not supported. To issue such queries in SQL tools you need to use Parameterization for Always Encrypted available in [Azure Data Studio](always-encrypted-query-columns-ads.md#parameterization-for-always-encrypted) and [SSMS](always-encrypted-query-columns-ssms.md#param).
+- Applications must use query parameters to pass values that correspond to encrypted columns, for example when inserting data to encrypted columns or filtering by encrypted columns (when using deterministic encryption). Passing literals or Transact-SQL variables corresponding to encrypted columns is not supported. For more information specific to a client driver you're using, see [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
+- You must use Parameterization for Always Encrypted available in [Azure Data Studio](always-encrypted-query-columns-ads.md#parameterization-for-always-encrypted) or [SSMS](always-encrypted-query-columns-ssms.md#param) to issue queries that pass values corresponding to encrypted columns in these tools, for example when inserting data to encrypted columns or filtering by encrypted columns (when using deterministic encryption). 
+
+- [Table-valued parameters](../../tables/use-table-valued-parameters-database-engine.md) targeting encrypted columns aren't supported.
+ 
 - Queries using the following clauses are not supported:
 
   - [FOR XML (SQL Server)](../../xml/for-xml-sql-server.md)
   - [FOR JSON (SQL Server)](../../json/format-query-results-as-json-with-for-json-sql-server.md)
-
 
 - After changing the definition of an encrypted column, execute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the Always Encrypted metadata for the object.
 
@@ -141,7 +148,7 @@ Always Encrypted isn't supported for the columns with the below characteristics:
 - [FILESTREAM](../../../t-sql/statements/create-table-transact-sql.md#filestream) columns
 - Columns with the [IDENTITY](../../../t-sql/statements/create-table-transact-sql.md#identity) property.
 - Columns with [ROWGUIDCOL](../../../t-sql/statements/create-table-transact-sql.md#rowguidcol) property.
-- String (**varchar**, **char**, etc.) columns with collations other than _BIN2 when using deterministic encryption.
+- String (**varchar**, **char**, etc.) columns with collations other than [binary-code point (_BIN2) collations](../../../relational-databases/collations/collation-and-unicode-support.md) when using deterministic encryption.
 - Columns that are keys for clustered and nonclustered indices when using randomized encryption (indices on columns using deterministic encryption are supported).
 - Columns included in full-text indexes (Always Encrypted does not support [Full Text Search](../../../relational-databases/search/full-text-search.md)).
 - [Computed columns](../../tables/specify-computed-columns-in-a-table.md).
@@ -163,13 +170,13 @@ Always Encrypted isn't supported for the columns with the below characteristics:
   > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../../includes/ssnotedepfutureavoid-md.md)]
 
 - Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported).
-- Table-valued parameters targeting encrypted columns aren't supported.
+
 
 The following features don't work on encrypted columns:
 
-- [SQL Server Replication](../../replication/sql-server-replication.md) (transactional, merge, or snapshot replication). Physical replication features, including [Always](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md), are supported.
+- [SQL Server replication](../../replication/sql-server-replication.md) (transactional, merge, or snapshot replication). Physical replication features, including [Always](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md), are supported.
 - Distributed queries ([linked servers](../../linked-servers/linked-servers-database-engine.md), [OPENROWSET (Transact-SQL)](../../../t-sql/functions/openrowset-transact-sql.md), [OPENDATASOURCE (Transact-SQL)](../../../t-sql/functions/opendatasource-transact-sql.md)).
-- [Cross-Database Queries](../../in-memory-oltp/cross-database-queries.md) that perform joins on columns (using deterministic encryption) from different databases.
+- [Cross-database queries](../../in-memory-oltp/cross-database-queries.md) that perform joins on columns (using deterministic encryption) from different databases.
 
 
 ## Always Encrypted Transact-SQL reference
@@ -216,11 +223,11 @@ The following table summarizes the permissions required for common actions.
 
 Important considerations:
 
-- The two *VIEW* permissions are required when selecting encrypted columns, even if the user doesn't have permission to column master keys (in their key stores), protecting the columns and doesn't access plaintext attempt.
+- The two **VIEW** permissions are required when selecting encrypted columns, even if the user doesn't have permission to column master keys (in their key stores), protecting the columns and doesn't access plaintext attempt.
 
-- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], both *VIEW* permissions are granted by default to the **public** fixed database role. A database administrator may choose to revoke (or deny) the *VIEW* permissions to the **public** role and grant them to specific roles or users to implement more restricted control.
+- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], both **VIEW** permissions are granted by default to the **public** fixed database role. A database administrator may choose to revoke (or deny) the **VIEW** permissions to the **public** role and grant them to specific roles or users to implement more restricted control.
 
-- In [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], the *VIEW* permissions aren't granted by default to the **public** fixed database role. This enables certain existing, legacy tools (using older versions of DacFx) to work properly. Consequently, to work with encrypted columns (even if not decrypting them) a database administrator must explicitly grant the two *VIEW* permissions.
+- In [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], the **VIEW** permissions aren't granted by default to the **public** fixed database role. This enables certain existing, legacy tools (using older versions of DacFx) to work properly. Consequently, to work with encrypted columns (even if not decrypting them) a database administrator must explicitly grant the two **VIEW** permissions.
 
 
 ## Next steps

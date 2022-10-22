@@ -25,7 +25,7 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 - Optional, but recommended for storing your column mater key for Always Encrypted: a key vault in Azure Key Vault. For information on how to create a key vault, see [Quickstart: Create a key vault using the Azure portal](https://learn.microsoft.com/azure/key-vault/general/quick-create-portal). 
   - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: get, list, create, unwrap key, wrap key, verify, sign. See [Assign a Key Vault access policy](https://learn.microsoft.com/azure/key-vault/general/assign-access-policy).
   - If you're using the Azure role-based access control (RBAC) permission model, make you sure you are a member of the [Key Vault Crypto Officer](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](https://learn.microsoft.com/azure/key-vault/general/rbac-migration).
-- The latest version of [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
+- [Download SQL Server Management Studio (SSMS)](../../docs/ssms/download-sql-server-management-studio-ssms.md)
 
 ### PowerShell requirements
 

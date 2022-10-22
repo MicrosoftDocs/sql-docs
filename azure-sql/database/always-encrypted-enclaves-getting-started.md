@@ -22,8 +22,10 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 ## Prerequisites
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/). You need to be a member of the Contributor role or the Owner role for the subscription to be able to create resources and configure an attestation policy.
-
-- SQL Server Management Studio (SSMS), version 18.9.1 or later. See [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) for information on how to download SSMS.
+- Optional, but recommended for storing your column mater key for Always Encrypted: a key vault in Azure Key Vault. For information on how to create a key vault, see [Quickstart: Create a key vault using the Azure portal](https://learn.microsoft.com/azure/key-vault/general/quick-create-portal). 
+  - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: get, list, create, unwrap key, wrap key, verify, sign. See [Assign a Key Vault access policy](https://learn.microsoft.com/azure/key-vault/general/assign-access-policy).
+  - If you're using the Azure role-based access control (RBAC) permission model, make you sure you are a member of the [Key Vault Crypto Officer](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](https://learn.microsoft.com/azure/key-vault/general/rbac-migration).
+- The latest version of [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
 ### PowerShell requirements
 
@@ -283,7 +285,7 @@ In this step, you'll create a table and populate it with some data that you'll l
     3. Select the **Always Encrypted** tab.
     4. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
-        :::image type="content" source="./media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png" alt-text="Connect without Always Encrypted":::
+        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-disabled.png" alt-text="Connect without Always Encrypted":::
 
     5. Click **Connect**.
 
@@ -338,13 +340,12 @@ In this step, you'll create a column master key and a column encryption key that
 1. Provision a new enclave-enabled column master key:
     1. Right-click **Always Encrypted Keys** and select **New Column Master Key...**.
     2. Select your column master key name: **CMK1**.
-    3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
-    4. Select **Allow enclave computations**.
-    5. If you selected Azure Key Vault, sign into Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal).
-    6. Select your certificate or Azure Key Value key if it already exists, or click the **Generate Certificate** button to create a new one.
-    7. Select **OK**.
-
-        :::image type="content" source="./media/always-encrypted-enclaves/allow-enclave-computations.png" alt-text="Allow enclave computations":::
+    3. Verify **Allow enclave computations** is selected. (It is selected by default if a secure enclave is enabled for the database - it should be enabled since your database uses the DC-series hardware configuration.)
+    4. Select either **Azure Key Vault** (recommended) or **Windows Certificate Store** (**Current User** or **Local Machine**).
+        1. If you selected Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Click **Generate Key** to create a new key.
+        1. If you select Windows Certificate Store, click the **Generate Certificate** button to create a new certificate.
+        :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Allow enclave computations":::
+    5. Select **OK**.
 
 1. Create a new enclave-enabled column encryption key:
 
@@ -362,13 +363,15 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     2. In the **Connect to Server** dialog, specify the fully qualified name of your server (for example, *myserver135.database.windows.net*), and enter the administrator user name and the password you specified when you created the server.
     3. Click **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, master database). 
     4. Select the **Always Encrypted** tab.
-    5. Make sure the **Enable Always Encrypted (column encryption)** checkbox **is** selected.
-    6. Specify your enclave attestation URL that you've obtained by following the steps in [Step 2: Configure an attestation provider](#step-2-configure-an-attestation-provider). See the below screenshot.
+    5. Select the **Enable Always Encrypted (column encryption)** checkbox.
+    6. Select **Enable secure enclaves**. (This step applies to SSMS 19 or later.)
+    7. Set **Protocol** to **Microsoft Azure Attestation**. (This step applies to SSMS 19 or later.)
+    8. Specify your enclave attestation URL that you've obtained by following the steps in [Step 2: Configure an attestation provider](#step-2-configure-an-attestation-provider). See the below screenshot.
 
-        :::image type="content" source="./media/always-encrypted-enclaves/connect-to-server-configure-attestation.png" alt-text="Connect with attestation":::
+        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-maa.png" alt-text="Connect with attestation":::
 
-    7. Select **Connect**.
-    8. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
+    9. Select **Connect**.
+    10. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
 
 1. Using the same SSMS instance (with Always Encrypted enabled), open a new query window and encrypt the **SSN** and **Salary** columns by running the below statements.
 

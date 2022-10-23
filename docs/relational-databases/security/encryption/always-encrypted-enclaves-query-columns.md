@@ -78,16 +78,20 @@ Minimum version requirements for SQL Server Management Studio:
 - SSMS 18.3 when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 - SSMS 18.8 when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
-Make sure you run your statements from a query window that uses a connection that has Always Encrypted and the correct attestation URL configured.
+Make sure you run your statements from a query window that uses a connection that has Always Encrypted and attestation parameters correctly configured.
 
 1. In the **Connect to Server** dialog, specify your server name, select an authentication method, and specify your credentials.
-2. Click **Options >>** and select the **Always Encrypted** tab.
-3. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
+2. Click **Options >>** and select the **Connection Properties** tab. Specify your database name.
+3. Select the **Always Encrypted** tab.
+4. Select **Enable Always Encrypted (column encryption)**.
+5. (This step applies to SSMS 19 or later.) Select **Enable secure enclaves**.
+6. (This step applies to SSMS 19 or later.) Set **Protocol** to **Host Guardian Service** (if you're using  [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]) or **Microsoft Azure Attestation** (if you're using a DC-series database with Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]). 
+7. Specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
 
-    ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/column-encryption-setting.png)
+    ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/ssms-connect-maa.png)
 
-4. Select **Connect**.
-5. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable** if you plan to run parameterized DML queries. For more information, see [Parameterization for Always Encrypted](always-encrypted-query-columns-ssms.md#param).
+8. Select **Connect**.
+9. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
 
 For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ssms.md#en-dis).
 

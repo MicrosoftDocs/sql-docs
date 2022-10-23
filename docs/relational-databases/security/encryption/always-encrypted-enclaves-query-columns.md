@@ -104,8 +104,8 @@ Make sure you run your statements from a query window that uses a connection tha
 1. In the **Connection** dialog, click **Advanced...**.
 2. To enable Always Encrypted for the connection, set the **Always Encrypted** field to **Enabled**.
 3. Specify the attestation protocol and the attestation URL.
-    - If you're using [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
-    - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
+    - If you're using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
+    - If you're using if you're using a DC-series database with Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
 
     ![Connect to server with attestation using Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
 

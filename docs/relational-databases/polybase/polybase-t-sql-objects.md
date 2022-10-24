@@ -471,12 +471,12 @@ Then, create a database scoped credential. `IDENTITY` is the user name to authen
 
 Create the external data source to Oracle data source. 
 
-- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `oracle://servername` or `oracle://servername:port`. Availed options for `LOCATION` prefixes may differ in different versions of Oracle. Please refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `oracle://servername` or `oracle://servername:port`. Options for `LOCATION` prefixes may differ in different versions of Oracle. Refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 - PUSHDOWN is ON by default for PolyBase in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. Specify whether computation should be pushed down to the source.
 - CONNECTION_OPTIONS such as impersonate user for curtailing user access
 - CREDENTIAL is the database scoped credential name created in the previous step.
 
-```sql 
+```sql
    -- LOCATION: Location string should be of format `<vendor>://<server>[:<port>]`.
    -- PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
    -- CREDENTIAL: the database scoped credential, created in the previous step.

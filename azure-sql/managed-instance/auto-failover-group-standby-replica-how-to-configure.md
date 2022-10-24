@@ -20,7 +20,7 @@ The ability to designate your instance as standby is currently in preview.
 
 ## Overview
 
-If your secondary SQL Managed Instance is used as a standby for disaster recovery (DR) and does not have any read-workloads or applications connected to it, you can save on licensing costs by designating the replica as **Standby**. When a secondary instance is designated as a standby instance, Microsoft provides you with a number of vCores that matches the number of vCores licensed to the primary instance, at no extra charge under the failover rights benefit provided by the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You are still billed for the compute and storage used by the secondary instance. 
+If your secondary SQL Managed Instance is used as a standby for disaster recovery (DR) and doesn't have any read-workloads or applications connected to it, you can save on licensing costs by designating the replica as **Standby**. When a secondary instance is designated as a standby instance, Microsoft provides you with a number of vCores that matches the number of vCores licensed to the primary instance, at no extra charge under the failover rights benefit provided by the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage used by the secondary instance. 
 
 Auto-failover groups for SQL Managed Instance support only one replica - the replica must either be a readable replica, or designated as a standby replica. 
 
@@ -29,11 +29,11 @@ Auto-failover groups for SQL Managed Instance support only one replica - the rep
 
 For replicas designated as standby, Microsoft provides you the same number of vCores as the primary instance without charging you SQL Server licensing costs for those vCores. 
 
-The benefit translates differently between customers using the pay-as-you-go model vs. customers using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md). Pay-as-you-go customers receive an equal number of vCores as the primary instance for free which are then discounted from their invoice, while customers using the AHB have an equal number of vCores as the primary instance uses returned to their licensing pool. 
+The benefit translates differently between customers using the pay-as-you-go model vs. customers using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md). Pay-as-you-go customers receive an equal number of vCores as the primary instance for free that are then discounted from their invoice, while customers using the AHB have an equal number of vCores as the primary instance uses returned to their licensing pool. 
 
-For example, as a pay-as-you go customer, if you have 16 vCores assigned to the primary instance, you will see a discount for 16 vCores from your invoice when you designate your secondary instance as standby only. Alternatively, if you have 16 AHB licenses, and you deploy two managed instances to a failover group with 8 vCores each, you will get an extra 8 vCores for free in your license pool to use with other Azure SQL deployments. 
+For example, as a pay-as-you go customer, if you have 16 vCores assigned to the primary instance, you'll see a discount for 16 vCores from your invoice when you designate your secondary instance as standby only. Alternatively, if you have 16 AHB licenses, and you deploy two managed instances to a failover group with 8 vCores each, you'll get an extra 8 vCores for free in your license pool to use with other Azure SQL deployments. 
 
-However, if you have only have 8 AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration will not be charged for the vCores used by the secondary instance and will also see 8 vCores subtracted from their invoice. 
+However, if you have only have eight AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration won't be charged for the vCores used by the secondary instance and will also see 8 vCores subtracted from their invoice. 
 
 
 ## Functional capabilities 
@@ -43,13 +43,13 @@ The following table describes the functional capabilities of a standby secondary
 
 |Functionality  |Description  |
 |---------|---------|
-|Limited read-workloads     | Once you designate your instance as standby, you are able to run only a limited number read-workloads on the secondary instance, such as DMVs, backups, and DBCC commands.      |
-|Planned failover | All planned failover scenarios including recovery drills, relocating databases to different regions, and returning databases to the primary are supported by the standby replica. When the secondary switches to the primary, it can then serve read and write queries, while the old primary / new secondary becomes the standby replica and should not be used for read workloads.     |
-|Unplanned failover | During an unplanned failover, once the secondary switches to the primary role, it can serve both read and write queries. After the outage is mitigated and the old primary reconnects, it becomes the new secondary standby replica and should not be used for read workloads.   |
-|Backup / restore| There is no difference in backup and restore behavior between a standby replica and a readable secondary managed instance.         |
+|Limited read-workloads     | Once you designate your instance as standby, you're able to run only a limited number read-workloads on the secondary instance, such as DMVs, backups, and DBCC commands.      |
+|Planned failover | All planned failover scenarios including recovery drills, relocating databases to different regions, and returning databases to the primary are supported by the standby replica. When the secondary switches to the primary, it can then serve read and write queries, while the old primary / new secondary becomes the standby replica and shouldn't be used for read workloads.     |
+|Unplanned failover | During an unplanned failover, once the secondary switches to the primary role, it can serve both read and write queries. After the outage is mitigated and the old primary reconnects, it becomes the new secondary standby replica, and shouldn't be used for read workloads.   |
+|Backup / restore| There's no difference in backup and restore behavior between a standby replica and a readable secondary managed instance.         |
 |Monitoring     | All monitoring operations that are supported by a readable secondary replica are supported by the standby replica.         |
 |RPO & RTO| The standby replica provides the same RPO and RTO as a readable secondary replica.          |
-|Removing failover group  | If the failover group is removed (using something like [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup)), the standby replica becomes a read-write standalone instance and will now be charged the license price.      |
+|Removing failover group  | If the failover group is removed (using something like [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup)), the standby replica becomes a read-write standalone instance, and will now be charged the license price.      |
 
 ## Configure standby replica 
 
@@ -59,7 +59,7 @@ You can designate your secondary instance as standby when you create your auto-f
 
 You can designate your secondary instance as a standby replica when you create a new failover group by using the Azure portal. 
 
-When you are creating your failover group in the Azure portal, set **Failover rights** to *On*, and then check the box next to *I confirm that I will use the secondary instance as a standby replica.*. 
+When you're creating your failover group in the Azure portal, set **Failover rights** to *On*, and then check the box next to *I confirm that I will use the secondary instance as a standby replica.*. Select **Create** to create your failover group. 
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/new-failover-group.png" alt-text="Screenshot of the Azure portal, creating a new failover group page, with the Failover rights option highlighted. ":::
 
@@ -90,7 +90,7 @@ From the **Failover groups** page, the **Failover rights** status should be *ON*
 
 The default license model indicates the licensing model the instance will go back to using if the failover group fails over and the current secondary instance becomes the new primary instance. You may incur charges upon failover, depending on the default license model. 
 
-From the **Compute and storage** page of your *secondary managed instance*, confirm that the **Failover rights** license is activated, and view the failover discount you're currently receiving for that instance under **Cost summary**: 
+From the **Compute + storage** page of your *secondary managed instance*, confirm that the **Failover rights** license is activated, and view the failover discount you're currently receiving for that instance under **Cost summary**: 
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot of the Azure portal, Compute and storage page, with failover rights highlighted.":::
 

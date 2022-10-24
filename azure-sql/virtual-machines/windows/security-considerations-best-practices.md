@@ -104,6 +104,12 @@ Using Azure AD authentication with SQL Server on Azure VMs has the following pre
 - Register SQL VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md). 
 - The identity you choose to authenticate to SQL Server has either the **Azure AD Directory Readers role** permission or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
 
+Consider the following limitations
+
+- Once Azure AD authentication is enabled, there is no way to disable it by using the Azure portal. 
+- Currently, enabling Azure AD authentication is possible through the Azure portal. 
+- SQL Server on Azure VMs supports only one Azure AD identity - either one system-managed identity, or one user-managed identity. 
+
 
 ## Azure Advisor 
        

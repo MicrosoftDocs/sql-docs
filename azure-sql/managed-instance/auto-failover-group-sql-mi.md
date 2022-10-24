@@ -172,7 +172,7 @@ The DNS update of the read-write listener will happen immediately after the fail
 
 ## Save costs with a license-free DR replica
 
-You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To set this up, see [Configure free DR replica](auto-failover-group-dr-only-replica-how-to-configure.md). 
+You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To set this up, see [Configure free DR replica](auto-failover-group-standby-replica-how-to-configure.md). 
 
 As long as the secondary instance is not used for read-workloads, Microsoft provides you with a free number of vCores to match the primary instance. You're still charged for compute and storage used by the secondary instance. Auto-failover groups support only one replica - the replica must either be a readable replica, or designated as a DR-only replica. 
 
@@ -308,7 +308,7 @@ Auto-failover groups can also be managed programmatically using Azure PowerShell
 
 - For instructions to configure a failover group, review the [how to guide](auto-failover-group-configure-sql-mi.md) or the detailed [tutorial](failover-group-add-instance-tutorial.md). 
 - For a sample script, review: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md)
-- To learn how to save on licensing costs, see [Configure DR-only replica](auto-failover-group-dr-only-replica-how-to-configure.md). 
+- To learn how to save on licensing costs, see [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
 - For a business continuity overview and scenarios, review [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
 - To learn about automated backups, review [SQL Database automated backups](../database/automated-backups-overview.md).
 - To learn about using automated backups for recovery, review [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).

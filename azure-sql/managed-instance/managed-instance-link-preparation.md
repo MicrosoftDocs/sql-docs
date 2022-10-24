@@ -1,5 +1,5 @@
 ---
-title: Prepare environment for Managed Instance link
+title: Prepare environment for Azure SQL Managed Instance link
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
 author: sasapopo
@@ -14,7 +14,7 @@ ms.topic: guide
 # Prepare your environment for a link - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to prepare your environment for a [Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
+This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
 > The link is a feature of Azure SQL Managed Instance and is currently in preview. 

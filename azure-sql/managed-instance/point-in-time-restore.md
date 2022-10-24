@@ -23,6 +23,11 @@ Point-in-time restore can restore a database:
 - from an existing database.
 - from a deleted database.
 - to the same SQL Managed Instance, or to another SQL Managed Instance. 
+- to an instance in a different subscription from the source instance. 
+
+> [!NOTE]
+> The [Create or Update v02.01.2022](/rest/api/sql/2022-02-01-preview/managed-databases/create-or-update) is being deprecated. Starting with January 2022, use the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) replacement API call for all database restore operations. 
+
 
 ## Limitations
 
@@ -34,13 +39,15 @@ Point-in-time restore to SQL Managed Instance has the following limitations:
 > [!WARNING]
 > Be aware of the storage size of your SQL Managed Instance. Depending on size of the data to be restored, you might run out of instance storage. If there isn't enough space for the restored data, use a different approach.
 
-The following table shows point-in-time restore scenarios for SQL Managed Instance:
+The following table shows point-in-time restore scenarios for SQL Managed Instance: 
 
-|           |Restore existing DB to the same instance of SQL Managed Instance| Restore existing DB to another SQL Managed Instance|Restore dropped DB to same SQL Managed Instance|Restore dropped DB to another SQL Managed Instance|
-|:----------|:----------|:----------|:----------|:----------|
-|**Azure portal**| Yes|Yes|Yes|Yes|
-|**Azure CLI**|Yes |Yes |No|No|
-|**PowerShell**| Yes|Yes |Yes|Yes|
+| **Scenario** | **Azure Portal** | **Azure CLI** | **PowerShell** | 
+|:----------|:----------|:----------|:----------|
+|Restore existing DB to the same instance of SQL Managed Instance| Yes | Yes | Yes| 
+|Restore existing DB to another SQL Managed Instance| Yes |  Yes | Yes | 
+|Restore dropped DB to same SQL Managed Instance| Yes | No| Yes | 
+|Restore dropped DB to another SQL Managed Instance | Yes | No | Yes 
+|Restore database to an instance in another subscription | Yes | No | No | 
 
 ## Restore an existing database
 
@@ -185,9 +192,12 @@ Restore your database to a specific point to a managed instance in a different s
 Restoring a PITR backup across subscriptions has the following limitations: 
 
 - Both subscriptions must be in the same region. 
+- Both subscriptions must be in the same tenant. 
+- The subscription type has to be either EA, CSP, MCA, or PayGo. 
 - The restore operation can only be performed on the primary instance. 
 - Backups that have geo-redundancy enabled are not currently supported for cross-subscription restores. 
 - The user performing the restore must either be part of the contributor role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
+- If you are bringing your own key (BYOK), then the key must be present in both subscriptions. 
 
 
 ### Restore database 
@@ -196,15 +206,14 @@ To restore your database to an instance in a different subscription by using the
 
 ### API call 
 
-
-The API call underlying the restore action must contain the `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and `crossSubscriptionSourceDatabaseId` **OR** `crossSubscriptionRestorableDroppedDatabaseId`. 
+The [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call underlying the restore action must contain `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and `crossSubscriptionSourceDatabaseId` **OR** `crossSubscriptionRestorableDroppedDatabaseId`. 
 
 The following is an example API call: 
 
 `PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}?api-version=2022-05-01-previe`
 
 > [!NOTE]
-> The [link to api call?] is being deprecated. Starting with January 2022, use the replacement API call for all database restore operations. 
+> The [Create or Update v02.01.2022](/rest/api/sql/2022-02-01-preview/managed-databases/create-or-update) is being deprecated. Starting with January 2022, use the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) replacement API call for all database restore operations. 
 
 ## Overwrite an existing database
 

@@ -1,6 +1,6 @@
 ---
 description: "Learn how to administer change tracking on SQL Server, Azure SQL Managed Instance, and Azure SQL Database. "
-title: "Change Tracking Cleanup and Troubleshooting"
+title: "Cleanup and troubleshoot Change Tracking"
 ms.date: "10/20/2022"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,15 +15,15 @@ ms.assetid:
 author: JetterMcTedder
 ms.author: bspendolini
 ---
-# Change Tracking Cleanup and Troubleshooting
+# Cleanup and troubleshoot change tracking
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how Change Tracking performs cleanup operations and how to troubleshoot common issues.  
   
-## Change Tracking Cleanup
+## Change Tracking cleanup
 
-Change Tracking cleanup is invoked automatically every 30 minutes. When this background process wakes up, it purges expired records(records beyond the retention period) from the change tracking side tables. The default retention period is two days and can be set for the Change Tracking automatic cleanup process as shown below:
+Change Tracking cleanup is invoked automatically every 30 minutes. When this background process wakes up, it purges expired records (records beyond the retention period) from the change tracking side tables. The default retention period is two days and can be set for the Change Tracking automatic cleanup process as shown below:
 
 ```sql
 ALTER DATABASE <DBNAME>
@@ -37,11 +37,11 @@ ALTER DATABASE <DBNAME>
 SET CHANGE_TRACKING (CHANGE_RETENTION = 90 MINUTES)
 ```
 
-### Auto Cleanup
+### Auto cleanup
 
 There are two cleanup version numbers that the auto-cleanup process maintains over the course of the cleanup action; invalid cleanup version and hardened cleanup version. When the Change Tracking background thread wakes up, it determines the invalid cleanup version. The invalid cleanup version is the change tracking version which marks the point until which the auto cleanup task will perform the cleanup for the side tables. The auto-cleanup thread traverses through the tables that are enabled for change tracking and calls an internal stored procedure. This procedure contains a loop, which deletes records in batches of approximately 5000. The loop is terminated only when all the expired records in the side table are removed. This delete query then uses the syscommittab table (an in-memory rowstore) to identify the transaction IDs that have a commit timestamp less than the invalid cleanup version. The auto-cleanup process is repeated until the cleanup is done with all change tracking side tables for that particular database. Once the process is done with the final change tracking side table, it updates the hardened cleanup version number to the invalid cleanup version number.
   
-### Manual Cleanup
+### Manual cleanup
 
 In SQL Server 2014 Service Pack 2 and above, manual cleanup of the side tables can be done with the store procedure [sp_flush_CT_internal_table_on_demand](../../relational-databases/system-stored-procedures/sys-sp-flush-ct-internal-table-on-demand-transact-sql.md). This stored procedure accepts a table name as parameter and will attempt to clean up records from the corresponding change tracking internal table. Manual cleanup uses existing invalid version and won't update either the hardened version or existing invalid version upon completion of the procedure.
 
@@ -53,21 +53,21 @@ sp_flush_CT_internal_table_on_demand [ @TableToClean= ] 'TableName'
 
 The sp_flush_CT_internal_table_on_demand stored procedure will do the following:
 
-1. If the tablename parameter is passed (@TableToClean), it will do the cleanup for the corresponding side-table using the current invalid version as the watermark. This option should be used to clear any backlogs left by the cleanup thread.
+- If the tablename parameter is passed (@TableToClean), it will do the cleanup for the corresponding side-table using the current invalid version as the watermark. This option should be used to clear any backlogs left by the cleanup thread.
 
-2. If the tablename parameter isn't passed (@TableToClean), then the procedure will do the following:
+- If the tablename parameter isn't passed (@TableToClean), then the procedure will do the following:
 
-    a. Determine the invalid version based on the retention period and persist this value in the sysobjvalues table.
+    1. Determine the invalid version based on the retention period and persist this value in the sysobjvalues table.
 
-    b. Use the invalid version from step the previous step (2a) to do the cleanup on all side tables. If there are tables for which cleanup failed, it will add that to a separate list and proceed with the other tables. After completing all tables, check if there are any tables in the error list and retry these tables.
+    1. Use the invalid version from step the previous step (2a) to do the cleanup on all side tables. If there are tables for which cleanup failed, it will add that to a separate list and proceed with the other tables. After completing all tables, check if there are any tables in the error list and retry these tables.
 
-    c. If the error list isn't empty even after a retry, return. If the error list is empty, proceed to step d.
+    1. If the error list isn't empty even after a retry, return. If the error list is empty, proceed to step d.
 
-    d. Update Hardened cleanup version and persist the value in sysobjvalues.
+    1. Update Hardened cleanup version and persist the value in sysobjvalues.
 
-    e. Clean up the syscommittab table with the hardened version from step 2d as the watermark.
+    1. Clean up the syscommittab table with the hardened version from step 2d as the watermark.
 
-## Creating Extended Events for Change Tracking
+## Creating extended events for Change Tracking
 
 > [!NOTE]
 > Extended Events Are Not Available With Azure SQL Database
@@ -83,7 +83,7 @@ Change Tracking has two events you can capture with Extended Events:
 
 The following sections outline solutions for Change Tracking performance issues.
 
-### Slow Cleanup
+### Slow cleanup
 
 If the database is having performance issues and is slow to clean up the side tables, perform the following steps:
 
@@ -111,8 +111,8 @@ If side table cleanup is failing because the process couldn't get lock on the ba
 
 A result of this could be that seeing the side tables need to clean up and could block syscommittab from being cleaned up, syscommittab will grow large and cause performance issues. To remedy this situation, the following two solutions can be attempted to remove the lock:
 
-1. Disable auto cleanup then manually clean-up side tables
-2. Disable auto cleanup and failover to another instance. This will kill the process and you can clean the tables and then fail back
+- Disable auto cleanup then manually clean-up side tables
+- Disable auto cleanup and failover to another instance. This will kill the process and you can clean the tables and then fail back
 
 ### Auto-cleanup not able to keep up with transactions
 
@@ -144,10 +144,10 @@ end
 drop table #CT_Tables
 ```
 
-## See Also
+## See also
 
  [About Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
- [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshooting-change-tracking-sql-server.md)  
+ [Change Tracking Cleanup &#40;Transact-SQL&#41;](../../relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)  
  [Change Tracking Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [Change Tracking Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md)  
  [Change Tracking System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-tracking-tables-transact-sql.md)  

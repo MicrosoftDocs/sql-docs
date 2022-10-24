@@ -1884,7 +1884,7 @@ items:
       - name: Work with
         href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
       - name: Cleanup and troubleshooting
-        href: relational-databases/track-changes/cleanup-and-troubleshooting-change-tracking-sql-server.md        
+        href: relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md        
   - name: Triggers
     items:
     - name: Logon Triggers
@@ -15264,7 +15264,7 @@ items:
       href: relational-databases/system-tables/change-tracking-tables-transact-sql.md
       items:
       - name: dbo.MSchange_tracking_history
-        href: relational-databases/system-tables/dbo-mschange_tracking_history-transact-sql.md
+        href: relational-databases/system-tables/dbo-mschange-tracking-history-transact-sql.md
     - name: Database Maintenance Plan Tables
       href: relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md
       items:

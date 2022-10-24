@@ -43,6 +43,8 @@ See the following topics:
 * [^ &#40;Bitwise Exclusive OR&#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
 * [^= &#40;Bitwise Exclusive OR Assignment&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
 * [~ &#40;Bitwise NOT&#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+* [>> &#40;Shift right - SQL Server 2022& and abive#41;](../../t-sql/functions/right-shift-transact-sql.md)
+* [<< &#40;Shift left - SQL Server 2022& and abive&#41;](../../t-sql/functions/left-shift-transact-sql.md)
   
  The operands for bitwise operators can be any one of the data types of the integer or binary string data type categories (except for the **image** data type), except that both operands cannot be any one of the data types of the binary string data type category. The following table shows the supported operand data types.  
   

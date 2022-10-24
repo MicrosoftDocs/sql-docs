@@ -3,14 +3,15 @@ title: Resource management in Azure SQL Database
 description: This article provides an overview of resource management in Azure SQL Database with information about what happens when resource limits are reached.
 author: dimitri-furman
 ms.author: dfurman
-ms.reviewer: wiassaf, mathoma
-ms.date: 09/13/2022
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 10/21/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
 ---
 
 # Resource management in Azure SQL Database
+
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
@@ -21,13 +22,13 @@ This article provides an overview of resource management in Azure SQL Database. 
 
 For specific resource limits per pricing tier (also known as service objective) for single databases, refer to either [DTU-based single database resource limits](resource-limits-dtu-single-databases.md) or [vCore-based single database resource limits](resource-limits-vcore-single-databases.md). For elastic pool resource limits, refer to either [DTU-based elastic pool resource limits](resource-limits-dtu-elastic-pools.md) or [vCore-based elastic pool resource limits](resource-limits-vcore-elastic-pools.md).
 
-> [!TIP]
+> [!TIP]  
 > For Azure Synapse Analytics dedicated SQL pool limits, see [capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits) and [memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
 
 ## Logical server limits
 
 <!---
-vCore resource limits are listed in the following articles, please be sure to update all of them: 
+vCore resource limits are listed in the following articles, please be sure to update all of them:
 /database/resource-limits-vcore-single-databases.md
 /database/resource-limits-vcore-elastic-pools.md
 /database/resource-limits-logical-server.md
@@ -46,13 +47,13 @@ vCore resource limits are listed in the following articles, please be sure to up
 | vCore quota per logical server | 540 |
 | Max elastic pools per logical server | Limited by number of DTUs or vCores. For example, if each pool is 1000 DTUs, then a server can support 54 pools.|
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > As the number of databases approaches the limit per logical server, the following can occur:
 >
-> - Increasing latency in running queries against the master database. This includes views of resource utilization statistics such as `sys.resource_stats`.
+> - Increasing latency in running queries against the `master` database. This includes views of resource utilization statistics such as `sys.resource_stats`.
 > - Increasing latency in management operations and rendering portal viewpoints that involve enumerating databases in the server.
 
-> [!NOTE]
+> [!NOTE]  
 > To obtain more DTU/eDTU quota, vCore quota, or more logical servers than the default number, submit a new support request in the Azure portal. For more information, see [Request quota increases for Azure SQL Database](quota-increase-request.md).
 
 ## What happens when resource limits are reached
@@ -91,7 +92,7 @@ For more information about these concepts, see the [Thread and Task Architecture
 
 The maximum number of workers is determined by the service tier and compute size. New requests are rejected when session or worker limits are reached, and clients receive an error message. While the number of connections can be controlled by the application, the number of concurrent workers is often harder to estimate and control. This is especially true during peak load periods when database resource limits are reached and workers pile up due to longer running queries, large blocking chains, or excessive query parallelism.
 
-> [!NOTE]
+> [!NOTE]  
 > The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error message 10928 in Azure SQL Database contains the wording "The request limit for the database is *N* and has been reached" for backwards compatibility purposes.  The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one. Learn more about error 10928 in [Resource governance errors](troubleshoot-common-errors-issues.md#resource-governance-errors).
 
 You can mitigate approaching or hitting worker or session limits by:
@@ -100,7 +101,7 @@ You can mitigate approaching or hitting worker or session limits by:
 - Optimizing queries to reduce resource utilization if the cause of increased workers is contention for compute resources. For more information, see [Query Tuning/Hinting](performance-guidance.md#query-tuning-and-hinting).
 - Optimizing the query workload to reduce the number of occurrences and duration of query blocking. For more information, see [Understand and resolve Azure SQL blocking problems](understand-resolve-blocking.md).
 - Reducing the [MAXDOP](configure-max-degree-of-parallelism.md) setting when appropriate.
- 
+
 Find worker and session limits for Azure SQL Database by service tier and compute size:
 
 - [Resource limits for single databases using the vCore purchasing model](resource-limits-vcore-single-databases.md)
@@ -110,6 +111,10 @@ Find worker and session limits for Azure SQL Database by service tier and comput
 
 Learn more about troubleshooting specific errors for session or worker limits in [Resource governance errors](troubleshoot-common-errors-issues.md#resource-governance-errors).
 
+### External connections
+
+The number of concurrent connections to external endpoints done via [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) are capped to 10% of worker threads, with a hard cap of max 150 workers.
+
 ### Memory
 
 Unlike other resources (CPU, workers, storage), reaching the memory limit does not negatively impact query performance, and does not cause errors and failures. As described in detail in [Memory Management Architecture Guide](/sql/relational-databases/memory-management-architecture-guide), the database engine often uses all available memory, by design. Memory is used primarily for caching data, to avoid slower storage access. Thus, higher memory utilization usually improves query performance due to faster reads from memory, rather than slower reads from storage.
@@ -118,7 +123,7 @@ After database engine startup, as the workload starts reading data from storage,
 
 Besides the data cache, memory is used in other components of the database engine. When there is demand for memory and all available memory has been used by the data cache, the database engine will dynamically reduce data cache size to make memory available to other components, and will dynamically grow data cache when other components release memory.
 
-In rare cases, a sufficiently demanding workload may cause an insufficient memory condition, leading to out-of-memory errors. This can happen at any level of memory utilization between 0% and 100%. This is more likely to occur on smaller compute sizes that have proportionally smaller memory limits, and/or with workloads using more memory for query processing, such as in [dense elastic pools](elastic-pool-resource-management.md). 
+In rare cases, a sufficiently demanding workload may cause an insufficient memory condition, leading to out-of-memory errors. This can happen at any level of memory utilization between 0% and 100%. This is more likely to occur on smaller compute sizes that have proportionally smaller memory limits, and/or with workloads using more memory for query processing, such as in [dense elastic pools](elastic-pool-resource-management.md).
 
 When encountering out-of-memory errors, mitigation options include:
 - Review the details of the OOM condition in [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events).
@@ -127,7 +132,7 @@ When encountering out-of-memory errors, mitigation options include:
 
 |Solution|Description|
 | :----- | :----- |
-|Reduce the size of memory grants|For more information about memory grants, see the [Understanding SQL Server memory grant](https://techcommunity.microsoft.com/t5/sql-server/understanding-sql-server-memory-grant/ba-p/383595) blog post. A common solution for avoiding excessively large memory grants is keeping [statistics](/sql/relational-databases/statistics/statistics) up to date. This results in more accurate estimates of memory consumption by the query engine, avoiding unnecessarily large memory grants.</br></br>By default, in databases using compatibility level 140 and above, the database engine may automatically adjust memory grant size using [Batch mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#batch-mode-memory-grant-feedback). Similarly, in databases using compatibility level 150 and above, the database engine also uses [Row mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#row-mode-memory-grant-feedback), for more common row mode queries. This built-in functionality helps avoid out-of-memory errors due to unnecessarily large memory grants.|
+|Reduce the size of memory grants|For more information about memory grants, see the [Understanding SQL Server memory grant](https://techcommunity.microsoft.com/t5/sql-server/understanding-sql-server-memory-grant/ba-p/383595) blog post. A common solution for avoiding excessively large memory grants is keeping [statistics](/sql/relational-databases/statistics/statistics) up to date. This results in more accurate estimates of memory consumption by the query engine, avoiding unnecessarily large memory grants.<br /><br />By default, in databases using compatibility level 140 and above, the database engine may automatically adjust memory grant size using [Batch mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#batch-mode-memory-grant-feedback). Similarly, in databases using compatibility level 150 and above, the database engine also uses [Row mode memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing#row-mode-memory-grant-feedback), for more common row mode queries. This built-in functionality helps avoid out-of-memory errors due to unnecessarily large memory grants.|
 |Reduce the size of query plan cache|The database engine caches query plans in memory, to avoid compiling a query plan for every query execution. To avoid query plan cache bloat caused by caching plans that are only used once, make sure to use parameterized queries, and consider enabling OPTIMIZE_FOR_AD_HOC_WORKLOADS [database-scoped configuration](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql).|
 |Reduce the size of lock memory|The database engine uses memory for [locks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#Lock_Engine). When possible, avoid large transactions that may acquire a large number of locks and cause high lock memory consumption.|
 
@@ -187,8 +192,8 @@ Log rate governor traffic shaping is surfaced via the following wait types (expo
 | :--- | :--- |
 | LOG_RATE_GOVERNOR | Database limiting |
 | POOL_LOG_RATE_GOVERNOR | Pool limiting |
-| INSTANCE_LOG_RATE_GOVERNOR | Instance level limiting |  
-| HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE | Feedback control, availability group physical replication in Premium/Business Critical not keeping up |  
+| INSTANCE_LOG_RATE_GOVERNOR | Instance level limiting |
+| HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE | Feedback control, availability group physical replication in Premium/Business Critical not keeping up |
 | HADR_THROTTLE_LOG_RATE_LOG_SIZE | Feedback control, limiting rates to avoid an out of log space condition |
 | HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Geo-replication feedback control, limiting log rate to avoid high data latency and unavailability of geo-secondaries|
 
@@ -200,7 +205,7 @@ When encountering a log rate limit that is hampering desired scalability, consid
 
 ### Storage space governance
 
-In Premium and Business Critical service tiers, customer data including *data files*, *transaction log files*, and *tempdb files* is stored on the local SSD storage of the machine hosting the database or elastic pool. Local SSD storage provides high IOPS and throughput, and low I/O latency. In addition to customer data, local storage is used for the operating system, management software, monitoring data and logs, and other files necessary for system operation.
+In Premium and Business Critical service tiers, customer data including data files, transaction log files, and `tempdb` files, is stored on the local SSD storage of the machine hosting the database or elastic pool. Local SSD storage provides high IOPS and throughput, and low I/O latency. In addition to customer data, local storage is used for the operating system, management software, monitoring data and logs, and other files necessary for system operation.
 
 The size of local storage is finite and depends on hardware capabilities, which determine the **maximum local storage** limit, or local storage set aside for customer data. This limit is set to maximize customer data storage, while ensuring safe and reliable system operation. To find the **maximum local storage** value for each service objective, see resource limits documentation for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
 
@@ -220,27 +225,28 @@ WHERE database_id = DB_ID();
 |`user_data_directory_space_quota_mb`|**Maximum local storage**, in MB|
 |`user_data_directory_space_usage_mb`|Current local storage consumption by data files, transaction log files, and `tempdb` files, in MB. Updated every five minutes.|
 
-This query should be executed in the user database, not in the master database. For elastic pools, the query can be executed in any database in the pool. Reported values apply to the entire pool.
+This query should be executed in the user database, not in the `master` database. For elastic pools, the query can be executed in any database in the pool. Reported values apply to the entire pool.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > In Premium and Business Critical service tiers, if the workload attempts to increase combined local storage consumption by data files, transaction log files, and `tempdb` files over the **maximum local storage** limit, an out-of-space error will occur.
 
-Local SSD storage is also used by databases in service tiers other than Premium and Business Critical for the tempdb database and Hyperscale RBPEX cache. As databases are created, deleted, and increase or decrease in size, total local storage consumption on a machine fluctuates over time. If the system detects that available local storage on a machine is low, and a database or an elastic pool is at risk of running out of space, it will move the database or elastic pool to a different machine with sufficient local storage available.
+Local SSD storage is also used by databases in service tiers other than Premium and Business Critical for the `tempdb` database and Hyperscale RBPEX cache. As databases are created, deleted, and increase or decrease in size, total local storage consumption on a machine fluctuates over time. If the system detects that available local storage on a machine is low, and a database or an elastic pool is at risk of running out of space, it will move the database or elastic pool to a different machine with sufficient local storage available.
 
 This move occurs in an online fashion, similarly to a database scaling operation, and has a similar [impact](single-database-scale.md#impact), including a short (seconds) failover at the end of the operation. This failover terminates open connections and rolls back transactions, potentially impacting applications using the database at that time.
 
 Because all data is copied to local storage volumes on different machines, moving larger databases in Premium and Business Critical service tiers may require a substantial amount of time. During that time, if local space consumption by a database or an elastic pool, or by the `tempdb` database grows rapidly, the risk of running out of space increases. The system initiates database movement in a balanced fashion to minimize out-of-space errors while avoiding unnecessary failovers.
 
-## Tempdb sizes
+## `tempdb` sizes
 
-Size limits for `tempdb` in Azure SQL Database depend on the purchasing and deployment model. 
+Size limits for `tempdb` in Azure SQL Database depend on the purchasing and deployment model.
 
-To learn more, review `tempdb` size limits for: 
+To learn more, review `tempdb` size limits for:
+
 - vCore purchasing model: [single databases](resource-limits-vcore-single-databases.md), [pooled databases](resource-limits-vcore-elastic-pools.md)
-- DTU purchasing model: [single databases](resource-limits-dtu-single-databases.md#tempdb-sizes),  [pooled databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes). 
+- DTU purchasing model: [single databases](resource-limits-dtu-single-databases.md#tempdb-sizes),  [pooled databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes).
 
 ## Next steps
 
 - For information about general Azure limits, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 - For information about DTUs and eDTUs, see [DTUs and eDTUs](purchasing-models.md#dtu-purchasing-model).
-- For information about `tempdb` size limits, see [single vCore databases](resource-limits-vcore-single-databases.md), [pooled vCore databases](resource-limits-vcore-elastic-pools.md), [single DTU databases](resource-limits-dtu-single-databases.md#tempdb-sizes), and [pooled DTU databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes). 
+- For information about `tempdb` size limits, see [single vCore databases](resource-limits-vcore-single-databases.md), [pooled vCore databases](resource-limits-vcore-elastic-pools.md), [single DTU databases](resource-limits-dtu-single-databases.md#tempdb-sizes), and [pooled DTU databases](resource-limits-dtu-elastic-pools.md#tempdb-sizes).

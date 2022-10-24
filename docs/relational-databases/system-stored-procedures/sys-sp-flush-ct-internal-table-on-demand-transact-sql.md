@@ -26,7 +26,7 @@ ms.author: bspendolini
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This stored procedure allows you to manually clean up the side table (change_tracking_objectid) for a table in a database for which change tracking is enabled. If the tablename parameter is not passed, then this process will clean up all side tables for all tables in the database where change tracking is enabled.
+  This stored procedure allows you to manually clean the side table (change_tracking_objectid) for a table in a database for which change tracking is enabled. If the tablename parameter is not passed, then this process will cleans all side tables for all tables in the database where change tracking is enabled.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -78,6 +78,9 @@ To update the failover rights, follow these steps:
    :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/update-failover-group-configuration.png" alt-text="Screenshot of the Azure portal, Failover groups page, selecting Edit Configurations. ":::
 
 1. Set **Failover rights** to *On*, and check the box next to *I confirm that I will use the secondary instance as a standby replica.* 
+
+   :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/update-failover-rights-existing-instance.png" alt-text="Screenshot of the Azure portal, edit failover group configuration, with failover rights highlighted." :::
+
 1. Select **Apply** to save your new settings and close the configuration pane. 
 
 ## View licensing rights
@@ -86,13 +89,13 @@ There are two places to check the licensing for your secondary managed instance 
 
 From the **Failover groups** page, the **Failover rights** status should be *ON* and the license model for the secondary instance should display **Failover rights currently activated**: 
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot of the Azure portal, Failover groups page, with failover rights, and license model highlighted.":::
+:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot of the Azure portal, Failover groups page, with failover rights, and license model highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png":::
 
 The default license model indicates the licensing model the instance will go back to using if the failover group fails over and the current secondary instance becomes the new primary instance. You may incur charges upon failover, depending on the default license model. 
 
 From the **Compute + storage** page of your *secondary managed instance*, confirm that the **Failover rights** license is activated, and view the failover discount you're currently receiving for that instance under **Cost summary**: 
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot of the Azure portal, Compute and storage page, with failover rights highlighted.":::
+:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot of the Azure portal, Compute and storage page, with failover rights highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png":::
 
 
 

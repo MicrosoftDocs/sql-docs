@@ -324,7 +324,7 @@ We will use SQL Agent on SQL Server to run connectivity tests from SQL Server to
 1. Verify the results:
 
    - The outcome of each test at TcpTestSucceeded should be `TcpTestSucceeded : True`.
-   - The RemoteAddresses should belong to the IP range for the Managed Instance subnet.
+   - The RemoteAddresses should belong to the IP range for the SQL Managed Instance subnet.
 
    If the response is unsuccessful, verify the following network settings:
    - There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 

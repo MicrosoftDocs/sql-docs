@@ -70,3 +70,7 @@ The compare plans menu offers several of the same icons as in the query plan men
 
 The default view of the Properties plan for plan comparison lists attributes with different values at the top, and attributes with the same values are collapsed under the Equivalent Properties heading.  This view can be changed using the sort icons, and the attribute lists can be expanded or collapsed to aid in displaying and finding information.  The Properties pane also has a filter menu, allowing quickly navigating to the attribute of interest.
 
+## Next Steps
+- [Download Azure Data Studio](./download-azure-data-studio.md)
+- [Connect to SQL Server](./quickstart-sql-server.md)
+- [Connect to Azure SQL Database](./quickstart-sql-database.md)

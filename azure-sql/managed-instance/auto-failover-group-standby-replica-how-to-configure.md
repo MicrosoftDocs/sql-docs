@@ -86,7 +86,7 @@ There are two places to check the licensing for your secondary managed instance 
 
 From the **Failover groups** page, the **Failover rights** status should be *ON* and the license model for the secondary instance should display **Failover rights currently activated**: 
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="":::
+:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot of the Azure portal, Failover groups page, with failover rights, and license model highlighted.":::
 
 The default license model indicates the licensing model the instance will go back to using if the failover group fails over and the current secondary instance becomes the new primary instance. You may incur charges upon failover, depending on the default license model. 
 

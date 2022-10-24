@@ -1885,6 +1885,8 @@ items:
         href: relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
+      - name: Cleanup and troubleshooting
+        href: relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md        
   - name: Triggers
     items:
     - name: Logon Triggers
@@ -13718,6 +13720,15 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md
       - name: sys.sp_cdc_set_scheduler_job
         href: relational-databases/system-stored-procedures/sys-cdc-set-scheduler-job-transact-sql.md
+    - name: Change Tracking
+      href: relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md
+      items:
+      - name: sys.sp_flush_commit_table
+        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-transact-sql.md       
+      - name: sys.sp_flush_commit_table_on_demand
+        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-on-demand-transact-sql.md       
+      - name: sys.sp_flush_CT_internal_table_on_demand
+        href: relational-databases/system-stored-procedures/sys-sp-flush-ct-internal-table-on-demand-transact-sql.md
     - name: Cursor
       href: relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md
       items:
@@ -15251,6 +15262,11 @@ items:
         href: relational-databases/system-tables/cdc-index-columns-transact-sql.md
       - name: dbo.cdc_jobs
         href: relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md
+    - name: Change Tracking Tables
+      href: relational-databases/system-tables/change-tracking-tables-transact-sql.md
+      items:
+      - name: dbo.MSchange_tracking_history
+        href: relational-databases/system-tables/dbo-mschange-tracking-history-transact-sql.md
     - name: Database Maintenance Plan Tables
       href: relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md
       items:

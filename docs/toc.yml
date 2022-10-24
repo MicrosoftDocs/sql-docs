@@ -13953,6 +13953,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-indexoption-transact-sql.md
       - name: sp_invalidate_textptr
         href: relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md
+      - name: sp_invoke_external_rest_endpoint
+        href: relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md
       - name: sp_lock
         href: relational-databases/system-stored-procedures/sp-lock-transact-sql.md
       - name: sp_monitor

@@ -83,9 +83,9 @@ In case that you plan to keep adding new backup files while migration is in prog
 After LRS is stopped, either automatically through autocomplete, or manually through cutover, you can't resume the restore process for a database that was brought online on SQL Managed Instance. For example, once migration completes, you're no longer able to restore more differential backups for an online database. To restore more backup files after migration completes, you need to delete the database from the managed instance and restart the migration from the beginning. 
 
 
-## Compare to the link
+## Compare to Managed Instance link
 
-LRS differs from the [Managed Instance link](managed-instance-link-overview.md): 
+LRS differs from the [Managed Instance link](managed-instance-link-feature-overview.md): 
 
 - LRS is based on log shipping technology, while the link uses distributed availability groups. 
 - LRS supports SQL Server starting with 2008, while the link only supports SQL Server starting with 2016. 

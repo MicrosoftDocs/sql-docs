@@ -64,6 +64,9 @@ The following table describes the resulting encryption and validation:
 > [!CAUTION]
 > The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption (for server-side configuration, see [Configure Server for Forced Encryption](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md#configure-server)). Also ensure that the server has a verifiable certificate, and that the **`TrustServerCertificate`** setting on the client is set to FALSE.
 
+> [!NOTE]
+> TLS 1.3 is only available via strict (TDS 8.0).
+
 ### Major version 18 with new authentication methods
 
 For versions 18.x.x, to improve security, when the new **Authentication** or **Access Token** connection string keywords (or their corresponding properties) are used, the driver overrides the default encryption value by setting it to `yes`. Overriding happens at data source object initialization time. If encryption is set before initialization by any means, the value is respected and not overridden.

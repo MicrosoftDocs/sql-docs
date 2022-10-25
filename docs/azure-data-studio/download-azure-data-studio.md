@@ -187,6 +187,24 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 > sudo apt-get install libxss1 libgconf-2-4 libunwind8
 > ```
 
+#### Install with deb-get
+For users of Debian and Ubuntu based distributions, you can also install and
+update the `.deb` package using [deb-get](https://github.com/wimpysworld/deb-get).
+
+First install `deb-get` using these commands in a terminal:
+
+    sudo apt install curl
+    curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+
+Then install Azure Data Studio using the following command in terminal:
+
+    deb-get install azuredatastudio
+
+Once azuredatastudio is installed it can be kept up to date using:
+
+    deb-get update
+    deb-get upgrade
+  
 #### Windows Subsystem for Linux
 
 1. Install Azure Data Studio for Windows. Then, use the `azuredatastudio` command in a Windows Subsystem for Linux (WSL) terminal just as you would in a standard command prompt. By default, the application is stored in your *AppData* folder.

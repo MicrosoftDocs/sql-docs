@@ -45,7 +45,7 @@ Good reports present information that leads to actions or insights. To present a
   
 -   **Lines.** Lines specify paths or routes, for example, delivery routes or flight paths. After you add a line to a map, you can vary the line color and line width.  
   
--   **Polygons.** Polygons specify areas, for example, regions, territories, countries, states, provinces, counties, cities, or areas covered by cities, postal codes, telephone exchanges, or census districts. After you add polygons to a map, in addition to displaying the outline, you can display a marker at the center point of the area of the polygon.  
+-   **Polygons.** Polygons specify areas, for example, territories, countries/regions, states, provinces, counties, cities, or areas covered by cities, postal codes, telephone exchanges, or census districts. After you add polygons to a map, in addition to displaying the outline, you can display a marker at the center point of the area of the polygon.  
   
  After you identify which spatial data that you need, you must find a source for it.  
   

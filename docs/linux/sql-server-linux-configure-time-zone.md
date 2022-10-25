@@ -310,7 +310,6 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Qatar                               | Arab Standard Time                       |
 | Asia/Qostanay                            | Central Asia Standard Time               |
 | Asia/Qyzylorda                           | Qyzylorda Standard Time                  |
-| Asia/Rangoon                             | Myanmar Standard Time                    |
 | Asia/Riyadh                              | Arab Standard Time                       |
 | Asia/Sakhalin                            | Sakhalin Standard Time                   |
 | Asia/Samarkand                           | West Asia Standard Time                  |
@@ -331,6 +330,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Vientiane                           | SE Asia Standard Time                    |
 | Asia/Vladivostok                         | Vladivostok Standard Time                |
 | Asia/Yakutsk                             | Yakutsk Standard Time                    |
+| Asia/Yangon (Rangoon)                    | Myanmar Standard Time                    |
 | Asia/Yekaterinburg                       | Ekaterinburg Standard Time               |
 | Asia/Yerevan                             | Caucasus Standard Time                   |
 | Atlantic/Azores                          | Azores Standard Time                     |

@@ -108,6 +108,21 @@ The Managed Instance link differs from the [log replay service (LRS)](log-replay
 - The link provides the best possible downtime migration, while LRS cut over can take a while in some cases. 
 - The link requires backing up log files on the primary to prevent filling up the disk while LRS does not require any kind of maintenance scripts on the source SQL Server. 
 
+The following table compares the functionality of the link with the [Log Replay Service (LRS)](log-replay-service-overview.md): 
+
+| Functionality | Managed Instance link | Log Replay Service (LRS) | 
+| ------------- | ---------------------- | ----------------------- |
+| Underlying technology | Distributed availability group | Log shipping | 
+| Minimal supported source database | SQL Server 2016 | SQL Server 2008 | 
+| Replication type | Near real-time | Replicates every few minutes | 
+| Read-only secondary | Supported | Not supported | 
+| Network type | Private network with configured port | Public endpoint | 
+| Impacted by system updates or failover | No, other than a minimum interruption | Yes, restarts the process | 
+| Duration | Unlimited | LRS job can run up to 30 days | 
+| Type of migration | True online migration (without client service interruption) | Offline migration (with downtime) | 
+| Migration cut over time | Fast cut over with best possible downtime | Cut over can take a while in some cases | 
+| Maintenance required on source | Yes, logs must be backed up to prevent filling up the disk | No| 
+
 
 ## Use the link feature
 

@@ -65,7 +65,7 @@ Details of parameters and people (users and contacts), along with common referen
 |People|Contains user names, contact information, for all who use the application, and for the people that the Wide World Importers deals with at customer organizations. This includes staff, customers, suppliers, and any other contacts. For people who have been granted permission to use the system or website, the information includes login details.|
 |Cities|There are many addresses stored in the system, for people, customer organization delivery addresses, pickup addresses at suppliers, etc. Whenever an address is stored, there is a reference to a city in this table. There is also a spatial location for each city.|
 |StateProvinces|Cities are part of states or provinces. This table has details of those, including spatial data describing the boundaries each state or province.|
-|Countries|States or Provinces are part of countries. This table has details of those, including spatial data describing the boundaries of each country.|
+|Countries|States or Provinces are part of countries/regions. This table has details of those, including spatial data describing the boundaries of each country.|
 |DeliveryMethods|Choices for delivering stock items (e.g., truck/van, post, pickup, courier, etc.)|
 |PaymentMethods|Choices for making payments (e.g., cash, check, EFT, etc.)|
 |TransactionTypes|Types of customer, supplier, or stock transactions (e.g., invoice, credit note, etc.)|

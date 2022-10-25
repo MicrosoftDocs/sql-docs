@@ -21,11 +21,11 @@ WideWorldImporters uses schemas for different purposes, such as storing data, de
 
 ### Data schemas
 
-These schemas contain the data. A number of tables are needed by all other schemas and are located in the Application schema.
+These schemas contain the data. Many tables are needed by all other schemas and are located in the Application schema.
 
 |Schema|Description|
 |-----------------------------|---------------------|
-|Application|Application-wide users, contacts, and parameters. This also contains reference tables with data that is used by multiple schemas|
+|Application|Application-wide users, contacts, and parameters. This schema also contains reference tables with data that is used by multiple schemas|
 |Purchasing|Stock item purchases from suppliers and details about suppliers.|  
 |Sales|Stock item sales to retail customers, and details about customers and sales people. |  
 |Warehouse|Stock item inventory and transactions.|  
@@ -40,7 +40,7 @@ These schemas are used for external applications that are not allowed to access 
 |Reports|All access to the database from Reporting Services reports is through this schema.|
 |PowerBI|All access to the database from the Power BI dashboards via the Enterprise Gateway is through this schema.|
 
-Note that the Reports and PowerBI schemas are not used in the initial release of the sample database. However, all Reporting Services and Power BI samples built on top of this database are encouraged to use these schemas.
+The Reports and PowerBI schemas are not used in the initial release of the sample database. However, all Reporting Services and Power BI samples built on top of this database are encouraged to use these schemas.
 
 ### Development schemas
 
@@ -48,7 +48,7 @@ Special-purpose schemas
 
 |Schema|Description|
 |-----------------------------|---------------------|
-|Integration|Objects and procedures required for data warehouse integration (i.e. migrating the data to the WideWorldImportersDW database).|
+|Integration|Objects and procedures required for data warehouse integration (that is, migrating the data to the WideWorldImportersDW database).|
 |Sequences|Holds sequences used by all tables in the application.|
 
 ## Tables
@@ -62,7 +62,7 @@ Details of parameters and people (users and contacts), along with common referen
 |Table|Description|
 |-----------------------------|---------------------|
 |SystemParameters|Contains system-wide configurable parameters.|
-|People|Contains user names, contact information, for all who use the application, and for the people that the Wide World Importers deals with at customer organizations. This includes staff, customers, suppliers, and any other contacts. For people who have been granted permission to use the system or website, the information includes login details.|
+|People|Contains user names, contact information, for all who use the application, and for the people that the Wide World Importers deals with at customer organizations. This table includes staff, customers, suppliers, and any other contacts. For people who have been granted permission to use the system or website, the information includes login details.|
 |Cities|There are many addresses stored in the system, for people, customer organization delivery addresses, pickup addresses at suppliers, etc. Whenever an address is stored, there is a reference to a city in this table. There is also a spatial location for each city.|
 |StateProvinces|Cities are part of states or provinces. This table has details of those, including spatial data describing the boundaries each state or province.|
 |Countries|States or Provinces are part of countries/regions. This table has details of those, including spatial data describing the boundaries of each country.|

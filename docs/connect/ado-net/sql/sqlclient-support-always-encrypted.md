@@ -3,7 +3,7 @@ title: Using Always Encrypted with SqlClient
 description: Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/08/2022
+ms.date: 10/25/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -207,7 +207,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 >
 > - All values printed by the program will be in plaintext, as the **Microsoft .NET Data Provider for SQL Server** will transparently decrypt the data retrieved from the `SSN` and `BirthDate` columns.
 >
-> - Queries can perform equality comparisons on columns if they are encrypted using [deterministic] encryption](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> - Queries can perform equality comparisons on columns if they are encrypted using [deterministic encryption](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ### Retrieving encrypted data example
 

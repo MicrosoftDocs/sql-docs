@@ -1,10 +1,10 @@
 ---
 title: "Tutorial: Getting started with Always Encrypted with secure enclaves"
-description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in Azure SQL Database and how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+description: Tutorial on how to create a basic environment for Always Encrypted with secure enclaves in Azure SQL Database, how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
-ms.date: 04/06/2022
+ms.date: 10/25/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: tutorial
@@ -22,10 +22,10 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 ## Prerequisites
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/). You need to be a member of the Contributor role or the Owner role for the subscription to be able to create resources and configure an attestation policy.
-- Optional, but recommended for storing your column mater key for Always Encrypted: a key vault in Azure Key Vault. For information on how to create a key vault, see [Quickstart: Create a key vault using the Azure portal](https://learn.microsoft.com/azure/key-vault/general/quick-create-portal). 
-  - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: get, list, create, unwrap key, wrap key, verify, sign. See [Assign a Key Vault access policy](https://learn.microsoft.com/azure/key-vault/general/assign-access-policy).
-  - If you're using the Azure role-based access control (RBAC) permission model, make you sure you are a member of the [Key Vault Crypto Officer](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](https://learn.microsoft.com/azure/key-vault/general/rbac-migration).
-- [Download SQL Server Management Studio (SSMS)](../../docs/ssms/download-sql-server-management-studio-ssms.md)
+- Optional, but recommended for storing your column master key for Always Encrypted: a key vault in Azure Key Vault. For information on how to create a key vault, see [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal). 
+  - If your key vault uses the access policy permissions model, make sure you have the following key permissions in the key vault: `get`, `list`, `create`, `unwrap key`, `wrap key`, `verify`, `sign`. See [Assign a Key Vault access policy](/azure/key-vault/general/assign-access-policy).
+  - If you're using the Azure role-based access control (RBAC) permission model, make you sure you're a member of the [Key Vault Crypto Officer](/azure/role-based-access-control/built-in-roles#key-vault-crypto-officer) role for your key vault. See [Provide access to Key Vault keys, certificates, and secrets with an Azure role-based access control](/azure/key-vault/general/rbac-migration).
+- [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
 
 ### PowerShell requirements
 
@@ -34,13 +34,13 @@ This tutorial teaches you how to get started with [Always Encrypted with secure 
 
 Make sure the following PowerShell modules are installed on your machine.
 
-1. Az version 6.5.0 or later. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az module installed on your machine, run the following command from a PowerShell session.
+1. Az PowerShell module version 6.5.0 or later. For details on how to install the Az PowerShell module, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps). To determine the version the Az PowerShell module installed on your machine, run the following command from a PowerShell session.
 
     ```powershell
     Get-InstalledModule -Name Az
     ```
 
-The PowerShell Gallery has deprecated Transport Layer Security (TLS) versions 1.0 and 1.1. TLS 1.2 or a later version is recommended. You may receive the following errors if you are using a TLS version lower than 1.2:
+The PowerShell Gallery has deprecated Transport Layer Security (TLS) versions 1.0 and 1.1. TLS 1.2 or a later version is recommended. You may receive the following errors if you're using a TLS version lower than 1.2:
 
 - `WARNING: Unable to resolve package source 'https://www.powershellgallery.com/api/v2'`
 - `PackageManagement\Install-Package: No match was found for the specified search criteria and module name.`
@@ -53,12 +53,12 @@ To continue to interact with the PowerShell Gallery, run the following command b
 
 ## Step 1: Create and configure a server and a DC-series database
 
-In this step, you will create a new Azure SQL Database logical server and a new database using DC-series hardware, required for Always Encrypted with secure enclaves. For more information see [DC-series](service-tiers-sql-database-vcore.md#dc-series).
+In this step, you'll create a new Azure SQL Database logical server and a new database using DC-series hardware, required for Always Encrypted with secure enclaves. For more information, see [DC-series](service-tiers-sql-database-vcore.md#dc-series).
 
 # [Portal](#tab/azure-portal)
 
 1. Browse to the [Select SQL deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
-1. If you are not already signed in to Azure portal, sign in when prompted.
+1. If you aren't already signed in to Azure portal, sign in when prompted.
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
    :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Add to Azure SQL":::
@@ -67,7 +67,7 @@ In this step, you will create a new Azure SQL Database logical server and a new 
 1. For **Resource group**, select **Create new**, enter a name for your resource group, and select **OK**.
 1. For **Database name** enter *ContosoHR*.
 1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
-   - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like mysqlserver135, and the portal lets you know if it is available or not.
+   - **Server name**: Enter *mysqlserver*, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like mysqlserver135, and the portal lets you know if it's available or not.
    - **Server admin login**: Enter an admin login name, for example: *azureuser*.
    - **Password**: Enter a password that meets requirements, and enter it again in the **Confirm password** field.
    - **Location**: Select a location from the dropdown list.
@@ -76,7 +76,7 @@ In this step, you will create a new Azure SQL Database logical server and a new 
 
    Select **OK**.
 1. Leave **Want to use SQL elastic pool** set to **No**.
-1. Under **Compute + storage**, select **Configure database**, and click **Change configuration**.
+1. Under **Compute + storage**, select **Configure database**, and select **Change configuration**.
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Configure database" lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
 
@@ -100,13 +100,13 @@ In this step, you will create a new Azure SQL Database logical server and a new 
 
 # [PowerShell](#tab/azure-powershell)
 
-1. Open a PowerShell console and import the required version of Az.
+1. Open a PowerShell console and import the required version of the Az PowerShell module.
 
    ```PowerShell
    Import-Module "Az" -MinimumVersion "5.6.0"
    ```
 
-1. Sign into Azure. If needed, [switch to the subscription](/powershell/azure/manage-subscriptions-azureps) you are using for this tutorial.
+1. Sign into Azure. If needed, [switch to the subscription](/powershell/azure/manage-subscriptions-azureps) you're using for this tutorial.
 
    ```PowerShell
    Connect-AzAccount
@@ -125,7 +125,7 @@ In this step, you will create a new Azure SQL Database logical server and a new 
    New-AzResourceGroup -Name $resourceGroupName -Location $location
    ```
 
-1. Create an Azure SQL logical server. When prompted, enter the server administrator name and a password. Make sure you remember the admin name and the password - you will need them later to connect to the server. 
+1. Create an Azure SQL logical server. When prompted, enter the server administrator name and a password. Make sure you remember the admin name and the password - you'll need them later to connect to the server. 
 
    ```powershell
    $serverName = "<your server name>" 
@@ -170,17 +170,17 @@ In this step, you'll create and configure an attestation provider in Microsoft A
 
    - **Subscription**: Choose the same subscription you created the Azure SQL logical server in.
    - **Resource Group**: Choose the same resource group you created the Azure SQL logical server in.
-   - **Name**: Enter *myattestprovider*, and add some characters for uniqueness. We can't provide an exact attestation provider name to use because names must be globally unique. So enter something like myattestprovider12345, and the portal lets you know if it is available or not.
-   - **Location**: Choose the location, in which you created the Azure SQL logical server in.
-   - **Policy signer certificates file**: Leave this field empty, as you will configure an unsigned policy.
+   - **Name**: Enter *myattestprovider*, and add some characters for uniqueness. We can't provide an exact attestation provider name to use because names must be globally unique. So enter something like myattestprovider12345, and the portal lets you know if it's available or not.
+   - **Location**: Choose the same location as your Azure SQL logical server.
+   - **Policy signer certificates file**: Leave this field empty, as you'll configure an unsigned policy.
 
 1. After you provide the required inputs, select **Review + create**.
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-create-attestation-provider-basics.png" alt-text="Create attestation provider":::
 
 1. Select **Create**.
-1. Once the attestation provider is created, click **Go to resource**.
-1. On the **Overview** tab for the attestation provider, copy the value of the **Attest URI** property to clipboard and save it in a file. This is the attestation URL, you will need in later steps.  
+1. Once the attestation provider is created, select **Go to resource**.
+1. On the **Overview** tab for the attestation provider, copy the value of the **Attest URI** property to clipboard and save it in a file. This is the attestation URL, you'll need in later steps.  
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-attest-uri.png" alt-text="Attestation URL":::
 
@@ -205,11 +205,11 @@ In this step, you'll create and configure an attestation provider in Microsoft A
     };
     ```
 
-1. Click **Save**.
+1. Select **Save**.
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-edit-attestation-policy.png" alt-text="Edit attestation policy":::
 
-1. Click **Refresh** on the upper menu to view the configured policy.
+1. Select **Refresh** on the upper menu to view the configured policy.
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -281,13 +281,13 @@ In this step, you'll create a table and populate it with some data that you'll l
 
 1. Open SSMS and connect to the **ContosoHR** database in the Azure SQL logical server you created **without** Always Encrypted enabled in the database connection.
     1. In the **Connect to Server** dialog, specify the fully qualified name of your server (for example, *myserver135.database.windows.net*), and enter the administrator user name and the password you specified when you created the server.
-    2. Click **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, master database). 
+    2. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, `master` database). 
     3. Select the **Always Encrypted** tab.
     4. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
         :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-disabled.png" alt-text="Connect without Always Encrypted":::
 
-    5. Click **Connect**.
+    5. Select **Connect**.
 
 2. Create a new table, named **Employees**.
 
@@ -340,10 +340,10 @@ In this step, you'll create a column master key and a column encryption key that
 1. Provision a new enclave-enabled column master key:
     1. Right-click **Always Encrypted Keys** and select **New Column Master Key...**.
     2. Select your column master key name: **CMK1**.
-    3. Verify **Allow enclave computations** is selected. (It is selected by default if a secure enclave is enabled for the database - it should be enabled since your database uses the DC-series hardware configuration.)
+    3. Verify **Allow enclave computations** is selected. (It's selected by default if a secure enclave is enabled for the database - it should be enabled since your database uses the DC-series hardware configuration.)
     4. Select either **Azure Key Vault** (recommended) or **Windows Certificate Store** (**Current User** or **Local Machine**).
-        1. If you selected Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Click **Generate Key** to create a new key.
-        1. If you select Windows Certificate Store, click the **Generate Certificate** button to create a new certificate.
+        1. If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.
+        1. If you select Windows Certificate Store, select the **Generate Certificate** button to create a new certificate.
         :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Allow enclave computations":::
     5. Select **OK**.
 
@@ -361,7 +361,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
 1. Open a new SSMS instance and connect to your database **with** Always Encrypted enabled for the database connection.
     1. Start a new instance of SSMS.
     2. In the **Connect to Server** dialog, specify the fully qualified name of your server (for example, *myserver135.database.windows.net*), and enter the administrator user name and the password you specified when you created the server.
-    3. Click **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, master database). 
+    3. Select **Options >>** and select the **Connection Properties** tab. Make sure to select the **ContosoHR** database (not the default, master database). 
     4. Select the **Always Encrypted** tab.
     5. Select the **Enable Always Encrypted (column encryption)** checkbox.
     6. Select **Enable secure enclaves**. (This step applies to SSMS 19 or later.)

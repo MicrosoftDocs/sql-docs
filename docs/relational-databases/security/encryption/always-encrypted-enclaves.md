@@ -4,7 +4,7 @@ description: Learn about the Always Encrypted with secure enclaves feature for S
 ms.custom:
 - seo-lt-2019
 - event-tier1-build-2022
-ms.date: 05/24/2022
+ms.date: 10/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -20,7 +20,7 @@ monikerRange: ">= sql-server-ver15"
 
 Always Encrypted with secure enclaves expands confidential computing capabilities of [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later, as well as in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
-Introduced in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] in 2015 and in [!INCLUDE[sssql16](../../../includes/sssql16-md.md)], Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users: Database Administrators (DBAs), computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but should not have access to some or all of the actual data.
+Introduced in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] in 2015 and in [!INCLUDE[sssql16](../../../includes/sssql16-md.md)], Always Encrypted protects the confidentiality of sensitive data from malware and high-privileged *unauthorized* users: Database Administrators (DBAs), computer admins, cloud admins, or anyone else who has legitimate access to server instances, hardware, etc., but shouldn't have access to some or all of the actual data.
 
 Without the enhancements discussed in this article, Always Encrypted protects the data by encrypting it on the client side and *never* allowing the data or the corresponding cryptographic keys to appear in plaintext inside the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]. As a result, the functionality on encrypted columns inside the database is severely restricted. The only operations the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] can perform on encrypted data are equality comparisons (only available with [deterministic encryption](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)). All other operations, including cryptographic operations (initial data encryption or key rotation) and richer queries (for example, pattern matching) aren't supported inside the database. Users need to move their data outside of the database to perform these operations on the client-side.
 
@@ -48,14 +48,14 @@ Always Encrypted uses one of the two enclave technologies, depending on the envi
 
 ## Secure enclave attestation
 
-Enclave attestation is a workflow that allows a client application to establish trust with a secure enclave for the database, the application is connected to, before sharing cryptographic keys and using the enclave for processing sensitive data. The attestation workflow verifies the enclave is a genuine VBS or Intel SGX enclave and the code running inside it is the genuine Microsoft-signed enclave library for Always Encrypted. Enclave attestation can help detect attacks that involve tampering with the enclave code or it's environment by malicious administrators.
+Enclave attestation is a workflow that allows a client application to establish trust with a secure enclave for the database and the application it's connected to, before sharing cryptographic keys and using the enclave for processing sensitive data. The attestation workflow verifies the enclave is a genuine VBS or Intel SGX enclave and the code running inside it is the genuine Microsoft-signed enclave library for Always Encrypted. Enclave attestation can help detect attacks that involve tampering with the enclave code or its environment by malicious administrators.
 
-To attest the enclave, both the client driver within the application and the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)], the application is connected to, communicate with an external attestation service using a client-specified endpoint. 
+To attest the enclave, both the client driver within the application and the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)], the application it's connected to, communicate with an external attestation service using a client-specified endpoint.
 
 A valid attestation service depends on the enclave type and your database environment:
 
-- VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] require [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) using Host Guardian Service (HGS) as an attestation service. See [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md) for more information.
-- Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (DC-series databases) require [Microsoft Azure Attestation](/azure/attestation/overview). See [Plan for Intel SGX enclaves and attestation in Azure SQL Database](../../../../azure-sql/database/always-encrypted-enclaves-plan.md) for more information.
+- VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] require [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) using Host Guardian Service (HGS) as an attestation service. For more information, see [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md).
+- Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (DC-series databases) require [Microsoft Azure Attestation](/azure/attestation/overview). For more information, see [Plan for Intel SGX enclaves and attestation in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-plan).
 
 ## Supported client drivers
 
@@ -116,8 +116,7 @@ The operations supported inside the secure enclaves are:
 
 > [!NOTE]
 > The above operations inside secure enclaves require randomized encryption. Deterministic encryption is not supported. Equality comparison remains the operation available for columns using deterministic encryption.
-
-> [!NOTE]
+>
 > In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 
 
 For more information, see [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
@@ -178,9 +177,9 @@ All other limitations for Always Encrypted listed in [Limitations](always-encryp
 The following limitations are specific to Always Encrypted with secure enclaves:
 
 - Clustered indexes can't be created on enclave-enabled columns using randomized encryption.
-- Enclave-enabled columns using randomized encryption can't be primary key columns and cannot be referenced by foreign key constraints or unique key constraints.
+- Enclave-enabled columns using randomized encryption can't be primary key columns and can't be referenced by foreign key constraints or unique key constraints.
 - In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (this limitation doesn't apply to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]) only nested loop joins (using indexes, if available) are supported on enclave-enabled columns using randomized encryption. For information about other differences among different products, see [Confidential queries](#confidential-queries).
-- In-place cryptographic operations cannot be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you can't encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
+- In-place cryptographic operations can't be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you can't encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 - Using enclave-enabled keys for columns in in-memory tables isn't supported.
 - Expressions defining computed columns can't perform any computations on enclave-enabled columns using randomized encryption (even if the computations are among the supported operations listed in [Confidential queries](#confidential-queries)).
 - Escape characters aren't supported in parameters of the LIKE operator on enclave-enabled columns using randomized encryption.
@@ -189,7 +188,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
   - `char[n]`, `varchar[n]`, `binary[n]`, `varbinary[n]`, if n is greater than 7935.
 - Tooling limitations:
   - The only supported key stores for storing enclave-enabled column master keys are Windows Certificate Store and Azure Key Vault.
-  - To trigger an in-place cryptographic operation via `ALTER TABLE`/`ALTER COLUMN`, you need to issue the statement using a query window in SSMS or Azure Data Studio, or you can write your own program that issues the statement. Currently, the Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio don't support in-place encryption - they move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled.
+  - To trigger an in-place cryptographic operation via `ALTER TABLE`/`ALTER COLUMN`, you need to issue the statement using a query window in SSMS or Azure Data Studio, or you can write your own program that issues the statement. Currently, the `Set-SqlColumnEncryption` cmdlet in the SqlServer PowerShell module and the Always Encrypted wizard in SQL Server Management Studio don't support in-place encryption. Move the data out of the database for cryptographic operations, even if the column encryption keys used for the operations are enclave-enabled.
 
 ## Next steps
 
@@ -201,5 +200,5 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 
 ## See also
 
-- [Always Encrypted with secure enclaves documentation](https://learn.microsoft.com/en-us/azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing)
+- [Always Encrypted with secure enclaves documentation](/azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing)
 - [Azure SQL Database Always Encrypted, SIGMOD '20: Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data](https://dl.acm.org/doi/abs/10.1145/3318464.3386141)

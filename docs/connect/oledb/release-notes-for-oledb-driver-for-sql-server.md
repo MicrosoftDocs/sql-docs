@@ -36,7 +36,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md) |
+| Support for TLS 1.3 | TDS 8.0 connections can now be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../relational-databases/security/networking/tds-8-and-tls-1-3.md). |
 | Support for the `Server Certificate` connection string keyword, and the `SSPROP_INIT_SERVER_CERTIFICATE` initialization property | The user may now specify the path to a certificate file to match against the SQL Server TLS/SSL certificate. <br/><br/>For more information, see: [Using connection string keywords](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 
 ## Previous releases

@@ -101,7 +101,7 @@ For additional types of indexes, see:
 
 ## Syntax
 
-### Syntax for SQL Server and Azure SQL Database
+### Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance
 
 ```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name

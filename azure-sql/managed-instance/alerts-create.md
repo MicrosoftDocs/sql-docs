@@ -103,7 +103,7 @@ The following managed instance metrics are available for alerting configuration:
       | Option | Behavior |
       | ------ | -------- |
       | Global | The action groups service decides where to store the action group. The action group is persisted in at least two regions to ensure regional resiliency. Processing of actions may be done in any [geographic region](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).<br></br>Voice, SMS and email actions performed as the result of [service health alerts](/azure/azure-monitor/service-health/alerts-activity-log-service-notifications-portal.md) are resilient to Azure live-site-incidents. |
-      | Regional | The action group is stored within the selected region. The action group is [zone-redundant](/azure/azure-monitor/availability-zones/az-region#highly-available-services). Processing of actions is performed within the region.</br></br>Use this option if you want to ensure that the processing of your action group is performed within a specific [geographic boundary](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview). |
+      | Regional | The action group is stored within the selected region. The action group is [zone-redundant](/azure/availability-zones/az-region#highly-available-services). Processing of actions is performed within the region.</br></br>Use this option if you want to ensure that the processing of your action group is performed within a specific [geographic boundary](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview). |
 
       ![Define_how_to_be_alerted](./media/alerts-create/mi-add-alerts-action-group-annotated.png)
 
@@ -117,21 +117,21 @@ The following managed instance metrics are available for alerting configuration:
 
          * **Details**: Based on the selected notification type, enter an email address, phone number, or other information.
 
-         * **Common alert schema**: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor. For more information about this schema, see [Common alert schema](./alerts-common-schema.md).
+         * **Common alert schema**: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor. For more information about this schema, see [Common alert schema](/azure/azure-monitor/alerts/alerts-common-schema.md).
 
-       :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-notifications.png" alt-text="Screenshot of the Notifications tab of the Create action group dialog box. Configuration information for an email notification is visible." border="false":::
+       :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-notifications.png" alt-text="Screenshot of the Notifications tab of the Create action group dialog box. Configuration information for an email notification is visible.":::
 
    1. To define a list of actions to trigger when an alert is triggered, select the **Actions** tab and define the actions such as execute a webhook, Azure function, or runbook or create an ITSM ticket in your compatible system.
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-actions.png" alt-text="Screenshot of the Actions tab of the Create action group dialog box in the Azure portal with the Action type and Name fields highlighted." border="false":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-actions.png" alt-text="Screenshot of the Actions tab of the Create action group dialog box in the Azure portal with the Action type and Name fields highlighted.":::
 
    1. If you'd like to assign a key-value pair to the action group, select the **Tags** tab. Otherwise, skip this step. By using tags, you can categorize your Azure resources. Tags are available for all Azure resources, resource groups, and subscriptions.
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-tabs.png" alt-text="Screenshot of the Tags tab of the Create action group dialog box in the Azure portal. Values are visible in the Name and Value boxes." border="false":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-tabs.png" alt-text="Screenshot of the Tags tab of the Create action group dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
 
    1. To review your settings, select the **Review + create** tab. This step quickly checks your inputs to make sure you've entered all required information. If there are issues, they're reported here. After you've reviewed the settings, select **Create** to create the action group.
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-review.png" alt-text="Screenshot of the Review and create tab of the Create an action group dialog box in the Azure portal with the Create button highlighted." border="false":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-review.png" alt-text="Screenshot of the Review and create tab of the Create an action group dialog box in the Azure portal with the Create button highlighted.":::
 
 10. In the **Details** tab, fill in the alert rule details for your records and select the severity type. You also have the option to use the **Custom properties** to add your own properties to the alert rule.
 
@@ -139,12 +139,12 @@ The following managed instance metrics are available for alerting configuration:
 
 11. In the **Tags** tab, set any required tags on the alert rule resource. Otherwise, skip this step.
 
-    :::image type="content" source="./media/alerts-create/mi-add-alerts-tags.png" alt-text="Screenshot of the Tags tab of the Create an alert rule dialog box in the Azure portal. Values are visible in the Name and Value boxes." border="false":::
+    :::image type="content" source="./media/alerts-create/mi-add-alerts-tags.png" alt-text="Screenshot of the Tags tab of the Create an alert rule dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
 
 
 12. In the **Review + create** tab, a validation will run and inform you of any issues. When validation passes and you've reviewed the settings, select the **Create** button at the bottom of the page.
 
-    :::image type="content" source="./media/alerts-create/mi-add-alerts-create-button.png" alt-text="Screenshot of the Review + create tab of the Create an alert rule dialog box in the Azure portal. The Create button is highlighted." border="false":::
+    :::image type="content" source="./media/alerts-create/mi-add-alerts-create-button.png" alt-text="Screenshot of the Review + create tab of the Create an alert rule dialog box in the Azure portal. The Create button is highlighted.":::
 
 The new alert rule will become active within a few minutes and will be triggered based on your settings.
 

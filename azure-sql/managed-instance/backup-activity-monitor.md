@@ -18,7 +18,7 @@ This article teaches you how to monitor backup activity for [Azure SQL Managed I
 
 ## Overview
 
-Azure SQL Managed Instance stores backup information in the [msdb database](msdb-database-sql-mi.md) and also emits events (also known as [Extended Events or XEvents](../database/xevent-db-diff-from-svr.md)) during backup activity for the purpose of reporting. Configure an XEvent session to track information such as backup status, backup type, size, time, and location within the msdb database. This information can be integrated with backup monitoring software and also used for the purpose of Enterprise Audit. 
+Azure SQL Managed Instance stores backup information in the [msdb database](backup-transparency.md) and also emits events (also known as [Extended Events or XEvents](../database/xevent-db-diff-from-svr.md)) during backup activity for the purpose of reporting. Configure an XEvent session to track information such as backup status, backup type, size, time, and location within the msdb database. This information can be integrated with backup monitoring software and also used for the purpose of Enterprise Audit. 
 
 Enterprise Audits may require proof of successful backups, time of backup, and duration of the backup.
 

@@ -1,11 +1,11 @@
 ---
-title: Prepare environment for Managed Instance link
+title: Prepare environment for Azure SQL Managed Instance link
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 08/30/2022
+ms.date: 10/20/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: guide
@@ -14,7 +14,7 @@ ms.topic: guide
 # Prepare your environment for a link - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to prepare your environment for a [Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
+This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
 > Some functionality of the link is generally available, while some is currently in preview. Review the [release status](managed-instance-link-feature-overview.md#release-status) to learn more. 
@@ -230,19 +230,105 @@ Bidirectional network connectivity between SQL Server and SQL Managed Instance i
 
 ### Test the connection from SQL Server to SQL Managed Instance 
 
-To check if SQL Server can reach SQL Managed Instance, use the following `tnc` command in PowerShell from the SQL Server host machine. Replace `<ManagedInstanceFQDN>` with the fully qualified domain name (FQDN) of the managed instance. You can copy the FQDN from the managed instance's overview page in the Azure portal.
+We will use SQL Agent on SQL Server to run connectivity tests from SQL Server to SQL Managed Instance.
 
-```powershell
-tnc <ManagedInstanceFQDN> -port 5022
-```
+1. Connect to SQL Managed Instance and run the following script to generate some parameters we will need later:
 
-A successful test shows `TcpTestSucceeded : True`. 
+   ```sql
+   SELECT 'DECLARE @serverName NVARCHAR(512) = N'''+ value + ''''
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE PARAMETER_NAME = 'DnsRecordName'
+   UNION
+   SELECT 'DECLARE @node NVARCHAR(512) = N'''+ NodeName + '.' + CLUSTER + ''''
+   FROM
+     (SELECT REPLACE(fr.node_name, '.', '') AS NodeName, JoinCol = 1
+      FROM sys.dm_hadr_fabric_partitions fp
+      JOIN sys.dm_hadr_fabric_replicas fr ON fp.partition_id = fr.partition_id
+      JOIN sys.dm_hadr_fabric_nodes fn ON fr.node_name = fn.node_name
+      WHERE service_name like '%ManagedServer%' AND replica_role = 2) t1
+   LEFT JOIN
+     (SELECT value AS CLUSTER, JoinCol = 1
+      FROM sys.dm_hadr_fabric_config_parameters
+      WHERE PARAMETER_NAME = 'ClusterName') t2 ON (t1.JoinCol = t2.JoinCol)
+   UNION
+   SELECT 'DECLARE @port NVARCHAR(512) = N'''+ value + ''''
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE PARAMETER_NAME = 'HadrPort';
+   ```
 
-:::image type="content" source="./media/managed-instance-link-preparation/powershell-output-tnc-command.png" alt-text="Screenshot that shows the output of the command for testing a network connection in PowerShell.":::
+   You will get something like:
 
-If the response is unsuccessful, verify the following network settings:
-- There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
-- There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
+   :::image type="content" source="./media/managed-instance-link-preparation/test-connectivity-parameters-output.png" alt-text="Screenshot that shows the output of the script that generates parameter values for testing connectivity in SSMS.":::
+
+   Save the result to be used in the next steps. Note that the parameters we just generated may change after any failover on SQL Managed Instance, be sure to generate them again if needed.
+
+1. Connect to SQL Server
+
+1. Open a new query window and paste the following:
+
+   ```sql
+   --START
+   -- Parameters section
+   DECLARE @node NVARCHAR(512) = N''
+   DECLARE @port NVARCHAR(512) = N''
+   DECLARE @serverName NVARCHAR(512) = N''
+   
+   --Script section
+   IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs_view WHERE name = N'TestMILinkConnection')
+   EXEC msdb.dbo.sp_delete_job @job_name = N'TestMILinkConnection', @delete_unused_schedule=1
+   
+   DECLARE @jobId BINARY(16), @cmd NVARCHAR(MAX)
+   
+   EXEC  msdb.dbo.sp_add_job @job_name=N'TestMILinkConnection', @enabled=1, @job_id = @jobId OUTPUT
+   
+   SET @cmd = (N'tnc ' + @serverName + N' -port 5022 | select ComputerName, RemoteAddress, TcpTestSucceeded | Format-List')
+   EXEC msdb.dbo.sp_add_jobstep @job_id = @jobId, @step_name = N'Test Port 5022'
+   , @step_id = 1, @cmdexec_success_code = 0, @on_success_action = 3, @on_fail_action = 3
+   , @subsystem = N'PowerShell', @command = @cmd, @database_name = N'master'
+   
+   SET @cmd = (N'tnc ' + @node + N' -port ' + @port +' | select ComputerName, RemoteAddress, TcpTestSucceeded | Format-List')
+   EXEC msdb.dbo.sp_add_jobstep @job_id = @jobId, @step_name = N'Test HADR Port'
+   , @step_id = 2, @cmdexec_success_code = 0, @subsystem = N'PowerShell', @command = @cmd, @database_name = N'master'
+   
+   EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
+   GO
+   EXEC msdb.dbo.sp_start_job @job_name = N'TestMILinkConnection'
+   GO
+   --Check status every 5 seconds
+   DECLARE @RunStatus INT 
+   SET @RunStatus=10
+   WHILE ( @RunStatus >= 4)
+   BEGIN
+   SELECT distinct @RunStatus = run_status
+   FROM [msdb].[dbo].[sysjobhistory] JH JOIN [msdb].[dbo].[sysjobs] J ON JH.job_id = J.job_id 
+   WHERE J.name=N'TestMILinkConnection' and step_id = 0
+   WAITFOR DELAY '00:00:05'; 
+   END
+   
+   --Get logs once job completes
+   SELECT [step_name]
+   ,SUBSTRING([message], CHARINDEX('TcpTestSucceeded',[message]), CHARINDEX('Process Exit', [message])-CHARINDEX('TcpTestSucceeded',[message])) as TcpTestResult
+   ,SUBSTRING([message], CHARINDEX('RemoteAddress',[message]), CHARINDEX ('TcpTestSucceeded',[message])-CHARINDEX('RemoteAddress',[message])) as RemoteAddressResult
+   ,[run_status] ,[run_duration], [message]
+   FROM [msdb].[dbo].[sysjobhistory] JH JOIN [msdb].[dbo].[sysjobs] J ON JH.job_id= J.job_id
+   WHERE J.name = N'TestMILinkConnection' and step_id <> 0
+   --END
+   ```
+
+1. Replace the *@node*, *@port* and *@serverName* parameters with the values you got from Step 1.
+
+1. Run the script and check the results, you will get something like:
+
+   :::image type="content" source="./media/managed-instance-link-preparation/test-connectivity-results.png" alt-text="Screenshot that shows the output with the test results in SSMS.":::
+
+1. Verify the results:
+
+   - The outcome of each test at TcpTestSucceeded should be `TcpTestSucceeded : True`.
+   - The RemoteAddresses should belong to the IP range for the SQL Managed Instance subnet.
+
+   If the response is unsuccessful, verify the following network settings:
+   - There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
+   - There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
 
 ### Test the connection from SQL Managed Instance to SQL Server
 

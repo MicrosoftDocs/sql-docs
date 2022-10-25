@@ -165,7 +165,7 @@ The following example shows how to use `Active Directory Managed Identity` authe
 
 ```cs
 // For system-assigned managed identity
-// Use your own server and database.
+// Use your own values for Server and Database.
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
@@ -203,6 +203,9 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 The following example demonstrates `Active Directory Managed Identity` authentication with a user-assigned managed identity with **Microsoft.Data.SqlClient v2.1**.
 
 ```cs
+// For user-assigned managed identity
+// Use your own values for Server, Database, and User Id.
+
 // With Microsoft.Data.SqlClient v2.1
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Encrypt=True; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 

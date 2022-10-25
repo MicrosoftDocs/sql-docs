@@ -4,7 +4,7 @@ description: Tutorial on how to set up Azure Active Directory Authentication for
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 10/20/2022
+ms.date: 10/25/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: tutorial
@@ -165,7 +165,7 @@ Select the newly created application, and on the left side menu, select **API Pe
    > [!NOTE]
    > Once the the Azure AD admin login is granted the `sysadmin` role, changing the Azure AD admin in the Azure portal does not remove the previous login that remains as a `sysadmin`. To remove the login, it must be dropped manually.
    >
-   > After changing the existing Azure AD admin, the SQL Server instance must be restarted for the change to take effect. Otherwise, the new admin login is not displayed in `sys.server_principals`. Instead, the old admin login is still displayed.
+   > The Azure AD admin change for the SQL Server instance takes place without a server restart, once the process is completed with the SQL Server's Azure Arc agent. For the new admin to display in `sys.server_principals`, the SQL Server instance must be restarted, and until then, the old admin is displayed. The current Azure AD admin can be checked in the Azure portal.
 
 ## Create logins and users
 

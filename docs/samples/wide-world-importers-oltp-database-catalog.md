@@ -141,7 +141,7 @@ The database schema has been code-generated based on a series of metadata tables
 
 For security, WideWorldImporters does not allow external applications to access data schemas directly. To isolate access, WideWorldImporters uses security-access schemas that do not hold data, but contain views and stored procedures. External applications use the security schemas to retrieve the data that they are allowed to view.  This way, users can only run the views and stored procedures in the secure-access schemas
 
-For example, this sample includes Power BI dashboards. An external application accesses these Power BI dashboards from the Power BI gateway as a user that has read-only permission on the PowerBI schema.  For read-only permission, the user only needs SELECT and EXECUTE permission on the PowerBI schema. A database administrator at WWI assigns these permissions as needed.
+For example, this sample includes Power BI dashboards. An external application accesses these Power BI dashboards from the Power BI gateway as a user that has read-only permission on the Power BI schema.  For read-only permission, the user only needs SELECT and EXECUTE permission on the Power BI schema. A database administrator at WWI assigns these permissions as needed.
 
 ## Stored Procedures
 
@@ -149,7 +149,7 @@ Stored procedures are organized in schemas. Most of the schemas are used for con
 
 The `Website` schema contains the stored procedures that can be used by a Web front-end.
 
-The `Reports` and `PowerBI` schemas are meant for reporting services and PowerBI purposes. Any extensions of the sample are encouraged to use these schemas for reporting purposes.
+The `Reports` and `PowerBI` schemas are meant for reporting services and Power BI purposes. Any extensions of the sample are encouraged to use these schemas for reporting purposes.
 
 ### Website schema
 

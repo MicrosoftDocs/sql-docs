@@ -9,7 +9,7 @@ items:
   items:
   - name: What's New
     items:
-    - name: SQL Server 2022 Preview
+    - name: SQL Server 2022
       href: sql-server/what-s-new-in-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-2019.md
@@ -19,6 +19,8 @@ items:
       href: sql-server/what-s-new-in-sql-server-2016.md
   - name: Editions & Features
     items:
+    - name: SQL Server 2022
+      href: sql-server/editions-and-components-of-sql-server-2022.md
     - name: SQL Server 2019
       href: sql-server/editions-and-components-of-sql-server-2019.md
     - name: SQL Server 2017
@@ -1883,6 +1885,8 @@ items:
         href: relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
+      - name: Cleanup and troubleshooting
+        href: relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md        
   - name: Triggers
     items:
     - name: Logon Triggers
@@ -10053,7 +10057,7 @@ items:
         href: linux/sql-server-linux-whats-new.md
     - name: Release notes
       items:
-      - name: SQL Server 2022 Preview
+      - name: SQL Server 2022
         href: linux/sql-server-linux-release-notes-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-notes-2019.md
@@ -10061,7 +10065,7 @@ items:
         href: linux/sql-server-linux-release-notes-2017.md
     - name: Release history
       items:
-      - name: SQL Server 2022 Preview
+      - name: SQL Server 2022
         href: linux/sql-server-linux-release-history-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-release-history-2019.md
@@ -10069,7 +10073,7 @@ items:
         href: linux/sql-server-linux-release-history-2017.md
     - name: Editions & Features
       items:
-      - name: SQL Server 2022 Preview
+      - name: SQL Server 2022
         href: linux/sql-server-linux-editions-and-components-2022.md
       - name: SQL Server 2019
         href: linux/sql-server-linux-editions-and-components-2019.md
@@ -13716,6 +13720,15 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md
       - name: sys.sp_cdc_set_scheduler_job
         href: relational-databases/system-stored-procedures/sys-cdc-set-scheduler-job-transact-sql.md
+    - name: Change Tracking
+      href: relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md
+      items:
+      - name: sys.sp_flush_commit_table
+        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-transact-sql.md       
+      - name: sys.sp_flush_commit_table_on_demand
+        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-on-demand-transact-sql.md       
+      - name: sys.sp_flush_CT_internal_table_on_demand
+        href: relational-databases/system-stored-procedures/sys-sp-flush-ct-internal-table-on-demand-transact-sql.md
     - name: Cursor
       href: relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md
       items:
@@ -13949,6 +13962,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-indexoption-transact-sql.md
       - name: sp_invalidate_textptr
         href: relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md
+      - name: sp_invoke_external_rest_endpoint
+        href: relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md
       - name: sp_lock
         href: relational-databases/system-stored-procedures/sp-lock-transact-sql.md
       - name: sp_monitor
@@ -15247,6 +15262,11 @@ items:
         href: relational-databases/system-tables/cdc-index-columns-transact-sql.md
       - name: dbo.cdc_jobs
         href: relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md
+    - name: Change Tracking Tables
+      href: relational-databases/system-tables/change-tracking-tables-transact-sql.md
+      items:
+      - name: dbo.MSchange_tracking_history
+        href: relational-databases/system-tables/dbo-mschange-tracking-history-transact-sql.md
     - name: Database Maintenance Plan Tables
       href: relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md
       items:

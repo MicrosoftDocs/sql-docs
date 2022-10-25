@@ -3,15 +3,15 @@ title: "RHEL: Install SQL Server on Linux"
 titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server on Red Hat Enterprise Linux (RHEL) and then create and query a database with sqlcmd.
 author: VanMSFT
+ms.author: vanto
+ms.reviewer: randolphwest
+ms.date: 10/20/2022
+ms.prod: sql
+ms.technology: linux
+ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
   - intro-installation
-ms.author: vanto
-ms.reviewer: randolphwest
-ms.date: 05/20/2022
-ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
 ---
 # Quickstart: Install SQL Server and create a database on Red Hat
 
@@ -42,8 +42,28 @@ For more information on supported platforms, see [Release notes for [!INCLUDE[ss
 
 ::: moniker-end
 
-> [!TIP]
+> [!TIP]  
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+If you choose to have a pre-installed SQL Server VM on RHEL ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
+## Azure Marketplace images
+
+You can create your VM based on the following Azure Marketplace image:
+
+- [RHEL 8.0](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-rhel8)
+
+When you use the above marketplace image, you avoid the installation step, and can directly configure the instance by providing the SKU and the `sa` password needed to get started with SQL Server. SQL Server Azure VMs deployed on RHEL using the above Marketplace images, are fully supported by both Microsoft and Red Hat.
+
+You can configure SQL Server on Linux with **mssql-conf**, using the following command:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf setup
+```
+
+::: moniker-end
 
 ## Prerequisites
 
@@ -64,10 +84,10 @@ The following commands for installing [!INCLUDE [ssnoversion-md](../includes/ssn
 
 ```bash
 sudo alternatives --config python
-# If not configured, install python2 and openssl10 using the following commands: 
+# If not configured, install python2 and openssl10 using the following commands:
 sudo yum install python2
 sudo yum install compat-openssl10
-# Configure python2 as the default interpreter using this command: 
+# Configure python2 as the default interpreter using this command:
 sudo alternatives --config python
 ```
 
@@ -121,10 +141,10 @@ The following commands for installing [!INCLUDE [ssnoversion-md](../includes/ssn
 
 ```bash
 sudo alternatives --config python
-# If not configured, install python2 and openssl10 using the following commands: 
+# If not configured, install python2 and openssl10 using the following commands:
 sudo yum install python2
 sudo yum install compat-openssl10
-# Configure python2 as the default interpreter using this command: 
+# Configure python2 as the default interpreter using this command:
 sudo alternatives --config python
 ```
 

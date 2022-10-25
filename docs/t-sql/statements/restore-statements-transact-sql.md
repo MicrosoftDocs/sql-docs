@@ -622,7 +622,7 @@ RESTORE LOG AdventureWorks2012
   FROM AdventureWorksBackups
     WITH FILE = 4,
     RECOVERY,
-    STOPATMARK = ListPriceUpdate;
+    STOPATMARK = 'UPDATE Product list prices';
 ```
 
 [&#91;Top of examples&#93;](#examples)

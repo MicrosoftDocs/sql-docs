@@ -14,7 +14,7 @@ metadata:
 
 highlightedContent:
   items:
-   - title: Try SQL Server 2022 Preview
+   - title: Try SQL Server 2022
      itemType: download
      url: https://aka.ms/getsqlserver2022
    - title: Get an Azure VM with SQL Server
@@ -79,7 +79,7 @@ conceptualContent:
           itemType: get-started
     - title: What's new
       links:
-        - text: SQL Server 2022 Preview
+        - text: SQL Server 2022
           url: ./sql-server/what-s-new-in-sql-server-2022.md
           itemType: whats-new
         - text: Azure SQL Database

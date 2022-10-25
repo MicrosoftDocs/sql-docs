@@ -72,7 +72,7 @@ While having `CHECKSUM` enabled for backups is not required, it is highly recomm
 
 
 
-### Autocomplete versus Continuous mode migration
+### Autocomplete versus continuous mode migration
 
 You can start LRS in either **autocomplete** or **continuous** mode.
 
@@ -82,7 +82,23 @@ In case that you plan to keep adding new backup files while migration is in prog
 
 After LRS is stopped, either automatically through autocomplete, or manually through cutover, you can't resume the restore process for a database that was brought online on SQL Managed Instance. For example, once migration completes, you're no longer able to restore more differential backups for an online database. To restore more backup files after migration completes, you need to delete the database from the managed instance and restart the migration from the beginning. 
 
-### Migration workflow
+
+## Compare to the link
+
+LRS differs from the [Managed Instance link](managed-instance-link-overview.md): 
+
+- LRS is based on log shipping technology, while the link uses distributed availability groups. 
+- LRS supports SQL Server starting with 2008, while the link only supports SQL Server starting with 2016. 
+- Replication happens every few minutes, as compared to the near real-time replication of the link. 
+- LRS does not provide an accessible read-only secondary while the link does. 
+- LRS uses a public endpoint while the link relies on a private endpoint, and must have a configured port. 
+- LRS can be impacted by system updates and failovers which could restart the LRS process, while the link is not impacted by interruption. 
+- LRS job can run up to 30 days, while the link provides unlimited duration for replication. 
+- LRS is not considered a true online migration while the link is. 
+- In some cases, cut over to the target can take a while with LRS while the link provides the best possible downtime migration. 
+- No maintenance scripts are required on the source SQL Server with LRS while the link requires backing up the transaction log to prevent filling up the disk. 
+
+## Migration workflow
 
 Typical migration workflow is shown in the image below, and steps outlined in the table.
 
@@ -144,16 +160,6 @@ Consider the following limitations of LRS:
 > If you require database to be R/O accessible during the migration, a much longer time frame to perform the migration, and the best possible minimum downtime, consider the [link feature for Managed Instance](managed-instance-link-feature-overview.md) as a recommended migration solution in these cases.
 >
 
-## Troubleshooting
-
-After you start LRS, use the monitoring cmdlet (PowerShell: `get-azsqlinstancedatabaselogreplay` or Azure CLI: `az_sql_midb_log_replay_show`) to see the status of the operation. If LRS fails to start after some time and you get an error, check for the most common issues:
-
-- Does an existing database on SQL Managed Instance have the same name as the one you're trying to migrate from SQL Server? Resolve this conflict by renaming one of the databases.
-- Are the permissions granted for the SAS **token Read** and **List** _only_?
-- Did you copy the SAS token for LRS after the question mark (`?`), with content starting like this: `sv=2020-02-10...`? 
-- Is the SAS token validity time applicable for the time window of starting and completing the migration? There might be mismatches due to the different time zones used for SQL Managed Instance and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.
-- Are the database name, resource group name, and managed instance name spelled correctly?
-- If you started LRS in autocomplete mode, was a valid filename for the last backup file specified?
 
 ## Next steps
 

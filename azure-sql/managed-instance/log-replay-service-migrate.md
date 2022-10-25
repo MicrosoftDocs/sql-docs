@@ -48,8 +48,8 @@ While having `CHECKSUM` enabled for backups is not required, it is highly recomm
 
 Make sure you have the following requirements for Azure: 
 
-- PowerShell Az.SQL module version 2.16.0 or later ([installed](https://www.powershellgallery.com/packages/Az.Sql/) or accessed through [Azure Cloud Shell](/azure/cloud-shell/)).
-- Azure CLI version 2.19.0 or later ([installed](/cli/azure/install-azure-cli)).
+- PowerShell Az.SQL module version 4.0.0 or later ([installed](https://www.powershellgallery.com/packages/Az.Sql/) or accessed through [Azure Cloud Shell](/azure/cloud-shell/)).
+- Azure CLI version 2.42.0 or later ([installed](/cli/azure/install-azure-cli)).
 - Provisioned Azure Blob Storage container.
 - Shared access signature (SAS) security token with read and list permissions generated for the Blob Storage container or a managed identity that can access the container. 
 - Place backup files for an individual database inside a separate folder in storage account using  flat-file structure (mandatory). Nested folders inside database folders aren't supported.
@@ -141,11 +141,16 @@ Azure Blob Storage is used as intermediary storage for backup files between SQL 
 1. [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
 2. [Crete a blob container](/azure/storage/blobs/storage-quickstart-blobs-portal) inside the storage account.
 
-### Copy backups from SQL Server to Blob Storage
 
-When migrating databases to a managed instance by using LRS, you can use the following approaches to upload backups to Blob Storage:
 
-- SQL Server native [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) 
+## Upload backups from SQL Server to Blob Storage
+
+Once your blob container is ready, you can start to upload your backups to Blob Storage. You can do so by copying existing backups to Blob Storage, or by taking backups from SQL Server directly to Blob Storage. 
+
+### Copy existing backups to Blob Storage
+
+When migrating databases to a managed instance by using LRS, you can use the following approaches to copy existing backups to Blob Storage:
+
 - [AzCopy](/azure/storage/common/storage-use-azcopy-v10) or [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer) to upload backups to a blob container
 - Storage Explorer in the Azure portal
 
@@ -153,7 +158,7 @@ When migrating databases to a managed instance by using LRS, you can use the fol
 > To migrate multiple databases using the same Azure Blob Storage container, place all backup files of an individual database into a separate folder inside the container. Use flat-file structure for each database folder, as nested folders aren't supported.
 > 
 
-### Make backups from SQL Server directly to Blob Storage
+### Take backups directly to Blob Storage
 
 If your corporate and network policies allow it, take backups from SQL Server directly to Blob Storage by using the SQL Server native [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) option. If you can use this option, you don't need to take backups to local storage and upload them to Blob Storage.
 
@@ -214,11 +219,14 @@ https://<mystorageaccountname>.blob.core.windows.net/<containername>/<database3>
 
 Use either an SAS token or a managed identity to access to the storage Azure Blob Storage account. 
 
+> [!WARNING]
+> You cannot use both an SAS token and a managed identity in parallel on the same storage account. You can use EITHER an SAS token OR managed identity but not both. 
+
 ### [SAS token](#tab/sas-token)
 
 ### Generate a Blob storage SAS authentication token for LRS
 
-Access Azure Blob storage either using an SAS token or a managed identity. If you're using a managed identity, skip this step. 
+Access Azure Blob storage either using an SAS token. 
 
 Azure Blob Storage is used as intermediary storage for backup files between SQL Server and SQL Managed Instance. Generate an SAS authentication token for LRS  with only list and read permissions. The token enables LRS to access Blob Storage and uses the backup files to restore them to SQL Managed Instance. 
 
@@ -254,7 +262,7 @@ The SAS authentication is generated with the time validity that you specified. Y
 
 ### Copy parameters from the SAS token
 
-Access Azure Blob storage either using an SAS token or a managed identity. If you're using a managed identity, skip this step. 
+Access Azure Blob storage either using an SAS token or a managed identity. 
 
 Before you use the SAS token to start LRS, you need to understand its structure. The URI of the generated SAS token consists of two parts separated with a question mark (`?`), as shown in this example:
 
@@ -280,11 +288,59 @@ Copy the parameters as follows:
 
 ### [Managed identity](#tab/managed-identity)
 
-what do i do? 
+To use a managed identity, assign either a system-managed, or user-managed identity used by the managed instance to the Azure Blob Storage container.  
+
+To do so, follow these steps: 
+
+1. Go to your Blob storage in the [Azure portal](https://portal.azure.com) that you intend to authorize managed instance access to. 
+1. Select **Access control (IAM)**. 
+1. Select **+Add**, and then **Add role assignment**. 
+1. Search for and select the existing role: **Storage Blob Data Reader**, however custom roles are supported as long as they have the Read and List permissions, at minimum. 
+1. Choose **Managed Identity**. 
+1. Use the **+Select members** option to identify:
+    - Your subscription
+    - In the **Managed Identity** field, choose **SQL Managed Instance**
+    - Then choose the SQL Managed Instance you intend to migrate to. 
+1. Choose **Select** to save your settings and authorize access. 
+1. Complete by selecting **Review + assign**. 
 
 
 ---
 
+## Validate storage access
+
+Validate that you have access to the Azure Blob storage. 
+
+First, upload a database backup to your Azure Blob Storage container. 
+
+Next, connect to your managed instance, and run a sample test query to determine if your managed instance is able to access the backup in the container. 
+
+### [SAS token](#tab/sas-token)
+
+If you're using an SAS token to authenticate to your storage account, then replace the `<sastoken>` with  your SAS token and run the following query on your instance: 
+
+```sql
+CREATE CREDENTIAL [https://mitutorials.blob.core.windows.net/databases] 
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE' 
+, SECRET = '<sastoken>' 
+
+RESTORE HEADERONLY 
+FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<containername>/full_0_0.bak' 
+```
+
+### [Managed identity](#tab/managed-identity)
+
+If you're using a managed identity to authenticate to your storage account, then update the `CREATE CREDENTIAL` with your storage account URL, and run the following sample query on your instance: 
+
+```sql
+RESTORE HEADERONLY 
+FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<containername>/full_0_0.bak' 
+
+CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
+WITH IDENTITY = 'MANAGED IDENTITY' 
+```
+
+---
 
 
 ## Log in to Azure and select a subscription
@@ -355,7 +411,16 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb -a --last
 
 The following PowerShell example starts LRS in autocomplete mode using a managed identity: 
 
-The following Azure CLI example starts LRS in autocomplete mode using managed identity: 
+```PowerShell
+Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
+	-InstanceName "ManagedInstance01" `
+	-Name "ManagedDatabaseName" `
+	-Collation "SQL_Latin1_General_CP1_CI_AS" `
+	-StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
+	-StorageContainerIdentity ManagedIdentity  `
+	-AutoCompleteRestore `
+	-LastBackupName "last_backup.bak"
+```
 
 
 ---
@@ -394,6 +459,15 @@ az sql midb log-replay start -g mygroup --mi myinstance -n mymanageddb
 
 ### [Managed identity](#tab/managed-identity)
 
+The following PowerShell example starts LRS in continuous mode using a managed identity:
+
+```PowerShell
+Start-AzSqlInstanceDatabaseLogReplay -ResourceGroupName "ResourceGroup01" `
+	-InstanceName "ManagedInstance01" `
+	-Name "ManagedDatabaseName" `
+	-Collation "SQL_Latin1_General_CP1_CI_AS" -StorageContainerUri "https://<mystorageaccountname>.blob.core.windows.net/<containername>/<databasefolder>" `
+	-StorageContainerIdentity ManagedIdentity
+```
 
 ---
 
@@ -469,6 +543,18 @@ To complete the migration process in LRS continuous mode through the Azure CLI, 
 ```CLI
 az sql midb log-replay complete -g mygroup --mi myinstance -n mymanageddb --last-backup-name "backup.bak"
 ```
+
+
+## Troubleshooting
+
+After you start LRS, use the monitoring cmdlet (PowerShell: `get-azsqlinstancedatabaselogreplay` or Azure CLI: `az_sql_midb_log_replay_show`) to see the status of the operation. If LRS fails to start after some time and you get an error, check for the most common issues:
+
+- Does an existing database on SQL Managed Instance have the same name as the one you're trying to migrate from SQL Server? Resolve this conflict by renaming one of the databases.
+- Are the permissions granted for the SAS **token Read** and **List** _only_?
+- Did you copy the SAS token for LRS after the question mark (`?`), with content starting like this: `sv=2020-02-10...`? 
+- Is the SAS token validity time applicable for the time window of starting and completing the migration? There might be mismatches due to the different time zones used for SQL Managed Instance and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.
+- Are the database name, resource group name, and managed instance name spelled correctly?
+- If you started LRS in autocomplete mode, was a valid filename for the last backup file specified?
 
 
 ## Next steps

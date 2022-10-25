@@ -93,6 +93,22 @@ Secure connectivity, such as VPN or Express Route is used between an on-premises
 
 There could exist up to 100 links from the same, or various SQL Server sources to a single SQL Managed Instance. This limit is governed by the number of databases that could be hosted on a managed instance at this time. Likewise, a single SQL Server can establish multiple parallel database replication links with several managed instances in different Azure regions in a 1 to 1 relationship between a database and a managed instance. The feature requires CU13 or higher to be installed on SQL Server 2019.
 
+## Compare with LRS
+
+The Managed Instance link differs from the [log replay service (LRS)](log-replay-service-overview.md): 
+
+- The link is based on availability group technology, while LRS uses log shipping. 
+- The link supports SQL Server databases starting with SQL Server 2016, while LRS supports databases starting with SQL Server 2008. 
+- The link provides near real-time replication, while LRS has replication every few minutes. 
+- Read-only secondaries are available with the link for testing, and offloading workloads, while LRS does not have an accessible read-only secondary. 
+- The link only supports private networks, and needs to have a configured point, while LRS uses a public endpoint. 
+- The link is not impacted by system updates, or failover (except for a minimum interruption). 
+- The link is unlimited in duration while an LRS job can run up to 30 days. 
+- The link is considered a true online migration to SQL Managed Instance, while LRS provides an offline migration option. 
+- The link provides the best possible downtime migration, while LRS cut over can take a while in some cases. 
+- The link requires backing up log files on the primary to prevent filling up the disk while LRS does not require any kind of maintenance scripts on the source SQL Server. 
+
+
 ## Use the link feature
 
 To help you set up initial environment, we've prepared the following online guide on how to prepare your SQL Server environment to use with the link feature for SQL Managed Instance:

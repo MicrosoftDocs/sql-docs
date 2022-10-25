@@ -99,7 +99,7 @@ The Managed Instance link differs from the [log replay service (LRS)](log-replay
 
 - The link is based on availability group technology, while LRS uses log shipping. 
 - The link supports SQL Server databases starting with SQL Server 2016, while LRS supports databases starting with SQL Server 2008. 
-- The link provides near real-time replication, while LRS has replication every few minutes. 
+- The link provides near real-time replication, while LRS replicates every few minutes. 
 - Read-only secondaries are available with the link for testing, and offloading workloads, while LRS does not have an accessible read-only secondary. 
 - The link only supports private networks, and needs to have a configured point, while LRS uses a public endpoint. 
 - The link is not impacted by system updates, or failover (except for a minimum interruption). 

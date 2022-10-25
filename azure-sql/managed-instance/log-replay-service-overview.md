@@ -94,7 +94,7 @@ LRS differs from the [Managed Instance link](managed-instance-link-feature-overv
 - LRS uses a public endpoint while the link relies on a private endpoint, and must have a configured port. 
 - LRS can be impacted by system updates and failovers which could restart the LRS process, while the link is not impacted by interruption. 
 - LRS job can run up to 30 days, while the link provides unlimited duration for replication. 
-- LRS is not considered a true online migration while the link is. 
+- LRS provides an offline migration option, while the link enables a true online migration without service interruption. 
 - In some cases, cut over to the target can take a while with LRS while the link provides the best possible downtime migration. 
 - No maintenance scripts are required on the source SQL Server with LRS while the link requires backing up the transaction log to prevent filling up the disk. 
 

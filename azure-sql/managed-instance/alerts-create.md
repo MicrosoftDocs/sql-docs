@@ -127,7 +127,7 @@ The following managed instance metrics are available for alerting configuration:
 
    1. If you'd like to assign a key-value pair to the action group, select the **Tags** tab. Otherwise, skip this step. By using tags, you can categorize your Azure resources. Tags are available for all Azure resources, resource groups, and subscriptions.
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-tabs.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-tabs.png alt-text="Screenshot of the Tags tab of the Create action group dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-tabs.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-tabs.png" alt-text="Screenshot of the Tags tab of the Create action group dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
 
    1. To review your settings, select the **Review + create** tab. This step quickly checks your inputs to make sure you've entered all required information. If there are issues, they're reported here. After you've reviewed the settings, select **Create** to create the action group.
 

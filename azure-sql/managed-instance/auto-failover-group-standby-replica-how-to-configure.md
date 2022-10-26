@@ -83,6 +83,9 @@ To update the failover rights, follow these steps:
 
 1. Select **Apply** to save your new settings and close the configuration pane. 
 
+
+Alternatively, you can enable Failover rights directly from the **Compute + storage** page for your *secondary* managed instance. Review the [View licensing rights](#view-licensing-rights) section to learn more. 
+
 ## View licensing rights
 
 There are two places to check the licensing for your secondary managed instance in the Azure portal. 
@@ -97,6 +100,9 @@ From the **Compute + storage** page of your *secondary managed instance*, confir
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot of the Azure portal, Compute and storage page, with failover rights highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png":::
 
+If you don't have Failover rights activated, and you qualify for the benefit, you'll also see the following recommendation on the **Overview** blade for either instance. Selecting it will take you to the **Edit configurations** page so you can activate the benefit: 
+
+:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot of the Azure portal, Failover groups page, with failover rights, and license model highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png":::
 
 
 ## Next steps

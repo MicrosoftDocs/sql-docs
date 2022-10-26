@@ -24,7 +24,7 @@ The Database Migration Assessment for Oracle extension in Azure Data Studio help
 
 ## Install Azure Data Studio extension
 
-Follow the steps below to install the Database Migration Assessment for the Oracle extension in Azure Data Studio.
+Follow the steps below to install the Database Migration Assessment for Oracle extension in Azure Data Studio.
 
 1. Open the extensions manager in Azure Data Studio. You can select the extensions icon or select **Extensions** in the View menu.
 
@@ -64,7 +64,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
    1. In the **Data Source** field, type in your Oracle server name and instance.
       1. You can provide the TNS name as well. (Make sure that the `ORACLE_HOME` environment variable is set and the `TNSNAMES.ORA` file is located in the `<ORACLE_HOME>/network/admin folder`.)
    1. Provide the database username in the **User Id** field.
-   1. In the **Password** field, provide the database password.
+   1. Provide the database password in the **Password** field.
 
    :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-connections-details.png" alt-text="connection details":::
 
@@ -91,7 +91,7 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
       1. Enter the destination migration database in the **Target Platform** field. Currently, it supports Azure SQL and PostgreSQL as targets.
       1. In the **Performance data collection** section, either select **Run performance data collection on Oracle database (connected)** or **Add AWR report**.
 
-         The recommendation is to use the connected option if running this tool during a peak or realistic load. Otherwise, provide the AWR reports generated in the past for performance and sizing recommendations.
+         The recommendation is to use the connected option if you're running this tool during a peak or realistic load. Otherwise, provide the AWR reports generated in the past for performance and sizing recommendations.
 
       1. Enter the multiplier value in the **Scale factor** field.
 
@@ -107,12 +107,12 @@ Once the assessment extension installs, the next step is to connect to Oracle yo
 
    - **Workload Assessment.** In this assessment, the Oracle assessment module performs a lightweight discovery of the schema objects and categorizes the schema complexity for migration to various categories with a high-level estimate for conversion hours.
 
-   - **Code Assessment.** The code assessment performs an in-depth assessment of the Oracle schema objects and then suggests an overall readiness of the code objects with "ready," "need review" and "not ready" object types at a granular level and its associated conversion hours with higher accuracy.
+   - **Code Assessment.** The code assessment performs an in-depth assessment of the Oracle schema objects and then suggests an overall readiness of the code objects with "ready", "need review", and "not ready" object types at a granular level and its associated conversion hours with higher accuracy.
 
      > [!NOTE]  
      > The extension uses the open-source Ora2Pg schema converter for code assessments.
 
-     If the Oracle client and/or Ora2Pg isn't installed on the same machine as Azure Data Studio, either manually install them or use the [Ora2Pg installation script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install) from GitHub.
+     If the Oracle client and/or Ora2Pg isn't installed on the same machine as Azure Data Studio, either manually install them, or use the [Ora2Pg installation script](https://github.com/microsoft/OrcasNinjaTeam/tree/master/ora2pg-install) from GitHub.
 
      If the Oracle client and Ora2Pg are installed, ensure that the Oracle client home path, and Ora2Pg installation path are updated in the extension settings.
 
@@ -138,13 +138,13 @@ Each card has multiple sections. The card shows the overall feasibility of the m
 - SKU recommendation provides the proper sizing of the target.
 - The code assessment provides the code complexity of database objects.
 
-When you select **View report details**, it first shows the summary of the assessment.
+When you select **View report details**, it first shows the assessment summary.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-card-sections.png" alt-text="Screenshot showing assessment summary.":::
 
 If the target selected is Database for Azure PostgreSQL, either the Database details tab or Code assessment tab will be visible based on the assessment type selection.
 
-The following Database details tab provides the breakdown per schema basis. It shows the list of schemas discovered, the migration feasibility, and the estimated time to convert schema in hours.
+The following Database details tab provides the breakdown per schema basis. It shows the list of schemas discovered, the migration feasibility, and the estimated time to convert the schema in hours.
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-per-schema-basis.png" alt-text="Screenshot showing the breakdown per schema basis.":::
 
@@ -172,7 +172,7 @@ The code compatibility (for PostgreSQL targets only) provides a summary of schem
 
 :::image type="content" source="media/database-migration-assessment-for-oracle-extension/dmafo-code-compatibility-pg.png" alt-text="Screenshot showing the code compatibility report.":::
 
-The report shows the total number of objects and conversion effort hours required to migrate code to the Azure PostgreSQL database. The graphical image provides the breakup for each schema object type such as tables, views, clusters etc. The efforts are categorized as "Ready - automatically converted," "Needs review," and "Not ready - requires manual conversion."
+The report shows the total number of objects and conversion effort hours required to migrate code to the Azure PostgreSQL database. The graphical image provides the breakup for each schema object type such as tables, views, and clusters. The efforts are categorized as "Ready - automatically converted", "Needs review", and "Not ready - requires manual conversion".
 
 A drill-down for the "Not ready" and "Needs review" sections provides the list of remediation tasks and the effort hours for each task.
 
@@ -202,11 +202,12 @@ You can also cancel an ongoing assessment, delete an assessment and move assessm
 
 The extension stores errors, warnings, and other diagnostic logs in the default log directory:
 
-- Windows - `C:\Users\<username>.dmaforacle\logs\`
-- Linux - `~/.dmaforacle/logs`
-- macOS - `/Users/<username>/.dmaforacle/logs`
+- Windows - `C:\Users\<username>.dmaoracle\logs\`
+- Linux - `~/.dmaoracle/logs`
+- macOS - `/Users/<username>/.dmaoracle/logs`
 
-By default, the extension stores the last seven log files.
+> [!NOTE]
+> By default, the extension stores the last seven log files.
 
 To change the log directory, update the `LogDirectory` property in the extension settings file.
 
@@ -224,7 +225,7 @@ To change the log directory, update the `LogDirectory` property in the extension
 
   **Possible solution:**
 
-  - User has read and write permission on the assessment folder.
+  - The user has read and write permission on the assessment folder.
   - If there's a missing file or folder, delete the assessment and generate a new assessment.
 
 - **Encountered connection timeout exception while interacting with Oracle.**

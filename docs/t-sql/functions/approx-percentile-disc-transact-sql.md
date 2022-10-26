@@ -21,7 +21,7 @@ monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-20
 
 # APPROX_PERCENTILE_DISC (Transact-SQL)
 
-[!INCLUDE[SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This function returns the value from the set of values in a group based on the provided percentile and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. As this approximate percentile is based on a discrete distribution of the column values, the output value would be equal to one of the specific values in the column. This function can be used as an alternative to PERCENTILE_DISC for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 

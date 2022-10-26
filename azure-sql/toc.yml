@@ -1627,9 +1627,6 @@
         href: /sql/connect/sql-connection-libraries
       - name: REST
         href: /rest/api/
-      - name: Azure Policy built-ins
-        displayName: samples, policies, definitions
-        href: ./database/policy-reference.md
     - name: Resources
       items:
       - name: FAQ

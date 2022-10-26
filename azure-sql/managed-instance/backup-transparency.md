@@ -1,6 +1,6 @@
 ---
-title: Backup transparency
-description: "View your backup history through the backup transparency feature of Azure SQL Managed Instance. "
+title: Backup transparency for backup history
+description: "Use backup transparency to view your backup history for your  Azure SQL Managed Instance. "
 author: MilanMSFT
 ms.author: mlazic
 ms.date: 11/16/2022
@@ -23,13 +23,15 @@ The [msdb database](/sql/relational-databases/databases/msdb-database) enables b
 The msdb database in SQL Managed Instance displays the following backup information: 
 
 - The type of automated backup taken, such as full, differential, or log.
-- The replica where the backup was taken, such as the primary, or secondary. The ability to take backups from the secondary replica is currently in private preview. 
-- Metadata information about the backup such as the status, size, time, and location 
+- Metadata about native backups taken manually, though some fields, such as file path and usernames, may not be populated. Use the `is_copyonly` column to determine if a backup was taken manually or automatically. 
+- Metadata about the backup such as the status, size, time, and location.
+- The replica where the backup was taken, such as the primary, or secondary. The ability to take backups from the secondary replica is currently in private preview, and only available on the Business Critical service tier. 
+
 
 The msdb database **does not** have information about the following: 
 
-- Backups stored for long-term retention, as this is done by copying out files at the storage level, and is not visible to the managed instance. 
-- Native backups taken manually. 
+- Backups stored for long-term retention, as this is done by copying out files at the storage level, and is not visible to the instance. 
+
 
 ## Supported tables
 
@@ -39,23 +41,24 @@ The msdb database in SQL Managed Instance supports the following backup tables:
 - [Backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)
 - [Backupmediafamily](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)
 
-The following backup tables have been removed: 
+The following backup tables are not used by SQL Managed Instance, and will not be populated with data: 
 
 - [Backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)
 - [Backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)
 
 ## Removed fields 
 
-Since SQL Managed Instance is a cloud service with data stored in storage, the following fields have been removed from existing msdb tabes: 
+Since SQL Managed Instance is a cloud service with data stored in storage, the following fields will not be populated with data: 
 
 - Fields that pertain to the user who is logged in. 
 - Fields that pertain to the path of the backup file. 
+- Backup expiration information. 
 
 ## Considerations
 
 When reviewing your backup history in the msdb database, consider the following:
 
-- Backup history does not contain information about user-initiated backups, including usernames of the user who initiated the backup. 
+- Backup history does not contain all information about user-initiated backups, such as usernames of the user who initiated the backup. 
 - Fields that are not relevant to the cloud will not be populated, such as the machine name, physical drive, and physical name. 
 - Backup information is inserted to the msdb database when the backup completes. Ongoing backups are not supported. 
 

@@ -554,6 +554,11 @@
       "source_path_from_root": "/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server.md",
       "redirect_url": "/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/migrate-to-database-from-sql-server.md",
+      "redirect_url": "/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide",
+      "redirect_document_id": false
     }
   ]
 }

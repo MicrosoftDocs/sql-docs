@@ -199,6 +199,9 @@ Installing SQL Server 2017 on Server Core mode is supported by the following edi
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
+> [!NOTE]  
+> Installing SQL Server on a Windows OS on which case sensitivity is enabled is not supported. For more information review [SQL Server is not supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled)
+
 ## Operating System support for SQL Server 2016
 
 The following table shows which editions of SQL Server 2016 are compatible with which versions of Windows:  
@@ -282,6 +285,9 @@ Installing SQL Server 2016 on Server Core mode is supported by the following edi
 :::row-end:::
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
+> [!NOTE]  
+> Installing SQL Server on a Windows OS on which case sensitivity is enabled is not supported. For more information review [SQL Server is not supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled)
 
 ### WOW64 support
   

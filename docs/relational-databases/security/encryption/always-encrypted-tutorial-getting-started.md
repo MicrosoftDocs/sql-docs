@@ -24,7 +24,7 @@ This tutorial teaches you how to get started with [Always Encrypted](always-encr
 > [!NOTE]
 > If you're looking for information on [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), see the following tutorials instead:
 >
-> - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](https://learn.microsoft.com/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+> - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 > - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 
 ## Prerequisites

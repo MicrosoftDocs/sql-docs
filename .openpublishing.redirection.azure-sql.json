@@ -486,6 +486,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/always-encrypted-azure-key-vault-configure.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/always-encrypted-certificate-store-configure.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/database/connect-query-r.md",
       "redirect_url": "/sql/machine-learning/tutorials/quickstart-r-create-script?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current",
       "redirect_document_id": false

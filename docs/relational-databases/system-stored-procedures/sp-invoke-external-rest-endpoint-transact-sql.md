@@ -263,7 +263,7 @@ As there's a collation rule set at the database level, the following logic will 
 1. Check if the URL and credential match using the RFC, which means:
    - Check the scheme and host using a case-insensitive collation (`Latin1_General_100_CI_AS_KS_WS_SC`)
    - Check all other segments of the URL are compared in a case-sensitive collation (`Latin1_General_100_BIN2`)
-1. Check if the URL and credential match using the database collation rules (and without doing any URL encoding). 
+1. Check that the URL and credential match using the database collation rules (and without doing any URL encoding). 
 
 ### Grant permissions to use credential
 

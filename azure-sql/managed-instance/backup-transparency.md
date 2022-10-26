@@ -30,7 +30,7 @@ The msdb database in SQL Managed Instance displays the following backup informat
 
 The msdb database **does not** have information about the following: 
 
-- Backups stored for long-term retention, as this is done by copying out files at the storage level, and is not visible to the instance. 
+- Backups stored for long-term retention, as this is done by copying out files at the storage level, and isn't visible to the instance. 
 
 
 ## Supported tables
@@ -41,14 +41,14 @@ The msdb database in SQL Managed Instance supports the following backup tables:
 - [Backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)
 - [Backupmediafamily](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)
 
-The following backup tables are not used by SQL Managed Instance, and will not be populated with data: 
+The following backup tables aren't used by SQL Managed Instance, and won't be populated with data: 
 
 - [Backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)
 - [Backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)
 
 ## Removed fields 
 
-Since SQL Managed Instance is a cloud service with data stored in storage, the following fields will not be populated with data: 
+Since SQL Managed Instance is a cloud service with data stored in storage, the following fields won't be populated with data: 
 
 - Fields that pertain to the user who is logged in. 
 - Fields that pertain to the path of the backup file. 
@@ -58,14 +58,14 @@ Since SQL Managed Instance is a cloud service with data stored in storage, the f
 
 When reviewing your backup history in the msdb database, consider the following:
 
-- Backup history does not contain all information about user-initiated backups, such as usernames of the user who initiated the backup. 
-- Fields that are not relevant to the cloud will not be populated, such as the machine name, physical drive, and physical name. 
-- Backup information is inserted to the msdb database when the backup completes. Ongoing backups are not supported. 
+- Backup history doesn't contain all information about user-initiated backups, such as usernames of the user who initiated the backup. 
+- Fields that aren't relevant to the cloud won't be populated, such as the machine name, physical drive, and physical name. 
+- Backup information is inserted to the msdb database when the backup completes. Ongoing backups aren't supported. 
 
 
 ## Next steps
 
 - To learn more, review [The msdb database in SQL Server](/sql/relational-database/databases/msdb-database). 
-- To learn about about backups in Azure SQL Managed Instance, review [Automated backups](automated-backups-overview.md)
+- To learn about backups in Azure SQL Managed Instance, review [Automated backups](automated-backups-overview.md)
 - To learn about querying the msdb database, review [monitor backup activity](backup-activity-monitor.md)
 

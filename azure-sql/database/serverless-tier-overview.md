@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/30/2022
+ms.date: 10/26/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -394,9 +394,15 @@ Azure Hybrid Benefit (AHB) and reserved capacity discounts do not apply to the s
 
 ## Available regions
 
-The serverless compute tier is available worldwide except the following regions: China East, China North, Germany Central, Germany Northeast, and US Gov Central (Iowa).
+The serverless compute tier with support up to 40 max vCores is available worldwide except the following regions: China East, China North, Germany Central, Germany Northeast, and US Gov Central (Iowa).
 
-All regions where serverless is available support up to 40 max vcores.  Additionally, 80 max vcores is also supported in the following regions with more regions planned: Australia East, Australia Southeast, Canada Central, Central US, East Asia, East US, East US 2, France Central, France South, India Central, Japan East, Japan West, North Central US, North Europe, Norway East, Qatar Central, South Africa North, South Central US, Switzerland North, UK South, UK West, West Europe, West US, West US 2, West US 3.
+### Regions supporting 80 max vCores
+
+Currently, 80 max vCores in serverless is supported in the following regions with more regions planned: Australia East, Australia Southeast, Canada Central, Central US, East Asia, East US, East US 2, France Central, France South, India Central, Japan East, Japan West, North Central US, North Europe, Norway East, Qatar Central, South Africa North, South Central US, Switzerland North, UK South, UK West, West Europe, West US, West US 2, and West US 3.
+
+### Regions supporting availability zones for 80 max vCores
+
+Currently, 80 max vCores in serverless with availability zone support is limited to the following regions with more regions planned: Canada Central, East US, UK South, West Europe, West US 2, and West US 3.
 
 ## Next steps
 

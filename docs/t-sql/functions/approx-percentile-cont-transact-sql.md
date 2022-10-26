@@ -21,7 +21,7 @@ monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-20
 
 # APPROX_PERCENTILE_CONT (Transact-SQL)
 
-[!INCLUDE[SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This function returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. The percentile value returned by this function is based on a continuous distribution of the column values and the result would be interpolated. Due to this, the output might not be one of values in the data set. One of the common use cases for this function is to avoid the data outliers. This function can be used as an alternative to PERCENTILE_CONT for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 

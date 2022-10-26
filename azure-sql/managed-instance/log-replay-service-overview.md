@@ -83,36 +83,6 @@ In case that you plan to keep adding new backup files while migration is in prog
 After LRS is stopped, either automatically through autocomplete, or manually through cutover, you can't resume the restore process for a database that was brought online on SQL Managed Instance. For example, once migration completes, you're no longer able to restore more differential backups for an online database. To restore more backup files after migration completes, you need to delete the database from the managed instance and restart the migration from the beginning. 
 
 
-## Compare to Managed Instance link
-
-LRS differs from the [Managed Instance link](managed-instance-link-feature-overview.md): 
-
-- LRS is based on log shipping technology, while the link uses distributed availability groups. 
-- LRS supports SQL Server starting with 2008, while the link only supports SQL Server starting with 2016. 
-- Replication happens every few minutes, as compared to the near real-time replication of the link. 
-- LRS does not provide an accessible read-only secondary while the link does. 
-- LRS uses a public endpoint while the link relies on a private endpoint, and must have a configured port. 
-- LRS can be impacted by system updates and failovers which could restart the LRS process, while the link is not impacted by interruption. 
-- LRS job can run up to 30 days, while the link provides unlimited duration for replication. 
-- LRS provides an offline migration option, while the link enables a true online migration without service interruption. 
-- In some cases, cut over to the target can take a while with LRS while the link provides the best possible downtime migration. 
-- No maintenance scripts are required on the source SQL Server with LRS while the link requires backing up the transaction log to prevent filling up the disk. 
-
-The following tables compares LRS with the [Managed Instance link](managed-instance-link-feature-overview.md): 
-
-| Functionality | Managed Instance link | Log Replay Service (LRS) | 
-| ------------- | ---------------------- | ----------------------- |
-| Underlying technology | Distributed availability group | Log shipping | 
-| Minimal supported source database | SQL Server 2016 | SQL Server 2008 | 
-| Replication type | Near real-time | Replicates every few minutes | 
-| Read-only secondary | Supported | Not supported | 
-| Network type | Private network with configured port | Public endpoint | 
-| Impacted by system updates or failover | No, other than a minimum interruption | Yes, restarts the process | 
-| Duration | Unlimited | LRS job can run up to 30 days | 
-| Type of migration | True online migration (without client service interruption) | Offline migration (with downtime) | 
-| Migration cut over time | Fast cut over with best possible downtime | Cut over can take a while in some cases | 
-| Maintenance required on source | Yes, logs must be backed up to prevent filling up the disk | No| 
-
 ## Migration workflow
 
 Typical migration workflow is shown in the image below, and steps outlined in the table.

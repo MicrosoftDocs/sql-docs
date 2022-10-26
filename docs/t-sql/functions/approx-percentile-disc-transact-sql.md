@@ -42,7 +42,7 @@ The percentile to compute. The value must range between 0.0 and 1.0. to calculat
 
 *order_by_expression*
 
-Specifies a list of values to sort and compute the percentile over. The default sort order is ascending (ASC).  Only numeric data types are allowed. The expression must evaluate to an supported exact or approximate numeric type, with no other data types allowed. Supported exact numeric types are int, bigint, smallint, tinyint, bit, smallmoney, and money. Supported approximate numeric types are float and real. Decimal and float data types are not supported. 
+Specifies a list of values to sort and compute the percentile over. The default sort order is ascending (ASC).  Only numeric data types are allowed. The expression must evaluate to a supported exact or approximate numeric type, with no other data types allowed. Supported exact numeric types are int, bigint, smallint, tinyint, bit, smallmoney, and money. Supported approximate numeric types are float and real. Decimal and float data types are not supported. 
 
 ## Return types
 

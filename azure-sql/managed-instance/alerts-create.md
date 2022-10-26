@@ -64,7 +64,7 @@ The following managed instance metrics are available for alerting configuration:
 
 5. Select **New alert rule**.
 
-   :::image type="content" source="./media/alerts-create/mi-alerting-menu-annotated.png" alt-text="Screenshot of the metrics explorer in the Azure portal with the Storage space used metric selected.":::
+   :::image type="content" source="./media/alerts-create/mi-alerting-menu-annotated.png" lightbox="./media/alerts-create/mi-alerting-menu-annotated.png" alt-text="Screenshot of the metrics explorer in the Azure portal with the Storage space used metric selected.":::
 
 6. In the **Alert logic** section:
 
@@ -88,7 +88,7 @@ The following managed instance metrics are available for alerting configuration:
 
    In the example shown in the screenshot, value of 1840876 MB is used representing a threshold value of 1.8 TB. As the operator in the example is set to greater than, the alert will be created if the storage space consumption on the managed instance goes over 1.8 TB. Note that the threshold value for storage space metrics must be expressed in MB.
 
-   :::image type="content" source="./media/alerts-create/mi-configure-signal-logic-annotated.png" alt-text="Screenshot of Condition tab of the Create alert rule dialog box in the Azure portal. The Alert logic and When to evaluate sections are highlighted.":::
+   :::image type="content" source="./media/alerts-create/mi-configure-signal-logic-annotated.png" lightbox="./media/alerts-create/mi-configure-signal-logic-annotated.png" alt-text="Screenshot of Condition tab of the Create alert rule dialog box in the Azure portal. The Alert logic and When to evaluate sections are highlighted.":::
 
 8. Select **Next: Actions>** at the bottom of the page or the **Actions** tab.
 
@@ -96,7 +96,7 @@ The following managed instance metrics are available for alerting configuration:
 
    1. Select **+Create action group**.
 
-      :::image type="content" source="./media/alerts-create/mi-create-alert-action-group-smaller-annotated.png" alt-text="Screenshot of Actions tab of the Create alert rule dialog box in the Azure portal. The Create action group button is highlighted.":::
+      :::image type="content" source="./media/alerts-create/mi-create-alert-action-group-smaller-annotated.png" lightbox="./media/alerts-create/mi-create-alert-action-group-smaller-annotated.png" alt-text="Screenshot of Actions tab of the Create alert rule dialog box in the Azure portal. The Create action group button is highlighted.":::
 
    1. Enter an **Action group name** and **Display name** and select the **Region**:
 
@@ -105,7 +105,7 @@ The following managed instance metrics are available for alerting configuration:
       | Global | The action groups service decides where to store the action group. The action group is persisted in at least two regions to ensure regional resiliency. Processing of actions may be done in any [geographic region](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).<br></br>Voice, SMS and email actions performed as the result of [service health alerts](/azure/azure-monitor/service-health/alerts-activity-log-service-notifications-portal.md) are resilient to Azure live-site-incidents. |
       | Regional | The action group is stored within the selected region. The action group is [zone-redundant](/azure/availability-zones/az-region#highly-available-services). Processing of actions is performed within the region.</br></br>Use this option if you want to ensure that the processing of your action group is performed within a specific [geographic boundary](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview). |
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-annotated.png" alt-text="Screenshot of Basics tab of the Create an action group dialog box in the Azure portal.":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-annotated.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-annotated.png" alt-text="Screenshot of Basics tab of the Create an action group dialog box in the Azure portal.":::
 
    1. Select **Next:Notifications>** at the bottom of the page or the **Notifications** tab.
 
@@ -119,32 +119,32 @@ The following managed instance metrics are available for alerting configuration:
 
          * **Common alert schema**: You can choose to turn on the common alert schema, which provides the advantage of having a single extensible and unified alert payload across all the alert services in Monitor. For more information about this schema, see [Common alert schema](/azure/azure-monitor/alerts/alerts-common-schema.md).
 
-       :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-notifications.png" alt-text="Screenshot of the Notifications tab of the Create action group dialog box. Configuration information for an email notification is visible.":::
+       :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-notifications.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-notifications.png" alt-text="Screenshot of the Notifications tab of the Create action group dialog box. Configuration information for an email notification is visible.":::
 
    1. If you'd like to define a list of actions to trigger when an alert is triggered, select the **Actions** tab and define the actions such as execute a webhook, Azure function, or runbook or create an ITSM ticket in your compatible system.
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-actions.png" alt-text="Screenshot of the Actions tab of the Create action group dialog box in the Azure portal with the Action type and Name fields highlighted.":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-actions.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-actions.png" alt-text="Screenshot of the Actions tab of the Create action group dialog box in the Azure portal with the Action type and Name fields highlighted.":::
 
    1. If you'd like to assign a key-value pair to the action group, select the **Tags** tab. Otherwise, skip this step. By using tags, you can categorize your Azure resources. Tags are available for all Azure resources, resource groups, and subscriptions.
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-tabs.png" alt-text="Screenshot of the Tags tab of the Create action group dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-tabs.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-tabs.png alt-text="Screenshot of the Tags tab of the Create action group dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
 
    1. To review your settings, select the **Review + create** tab. This step quickly checks your inputs to make sure you've entered all required information. If there are issues, they're reported here. After you've reviewed the settings, select **Create** to create the action group.
 
-      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-review.png" alt-text="Screenshot of the Review and create tab of the Create an action group dialog box in the Azure portal with the Create button highlighted.":::
+      :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-review.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-review.png" alt-text="Screenshot of the Review and create tab of the Create an action group dialog box in the Azure portal with the Create button highlighted.":::
 
 10. In the **Details** tab, fill in the alert rule details and settings for your records and select the severity type. You also have the option to use the **Custom properties** to add your own properties to the alert rule.
 
-      :::image type="content" source="./media/alerts-create/mi-rule-details-complete-smaller-annotated.png" alt-text="Screenshot of the Details tab of the Create alert dialog box in the Azure portal.":::
+      :::image type="content" source="./media/alerts-create/mi-rule-details-complete-smaller-annotated.png" lightbox="./media/alerts-create/mi-rule-details-complete-smaller-annotated.png" alt-text="Screenshot of the Details tab of the Create alert dialog box in the Azure portal.":::
 
 11. In the **Tags** tab, set any required tags on the alert rule resource. Otherwise, skip this step.
 
-    :::image type="content" source="./media/alerts-create/mi-add-alerts-tags.png" alt-text="Screenshot of the Tags tab of the Create an alert rule dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
+    :::image type="content" source="./media/alerts-create/mi-add-alerts-tags.png" lightbox="./media/alerts-create/mi-add-alerts-tags.png" alt-text="Screenshot of the Tags tab of the Create an alert rule dialog box in the Azure portal. Values are visible in the Name and Value boxes.":::
 
 
 12. In the **Review + create** tab, a validation will run and inform you of any issues. When validation passes and you've reviewed the settings, select the **Create** button at the bottom of the page.
 
-    :::image type="content" source="./media/alerts-create/mi-add-alerts-create-button.png" alt-text="Screenshot of the Review + create tab of the Create an alert rule dialog box in the Azure portal. The Create button is highlighted.":::
+    :::image type="content" source="./media/alerts-create/mi-add-alerts-create-button.png" lightbox="./media/alerts-create/mi-add-alerts-create-button.png" alt-text="Screenshot of the Review + create tab of the Create an alert rule dialog box in the Azure portal. The Create button is highlighted.":::
 
 The new alert rule will become active within a few minutes and will be triggered based on your settings.
 
@@ -155,7 +155,7 @@ The new alert rule will become active within a few minutes and will be triggered
 
 Upon setting up an alerting rule, verify that you are satisfied with the alerting trigger and its frequency. For the example shown on this page for setting up an alert on storage space used, if your alerting option was email, you might receive email such is the one shown below.
 
-   ![alert_example](./media/alerts-create/mi-email-alert-example-smaller-annotated.png)
+   :::image type="content" source="./media/alerts-create/mi-email-alert-example-smaller-annotated.png" lightbox="./media/alerts-create/mi-email-alert-example-smaller-annotated.png" alt-text="Screenshot of an example of the email that is sent when an alert is triggered.":::
 
 The email shows the alert name, details of the threshold and why the alert was triggered helping you to verify and troubleshoot your alert. You can use **See in Azure portal** button to view alert received via email in Azure portal. 
 
@@ -168,13 +168,13 @@ To view, suspend, activate, modify and delete existing alerts:
 
 1. Search for Alerts using Azure portal search. Click on Alerts.
 
-   :::image type="content" source="./media/alerts-create/mi-manage-alerts-browse-smaller-annotated.png" alt-text="Screenshot of the search box in the Azure portal. The “alerts” search term and Alerts service in the search results are highlighted.":::
+   :::image type="content" source="./media/alerts-create/mi-manage-alerts-browse-smaller-annotated.png" lightbox="./media/alerts-create/mi-manage-alerts-browse-smaller-annotated.png" alt-text="Screenshot of the search box in the Azure portal. The “alerts” search term and Alerts service in the search results are highlighted.":::
 
    Alternatively, you could also click on Alerts on the Azure navigation bar, if you have it configured.
 
 2. On the Alerts pane, select **Alert rules**.
 
-   :::image type="content" source="./media/alerts-create/mi-manage-alert-rules-smaller-annotated.png" alt-text="Screenshot of the Alerts page in the Azure portal with the Alert rules button highlighted.":::
+   :::image type="content" source="./media/alerts-create/mi-manage-alert-rules-smaller-annotated.png" lightbox="./media/alerts-create/mi-manage-alert-rules-smaller-annotated.png" alt-text="Screenshot of the Alerts page in the Azure portal with the Alert rules button highlighted.":::
 
    List of existing alerts will show up. Select an individual existing alert rule to manage it. Existing active rules can be modified and tuned to your preference. Active rules can also be suspended without being deleted. 
 

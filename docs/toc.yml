@@ -1883,6 +1883,8 @@ items:
         href: relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
+      - name: Cleanup and troubleshooting
+        href: relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md        
   - name: Triggers
     items:
     - name: Logon Triggers
@@ -6087,6 +6089,8 @@ items:
         href: relational-databases/accelerated-database-recovery-management.md
       - name: Troubleshooting
         href: relational-databases/accelerated-database-recovery-troubleshoot.md        
+    - name: Manage the Query Store
+      href: relational-databases/performance/manage-the-query-store.md
     - name: Central Management Servers
       href: relational-databases/administer-multiple-servers-using-central-management-servers.md
     - name: Configuration Manager
@@ -6573,8 +6577,6 @@ items:
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Optimized plan forcing
         href: relational-databases/performance/optimized-plan-forcing-query-store.md
-      - name: In-Memory OLTP
-        href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md
       items:
@@ -10258,26 +10260,25 @@ items:
       - name: Availability groups
         href: linux/sql-server-linux-availability-group-overview.md
         items:
-        - name: Create for high availability
-          href: linux/sql-server-linux-availability-group-ha.md
+        - name: High availability
           items:
-          - name: Configure AG
+          - name: Create for high availability
+            href: linux/sql-server-linux-availability-group-ha.md
+          - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-ha.md
-          - name: Configure on RHEL
-            href: linux/sql-server-linux-availability-group-cluster-rhel.md
-          - name: Configure on SLES
-            href: linux/sql-server-linux-availability-group-cluster-sles.md
-          - name: Configure on Ubuntu
-            href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-          - name: Failover
+          - name: Configure Pacemaker
+            items:
+            - name: Configure on RHEL, SLES, and Ubuntu
+              href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
+          - name: Configure failover
             href: linux/sql-server-linux-availability-group-failover-ha.md
-          - name: Operate
+          - name: Operate an AG
             href: linux/sql-server-linux-availability-group-operate-ha.md
           - name: Configure multiple subnets for availability
             href: linux/sql-server-linux-configure-multiple-subnet.md
         - name: Create for read-scale only
           items:
-          - name: Configure AG
+          - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-rs.md
         - name: Configure cross-platform (Windows & Linux)
           href: linux/sql-server-linux-availability-group-cross-platform.md
@@ -10356,7 +10357,9 @@ items:
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-- name: SQL Server on Azure Arc-enabled servers
+  - name: Azure Arc-enabled data services >
+    href: /azure/azure-arc/data/overview
+- name: Azure Arc-enabled SQL Server
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
@@ -11058,6 +11061,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
         - name: 3023
           href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
+        - name: 3043
+          href: relational-databases/errors-events/mssqlserver-3043-database-engine-error.md          
         - name: 3056
           href: relational-databases/errors-events/mssqlserver-3056-database-engine-error.md
         - name: 3151
@@ -11074,6 +11079,8 @@ items:
           href: relational-databases/errors-events/mssqlserver-3176-database-engine-error.md
         - name: 3181
           href: relational-databases/errors-events/mssqlserver-3181-database-engine-error.md
+        - name: 3183
+          href: relational-databases/errors-events/mssqlserver-3183-database-engine-error.md
         - name: 3201
           href: relational-databases/errors-events/mssqlserver-3201-database-engine-error.md
         - name: 3260
@@ -13243,6 +13250,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services
         href: relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md
+      - name: sys.dm_server_suspend_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-suspend-status.md
       - name: sys.dm_server_registry
         href: relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md
     - name: Service Broker
@@ -13709,6 +13718,15 @@ items:
         href: relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md
       - name: sys.sp_cdc_set_scheduler_job
         href: relational-databases/system-stored-procedures/sys-cdc-set-scheduler-job-transact-sql.md
+    - name: Change Tracking
+      href: relational-databases/system-stored-procedures/change-tracking-stored-procedures-transact-sql.md
+      items:
+      - name: sys.sp_flush_commit_table
+        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-transact-sql.md       
+      - name: sys.sp_flush_commit_table_on_demand
+        href: relational-databases/system-stored-procedures/sys-sp-flush-commit-table-on-demand-transact-sql.md       
+      - name: sys.sp_flush_CT_internal_table_on_demand
+        href: relational-databases/system-stored-procedures/sys-sp-flush-ct-internal-table-on-demand-transact-sql.md
     - name: Cursor
       href: relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md
       items:
@@ -13942,6 +13960,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-indexoption-transact-sql.md
       - name: sp_invalidate_textptr
         href: relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md
+      - name: sp_invoke_external_rest_endpoint
+        href: relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md
       - name: sp_lock
         href: relational-databases/system-stored-procedures/sp-lock-transact-sql.md
       - name: sp_monitor
@@ -15240,6 +15260,11 @@ items:
         href: relational-databases/system-tables/cdc-index-columns-transact-sql.md
       - name: dbo.cdc_jobs
         href: relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md
+    - name: Change Tracking Tables
+      href: relational-databases/system-tables/change-tracking-tables-transact-sql.md
+      items:
+      - name: dbo.MSchange_tracking_history
+        href: relational-databases/system-tables/dbo-mschange-tracking-history-transact-sql.md
     - name: Database Maintenance Plan Tables
       href: relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md
       items:

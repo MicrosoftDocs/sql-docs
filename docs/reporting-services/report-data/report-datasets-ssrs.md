@@ -1,7 +1,7 @@
 ---
 title: "Report Datasets | Microsoft Docs"
 description: Learn about report datasets, for example that a dataset contains the information that is needed to retrieve a specific set of data from a data source. 
-ms.date: 03/14/2017
+ms.date: 10/14/2022
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -77,7 +77,7 @@ ms.author: maggies
  Report parts contain the datasets that they depend on. These datasets are built on shared data sources that are available on the report server. In Report Builder, when you add a report part to your report, the dependent datasets are added to your report, just as if you had added them manually. For example, a predefined chart contains a dataset. To see the data, preview the report.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
+> [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  Report parts, shared data sources, and shared datasets are defined in advance and saved on a report server. To access them, you must open Report Builder in server mode by connecting to the report server. You can use these to create new versions of your own if you have write permissions to the report server.  
   

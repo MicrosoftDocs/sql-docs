@@ -16,9 +16,6 @@ ms.author: chugu
 ---
 # Select Oracle Tables and Columns
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   Use the Select Oracle Tables and Columns page to select the tables from the Oracle source database where changes are captured. This page has the following elements:  
   
 ## Options  

@@ -307,7 +307,7 @@
       },
       "sensitive-language-sl": {
         "exclude": [
-          "linux/sql-server-linux-availability-group-cluster-sles.md",
+          "linux/sql-server-linux-availability-group-cluster-pacemaker.md",
           "linux/sql-server-linux-create-availability-group.md",
           "linux/sql-server-linux-ha-basics.md"
         ]

@@ -12,7 +12,7 @@ ms.topic: how-to
 # Create alerts for Azure SQL Managed Instance using the Azure portal
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article shows you how to set up alerts for databases in Azure SQL Managed Instance Database using the Azure portal. Alerts can send you an email, call a web hook, execute Azure Function, runbook, call an external ITSM compatible ticketing system, call you on the phone or send a text message when some metric, such is for example instance storage size, or CPU usage, reaches a predefined threshold. This article also provides best practices for setting alert periods.
+This article shows you how to set up alerts for databases in Azure SQL Managed Instance Database using the Azure portal. Alerts can send you an email, call a web hook, execute Azure Function, runbook, call an external ITSM compatible ticketing system, call you on the phone or send a text message when some metric, such as for example instance storage size or CPU usage, reaches a predefined threshold. This article also provides best practices for setting alert periods.
 
 
 ## Overview
@@ -121,7 +121,7 @@ The following managed instance metrics are available for alerting configuration:
 
        :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-notifications.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-notifications.png" alt-text="Screenshot of the Notifications tab of the Create action group dialog box. Configuration information for an email notification is visible.":::
 
-   1. If you'd like to define a list of actions to trigger when an alert is triggered, select the **Actions** tab and define the actions such as execute a webhook, Azure function, or runbook or create an ITSM ticket in your compatible system.
+   1. If you need to define a list of actions to trigger when an alert is triggered, select the **Actions** tab and define the actions such as execute a webhook, Azure function, or runbook or create an ITSM ticket in your compatible system.
 
       :::image type="content" source="./media/alerts-create/mi-add-alerts-action-group-actions.png" lightbox="./media/alerts-create/mi-add-alerts-action-group-actions.png" alt-text="Screenshot of the Actions tab of the Create action group dialog box in the Azure portal with the Action type and Name fields highlighted.":::
 
@@ -153,11 +153,15 @@ The new alert rule will become active within a few minutes and will be triggered
 > [!NOTE]
 > To supress noisy alerts, see [Supression of alerts using action rules](/azure/azure-monitor/alerts/alerts-action-rules#suppression-of-alerts).
 
-Upon setting up an alerting rule, verify that you are satisfied with the alerting trigger and its frequency. For the example shown on this page for setting up an alert on storage space used, if your alerting option was email, you might receive email such is the one shown below.
+Upon setting up an alerting rule, verify that you are satisfied with the alerting trigger and its frequency. For the example shown on this page for setting up an alert on storage space used, if your alerting option was email, you might receive an email such as the one shown below.
 
    :::image type="content" source="./media/alerts-create/mi-email-alert-example-smaller-annotated.png" lightbox="./media/alerts-create/mi-email-alert-example-smaller-annotated.png" alt-text="Screenshot of an example of the email that is sent when an alert is triggered.":::
 
-The email shows the alert name, details of the threshold and why the alert was triggered helping you to verify and troubleshoot your alert. You can use **See in Azure portal** button to view alert received via email in Azure portal. 
+The email shows the alert name, details of the threshold and why the alert was triggered, helping you to verify and troubleshoot your alert. 
+
+* Select the **See in Azure portal** button to view the alert you received via email in the Azure portal. 
+* Select **View Rule >** to view or edit the alert rule that triggered the alert.
+* Select **View Resource >** to view the managed instance for which the alert was triggered.
 
 ## View, suspend, activate, modify and delete existing alert rules
 

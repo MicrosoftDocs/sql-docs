@@ -2,10 +2,10 @@
 title: Rotate TDE protector (PowerShell & the Azure CLI)
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Learn how to rotate the Transparent data encryption (TDE) protector for a server in Azure used by Azure SQL Database and Azure Synapse Analytics using PowerShell and the Azure CLI.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 10/04/2022
+ms.date: 10/26/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -75,7 +75,7 @@ Automatic rotation in a server or managed instance can be used with automatic ke
 
 Using the Azure portal:
 
-1. Browse to the **Transparent data encryption** section for an existing server.
+1. Browse to the **Transparent data encryption** section for an existing server or managed instance.
 2. Select the **Customer-managed key** option and select the key vault and key to be used as the TDE protector.
 3. Check the **Auto-rotate key** checkbox.
 4. Select **Save**.
@@ -88,11 +88,23 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 To enable automatic rotation for the TDE protector using PowerShell, see the following script.
 
-Use the [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) cmdlet.
+**Azure SQL Database**
+
+Use the [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) command.
 
 ```powershell
 Set-AzSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId <keyVaultKeyId> `
    -ServerName <logicalServerName> -ResourceGroup <SQLDatabaseResourceGroupName> `
+    -AutoRotationEnabled <boolean>
+```
+
+**Azure SQL Managed Instance**
+
+Use the [Set-AzSqlInstanceTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlinstancetransparentdataencryptionprotector) command.
+
+```powershell
+Set-AzSqlInstanceTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId <keyVaultKeyId> `
+   -InstanceName <ManagedInstanceName> -ResourceGroup <ManagedInstanceResourceGroupName> `
     -AutoRotationEnabled <boolean>
 ```
 
@@ -102,6 +114,8 @@ For information on installing the current release of Azure CLI, see [Install the
 
 To enable automatic rotation for the TDE protector using the Azure CLI, see the following script.
 
+**Azure SQL Database**
+
 Use the [az sql server tde-key set](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-set) command.
 
 ```azurecli
@@ -110,6 +124,18 @@ az sql server tde-key set --server-key-type AzureKeyVault
                           [--kid] <keyVaultKeyId>
                           [--resource-group] <SQLDatabaseResourceGroupName> 
                           [--server] <logicalServerName>
+```
+
+**Azure SQL Managed Instance**
+
+Use the [az sql mi tde-key set](/cli/azure/sql/mi/tde-key#az-sql-mi-tde-key-set) command.
+
+```azurecli
+az sql mi tde-key set --server-key-type AzureKeyVault
+                      --auto-rotation-enabled true
+                      [--kid] <keyVaultKeyId>
+                      [--resource-group] <ManagedInstanceGroupName> 
+                      [--managed-instance] <ManagedInstanceName>
 ```
 
 ---
@@ -127,7 +153,7 @@ With manual key rotation, when a new key version is generated in key vault (eith
 
 Using the Azure portal:
 
-1. Browse to the **Transparent data encryption** menu for an existing server.
+1. Browse to the **Transparent data encryption** menu for an existing server or managed instance.
 2. Select the **Customer-managed key** option and select the key vault and key to be used as the new TDE protector.
 3. Select **Save**.
 
@@ -135,11 +161,19 @@ Using the Azure portal:
 
 # [PowerShell](#tab/azure-powershell)
 
-Use the [Add-AzKeyVaultKey](/powershell/module/az.keyvault/Add-AzKeyVaultKey), [Add-AzSqlServerKeyVaultKey](/powershell/module/az.sql/add-azsqlserverkeyvaultkey), and [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) cmdlets.
+Use the [Add-AzKeyVaultKey](/powershell/module/az.keyvault/Add-AzKeyVaultKey) command to add a new key to the key vault.
 
 ```powershell
 # add a new key to Key Vault
 Add-AzKeyVaultKey -VaultName <keyVaultName> -Name <keyVaultKeyName> -Destination <hardwareOrSoftware>
+```
+
+For **Azure SQL Database**, use:
+
+- [Add-AzSqlServerKeyVaultKey](/powershell/module/az.sql/add-azsqlserverkeyvaultkey)
+- [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector)
+
+```powershell
 
 # add the new key from Key Vault to the server
 Add-AzSqlServerKeyVaultKey -KeyId <keyVaultKeyId> -ServerName <logicalServerName> -ResourceGroup <SQLDatabaseResourceGroupName>
@@ -149,19 +183,53 @@ Set-AzSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId <ke
    -ServerName <logicalServerName> -ResourceGroup <SQLDatabaseResourceGroupName>
 ```
 
+For **Azure SQL Managed Instance**, use:
+
+- [Add-AzSqlInstanceKeyVaultKey](/powershell/module/az.sql/add-azsqlinstancekeyvaultkey)
+- [Set-AzSqlInstanceTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector)
+
+```powershell
+# add the new key from Key Vault to the managed instance
+Add-AzSqlInstanceKeyVaultKey -KeyId <keyVaultKeyId> -InstanceName <ManagedInstanceName> -ResourceGroup <ManagedInstanceResourceGroupName>
+  
+# set the key as the TDE protector for all resources under the managed instance
+Set-AzSqlInstanceTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId <keyVaultKeyId> `
+   -InstanceName <ManagedInstanceName> -ResourceGroup <ManagedInstanceResourceGroupName>
+```
+
 # [The Azure CLI](#tab/azure-cli)
 
-Use the [az keyvault key create](/cli/azure/keyvault/key#az-keyvault-key-create), [az sql server key create](/cli/azure/sql/server/key#az-sql-server-key-create), and [az sql server tde-key set](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-set) commands.
+Use the [az keyvault key create](/cli/azure/keyvault/key#az-keyvault-key-create) command to add a new key to the key vault.
 
 ```azurecli
 # add a new key to Key Vault
 az keyvault key create --name <keyVaultKeyName> --vault-name <keyVaultName> --protection <hsmOrSoftware>
+```
 
+For **Azure SQL Database**, use:
+
+- [az sql server key create](/cli/azure/sql/server/key#az-sql-server-key-create)
+- [az sql server tde-key set](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-set)
+
+```azurecli
 # add the new key from Key Vault to the server
 az sql server key create --kid <keyVaultKeyId> --resource-group <SQLDatabaseResourceGroupName> --server <logicalServerName>
 
 # set the key as the TDE protector for all resources under the server
 az sql server tde-key set --server-key-type AzureKeyVault --kid <keyVaultKeyId> --resource-group <SQLDatabaseResourceGroupName> --server <logicalServerName>
+```
+
+For **Azure SQL Managed Instance**, use:
+
+- [az sql mi key create](/cli/azure/sql/mi/key#az-sql-mi-key-create)
+- [az sql mi tde-key set](/cli/azure/sql/mi/tde-key#az-sql-mi-tde-key-set)
+
+```azurecli
+# add the new key from Key Vault to the managed instance
+az sql mi key create --kid <keyVaultKeyId> --resource-group <Managed InstanceResourceGroupName> --managed-instance <ManagedInstanceName>
+
+# set the key as the TDE protector for all resources under the managed instance
+az sql mi tde-key set --server-key-type AzureKeyVault --kid <keyVaultKeyId> --resource-group <ManagedInstanceResourceGroupName> --managed-instance <ManagedInstanceName>
 ```
 
 ---
@@ -172,28 +240,48 @@ az sql server tde-key set --server-key-type AzureKeyVault --kid <keyVaultKeyId> 
 
 Using the Azure portal to switch the TDE protector from Microsoft-managed to BYOK mode:
 
-1. Browse to the **Transparent data encryption** menu for an existing server.
+1. Browse to the **Transparent data encryption** menu for an existing server or managed instance.
 1. Select the **Customer-managed key** option.
 1. Select the key vault and key to be used as the TDE protector.
 1. Select **Save**.
 
 # [PowerShell](#tab/azure-powershell)
 
-- To switch the TDE protector from Microsoft-managed to BYOK mode, use the [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) cmdlet.
+**Azure SQL Database**
+
+- To switch the TDE protector from Microsoft-managed to BYOK mode, use the [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) command.
 
    ```powershell
    Set-AzSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault `
        -KeyId <keyVaultKeyId> -ServerName <logicalServerName> -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 
-- To switch the TDE protector from BYOK mode to Microsoft-managed, use the [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) cmdlet.
+- To switch the TDE protector from BYOK mode to Microsoft-managed, use the [Set-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector) command.
 
    ```powershell
    Set-AzSqlServerTransparentDataEncryptionProtector -Type ServiceManaged `
        -ServerName <logicalServerName> -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 
+**Azure SQL Managed Instance**
+
+- To switch the TDE protector from Microsoft-managed to BYOK mode, use the [Set-AzSqlInstanceTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlinstancetransparentdataencryptionprotector) command.
+
+   ```powershell
+   Set-AzSqlServerTransparentDataEncryptionProtector -Type AzureKeyVault `
+       -KeyId <keyVaultKeyId> <ManagedInstanceName> -ResourceGroup <ManagedInstanceResourceGroupName>
+   ```
+
+- To switch the TDE protector from BYOK mode to Microsoft-managed, use the [Set-AzSqlInstanceTransparentDataEncryptionProtector](/powershell/module/az.sql/set-azsqlinstancetransparentdataencryptionprotector) command.
+
+   ```powershell
+   Set-AzSqlServerTransparentDataEncryptionProtector -Type ServiceManaged `
+       -InstanceName <ManagedInstanceName> -ResourceGroup <ManagedInstanceResourceGroupName>e>
+   ```
+
 # [The Azure CLI](#tab/azure-cli)
+
+**Azure SQL Database**
 
 The following examples use [az sql server tde-key set](/powershell/module/az.sql/set-azsqlservertransparentdataencryptionprotector).
 
@@ -207,6 +295,22 @@ The following examples use [az sql server tde-key set](/powershell/module/az.sql
 
    ```azurecli
    az sql server tde-key set --server-key-type ServiceManaged --resource-group <SQLDatabaseResourceGroupName> --server <logicalServerName>
+   ```
+
+**Azure SQL Managed Instance**
+
+The following examples use [az sql mi tde-key set](/cli/azure/sql/mi/tde-key#az-sql-mi-tde-key-set).
+
+- To switch the TDE protector from Microsoft-managed to BYOK mode:
+
+   ```azurecli
+   az sql mi tde-key set --server-key-type AzureKeyVault --kid <keyVaultKeyId> --resource-group <ManagedInstanceResourceGroupName> --managed-instance <ManagedInstanceName>
+   ```
+
+- To switch the TDE protector from BYOK mode to Microsoft-managed:
+
+   ```azurecli
+   az sql mi tde-key set --server-key-type ServiceManaged --resource-group <ManagedInstanceResourceGroupName> --managed-instance <ManagedInstanceName>
    ```
 
 ---

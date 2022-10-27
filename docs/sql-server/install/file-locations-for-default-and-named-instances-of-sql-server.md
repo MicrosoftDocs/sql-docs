@@ -35,7 +35,7 @@ ms.author: randolphwest
 
 |Version|\*nnn*|{nn}|
 |-----|-----|--------|
-|[!INCLUDE[ssqlv15](../../includes/sssql22-md.md)]| 160| 16|
+|[!INCLUDE[ssqlv22](../../includes/sssql22-md.md)]| 160| 16|
 |[!INCLUDE[ssqlv15](../../includes/sssql19-md.md)]| 150| 15| 
 |[!INCLUDE[ssqlv14](../../includes/sssql17-md.md)]| 140| 14| 
 |[!INCLUDE[ssqlv13](../../includes/sssql16-md.md)]| 130| 13 | 

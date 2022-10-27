@@ -13,6 +13,8 @@ ms.topic: conceptual
 
 The Table Designer (preview) in Azure Data Studio provides a visual editor experience alongside the Transact-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.
 
+[!INCLUDE [azure-data-studio-preview](../../includes/azure-data-studio-preview.md)]
+
 ## Why Table Designer?
 
 The Table Designer in Azure Data Studio provides users an efficient way to configure and manage tables, using primary and foreign keys, indices, constraints, triggers, etc. directly on the graphical user interface (GUI).

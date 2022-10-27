@@ -85,7 +85,7 @@ The **Basics** tab allows you to select the subscription, resource group, and de
 
 1. Select the **Region**. All VMs will be deployed to the same region.
 
-1. Select the **Availability** for the VMs, either Availability Zone or Availability Set. For more information about availability options, see [Availability](azure/virtual-machines/windows/availability).
+1. Select the **Availability** for the VMs, either Availability Zone or Availability Set. For more information about availability options, see [Availability](https://learn.microsoft.com/en-us/azure/virtual-machines/availability).
 
 1. The **Image** will be the one selected when starting the portal experience. Select **Configure VM generation** to select the VM generation.
 
@@ -115,7 +115,7 @@ On the Networking tab, configure your networking options.
 
 1. **Create subnets** allows management of the subnets for each VM, as each virtual machine being created needs to be in its own subnet. Select **Manage subnet configuration** to create or validate that a subnet is available for each new to be created virtual machine. This opens the virtual network screen to manage your subnets. Once done, close the screen using the **X** close the subnet management window.
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/subnet-management.png" alt-text="Screenshot of NIC security group UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/subnet-management.png" alt-text="Screenshot of subnet management.":::
 
 1. Choose the type of **Public IP SKU**, all machines need to use the same SKU type.  
 
@@ -127,7 +127,7 @@ On the Networking tab, configure your networking options.
 
 ## WSFC and Credentials settings
 
-On the **WSFC and Credentials** tab, provide account information needed to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to be present in Active Directory in the domain controller virtual machine for the deployment to work. This experience does not create any accounts and will fail if an account provided is invalid. For more information about the permissions required, see [Configure cluster accounts in Active Directory](./windows-server/failover-clustering/configure-ad-accounts).
+On the **WSFC and Credentials** tab, provide account information needed to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to be present in Active Directory in the domain controller virtual machine for the deployment to work. This experience does not create any accounts and will fail if an account provided is invalid. For more information about the permissions required, see [Configure cluster accounts in Active Directory](https://learn.microsoft.com/en-us/windows-server/failover-clustering/configure-ad-accounts).
 
 1. Provide the name of the Windows server failover cluster.  
 
@@ -191,11 +191,11 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
     :::image type="content" source="./media/availability-group-az-portal-configure/availability-group-settings.png" alt-text="Screenshot of availability group details UI.":::
 
-1. Under **Security & Networking**, choose the **SQL connectivity** to access the SQL Server instance on the VMs. For more information about connectivity options, see [Connectivity](azure/virtual-machines/windows/create-sql-vm-portal.md#connectivity).
+1. Under **Security & Networking**, choose the **SQL connectivity** to access the SQL Server instance on the VMs. For more information about connectivity options, see [Connectivity](create-sql-vm-portal.md#connectivity).
 
-1. If you require SQL Server Authentication, select **Enable** under **SQL Server Authentication** and provide the Login name and password. This will be used across all the VMs being deployed. For more information about authentication options, see [Authentication](azure/virtual-machines/windows/create-sql-vm-portal.md#authentication).
+1. If you require SQL Server Authentication, select **Enable** under **SQL Server Authentication** and provide the Login name and password. This will be used across all the VMs being deployed. For more information about authentication options, see [Authentication](create-sql-vm-portal.md#authentication).
 
-1. Select **Enable** if you need to use **Azure Key Vault integration** to store security secrets for encryption. Fill in the requested information once choosing **Enable**. See [Azure Key Vault Integration](azure/virtual-machines/windows/create-sql-vm-portal.md#azure-key-vault-integration) for more information.
+1. Select **Enable** if you need to use **Azure Key Vault integration** to store security secrets for encryption. Fill in the requested information once choosing **Enable**. See [Azure Key Vault Integration](create-sql-vm-portal.md#azure-key-vault-integration) for more information.
 
 1. Select **Change SQL instance settings** to modify SQL Server configuration options, such as the server collation, max degree of parallelism (MAXDOP), SQL Server min and max memory limits, and whether you want to optimize for ad-hoc workloads.
 

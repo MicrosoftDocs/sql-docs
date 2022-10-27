@@ -139,7 +139,7 @@ Open a command prompt and create a folder named *sqltest*. Open the folder you c
                 encrypt: true,
                 port: 1433
             }
-        });
+        };
 
     */
 

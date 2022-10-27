@@ -10,7 +10,9 @@ ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ---
+
 # File Locations for Default and Named Instances of SQL Server
+
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consists of one or more separate instances. An instance, whether default or named, has its own set of program and data files, as well as a set of common files shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
@@ -33,6 +35,7 @@ ms.author: randolphwest
 
 |Version|\*nnn*|{nn}|
 |-----|-----|--------|
+|[!INCLUDE[ssqlv15](../../includes/sssql22-md.md)]| 160| 16|
 |[!INCLUDE[ssqlv15](../../includes/sssql19-md.md)]| 150| 15| 
 |[!INCLUDE[ssqlv14](../../includes/sssql17-md.md)]| 140| 14| 
 |[!INCLUDE[ssqlv13](../../includes/sssql16-md.md)]| 130| 13 | 
@@ -116,7 +119,7 @@ ms.author: randolphwest
 > [!WARNING]
 > Ensure that the \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ folder is protected with limited permissions.  
   
-Note that the default drive for file locations is *systemdrive*, normally drive C. Installation paths for child features are determined by the installation path of the parent feature.  
+The default drive for file locations is *systemdrive*, normally drive C. Installation paths for child features are determined by the installation path of the parent feature.  
   
 <sup>1</sup> A single installation path is shared between [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and client components. Changing the installation path for one component also changes it for other components. Subsequent installations install components to the same location as the original installation.  
   

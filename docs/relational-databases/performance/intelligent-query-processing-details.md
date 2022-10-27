@@ -74,6 +74,8 @@ Contrast the prior plan with the actual plan generated with interleaved executio
 
 MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, MSTVFs are not eligible for interleaved execution if they do not use runtime constants.
 
+Using the query hint `OPTIMIZE FOR` parameters may not be eligible for interleaved execution and could disable the feature for the query.
+
 ### Interleaved execution benefits
 
 In general, the higher the skew between the estimated vs. actual number of rows, coupled with the number of downstream plan operations, the greater the performance impact.

@@ -103,11 +103,9 @@ To learn more, see, [Automated patching](automated-backup.md).
 
 ## High availability (Preview)
 
-Use the **High Availability** page of the SQL virtual machines resource to create a Windows Server Failover Cluster, and configure an Always On availability group, availability group listener, and Azure Load Balancer. Configuring high availability using Azure portal is currently in preview. 
+Use the **High Availability** page of the SQL virtual machines resource to monitor the health of your existing Always On availability group. 
 
-
-![Configure a Windows Server Failover Cluster and an Always On availability group in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-high-availability.png)
-
+:::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Check the status of your availability group from the high availability page from the Azure portal.":::
 
 To learn more, see [Configure availability group by using the Azure portal](availability-group-azure-portal-configure.md).
 

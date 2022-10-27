@@ -2,8 +2,8 @@
 title: Migrate failover cluster instance
 titleSuffix: SQL Server on Azure VMs
 description: Learn how to lift and shift your Always On failover cluster instance high availability solution to SQL Server on Azure VMs using Azure Migrate.
-author: rahugup
-ms.author: rahugup
+author: rwestMSFT
+ms.author: randolphwest
 manager: bsiva
 ms.reviewer: mathoma
 ms.date: 4/25/2021

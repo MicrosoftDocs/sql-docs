@@ -17,6 +17,9 @@ One notebook can have multiple views and work for any kernel.
 
 Notebook Views is now available in [Azure Data Studio](../download-azure-data-studio.md), starting with the October 2021 release (1.33.0).
 
+
+[!INCLUDE [azure-data-studio-preview](../../includes/azure-data-studio-preview.md)]
+
 ## Get started
 
 1. Enable Notebook Views from Settings.

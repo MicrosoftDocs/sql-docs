@@ -85,7 +85,7 @@ The **Basics** tab allows you to select the subscription, resource group, and de
 
 1. Select the **Region**. All VMs will be deployed to the same region.
 
-1. Select the **Availability** for the VMs, either Availability Zone or Availability Set. For more information about availability options, see [Availability](https://learn.microsoft.com/en-us/azure/virtual-machines/availability).
+1. Select the **Availability** for the VMs, either Availability Zone or Availability Set. For more information about availability options, see [Availability](https://learn.microsoft.com/azure/virtual-machines/availability).
 
 1. The **Image** will be the one selected when starting the portal experience. Select **Configure VM generation** to select the VM generation.
 
@@ -127,7 +127,7 @@ On the Networking tab, configure your networking options.
 
 ## WSFC and Credentials settings
 
-On the **WSFC and Credentials** tab, provide account information needed to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to be present in Active Directory in the domain controller virtual machine for the deployment to work. This experience does not create any accounts and will fail if an account provided is invalid. For more information about the permissions required, see [Configure cluster accounts in Active Directory](https://learn.microsoft.com/en-us/windows-server/failover-clustering/configure-ad-accounts).
+On the **WSFC and Credentials** tab, provide account information needed to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to be present in Active Directory in the domain controller virtual machine for the deployment to work. This experience does not create any accounts and will fail if an account provided is invalid. For more information about the permissions required, see [Configure cluster accounts in Active Directory](https://learn.microsoft.com/windows-server/failover-clustering/configure-ad-accounts).
 
 1. Provide the name of the Windows server failover cluster.  
 

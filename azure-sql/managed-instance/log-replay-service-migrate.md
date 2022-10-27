@@ -239,14 +239,66 @@ WITH IDENTITY = 'MANAGED IDENTITY'
 
 ## Upload backups from SQL Server to Blob Storage
 
-Once your blob container is ready and you've confirmed your managed instance can access the container, you can start to upload your backups to Blob Storage. You can do so by copying existing backups to Blob Storage, or by taking backups from SQL Server directly to Blob Storage if your corporate and network policies allow it. 
+Once your blob container is ready and you've confirmed your managed instance can access the container, you can start to upload your backups to Blob Storage. You can either copy your backups to Azure Blob Storage, or if your environment allows it, starting with SQL Server 2012 SP1 CU2 and SQL Server 2014, you can take backups from SQL Server directly to Azure Blob Storage by using the [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) command. 
+
+
 
 ### Copy existing backups to Blob Storage
 
-When migrating databases to a managed instance by using LRS, you can use the following approaches to copy existing backups to Blob Storage:
+If you're on an older version of SQL Server, or if your environment doesn't support backing up directly to URL, take your backups on SQL Server as you normally would, and then copy them to Azure Blob Storage. 
 
-- [AzCopy](/azure/storage/common/storage-use-azcopy-v10)
-- [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer) 
+#### Take backup directly on SQL Server
+
+Set databases that you want to migrate to the full recovery model to allow log backups.
+
+```SQL
+-- To permit log backups, before the full database backup, modify the database to use the full recovery
+USE master
+ALTER DATABASE SampleDB
+SET RECOVERY FULL
+GO
+```
+
+To manually make full, differential, and log backups of your database to local storage, use the following sample T-SQL scripts. `CHECKSUM` is not required, but recommended. 
+
+
+The following example takes a full database backup to the local disk: 
+
+```SQL
+-- Take full database backup to local disk
+BACKUP DATABASE [SampleDB]
+TO DISK='C:\BACKUP\SampleDB_full.bak'
+WITH INIT, COMPRESSION, CHECKSUM
+GO
+```
+
+The following example takes a differential backup to the local disk: 
+
+```sql
+-- Take differential database backup to local disk
+BACKUP DATABASE [SampleDB]
+TO DISK='C:\BACKUP\SampleDB_diff.bak'
+WITH DIFFERENTIAL, COMPRESSION, CHECKSUM
+GO
+```
+
+The following example takes a transaction log backup to the local disk: 
+
+```sql
+-- Take transactional log backup to local disk
+BACKUP LOG [SampleDB]
+TO DISK='C:\BACKUP\SampleDB_log.trn'
+WITH COMPRESSION, CHECKSUM
+GO
+```
+
+#### Copy backups to Blob Storage 
+
+Once your backups are ready, and you want to start migrating databases to a managed instance by using LRS, you can use the following approaches to copy existing backups to Blob Storage:
+
+- Download and install [AzCopy](/azure/storage/common/storage-use-azcopy-v10)
+- Download and install [Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) 
+- Use [Storage Explore in the Azure portal](/azure/storage/blobs/storage-quickstart-blobs-portal?source=recommendations)
 
 
 > [!NOTE]
@@ -255,9 +307,11 @@ When migrating databases to a managed instance by using LRS, you can use the fol
 
 ### Take backups directly to Blob Storage
 
-If your corporate and network policies allow it, take backups from SQL Server directly to Blob Storage by using the SQL Server native [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) option. If you can use this option, you don't need to take backups to local storage and upload them to Blob Storage.
+If you're on a supported version of SQL Server (starting with SQL Server 2012 SP1 CU2 and SQL Server 2014), and your corporate and network policies allow it, you can take backups from SQL Server directly to Blob Storage by using the native SQL Server [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) option. If you can use `BACKUP TO URL`, you don't need to take backups to local storage and upload them to Blob Storage.
 
-When you take native backups directly to Azure Blob Storage, you have to authenticate to the Storage account. You can do so by using an SAS token, or a managed identity.  
+When you take native backups directly to Azure Blob Storage, you have to authenticate to the Storage account. You can do so by using an SAS token, or, if you're on SQL Server 2022, you can also use a managed identity.  
+
+
 
 ### [SAS token](#tab/sas-token)
 
@@ -274,6 +328,8 @@ For detailed instructions working with SAS tokens, review the tutorial [Use Azur
 
 
 ### [Managed identity](#tab/managed-identity)
+
+SQL Server 2022 added support for managed identities. If you're on SQL Server 2022, you can authenticate to your storage account using a managed identity. 
 
 Use the following command to create a credential that uses the managed identity on your SQL Server instance: 
 

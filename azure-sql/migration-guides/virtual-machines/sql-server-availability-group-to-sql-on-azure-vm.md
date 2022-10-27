@@ -267,7 +267,7 @@ Replication proceeds in the following sequence:
 You can track job status in the portal notifications.
 
 You can monitor replication status by selecting on **Replicating servers** in **Azure Migrate: Server Migration**.
-:::image type="content" source="media/sql-server-availability-group-to-sql-on-azure-vm/replicating-servers.png" alt-text="Monitor replication.":::
+:::image type="content" source="media/sql-server-availability-group-to-sql-on-azure-vm/replicating-servers.png" alt-text="Screenshot that shows monitor replication.":::
 
 ## Migrate VMs
 

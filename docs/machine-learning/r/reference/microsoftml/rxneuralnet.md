@@ -1,32 +1,17 @@
---- 
-
-# required metadata 
-title: "rxNeuralNet function (MicrosoftML) " 
-description: " Neural networks for regression modeling and for Binary and multi-class classification. " 
-keywords: "(MicrosoftML), rxNeuralNet, classification, dnn, models, network, neural, regression" 
+---
+title: "rxNeuralNet function (MicrosoftML)"
+description: "Neural networks for regression modeling and for Binary and multi-class classification (MicrosoftML)."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.prod: sql
+ms.service: ""
+ms.technology: machine-learning
+ms.topic: "reference"
+ms.custom: ""
+keywords: (MicrosoftML), rxNeuralNet, classification, dnn, models, network, neural, regression
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # rxNeuralNet: Neural Net 

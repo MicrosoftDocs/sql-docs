@@ -28,7 +28,7 @@ ms.author: jopilov
 
 ## Explanation
 
-Error 912 indicates that the database script failed to executed and to upgrade the database(s) to the latest level required by the server. It is a general error message that contains a reference to the upgrade script that failed and what error the failed script encountered.
+Error 912 indicates that the database script failed to be executed and to upgrade the database(s) to the latest level required by the server. It is a general error message that contains a reference to the upgrade script that failed and what error the failed script encountered.
 
 When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is upgraded or a Cumulative Update is applied, only the binaries are upgraded initially. The database and its objects remain unmodified. Once the binaries are replaced with new versions and the service restarts for the first time, a database upgrade is started. The upgrade scripts to be executed are located under C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\.
 

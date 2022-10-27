@@ -59,7 +59,7 @@ If you choose to manually run the SQL command to update this database, you need 
 
 :::image type="content" source="media/table-designer-azure-data-studio/change-publishing-via-the-sql-command-script-table-designer.png" alt-text="Screenshot of Table Designer showing how to publish changes to the database using the S Q L command option.":::
 
-You see that this script was ran successfully as described in the "Messages" pane.
+You see that this script was run successfully as described in the "Messages" pane.
 
 > [!Note]
 > Please note that if you decide to use the "Generate Script" option, you need to enable the SQL command mode in order to prevent errors in the SQL command script.Do this by clicking the "Enable SQLCMD" icon. In the image above, the "Enable SQLCMD" option is already selected, which is why you see "Disable SQLCMD". 

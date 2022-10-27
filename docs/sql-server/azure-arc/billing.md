@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/10/2022
+ms.date: 10/11/2022
 ms.prod: sql
 ms.topic: conceptual
 ---

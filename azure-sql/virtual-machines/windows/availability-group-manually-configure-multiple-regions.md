@@ -43,7 +43,6 @@ In this architecture, the replica in the remote region is normally configured wi
 
 When availability group replicas are on Azure virtual machines in different Azure regions, then you can connect the Virtual Networks using the recommended [Virtual Network Peering](/azure/virtual-network/virtual-network-peering-overview) or [Site to Site VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
 
-
 >[!IMPORTANT]
 >This architecture incurs outbound data charges for data replicated between Azure regions. See [Bandwidth Pricing](https://azure.microsoft.com/pricing/details/bandwidth/).  
 
@@ -51,7 +50,7 @@ When availability group replicas are on Azure virtual machines in different Azur
 
 To create a replica in a remote data center, do the following steps:
 
-1. [Create a virtual network in the new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network).
+1. [Create a virtual network and subnet in the new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network).
 
    Select the subnet network, Cluster IP, and AG Listener IP addresses to be used for the local and remote region. The step listed here is using the following:
 

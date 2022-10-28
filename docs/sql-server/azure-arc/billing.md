@@ -102,7 +102,7 @@ When you run your SQL Server instance on a virtual or physical machine, you are 
 
 ### Can I switch from pay-as-you-go to license and vice versa
 
-Yes, you can change you selection. To change, run setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**.
+Yes, you can change your selection. To change, run Setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**.
 
 ## Next steps
 

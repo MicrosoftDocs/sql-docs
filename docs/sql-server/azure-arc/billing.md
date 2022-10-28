@@ -24,17 +24,17 @@ The billing granularity is one hour and the charges are calculated based on the 
 
 When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following rules to select instance to be licensed:
 
-1. The instance with the highest edition of all instances installed on the same operating system determines the required license.
-1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
-1. If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed.
-1. If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billed.
+- The instance with the highest edition of all instances installed on the same operating system determines the required license.
+- If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
+- If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed.
+- If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billed.
 
 Pay-as-you-go billing requires that the following conditions are met:
 
-1. The host is in a running state. For example, the virtual machine is fully up.
-1. The hosting server is onboarded to Azure Arc.
-1. The SQL Server instance and Azure extension for SQL Server are installed.
-1. The pay-as-you-go option is selected during the SQL Server installation, or enabled in Azure portal.
+- The host is in a running state. For example, the virtual machine is fully up.
+- The hosting server is onboarded to Azure Arc.
+- The SQL Server instance and Azure extension for SQL Server are installed.
+- The pay-as-you-go option is selected during the SQL Server installation, or enabled in Azure portal.
 
 If any of these conditions is not met, the pay-as-you-go billing will stop until they are met again.
 

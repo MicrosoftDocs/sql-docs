@@ -13,7 +13,7 @@ metadata:
   ms.topic: faq
   ms.tgt_pltfrm: vm-windows-sql-server
   ms.workload: iaas-sql-server
-  ms.date: 05/24/2022
+  ms.date: 10/28/2022
   ms.author: pamela
   ms.reviewer: randolphwest
 title: Frequently asked questions for SQL Server on Azure VMs
@@ -39,7 +39,7 @@ sections:
           
       - question: |
           Are existing SQL Server virtual machine gallery images updated?
-        answer:    Every two months, SQL Server images in the virtual machine gallery are updated with the latest Windows and Linux updates. For Windows images, this includes any updates that are marked important in Windows Update, including important SQL Server security updates and service packs. For Linux images, this includes the latest system updates. SQL Server cumulative updates are handled differently for Linux and Windows. For Linux, SQL Server cumulative updates are also included in the refresh. But at this time, Windows VMs are not updated with SQL Server or Windows Server cumulative updates.
+        answer:    Every two months, SQL Server images in the virtual machine gallery are updated with the latest Windows and Linux updates. For Windows images, this includes any updates that are marked important in Windows Update, including important SQL Server security updates and service packs. For Linux images, this includes the latest system updates. SQL Server cumulative updates are handled differently for Linux and Windows. For Linux, SQL Server cumulative updates are also included in the refresh. But at this time, Windows VMs aren't updated with SQL Server or Windows Server cumulative updates.
 
       - question: |
           Can SQL Server virtual machine images get removed from the gallery?
@@ -299,7 +299,7 @@ sections:
           
       - question: | 
            What permissions does the SQL Server IaaS agent extension use? 
-        answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions) to learn more. 
+        answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure Marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions) to learn more. 
       - question: |
           Will registering with the SQL IaaS Agent extension restart SQL Server on my VM?
         answer:    Starting in September 2021, restarting the SQL Server service is no longer required when registering with the [SQL IaaS extension](sql-server-iaas-agent-extension-automate-management.md) in [full management mode](sql-agent-extension-manually-register-single-vm.md).  

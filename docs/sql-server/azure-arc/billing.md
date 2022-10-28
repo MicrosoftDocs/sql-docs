@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-Azure Arc-enabled SQL Server allows you to use a pay-as-you-go option to purchasing the SQL Server software license. This option is an alternative to using the traditional license agreement with Microsoft. Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], setup includes this option and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
+You may use a pay-as-you-go billing option to license SQL Server with Azure Arc. This option is an alternative to using the traditional license agreement. Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], setup includes this option and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
 
 ## Overview
 
@@ -26,15 +26,15 @@ When multiple instances of SQL Server are installed on the same OS, only one ins
 
 1. The instance with the highest edition of all instances installed on the same operating system determines the required license.
 1. If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
-1. If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed. 
-1. If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billed. 
+1. If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed.
+1. If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billed.
 
-The pay-as-you-go billing requires that the following conditions are met:
+Pay-as-you-go billing requires that the following conditions are met:
 
 1. The host is in a running state. For example, the virtual machine is fully up.
 1. The hosting server is onboarded to Azure Arc.
 1. The SQL Server instance and Azure extension for SQL Server are installed.
-1. The pay-as-you-go option is selected during the SQL Server installation, or enabled in Azure portal. 
+1. The pay-as-you-go option is selected during the SQL Server installation, or enabled in Azure portal.
 
 If any of these conditions is not met, the pay-as-you-go billing will stop until they are met again.
 

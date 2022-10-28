@@ -10377,6 +10377,8 @@ items:
       href: sql-server/azure-arc/assess.md
     - name: Configure advanced data Security
       href: sql-server/azure-arc/configure-advanced-data-security.md
+    - name: Billing through Microsoft Azure
+      href: sql-server/azure-arc/billing.md
 - name: Big Data Clusters
   items:
   - name: Big Data Clusters

@@ -105,7 +105,7 @@ After a computer has been renamed, any connections that used the old computer na
 
  **Linked server configurations** - Linked server configurations will be affected by the computer renaming operation. Use `sp_addlinkedserver` or `sp_setnetname` to update computer name references. For more information, see the [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or [sp_setnetname (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).
 
- **Client alias names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100)).
+ **Client alias names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100)).
 
 ## See also
 

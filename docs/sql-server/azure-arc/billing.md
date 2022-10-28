@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-You may use a pay-as-you-go billing option to license SQL Server with Azure Arc. This option is an alternative to using the traditional license agreement. Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], setup includes this option and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
+You may use a pay-as-you-go billing option to license SQL Server with Azure Arc. This option is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
 
 ## Overview
 
@@ -43,7 +43,7 @@ If any of these conditions is not met, the pay-as-you-go billing will stop until
 
 ## License types
 
-Any installed instance of SQL server can be connected to Azure. The only exceptions are Express and Web editions. When they are connected, their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licences in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage your license position and maintain compliance. The following table shows the different license types.
+Any installed instance of SQL server can be connected to Azure. The only exceptions are Express and Web editions. When they are connected, their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licenses in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage your license position and maintain compliance. The following table shows the different license types.
 
 | Installed edition | Activation choice  | License type  |  
 |---|---|---|
@@ -98,11 +98,11 @@ When the VM is stopped, the usage data is not be collected. Therefore you will n
 
 ### If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges. 
 
-Whe you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
+When you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 
-### Can I switch from pay-as-you-go to license and visa-versa
+### Can I switch from pay-as-you-go to license and vice versa
 
-Yes, you change you selection by running the setup again, choosing the **Maintenance** tab, then **Edition Upgrade**. 
+Yes, you can change you selection. To change, run setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**.
 
 ## Next steps
 

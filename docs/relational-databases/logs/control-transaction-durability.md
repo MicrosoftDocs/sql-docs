@@ -185,8 +185,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Transaction Replication**    
  Delayed durable transactions is not supported with Transactional Replication.    
  
- **Azure Synapse Link**    
- Delayed durable transactions is not supported with Azure Synapse Link.    
+ **Azure Synapse Link for SQL**    
+ Delayed durable transactions is not supported with Azure Synapse Link for SQL.    
  
  **Log shipping**    
  Only transactions that have been made durable are included in the log that is shipped.    

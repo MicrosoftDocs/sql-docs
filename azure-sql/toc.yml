@@ -660,7 +660,6 @@
         - name: Migrate (from old Elastic jobs)
           href: database/elastic-jobs-migrate.md
 
-
     - name: Secure 
       items: 
       - name: Audit to storage account behind VNet or firewall
@@ -731,7 +730,7 @@
     - name: Load and move data 
       items: 
       - name: Migrate to SQL Database
-        href: database/migrate-to-database-from-sql-server.md
+        href: migration-guides/database/sql-server-to-sql-database-guide.md
       - name: Manage SQL Database after migration
         href: database/manage-data-after-migrating-to-database.md
       - name: Import/export (allow Azure services disabled)
@@ -746,7 +745,6 @@
         href: database/replication-to-sql-database.md
       - name: Replicate schema changes (Data sync)
         href: database/sql-data-sync-update-sync-schema.md
-
 
     - name: Database sharding
       items:
@@ -782,7 +780,6 @@
         href: database/elastic-query-horizontal-partitioning.md
       - name: Query across tables with different schemas
         href: database/elastic-query-vertical-partitioning.md
-
 
     - name: Design data applications
       items:
@@ -1625,9 +1622,6 @@
         href: /sql/connect/sql-connection-libraries
       - name: REST
         href: /rest/api/
-      - name: Azure Policy built-ins
-        displayName: samples, policies, definitions
-        href: ./database/policy-reference.md
     - name: Resources
       items:
       - name: FAQ

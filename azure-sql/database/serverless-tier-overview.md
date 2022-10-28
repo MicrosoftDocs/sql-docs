@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/26/2022
+ms.date: 10/28/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -402,7 +402,7 @@ Currently, 80 max vCores in serverless is supported in the following regions wit
 
 ### Regions supporting availability zones for 80 max vCores
 
-Currently, 80 max vCores in serverless with availability zone support is limited to the following regions with more regions planned: Canada Central, East US, UK South, West Europe, West US 2, and West US 3.
+Currently, 80 max vCores in serverless with availability zone support is limited to the following regions with more regions planned: East US, West Europe, West US 2, and West US 3.
 
 ## Next steps
 

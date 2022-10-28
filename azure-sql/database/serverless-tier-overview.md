@@ -193,7 +193,13 @@ The latency to auto-resume and auto-pause a serverless database is generally ord
 
 ### Customer managed transparent data encryption (BYOK)
 
+#### Key deletion or revocation
+
 If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused when key deletion or revocation occurs, then the database remains in the auto-paused state.  In this case, after the database is next resumed, the database becomes inaccessible within approximately 10 minutes. Once the database becomes inaccessible, the recovery process is the same as for provisioned compute databases. If the serverless database is online when key deletion or revocation occurs, then the database also becomes inaccessible within approximately 10 minutes in the same way as with provisioned compute databases.
+
+#### Key rotation
+
+If using [customer managed transparent data encryption](transparent-data-encryption-byok-overview.md) (BYOK) and the serverless database is auto-paused, then automated key rotation is deferred until the database is auto-resumed.
 
 ## Onboarding into serverless compute tier
 

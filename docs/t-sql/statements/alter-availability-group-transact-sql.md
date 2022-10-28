@@ -15,7 +15,7 @@ f1_keywords:
   - "ALTER AVAILABILITY"
 helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
-  - "ALTER AVAILABILITY GROUP statement"F
+  - "ALTER AVAILABILITY GROUP statement"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], Transact-SQL statements"
 dev_langs:

@@ -902,7 +902,12 @@ For more information about service account configuration, see [Configure Windows
 
 ## <a id="Feature"></a> Feature parameters
 
-To install specific features, use the `/FEATURES` parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]](../../sql-server/editions-and-components-of-sql-server-2016.md), [Editions and Supported Features for [!INCLUDE[sssql17](../../includes/sssql17-md.md)]](../../sql-server/editions-and-components-of-sql-server-2017.md), or [Editions and Supported Features for [!INCLUDE[sssql19](../../includes/sssql19-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+To install specific features, use the `/FEATURES` parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
+
+- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
+- [Editions and Supported Features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+- [Editions and Supported Features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 
 |Parent feature parameter|Feature parameter|Description|
 |:---|:---|:---|
@@ -946,9 +951,8 @@ To install specific features, use the `/FEATURES` parameter and specify the pare
 |---|---|
 |`/FEATURES=SQLEngine`|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] without replication and full-text.|
 |`/FEATURES=SQLEngine,FullText`|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and full-text.|
-|`/FEATURES=SQL,Tools`|Installs the complete [!INCLUDE[ssDE](../../includes/ssde-md.md)] and all tools.|
-|`/FEATURES=BOL`|Installs SQL Server Books Online components to view and manage help content.|
-|`/FEATURES=SQLEngine,PolyBase`|Installs the PolyBase engine.|
+|`/FEATURES=SQL`|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)], replication, and full-text.|
+|`/FEATURES=SQLEngine,PolyBase`|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and the PolyBase engine.|
 
 ## <a id="RoleParameters"></a> Role parameters
 

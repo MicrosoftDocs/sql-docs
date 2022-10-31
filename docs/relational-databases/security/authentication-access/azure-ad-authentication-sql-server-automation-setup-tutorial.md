@@ -25,7 +25,7 @@ In this article, we'll go over how to set up the Azure Active Directory (Azure A
 We'll also go over the updated functionality to set up an Azure AD admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Azure AD authentication for SQL server required manual setup of Azure AD admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
 
 > [!NOTE]
-> This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts.
+> This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview).
 
 ## Prerequisites
 

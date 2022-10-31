@@ -2618,7 +2618,8 @@ Additional notes and guidance when creating a credential:
 
 To use the managed service identity for the database scoped credential:
   - Specify `WITH IDENTITY = 'Managed Identity'`
-    - - Use the system-assigned managed service identity of the Azure SQL Managed Instance, which must be enabled if it is to be used for this purpose.
+    - Use the system-assigned managed service identity of the Azure SQL Managed Instance, which must be enabled if it is to be used for this purpose.
+
   - Grant the **Reader** Azure RBAC role to the system assigned managed service identity of the Azure SQL Managed Instance to the necessary Azure Blob Storage containers. For example, via the Azure portal, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
 To create a shared access signature (SAS) for the database scoped credential:

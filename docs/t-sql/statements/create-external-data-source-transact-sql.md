@@ -650,7 +650,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 ::: moniker range="=sql-server-linux-ver15"
 
 > [!NOTE]  
-> This syntax varies in different versions of SQL Server on Linux. Use the version selector dropdown to choose the appropriate version.  
+> This syntax varies in different versions of SQL Server. Use the version selector dropdown to choose the appropriate version.  
 > To view the features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], visit [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver16&preserve-view=true#syntax).
 
 ::: moniker-end
@@ -1182,7 +1182,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
 > [!NOTE]
-> This syntax varies in different versions of SQL Server on Linux. Use the version selector dropdown to choose the appropriate version. This content applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
+> This syntax varies in different versions of SQL Server. Use the version selector dropdown to choose the appropriate version. This content applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
 
 ## <a id="syntax"></a> Syntax for SQL Server 2022 and later
 

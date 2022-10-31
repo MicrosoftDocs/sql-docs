@@ -87,7 +87,7 @@ Recommendations for disk encryption are different for confidential VMs than for 
 
 ## Azure AD authentication (Preview)
 
-Starting with SQL Server 2022, you can connect to SQL Server using one of the following Azure Active Directory (AD) identity authentication methods: 
+Starting with SQL Server 2022, you can connect to SQL Server using one of the following Azure Active Directory (Azure AD) identity authentication methods: 
 
 - Azure AD Password
 - Azure AD Integrated

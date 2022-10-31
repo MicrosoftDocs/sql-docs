@@ -1,2 +1,2 @@
 >[!NOTE]
->Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+>Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019. They're discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.

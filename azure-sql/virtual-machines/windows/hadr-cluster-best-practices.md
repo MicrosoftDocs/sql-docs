@@ -73,7 +73,7 @@ To reduce the impact of downtime, consider the following VM best availability se
 
 Although a two-node cluster will function without a [quorum resource](/windows-server/storage/storage-spaces/understand-quorum), customers are strictly required to use a quorum resource to have production support. Cluster validation won't pass any cluster without a quorum resource. 
 
-Technically, a three-node cluster can survive a single node loss (down to two nodes) without a quorum resource. But after the cluster is down to two nodes, there's a risk that the clustered resources will go offline if a node loss or communication failure to prevent a split-brain scenario. Configuring a quorum resource will allow the cluster to continue online with only one node online.
+Technically, a three-node cluster can survive a single node loss (down to two nodes) without a quorum resource, but after the cluster is down to two nodes, if there is another node loss or communication failure, then there is a risk that the clustered resources will go offline to prevent a split-brain scenario. Configuring a quorum resource will allow the cluster to continue online with only one node online.
 
 The disk witness is the most resilient quorum option, but to use a disk witness on a SQL Server on Azure VM, you must use an Azure Shared Disk which imposes some limitations to the high availability solution. As such, use a disk witness when you're configuring your failover cluster instance with Azure Shared Disks, otherwise use a cloud witness whenever possible. 
 

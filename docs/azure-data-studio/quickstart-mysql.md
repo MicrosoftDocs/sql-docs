@@ -4,7 +4,7 @@ description: Use Azure Data Studio to connect to a MySQL server (hosted on-premi
 author: shreyaaithal
 ms.author: shaithal
 ms.reviewer: erinstellato
-ms.date: 09/28/2022
+ms.date: 10/12/2022
 ms.prod: azure-data-studio
 ms.topic: quickstart
 ms.custom: intro-quickstart, ignite-2022
@@ -12,7 +12,7 @@ ms.custom: intro-quickstart, ignite-2022
 
 # Quickstart: Use Azure Data Studio to connect and query MySQL (Preview)
 
-This quickstart shows how to use Azure Data Studio to connect to a MySQL server (hosted on-premises, on VMs, on managed MySQL in other clouds or on Azure Database for MySQL - FLexible Server), create a database, and use SQL statements to insert and query data in the database.
+This quickstart shows how to use Azure Data Studio to connect to a MySQL server (hosted on-premises, on VMs, on managed MySQL in other clouds or on Azure Database for MySQL - Flexible Server), create a database, and use SQL statements to insert and query data in the database.
 
 ## Prerequisites
 
@@ -20,16 +20,16 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
 
 - [Install Azure Data Studio](./download-azure-data-studio.md).
 - [Install the MySQL extension for Azure Data Studio](./extensions/mysql-extension.md).
-- A MySQL server. You can either create a managed MySQL server on Azure using [Azure Database for MySQL - Flexible Server](/azure/mysql/flexible-server/quickstart-create-server-portal.md) or [install MySQL locally](https://dev.mysql.com/downloads/mysql/).
+- A MySQL server. You can either create a managed MySQL server on Azure using [Azure Database for MySQL - Flexible Server](/azure/mysql/flexible-server/quickstart-create-server-portal) or [install MySQL locally](https://dev.mysql.com/downloads/mysql/).
 
 > [!NOTE]
-> The extension is currently available in Azure Data Studio (ADS) insider build only. It will be available in the next ADS stable build soon.
+> The extension is currently available in [Azure Data Studio (ADS) insider build](./download-azure-data-studio.md#download-the-insiders-build-of-azure-data-studio) only. It will be available in the next ADS stable build soon.
 
 ## Connect to MySQL
 
 1. Start **Azure Data Studio**.
 
-2. The first time you start Azure Data Studio the **Connection** dialog opens. If the **Connection** dialog doesn't open, click the **New Connection** icon on the **SERVERS** view in the **Connections** tab:
+2. The first time you start Azure Data Studio the **Connection** dialog opens. If the **Connection** dialog doesn't open, select the **New Connection** icon on the **SERVERS** view in the **Connections** tab:
 
     :::image type="content" source="media/quickstart-mysql/new-connection-icon.png" alt-text="Screenshot of new connection icon in the Servers sidebar.":::
 
@@ -42,14 +42,14 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
    | Setting       | Example value | Description |
    | ------------ | ------------------ | ------------------------------------------------- |
    | **Server name** | localhost / exampleserver.mysql.database.azure.con | The fully qualified server name. |
-   | **User name** | mysqluser | The user name you want to log in with. |
-   | **Password (SQL Login)** | *password* | The password for the user account you are logging in with. |
+   | **User name** | mysqluser | The user name you want to sign in with. |
+   | **Password (SQL Login)** | *password* | The password for the user account you're logging in with. |
    | **Remember Password** | *Check* | Check this box if you don't want to enter the password each time you connect. |
    | **Database name** | \<Default\> | Enter a database name if you want the connection to specify a database. |
    | **Server group** | \<Default\> | This option lets you assign this connection to a specific server group you create. |
    | **Name (optional)** | *leave blank* | This option lets you specify a friendly name for your server. |
 
-5. If your MySQL server requires SSL encryptions, navigate to **Advanced Properties** window by selecting **Advanced...** button, enter the SSL configuration details and select **OK**. By default, SSL mode is configured as *Require*. For more details on SSL encryption and modes, see [Configuring MySQL to Use Encrypted Connections](https://dev.mysql.com/doc/refman/8.0/en/using-encrypted-connections.html).
+5. If your MySQL server requires SSL encryptions, navigate to **Advanced Properties** window by selecting **Advanced...** button, enter the SSL configuration details and select **OK**. By default, SSL mode is configured as *Require*. For more information on SSL encryption and modes, see [Configuring MySQL to Use Encrypted Connections](https://dev.mysql.com/doc/refman/8.0/en/using-encrypted-connections.html).
 
 6. Review the connection details and select **Connect**.
 
@@ -67,7 +67,7 @@ The following steps will create a database named **tutorialdb**:
    CREATE DATABASE tutorialdb;
    ```
 
-3. From the toolbar select **Run** to execute the query. Notifications appear in the **MESSAGES** pane to show query progress.
+3. From the toolbar, select **Run** to execute the query. Notifications appear in the **MESSAGES** pane to show query progress.
 
 >[!TIP]
 > You can use **F5** on your keyboard to execute the statement instead of using **Run**.
@@ -101,7 +101,7 @@ After the query completes, right-click **Databases** under your MySQL server in 
 
 ## Insert data
 
-Paste the following snippet into the query window and click **Run**:
+Paste the following snippet into the query window and select **Run**:
 
    ```sql
    -- Insert rows into table 'customers'

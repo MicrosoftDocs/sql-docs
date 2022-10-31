@@ -115,6 +115,12 @@
       "url": "https://github.com/Microsoft/sql-server-samples",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-sql/reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {

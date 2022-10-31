@@ -169,7 +169,7 @@ You can perform an unattended installation in the following way:
 - Follow the initial steps in the [quickstarts](#platforms) to register the repositories and install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 - When you run `mssql-conf setup`, set [environment variables](sql-server-linux-configure-environment-variables.md) and use the `-n` (no prompt) option.
 
-The following example configures the Developer edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] with the `MSSQL_PID` environment variable. It also accepts the EULA (`ACCEPT_EULA`) and sets the SA user password (`MSSQL_SA_PASSWORD`). The `-n` parameter performs an unprompted installation where the configuration values are pulled from the environment variables.
+The following example configures [!INCLUDE [ssdeveloper-md](../includes/ssdeveloper-md.md)] edition with the `MSSQL_PID` environment variable. It also accepts the EULA (`ACCEPT_EULA`) and sets the SA user password (`MSSQL_SA_PASSWORD`). The `-n` parameter performs an unprompted installation where the configuration values are pulled from the environment variables.
 
 ```bash
 sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup

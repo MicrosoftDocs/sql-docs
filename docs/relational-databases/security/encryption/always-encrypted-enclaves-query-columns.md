@@ -88,7 +88,7 @@ Make sure you run your statements from a query window that uses a connection tha
 6. (This step applies to SSMS 19 or later.) Set **Protocol** to **Host Guardian Service** (if you're using  [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]) or **Microsoft Azure Attestation** (if you're using a DC-series database with Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]). 
 7. Specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
 
-    ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/ssms-connect-maa.png)
+    ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/ssms-connect-microsoft-azure-attestation.png)
 
 8. Select **Connect**.
 9. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

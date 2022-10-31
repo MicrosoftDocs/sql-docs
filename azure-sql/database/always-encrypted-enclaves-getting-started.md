@@ -368,7 +368,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     7. Set **Protocol** to **Microsoft Azure Attestation**. (This step applies to SSMS 19 or later.)
     8. Specify your enclave attestation URL that you've obtained by following the steps in [Step 2: Configure an attestation provider](#step-2-configure-an-attestation-provider). See the below screenshot.
 
-        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-maa.png" alt-text="Connect with attestation":::
+        :::image type="content" source="./media/always-encrypted-enclaves/ssms-connect-microsoft-azure-attestation.png" alt-text="Connect with attestation":::
 
     9. Select **Connect**.
     10. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

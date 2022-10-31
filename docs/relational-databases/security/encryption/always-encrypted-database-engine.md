@@ -54,7 +54,7 @@ To set up Always Encrypted in your database, you need to:
 
     For more information about managing Always Encrypted keys, see [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
 
-<a name="selecting--deterministic-or-randomized-encryption"></a>
+   <a name="selecting--deterministic-or-randomized-encryption"></a>
 
 1. **Configure encryption for selected database columns** that contain sensitive data to be protected. This can involve creating new tables with encrypted columns or encrypting existing database columns and existing data. When setting up encryption for a column, you specify the information about an encryption algorithm, a column encryption key to protect the data in the column, and an encryption type. Always Encrypted supports two encryption types: 
 

@@ -109,7 +109,7 @@ Consider the following limitations
 - Once Azure AD authentication is enabled, there is no way to disable it by using the Azure portal. 
 - Currently, enabling Azure AD authentication is only possible through the Azure portal. 
 - Currently, Azure AD authentication is only available to SQL Server VMs deployed to the public cloud. 
-- SQL Server on Azure VMs supports only one Azure AD identity - either one system-managed identity, or one user-managed identity. 
+
 
 
 ## Azure Advisor 

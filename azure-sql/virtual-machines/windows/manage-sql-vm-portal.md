@@ -90,8 +90,6 @@ Use the **Patching** page of the SQL virtual machines resource to enable auto pa
 
 To learn more, see, [Automated patching](automated-patching.md). 
 
-
-
 ## Backups
 
 Use the **Backups** page of the SQL virtual machines resource to configure your automated backup settings, such as the retention period, which storage account to use, encryption, whether or not to back up system databases, and a backup schedule. 
@@ -106,11 +104,9 @@ Manage additional features of SQL Server on the **Additional features** tab, suc
 
 ## High availability (Preview)
 
-Use the **High Availability** page of the SQL virtual machines resource to monitor the health of your existing Always On availability group. 
+Once you've configured your [availability group by using the Azure portal](availability-group-azure-portal-configure.md), use the **High Availability** page of the SQL virtual machines resource to monitor the health of your existing Always On availability group. 
 
 :::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Check the status of your availability group from the high availability page from the Azure portal.":::
-
-To learn more, see [Configure availability group by using the Azure portal](availability-group-azure-portal-configure.md).
 
 ## Security Configuration 
 

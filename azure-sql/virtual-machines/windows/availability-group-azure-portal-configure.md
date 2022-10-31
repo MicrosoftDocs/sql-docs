@@ -4,37 +4,36 @@ description: "Use the Azure portal to create multiple SQL Server VMs, each in a 
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 09/30/2022
+ms.date: 11/16/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-ms.topic: article
+ms.topic: how-to
 ms.custom:
-  - seo-lt-2019
   - devx-track-azurecli
   - devx-track-azurepowershell
 tags: azure-resource-manager
 ---
-# Use Azure portal to configure a multi-subnet availability group for SQL Server on Azure VM (Preview)
+# Use Azure portal to configure a multi-subnet availability group for SQL Server on Azure VMs (Preview)
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
 > Eliminate the need for an Azure Load Balancer for your Always On availability (AG) group by creating your SQL Server VMs in multiple subnets within the same Azure virtual network.
 
-This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs within multiple subnets. Deploying a multi-subnet availability group through the portal provides an easy end-to-end experience for users which configures the virtual machines following the [HADR best practices](hadr-cluster-best-practices.md).
+This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs within multiple subnets by creating new virtual machines with SQL Server, a Windows failover cluster, availability group, and listener. This deployment method supports SQL Server 2016 and later on Windows Server 2016 and later.
 
-Use this experience to create new virtual machines with SQL Server, a Windows failover cluster, availability group, and listener. This deployment method supports SQL Server 2016+ on Windows Server 2016+.
+Deploying a multi-subnet availability group through the portal provides an easy end-to-end experience for users which configures the virtual machines following the [HADR best practices](hadr-cluster-best-practices.md).
 
-This feature is currently in preview.
+The ability to create your availability group through the Azure portal is currently in preview.
 
-While this article uses the Azure portal to configure the availability group environment, it is also possible to do so [Manually](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) as well.
+While this article uses the Azure portal to configure the availability group environment, it is also possible to do so [manually](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) as well.
 
 > [!NOTE]  
-> It's now possible to lift and shift your availability group solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate availability group](../../migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md) to learn more.
+> It's possible to lift and shift your availability group solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate availability group](../../migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md) to learn more.
 
 ## Prerequisites
 
-To configure an Always On availability group using the Azure portal, you must have the following prerequisites:
+To configure an Always On availability group by using the Azure portal, you must have the following prerequisites:
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
 
@@ -46,7 +45,7 @@ To configure an Always On availability group using the Azure portal, you must ha
 
 - Domain accounts including:
 
-  - A domain admin user that should have Create Computer object permissions – this user will create the cluster and availability group, and will install SQL Server
+  - A domain admin user that should have **Create Computer Object** permissions – this user will create the cluster and availability group, and will install SQL Server
 
   - A domain SQL Server service account to control SQL Server
   
@@ -65,7 +64,7 @@ To choose an image, follow these steps:
 
 1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, then type Azure SQL in the search box.  
 
-1. Select + Create to open the **Select SQL deployment option** page.  Under **SQL Virtual Machines**, check the box next to **High availability**, then select the **Image** drop-down and type, for example 2019, in the SQL Server image search box. Choose a SQL Server image, such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**.  
+1. Select **+ Create** to open the **Select SQL deployment option** page.  Under **SQL Virtual Machines**, check the box next to **High availability**, then select the **Image** drop-down. Type in the version of SQL Server you're interested in, such as `2019`, and then choose a SQL Server image, such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**.  
 
   :::image type="content" source="./media/availability-group-az-portal-configure/select-sql-server-image.png" alt-text="Screenshot of SQL virtual machines create UI.":::
 
@@ -73,23 +72,23 @@ To choose an image, follow these steps:
 
 ## Basic settings
 
-The **Basics** tab allows you to select the subscription, resource group, and details of the instances to be created.  
+On the **Basics** tab, select the subscription, resource group, and provide details for the SQL Server instances you're creating for your availability group. 
 
-1. Select the Subscription and the resource group with the domain controller VM already configured.  
+1. Choose the subscription and resource group from the drop-down that contains your domain controller, and where you intend to deploy your availability group. 
 
    :::image type="content" source="./media/availability-group-az-portal-configure/basics-subscription.png" alt-text="Screenshot of basics tab UI.":::
 
-1. Use the slider to select the number of virtual machines to be created for the cluster with a minimum of 2 and a maximum of 9 can be created. The virtual machine names are pre-populated but can be edited by selecting **Edit names**.
+1. Use the slider to select the number of virtual machines you want to create for the availability group, with a minimum of 2, and a maximum of 9. The virtual machine names are pre-populated but can be edited by selecting **Edit names**.
 
    :::image type="content" source="./media/availability-group-az-portal-configure/edit-vm-names.png" alt-text="Screenshot of edit names UI.":::
 
 1. Select the **Region**. All VMs will be deployed to the same region.
 
-1. Select the **Availability** for the VMs, either Availability Zone or Availability Set. For more information about availability options, see [Availability](https://learn.microsoft.com/azure/virtual-machines/availability).
+1. Select the **Availability** for the VMs, either Availability Zone or Availability Set. For more information about availability options, see [Availability](/azure/virtual-machines/availability).
 
-1. The **Image** will be the one selected when starting the portal experience. Select **Configure VM generation** to select the VM generation.
+1. The **Image** displays the chosen SQL Server VM image. Select **Configure VM generation** to choose the VM generation.
 
-1. Select **See all sizes** for the Size of the virtual machines. All VMs created will be the same size. For production workloads, see the recommended machine sizes and configuration in [Performance best practices for SQL Server in Azure Virtual Machines](./performance-guidelines-best-practices-vm-size.md).
+1. Select **See all sizes** for the size of the virtual machines. All VMs created will be the same size. For production workloads, see the recommended machine sizes and configuration in [Performance best practices for SQL Server in Azure Virtual Machines](./performance-guidelines-best-practices-vm-size.md).
 
 1. Under **Virtual machine administrator account**, provide a username and password. The password must be at least 12 characters long and meet the [defined complexity requirements](/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-). This account will be the administrator of the VM.  
 
@@ -105,15 +104,15 @@ The **Basics** tab allows you to select the subscription, resource group, and de
 
 On the Networking tab, configure your networking options.
 
-1. Select the **virtual network** from the dropdown. The list is pre-populated based on the region chosen in the **Basics** tab. The virtual network should have the domain controller VM present in it.
+1. Select the **virtual network** from the dropdown. The list is pre-populated based on the chosen region and resource group on the **Basics** tab. The selected virtual network should contain the domain controller VM in it.
 
 1. Under **NIC network security group**, select basic security group. Choosing the basic option allows you to select inbound ports for the SQL Server VM.  
 
-1. Configure **Public inbound ports**, if needed, by selecting **Allow selected ports**, then use the dropdown to select the allowed common ports.
+1. Configure **Public inbound ports**, if needed, by selecting **Allow selected ports**, then use the drop-down to select the allowed common ports.
 
     :::image type="content" source="./media/availability-group-az-portal-configure/networking-nic-basic.png" alt-text="Screenshot of NIC security group UI.":::
 
-1. **Create subnets** allows management of the subnets for each VM, as each virtual machine being created needs to be in its own subnet. Select **Manage subnet configuration** to create or validate that a subnet is available for each new to be created virtual machine. This opens the virtual network screen to manage your subnets. Once done, close the screen using the **X** close the subnet management window.
+1. Each virtual machine you create has to be in its own subnet. Select **Create subnets** to open the **Subnets** page for the virtual network, and then select **Manage subnet configuration** to create or validate that a subnet is available for each virtual machine you intend to create for the availability group. Once done, use the **X** to close the subnet management window, and navigate back to the availability group deployment page.
 
     :::image type="content" source="./media/availability-group-az-portal-configure/subnet-management.png" alt-text="Screenshot of subnet management.":::
 

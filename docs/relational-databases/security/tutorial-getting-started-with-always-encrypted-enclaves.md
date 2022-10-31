@@ -167,7 +167,7 @@ In this step, you'll enable the functionality of Always Encrypted using enclaves
     1. Select **Options >>** and select the **Always Encrypted** tab.
     1. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
-          ![Connect to server without Always Encrypted](./encryption/media/always-encrypted-database-engine/allways-encrypted-ssms-connect-disabled.png)
+       :::image type="content" source="./encryption/media/always-encrypted-database-engine/always-encrypted-ssms-connect-disabled.png" alt-text="Screenshot of the SSMS connection option for Always Encrypted disabled.":::
 
     1. Select **Connect**.
 

@@ -61,7 +61,7 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 
 ## Remarks
 
-- Only [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] on-premises with a supported Windows or Linux operating system, or [SQL Server on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview), is supported for Azure AD authentication.
+- Only [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] on-premises with a supported Windows or Linux operating system, or [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview), is supported for Azure AD authentication.
 - To connect SQL Server to Azure Arc, the Azure AD account needs the following permissions:
   - Member of the *Azure Connected Machine Onboarding* group or *Contributor* role in the resource group.
   - Member of the *Azure Connected Machine Resource Administrator* role in the resource group.

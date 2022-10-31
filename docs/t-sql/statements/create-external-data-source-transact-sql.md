@@ -1275,7 +1275,7 @@ Additional notes and guidance when creating a credential:
 
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - When accessing Azure Storage Account (V2) or Azure Data Lake Storage Gen2, the `IDENTITY` must be `SHARED ACCESS SIGNATURE`.
-  - For an example, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage).
+  - For an example, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage-1).
 
 There are multiple ways to create a shared access signature:
   - You can create an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
@@ -1588,7 +1588,7 @@ WITH
 
 #### Create a shared access signature
 
-For both Azure Blob Storage and Azure Data Lake Gen2 the supported authentication method is shared access signature (SAS). To generate a shared access signature token follow the steps below:
+For both Azure Blob Storage and Azure Data Lake Gen2 the supported authentication method is shared access signature (SAS). One simple way to generate a shared access signature token follow the steps below. For more information, see [CREDENTIAL](#credential--credential_name-3).
 
 1. Navigate to the Azure portal, and the desired Storage Account.
 2. Navigate to your desired Container under **Data Storage** menu.

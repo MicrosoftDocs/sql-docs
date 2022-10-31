@@ -242,10 +242,7 @@ Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 Required for snapshot backup.  `BACKUP SERVER`, or `BACKUP GROUP...` See [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
 
-METADATA_ONLY is synonymous with SNAPSHOT.
-
-#### METADATA_ONLY
-
+METADATA_ONLY is synonymous with SNAPSHOT. Virtual device interface (VDI) uses SNAPSHOT. For information about VDI, see [Virtual device interface (VDI) reference](../../relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md).
 
 #### { _database\_name_ | **@**_database\_name\_var_ }    
 Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.

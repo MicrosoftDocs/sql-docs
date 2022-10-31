@@ -107,6 +107,7 @@ SET
   | <service_broker_option>
   | <snapshot_option>
   | <sql_option>
+  | <suspend_for_snapshot_backup>
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
@@ -282,12 +283,15 @@ SET
   | ANSI_PADDING { ON | OFF }
   | ANSI_WARNINGS { ON | OFF }
   | ARITHABORT { ON | OFF }
-  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }
+  | COMPATIBILITY_LEVEL = { 160 | 150 | 140 | 130 | 120 | 110 | 100 }
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }
   | NUMERIC_ROUNDABORT { ON | OFF }
   | QUOTED_IDENTIFIER { ON | OFF }
   | RECURSIVE_TRIGGERS { ON | OFF }
 }
+
+<suspend_for_snapshot_backup> ::=
+    SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | OFF } [ ( MODE = COPY_ONLY ) ]
 
 <target_recovery_time_option> ::=
     TARGET_RECOVERY_TIME = target_recovery_time { SECONDS | MINUTES }
@@ -1229,7 +1233,22 @@ You can determine this option's status by examining the `is_recursive_triggers_o
 
 You can determine this option's status by examining the `is_recursive_triggers_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsRecursiveTriggersEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
+#### **\<suspend_for_snapshot_backup> ::=**
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)])
+
+Suspends databases for snapshot backup. May define a group of one or more databases. May designate copy only mode.
+
+#### SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | **OFF** }
+
+Suspends, or un-suspends databases. Default OFF.
+
+####  MODE = COPY_ONLY
+
+Optional. Uses COPY_ONLY mode.
+
 #### **\<target_recovery_time_option> ::=**     
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Specifies the frequency of indirect checkpoints on a per-database basis. Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] the default value for new databases is **1 minute**, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.
@@ -3195,6 +3214,8 @@ SET QUERY_STORE = ON
       )
     );
 ```
+
+
 
 ## See also
 - [Statistics](../../relational-databases/statistics/statistics.md)

@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts.
+This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview).
 
 In this tutorial, you learn how to:
 

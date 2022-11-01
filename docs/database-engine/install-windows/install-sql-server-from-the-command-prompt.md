@@ -3,7 +3,7 @@ title: "Install SQL Server on Windows from the command prompt"
 description: This article describes command prompt parameters for SQL Server installation on Windows. You can specify features to install and configure.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/20/2022
+ms.date: 11/01/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -120,6 +120,9 @@ To view a list of all possible commands within the console, run the executable w
 C:\SQLMedia\SQLServer2022> setup.exe /help
 ```
 
+> [!IMPORTANT]  
+> A new installation parameter, `/PRODUCTCOVEREDBYSA`, was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. This parameter indicates whether the provided product key (`/PID=`) license is covered under a Software Assurance or SQL Server Subscription contract, or just a SQL Server license.
+
 The rest of the article provides a detailed description of the available parameters.
 
 > [!NOTE]  
@@ -189,14 +192,7 @@ Use the parameters in the following table to develop command-line scripts for in
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/INSTANCEDIR`<br /><br />**Optional**|Specifies a nondefault installation directory for instance-specific components.|
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/INSTANCEID`<br /><br />**Optional**|Specifies a nondefault value for an [InstanceID](#InstanceID).|
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/INSTANCENAME`<br /><br />**Required**|Specifies a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance name.<br /><br />For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md).|
-|PolyBase Engine|`/PBENGSVCACCOUNT`<br /><br />**Optional**|Specifies the account for the engine service.<br /><br />Default value: `NT AUTHORITY\NETWORK SERVICE`.|
-|PolyBase Engine|`/PBENGSVCPASSWORD`<br /><br />**Optional**|Specifies the password for the engine service account.|
-|PolyBase Engine|`/PBENGSVCSTARTUPTYPE`<br /><br />**Optional**|Specifies the startup mode for the PolyBase Engine service.<br /><br />Supported values:<br /><br />- `Automatic` (default)<br />- `Disabled`<br />- `Manual`|
-|PolyBase Data Movement|`/PBDMSSVCACCOUNT`<br /><br />**Optional**|Specifies the account for the data movement service.<br /><br />Default value: `NT AUTHORITY\NETWORK SERVICE`.|
-|PolyBase Data Movement|`/PBDMSSVCPASSWORD`<br /><br />**Optional**|Specifies the password for the data movement account. This parameter can be omitted when using a managed service account, virtual account, or built-in account.|
-|PolyBase Data Movement|`/PBDMSSVCSTARTUPTYPE`<br /><br />**Optional**|Specifies the startup mode for the data movement service.<br /><br />Supported values:<br /><br />- `Automatic` (default)<br />- `Disabled`<br />- `Manual`|
-|PolyBase|`/PBPORTRANGE`<br /><br />**Optional**|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br />`/PBPORTRANGE=16450-16460`|
-|PolyBase|`/PBSCALEOUT`<br /><br />**Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node.<br /><br />Supported values: `True`, `False`|
+|[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/PRODUCTCOVERDBYSA`<br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions<br /><br />**Required**, when installing the Azure Extension feature from the command line with `/AZUREEXTENSION`. |Specifies the license coverage for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].<br /><br />`/PRODUCTCOVERDBYSA=True`, or just `/PRODUCTCOVERDBYSA`, indicates it is covered under Software Assurance or [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] subscription.<br /><br />`/PRODUCTCOVERDBYSA=False`, or omitting the parameter, indicates it is covered under a SQL Server license.|
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/PID`<br /><br />**Optional**|Specifies the product key for the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this parameter isn't specified, Evaluation is used.<br /><br />**Note:** If you are installing [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with tools, [!INCLUDE[ssdeveloper](../../includes/ssdeveloper-md.md)], or [!INCLUDE[ssevaluation](../../includes/ssevaluation-md.md)], the PID is predefined.|
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/Q` or `/QUIET`<br /><br />**Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The `/Q` parameter overrides the input of the `/QS` parameter.|
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/QS` or `/QUIETSIMPLE`<br /><br />**Optional**|Specifies that Setup runs and shows progress through the UI, but doesn't accept any input or show any error messages.|
@@ -206,6 +202,14 @@ Use the parameters in the following table to develop command-line scripts for in
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|`/AGTSVCACCOUNT`<br /><br />**Required**|Specifies the account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|`/AGTSVCPASSWORD`<br /><br />**[Required](#Accounts)**|Specifies the password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. This parameter can be omitted when using a managed service account, virtual account, or built-in account.|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|`/AGTSVCSTARTUPTYPE`<br /><br />**Optional**|Specifies the [startup](#Accounts) mode for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.<br /><br />Supported values:<br /><br />- `Automatic`<br />- `Disabled`<br />- `Manual`|
+|PolyBase Engine|`/PBENGSVCACCOUNT`<br /><br />**Optional**|Specifies the account for the engine service.<br /><br />Default value: `NT AUTHORITY\NETWORK SERVICE`.|
+|PolyBase Engine|`/PBENGSVCPASSWORD`<br /><br />**Optional**|Specifies the password for the engine service account.|
+|PolyBase Engine|`/PBENGSVCSTARTUPTYPE`<br /><br />**Optional**|Specifies the startup mode for the PolyBase Engine service.<br /><br />Supported values:<br /><br />- `Automatic` (default)<br />- `Disabled`<br />- `Manual`|
+|PolyBase Data Movement|`/PBDMSSVCACCOUNT`<br /><br />**Optional**|Specifies the account for the data movement service.<br /><br />Default value: `NT AUTHORITY\NETWORK SERVICE`.|
+|PolyBase Data Movement|`/PBDMSSVCPASSWORD`<br /><br />**Optional**|Specifies the password for the data movement account. This parameter can be omitted when using a managed service account, virtual account, or built-in account.|
+|PolyBase Data Movement|`/PBDMSSVCSTARTUPTYPE`<br /><br />**Optional**|Specifies the startup mode for the data movement service.<br /><br />Supported values:<br /><br />- `Automatic` (default)<br />- `Disabled`<br />- `Manual`|
+|PolyBase|`/PBPORTRANGE`<br /><br />**Optional**|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br />`/PBPORTRANGE=16450-16460`|
+|PolyBase|`/PBSCALEOUT`<br /><br />**Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node.<br /><br />Supported values: `True`, `False`|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|`/ASBACKUPDIR`<br /><br />**Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] backup files.<br /><br />Default values:<br /><br />For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br />For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|`/ASCOLLATION`<br /><br />**Optional**|Specifies the collation setting for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br />Default value: `Latin1_General_CI_AS`<br /><br />**Note:** Only Windows collation is supported. Using SQL collation may result in unexpected behavior.|
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|`/ASCONFIGDIR`<br /><br />**Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuration files.<br /><br />Default values:<br /><br />For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br />For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|

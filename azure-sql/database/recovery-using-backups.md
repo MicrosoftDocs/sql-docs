@@ -218,6 +218,9 @@ To restore a database by using the REST API:
 
 ---
 
+> [!NOTE]
+> In case if we accidently delete the SQL server itself, all the associated items will gone permanently.So there would be no way to recover the databases other than opening a support ticket to Microsoft. 
+
 ## Geo-restore
 
 You can use geo-restore to restore a deleted database by using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API.

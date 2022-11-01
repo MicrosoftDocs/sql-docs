@@ -100,6 +100,9 @@ Use the **Backups** page of the SQL virtual machines resource to configure your 
 
 To learn more, see, [Automated patching](automated-backup.md). 
 
+## Additional features
+
+Manage additional features of SQL Server on the **Additional features** tab, such as enabling [R Services (Advanced analytics)](/sql/machine-learning/r/sql-server-r-services) or [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). 
 
 ## High availability (Preview)
 

@@ -85,7 +85,8 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer or it must match the DNS suffix if using a wildcard certificate. When using the host name, the DNS suffix must be specified in the certificate. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster. 
 
-- As [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only allows one certificate to be installed on the server, if connections are made to the server using multiple domain names, then these domains must be covered in the Subject Alternate Name (SAN) of the certificate. The domains in the SAN can also be wildcard domains e.g. \*.yourcompany.com
+- As [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only allows one certificate to be installed on the server, if connections are made to the server using multiple domain names, these domains must be covered in the Subject Alternate Name (SAN) of the certificate. The domains in the SAN can also be wildcard domains (for example, `\*.yourcompany.com`).
+
 
 - For stand-alone servers, wildcard certificates can be set via the SQL Server Configuration Manager UI. However, in case of a Failover cluster, wildcard certificates cannot be selected via the UI. To use a wildcard certificate in a Failover cluster, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.
 

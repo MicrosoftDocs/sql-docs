@@ -46,14 +46,14 @@ The availability group listener is an IP address and network name that the SQL S
    :::image type="content" source="./media/virtual-machines-ag-listener-configure/96-ipresource.png" alt-text="Screenshot that shows where you set the IP address.":::
 
     <!-----------------------I don't see this option on server 2016
-    1. Disable NetBIOS for this address and click **OK**. Repeat this step for each IP resource if your solution spans multiple Azure VNets. 
+    1. Disable NetBIOS for this address and click **OK**. Repeat this step for each IP resource if your solution spans multiple Azure VNets.
     ------------------------->
 
 1. <a name = "dependencyGroup"></a>Make the SQL Server availability group resource dependent on the client access point.
 
     a. In Failover Cluster Manager, click **Roles**, and then click your availability group.
 
-    b. On the **Resources** tab, under **Other Resources**, right-click the availability resource group, and then click **Properties**. 
+    b. On the **Resources** tab, under **Other Resources**, right-click the availability resource group, and then click **Properties**.
 
     c. On the dependencies tab, add the name of the client access point (the listener) resource.
 

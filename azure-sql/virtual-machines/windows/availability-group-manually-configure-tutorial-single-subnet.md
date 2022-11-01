@@ -273,7 +273,7 @@ You are now ready to configure an availability group using the following steps:
 * Restore the full and log backups to the second SQL Server with the **NORECOVERY** option.
 * Create the availability group (**AG1**) with synchronous commit, automatic failover, and readable secondary replicas.
 
-### Create the availability group:
+### Create the availability group
 
 1. On remote desktop session to the first SQL Server. In **Object Explorer** in SSMS, right-click **Always On High Availability** and select **New availability group Wizard**.
 
@@ -397,7 +397,6 @@ A load balancer in Azure can be either a Standard Load Balancer or a Basic Load 
    The following image shows the **Add frontend IP Configuration** UI:
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade.":::
-
 
 1. Select **Add** to create the frontend IP.
 

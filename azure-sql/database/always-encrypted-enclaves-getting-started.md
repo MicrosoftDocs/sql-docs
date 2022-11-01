@@ -342,8 +342,8 @@ In this step, you'll create a column master key and a column encryption key that
     2. Select your column master key name: **CMK1**.
     3. Verify **Allow enclave computations** is selected. (It's selected by default if a secure enclave is enabled for the database - it should be enabled since your database uses the DC-series hardware configuration.)
     4. Select either **Azure Key Vault** (recommended) or **Windows Certificate Store** (**Current User** or **Local Machine**).
-        1. If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.
-        1. If you select Windows Certificate Store, select the **Generate Certificate** button to create a new certificate.
+      - If you select Azure Key Vault, sign into Azure, select an Azure subscription containing a key vault you want to use, and select your key vault. Select **Generate Key** to create a new key.
+      - If you select Windows Certificate Store, select the **Generate Certificate** button to create a new certificate.
         :::image type="content" source="./media/always-encrypted-enclaves/ssms-new-cmk-enclave-key-vault.png" alt-text="Allow enclave computations":::
     5. Select **OK**.
 

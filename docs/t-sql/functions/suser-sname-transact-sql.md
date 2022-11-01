@@ -60,6 +60,8 @@ SUSER_SNAME ( [ server_user_sid ] )
  SUSER_NAME always return the login name for the current security context.  
   
  The SUSER_SNAME statement does not support execution using an impersonated security context through EXECUTE AS.  
+ 
+ SUSER_SNAME does not support the server_user_id argument.  
   
 ## Examples  
   

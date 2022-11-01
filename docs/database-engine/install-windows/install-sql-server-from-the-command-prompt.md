@@ -348,7 +348,7 @@ Use the parameters in the following table to develop command-line scripts for pr
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/Q` or `/QUIET`<br /><br />**Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The `/Q` parameter overrides the input of the `/QS` parameter.|
 |[!INCLUDE[ssde-md](../../includes/ssde-md.md)] Setup Control|`/QS` or `/QUIETSIMPLE`<br /><br />**Optional**|Specifies that Setup runs and shows progress through the UI, but doesn't accept any input or show any error messages.|
 
-<sup>1</sup> Distributed Replay and SNAC aren't available in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+<sup>1</sup> Distributed Replay, SDK, and SNAC aren't available in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ###### Sample syntax
 
@@ -922,7 +922,7 @@ To install specific features, use the `/FEATURES` parameter and specify the pare
 | |DQ|Copies the files required for completing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation. After completing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, you must run the DQSInstaller.exe file to complete the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation. For more information, see [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md). This also installs [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|
 | |PolyBase|Installs PolyBase components.|
 | |PolyBaseCore|Pair with `PolyBase` to install PolyBase technology that enables truly integrated querying across Oracle, Teradata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and other relational and non-relational data using standard T-SQL statements.<br /><br />**Applies to:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later versions|
-| |PolyBaseJava|In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], pair with `PolyBase` to install PolyBase Java Connector that enables truly integrated querying across HDFS data using standard T-SQL statements.
+| |PolyBaseJava|In [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] only, pair with `PolyBase` to install PolyBase Java Connector that enables truly integrated querying across HDFS data using standard T-SQL statements.
 | |AdvancedAnalytics|Installs [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) or [SQL Server 2016 R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md).|
 | |SQL_INST_MR|Pair with `AdvancedAnalytics` to install R Open and proprietary R packages.<br /><br />**Applies to:** [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 and 2019) and [SQL Server 2016 R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md)|
 | |SQL_INST_MPY|Pair with `AdvancedAnalytics` to install Anaconda and proprietary Python packages.<br /><br />**Applies to:** [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 and 2019)|

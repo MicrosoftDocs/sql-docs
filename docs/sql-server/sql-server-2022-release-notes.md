@@ -70,7 +70,7 @@ When installing an initial SQL Server 2022 instance on a Windows Server 2022 mac
 
 Windows Server 2022 was released with VCRuntime version 14.28.29914. 
 
-You can avoid the reboot requirement. Before you install the initial SQL Server 2022 instance on Windows Server 2022 download and install the current VCRumtime140 (14.32.31332) at [https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+You can avoid the reboot requirement. Before you install the initial SQL Server 2022 instance on Windows Server 2022 download and install the current VCRuntime140 (14.32.31332) at [https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ## Build number
 

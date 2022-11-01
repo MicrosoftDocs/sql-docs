@@ -34,4 +34,4 @@ To connect with Azure Data Studio:
 
 ## Next steps
 
-[Quickstart: Use Azure Data Studio to connect and query SQL Server](quickstart-sql-server.md)
+- [Quickstart: Use Azure Data Studio to connect and query SQL Server](quickstart-sql-server.md)

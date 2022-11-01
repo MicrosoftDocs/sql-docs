@@ -37,9 +37,9 @@ When you execute `setup /HELP` the information returned does not include the new
 
 #### Localized language interface
 
-In certain localized languages, the Azure Extension configuration screen controls may be partially overwritten or missing.  To resolve issue, expand or maximize the Setup window from the default window sizing. This will be resolved in Cumulative Update 1 (CU1) and later. If you install a SQL Server 2022 instance as a Slipstream installation (/UPDATESOURCE=) with CU1 or later, this issue will not be present.
+In certain localized languages, the Azure Extension configuration screen controls may be partially overwritten or missing. To resolve issue, expand or maximize the Setup window from the default window sizing. This will be resolved in Cumulative Update 1 (CU 1) and later. If you install a SQL Server 2022 instance as a Slipstream installation (`/UPDATESOURCE=`) with CU 1 or later, this issue will not be present.
 
-#### Software assurance installation parameter
+#### Software Assurance installation parameter
 
 There is a new Setup command line installation parameter - `/PRODUCTCOVERDBYSA`. The parameter indicates if the provided product key (`/PID=`) license is covered under a Software Assurance or SQL Server Subscription contract, or just a SQL Server license.
 
@@ -51,7 +51,7 @@ There is a new Setup command line installation parameter - `/PRODUCTCOVERDBYSA`.
 
 The following features are not available in Setup in SQL Server 2022. If specified in command line installations or scripts, these previously supported parameters may fail.
 
-- `\PolybaseJava`
+- `\PolyBaseJava`
 - `\SQL_INST_MR`
 - `\SQL_INST_JAVA`
 - `\SQL_INST_MPY`
@@ -66,11 +66,11 @@ The following features are not available in Setup in SQL Server 2022. If specifi
 
 #### Reboot requirement
 
-When installing an initial SQL Server 2022 instance on a Windows Server 2022 machine, if the server does not have VCRuntine140 version 14.29.30139 or later installed, Setup will require reboot.
+When installing an initial SQL Server 2022 instance on a Windows Server 2022 machine, if the server does not have `VCRuntime140` version 14.29.30139 or later installed, Setup will require reboot.
 
 Windows Server 2022 was released with VCRuntime version 14.28.29914. 
 
-You can avoid the reboot requirement. Before you install the initial SQL Server 2022 instance on Windows Server 2022 download and install the current VCRuntime140 (14.32.31332) at [https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+You can avoid the reboot requirement. Before you install the initial SQL Server 2022 instance on Windows Server 2022, download and install the current VCRuntime140 (14.32.31332) at [https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ## Build number
 

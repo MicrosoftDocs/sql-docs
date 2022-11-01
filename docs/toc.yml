@@ -8047,10 +8047,8 @@ items:
     items:
     - name: Always Encrypted
       items:
-      - name: Protect sensitive data and store encryption keys in the Windows certificate store >
-        href: /azure/sql-database/sql-database-always-encrypted
-      - name: Protect sensitive data and store encryption keys in Azure Key Vault >
-        href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+      - name: Getting started with Always Encrypted
+        href: relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md
     - name: Always Encrypted with secure enclaves
       items:
       - name: Getting started with Always Encrypted with secure enclaves in SQL Server

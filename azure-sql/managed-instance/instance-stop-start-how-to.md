@@ -14,7 +14,7 @@ ms.custom:
 # Instance stop and start overview - Azure SQL Managed Instance (Preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you to stop and start your instance to save on billing costs when using Azure SQL Managed Instance. Start and stop your instance by using Azure PowerShell. 
+This article teaches you to stop and start your instance to save on billing costs when using Azure SQL Managed Instance. Start and stop your instance by using Azure PowerShell, API, or Azure Portal. 
 
 The ability to stop and start your instance is currently in preview. 
 
@@ -31,7 +31,17 @@ This features introduces three new managed instance states:
 - Starting
 
 
-Stopping an instance usually takes up to 5 minutes, meaning after the stop operation is triggered, the operation response should be returned within 5 minutes. Only instances in a ready state can be stopped. Starting an instance can take longer to complete, up to 20 minutes. Only instances that are in the stopped state can be started.  
+Stopping an instance usually takes up to 5 minutes, meaning after the stop operation is triggered, the operation response should be returned within 5 minutes. Only instances in a ready state can be stopped. Starting an instance can take longer to complete, up to 20 minutes. Only instances that are in the stopped state can be started.
+
+>IMPORTANT
+>Ability to stop and start managed instance is availabile only in General Purpose service tier.
+
+Once the stop operation is initiated, it takes about 5 mintues to stop the instance. Opposite to this, starting managed instance will take around 20 minutes from the moment when operation is initiated.
+
+Once instance is stopped, it stays in stopped state until start operation is initiated (using manual start, or start being triggered per defined schedule).
+
+>IMPORTANT
+>SQL Managed Instance is PaaS service, therefore responsible for compliance of every part of the system component. In case of any urgent need for system maintenance that requires instance to be online, system can initiate the start operation and keep instance online until the maintenance operation is completed. Once everything is completed, instance will be stopped by the system. Compute and license charges will be applied for all the time that instance is in online state.
 
 ## Action types 
 
@@ -43,7 +53,16 @@ Manual commands immediately trigger the stop or start action. Manual commands ar
 
 ### Scheduled commands 
 
-You can also create a schedule with one or more multiple points of time when a start or stop action is triggered. Scheduling commands are a good fit for instances that have regular patterns, such as starting an instance every working day at 8am, and then stopping it at 5pm, and then starting at 7am and stopping at 11am on a weekend. Scheduling your commands eliminates the need for custom solutions or Azure Automation Schedules to create stop/start schedules. 
+You can also create a schedule with one or more multiple points of time when a start or stop action is triggered. Scheduling commands are a good fit for instances that have regular patterns, such as starting an instance every working day at 8am, and then stopping it at 5pm, and then starting at 7am and stopping at 11am on a weekend. Scheduling your commands eliminates the need for custom solutions or Azure Automation Schedules to create stop/start schedules.
+
+Schedule items represent points in time when start or stop events will be initiated, not when instance will be up and running. So when creating a schedule, take into the account operation duration. For example, if you want to have your instance up and running at 08:00 AM, define a schedule item that initates start operation at 07:40 AM.
+
+#### Rules that apply for start-stop schedule
+
+- Schedule items are defained as start and stop pair, and must have both start and stop values populated. It is not possible to have item with start value populated and stop value missing, or vice versa.
+- There should be no overlap of schedule pairs. In case that there is overlap between schedule items, API will return error.
+- Time span between the two successive actions (start after stop and stop after start) must be at least 1 hour. For example, if start is scheduled for 10:00 AM, stop action can be scheduled not before 11:00 AM
+- In case of conflicting operations (for example vCore scaling in progress) when stop is triggered, there is a retry mechanism with a duration of 10 minutes. After 10 minutes, in case that conflicting operation is still ongoing, stop operation is skipped
 
 ## Billing
 
@@ -55,13 +74,17 @@ The [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) is applied per reso
 
 ### Reserved instance pricing 
 
-[Reserved instance pricing (reserved capacity)](../database/reserved-capacity-overview.md) is applied for the vCores and hours emitted. When an instance eligible for reserved pricing is stopped, reserved pricing is automatically redirected to another instance, if one exists. As such, the stop and stop feature can be used to "overprovision" reserved instance pricing. For example, assume you purchase a SQL Managed Instance with a reserved capacity of 16 vCores. This means that you can run two managed instances with 8 vCores each from 1pm to 2pm, stop  both instances, and then run two different managed instances with 8 vCores each from 2pm to 3pm, consuming your 16 vCore limit for each hour, spread amongst four instances in total. 
+[Reserved instance pricing (reserved capacity)](../database/reserved-capacity-overview.md) is applied for the vCores and hours emitted. When an instance eligible for reserved pricing is stopped, reserved pricing is automatically redirected to another instance, if one exists. As such, the start and stop feature can be used to "overprovision" reserved instance pricing. For example, assume you purchase a SQL Managed Instance with a reserved capacity of 16 vCores. This means that you can run two managed instances with 8 vCores each from 1pm to 2pm, stop  both instances, and then run two different managed instances with 8 vCores each from 2pm to 3pm, consuming your 16 vCore limit for each hour, spread amongst four instances in total. 
 
 Reservation discounts are [use it or lose it](/azure/cost-management-billing/reservations/understand-reservation-charges), so if you don't have matching resources for any hour, then you lose the reservation quantity for that hour. You cannot carry forward unused reserved hours.
 
-## Prerequisites
+## Manually stop and start the instance
 
-To stop and start your instance, you need the latest version of the [Az.Sql](/powershell/module/az.sql) module. 
+# [Portal](#tab/azure-portal)
+
+[TODO] Add screenshots
+
+# [PowerShell](#tab/azure-powershell)
 
 ## Define parameters
 
@@ -115,8 +138,7 @@ Stopping the instance uses the following API call:
 
 `POST
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=2021-08-01-
-preview`
+providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=2021-08-01-preview`
 
 To stop your instance, run the following PowerShell sample script: 
 
@@ -150,13 +172,12 @@ $getInstanceResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $inst
 Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 ```
 
-## Start the instance 
+## Start the instance
 
 Starting the instance uses the following API call: 
 
 `https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version=2021-08-01-
-preview`
+providers/Microsoft.Sql/managedInstances/{managedInstanceName}/start?api-version=2021-08-01-preview`
 
 To start your instance, run the following PowerShell script: 
 
@@ -189,8 +210,19 @@ Write-Host "Status of the instance start operation:`n" $startInstanceOperationSt
 $getInstanceResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $instanceGetUri
 Write-Host "Instance Get API Response:`n" $getInstanceResp | ConvertFrom-Json
 ```
+---
 
-## Create a schedule
+## Schedule stop and start events
+
+# [Portal](#tab/azure-portal)
+
+[TODO] Add screenshots
+
+# [PowerShell](#tab/azure-powershell)
+
+Defining parameters is the same as for manually executing start and stop. Check the section above for the script example.
+
+## Create or update a schedule
 
 Creating a schedule relies on the startStopSchedules API call: 
 
@@ -260,7 +292,7 @@ $instanceScheduleDeleteUri = $UriPrefix + $SqlMIName + "/startStopSchedules/defa
 # Invoke API call to start the operation
 Invoke-WebRequest -Method Delete -Headers $authHeader -Uri $instanceScheduleDeleteUri
 ```
-
+---
 
 
 ## Next steps

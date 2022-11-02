@@ -273,7 +273,7 @@ The following table shows the default collation designations, as determined by t
 |Lithuanian (Lithuania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Lower Sorbian (Germany)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgish (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedonian (North Macedonia, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedonian (North Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malay (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malay (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|Not available at server level|

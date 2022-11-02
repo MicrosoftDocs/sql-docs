@@ -5,10 +5,10 @@ description: Learn how to use Transact-SQL and PowerShell scripts to fail over a
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 07/04/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 
 # Failover (migrate) a database with a link via T-SQL and PowerShell scripts - Azure SQL Managed Instance 

@@ -5,10 +5,10 @@ description: Learn how to use the link feature in SQL Server Management Studio (
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 08/30/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 
 # Fail over a database by using the link in SSMS - Azure SQL Managed Instance

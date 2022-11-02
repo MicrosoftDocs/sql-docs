@@ -5,10 +5,10 @@ description: Learn how to use a Managed Instance link with T-SQL and PowerShell 
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 07/04/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 
 # Replicate a database with the link feature via T-SQL and PowerShell scripts - Azure SQL Managed Instance

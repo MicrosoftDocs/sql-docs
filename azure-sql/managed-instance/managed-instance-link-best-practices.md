@@ -5,10 +5,10 @@ description: Learn about best practices when using the link feature for Azure SQ
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 03/28/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 # Best practices with link feature for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

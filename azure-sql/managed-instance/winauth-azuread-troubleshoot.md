@@ -40,12 +40,12 @@ The following are some well-known error codes:
 
 ## Investigate message flow failures
 
-Use Wireshark, or the network traffic analyzer of your choice, to monitor traffic between the client and on-prem Kerberos Key Distribution Center (KDC).
+Use Wireshark, or the network traffic analyzer of your choice, to monitor traffic between the client and on-premises Kerberos Key Distribution Center (KDC).
 
 When using Wireshark the following is expected:
 
-- AS-REQ: Client => on-prem KDC => returns on-prem TGT.
-- TGS-REQ: Client => on-prem KDC => returns referral to `kerberos.microsoftonline.com`.
+- AS-REQ: Client => on-premises KDC => returns on-premises TGT.
+- TGS-REQ: Client => on-premises KDC => returns referral to `kerberos.microsoftonline.com`.
 
 ## Next steps
 

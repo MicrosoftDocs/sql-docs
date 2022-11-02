@@ -299,30 +299,32 @@ The following list shows the supported regions for this service:
 - West US 2
 - West US 3
 
+Government regions are not supported. For more information, see [Can customers get free Extended Security Updates on Azure Government regions?](#can-customers-get-free-extended-security-updates-on-azure-government-regions)
+
 ## Frequently asked questions
 
 General frequently asked questions about Extended Security updates can be found at the [Extended security updates FAQ](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific frequently asked questions are listed below.
 
-**When is the End of Support for SQL Server 2012?**
+#### When is the End of Support for SQL Server 2012?
 
 The End of Support date for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] was July 12, 2022.
 
-**What does End of Support mean?**
+#### What does End of Support mean?
 
 Microsoft Lifecycle Policy offers 10 years of support (five years for Mainstream Support and five years for Extended Support) for Business and Developer products (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Server). After the end of the Extended Support period, there will be no patches or security updates, which may cause security and compliance issues, and expose your applications and business to serious security risks.
 
-**What editions of SQL Server are eligible for Extended Security Updates?**
+#### What editions of SQL Server are eligible for Extended Security Updates?
 
 Enterprise, Datacenter, Standard, Web, and Workgroup editions of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] are eligible for ESUs for both x86 and x64 versions.
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
-**When will the Extended Security Updates offer be available?**
+#### When will the Extended Security Updates offer be available?
 
 ESUs are now available for purchase and can be ordered from [!INCLUDE[msCoName](../../includes/msconame-md.md)] or a [!INCLUDE[msCoName](../../includes/msconame-md.md)] licensing partner. The delivery of ESUs will begin after the End of Support dates, if and when available. Customers interested in migrating to Azure can do so immediately.
 
-**What do Extended Security Updates include?**
+#### What do Extended Security Updates include?
 
 ESUs include provision of Security Updates and Bulletins rated **critical** by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/), for a maximum of three years after the end of extended support:
 
@@ -332,39 +334,39 @@ ESUs include provision of Security Updates and Bulletins rated **critical** by t
 
 ESU will be distributed if and when available. ESUs don't include technical support, but you may use other [!INCLUDE[msCoName](../../includes/msconame-md.md)] support plans to get assistance on your [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questions on workloads covered by ESUs. ESUs don't include new features, functional improvements, nor customer-requested fixes. However, [!INCLUDE[msCoName](../../includes/msconame-md.md)] may include non-security fixes as deemed necessary.
 
-**Why do Extended Security Updates only offer "critical" updates?**
+#### Why do Extended Security Updates only offer "critical" updates?
 
 For End of Support events in the past, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provided only Critical Security Updates, which meets the compliance criteria of our enterprise customers. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't ship a general monthly security update. [!INCLUDE[msCoName](../../includes/msconame-md.md)] only provides on-demand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security updates (GDRs) for MSRC bulletins where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is identified as an affected product.
 If there are situations where new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] important updates won't be provided and it's deemed critical by the customer but not by MSRC, we'll work with the customer on a case-by-case basis to suggest appropriate mitigation.
 
-**What Licensing programs are eligible for Extended Security Updates?**
+#### What Licensing programs are eligible for Extended Security Updates?
 
 Software Assurance customers can purchase ESUs on-premises under an Enterprise Agreement (EA), Enterprise Subscription Agreement (EAS), a Server & Cloud Enrollment (SCE), or an Enrollment for Education Solutions (EES). Software Assurance doesn't need to be on the same enrollment.
 
-**Do SQL Server customers need to be running the most current Service Pack to benefit from Extended Security Updates?**
+#### Do SQL Server customers need to be running the most current Service Pack to benefit from Extended Security Updates?
 
 Yes, customers need to run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with the latest Service Pack to apply ESUs. [!INCLUDE[msCoName](../../includes/msconame-md.md)] will only produce updates that can be applied on the latest Service Pack.
 
-**What are the options for SQL Server customers without Software Assurance?**
+#### What are the options for SQL Server customers without Software Assurance?
 
 For customers who don't have Software Assurance, the alternative option to get access to ESUs is to migrate to Azure. For variable workloads, we recommend that customers migrate on Azure via Pay-As-You-Go, which allows for scaling up or down at any time. For predictable workloads, customers should migrate to Azure via Server Subscription and Reserved Instances.
 
-**Does this offer apply to older versions of SQL Server?**
+#### Does this offer apply to older versions of SQL Server?
 
 No. For versions before [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] we recommend upgrading to the latest supported versions, but customers can upgrade to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to take advantage of this offer.
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
 
-**Can I deploy a brand new SQL Server 2012 instance on Azure and still get Extended Security Updates?**
+#### Can I deploy a brand new SQL Server 2012 instance on Azure and still get Extended Security Updates?
 
 Yes, customers can start a new [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instance on an Azure SQL Server Virtual Machine and have access to ESUs.
 
-**Can I get technical support on-premises for SQL Server after the End of Support date, without purchasing Extended Security Updates?**
+#### Can I get technical support on-premises for SQL Server after the End of Support date, without purchasing Extended Security Updates?
 
 No. If a customer has [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and chooses to remain on-premises during a migration without ESUs, they can't log a support ticket even if they have a support plan. If they migrate to Azure, however, they can get support using their Azure Support Plan.
 
-**If a customer wants to bring their own SQL Server license (BYOL), are they required to have Software Assurance coverage?**
+#### If a customer wants to bring their own SQL Server license (BYOL), are they required to have Software Assurance coverage?
 
 Yes, customers need to have Software Assurance to take advantage of the BYOL program for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure Virtual Machines as part of the License Mobility program. For customers without Software Assurance, we recommend customers move to Azure SQL Managed Instance for their [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environments.
 
@@ -372,11 +374,11 @@ Customers can also migrate to pay-as-you-go Azure Virtual Machines. Software Ass
 
 Azure SQL Managed Instance is a service in Azure providing nearly 100% compatibility with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises. SQL Managed Instance provides built-in high availability and disaster recovery capabilities plus intelligent performance features and the ability to scale on the fly. SQL Managed Instance also provides a version-less experience that takes away the need for manual security patching and upgrades. For more information on the BYOL program, see [Azure SQL Managed Instance pricing](https://azure.microsoft.com/pricing/details/azure-sql-managed-instance/single/).
 
-**What options do customers have to run SQL Server in Azure?**
+#### What options do customers have to run SQL Server in Azure?
 
 Customers can move legacy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environments to Azure SQL Managed Instance, a fully managed data platform service (PaaS) that offers a "version-free" option to eliminate concerns with End of Support dates, or to Azure Virtual Machines to have access to Security Updates. The migrated databases will retain their compatibility with the legacy system. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
-ESUs will be available for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in Azure Virtual Machines after the End of Support date of July 12, 2022, for the next three years.
+ESUs are available for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in Azure Virtual Machines after the End of Support date of July 12, 2022, for the next three years.
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates). See the [Overview](#overview) for more information.
@@ -385,37 +387,41 @@ For customers looking to upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-
 
 Azure SQL Managed Instance is an instance-scoped deployment option in Azure SQL that provides the broadest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine compatibility and native virtual network (VNET) support, so you can migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases to SQL Managed Instance without changing apps. It combines the rich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area with the operational and financial benefits of an intelligent, fully managed service. You can use the new Azure Database Migration Service to move [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to Azure SQL Managed Instance with few or no application code changes.
 
-**Can customers use the Azure Hybrid Benefit for SQL Server 2012?**
+#### Can customers use the Azure Hybrid Benefit for SQL Server 2012?
 
 Yes, customers with active Software Assurance or equivalent Server Subscriptions can use the Azure Hybrid Benefit using existing on-premises license investments for discounted pricing on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Azure SQL and Azure VMs.
 
-**Can customers get free Extended Security Updates on Azure Government regions?**
+#### Can customers get free Extended Security Updates on Azure Government regions?
 
 Not at this stage. Refer to the [Supported regions](#supported-regions) for more information.
 
-**Can customers get free Extended Security Updates on Azure Stack?**
+Government customers with a support plan that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
+
+#### Can customers get free Extended Security Updates on Azure Stack?
 
 Yes, customers can migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to Azure Stack and receive ESUs for no extra cost after the End of Support dates.
 
-**For customers with a SQL Server cluster using shared storage, what is the guidance to migrating to Azure?**
+#### For customers with a SQL Server cluster using shared storage, what is the guidance to migrating to Azure?
 
 Azure doesn't currently support shared storage clustering. For advice on how to configure a highly available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on Azure, refer to the [SQL Server High Availability guide](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview).
 
-**Can customers use Extended Security Updates for SQL Server with a third-party hosting provider?**
+#### Can customers use Extended Security Updates for SQL Server with a third-party hosting provider?
 
 Customers can't use ESUs if they move their [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] environment to a PaaS implementation on other cloud providers. If you want to move to virtual machines (IaaS), you can use License Mobility for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance to make the move, and purchase ESUs from [!INCLUDE[msCoName](../../includes/msconame-md.md)] to manually apply patches to the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instances running in a VM (IaaS) on an authorized SPLA hosting provider's server. However, free updates in Azure are the more attractive offer.
 
-**What are the best practices for enhancing performance of SQL Server in Azure virtual machines?**
+#### What are the best practices for enhancing performance of SQL Server in Azure virtual machines?
 
 For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Azure virtual machines, see the [SQL Server optimization guide](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices).
 
-**How do US Federal Government customers register and obtain SQL Server 2012 ESUs if they are running in Azure Government/O365 GCCH/O365 DOD?**
+#### How do US Federal Government customers register and obtain SQL Server 2012 ESUs if they are running in Azure Government/O365 GCCH/O365 DOD?
 
 Azure Government regions aren't currently supported in the Azure portal. Until then, [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] customers in Government regions interested in Extended Security Updates (ESU) will have to create an Azure subscription in one of the supported regions and register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances there.
 
 Registering provides access to offers via the Azure portal, including ESUs, for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that can't be directly connected to Azure. You can register your instance in a [disconnected](#overview) state using the following metadata for each instance: `name,version,edition,cores,hostType`. See the [formatting requirements](#formatting-requirements-for-csv-file) for more information.
 
 If there is a critical security patch for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], customers will need to download the patch from the Azure portal following these [step-by-step instructions](#download-esus), and then apply the patch to their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
+
+Government customers with a support plan that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
 
 ## See also
 

@@ -13,6 +13,8 @@ ms.topic: conceptual
 
 Azure Data Studio supports capturing both estimated and actual query plans (currently in preview).  Query plans provide a graphical display of the data retrieval (or modification) method chosen by the SQL Server Query Optimizer.  This visual approach helps understand the performance characteristics of a query.
 
+[!INCLUDE [azure-data-studio-preview](../includes/azure-data-studio-preview.md)]
+
 ## Display - estimated plan
 
 To view the estimated plan for a query, highlight the specific query and select the Estimated Plan button.
@@ -52,7 +54,7 @@ From the context of a query plan there are multiple options available for furthe
 
 ## Top operations
 
-Within the Top Operations tab, in addition to sorting columns, the Filter window on the right can be used to find operators with a common field value.  For example, it may be helpful to find all Nested Loop operators in a plan all operators that access a specific database object, or specific values for a given attribute.
+Within the Top Operations tab, in addition to sorting columns, the Filter window on the right can be used to find operators with a common field value.  For example, it may be helpful to find all Nested Loop operators in a plan that access a specific database object, or filter on specific values for a given attribute.
 
 :::image type="content" source="media/query-plan-viewer/top-operations-filtered.png" alt-text="Screenshot of a Top Operations tab after filtering for clustered.":::
 
@@ -68,7 +70,7 @@ The compare plans menu offers several of the same icons as in the query plan men
 
    :::image type="content" source="media/query-plan-viewer/compare-plans-properties.png" alt-text="Screenshot of Two plans compared with the properties window displayed." lightbox="media/query-plan-viewer/compare-plans-properties.png":::
 
-The default view of the Properties plan for plan comparison lists attributes with different values at the top, and attributes with the same values are collapsed under the Equivalent Properties heading.  This view can be changed using the sort icons, and the attribute lists can be expanded or collapsed to aid in displaying and finding information.  The Properties pane also has a filter menu, allowing quickly navigating to the attribute of interest.
+The default view of the Properties plan for plan comparison lists attributes with different values at the top, and attributes with the same values are collapsed under the Equivalent Properties heading.  This view can be changed using the sort icons, and the attribute lists can be expanded or collapsed to aid in displaying and finding information.  The Properties pane also has a filter menu, providing the ability to  quickly navigate to the attribute of interest.
 
 ## Next steps
 

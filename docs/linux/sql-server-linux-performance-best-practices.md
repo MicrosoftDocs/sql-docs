@@ -26,7 +26,7 @@ Consider using the following Linux OS configuration settings to experience the b
 
 #### Use storage subsystem with appropriate IOPS, throughput, and redundancy
 
-The storage subsystem hosting data, transaction logs, and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally, in on-premise environments, the storage vendor support appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, throughput, and redundancy. Though, this can differ across different storage vendors and different storage offerings with varying architectures.
+The storage subsystem hosting data, transaction logs, and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally, in on-premises environments, the storage vendor support appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, throughput, and redundancy. Though, this can differ across different storage vendors and different storage offerings with varying architectures.
 
 For SQL Server on Linux deployed on Azure Virtual Machines, consider using software RAID to ensure appropriate IOPS and throughput requirements are achieved. Refer to following article when configuring SQL Server on Azure virtual machines for similar storage considerations: [Storage configuration for SQL Server VMs](/azure/azure-sql/virtual-machines/windows/storage-configuration)
 

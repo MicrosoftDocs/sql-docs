@@ -21,8 +21,9 @@ The redistributable installer for Microsoft ODBC Driver 18 for SQL Server instal
 
 Version 18.1.2.1 is the latest general availability (GA) version. The Microsoft ODBC Driver 18 for SQL Server will install side by side with Microsoft ODBC Driver 17 for SQL Server.
 
-(TODO:UPDATE LINK):::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2202930)**  
-(TODO:UPDATE LINK):::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2203124)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2214634)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2214633)**  
+
 
 
 ### Version information

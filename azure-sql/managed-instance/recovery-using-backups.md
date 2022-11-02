@@ -92,9 +92,12 @@ You generally restore a database to an earlier point for recovery purposes. You 
   
 ### [Azure portal](#tab/azure-portal)
 
-To recover a database in SQL Managed Instance to a point in time by using the Azure portal, open the database overview page, and select **Restore** on the toolbar. Choose the point-in-time backup point from which a new database will be created.
+To recover a database in SQL Managed Instance to a point in time by using the Azure portal, open the database overview page, and select **Restore** on the toolbar. 
+Provide target managed instance details on the **Basics** tab, and source managed instance details on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
 
-:::image type="content" source="../database/media/recovery-using-backups/pitr-backup-managed-instance-annotated.png" alt-text="Screenshot of database restore options for SQL Managed Instance.":::
+:::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot of the Azure portal, SQL Managed Instance overview blade, with a database selected. ":::
+
+:::image type="content" source="./media/point-in-time-restore/restore-database-to-mi.png" alt-text="Screenshot of the Azure portal, database overview page, Restore is highlighted.":::
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -130,9 +133,9 @@ You can restore a deleted database to the deletion time, or an earlier point in 
 
 ### [Azure portal](#tab/azure-portal)
 
-To recover a database by using the Azure portal, open the managed instance's overview page and select **Deleted databases**. Select a deleted database that you want to restore. Then enter the name for the new database that will be created with data restored from the backup.
+To recover a database by using the Azure portal, open the managed instance's overview page and select **Backups**. Choose to show **Deleted** backups, and then select **Restore** next to the deleted backup you want to recover to open the **Create Azure SQL Managed Database** page. Provide target managed instance details on the **Basics** tab, and source managed instance details on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
 
-:::image type="content" source="../database/media/recovery-using-backups/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of selections for restoring a deleted database in Azure SQL Managed Instance.":::
+:::image type="content" source="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of the Azure portal, Backups page of the SQL Managed Instance, showing deleted databases and selecting the Restore action. " lightbox="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png":::
 
 > [!TIP]
 > It might take several minutes for recently deleted databases to appear on the **Deleted databases** page in the Azure portal, or when you want to display deleted databases by using the command line. 

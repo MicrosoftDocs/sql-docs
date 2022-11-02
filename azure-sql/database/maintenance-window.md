@@ -4,7 +4,7 @@ description: Understand how the Azure SQL Database and managed instance maintena
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 04/19/2022
+ms.date: 11/02/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -20,7 +20,7 @@ The maintenance window feature allows you to configure maintenance schedule for 
 > [!Note]
 > The maintenance window feature only protects from planned impact from upgrades or scheduled maintenance. It does not protect from all failover causes; exceptions that may cause short connection interruptions outside of a maintenance window include hardware failures, cluster load balancing, and database reconfigurations due to events like a change in database Service Level Objective. 
 
-[Advance notifications (Preview)](advance-notifications.md) are available for databases configured to use a non-default maintenance window. Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event. 
+[Advance notifications (Preview)](advance-notifications.md) are available for databases configured to use a non-default maintenance window and managed instances with any configuration (including the default one). Advance notifications enable customers to configure notifications to be sent up to 24 hours in advance of any planned event.
 
 ## Overview
 
@@ -51,7 +51,7 @@ Once the maintenance window selection is made and service configuration complete
 
 ## Advance notifications
 
-Maintenance notifications can be configured to alert you of upcoming planned maintenance events for your Azure SQL Database and Azure SQL Managed Instance. The alerts arrive 24 hours in advance, at the time of maintenance, and when the maintenance is complete. For more information, see [Advance Notifications](advance-notifications.md).
+Maintenance notifications can be configured to alert you of upcoming planned maintenance events for your Azure SQL Database and Azure SQL Managed Instance. The alerts arrive 24 hours in advance, before maintenance window opens, and at the end of maintenance window. For more information, see [Advance Notifications](advance-notifications.md).
 
 ## Feature availability
 

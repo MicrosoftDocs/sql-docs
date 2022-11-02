@@ -54,7 +54,7 @@ Unicode string in a JSON format that contains the payload to send to the HTTPS R
 
 #### [ @headers = N'headers' ]
 
-Headers that must be sent as part of the request to the HTTPS REST endpoint. Headers must be specified using a flat JSON (a JSON document without nested structures) format. Headers defined in the [Forbidden headers name](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name) list will be ignored even if explicitity passed in the @headers parameter; their values will be discarded or replaced with system-supplied values when starting the HTTPS request.
+Headers that must be sent as part of the request to the HTTPS REST endpoint. Headers must be specified using a flat JSON (a JSON document without nested structures) format. Headers defined in the [Forbidden headers name](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name) list will be ignored even if explicitity passed in the *headers* parameter; their values will be discarded or replaced with system-supplied values when starting the HTTPS request.
  
  The *headers* parameter is **nvarchar(4000)** with no default.
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "sys.query_store_plan_feedback catalog view"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # sys.query_store_plan_feedback (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Contains information about Query Store tuning via [memory grant, CE, and DOP feedback](../performance/intelligent-query-processing-feedback.md).
 

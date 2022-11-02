@@ -92,8 +92,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
   
 ### [Azure portal](#tab/azure-portal)
 
-To recover a database in SQL Managed Instance to a point in time by using the Azure portal, open the database overview page, and select **Restore** on the toolbar. 
-Provide target managed instance details on the **Basics** tab, and source managed instance details on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
+To recover a database in SQL Managed Instance to a point in time by using the Azure portal, open the source database overview page, and select **Restore** on the toolbar. Provide target managed instance details on the **Basics** tab, and source managed instance details on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
 
 :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot of the Azure portal, SQL Managed Instance overview blade, with a database selected. ":::
 
@@ -116,8 +115,6 @@ To restore a database in SQL Managed Instance by using PowerShell, use the follo
 | [Restore-AzSqlInstanceDatabase](/powershell/module/az.sql/restore-azsqlinstancedatabase) |Restores an instance database. |
 
 > [!IMPORTANT]
-> - SQL Managed Instance still supports the PowerShell Azure Resource Manager module, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). Arguments for the commands in the Az module and in Azure Resource Manager modules are largely identical.
-> 
 > - Restore points represent a period between the earliest restore point and the latest log backup point. Information on the latest restore point is currently unavailable on Azure PowerShell.
 
 To restore a database in SQL Managed Instance, see [Restore-AzSqlInstanceDatabase](/powershell/module/az.sql/restore-azsqlinstancedatabase).
@@ -156,9 +153,7 @@ For a sample PowerShell script that shows how to restore a deleted instance data
 > - Geo-restore is available only for managed instances configured with geo-redundant [backup storage](automated-backups-overview.md#backup-storage-redundancy). If you're not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
 > - You can perform geo-restore on managed instances that reside in the same subscription only.
 
-You can restore a database on any managed instance in any Azure region from the most recent geo-replicated backups. Geo-restore uses a geo-replicated backup as its source. You can request a geo-restore even if an outage has made the database or datacenter inaccessible.
-
-Geo-restore is the default recovery option when your database is unavailable because of an incident in the hosting region. You can restore the database to a server in any other region. 
+Geo-restore is the default recovery option when your database is unavailable because of an incident in the hosting region. You can restore the database to an instance in any other region. You can restore a database on any managed instance in any Azure region from the most recent geo-replicated backups. Geo-restore uses a geo-replicated backup as its source. You can request a geo-restore even if an outage has made the database or datacenter inaccessible.
 
 There's a delay between when a backup is taken and when it's geo-replicated to an Azure blob in a different region. As a result, the restored database can be up to one hour behind the original database. The following illustration shows a database restore from the last available backup in another region.
 
@@ -166,16 +161,18 @@ There's a delay between when a backup is taken and when it's geo-replicated to a
 
 ### [Azure portal](#tab/azure-portal)
 
-From the Azure portal, you create a new managed instance and select an available geo-restore backup. The newly created database contains the geo-restored backup data.
+From the Azure portal, you can restore a geo-replicated backup to an existing instance, or you create a new managed instance and select an available geo-restore backup. The newly created database contains the geo-restored backup data.
 
-To geo-restore a database from the Azure portal to an existing managed instance in a region of your choice, select the managed instance. Then follow these steps:
+To restore to an existing instance, follow the steps in [Point-in-time restore](#point-in-time-restore), and be sure to choose the appropriate source and target instances to restore your database to your intended instance. 
 
+To gep-restore to a new instance by using the Azure portal, follow these steps: 
+
+1. Go to your new managed instance. 
 1. Select **New database**.
-2. Enter a database name.
-3. Under **Use existing data**, select **Backup**.
-4. Select a backup from the list of available geo-restore backups.
+1. Enter a database name. 
+1. Under **Data source**, choose the appropriate type of backup, and then provide details for the data source. 
+1. Select a backup from the list of available geo-restore backups. 
 
-:::image type="content" source="../database/media/recovery-using-backups/geo-restore-sql-managed-instance-list-annotated.png" alt-text="Screenshot of the Azure portal that shows options to create a database.":::
 
 After you complete the process of creating an instance database, it will contain the restored geo-restore backup.
 

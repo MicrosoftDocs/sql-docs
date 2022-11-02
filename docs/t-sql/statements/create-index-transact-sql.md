@@ -4,7 +4,7 @@ description: CREATE INDEX (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, randolphwest
-ms.date: 05/09/2022
+ms.date: 10/25/2022
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: t-sql
@@ -101,7 +101,7 @@ For additional types of indexes, see:
 
 ## Syntax
 
-### Syntax for SQL Server and Azure SQL Database
+### Syntax for SQL Server, Azure SQL Database, Azure SQL Managed Instance
 
 ```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
@@ -803,7 +803,7 @@ The following guidelines apply for performing index operations online:
 - The underlying table can't be altered, truncated, or dropped while an online index operation is in process.
 - Additional temporary disk space is required during the index operation.
 - Online operations can be performed on partitioned indexes and indexes that contain persisted computed columns, or included columns.
-- The `low_priority_lock_wait` argument option allows you to decide how the index operation can proceed when blocked on the Sch-M lock. This is currently supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only.
+- The `low_priority_lock_wait` argument option allows you to decide how the index operation can proceed when blocked on the Sch-M lock.
 
 For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
@@ -850,7 +850,7 @@ To indicate that an index create is executed as resumable operation and to check
 
 ### <a name="wait-at-low-priority"></a> WAIT_AT_LOW_PRIORITY with online index operations
 
-**Applies to**: This syntax for `CREATE INDEX` currently applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only. For `ALTER INDEX`, this syntax applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, see [ALTER INDEX](alter-index-transact-sql.md).
+**Applies to**: This syntax for `CREATE INDEX` currently applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] only. For `ALTER INDEX`, this syntax applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information, see [ALTER INDEX](alter-index-transact-sql.md).
 
  The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. `WAIT_AT_LOW_PRIORITY` can be used with `ONLINE=ON` only.
 

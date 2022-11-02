@@ -2,18 +2,15 @@
 title: Create server configured with user-assigned managed identity and customer-managed TDE
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Learn how to configure user-assigned managed identity and customer-managed transparent data encryption (TDE) while creating an Azure SQL Database logical server using the Azure portal, PowerShell, or Azure CLI.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: vanto
-ms.date: 12/16/2021
+ms.date: 10/17/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
 ---
 # Create server configured with user-assigned managed identity and customer-managed TDE
-
-> [!NOTE]
-> Assigning a user-assigned managed identity for Azure SQL logical servers and Managed Instances is in **public preview**.
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
@@ -64,11 +61,11 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
 
 11. Select **Next: Security** at the bottom of the page.
 
-12. On the Security tab, under **Identity (preview)**, select **Configure Identities**.
+12. On the Security tab, under **Identity**, select **Configure Identities**.
 
     :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="screenshot of security settings and configuring identities in the Azure portal":::
 
-13. On the **Identity (preview)** blade, select **User assigned managed identity** and then select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user-assigned managed identity from the selected subscription. Then select the  **Select** button. 
+13. On the **Identity** blade, select **User assigned managed identity** and then select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user-assigned managed identity from the selected subscription. Then select the  **Select** button. 
 
     :::image type="content" source="media/transparent-data-encryption-byok-create-server/identity-configuration-managed-identity.png" alt-text="screenshot of adding user assigned managed identity when configuring server identity":::
 

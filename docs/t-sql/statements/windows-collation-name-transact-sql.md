@@ -231,7 +231,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssnovers
 
 <sup>1</sup> Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 
-<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
+<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao SAR) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
 
 ## See Also
 

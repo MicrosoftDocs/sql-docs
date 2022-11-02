@@ -5,7 +5,7 @@ description: Configure server-level IP firewall rules for a database in Azure SQ
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/09/2022
+ms.date: 11/01/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -138,11 +138,11 @@ To set a server-level IP firewall rule in the Azure portal, go to the overview p
 
 1. To set a server-level IP firewall rule from the database overview page, select **Set server firewall** on the toolbar, as the following image shows.
 
-    ![Server IP firewall rule](./media/firewall-configure/sql-database-server-set-firewall-rule.png)
+    :::image type="content" source="media/firewall-configure/sql-database-server-set-firewall-rule.png" alt-text="Screenshot of the set server firewall setting in the Azure portal.":::
 
-    The **Firewall settings** page for the server opens.
+    The **Networking** page for the server opens.
 
-2. Select **Add client IP** on the toolbar to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
+2. Add a rule in the **Firewall rules** section to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
 
     ![Set server-level IP firewall rule](./media/firewall-configure/sql-database-server-firewall-settings.png)
 
@@ -150,9 +150,9 @@ To set a server-level IP firewall rule in the Azure portal, go to the overview p
 
 The overview page for your server opens. It shows the fully qualified server name (such as *mynewserver20170403.database.windows.net*) and provides options for further configuration.
 
-1. To set a server-level rule from this page, select **Firewall** from the **Settings** menu on the left side.
+1. To set a server-level rule from this page, select **Networking** from the **Settings** menu on the left side.
 
-2. Select **Add client IP** on the toolbar to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
+2. Add a rule in the **Firewall rules** section to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
 
 ### Use Transact-SQL to manage IP firewall rules
 

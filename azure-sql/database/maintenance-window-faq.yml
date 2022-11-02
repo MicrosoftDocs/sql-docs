@@ -45,15 +45,15 @@ sections:
       - question: What can I expect during a maintenance event?
         answer: |
           During a maintenance update, databases are fully available and accessible but some of the maintenance updates require a reconfiguration as Azure takes SQL Databases offline for a short time to apply the maintenance updates (generally a few seconds in duration), and only during the maintenance window slots selected by the customer. Planned maintenance updates occur once every 35 days on average, which means customer can expect approximately one planned maintenance event per month per Azure SQL Database. In case of Azure SQL Managed Instance, customers can expect approximately two planned maintenance events per month.
-      
+
       - question: How many reconfigurations can I expect during a maintenance event?
         answer: |
           If maintenance update require a reconfiguration, typically one reconfiguration happens during the window. In case of SQL Managed Instance, more than one reconfiguration may happen.
-        
-       - question: Can my application become resiliant to reconfiguration events?
+  
+      - question: Can my application become resiliant to reconfiguration events?
         answer: |
-          Yes, for becoming resiliant on [Gateway maintenance](maintenance-window.md#gateway-maintenance), make sure your client applications are using the redirect connection policy. For becoming resiliant on planned maintenance events on your database, use the concept of [retry logic[(planned-maintenance.md).
-          
+          Yes, for becoming resiliant on reconfigurations that are result of [Gateway maintenance](maintenance-window.md#gateway-maintenance), make sure your client applications are using the redirect connection policy. For becoming resiliant on reconfiguration of SQL process, leverage the [retry logic](planned-maintenance.md) concept.
+
       - question: Are there any prerequisites for configuring maintenance window?
         answer: |
           In case of managed instance [additional IP addresses](../managed-instance/vnet-subnet-determine-size.md#update-scenarios) are needed temporarily, as in scaling vCores scenario for corresponding service tier.

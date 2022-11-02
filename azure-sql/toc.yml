@@ -1540,6 +1540,7 @@
             displayName: Always On, alwayson, availability group
             items: 
             - name: Azure portal
+              displayName: Always On, alwayson, availability group
               href: virtual-machines/windows/availability-group-azure-portal-configure.md
             - name: Manually
               items: 
@@ -1547,12 +1548,12 @@
                 href: virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md
                 displayName: Always On, alwayson, availability group
               - name: Create availability group
+                displayName: Always On, alwayson, availability group
                 href: virtual-machines/windows/availability-group-manually-configure-tutorial-multi-subnet.md
-              displayName: Always On, alwayson, availability group
+              
           - name: Configure AG (single subnet)
             displayName: Always On, alwayson, availability group
-            items: 
-              displayName: Always On, alwayson, availability group
+            items:               
             - name: PowerShell or Az CLI
               href: virtual-machines/windows/availability-group-az-commandline-configure.md
               displayName: Always On, alwayson, availability group

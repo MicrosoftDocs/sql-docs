@@ -110,11 +110,12 @@ Once you've configured your [availability group by using the Azure portal](avail
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as which port to use, whether or not SQL Authentication is enabled, and to enable Azure Key Vault integration. 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as which port to use, or to enable Azure Key Vault integration, or enable authentication methods to connect to your SQL Server instance - such as SQL authentication, or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
 
-![Configure SQL Server security in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-security-configuration.png)
+![Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.](./media/manage-sql-vm-portal/sql-vm-security-configuration.png)
 
 To learn more, see the [Security best practices](security-considerations-best-practices.md).
+
 
 <a name="security-center"></a>
 

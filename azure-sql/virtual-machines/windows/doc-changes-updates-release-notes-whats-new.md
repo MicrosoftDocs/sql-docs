@@ -27,7 +27,9 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 | Changes | Details |
 | --- | --- |
+| **Azure AD authentication** | It's now possible to configure Azure Active Directory (Azure AD) authentication to your SQL Server 2022 on Azure VM by using the Azure portal. This feature is currently in preview. To get started, review [Azure AD with SQL Server VMs](security-considerations-best-practices.md#azure-ad-authentication-preview). | 
 | **Least privilege permission model for SQL IaaS Agent extension** | There is a new permissions model available for the SQL Server IaaS Agent extension that grants the least privileged permission for each feature used by the extension. To learn more, review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions). | 
+
 
 ## September 2022
 

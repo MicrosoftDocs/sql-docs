@@ -12443,7 +12443,7 @@ items:
       - name: sys.query_store_plan
         href: relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md
       - name: sys.query_store_plan_feedback
-        href: relational-databases/system-catalog-views/sys-query-store-plan_feedback.md
+        href: relational-databases/system-catalog-views/sys-query-store-plan-feedback.md
       - name: sys.query_store_plan_forcing_locations
         href: relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md
       - name: sys.query_store_query

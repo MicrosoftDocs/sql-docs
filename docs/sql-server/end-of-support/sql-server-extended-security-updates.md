@@ -395,7 +395,7 @@ Yes, customers with active Software Assurance or equivalent Server Subscriptions
 
 Not at this stage. Refer to the [Supported regions](#supported-regions) for more information.
 
-Government customers with a support plan that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
+Government customers that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
 
 #### Can customers get free Extended Security Updates on Azure Stack?
 
@@ -421,7 +421,7 @@ Registering provides access to offers via the Azure portal, including ESUs, for 
 
 If there is a critical security patch for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], customers will need to download the patch from the Azure portal following these [step-by-step instructions](#download-esus), and then apply the patch to their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
 
-Government customers with a support plan that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
+Government customers that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
 
 ## See also
 

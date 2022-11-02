@@ -56,7 +56,7 @@ sp_query_store_force_plan
 
 #### [ @force_plan_scope = ] replica_group_id
 
- You can force plans on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md) is enabled. Execute `sp_query_store_force_plan` and `sp_query_store_unforce_plan` on the secondary replica. The optional *force_plan_scope* argument defaults only to the local replica (primary or secondary), but you can optionally specify a `replica_group_id` referencing [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md). 
+ You can force plans on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. Execute `sp_query_store_force_plan` and `sp_query_store_unforce_plan` on the secondary replica. The optional *force_plan_scope* argument defaults only to the local replica (primary or secondary), but you can optionally specify a `replica_group_id` referencing [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md). 
 
 ## Return code values
 
@@ -91,7 +91,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_force_plan @query_id = 3, @plan_id = 3;
 ```
 
-Use [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md), joined with [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md).
+Use [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md), joined with [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-secondary-replicas.md).
 
 ```sql
 SELECT query_plan 

@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-curr
 
 [!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
-Contains information about Query Store replicas, when [Query Store for secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md) is enabled. You can use this information to determine what `replica_group_id` to use when using Query Store to force or un-force a plan on a secondary replica with [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
+Contains information about Query Store replicas, when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. You can use this information to determine what `replica_group_id` to use when using Query Store to force or un-force a plan on a secondary replica with [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|
@@ -42,6 +42,7 @@ Requires the `VIEW DATABASE STATE` permission.
 
 ## Next steps 
 
+- [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
 - [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
 - [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)

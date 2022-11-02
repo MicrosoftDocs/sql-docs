@@ -120,7 +120,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 The Query Store for secondary replicas feature enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. When Query Store for secondary replicas is enabled, replicas send the query execution information that would normally be stored in the Query Store back to the primary replica. The primary replica then persists the data to disk within its own Query Store. In essence, there is one Query Store shared between the primary and all secondary replicas. The Query Store exists on the primary replica and stores data for all replicas together. 
 
-For complete information on Query Store for secondary replicas, see [Query Store for Always On availability group secondary replicas](query-store-for-always-on-availability-group-secondary-replicas.md).
+For complete information on Query Store for secondary replicas, see [Query Store for Always On availability group secondary replicas](query-store-for-secondary-replicas.md).
 
 ## <a id="Regressed"></a> Use the Regressed Queries feature
 

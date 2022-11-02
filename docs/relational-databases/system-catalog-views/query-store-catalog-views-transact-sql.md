@@ -49,4 +49,4 @@ Learn more about Query Store in the following articles:
 
  - [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
- - [Query Store for secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md)
+ - [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)

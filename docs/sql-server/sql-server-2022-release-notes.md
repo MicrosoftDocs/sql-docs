@@ -36,7 +36,7 @@ This section identifies known issues you may experience with this product:
 
 - When you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting won't change the encryption and may cause errors.
 
-- [Query Store for secondary replicas](../relational-databases/performance/query-store-for-always-on-availability-group-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
+- [Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
 
 ## Build number
 

@@ -1,6 +1,6 @@
 ---
-title: "Query Store for Always On availability group secondary replicas"
-description: Query Store can be configured to monitor and tuning secondary read-only replicas in Always On availability groups.
+title: "Query Store for secondary replicas"
+description: Query Store can be configured to monitor and tuning workloads on secondary read-only replicas.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/12/2022
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Query Store secondary replicas"
 monikerRange: ">=sql-server-ver16"
 ---
-# Query Store for Always On availability group secondary replicas
+# Query Store for secondary replicas
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/_ss2022.md)]
 
@@ -30,9 +30,9 @@ The Query Store for secondary replicas feature enables the same Query Store func
 
 ### Enable Query Store for secondary replicas
 
-Before using Query Store for secondary replicas, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). Then, enable Query Store for secondary replicas using [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+Before using Query Store for secondary replicas on a SQL Server instance, you need to have an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). Then, enable Query Store for secondary replicas using [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-If Query Store is not already enabled and in READ_WRITE mode on the primary replica of the availability group, it must be before proceeding. Execute the following for each desired database on the primary replica instance:
+If Query Store is not already enabled and in READ_WRITE mode on the primary replica, you must enable it before proceeding. Execute the following for each desired database on the primary replica:
 
 ```sql
 ALTER DATABASE [Database_Name] SET QUERY_STORE = ON;
@@ -95,13 +95,15 @@ Thus, when a system is under significant load, you may notice some slowdown beca
 
 ## See also
 
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md)
-- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
+- [sys.sp_query_store_force_plan (Transact-SQL)](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
 
 ## Next steps
 
-- [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+- [Always On availability groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [Best Practices with the Query Store](best-practice-with-the-query-store.md)
 - [Best practices for managing the Query Store](manage-the-query-store.md)
 - [Tune performance with the Query Store](tune-performance-with-the-query-store.md)

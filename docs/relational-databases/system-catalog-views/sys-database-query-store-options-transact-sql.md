@@ -59,7 +59,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 
 ## Remarks
 
-An `actual_state_desc` value of READ_CAPTURE_SECONDARY is the expected state when Query Store for secondary replicas is enabled. For more information, see [Query Store for secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md).
+An `actual_state_desc` value of READ_CAPTURE_SECONDARY is the expected state when Query Store for secondary replicas is enabled. For more information, see [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md).
 
 ## Next steps
 

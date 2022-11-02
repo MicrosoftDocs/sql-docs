@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-curr
 
 [!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
-Contains information about Query Store plans that have been forced on secondary replicas using [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md), when [Query Store for secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md) is enabled. You can use this information to determine what queries have plans forced on different replica sets.
+Contains information about Query Store plans that have been forced on secondary replicas using [sp_query_store_force_plan](../system-stored-procedures/sp-query-store-force-plan-transact-sql.md), when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. You can use this information to determine what queries have plans forced on different replica sets.
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|
@@ -39,7 +39,7 @@ Requires the `VIEW DATABASE STATE` permission.
 
 ## Example
 
-Use `sys.query_store_plan_forcing_locations`, joined with [sys.query_store_replicas](sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-always-on-availability-group-secondary-replicas.md).
+Use `sys.query_store_plan_forcing_locations`, joined with [sys.query_store_replicas](sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-secondary-replicas.md).
 
 ```sql
 SELECT query_plan 

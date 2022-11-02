@@ -112,7 +112,7 @@ When hints are applied, the following result set appears in the `StmtSimple` ele
 
 ### Query Store hints and availability groups
 
-For more information, see [Query Store for secondary replicas](query-store-for-always-on-availability-group-secondary-replicas.md).
+For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
 
 *   Prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store hints can be applied against the primary replica of an availability group.
 *   Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, Query Store hints are also replica-aware for secondary replicas in availability groups.

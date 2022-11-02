@@ -40,6 +40,9 @@ Complete the following steps to enable a notification.
 3. In the **Condition** section, configure service(s) to be alerted for, region(s) and criteria. For more generic alert, select all values. To narrow down, select Azure SQL Database or Azure SQL Managed Instance as a service, region(s) where you have those services deployed, and **Planned maintenance** for the event type.
 
     :::image type="content" source="media/advance-notifications/define-condition.png" alt-text="define conditions for health alert":::
+    
+>Important
+>Service health is rolling out new experiencs in phases. Some users will see the updated experience, others will still see the classic Service Health portal experience. In case that you still see the classic Service Health portal, for **Region** don't select Global as an option, but rather the specific region or all regions.
 
 4. In the **Actions** section, select the existing action group or create a new one. 
 
@@ -52,6 +55,8 @@ Complete the following steps to enable a notification.
 6. Click the **Review + create** and your alert will be created.
 
 You're all set. Next time there's a planned Azure SQL maintenance event, you'll receive an advance notification.
+
+To learn more about creating health alerts, visit [Azure Service Health](/azure/service-health/service-health-portal-update)
 
 ## Receiving notifications
 

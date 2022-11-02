@@ -32,29 +32,24 @@ Complete the following steps to enable a notification.
 1. Go to the [Planned maintenance](https://portal.azure.com/#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/plannedMaintenance) page, select **Health alerts**, then **Add service health alert**.
 
     :::image type="content" source="media/advance-notifications/health-alerts.png" alt-text="create a new health alert menu option":::
+    
+2. In the **Scope** section, select subscription. 
 
-2. In the **Actions** section, select **Add action groups**. 
+    :::image type="content" source="media/advance-notifications/select-subscription.png" alt-text="select subscription for health alert":::
 
-    :::image type="content" source="media/advance-notifications/add-action-group.png" alt-text="add an action group menu option":::
+3. In the **Condition** section, configure service(s) to be alerted for, region(s) and criteria. For more generic alert, select all values. To narrow down, select Azure SQL Database or Azure SQL Managed Instance as a service, region(s) where you have those services deployed, and **Planned maintenance** for the event type.
 
-3. Complete the **Create action group** form, then select **Next: Notifications**.  
+    :::image type="content" source="media/advance-notifications/define-condition.png" alt-text="define conditions for health alert":::
 
-    :::image type="content" source="media/advance-notifications/create-action-group.png" alt-text="create action group form":::
+4. In the **Actions** section, select the existing action group or create a new one. 
 
-1. On the **Notifications** tab, select the **Notification type**. The **Email/SMS message/Push/Voice** option offers the most flexibility and is the recommended option. Select the pen to configure the notification.  
+    :::image type="content" source="media/advance-notifications/add-action-group.png" alt-text="add or create action group":::
 
-    :::image type="content" source="media/advance-notifications/notifications.png" alt-text="configure notifications":::
+5. In the **Details** section, define the name for your alert and specify resource group where it should be deployed.
 
-   1. Complete the *Add or edit notification* form that opens and select **OK**: 
+    :::image type="content" source="media/advance-notifications/define-alert-details.png" alt-text="define alert details":::
 
-   2. Actions and Tags are optional. Here you can configure additional actions to be triggered or use tags to categorize and organize your Azure resources. 
-
-   4. Check the details on the **Review + create** tab and select **Create**. 
-
-7. After selecting create, the alert rule configuration screen opens and the action group will be selected. Give a name to your new alert rule, then choose the resource group for it, and select **Create alert rule**. 
-
-8. Click the **Health alerts** menu item again, and the list of alerts now contains your new alert. 
-
+6. Click the **Review + create** and your alert will be created.
 
 You're all set. Next time there's a planned Azure SQL maintenance event, you'll receive an advance notification.
 

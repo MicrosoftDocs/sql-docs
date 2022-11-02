@@ -68,7 +68,9 @@ When you install an initial SQL Server 2022 instance on a Windows Server 2022 ma
 
 Windows Server 2022 was released with VCRuntime version 14.28.29914. 
 
-You can avoid the reboot requirement. Before you install the initial SQL Server 2022 instance on Windows Server 2022, download and install the current VCRuntime140 (14.32.31332) at [https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+### Query Store for secondary replicas
+
+[Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
 
 ## Build number
 

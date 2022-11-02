@@ -36,8 +36,8 @@ GeneMi (and CraigG).  2019/03/30.
 
 ## 18.1.2
 
-(TODO: UPDATE LINKS):::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2202930)  
-(TODO: UPDATE LINKS):::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2203124)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2214634)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2214633)  
 
 Version number: 18.1.2.1  
 Released: November 3, 2022  

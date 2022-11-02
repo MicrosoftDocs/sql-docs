@@ -305,11 +305,11 @@ sections:
 
           ### Can I turn backup portability off? 
 
-          Currently, no. There is no reason to do so as the internal databases between SQL Server 2022 and SQL Managed Instance are synchronized. In the future, if and when there are engine features available that break backup portability, you will have the option to switch the instance property off to disable backup portability and take advantage of the full breadth of features available to Azure SQL Managed Instance. However, you will no longer be able to restore your database to SQL Server from SQL Managed Instance. Once disabled, you will not be able to enable backup portability for the managed instance again, and will have to move your database to a new instance that has backup portability enabled if you want to restore it to SQL Server 2022. You can move your database by using a [bacpac](../database/database-import.md), or [transactional replication](replication-transactional-overview.md).  
+          Currently, no. There is no reason to do so as the internal databases between SQL Server 2022 and SQL Managed Instance are synchronized. In the future, if and when there are engine features available that break backup portability, you will have the option to switch the instance property off to disable backup portability and take advantage of the full breadth of features available to Azure SQL Managed Instance.   
 
           ### What happens when a new version of SQL Server is released? 
 
-          Once a new version of SQL Server is released, you will have the option to keep your backups SQL Server 2022-compatible until the end of mainstream support, which is 5 years after RTM. You can also choose to switch your instance and backups to be compatible with the new version of SQL Server. Or, you can disable backup portability entirely, and benefit from all available features for Azure SQL Managed Instance, but you will no longer be able to restore your databases from SQL Managed Instance to SQL Server, or failover from SQL Managed Instance to SQL Server when using the [Managed Instance link](managed-instance-link-feature-overview.md)
+          Once a new version of SQL Server is released, you will have the option to keep your backups SQL Server 2022-compatible until the end of mainstream support, which is 5 years after RTM. You can also choose to switch your instance and backups to be compatible with the new version of SQL Server. Or, you will be able to disable backup portability entirely, and benefit from all available features for Azure SQL Managed Instance.
 
           ### Does my licensing model change when I enable backup portability? 
 
@@ -317,7 +317,7 @@ sections:
 
           ### Why is the backup portability option enabled by default on my instance? 
 
-          This is because, if and when there is a divergence of internal databases between SQL Server 2022 and SQL Managed Instance, you will easily be able to disable the instance property to disable backup portability, but, once disabled, it cannot be enabled again on the instance. You will have to move your database to another instance if you want to be able to restore it to SQL Server. You can move your database by using a [bacpac](../database/database-import.md), or [transactional replication](replication-transactional-overview.md). 
+          This is because, if and when there is a divergence of internal databases between SQL Server 2022 and SQL Managed Instance, you will easily be able to update the instance property to disable backup portability, but, once disabled, it cannot be enabled again on that instance.  
 
 
 

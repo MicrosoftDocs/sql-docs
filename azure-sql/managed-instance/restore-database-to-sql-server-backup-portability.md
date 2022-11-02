@@ -86,7 +86,7 @@ Consider the following limitations:
 - When restoring to SQL Server, you must use the `WITH MOVE` qualifier, and provide explicit paths for the data files. 
 - Databases backed up with service-managed TDE keys are not supported with the backup portability feature, and cannot be restored to SQL Server while databases backed up with custom-managed keys can be restored to SQL Server. 
 
-In the future, instances that have backup portability enabled may not get database engine updates that impact the backup portability feature. When this happens, you will have the option to disable the backup portability feature to get all the latest updates, but should consider the trade off to your business between gaining the new feature while losing the ability to restore their database to SQL Server. Once disabled, you will not be able to enable backup portability for the managed instance again, and will have to move your database to a new instance that has backup portability enabled if you want to restore it to SQL Server 2022. You can move your database by using a [bacpac](../database/database-import.md), or [transactional replication](replication-transactional-overview.md). 
+In the future, instances that have backup portability enabled may not get database engine updates that impact the backup portability feature. If and when this happens, you will have the option to update the instance property and disable the backup portability feature to get all the latest updates. 
 
 The following table details the type of updates that will occur if the portability feature is on or off: 
 
@@ -99,7 +99,7 @@ The following table details the type of updates that will occur if the portabili
 | New Database Engine features with database version bump| No | Yes | 
 
 <sup>1</sup> SQL Server Cumulative Updates as well as updates specific to Azure SQL.   
-<sup>2/sup> Subject to review and triage by the product group, as it requires porting. 
+<sup>2</sup> Subject to review and triage by the product group, as it requires porting. 
 
 
 ## Next steps

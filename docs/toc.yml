@@ -10133,8 +10133,6 @@ items:
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
     - name: Create & configure availability groups
       href: linux/sql-server-linux-create-availability-group.md
-    - name: Create with HA with HPE Serviceguard
-      href: linux/sql-server-availability-group-ha-hpe.md
     - name: Deploy availability group with DH2i on AKS
       href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Configure replication
@@ -10267,16 +10265,22 @@ items:
             href: linux/sql-server-linux-availability-group-ha.md
           - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-ha.md
-          - name: Configure Pacemaker
+          - name: Configure with DH2i
+            href: /azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial
+          - name: Configure with HPE Serviceguard
+            href: linux/sql-server-availability-group-ha-hpe.md
+          - name: Configure with Pacemaker
             items:
+            - name: Pacemaker basics
+              href: linux/sql-server-linux-pacemaker-basics.md
             - name: Configure on RHEL, SLES, and Ubuntu
               href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
-          - name: Configure failover
-            href: linux/sql-server-linux-availability-group-failover-ha.md
-          - name: Operate an AG
-            href: linux/sql-server-linux-availability-group-operate-ha.md
-          - name: Configure multiple subnets for availability
-            href: linux/sql-server-linux-configure-multiple-subnet.md
+            - name: Configure failover
+              href: linux/sql-server-linux-availability-group-failover-ha.md
+            - name: Operate an AG
+              href: linux/sql-server-linux-availability-group-operate-ha.md
+            - name: Configure multiple subnets for availability
+              href: linux/sql-server-linux-configure-multiple-subnet.md
         - name: Create for read-scale only
           items:
           - name: Configure an AG

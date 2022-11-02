@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn how to use Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/05/2022
+ms.date: 11/01/2022
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -15,6 +15,8 @@ monikerRange: ">=sql-server-2016"
 [!INCLUDE [SQL Server end of support](../../includes/applies-to-version/sql-migration-end-of-support.md)]
 
 This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of SQL Server that are out of extended support.
+
+[!INCLUDE [esu-table](includes/esu-table.md)]
 
 > [!WARNING]  
 > Effective July 12, 2022, the SQL Registry portal has been retired. Please use the new Azure portal as described below to connect and/or register your SQL Server instances that qualify for Extended Security Updates (ESUs).
@@ -54,11 +56,11 @@ You can receive Extended Security Updates in several ways:
 
 For the versions in the table below, consider using [Extended Security Updates](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support) described in this article, or other migration options. For more information, see [End of support options](sql-server-end-of-support-overview.md).
 
-|SQL Server Version|Extended Support End Date|
-|---|---|
-|SQL Server 2012|July 12, 2022|
-|SQL Server 2008 R2|July 10, 2019|
-|SQL Server 2008|July 10, 2019|
+| SQL Server version | Extended Support end date |
+| --- | --- |
+| SQL Server 2012 | July 12, 2022 |
+| SQL Server 2008 R2 | July 10, 2019 |
+| SQL Server 2008 | July 10, 2019 |
 
 ## What are Extended Security Updates
 
@@ -109,9 +111,16 @@ This example shows you how to manually add your SQL Server instances in a discon
 
 ### Prerequisites
 
-1. Assign the `Azure Connected SQL Server Onboarding` role on the *resource group* that you are using to register your SQL Server instances. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+1. If you don't already have an Azure subscription, you can create an account using one of the following methods:
 
-2. Register the `Microsoft.AzureArcData` resource provider in your Azure subscription:
+   - [Create a Microsoft Customer Agreement subscription](/azure/cost-management-billing/manage/create-subscription)
+   - [Create an Enterprise Agreement subscription](/azure/cost-management-billing/manage/create-enterprise-subscription)
+   - [Create an Azure account with pay-as-you-go pricing](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)
+   - [Create a free Azure account](https://azure.microsoft.com/free/)
+
+1. Assign the `Azure Connected SQL Server Onboarding` role on the [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal) that you are using to register your SQL Server instances. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+
+1. Register the `Microsoft.AzureArcData` resource provider in your Azure subscription:
 
    - Sign in to the Azure portal.
 
@@ -119,7 +128,7 @@ This example shows you how to manually add your SQL Server instances in a discon
 
    - If the `Microsoft.AzureArcData` resource provider isn't listed, you can add it to your subscription using the **Register** option.
 
-3. If you are using Azure policies that only allow the creation of specific resource types, you will need to allow the `Microsoft.AzureArcData/sqlServerInstances` resource type. If it is not allowed, the `SQLServerInstances_Update` operation will fail with a **'deny' Policy action** log entry in the activity log of the subscription.
+1. If you are using Azure policies that only allow the creation of specific resource types, you will need to allow the `Microsoft.AzureArcData/sqlServerInstances` resource type. If it isn't allowed, the `SQLServerInstances_Update` operation will fail with a **'deny' Policy action** log entry in the activity log of the subscription.
 
 You can either register a [single SQL Server instance](#single-sql-server-instance), or upload a CSV file to register [multiple SQL Server instances in bulk](#multiple-sql-server-instances-in-bulk).
 
@@ -296,7 +305,7 @@ General frequently asked questions about Extended Security updates can be found 
 
 **When is the End of Support for SQL Server 2012?**
 
-The End of Support date for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] is July 12, 2022.
+The End of Support date for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] was July 12, 2022.
 
 **What does End of Support mean?**
 

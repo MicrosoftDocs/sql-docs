@@ -625,7 +625,7 @@ Once SQL Server has restarted on the newly created virtual machine, it can be ad
    >[!IMPORTANT]
    > A replica in a remote Azure region, should be set to asynchronous replication with manual failover.
 
-1. In the **Select Initial Data Synchronization** page, select **Full** and specify a shared network location. For the location, use the [backup share that you created](availability-group-manually-configure-tutorial-single-subnet?#backupshare). In the example it was, **\\\\<First SQL Server\>\Backup\\**. Select **Next**.
+1. In the **Select Initial Data Synchronization** page, select **Full** and specify a shared network location. For the location, use the [backup share that you created](availability-group-manually-configure-tutorial-single-subnet.md?#backupshare). In the example it was, **\\\\<First SQL Server\>\Backup\\**. Select **Next**.
 
    >[!NOTE]
    >Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, full synchronization is not recommended because it may take a long time. You can reduce this time by manually taking a backup of the database and restoring it with `NO RECOVERY`. If the database is already restored with `NO RECOVERY` on the second SQL Server before configuring the availability group, choose **Join only**. If you want to take the backup after configuring the availability group, choose **Skip initial data synchronization**.

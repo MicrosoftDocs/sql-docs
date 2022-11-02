@@ -1,13 +1,13 @@
 ---
-title: Configure a SQL Server Always On availability group across different regions
-description: This article explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region.
+title: "Tutorial: Configure a SQL Server Always On availability group across different regions"
+description: "This tutorial explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region."
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 09/01/2022
+ms.date: 11/02/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-ms.topic: how-to
+ms.topic: tutorial
 ms.custom: seo-lt-2019
 editor: monicar
 tags: azure-service-management
@@ -28,7 +28,7 @@ The following image shows a common deployment of an availability group on Azure 
 
 :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic.png" alt-text="Diagram that shows the Azure load balancer and the Availability set with a Windows Server Failover Cluster and Always On Availability Group":::
 
-In this deployment, all virtual machines are in one Azure region. The availability group replicas can have synchronous commit with automatic failover on SQL-1 and SQL-2. To build this architecture, see [Availability Group template or tutorial](./availability-group-overview.md).
+In this deployment, all virtual machines are in one Azure region. The availability group replicas can have synchronous commit with automatic failover on SQL-1 and SQL-2. To build this architecture, see [Availability Group template or tutorial](availability-group-overview.md).
 
 This architecture is vulnerable to downtime if the Azure region becomes inaccessible. To overcome this vulnerability, add a replica in a different Azure region. The following diagram shows how the new architecture would look:
 
@@ -46,7 +46,7 @@ When availability group replicas are on Azure virtual machines in different Azur
 >[!IMPORTANT]
 >This architecture incurs outbound data charges for data replicated between Azure regions. See [Bandwidth Pricing](https://azure.microsoft.com/pricing/details/bandwidth/).  
 
-This article builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](./availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). When mentioning to local region in this article, it refers to the virtual machines and availability group already configured in a single region, the remote region is the new infrastructure being added.
+This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). When mentioning to local region in this article, it refers to the virtual machines and availability group already configured in a single region, the remote region is the new infrastructure being added.
 
 To create a replica in a remote data center, perform the following steps:
 
@@ -100,7 +100,7 @@ After you have create the new virtual network and subnet, you're ready to connec
 
 For this tutorial, Virtual Network Peering will be used.
 
-1. In the search box at the top of the Azure portal, look for *autoHAVNET*. When **autoHAVNET** appears in the search results, select it.
+1. In the search box at the top of the Azure portal, look for *autoHAVNET* the virtual network in your local region. When **autoHAVNET** appears in the search results, select it.
 
 1. Under **Settings**, select **Peerings**, and then select **+ Add**, as shown in the following picture:
 
@@ -359,9 +359,9 @@ The load balancer must:
    - Be a Standard Load Balancer if the virtual machines in the backend pool are not part of either a single availability set or virtual machine scale set. For additional information review [Azure Load Balancer Standard overview](/azure/load-balancer/load-balancer-overview).
    - Be a Standard Load Balancer if the two virtual networks in two different regions are peered over global VNet peering. For more information, see [Azure Virtual Network frequently asked questions (FAQ)](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers).
 
-The steps to [create the load balancer]((availability-group-manually-configure-tutorial-single-subnet.md#configure-internal-load-balancer) are:
+The steps to [create the load balancer](availability-group-manually-configure-tutorial-single-subnet.md#configure-internal-load-balancer) are:
 
-1. In the Azure portal, go to the resource group where your SQL Servers are and select **+ Add**.
+1. In the Azure portal, go to the resource group where your SQL Server is and select **+ Add**.
 1. Search for **Load Balancer**. Choose the load balancer published by Microsoft.
 1. Select **Create**.
 1. Configure the following parameters for the load balancer.
@@ -542,10 +542,10 @@ To add the SQL Server to the cluster, perform the following steps:
 
 ### Add the Windows Server Failover cluster IP address
 
-Add an IP address resource to the cluster for the new SQL Server VM.
-
    > [!NOTE]
    > On Windows Server 2019, the cluster creates a **Distributed Server Name** instead of the **Cluster Network Name**. If you're using Windows Server 2019, skip to **Add IP Address for the Availability Group Listener**. You can create a cluster network name using [PowerShell](failover-cluster-instance-storage-spaces-direct-manually-configure.md#create-windows-failover-cluster). Review the blog [Failover Cluster: Cluster Network Object](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97) for more information.  
+
+Next, add the IP address resource to the cluster for the new SQL Server VM.
 
 1. Create the IP address resource in **Failover Cluster Manager**, select the name of the cluster, then right-click the cluster name under **Cluster Core Resources** and select **Properties**:
 

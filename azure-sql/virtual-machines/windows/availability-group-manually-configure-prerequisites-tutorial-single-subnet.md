@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 11/02/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -85,7 +85,7 @@ To create the virtual network in the Azure portal, follow these steps:
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png" alt-text="Delete the existing address space":::
 
-1. Select **Add an IP address space** to open the blade to create the address space you need. For this tutorial, the address space of **192.168.0.0/16** is being used.  Select **Add**.
+1. Select **Add an IP address space** to open the blade to create the address space you need. For this tutorial, the address space of **192.168.0.0/16** is being used.  Click **Add** to create the address space.
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/05-add-address-space.png" alt-text="Add the address space":::
 

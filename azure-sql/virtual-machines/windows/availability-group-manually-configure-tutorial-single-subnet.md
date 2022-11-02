@@ -4,7 +4,7 @@ description: "This tutorial shows how to create a SQL Server Always On availabil
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 11/02/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -271,7 +271,7 @@ You are now ready to configure an availability group using the following steps:
 * Create a database on the first SQL Server.
 * Take both a full backup and a transaction log backup of the database.
 * Restore the full and log backups to the second SQL Server with the **NORECOVERY** option.
-* Create the availability group (**AG1**) with synchronous commit, automatic failover, and readable secondary replicas.
+* Create the availability group (**MyTestAG**) with synchronous commit, automatic failover, and readable secondary replicas.
 
 ### Create the availability group
 
@@ -279,7 +279,7 @@ You are now ready to configure an availability group using the following steps:
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/56-newagwiz.png" alt-text="Screenshot of launching new availability group wizard.":::
 
-1. In the **Introduction** page, select **Next**. In the **Specify availability group Name** page, type a name for the availability group in **Availability group name**. For example, **AG1**. Select **Next**.
+1. In the **Introduction** page, select **Next**. In the **Specify availability group Name** page, type a name for the availability group in **Availability group name**. For example, **MyTestAG**. Select **Next**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/58-newagname.png" alt-text="Screenshot of new availability group wizard, specify availability group name.":::
 

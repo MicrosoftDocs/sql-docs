@@ -69,7 +69,7 @@ Once your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has reached 
 
 ### Resources
 
-- [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-rtm)
+- [Installation media](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
 - [Upgrade SQL Server using Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 What's new in:

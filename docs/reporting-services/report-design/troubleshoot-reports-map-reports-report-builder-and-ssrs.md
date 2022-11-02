@@ -112,7 +112,7 @@ ms.author: maggies
  To reload the spatial data and use the map view center saved in the report, right-click the map viewport, and then click **Reload**. After you enter the credentials for the spatial data source, the layer loads the spatial data and the map view is restored.  
   
 ## The center and view for a map layer option does not work.  
- When the viewport is set to center on the spatial data for a specific layer, and the center of the view does not appear to be the center for the layer, there are probably small islands or areas that are included in the spatial data that are too small to be seen in the viewport. For example, spatial data for a country might include small islands or other small territories as part of the territory. The viewport uses all spatial data to calculate the center for the layer.  
+ When the viewport is set to center on the spatial data for a specific layer, and the center of the view does not appear to be the center for the layer, there are probably small islands or areas that are included in the spatial data that are too small to be seen in the viewport. For example, spatial data for a country/region might include small islands or other small territories as part of the territory. The viewport uses all spatial data to calculate the center for the layer.  
   
  To override calculations for the layer, you can do one of the following:  
   

@@ -13,6 +13,8 @@ ms.topic: conceptual
 
 Azure Data Studio supports capturing both estimated and actual query plans (currently in preview).  Query plans provide a graphical display of the data retrieval (or modification) method chosen by the SQL Server Query Optimizer.  This visual approach helps understand the performance characteristics of a query.
 
+[!INCLUDE [azure-data-studio-preview](../includes/azure-data-studio-preview.md)]
+
 ## Display - estimated plan
 
 To view the estimated plan for a query, highlight the specific query and select the Estimated Plan button.

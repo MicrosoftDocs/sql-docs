@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/11/2022
+ms.date: 11/01/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
@@ -43,7 +43,7 @@ If any of these conditions is not met, the pay-as-you-go billing will stop until
 
 ## License types
 
-Any installed instance of SQL server can be connected to Azure. The only exceptions are Express and Web editions. When they are connected, their license  type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licenses in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage your license position and maintain compliance. The following table shows the different license types.
+Any installed instance of SQL server can be connected to Azure with the exception of Express and Web editions and SQL Server instances with a Serever/CAL license. When they are connected, their license type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licenses in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage your license position and maintain compliance. The following table shows the different license types.
 
 | Installed edition | Activation choice  | License type  |  
 |---|---|---|
@@ -53,7 +53,6 @@ Any installed instance of SQL server can be connected to Azure. The only excepti
 | Standard | Pay-as-you-go | PAYG |
 | Enterprise Core | Product key without Software Assurance or Subscription | LicenseOnly | 
 | Standard | Product key without Software Assurance or Subscription | LicenseOnly | 
-| Enterprise | Product key, Server/CAL  | ServerCAL | 
 | Evaluation | Free edition | Free | 
 | Developer | Free edition | Free | 
 
@@ -79,12 +78,9 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 | Enterprise Core | Product key with Software Assurance or SQL subscription | Yes | HADR | 
 | Enterprise Core | Pay-as-you-go | Yes | HADR | 
 | Enterprise Core | Product key without Software Assurance or SQL subscription | Yes | LicenseOnly | 
-| Enterprise | Product key, Server/CAL  | Yes | ServerCAL<sup>1</sup> 
 | Standard | Product key with Software Assurance or SQL subscription | Yes | HADR | 
 | Standard | Pay-as-you-go | Yes | HADR | 
 | Standard | Product key without Software Assurance or SQL subscription| Yes | LicenseOnly | 
-
-<sup>1</sup> *Server/CAL license does not include free fail-over servers for high availability.*
 
 ## FAQ
 

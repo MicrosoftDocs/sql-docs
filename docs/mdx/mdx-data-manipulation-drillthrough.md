@@ -73,7 +73,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Returns the unary operator of the specified attribute member.  
   
 ## Example  
- The following example specifies cell for the month of July, 2007 for the reseller sales amount measure (the default measure) for the country of Australia. The RETURN clause specifies that the date of each sale, the product model name, the employee name, the sales amount, the tax amount and the product cost values that underlie this cell be returned.  
+ The following example specifies cell for the month of July, 2007 for the reseller sales amount measure (the default measure) for Australia. The RETURN clause specifies that the date of each sale, the product model name, the employee name, the sales amount, the tax amount and the product cost values that underlie this cell be returned.  
   
 ```  
 DRILLTHROUGH  

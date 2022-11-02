@@ -171,7 +171,7 @@ The maximum request and response header size (all header fields: headers passed 
 
 ## Throttling
 
-The number of concurrent connections to external endpoints done via `sp_invoke_external_rest_endpoint` are capped to 10% of worker threads, with a maximum of 150 workers. On an [single database](/azure-sql/database/single-database-overview) throttling is enforced at the database level, while on an [elastic pool](/azure-sql/database/elastic-pool-overview) throttling is enforced both at database and at pool level.
+The number of concurrent connections to external endpoints done via `sp_invoke_external_rest_endpoint` are capped to 10% of worker threads, with a maximum of 150 workers. On an [single database](/azure/azure-sql/database/single-database-overview) throttling is enforced at the database level, while on an [elastic pool](/azure/azure-sql/database/elastic-pool-overview) throttling is enforced both at database and at pool level.
 
 To check how many concurrent connections a database can sustain, run the following query:
 

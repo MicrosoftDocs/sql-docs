@@ -28,6 +28,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 
 | Feature | Details |
 | ---| --- |
+|[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
 |[Managed Instance link](managed-instance-link-feature-overview.md)| Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. |
@@ -47,8 +48,8 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-| [Cross-subscription PITR](point-in-time-restore.md) | November 2022 | Restore your database to an instance in a different subscription than your original managed instance. 
-|[TempDB configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of TempDB files and their growth increments to tune the performance of your instance even more. |
+|[Cross-subscription PITR](point-in-time-restore.md) | November 2022 | Restore your database to an instance in a different subscription than your original managed instance. 
+|[Tempdb configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of tempdb files and their growth increments to tune the performance of your instance even more. |
 |[Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
 |[16 TB support in Business Critical](resource-limits.md#service-tier-characteristics) | September 2022 |Support for allocation up to 16 TB of space on SQL Managed Instance in the Business Critical service tier using the new memory optimized premium-series hardware. | 
 |[Data virtualization](data-virtualization-overview.md) | September 2022 |  Join locally stored relational data with data queried from external data sources, such as Azure Data Lake Storage Gen2 or Azure Blob Storage. |
@@ -74,6 +75,12 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | Changes | Details |
 | --- | --- |
 | **Cross-subscription PITR** | It's now possible to restore your database for your SQL Managed Instance across subscriptions. This feature is generally available. To learn more, review [Point-in-time restore](point-in-time-restore.md). | 
+
+### October 2022
+
+| Changes | Details |
+| --- | --- |
+| **Approximate percentiles** | Support has been added to quickly compute percentiles using approximate percentile aggregate functions for large datasets with acceptable rank-based error bounds. This feature is currently in preview. To learn more, review [Approx_Percentile_Cont](/sql/t-sql/functions/approx-percentile-cont-transact-sql) and [Approx_Percentile_Disc](/sql/t-sql/functions/approx-percentile-disc-transact-sql). | 
 
 
 ### September 2022

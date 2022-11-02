@@ -27,7 +27,7 @@ For more information, see [Always Encrypted (Database Engine)](../../relational-
 
 ### Prerequisites
 
-Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
+Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
 
 If you're using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for more prerequisites.
 
@@ -187,7 +187,7 @@ The following example demonstrates filtering data based on encrypted values, and
 - All values printed by the program will be in plaintext, since the driver will transparently decrypt the data retrieved from the SSN and BirthDate columns.
 
 > [!NOTE]
-> Queries can perform equality comparisons on encrypted columns only if the encryption is deterministic, or if the secure enclave is enabled. For more information, see [Selecting Deterministic or Randomized encryption](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> Queries can perform equality comparisons on encrypted columns only if the encryption is [deterministic](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption), or if the secure enclave is enabled.
 
 ```cpp
 SQLCHAR SSN[12];

@@ -24,7 +24,10 @@ The following video introduces [!INCLUDE [sssql22-md](../includes/sssql22-md.md)
 
 > [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
 
-For additional video content, see [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022).
+For additional video content, see:
+
+- [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022)
+- [Data Exposed SQL Server 2022 playlist](/users/marisamathews/collections/qep1fr3gw3jqy8)
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 
@@ -74,8 +77,7 @@ The following sections identify features that are improved our introduced in [!I
 |:---|:---|
 | Link to Azure SQL Managed Instance | Connect your SQL Server instance to Azure SQL Managed Instance. See [Link feature for Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). To experience this feature, you can [register here](https://aka.ms/mi-link-2022-signup).|
 |Contained availability group | Create an Always On availability group that:<br/>- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level. <br/>- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)|
-|Distributed availability group |- Changing `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is supported. This helps ensure a zero data loss failover of the distributed availability group. For more information, visit [ALTER AVAILABILITY GROUP ()](../t-sql/statements/alter-availability-group-transact-sql.md)<br/> - Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
-| Improved availability groups | - `ParallelRedoThreadPool` : Instance level thread pool shared with all databases having redo work. With this, each database can take the benefit of parallel redo. Limited to max 100 thread earlier. <br/> - Parallel Redo Batch Redo - Redo of log records are batched under one latch improving speed. This helps both, catchup redo and crash recovery redo. |
+|Distributed availability group |- Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
 | Improved backup metadata | `backupset` system table returns last valid restore time. See [backupset (Transact-SQL)](../relational-databases/system-tables/backupset-transact-sql.md).|
 
 ## Security
@@ -86,7 +88,7 @@ The following sections identify features that are improved our introduced in [!I
 | Microsoft Purview integration | Apply Microsoft Purview access policies to any SQL Server instance that is enrolled in both Azure Arc and the Microsoft Purview Data Use Management.<br/><br/>- Newly introduced *SQL Performance Monitor*, and *SQL Security Auditor* roles align with the principle of least privilege using Microsoft Purview access policies.</br></br>Check out [Provision access by data owner for Azure Arc-enabled SQL Server](/azure/purview/how-to-policies-data-owner-arc-sql-server) for details. |
 | Ledger | The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with. See [Ledger](../relational-databases/security/ledger/ledger-overview.md). |
 | Azure Active Directory authentication | Use [Azure Active Directory (Azure AD) authentication](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) to connect to SQL Server. |
-| Always encrypted with secure enclaves | Enable in-place encryption and richer confidential queries. Support for confidential queries with JOIN, GROUP BY, and ORDER BY. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
+| Always encrypted with secure enclaves | Support for JOIN, GROUP BY, and ORDER BY, and for text columns using UTF-8 collations in confidential queries using enclaves. Improved performance. See [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 | Access Control: Permissions | New [granular permissions](https://techcommunity.microsoft.com/t5/sql-server-blog/new-granular-permissions-for-sql-server-2022-and-azure-sql-to/ba-p/3607507) improve adherence with the [Principle of Least Privilege](https://techcommunity.microsoft.com/t5/azure-sql-blog/security-the-principle-of-least-privilege-polp/ba-p/2067390)</br></br>Read here for an in-depth explanation of the [revamped SQL Permission system for Principle of Least Privilege and external policies](https://techcommunity.microsoft.com/t5/azure-sql-blog/revamped-sql-permission-system-for-principle-of-least-privilege/ba-p/3639399) |
 | Access Control: Server-level Roles | New [built-in server-level roles](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022) enable least privileged access for administrative tasks that apply to the whole SQL Server Instance |
 |Dynamic data masking | Granular UNMASK permissions for [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md#granular). |
@@ -103,6 +105,7 @@ The following sections identify features that are improved our introduced in [!I
 |Improved columnstore segment elimination | All columnstore indexes benefit from enhanced segment elimination by data type. Data type choices may have a significant impact on query performance based common filter predicates for queries on the columnstore index. This segment elimination applied to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. |
 | In-memory OLTP management | Improve memory management in large memory servers to reduce out-of-memory conditions. |
 | Virtual log file growth | In previous versions of SQL Server, if the next growth is more than 1/8 of the current log size, and the growth is less than 64MB, four VLFs were created. In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], this behavior is slightly different. Only one VLF is created if the growth is less than or equal to 64 MB and more than 1/8 of the current log size. For more information on VLF growth, see [Virtual Log Files (VLFs)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs).|
+| Thread management | - `ParallelRedoThreadPool` : Instance level thread pool shared with all databases having redo work. With this, each database can take the benefit of parallel redo. Limited to max 100 thread earlier. <br/> - Parallel redo batch redo - Redo of log records are batched under one latch improving speed. This improves recovery, catchup redo, and crash recovery redo. |
 
 ## Query Store and intelligent query processing
 
@@ -138,7 +141,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
-|Hybrid buffer pool with direct write<|Reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. This *enlightenment* is is now available for Window 2022 as well as Linux. For details, see [Hybrid buffer pool with direct write](../database-engine/configure-windows/hybrid-buffer-pool.md#hybrid-buffer-pool-with-direct-write) and [Configure persistent memory (PMEM) for SQL Server on Windows](../database-engine/configure-windows/configure-persistent-memory.md).|
+|Hybrid buffer pool with direct write|Reduces the number of `memcpy` commands that need to be performed on modified data or index pages residing on PMEM devices. This *enlightenment* is is now available for Window 2022 as well as Linux. For details, see [Hybrid buffer pool with direct write](../database-engine/configure-windows/hybrid-buffer-pool.md#hybrid-buffer-pool-with-direct-write) and [Configure persistent memory (PMEM) for SQL Server on Windows](../database-engine/configure-windows/configure-persistent-memory.md).|
 |Integrated acceleration & offloading | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages acceleration technologies from partners such as Intel to provide extended capabilities. At release, Intel&reg; QuickAssist Technology (QAT) provides backup compression and hardware offloading. For more information, see [Integrated acceleration & offloading](../relational-databases/integrated-acceleration/overview.md). |
 | Improved optimization | [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)] leverages new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations. Requires trace flag 15097. See [DBCC TRACEON - Trace Flags (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf15097). |
 
@@ -147,6 +150,7 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 | New feature or update | Details |
 |:---|:---|
 | Resumable add table constraints | Supports [pausing and resuming an ALTER TABLE ADD CONSTRAINT](../relational-databases/security/resumable-add-table-constraints.md) operation. Resume such operation after maintenance windows, failovers, or system failures.
+| CREATE INDEX | [WAIT_AT_LOW_PRIORITY](../t-sql/statements/create-index-transact-sql.md#wait-at-low-priority) with online index operations clause added.
 | Transactional replication | Peer-to-peer replication enables conflict detection and resolution to allow last writer to win. Originally introduced in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] CU 13. See [Automatically handle conflicts with last write wins](../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) for more information. |
 | CREATE STATISTICS | Adds [AUTO_DROP option](../relational-databases/statistics/statistics.md#auto_drop-option)<br/><br/>Automatic statistics with low priority.|
 | SELECT ... WINDOW clause | Determines the partitioning and ordering of a rowset before the window function, which uses the window in OVER clause is applied. See [SELECT - WINDOW ](../t-sql/queries/select-window-transact-sql.md).|

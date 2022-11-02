@@ -31,11 +31,12 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  
 
 - **Hive ORC**
 
-  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
 
 - **Parquet**
 
@@ -61,7 +62,6 @@ WITH (
     [ , FORMAT_OPTIONS ( <format_options> [ ,...n  ] ) ]
     [ , DATA_COMPRESSION = {
            'org.apache.hadoop.io.compress.GzipCodec'
-         | 'org.apache.hadoop.io.compress.DefaultCodec'
         }
      ]);
 
@@ -75,7 +75,7 @@ WITH (
     | Encoding = {'UTF8' | 'UTF16'}
 }
 ```
-
+<!---'org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 ### [RC](#tab/rc)
 
 ```syntaxsql
@@ -196,10 +196,10 @@ To work properly, Gzip compressed files must have the ".gz" file extension.
 
 #### [Delimited text](#tab/delimited)
 
-The DELIMITEDTEXT format type supports these compression methods:
+The DELIMITEDTEXT format type supports this compression method:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
 - DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+<!--- - DATA COMPRESSION ='org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 
 #### [RC](#tab/rc)
 

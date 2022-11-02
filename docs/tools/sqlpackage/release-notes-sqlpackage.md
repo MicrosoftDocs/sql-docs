@@ -32,11 +32,11 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 | Connection pooling | Enables connection pooling for all connections if the environment variable `CONNECTION_POOLING_ENABLED` is set to True.  This is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling. |
 | Deployment options | Surfaces friendly names for deployment options in DacFx .NET APIs. |
-| Dynamic Data Masking | Adds support for [granular UNMASK permissions](/sql/relational-databases/security/dynamic-data-masking#granular) in Import/Export and Extract/Publish.|
+| Dynamic Data Masking | Adds support for [granular UNMASK permissions](../../relational-databases/security/dynamic-data-masking.md#granular) in Import/Export and Extract/Publish.|
 | Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, does not import or publish the history table to a database. |
 | Platform | SqlPackage is now built with .NET 6 |
-| SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](/sql/relational-databases/security/permissions-database-engine).|
-| XML compression | [XML compression](/sql/t-sql/statements/create-table-transact-sql#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation](/sql/relational-databases/xml/xml-data-sql-server). |
+| SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](../../relational-databases/security/permissions-database-engine.md).|
+| XML compression | [XML compression](../../t-sql/statements/create-table-transact-sql.md#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation](../../relational-databases/xml/xml-data-sql-server.md). |
 
 
 ### Fixes

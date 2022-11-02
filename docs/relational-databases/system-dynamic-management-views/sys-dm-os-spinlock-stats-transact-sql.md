@@ -6,10 +6,8 @@ ms.author: "pamela"
 manager: amitban
 ms.reviewer: "wiassaf"
 ms.date: "02/10/2021"
-ms.prod: "sql-non-specified"
-ms.service:
-ms.prod_service: "database-engine"
-ms.technology: "database-engine"
+ms.prod: sql
+ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_spinlock_stats_TSQL"

@@ -62,6 +62,7 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 |Max log rate per pool (MBps)|12|24|36|48|60|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|210|420|630|840|1050|1260|1470|
 |Max concurrent logins per pool <sup>4</sup>|210|420|630|840|1050|1260|1470|
+|Max concurrent external connections per pool <sup>5</sup>|21|42|63|84|105|126|147|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1, 2|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...6|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...12|0, 0.25, 0.5, 1...14|
 |Number of replicas|1|1|1|1|1|1|1|
@@ -76,6 +77,8 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### General purpose service tier: Generation 5 compute platform (part 2)
 
@@ -97,6 +100,7 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 |Max log rate per pool (MBps)|62.5|62.5|62.5|62.5|62.5|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
 |Max concurrent logins per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
+|Max concurrent external connections per pool <sup>5</sup>|150|150|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...16|0, 0.25, 0.5, 1...18|0, 0.25, 0.5, 1...20|0, 0.25, 0.5, 1...20, 24|0, 0.25, 0.5, 1...20, 24, 32|0, 0.25, 0.5, 1...16, 24, 32, 40|0, 0.25, 0.5, 1...16, 24, 32, 40, 80|
 |Number of replicas|1|1|1|1|1|1|1|
@@ -111,6 +115,8 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## General purpose - provisioned compute - Fsv2-series
 
@@ -134,6 +140,7 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 |Max log rate per pool (MBps)|48|60|62.5|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|400|500|600|700|800|
 |Max concurrent logins per pool <sup>4</sup>|800|1000|1200|1400|1600|
+|Max concurrent external connections per pool <sup>5</sup>|40|50|60|70|80|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0-8|0-10|0-12|0-14|0-16|
 |Number of replicas|1|1|1|1|1|
@@ -148,6 +155,8 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Fsv2-series Hardware (part 2)
 
@@ -169,6 +178,7 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 |Max log rate per pool (MBps)|62.5|62.5|62.5|62.5|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|900|1000|1200|1600|1800|3600|
 |Max concurrent logins per pool <sup>4</sup>|1800|2000|2400|3200|3600|7200|
+|Max concurrent external connections per pool <sup>5</sup>|90|100|120|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0-18|0-20|0-24|0-32|0-36|0-72|
 |Number of replicas|1|1|1|1|1|1|
@@ -183,6 +193,8 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## General purpose - provisioned compute - DC-series
 
@@ -204,6 +216,7 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 |Max log rate per pool (MBps)|12|24|36|48|
 |Max concurrent workers per pool <sup>4</sup>|168|336|504|672|
 |Max concurrent logins per pool <sup>4</sup>|168|336|504|672|
+|Max concurrent external connections per pool <sup>5</sup>|16|33|50|67|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|2|2...4|2...6|2...8|
 |Number of replicas|1|1|1|1|
@@ -218,6 +231,8 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Business Critical - provisioned compute - Gen5
 
@@ -242,6 +257,7 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 |Max log rate per pool (MBps)|60|90|120|120|120|120|
 |Max concurrent workers per pool <sup>4</sup>|420|630|840|1050|1260|1470|
 |Max concurrent logins per pool <sup>4</sup>|420|630|840|1050|1260|1470|
+|Max concurrent external connections per pool <sup>5</sup>|42|63|84|105|126|147|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...6|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...12|0, 0.25, 0.5, 1...14|
 |Number of replicas|4|4|4|4|4|4|
@@ -256,6 +272,8 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Business Critical service tier: Generation 5 compute platform (part 2)
 
@@ -278,6 +296,7 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 |Max log rate per pool (MBps)|120|120|120|120|120|120|120|
 |Max concurrent workers per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
 |Max concurrent logins per pool <sup>4</sup>|1680|1890|2100|2520|3360|4200|8400|
+|Max concurrent external connections per pool <sup>5</sup>|150|150|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...16|0, 0.25, 0.5, 1...18|0, 0.25, 0.5, 1...20|0, 0.25, 0.5, 1...20, 24|0, 0.25, 0.5, 1...20, 24, 32|0, 0.25, 0.5, 1...20, 24, 32, 40|0, 0.25, 0.5, 1...20, 24, 32, 40, 80|
 |Number of replicas|4|4|4|4|4|4|4|
@@ -292,6 +311,8 @@ If all vCores of an elastic pool are busy, then each database in the pool receiv
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Business Critical - provisioned compute - M-series
 
@@ -318,6 +339,7 @@ For important information about M-series hardware availability, see [Azure offer
 |Max log rate per pool (MBps)|48|60|72|84|96|108|
 |Max concurrent workers per pool <sup>4</sup>|800|1,000|1,200|1,400|1,600|1,800|
 |Max concurrent logins per pool <sup>4</sup>|800|1,000|1,200|1,400|1,600|1,800|
+|Max concurrent external connections per pool <sup>5</sup>|80|100|120|140|150|150|
 |Max concurrent sessions|30000|30000|30000|30000|30000|30000|
 |Min/max elastic pool vCore choices per database|0-8|0-10|0-12|0-14|0-16|0-18|
 |Number of replicas|4|4|4|4|4|4|
@@ -332,6 +354,8 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### M-series hardware (part 2)
 
@@ -354,6 +378,7 @@ For important information about M-series hardware availability, see [Azure offer
 |Max log rate per pool (MBps)|120|144|192|264|264|
 |Max concurrent workers per pool <sup>4</sup>|2,000|2,400|3,200|6,400|12,800|
 |Max concurrent logins per pool <sup>4</sup>|2,000|2,400|3,200|6,400|12,800|
+|Max concurrent external connections per pool <sup>5</sup>|150|150|150|150|150|
 |Max concurrent sessions|30000|30000|30000|30000|30000|
 |Number of replicas|4|4|4|4|4|
 |Multi-AZ|No|No|No|No|No|
@@ -367,6 +392,8 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Business Critical - provisioned compute - DC-series
 
@@ -389,6 +416,7 @@ For important information about M-series hardware availability, see [Azure offer
 |Max log rate per pool (MBps)|20|60|90|120|
 |Max concurrent workers per pool <sup>4</sup>|168|336|504|672|
 |Max concurrent logins per pool <sup>4</sup>|168|336|504|672|
+|Max concurrent external connections per pool <sup>5</sup>|16|33|50|67|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|2|2...4|2...6|2...8|
 |Number of replicas|4|4|4|4|
@@ -404,6 +432,8 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
 
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
 ## Database properties for pooled databases
 
 For each elastic pool, you can optionally specify per database minimum and maximum vCores to modify resource consumption patterns within the pool. Specified min and max values apply to all databases in the pool. Customizing min and max vCores for individual databases in the pool is not supported. 
@@ -418,12 +448,10 @@ The following table describes per database properties for pooled databases.
 | Min vCores per database |The minimum number of vCores reserved for any database in the pool. Consider setting a min vCores per database when you want to guarantee resource availability for each database regardless of resource consumption by other databases in the pool. The min vCores per database may be set to 0, and is also the default value. This property is set to anywhere between 0 and the average vCores utilization per database.|
 | Max storage per database |The maximum database size set by the user for a database in a pool. Pooled databases share allocated pool storage, so the size a database can reach is limited to the smaller of remaining pool storage and maximum database size. Maximum database size refers to the maximum size of the data files and does not include the space used by the log file. |
 
-
 > [!IMPORTANT]
 > Because resources in an elastic pool are finite, setting min vCores per database to a value greater than 0 implicitly limits resource utilization by each database. If, at a point in time, most databases in a pool are idle, resources reserved to satisfy the min vCores guarantee are not available to databases active at that point in time.
 >
 > Additionally, setting min vCores per database to a value greater than 0 implicitly limits the number of databases that can be added to the pool. For example, if you set the min vCores to 2 in a 20 vCore pool, it means that you will not be able to add more than 10 databases to the pool, because 2 vCores are reserved for each database.
-> 
 
 Even though the per database properties are expressed in vCores, they also govern consumption of other resource types, such as data IO, log IO, buffer pool memory, and worker threads. As you adjust min and max per database vCore values, reservations and limits for all resource types are adjusted proportionally.
 
@@ -472,6 +500,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Max log rate per pool (MBps)|6|12|18|24|30|36|
 |Max concurrent workers per pool<sup>4</sup> |210|420|630|840|1050|1260|
 |Max concurrent logins per pool <sup>4</sup> |210|420|630|840|1050|1260|
+|Max concurrent external connections per pool <sup>5</sup>|21|42|63|84|105|126|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1|0, 0.25, 0.5, 1, 2|0, 0.25, 0.5, 1...3|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...5|0, 0.25, 0.5, 1...6|
 |Number of replicas|1|1|1|1|1|1|
@@ -486,6 +515,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### General purpose service tier: Generation 4 compute platform (part 2)
 
@@ -507,6 +538,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Max log rate per pool (MBps)|42|48|54|60|62.5|62.5|
 |Max concurrent workers per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
 |Max concurrent logins pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
+|Max concurrent external connections per pool <sup>5</sup>|147|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...7|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...9|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...10, 16|0, 0.25, 0.5, 1...10, 16, 24|
 |Number of replicas|1|1|1|1|1|1|
@@ -521,6 +553,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).    
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Business critical - provisioned compute - Gen4
 
@@ -548,6 +582,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Max log rate per pool (MBps)|20|30|40|50|60|
 |Max concurrent workers per pool <sup>4</sup>|420|630|840|1050|1260|
 |Max concurrent logins per pool <sup>4</sup>|420|630|840|1050|1260|
+|Max concurrent external connections per pool <sup>5</sup>|42|63|84|105|126|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1, 2|0, 0.25, 0.5, 1...3|0, 0.25, 0.5, 1...4|0, 0.25, 0.5, 1...5|0, 0.25, 0.5, 1...6|
 |Number of replicas|4|4|4|4|4|
@@ -562,6 +597,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Business critical service tier: Generation 4 compute platform (part 2)
 
@@ -584,6 +621,7 @@ vCore resource limits are listed in the following articles, please be sure to up
 |Max log rate per pool (MBps)|70|80|80|80|80|80|
 |Max concurrent workers per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
 |Max concurrent logins per pool <sup>4</sup>|1470|1680|1890|2100|3360|5040|
+|Max concurrent external connections per pool <sup>5</sup>|147|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Min/max elastic pool vCore choices per database|0, 0.25, 0.5, 1...7|0, 0.25, 0.5, 1...8|0, 0.25, 0.5, 1...9|0, 0.25, 0.5, 1...10|0, 0.25, 0.5, 1...10, 16|0, 0.25, 0.5, 1...10, 16, 24|
 |Number of replicas|4|4|4|4|4|4|
@@ -598,6 +636,8 @@ vCore resource limits are listed in the following articles, please be sure to up
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
 <sup>4</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using Gen5 and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on Gen5 there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>5</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Next steps
 

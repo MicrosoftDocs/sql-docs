@@ -5,7 +5,7 @@ description: Learn about point-in-time restore, which enables you to roll back a
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 07/20/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -33,7 +33,7 @@ This article provides steps to recover a database from a backup in Azure SQL Man
 - Create a database on the same managed instance, recovered to the deletion time for a deleted database.
 - Create a new database on any managed instance in the same region, recovered to the point of the most recent backups.
 
-Cross-region and cross-subscription point-in-time restore for SQL Managed Instance isn't currently supported. 
+Cross-region restore for SQL Managed Instance isn't currently supported. 
 
 If you configured [long-term retention (LTR)](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any instance.
 
@@ -73,7 +73,7 @@ You can recover by using the Azure portal, PowerShell, or the REST API. You can'
 
 You can restore a database to an earlier point in time. The request can specify any service tier or compute size for the restored database. Ensure that you have sufficient resources on the instance to which you're restoring the database. 
 
-When the restore is complete, it creates a new database on the same instance as the original database. The restored database is charged at normal rates, based on its service tier and compute size. You don't incur charges until the database restore is complete.
+When the restore is complete, it creates a new database on the target instance, whether it's the same instance, or a different instance.  The restored database is charged at normal rates, based on its service tier and compute size. You don't incur charges until the database restore is complete.
 
 You generally restore a database to an earlier point for recovery purposes. You can treat the restored database as a replacement for the original database or use it as a data source to update the original database.
 
@@ -123,7 +123,7 @@ To restore a database in SQL Managed Instance, see [Restore-AzSqlInstanceDatabas
 
 ## Deleted database restore
 
-You can restore a deleted database to the deletion time, or an earlier point in time, on the same managed instance. You restore a deleted database by creating a new database from the backup.
+You can restore a deleted database to the deletion time, or an earlier point in time, to the same instance, or a different instance than the source instance. You restore a deleted database by creating a new database from the backup.
 
 > [!IMPORTANT]
 > If you delete a managed instance, all its databases are also deleted and can't be recovered. You can't restore a deleted managed instance.

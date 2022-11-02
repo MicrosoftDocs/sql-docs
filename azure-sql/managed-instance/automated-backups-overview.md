@@ -54,7 +54,7 @@ By default, Azure SQL Managed Instance stores data in geo-redundant [storage blo
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. Those events might include transient hardware failures, network or power outages, or massive natural disasters. 
 
-To ensure that your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both:To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
+To ensure that your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
 
 You can configure backup storage redundancy when you create your instance, and you can update it at a later time at the instance level. The changes that you make to an existing instance apply to future backups only. After you update the backup storage redundancy of an existing instance, it might take up to 24 hours for the changes to be applied. Changes made to backup storage redundancy apply to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups when the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
 
@@ -91,10 +91,10 @@ You can choose one of the following storage redundancies for backups:
 
 You can use these backups to:
 
-- [Restore an existing database to a point in time](recovery-using-backups.md#point-in-time-restore) in the past within the retention period by using the Azure portal, Azure PowerShell, the Azure CLI, or the REST API. This operation creates a new database on either the same instance as the original database or a different instance in the same subscription and region. It uses a different name to avoid overwriting the original database. 
+- [Restore an existing database to a point in time](recovery-using-backups.md#point-in-time-restore) in the past within the retention period by using the Azure portal, Azure PowerShell, the Azure CLI, or the REST API. This operation creates a new database on either the same instance as the original database or a different instance in the same subscription and region. It uses a different name to avoid overwriting the original database. You can also use the Azure portal to restore your point-in-time database backup to an instance in a different subscription from your source instance. 
 
   After the restore finishes, you can delete the original database. Alternatively, you can both [rename](/sql/relational-databases/databases/rename-a-database) the original database and rename the restored database to the original database name.
-- [Restore a deleted database to a point in time](recovery-using-backups.md#deleted-database-restore) within the retention period, including the time of deletion. You can restore the deleted database only on the same managed instance where you created the original database. Before you delete a database, the service takes a final transaction log backup to prevent any data loss.
+- [Restore a deleted database to a point in time](recovery-using-backups.md#deleted-database-restore) within the retention period, including the time of deletion. You can restore the deleted database to the same managed instance where the backup was taken, or another instance in the same, or different subscription to the source instance. Before you delete a database, the service takes a final transaction log backup to prevent any data loss.
 - [Restore a database to another geographic region](recovery-using-backups.md#geo-restore). Geo-restore allows you to recover from a geographic disaster when you can't access your database or backups in the primary region. It creates a new database on any existing managed instance in any Azure region.
    > [!IMPORTANT]
    > Geo-restore is available only for databases that are configured with geo-redundant backup storage. If you're not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
@@ -116,7 +116,7 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | **Restoring a new database in another subscription** |  Supported  |  Not supported\*\*\* | Not supported\*\*\*  |
 | **Restoring via Azure portal**|Yes|Yes|Yes|
 | **Restoring via PowerShell** |Yes|Yes|Yes|
-| **Restoring via Azure CLI** |Yes|Yes|Yes|
+| **Restoring via Azure CLI** |Yes|No|Yes|
 
 
 \* For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-mi.md). 

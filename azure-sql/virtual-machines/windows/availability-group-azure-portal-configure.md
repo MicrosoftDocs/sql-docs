@@ -53,7 +53,7 @@ To configure an Always On availability group by using the Azure portal, you must
 
 You need the following account permissions to configure the availability group by using the Azure portal:
 
-- An existing domain user account that has **Create Computer Object** permission in the domain. For example, a domain admin account typically has sufficient permission (for example: account@domain.com). This account should also be part of the local administrator group on each VM to create the cluster.
+- An existing domain user account that has **Create Computer Object** permission in the domain. For example, a domain admin account (account@domain.com)) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
 - The domain user account that controls SQL Server. This should be the same account for every SQL Server VM you intend to add to the availability group.
 
 ## <a id="select"></a> Choose Marketplace image
@@ -86,6 +86,8 @@ On the **Basics** tab, select the subscription, resource group, and provide deta
 
 1. Select the **Availability** for the VMs, either Availability Zone or Availability Set. For more information about availability options, see [Availability](/azure/virtual-machines/availability).
 
+1. Select a security type, either **Standard**, or [Trusted launch](/azure/virtual-machines/trusted-launch). 
+
 1. The **Image** displays the chosen SQL Server VM image. Select **Configure VM generation** to choose the VM generation.
 
 1. Select **See all sizes** for the size of the virtual machines. All VMs created will be the same size. For production workloads, see the recommended machine sizes and configuration in [Performance best practices for SQL Server in Azure Virtual Machines](./performance-guidelines-best-practices-vm-size.md).
@@ -94,7 +96,7 @@ On the **Basics** tab, select the subscription, resource group, and provide deta
 
 1. Under **Licensing** you have the option to check the box and enable the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to use your own Windows Server License and save on licensing costs.
 
-1. **SQL Server License**: If you’re a Software Assurance customer, you can use the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to bring your own SQL Server license and save on resources. Select **Yes** to enable the Azure Hybrid Benefit, and then confirm that you have Software Assurance by selecting the checkbox.
+1. **SQL Server License**: If you’re a Software Assurance customer, you can use the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to bring your own SQL Server license and save on resources. Select **Yes** to enable the Azure Hybrid Benefit, and then confirm that you have Software Assurance by selecting the checkbox. This option is grayed out if you selected one of the free SQL Server images, such as the developer edition. 
 
    :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-license.png" alt-text="Screenshot of SQL Server License confirmation UI.":::
 
@@ -112,21 +114,23 @@ On the Networking tab, configure your networking options.
 
     :::image type="content" source="./media/availability-group-az-portal-configure/networking-nic-basic.png" alt-text="Screenshot of NIC security group UI.":::
 
-1. Each virtual machine you create has to be in its own subnet. Select **Create subnets** to open the **Subnets** page for the virtual network, and then select **Manage subnet configuration** to create a subnet or validate that a subnet is available for each virtual machine you intend to create for the availability group. Once done, use the **X** to close the subnet management window, and navigate back to the availability group deployment page.
+1. Each virtual machine you create has to be in its own subnet. Under **Create subnets**, select **Manage subnet configuration** to open the **Subnets** page for the virtual network and either create a subnet (**+Subnet**) for each virtual machine or validate that a subnet is available for each virtual machine you intend to create for the availability group. Once done, use the **X** to close the subnet management window, and navigate back to the availability group deployment page.
 
     :::image type="content" source="./media/availability-group-az-portal-configure/subnet-management.png" alt-text="Screenshot of subnet management.":::
 
-1. Choose the type of **Public IP SKU**.  All machines need to use the same SKU type.  
+1. Choose a **Public IP SKU** type.  All machines will use this Public IP type.  
 
-1. Use the drop-down to assign the subnet, Public IP, Cluster IP (if using Windows Server 2017) and Listener IP to each VM you're creating. When assigning a subnet to a virtual machine, the listener and cluster IP will pre-populate with available IP addresses - which can be edited, if necessary, by placing the cursor in the IP field. Select **Create new** if you need to create a new IP address. 
+1. Use the drop-down to assign the subnet, Public IP, and Listener IP to each VM you're creating. If you're using a Windows Server 2016 image, you will also need to assign the Cluster IP. When assigning a subnet to a virtual machine, the listener and cluster IP pre-populate with available IP addresses - place the cursor in the field if you want to edit the IP address.  Select **Create new** if you need to create a new IP address. 
 
     :::image type="content" source="./media/availability-group-az-portal-configure/assign-subnet-to-virtual-machine.png" alt-text="Screenshot of subnet configuration UI.":::
+
+1. You can also choose to delete the newly created public IP address and NIC when you delete the VM. Check the box if you want your resources deleted with the VM. 
 
 1. Select **Next: WSFC and Credentials**.
 
 ## WSFC and Credentials settings
 
-On the **WSFC and Credentials** tab, provide account information to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to already be present in the Active Directory of the domain controller virtual machine for the deployment to work. This deployment process does not create any accounts and will fail if you provide an invalid account. For more information about the required permissions, review [Configure cluster accounts in Active Directory](https://learn.microsoft.com/windows-server/failover-clustering/configure-ad-accounts).
+On the **WSFC and Credentials** tab, provide account information to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to already be present in the Active Directory of the domain controller virtual machine for the deployment to work. This deployment process does not create any accounts and will fail if you provide an invalid account. For more information about the required permissions, review [Configure cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
 
 1. Under **Windows Server Failover Cluster details***, provide the name you want to use for the failover cluster.  
 
@@ -142,7 +146,7 @@ On the **WSFC and Credentials** tab, provide account information to configure an
 
     :::image type="content" source="./media/availability-group-az-portal-configure/windows-ad-domain.png" alt-text="Screenshot of Windows active directory domain details UI.":::
 
-1. Under SQL Server details, provide the domain-joined account you want to use to manage SQL Server on the VMs. You can choose to use the **Same as domain join account** or you can select **Custom** and provide account details to use with the SQL Server service account.  
+1. Under SQL Server details, provide the domain-joined account you want to use to manage SQL Server on the VMs. You can choose to use the same user that created the cluster and joined the VMs to the domain by choosing **Same as domain join account** or you can select **Custom** and provide different account details to use with the SQL Server service account.  
 
     :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-account-credentials.png" alt-text="Screenshot of SQL Server account details UI.":::
 
@@ -214,7 +218,7 @@ On the **Review + Create** tab:
 
 You can monitor the deployment from the Azure portal. The **Notifications** button at the top of the screen shows the basic status of the deployment.
 
-Once the deployment completes, you can browse to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the portal and,  under **Settings** select **High Availability** to monitor the health of the availability group. By clicking the arrow next to the name of your availability group, you will see a list of all replicas:
+Once the deployment completes, you can browse to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the portal and,  under **Settings** select **High Availability** to monitor the health of the availability group. Select the arrow next to the name of your availability group to see a list of all replicas:
 
 :::image type="content" source="./media/availability-group-az-portal-configure/unhealthy-availability-group.png" alt-text="Screenshot of an unhealthy availability group in the portal.":::
 

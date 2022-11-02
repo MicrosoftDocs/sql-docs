@@ -21,7 +21,8 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 | Changes | Details |
 | --- | --- |
-| **Configure AG from Azure portal** | There is a new experience to deploy an Always On availability group to multiple subnets by using the Azure portal. The new availability group deployment method replaces the previous deployment through the SQL virtual machines resource. This feature is currently in preview. To learn more, review [Configure availability group through the Azure portal](availabililty-group-azure-portal-configure.md). | 
+| **Configure AG from Azure portal** | There is a new experience to deploy an Always On availability group to multiple subnets by using the Azure portal. The new availability group deployment method replaces the previous deployment through the SQL virtual machines resource. This feature is currently in preview. To learn more, review [Configure availability group through the Azure portal](availability-group-azure-portal-configure.md). | 
+
 
 ## October 2022
 

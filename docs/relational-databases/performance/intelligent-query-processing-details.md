@@ -12,7 +12,7 @@ ms.reviewer: "wiassaf"
 ms.custom:
 - seo-dt-2019
 - event-tier1-build-2022
-ms.date: 07/26/2022
+ms.date: 11/01/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

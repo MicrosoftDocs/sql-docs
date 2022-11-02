@@ -25,7 +25,7 @@ Notifications can be configured so you can get texts, emails, Azure push notific
 
 ## Configure an advance notification
 
-Advance notifications are available for Azure SQL databases that have their maintenance window configured. 
+Advance notifications are available for Azure SQL databases that have their maintenance window configured and managed instances with any configuration (including the default one). 
 
 Complete the following steps to enable a notification.  
 

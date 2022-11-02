@@ -41,8 +41,8 @@ Complete the following steps to enable a notification.
 
     :::image type="content" source="media/advance-notifications/define-condition.png" alt-text="define conditions for health alert":::
     
->Important
->Service health is rolling out new experiencs in phases. Some users will see the updated experience, others will still see the classic Service Health portal experience. In case that you still see the classic Service Health portal, for **Region** don't select Global as an option, but rather the specific region or all regions.
+> [!IMPORTANT]
+> Service health is rolling out new experiencs in phases. Some users will see the updated experience, others will still see the classic Service Health portal experience. In case that you still see the classic Service Health portal, for **Region** don't select Global as an option, but rather the specific region or all regions.
 
 4. In the **Actions** section, select the existing action group or create a new one. 
 

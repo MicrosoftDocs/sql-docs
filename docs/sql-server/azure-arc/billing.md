@@ -43,7 +43,7 @@ If any of these conditions is not met, the pay-as-you-go billing will stop until
 
 ## License types
 
-Any installed instance of SQL server can be connected to Azure with the exeption of Express and Web editions and SQL Server instances with a Serever/CAL license. When they are connected, their license type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licenses in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage your license position and maintain compliance. The following table shows the different license types.
+Any installed instance of SQL server can be connected to Azure with the exception of Express and Web editions and SQL Server instances with a Serever/CAL license. When they are connected, their license type is visible in Azure portal as the `licenseType` property of the `SQL Server - Azure Arc` resource. One of the benefits of connecting your SQL Server instances to Azure is that you can manage the usage of the different licenses in the *Cost Management + Billing* portal but only the pay-as-you-go instances generate actual charges. This way you can manage your license position and maintain compliance. The following table shows the different license types.
 
 | Installed edition | Activation choice  | License type  |  
 |---|---|---|

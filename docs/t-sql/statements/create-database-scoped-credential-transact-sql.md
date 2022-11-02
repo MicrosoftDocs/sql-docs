@@ -90,11 +90,18 @@ Here are some applications of database scoped credentials:
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](/azure/azure-sql/database/elastic-pool-overview)
 
-- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure blob storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure blob storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 ## Permissions
 
 Requires **CONTROL** permission on the database.
+
+## SQL Server 2022
+
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] a new type of connector was introduced, using REST-API calls replacing HADOOP.  For Azure Blog Storage and Azure Data Lake Gen 2 the only supported authentication method supported is `SHARED ACCESS SIGNATURE`.
+
+Please refer to [create external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) for more information.
+
 
 ## Examples
 

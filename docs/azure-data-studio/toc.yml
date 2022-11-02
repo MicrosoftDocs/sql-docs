@@ -134,6 +134,8 @@
     href: source-control.md
   - name: Table designer
     href: table-designer-azure-data-studio.md
+  - name: Query Plan Viewer
+    href: query-plan-viewer.md
 - name: How-to guides
   items:
   - name: Notebooks

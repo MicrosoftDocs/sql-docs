@@ -257,6 +257,10 @@ After databases are added, you can check the status of your availability group i
 
 :::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Check the status of your availability group from the high availability page from the Azure portal after databases are synchronized":::
 
+## Modify availability group
+
+Once your availability group is deployed through the portal, all changes to the availability group need to be done manually. If you want to [remove a replica](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server), you can do so through SQL Server Management Studio (SSMS) or Transact-SQL, and then delete the VM through the Azure portal. If you want to add a replica, you'll have to deploy the virtual machine manually to the resource group, join it to the domain, and [add the replica](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server) as you normally would in a traditional on-premises environment. 
+
 ## Remove cluster
 
 Remove all of the SQL Server VMs from the cluster to destroy it, and then remove the cluster metadata from the SQL IaaS Agent extension. You can do so by using the latest version of the [Azure CLI](/cli/azure/install-azure-cli) or PowerShell.

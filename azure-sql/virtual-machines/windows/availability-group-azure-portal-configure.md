@@ -66,15 +66,15 @@ To choose an image, follow these steps:
 
 1. Select **+ Create** to open the **Select SQL deployment option** page.  Under **SQL Virtual Machines**, check the box next to **High availability**, then select the **Image** drop-down. Type in the version of SQL Server you're interested in, such as `2019`, and then choose a SQL Server image, such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**.  Once you check the **High availability** box, the portal displays the supported SQL Server versions, starting with SQL Server 2016. 
 
-  :::image type="content" source="./media/availability-group-az-portal-configure/select-sql-server-image.png" alt-text="Screenshot of SQL virtual machines create UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/select-sql-server-image.png" alt-text="Screenshot of SQL virtual machines create UI.":::
 
 1. Select **Create**.
 
 ## Basic settings
 
-On the **Basics** tab, select the subscription, resource group, and provide details for the SQL Server instances you're creating for your availability group. 
+On the **Basics** tab, select the subscription, resource group, and provide details for the SQL Server instances you're creating for your availability group.
 
-1. Choose the subscription and resource group from the drop-down that contains your domain controller, and where you intend to deploy your availability group. 
+1. Choose the subscription and resource group from the drop-down that contains your domain controller, and where you intend to deploy your availability group.
 
    :::image type="content" source="./media/availability-group-az-portal-configure/basics-subscription.png" alt-text="Screenshot of basics tab UI.":::
 
@@ -334,7 +334,7 @@ To view the logs for the deployment, and check the deployment history, follow th
 
    :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Select the deployment you're interested in learning more about." :::
 
-
+If the deployment fails and you want to redeploy using the portal experience, then manual clean-up of the resources, including deleting VMs, removing entries in Active Directory and/or DNS will be necessary, as the UX portal deployment is not idempotent. However, if you have deployed the using the template for automation, then clean-up of resources will not be necessary as the template is idempotent.
 
 ## Next steps
 

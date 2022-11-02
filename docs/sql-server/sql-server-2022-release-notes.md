@@ -33,7 +33,7 @@ This section identifies known issues you may experience with this product.
 
 #### Help
 
-When you execute `setup /HELP` the information returned does not include the new `/AZUREEXTENSION` feature. Complete information about the features available in `setup` are at [Install SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
+When you execute `setup /HELP` the information returned does not include the new `/AZUREEXTENSION` feature. Complete information for `setup` is at [Install SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 
 #### Localized language interface
 
@@ -64,7 +64,7 @@ The following features are not available in Setup in SQL Server 2022. If specifi
 
 #### Reboot requirement
 
-When installing an initial SQL Server 2022 instance on a Windows Server 2022 machine, if the server does not have `VCRuntime140` version 14.29.30139 or later installed, Setup will require reboot.
+When you install an initial SQL Server 2022 instance on a Windows Server 2022 machine, if the server does not have `VCRuntime140` version 14.29.30139 or later installed, Setup will require reboot.
 
 Windows Server 2022 was released with VCRuntime version 14.28.29914. 
 

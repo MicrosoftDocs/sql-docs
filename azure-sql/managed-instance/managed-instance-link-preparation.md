@@ -17,7 +17,7 @@ ms.topic: guide
 This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
-> Some functionality of the link is generally available, while some is currently in preview. Review the [release status](managed-instance-link-feature-overview.md#release-status) to learn more. 
+> Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
 
 ## Prerequisites 
 
@@ -50,11 +50,11 @@ SELECT @@VERSION as 'SQL Server version'
 
 Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
 
-| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+| SQL Server Version  |  Servicing update requirement |
 |---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | SQL Server 2022 RTM | 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] |  [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
@@ -489,7 +489,7 @@ If you're migrating a SQL Server database protected by Transparent Data Encrypti
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use the Managed Instance link. [Download SSMS version 19, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 

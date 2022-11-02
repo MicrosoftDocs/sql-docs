@@ -8,7 +8,7 @@ ms.reviewer: mathoma, danil
 ms.date: 06/09/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 
 # Prepare SQL Server 2016 prerequisites - Azure SQL Managed Instance link
@@ -16,7 +16,7 @@ ms.topic: guide
 
 This article teaches you how to enable Always On with Windows Server Failover Cluster (WSFC) on your SQL Server 2016 as an extra step to [prepare your environment](managed-instance-link-preparation.md) for Managed Instance link.
 
-Extra steps described in this guide are mandatory for SQL Server 2016 only, as this version of SQL Server can't enable Always On option without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable Always On on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Servers, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
+Extra steps described in this guide are mandatory for SQL Server 2016 only, as this version of SQL Server can't enable availability groups without Windows Server Failover Cluster present on the host Windows OS machine. The minimum requirement to enable availability groups on SQL Server 2016 is to create a local single-node (single machine) cluster. No multiple nodes, and therefore no additional SQL Servers, are required. The link can however also support multiple-node cluster configurations as optional, in case you have this type of environment for any SQL Server version (2016-2022).
 
 ## Install WSFC module on Windows Server
 

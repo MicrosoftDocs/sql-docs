@@ -20,7 +20,7 @@ This article teaches you how to fail over a database from SQL Server to Azure SQ
 Failing over your database from SQL Server 2019 or earlier to SQL Managed Instance breaks the link between the two databases. It stops replication and leaves both databases in an independent state, ready for individual read/write workloads. Failing over from SQL Server 2022 does not break the link, and fail back to SQL Server 2022 is supported - this is currently in preview. 
 
 > [!NOTE]
-> - Some functionality of the link is generally available, while some is currently in preview. Review the [release status](managed-instance-link-feature-overview.md#release-status) to learn more. 
+> - Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
 > -  You can also use a [T-SQL and PowerShell](managed-instance-link-use-scripts-to-failover-database.md) to failover a database with the link. 
 
 ## Prerequisites 
@@ -30,7 +30,7 @@ To fail over your databases to SQL Managed Instance, you need the following prer
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- [SQL Server Management Studio v18.12.1 or later](/sql/ssms/download-sql-server-management-studio-ssms).
+- [SQL Server Management Studio v19 or later](/sql/ssms/download-sql-server-management-studio-ssms).
 - [An environment that's prepared for replication](managed-instance-link-preparation.md).
 - [Setup of the link feature and replication of your database to your managed instance in Azure](managed-instance-link-use-ssms-to-replicate-database.md). 
 

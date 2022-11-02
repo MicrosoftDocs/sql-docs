@@ -86,11 +86,10 @@ MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 
 Consider the following limitations:
 
-- Once the backup portability feature has been disabled for an instance, it's no longer possible to enable it again on that instance. You will have to move your databases to a new instance that has backup portability enabled using a bacpac, or transaction replication. 
 - When restoring to SQL Server, you must use the 'WITH MOVE` qualifier, and provide explicit paths for the data files. 
 - Databases backed up with service-managed TDE keys are not supported with the backup portability feature, and cannot be restored to SQL Server while databases backed up with custom-managed keys can be restored to SQL Server. 
 
-Additionally, in the future, instances that have backup portability enabled may not get SQL Server 2022 database engine updates that impact the backup portability feature. Customers can disable the backup portability feature to get all the latest updates, but should consider the trade off to their business between gaining the new feature while losing the ability to restore their database to SQL Server. 
+In the future, instances that have backup portability enabled may not get database engine updates that impact the backup portability feature. When this happens, you will have the option to disable the backup portability feature to get all the latest updates, but should consider the trade off to your business between gaining the new feature while losing the ability to restore their database to SQL Server. Once disabled, you will not be able to enable backup portability for the managed instance again, and will have to move your database to a new instance that has backup portability enabled if you want to restore it to SQL Server 2022. You can move your database by using a [bacpac](../database/database-import.md), [transactional replication](replication-transactional-overview.md), or the database move/copy feature. 
 
 The following table details the type of updates that will occur if the portability feature is on or off: 
 

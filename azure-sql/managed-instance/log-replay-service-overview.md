@@ -70,6 +70,7 @@ If you're migrating several databases, you need to:
 
 While having `CHECKSUM` enabled for backups is not required, it is highly recommended. Restoring databases without `CHECKSUM` will take longer, as SQL Managed Instance performs an integrity check on backups restored without `CHECKSUM` enabled. 
 
+To get started, review [Migrate with LRS](log-replay-service-migrate.md). 
 
 
 ### Autocomplete versus continuous mode migration
@@ -112,7 +113,7 @@ If migrating large databases of several terrabytes in size, consider the followi
 
 ## Starting the migration
 
-You start the migration by starting LRS. You can start the service in either autocomplete or continuous mode. 
+You start the migration by starting LRS. You can start the service in either autocomplete or continuous mode. For specific details, review [Migrate with LRS](log-replay-service-migrate.md). 
 
 When you use autocomplete mode, the migration completes automatically when the last of the specified backup files have been restored. This option requires the entire backup chain to be available in advance, and uploaded to Azure Blob Storage. It doesn't allow adding new backup files while migration is in progress. This option requires the start command to specify the filename of the last backup file. This mode is recommended for passive workloads for which data catch-up isn't required.
 
@@ -123,6 +124,8 @@ Plan to complete a single LRS migration job within a maximum of 30 days. On expi
 > [!NOTE]
 > When migrating multiple databases, LRS must be started separately for each database pointing to the full URI path of Azure Blob storage container and the individual database folder.
 > 
+
+
 
 
 ## Limitations
@@ -147,6 +150,8 @@ Consider the following limitations of LRS:
 
 
 ## Next steps
+
+To get started, review [Migrate with LRS](log-replay-service-migrate.md). 
 
 - Learn more about [migrating to SQL Managed Instance using the link feature](managed-instance-link-feature-overview.md).
 - Learn more about [migrating from SQL Server to SQL Managed instance](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).

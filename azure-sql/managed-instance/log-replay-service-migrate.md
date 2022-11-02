@@ -41,6 +41,9 @@ Make sure you have the following requirements for SQL Server:
 - Full backup of databases (one or multiple files).
 - Differential backup (one or multiple files).
 - Log backup (not split for a transaction log file).
+- For SQL Server 2008 - SQL Server 2016, take a backup locally and [manually upload](#copy-existing-backups-to-blob-storage) it to Azure Blob Storage. 
+- Starting with SQL Server 2016 and later, you can [take your backup directly](#take-backups-directly-to-blob-storage) to Azure Blob Storage. Starting with SQL Server 2022, you can choose to use a managed identity instead of an SAS token to authenticate to Azure Blob Storage. 
+
 
 While having `CHECKSUM` enabled for backups is not required, it is highly recommended for faster restore operations. 
 
@@ -247,7 +250,7 @@ Once your blob container is ready and you've confirmed your managed instance can
 
 If you're on an older version of SQL Server, or if your environment doesn't support backing up directly to URL, take your backups on SQL Server as you normally would, and then copy them to Azure Blob Storage. 
 
-#### Take backup directly on SQL Server
+#### Take backup on SQL Server
 
 Set databases that you want to migrate to the full recovery model to allow log backups.
 

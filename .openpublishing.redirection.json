@@ -59036,6 +59036,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-plan-forcing-locations.md",
+      "redirect_url": "/sql/relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/azure-data-studio/download.md",
       "redirect_url": "/sql/azure-data-studio/download-azure-data-studio",
       "redirect_document_id": true

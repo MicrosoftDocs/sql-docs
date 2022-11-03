@@ -34,15 +34,17 @@ sections:
           |Basic authentication only|Basic & integrated authentication|
           |Suitable for analytic queries processing large number of rows|Suitable for OLTP queries returning single or few rows|
           |Queries using external table cannot participate in distributed transaction|Distributed queries can participate in distributed transaction|
-      - question: What's new in PolyBase in [!INCLUDE[sssql22](../../includes/sssql22-md.md)]? 
+      - question: What's new in PolyBase in SQL Server 2022? 
         answer: |
           [!INCLUDE[sssql22](../../includes/sssql22-md.md)] now supports CSV, Parquet, and Delta files stored on Azure Storage Account v2, Azure Data Lake Storage Gen2, or any S3–compliant object storage using the S3 REST API, on-premises or in the cloud.
 
           [!INCLUDE[sssql22](../../includes/sssql22-md.md)] can now use CREATE EXTERNAL TABLE as SELECT (CETAS), together with commands like OPENROWSET, CREATE EXTERNAL TABLE (CET), and all the new T-SQL enhancements. 
           
+          Currently, support for Hadoop external data sources has been removed in [!INCLUDE[sssql22](../../includes/sssql22-md.md)].
+
           Read more on [Data Virtualization with PolyBase for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/10/05/data-virtualization-with-polybase-for-sql-server-2022/) and review [SQL Server 2022 PolyBase enhancements](polybase-guide.md#sql-server-2022-polybase-enhancements).
 
-      - question: What's new in PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)]? 
+      - question: What's new in PolyBase in SQL Server 2019? 
         answer: |
           PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be stored as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
           

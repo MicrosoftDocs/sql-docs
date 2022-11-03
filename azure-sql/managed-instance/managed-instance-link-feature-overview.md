@@ -86,6 +86,8 @@ You must sign up to get access to the limited public preview of this feature:
 > [!div class="nextstepaction"]
 > [Preview DR with SQL Server 2022](https://aka.ms/mi-link-dr-preview-signup)
 
+To learn more about limited public preview of the DR feature, see https://aka.ms/mi-link-dr-preview-announcement.
+
 ## Requirements
 
 To use the link feature, you'll need a supported Enterprise, Standard, or Developer edition of SQL Server running on Windows Server. 

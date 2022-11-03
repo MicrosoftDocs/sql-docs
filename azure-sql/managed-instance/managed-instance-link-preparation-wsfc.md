@@ -140,5 +140,5 @@ GO
 
 ## Next steps
 
-- Continue environment preparation for the link by returning to [enable Always On on your SQL Server](managed-instance-link-preparation.md#enable-availability-groups) section in prepare your environment for a link guide.
+- Continue environment preparation for the link by returning to [enable availability groups on your SQL Server](managed-instance-link-preparation.md#enable-availability-groups) section in prepare your environment for a link guide.
 - To learn more about configuring multiple-node WSFC (not mandatory, and only optional for the link), see [Create a failover cluster](/windows-server/failover-clustering/create-failover-cluster) guide for Windows Server.

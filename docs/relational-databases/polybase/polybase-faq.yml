@@ -13,7 +13,7 @@ metadata:
 
 title: Frequently asked questions
 summary: |
-   [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+   [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
   
 
 sections:

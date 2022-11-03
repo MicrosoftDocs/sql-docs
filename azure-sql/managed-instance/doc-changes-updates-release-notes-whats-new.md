@@ -29,6 +29,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 | Feature | Details |
 | ---| --- |
 |[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
+|[Database copy and move](database-copy-move-how-to.md) | Perform an online database copy or move operation across managed instances. | 
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
 |[Managed Instance link](managed-instance-link-feature-overview.md)| Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. |
@@ -68,6 +69,12 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation.
+
+### November 2022
+
+| Changes | Details |
+| --- | --- |
+| **Database copy and move preview** | Perform an online copy or move operation of your database across managed instances. This feature is currently in preview. To learn more, review [Copy or move your database](database-copy-move-how-to.md). | 
 
 ### October 2022
 

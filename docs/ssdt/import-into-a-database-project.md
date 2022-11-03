@@ -9,7 +9,6 @@ f1_keywords:
   - "SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

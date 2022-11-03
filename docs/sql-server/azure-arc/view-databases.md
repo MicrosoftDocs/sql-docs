@@ -1,6 +1,6 @@
 ---
 title: View SQL Server databases
-description: View databases in Azure for instance of Azure Arc-enabled SQL Server. Use to help manage SQL Server databases centrally, as Arc-enabled resources.
+description: View databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to help manage SQL Server databases centrally, as Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray

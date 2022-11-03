@@ -71,6 +71,10 @@ The link feature also facilitates migrating from SQL Server to SQL Managed Insta
 
 Since the link feature enables minimum downtime migration, you can migrate to your managed instance while maintaining your primary workload online. While online migration was possible to achieve previously with other solutions when migrating to the General Purpose service tier, the link feature now also allows for true online migrations to the Business Critical service tier as well. 
 
+### Automated backups 
+
+Once your databases are replicated to SQL Managed Instance, they are automatically backed up to Azure Blob Storage with Azure backup. You can reduce your on-premises management and operation costs while enjoying the reliability of Azure backup for your replicated databases. You can then perform a [point-in-time restore](point-in-time-restore.md) of your replicated database to any SQL Managed Instance in the same region, as with any other [automated backup](automated-backups-overview.md). 
+
 ### Disaster recovery 
 
 SQL Server 2022 customers can use the Managed Instance link for the purpose of disaster recovery, where, in the event of a disaster, you can manually fail your workload over to Azure SQL Managed Instance. Once the disaster is mitigated, you can fail back over to your SQL Server 2022 instance. This feature is currently in limited public preview. 

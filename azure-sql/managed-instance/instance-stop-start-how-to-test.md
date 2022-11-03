@@ -28,6 +28,15 @@ This features introduces three new managed instance states, as the diagram indic
 
 :::row:::
     :::column:::
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
         - Stopping
         - Stopped
         - Starting

@@ -73,7 +73,7 @@ Since the link feature enables minimum downtime migration, you can migrate to yo
 
 ### Disaster recovery 
 
-SQL Server 2022 customers can use the Managed Instance link for the purpose of disaster recovery, where, in the event of a disaster, you can manually fail your workload over to Azure SQL Managed Instance. Once the disaster is mitigated, you can fail back over to your SQL Server 2022 instance. 
+SQL Server 2022 customers can use the Managed Instance link for the purpose of disaster recovery, where, in the event of a disaster, you can manually fail your workload over to Azure SQL Managed Instance. Once the disaster is mitigated, you can fail back over to your SQL Server 2022 instance. This feature is currently in limited public preview. 
 
 :::image type="content" source="media/managed-instance-link-feature-overview/disaster-recovery-scenario.png" alt-text="Diagram showing the disaster recovery scenario":::
 

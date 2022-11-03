@@ -9,7 +9,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: seodec18
-ms.date: 10/17/2022
+ms.date: 11/2/2022
 ---
 
 # Discontinued functionality in SQL Server Reporting Services (SSRS)
@@ -24,15 +24,19 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2022-and-later](../includes/ssrs-appliesto-2022-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
+These features are discontinued and no longer available in SQL Server 2022 Reporting Services and Power BI Report Server September 2022.
+
+| **Category** | **Discontinued feature** | **Replacement** |
+| --- | --- | --- |
+| Report Server | Mobile Reports and Mobile Report Publisher | Power BI reports in Power BI Report Server offer mobile capabilities. |
+| Report Server | Pin to Power BI | Paginated report support is now available directly in the Power BI service.  |
+
 These features are discontinued and no longer available in SQL Server 2022 Reporting Services.
 
-| **Category** | **Deprecated feature** | **Replacement** |
+| **Category** | **Discontinued feature** | **Replacement** |
 | --- | --- | --- |
-| Report Server | Report Part Gallery | None |
-| Report Server | Mobile Reports and Mobile Report Publisher | Power BI reports in Power BI Report Server offer mobile capabilities. |
 | Report Server | XLS and DOC render formats | XLSX and DOCX formats are available and supported. |
 | Report Server | Atom Data Feed | oData feed support is available for shared datasets in SSRS and Power BI Report Server. |
-| Report Server | Pin to Power BI | Paginated report support is now available directly in the Power BI service.  |
 
 ::: moniker-end
 
@@ -44,7 +48,7 @@ These features are discontinued and no longer available in SQL Server 2022 Repor
 
 These features that are no longer available in SQL Server 2019 Reporting Services. 
 
-| Category | Deprecated feature | Replacement |
+| Category | Discontinued feature | Replacement |
 | --- | --- | --- |
 | Report Server | HTML 4.0 Renderer | HTML 5 renderer |
 | Report Server | Customized style sheets for HTML Viewer and  Report Manager | You can still [brand the web portal](branding-the-web-portal.md). |

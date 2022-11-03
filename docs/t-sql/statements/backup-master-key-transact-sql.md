@@ -63,9 +63,13 @@ BACKUP MASTER KEY TO
 
  The master key must be open and, therefore, decrypted before it's backed up. If it's encrypted with the service master key, the master key doesn't have to be explicitly opened. But if the master key is encrypted only with a password, it must be explicitly opened.  
   
- We recommend that you back up the master key as soon as it's created, and store the backup in a secure, off-site location.  
-  
- If you're using [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and want to back up the database master key to an Azure Blob storage, the following prerequisites apply:
+ Back up the master key as soon as it's created, and store the backup in a secure, off-site location.  
+
+## Authenticate to Azure Blob storage
+
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
+
+To back up the database master key to an Azure Blob storage, the following prerequisites apply:
 
 1. Have an [Azure storage account](/azure/storage/common/storage-account-create).
 1. [Create stored access policy and shared access storage](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).

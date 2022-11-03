@@ -190,13 +190,22 @@ SELECT * FROM sys.dm_exec_query_stats
 Run this command in the virtual `master` database to see all Azure AD logins that are part of server-level roles in SQL Database. For more information on Azure AD server logins, see [Azure Active Directory server principals](authentication-azure-ad-logins.md).
 
 ```sql
-SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
-       server_role_members.member_principal_id AS MemberPID, members.name AS MemberPName
-       FROM sys.server_role_members AS server_role_members
-       INNER JOIN sys.server_principals AS roles
-       ON server_role_members.role_principal_id = roles.principal_id
-       INNER JOIN sys.server_principals AS members 
-       ON server_role_members.member_principal_id = members.principal_id;
+SELECT
+		member.principal_id			AS MemberPrincipalID
+	,	member.name					AS MemberPrincipalName
+	,	roles.principal_id			AS RolePrincipalID
+	,	roles.name					AS RolePrincipalName
+FROM sys.server_role_members AS server_role_members
+INNER JOIN sys.server_principals	AS roles
+    ON server_role_members.role_principal_id = roles.principal_id
+INNER JOIN sys.server_principals	AS member 
+    ON server_role_members.member_principal_id = member.principal_id
+LEFT OUTER JOIN sys.sql_logins		AS sql_logins 
+    ON server_role_members.member_principal_id = sql_logins.principal_id
+WHERE member.principal_id NOT IN (-- prevent SQL Logins from interfering with resultset
+	SELECT principal_id FROM sys.sql_logins AS sql_logins
+		WHERE member.principal_id = sql_logins.principal_id)
+; 
 ```
 
 ### E. Check the virtual master database roles for specific logins

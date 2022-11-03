@@ -280,7 +280,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Fix an issue that can't add expression to precedence constraint when using package part. |
 | Integration Services (SSIS) | Fix an issue that the “Help” button of Power Query Source & Connection Manager doesn’t link to the correct document. |
 | Integration Services (SSIS) | ix an issue that SSIS build version isn't displayed in VS help window. |
-| Integration Services (SSIS) | Add the property “ConnectByProxy” for Ole DB and Flat File connection manager, which can enable access on-premise data with Self-hosted IR in Azure-SSIS IR. |
+| Integration Services (SSIS) | Add the property “ConnectByProxy” for Ole DB and Flat File connection manager, which can enable access on-premises data with Self-hosted IR in Azure-SSIS IR. |
 | Integration Services (SSIS) | Fix an issue that ODBC components map to DT_DBDATE data type incorrectly. |
 | Integration Services (SSIS) | Add the property “ConnectUsingManagedIdentity” for ADO.NET and OLE DB connection manager, which enable managed identity authentication to connect to data source in Azure-SSIS IR. |
 

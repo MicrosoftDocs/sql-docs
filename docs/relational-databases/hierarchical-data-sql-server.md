@@ -200,7 +200,7 @@ CREATE TABLE SimpleDemo
 );
 ```  
   
- Now insert data for some continents, countries, states, and cities.  
+ Now insert data for some continents, countries/regions, states, and cities.  
   
 ```sql
 INSERT SimpleDemo  

@@ -56,7 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 
 ## Remarks
 
-More than one plan can be forced when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled.
+More than one plan can be forced when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled.
 
 ## Plan forcing limitations
 

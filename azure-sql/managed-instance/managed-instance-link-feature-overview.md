@@ -77,12 +77,10 @@ SQL Server 2022 customers can use the Managed Instance link for the purpose of d
 
 :::image type="content" source="media/managed-instance-link-feature-overview/disaster-recovery-scenario.png" alt-text="Diagram showing the disaster recovery scenario":::
 
-This feature is currently in limited public preview. 
+You must sign up to get access to the limited public preview of this feature: 
 
 > [!div class="nextstepaction"]
-> [Click here to sign-up to preview DR with SQL Server 2022](https://aka.ms/mi-link-dr-preview-signup)
-
-To learn more about limited public preview of the DR feature, review [https://aka.ms/mi-link-dr-preview-announcement](https://aka.ms/mi-link-dr-preview-announcement).
+> [Preview DR with SQL Server 2022](https://aka.ms/mi-link-dr-preview-signup)
 
 ## Requirements
 

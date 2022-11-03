@@ -35,7 +35,7 @@ Moving or copying your database is useful to:
 
 - Manage database growth and performance requirements
 - Balance workloads across multiple managed instances. 
-- Move databases to an instance with more available resources to handle the workload 
+- Move databases to an instance with more available resources to handle the workload.
 - Consolidate multiple databases from a a number of smaller instances. 
 - Create database parity between dev, test, and production environments. 
 
@@ -45,9 +45,15 @@ The following details the workflow when you move or copy the database:
 
 1. Choose the database, source managed instance, destination instance, and start the operation. 
 1. The database gets seeded to the destination server. Check the status to determine if the operation is in progress, or if it has succeeded. 
-1. After seeding completes, the operation state shows as **ready for completion**. You have 24 hours to explicitly complete the operation. Until the operation completes, all changes that happen to the source database are applied to the destination database. 
+1. After seeding completes, the operation state shows as **ready for completion**. Until the operation completes, all changes that happen to the source database are applied to the destination database. You can cancel the operation at any time. You have 24 hours to explicitly complete the operation. If you don't complete the operation within 24 hours, it's automatically cancelled, and the destination database is dropped. 
 1. At the moment you complete the operation, your destination database comes online and is ready for read/write workloads. 
 1. If you chose to move the database, the source database gets dropped. If you chose to copy the database, the source database remains online, but data replication stops. 
+
+The following diagram shows the workflow for a move operation: 
+
+:::image type="content" source="media/database-copy-move-how-to/database-move-diagram-png.png" alt-text="Diagram showing the workflow of a move operation":::
+
+
 
 ## Requirements 
 
@@ -64,20 +70,20 @@ You can copy or move your database to another managed instance by using the Azur
 To copy or move your database, follow these steps: 
 
 1. Go to your managed instance in the [Azure portal](https://portal.azure.com).
-1. Select **Databases** under data management, and then choose either the **Copy** or **Move** options at the top navigation bar. Choosing **Move** drops the source database when the operation completes, whereas **Copy** leaves the source database online when the operation completes. 
+1. Select **Databases** under data management, choose a database, and then select either the **Copy** or **Move** options at the top navigation bar. Choosing **Move** drops the source database when the operation completes, whereas **Copy** leaves the source database online when the operation completes. 
 
    :::image type="content" source="media/database-copy-move-how-to/start-move-copy-operation.png" alt-text="Screenshot of the Azure portal, databases page for Azure SQL Managed Instance, with move and copy highlighted. ":::
 
-1. Selecting either option opens the **Move Managed Database** or the **Copy Managed Database** page. 
+1. Selecting either option opens the relative **Move Managed Database** or **Copy Managed Database** page. 
 1. You can select additional databases to include in the operation on either page. 
 1. Provide details for the source database and managed instance on the **Source details** tab. 
 1. Provide details for the destination managed instance on the **Destination details** tab. 
 1. Select **Review + Start** to validate your source and destination details, and then select **Start** to begin the operation. 
 1. Selecting **Start** takes you back to the **Databases** page of your instance, where you can monitor the progress of the operation under **Operation details**. 
-1. During seeding, the **Operation details** displays **Move/Copy in progress**. 
+1. During seeding, the **Operation details** displays **Move/Copy in progress**. If you need to cancel, you can select the **In progress**, choose the database of interest, and select **Cancel operation** to stop seeding, and drop the destination database. 
 1. After seeding completes, the **Operation details** displays **Move/Copy ready for completion**. 
-1. Select **Ready for completion** to open the operation details pane, choose the database(s) you're ready to copy or move, and then select **Complete** once you're ready to finalize the operation and bring the destination database online. Changes made to the source database are replicated to the destination database during this time, until you select **Complete**. 
-1. Selecting **Complete** finalizes the operation and takes you back to the **Databases** page, where you can see that the operation completed, and, if  you chose move, the database will be grayed out as it's now offline. 
+1. Select **Ready for completion** to open the operation details pane, choose the database(s) you're ready to copy or move, and then select **Complete** once you're ready to finalize the operation and bring the destination database online. Changes made to the source database are replicated to the destination database during this time, until you select **Complete**. If you don't complete the operation within 24 hours, it's automatically cancelled, and the destination database is dropped. 
+1. Selecting **Complete** finalizes the operation and takes you back to the **Databases** page, where you can see the operation completed, and, if you chose move, the database is grayed out as it's now offline. 
 
 
 ## Limitations

@@ -1291,8 +1291,8 @@
       href: managed-instance/how-to-content-reference-guide.md      
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
-    - name: Move or copy a database
-      href: managed-instance/database-move-copy-how-to.md
+    - name: Copy or move a database
+      href: managed-instance/database-copy-move-how-to.md
     - name: Job automation with SQL Agent 
       href: managed-instance/job-automation-managed-instance.md
     - name: Monitor & Tune

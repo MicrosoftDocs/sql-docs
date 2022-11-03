@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current"
  This view is only available in the **master** database to the server-level principal login.  
   
 ## Remarks  
- To use this view, you must be connected to the **master** database. Use the `sys.dm_operation_status` view in the **master** database of the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server to track the status of the following operations performed on a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
+ To use this view, you must be connected to the `master` database. Use the `sys.dm_operation_status` view in the `master` database of the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server to track the status of the following operations performed on a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   Create database  
   
@@ -70,17 +70,18 @@ monikerRange: "=azuresqldb-current"
 The information in this view is retained for approximately 1 hour. Please use the [Azure Activity Log](/azure/azure-monitor/platform/activity-log) to view details of operations in the last 90 days. For retention more than 90 days, consider [sending Activity Log](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) entries to a Log Analytics workspace.
 
 ## Example  
- Show most recent geo-replication operations associated with database 'mydb'.  
+
+Show most recent geo-replication operations associated with database `mydb`:
   
-```  
+```sql
 SELECT * FROM sys.dm_operation_status   
    WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  
   
-## See Also  
- [Geo-Replication Dynamic Management Views and Functions &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
-  
+## Next steps
+
+- [Geo-Replication Dynamic Management Views and Functions &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+- [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+- [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)

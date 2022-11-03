@@ -33,13 +33,9 @@ This features introduces three new managed instance states, as the diagram indic
         </br>
         </br>
         </br>
-        </br>
-        </br>
-        </br>
-        </br>
-        - Stopping
-        - Stopped
-        - Starting
+        </br>- Stopping
+        </br>- Stopped
+        </br>- Starting
     :::column-end:::
     :::column:::
         ![Diagram showing the different states of SQL Managed Instance.](media/instance-stop-start-how-to/sql-managed-instance-states.png)

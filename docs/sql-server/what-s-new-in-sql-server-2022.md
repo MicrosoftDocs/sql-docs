@@ -39,17 +39,6 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 
-This release:
-
-- Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
-- Doesn't include support from Microsoft, except for select Early Adoption Program customers.
-
-After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
-
-RC 1 introduces [Hybrid buffer pool with direct write](#platform) as well as other improvements.
-
 ## Feature highlights
 
 The following sections identify features that are improved our introduced in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
@@ -75,7 +64,7 @@ The following sections identify features that are improved our introduced in [!I
 
 | New feature or update | Details |
 |:---|:---|
-| Link to Azure SQL Managed Instance | Connect your SQL Server instance to Azure SQL Managed Instance. See [Link feature for Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). To experience this feature, you can [register here](https://aka.ms/mi-link-2022-signup).|
+| Link to Azure SQL Managed Instance | Connect your SQL Server instance to Azure SQL Managed Instance. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview).|
 |Contained availability group | Create an Always On availability group that:<br/>- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level. <br/>- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)|
 |Distributed availability group |- Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
 | Improved backup metadata | `backupset` system table returns last valid restore time. See [backupset (Transact-SQL)](../relational-databases/system-tables/backupset-transact-sql.md).|

@@ -266,8 +266,8 @@ From the **Start/Stop Schedule** page you can:
 
 ### [PowerShell](#tab/azure-powershell)
 
-Creating a schedule relies on the startStopSchedules API call: 
 
+### Create or update schedule
 
 
 To create or update a schedule to stop or start an instance by using PowerShell, run the following sample script: 
@@ -293,6 +293,8 @@ $instanceScheduleBody = ConvertTo-Json -InputObject $requestBody -Depth 3
 # Invoke API call to start the operation
 Invoke-WebRequest -Method Put -Headers $authHeader -Uri $instanceCreateScheduleUri -Body $instanceScheduleBody
 ```
+
+Creating a schedule relies on the startStopSchedules API call: 
 
 `PUT
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/

@@ -26,8 +26,6 @@ Stopping an instance clears all cached data.
 
 This features introduces three new managed instance states, as the diagram indicates:
 
-:::image type="content" source="media/instance-stop-start-how-to/sql-managed-instance-states.png" alt-text="Diagram showing the different states of SQL Managed Instance.":::
-
 :::row:::
     :::column:::
         - Stopping

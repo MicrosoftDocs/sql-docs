@@ -82,7 +82,7 @@ To exchange DNS suffixes, follow these steps:
    Set-DnsClientGlobalSetting -SuffixSearchList $list
    ```
 
-## Troubleshoot network and DNS settings 
+## Test network connectivity
 
 After networking and DNS is properly configured, you should be able to run [Test-NetConnection (TNC)](/powershell/module/nettcpip/test-netconnection) between the DTC endpoints of your managed instance and the external DTC host. 
 

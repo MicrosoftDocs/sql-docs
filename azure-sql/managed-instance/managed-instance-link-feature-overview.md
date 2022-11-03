@@ -109,7 +109,7 @@ You'll also need the following tooling:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 19](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup for SQL Server 2016, 2019, and 2022. The ability to use SSMS to fail back from SQL MI to SQL Server 2022 is only available in limited public preview. Sgn up at [https://aka.ms/mi-link-dr-preview-signup](https://aka.ms/mi-link-dr-preview-signup). |
+| [SSMS 19.0](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup for SQL Server 2016, 2019, and 2022. The ability to use SSMS to fail back from SQL MI to SQL Server 2022 is only available in limited public preview. Sgn up at [https://aka.ms/mi-link-dr-preview-signup](https://aka.ms/mi-link-dr-preview-signup). |
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]

@@ -27,7 +27,7 @@ Before you begin, verify that the SQL Server instance that hosts the databases:
 
 1. Locate the Azure Arc-enabled SQL Server instance in Azure portal
 1. **Select** the SQL Server resource.
-1. Under **Data management** select **Databases**.
+1. Under **Data management**, select **Databases**.
 
    :::image type="content" source="media/view-databases/databases.png" alt-text="Screenshot of Azure portal, SQL Server databases - Azure Arc.":::
 

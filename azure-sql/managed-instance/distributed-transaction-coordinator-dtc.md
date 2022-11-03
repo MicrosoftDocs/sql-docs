@@ -1,7 +1,7 @@
 ---
 title: Distributed Transaction Coordinator (DTC) (preview)
 titleSuffix: Azure SQL Managed Instance
-description: Learn about the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview) to run distributed transactions in heterogeneous environments, across managed instances, SQL Servers, 3rd party relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
+description: Learn about the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview) to run distributed transactions in heterogeneous environments, across managed instances, SQL Servers, third-party relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
 author: sasapopo
 ms.author: dansasapopoil
 ms.reviewer: mathoma, danil
@@ -13,13 +13,13 @@ ms.topic: how-to
 # Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance, which allows you to run distributed transactions in heterogeneous environments, across managed instances, SQL Servers, 3rd party relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
+This article provides an overview of the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance, which allows you to run distributed transactions in heterogeneous environments, across managed instances, SQL Servers, third-party relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
 
 Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance is currently in preview. 
 
 ## Overview 
 
-Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance allows you to run distributed transactions across a number of environments that can establish network connectivity to Azure. DTC for managed instance is **managed**, which means that the service takes care of management and maintenance, such as logging, storage, DTC availability, networking, etc. Aside from the managed aspect, it's still the same [DTC windows service](/previous-versions/windows/desktop/ms684146(v=vs.85) that supports traditional distributed transactions for SQL Server. 
+Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance allows you to run distributed transactions across a number of environments that can establish network connectivity to Azure. DTC for managed instance is **managed**, which means that Azure takes care of management and maintenance, such as logging, storage, DTC availability, networking, etc. However, aside from the managed aspect, it's still the same [DTC windows service](/previous-versions/windows/desktop/ms684146(v=vs.85)) that supports traditional distributed transactions for SQL Server. 
 
 DTC for managed instance unlocks a wide range of technologies and scenarios, such as XA, .NET, T-SQL, COM+, ODBC, and JDBC. 
 
@@ -58,7 +58,7 @@ Ports 135 and 1024-65535 need to allow both inbound and outbound communication -
 
 ## DNS settings 
 
-DTC relies on the NetBIOS name for mutual communication. Since the NetBIOS protocol isn't supported by Azure networking, and NetBIOS names can't be resolved in heterogenous environments, DTC for managed instance relies on DNS name servers for host name resolution. As such, managed instance DTC hosts are automatically registered with the Azure DNS server, and you need to register external DTC hosts with some DNS server. Additionally, the managed instance and external environment need to exchange DNS suffixes.
+DTC relies on the NetBIOS name for mutual communication. Since the NetBIOS protocol isn't supported by Azure networking, and NetBIOS names can't be resolved in heterogenous environments, DTC for managed instance relies on DNS name servers for host name resolution. As such, managed instance DTC hosts are automatically registered with the Azure DNS Server, and you need to register external DTC hosts with some DNS server. Additionally, the managed instance and external environment need to exchange DNS suffixes.
 
 The following diagram shows name resolution across heterogenous environments: 
 
@@ -72,9 +72,9 @@ To exchange DNS suffixes, follow these steps:
 1. Go to your managed instance in the [Azure portal](https://portal.azure.com). 
 1. Select **Distributed Transaction Coordinator** under **Settings** and then open the **Networking** tab. 
 
-  :::image type="content" source="media/distributed-transaction-coordinator-dtc/dtc-network-settings.png" alt-text="Screenshot of the Azure portal, Distributed Transaction Coordinator page for you managed instance, with the networking tab selected, and the DNS suffix, and +New external DNS suffix highlighted.":::
+   :::image type="content" source="media/distributed-transaction-coordinator-dtc/dtc-network-settings.png" alt-text="Screenshot of the Azure portal, Distributed Transaction Coordinator page for you managed instance, with the networking tab selected, and the DNS suffix, and +New external DNS suffix highlighted.":::
 
-1. Select **+New external DNS suffix**, and then provide the DNS suffix for your external environment. 
+1. Select **+New external DNS suffix**, and then provide the DNS suffix for your external environment, such as `dnszone1.com`.
 1. Copy the _DTC Host DNS suffix_ value and then use the PowerShell command `Set-DnsClientGlobalSetting -SuffixSearchList $list` on your external environment to set the DTC Host DNS suffix. For example, if your suffix is abc1111111.database.windows.net as in the previous sample screenshot, then define your $list parameter to get the existing DNS settings, and append your suffix to it like the following sample: 
   
    ```powershell
@@ -95,9 +95,9 @@ First, update the user configurable values and then use the following PowerShell
 # User configurable values 
 # 
 
-$SubscriptionId = "e775c3cd-e8af-412b-a951-d74761b2ebdf" 
-$RgName = "rgroup1" 
-$MIName = "ddhsqlmi1" 
+$SubscriptionId = "a1a1a1a1-8372-1d28-a111-1a2a31a1a1a1" 
+$RgName = "my-instance-name" 
+$MIName = "my-instance-name" 
 
 # =============================================================== 
 # 
@@ -131,19 +131,18 @@ The JSON output will look something like the following FQDN: `chn000000000000.zc
 
 Next, run a TNC to both the FQDN and the NetBIOS name of the DTC host managed instance on port 135. 
 
-The first entry verifies network connectivity, and the second entry verifies correct DNS settings are in place: 
+The first entry verifies network connectivity, and the second entry verifies the DNS settings are correct: 
 
 ```
 tnc chn000000000000.zcn111111111.database.windows.net -Port 135 
 tnc chn000000000000 -Port 135 
 ```
 
-
-You will see **TcpTestSucceeded : True** as a result if connectivity and DNS suffixes are configured correctly. 
+You'll see **TcpTestSucceeded : True** as a result if connectivity and DNS suffixes are configured correctly. 
 
 Likewise, on the managed instance side, create a SQL Agent job to run the TNC PowerShell command to test connectivity to your external host. 
 
-For example, if the FQDN for your external host is `host10.dnszone1.com`, then run the following test: 
+For example, if the FQDN for your external host is `host10.dnszone1.com`, then run the following test via your SQL Agent job: 
 
 ```
 tnc host10.dnszone1.com -Port 135 
@@ -154,14 +153,14 @@ tnc host10 -Port 135
 
 Consider the following limitations when using DTC with SQL Managed Instance: 
 
-- Running distributed T-SQL transactions between SQL Managed Instance and 3rdd party RDBMSs isn't supported, as SQL Managed Instance does not support linked servers with 3rd party RDBMSs. Running distributed T-SQL transactions between manges instances and SQL Server, and other SQL Server-based products is supported. 
+- Running distributed T-SQL transactions between SQL Managed Instance and third-party RDBMSs isn't supported, as SQL Managed Instance doesn't support linked servers with third-party RDBMSs. Conversely, running distributed T-SQL transactions between managed instances and SQL Server, and other SQL Server-based products is supported. 
 - Host names in external environment can't be longer than 15 characters. 
-- Distributed transactions to Azure SQL Database are not supported with DTC. 
-- DTC only supports the **No authentication** option. Mutual authentication and Incoming Caller authentication options aren't available. Since DTC only exchanges synchronization messages rather than user data, and communicates solely with the VNet, this is not a security risk. 
+- Distributed transactions to Azure SQL Database aren't supported with DTC. 
+- For authentication, DTC only supports the **No authentication** option. Mutual authentication and Incoming Caller authentication options aren't available. Since DTC only exchanges synchronization messages rather than user data, and communicates solely with the VNet, this isn't a security risk. 
 
 
 
 ## Next steps
 
-For native managed instance distributed transaction support, review [Elastic transactions](elastic-transactions-overview.md). 
+For native managed instance distributed transaction support, review [Elastic transactions](../database/elastic-transactions-overview.md). 
 

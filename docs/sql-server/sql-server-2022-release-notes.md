@@ -37,7 +37,7 @@ When you execute `setup /HELP` the information returned does not include the new
 
 #### Localized language interface
 
-In certain localized languages, the Azure Extension configuration screen controls may be partially overwritten or missing. To resolve issue, expand or maximize the Setup window from the default window sizing. This will be resolved in Cumulative Update 1 (CU 1) and later. If you install a SQL Server 2022 instance as a Slipstream installation (`/UPDATESOURCE=`) with CU 1 or later, this issue will not be present.
+In certain localized languages, the Azure Extension configuration screen controls may be partially overwritten or missing. To resolve issue, expand or maximize the Setup window from the default window sizing.
 
 #### Software Assurance installation parameter
 
@@ -49,18 +49,26 @@ There is a new Setup command line installation parameter - `/PRODUCTCOVERDBYSA`.
 
 The following features are not available in Setup in SQL Server 2022. If specified in command line installations or scripts, these previously supported parameters may fail.
 
-- `\PolyBaseJava`
-- `\SQL_INST_MR`
-- `\SQL_INST_JAVA`
-- `\SQL_INST_MPY`
-- `\SQLJAVADIR`
-- `\SQL_SHARED_MPY`
-- `\SNAC_SDK`
-- `\SQL_SHARED_MR`
-- `\SDK`
-- `\DREPLAY_CTLR`
-- `\TOOLS`
-- `\DREPLAY_CLT`
+:::row:::
+    :::column:::
+     - `\PolyBaseJava`
+     - `\SQL_INST_MR`
+     - `\SQL_INST_JAVA`
+     - `\SQL_INST_MPY`
+    :::column-end:::
+    :::column:::
+     - `\SQLJAVADIR`
+     - `\SQL_SHARED_MPY`
+     - `\SNAC_SDK`
+     - `\SQL_SHARED_MR`
+    :::column-end:::
+    :::column:::
+     - `\SDK`
+     - `\DREPLAY_CTLR`
+     - `\TOOLS`
+     - `\DREPLAY_CLT`
+    :::column-end:::
+:::row-end:::
 
 #### Reboot requirement
 

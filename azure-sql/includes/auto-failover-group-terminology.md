@@ -43,4 +43,4 @@ ms.topic: include
 
 - **Grace period with data loss**
 
-  Because the data is replicated to the secondary database using asynchronous replication, an automatic geo-failover may result in data loss. You can customize the automatic failover policy to reflect your application’s tolerance to data loss. By configuring `GracePeriodWithDataLossHours`, you can control how long the system waits before initiating a forced failover, which may result in data loss.
+  Because the data is replicated to the secondary database using asynchronous replication, an automatic geo-failover may result in data loss. You can customize the automatic failover policy to reflect your application's tolerance to data loss. By configuring `GracePeriodWithDataLossHours`, you can control how long the system waits before initiating a forced failover, which may result in data loss.

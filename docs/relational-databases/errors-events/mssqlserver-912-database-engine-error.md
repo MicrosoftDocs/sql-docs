@@ -69,7 +69,7 @@ To find the cause of the issue, follow these steps:
 1. Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in **SQL Server Services**.
 1. Right-click the instance, and then select **Properties**.
 1. Select the **Startup Parameters** tab.
-1. Use the **Specify a startup parameter** field to add the trace flag. Type “-T902” (without quotes) and click **Add**.
+1. Use the **Specify a startup parameter** field to add the trace flag. Type "-T902" (without quotes) and click **Add**.
 1. Select **OK** and close instance properties.
 1. Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.
 

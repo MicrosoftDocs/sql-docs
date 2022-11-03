@@ -175,7 +175,7 @@ neural networks as well as in cases where training produces unbounded weights.
 ### acceleration
 
 Specifies the type of hardware acceleration to use.
-Possible values are “sse_math” and “gpu_math”.
+Possible values are "sse_math" and "gpu_math".
 For GPU acceleration, it is recommended to use a miniBatchSize
 greater than one. If you want to use the GPU acceleration, there are
 additional manual setup steps are required:
@@ -298,7 +298,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenvis used instead.
 
 

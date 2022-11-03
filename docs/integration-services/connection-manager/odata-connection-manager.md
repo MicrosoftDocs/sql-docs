@@ -60,7 +60,7 @@ To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you
   
 |Property|Default Value|Description|  
 |-|-|-|
-|Keep Alive|False|Value of the “Keep-Alive” header when sending web request.|
+|Keep Alive|False|Value of the "Keep-Alive" header when sending web request.|
 |Max Received Message Size|4TB|The max received message size in byte when sending web request.|
 |Retry Count|5|Retry count when sending web request.|
 |Retry Sleep|100|Sleep time in millisecond for retry when sending web request.|

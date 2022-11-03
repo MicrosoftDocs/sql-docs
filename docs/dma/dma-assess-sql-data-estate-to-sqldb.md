@@ -41,7 +41,7 @@ An Azure Migrate project is used to store discovery, assessment, and migration m
 
    ![Azure Migrate - add tools](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
-5. On the **Migrate project** tab, select your Azure subscription and resource group (if you don’t already have a resource group, create one).
+5. On the **Migrate project** tab, select your Azure subscription and resource group (if you don't already have a resource group, create one).
 6. Under **Project Details**, specify the project name and the geography in which you want to create the project.
 
     ![Azure Migrate - add a tool dialog box](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)

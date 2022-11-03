@@ -105,4 +105,4 @@ clients require authentication. The *auth* is  **required** for
 ### use
 
 (required) Deployment implementation to use (ex)
-*use=’MLServer’* to use The ML Server.
+*use='MLServer'* to use The ML Server.

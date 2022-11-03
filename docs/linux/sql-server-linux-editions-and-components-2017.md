@@ -190,9 +190,6 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Transact-SQL endpoints|Yes|Yes|Yes|No|
 |Graph|Yes|Yes|Yes|Yes|  
 
-
-<sup>1</sup> Scale out with multiple compute nodes requires a head node.
-
 ## <a name="IS"></a> Integration Services
 
 For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services features supported by the editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).

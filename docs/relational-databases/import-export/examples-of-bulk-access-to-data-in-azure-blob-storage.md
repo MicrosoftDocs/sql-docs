@@ -110,6 +110,18 @@ WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
       FORMAT = 'CSV');
 ```
 
+
+> [!Note]  
+>  Validate the firewall setting on the Azure storage account. If the firewall is enabled by selecting the `Enabled from selected virtual networks and IP addresses` for  `Public network access` under `Networking` page of Storage account, then
+>  -	Any request from SQL PaaS service (`Azure SQL Database & Azure SQL Managed Instance(SQL MI)`) which uses the `SHARED ACCESS SIGNATURE(SAS)` token to access storage account would get blocked as Azure SQL Database & SQL MI are `currently` not part of Azure trusted services, you might see the below error message for the read operation using bulk insert:
+>  ```sql
+>  Msg 4861, Level 16, State 1, Line 27
+>  Cannot bulk load because the file "FileName.extention" could not be opened. Operating system error code 5(Access is denied.).
+>  ```
+>  -	This is because `only subset of Azure services is on the trusted services list`.
+>  -	Please refer the page [Trusted access for resources registered in your subscription](https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal#trusted-access-for-resources-registered-in-your-subscription) for the complete list of trusted services and new updates on Azure storage firewall settings.
+
+
 ## See also
 
 - [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)

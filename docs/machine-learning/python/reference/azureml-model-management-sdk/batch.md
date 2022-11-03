@@ -42,7 +42,7 @@ azureml.deploy.server.service.Batch(service, records=[], parallel_count=10,
 
 
 
-Manager of a service’s batch execution lifecycle.
+Manager of a service's batch execution lifecycle.
 
 
 
@@ -68,7 +68,7 @@ execution_id
 
 
 
-Gets this batch’s execution identifier if currently started, otherwise
+Gets this batch's execution identifier if currently started, otherwise
 `None`.
 
 
@@ -82,7 +82,7 @@ parallel_count
 
 
 
-Gets this batch’s parallel count of threads.
+Gets this batch's parallel count of threads.
 
 
 
@@ -216,7 +216,7 @@ Batch execution index.
 
 A *list* of file artifact names.
 
-Gets this batch’s parallel count of threads.
+Gets this batch's parallel count of threads.
 
 ## records
 

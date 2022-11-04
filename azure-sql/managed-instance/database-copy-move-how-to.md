@@ -20,9 +20,9 @@ The copy and move feature is currently in preview.
 
 ## Overview
 
-Perform an online copy or move operation of your database across managed instances by leveraging Always On availability group technology. The feature creates a new database on the destination instance as a copy of another database at the moment the operation completes. With database copy and move, data replication is continuous, asynchronous, near real-time and ensures there's no data loss. 
+Perform an online copy or move operation of your database across managed instances by using Always On availability group technology. The feature creates a new database on the destination instance as a copy of another database at the moment the operation completes. With database copy and move, data replication is continuous, asynchronous, near real-time and ensures there's no data loss. 
 
-When you copy your database, the source database remains online during and after the operation completes. Conversely, when you move your database, the source database gets dropped once the operation completes. You can run multiple database copy and move operations from the source managed instance to one or several target instances. 
+When you copy your database, the source database remains online during, and after the operation completes. Conversely, when you move your database, the source database gets dropped once the operation completes. You can run multiple database copy and move operations from the source managed instance to one or several target instances. 
 
 Copying and moving your database is different from point-in-time restore (PITR) as it creates a copy of the database when the operation completes as opposed to PITR, which creates a copy of the database from some moment in the past. 
 
@@ -36,16 +36,16 @@ Moving or copying your database is useful to:
 - Manage database growth and performance requirements
 - Balance workloads across multiple managed instances. 
 - Move databases to an instance with more available resources to handle the workload.
-- Consolidate multiple databases from a a number of smaller instances. 
+- Consolidate multiple databases from a number of smaller instances. 
 - Create database parity between dev, test, and production environments. 
 
 ## Workflow 
 
-The following details the workflow when you move or copy the database: 
+This is the workflow when you copy or move your database: 
 
 - Choose the database, source managed instance, destination instance, and start the operation. 
 - The database gets seeded to the destination server. Check the status to determine if the operation is in progress, or if it has succeeded. 
-- After seeding finishes, the operation state shows as **ready for completion**. Until the operation is complete, all changes that happen to the source database are applied to the destination database. You can cancel the operation at any time. You have 24 hours to explicitly complete the operation. If you don't complete the operation within 24 hours, it's automatically cancelled, and the destination database is dropped. 
+- After seeding finishes, the operation state shows as **ready for completion**. Until the operation is complete, all changes that happen to the source database are applied to the destination database. You can cancel the operation at any time. You have 24 hours to explicitly complete the operation. If you don't complete the operation within 24 hours, it's automatically canceled, and the destination database is dropped. 
 - At the moment you complete the operation, your destination database comes online and is ready for read/write workloads. 
 - If you chose to move the database, the source database gets dropped. If you chose to copy the database, the source database remains online, but data replication stops. 
 
@@ -79,22 +79,22 @@ To copy or move your database, follow these steps:
 1. Select **Review + Start** to validate your source and destination details, and then select **Start** to begin the operation. Selecting **Start** takes you back to the **Databases** page of your instance, where you can monitor the progress of the operation. 
 1. On the **Databases** page, check **Operation details** to view the status of your operation as **Move/Copy in progress**. If you need to cancel, you can select the **In progress**, choose the database of interest, and select **Cancel operation** to stop seeding, and drop the destination database. 
 1. Monitor the operation. After seeding finishes, the **Operation details** displays **Move/Copy ready for completion**. 
-1. Select **Ready for completion** to open the operation details pane, choose the database(s) you're ready to copy or move, and then select **Complete** once you want to finalize the operation and bring the destination database online. Changes made to the source database are replicated to the destination database during this time, until you select **Complete**. If you don't complete the operation within 24 hours, it's automatically cancelled, and the destination database is dropped. Selecting **Complete** finalizes the operation and takes you back to the **Databases** page, where you can see the operation completed, and, if you chose move, the database is grayed out as it's now offline. 
+1. Select **Ready for completion** to open the operation details pane, choose the database(s) you're ready to copy or move, and then select **Complete** once you want to finalize the operation and bring the destination database online. Changes made to the source database are replicated to the destination database during this time, until you select **Complete**. If you don't complete the operation within 24 hours, it's automatically canceled, and the destination database is dropped. Selecting **Complete** finalizes the operation and takes you back to the **Databases** page, where you can see the operation completed, and, if you chose move, the database is grayed out as it's now offline. 
 
 
 ## Limitations
 
 Consider the following limitations:
 
-- The source and destination managed instance cannot be the same. 
+- The source and destination managed instance can't be the same. 
 - Both source and destination managed instances need to be in the same Azure subscription and same region. 
-- You can only copy and move user databases. Copying and moving system databases is not supported. 
+- You can only copy and move user databases. Copying and moving system databases isn't supported. 
 - A database can only participate in a single move or copy operation at a time. 
-- The source managed instance can run up to 8 copy or move operations at a time. You can start more than 8 operations, but some will be queued and processed later, as managed by the service. 
+- The source managed instance can run up to eight copy or move operations at a time. You can start more than eight operations, but some will be queued and processed later, as managed by the service. 
 - You can't rename a database during a copy or move operation. 
-- Database copy and move does not copy or move PITR backups. 
+- Database copy and move doesn't copy or move PITR backups. 
 - You can't copy or move a database that is part of an [auto-failover group](auto-failover-group-sql-mi.md), or using the [Managed Instance link](managed-instance-link-feature-overview.md). 
-- You will need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features. 
+- You'll need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features. 
 
 ## Next steps
 

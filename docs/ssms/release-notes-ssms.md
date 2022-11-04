@@ -1222,7 +1222,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Object Scripting|Omit the graph syntax "as edge" and "as node" when scripting a table on SQL Server 2016 and earlier.|
 |Object Scripting|Fixed an issue where scripting of database objects was failing when connecting to an Azure SQL Database using Azure AD with MFA.|
 |Object Scripting|Fixed an issue where trying to script a spatial index with GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID on an Azure SQL Database was throwing an error.|
-|Object Scripting|Fixed an issue, which was causing the database scripting (of an Azure SQL Database) to always target an on-prem SQL, even if the "Object Explorer" scripting settings were set to match the source.|
+|Object Scripting|Fixed an issue, which was causing the database scripting (of an Azure SQL Database) to always target an on-premises SQL, even if the "Object Explorer" scripting settings were set to match the source.|
 |Object Scripting|Fixed an issue where trying to script a table in a SQL DW database involving clustered and nonclustered indexes was generating incorrect T-SQL statements.|
 |Object Scripting|Fixed an issue where trying to script a table in a SQL DW database with both "Clustered Columnstore Indexes" and "Clustered Indexes" was generating incorrect T-SQL (duplicate statements).|
 |Object Scripting|Fixed Partitioned table scripting with no range values (SQL DW databases).|

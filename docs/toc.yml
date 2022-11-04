@@ -6567,11 +6567,14 @@ items:
       - name: Schedule Traces
         href: relational-databases/sql-trace/schedule-traces.md
     - name: Query Store
-      href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
+      - name: Monitor performance by using the Query Store
+        href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md      
       - name: Best Practices for Monitoring
         href: relational-databases/performance/best-practice-with-the-query-store.md
-      - name: How Query Store Collects Data
+      - name: Query Store for secondary replicas
+        href: relational-databases/performance/query-store-for-secondary-replicas.md
+      - name: How Query Store collects data
         href: relational-databases/performance/how-query-store-collects-data.md
       - name: In-Memory OLTP
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
@@ -8043,10 +8046,8 @@ items:
     items:
     - name: Always Encrypted
       items:
-      - name: Protect sensitive data and store encryption keys in the Windows certificate store >
-        href: /azure/sql-database/sql-database-always-encrypted
-      - name: Protect sensitive data and store encryption keys in Azure Key Vault >
-        href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+      - name: Getting started with Always Encrypted
+        href: relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md
     - name: Always Encrypted with secure enclaves
       items:
       - name: Getting started with Always Encrypted with secure enclaves in SQL Server
@@ -10132,8 +10133,6 @@ items:
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
     - name: Create & configure availability groups
       href: linux/sql-server-linux-create-availability-group.md
-    - name: Create with HA with HPE Serviceguard
-      href: linux/sql-server-availability-group-ha-hpe.md
     - name: Deploy availability group with DH2i on AKS
       href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Configure replication
@@ -10266,16 +10265,22 @@ items:
             href: linux/sql-server-linux-availability-group-ha.md
           - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-ha.md
-          - name: Configure Pacemaker
+          - name: Configure with DH2i
+            href: /azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial
+          - name: Configure with HPE Serviceguard
+            href: linux/sql-server-availability-group-ha-hpe.md
+          - name: Configure with Pacemaker
             items:
+            - name: Pacemaker basics
+              href: linux/sql-server-linux-pacemaker-basics.md
             - name: Configure on RHEL, SLES, and Ubuntu
               href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
-          - name: Configure failover
-            href: linux/sql-server-linux-availability-group-failover-ha.md
-          - name: Operate an AG
-            href: linux/sql-server-linux-availability-group-operate-ha.md
-          - name: Configure multiple subnets for availability
-            href: linux/sql-server-linux-configure-multiple-subnet.md
+            - name: Configure failover
+              href: linux/sql-server-linux-availability-group-failover-ha.md
+            - name: Operate an AG
+              href: linux/sql-server-linux-availability-group-operate-ha.md
+            - name: Configure multiple subnets for availability
+              href: linux/sql-server-linux-configure-multiple-subnet.md
         - name: Create for read-scale only
           items:
           - name: Configure an AG
@@ -12441,8 +12446,10 @@ items:
         href: relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md
       - name: sys.query_store_plan
         href: relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md
+      - name: sys.query_store_plan_feedback
+        href: relational-databases/system-catalog-views/sys-query-store-plan-feedback.md
       - name: sys.query_store_plan_forcing_locations
-        href: relational-databases/system-catalog-views/sys-plan-forcing-locations.md
+        href: relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md
       - name: sys.query_store_query
         href: relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md
       - name: sys.query_store_query_text

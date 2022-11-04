@@ -171,7 +171,7 @@ The maximum request and response header size (all header fields: headers passed 
 
 ## Throttling
 
-The number of concurrent connections to external endpoints done via `sp_invoke_external_rest_endpoint` are capped to 10% of worker threads, with a maximum of 150 workers. On an [single database](/azure-sql/database/single-database-overview) throttling is enforced at the database level, while on an [elastic pool](/azure-sql/database/elastic-pool-overview) throttling is enforced both at database and at pool level.
+The number of concurrent connections to external endpoints done via `sp_invoke_external_rest_endpoint` are capped to 10% of worker threads, with a maximum of 150 workers. On an [single database](/azure/azure-sql/database/single-database-overview) throttling is enforced at the database level, while on an [elastic pool](/azure/azure-sql/database/elastic-pool-overview) throttling is enforced both at database and at pool level.
 
 To check how many concurrent connections a database can sustain, run the following query:
 
@@ -210,8 +210,8 @@ the created DATABASE SCOPED CREDENTIAL can be used via the *@credential* paramet
 
 ```sql
 EXEC sp_invoke_external_rest_endpoint
-  @url = N'http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
-  @credential = [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+  @url = N'https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
+  @credential = [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 ```
 
 ### [Request Headers](#tab/request-headers)
@@ -219,7 +219,7 @@ EXEC sp_invoke_external_rest_endpoint
 With this IDENTITY value, the DATABASE SCOPED CREDENTIAL will be added to the request headers. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
 
 ```sql
-CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
 ```
 
@@ -228,7 +228,7 @@ WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-funct
 With this IDENTITY value, the DATABASE SCOPED CREDENTIAL will be added to the query string. The key-value pair containing the authentication information must be provided via the SECRET parameter using a flat JSON format. For example:
 
 ```sql
-CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key-here>"}';
 ```
 
@@ -237,7 +237,7 @@ WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key
 With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Azure AD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](/azure/app-service/configure-authentication-provider-aad))
 
 ```sql
-CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 WITH IDENTITY = 'Managed Identity', SECRET = '{"resourceid":"<APP_ID>"}';
 ```
 
@@ -260,10 +260,10 @@ The created DATABASE SCOPED CREDENTIAL must adhere to specific rules in order to
 
 As there's a collation rule set at the database level, the following logic will be applied, to be coherent with the database collation rule and the RFC mentioned above. (The described rule could potentially be more restrictive than the RFC rules, for example if database is set to use a case-sensitive collation.):
 
-1. Check if the URL and credential match using the database collation rules (and without doing any URL encoding). If yes, move to the next point.
 1. Check if the URL and credential match using the RFC, which means:
    - Check the scheme and host using a case-insensitive collation (`Latin1_General_100_CI_AS_KS_WS_SC`)
    - Check all other segments of the URL are compared in a case-sensitive collation (`Latin1_General_100_BIN2`)
+1. Check that the URL and credential match using the database collation rules (and without doing any URL encoding). 
 
 ### Grant permissions to use credential
 
@@ -300,7 +300,7 @@ Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption
 If the same headers are also specified via the *@headers* parameter, the system-supplied values will take precedence and overwrite any user-specified values.
 
 > [!NOTE]  
-> If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](http://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
+> If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
 
 ## Known issues
 
@@ -348,7 +348,7 @@ The following example calls an Azure Function using an HTTP trigger binding allo
 DECLARE @ret INT, @response NVARCHAR(MAX);
 
 EXEC @ret = sp_invoke_external_rest_endpoint
-  @url = N'http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
+  @url = N'https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
   @headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
   @payload = N'{"some":{"data":"here"}}',
   @response = @response OUTPUT;
@@ -361,15 +361,15 @@ SELECT @ret AS ReturnCode, @response AS Response;
 The following example calls an Azure Function using an HTTP trigger binding configured to require an authorization key. The authorization key will be passed in the `x-function-key` header as required by Azure Functions. For more information, see [Azure Functions - API key authorization](/azure/azure-functions/functions-bindings-http-webhook-trigger#api-key-authorization).
 
 ```sql
-CREATE DATABASE SCOPED CREDENTIAL [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
+CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
 WITH IDENTITY = 'HTTPEndpointHeaders', SECRET = '{"x-functions-key":"<your-function-key-here>"}';
 
 DECLARE @ret INT, @response NVARCHAR(MAX);
 
 EXEC @ret = sp_invoke_external_rest_endpoint
-  @url = N'http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
+  @url = N'https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?key1=value1',
   @headers = N'{"header1":"value_a", "header2":"value2", "header1":"value_b"}',
-  @credential = [http://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>],
+  @credential = [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>],
   @payload = N'{"some":{"data":"here"}}',
   @response = @response OUTPUT;
 

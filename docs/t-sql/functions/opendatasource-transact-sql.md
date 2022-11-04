@@ -30,20 +30,21 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-li
   
 ## Syntax  
   
-```  
+```syntaxsql
 OPENDATASOURCE ( 'provider_name', 'init_string' )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- '*provider_name*'  
+
+#### '*provider_name*'  
  Is the name registered as the PROGID of the OLE DB provider used to access the data source. *provider_name* is a **char** data type, with no default value.  
 
  > [!IMPORTANT]
- > [!INCLUDE[snac-removed](../../includes/snac-removed.md)]
+ > [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
 
- '*init_string*'  
+ #### '*init_string*'  
  Is the connection string passed to the IDataInitialize interface of the destination provider. The provider string syntax is based on keyword-value pairs separated by semicolons, such as: **'**_keyword1_=_value_ **;** _keyword2_=_value_**'**.  
   
  For specific keyword-value pairs supported on the provider, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. This documentation defines the basic syntax. The following table lists the most frequently used keywords in the *init_string* argument.  
@@ -114,7 +115,7 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
     'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
-## See Also  
- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
+## Next steps
+
+- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
+- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)

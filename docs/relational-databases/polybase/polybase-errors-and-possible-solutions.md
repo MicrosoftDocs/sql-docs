@@ -83,6 +83,8 @@ Create External Table foo
 (col1 int) WITH (LOCATION = '/bar/', DATA_SOURCE…);
 ```
 
+> [!NOTE] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
 ### Kerberos support
 

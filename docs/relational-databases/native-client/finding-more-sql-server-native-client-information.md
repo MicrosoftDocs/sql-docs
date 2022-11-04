@@ -18,6 +18,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Finding More SQL Server Native Client Information
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
+
   For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and other types of data access programming, see the following online resources:  
   
  [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)  

@@ -24,15 +24,20 @@ Save on billing costs by stopping your General Purpose managed instance when you
 
 Stopping an instance clears all cached data. 
 
-This features introduces three new managed instance states:
+This features introduces three new managed instance states, as the following diagram indicates:
 
-- Stopping
-- Stopped
-- Starting
-
-As the following diagram indicates: 
-
-:::image type="content" source="media/instance-stop-start-how-to/sql-managed-instance-states.png" alt-text="Diagram showing the different states of SQL Managed Instance.":::
+:::row:::
+    :::column:::
+        <br />
+        <br />
+        <br />- Stopping
+        <br />- Stopped
+        <br />- Starting
+    :::column-end:::
+    :::column:::
+        ![Diagram showing the different states of SQL Managed Instance.](media/instance-stop-start-how-to/sql-managed-instance-states.png)
+    :::column-end:::
+:::row-end:::
 
 
 Once the stop operation is initiated, it typically takes about 5 minutes to stop the instance. However, conversely, starting an instance takes about 20 minutes from the moment the start operation is initiated. 

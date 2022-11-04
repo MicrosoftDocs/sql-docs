@@ -39,17 +39,6 @@ For more information and known issues, see [[!INCLUDE[sql-server-2022](../includ
 
 For the best experience with [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)], use the [latest tools](../tools/overview-sql-tools.md).
 
-This release:
-
-- Is available as Evaluation Edition. It's available for a 180 day trial period, and includes all of the capabilities of Enterprise Edition.
-- On Azure Virtual Machines, it's available as Developer Edition. It's available for a 180 day trial period via a SQL Server on Azure Virtual Machines [marketplace image](https://ms.portal.azure.com/#create/Microsoft.AzureSQL).
-- For [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Linux, see the [Release notes for [!INCLUDE[sssql22](../includes/sssql22-md.md)] on Linux](../linux/sql-server-linux-release-notes-2022.md).
-- Doesn't include support from Microsoft, except for select Early Adoption Program customers.
-
-After you check out [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], [submit feedback about the product](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0).
-
-RC 1 introduces [Hybrid buffer pool with direct write](#platform) as well as other improvements.
-
 ## Feature highlights
 
 The following sections identify features that are improved our introduced in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
@@ -75,7 +64,7 @@ The following sections identify features that are improved our introduced in [!I
 
 | New feature or update | Details |
 |:---|:---|
-| Link to Azure SQL Managed Instance | Connect your SQL Server instance to Azure SQL Managed Instance. See [Link feature for Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). To experience this feature, you can [register here](https://aka.ms/mi-link-2022-signup).|
+| Link to Azure SQL Managed Instance | Connect your SQL Server instance to Azure SQL Managed Instance. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview).|
 |Contained availability group | Create an Always On availability group that:<br/>- Manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level. <br/>- Includes specialized contained system databases within the availability group. For more information, see [What is a contained availability group?](../database-engine/availability-groups/windows/contained-availability-groups-overview.md)|
 |Distributed availability group |- Now using multiple TCP connections for better network bandwidth utilization across a remote link with long tcp latencies.|
 | Improved backup metadata | `backupset` system table returns last valid restore time. See [backupset (Transact-SQL)](../relational-databases/system-tables/backupset-transact-sql.md).|
@@ -115,8 +104,8 @@ The [intelligent query processing (IQP)](../relational-databases/performance/int
 
 | New feature or update | Details |
 |:---|:---|
-| Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|
-| Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) use the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Requires the Query Store to be enabled and in "Read write" mode. |
+| Query Store on secondary replicas |  Query Store on secondary replicas enables the same Query Store functionality on secondary replica workloads that is available for primary replicas. Learn more in [Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md).<br/><br/> For more information, see [Query Store improvements](#query-store-improvements) later in this article.|
+| Query Store hints | [Query Store hints](../relational-databases/performance/query-store-hints.md) leverage the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Requires the Query Store to be enabled and in "Read write" mode. |
 | Memory grant feedback | Memory grant feedback adjusts the size of the memory allocated for a query based on past performance. [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] introduces [Percentile and Persistence mode memory grant feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback). Requires enabling Query Store.<br/><br/> - **Persistence**: A capability that allows the memory grant feedback for a given cached plan to be persisted in the Query Store so that feedback can be reused after cache evictions. Persistence benefits memory grant feedback as well as the new DOP and CE feedback features.<br/>- **Percentile**: A new algorithm improves performance of queries with widely oscillating memory requirements, using memory grant information from several previous query executions over, instead of just the memory grant from the immediately preceding query execution. Requires enabling Query Store. Query Store is enabled by default for newly created databases as of SQL Server 2022 CTP 2.1.|
 | Parameter sensitive plan optimization | Automatically enables multiple, active cached plans for a single parameterized statement. Cached execution plans accommodate largely different data sizes based on the customer-provided runtime parameter value(s). For more information, see [Parameter Sensitive Plan optimization](../relational-databases/performance/parameter-sensitivity-plan-optimization.md).|
 | Degree of parallelism (DOP) feedback | A new database scoped configuration option `DOP_FEEDBACK` automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Similar to optimizations in Azure SQL Database. Requires the Query Store to be enabled and in "Read write" mode. <br/><br/> Beginning with RC 0, every query recompilation SQL Server compares the runtime stats of the query using existing feedback to the runtime stats of the previous compilation with the existing feedback. If the performance isn't the same or better, we clear all DOP feedback and trigger a reanalysis of the query starting from the compiled DOP. <br/><br/> See [Degree of parallelism (DOP) feedback](../relational-databases/performance/intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback).|

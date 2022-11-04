@@ -115,7 +115,7 @@ The following properties need to be passed in the API call:
 | resourceGroupName | Resource group that contains managed instance |
 | managedInstanceName | Name of managed instance |
 | replicaType | (Optional) (Primary or ReadableSecondary). These parameters represent the type of replica to be failed over: primary or readable secondary. If not specified, failover will be initiated on the primary replica by default. |
-| api-version | Static value and currently needs to be “2019-06-01-preview" |
+| api-version | Static value and currently needs to be "2019-06-01-preview" |
 
 API response will be one of the following two:
 

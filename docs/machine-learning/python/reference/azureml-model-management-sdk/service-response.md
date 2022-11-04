@@ -163,7 +163,7 @@ The name of the output.
 
 ### Returns
 
-The service output’s value.
+The service output's value.
 
 
 

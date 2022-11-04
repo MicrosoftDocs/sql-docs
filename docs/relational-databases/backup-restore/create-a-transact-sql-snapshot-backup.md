@@ -258,7 +258,7 @@ RESTORE BACKUPSETONLY supports DBNAME parameter if the user wants to output one 
 ```sql
 RESTORE BACKUPSETONLY
 FROM DISK='d:\temp\db.bkm'
-WITH METADATA_ONLY, FILE=3, DBNAME=’testdb2’
+WITH METADATA_ONLY, FILE=3, DBNAME='testdb2'
 ```
 
 ### Dynamic Management Views (DMVs) for seeing the suspend status and locks acquired
@@ -273,7 +273,7 @@ sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition,
 ```sql
 SELECT SERVERPROPERTY('SuspendedDatabaseCount')
 SELECT SERVERPROPERTY('IsServerSuspendedForSnapshotBackup')
-SELECT DATABASEPROPERTYEX('db1', 'IsDatabaseSuspendedForSnapshotBackup’)
+SELECT DATABASEPROPERTYEX('db1', 'IsDatabaseSuspendedForSnapshotBackup')
 ```
 
 ### Sample T-SQL troubleshooting script

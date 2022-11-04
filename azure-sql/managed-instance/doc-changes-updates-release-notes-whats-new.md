@@ -74,7 +74,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Restore progress** | Restore progress tracked in the `percent_complete` column [sys.dm_operation_status](../../docs/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) is now generally available. | 
+| **Restore progress** | Restore progress tracked in the `percent_complete` column [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) is now generally available. | 
 
 
 ### October 2022

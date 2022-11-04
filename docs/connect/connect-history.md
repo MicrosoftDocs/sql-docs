@@ -18,7 +18,7 @@ There are three distinct generations of Microsoft ODBC drivers for SQL Server. T
 
 ### SQL Server Native Client
 
-SQL Server Native Client was a stand-alone library that is used for both OLE DB and ODBC. SQL Server Native Client (often abbreviated SNAC) was included in SQL Server 2005 through 2012. SQL Server Native Client can be used for applications that need to take advantage of new features introduced in SQL Server 2005 through SQL Server 2012. (Microsoft/Windows Data Access Components aren't updated for these new features in SQL Server.) For new features beyond SQL Server 2012, SQL Server Native Client won't be updated. [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+SQL Server Native Client was a stand-alone library that is used for both OLE DB and ODBC. SQL Server Native Client (often abbreviated SNAC) was included in SQL Server 2005 through 2012. SQL Server Native Client can be used for applications that need to take advantage of new features introduced in SQL Server 2005 through SQL Server 2012. (Microsoft/Windows Data Access Components aren't updated for these new features in SQL Server.) For new features beyond SQL Server 2012, SQL Server Native Client won't be updated. [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 For complete documentation of the SQL Server Native Client, see the [SQL Server Native Client documentation](../relational-databases/native-client/sql-server-native-client-programming.md).
 

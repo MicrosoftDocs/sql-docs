@@ -47,7 +47,7 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-|[Transactional Replication](replication-transactional-overview.md) | November 2022 | Replicate the changes from your tables into other databases in SQL Managed Instance, SQL Database, or SQL Server. Or update your tables when some rows are changed in other instances of SQL Managed Instance or SQL Server. For information, see [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). |
+|[Transactional Replication](replication-transactional-overview.md) | November 2022 | Replicate data from SQL Managed Instance to database hosted on SQL Server, SQL Managed Instance or SQL Database, or from SQL Server to SQL Managed Instance. To get started, review [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). |
 |[TempDB configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of TempDB files and their growth increments to tune the performance of your instance even more. |
 |[Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
 |[16 TB support in Business Critical](resource-limits.md#service-tier-characteristics) | September 2022 |Support for allocation up to 16 TB of space on SQL Managed Instance in the Business Critical service tier using the new memory optimized premium-series hardware. | 
@@ -73,7 +73,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Transactional replication GA** | Replicate the changes from your tables into other databases in SQL Managed Instance, SQL Database, or SQL Server. Or update your tables when some rows are changed in other instances of SQL Managed Instance or SQL Server. This feature is now generally available. To learn more, review [Transactional Replication](replication-transactional-overview.md). To get started, review [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). | 
+| **Transactional replication GA** | Replicate data from SQL Managed Instance to database hosted on SQL Server, SQL Managed Instance or SQL Database, or from SQL Server to SQL Managed Instance. This feature is now generally available. To learn more, review [Transactional Replication](replication-transactional-overview.md). To get started, review [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). | 
 
 ### September 2022
 

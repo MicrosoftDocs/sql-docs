@@ -19,14 +19,14 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 This article describes using elastic database transactions which allow you to run distributed transactions across cloud databases for Azure SQL Database and Azure SQL Managed Instance.  In this article, the terms "distributed transactions" and "elastic database transactions" are considered synonyms and are used interchangeably.
 
 > [!NOTE]
-> You can also use the [Distributed Transaction Coordinator for Azure SQL Managed Instance](../managed-instance/distributed-transaction-coordinator-dtc.md) to run distributed transactions in heterogeneous environments.
+> You can also use the [Distributed Transaction Coordinator for Azure SQL Managed Instance](../managed-instance/distributed-transaction-coordinator-dtc.md) to run distributed transactions in mixed environments.
 
 ## Overview
 
 Elastic database transactions for Azure SQL Database and Azure SQL Managed Instance allow you to run transactions that span several databases. Elastic database transactions are available for .NET applications using ADO.NET and integrate with the familiar programming experience using the [System.Transaction](/dotnet/api/system.transactions) classes. To get the library, see [.NET Framework 4.6.1 (Web Installer)](https://www.microsoft.com/download/details.aspx?id=49981).
 Additionally, for managed instance distributed transactions are available in [Transact-SQL](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql).
 
-On-premises, such a scenario usually requires running Microsoft Distributed Transaction Coordinator (MSDTC). Since MSDTC isn't available for Azure SQL Database, the ability to coordinate distributed transactions has been directly integrated into SQL Database and SQL Managed Instance. However, for SQL Managed Instance, you can also use the [Distributed Transaction Coordinator](../managed-instance/distributed-transaction-coordinator-dtc.md) to run distributed transactions across a number of heterogenous environments, such as across managed instances, SQL Servers, third-party relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
+On-premises, such a scenario usually requires running Microsoft Distributed Transaction Coordinator (MSDTC). Since MSDTC isn't available for Azure SQL Database, the ability to coordinate distributed transactions has been directly integrated into SQL Database and SQL Managed Instance. However, for SQL Managed Instance, you can also use the [Distributed Transaction Coordinator](../managed-instance/distributed-transaction-coordinator-dtc.md) to run distributed transactions across a number of mixed environments, such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
 
 
 Applications can connect to any database to launch distributed transactions, and one of the databases or servers will transparently coordinate the distributed transaction, as shown in the following figure. 

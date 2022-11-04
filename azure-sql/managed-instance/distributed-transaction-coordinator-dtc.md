@@ -1,7 +1,7 @@
 ---
 title: Distributed Transaction Coordinator (DTC) (preview)
 titleSuffix: Azure SQL Managed Instance
-description: Learn about the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview) to run distributed transactions in heterogeneous environments, across managed instances, SQL Servers, third-party relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
+description: Learn about the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview) to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
@@ -13,7 +13,7 @@ ms.topic: how-to
 # Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance, which allows you to run distributed transactions in heterogeneous environments, across managed instances, SQL Servers, third-party relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
+This article provides an overview of the Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance, which allows you to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
 
 Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance is currently in preview. 
 
@@ -61,11 +61,11 @@ Ports 135 and 1024-65535 need to allow both inbound and outbound communication -
 
 ## DNS settings 
 
-DTC relies on the NetBIOS name for mutual communication. Since the NetBIOS protocol isn't supported by Azure networking, and NetBIOS names can't be resolved in heterogenous environments, DTC for managed instance relies on DNS name servers for host name resolution. As such, managed instance DTC hosts are automatically registered with the Azure DNS Server, and you need to register external DTC hosts with some DNS server. Additionally, the managed instance and external environment need to exchange DNS suffixes.
+DTC relies on the NetBIOS name for mutual communication. Since the NetBIOS protocol isn't supported by Azure networking, and NetBIOS names can't be resolved in mixed environments, DTC for managed instance relies on DNS name servers for host name resolution. As such, managed instance DTC hosts are automatically registered with the Azure DNS Server, and you need to register external DTC hosts with some DNS server. Additionally, the managed instance and external environment need to exchange DNS suffixes.
 
-The following diagram shows name resolution across heterogenous environments: 
+The following diagram shows name resolution across mixed environments: 
 
-:::image type="content" source="media/distributed-transaction-coordinator-dtc/dtc-heterogeneous-environment-diagram.png" alt-text="Diagram that shows name resolution across heterogenous environments when using DTC.":::
+:::image type="content" source="media/distributed-transaction-coordinator-dtc/dtc-mixed-environment-diagram.png" alt-text="Diagram that shows name resolution across mixed environments when using DTC.":::
 
 > [!NOTE]
 > You don't need to configure DNS settings if you plan to use DTC only for XA transactions. 

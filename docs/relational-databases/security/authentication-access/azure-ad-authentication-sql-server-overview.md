@@ -4,7 +4,7 @@ description: Learn about Azure Active Directory authentication support for SQL S
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 08/23/2022
+ms.date: 10/20/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -35,7 +35,7 @@ If your Windows Server Active Directory is federated with Azure AD, users can au
 
 ## Connect SQL Server to Azure with Azure AD
 
-For SQL Server to communicate with Azure, both SQL Server and the Windows or Linux host it runs on must be registered with [Azure Arc](../../../sql-server/azure-arc/overview.md). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [Azure extension for SQL Server](../../../sql-server/azure-arc/overview.md). This will facilitate SQL Server’s  communication with Azure.
+For SQL Server to communicate with Azure, both SQL Server and the Windows or Linux host it runs on must be registered with [Azure Arc](../../../sql-server/azure-arc/overview.md). To do this, you'll need to install the [Azure Arc Agent](/azure/azure-arc/servers/overview) and [Azure extension for SQL Server](../../../sql-server/azure-arc/overview.md). This will facilitate SQL Server's  communication with Azure.
 
 To get started, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 
@@ -61,7 +61,7 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 
 ## Remarks
 
-- Only [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] on-premises with a supported Windows or Linux operating system is supported for Azure AD authentication. SQL Servers on Azure Virtual Machines aren't supported for Azure AD authentication.
+- Only [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] on-premises with a supported Windows or Linux operating system, or [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview), is supported for Azure AD authentication.
 - To connect SQL Server to Azure Arc, the Azure AD account needs the following permissions:
   - Member of the *Azure Connected Machine Onboarding* group or *Contributor* role in the resource group.
   - Member of the *Azure Connected Machine Resource Administrator* role in the resource group.

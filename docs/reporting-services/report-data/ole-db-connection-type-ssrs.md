@@ -54,8 +54,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  To successfully retrieve the data that you want, you must provide query syntax that is supported by the data provider. Parameter support varies by data provider. For more information, see topics that are specific to the data provider that you select. For example:  
   
--   [Analysis Services OLE DB Provider &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/instances/data-providers-used-for-analysis-services-connections
-)  
+-   [Analysis Services client libraries](/analysis-services/client-libraries)  
    
   
 -   [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

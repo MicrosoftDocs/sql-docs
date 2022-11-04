@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/07/2022
+ms.date: 10/31/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -396,16 +396,24 @@ Additional notes and guidance when creating a credential:
 
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. 
-  - You can get an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
-  - You can [create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container). 
-  - You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json). 
-  - The SAS token should be configured as follows:
-    - When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. Exclude the leading `?` when configured as the SECRET.
-    - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).
-    - Use a valid expiration period (all dates are in UTC time).
-    - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
+- `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
 - Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
 - When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
+
+There are multiple ways to create a shared access signature:
+- You can create an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
+- You can [create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container).
+- You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json).
+- The SAS token should be configured as follows:
+  - When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. Exclude the leading `?` when configured as the SECRET.
+  - Use a valid expiration period (all dates are in UTC time).
+  - Grant at least read permission on the file that should be loaded (for example `srt=o&sp=r`). Multiple shared access signatures can be created for different use cases. Permissions should be granted as follows:
+
+  |    Action    |    Permission    |
+  |    ------    |    ----------    |
+  |    Read data from a file    |    Read    |
+  |    Read data from multiple files and subfolders    |    Read and List    |
+  |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
@@ -642,7 +650,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 ::: moniker range="=sql-server-linux-ver15"
 
 > [!NOTE]  
-> This syntax varies in different versions of SQL Server on Linux. Use the version selector dropdown to choose the appropriate version.  
+> This syntax varies in different versions of SQL Server. Use the version selector dropdown to choose the appropriate version.  
 > To view the features of [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], visit [CREATE EXTERNAL DATA SOURCE](create-external-data-source-transact-sql.md?view=sql-server-linux-ver16&preserve-view=true#syntax).
 
 ::: moniker-end
@@ -710,7 +718,7 @@ Additional notes and guidance when setting the location:
 
 - The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
-- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - Using `wasbs` or `abfss` is optional but recommended in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection.
 - The `abfs` or `abfss` APIs are supported when accessing Azure Storage Accounts starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11. For more information, see [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver).
@@ -747,16 +755,22 @@ Additional notes and guidance when creating a credential:
 
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. 
-  - You can get an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
-  - You can [create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container). 
-  - You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json).
-  - The SAS token should be configured as follows:
-    - When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. Exclude the leading `?` when configured as the SECRET.
-    - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).
-    - Use a valid expiration period (all dates are in UTC time).
-    - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
-- Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
-- When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
+  - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
+
+There are multiple ways to create a shared access signature:
+- You can create an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
+- You can [create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container).
+- You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json).
+- The SAS token should be configured as follows:
+  - When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. Exclude the leading `?` when configured as the SECRET.
+  - Use a valid expiration period (all dates are in UTC time).
+  - Grant at least read permission on the file that should be loaded (for example `srt=o&sp=r`). Multiple shared access signatures can be created for different use cases. Permissions should be granted as follows:
+
+  |    Action    |    Permission    |
+  |    ------    |    ----------    |
+  |    Read data from a file    |    Read    |
+  |    Read data from multiple files and subfolders    |    Read and List    |
+  |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
@@ -1168,7 +1182,7 @@ Creates an external data source for PolyBase queries. External data sources are 
 - Bulk load operations using `BULK INSERT` or `OPENROWSET`
 
 > [!NOTE]
-> This syntax varies in different versions of SQL Server on Linux. Use the version selector dropdown to choose the appropriate version. This content applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
+> This syntax varies in different versions of SQL Server. Use the version selector dropdown to choose the appropriate version. This content applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.
 
 ## <a id="syntax"></a> Syntax for SQL Server 2022 and later
 
@@ -1179,7 +1193,9 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
     [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
-    [ [ , ] CREDENTIAL = <credential_name> ])
+    [ [ , ] CREDENTIAL = <credential_name> ]
+    [ [ , ] PUSHDOWN = { ON | OFF } ]
+  )
 [ ; ]
 ```
 
@@ -1219,7 +1235,7 @@ Location path:
 Additional notes and guidance when setting the location:
 
 - The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
-- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
+- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) using the prefix `adls` is supported via Azure Data Lake Storage Gen2 in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 <!--- - The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of SQL Server 2019 Big Data Cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
@@ -1243,7 +1259,6 @@ The `key_value_pair` is the keyword and the value for a specific connection opti
 
 Possible key value pairs are specific to the driver. For more information for each provider, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](create-external-data-source-connection-options.md).
 
-<!---
 #### PUSHDOWN = ON | OFF
 
 **Applies to: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later.** States whether computation can be pushed down to the external data source. It is on by default.
@@ -1252,7 +1267,6 @@ Possible key value pairs are specific to the driver. For more information for ea
 
 Enabling or disabling push-down at the query level is achieved through a [hint][hint_pb].
 
--->
 #### CREDENTIAL = *credential_name*
 
 Specifies a database-scoped credential for authenticating to the external data source.
@@ -1260,15 +1274,31 @@ Specifies a database-scoped credential for authenticating to the external data s
 Additional notes and guidance when creating a credential:
 
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
-- When accessing Azure Storage Account (V2) or Azure Data Lake Storage Gen2, the `IDENTITY` must be `SHARED ACCESS SIGNATURE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
+- When accessing Azure Storage Account (V2) or Azure Data Lake Storage Gen2, the `IDENTITY` must be `SHARED ACCESS SIGNATURE`.
+  - For an example, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage-1).
 
-<!---
+There are multiple ways to create a shared access signature:
+  - You can create an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
+  - You can [create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container).
+  - You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json).
+  - The SAS token should be configured as follows:
+    - When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. Exclude the leading `?` when configured as the SECRET.
+    - Use a valid expiration period (all dates are in UTC time).
+    - Grant at least read permission on the file that should be loaded (for example `srt=o&sp=r`). Multiple shared access signatures can be created for different use cases. Permissions should be granted as follows:
+
+    |    Action    |    Permission    |
+    |    ------    |    ----------    |
+    |    Read data from a file    |    Read    |
+    |    Read data from multiple files and subfolders    |    Read and List    |
+    |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
+
+
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
   - Exclude the leading `?` when configured as the secret.
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).
   - Use a valid expiration period (all dates are in UTC time).
   - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
--->
+
 For an example of using a `CREDENTIAL` with S3-compatible object storage and PolyBase, see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md).
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
@@ -1355,7 +1385,7 @@ Users will also need to configure their external data sources to use new connect
 | External Data Source | From | To |
 |:--|:--|:--|
 | Azure Blob Storage | wasb[s] | abs |
-| ADLS Gen 2 | abfs[s] | adls |
+| ADLS Gen2 | abfs[s] | adls |
 
 ## Examples
 
@@ -1396,32 +1426,7 @@ CONNECTION_OPTIONS = 'ImpersonateUser=%CURRENT_USER',
 CREDENTIAL = [OracleProxyCredential]);
 ```
 
-For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb].
-
-### B. Create external data source to access data in Azure Storage using the abs:// interface
-
-Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `abs` for Azure Storage Account v2. The `abs` prefix also supports authentication using Shared Access Signature. The `abs` prefix replaces `wasb`, used in previous versions. Since HADOOP is not longer supported, there is no more need to use `TYPE = BLOB_STORAGE`.
-
-The Azure storage account key is no longer needed, instead using SAS Token as we can see in the following example:
-
-```sql
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
-GO
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredentialv2
-WITH
-  IDENTITY = 'SHARED ACCESS SIGNATURE', -- to use SAS the identity must be fixed as-is
-  SECRET = '<Blob_SAS_Token>' ;
-GO
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage
-WITH
-  ( LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>' ,
-    CREDENTIAL = AzureStorageCredentialv2,
-  ) ;
-```
-
-### C. Create external data source to reference a SQL Server named instance via PolyBase connectivity
+### B. Create external data source to reference a SQL Server named instance via PolyBase connectivity
 
 **Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
 
@@ -1455,7 +1460,7 @@ WITH (
 ) ;
 ```
 
-### D. Create external data source to reference a readable secondary replica of Always On availability group
+### C. Create external data source to reference a readable secondary replica of Always On availability group
 
 **Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later
 
@@ -1525,7 +1530,7 @@ SELECT [name] FROM dbo.vw_sys_servers_rw; --should return primary replica instan
 GO
 ```
 
-### E. Create external data source to query a parquet file in S3-compatible object storage via PolyBase
+### D. Create external data source to query a parquet file in S3-compatible object storage via PolyBase
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
@@ -1563,7 +1568,74 @@ FROM    OPENROWSET
         ) AS [cc];
 ```
 
-### F. Create external data source to access data in Azure Data Lake Gen2
+### E. Create external data source using generic ODBC to PostgreSQL
+
+As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the server.
+
+In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
+
+```sql
+CREATE EXTERNAL DATA SOURCE POSTGRES1
+WITH
+(
+ LOCATION = 'odbc://POSTGRES1.domain:5432'
+,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
+,CREDENTIAL = postgres_credential
+)
+```
+
+### Azure Storage
+
+#### Create a shared access signature
+
+For both Azure Blob Storage and Azure Data Lake Gen2 the supported authentication method is shared access signature (SAS). One simple way to generate a shared access signature token follow the steps below. For more information, see [CREDENTIAL](#credential--credential_name-3).
+
+1. Navigate to the Azure portal, and the desired Storage Account.
+2. Navigate to your desired Container under **Data Storage** menu.
+3. Select **Shared access tokens**.
+4. Choose the appropriate permission based on the desired action, for reference use the table bellow:
+
+|    Action    |    Permission    |
+|    ------    |    ----------    |
+|    Read data from a file    |    Read    |
+|    Read data from multiple files and subfolders    |    Read and List    |
+|    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
+
+5. Choose the token expiration date.
+6. Generate SAS token and URL.
+7. Copy the SAS token.
+
+
+### F. Create external data source to access data in Azure Blob Storage using the abs:// interface
+
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `abs` for Azure Storage Account v2. The `abs` prefix supports authentication using `SHARED ACCESS SIGNATURE`. The `abs` prefix replaces `wasb`, used in previous versions. HADOOP is not longer supported, there is no more need to use `TYPE = BLOB_STORAGE`.
+
+The Azure storage account key is no longer needed, instead using SAS Token as we can see in the following example:
+
+```sql
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>' ;
+GO
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredentialv2
+WITH
+  IDENTITY = 'SHARED ACCESS SIGNATURE', -- to use SAS the identity must be fixed as-is
+  SECRET = '<Blob_SAS_Token>' ;
+GO
+-- Create an external data source with CREDENTIAL option.
+CREATE EXTERNAL DATA SOURCE MyAzureStorage
+WITH
+  ( LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>' ,
+    CREDENTIAL = AzureStorageCredentialv2,
+  ) ;
+```
+
+For a more detailed example on how to access CSV files stored in Azure Blob Storage, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
+
+### G. Create external data source to access data in Azure Data Lake Gen2
+
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
 Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], use a new prefix `adls` for Azure Data Lake Gen2, replacing `abfs` used in previous versions. The `adls` prefix also supports SAS token as authentication method as shown in the example below:
 
@@ -1581,58 +1653,14 @@ LOCATION = 'adls://<storage_account>.dfs.core.windows.net'
 )
 ```
 
-### G. Create external data source to access data in a CSV file
-
-As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. In this example, the CSV file resides in Azure Blob Storage. Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], so use prefix `abs` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
-
-```sql
-CREATE EXTERNAL DATA SOURCE Blob_CSV
-WITH
-(
- LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>'
-,CREDENTIAL = blob_storage
-);
-```
-
-### H. Create external data source to access data in a CSV file
-
-As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source.
-
-In this example, the delta table resides in Azure Data Lake Storage Gen2, so use prefix `adls` and the `SHARED ACCESS SIGNATURE` identity method. For a more detailed example, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
-
-For example, if your storage account is named `delta_lake_sample` and the container is named `sink`, the code would be:
-
-```sql
-CREATE EXTERNAL DATA SOURCE Delta_ED
-WITH
-(
- LOCATION = 'abs://delta_lake_sample.dfs.core.windows.net/sink'
-,CREDENTIAL = delta_storage_dsc
-)
-```
-
-### I. Create external data source using generic ODBC to PostgreSQL
-
-As in previous examples, first create a database master key and database scoped credential. The database scoped credential will be used for the external data source. This example also assumes that a generic ODBC data provider for PostgreSQL is installed on the server.
-
-In this example, the generic ODBC data provider is used to connect to a PostgreSQL database server in the same network, where the fully qualified domain name of the PostgreSQL server is `POSTGRES1`, using the default port of TCP 5432.
-
-```sql
-CREATE EXTERNAL DATA SOURCE POSTGRES1
-WITH
-(
- LOCATION = 'odbc://POSTGRES1.domain:5432'
-,CONNECTION_OPTIONS = 'Driver={PostgreSQL Unicode(x64)};'
-,CREDENTIAL = postgres_credential
-)
-```
+For a more detailed example on  how to access delta files stored on Azure Data Lake Gen2, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
 
 ## Examples: Bulk Operations
 
 > [!IMPORTANT]  
 > Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### I. Create an external data source for bulk operations retrieving data from Azure Storage
+### H. Create an external data source for bulk operations retrieving data from Azure Storage
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.
 
@@ -1652,8 +1680,6 @@ WITH
     TYPE = BLOB_STORAGE
   ) ;
 ```
-
-To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 
 ## Next steps
 
@@ -1774,16 +1800,25 @@ Additional notes and guidance when creating a credential:
 - To load data from Azure Storage into [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use a Shared Access Signature (SAS token).
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. 
-  - You can get an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
+- When connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
+- When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
+- `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
+
+There are multiple ways to create a shared access signature:
+  - You can create an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
   - You can [create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container).
   - You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json).
   - The SAS token should be configured as follows:
     - When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. Exclude the leading `?` when configured as the SECRET.
-    - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).
     - Use a valid expiration period (all dates are in UTC time).
-    - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
-- When connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
-- When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
+    - Grant at least read permission on the file that should be loaded (for example `srt=o&sp=r`). Multiple shared access signatures can be created for different use cases. Permissions should be granted as follows:
+
+    |    Action    |    Permission    |
+    |    ------    |    ----------    |
+    |    Read data from a file    |    Read    |
+    |    Read data from multiple files and subfolders    |    Read and List    |
+    |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
+
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
@@ -2036,7 +2071,7 @@ Provides the connectivity protocol and path to the external data source.
 | External Data Source        | Connector location prefix | Location path                                         |
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
 | Azure V2 Storage account    | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Location path:
@@ -2058,7 +2093,7 @@ Specifies a database-scoped credential for authenticating to the external data s
 
 Additional notes and guidance when creating a credential:
 
-- To load data from Azure Storage or Azure Data Lake Store (ADLS) Gen 2 into [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], use an Azure Storage Key.
+- To load data from Azure Storage or Azure Data Lake Store (ADLS) Gen2 into [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], use an Azure Storage Key.
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
@@ -2067,7 +2102,7 @@ To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
-Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen 2.
+Use HADOOP when the external data source is Azure Storage, ADLS Gen 1, or ADLS Gen2.
 
 For an example of using `TYPE` = `HADOOP` to load data from Azure Storage, see [Create external data source to reference Azure Data Lake Store Gen 1 or 2 using a service principal](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal).
 
@@ -2083,11 +2118,11 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a SQL Server 2019 Big Data Cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+Shared Access Signature (SAS) keys are supported for authenticating to Azure Data Lake Store Gen 2 Storage Accounts. Customers who want to authenticate by using a Shared Access Signature must create a database scoped credential where `IDENTITY = "Shared Access Signature"` and enter a SAS token as the secret. 
 
-An SAS token with type `HADOOP` is unsupported. It's only supported with type = `BLOB_STORAGE` when a storage account access key is used instead. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
+If you create a database scoped credential where `IDENTITY = "Shared Access Signature"` and use a storage key value as the secret, you'll get the following error message: 
 
-`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
+`'HdfsBridge::isDirExist - Unexpected error encountered checking whether directory exists or not: AbfsRestOperationException: Operation failed: "Server failed to authenticate the request. Please refer to the information in the www-authenticate header.", 401, HEAD, [Storage path URL]'`
 
 ## Examples
 
@@ -2144,9 +2179,9 @@ WITH
     TYPE = HADOOP
   ) ;
 
--- For Gen 2 - Create an external data source
+-- For Gen2 - Create an external data source
 -- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
--- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- LOCATION: Provide Data Lake Storage Gen2 account name and URI
 -- CREDENTIAL: Provide the credential created in the previous step
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
@@ -2157,7 +2192,7 @@ WITH
   ) ;
 ```
 
-### C. Create external data source to reference Azure Data Lake Store Gen 2 using the storage account key
+### C. Create external data source to reference Azure Data Lake Store Gen2 using the storage account key
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -2171,7 +2206,7 @@ WITH
   SECRET = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
--- Note this example uses a Gen 2 secured endpoint (abfss)
+-- Note this example uses a Gen2 secured endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( LOCATION = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net' ,
@@ -2180,7 +2215,7 @@ WITH
   ) ;
 ```
 
-### D. Create external data source to reference PolyBase connectivity to Azure Data Lake Store Gen 2 using abfs://
+### D. Create external data source to reference PolyBase connectivity to Azure Data Lake Store Gen2 using abfs://
 
 There is no need to specify SECRET when connecting to Azure Data Lake Store Gen2 account with [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview) mechanism.
 
@@ -2534,9 +2569,9 @@ WITH
 
 [!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE[asdbmi](../../includes/applies-to-version/_asmi.md)]
 
-Creates an external data source in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
+Creates an external data source in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. For complete information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
-Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats via the [OPENROWSET T-SQL syntax](/azure/azure-sql/managed-instance/data-virtualization-overview.md#query-data-sources-using-openrowset) or the [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md) T-SQL syntax.
+Data virtualization in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] provides access to external data in a variety of file formats via the [OPENROWSET T-SQL syntax](/azure/azure-sql/managed-instance/data-virtualization-overview#query-data-sources-using-openrowset) or the [CREATE EXTERNAL TABLE](create-external-table-transact-sql.md) T-SQL syntax.
 
 ## <a id="syntax"></a> Syntax
 
@@ -2579,24 +2614,30 @@ Additional notes and guidance when creating a credential:
 - To load data from Azure Storage into [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], use a Shared Access Signature (SAS token).
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - If a credential is required, the credential must be created using `Managed Identity` or `SHARED ACCESS SIGNATURE` as the IDENTITY. To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
+- `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
 
-  To use the managed service identity for the database scoped credential:
+To use the managed service identity for the database scoped credential:
   - Specify `WITH IDENTITY = 'Managed Identity'`
-  - Use the system-assigned managed service identity of the Azure SQL Managed Instance, which must be enabled if it is to be used for this purpose.
+    - Use the system-assigned managed service identity of the Azure SQL Managed Instance, which must be enabled if it is to be used for this purpose.
+
   - Grant the **Reader** Azure RBAC role to the system assigned managed service identity of the Azure SQL Managed Instance to the necessary Azure Blob Storage containers. For example, via the Azure portal, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
-  To create a shared access signature (SAS) for the database scoped credential:
-
+To create a shared access signature (SAS) for the database scoped credential:
   - Specify `WITH IDENTITY = 'SHARED ACCESS SIGNATURE', SECRET = ...`
-  - There are multiple ways to create an SAS:
+  - There are multiple ways to create a shared access signature:
     - You can get an SAS token by navigating to the **Azure portal -> <Your_Storage_Account> -> Shared access signature -> Configure permissions -> Generate SAS and connection string**. For more information, see [Generate a shared access signature](/azure/storage/blobs/blob-containers-portal#generate-a-shared-access-signature).
     - You can [create and configure an SAS with Azure Storage Explorer](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container).
     - You can create an SAS programmatically via PowerShell, Azure CLI, .NET, and REST API. For more information, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json).
   - The SAS token should be configured as follows:
     - When an SAS token is generated, it includes a question mark ('?') at the beginning of the token. Exclude the leading `?` when configured as the SECRET.
-    - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).
     - Use a valid expiration period (all dates are in UTC time).
-    - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
+    - Grant at least read permission on the file that should be loaded (for example `srt=o&sp=r`). Multiple shared access signatures can be created for different use cases. Permissions should be granted as follows:
+
+    |    Action    |    Permission    |
+    |    ------    |    ----------    |
+    |    Read data from a file    |    Read    |
+    |    Read data from multiple files and subfolders    |    Read and List    |
+    |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
 
 ## Permissions
 
@@ -2608,11 +2649,11 @@ Takes a shared lock on the `EXTERNAL DATA SOURCE` object.
 
 ## Examples
 
-For more examples, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
+For more examples, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 ### A. Query external data from Azure SQL Managed Instance with OPENROWSET or an external table
 
-For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md).
+For more examples, see [Create external data source](create-external-data-source-transact-sql.md) or see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
 1. Create the database master key, if it doesn't exist.
 
@@ -2713,7 +2754,7 @@ For more examples, see [Create external data source](create-external-data-source
     WITH (
      LOCATION = 'yellow/puYear=*/puMonth=*/*.parquet',
      DATA_SOURCE = NYCTaxiExternalDataSource,
-     FILE_FORMAT = MyFileFormat
+     FILE_FORMAT = MyFileFormat\.\./\.\./\.\./azure-sql/
     );
     GO
     
@@ -2725,7 +2766,7 @@ For more examples, see [Create external data source](create-external-data-source
 
 ## Next steps
 
-- [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview.md)
+- [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview)
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]

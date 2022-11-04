@@ -58,7 +58,7 @@ The zone-redundant version of the high availability architecture for the General
 ![Zone redundant configuration for General Purpose](./media/high-availability-sla/zone-redundant-for-general-purpose.png)
 
 > [!IMPORTANT]
-> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, and France Central. This is in preview in the following regions: East US, East US 2, Southeast Asia, Australia East, Japan East, and UK South. 
+> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central, East US 2 & East US. This is in preview in the following regions: Southeast Asia, Australia East, Japan East, and UK South. 
 
 > [!NOTE]
 > Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the standard-series (Gen5) hardware is selected.
@@ -160,7 +160,7 @@ Specify the `-ZoneRedundant` parameter to enable zone redundancy for your Hypers
 To create your zone redundant database using Azure PowerShell, use the following example command: 
 
 ```powershell
-New-AzSqlDatabaseSecondary -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -PartnerResourceGroupName "myPartnerResourceGroup" -PartnerServerName $targetserver -PartnerDatabaseName "zoneRedundantCopyOfMySampleDatabase” -ZoneRedundant -BackupStorageRedundancy Zone -HighAvailabilityReplicaCount 1
+New-AzSqlDatabaseSecondary -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -PartnerResourceGroupName "myPartnerResourceGroup" -PartnerServerName $targetserver -PartnerDatabaseName "zoneRedundantCopyOfMySampleDatabase" -ZoneRedundant -BackupStorageRedundancy Zone -HighAvailabilityReplicaCount 1
 ```
 
 
@@ -187,7 +187,7 @@ Specify the `-ZoneRedundant` parameter to enable zone redundancy for your Hypers
 To create your zone redundant database using Azure PowerShell, use the following example command: 
 
 ```powershell
-New-AzSqlDatabaseCopy -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -CopyResourceGroupName "myCopyResourceGroup" -CopyServerName $copyserver -CopyDatabaseName "zoneRedundantCopyOfMySampleDatabase” -ZoneRedundant -BackupStorageRedundancy Zone 
+New-AzSqlDatabaseCopy -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -CopyResourceGroupName "myCopyResourceGroup" -CopyServerName $copyserver -CopyDatabaseName "zoneRedundantCopyOfMySampleDatabase" -ZoneRedundant -BackupStorageRedundancy Zone 
 ```
 
 

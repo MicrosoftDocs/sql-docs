@@ -4,7 +4,7 @@ description: Tutorial on how to set up Azure Active Directory Authentication for
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 09/12/2022
+ms.date: 10/25/2022
 ms.prod: sql
 ms.technology: security
 ms.topic: tutorial
@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts. Azure Virtual Machines aren't supported.
+This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview).
 
 In this tutorial, you learn how to:
 
@@ -33,7 +33,6 @@ In this tutorial, you learn how to:
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
-- Azure extension for SQL Server version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) version 18.0 or higher is installed on the client machine. Or download the latest [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
@@ -156,7 +155,17 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    The Azure Arc server agent can only update once the previous action has completed. This means that saving a new Azure AD configuration before the last one has finalized can cause a failure. If you see the message **Extended call failed** when you select **Save**, wait 5 minutes and then try again.
 
-   The admin login specified in the portal will be added as a `sysadmin` to the SQL Server instance, but it will not be listed in `syslogins` or `sys.server_principals`.
+   The Azure AD admin login is listed in `sys.server_principals`, but is not part of the `sysadmin` role. To grant the Azure AD admin the `sysadmin` role, use the [sp_addsrvrolemember](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql) stored procedure.
+
+   ```sql
+   EXEC sp_addsrvrolemember @loginame='aadadmin@contoso.com', @rolename='sysadmin';
+   GO
+   ```
+
+   > [!NOTE]
+   > Once the Azure AD admin login is granted the `sysadmin` role, changing the Azure AD admin in the Azure portal does not remove the previous login that remains as a `sysadmin`. To remove the login, it must be dropped manually.
+   >
+   > The Azure AD admin change for the SQL Server instance takes place without a server restart, once the process is completed with the SQL Server's Azure Arc agent. For the new admin to display in `sys.server_principals`, the SQL Server instance must be restarted, and until then, the old admin is displayed. The current Azure AD admin can be checked in the Azure portal.
 
 ## Create logins and users
 

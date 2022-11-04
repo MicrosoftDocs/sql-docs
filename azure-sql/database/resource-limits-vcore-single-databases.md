@@ -4,7 +4,7 @@ description: This page describes some common vCore resource limits for a single 
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/30/2022
+ms.date: 11/04/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -73,6 +73,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>3</sup>|320|640|1280|1920|2560|
 |Max log rate (MBps)|4.5|9|18|27|36|
 |Max concurrent workers|75|150|300|450|600|
+|Max concurrent external connections <sup>4</sup>|7|15|30|45|60|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -85,55 +86,28 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
 ### <a id="gen5-hardware-part-2-1"></a>General Purpose Serverless Standard-series (Gen5) compute (part 2 of 3)
 
-
-|Compute size (service objective)|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
-|:--- | --: |--: |--: |--: |
-|Compute generation|Gen5|Gen5|Gen5|Gen5|
-|Min-max vCores|1.25 - 10|1.50 - 12|1.75 - 14|2.00 - 16|
-|Min-max memory (GB)|3.75 - 30|4.50 - 36|5.25 - 42|6.00 - 48|
-|Min-max auto-pause delay (minutes)|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|
-|Columnstore support|Yes|Yes|Yes|Yes|
-|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|
-|Max data size (GB)|2048|3072|3072|3072|
-|Max log size (GB) <sup>1</sup>|461|461|461|922|
-|Tempdb max data size (GB)|320|384|448|512|
-|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
-|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
-|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS <sup>2</sup>|3200|3840|4480|5120|
-|Max log rate (MBps)|45|50|50|50|
-|Max concurrent workers|750|900|1050|1200|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|
-|Number of replicas|1|1|1|1|
-|Multi-AZ|Yes|Yes|Yes|Yes|
-|Read Scale-out|N/A|N/A|N/A|N/A|
-|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-### <a id="gen5-hardware-part-3-1"></a>General Purpose Standard-series Serverless (Gen5) compute (part 3 of 3)
-
-|Compute size (service objective)|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
-|:--- | --: |--: |--: |--: |--:|
+|Compute size (service objective)|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|GP_S_Gen5_18|
+|:--- | --: |--: |--: |--: |--: |
 |Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
-|Min-max vCores|2.25-18|2.5-20|3-24|4-32|5-40|
-|Min-max memory (GB)|6.75-54|7.5-60|9-72|12-96|15-120|
-|Min-max auto-pause delay (minutes)|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|60 - 10,080|
+|Min-max vCores|1.25-10|1.50-12|1.75-14|2.00-16|2.25-18|
+|Min-max memory (GB)|3.75-30|4.50-36|5.25-42|6.00-48|6.75-54|
+|Min-max auto-pause delay (minutes)|60-10,080|60-10,080|60-10,080|60-10,080|60-10,080|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
-|Max data size (GB)|3072|4096|4096|4096|4096|
-|Max log size (GB) <sup>1</sup>|922|1024|1024|1024|1024|
-|Tempdb max data size (GB)|640|768|1024|1280|2560|
+|Max data size (GB)|2048|3072|3072|3072|3072|
+|Max log size (GB) <sup>1</sup>|461|461|461|922|922|
+|Tempdb max data size (GB)|320|384|448|512|576|
 |Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
 |Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
 |Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
-|Max data IOPS <sup>2</sup>|5,760|6,400|7,680|10,240|12,800|
-|Max log rate (MBps)|50|50|50|50|50|
-|Max concurrent workers|1500|1800|2400|3000|6000|
+|Max data IOPS <sup>2</sup>|3200|3840|4480|5120|5760|
+|Max log rate (MBps)|45|50|50|50|50|
+|Max concurrent workers|750|900|1050|1200|1350|
+|Max concurrent external connections <sup>3</sup>|75|90|105|120|135|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -143,6 +117,42 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+### <a id="gen5-hardware-part-3-1"></a>General Purpose Standard-series Serverless (Gen5) compute (part 3 of 3)
+
+|Compute size (service objective)|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|GP_S_Gen5_80 <sup>3</sup>|
+|:--- |--: |--: |--: |--: |--:|
+|Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
+|Min-max vCores|2.5-20|3-24|4-32|5-40|10-80|
+|Min-max memory (GB)|7.5-60|9-72|12-96|15-120|30-240|
+|Min-max auto-pause delay (minutes)|60-10,080|60-10,080|60-10,080|60-10,080|60-10,080|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
+|Max data size (GB)|3072|4096|4096|4096|4096|
+|Max log size (GB) <sup>1</sup>|922|1024|1024|1024|1024|
+|Tempdb max data size (GB)|640|768|1024|1280|2560|
+|Storage type|Remote SSD|Remote SSD|Remote SSD|Remote SSD|Remote SSD|
+|Read IO latency (approximate)|5-10 ms|5-10 ms|5-10 ms|5-10 ms|5-10 ms|
+|Write IO latency (approximate)|5-7 ms|5-7 ms|5-7 ms|5-7 ms|5-7 ms|
+|Max data IOPS <sup>2</sup>|6,400|7,680|10,240|12,800|12,800|
+|Max log rate (MBps)|50|50|50|50|50|
+|Max concurrent workers|1500|1800|2400|3000|6000|
+|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
+|Number of replicas|1|1|1|1|1|
+|Multi-AZ|Yes|Yes|Yes|Yes|Yes|
+|Read Scale-out|N/A|N/A|N/A|N/A|N/A|
+|Included backup storage|1X DB size|1X DB size|1X DB size|1X DB size|1X DB size|
+
+<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
+
+<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> For specific regions where 80 max vcores in serverless is available, see [Available regions](serverless-tier-overview.md#available-regions).
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## <a id="hyperscale---provisioned-compute---gen5"></a>Hyperscale - provisioned compute - standard-series (Gen5)
 
@@ -166,12 +176,12 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
+|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|7 days|
-
 
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -179,8 +189,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
-### <a id="gen5-hardware-part-2-2"></a>Hyperscale Standard-series (Gen5) compute generation (part 2 of 2)
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
+### <a id="gen5-hardware-part-2-2"></a>Hyperscale Standard-series (Gen5) compute generation (part 2 of 2)
 
 |Compute size (service objective)|HS_Gen5_16|HS_Gen5_18|HS_Gen5_20|HS_Gen5_24|HS_Gen5_32|HS_Gen5_40|HS_Gen5_80|
 |:--- | --: |--: |--: |--: |---: |--: |--: |
@@ -200,6 +211,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1600|1800|2000|2400|3200|4000|8000|
+|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -211,6 +223,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Hyperscale - provisioned compute - DC-series
 
@@ -232,6 +246,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|160|320|480|640|
+|Max concurrent external connections <sup>4</sup>|16|32|48|64|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|
@@ -243,6 +258,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## <a id="general-purpose---provisioned-compute---gen5"></a>General purpose - provisioned compute - standard-series (Gen5)
 
@@ -264,6 +281,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>2</sup>|640|1280|1920|2560|3200|
 |Max log rate (MBps)|9|18|27|36|45|
 |Max concurrent workers|200|400|600|800|1000|
+|Max concurrent external connections <sup>3</sup>|20|40|60|80|100|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -273,6 +291,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
 
 ### <a id="gen5-hardware-part-2-3"></a>General purpose Standard-series (Gen5) compute (part 2 of 3)
 
@@ -292,6 +313,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>2</sup>|3,840|4,480|5,120|5,760|6,400|
 |Max log rate (MBps)|50|50|50|50|50|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
+|Max concurrent external connections <sup>3</sup>|120|140|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -302,13 +324,15 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
 
 ### <a id="gen5-hardware-part-3-3"></a>General purpose Standard-series (Gen5) compute (part 3 of 3)
 
 |Compute size (service objective)|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|GP_Gen5_128|
 |:--- | --: |--: |--: |--: |---: |
 |Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|24|32|40|80|128<sup>3</sup>|
+|vCores|24|32|40|80|128<sup>4</sup>|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
@@ -321,6 +345,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>2</sup>|7,680|10,240|12,800|12,800|16,000|
 |Max log rate (MBps)|50|50|50|50|50|
 |Max concurrent workers|2,400|3,200|4,000|8,000|12,800|
+|Max concurrent external connections <sup>3</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -331,7 +356,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> The 128 vCore offering is currently in Public Preview.
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+<sup>4</sup> The 128 vCore offering is currently in Public Preview.
 
 ## General purpose - provisioned compute - Fsv2-series
 
@@ -354,6 +381,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log rate (MBps)|36|45|50|50|50|
 |Max concurrent workers|400|500|600|700|800|
 |Max concurrent logins|800|1000|1200|1400|1600|
+|Max concurrent external connections <sup>3</sup>|40|50|60|70|80|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
@@ -363,6 +391,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### General Purpose Fsv2-series hardware (part 2 of 2)
 
@@ -383,6 +413,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log rate (MBps)|50|50|50|50|50|50|
 |Max concurrent workers|900|1000|1200|1600|1800|3600|
 |Max concurrent logins|1800|2000|2400|3200|3600|7200|
+|Max concurrent external connections <sup>3</sup>|90|100|120|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|1|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -392,6 +423,8 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## General purpose - provisioned compute - DC-series
 
@@ -411,6 +444,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max data IOPS <sup>2</sup>|640|1280|1920|2560|
 |Max log rate (MBps)|9|18|27|36|
 |Max concurrent workers|160|320|480|640|
+|Max concurrent external connections <sup>3</sup>|16|32|48|64|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|
 |Multi-AZ|N/A|N/A|N/A|N/A|
@@ -421,6 +455,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## <a id="business-critical---provisioned-compute---gen5"></a>Business critical - provisioned compute - standard-series (Gen5)
 
@@ -444,6 +479,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log rate (MBps)|24|48|72|96|96|
 |Max concurrent workers|200|400|600|800|1000|
 |Max concurrent logins|200|400|600|800|1000|
+|Max concurrent external connections <sup>3</sup>|20|40|60|80|100|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -453,6 +489,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
 
 ### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 2 of 3)
 
@@ -474,6 +513,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log rate (MBps)|96|96|96|96|96|
 |Max concurrent workers|1200|1400|1600|1800|2000|
 |Max concurrent logins|1200|1400|1600|1800|2000|
+|Max concurrent external connections <sup>3</sup>|120|140|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -484,13 +524,14 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### <a id="gen5-hardware-part-2-4"></a>Business critical Standard-series (Gen5) compute generation (part 3 of 3)
 
 |Compute size (service objective)|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|BC_Gen5_128|
 |:--- | --: |--: |--: |--: |--: | 
 |Compute generation|Gen5|Gen5|Gen5|Gen5|Gen5|
-|vCores|24|32|40|80|128<sup>3</sup>|
+|vCores|24|32|40|80|128<sup>4</sup>|
 |Memory (GB)|124.6|166.1|207.6|415.2|625|
 |Columnstore support|Yes|Yes|Yes|Yes|Yes|
 |In-memory OLTP storage (GB)|25.25|37.94|52.23|131.64|227.02|
@@ -505,6 +546,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Max log rate (MBps)|96|96|96|96|96|
 |Max concurrent workers|2400|3200|4000|8000|12,800|
 |Max concurrent logins|2400|3200|4000|8000|8000|
+|Max concurrent external connections <sup>3</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|
@@ -515,7 +557,9 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-<sup>3</sup> The 128 vCore offering is currently in Public Preview.
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+<sup>4</sup> The 128 vCore offering is currently in Public Preview.
 
 ## Business Critical - provisioned compute - M-series
 
@@ -541,6 +585,7 @@ For important information about M-series hardware availability, see [Azure offer
 |Max log rate (MBps)|48|60|72|84|96|108|
 |Max concurrent workers|800|1,000|1,200|1,400|1,600|1,800|
 |Max concurrent logins|800|1,000|1,200|1,400|1,600|1,800|
+|Max concurrent external connections <sup>3</sup>|80|100|120|140|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|4|
 |Multi-AZ|No|No|No|No|No|No|
@@ -551,8 +596,10 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
-### Business Critical M-series hardware (part 2 of 2)
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
+### Business Critical M-series hardware (part 2 of 2)
+=======
 |Compute size (service objective)|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:---| ---:|---:|---:|---:|---:|
 |Compute generation|M-series|M-series|M-series|M-series|M-series|
@@ -571,6 +618,7 @@ For important information about M-series hardware availability, see [Azure offer
 |Max log rate (MBps)|120|144|192|264|264|
 |Max concurrent workers|2,000|2,400|3,200|6,400|12,800|
 |Max concurrent logins|2,000|2,400|3,200|6,400|12,800|
+|Max concurrent external connections <sup>3</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|
 |Multi-AZ|No|No|No|No|No|
@@ -580,6 +628,8 @@ For important information about M-series hardware availability, see [Azure offer
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Business Critical - provisioned compute - DC-series
 
@@ -601,6 +651,7 @@ For important information about M-series hardware availability, see [Azure offer
 |Max log rate (MBps)|24|48|72|96|
 |Max concurrent workers|200|400|600|800|
 |Max concurrent logins|200|400|600|800|
+|Max concurrent external connections <sup>3</sup>|20|40|60|80|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|
 |Multi-AZ|No|No|No|No|
@@ -611,6 +662,7 @@ For important information about M-series hardware availability, see [Azure offer
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Previously available hardware
 
@@ -640,6 +692,7 @@ This section includes details on previously available hardware.
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|1200|
+|Max concurrent external connections <sup>4</sup>|20|40|60|80|100|120|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -673,12 +726,12 @@ This section includes details on previously available hardware.
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1400|1600|1800|2000|3200|4800|
+|Max concurrent external connections <sup>4</sup>|140|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|Yes|
 |Backup storage retention|7 days|7 days|7 days|7 days|7 days|7 days|
-
 
 <sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
 
@@ -686,6 +739,7 @@ This section includes details on previously available hardware.
 
 <sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
 
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### General purpose - provisioned compute - Gen4
 
@@ -710,6 +764,7 @@ This section includes details on previously available hardware.
 |Max data IOPS <sup>2</sup>|320|640|960|1280|1600|1920|
 |Max log rate (MBps)|4.5|9|13.5|18|22.5|27|
 |Max concurrent workers|200|400|600|800|1000|1200|
+|Max concurrent external connections <sup>3</sup>|20|40|60|80|100|120|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|1|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -719,6 +774,8 @@ This section includes details on previously available hardware.
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 #### General Purpose Gen4 hardware (part 2 of 2)
 
@@ -738,6 +795,7 @@ This section includes details on previously available hardware.
 |Max data IOPS <sup>2</sup>|2240|2560|2880|3200|5120|7680|
 |Max log rate (MBps)|31.5|36|40.5|45|50|50|
 |Max concurrent workers|1400|1600|1800|2000|3200|4800|
+|Max concurrent external connections <sup>3</sup>|140|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|1|1|1|1|1|1|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -747,6 +805,8 @@ This section includes details on previously available hardware.
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Business critical - provisioned compute - Gen4
 
@@ -773,6 +833,7 @@ This section includes details on previously available hardware.
 |Max log rate (MBps)|8|16|24|32|40|48|
 |Max concurrent workers|200|400|600|800|1000|1200|
 |Max concurrent logins|200|400|600|800|1000|1200|
+|Max concurrent external connections <sup>3</sup>|20|40|60|80|100|120|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -782,6 +843,8 @@ This section includes details on previously available hardware.
 <sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 #### Business critical Gen4 hardware (part 2 of 2)
 
@@ -803,6 +866,7 @@ This section includes details on previously available hardware.
 |Max log rate (MBps)|56|64|64|64|64|64|
 |Max concurrent workers|1400|1600|1800|2000|3200|4800|
 |Max concurrent logins|1400|1600|1800|2000|3200|4800|
+|Max concurrent external connections <sup>3</sup>|140|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|
 |Number of replicas|4|4|4|4|4|4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -813,6 +877,7 @@ This section includes details on previously available hardware.
 
 <sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
 
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ## Next steps
 

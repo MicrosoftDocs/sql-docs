@@ -178,7 +178,7 @@ To use an existing Azure Storage account:
 1. On the **Overview** pane, Under **Resources**, set the **Type** dropdown to *Storage account*.
 1. Select the storage account you want to use.
 
-To create a new Azure Storage account, follow the steps in [Create an Azure storage account](/azure/media-services/latest/storage-create-how-to). Complete the process by selecting **Go to resource** in the final step.
+To create a new Azure Storage account, follow the steps in [Create an Azure storage account](/azure/storage/common/storage-account-create). Complete the process by selecting **Go to resource** in the final step.
 
 #### Create a container
 
@@ -797,7 +797,7 @@ GO
 
 ## Use Azure Storage Explorer
 
-[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer is a standalone application that simplifies working with event file targets stored in blobs in Azure Storage. You can use Storage Explorer to:
+[Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer) is a standalone application that simplifies working with event file targets stored in blobs in Azure Storage. You can use Storage Explorer to:
 
 - [Create a blob container](/azure/vs-azure-tools-storage-explorer-blobs#create-a-blob-container) to hold XEvent session data.
 - [Get the shared access signature (SAS)](/azure/vs-azure-tools-storage-explorer-blobs#get-the-sas-for-a-blob-container) for a blob container. 

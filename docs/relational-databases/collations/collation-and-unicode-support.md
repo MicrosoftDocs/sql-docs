@@ -273,7 +273,7 @@ The following table shows the default collation designations, as determined by t
 |Lithuanian (Lithuania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Lower Sorbian (Germany)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgish (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedonian (North Macedonia, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedonian (North Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malay (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malay (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|Not available at server level|
@@ -604,7 +604,7 @@ As you've just seen, choosing the appropriate Unicode encoding and data type mig
 
 Before you choose whether to use UTF-8 or UTF-16 encoding for a database or column, consider the distribution of string data that will be stored:
 -  If it's mostly in the ASCII range 0–127 (such as English), each character requires 1 byte with UTF-8 and 2 bytes with UTF-16. Using UTF-8 provides storage benefits. Changing an existing column data type with ASCII characters in the range 0–127 from `NCHAR(10)` to `CHAR(10)`, and using an UTF-8 enabled collation, translates into a 50 percent reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, compared with `CHAR(10)`, which requires 10 bytes for the same Unicode string representation.    
--  Above the ASCII range, almost all Latin-based script, and Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac, Tāna, and N’Ko, require 2 bytes per character in both UTF-8 and UTF-16. In these cases, there aren't significant storage differences for comparable data types (for example, between using **char** or **nchar**).
+-  Above the ASCII range, almost all Latin-based script, and Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac, Tāna, and N'Ko, require 2 bytes per character in both UTF-8 and UTF-16. In these cases, there aren't significant storage differences for comparable data types (for example, between using **char** or **nchar**).
 -  If it's mostly East Asian script (such as Korean, Chinese, and Japanese), each character requires 3 bytes with UTF-8 and 2 bytes with UTF-16. Using UTF-16 provides storage benefits. 
 -  Characters in the range 010000–10FFFF require 4 bytes in both UTF-8 and UTF-16. In these cases, there aren't storage differences for comparable data types (for example, between using **char** or **nchar**).
 

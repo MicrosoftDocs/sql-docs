@@ -13,13 +13,15 @@ ms.topic: conceptual
 
 The Table Designer (preview) in Azure Data Studio provides a visual editor experience alongside the Transact-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.
 
+[!INCLUDE [azure-data-studio-preview](../includes/azure-data-studio-preview.md)]
+
 ## Why Table Designer?
 
 The Table Designer in Azure Data Studio provides users an efficient way to configure and manage tables, using primary and foreign keys, indices, constraints, triggers, etc. directly on the graphical user interface (GUI).
 
 ## Overview of Table Designer
 
-The Table Designer consists of a window split into three separate panes. The first pane, is the Overview/General pane of the table design. This consists of tabs for the columns, primary and foreign keys, constraint checks, indexes, and a general tab. The second pane is used for defining the properties of your table. Lastly, the third pane is the Script pane for the read-only T-SQL script that represents actions performed on the GUI as well as query results. The size of these panes can be adjusted by clicking on the edge lines and mouse dragging with the mouse to resize. 
+The Table Designer consists of a window split into three separate panes. The first pane is the Overview/General pane of the table design. This consists of tabs for the columns, primary and foreign keys, constraint checks, indexes, and a general tab. The second pane is used for defining the properties of your table. Lastly, the third pane is the Script pane for the read-only T-SQL script that represents actions performed on the GUI as well as query results. The size of these panes can be adjusted by clicking on the edge lines and mouse dragging with the mouse to resize. 
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-panes.png" alt-text="Screenshot of Table Designer showing the three different panes.":::
 
@@ -39,7 +41,7 @@ Before creating a table, you need to ensure that you have an active connection w
 
 To create a table, right-click the Tables folder in the connection pane and select "New Table". This opens up the Table Designer view seen below.
 
-A default table is created with the default name of "NewTable", which has one column by default. You can edit the name of your table and add new columns to it. Let us update our table name to “Cities”. We do this by selecting inside this name field, typing the new table name (Cities) and pressing "Enter" to save the change. Lets add a new column by selecting the "New Column" button above the columns grid. In the Columns grid, select the name value "column 1", replace with "CityName", and select the Primary Key column checkbox to make this the primary key for the table. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](../relational-databases/tables/primary-and-foreign-key-constraints.md).
+A default table is created with the default name of "NewTable", which has one column by default. You can edit the name of your table and add new columns to it. Let us update our table name to "Cities". We do this by selecting inside this name field, typing the new table name (Cities) and pressing "Enter" to save the change. Lets add a new column by selecting the "New Column" button above the columns grid. In the Columns grid, select the name value "column 1", replace with "CityName", and select the Primary Key column checkbox to make this the primary key for the table. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](../relational-databases/tables/primary-and-foreign-key-constraints.md).
 
 Select the "column 2", replace with "Population"
 
@@ -57,7 +59,7 @@ If you choose to manually run the SQL command to update this database, you need 
 
 :::image type="content" source="media/table-designer-azure-data-studio/change-publishing-via-the-sql-command-script-table-designer.png" alt-text="Screenshot of Table Designer showing how to publish changes to the database using the S Q L command option.":::
 
-You see that this script was ran successfully as described in the "Messages" pane.
+You see that this script was run successfully as described in the "Messages" pane.
 
 > [!Note]
 > Please note that if you decide to use the "Generate Script" option, you need to enable the SQL command mode in order to prevent errors in the SQL command script.Do this by clicking the "Enable SQLCMD" icon. In the image above, the "Enable SQLCMD" option is already selected, which is why you see "Disable SQLCMD". 
@@ -110,7 +112,7 @@ The Table Designer supports different table types and properties that dictate re
 
 ### Graph Tables
 
-Graph tables are used to establish relationships between entities in your database using node and edge table relationships. In Azure Data Studio, you can easily create these relationships directly on the GUI without having to manually type out long T-SQL statements. To read more on graph tables, check out [this documentation on SQL Graph Architecture](../relational-databases/graphs/sql-graph-architecture.md). The table type can be seen in the Connections Pane by the icon shown to the left of the table name A single dot represents a node table, while the two unshaded dots represent edge tables as shown below
+Graph tables are used to establish relationships between entities in your database using node and edge table relationships. In Azure Data Studio, you can easily create these relationships directly on the GUI without having to manually type out long T-SQL statements. To read more on graph tables, check out [this documentation on SQL Graph Architecture](../relational-databases/graphs/sql-graph-architecture.md). The table type can be seen in the Connections Pane by the icon shown to the left of the table name. A single dot represents a node table, while the two unshaded dots represent edge tables as shown below
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-node-vs-edge.png" alt-text="Screenshot of Table Designer showing node and edge graph table types.":::
 
@@ -136,7 +138,7 @@ Notice that the script is updated to include the "as node" syntax.
 
 Once this configuration is set, publish this update to the database. Once published, you will see that a new column for the node ID is created and this ID is referenced in the script pane as shown below. 
 
-:::image type="content" source="media/table-designer-azure-data-studio/table-designer-publishing-changes-to-a-node-graph-table.png" alt-text="Screenshot of Table Designer showing the node I D in the table view and script pane.":::
+:::image type="content" source="media/table-designer-azure-data-studio/table-designer-publishing-changes-to-a-node-graph-table.png" alt-text="Screenshot of Table Designer showing the node ID in the table view and script pane.":::
 
 
 Create another node table called "Persons", repeating the steps above.
@@ -152,7 +154,7 @@ To create the relationship between the node and edge, select "Edge Constraints".
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-creating-edge-constraint-without-clause.png" alt-text="Screenshot of Table Designer showing how to create edge constraint.":::
 
-As seen in script pane in the image above, a warning appears indicating that a clause has not been specified. We need to create the clause that will establish the edge constraint between our "Persons" and "Cities" node tables. On the "Edge Constraint Properties" pane, under "Clauses", select "+New Clause". The"From" and "To" values will now appear in the clauses section. Hover over the "From Table" to view the drop-down, select "dbo.Persons" and from the "To Table" drop-down, select "dbo.Cities". Be sure to publish changes to save your work. See below for the overview of what the Table Designer view should look like after performing these steps described above. 
+As seen in script pane in the image above, a warning appears indicating that a clause has not been specified. We need to create the clause that will establish the edge constraint between our "Persons" and "Cities" node tables. On the "Edge Constraint Properties" pane, under "Clauses", select "+New Clause". The "From" and "To" values will now appear in the clauses section. Hover over the "From Table" to view the drop-down, select "dbo.Persons" and from the "To Table" drop-down, select "dbo.Cities". Be sure to publish changes to save your work. See below for the overview of what the Table Designer view should look like after performing these steps described above. 
 
 :::image type="content" source="media/table-designer-azure-data-studio/table-designer-creating-edge-constraint-with-clause.png" alt-text="Screenshot of Table Designer showing how to add clause to edge constraint.":::
 

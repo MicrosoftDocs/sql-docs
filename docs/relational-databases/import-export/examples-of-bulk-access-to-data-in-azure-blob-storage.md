@@ -38,6 +38,17 @@ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
 
+## Known issues
+
+Requests from Azure SQL Database and Azure SQL Managed Instance using SAS tokens may be blocked with the following error:
+
+```text
+Msg 4861, Level 16, State 1, Line 27
+Cannot bulk load because the file "FileName.extension" could not be opened. Operating system error code 5(Access is denied.).
+```
+
+Only a subset of Azure services are currently on the trusted services list. For a complete list of trusted services and updates on Azure storage firewall settings, see [Trusted access for resources registered in your subscription](/azure/storage/common/storage-network-security?tabs=azure-portal#trusted-access-for-resources-registered-in-your-subscription).
+
 ## Examples
 
 Along with the examples in this article, you can also review the [Azure SQL Database import data samples](https://github.com/Azure-Samples/azure-sql-db-import-data) on GitHub.

@@ -55,15 +55,17 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max number DBs per pool <sup>1</sup> | 100 | 200 | 500 | 500 | 500 | 500 | 500 | 500 |
 | Max concurrent workers per pool <sup>2</sup> | 100 | 200 | 400 | 600 | 800 | 1600 | 2400 | 3200 |
+| Max concurrent external connections per pool <sup>3</sup> | 10 | 20 | 40 | 60 | 80 | 150 | 150 | 150 |
 | Max concurrent sessions per pool <sup>2</sup> | 30000 | 30000 | 30000 | 30000 |30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 | 0, 5 |
 | Max DTU per database choices | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 |
 | Max storage per database (GB) | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
 
-
 <sup>1</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
 <sup>2</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Standard elastic pool limits
 
@@ -74,17 +76,19 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | N/A | N/A | N/A | N/A | N/A | N/A |
 | Max number DBs per pool <sup>2</sup> | 100 | 200 | 500 | 500 | 500 | 500 |
 | Max concurrent workers per pool <sup>3</sup> | 100 | 200 | 400 | 600 | 800 | 1600 |
+| Max concurrent external connections per pool <sup>4</sup> | 10 | 20 | 40 | 60 | 80 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 10, 20, 50 | 0, 10, 20, 50, 100 | 0, 10, 20, 50, 100, 200 | 0, 10, 20, 50, 100, 200, 300 | 0, 10, 20, 50, 100, 200, 300, 400 | 0, 10, 20, 50, 100, 200, 300, 400, 800 |
 | Max DTU per database choices | 10, 20, 50 | 10, 20, 50, 100 | 10, 20, 50, 100, 200 | 10, 20, 50, 100, 200, 300 | 10, 20, 50, 100, 200, 300, 400 | 10, 20, 50, 100, 200, 300, 400, 800 |
 | Max storage per database (GB) | 1024 | 1024 | 1024 | 1024 | 1024 | 1024 |
-
 
 <sup>1</sup> See [SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/elastic/) for details on additional cost incurred due to any extra storage provisioned.
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
 <sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Standard elastic pool limits (continued)
 
@@ -95,17 +99,19 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | N/A | N/A | N/A | N/A | N/A |
 | Max number DBs per pool <sup>2</sup> | 500 | 500 | 500 | 500 | 500 |
 | Max concurrent workers per pool <sup>3</sup> | 2400 | 3200 | 4000 | 5000 | 6000 |
+| Max concurrent external connections per pool <sup>4</sup> | 150 | 150 | 150 | 150 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000, 2500 | 0, 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000, 2500, 3000 |
 | Max DTU per database choices | 10, 20, 50, 100, 200, 300, 400, 800, 1200 | 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600 | 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000 | 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000, 2500 | 10, 20, 50, 100, 200, 300, 400, 800, 1200, 1600, 2000, 2500, 3000 |
 | Max storage per database (GB) | 1024 | 1536 | 1792 | 2304 | 2816 |
-
 
 <sup>1</sup> See [SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/elastic/) for details on additional cost incurred due to any extra storage provisioned.
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
 <sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Premium elastic pool limits
 
@@ -116,17 +122,19 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | 1 | 2 | 4 | 10 | 12 |
 | Max number DBs per pool <sup>2</sup> | 50 | 100 | 100 | 100 | 100 |
 | Max concurrent workers per pool (requests) <sup>3</sup> | 200 | 400 | 800 | 1600 | 2400 |
+| Max concurrent external connections per pool <sup>4</sup> | 20 | 40 | 80 | 150 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min eDTUs per database | 0, 25, 50, 75, 125 | 0, 25, 50, 75, 125, 250 | 0, 25, 50, 75, 125, 250, 500 | 0, 25, 50, 75, 125, 250, 500, 1000 | 0, 25, 50, 75, 125, 250, 500, 1000|
 | Max eDTUs per database | 25, 50, 75, 125 | 25, 50, 75, 125, 250 | 25, 50, 75, 125, 250, 500 | 25, 50, 75, 125, 250, 500, 1000 | 25, 50, 75, 125, 250, 500, 1000|
 | Max storage per database (GB) | 1024 | 1024 | 1024 | 1024 | 1536 |
-
 
 <sup>1</sup> See [SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/elastic/) for details on additional cost incurred due to any extra storage provisioned.
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
 <sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Premium elastic pool limits (continued)
 
@@ -137,17 +145,19 @@ For the same number of DTUs, resources provided to an elastic pool may exceed th
 | Max In-Memory OLTP storage per pool (GB) | 16 | 20 | 24 | 28 | 32 |
 | Max number DBs per pool <sup>2</sup> | 100 | 100 | 100 | 100 | 100 |
 | Max concurrent workers per pool <sup>3</sup> | 3200 | 4000 | 4800 | 5600 | 6400 |
+| Max concurrent external connections per pool <sup>4</sup> | 150 | 150 | 150 | 150 | 150 |
 | Max concurrent sessions per pool <sup>3</sup> | 30000 | 30000 | 30000 | 30000 | 30000 |
 | Min DTU per database choices | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750 | 0, 25, 50, 75, 125, 250, 500, 1000, 1750, 4000 |
 | Max DTU per database choices | 25, 50, 75, 125, 250, 500, 1000, 1750 | 25, 50, 75, 125, 250, 500, 1000, 1750 | 25, 50, 75, 125, 250, 500, 1000, 1750 | 25, 50, 75, 125, 250, 500, 1000, 1750 | 25, 50, 75, 125, 250, 500, 1000, 1750, 4000 |
 | Max storage per database (GB) | 2048 | 2560 | 3072 | 3584 | 4096 |
-
 
 <sup>1</sup> See [SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/elastic/) for details on additional cost incurred due to any extra storage provisioned.
 
 <sup>2</sup> See [Resource management in dense elastic pools](elastic-pool-resource-management.md) for additional considerations.
 
 <sup>3</sup> For the max concurrent workers for any individual database, see [Single database resource limits](resource-limits-vcore-single-databases.md). For example, if the elastic pool is using standard-series (Gen5) and the max vCore per database is set at 2, then the max concurrent workers value is 200.  If max vCore per database is set to 0.5, then the max concurrent workers value is 50 since on standard-series (Gen5) there are a max of 100 concurrent workers per vCore. For other max vCore settings per database that are less 1 vCore or less, the number of max concurrent workers is similarly rescaled.
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 > [!IMPORTANT]
 > More than 1 TB of storage in the Premium tier is currently available in all regions except: China East, China North, Germany Central, and Germany Northeast. In these regions, the storage max in the Premium tier is limited to 1 TB.  For more information, see [P11-P15 current limitations](single-database-scale.md#p11-and-p15-constraints-when-max-size-greater-than-1-tb).

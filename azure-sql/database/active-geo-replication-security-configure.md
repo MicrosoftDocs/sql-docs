@@ -93,7 +93,7 @@ SID = 0x1234 /*replace 0x1234 with the desired login SID*/
 > ALTER LOGIN [<login name>] DISABLE
 > ```
 >
-> DISABLE doesn’t change the password, so you can always enable it if needed.
+> DISABLE doesn't change the password, so you can always enable it if needed.
 
 ## Next steps
 

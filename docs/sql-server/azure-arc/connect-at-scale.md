@@ -15,7 +15,7 @@ This article describes how to connect multiple instances of SQL Server to Azure 
 
 ## Connecting at-scale using Azure policy
 
-You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the *Azure extension for SQL Server* on all Azure Arc connected servers, and will assign `Azure Connected SQL Server Onboarding` role to Arc managed identity in the specified scope. Once installed, the extension will register the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension will automatically register it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
+You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the *Azure extension for SQL Server* on all Azure Arc connected servers. Once installed, the extension will connect the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension will automatically register it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
 
 > [!IMPORTANT]
 >The Arc-enabled SQL Server resources for the SQL Server instances use the type `SQL Server - Azure Arc` and will be created in the same region and the resource group as the corresponding `Server - Azure Arc` resources. Because Azure extension for SQL Server  synchronizes with Azure once an hour, it may take up to one hour before these resources are created.
@@ -164,9 +164,9 @@ This means the machine is no longer recognized as a connected server. [Onboard t
 ### Server managed identity has insufficient permissions
 
 Check the extension log for the following record:
-`[7/14/2021 5:16:14 PM UTC] [INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc post request failed with error: Forbidden message: {"ErrorDescription":{"ErrorCode":6,"Message":"The user has no access to the provided Azure resource."},"ResponseUrl":null}`
+`[INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc post request failed with error: Forbidden message: {"ErrorDescription":{"ErrorCode":6,"Message":"The user has no access to the provided Azure resource."},"ResponseUrl":null}`
 
-Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [Initiate the connection from Azure](./connect.md#initiate-the-connection-from-azure) for the role assignment instructions.
+Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [When machine already connected to Arc-enabled Server](connect.md#when-machine-already-connected-to-arc-enabled-server) role assignment instructions.
 
 ### The user didn't migrate the Arc-enabled SQL Server resource to the new resource provider
 

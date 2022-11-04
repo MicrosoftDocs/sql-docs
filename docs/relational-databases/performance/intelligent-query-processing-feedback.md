@@ -329,7 +329,7 @@ The following XEs are available for the feature:
 
 ## Cardinality estimation (CE) feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later. Currently in preview for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 

@@ -27,8 +27,8 @@ Point-in-time restore can restore a database:
 
 - from an existing database.
 - from a deleted database.
-- to the same SQL Managed Instance, or to another SQL Managed Instance in the same subscription. 
-- to an instance in a different subscription from the source instance. 
+- to the same SQL Managed Instance, or to another SQL Managed Instance. 
+- to an instance in the same subscription or in a different subscription from the source instance. 
 
 The following table shows point-in-time restore scenarios for SQL Managed Instance: 
 
@@ -38,7 +38,7 @@ The following table shows point-in-time restore scenarios for SQL Managed Instan
 |Restore existing DB to another SQL Managed Instance| Yes |  Yes | Yes | 
 |Restore dropped DB to same SQL Managed Instance| Yes | No| Yes | 
 |Restore dropped DB to another SQL Managed Instance | Yes | No | Yes 
-|Restore database to an instance in another subscription | Yes | No | No | 
+|Restore existing DB to an instance in another subscription | Yes | No | No | 
 |Restore dropped DB to an instance in another subscription | Yes | No | No | 
 
 
@@ -47,6 +47,8 @@ The following table shows point-in-time restore scenarios for SQL Managed Instan
 Point-in-time restore of a whole SQL Managed Instance is not possible. This article explains only what's possible: point-in-time restore of a database that's hosted on SQL Managed Instance. 
 
 Limitations differ if you're restoring your database to an instance in the same subscription, or to a different subscription. 
+
+When [service endpoint policies](/service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet, prevents point-in-time restores (PITR) from instances in different subnets. 
 
 
 > [!WARNING]
@@ -67,13 +69,13 @@ Restoring a PITR backup across subscriptions has the following limitations:
 - The subscription type has to be either EA, CSP, MCA, or PayGo. 
 - The restore operation can only be performed on the primary instance. 
 - Geo-replicated backups are not currently supported for cross-subscription point-in-time restore. 
-- The user performing the restore must either be part of the contributor role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
+- The user performing the restore must either be part of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
 - If you are bringing your own key (BYOK), then the key must be present in both subscriptions. 
 
 
 ## Restore an existing database
 
-Restore an existing database by using the Azure portal, PowerShell, or the Azure CLI. If you're restoring to a different instance and using PowerShell or the Azure CLI, be sure to specify the properties for the target SQL Managed Instance or the database will be restored to the same instance by default. 
+Restore an existing database in the same subscription by using the Azure portal, PowerShell, or the Azure CLI. If you're restoring to a different instance in the same subscription and using PowerShell or the Azure CLI, be sure to specify the properties for the target SQL Managed Instance or the database will be restored to the same instance by default. 
 
 Restoring your database to an instance in a different subscription is currently only possible by using the Azure portal. If you're restoring to a different subscription, the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call underlying the restore action must contain `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and `crossSubscriptionSourceDatabaseId` **OR** `crossSubscriptionRestorableDroppedDatabaseId`. 
 
@@ -81,7 +83,7 @@ Restoring your database to an instance in a different subscription is currently 
 # [Portal](#tab/azure-portal)
 
 1. Sign in to the [Azure portal](https://portal.azure.com). 
-1. Go to your source SQL Managed Instance and under **Managed Databases**, choose the database that you want to restore.
+1. Go to your source SQL Managed Instance and under **Managed Instance Databases**, choose the database that you want to restore.
 
    :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot of the Azure portal, SQL Managed Instance overview blade, with a database selected. ":::
 

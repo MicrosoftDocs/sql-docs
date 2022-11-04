@@ -48,7 +48,7 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-|[Backup transparency](backup-transparency.md) | November 2022 |  Query the msdb database to explore your automated backup history. | 
+|[Backup transparency](backup-transparency.md) | November 2022 |  Query the **msdb** database to explore your backup history. | 
 |[Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | October 2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Managed Instance. | 
 |[Tempdb configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of tempdb files and their growth increments to tune the performance of your instance even more. |
 |[Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
@@ -75,7 +75,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the msdb database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 
+| **Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the **msdb** database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 
 
 
 ### October 2022

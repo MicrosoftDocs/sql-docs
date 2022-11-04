@@ -73,7 +73,7 @@ There is some overlap of content in the following articles, be sure to make chan
 
 ## Failover group architecture
 
-The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like `master` and `msdb` will not be replicated.
+The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like **master** and **msdb** will not be replicated.
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using managed instance and auto-failover group:
 

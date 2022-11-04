@@ -20,9 +20,6 @@ ms.author: wiassaf
 # msdb Database
  [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-> [!div class="op_single_selector"]
-> * [SQL Server](msdb-database.md)
-> * [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/msdb-database-sql-mi)
 
   The **msdb** database is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling alerts and jobs and by other features such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] and Database Mail.  
   
@@ -31,8 +28,8 @@ ms.author: wiassaf
  By default, **msdb** uses the simple recovery model. If you use the [backup and restore history](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) tables, we recommend that you use the full recovery model for **msdb**. For more information, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md). Notice that when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed or upgraded and whenever Setup.exe is used to rebuild the system databases, the recovery model of **msdb** is automatically set to simple.  
   
 > [!IMPORTANT]  
->  - After any operation that updates **msdb**, such as backing up or restoring any database, we recommend that you back up **msdb**. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
-> - Support for the msdb database was added to Azure SQL Managed Instance in 11/2022. To learn more about the difference of the database between the two products, review [The msdb database with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/msdb-database-sql-mi). 
+> - After any operation that updates **msdb**, such as backing up or restoring any database, we recommend that you back up **msdb**. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+> - There are differences to whats available in the **msdb** database in Azure SQL Managed Instance. Review [backup transparency](/azure/azure-sql/managed-instance/backup-trasparency.md)  to learn more. 
   
 ## Physical Properties of msdb  
  The following table lists the initial configuration values of the **msdb** data and log files. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

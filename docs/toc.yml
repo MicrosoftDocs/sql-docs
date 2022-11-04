@@ -15233,9 +15233,9 @@ items:
       - name: cdc.change_feed_settings
         href: relational-databases/system-tables/cdc-change-feed-settings.md
       - name: cdc.change_feed_table_groups
-        href: relational-databases/system-tables/cdc-change-feed-table-groups.md
+        href: relational-databases/system-tables/cdc-change-feed-table-groups-transact-sql.md
       - name: cdc.change_feed_tables
-        href: relational-databases/system-tables/cdc-change-feed-tables.md        
+        href: relational-databases/system-tables/cdc-change-feed-tables-transact-sql.md      
     - name: Backup & Restore Tables
       href: relational-databases/system-tables/backup-and-restore-tables-transact-sql.md
       items:

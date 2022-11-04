@@ -91,3 +91,5 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 - Get more information by viewing the prerequisite documents at [Services Hub On-Demand Assessments](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
 - To obtain comprehensive support of the on-demand SQL Assessment feature, a Premier or Unified support subscription is required. For details, see [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
+
+- [View SQL Server databases - Azure Arc](view-databases.md)

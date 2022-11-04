@@ -52,7 +52,7 @@ The name of the ledger table you want to verify. This is an optional argument, i
 Example of the input JSON document:
 
 ```json
-[{"path": “https://mystorage.blob.core.windows.net/sqldbledgerdigests/serverName/DatabaseName/2020-1-1 00:00:00Z”, “last_digest_block_id”:42, "is_current:true"} , … ]
+[{"path": "https://mystorage.blob.core.windows.net/sqldbledgerdigests/serverName/DatabaseName/2020-1-1 00:00:00Z", "last_digest_block_id":42, "is_current:true"} , … ]
 ```
 
 ## Return code values

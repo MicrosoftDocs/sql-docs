@@ -76,7 +76,7 @@ high of a number because it might negatively impact performance.
 
 ### Returns
 
-The [`Batch`](batch.md) instance to control this service’s
+The [`Batch`](batch.md) instance to control this service's
 batching lifecycle.
 
 
@@ -121,7 +121,7 @@ service:
 
 * *operation_id* - The function `alias`. 
 
-* *swagger* - The API REST endpoint to this service’s *swagger.json* document. 
+* *swagger* - The API REST endpoint to this service's *swagger.json* document. 
 
 
 ### Returns
@@ -152,7 +152,7 @@ The identifier of the batch execution.
 
 ### Returns
 
-The [`Batch`](batch.md) instance to control this service’s
+The [`Batch`](batch.md) instance to control this service's
 batching lifecycle.
 
 

@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/03/2022
+ms.date: 11/034/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
@@ -21,7 +21,7 @@ You may use a pay-as-you-go billing option to activate and run SQL Server with A
 * You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) in at least one of the Azure subscriptions your organization created. Learn how to [create a new billing subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 * You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the resource group in which the SQL Server instance will be registered. See [Managed Azure resource groups](/azure/azure-resource-manager/management/manage-resource-groups-portal) for details.
 * The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers are registered in each  subscription you use for SQL Server pay-as-you-go billing.
-* You select pay-as-you-go activation option in the [Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
+* You select pay-as-you-go activation option in [SQL 2022 setup wizard](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup) or [command prompt](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt). 
 
 To register the resource providers, use one of the methods below:  
 
@@ -63,15 +63,8 @@ When multiple instances of SQL Server are installed on the same OS, only one ins
 - If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed.
 - If two instances are installed with pay-as-you-go billing and same editions, the first instance in alphabetical order is billed.
 
-Pay-as-you-go billing requires that the following conditions are met:
-
-- The host is in a running state. For example, the virtual machine is fully up.
-- The hosting server is onboarded to Azure Arc.
-- The SQL Server instance and Azure extension for SQL Server are installed.
-- The pay-as-you-go option is selected during the SQL Server installation, or enabled in Azure portal.
-
 > [!IMPORTANT]
-> Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
+> Pay-as-you-go billing option is only supported in SQL Server 2022 for Standard or Enterprise editions. 
 
 ## License types
 
@@ -87,6 +80,7 @@ Any installed instance of SQL server can be connected to Azure with the exceptio
 | Standard | Product key without Software Assurance or Subscription | LicenseOnly | 
 | Evaluation | Free edition | Free | 
 | Developer | Free edition | Free | 
+|||
 
 Example of the instance properties of [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] in JSON:
 
@@ -116,6 +110,11 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 
 ## FAQ
 
+### Does pay-as-you-go billing stop when the Intenet connectivity is temporary down
+
+Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
+
+
 ### Do I get charged if my virtual machine is stopped
 
 When the VM is stopped, the usage data is not collected. Therefore, you will not be charged for the time the VM was stopped.  
@@ -129,6 +128,10 @@ The usage data collection requires an active SQL Server instance. Therefore, you
 The billing granularity is one hour. If your instance was active for less than an hour, you will be billed for the full hour. 
 
 ### Is there a minimum number of cores with pay-as-you-go billing 
+<<<<<<< HEAD
+Pay-as-you-go billing doesnt change the lincensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
+=======
+>>>>>>> 0651292073e7bd0430028680033fce7a71a0a16c
 
 Pay-as-you-go billing doesn't change the licensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
 

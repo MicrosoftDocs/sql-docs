@@ -18,10 +18,10 @@ You may use a pay-as-you-go billing option to activate and run SQL Server with A
 
 ## Prerequisites
 
-* Your have a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) in at least one of the Azure subscriptions your organization created. Learn how to [create a new billing subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
-* You must have a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the resource group in which the SQL Server instance will be registered. See [Managed Azure resource groops](/azure/azure-resource-manager/management/manage-resource-groups-portal) for details.
+* You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) in at least one of the Azure subscriptions your organization created. Learn how to [create a new billing subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+* You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the resource group in which the SQL Server instance will be registered. See [Managed Azure resource groups](/azure/azure-resource-manager/management/manage-resource-groups-portal) for details.
 * The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers are registered in each  subscription you use for SQL Server pay-as-you-go billing.
-* You select pay-as-you-go activation option in the [SQL 2022 setup wizard](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup) or [command prompt](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt). 
+* You select pay-as-you-go activation option in the [Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt).
 
 To register the resource providers, use one of the methods below:  
 
@@ -47,6 +47,7 @@ Run:
 ```azurecli
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
+
 ---
 
 ## Overview
@@ -124,10 +125,12 @@ When the VM is stopped, the usage data is not collected. Therefore, you will not
 The usage data collection requires an active SQL Server instance. Therefore, you will not be charged for the time the SQL Server instance was stopped.  
 
 ### Do I get charged if my SQL Server instance was running for less than an hour
+
 The billing granularity is one hour. If your instance was active for less than an hour, you will be billed for the full hour. 
 
 ### Is there a minimum number of cores with pay-as-you-go billing 
-Pay-as-you-go billing doesnt change the lincensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
+
+Pay-as-you-go billing doesn't change the licensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
 
 ### If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges
 

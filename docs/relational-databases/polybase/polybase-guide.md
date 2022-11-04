@@ -149,7 +149,7 @@ Starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Hadoop is no l
 | Azure Blob Storage | wasb[s] | abs |
 | ADLS Gen 2 | abfs[s] | adls |
 
-Due to these changes, it is required to manually drop PolyBase external data sources created on previous versions of SQL Server that uses `TYPE = HADOOP` or uses Azure Storage before migrating to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Dropping External Data Sources also require dropping the database associated objects such as Database Scoped Credentials and External Tables.
+Due to these changes, it is required to manually drop PolyBase external data sources created on previous versions of SQL Server that use `TYPE = HADOOP` or Azure Storage before migrating to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. Dropping external data sources also requires dropping the associated database objects, such as database scoped credentials and external tables.
 
 ## Next steps
 

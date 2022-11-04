@@ -48,6 +48,12 @@ EXECUTE sys.sp_help_change_feed;
 | **table_object_id** | **int** | The object id of the change feed table. | 
 | **state** | **tinyint** | The state of the change feed table. | 
 | **version** | **binary(10)** | The version of the change feed table. | 
+| **snapshot_phase** | **tinyint** | Phase of the current snapshot. | 
+| **snapshot_current_phase_time** | **datetime** | Time when the current snapshot phase started. | 
+| **snapshot_retry_count** | **int** | Number of times snapshot has attempted to retry.| 
+| **snapshot_start_time** | **datetime** | Start time of snapshot phase | 
+| **snapshot_end_time** | **datetime** | End time of snapshot phase|
+| **snapshot_row_count** | **int** | The number of rows of data being exported during the snapshot operation of the change feed table |
  
 ## Permissions  
 

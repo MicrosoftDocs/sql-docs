@@ -72,9 +72,9 @@ To choose an image, follow these steps:
 
 ## Basic settings
 
-On the **Basics** tab, select the subscription, resource group, and provide details for the SQL Server instances you're creating for your availability group. 
+On the **Basics** tab, select the subscription, resource group, and provide details for the SQL Server instances you're creating for your availability group.
 
-1. Choose the subscription and resource group from the drop-down that contains your domain controller, and where you intend to deploy your availability group. 
+1. Choose the subscription and resource group from the drop-down that contains your domain controller, and where you intend to deploy your availability group.
 
    :::image type="content" source="./media/availability-group-az-portal-configure/basics-subscription.png" alt-text="Screenshot of the Azure portal, basics tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page.":::
 
@@ -334,7 +334,7 @@ To view the logs for the deployment, and check the deployment history, follow th
 
    :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Screenshot of the Azure portal, Deployments page, with a failed availability group deployment highlighted. Select the deployment you're interested in learning more about." :::
 
-
+If the deployment fails and you want to redeploy using the portal experience, then manual clean-up of the resources, including deleting VMs, removing entries in Active Directory and/or DNS will be necessary, as the UX portal deployment is not idempotent. However, if you have deployed the using the template for automation, then clean-up of resources will not be necessary as the template is idempotent.
 
 ## Next steps
 

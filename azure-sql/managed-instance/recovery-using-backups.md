@@ -27,6 +27,8 @@ Some of the content in this article is duplicated in /azure-sql/database/recover
 
 This article provides steps to recover a database from a backup in Azure SQL Managed Instance. For Azure SQL Database, see [Restore a database from a backup in Azure SQL Database](../database/recovery-using-backups.md).
 
+## Overview
+
 [Automated database backups](automated-backups-overview.md) help protect your databases from user and application errors, accidental database deletion, and prolonged outages. This built-in capability is available for all service tiers and compute sizes. The following options are available for database recovery through automated backups:
 
 - Create a new database on the same managed instance, recovered to a specified point in time within the retention period.
@@ -34,7 +36,7 @@ This article provides steps to recover a database from a backup in Azure SQL Man
 - Create a database on the same managed instance or a different managed instance, recovered to the deletion time for a deleted database.
 - Create a new database on any managed instance in same subscription or different subscription in same tenant and in the same region, recovered to the point of the most recent backups.
 
-Cross-region restore for SQL Managed Instance isn't currently supported. When [service endpoint policies](/service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet, prevents point-in-time restores (PITR) from instances in different subnets. 
+Cross-region restore for SQL Managed Instance isn't currently supported. Additionally, when [service endpoint policies](/service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores (PITR) from instances in different subnets. 
 
 If you configured [long-term retention (LTR)](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any instance.
 
@@ -89,7 +91,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
   If you plan to retrieve data from the restored database to recover from a user or application error, you need to write and run a data recovery script that extracts data from the restored database and applies to the original database. Although the restore operation might take a long time to complete, the restoring database is visible in the database list throughout the restore process. 
   
-  If you delete the database during the restore, the restore operation will be canceled. You won't be charged for the database that did not complete the restore.
+  If you delete the database during the restore, the restore operation will be canceled. You won't be charged for the database that didn't complete the restore.
   
 ### [Azure portal](#tab/azure-portal)
 
@@ -179,7 +181,7 @@ After you complete the process of creating an instance database, it will contain
 
 ### [Azure CLI](#tab/azure-cli)
 
-To restore a database in SQL Managed Instance by using the Azure CLI, see [az sql midb restore](/cli/azure/sql/midb#az-sql-midb-restore).
+Geo-restore with the Azure CLI is currently unavailable. 
 
 ### [PowerShell](#tab/powershell)
 
@@ -191,7 +193,7 @@ For a PowerShell script that shows how to perform geo-restore for a database in 
 
 For detailed information about using geo-restore to recover from an outage, see [Recover from an outage](../database/disaster-recovery-guidance.md#recover-using-geo-restore).
 
-Geo-restore is the most basic disaster-recovery solution available in SQL Managed Instance. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and is not critical to the business, geo-restore is an appropriate disaster-recovery solution. 
+Geo-restore is the most basic disaster-recovery solution available in SQL Managed Instance. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and isn't critical to the business, geo-restore is an appropriate disaster-recovery solution. 
 
 For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-mi.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
 

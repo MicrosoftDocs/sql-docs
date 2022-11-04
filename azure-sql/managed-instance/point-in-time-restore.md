@@ -44,7 +44,7 @@ The following table shows point-in-time restore scenarios for SQL Managed Instan
 
 ## Limitations
 
-Point-in-time restore of a whole SQL Managed Instance is not possible. This article explains only what's possible: point-in-time restore of a database that's hosted on SQL Managed Instance. 
+Point-in-time restore of a whole SQL Managed Instance isn't possible. This article explains only what's possible: point-in-time restore of a database that's hosted on SQL Managed Instance. 
 
 Limitations differ if you're restoring your database to an instance in the same subscription, or to a different subscription. 
 
@@ -68,9 +68,9 @@ Restoring a PITR backup across subscriptions has the following limitations:
 - Both subscriptions must be in the same tenant. 
 - The subscription type has to be either EA, CSP, MCA, or PayGo. 
 - The restore operation can only be performed on the primary instance. 
-- Geo-replicated backups are not currently supported for cross-subscription point-in-time restore. 
+- Geo-replicated backups aren't currently supported for cross-subscription point-in-time restore. 
 - The user performing the restore must either be part of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
-- If you are bringing your own key (BYOK), then the key must be present in both subscriptions. 
+- If you're bringing your own key (BYOK), then the key must be present in both subscriptions. 
 
 
 ## Restore an existing database

@@ -1,5 +1,5 @@
 ---
-title: "Enable | disable backup checksums"
+title: "Enable or disable backup checksums during backup or restore (SQL Server)"
 description: This article shows you how to enable or disable backup checksums for a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -1,7 +1,7 @@
 ---
 title: "cdc.change_feed_settings (Transact-SQL)"
 description: "cdc.change_feed_settings contains metadata that is used to configure change feed."
-author: IdrisMotiwalaMSFT
+author: im-microsoft
 ms.author: imotiwala
 ms.reviewer: wiassaf
 ms.date: 11/04/2022

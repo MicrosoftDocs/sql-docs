@@ -13,7 +13,7 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_change_feed_table"
-author: IdrisMotiwalaMSFT
+author: im-microsoft
 ms.author: imotiwala
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 ---

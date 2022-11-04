@@ -1,7 +1,7 @@
 ---
 title: "cdc.change_feed_table_groups (Transact-SQL)"
 description: "cdc.change_feed_table_groups stores metadata with their associated indexes for Azure Synapse Link for SQL."
-author: IdrisMotiwalaMSFT
+author: im-microsoft
 ms.author: imotiwala
 ms.date: 11/04/2022
 ms.reviewer: wiassaf

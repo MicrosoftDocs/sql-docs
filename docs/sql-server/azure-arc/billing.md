@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/034/2022
+ms.date: 11/04/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
@@ -128,10 +128,7 @@ The usage data collection requires an active SQL Server instance. Therefore, you
 The billing granularity is one hour. If your instance was active for less than an hour, you will be billed for the full hour. 
 
 ### Is there a minimum number of cores with pay-as-you-go billing 
-<<<<<<< HEAD
 Pay-as-you-go billing doesnt change the lincensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
-=======
->>>>>>> 0651292073e7bd0430028680033fce7a71a0a16c
 
 Pay-as-you-go billing doesn't change the licensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
 

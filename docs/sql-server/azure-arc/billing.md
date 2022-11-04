@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/01/2022
+ms.date: 11/02/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
@@ -16,11 +16,44 @@ ms.topic: conceptual
 
 You may use a pay-as-you-go billing option to license SQL Server with Azure Arc. This option is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
 
+## Prerequisites
+
+* Your have a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) in at least one of the Azure subscriptions your organization created. Learn how to [create a new billing subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+* You must have a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the resource group in which the SQL Server instance will be registered. See [Managed Azure resource groops](/azure/azure-resource-manager/management/manage-resource-groups-portal) for details.
+* The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers are registered in each  subscription you use for SQL Server pay-as-you-go billing.
+* You select pay-as-you-go activation option in the [SQL 2022 setup wizard](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup) or [command prompt](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt). 
+
+To register the resource providers, use one of the methods below:  
+
+# [Azure portal](#tab/azure)
+
+1. Select **Subscriptions** 
+2. Choose your subscription
+3. Under **Settings**, select **Resource providers**
+4. Search for `Microsoft.AzureArcData` and `Microsoft.HybridCompute` and select **Register**
+
+# [PowerShell](#tab/powershell)
+
+Run:
+
+```powershell
+Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData
+```
+
+# [Azure CLI](#tab/az)
+
+Run:
+
+```azurecli
+az provider register --namespace 'Microsoft.AzureArcData'
+```
+---
+
 ## Overview
 
 You can select pay-as-you-go billing through Microsoft Azure to install a Standard or Enterprise edition without supplying a pre-purchased product key. This option requires that you have an active [Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions). Once your SQL Server instance is connected to Azure and the [Azure extension for SQL Server](connect.md) is installed on the hosting server, the SQL Server instance(s) will be registered with Azure Resource Manager (ARM) as a `SQL Server - Azure Arc` resource(s). The charges will be associated with a specific instance of SQL Server that requires a license. 
 
-The billing granularity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the host at any time during that hour. The size of the host is measured in logical cores (vCores) whether the SQL Server instance is installed on the physical server or virtual machine.
+The billing granularity is one hour and the charges are calculated based on the SQL Server edition and the maximum size of the hosting server at any time during that hour. The size is measured in cores if the SQL Server instance is installed on a physical server, and logical cores (vCores) if the SQL Server instance is installed on a  virtual machine.
 
 When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following rules to select instance to be licensed:
 
@@ -35,8 +68,6 @@ Pay-as-you-go billing requires that the following conditions are met:
 - The hosting server is onboarded to Azure Arc.
 - The SQL Server instance and Azure extension for SQL Server are installed.
 - The pay-as-you-go option is selected during the SQL Server installation, or enabled in Azure portal.
-
-If any of these conditions is not met, the pay-as-you-go billing will stop until they are met again.
 
 > [!IMPORTANT]
 > Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
@@ -84,15 +115,21 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 
 ## FAQ
 
-### Do I get charged if my SQL Server instance is stopped
-
-The billing and usage collection is based on the time the instance is installed on the virtual machine, not on the time it is in the active state.  
-
 ### Do I get charged if my virtual machine is stopped
 
-When the VM is stopped, the usage data is not be collected. Therefore you will not be charged for the time the VM was stopped.  
+When the VM is stopped, the usage data is not collected. Therefore, you will not be charged for the time the VM was stopped.  
 
-### If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges. 
+### Do I get charged if my SQL Server instance is stopped
+
+The usage data collection requires an active SQL Server instance. Therefore, you will not be charged for the time the SQL Server instance was stopped.  
+
+### Do I get charged if my SQL Server instance was running for less than an hour
+The billing granularity is one hour. If your instance was active for less than an hour, you will be billed for the full hour. 
+
+### Is there a minimum number of cores with pay-as-you-go billing 
+Pay-as-you-go billing doesnt change the lincensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
+
+### If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges
 
 When you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 

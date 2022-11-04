@@ -181,7 +181,7 @@ To avoid using duplicate IP addresses, configure an APIPA address (also known as
 
 ```powershell
 Get-ClusterResource "virtual IP address" | Set-ClusterParameter 
-    –Multiple @{"Address”=”169.254.1.1”;”SubnetMask”=”255.255.0.0”;"OverrideAddressMatch"=1;”EnableDhcp”=0}
+    –Multiple @{"Address"="169.254.1.1";"SubnetMask"="255.255.0.0";"OverrideAddressMatch"=1;"EnableDhcp"=0}
 ```
 
 In this command, "virtual IP address" is the name of the clustered VIP address resource, and "169.254.1.1" is the APIPA address chosen for the VIP address. Choose the address that best suits your business. Set `OverrideAddressMatch=1` to allow the IP address to be on any network, including the APIPA address space. 

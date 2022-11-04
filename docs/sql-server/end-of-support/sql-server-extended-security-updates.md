@@ -118,7 +118,12 @@ This example shows you how to manually add your SQL Server instances in a discon
    - [Create an Azure account with pay-as-you-go pricing](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)
    - [Create a free Azure account](https://azure.microsoft.com/free/)
 
-1. Assign the `Azure Connected SQL Server Onboarding` role on the [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal) that you are using to register your SQL Server instances. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+1. The user creating disconnected Arc-enabled SQL Server resources must have the following permissions:
+
+   - `Microsoft.AzureArcData/sqlServerInstances/read`
+   - `Microsoft.AzureArcData/sqlServerInstances/write`
+
+   Users can be assigned to the `Azure Connected SQL Server Onboarding` role to get those specific permissions, or they can be assigned to built-in roles such as Contributor or Owner that have these permissions. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
 1. Register the `Microsoft.AzureArcData` resource provider in your Azure subscription:
 

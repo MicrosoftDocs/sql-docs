@@ -163,7 +163,7 @@ The web service name.
 
 ### opts
 
-The web service version (*version=’v1.0.1*).
+The web service version (*version='v1.0.1*).
 
 
 ### Returns

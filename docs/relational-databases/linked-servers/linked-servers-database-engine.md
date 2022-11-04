@@ -53,7 +53,7 @@ An *OLE DB provider* is a DLL that manages and interacts with a specific data so
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) is the default OLE DB provider. In earlier versions, the [SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) was the default OLE DB provider. 
 
 > [!IMPORTANT]
-> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
 Linked servers to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access and Excel sources are only supported by Microsoft when using the 32-bit Microsoft.JET.OLEDB.4.0 OLE DB provider.
 

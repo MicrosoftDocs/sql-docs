@@ -30,10 +30,11 @@ This article provides steps to recover a database from a backup in Azure SQL Man
 [Automated database backups](automated-backups-overview.md) help protect your databases from user and application errors, accidental database deletion, and prolonged outages. This built-in capability is available for all service tiers and compute sizes. The following options are available for database recovery through automated backups:
 
 - Create a new database on the same managed instance, recovered to a specified point in time within the retention period.
-- Create a database on the same managed instance, recovered to the deletion time for a deleted database.
-- Create a new database on any managed instance in the same region, recovered to the point of the most recent backups.
+- Create a new database on the same managed instance or a different managed instance, recovered to a specified point in time within the retention period.
+- Create a database on the same managed instance or a different managed instance, recovered to the deletion time for a deleted database.
+- Create a new database on any managed instance in same subscription or different subscription in same tenant and in the same region, recovered to the point of the most recent backups.
 
-Cross-region restore for SQL Managed Instance isn't currently supported. 
+Cross-region restore for SQL Managed Instance isn't currently supported. When [service endpoint policies](/service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet, prevents point-in-time restores (PITR) from instances in different subnets. 
 
 If you configured [long-term retention (LTR)](../database/long-term-retention-overview.md), you can also create a new database from any long-term retention backup on any instance.
 
@@ -123,7 +124,7 @@ To restore a database in SQL Managed Instance, see [Restore-AzSqlInstanceDatabas
 
 ## Deleted database restore
 
-You can restore a deleted database to the deletion time, or an earlier point in time, to the same instance, or a different instance than the source instance. You restore a deleted database by creating a new database from the backup.
+You can restore a deleted database to the deletion time, or an earlier point in time, to the same instance, or a different instance than the source instance. The target instance can be in the same subscription or in a different subscription than the source instance. You restore a deleted database by creating a new database from the backup.
 
 > [!IMPORTANT]
 > If you delete a managed instance, all its databases are also deleted and can't be recovered. You can't restore a deleted managed instance.

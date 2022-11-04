@@ -1,5 +1,5 @@
 ---
-title: Configure an availability group (Azure portal)
+title: Configure an availability group (Azure portal) - preview
 description: "Use the Azure portal to create multiple SQL Server VMs, each in a different subnet, Windows failover cluster, the availability group, and the availability group listener."
 author: tarynpratt
 ms.author: tarynpratt
@@ -13,7 +13,7 @@ ms.custom:
   - devx-track-azurepowershell
 tags: azure-resource-manager
 ---
-# Use Azure portal to configure a multi-subnet availability group for SQL Server on Azure VMs (Preview)
+# Use Azure portal to configure a multi-subnet availability group (preview) for SQL Server on Azure VMs
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
@@ -66,7 +66,7 @@ To choose an image, follow these steps:
 
 1. Select **+ Create** to open the **Select SQL deployment option** page.  Under **SQL Virtual Machines**, check the box next to **High availability**, then select the **Image** drop-down. Type in the version of SQL Server you're interested in, such as `2019`, and then choose a SQL Server image, such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**.  Once you check the **High availability** box, the portal displays the supported SQL Server versions, starting with SQL Server 2016. 
 
-  :::image type="content" source="./media/availability-group-az-portal-configure/select-sql-server-image.png" alt-text="Screenshot of SQL virtual machines create UI.":::
+  :::image type="content" source="./media/availability-group-az-portal-configure/select-sql-server-image.png" alt-text="Screenshot of the Azure portal, showing the Select SQL deployment option page, with high availability checked. ":::
 
 1. Select **Create**.
 
@@ -76,11 +76,11 @@ On the **Basics** tab, select the subscription, resource group, and provide deta
 
 1. Choose the subscription and resource group from the drop-down that contains your domain controller, and where you intend to deploy your availability group. 
 
-   :::image type="content" source="./media/availability-group-az-portal-configure/basics-subscription.png" alt-text="Screenshot of basics tab UI.":::
+   :::image type="content" source="./media/availability-group-az-portal-configure/basics-subscription.png" alt-text="Screenshot of the Azure portal, basics tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page.":::
 
 1. Use the slider to select the number of virtual machines you want to create for the availability group, with a minimum of 2, and a maximum of 9. The virtual machine names are pre-populated but can be edited by selecting **Edit names**.
 
-   :::image type="content" source="./media/availability-group-az-portal-configure/edit-vm-names.png" alt-text="Screenshot of edit names UI.":::
+   :::image type="content" source="./media/availability-group-az-portal-configure/edit-vm-names.png" alt-text="Screenshot of the Azure portal, basics tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, with Edit names highlighted.":::
 
 1. Select the **Region**. All VMs will be deployed to the same region.
 
@@ -98,7 +98,7 @@ On the **Basics** tab, select the subscription, resource group, and provide deta
 
 1. **SQL Server License**: If you’re a Software Assurance customer, you can use the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to bring your own SQL Server license and save on resources. Select **Yes** to enable the Azure Hybrid Benefit, and then confirm that you have Software Assurance by selecting the checkbox. This option is grayed out if you selected one of the free SQL Server images, such as the developer edition. 
 
-   :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-license.png" alt-text="Screenshot of SQL Server License confirmation UI.":::
+   :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-license.png" alt-text="Screenshot of the Azure portal, basics tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing SQL Server License section.":::
 
 1. Select **Next: Networking**.
 
@@ -112,17 +112,17 @@ On the Networking tab, configure your networking options.
 
 1. Configure **Public inbound ports**, if needed, by selecting **Allow selected ports**, then use the drop-down to select the allowed common ports.
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/networking-nic-basic.png" alt-text="Screenshot of NIC security group UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/networking-nic-basic.png" alt-text="Screenshot of the Azure portal, networking tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing NIC settings.":::
 
 1. Each virtual machine you create has to be in its own subnet. Under **Create subnets**, select **Manage subnet configuration** to open the **Subnets** page for the virtual network and either create a subnet (**+Subnet**) for each virtual machine or validate that a subnet is available for each virtual machine you intend to create for the availability group. Once done, use the **X** to close the subnet management window, and navigate back to the availability group deployment page.
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/subnet-management.png" alt-text="Screenshot of subnet management.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/subnet-management.png" alt-text="Screenshot of the Azure portal, subnet management page for your virtual network. ":::
 
 1. Choose a **Public IP SKU** type.  All machines will use this Public IP type.  
 
 1. Use the drop-down to assign the subnet, Public IP, and Listener IP to each VM you're creating. If you're using a Windows Server 2016 image, you will also need to assign the Cluster IP. When assigning a subnet to a virtual machine, the listener and cluster IP pre-populate with available IP addresses - place the cursor in the field if you want to edit the IP address.  Select **Create new** if you need to create a new IP address. 
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/assign-subnet-to-virtual-machine.png" alt-text="Screenshot of subnet configuration UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/assign-subnet-to-virtual-machine.png" alt-text="Screenshot of the Azure portal, subnet configuration page.":::
 
 1. You can also choose to delete the newly created public IP address and NIC when you delete the VM. Check the box if you want your resources deleted with the VM. 
 
@@ -144,11 +144,11 @@ On the **WSFC and Credentials** tab, provide account information to configure an
 
    - If you're using the active directory Ou path, provide it in the **Ou path** field. 
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/windows-ad-domain.png" alt-text="Screenshot of Windows active directory domain details UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/windows-ad-domain.png" alt-text="Screenshot of the Azure portal, WSFC and Credentials tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing Windows Active Directory Domain details.":::
 
 1. Under SQL Server details, provide the domain-joined account you want to use to manage SQL Server on the VMs. You can choose to use the same user that created the cluster and joined the VMs to the domain by choosing **Same as domain join account** or you can select **Custom** and provide different account details to use with the SQL Server service account.  
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-account-credentials.png" alt-text="Screenshot of SQL Server account details UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-account-credentials.png" alt-text="Screenshot of the Azure portal, WSFC and Credentials tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing SQL Server service account information.":::
 
 1. Select **Next: Disks**.
 
@@ -162,19 +162,19 @@ On the **Disks** tab, configure your disk options for both the virtual machines 
 
 1. Under **Storage Configuration**, select **Change configuration** to open the **Configure storage** page and specify storage requirements. You can choose to leave the values at default, or you can manually change the storage topology to suit your IOPS needs. For more information, see [storage configuration](storage-configuration.md).
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/change-sql-server-disk-configuration.png " alt-text="Screenshot of SQL Server storage configuration UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/change-sql-server-disk-configuration.png " alt-text="Screenshot of the Azure portal, Disks tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing the Storage configuration with Change configuration highlighted.":::
 
 1. Under **Data storage**, choose the location for your data drive, the disk type, and the number of disks. You can also select the checkbox to store your system databases on your data drive instead of the local C:\ drive.
 
-    :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-data-storage.png" alt-text=" Screenshot that shows where you can configure the data files storage for your SQL VM ":::
+    :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-data-storage.png" alt-text="Screenshot of the Azure portal, storage configuration page, showing data storage configuration settings.":::
 
 1. Under **Log storage**, you can choose to use the same drive as the data drive for your transaction log files, or you can choose to use a separate drive from the drop-down. You can also choose the name of the drive, the disk type, and the number of disks.
 
-    :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-log-storage.png " alt-text="Screenshot that shows where you can configure the transaction log storage for your SQL VM":::
+    :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-log-storage.png " alt-text="Screenshot of the Azure portal, storage configuration page, showing log storage configuration settings.":::
 
 1. Configure your tempdb database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, the max number of tempdb files. Currently, during deployment, the max number of tempdb files is 8, but more files can be added after the SQL Server VM is deployed.
 
-    :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png" alt-text="Screenshot that shows where you can configure the tempdb storage for your SQL VM":::
+    :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png" alt-text="Screenshot of the Azure portal, storage configuration page, showing tempdb storage configuration settings.":::
 
 1. Select **OK** to save your storage configuration settings.
 
@@ -192,7 +192,7 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
    1. Choose the availability group settings that best suit your business needs.  
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/availability-group-settings.png" alt-text="Screenshot of availability group details UI.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/availability-group-settings.png" alt-text="Screenshot of the Azure portal, SQL Server settings tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing availability group details section. ":::
 
 1. Under **Security & Networking**, choose **SQL connectivity** to access the SQL Server instance on the VMs. For more information about connectivity options, see [Connectivity](create-sql-vm-portal.md#connectivity).
 
@@ -202,7 +202,7 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
 1. Select **Change SQL instance settings** to modify SQL Server configuration options, such as the server collation, max degree of parallelism (MAXDOP), SQL Server min and max memory limits, and whether you want to optimize for ad-hoc workloads.
 
-    :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot that shows where you can configure the SQL Server settings for your SQL VM instance.":::
+    :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot of the Azure portal, SQL Server settings tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing SQL instance settings, with Change SQL instance settings highlighted.":::
 
 1. You have the option to enable **Machine Learning Services**, if it suits your business needs.
 
@@ -220,7 +220,7 @@ You can monitor the deployment from the Azure portal. The **Notifications** butt
 
 Once the deployment completes, you can browse to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the portal and,  under **Settings** select **High Availability** to monitor the health of the availability group. Select the arrow next to the name of your availability group to see a list of all replicas:
 
-:::image type="content" source="./media/availability-group-az-portal-configure/unhealthy-availability-group.png" alt-text="Screenshot of an unhealthy availability group in the portal.":::
+:::image type="content" source="./media/availability-group-az-portal-configure/unhealthy-availability-group.png" alt-text="Screenshot of the Azure portal, High Availability (Preview) tab of the SQL virtual machines resource, showing the health of the AG, which is currently not healthy." lightbox="./media/availability-group-az-portal-configure/unhealthy-availability-group.png":::
 
 > [!NOTE]
 > Your **Synchronization health** on the **High Availability** page of the Azure portal will show as **Not healthy** until you add databases to your availability group.
@@ -245,7 +245,7 @@ To add databases to your availability group by using SQL Server Management Studi
 
 1. Expand **Availability Groups**, right-click your availability group and choose to **Add database...**.
 
-    :::image type="content" source="media/availability-group-az-portal-configure/add-database.png" alt-text="Right-click the availability group in object explorer and choose to Add database":::
+    :::image type="content" source="media/availability-group-az-portal-configure/add-database.png" alt-text="Screenshot of SSMS UI, with the name of the availability group selected, and Add Database highlighted from the selection menu.":::
 
 1. Follow the prompts to select the database(s) you want to add to your availability group.  
 
@@ -255,7 +255,7 @@ To add databases to your availability group by using SQL Server Management Studi
 
 After databases are added, you can check the status of your availability group in the Azure portal:
 
-:::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Check the status of your availability group from the high availability page from the Azure portal after databases are synchronized":::
+:::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Screenshot of the Azure portal, High Availability (Preview) tab of the SQL virtual machines resource, showing the health of the AG, which is currently healthy.":::
 
 ## Modify availability group
 
@@ -332,7 +332,7 @@ To view the logs for the deployment, and check the deployment history, follow th
 1. Select **Deployments** under **Settings**.
 1. Select the deployment of interest to learn more about the deployment.
 
-   :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Select the deployment you're interested in learning more about." :::
+   :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Screenshot of the Azure portal, Deployments page, with a failed availability group deployment highlighted. Select the deployment you're interested in learning more about." :::
 
 
 

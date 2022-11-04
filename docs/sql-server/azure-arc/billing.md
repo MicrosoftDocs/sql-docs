@@ -128,7 +128,6 @@ The usage data collection requires an active SQL Server instance. Therefore, you
 The billing granularity is one hour. If your instance was active for less than an hour, you will be billed for the full hour. 
 
 ### Is there a minimum number of cores with pay-as-you-go billing 
-Pay-as-you-go billing doesnt change the lincensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
 
 Pay-as-you-go billing doesn't change the licensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
 

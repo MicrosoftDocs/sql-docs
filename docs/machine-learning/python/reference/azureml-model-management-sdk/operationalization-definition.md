@@ -41,7 +41,7 @@ azureml.deploy.operationalization.OperationalizationDefinition(name, op,
 
 
 
-Base abstract class defining a service’s properties.
+Base abstract class defining a service's properties.
 
 Create a new publish definition.
 
@@ -131,7 +131,7 @@ description(description)
 
 
 
-Set the service’s optional description.
+Set the service's optional description.
 
 
 ### Arguments
@@ -178,7 +178,7 @@ version(version)
 
 
 
-Set the service’s optional version.
+Set the service's optional version.
 
 
 ### Arguments

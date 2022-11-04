@@ -41,7 +41,7 @@ Before creating a table, you need to ensure that you have an active connection w
 
 To create a table, right-click the Tables folder in the connection pane and select "New Table". This opens up the Table Designer view seen below.
 
-A default table is created with the default name of "NewTable", which has one column by default. You can edit the name of your table and add new columns to it. Let us update our table name to “Cities”. We do this by selecting inside this name field, typing the new table name (Cities) and pressing "Enter" to save the change. Lets add a new column by selecting the "New Column" button above the columns grid. In the Columns grid, select the name value "column 1", replace with "CityName", and select the Primary Key column checkbox to make this the primary key for the table. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](../relational-databases/tables/primary-and-foreign-key-constraints.md).
+A default table is created with the default name of "NewTable", which has one column by default. You can edit the name of your table and add new columns to it. Let us update our table name to "Cities". We do this by selecting inside this name field, typing the new table name (Cities) and pressing "Enter" to save the change. Lets add a new column by selecting the "New Column" button above the columns grid. In the Columns grid, select the name value "column 1", replace with "CityName", and select the Primary Key column checkbox to make this the primary key for the table. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](../relational-databases/tables/primary-and-foreign-key-constraints.md).
 
 Select the "column 2", replace with "Population"
 

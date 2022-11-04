@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/02/2022
+ms.date: 11/03/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-You may use a pay-as-you-go billing option to license SQL Server with Azure Arc. This option is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
+You may use a pay-as-you-go billing option to activate and run SQL Server with Azure Arc. This option is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. See [SQL Server installation guide](../../database-engine/install-windows/install-sql-server.md).
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ When multiple instances of SQL Server are installed on the same OS, only one ins
 - The instance with the highest edition of all instances installed on the same operating system determines the required license.
 - If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
 - If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed.
-- If two instances are installed with pay-as-you-go billing and same editions, the first installed instance is billed.
+- If two instances are installed with pay-as-you-go billing and same editions, the first instance in alphabetical order is billed.
 
 Pay-as-you-go billing requires that the following conditions are met:
 

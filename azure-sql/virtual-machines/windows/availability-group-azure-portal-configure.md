@@ -22,11 +22,11 @@ tags: azure-resource-manager
 
 This article describes how to use the [Azure portal](https://portal.azure.com) to configure an availability group for SQL Server on Azure VMs within multiple subnets by creating new virtual machines with SQL Server, a Windows failover cluster, availability group, and listener. This deployment method supports SQL Server 2016 and later on Windows Server 2016 and later.
 
-Deploying a multi-subnet availability group through the portal provides an easy end-to-end experience for users which configures the virtual machines following the [HADR best practices](hadr-cluster-best-practices.md).
+Deploying a multi-subnet availability group through the portal provides an easy end-to-end experience for users that configures the virtual machines following the [HADR best practices](hadr-cluster-best-practices.md).
 
 The ability to create your availability group through the Azure portal is currently in preview.
 
-While this article uses the Azure portal to configure the availability group environment, it is also possible to do so [manually](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) as well.
+While this article uses the Azure portal to configure the availability group environment, it's also possible to do so [manually](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) as well.
 
 > [!NOTE]  
 > It's possible to lift and shift your availability group solution to SQL Server on Azure VMs using Azure Migrate. See [Migrate availability group](../../migration-guides/virtual-machines/sql-server-availability-group-to-sql-on-azure-vm.md) to learn more.
@@ -62,7 +62,7 @@ Use the Azure Marketplace to choose one of several pre-configured images from th
 
 To choose an image, follow these steps:
 
-1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, then type Azure SQL in the search box.  
+1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** isn't in the list, select **All services**, then type Azure SQL in the search box.  
 
 1. Select **+ Create** to open the **Select SQL deployment option** page.  Under **SQL Virtual Machines**, check the box next to **High availability**, then select the **Image** drop-down. Type in the version of SQL Server you're interested in, such as `2019`, and then choose a SQL Server image, such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**.  Once you check the **High availability** box, the portal displays the supported SQL Server versions, starting with SQL Server 2016. 
 
@@ -106,7 +106,7 @@ On the **Basics** tab, select the subscription, resource group, and provide deta
 
 On the Networking tab, configure your networking options.
 
-1. Select the **virtual network** from the dropdown. The list is pre-populated based on the previously-chosen region and resource group on the **Basics** tab. The selected virtual network should contain the domain controller VM in it.
+1. Select the **virtual network** from the dropdown. The list is pre-populated based on the previously chosen region and resource group on the **Basics** tab. The selected virtual network should contain the domain controller VM in it.
 
 1. Under **NIC network security group**, select basic security group. Choosing the basic option allows you to select inbound ports for the SQL Server VM.  
 
@@ -120,7 +120,7 @@ On the Networking tab, configure your networking options.
 
 1. Choose a **Public IP SKU** type.  All machines will use this Public IP type.  
 
-1. Use the drop-down to assign the subnet, Public IP, and Listener IP to each VM you're creating. If you're using a Windows Server 2016 image, you will also need to assign the Cluster IP. When assigning a subnet to a virtual machine, the listener and cluster IP pre-populate with available IP addresses - place the cursor in the field if you want to edit the IP address.  Select **Create new** if you need to create a new IP address. 
+1. Use the drop-down to assign the subnet, Public IP, and Listener IP to each VM you're creating. If you're using a Windows Server 2016 image, you'll also need to assign the Cluster IP. When assigning a subnet to a virtual machine, the listener and cluster IP pre-populate with available IP addresses - place the cursor in the field if you want to edit the IP address.  Select **Create new** if you need to create a new IP address. 
 
     :::image type="content" source="./media/availability-group-az-portal-configure/assign-subnet-to-virtual-machine.png" alt-text="Screenshot of the Azure portal, subnet configuration page.":::
 
@@ -130,7 +130,7 @@ On the Networking tab, configure your networking options.
 
 ## WSFC and Credentials settings
 
-On the **WSFC and Credentials** tab, provide account information to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to already be present in the Active Directory of the domain controller virtual machine for the deployment to work. This deployment process does not create any accounts and will fail if you provide an invalid account. For more information about the required permissions, review [Configure cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
+On the **WSFC and Credentials** tab, provide account information to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to already be present in the Active Directory of the domain controller virtual machine for the deployment to work. This deployment process doesn't create any accounts and will fail if you provide an invalid account. For more information about the required permissions, review [Configure cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
 
 1. Under **Windows Server Failover Cluster details***, provide the name you want to use for the failover cluster.  
 
@@ -140,7 +140,7 @@ On the **WSFC and Credentials** tab, provide account information to configure an
 
    - The **Domain join user name and password**: this account creates the Windows Server Failover Cluster name in Active Directory and joins the VMs to the domain. **This account must have Create Computer Objects permissions**.
 
-   - **Domain FQDN (fully-qualified domain name)**: your domain,, such as contoso.com.
+   - **Domain FQDN (fully-qualified domain name)**: your domain, such as contoso.com.
 
    - If you're using the active directory Ou path, provide it in the **Ou path** field. 
 
@@ -156,7 +156,7 @@ On the **WSFC and Credentials** tab, provide account information to configure an
 
 On the **Disks** tab, configure your disk options for both the virtual machines and the SQL Server storage configuration.
 
-1. Under **OS disk type**, select the type of disk you want for your OS from the drop-down. Premium is recommended for production systems but is not available for a Basic VM. To use a Premium SSD, change the virtual machine size.
+1. Under **OS disk type**, select the type of disk you want for your OS from the drop-down. Premium is recommended for production systems but isn't available for a Basic VM. To use a Premium SSD, change the virtual machine size.
 
 1. Select the **Encryption type** for the disks.
 
@@ -227,7 +227,7 @@ Once the deployment completes, you can browse to the [SQL virtual machines resou
 
 ## Configure Firewall
 
-This deployment creates a firewall rule for the listener on port 5022, but it does not configure a firewall rule for the SQL Server VM port 1433. Once the virtual machines are created, you can configure any firewall rules. For more information, see [configure the firewall](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md#configure-the-firewall).
+This deployment creates a firewall rule for the listener on port 5022, but it doesn't configure a firewall rule for the SQL Server VM port 1433. Once the virtual machines are created, you can configure any firewall rules. For more information, see [configure the firewall](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md#configure-the-firewall).
 
 ## Add database to availability group
 
@@ -334,7 +334,7 @@ To view the logs for the deployment, and check the deployment history, follow th
 
    :::image type="content" source="media/availability-group-az-portal-configure/failed-deployment.png" alt-text="Screenshot of the Azure portal, Deployments page, with a failed availability group deployment highlighted. Select the deployment you're interested in learning more about." :::
 
-If the deployment fails and you want to redeploy using the portal experience, then manual clean-up of the resources, including deleting VMs, removing entries in Active Directory and/or DNS will be necessary, as the UX portal deployment is not idempotent. However, if you have deployed the using the template for automation, then clean-up of resources will not be necessary as the template is idempotent.
+If the deployment fails and you want to redeploy using the portal experience, then manual clean-up of the resources, including deleting VMs, removing entries in Active Directory and/or DNS will be necessary, as the UX portal deployment isn't idempotent. However, if you've deployed the using the template for automation, then clean-up of resources won't be necessary as the template is idempotent.
 
 ## Next steps
 

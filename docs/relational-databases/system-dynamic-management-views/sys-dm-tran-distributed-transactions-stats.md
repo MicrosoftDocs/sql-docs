@@ -3,7 +3,7 @@ title: "sys.dm_tran_distributed_transactions_stats (Transact-SQL)"
 description: sys.dm_tran_distributed_transactions_stats (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "10/18/2022"
+ms.date: "11/16/2022"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: system-objects

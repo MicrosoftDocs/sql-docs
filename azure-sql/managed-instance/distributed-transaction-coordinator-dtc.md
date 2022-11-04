@@ -17,6 +17,9 @@ This article provides an overview of the Distributed Transaction Coordinator (DT
 
 Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance is currently in preview. 
 
+> [!NOTE]
+> DTC for Azure SQL Managed Instance is part of the November 2022 feature wave. To learn more about the timelines for feature wave roll out, see [November 2022 feature wave](https://aka.ms/sqlmi-fwnov2022). 
+
 ## Overview 
 
 Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance allows you to run distributed transactions across a number of environments that can establish network connectivity to Azure. DTC for managed instance is **managed**, which means that Azure takes care of management and maintenance, such as logging, storage, DTC availability, networking, etc. However, aside from the managed aspect, it's still the same [DTC windows service](/previous-versions/windows/desktop/ms684146(v=vs.85)) that supports traditional distributed transactions for SQL Server. 
@@ -65,7 +68,7 @@ The following diagram shows name resolution across heterogenous environments:
 :::image type="content" source="media/distributed-transaction-coordinator-dtc/dtc-heterogeneous-environment-diagram.png" alt-text="Diagram that shows name resolution across heterogenous environments when using DTC.":::
 
 > [!NOTE]
-> You don't need to configure DNS settings if you plan to use DTC for only XA transactions. 
+> You don't need to configure DNS settings if you plan to use DTC only for XA transactions. 
 
 To exchange DNS suffixes, follow these steps: 
 
@@ -96,7 +99,7 @@ First, update the user configurable values and then use the following PowerShell
 # 
 
 $SubscriptionId = "a1a1a1a1-8372-1d28-a111-1a2a31a1a1a1" 
-$RgName = "my-instance-name" 
+$RgName = "my-resource-group" 
 $MIName = "my-instance-name" 
 
 # =============================================================== 
@@ -126,10 +129,10 @@ Write-Host "Response:" $startMoveResp
 
 The JSON output will look something like the following FQDN: `chn000000000000.zcn111111111.database.windows.net` where: 
 
-- `chn000000000000` is the NetBIOS name of the DTC host managed instance 
-- `zcn111111111.database.windows.net` is the suffix
+- `chn000000000000` is the NetBIOS name of the managed instance DTC host
+- `zcn111111111.database.windows.net` is the DNS suffix
 
-Next, run a TNC to both the FQDN and the NetBIOS name of the DTC host managed instance on port 135. 
+Next, run a TNC to both the FQDN and the NetBIOS name of the managed instance DTC host on port 135. 
 
 The first entry verifies network connectivity, and the second entry verifies the DNS settings are correct: 
 

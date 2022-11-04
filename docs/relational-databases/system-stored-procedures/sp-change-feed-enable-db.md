@@ -1,12 +1,10 @@
 ---
-description: "The sp_change_feed_enable_db system stored procedure enables the current database for Synapse Link publishing"
+description: "The sp_change_feed_enable_db system stored procedure enables the current database for Azure Synapse Link publishing."
 title: "sp_change_feed_enable_db (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "10/27/2022"
+ms.date: 11/04/2022
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 
   - "sp_change_feed_enable_db_TSQL"
@@ -22,7 +20,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 # sp_change_feed_enable_db (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) . For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+Enables current database for [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview). For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 > [!NOTE]
 > This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio instead. Using this procedure will introduce inconsistency with Synapse Workspace configuration.
@@ -39,25 +37,26 @@ GO
 ```  
 
 ## Arguments  
-#### @maxtrans - Maximum transactions to process in each cycle
 
-Data type is an integer which indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is 500. If specified, the value must be a positive integer.
+#### @maxtrans
 
-#### @pollinterval - Interval in seconds
+Data type is integer. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is 500. If specified, the value must be a positive integer.
 
-Data type is an integer which describes the frequency that the log is scanned for any new changes in seconds.  Default interval if not specified is 5 sec, the value must be 5 or larger
+#### @pollinterval
+
+Data type is integer. Describes the frequency that the log is scanned for any new changes in seconds.  Default interval if not specified is 5 s, the value must be 5 or larger.
 
 ## Permissions  
 
- Only a member of the sysadmin server role or db_owner database role can execute this procedure. 
+ Only a member of the sysadmin server role or db_owner database role can execute this procedure.
 
 ## See also  
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
 - [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
 
 ## Next steps
 
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Get started with Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)
+- [Get started with Azure Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)

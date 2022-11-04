@@ -1,12 +1,10 @@
 ---
-description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Synapse Link table to an existing Synapse Link table group"
+description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Azure Synapse Link table to an existing Azure Synapse Link table group."
 title: "sp_change_feed_enable_table (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "10/27/2022"
+ms.date: 11/04/2022
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 
   - "sp_change_feed_enable_table_TSQL"
@@ -22,7 +20,7 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 # sp_change_feed_enable_table (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Stored procedure to enable the creation of a new [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) table to an existice ng Synapse Link table group . For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+Stored procedure to enable the creation of a new [Azure Synapse Link for SQL](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) table to an existing Azure Synapse Link table group. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 > [!NOTE]
 > This stored procedure is used internally and is not recommended for direct administrative use. Use Synapse Studio instead. Using this procedure will introduce inconsistency with Synapse Workspace configuration.
@@ -40,22 +38,31 @@ EXECUTE sys.sp_change_feed_enable_table
 GO
 ```  
 
-## Arguments  
-#### @table_group_id - The unique identifier of the table group
+## Arguments
 
-#### @table_id - The unique identifier for the change feed table generated during setup workflow
+#### @table_group_id
 
-#### @source_schema - The source table schema name
+The unique identifier of the table group.
 
-#### @source_name - The source table name
+#### @table_id
+
+The unique identifier for the change feed table generated during setup workflow.
+
+#### @source_schema
+
+The source table schema name.
+
+#### @source_name
+
+The source table name.
 
 ## Permissions  
 
- Only a member of the sysadmin server role or db_owner database role can execute this procedure. 
+ Only a member of the sysadmin server role or db_owner database role can execute this procedure.
 
 ## See also  
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [sp_change_feed_enable_db (Transact-SQL)](sp-change-feed-enable-db.md)
 - [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
 - [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
@@ -63,4 +70,4 @@ GO
 ## Next steps
 
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Get started with Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)
+- [Get started with Azure Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)

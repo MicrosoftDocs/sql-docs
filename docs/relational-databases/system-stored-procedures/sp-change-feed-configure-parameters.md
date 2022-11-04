@@ -1,12 +1,10 @@
 ---
 description: "The sp_change_feed_configure_parameters system stored procedure is used to reduce latency or reduce the cost by increasing the batch size with higher transactions"
 title: "sp_change_feed_configure_parameters (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "10/27/2022"
+ms.date: 11/04/2022
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 
   - "sp_change_feed_configure_parameters_TSQL"
@@ -39,17 +37,18 @@ GO
 ```  
 
 ## Arguments  
-#### @maxtrans - Maximum transactions to process in each cycle
 
-Data type is an integer which indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is 500. If specified, the value must be a positive integer.
+#### @maxtrans
 
-#### @pollinterval - Interval in seconds
+Data type is integer. Indicates the maximum number of transactions to process in each scan cycle. Default value if not specified is 500. If specified, the value must be a positive integer.
 
-Data type is an integer which describes the frequency that the log is scanned for any new changes in seconds.  Default interval if not specified is 5 sec, the value must be 5 or larger
+#### @pollinterval
+
+Data type is integer. Describes the frequency that the log is scanned for any new changes, in seconds.  Default interval if not specified is 5 s, the value must be 5 or larger.
 
 ## Result set
 
-Returns: 0 - Success 1 - Failure
+Returns: 0 - Success, 1 - Failure
 
 ## Permissions  
 
@@ -57,11 +56,11 @@ Returns: 0 - Success 1 - Failure
 
 ## See also  
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 - [sp_change_feed_disable_db (Transact-SQL)](sp-change-feed-disable-db.md)
 - [sp_change_feed_drop_table_group (Transact-SQL)](sp-change-feed-drop-table-group.md)
 
 ## Next steps
 
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Get started with Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)
+- [Get started with Azure Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)

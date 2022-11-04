@@ -1,12 +1,10 @@
 ---
 description: "The sp_change_feed_table system stored procedure provides the provision or deprovision flow status of Azure Synapse Link for SQL."
 title: "sp_change_feed_table (Transact-SQL)"
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
+ms.date: 11/04/2022
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 
   - "sp_change_feed_table_TSQL"
@@ -22,23 +20,33 @@ monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
 # sp_change_feed_table (Transact-SQL)
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Provides the  provision or deprovision status and information of the [Azure Synapse Link for SQL](../../sql-server/synapse-link/synapse-link-sql-server-change-feed.md) table group and table metadata. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
+Provides the provision or deprovision status and information of the [Azure Synapse Link for SQL](../../sql-server/synapse-link/synapse-link-sql-server-change-feed.md) table group and table metadata. For more information, see [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md).
 
 ## Syntax  
-   
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ```syntaxsql  
 EXECUTE sys.sp_change_feed_table;
-```  
+```
+
 ## Arguments  
-#### @table_group_id - The unique identifier of the table group
 
-#### @table_id - The source table identifier
+#### @table_group_id
 
-#### @source_schema - The source table schema name
+The unique identifier of the table group
 
-#### @source_name - The source table name
+#### @table_id
+
+The source table identifier
+
+#### @source_schema
+
+The source table schema name
+
+#### @source_name
+
+The source table name
 
 ## Result set
 
@@ -51,17 +59,16 @@ EXECUTE sys.sp_change_feed_table;
 | **table_id** | **uniqueidentifier** | The source table identifier. | 
 | **destination_location** | **nvarchar(512)** | URL string of the landing zone folder.| 
 | **workspace_id** | **nvarchar(247)** | The related Synapse workspace Azure resource ID. |
-| **state** | **nvarchar(50)** | The current state of the Synapse Link table. |
-| **table_object_id** | **int** | The object id of the change feed table. | 
+| **state** | **nvarchar(50)** | The current state of the Azure Synapse Link table. |
+| **table_object_id** | **int** | The object ID of the change feed table. | 
 
- 
 ## Permissions  
 
 Currently, a user must be a member of the sysadmin server role or db_owner database role.
 
 ## See also  
 
-- [What is Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
+- [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)
 
 ## Next steps
 

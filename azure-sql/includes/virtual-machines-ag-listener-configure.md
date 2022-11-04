@@ -138,7 +138,7 @@ If the SQL Server database engine, Always On availability group listener, failov
 - `netsh int ipv4 add excludedportrange tcp startport=58888 numberofports=1 store=persistent`
 - `netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`
 
-It is important to configure the port exclusion when the port is not in use, otherwise the command will fail with a message like “The process cannot access the file because it is being used by another process.”
+It is important to configure the port exclusion when the port is not in use, otherwise the command will fail with a message like "The process cannot access the file because it is being used by another process."
 To confirm that the exclusions have been configured correctly, use the following command: `netsh int ipv4 show excludedportrange tcp`  
 
 >[!WARNING]

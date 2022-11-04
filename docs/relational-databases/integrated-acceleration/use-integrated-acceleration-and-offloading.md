@@ -209,7 +209,7 @@ Use RESTORE HEADERONLY to view the compression algorithm. See [RESTORE Statement
 > [!NOTE]
 > If the server-scope configuration `HARDWARE_OFFLOAD` option is not enabled, and/or the Intel&reg; QAT drivers have not been installed, SQL Server returns error 17441, (`Msg 17441, Level 16, State 1, Line 175 This operation requires Intel(R) QuickAssist Technology (QAT) libraries to be loaded.`)
 
-To restore an Intel&reg; QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation. It’s not required to have QAT hardware to restore QAT compressed backups. However, to restore QAT backups requires the following:
+To restore an Intel&reg; QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation. It's not required to have QAT hardware to restore QAT compressed backups. However, to restore QAT backups requires the following:
 
 - QAT driver needs to be installed on the machine
 - Hardware offloading needs to be enabled (`sp_configure 'hardware offload enabled', 1;`)

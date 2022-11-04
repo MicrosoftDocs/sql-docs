@@ -152,7 +152,7 @@ For example, to remove the **Python 3.7** folder from the instance MSSQLSERVER01
 To confirm, answer `Y` or press enter. Alternatively, you can skip this prompt by passing in `/y` or `/Yes` along the `/cleanup` option.
 
 > [!NOTE]
-> You can remove a version only if it's not configured as the default and it’s not currently being used to run **RegisterRext.exe**.
+> You can remove a version only if it's not configured as the default and it's not currently being used to run **RegisterRext.exe**.
 
 ## Next steps
 

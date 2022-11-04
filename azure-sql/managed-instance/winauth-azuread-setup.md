@@ -21,7 +21,7 @@ There are two phases to set up Windows Authentication for Azure SQL Managed Inst
 - **One-time infrastructure setup.**
     - Synchronize Active Directory (AD) and Azure AD, if this hasn't already been done.
     - Enable the modern interactive authentication flow, when available. The modern interactive flow is recommended for organizations with Azure AD joined or Hybrid AD joined clients running Windows 10 20H1 / Windows Server 2022 and higher where clients are joined to Azure AD or Hybrid AD.
-    - Set up the incoming trust-based authentication flow. This is recommended for customers who can’t use the modern interactive flow, but who have AD joined clients running Windows 10 / Windows Server 2012 and higher.
+    - Set up the incoming trust-based authentication flow. This is recommended for customers who can't use the modern interactive flow, but who have AD joined clients running Windows 10 / Windows Server 2012 and higher.
 - **Configuration of Azure SQL Managed Instance.**
     - Create a system assigned service principal for each managed instance.
 

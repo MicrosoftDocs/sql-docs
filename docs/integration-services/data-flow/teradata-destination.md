@@ -39,7 +39,7 @@ Fast load mode has below restrictions:
 - Foreign key references in target tables are not supported.
 - Target tables defined with a secondary index are not supported.
 
-For more information on the Teradata fast load restrictions, see Teradata’s fast load reference.
+For more information on the Teradata fast load restrictions, see Teradata's fast load reference.
 
 You can set the mode in the [Teradata Destination Editor (Connection Manager Page)](#teradata-destination-editor-connection-manager-page).
 

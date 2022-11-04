@@ -122,7 +122,7 @@ adutil keytab createauto -k /container/sql1/secrets/mssql.keytab -p 5433 -H sql1
 
 > [!NOTE]
 >
-> - `-k`: Path where you would like the `mssql.keytab` file to be created. In the above example the directory "/container/sql1/secrets” should already exist on the host.
+> - `-k`: Path where you would like the `mssql.keytab` file to be created. In the above example the directory "/container/sql1/secrets" should already exist on the host.
 > - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port.
 > - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. Please provide the FQDN for the container name as well. In this case, the container name is `sql1` and the FQDN is `sql1.contoso.com`.
 > - `-s`: The service name to use for generating SPNs. In this case, it is for SQL Server service, and hence the service name is MSSQLSvc.
@@ -131,7 +131,7 @@ adutil keytab createauto -k /container/sql1/secrets/mssql.keytab -p 5433 -H sql1
 
 When given a choice to choose the encryption types, you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose the encryption type that is supported by the host and domain.
 
-If you’d like to non-interactively choose the encryption type, you can specify your choice of encryption type with the -e argument in the above command. For additional help on the adutil commands, run the command below.
+If you'd like to non-interactively choose the encryption type, you can specify your choice of encryption type with the -e argument in the above command. For additional help on the adutil commands, run the command below.
 
 ```bash
 adutil keytab createauto --help
@@ -148,7 +148,7 @@ adutil keytab create -k /container/sql1/secrets/mssql.keytab -p sqluser --passwo
 
 > [!NOTE]
 >
-> - `-k`: Path where you would like the `mssql.keytab` file to be created. In the above example the directory "/container/sql1/secrets” should already exist on the host.
+> - `-k`: Path where you would like the `mssql.keytab` file to be created. In the above example the directory "/container/sql1/secrets" should already exist on the host.
 > - `-p`: Principal to add to the keytab.
 
 The adutil keytab create/autocreate doesn't overwrite the previous files, it just appends to the file if already present.

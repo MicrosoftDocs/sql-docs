@@ -80,7 +80,7 @@ The following sections provide more information about these scenarios.
 
 ## Data virtualization
 
-By leveraging [PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] introduces new connectors to data sources, for more information see [What's new in PolyBase 2019?](../relational-databases/polybase/polybase-faq.yml#what-s-new-in-polybase-2019).
+By leveraging [PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-cluster](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] introduces new connectors to data sources, for more information see [What's new in PolyBase 2019?](../relational-databases/polybase/polybase-faq.yml).
 
 ![Data virtualization](media/big-data-cluster-overview/data-virtualization.png)
 

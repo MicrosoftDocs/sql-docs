@@ -5,7 +5,7 @@ description: Explains how Azure Arc-enabled SQL Server is billed by Microsoft.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/04/2022
+ms.date: 11/05/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
@@ -59,8 +59,7 @@ The billing granularity is one hour and the charges are calculated based on the 
 When multiple instances of SQL Server are installed on the same OS, only one instance requires to be licensed for the full size of the host, subject to minimum core size. See [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details. The billing logic uses the following rules to select instance to be licensed:
 
 - The instance with the highest edition of all instances installed on the same operating system determines the required license.
-- If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key (for example, is pre-paid), the pay-as-you-go instance is ignored to minimize the customer cost.
-- If two instances are installed with pay-as-you-go billing but have different editions, the instance with the highest edition is billed.
+- If two instances are installed with same edition but one instance is configured to use pay-as-you-go billing and the other is installed using a product key, the pay-as-you-go instance is ignored because it is included in the customer's product key.
 - If two instances are installed with pay-as-you-go billing and same editions, the first instance in alphabetical order is billed.
 
 > [!IMPORTANT]
@@ -107,13 +106,13 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 | Standard | Product key with Software Assurance or SQL subscription | Yes | HADR | 
 | Standard | Pay-as-you-go | Yes | HADR | 
 | Standard | Product key without Software Assurance or SQL subscription| Yes | LicenseOnly | 
+|||
 
 ## FAQ
 
 ### Does pay-as-you-go billing stop when the Intenet connectivity is temporary down
 
 Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
-
 
 ### Do I get charged if my virtual machine is stopped
 

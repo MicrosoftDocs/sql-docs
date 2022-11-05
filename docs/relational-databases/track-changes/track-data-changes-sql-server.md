@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] provides two features that track changes to data in a database: [change data capture](#Capture) and [change tracking](#Tracking). These features enable applications to determine the DML changes (insert, update, and delete operations) that were made to user tables in a database. Change data capture and change tracking can be enabled on the same database; no special considerations are required. For the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support change data capture and change tracking, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2019.md).
 
-Change tracking is supported by [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Change data capture is only supported in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance.
+Change tracking is supported by [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Change data capture is supported by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], and Azure SQL Managed Instance.
 
 ## Benefits of using change data capture or change tracking
 

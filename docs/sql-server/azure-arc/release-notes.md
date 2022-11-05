@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 ## November 2022
 
-This release is published November ??, 2022
+This release is published November 12, 2022
 
 ### Image tag
 

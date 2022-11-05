@@ -4,7 +4,7 @@ description: "Enable applications to determine the DML changes (insert, update, 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 09/20/2022
+ms.date: 11/04/2022
 ms.prod: sql
 ms.topic: conceptual
 ms.custom: seo-dt-2019

@@ -2,7 +2,7 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
 ms.custom: "tools|sos"
-ms.date: 09/22/2022
+ms.date: 11/7/2022
 ms.prod: sql
 ms.reviewer: "llali"
 ms.prod_service: sql-tools
@@ -16,6 +16,42 @@ ms.author: drskwier
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
+## 161.6370.0 SqlPackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214842)|November 7, 2022|161.6370.0|16.1.6370.0|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2214739)|November 7, 2022|161.6370.0|16.1.6370.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214740)|November 7, 2022|161.6370.0|16.1.6370.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214843)|November 7, 2022|161.6370.0|16.1.6370.0|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Platform|Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default.  For more information, see [this dedicated article](https://aka.ms/dacfx-connection).|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.1) v5.0.1|
+|Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves).|
+|Connectivity|Adds support for TDS 8.0 and parameters for `/SourceHostNameInCertificate` and `/TargetHostNameInCertificate` to SqlPackage operations.|
+|Replication|Adds support for [sp_addpublication](/sql/relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication#automatically-handle-conflicts-with-last-write-wins) with peer-to-peer replication.|
+|ScriptDOM|Adds support for IS NOT DISTINCT FROM syntax with predicate subqueries.|
+|Server-level roles|Adds support for additional [fixed server roles](/sql/relational-databases/security/authentication-access/server-level-roles#fixed-server-level-roles-introduced-in-sql-server-2022): MS_DatabaseConnector, MS_LoginManager, MS_DatabaseManager, MS_ServerStateManager, MS_ServerStateReader, MS_ServerPerformanceStateReader, MS_ServerSecurityStateReader, MS_DefinitionReader, MS_PerformanceDefinitionReader, MS_SecurityDefinitionReader.|
+|SQL Server 2022|Adds support for [T-SQL function changes associated with SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022#language): GREATEST(), LEAST(), STRING_SPLIT(), DATETRUNC(), LTRIM(), RTRIM(), and TRIM().|
+|SQL Server 2022|Adds support for [JSON function changes associated with SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022#language): ISJSON(), JSON_PATH_EXISTS(), JSON_OBJECT(), and JSON_ARRAY().|
+|SQL Server 2022|Adds support for [bit manipulation functions associated with SQL Server 2022](/sql/t-sql/functions/bit-manipulation-functions-overview): LEFT_SHIFT(), RIGHT_SHIFT(), BIT_COUNT(), GET_BIT(), and SET_BIT().|
+|SQL Server 2022|Adds support for [time series function changes associated with SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022#language): DATE_BUCKET(), GENERATE_SERIES(), FIRST_VALUE(), and LAST_VALUE().|
+|Statistics|Adds support for [STATISTICS AUTO_DROP option](/sql/t-sql/statements/create-statistics-transact-sql).|
+|Synapse Link|Adds support for [Synapse Link](/sql/sql-server/synapse-link/synapse-link-sql-server-change-feed) enabled databases. Excludes `changefeed` user and `changefeed` schema from operations.|
+|XML compression|Adds support for XML compression on [XML indexes](/sql/relational-databases/xml/xml-indexes-sql-server#xml-compression).|
+
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+| Synapse Link | user-created objects in the `changefeed` schema are not included in bacpac and dacpac operations | N/A |
 
 ## 19.2 SqlPackage
 

@@ -15010,6 +15010,16 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
       - name: sp_help_change_feed
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_change_feed_configure_parameters
+        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
+      - name: sp_change_feed_create_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
+      - name: sp_change_feed_enable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
+      - name: sp_change_feed_enable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
+      - name: sp_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-table.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
@@ -15233,6 +15243,14 @@ items:
       href: relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md
     - name: System Base Tables
       href: relational-databases/system-tables/system-base-tables.md
+    - name: Azure Synapse Link to SQL Tables
+      items:
+      - name: cdc.change_feed_settings
+        href: relational-databases/system-tables/cdc-change-feed-settings.md
+      - name: cdc.change_feed_table_groups
+        href: relational-databases/system-tables/cdc-change-feed-table-groups-transact-sql.md
+      - name: cdc.change_feed_tables
+        href: relational-databases/system-tables/cdc-change-feed-tables-transact-sql.md      
     - name: Backup & Restore Tables
       href: relational-databases/system-tables/backup-and-restore-tables-transact-sql.md
       items:

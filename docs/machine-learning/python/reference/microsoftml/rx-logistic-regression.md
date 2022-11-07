@@ -80,7 +80,7 @@ then the logistic regression is multinomial.
 The optimization technique used for `rx_logistic_regression` is the
 limited memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS). Both the L-BFGS
 and regular BFGS algorithms use quasi-Newtonian methods to estimate the
-computationally intensive Hessian matrix in the equation used by Newton’s
+computationally intensive Hessian matrix in the equation used by Newton's
 method to calculate steps. But the L-BFGS approximation uses only a limited
 amount of memory to compute the next step direction, so that it is especially
 suited for problems with a large number of variables. The `memory_size`
@@ -104,7 +104,7 @@ and uses that are complementary in certain respects.
 
 * `l2_weight`: is preferable for data that is not sparse. It pulls large weights towards zero. 
 
-Adding the ridge penalty to the regularization overcomes some of lasso’s
+Adding the ridge penalty to the regularization overcomes some of lasso's
 limitations. It can improve its predictive accuracy, for example, when
 the number of predictors is greater than the sample size.
 If `x = l1_weight` and `y = l2_weight`, `ax + by = c`
@@ -321,7 +321,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenv is used instead.
 
 

@@ -69,7 +69,7 @@ Momentum Term (settings).
 
 ### nag
 
-Use Nesterov’s accelerated gradient (settings).
+Use Nesterov's accelerated gradient (settings).
 
 
 ### weight_decay

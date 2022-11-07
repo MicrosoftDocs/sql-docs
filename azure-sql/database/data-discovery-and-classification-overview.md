@@ -77,7 +77,7 @@ After the organization-wide policy has been defined, you can continue classifyin
 
 1. Go to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Data Discovery & Classification** under the **Security** heading in your Azure SQL Database pane. The Overview tab includes a summary of the current classification state of the database. The summary includes a detailed list of all classified columns, which you can also filter to show only specific schema parts, information types, and labels. If you haven’t classified any columns yet, [skip to step 4](#step-4).
+1. Go to **Data Discovery & Classification** under the **Security** heading in your Azure SQL Database pane. The Overview tab includes a summary of the current classification state of the database. The summary includes a detailed list of all classified columns, which you can also filter to show only specific schema parts, information types, and labels. If you haven't classified any columns yet, [skip to step 4](#step-4).
 
     ![Overview](./media/data-discovery-and-classification-overview/data-discovery-and-classification.png)
 

@@ -29,25 +29,31 @@ For details about the latest release, see the [release notes](release-notes-sqlp
 
 ## Installation, cross-platform
 
-Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/6.0) v6.0 or later to be installed on your machine.  Installing SqlPackage as a global tool will make it available on your path as `SqlPackage` and is the recommended way to install SqlPackage for Windows, macOS, and Linux.
+Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/6.0) v6.0 or later to be installed on your machine.  Installing SqlPackage as a global tool will make it available on your path as `sqlpackage` and is the recommended way to install SqlPackage for Windows, macOS, and Linux.
 
 To install SqlPackage as a global .NET tool, run the following command:
 
-```bash
-dotnet tool install -g Microsoft.SqlPackage
-```
+   ```bash
+   dotnet tool install -g microsoft.sqlpackage
+   ```
+
+More information on the options available with the `dotnet tool install` command can be found in the [dotnet tool install documentation](/dotnet/core/tools/dotnet-tool-install).
+
 
 To update SqlPackage to the latest version, run the following command:
 
-```bash
-dotnet tool update -g Microsoft.SqlPackage
-```
+   ```bash
+   dotnet tool update -g microsoft.sqlpackage
+   ```
+
 
 To uninstall SqlPackage, run the following command:
 
-```bash
-dotnet tool uninstall -g Microsoft.SqlPackage
-```
+   ```bash
+   dotnet tool uninstall -g microsoft.sqlpackage
+   ```
+
+
 
 ## Installation, zip download
 

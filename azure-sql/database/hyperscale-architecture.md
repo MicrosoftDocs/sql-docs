@@ -24,7 +24,7 @@ Hyperscale databases follow a different approach. Hyperscale separates the query
 
 All network communication among Hyperscale components uses Azure network infrastructure with built-in redundancy.
 
-High availability secondary replicas and named replicas are optional  compute nodes which can be added on-demand. Both share the same storage components, so no data copy is required to spin up a new replica. Geo secondary replica can be added on-demand in same or different Azure region that has separate storage components from primary replica.
+High availability secondary replicas and named replicas are optional compute nodes which can be added on-demand. Both share the same storage components, so no data copy is required to spin up a new replica. A geo secondary replica can be added on-demand in same or different Azure region. For data protection and redundancy, geo secondary replicas have storage components that are separate from those used by primary replica.
 
 The following diagram illustrates the functional Hyperscale architecture:
 

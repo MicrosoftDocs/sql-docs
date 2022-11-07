@@ -43,9 +43,7 @@ This article lists the features and fixes delivered by the released versions of 
 |SQL Server 2022|Adds support for [bit manipulation functions associated with SQL Server 2022](/sql/t-sql/functions/bit-manipulation-functions-overview): LEFT_SHIFT(), RIGHT_SHIFT(), BIT_COUNT(), GET_BIT(), and SET_BIT().|
 |SQL Server 2022|Adds support for [time series function changes associated with SQL Server 2022](/sql/sql-server/what-s-new-in-sql-server-2022#language): DATE_BUCKET(), GENERATE_SERIES(), FIRST_VALUE(), and LAST_VALUE().|
 |Statistics|Adds support for [STATISTICS AUTO_DROP option](/sql/t-sql/statements/create-statistics-transact-sql).|
-|Synapse Link|Adds support for [Synapse Link](/sql/sql-server/synapse-link/synapse-link-sql-server-change-feed) enabled databases. Excludes `changefeed` user and `changefeed` schema from operations.|
 |XML compression|Adds support for XML compression on [XML indexes](/sql/relational-databases/xml/xml-indexes-sql-server#xml-compression).|
-
 
 
 ### Known Issues
@@ -53,7 +51,6 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
-| Synapse Link | user-created objects in the `changefeed` schema are not included in bacpac and dacpac operations | N/A |
 
 ## 19.2 SqlPackage
 

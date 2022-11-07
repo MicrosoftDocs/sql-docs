@@ -25,6 +25,8 @@ This article lists the features and fixes delivered by the released versions of 
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214740)|November 7, 2022|161.6370.0|16.1.6370.0|
 |Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214843)|November 7, 2022|161.6370.0|16.1.6370.0|
 
+> [!IMPORTANT]
+> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters.  For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
 
 ### Features
 | Feature | Details |

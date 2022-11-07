@@ -29,6 +29,8 @@ Download and install the latest releases:
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 
+> [!NOTE]
+> Beginning with version 161, SqlPackage version numbering has been adjusted to better reflect the DacFx build number it is associated with.
 
 ## DacFx
 

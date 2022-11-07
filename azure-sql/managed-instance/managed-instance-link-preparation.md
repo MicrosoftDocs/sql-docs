@@ -495,6 +495,21 @@ After installation finishes, open SSMS and connect to your supported SQL Server 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-database-context-menu-managed-instance-link.png" alt-text="Screenshot that shows the Azure SQL Managed Instance link option on the context menu.":::
 
+## Configure SSMS for government cloud 
+
+If you want to deploy your SQL Managed Instance to a government cloud, you'll need to modify your SQL Server Management Studio (SSMS) settings to use the correct cloud. If you're not deploying your SQL Managed Instance to a government cloud, skip this step. 
+
+To update your SSMS settings, follow these steps: 
+
+1. Open SSMS. 
+1. From the menu, select **Tools** and then choose **Options**. 
+1. Expand **Azure Services** and select **Azure Cloud**. 
+1. Under **Select an Azure Cloud**, use the drop-down to choose **AzureUSGovernment**, or another government cloud: 
+
+  :::image type="content" source="media/managed-instance-link-preparation/ssms-for-government-cloud.png" alt-text="Screenshot of SSMS UI, options page, Azure services, with Azure cloud highlighted. ":::
+
+
+
 ## Next steps
 
 - After you've prepared your environment, you're ready to start [replicating your database](managed-instance-link-use-ssms-to-replicate-database.md). To learn more, review [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md). 

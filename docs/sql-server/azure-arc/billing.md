@@ -21,7 +21,7 @@ You may use a pay-as-you-go billing option to activate and run SQL Server with A
 * You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) in at least one of the Azure subscriptions your organization created. Learn how to [create a new billing subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 * You're in a [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the resource group in which the SQL Server instance will be registered. See [Managed Azure resource groups](/azure/azure-resource-manager/management/manage-resource-groups-portal) for details.
 * The **Microsoft.AzureArcData** and **Microsoft.HybridCompute** resource providers are registered in each  subscription you use for SQL Server pay-as-you-go billing.
-* You select pay-as-you-go activation option in [SQL 2022 setup wizard](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup) or [command prompt](https://learn.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt). 
+* You select pay-as-you-go activation option in [SQL 2022 setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). 
 
 To register the resource providers, use one of the methods below:  
 

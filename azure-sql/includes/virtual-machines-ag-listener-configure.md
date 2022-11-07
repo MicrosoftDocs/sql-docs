@@ -74,7 +74,7 @@ The availability group listener is an IP address and network name that the SQL S
    :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-propertiesdependencies.png" alt-text="Screenshot showing the IP Resource.":::
 
     >[!TIP]
-    >You can validate that the dependencies are correctly configured. In Failover Cluster Manager, go to Roles, right-click the availability group, click **More Actions**, and then click  **Show Dependency Report**. When the dependencies are correctly configured, the availability group is dependent on the network name, and the network name is dependent on the IP address. 
+    >You can validate that the dependencies are correctly configured. In Failover Cluster Manager, go to Roles, right-click the availability group, click **More Actions**, and then click  **Show Dependency Report**. When the dependencies are correctly configured, the availability group is dependent on the network name, and the network name is dependent on the IP address.
 
 
 1. <a name="setparam"></a>Set the cluster parameters in PowerShell.

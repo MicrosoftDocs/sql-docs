@@ -62,7 +62,7 @@ After the prerequisites are completed, the first step is to create a Windows Ser
 1. In the **Server Manager** dashboard, select **Tools**, and then select **Failover Cluster Manager**.
 1. In the left pane, right-click **Failover Cluster Manager**, and then select **Create a Cluster**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/40-createcluster.png" alt-text="Screenshot of create cluster UI.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/40-createcluster.png" alt-text="Screenshot of create failover cluster UI.":::
 
 1. In the Create Cluster Wizard, create a one-node cluster by stepping through the pages with the settings in the following table:
 
@@ -129,7 +129,7 @@ In this example, the Windows cluster uses a file share to create a cluster quoru
 
 1. Right-click **Shares**, and select **New Share...**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/48-newshare.png" alt-text="Screenshot of the create new share ui.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/48-newshare.png" alt-text="Screenshot of the create new share UI.":::
 
    Use **Create a Shared Folder Wizard** to create a share.
 
@@ -156,8 +156,8 @@ In this example, the Windows cluster uses a file share to create a cluster quoru
 Next, set the cluster quorum.
 
   > [!NOTE]
-  > Depending on the configuration of your availability group it may be necessary to change the quorum vote of a node participating in the Windows Server Failover Cluster.  For more information, see [Configure Cluster Quorum for SQL Server on Azure VMs](hadr-cluster-quorum-configure-how-to.md). 
-  > 
+  > Depending on the configuration of your availability group it may be necessary to change the quorum vote of a node participating in the Windows Server Failover Cluster.  For more information, see [Configure Cluster Quorum for SQL Server on Azure VMs](hadr-cluster-quorum-configure-how-to.md).
+  >
 
 1. Connect to the first cluster node with remote desktop.
 

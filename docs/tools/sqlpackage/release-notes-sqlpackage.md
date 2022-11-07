@@ -33,6 +33,7 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 |Platform|Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default.  For more information, see [this dedicated article](https://aka.ms/dacfx-connection).|
 |Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.1) v5.0.1|
+|Platform|SqlPackage is now available for [installation](sqlpackage-download.md) as a `dotnet tool` for Windows, macOS, and Linux platforms.|
 |Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves).|
 |Connectivity|Adds support for TDS 8.0 and parameters for `/SourceHostNameInCertificate` and `/TargetHostNameInCertificate` to SqlPackage operations.|
 |Replication|Adds support for [sp_addpublication](/sql/relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication#automatically-handle-conflicts-with-last-write-wins) with peer-to-peer replication.|

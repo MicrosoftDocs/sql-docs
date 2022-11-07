@@ -280,7 +280,7 @@ The following table provides an approximation of lifecycle dates for [!INCLUDE[s
 
 | **Version** | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
 |:---|:---|:---|:---|
-| [SQL Server 2022](/lifecycle/products/?terms=sql%20server%202022)|2022|2028|2033|
+| [SQL Server 2022](/lifecycle/products/?terms=sql%20server%202022) | 2022 | 2028 |2033 |
 | [SQL Server 2019](/lifecycle/products/?terms=SQL%20Server%202019) | 2019 | 2025 | 2030 |
 | [SQL Server 2017](/lifecycle/products/?terms=SQL%20Server%202017) | 2017 | 2022 | 2027 |
 | [SQL Server 2016](/lifecycle/products/?terms=SQL%20Server%202016) | 2016 | 2021 | 2026 |

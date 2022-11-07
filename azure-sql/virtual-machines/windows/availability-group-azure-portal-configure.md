@@ -53,7 +53,7 @@ To configure an Always On availability group by using the Azure portal, you must
 
 You need the following account permissions to configure the availability group by using the Azure portal:
 
-- An existing domain user account that has **Create Computer Object** permission in the domain. For example, a domain admin account (account@domain.com)) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
+- An existing domain user account that has **Create Computer Object** permission in the domain. For example, a domain admin account (account@domain.com) typically has sufficient permission. This account should also be part of the local administrator group on each VM to create the cluster.
 - The domain user account that controls SQL Server. This should be the same account for every SQL Server VM you intend to add to the availability group.
 
 ## <a id="select"></a> Choose Marketplace image
@@ -66,7 +66,7 @@ To choose an image, follow these steps:
 
 1. Select **+ Create** to open the **Select SQL deployment option** page.  Under **SQL Virtual Machines**, check the box next to **High availability**, then select the **Image** drop-down. Type in the version of SQL Server you're interested in, such as `2019`, and then choose a SQL Server image, such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**.  Once you check the **High availability** box, the portal displays the supported SQL Server versions, starting with SQL Server 2016. 
 
-  :::image type="content" source="./media/availability-group-az-portal-configure/select-sql-server-image.png" alt-text="Screenshot of the Azure portal, showing the Select SQL deployment option page, with high availability checked. ":::
+   :::image type="content" source="./media/availability-group-az-portal-configure/select-sql-server-image.png" alt-text="Screenshot of the Azure portal, showing the Select SQL deployment option page, with high availability checked. ":::
 
 1. Select **Create**.
 
@@ -132,7 +132,7 @@ On the Networking tab, configure your networking options.
 
 On the **WSFC and Credentials** tab, provide account information to configure and manage the Windows Server Failover Cluster and SQL Server. All the accounts need to already be present in the Active Directory of the domain controller virtual machine for the deployment to work. This deployment process doesn't create any accounts and will fail if you provide an invalid account. For more information about the required permissions, review [Configure cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
 
-1. Under **Windows Server Failover Cluster details***, provide the name you want to use for the failover cluster.  
+1. Under **Windows Server Failover Cluster details**, provide the name you want to use for the failover cluster.  
 
 1. Select the **storage account** from the drop-down that you want to use for the cloud witness, or, if one doesn't exist, select **Create a new storage account**.
 

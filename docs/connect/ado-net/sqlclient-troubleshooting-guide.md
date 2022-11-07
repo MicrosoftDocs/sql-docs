@@ -151,7 +151,7 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 
 - SQL Server enforced encryption
 
-  If the target Server is an Azure SQL instance or an On-Premise SQL Server with the "Force Encryption" property turned on, an encrypted connection will be made, for which the client must establish trust with the server.
+  If the target Server is an Azure SQL instance or an on-premises SQL Server with the "Force Encryption" property turned on, an encrypted connection will be made, for which the client must establish trust with the server.
 
   **Recommended Solution:** There are two available options to fix this issue:
 

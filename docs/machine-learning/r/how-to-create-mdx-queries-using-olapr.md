@@ -88,7 +88,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + On columns, you can specify multiple measures as elements of a comma-separated string.
 + The Row axis uses all possible values (all MEMBERS) of the "Product Line" dimension. 
-+ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries.
++ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries/regions.
 + The WHERE clause specifies the _slicer axis_. In this example, the slicer uses a member of the **SalesTerritory** dimension to filter the query so that only the sales from Australia are used in calculations.
 
 #### To build this query using the functions provided in olapR

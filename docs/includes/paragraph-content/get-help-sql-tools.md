@@ -1,12 +1,12 @@
 ---
-ms.date: 05/21/2019
-ms.topic: include
-ms.prod: sql
 author: rothja
 ms.author: jroth
+ms.date: 05/21/2019
+ms.prod: sql
+ms.topic: include
 ---
 
-## :::image type="icon" source="../media/info-tip.png" border="false"::: Get help for SQL tools
+## :::image type="icon" source="../media/info-tip.svg" border="false"::: Get help for SQL tools
 
 - [All the ways to get help](../../sql-server/sql-server-get-help.md)
 - [Submit an Azure Data Studio Git issue](https://github.com/Microsoft/azuredatastudio/issues)

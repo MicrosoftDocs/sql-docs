@@ -32,7 +32,7 @@ Stores metadata with their associated indexes for Azure Synapse Link for SQL.
 |**workspace_id**|**nvarchar(247)**| The related Synapse workspace Azure resource ID.|  
 |**synapse_workgroup_name**|**nvarchar(50)**| The related Synapse workspace name.|  
 |**enabled**|**bit**|Tracks if the table group is enabled for change feed. 1 - Yes, 0 - No. |  
-|**destination_type**|**tinyint** |The type of destination assigned to this table group. Valid `destination_type` values: 0 - Synapse. 1 - Event Hub. 2 - Kafka.|  
+|**destination_type**|**tinyint** |The type of destination assigned to this table group. Valid `destination_type` values: 0 - Azure Synapse. 1 - Azure Event Hubs. 2 - Kafka.|
 |**max_message_size_bytes**|**int**| Maximum message size that the destination supports.|  
 |**partition_scheme**|**tinyint**| Partitioning scheme to partition the change data while publishing table group.|  
 

@@ -37,7 +37,6 @@ Stores metadata with their associated indexes for Azure Synapse Link for SQL.
 | **snapshot_start_time** | **datetime** | Start time of snapshot phase.| 
 | **snapshot_end_time** | **datetime** | End time of snapshot phase.|  
 
-  
 ## See also  
 
 - [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)

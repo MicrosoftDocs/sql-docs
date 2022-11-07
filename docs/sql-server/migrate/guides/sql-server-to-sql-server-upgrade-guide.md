@@ -33,7 +33,7 @@ Confirm source environment is supported  and you've addressed any prerequisites,
 
 ### Discover
 
-The discover stage identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization’s SQL instances together with the version and features in use.
+The discover stage identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization's SQL instances together with the version and features in use.
 
 To use the MAP Toolkit to create an inventory scan, complete the following steps.
 
@@ -105,7 +105,7 @@ To use DMA to create an assessment, complete the following steps.
    1. Select the New (+) icon, select the **Assessment** project type, specify a project name, select **SQL Server** as the source and target, and then select **Create**.
 
       ![New Assessment](./media/sql-server-to-sql-server-upgrade-guide/dma-new-project.png)
-   1. Select the target SQL Server version that you plan to migrate to and against which you need to run an assessment, select one or both of the assessment report types (**Compatibility Issues** and **New features’ recommendation**), and then select **Next**.
+   1. Select the target SQL Server version that you plan to migrate to and against which you need to run an assessment, select one or both of the assessment report types (**Compatibility Issues** and **New features' recommendation**), and then select **Next**.
 
       ![Report Types](./media/sql-server-to-sql-server-upgrade-guide/dma-assessment.png)
 
@@ -172,7 +172,7 @@ which the experiment was run displays.
 
       > [!NOTE]
       > By default, threshold is set to 5%; any performance improvement that is \>= 5% is 
-categorized as ‘Improved’. The drop-down selector allows you to evaluate the report using different performance thresholds.
+categorized as 'Improved'. The drop-down selector allows you to evaluate the report using different performance thresholds.
 
 
    1. Select the individual slices of the pie chart to view detailed metrics on performance.

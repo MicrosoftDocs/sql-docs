@@ -43,7 +43,7 @@ azureml.deploy.operationalization.RealtimeDefinition(name, op)
 
 Bases: [`azureml.deploy.operationalization.OperationalizationDefinition`](operationalization-definition.md)
 
-Real-time class defining a *real-time* service’s properties for publishing.
+Real-time class defining a *real-time* service's properties for publishing.
 
 
 
@@ -113,7 +113,7 @@ description(description)
 
 
 
-Set the service’s optional description.
+Set the service's optional description.
 
 
 ### Arguments
@@ -186,7 +186,7 @@ version(version)
 
 
 
-Set the service’s optional version.
+Set the service's optional version.
 
 
 ### Arguments

@@ -54,8 +54,8 @@ Syntax:
 <External_Data_Source> ::=
 CREATE EXTERNAL DATA SOURCE <data_source_name> WITH
     (TYPE = RDBMS,
-    LOCATION = ’<fully_qualified_server_name>’,
-    DATABASE_NAME = ‘<remote_database_name>’,  
+    LOCATION = '<fully_qualified_server_name>',
+    DATABASE_NAME = '<remote_database_name>',  
     CREDENTIAL = <credential_name>
     ) [;]
 ```

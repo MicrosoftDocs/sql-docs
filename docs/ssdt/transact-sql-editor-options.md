@@ -25,7 +25,6 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

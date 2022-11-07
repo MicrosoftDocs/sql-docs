@@ -110,7 +110,7 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 
 ## FAQ
 
-### Does pay-as-you-go billing stop when the Intenet connectivity is temporary down
+### Does pay-as-you-go billing stop when internet connectivity temporarily down
 
 Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
 

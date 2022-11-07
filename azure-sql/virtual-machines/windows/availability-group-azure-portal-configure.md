@@ -142,7 +142,7 @@ On the **WSFC and Credentials** tab, provide account information to configure an
 
    - **Domain FQDN (fully-qualified domain name)**: your domain, such as contoso.com.
 
-   - If you're using the active directory Ou path, provide it in the **Ou path** field. 
+   - If you're using the active directory Ou path, provide it in the **Ou path** field.
 
     :::image type="content" source="./media/availability-group-az-portal-configure/windows-ad-domain.png" alt-text="Screenshot of the Azure portal, WSFC and Credentials tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing Windows Active Directory Domain details.":::
 

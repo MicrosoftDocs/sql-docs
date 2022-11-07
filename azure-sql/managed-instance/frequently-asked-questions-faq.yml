@@ -59,7 +59,7 @@ sections:
           
           ### Can I increase the number of databases limit (100) on my managed instance on demand?
           
-          No, and currently there are no committed plans to increase the number of databases on SQL Managed Instance. 
+          The limit of 100 databases per SQL Managed Instance is a hard limit that cannot be changed.
           
           ### Where can I migrate if I have more than 16 TB of data?
           You can consider migrating to other Azure flavors that suit your workload: [Azure SQL Database Hyperscale](../database/service-tier-hyperscale.md) or [SQL Server on Azure Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).
@@ -303,7 +303,7 @@ sections:
         answer: |
           ### What are the current inbound/outbound NSG constraints on the managed instance subnet?
           
-          The required NSG and UDR rules are documented [here](connectivity-architecture-overview.md#mandatory-inbound-security-rules-with-service-aided-subnet-configuration), and automatically set by the service.
+          The required NSG and UDR rules are documented [here](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration), and automatically set by the service.
           Please keep in mind that these rules are just the ones we need for maintaining the service. To connect to managed instance and use different features you will need to set additional, feature specific rules, that you need to maintain.
           
           ### How can I set inbound NSG rules on management ports?
@@ -376,17 +376,7 @@ sections:
           
           ### Does SQL Managed Instance have a public endpoint?
           
-          Yes. A managed instance has a public endpoint that is by default used only for Azure Service Management, but a customer may enable it for data access as well. For more information, see [Use SQL Managed Instance with public endpoints](./public-endpoint-overview.md). To configure public endpoint, go to [Configure public endpoint in SQL Managed Instance](public-endpoint-configure.md).
-          
-          ### How does SQL Managed Instance control access to the public endpoint?
-          
-          SQL Managed Instance controls access to the public endpoint at both the network and application level.
-          
-          Management and deployment services connect to a managed instance by using a [management endpoint](./connectivity-architecture-overview.md#management-endpoint) that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the managed instance's management components use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP ranges. Certificates mutually authenticate all communication between management components and the management plane. For more information, see [Connectivity architecture for SQL Managed Instance](./connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture).
-          
-          ### Could I use the public endpoint to access the data in SQL Managed Instance databases?
-          
-          Yes. The customer will need to enable public endpoint data access from [Azure portal](public-endpoint-configure.md#enabling-public-endpoint-for-a-managed-instance-in-the-azure-portal) / [PowerShell](public-endpoint-configure.md#enabling-public-endpoint-for-a-managed-instance-using-powershell) / ARM and configure NSG to lock down access to the data port (port number 3342). For more information, see [Configure public endpoint in Azure SQL Managed Instance](public-endpoint-configure.md) and [Use Azure SQL Managed Instance securely with public endpoint](public-endpoint-overview.md). 
+          Yes, a public endpoint can be enabled to enable inbound traffic from the Internet to reach SQL Managed Instance. For more information, see [Use SQL Managed Instance with public endpoints](./public-endpoint-overview.md) and [Configure public endpoint in SQL Managed Instance](public-endpoint-configure.md).
           
           ### Can I specify a custom port for SQL data endpoint(s)?
           
@@ -418,6 +408,7 @@ sections:
           - Configure JIT jumpbox access for the sysadmin account.
           - Turn on [SQL auditing](/sql/relational-databases/security/auditing/sql-server-audit-database-engine), and integrate it with alerting mechanisms.
           - Turn on [Threat Detection](../database/threat-detection-configure.md) from the [Microsoft Defender for SQL](../database/azure-defender-for-sql.md) suite.
+          - Apply a [service endpoint policy](./service-endpoint-policies-configure.md) to the subnet to control outbound traffic to Azure Storage.
           
       - question: |
           DNS

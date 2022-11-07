@@ -18,7 +18,7 @@ ms.topic: conceptual
   
 -   **Country/Region (three-letter leading)**: Contains the conventional long (official name as designated by the country/region) and short names (common name used in lists, on maps, and so on), two-letter abbreviation, three-letter abbreviation and three-digit code for each location.  Leading values is set to County three-letter abbreviation.  
   
--   **Country/Region (two-letter leading)**: Contains the conventional long (official name as designated by the country/region ) and short names (common name used in lists, on maps, etc. ), two-letter abbreviation, three-letter abbreviation and three-digit code for each location.  Leading value is set to the Country two-letter abbreviation.  
+-   **Country/Region (two-letter leading)**: Contains the conventional long (official name as designated by the country/region ) and short names (common name used in lists, on maps, etc. ), two-letter abbreviation, three-letter abbreviation and three-digit code for each location.  Leading value is set to the country/region two-letter abbreviation.  
   
 -   **US - Counties**: Contains a list of US counties.  
   

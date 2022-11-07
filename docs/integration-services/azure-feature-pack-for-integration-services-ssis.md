@@ -232,7 +232,7 @@ This is a hotfix version released for SQL Server 2019 only.
 
 #### Bugfixes
 
-1. In certain cases, package execution reports "Error: Could not load file or assembly ‘Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed’ or one of its dependencies."
+1. In certain cases, package execution reports "Error: Could not load file or assembly 'Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies."
 
 ### Version 1.15.0
 

@@ -29,7 +29,7 @@ This article provides a list of the rules used to assess the feasibility of migr
  | CryptographicProvider | Database | Issue | [A use of CREATE CRYPTOGRAPHIC PROVIDER or ALTER CRYPTOGRAPHIC PROVIDER was found, which isn't supported in Azure SQL Database.](#CryptographicProvider) | 
  | DatabaseMail | Instance | Warning | [Database Mail isn't supported in Azure SQL Database.](#DatabaseMail) | 
  | DatabasePrincipalAlias | Database | Issue | [SYS.DATABASE_PRINCIPAL_ALIASES is no longer supported and has been removed.](#DatabasePrincipalAlias) | 
- | DbCompatLevelLowerThan100 | Database | Warning | [Azure SQL Database doesn’t support compatibility levels below 100.](#DbCompatLevelLowerThan100) | 
+ | DbCompatLevelLowerThan100 | Database | Warning | [Azure SQL Database doesn't support compatibility levels below 100.](#DbCompatLevelLowerThan100) | 
  | DisableDefCNSTCHK | Database | Issue | [SET option DISABLE_DEF_CNST_CHK is no longer supported and has been removed.](#DisableDefCNSTCHK) | 
  | FastFirstRowHint | Database | Warning | [FASTFIRSTROW query hint is no longer supported and has been removed.](#FastFirstRowHint) | 
  | FileStream | Database | Issue | [Filestream isn't supported in Azure SQL Database.](#FileStream) | 

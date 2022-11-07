@@ -51,6 +51,7 @@ Azure Synapse Pathway supports code conversion of database, schemas, and tables 
 - **IBM Netezza**
 - **Microsoft SQL Server**
 - **Snowflake**
+- **Teradata Vantage**
 
 ## Frequently asked questions
 

@@ -103,13 +103,13 @@ The subnet in which SQL Managed Instance is deployed must meet the following cha
 ### Mandatory security rules with service-aided subnet configuration
 These rules are necessary to ensure inbound management traffic flow. They are enforced by the network intent policy and need not be deployed by the customer. See the [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
-| Name       |Port                        |Protocol|Source           |Destination|Action|
+|Name        |Port                        |Protocol|Source           |Destination|Action|
 |------------|----------------------------|--------|-----------------|-----------|------|
 |internal-in |Any                         |Any     |_subnet_         |_subnet_   |Allow |
 
 These rules are necessary to ensure outbound management traffic flow. See the [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
-| Name              |Port          |Protocol|Source           |Destination               |Action|
+|Name               |Port          |Protocol|Source           |Destination               |Action|
 |-------------------|--------------|--------|-----------------|--------------------------|------|
 |AAD-out            |443           |TCP     |_subnet_         |AzureActiveDirectory      |Allow |
 |OneDsCollector-out |443           |TCP     |_subnet_         |OneDsCollector            |Allow |

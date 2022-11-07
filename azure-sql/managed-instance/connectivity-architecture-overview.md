@@ -120,13 +120,13 @@ These rules are necessary to ensure outbound management traffic flow. See the [p
 ### Mandatory routes with service-aided subnet configuration
 These routes are necessary to ensure that management traffic is routed directly to a destination. They are enforced by the network intent policy and need not be deployed by the customer. See the [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
-|Name|Address prefix|Next hop|
-|----|--------------|-------|
-|AzureActiveDirectory|AzureActiveDirectory|Internet<sup>*</sup>|
-|OneDsCollector|OneDsCollector|Internet<sup>*</sup>|
-|Storage._primaryRegion_|Storage._primaryRegion_|Internet<sup>*</sup>|
+|Name                     |Address prefix           |Next hop            |
+|-------------------------|-------------------------|--------------------|
+|AzureActiveDirectory     |AzureActiveDirectory     |Internet<sup>*</sup>|
+|OneDsCollector           |OneDsCollector           |Internet<sup>*</sup>|
+|Storage._primaryRegion_  |Storage._primaryRegion_  |Internet<sup>*</sup>|
 |Storage._secondaryRegion_|Storage._secondaryRegion_|Internet<sup>*</sup>|
-|subnet-to-vnetlocal|_subnet_|Virtual network| <sup>*</sup>|Virtual network|
+|subnet-to-vnetlocal      |_subnet_                 |Virtual network     |
 
 > [!NOTE]
 > <sup>*</sup> **Internet** - this value in the "next hop" field instructs the gateway to route the traffic outside of the virtual network. However, if the destination address is for one of Azure's services, Azure routes the traffic directly to the service over Azure's backbone network, rather than outside of Azure cloud. Traffic between Azure services does not traverse the Internet, regardless of which Azure region the virtual network exists in, or which Azure region an instance of the Azure service is deployed in. For more details, visit the page on [Azure's virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview).

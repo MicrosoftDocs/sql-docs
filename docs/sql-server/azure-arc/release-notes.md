@@ -19,6 +19,9 @@ This release is published November 12, 2022
 
 `1.1.2132.21`
 
+> [!IMPORTANT]
+> Billing for this extension will not be enabled until December 1, 2022.
+
 ### Azure extension for SQL Server
 
 - Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). 
@@ -40,11 +43,12 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 ### Known issues and limitations
 
-- The pay-as-you-go billing is limited to SQL Server 2022
+- Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
+- The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 - Azure extension for SQL Server is not supported in the following environments:
-    - SQL Server in Linux containers
-    - SQL Server on VMware clusters or on Azure VMware Solution
-    - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms.md).
+  - SQL Server in Linux containers
+  - SQL Server on VMware clusters or on Azure VMware Solution
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms.md).
 
 ## September 2022
 

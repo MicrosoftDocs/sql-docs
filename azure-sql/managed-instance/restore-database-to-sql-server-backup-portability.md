@@ -11,33 +11,30 @@ ms.subservice: data-movement
 ms.topic: how-to
 ms.custom: 
 ---
-# Restore database to SQL Server with backup portability (Azure SQL Managed Instance)
+# Restore database to SQL Server from Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you to restore your database backup from your managed instance to SQL Server 2022 by using the backup portability feature of Azure SQL Managed Instance. 
-
+This article teaches you to restore your database backup from Azure SQL Managed Instance to SQL Server 2022. 
 
 ## Overview
 
-The backup portability feature gives you an easy way to copy or move your databases from SQL Managed Instance to SQL Server instances hosted on-premises, virtual machines in Azure, or in other clouds. The backup portability feature is enabled by default for all new and existing instances starting November 2022, and it's possible to opt out at any time. 
+The backup portability instance property gives you an easy way to copy or move your databases from SQL Managed Instance to SQL Server 2022 instances hosted on-premises, virtual machines in Azure, or in other clouds. 
 
-The backup portability feature unlocks the following scenarios: 
+The backup portability instance property unlocks the following scenarios: 
 
-- Disaster recovery with two-way failover between Azure SQL Managed Instance and SQL Server 2022 (currently in preview). Review [Managed Instance link](managed-instance-link-feature-overview.md) to learn more. 
-- Hybrid and multi-cloud mobility
-- Migration roll back to SQL Server, if necessary. 
-- Leveraging cloud elasticity during peak season - seasonal migrations to and from Azure. 
-- Refresh non-production environments outside of SQL Managed Instance. 
-- Provide database copies to end customers and auditors. 
-- Restore to SQL Server as an insurance policy. 
+- Database mobility between SQL Managed Instance and SQL Server-based products
+- Provide database copies to end customers or eligible parties. 
+- Refresh environments outside of SQL Managed Instance
 
-To ensure backup compatibility with SQL Server, instances with the backup portability feature enabled may not have access to some newly introduced SQL Server features that impact the database engine and would break backup file compatibility with SQL Server. See [limitations](#limitations) for more details.  If you anticipate the need to copy your database from SQL Managed Instance to other SQL Server form factors, for operational, contractual, or regulatory reasons, your instance is a good candidate for keeping the backup portability feature enabled. 
-
-For more details, check the [backup and restore](frequently-asked-questions-faq.yml#backup-and-restore) section of the frequently asked questions article. 
+The backup portability property is enabled by default for _all_ instances starting in November 2022, including all existing instances, and any new instances deployed after November 2022. 
 
 ## Take backup on SQL Managed Instance 
 
 First, create a credential to access the storage account from SQL Managed Instance, and then take a copy-only backup of your database. 
+
+You can create your credential by using an SAS token, or a managed identity. 
+
+### [SAS token](#tab/sas-token)
 
 To create a credential using an [SAS token](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016), run the following sample T-SQL command: 
 
@@ -47,12 +44,16 @@ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = '<SAS_TOKEN>';  
 ```
 
+### [Managed identity](#tab/managed-identity)
+
 To create a credential using a [managed identity](/azure/active-directory/managed-identities-azure-resources/howto-assign-access-portal), run the following sample T-SQL command: 
 
 ```sql
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
 WITH IDENTITY = 'MANAGED IDENTITY'
 ```
+
+---
 
 Next, take a COPY_ONLY backup of your database by running the following sample T-SQL command: 
 
@@ -66,7 +67,7 @@ WITH COPY_ONLY
 
 ## Restore to SQL Server 
 
-Restore the database to SQL Server by using the `WITH MOVE` command, and providing explicit file paths for your files on the destination server. If the source database was protected with TDE encryption using a customer-managed key, the destination SQL Server must have access to the same key stored locally to decrypt the data during the restore. 
+Restore the database to SQL Server by using the `WITH MOVE` command, and providing explicit file paths for your files on the destination server.
 
 To restore your database to SQL Server, run the following sample T-SQL command: 
 
@@ -79,28 +80,17 @@ MOVE 'log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\SampleDB_xtp.xtp'
 ```
 
-## Limitations
+> [!NOTE]
+> To restore databases that are encrypted at-rest (by using [TDE](../../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the [SQL Server Connector for Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-sql-blog/sql-server-connector-for-azure-key-vault-is-generally-available/ba-p/386105).
 
-Consider the following limitations:
+
+## Consideration
+
+Consider the following:
 
 - When restoring to SQL Server, you must use the `WITH MOVE` qualifier, and provide explicit paths for the data files. 
-- Databases backed up with service-managed TDE keys are not supported with the backup portability feature, and cannot be restored to SQL Server while databases backed up with custom-managed keys can be restored to SQL Server. 
-
-In the future, instances that have backup portability enabled may not get database engine updates that impact the backup portability feature. When this happens, you will have the option to disable the backup portability feature to get all the latest updates. Once disabled, you will not be able to enable backup portability for the managed instance again.
-
-The following table details the type of updates that will occur if the portability feature is on or off: 
-
-|Type of upgrade | Portability ON | Portability OFF | 
-| ----------- | ------------------ | ------------- | 
-| Security patches| Yes<sup>1</sup>| Yes | 
-| Bug fixes | Yes<sup>1</sup> | Yes | 
-| New PaaS features | Yes | Yes | 
-| New Database Engine features with no on-disk metadata changes | Subject to triage<sup>2</sup> | Yes
-| New Database Engine features with database version bump| No | Yes | 
-
-<sup>1</sup> SQL Server Cumulative Updates as well as updates specific to Azure SQL.   
-<sup>2</sup> Subject to review and triage by the product group, as it requires porting. 
-
+- Databases encrypted with service-managed TDE keys cannot be restored to SQL Server. You can only restore an encrypted database to SQL Server if it was encrypted with a customer-managed key assuming the destination server has access to the same key used to encrypt the database. 
+- It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt in. 
 
 ## Next steps
 

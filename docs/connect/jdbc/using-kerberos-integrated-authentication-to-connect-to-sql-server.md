@@ -217,6 +217,43 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. Verify the credentials in the ticket via `klist` and confirm the credentials are the ones you intend to use for authentication.
 6. Run the above sample code and confirm that Kerberos Authentication was successful.
 
+
+## Native platform GSS integration
+
+Native platform GSS integration allows Java applications to use the native GSS-API rather than the cryptographic mechanisms of the JDK implementation of the GSS-API. For example, the following sample code demonstrates how to enable use of the native GSS-API within the driver:
+
+```java
+GSSCredential credential = GSSManager.getInstance().createCredential(null, GSSCredential.DEFAULT_LIFETIME, new Oid("1.2.840.113554.1.2.2"), GSSCredential.ACCEPT_ONLY);
+
+SQLServerDataSource ds = new SQLServerDataSource();
+dataSource.setURL("jdbc:sqlserver://<server>;databaseName=<database>;integratedSecurity=true;authenticationScheme=JavaKerberos;");
+ds.setGSSCredentials(credential);
+ds.getConnection();
+
+try (Connection conn = ds.getConnection()) {
+    ResultSet rs = conn.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+    while (rs.next()) {
+        System.out.println("Authentication Scheme: " + rs.getString(1));
+    }
+}
+```
+
+In addition, the following JVM arguments are also required:
+
+```
+-Dsun.security.jgss.native=true
+-Djavax.security.auth.useSubjectCredsOnly=false
+```
+
+You may also optionally provide the path to the native GSS library.
+
+```
+-Dsun.security.jgss.lib=path/to/native/gss/library // This is optional
+```
+
+Refer to the official Java documentation for more information on the aforementioned JVM arguments.
+
+
 ## See also
 
 [Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

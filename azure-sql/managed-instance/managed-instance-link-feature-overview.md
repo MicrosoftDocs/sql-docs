@@ -43,9 +43,8 @@ The following table lists the functionality of the link feature and the supporte
 |[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server | Preview |Not supported | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
 |[!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] | N/A | Not supported | Not supported | N/A | 
 |[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Windows Server | Preview | Not supported|   [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
-|[!INCLUDE [sssql14-md](../../docs/includes/sssql14-md.md)] | N/A | Not supported | Not supported | N/A | 
-|[!INCLUDE [sssql11-md](../../docs/includes/sssql11-md.md)] | N/A | Not supported | Not supported | N/A | 
-|[!INCLUDE [sssql10-md](../../docs/includes/sssql10-md.md)] & [SQL Server 2008 R2] | N/A | Not supported | Not supported | N/A |  
+
+SQL Server 2008 to SQL Server 2014 isn't supported as the link feature relies on Always On availability group technology introduced in SQL Server 2016. 
 
 
 In addition to the supported version, you'll need:
@@ -156,7 +155,7 @@ Data replication limitations include:
 
 - Only user databases can be replicated. Replication of system databases isn't supported.
 - The solution doesn't replicate server level objects, agent jobs, nor user logins from SQL Server to SQL Managed Instance.
-- For SQL Server 2016 - 2019, replication of user databases from SQL Server to SQL Managed Instance is one-way. User databases from SQL Managed Instance can't be replicated back to SQL Server. Fail back to SQL Server is only supported with SQL Server 2022. 
+- For SQL Server 2016 - 2019, replication of user databases from SQL Server to SQL Managed Instance is one-way. User databases from SQL Managed Instance can't be replicated back to SQL Server. Two-way replication with fail back to SQL Server is only available for SQL Server 2022. 
 
 
 Configuration limitations include: 

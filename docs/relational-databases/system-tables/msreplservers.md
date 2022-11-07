@@ -37,7 +37,7 @@ Value Description **0** Never **1** On success **2** (default) On failure **3** 
 |**job_step_uid**|**uniqueidentifier**|**job_step_uid** contains the same value as column **step_uid** in table **dbo**.**sysjobsteps**|
 |**job_login**|**uniqueinvarchar(4000)**|Used to look for existing credential in the sys.credentials catalog view.|
 |**subsystem**|**nvarchar(40)**|Maps to msdb.dbo.syssubsystems.|
-|**command**|**nvarchar(3200)**|The replication agent command text. The “-distributor” value points to the AG listener URL when this distribution db is in an AG.|
+|**command**|**nvarchar(3200)**|The replication agent command text. The "-distributor" value points to the AG listener URL when this distribution db is in an AG.|
 |**cmdexec_success_code**|**int**|
 |**server**|**sysname**|
 |**database_user_name**|**sysname**|Always set with the default value of NULL.|

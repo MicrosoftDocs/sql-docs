@@ -11,7 +11,6 @@ f1_keywords:
   - "sql.data.tools.DacExtractDialog"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

@@ -143,7 +143,7 @@ The default value is 20.
 
 Minimum number of training instances required to form a
 leaf. That is, the minimal number of documents allowed in a leaf of a
-regression tree, out of the sub-sampled data. A ‘split’ means that features
+regression tree, out of the sub-sampled data. A 'split' means that features
 in each level of the tree (node) are randomly divided. The default value is 10.
 
 
@@ -274,7 +274,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenv is used instead.
 
 

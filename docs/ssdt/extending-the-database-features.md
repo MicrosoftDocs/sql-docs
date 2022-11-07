@@ -7,7 +7,6 @@ ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

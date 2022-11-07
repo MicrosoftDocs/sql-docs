@@ -42,7 +42,7 @@ ms.author: jiwang6
   
 ## Rules  
   
--   A derived hierarchy cannot contain more than one recursive relationship. It can, however, have other derived relationships (for example, a derived hierarchy that contains a recursive Manager to Employee relationship can also have Country to Manager and Employee to Store relationships).  
+-   A derived hierarchy cannot contain more than one recursive relationship. It can, however, have other derived relationships (for example, a derived hierarchy that contains a recursive Manager to Employee relationship can also have Country/Region to Manager and Employee to Store relationships).  
   
 -   You cannot assign member permissions (on the **Hierarchy Members** tab) to members in a recursive hierarchy.  
   

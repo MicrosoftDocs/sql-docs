@@ -114,13 +114,13 @@ ms.topic: conceptual
  In domain management, you can specify a term-based relation for a single domain, specifying a change to a single value.  
   
 ### Composite Domains  
- A composite domain is a structure comprised of two or more single domains that each contain knowledge about common data. Examples of data that can be addressed by composite domains are the first, middle, and family names in a name field, and the house number and street, city, state, postal code, and country in an address field. When you map a single field to a composite domain, DQS parses the data from the one field into the multiple domains that make up the composite.  
+ A composite domain is a structure comprised of two or more single domains that each contain knowledge about common data. Examples of data that can be addressed by composite domains are the first, middle, and family names in a name field, and the house number and street, city, state, postal code, and country/region in an address field. When you map a single field to a composite domain, DQS parses the data from the one field into the multiple domains that make up the composite.  
   
  Sometimes a single domain does not represent field data in full. Grouping two or more domains in a composite domain can enable you to represent the data in an efficient way. The following are advantages of using composite domains:  
   
 -   Analyzing the different single domains that make up a composite domain can be a more effective way of assessing data quality.  
   
--   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string "London" in a city domain corresponds to the string "England" in a country domain. Note that cross-domain rules are taken into consideration after domain rules.  
+-   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string "London" in a city domain corresponds to the string "England" in a country/region domain. Note that cross-domain rules are taken into consideration after domain rules.  
   
 -   Data in composite domains can be attached to a reference data source, in which case the composite domain will be sent to the reference data provider. This is often done with address data.  
   

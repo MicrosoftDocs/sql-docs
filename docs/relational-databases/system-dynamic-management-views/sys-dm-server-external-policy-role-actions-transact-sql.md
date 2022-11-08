@@ -26,7 +26,7 @@ Lists the links between the roles and actions, could be used to join the two.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**role_guid**|**nvarchar(max)**|The role name as defined in external policy source. Has to be unique.|  
+|**role_guid**|**nvarchar(128)**|The role name as defined in external policy source. Has to be unique.|  
 |**sql_action_id**|**int**|Internal ID for joining with other dynamic management views. Not used by external policy providers.|  
   
 ## Permissions  

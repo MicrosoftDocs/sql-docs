@@ -36,7 +36,7 @@ Max( Set_Expression [ , Numeric_Expression ] )
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignores nulls when calculating the maximum value in a set of numbers.  
   
 ## Example  
- The following example returns the maximum monthly sales for each quarter, subcategory, and country in the Adventure Works cube.  
+ The following example returns the maximum monthly sales for each quarter, subcategory, and country/region in the Adventure Works cube.  
   
 ```  
 WITH MEMBER Measures.x AS Max   

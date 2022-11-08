@@ -124,7 +124,7 @@ chmod -R g=u <database file dir>
 
 #### Set the non-root user as the owner of the files
 
-This can be the default non-root user, or any other non-root user you’d like to specify. In this example, we set UID 10001 as the non-root user.
+This can be the default non-root user, or any other non-root user you'd like to specify. In this example, we set UID 10001 as the non-root user.
 
 ```bash
 chown -R 10001:0 <database file dir>

@@ -45,7 +45,7 @@ WITH SET MySet AS
  FROM [Adventure Works] 
  ```
 
-The DistinctCount function returns the distinct number of items in a set; in this example, the optional second parameter is used to exclude items that don’t have a value for a given tuple. In this case there are four distinct items in the set in the first parameter, but the function returns three because only Australia, Canada and France have data for July 1st 2001 for Internet Sales Amount.
+The DistinctCount function returns the distinct number of items in a set; in this example, the optional second parameter is used to exclude items that don't have a value for a given tuple. In this case there are four distinct items in the set in the first parameter, but the function returns three because only Australia, Canada and France have data for July 1st 2001 for Internet Sales Amount.
  
 ## See Also  
  [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   

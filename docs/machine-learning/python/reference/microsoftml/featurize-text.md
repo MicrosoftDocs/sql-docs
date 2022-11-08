@@ -179,7 +179,7 @@ the following options:
 
 * `sort`: Specifies how to order items when vectorized. Two orderings are supported:
     * `"occurrence"`: items appear in the order encountered. 
-    * `"value"`: items are sorted according to their default comparison. For example, text sorting will be case sensitive (e.g., ‘A’ then ‘Z’ then ‘a’). 
+    * `"value"`: items are sorted according to their default comparison. For example, text sorting will be case sensitive (e.g., 'A' then 'Z' then 'a'). 
 
 The default value is *None*.
 Note that the stopwords list takes precedence over the dictionary allowlist

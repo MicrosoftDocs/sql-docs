@@ -24,8 +24,8 @@ In this article, we'll show you how to connect to [!INCLUDE [sssql22-md](../../.
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
 - ODBC or OLE DB Driver for SQL Server
-  - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.0.1.1 or higher
-  - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.0.0 or higher
+  - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.1.2.1 or higher
+  - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.2.0 or higher
 - Create and install a TLS certificate in SQL Server. For more information, see [Enable encrypted connections to the Database Engine](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
 
 ## Connect to SQL Server using a .NET application
@@ -89,9 +89,6 @@ If you see `SSL certificate validation failed`, validate that:
 - At least one of the following is true:
   - Provider SQL Server matches CA name or one of the DNS names in the certificate.
   - `HostNameInCertificate` connection string property matches CA name or one of the DNS names in the certificate.
-
-> [!IMPORTANT]
-> Although TLS 1.3 is supported for [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], client drivers have not been updated to handle TLS 1.3 in this public preview release. TDS 8.0 will still work with TLS 1.2 and earlier versions.
 
 ## See also
 

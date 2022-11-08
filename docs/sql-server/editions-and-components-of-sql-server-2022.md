@@ -155,6 +155,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database snapshot|Yes|Yes|Yes|Yes|Yes|
 |Always On failover cluster instances<sup>4</sup>|Yes|Yes|No|No|No|
 |Always On availability groups<sup>5</sup>|Yes|No|No|No|No|
+|Managed Instance link|Yes|Yes|No|No|No|
 |Basic availability groups<sup>6</sup>|No|Yes|No|No|No|
 |Automatic read write connection re-routing |Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|

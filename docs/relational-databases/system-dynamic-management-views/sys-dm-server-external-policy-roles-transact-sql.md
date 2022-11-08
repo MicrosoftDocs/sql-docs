@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_server_external_policy_roles (Transact-SQL)"
 description: Reference documentation to explain sys.dm_server_external_policy_roles (Transact-SQL) dynamic management view.
-author: srdanbozovic
+author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.date: "11/07/2022"
 ms.prod: sql

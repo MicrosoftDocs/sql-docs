@@ -14933,6 +14933,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md
       - name: sp_enclave_send_keys
         href: relational-databases/system-stored-procedures/sp-enclave-send-keys-sql.md
+      - name: sp_external_policy_refresh
+        href: relational-databases/system-stored-procedures/sp-external-policy-refresh-transact-sql.md
       - name: sp_grantdbaccess
         href: relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
       - name: sp_grantlogin

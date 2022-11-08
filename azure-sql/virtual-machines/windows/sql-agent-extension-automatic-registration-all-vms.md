@@ -32,6 +32,9 @@ When automatic registration is enabled, a job runs monthly to detect whether or 
 
 Once automatic registration is enabled for a subscription, all current and future VMs that have SQL Server installed will be registered with the SQL IaaS Agent extension **in lightweight mode without downtime, and without restarting the SQL Server service**. You still need to [manually upgrade to full manageability mode](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set. The license type automatically defaults to that of the VM image. If you use a pay-as-you-go image for your VM, then your license type will be `PAYG`, otherwise your license type will be `AHUB` by default. 
 
+> [!NOTE]
+> There might be scenarios where user would have deployed a SQL VM which has IaaS extension preinstalled. Sometimes its in a failure state or sometimes they will remove it. Automatic registration will check the registry to see if SQL Server is installed on a VM and if extension is not there then it would register it in lightweight mode.
+
 By default, Azure VMs with SQL Server 2016 or later installed will be automatically registered with the SQL IaaS Agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server).  See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
 
 > [!IMPORTANT]

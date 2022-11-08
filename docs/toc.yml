@@ -13254,13 +13254,25 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql.md
       - name: sys.dm_database_encryption_keys
         href: relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md
-      - name: sys.dm_server_audit_status
-        href: relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md
     - name: Server-Related
       href: relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md
       items:
       - name: sys.dm_server_accelerator_status
         href: relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md
+      - name: sys.dm_server_audit_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md
+      - name: sys.dm_server_external_policy_actions
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-actions-transact-sql.md
+      - name: sys.dm_server_external_policy_principals
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-principals-transact-sql.md
+      - name: sys.dm_server_external_policy_role_actions
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-role-actions-transact-sql.md
+      - name: sys.dm_server_external_policy_role_members
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-role-members-transact-sql.md
+      - name: sys.dm_server_external_policy_roles
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-roles-transact-sql.md
+      - name: sys.dm_server_external_policy_principal_assigned_actions
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-principal-assigned-actions-transact-sql.md
       - name: sys.dm_server_memory_dumps
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services

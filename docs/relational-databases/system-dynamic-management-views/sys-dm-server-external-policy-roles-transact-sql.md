@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 ---
 
-# dm_server_external_policy_roles (Transact-SQL)
+# sys.dm_server_external_policy_roles (Transact-SQL)
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 

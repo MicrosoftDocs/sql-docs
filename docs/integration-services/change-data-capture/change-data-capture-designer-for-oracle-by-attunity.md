@@ -23,6 +23,8 @@ ms.author: chugu
 -   CDC Instance Properties Viewer: This is a docked view showing the status and configuration of the selected CDC instance. For information about the properties viewer, see [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
 -   CDC Instance Properties Editor: This dialog box is used to edit any existing Oracle CDC Service instance. For information about editing the CDC instance properties, see [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
+
+> [!NOTE] Microsoft Change Data Capture for Oracle by Attunity supports SQL server 2019 and below.  
   
  Download Microsoft Change Data Capture Designer for Oracle by Attunity for corresponding SQL Server version from below links:
 

@@ -1,11 +1,11 @@
 ---
-title: Connectivity architecture for Azure SQL Managed Instance before the November 2022 Feature Wave
+title: Connectivity architecture prior to November 2022 Feature Wave
 titleSuffix: Azure SQL Managed Instance
-description: Learn about Azure SQL Managed Instance communication and connectivity architecture before the November 2022 Feature Wave.
+description: Learn about Azure SQL Managed Instance communication and connectivity architecture prior to the November 2022 Feature Wave.
 author: zoran-rilak-msft
-ms.author: srbozovi
+ms.author: zoranrilak
 ms.reviewer: mathoma, bonova
-ms.date: 04/11/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -15,15 +15,15 @@ ms.custom:
 # Connectivity architecture for Azure SQL Managed Instance not enrolled in the November 2022 Feature Wave
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-> [!NOTE]
-> This article updates the [Connectivity architecture](connectivity-architecture-overview.md) article to apply to SQL Managed Instances which do not yet participate in the November 2022 Feature Wave. For SQL Managed Instances enrolled in the November 2022 Feature Wave, the [Connectivity architecture](connectivity-architecture-overview.md) should be referenced as authoritative.
+November 2022 introduced a number of changes to the underlying connectivity architecture for Azure SQL Managed Instance. This article provides information about the connectivity structure for instances that have not enrolled in the feature wave. 
 
-For SQL Managed Instances not yet enrolled in the November 2022 Feature Wave, the [Connectivity architecture](connectivity-architecture-overview.md) article should be amended with the information below.
+For information about the connectivity architecture for instances that have enrolled in the feature wave, see [Connectivity architecture](connectivity-architecture-overview.md). For more information about the feature wave, review [November 2022 feature wave](doc-changes-release-notes-whats-new.md#november-2022-feature-wave). 
+
 
 ## Communication overview
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
 
-![Entities in connectivity architecture](./media/connectivity-architecture-overview/connectivityarch001.png)
+![Entities in connectivity architecture](./media/connectivity-architecture-prior-november-2022-feature-wave/01-connectivity-architecture-entitites.png)
 
 SQL Managed Instance is a single-tenant Platform-as-a-Service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet, and it is typically accessed via its local endpoint](connectivity-architecture-overview.md#local-endpoint). SQL Managed Instance depends on Azure services such as Azure Storage, Azure Active Directory (AAD), Azure Key Vault, Event Hub, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
 
@@ -31,7 +31,7 @@ Deployment, management and core service maintenance operations are carried out v
 
 ## High-level connectivity architecture
 
-![Connectivity architecture diagram](./media/connectivity-architecture-overview/connectivityarch002.png)
+![Diagram showing the connectivity architecture of Azure SQL Managed Instance](./media/connectivity-architecture-prior-november-2022-feature-wave/02-connectivity-architecture-sql-managed-instance.png)
 
 
 ## Management endpoint
@@ -64,9 +64,10 @@ To verify that only the mandatory ports are open on the management endpoint, use
 
 ## Virtual cluster connectivity architecture
 
-![Connectivity architecture of the virtual cluster](./media/connectivity-architecture-overview/connectivityarch003.png)
+![Connectivity architecture of the virtual cluster](./media/connectivity-architecture-prior-november-2022-feature-wave/03-connectivity-architecture-virtual-cluster.png)
 
 ## Mandatory inbound security rules with service-aided subnet configuration
+
 These rules are necessary to ensure inbound management traffic flow. See [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
 | Name       |Port                        |Protocol|Source           |Destination|Action|
@@ -78,6 +79,7 @@ These rules are necessary to ensure inbound management traffic flow. See [paragr
 |health_probe|Any                         |Any     |AzureLoadBalancer|MI SUBNET  |Allow |
 
 ## Mandatory outbound security rules with service-aided subnet configuration
+
 These rules are necessary to ensure outbound management traffic flow. See [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
 | Name       |Port          |Protocol|Source           |Destination|Action|
@@ -86,6 +88,7 @@ These rules are necessary to ensure outbound management traffic flow. See [parag
 |mi_subnet   |Any           |Any     |MI SUBNET        |MI SUBNET  |Allow |
 
 ## Mandatory user defined routes with service-aided subnet configuration
+
 These routes are necessary to ensure that management traffic is routed directly to a destination. See [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 
 |Name|Address prefix|Next hop <sup>2</sup>|

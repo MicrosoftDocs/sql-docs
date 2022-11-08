@@ -66,6 +66,14 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 |[Long-term backup retention](long-term-backup-retention-configure.md) |November 2021 | Store full backups for a specific database with configured redundancy for up to 10 years in Azure Blob storage, restoring the database as a new database. |
 |[Move instance to different subnet](vnet-subnet-move-instance.md)| November 2021 | Move SQL Managed Instance to a different subnet using the Azure portal, Azure PowerShell or the Azure CLI.  |
 
+
+## November 2022 feature wave
+
+November 2022 introduces a wave of new features and changes to the underlying architecture of Azure SQL Managed Instance. 
+
+For example, the [Connectivity architecture](connectivity-architecture-overview.md) has been updated. To learn about your connectivity architecture prior to the feature wave, view [Connectivity architecture prior to November 2022](connectivity-architecture-prior-november-2022-feature-wave.md). 
+
+
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation.

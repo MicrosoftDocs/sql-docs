@@ -68,6 +68,7 @@ The following table lists the features of Azure SQL Database that have transitio
 | [Azure AD service principal](authentication-aad-service-principal.md) |  September 2021 | Azure Active Directory (Azure AD) supports user creation in Azure SQL Database on behalf of Azure AD applications (service principals).|
 | [Audit management operations](../database/auditing-overview.md#auditing-of-microsoft-support-operations) |  March 2021 | Azure SQL audit capabilities enable you to audit operations done by Microsoft support engineers when they need to access your SQL assets during a support request, enabling more transparency in your workforce. |
 
+
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation.

@@ -410,6 +410,7 @@
       items: 
       - name: Connectivity architecture
         href: database/connectivity-architecture.md
+      - name: Connectivity architecture prior to Nov 2022
       - name: Connectivity settings
         href: database/connectivity-settings.md
     - name: Local development

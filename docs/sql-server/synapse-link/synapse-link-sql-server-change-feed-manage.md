@@ -40,7 +40,7 @@ The SQL Server or the Azure SQL Database will maintain metadata specific to each
 
 ## Monitor Azure Synapse Link for SQL Server and Azure SQL Database
 
-The following system objects allow for querying the state of the Azure Synapse Link feature from the source database.
+The following system objects allow for querying the state of the Azure Synapse Link for SQL feature from the source database.
 
 ### View configuration
 

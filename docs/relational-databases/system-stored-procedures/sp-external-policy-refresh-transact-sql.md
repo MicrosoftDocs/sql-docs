@@ -24,8 +24,7 @@ Force immediate download of latest published policies.
 
 ## Syntax  
   
-```  
-  
+```sqlsyntax
 sp_external_policy_refresh  [ @type = ] 'type'   
 ```  
   
@@ -33,7 +32,7 @@ sp_external_policy_refresh  [ @type = ] 'type'
 #### [ @type = ] '*type*'
  Type can be: *reload* (complete policy download) or *update* (incremental policy download). Default type is *update*.
   
-## Return Code Values  
+## Return code values  
  0 (success) or a nonzero number (failure)  
     
 ## Permissions  
@@ -54,3 +53,8 @@ EXEC sp_external_policy_refresh reload
 ```  
 EXEC sp_external_policy_refresh
 ```  
+
+## See also
+
+- [Provision access by data owner for Azure SQL Database](/azure/purview/how-to-policies-data-owner-azure-sql-db)
+- [Provision access by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-policies-data-owner-arc-sql-server)

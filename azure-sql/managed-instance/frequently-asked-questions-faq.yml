@@ -378,7 +378,7 @@ sections:
           
           ### Can I specify a custom port for SQL data endpoint(s)?
           
-          No, this option is not available. For local endpoint, SQL Managed Instance uses default port number 1433 and for public data endpoint, SQL Managed Instance uses default port number 3342.
+          No, this option is not available. For VNet-local endpoint, SQL Managed Instance uses default port number 1433 and for public data endpoint, SQL Managed Instance uses default port number 3342.
           
           ### What is the recommended way to connect managed instances placed in different regions?
           

@@ -16,9 +16,14 @@ ms.custom: fasttrack-edit
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!NOTE]
-> This article describes the connectivity of SQL Managed Instances participating in the November 2022 Feature Wave.
-> 
-> To learn about the connectivity of SQL Managed Instances not enrolled in the 2022 Feature Wave, please visit [this page](pre-nov22-feature-wave.md).
+> This article describes the connectivity of SQL Managed Instances participating in the [[November 2022 Feature Wave]]. If you are already familiar with the connectivity architecture of SQL Managed Instance and are adopting the new architecture with the November 2022 Feature Wave, here is a brief overview of the major differences introduced with the feature wave:
+>
+> * Mandatory Network Security Group rules are simplified (from 7 to 6 mandatory rules).
+> * Mandatory Network Security Group rules do not include outbound to AzureCloud on port 443.
+> * Route table is simplified (from 13 to 5 mandatory routes).
+> * Management endpoint is removed.
+>
+> To learn about the connectivity of SQL Managed Instances not enrolled in the 2022 Feature Wave, visit [this page](pre-nov22-feature-wave.md).
 
 This article explains communication in SQL Managed Instance. It also describes connectivity architecture and how the components direct traffic to a managed instance.  
 
@@ -37,7 +42,7 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 SQL Managed Instance is a single-tenant Platform-as-a-Service (PaaS) offering that operates in two planes: _data plane_ and _control plane_.
 
-Data plane is deployed inside the customer's subnet for compatibility, connectivity, and network isolation, and is typically accessed via its [local endpoint](#local-endpoint). Data plane depends on Azure services such as Azure Storage, Azure Active Directory (AAD) for authentication, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
+Data plane is deployed inside the customer's subnet for compatibility, connectivity, and network isolation, and is typically accessed via its [VNet-local endpoint](#vnet-local-endpoint). Data plane depends on Azure services such as Azure Storage, Azure Active Directory (AAD) for authentication, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
 
 Control plane carries the deployment, management and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources operating the service: it is not possible to `ssh` or RDP to those hosts. All control plane communications are encrypted and signed using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates through certificate revocation lists.
 
@@ -51,11 +56,11 @@ Customer applications can connect to SQL Managed Instance and can query and upda
 
 ![Connectivity architecture diagram](./media/connectivity-architecture-overview/connectivityarch102.png)
 
-To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: **local endpoint** and **public endpoint**.
+To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: **VNet-local endpoint** and **public endpoint**.
 
-### Local endpoint
+### VNet-Local endpoint
 
-Local endpoint is the default means of connecting to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool. Local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
+VNet-Local endpoint is the default means of connecting to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
 
 ### Public endpoint
 

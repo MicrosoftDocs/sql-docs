@@ -31,7 +31,7 @@ In the redirect connection type, after the TCP session is established to the SQL
 ![Diagram shows an on-premises network with redirect-find-db connected to a gateway in an Azure virtual network and a redirect-query connected to a database primary node in the virtual network.](./media/connection-types-overview/redirect.png)
 
 > [!IMPORTANT]
-> The redirect connection type currently works only for a local endpoint. Regardless of the connection type setting, connections coming through the public endpoint would be through a proxy.
+> The redirect connection type currently works only for the VNet-local endpoint. Regardless of the connection type setting, connections coming through the public endpoint would be through a proxy.
 
 ## Proxy connection type
 

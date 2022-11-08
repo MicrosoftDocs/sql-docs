@@ -2,7 +2,7 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
 ms.custom: "tools|sos"
-ms.date: 11/7/2022
+ms.date: 11/9/2022
 ms.prod: sql
 ms.reviewer: "llali"
 ms.prod_service: sql-tools
@@ -16,14 +16,14 @@ ms.author: drskwier
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
-## 161.6370.0 SqlPackage
+## 161.6374.0 SqlPackage
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214842)|November 7, 2022|161.6370.0|16.1.6370.0|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2214739)|November 7, 2022|161.6370.0|16.1.6370.0|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214740)|November 7, 2022|161.6370.0|16.1.6370.0|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2214843)|November 7, 2022|161.6370.0|16.1.6370.0|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215400)|November 9, 2022|161.6374.0|16.1.6374.0|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2215326)|November 9, 2022|161.6374.0|16.1.6374.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215401)|November 9, 2022|161.6374.0|16.1.6374.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215501)|November 9, 2022|161.6374.0|16.1.6374.0|
 
 > [!IMPORTANT]
 > Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters.  For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).

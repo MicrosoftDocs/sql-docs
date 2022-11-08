@@ -54,7 +54,7 @@ The **control plane** carries the deployment, management and core service mainte
 
 At a high level, SQL Managed Instance is a set of service components hosted on a dedicated set of isolated virtual machines joined to a virtual cluster. Some service components are deployed inside the customer's virtual network subnet, while others operate in a secure network environment managed by Microsoft.
 
-A virtual cluster can host multiple managed nstances. The cluster automatically expands or contracts as needed to accommodate for new or removed instances.
+A virtual cluster can host multiple managed instances. The cluster automatically expands or contracts as needed to accommodate for new or removed instances.
 
 Customer applications can connect to SQL Managed Instance and can query and update databases inside the virtual network, peered virtual network, or network connected by VPN or Azure ExpressRoute.
 

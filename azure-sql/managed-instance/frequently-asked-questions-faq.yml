@@ -281,7 +281,7 @@ sections:
           
           ### How can I see when automated backups are made on my managed instance?
           
-          To track when automated backups have been performed on a managed instance, see [How to track the automated backup for an Azure SQL Managed Instance](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-128-how-to-track-the-automated-backup-for-an/ba-p/1442355).
+          To track when automated backups have been performed on a managed instance, review [Monitor backup activity](backup-activity-monitor.md).
           
           ### Is on-demand backup supported?
           

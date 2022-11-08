@@ -16,6 +16,8 @@ Azure Arc-enabled SQL Server extends Azure services to SQL Server instances host
 
 To enable Azure services, you must onboard a running SQL Server instance to Azure Arc. The onboarding will install a *Azure  extension for SQL Server* to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will create an Azure resource for each SQL Server instance.  You can see all the Arc-enabled SQL Server resources in the Azure portal under __Azure Arc > SQL Server__. The properties of this resource reflect a subset of the SQL Server configuration settings.
 
+Azure Arc-enabled SQL Server doesn't store any customer data.
+
 ## Architecture
 
 The SQL Server instance can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the [Connected Machine agent](/azure/azure-arc/servers/agent-overview). When you register the SQL Server instance, the agent is installed, and the machine is registered automatically.

@@ -26,9 +26,9 @@ List all available roles, independently of them being used or not. Not all roles
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**role_name**|**nvarchar(max)**|ID for joining with other dynamic management views.|  
-|**role_guid**|**nvarchar(max)**|The role name as defined in external policy source. Has to be unique.|  
-|**modify_date**|**datetime**|Time when the role definition was changed.|  
+|**role_name**|**nvarchar(128)**|ID for joining with other dynamic management views.|  
+|**role_guid**|**nvarchar(128)**|The role name as defined in external policy source. Has to be unique.|  
+|**modify_date**|**datetime2**|Time when the role definition was changed.|  
   
 ## Permissions  
 

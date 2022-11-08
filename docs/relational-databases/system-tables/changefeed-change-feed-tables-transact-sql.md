@@ -45,3 +45,5 @@ Stores metadata with their associated indexes for Azure Synapse Link for SQL.
 
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
 - [sys.sp_help_change_feed (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-change-feed.md)
+- [changefeed.change_feed_table_groups (Transact-SQL)](changefeed-change-feed-table-groups-transact-sql.md)
+- [changefeed.change_feed_settings (Transact-SQL)](changefeed-change-feed-settings.md)

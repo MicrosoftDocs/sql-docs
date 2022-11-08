@@ -69,9 +69,10 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 ## November 2022 feature wave
 
-November 2022 introduces a wave of new features and changes to the underlying architecture of Azure SQL Managed Instance. 
+November 2022 introduced a wave of new features and changes to the underlying architecture of Azure SQL Managed Instance. 
 
-For example, the [Connectivity architecture](connectivity-architecture-overview.md) has been updated. To learn about your connectivity architecture prior to the feature wave, view [Connectivity architecture prior to November 2022](connectivity-architecture-prior-november-2022-feature-wave.md). 
+For example, the November 2022 feature way introduced a number of changes to the [Connectivity architecture](connectivity-architecture-overview.md). Instances deployed after November 2022 use the new connectivity architecture by default, but existing instances have to op-in to the feature wave. For instances that have not opted in, review [Connectivity architecture prior to November 2022](connectivity-architecture-prior-november-2022-feature-wave.md). 
+
 
 
 ## Documentation changes

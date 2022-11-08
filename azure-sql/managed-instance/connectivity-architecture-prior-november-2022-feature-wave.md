@@ -15,12 +15,13 @@ ms.custom:
 # Connectivity architecture for Azure SQL Managed Instance prior to November 2022
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-November 2022 introduced a number of changes to the underlying connectivity architecture for Azure SQL Managed Instance. This article provides information about the connectivity structure for instances that have not enrolled in the feature wave. 
+November 2022 introduced a number of changes to the underlying connectivity architecture for Azure SQL Managed Instance. Instances created after November 2022 use the new architecture by default, but existing instances have to enroll in the feature wave to use the new architecture. This article provides information about the connectivity structure for instances that have not enrolled in the feature wave. 
 
 For information about the connectivity architecture for instances that have enrolled in the feature wave, see [Connectivity architecture](connectivity-architecture-overview.md). For more information about the feature wave, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
 
 
 ## Communication overview
+
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
 
 ![Entities in connectivity architecture](./media/connectivity-architecture-prior-november-2022-feature-wave/01-connectivity-architecture-entitites.png)
@@ -35,6 +36,7 @@ Deployment, management and core service maintenance operations are carried out v
 
 
 ## Management endpoint
+
 To facilitate the communication between the control plane and components deployed inside the customer's subnet, Azure SQL Managed Instances not participating in the November 2022 Feature Wave employ a management endpoint. This means that elements of the virtual network's infrastructure can harm management traffic by making the instance fail and become unavailable.  Management and deployment services connect to SQL Managed Instance's management endpoint that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the management components of SQL Managed Instance use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP ranges. Certificates mutually authenticate all communication between management components and the management plane.
 
 > [!NOTE]
@@ -45,6 +47,7 @@ The Azure SQL Managed Instance [mandatory inbound security rules](connectivity-a
 The management endpoint is protected by a built-in firewall on the network level. On the application level, it is protected by mutual certificate verification. When connections start inside SQL Managed Instance (as with backups and audit logs), traffic appears to start from the management endpoint's public IP address. You can limit access to public services from SQL Managed Instance by setting firewall rules to allow only the IP address for SQL Managed Instance.
 
 ### How to determine the IP address of the management endpoint
+
 To determine the management IP address, do a [DNS lookup](/windows-server/administration/windows-commands/nslookup) on your SQL Managed Instance FQDN: `mi-name.zone_id.database.windows.net`. This will return a DNS entry that's like `trx.region-a.worker.vnet.database.windows.net`. You can then do a DNS lookup on this FQDN with ".vnet" removed. This will return the management IP address. 
 
 This PowerShell code will do it all for you if you replace \<MI FQDN\> with the DNS entry of SQL Managed Instance: `mi-name.zone_id.database.windows.net`:

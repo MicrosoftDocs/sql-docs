@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.custom:
 ---
 
-# Connectivity architecture for Azure SQL Managed Instance not enrolled in the November 2022 Feature Wave
+# Connectivity architecture for Azure SQL Managed Instance prior to November 2022
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 November 2022 introduced a number of changes to the underlying connectivity architecture for Azure SQL Managed Instance. This article provides information about the connectivity structure for instances that have not enrolled in the feature wave. 
 
-For information about the connectivity architecture for instances that have enrolled in the feature wave, see [Connectivity architecture](connectivity-architecture-overview.md). For more information about the feature wave, review [November 2022 feature wave](doc-changes-release-notes-whats-new.md#november-2022-feature-wave). 
+For information about the connectivity architecture for instances that have enrolled in the feature wave, see [Connectivity architecture](connectivity-architecture-overview.md). For more information about the feature wave, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
 
 
 ## Communication overview

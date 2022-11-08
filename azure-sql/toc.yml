@@ -410,7 +410,6 @@
       items: 
       - name: Connectivity architecture
         href: database/connectivity-architecture.md
-      - name: Connectivity architecture prior to Nov 2022
       - name: Connectivity settings
         href: database/connectivity-settings.md
     - name: Local development
@@ -1051,6 +1050,8 @@
     items:
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
+    - name: Connectivity architecture prior to Nov 2022
+      href: managed-instance/connectivity-architecture-prior-november-2022-feature-wave.md
     - name: Automated backups
       href: managed-instance/automated-backups-overview.md 
     - name: Auto-failover groups

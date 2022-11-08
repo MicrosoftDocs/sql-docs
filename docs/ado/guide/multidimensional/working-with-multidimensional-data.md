@@ -23,7 +23,7 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
 -   Salesperson  
   
--   Geography (natural hierarchy) - Continents, Countries, States, and so on  
+-   Geography (natural hierarchy) - Continents, Countries/Regions, States, and so on  
   
 -   Quarters - Quarters, Months, Days  
   

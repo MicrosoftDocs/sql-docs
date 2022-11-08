@@ -18,7 +18,8 @@ ms.author: chugu
   
 ## Installation  
 
-> [!NOTE] Microsoft Change Data Capture for Oracle by Attunity supports SQL server 2019 and below.  
+> [!NOTE]
+> Microsoft Change Data Capture for Oracle by Attunity supports SQL server 2019 and below.  
 
 Download Microsoft Change Data Capture Designer and Service for Oracle by Attunity for corresponding SQL Server version from below links:
 

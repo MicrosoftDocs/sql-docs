@@ -31,7 +31,7 @@ This article describes how to connect an application to Azure SQL Managed Instan
 
 ## Connect inside the same VNet
 
-Connecting an application inside the same virtual network as SQL Managed Instance is the simplest scenario. Virtual machines inside the virtual network can connect to each other directly even if they are inside different subnets. That means that all you need to connect an application inside App Service Environment or a virtual machine is to configure the connection string to the local endpoint of the target SQL Managed Instance. .
+Connecting an application inside the same virtual network as SQL Managed Instance is the simplest scenario. Virtual machines inside the virtual network can connect to each other directly even if they are inside different subnets. That means that all you need to connect an application inside App Service Environment or a virtual machine is to configure the connection string to target [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) of the SQL Managed Instance.
 
 ## Connect inside a different VNet
 
@@ -46,7 +46,7 @@ Peering is preferable because it uses the Microsoft backbone network, so from th
 
 ## Connect from on-premises 
 
-You can connect your on-premises application to the local endpoint of SQL Managed Instance. In order to access it from on-premises, you need to make a site-to-site connection between the application and the SQL Managed Instance virtual network. For data access to your managed instance from outside a virtual network see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
+You can connect your on-premises application to the [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) of your SQL Managed Instance. In order to access it from on-premises, you need to make a site-to-site connection between the application and the SQL Managed Instance virtual network. For data access to your managed instance from outside a virtual network see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
 There are two options for how to connect on-premises to an Azure virtual network:
 

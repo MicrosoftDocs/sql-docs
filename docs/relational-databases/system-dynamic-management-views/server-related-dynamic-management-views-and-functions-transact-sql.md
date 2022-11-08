@@ -24,14 +24,12 @@ ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
         [sys.dm_server_audit_status](sys-dm-server-audit-status-transact-sql.md)
         [sys.dm_server_external_policy_actions](sys-dm-server-external-policy-actions-transact-sql.md)
         [sys.dm_server_external_policy_principal_assigned_actions](sys-dm-server-external-policy-principal-assigned-actions-transact-sql.md)
-    :::column-end:::
-    :::column:::
         [sys.dm_server_external_policy_principals](sys-dm-server-external-policy-principals-transact-sql.md)
         [sys.dm_server_external_policy_role_actions](sys-dm-server-external-policy-role-actions-transact-sql.md)
-        [sys.dm_server_external_policy_role_members](sys-dm-server-external-policy-role-members-transact-sql.md)
-        [sys.dm_server_external_policy_roles](sys-dm-server-external-policy-roles-transact-sql.md)
     :::column-end:::
     :::column:::
+        [sys.dm_server_external_policy_role_members](sys-dm-server-external-policy-role-members-transact-sql.md)
+        [sys.dm_server_external_policy_roles](sys-dm-server-external-policy-roles-transact-sql.md)
         [sys.dm_server_memory_dumps](../../relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md)
         [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)
         [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)

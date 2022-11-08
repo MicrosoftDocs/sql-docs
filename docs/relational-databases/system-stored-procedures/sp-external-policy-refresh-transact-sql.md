@@ -1,7 +1,7 @@
 ---
 title: "sp_external_policy_refresh (Transact-SQL)"
 description: Reference documentation to explain sp_external_policy_refresh (Transact-SQL) system stored procedure.
-author: srdanbozovic
+author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.date: "11/07/2022"
 ms.prod: sql

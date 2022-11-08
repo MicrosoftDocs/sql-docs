@@ -18,6 +18,9 @@ ms.author: chugu
   
 ## Installation  
 
+> [!NOTE]
+> Microsoft Change Data Capture for Oracle by Attunity supports SQL server 2019 and below.  
+
 Download Microsoft Change Data Capture Designer and Service for Oracle by Attunity for corresponding SQL Server version from below links:
 
 - [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
@@ -32,12 +35,12 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
  The CDC Service for Oracle can be installed on any supported Windows computer where the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Native Client is installed; it does not need to be installed on the same computer where the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
 ## Supported Windows Environments  
- The Change Data Capture Service for Oracle by Attunity can run in the following Windows environments:  
-  
--   Windows 8 and 8.1  
--   Windows 10  
--   Windows Server 2012 and 2012 R2
--   Windows Server 2016
+ The Change Data Capture Service for Oracle by Attunity can run in the following Windows environments:
+- Windows 8 and 8.1
+- Windows 10
+- Windows Server 2012 and 2012 R2
+- Windows Server 2016
+- Windows 2019
   
 ## Database Prerequisites  
  To work with the CDC Service for Oracle you must install Oracle client that is compatible with Oracle database version. This is a prerequisite that should be obtained from Oracle and installed before installing the Oracle CDC Service. Additionally, you need to install the SQL Server ODBC Client using SQL Server Setup.  
@@ -48,9 +51,9 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
   
 -   Oracle Database 10g Release 2
 -   Oracle Database 11g Release 1 and Release 2
--   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
--   Oracle Database 18c in classic installation. (Multitenant installation is not supported.)
--   Oracle Database 19c in classic installation. (Multitenant installation is not supported.)
+-   Oracle Database 12c in classic installation (Multitenant installation is not supported)  
+-   Oracle Database 18c in classic installation (Multitenant installation is not supported), for SQL server 2019 only
+-   Oracle Database 19c in classic installation. (Multitenant installation is not supported), for SQL server 2019 only
   
 ### Target SQL Server Database  
  For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

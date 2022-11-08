@@ -15235,14 +15235,14 @@ items:
       href: relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md
     - name: System Base Tables
       href: relational-databases/system-tables/system-base-tables.md
-    - name: Azure Synapse Link to SQL Tables
+    - name: Azure Synapse Link for SQL Tables
       items:
-      - name: cdc.change_feed_settings
-        href: relational-databases/system-tables/cdc-change-feed-settings.md
-      - name: cdc.change_feed_table_groups
-        href: relational-databases/system-tables/cdc-change-feed-table-groups-transact-sql.md
-      - name: cdc.change_feed_tables
-        href: relational-databases/system-tables/cdc-change-feed-tables-transact-sql.md      
+      - name: changefeed.change_feed_settings
+        href: relational-databases/system-tables/changefeed-change-feed-settings.md
+      - name: changefeed.change_feed_table_groups
+        href: relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql.md
+      - name: changefeed.change_feed_tables
+        href: relational-databases/system-tables/changefeed-change-feed-tables-transact-sql.md      
     - name: Backup & Restore Tables
       href: relational-databases/system-tables/backup-and-restore-tables-transact-sql.md
       items:

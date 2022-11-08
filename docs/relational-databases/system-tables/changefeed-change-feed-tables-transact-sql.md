@@ -1,23 +1,23 @@
 ---
-title: "cdc.change_feed_tables (Transact-SQL)"
-description: "cdc.change_feed_tables stores metadata with their associated indexes for Azure Synapse Link for SQL."
+title: "changefeed.change_feed_tables (Transact-SQL)"
+description: "changefeed.change_feed_tables stores metadata with their associated indexes for Azure Synapse Link for SQL."
 author: im-microsoft
 ms.author: imotiwala
 ms.reviewer: wiassaf
-ms.date: 11/04/2022
+ms.date: 11/07/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords:
-  - "cdc.change_feed_tables"
-  - "cdc.change_feed_tables_TSQL"
+  - "changfeed.change_feed_tables"
+  - "changfeed.change_feed_tables_TSQL"
 helpviewer_keywords:
-  - "cdc.change_feed_tables"
+  - "changfeed.change_feed_tables"
 dev_langs:
   - "TSQL"
 ---
-# cdc.change_feed_tables (Transact-SQL)
+# change_feed_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Stores metadata with their associated indexes for Azure Synapse Link for SQL.
@@ -45,3 +45,5 @@ Stores metadata with their associated indexes for Azure Synapse Link for SQL.
 
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
 - [sys.sp_help_change_feed (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-change-feed.md)
+- [changefeed.change_feed_table_groups (Transact-SQL)](changefeed-change-feed-table-groups-transact-sql.md)
+- [changefeed.change_feed_settings (Transact-SQL)](changefeed-change-feed-settings.md)

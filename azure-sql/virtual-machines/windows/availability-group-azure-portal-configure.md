@@ -112,7 +112,7 @@ On the Networking tab, configure your networking options.
 
 1. Configure **Public inbound ports**, if needed, by selecting **Allow selected ports**, then use the drop-down to select the allowed common ports.
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/networking-nic-basic.png" alt-text="Screenshot of the Azure portal, networking tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing NIC settings.":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/networking-basic.png" alt-text="Screenshot of the Azure portal, networking tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing NIC settings.":::
 
 1. Each virtual machine you create has to be in its own subnet. Under **Create subnets**, select **Manage subnet configuration** to open the **Subnets** page for the virtual network and either create a subnet (**+Subnet**) for each virtual machine or validate that a subnet is available for each virtual machine you intend to create for the availability group. Once done, use the **X** to close the subnet management window, and navigate back to the availability group deployment page.
 
@@ -192,7 +192,7 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
    1. Choose the availability group settings that best suit your business needs.  
 
-    :::image type="content" source="./media/availability-group-az-portal-configure/availability-group-settings.png" alt-text="Screenshot of the Azure portal, SQL Server settings tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing availability group details section. ":::
+    :::image type="content" source="./media/availability-group-az-portal-configure/availability-group-settings.png" alt-text="Screenshot of the Azure portal availability group deployment page, SQL Server settings tab, showing availability group details section. ":::
 
 1. Under **Security & Networking**, choose **SQL connectivity** to access the SQL Server instance on the VMs. For more information about connectivity options, see [Connectivity](create-sql-vm-portal.md#connectivity).
 
@@ -202,7 +202,7 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
 1. Select **Change SQL instance settings** to modify SQL Server configuration options, such as the server collation, max degree of parallelism (MAXDOP), SQL Server min and max memory limits, and whether you want to optimize for ad-hoc workloads.
 
-    :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot of the Azure portal, SQL Server settings tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing SQL instance settings, with Change SQL instance settings highlighted.":::
+    :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot of the Azure portal availability group deployment page, showing SQL instance settings, with Change SQL instance settings highlighted.":::
 
 1. You have the option to enable **Machine Learning Services**, if it suits your business needs.
 
@@ -220,7 +220,7 @@ You can monitor the deployment from the Azure portal. The **Notifications** butt
 
 Once the deployment completes, you can browse to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the portal and,  under **Settings** select **High Availability** to monitor the health of the availability group. Select the arrow next to the name of your availability group to see a list of all replicas:
 
-:::image type="content" source="./media/availability-group-az-portal-configure/unhealthy-availability-group.png" alt-text="Screenshot of the Azure portal, High Availability (Preview) tab of the SQL virtual machines resource, showing the health of the AG, which is currently not healthy." lightbox="./media/availability-group-az-portal-configure/unhealthy-availability-group.png":::
+:::image type="content" source="./media/availability-group-az-portal-configure/unhealthy-availability-group.png" alt-text="Screenshot of the Azure portal, High Availability tab of the SQL VM resource, showing the health of the AG, which is currently not healthy." lightbox="./media/availability-group-az-portal-configure/unhealthy-availability-group.png":::
 
 > [!NOTE]
 > Your **Synchronization health** on the **High Availability** page of the Azure portal will show as **Not healthy** until you add databases to your availability group.
@@ -255,7 +255,7 @@ To add databases to your availability group by using SQL Server Management Studi
 
 After databases are added, you can check the status of your availability group in the Azure portal:
 
-:::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Screenshot of the Azure portal, High Availability (Preview) tab of the SQL virtual machines resource, showing the health of the AG, which is currently healthy.":::
+:::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Screenshot of the Azure portal, High Availability  tab of the SQL VM resource, showing the health of the AG, which is currently healthy.":::
 
 ## Modify availability group
 

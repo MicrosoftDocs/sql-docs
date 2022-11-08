@@ -244,6 +244,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Contained databases|Yes|Yes|Yes|Yes|Yes|
 |Encryption for backups|Yes|Yes|No|No|No|
 |Data classification and auditing|Yes|Yes|Yes|Yes|Yes|
+|Ledger for SQL Server|xxx|xxx|xxx|xxx|xxx|
+|Azure Active Directory authentication|xxx|xxx|xxx|xxx|xxx|
 
 ## <a id="Replication"></a> Replication
 

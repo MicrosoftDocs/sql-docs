@@ -54,7 +54,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 This release is published September 13, 2022
 
-### Image tag
+### Extension version
 
 `1.1.2082.9`
 
@@ -72,7 +72,7 @@ This release is published September 13, 2022
 
 This release is published July 26, 2022
 
-### Image tag
+### Extension version
 
 `v1.0.2019.2`
 

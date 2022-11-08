@@ -53,7 +53,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|If 1, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. For more information, see [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Date that server information was last changed.|  
 |**is_rda_server**|**bit**|**Applies to:** Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].<br /><br />Server is remote data archive enable (stretch-enabled). For more information, see [Enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
-  
+
+## Remarks
+
+[!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
+
 ## Permissions  
  The value in **provider_string** is always NULL unless the caller has the ALTER ANY LINKED SERVER permission.  
   

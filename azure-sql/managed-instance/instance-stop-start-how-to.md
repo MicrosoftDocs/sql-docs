@@ -84,6 +84,18 @@ The [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) is applied per reso
 
 Reservation discounts are [use it or lose it](/azure/cost-management-billing/reservations/understand-reservation-charges), so if you don't have matching resources for any hour, then you lose the reservation quantity for that hour. You cannot carry forward unused reserved hours.
 
+## Limitations
+
+Consider the following limitations: 
+
+- You cannot stop instances that: 
+    - have ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCores scaling, etc)
+    - are part of a [failover group](auto-failover-group-sql-mi.md) 
+    - use the [Managed Instance link](managed-instance-link-feature-overview.md) 
+- While instance is in a stopped state, it is not possible to change any configuration parameters, and the instance has to be started to change any instance properties. 
+- While the instance is in stopped state it is not possible to take backups. Therefore, if you have [long-term backups](long-term-backup-retention-configure.md) configured and you have yearly backups in place, if the instance is stopped during the defined yearly backup period, the backup will be skipped. It is advised to keep the instance up and running during the yearly backup period. 
+- It is not possible to cancel the start or stop operation once it is initiated. 
+
 
 ## Define PowerShell parameters
 

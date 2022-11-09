@@ -56,7 +56,7 @@ You'll also need the following tooling:
 
 | Tool  | Notes  | 
 |---------|---------|
-| [SSMS 19.0](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup for SQL Server 2016, 2019, and 2022. The ability to use SSMS to fail back from SQL MI to SQL Server 2022 is only available in limited public preview. Sgn up at [https://aka.ms/mi-link-dr-preview-signup](https://aka.ms/mi-link-dr-preview-signup). |
+| [SSMS 19.0](/sql/ssms/download-sql-server-management-studio-ssms), or higher | SQL Server Management Studio (SSMS) is the easiest way to use SQL Managed Instance link. Provides graphical wizards for automated link setup for SQL Server 2016, 2019, and 2022. The ability to use SSMS to fail back from SQL MI to SQL Server 2022 is only available in limited public preview. Sign up at [https://aka.ms/mi-link-dr-preview-signup](https://aka.ms/mi-link-dr-preview-signup). |
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql), or higher | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]
@@ -66,7 +66,7 @@ You'll also need the following tooling:
 
 The underlying technology behind the link feature for SQL Managed Instance creates a distributed availability group between SQL Server and Azure SQL Managed Instance. The solution supports single-node systems without existing availability groups, or multiple node systems with existing availability groups.  
 
-:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-ag-dag.png" alt-text="How does the link feature for SQL Managed Instance work":::
+:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-ag-dag.png" alt-text="Diagram showing how the link feature for SQL Managed Instance works.":::
 
 Secure connectivity, such as VPN or Express Route is used between an on-premises network and Azure. If SQL Server is hosted on an Azure VM, the internal Azure backbone can be used between the VM and managed instance – such as, for example, VNet peering. The trust between the two systems is established using certificate-based authentication, in which SQL Server and SQL Managed Instance exchange their public keys.
 
@@ -81,7 +81,7 @@ Databases replicated through the link feature from SQL Server to Azure SQL Manag
 - **Migrate to Azure**
 - **Disaster recovery with SQL Server 2022** (currently in limited public preview)
 
-:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-main-scenario.png" alt-text="Diagram showing Managed Instance link main scenario":::
+:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-main-scenario.png" alt-text="Diagram showing the main Managed Instance link scenario.":::
 
 ### Use Azure services 
 
@@ -110,7 +110,7 @@ Once your databases are replicated to SQL Managed Instance, they are automatical
 
 SQL Server 2022 customers can use the Managed Instance link for the purpose of disaster recovery, where, in the event of a disaster, you can manually fail your workload over to Azure SQL Managed Instance. Once the disaster is mitigated, you can fail back over to your SQL Server 2022 instance. This feature is currently in limited public preview that you must [sign up for](https://aka.ms/mi-link-dr-preview-signup) so the product group can configure your environment for the preview.  
 
-:::image type="content" source="media/managed-instance-link-feature-overview/disaster-recovery-scenario.png" alt-text="Diagram showing the disaster recovery scenario":::
+:::image type="content" source="media/managed-instance-link-feature-overview/disaster-recovery-scenario.png" alt-text="Diagram showing the disaster recovery scenario.":::
 
 Select the following link to sign up and get access to the limited public preview of this feature: 
 

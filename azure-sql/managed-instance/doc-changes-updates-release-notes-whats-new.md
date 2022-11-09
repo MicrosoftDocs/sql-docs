@@ -77,7 +77,13 @@ For example, the November 2022 feature way introduced a number of changes to the
 
 ## Documentation changes
 
-Learn about significant changes to the Azure SQL Managed Instance documentation.
+Learn about significant changes to the Azure SQL Managed Instance documentation.'
+
+### November 2022
+
+| Changes | Details |
+| --- | --- |
+|**Relaxed networking requirements**| The November 2022 feature wave simplifies the connectivity architecture for SQL Managed Instance, such as reducing the number of mandatory rules, and removing the management endpoint. Instances deployed after November 2022 will automatically benefit from these changes,  but existing instances created before November will need to opt-in to the feature wave. Review [Connectivity architecture](connectivity-architecture-overview.md) to learn more. |
 
 ### October 2022
 

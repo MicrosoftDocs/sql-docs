@@ -6,7 +6,6 @@ description: "The BatchResponse class is for SQL Machine Learning Services and M
 keywords: "" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019 
 ms.topic: "reference" 
 ms.prod: "sql"

@@ -6,7 +6,6 @@ description: "The Service class is for SQL Machine Learning Services and Machine
 keywords: "" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: "09/20/2017" 
 ms.topic: "reference" 
 ms.prod: "sql"

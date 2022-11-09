@@ -3,7 +3,6 @@ title: "sys.external_languages (Transact-SQL) - SQL Server"
 description: sys.external_languages (Transact-SQL) - SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
-manager: cgronlun
 ms.reviewer: rothja
 ms.date: 05/22/2019
 ms.prod: sql

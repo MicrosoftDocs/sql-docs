@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.migratedata.f1"
 ---

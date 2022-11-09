@@ -1,7 +1,7 @@
 ---
 description: "The sp_change_feed_enable_db system stored procedure enables the current database for Azure Synapse Link publishing."
 title: "sp_change_feed_enable_db (Transact-SQL)"
-ms.date: 11/04/2022
+ms.date: 11/09/2022
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
@@ -48,7 +48,7 @@ Data type is integer. Describes the frequency that the log is scanned for any ne
 
 ## Permissions  
 
- Only a member of the sysadmin server role, db_owner role or CONTROL database permissions can execute this procedure.
+ Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
 
 ## See also  
 

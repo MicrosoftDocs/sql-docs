@@ -1,7 +1,7 @@
 ---
 description: "The sp_change_feed_enable_table system stored procedure enables the creation of a new Azure Synapse Link table to an existing Azure Synapse Link table group."
 title: "sp_change_feed_enable_table (Transact-SQL)"
-ms.date: 11/04/2022
+ms.date: 11/09/2022
 ms.service: synapse-analytics
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
@@ -58,7 +58,7 @@ The source table name.
 
 ## Permissions  
 
- Only a member of the sysadmin server role, db_owner role or CONTROL database permissions can execute this procedure.
+ Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
 
 ## See also  
 

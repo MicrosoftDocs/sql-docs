@@ -1,6 +1,6 @@
 ---
-title: Creating Graph Tables in Azure Data Studio
-description: How to use the Table Designer to create a Graph Tables
+title: Creating graph tables in Azure Data Studio
+description: How to use the Table Designer to create graph tables
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan

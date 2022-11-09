@@ -32,7 +32,7 @@ With the help of the SQL Database Projects extension (preview), projects (tables
 
 3. From the Azure Data Studio sidebar menu, select the **Database Projects** icon to open the SQL Database Projects extension. navigate to the database project folder you created. Then, in the **Person** schema folder in this project, navigate to the **Tables** folder, and expand the drop-down of this folder. Right-click and open any of the tables in the designer mode to open the table design of this table. In this example, we will be working on the ***Person.sql*** table.
 
-    :::image type="content" source="media/table-designer-azure-data-studio/table-designer-show-how-to-open-table-in-sql-projects.png" alt-text="Screenshot of Azure Data Studio showing how to open a table in offline mode using the S Q L database projects extension.":::
+    :::image type="content" source="media/table-designer-azure-data-studio/table-designer-show-how-to-open-table-in-sql-projects.png" alt-text="Screenshot of Azure Data Studio showing how to open a table in offline mode using the SQL database projects extension.":::
 
     > [!NOTE]
     > Please note that the location of the project file could be vary depending on the folder structure defined in Step 2 above.
@@ -41,11 +41,11 @@ With the help of the SQL Database Projects extension (preview), projects (tables
 
 1. The original table shows the table design of the ***Person*** table with thirteen (13) column names, starting from ***BusinessEntityID*** and ending with ***ModifiedDate***.
     Add another column named ***Citizenship*** of type nvarchar(50) and publish this change:
-        :::image type="content" source="media/table-designer-azure-data-studio/table-designer-publish-changes-to-sql-project.png" alt-text="Screenshot of Azure Data Studio showing how to publish changes S Q L Database Projects.":::
+        :::image type="content" source="media/table-designer-azure-data-studio/table-designer-publish-changes-to-sql-project.png" alt-text="Screenshot of Azure Data Studio showing how to publish changes SQL Database Projects.":::
 
 2. From the file menu in the Database Projects, right-click on the project root node in which your project resides, and select **Build** to build this project. You should see a success or error message in the output terminal for a successful or failed build. When finished, right-click this same folder and select **Publish** to publish this project to the ***AdventureWorks2019*** database in your local host server connection.
 
-    :::image type="content" source="media/table-designer-azure-data-studio/table-designer-show-how-to-build-and-publish-changes-to-sql-project.png" alt-text="Screenshot of Azure Data Studio showing how to build and publish changes S Q L Database Projects.":::
+    :::image type="content" source="media/table-designer-azure-data-studio/table-designer-show-how-to-build-and-publish-changes-to-sql-project.png" alt-text="Screenshot of Azure Data Studio showing how to build and publish changes SQL Database Projects.":::
 
     > [!NOTE]
     > Please note that you will need to be connected to your local host for this step. This can be done by clicking the plug icon in **Publish Project** dialog box.
@@ -53,3 +53,7 @@ With the help of the SQL Database Projects extension (preview), projects (tables
 3. Exit the SQL Database Projects view. Then, go to the object explorer in your server connection and navigate to the **Tables** folder of ***AdventureWorks2019*** database. Open the table design of the table you made changes to and confirm the change made. In this case, we added a new column, ***Citizenship*** to the ***Person.Person*** table:
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-confirm-changes-made-to-project-in-local-host.png" alt-text="Screenshot of Azure Data Studio showing the changes made to the table in the local host connection.":::
+
+## Next steps
+
+- [Download Azure Data Studio](./download-azure-data-studio.md)

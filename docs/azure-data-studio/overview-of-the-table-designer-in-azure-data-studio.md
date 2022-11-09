@@ -43,7 +43,7 @@ The SQL server connection in which your database resides needs to be active in o
 
 2. Change the value in the **Table Name** field from its' default, ***NewTable*** to ***City***. In the **Table Properties** field, feel free to add a description for this table.
 
-3. In the **Name** Column grid, change the provided default value from ***column_1*** to  ***ID***. Select the checkbox in the **Primary Key** column to make this the primary key for the table. To read more on Primary Keys, [see this SQL Server documentation on Primary Keys](../relational-databases/tables/primary-and-foreign-key-constraints.md).
+3. In the **Name** Column grid, change the provided default value from ***column_1*** to  ***ID***. Select the checkbox in the **primary key** column to make this the primary key for the table. To read more on primary keys, [see this SQL Server documentation on Primary Keys](../relational-databases/tables/primary-and-foreign-key-constraints.md).
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-changing-column-name-adding-new-column-with-primary-key-t-sql-script.png" alt-text="Screenshot of Table Designer showing how to edit table name and add column showing primary key identifier. Also shows the T-SQL script generated from the Table Designer.":::
 
@@ -62,7 +62,7 @@ The SQL server connection in which your database resides needs to be active in o
 
     Running the T-SQL script in the query editor is done by selecting the **Run** button as shown below:
 
-    :::image type="content" source="media/table-designer-azure-data-studio/change-publish-via-the-sql-command-script-table-designer.png" alt-text="Screenshot of Table Designer showing how to publish changes to the database in the Query Editor using the S Q L C M D option.":::
+    :::image type="content" source="media/table-designer-azure-data-studio/change-publish-via-the-sql-command-script-table-designer.png" alt-text="Screenshot of Table Designer showing how to publish changes to the database in the Query Editor using the SQL CMD option.":::
 
     Ensure that the query editor is connected to the database on which the script is to be ran. This is done by selecting the **Connect** button in the query editor window. This will pull up the connection dialog box where you can enter in the credentials for the server you are running your database script on.
 
@@ -119,7 +119,7 @@ You can add as few or as many constraints as needed depending on the nature of t
 
 Foreign keys are used to establish and enforce a link between data in tables. To learn more about foreign keys, check out this documentation on [primary and foreign key constraints.](../relational-databases/tables/primary-and-foreign-key-constraints.md) In this example, we will create another table called ***PersonProfile*** and map this table to the ***City table*** using a foreign key.
 
-1. Create a table named ***PersonProfile*** with three columns, **ID**(int, Primary Key), **Name**(nvarchar(50)), and **Age**(int). Set the **Name** and **Age** column such that they are non-nullable.
+1. Create a table named ***PersonProfile*** with three columns, **ID**(int, primary key), **Name**(nvarchar(50)), and **Age**(int). Set the **Name** and **Age** column such that they are non-nullable.
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-create-person-profile-table.png" alt-text="Screenshot of Table Designer showing how to create table for establishing a foreign key.":::
 
@@ -132,6 +132,6 @@ Don't forget to publish to your database.
 
 - [Download Azure Data Studio](./download-azure-data-studio.md)
 - [Build and Deploy changes to a database table using SQL Projects](./build-and-publish-changes-to-table-using-sql-projects.md)
-- [Learn how to create a Graph Table using the Table Designer](./create-graph-tables-in-azure-data-studio.md)
-- [Learn how to create a Memory-Optimized Table using the Table Designer](./create-memory-optimized-tables-in-azure-data-studio.md)
-- [Learn how to create System-Versioned Tables using the Table Designer](./create-temporal-tables-in-azure-data-studio.md)
+- [Learn how to create a graph table using the Table Designer](./create-graph-tables-in-azure-data-studio.md)
+- [Learn how to create a memory-optimized table using the Table Designer](./create-memory-optimized-tables-in-azure-data-studio.md)
+- [Learn how to create system-versioned tables using the Table Designer](./create-temporal-tables-in-azure-data-studio.md)

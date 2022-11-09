@@ -42,11 +42,11 @@
     items:
     - name: Creating and managing tables using the Table Designer
       href: overview-of-the-table-designer-in-azure-data-studio.md
-    - name: Create Graph Tables in Azure Data Studio
+    - name: Create graph tables in Azure Data Studio
       href: create-graph-tables-in-azure-data-studio.md
-    - name: Create Memory-Optimized Tables in Azure Data Studio
+    - name: Create memory-optimized tables in Azure Data Studio
       href: create-memory-optimized-tables-in-azure-data-studio.md
-    - name: Create System-Versioned Tables in Azure Data Studio
+    - name: Create system-versioned tables in Azure Data Studio
       href: create-temporal-tables-in-azure-data-studio.md
     - name: Using SQL Database Projects to build and deploy changes to tables
       href: build-and-publish-changes-to-table-using-sql-projects.md

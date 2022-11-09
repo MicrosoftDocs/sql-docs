@@ -1,6 +1,6 @@
 ---
 title: Creating Memory-Optimized tables in Azure Data Studio
-description: How to use the Table Designer to create Memory-Optimized Tables
+description: How to use the Table Designer to create memory-optimized tables
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
@@ -13,16 +13,16 @@ ms.topic: tutorial
 
 [!INCLUDE [sql-asdb-asdbmi](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
- Memory-Optimized tables are a feature of SQL Server where the entire table resides in memory. A second copy of the table data is maintained on disk. Data in memory-optimized tables is only read from disk during database recovery. For example, after a server restart. Memory-Optimized Tables can be created in the table designer in Azure Data Studio.
+ memory-Optimized tables are a feature of SQL Server where the entire table resides in memory. A second copy of the table data is maintained on disk. Data in memory-optimized tables is only read from disk during database recovery. For example, after a server restart. memory-Optimized tables can be created in the table designer in Azure Data Studio.
 
 > [!NOTE]
-> Memory-Optimized tables must belong to a filegroup. To read more on this, check out this documentation on [the memory optimized filegroup](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
+> memory-optimized tables must belong to a filegroup. To read more on this, check out this documentation on [the memory optimized filegroup](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
 
- Memory-Optimized tables must have a non-clustered primary key. For an introduction to Memory-Optimized Tables, check out the [Introduction to Memory-Optimized Tables](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md) article. Additionally, all memory-optimized tables must have at least one index.
+ memory-Optimized tables must have a non-clustered primary key. For an introduction to memory-optimized Tables, check out the [Introduction to Memory-Optimized Tables](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md) article. Additionally, all memory-optimized tables must have at least one index.
 
-## Create a Memory-Optimized Table
+## Create a memory-optimized table
 
-1. To create a Memory-Optimized Table, we need to ensure that a filegroup has been created for our database. In the object explorer, open a new query editor window from the server level as we will be creating an entirely new database in which our memory-optimized table will reside. In the query editor, copy, paste and execute the following code:
+1. To create a memory-optimized Table, we need to ensure that a filegroup has been created for our database. In the object explorer, open a new query editor window from the server level as we will be creating an entirely new database in which our memory-optimized table will reside. In the query editor, copy, paste and execute the following code:
 
     ```sql  
     CREATE DATABASE imoltp   
@@ -57,7 +57,7 @@ ms.topic: tutorial
 
     Choosing **Schema** saves only the schema to memory. Choosing **Schema and Data** saves both the schema and data to memory. Notice the change in the script.
 
-    :::image type="content" source="media/table-designer-azure-data-studio/table-designer-memory-optimized-schema-only.png" alt-text="Screenshot of Table Designer showing Schema only Memory Optimized Table.":::
+    :::image type="content" source="media/table-designer-azure-data-studio/table-designer-memory-optimized-schema-only.png" alt-text="Screenshot of Table Designer showing schema only memory-optimized table.":::
 
 > [!NOTE]
 > The table designer also supports hash indexes, columnstore indexes, and these can be configured while creating the memory-optimized table.

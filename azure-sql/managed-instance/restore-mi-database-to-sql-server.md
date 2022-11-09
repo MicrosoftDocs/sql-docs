@@ -2,8 +2,8 @@
 title: Restore database to SQL Server
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to restore a database to SQL Server 2022 from Azure SQL Managed Instance
-author: danimir
-ms.author: danil
+author: mladjoa
+ms.author: mlandzic
 ms.reviewer: mathoma, danil
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
@@ -18,15 +18,16 @@ This article teaches you to restore your database backup from Azure SQL Managed 
 
 ## Overview
 
-The backup portability instance property gives you an easy way to copy or move your databases from SQL Managed Instance to SQL Server 2022 instances hosted on-premises, virtual machines in Azure, or in other clouds. 
+The database format alignment between SQL Managed Instance and SQL Server 2022 gives you an easy way to copy or move your databases from SQL Managed Instance to SQL Server 2022 instances hosted on-premises, virtual machines in Azure, or in other clouds. 
 
-The backup portability instance property unlocks the following scenarios: 
+Restoring databases from SQL Managed Instance to to SQL Server 2022 unlocks the following scenarios:
 
-- Database mobility between SQL Managed Instance and SQL Server-based products
+- Database mobility between SQL Managed Instance and SQL Server-based products.
 - Provide database copies to end customers or eligible parties. 
-- Refresh environments outside of SQL Managed Instance
+- Refresh environments outside of SQL Managed Instance.
 
-The backup portability property is enabled by default for _all_ instances starting in November 2022, including all existing instances, and any new instances deployed after November 2022. 
+The ability to restore databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed instances.
+
 
 ## Take backup on SQL Managed Instance 
 

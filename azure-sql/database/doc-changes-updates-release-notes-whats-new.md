@@ -33,7 +33,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) | Azure Synapse Link for SQL enables near real time analytics over operational data in Azure SQL Database or SQL Server 2022. |
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
-| [sp_invoke_external_rest_endpoint](/docs/relational-database/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql.md) | Invokes an HTTPS REST endpoint provided as an input argument to the procedure. |
+| [sp_invoke_external_rest_endpoint](/sql/relational-database/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) | Invokes an HTTPS REST endpoint provided as an input argument to the procedure. |
 | [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Retain backups from 1 up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured retention period. |
 | [Hyperscale RA-GZRS](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Store your Hyperscale database backups on read access geo-zone-redundancy (RA-GZRS) storage. |
 | [JavaScript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use JavaScript or Python SQL bindings with Azure Functions. | 

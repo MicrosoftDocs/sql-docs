@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 
 # Testing Migrated Database Objects (OracleToSQL)

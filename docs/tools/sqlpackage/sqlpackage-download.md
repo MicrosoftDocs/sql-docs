@@ -16,44 +16,56 @@ ms.date: 11/9/2022
 
 # Download and install SqlPackage
 
-SqlPackage runs on Windows, macOS, and Linux.
+SqlPackage runs on Windows, macOS, and Linux, and is available to install through `dotnet tool` or as a standalone zip download.
 
-Download and install the latest releases:
+- **Version number:** 161.6374.0
+- **Build number:** 16.1.6374.0
+- **Release date:** November 9, 2022
 
-|Platform|Download|Release date|Version|Build|
-|:---|:---|:---|:---|:---|
-|[Windows .NET 6](#windows-net-6) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215400)|November 9, 2022|161.6374.0|16.1.6374.0|
-|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2215326)|November 9, 2022|161.6374.0|16.1.6374.0|
-|[macOS .NET 6](#macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215401)|November 9, 2022|161.6374.0|16.1.6374.0|
-|[Linux .NET 6](#linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215501)|November 9, 2022|161.6374.0|16.1.6374.0|
-
-For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
+For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
 > [!NOTE]
 > SqlPackage version numbering has been adjusted to better reflect the DacFx build number it is associated with. Previously, SqlPackage had a distinct version number (19) and build number (160.x). Beginning with version 161, the version number of SqlPackage will match the DacFx version number it is associated with (eg 161.6374.0).
 
-## DacFx
+## Installation, cross-platform
 
-SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 161.6374.0.
+Installing SqlPackage as a [dotnet tool](/dotnet/core/tools/global-tools) requires the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/6.0) v6.0 or later to be installed on your machine.  Installing SqlPackage as a global tool will make it available on your path as `sqlpackage` and is the recommended way to install SqlPackage for Windows, macOS, and Linux.
 
-Installing the NuGet package via the .NET CLI is accomplished with this command:
+To install SqlPackage as a global .NET tool, run the following command:
 
-```cmd
-dotnet add package Microsoft.SqlServer.DacFx
-```
+   ```bash
+   dotnet tool install -g microsoft.sqlpackage
+   ```
 
-> [!NOTE]
-> Additional NuGet packages were published under the DacFx name, "Microsoft.SqlServer.DacFx.x64" and "Microsoft.SqlServer.DacFx.x86". Support for both platforms is covered under the "Microsoft.SqlServer.DacFx" package. New references should be made to this package, not the x64 or x86 variants.
+More information on the options available with the `dotnet tool install` command can be found in the [dotnet tool install documentation](/dotnet/core/tools/dotnet-tool-install).
 
-## Automated environments
 
-Evergreen links are available for downloading the latest Sqlpackage versions:
-- Linux ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux))
-- macOS ([https://aka.ms/sqlpackage-macos](https://aka.ms/sqlpackage-macos))
-- Windows ([https://aka.ms/sqlpackage-windows](https://aka.ms/sqlpackage-windows))
-- Windows, .NET Framework ([https://aka.ms/dacfx-msi](https://aka.ms/dacfx-msi))
+To update SqlPackage to the latest version, run the following command:
 
-## Linux
+   ```bash
+   dotnet tool update -g microsoft.sqlpackage
+   ```
+
+
+To uninstall SqlPackage, run the following command:
+
+   ```bash
+   dotnet tool uninstall -g microsoft.sqlpackage
+   ```
+
+
+
+## Installation, zip download
+
+|Platform|Download|
+|:---|:---|
+|[Windows .NET 6](#windows-net-6) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215400)|
+|[Windows](#windows-net-framework)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2215326)|
+|[macOS .NET 6](#macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215401)|
+|[Linux .NET 6](#linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215501)|
+
+
+### Linux
 
 1. Download [SqlPackage for Linux](https://aka.ms/sqlpackage-linux).
 2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
@@ -96,7 +108,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
    sudo apt-get install libicu66      # for 20.x
    ```
 
-## macOS
+### macOS
 
 1. Download [SqlPackage for macOS](https://aka.ms/sqlpackage-macos).
 2. To extract the file and launch SqlPackage, open a new Terminal window and type the following commands:
@@ -123,7 +135,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
    sudo spctl --master-enable
    ```
 
-## Windows (.NET 6)
+### Windows (.NET 6)
 
 1. Download [SqlPackage for Windows](https://aka.ms/sqlpackage-windows).
 2. To extract the file by right clicking on the file in Windows Explorer, and selecting 'Extract All...', and select the target directory.
@@ -133,7 +145,7 @@ Evergreen links are available for downloading the latest Sqlpackage versions:
    > sqlpackage
    ```
 
-## Windows (.NET Framework)
+### Windows (.NET Framework)
 
 This release of SqlPackage includes a standard Windows installer experience, and a .zip: 
 
@@ -141,11 +153,33 @@ This release of SqlPackage includes a standard Windows installer experience, and
 2. Open a new Command Prompt window, and run SqlPackage.exe
     - SqlPackage is installed to the ```C:\Program Files\Microsoft SQL Server\160\DAC\bin``` folder
 
-## Uninstall SqlPackage
+### Uninstall SqlPackage
 
 If you installed SqlPackage using the Windows installer, then uninstall the same way you remove any Windows application.
 
 If you installed SqlPackage with a .zip or other archive, then delete the files.
+
+### Automated environments
+
+Evergreen links are available for downloading the latest Sqlpackage versions:
+- Linux ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux))
+- macOS ([https://aka.ms/sqlpackage-macos](https://aka.ms/sqlpackage-macos))
+- Windows ([https://aka.ms/sqlpackage-windows](https://aka.ms/sqlpackage-windows))
+- Windows, .NET Framework ([https://aka.ms/dacfx-msi](https://aka.ms/dacfx-msi))
+
+## DacFx
+
+SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DacFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DacFx).  The current DacFx version is 161.6374.0.
+
+Adding the NuGet package to a .NET project is accomplished via the .NET CLI with this command:
+
+```cmd
+dotnet add package Microsoft.SqlServer.DacFx
+```
+
+> [!NOTE]
+> Additional NuGet packages were published under the DacFx name, "Microsoft.SqlServer.DacFx.x64" and "Microsoft.SqlServer.DacFx.x86". Support for both platforms is covered under the "Microsoft.SqlServer.DacFx" package. New references should be made to this package, not the x64 or x86 variants.
+
 
 ## Supported Operating Systems
 

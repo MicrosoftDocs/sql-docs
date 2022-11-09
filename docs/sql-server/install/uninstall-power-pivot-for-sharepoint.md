@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: maggiesMSFT 
 ms.author: maggies
-manager: kfile
 ---
 # Uninstall Power Pivot for SharePoint
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]

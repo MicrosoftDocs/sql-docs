@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Generating Reports (OracleToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

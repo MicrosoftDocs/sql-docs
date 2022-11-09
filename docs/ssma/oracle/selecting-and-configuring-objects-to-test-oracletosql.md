@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Selecting and Configuring Objects to Test (OracleToSQL)
 At this step you select objects to test, and configure settings for comparing procedures' and functions' output parameters, as well as the return values of functions.  

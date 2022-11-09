@@ -5,9 +5,7 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: reporting-services
 ms.reviewer: ""
-ms.technology: install
 ms.topic: conceptual
-ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: maggiesMSFT 
 ms.author: maggies
 ---

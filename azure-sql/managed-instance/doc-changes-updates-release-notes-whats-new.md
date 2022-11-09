@@ -79,7 +79,7 @@ For example, the November 2022 feature way introduced a number of changes that s
 The following is a list of all features and architecture changes introduced by the November 2022 feature wave: 
 
 - Fast Instance provisioning:  a passive benefit that improves the time it takes to deploy an instance. 
-- [Relaxed networking requirements](connectivity-architecture-overview.md): a passive benefit that changes the connectivity architecture of SQL Managed Instance. 
+- [Relaxed networking requirements](connectivity-architecture-overview.md): a passive benefit that simplifies the connectivity architecture of SQL Managed Instance. 
 - Virtual cluster v2: a passive benefit that improves the functionality of the underlying virtual cluster. 
 - [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
 - Multi-AZ: a feature in preview that lets you deploy your managed instance to multiple availability zones and improve the availability of your service. 
@@ -88,13 +88,8 @@ The following is a list of all features and architecture changes introduced by t
 
 ## Documentation changes
 
-Learn about significant changes to the Azure SQL Managed Instance documentation.'
+Learn about significant changes to the Azure SQL Managed Instance documentation.
 
-### November 2022
-
-| Changes | Details |
-| --- | --- |
-|**Relaxed networking requirements**| The November 2022 feature wave simplifies the connectivity architecture for SQL Managed Instance, such as reducing the number of mandatory rules, and removing the management endpoint. Instances deployed after November 2022 will automatically benefit from these changes,  but existing instances created before November will need to opt-in to the feature wave. Review [Connectivity architecture](connectivity-architecture-overview.md) to learn more. |
 
 ### November
 
@@ -102,7 +97,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | --- | --- |
 |**Distributed Transaction Coordinator (DTC) preview** | Use DTC to run distributed transactions in in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  This feature is currently in preview. Review [Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) to learn more. | 
 | **Instance stop preview** | It's now possible to save on costs by stopping your General Purpose Azure SQL Managed Instance when you're not using it. To learn more, review [stop and start instance](instance-stop-start-how-to.md). | 
-
+|**Relaxed networking requirements**| The November 2022 feature wave simplifies the connectivity architecture for SQL Managed Instance, such as reducing the number of mandatory rules, and removing the management endpoint. Instances deployed after November 2022 will automatically benefit from these changes,  but existing instances created before November will need to opt-in to the feature wave. Review [Connectivity architecture](connectivity-architecture-overview.md) to learn more. |
 
 
 

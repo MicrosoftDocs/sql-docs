@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Execution Plans
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

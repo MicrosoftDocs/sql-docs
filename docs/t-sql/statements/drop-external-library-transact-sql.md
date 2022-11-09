@@ -3,7 +3,6 @@ title: "DROP EXTERNAL LIBRARY (Transact-SQL)"
 description: DROP EXTERNAL LIBRARY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-manager: cgronlund
 ms.date: 08/26/2020
 ms.prod: sql
 ms.technology: machine-learning

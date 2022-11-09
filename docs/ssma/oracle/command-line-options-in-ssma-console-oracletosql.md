@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Command Line Options in SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

@@ -3,7 +3,6 @@ title: "DROP EXTERNAL RESOURCE POOL (Transact-SQL)"
 description: DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-manager: cgronlund
 ms.date: "08/06/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"

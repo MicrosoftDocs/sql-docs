@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.access.general.f1"
 ---

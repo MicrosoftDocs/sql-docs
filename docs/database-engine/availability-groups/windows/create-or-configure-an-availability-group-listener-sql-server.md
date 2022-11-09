@@ -3,7 +3,6 @@ title: "Configure availability group listener"
 description: "Describes the steps to take when configuring a listener for an Always On availability group using PowerShell or SQL Server Management Studio. "
 author: MashaMSFT
 ms.author: mathoma
-manager: erikre
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.technology: availability-groups

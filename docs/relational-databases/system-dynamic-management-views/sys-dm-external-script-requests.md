@@ -3,7 +3,6 @@ title: "sys.dm_external_script_requests"
 description: sys.dm_external_script_requests
 author: rwestMSFT
 ms.author: randolphwest
-manager: cgronlun
 ms.date: "06/26/2020"
 ms.prod: sql
 ms.technology: machine-learning

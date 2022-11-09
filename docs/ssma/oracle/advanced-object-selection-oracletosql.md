@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.multichecktreeview.f1"
   - "ssma.oracle"

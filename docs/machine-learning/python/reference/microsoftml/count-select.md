@@ -6,7 +6,6 @@ description: "Selects the features for which the count of non-default values is 
 keywords: "feature, selection, count" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

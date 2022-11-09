@@ -89,7 +89,7 @@ Restoring your database to an instance in a different subscription is currently 
 
 1. Select **Restore** on the database page to open the **Create Azure SQL Managed Database** page: 
 
-    :::image type="content" source="./media/point-in-time-restore/restore-database-to-mi.png" alt-text="Restore a database by using the Azure portal":::
+    :::image type="content" source="./media/point-in-time-restore/restore-database-to-mi.png" alt-text="Screenshot of the Azure portal, databases page, with Restore a database selected.":::
 
 1. On the **Basics** tab, under **Project details**, choose the target destination subscription and resource group that contains the managed instance you want to restore the database to. 
 1. Under **Database details**, provide the new name your restored database will use, and the target SQL Managed Instance you want to restore the database to. 
@@ -178,7 +178,7 @@ To recover a deleted managed database by using the Azure portal, follow these st
 1. Choose **Deleted** under **Show databases**. 
 1. Select **Restore** for the deleted database you want to restore to open the **Create Azure SQL Managed Database** page. 
 
-  :::image type="content" source="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of restore deleted Azure SQL instance database" lightbox="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png":::
+  :::image type="content" source="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of Azure portal, databases page, with restore deleted Azure SQL instance database highlighted." lightbox="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png":::
 
 1. Provide details for the target managed instance you want to restore your database to on the **Basics** tab, and provide details of your source database on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
 1. Once you're done, select **Review + Create** followed by **Create** to restore your deleted database. 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.globalsettingdialog.f1"
 

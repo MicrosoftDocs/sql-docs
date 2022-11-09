@@ -140,9 +140,7 @@
 
       "manager": {
         "**/*.md": "jroth",
-        "machine-learning/**/*.md": "cgronlun",
         "dmx/**/*.md": "kfollis",
-        "language-extensions/**/*.md": "cgronlun",
         "mdx/**/*.md": "kfollis",
         "reporting-services/**/*.md": "kfollis"
       },

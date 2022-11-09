@@ -6,7 +6,6 @@ description: "Categorical hash transform that can be performed on data before tr
 keywords: "transform, catagory, hash" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

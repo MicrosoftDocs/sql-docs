@@ -12,7 +12,6 @@ f1_keywords:
   - "ssma.oracle.general.f1"
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 
 ---
 # SQL Server Migration Assistant for Oracle (OracleToSQL)

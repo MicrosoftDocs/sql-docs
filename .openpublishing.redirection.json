@@ -59509,6 +59509,21 @@
       "source_path": "docs/linux/sql-server-linux-availability-group-cluster-ubuntu.md",
       "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-tables-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-tables-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-table-groups-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-settings.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-settings",
+      "redirect_document_id": false
     }
   ]
 }

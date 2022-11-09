@@ -31,36 +31,47 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
-| Table Designer | Announcing the General Availability of the Table Designer in Azure Data Studio. |
-| Query Plan Viewer | Announcing the General Availability of the Query Plan Viewer in Azure Data Studio. |
+| Connections | Enabled encryption by default for SQL Server connections. |
 | ARM64 Support for macOS | Support for ARM64 in macOS is now available. |
-| Query History Extension | Announcing the general availability of the Query History extension. |
+| Table Designer | Announcing the General Availability of the Table Designer in Azure Data Studio. |
+| Table Designer | Period columns now added by default when System-Versioning table option is selected. |
+| Table Designer | Added support for hash and column store indexes. |
+| Table Designer | New checkbox added to "Preview Database Updates dialog box to ensure user is aware of potential risks associated with database changes before updating the database. |
+| Table Designer | "Move Up" and "Move Down" buttons added to support column reordering for Primary Keys. |
+| Query Plan Viewer | Announcing the General Availability of the Query Plan Viewer in Azure Data Studio. |
+| Query Plan Viewer | Added support for identification of most expensive operator(s) in a plan. |
+| Query Plan Viewer | Added new context menu and additional button to add an execution plan. |
+| Query Plan Viewer | Updates were made to the properties window to allow for full display of text upon hovering over a cell. Full text can also be copied. |
+| Query Plan Viewer | Added search feature in properties view. |
+| Query Plan Viewer | Added support for collapsing and expanding all property rows. |
+| SQL History Extension | Announcing the General Availability of the SQL History Extension. |
+| SQL History Extension | Now includes ability to persist history across multiple user sessions. |
+| Schema Compare | Users can now open .scmp files directly from the context menu for existing files in the file explorer. |
+| Query Editor | Now allows full display for text strings larger than 65,535 characters. |
+| Query Editor | Added support for the SHIFT key when making multiple cell selections.  |
 | MySQL Extension | Support for MySQL extension is now available in preview. |
 | Azure SQL Migration Extension | Azure SQL Database Offline Migrations is now available in preview. Customers can use this new capability to save and share reports as needed. |
 | Azure SQL Migration Extension | Addition of elastic Azure recommendations model. |
 | Database Migration Assessment for Oracle | Assessment tooling for Oracle database migrations to Azure Database for PostgreSQL and Azure SQL available in preview. |
 | VS Code merge| VS Code merges to version 1.67. Read [their release notes](https://code.visualstudio.com/updates/v1_67) to learn more. |
-| Connections | Enabled encryption by default for SQL Server connections. |
 
 #### Bug fixes in 1.40
 
 | New Item | Details |
 |----------|---------|
-| Dashboard | Fixed an accessibility issue that prevented users from being able to access tooltip information using the keyboard. |
-| Voiceover | Fixed a bug that caused voiceover errors across the Dashboard, SQL Projects, SQL Import Wizard, and SQL Migration extensions. |
-| Schema Compare | Fixed a bug that caused the UI to jump back to the top of the options list after selecting/deselecting any option. |
-| Schema Compare | Fixed a bug involving Schema Compare (.SCMP) file incompatibility with Database Project information causing errors when reading and using information stored in this file type. |
-| Object Explorer | Fixed a bug that caused menu items in Object Explorer not to show up for non-English languages. |
-| Table Designer | Fixed a bug that caused the History Table name not to be consistent with the current table name when working with System-Versioned Tables. |
-| Table Designer | Fixed a bug in the Primary Key settings that caused the "Allow Nulls" option to be checked, but disabled, preventing users from changing this option. |
-| Query Editor | Fixed a bug that prevented the SQLCMD in T-SQL from working correctly, giving false errors when running scripts in Azure Data Studio. |
-| Query Editor | Fixed a bug that caused user-specified zoom settings to reset to default when selecting JSON values after query that returned JSON dataset was ran. |
-| SQL Projects | Fixed a bug that caused the "Generate Script" command to not work correctly when targeting a new Azure SQL Database. |
-| Notebooks | Fixed a bug that caused pasted images to disappear from editor after going out of edit mode. |
-| Notebooks | Fixed a bug that caused a console error message to appear after opening a markdown file. |
-| Notebooks | Fixed a bug that prevented markdown cell toolbar shortcuts from working after creating a new split view cell. |
-| Notebooks | Fixed a bug that caused text cells to be erroneously created in split view mode when the notebook default text edit mode was set to "Markdown". |
-
+| Connections | Fixed bug that occurred when trying to connect to the dedicated Admin Connection on SQL Server. |
+| Connections | Fixed issue with wrong tenant showing up while trying to connect to a database with Azure Active Directory login. |
+| Connections | Fixed zoom reset behavior when adding a new connection. |
+| Connections | Fixed loading bug what occurred when attempting to sign in to Azure via proxy. |
+| Connections | Fixed issue encountered while attempting to connect to a "sleeping" Azure SQL Database. |
+| Object Explorer | Fixed the SELECT script generation issue for Synapse Databases. |
+| Schema Compare | Fixed error that caused duplication of comment headers when applying schema changes on stored procedure objects. |
+| Schema Compare | Fixed issue that prevented schema compare issues when creating a new empty schema with a "DOMAIN\User" pattern. |
+| Query Editor | Fixed bug that caused results to be lost upon saving query files. |
+| Table Designer | Fixed a bug that caused creation of a new table when renaming an existing table. |
+| Query Plan Viewer | Fixed missing index recommendation T-SQL syntax. |
+| SQL Projects | Fixed bug in SQL Projects that led to extension not using output path when publishing a project. |
+| SQL Projects | Fixed bug that caused .NET extension to not be found when using the SQL Projects extension on Linux platforms. |
 
 ## Azure Data Studio feedback
 

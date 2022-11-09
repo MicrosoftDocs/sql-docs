@@ -4,7 +4,7 @@ description: Download and install Azure Data Studio for Windows, macOS, or Linux
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.date: 08/30/2022
+ms.date: 11/16/2022
 ms.prod: azure-data-studio
 ms.topic: overview
 ms.custom:
@@ -25,10 +25,10 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.39.1 is the latest general availability (GA) version.
+Azure Data Studio 1.40 is the latest general availability (GA) version.
 
-- Release number: 1.39.1
-- Release date: August 30, 2022
+- Release number: 1.40
+- Release date: November 16, 2022
 
 | Platform | Download |
 |----------|----------|

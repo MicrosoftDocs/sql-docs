@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 
 # Upgrading Databases by using the Query Tuning Assistant

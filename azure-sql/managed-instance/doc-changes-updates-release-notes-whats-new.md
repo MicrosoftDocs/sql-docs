@@ -66,6 +66,24 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 |[Long-term backup retention](long-term-backup-retention-configure.md) |November 2021 | Store full backups for a specific database with configured redundancy for up to 10 years in Azure Blob storage, restoring the database as a new database. |
 |[Move instance to different subnet](vnet-subnet-move-instance.md)| November 2021 | Move SQL Managed Instance to a different subnet using the Azure portal, Azure PowerShell or the Azure CLI.  |
 
+
+
+## November 2022 feature wave
+
+November 2022 introduced a wave of new features and changes to the underlying architecture of Azure SQL Managed Instance. Instances deployed after November 2022 will automatically be enrolled in the feature wave so they will receive all the passive benefits, as well as the ability to enable specific features. Existing instances created prior to November 2022 will need to opt into the feature wave to utilize the architecture changes, and unlock the features introduced by the wave. 
+
+For example, the November 2022 feature way introduced a number of changes that simplify the [connectivity architecture](connectivity-architecture-overview.md) for SQL Managed Instance, such as removing the management endpoint and reducing the amount of mandatory rules. Instances deployed after November 2022 use the new connectivity architecture by default, but existing instances have to op-in to the feature wave. For instances that have not opted in, review [Connectivity architecture prior to November 2022](connectivity-architecture-prior-november-2022-feature-wave.md). 
+
+The following is a list of all features and architecture changes introduced by the November 2022 feature wave: 
+
+- Fast Instance provisioning:  a passive benefit that improves the time it takes to deploy an instance. 
+- Relaxed networking requirements: a passive benefit that changes the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
+- Virtual cluster v2: a passive benefit that improves the functionality of the underlying virtual cluster. 
+- Stop / start (preview):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
+- Multi-AZ (preview): a feature in preview that lets you deploy your managed instance to multiple availability zones and improve the availability of your service. 
+- Managed DTC: a feature in preview that lets you run distributed transactions in mixed environments. 
+
+
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation.

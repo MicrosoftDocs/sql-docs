@@ -3,7 +3,6 @@ title: "Linux and macOS Installation for the Drivers for PHP"
 description: "In these instructions, learn how to install the Microsoft Drivers for PHP for SQL Server on Linux or macOS."
 author: David-Engel
 ms.author: v-davidengel
-manager: v-mabarw
 ms.date: 03/01/2022
 ms.prod: sql
 ms.technology: connectivity

@@ -9,7 +9,6 @@ ms.reviewer: "MikeRayMSFT"
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
-manager: rothj
 ms.custom: seo-dt-2019
 ---
 

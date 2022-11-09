@@ -29,7 +29,7 @@ These terms are used in [Adding a shard using Elastic Database tools](elastic-sc
 
 **Local shard map**: Stored on a shard, the local shard map contains mappings for the shardlets that reside on the shard.
 
-**Multi-shard query**: The ability to issue a query against multiple shards; results sets are returned using UNION ALL semantics (also known as “fan-out query”). Compare to **data dependent routing**.
+**Multi-shard query**: The ability to issue a query against multiple shards; results sets are returned using UNION ALL semantics (also known as "fan-out query"). Compare to **data dependent routing**.
 
 **Multi-tenant** and **Single-tenant**: This shows a single-tenant database and a multi-tenant database:
 

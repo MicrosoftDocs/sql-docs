@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "page info"
 author: "bluefooted"
 ms.author: "pamela"
-manager: amitban
 ---
 # sys.fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]

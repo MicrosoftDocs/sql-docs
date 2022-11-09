@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 08/31/2022
+ms.date: 11/4/2022
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -57,7 +57,7 @@ Release Candidate 0 (RC0)
 - Accessibility fixes to many parts of the Portal.
 - Security enhancements.
 - Bug fixes.
-- Deprecation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
+- Discontinuation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
 
 
 ## SQL Server 2019 Reporting Services
@@ -176,7 +176,7 @@ Initial release.
 | Paginated reports didn't work properly with filter parameters when snapshot is enabled  | &nbsp; |
 | Users with Browser role and default settings didn't have permissions to download Excel files  | &nbsp; |
 | Upgrading to Power BI Report Server from SQL Server 2016 Reporting Services failed during upgrade | &nbsp; |
-| After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with “An invalid character was found in the mail header: ','” message | &nbsp; |
+| After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with "An invalid character was found in the mail header: ','" message | &nbsp; |
 | Configuration tool: canceling modal windows in Database section would restart the Reporting Services service | &nbsp; |
 | BorderStyle property expression of Textbox controls weren't rendered to Excel format  | &nbsp; |
 | Pagination issue that could get certain reports stuck with rendering the same page without ever reaching the last page of the report | &nbsp; |

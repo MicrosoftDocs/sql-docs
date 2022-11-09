@@ -129,7 +129,7 @@ After you've successfully completed the *migration* stage, you need to complete 
 
 ### Remediate applications 
 
-After you’ve migrated the data to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this will in some cases require changes to the applications.
+After you've migrated the data to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this will in some cases require changes to the applications.
 
 ### Perform tests
 
@@ -150,7 +150,7 @@ For more assistance with completing this migration scenario, see the following r
 
 | Title | Description |
 | --- | --- |
-| [Data workload assessment model and tool](https://www.microsoft.com/download/details.aspx?id=103130) | Provides suggested “best fit” target platforms, cloud readiness, and application/database remediation levels for specified workloads. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated, uniform target-platform decision process. |
+| [Data workload assessment model and tool](https://www.microsoft.com/download/details.aspx?id=103130) | Provides suggested "best fit" target platforms, cloud readiness, and application/database remediation levels for specified workloads. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated, uniform target-platform decision process. |
 | [IBM Db2 zOS data assets discovery and assessment package](https://www.microsoft.com/download/details.aspx?id=103108) | After running the SQL script on a database, you can export the results to a file on the file system. Several file formats are supported, including CSV, so that you can capture the results in external tools, such as spreadsheets. This method can be useful if you want to easily share results with teams that do not have the workbench installed.|
 | [IBM Db2 LUW inventory scripts and artifacts](https://www.microsoft.com/download/details.aspx?id=103109) | Includes a SQL query that hits IBM Db2 LUW version 11.1 system tables and provides a count of objects by schema and object type, a rough estimate of "Raw Data" in each schema, and the sizing of tables in each schema, with results stored in CSV format. |
 |[IBM Db2 to SQL Server - Database Compare utility](https://www.microsoft.com/download/details.aspx?id=103016)|The Database Compare utility is a Windows console application that you can use to verify that the data is identical both on source and target platforms. You can use the tool to efficiently compare data down to the row or column level in all or selected tables, rows, and columns.|

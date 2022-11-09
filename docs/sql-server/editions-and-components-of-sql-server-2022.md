@@ -244,8 +244,10 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Contained databases|Yes|Yes|Yes|Yes|Yes|
 |Encryption for backups|Yes|Yes|No|No|No|
 |Data classification and auditing|Yes|Yes|Yes|Yes|Yes|
-|Ledger for SQL Server|xxx|xxx|xxx|xxx|xxx|
-|Azure Active Directory authentication|xxx|xxx|xxx|xxx|xxx|
+|Ledger for SQL Server|Yes|Yes|Yes|Yes|Yes|
+|Azure Active Directory authentication<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
+
+<sup>1</sup> Requires an Azure Arc-enabled SQL Server
 
 ## <a id="Replication"></a> Replication
 

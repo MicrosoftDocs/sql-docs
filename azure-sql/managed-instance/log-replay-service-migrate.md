@@ -78,7 +78,7 @@ Consider the following best practices when using LRS:
 - Plan to complete a single LRS migration job within a maximum of 30 days. On expiry of this time frame, the LRS job will be automatically canceled.
 - Enable `CHECKSUM` when taking your backups for a faster database restore. SQL Managed Instance performs an integrity check on backups without `CHECKSUM`, increasing restore time. 
 
-System updates on managed instance will take precedence over database migrations in progress. All pending LRS migrations in case of a system update on Managed Instance will be suspended and resumed once the update has been applied. This system behavior might prolong migration time, especially in cases of large databases. To achieve a predictable time of database migrations, consider configuring [maintenance window](../database/maintenance-window.md) allowing scheduling of system updates at a specific day/time, and consider running and completing migration jobs outside of the scheduled maintenance window day/time.
+System updates on managed instance will take precedence over database migrations in progress. All pending LRS migrations in case of a system update on SQL Managed Instance will be suspended and resumed once the update has been applied. This system behavior might prolong migration time, especially in cases of large databases. To achieve a predictable time of database migrations, consider configuring [maintenance window](../database/maintenance-window.md) allowing scheduling of system updates at a specific day/time, and consider running and completing migration jobs outside of the scheduled maintenance window day/time.
 
 
 > [!IMPORTANT]

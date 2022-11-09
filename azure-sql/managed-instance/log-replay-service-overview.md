@@ -104,7 +104,7 @@ Continuous mode migration needs to be used when you don't have the entire backup
 
 ### Migrating large databases
 
-If migrating large databases of several terrabytes in size, consider the following:
+If migrating large databases of several terabytes in size, consider the following:
 - Single LRS job can run for a maximum of 30 days. On expiry of this timeframe, the job will be automatically canceled.
 - In the case of long-running jobs, system updates will interrupt and prolong migration jobs. It's highly recommended to use [maintenance window]( ../database/maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
 - Migration jobs interrupted by system updates will be automatically suspended and resumed for General Purpose managed instances, and restarted for Business Critical managed instances. These updates will affect the timeframe of your migration.

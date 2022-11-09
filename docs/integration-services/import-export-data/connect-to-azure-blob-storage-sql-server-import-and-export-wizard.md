@@ -26,7 +26,7 @@ This topic shows you how to connect to an **Azure Blob Storage** data source fro
 
 The following screen shot shows the options to configure for a connection to Azure Blob Storage.
 
-![Azure blob storage connection](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
+![Azure Blob Storage connection](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
 
 ## Options to specify
 

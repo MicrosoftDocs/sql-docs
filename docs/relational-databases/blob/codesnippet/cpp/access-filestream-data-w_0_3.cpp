@@ -3,7 +3,7 @@
 #include<sqltypes.h>
 #include<sqlext.h>
 #include <stdio.h>
-#include <sqlncli.h>
+#include <msoledbsql.h>
 
 #define COPYBUFFERSIZE 4096
 

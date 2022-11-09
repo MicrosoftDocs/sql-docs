@@ -569,6 +569,16 @@
       "source_path_from_root": "/azure-sql/database/migrate-to-database-from-sql-server.md",
       "redirect_url": "/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-find-ip-address.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-prior-november-2022-feature-wave",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-verify-built-in-firewall.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-prior-november-2022-feature-wave",
+      "redirect_document_id": false
     }
   ]
 }

@@ -140,7 +140,7 @@ Managed Instance link has a set of general limitations, and those are listed in 
 Some Managed Instance link features and capabilities are limited **at this time**. Details can be found in the following list:
 
 - Product version requirements as listed in [Requirements](#requirements). At this time [!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] is not supported.
-- Private endpoint (VPN/VNET) is supported to establish the link with SQL Managed Instance. Public endpoint can't be used to establish the link with SQL Managed Instance.
+- VNet-Local endpoint (VPN/VNET) is supported to establish the link with SQL Managed Instance. Public endpoint can't be used to establish the link with SQL Managed Instance.
 - Managed Instance link authentication between SQL Server instance and SQL Managed Instance is certificate-based, available only through exchange of certificates. Windows authentication between SQL Server and managed instance isn't supported.
 - Replication of user databases from SQL Server to SQL Managed Instance is one-way. User databases from SQL Managed Instance can't be replicated back to SQL Server.
 - [Auto failover groups](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance can't be used in parallel while operating the Managed Instance link with SQL Server.

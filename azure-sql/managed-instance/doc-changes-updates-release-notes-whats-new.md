@@ -79,7 +79,7 @@ For example, the November 2022 feature way introduced a number of changes that s
 The following is a list of all features and architecture changes introduced by the November 2022 feature wave: 
 
 - Fast Instance provisioning:  a passive benefit that improves the time it takes to deploy an instance. 
-- Relaxed networking requirements: a passive benefit that changes the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
+- [Relaxed networking requirements](connectivity-architecture-overview.md): a passive benefit that changes the connectivity architecture of SQL Managed Instance. 
 - Virtual cluster v2: a passive benefit that improves the functionality of the underlying virtual cluster. 
 - [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
 - Multi-AZ: a feature in preview that lets you deploy your managed instance to multiple availability zones and improve the availability of your service. 

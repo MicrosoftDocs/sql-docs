@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 *Transparent data encryption* (TDE) encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] data files. This encryption is known as encrypting data at rest.
 
-To help secure a database, you can take precautions like:
+To help secure a user database, you can take precautions like:
 
 * Designing a secure system.
 * Encrypting confidential assets.
@@ -40,6 +40,10 @@ One solution is to encrypt sensitive data in a database and use a certificate to
 TDE does real-time I/O encryption and decryption of data and log files. The encryption uses a database encryption key (DEK). The database boot record stores the key for availability during recovery. The DEK is a symmetric key. It's secured by a certificate that the server's master database stores or by an asymmetric key that an EKM module protects.
 
 TDE protects data at rest, which is the data and log files. It lets you follow many laws, regulations, and guidelines established in various industries. This ability lets software developers encrypt data by using AES and 3DES encryption algorithms without changing existing applications.
+
+> [!Note]
+> TDE is not available for system databases. It cannot be used to encrypt master, model, or msdb. Tempdb is automatically encrypted when a user database enabled TDE, but cannot be encrypted directly.
+>
 
 > [!IMPORTANT]
 > TDE doesn't provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).

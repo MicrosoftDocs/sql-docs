@@ -23,7 +23,7 @@ ms.author: mathoma
 > [!IMPORTANT]  
 >  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [ Configure advanced options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## Create the Azure Blob Container
+## Create the Azure Blob Storage container
 
 The process requires an Azure account. If you already have an account, go to the next step. Otherwise, you can get started with a [free trial](https://azure.microsoft.com/pricing/free-trial/) or explore [purchase options](https://azure.microsoft.com/pricing/purchase-options/).
 

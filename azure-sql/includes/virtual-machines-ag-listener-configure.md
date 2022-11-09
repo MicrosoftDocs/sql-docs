@@ -15,7 +15,7 @@ The availability group listener is an IP address and network name that the SQL S
 
     c. Select the **Networks** node, and note the cluster network name. Use this name in the `$ClusterNetworkName` variable in the PowerShell script. In the following image the cluster network name is **Cluster Network 1**:
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/90-clusternetworkname.png" alt-text="Screenshot of Cluster Network Name.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/90-cluster-network-name.png" alt-text="Screenshot of Failover Cluster Manager, Networks tab, with the Cluster Network Name highlighted.":::
 
 1. <a name="addcap"></a>Add the client access point.  
     The client access point is the network name that applications use to connect to the databases in an availability group. Create the client access point in Failover Cluster Manager.
@@ -24,7 +24,7 @@ The availability group listener is an IP address and network name that the SQL S
 
     b. In the **Roles** pane, right-click the availability group name, and then select **Add Resource** > **Client Access Point**.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/92-addclientaccesspoint.png" alt-text="Screenshot that shows the Client Access Point menu option.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/92-add-client-access-point.png" alt-text="Screenshot of Failover Cluster Manager, Roles tab, with Client Access Point selected in the menu for the availability group.":::
 
     c. In the **Name** box, create a name for this new listener. 
    The name for the new listener is the network name that applications use to connect to databases in the SQL Server availability group.
@@ -37,13 +37,13 @@ The availability group listener is an IP address and network name that the SQL S
 
     a. Click the **Resources** tab, and then expand the client access point you created. The client access point is offline.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/94-newclientaccesspoint.png" alt-text="Screenshot of the Client Access Point.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/94-new-client-access-point.png" alt-text="Screenshot of Failover Cluster Manager, Roles tab, with the Client Access Point showing offline.":::
 
     b. Right-click the IP resource, and then click properties. Note the name of the IP address, and use it in the `$IPResourceName` variable in the PowerShell script.
 
     c. Under **IP Address**, click **Static IP Address**. Set the IP address as the same address that you used when you set the load balancer address on the Azure portal.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/96-ipresource.png" alt-text="Screenshot that shows where you set the IP address.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/96-ip-resource.png" alt-text="Screenshot of the IP Address: Address on Cluster Network 1 Properties showing where to set the IP address.":::
 
     <!-----------------------I don't see this option on server 2016
     1. Disable NetBIOS for this address and click **OK**. Repeat this step for each IP resource if your solution spans multiple Azure VNets.
@@ -57,7 +57,7 @@ The availability group listener is an IP address and network name that the SQL S
 
     c. On the dependencies tab, add the name of the client access point (the listener) resource.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/97-propertiesdependencies.png" alt-text="Screenshot that shows where to add the name on the Dependencies tab.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/97-properties-dependencies.png" alt-text="Screenshot that shows where to add the name on the Dependencies tab.":::
 
     d. Click **OK**.
 
@@ -71,7 +71,7 @@ The availability group listener is an IP address and network name that the SQL S
 
     c. Click the **Dependencies** tab. Verify that the IP address is a dependency. If it is not, set a dependency on the IP address. If there are multiple resources listed, verify that the IP addresses have OR, not AND, dependencies. Click **OK**.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-propertiesdependencies.png" alt-text="Screenshot showing the IP Resource.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-properties-dependencies.png" alt-text="Screenshot showing the IP Resource.":::
 
     >[!TIP]
     >You can validate that the dependencies are correctly configured. In Failover Cluster Manager, go to Roles, right-click the availability group, click **More Actions**, and then click  **Show Dependency Report**. When the dependencies are correctly configured, the availability group is dependent on the network name, and the network name is dependent on the IP address.

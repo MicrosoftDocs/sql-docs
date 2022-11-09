@@ -31,7 +31,7 @@ The core SSDT functionality to create database projects has remained integral to
 
 ### Install SSDT with Visual Studio 2022
 
-If [Visual Studio 2022](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2022) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2022 installed, then you can download and install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/).
+If [Visual Studio 2022](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2022) is already installed, you can edit the list of workloads to include SSDT. If you don't have Visual Studio 2022 installed, then you can download and install [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/).
 
 To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
 
@@ -74,7 +74,7 @@ With Visual Studio 2019, the required functionality to enable Analysis Services,
 
 ### Install SSDT with Visual Studio 2019
 
-If [Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
+If [Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019) is already installed, you can edit the list of workloads to include SSDT. If you don't have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
 
 To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
 

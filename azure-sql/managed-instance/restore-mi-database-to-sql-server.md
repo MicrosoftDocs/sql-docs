@@ -18,15 +18,15 @@ This article teaches you to restore your database backup from Azure SQL Managed 
 
 ## Overview
 
-The database format instance property gives you an easy way to copy or move your databases from SQL Managed Instance to SQL Server 2022 instances hosted on-premises, virtual machines in Azure, or in other clouds. 
+The backup portability instance property gives you an easy way to copy or move your databases from SQL Managed Instance to SQL Server 2022 instances hosted on-premises, virtual machines in Azure, or in other clouds. 
 
-The database format instance property unlocks the following scenarios: 
+The backup portability instance property unlocks the following scenarios: 
 
 - Database mobility between SQL Managed Instance and SQL Server-based products
 - Provide database copies to end customers or eligible parties. 
 - Refresh environments outside of SQL Managed Instance
 
-The database format property is set to SQL Server 2022 by default for all instances starting November 2022, including all existing instances, and any new instances deployed after November 2022. 
+The backup portability property is enabled by default for _all_ instances starting in November 2022, including all existing instances, and any new instances deployed after November 2022. 
 
 ## Take backup on SQL Managed Instance 
 

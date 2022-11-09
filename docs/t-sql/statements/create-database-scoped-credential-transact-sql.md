@@ -50,7 +50,12 @@ Specifies the name of the database scoped credential being created. *credential_
 
 #### IDENTITY **='**_identity\_name_**'**
 
-Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into Azure Synapse Analytics, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY argument. It should just be the account name.
+Specifies the name of the account to be used when connecting outside the server. 
+
+- To import a file from Azure Blob Storage or Azure Data Lake Storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).
+- To load data into Azure Synapse Analytics, any valid value can be used for identity. 
+- When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY argument. It should just be the account name.
+- When on SQL Server, if creating a database scoped credential with a Storage Access Key used as the SECRET, IDENTITY is ignored.
 
 > [!IMPORTANT]
 > The only PolyBase external data source that supports Kerberos authentication is Hadoop. All other external data sources (SQL Server, Oracle, Teradata, MongoDB, generic ODBC) only support Basic Authentication.

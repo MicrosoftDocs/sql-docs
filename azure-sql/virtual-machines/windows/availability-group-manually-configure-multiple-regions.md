@@ -19,10 +19,13 @@ tags: azure-service-management
 
 This tutorial explains how to configure a SQL Server Always On availability group replica on Azure virtual machines in a remote Azure location. Use this configuration to support disaster recovery.
 
+This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). Mentions of the local region in this article refers to the virtual machines and availability group already configured in a single region, whereas the remote region is the new infrastructure being added in this tutorial.
+
 > [!NOTE]  
 > You can use the same steps in this article to extend your on-premises availability group to Azure.
 
-This article applies to Azure Virtual Machines in Resource Manager mode.
+
+## Overview
 
 The following image shows a common deployment of an availability group on Azure virtual machines:
 
@@ -32,27 +35,25 @@ In this deployment, all virtual machines are in one Azure region. The availabili
 
 This architecture is vulnerable to downtime if the Azure region becomes inaccessible. To overcome this vulnerability, add a replica in a different Azure region. The following diagram shows how the new architecture would look:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic-dr.png" alt-text="Diagram of an Availability Group DR.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic-dr.png" alt-text="Diagram of an Availability Group disaster recovery scenario.":::
 
-The preceding diagram shows a new virtual machine called SQL-3. SQL-3 is in a different Azure region. SQL-3 is added to the Windows Server Failover Cluster. SQL-3 can host an availability group replica. Finally, notice that the Azure region for SQL-3 has a new Azure load balancer.
+The previous diagram shows a new virtual machine called SQL-3. SQL-3 is in a different Azure region. SQL-3 is added to the Windows Server Failover Cluster. SQL-3 can host an availability group replica. Finally, notice that the Azure region for SQL-3 has a new Azure load balancer. In this architecture, the replica in the remote region is normally configured with asynchronous commit availability mode and manual failover mode.
 
->[!NOTE]
+> [!NOTE]
 > An Azure availability set is required when more than one virtual machine is in the same region. If only one virtual machine is in the region, then the availability set is not required. You can only place a virtual machine in an availability set at creation time. If the virtual machine is already in an availability set, you can add a virtual machine for an additional replica later.
-
-In this architecture, the replica in the remote region is normally configured with asynchronous commit availability mode and manual failover mode.
 
 When availability group replicas are on Azure virtual machines in different Azure regions, then you can connect the Virtual Networks using the recommended [Virtual Network Peering](/azure/virtual-network/virtual-network-peering-overview) or [Site to Site VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
 
->[!IMPORTANT]
->This architecture incurs outbound data charges for data replicated between Azure regions. See [Bandwidth Pricing](https://azure.microsoft.com/pricing/details/bandwidth/).  
+> [!IMPORTANT]
+> This architecture incurs outbound data charges for data replicated between Azure regions. See [Bandwidth Pricing](https://azure.microsoft.com/pricing/details/bandwidth/).  
 
-This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). When mentioning to local region in this article, it refers to the virtual machines and availability group already configured in a single region, the remote region is the new infrastructure being added.
 
-To create a replica in a remote data center, perform the following steps:
 
 ## Create the network and subnet
 
-Before creating a virtual network and subnet in a new region, decide the address space, subnet starting address, Cluster IP, and AG Listener IP addresses to be used for the remote region. The table below lists the details for the local (current) region and what will be set up in the new remote region for easy reference.
+Before creating a virtual network and subnet in a new region, decide the address space, subnet starting address, Cluster IP, and AG listener IP addresses you will use for the remote region. 
+
+The following table lists details for the local (current) region and what will be set up in the new remote region for easy reference.
 
 | Type | Local | Remote Region
 | ----- | ----- | ----------

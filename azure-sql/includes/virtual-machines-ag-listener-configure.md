@@ -57,7 +57,7 @@ The availability group listener is an IP address and network name that the SQL S
 
     c. On the dependencies tab, add the name of the client access point (the listener) resource.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/97-properties-dependencies.png" alt-text="Screenshot that shows where to add the name on the Dependencies tab.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/97-properties-dependencies.png" alt-text="Screenshot of MyTestAG properties, showing where to add the name on the Dependencies tab.":::
 
     d. Click **OK**.
 
@@ -67,11 +67,11 @@ The availability group listener is an IP address and network name that the SQL S
 
     b. On the **Resources** tab, right-click the client access point resource under **Server Name**, and then click **Properties**.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-dependencies.png" alt-text="Screenshot that shows the Properties menu option for the server's name.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-dependencies.png" alt-text="Screenshot of the Failover Cluster Manager, zoomed in the MyTestAG resource, showing the Properties menu option for the listener's name.":::
 
     c. Click the **Dependencies** tab. Verify that the IP address is a dependency. If it is not, set a dependency on the IP address. If there are multiple resources listed, verify that the IP addresses have OR, not AND, dependencies. Click **OK**.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-properties-dependencies.png" alt-text="Screenshot showing the IP Resource.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-properties-dependencies.png" alt-text="Screenshot of the Name: MyAgListnr Properties window, showing the IP Resource for the availability group.":::
 
     >[!TIP]
     >You can validate that the dependencies are correctly configured. In Failover Cluster Manager, go to Roles, right-click the availability group, click **More Actions**, and then click  **Show Dependency Report**. When the dependencies are correctly configured, the availability group is dependent on the network name, and the network name is dependent on the IP address.

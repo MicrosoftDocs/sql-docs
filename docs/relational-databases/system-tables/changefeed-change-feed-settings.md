@@ -1,23 +1,23 @@
 ---
-title: "cdc.change_feed_settings (Transact-SQL)"
-description: "cdc.change_feed_settings contains metadata that is used to configure change feed."
+title: "changefeed.change_feed_settings (Transact-SQL)"
+description: "changefeed.change_feed_settings contains metadata that is used to configure change feed."
 author: im-microsoft
 ms.author: imotiwala
 ms.reviewer: wiassaf
-ms.date: 11/04/2022
+ms.date: 11/07/2022
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
 ms.topic: "reference"
 f1_keywords:
-  - "cdc.change_feed_settings"
-  - "cdc.change_feed_settings_TSQL"
+  - "changefeed.change_feed_settings"
+  - "changefeed.change_feed_settings_TSQL"
 helpviewer_keywords:
-  - "cdc.change_feed_settings"
+  - "changefeed.change_feed_settings"
 dev_langs:
   - "TSQL"
 ---
-# cdc.change_feed_settings (Transact-SQL)
+# changefeed.change_feed_settings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains metadata that is used to configure change feed for Azure Synapse Link for SQL.

@@ -101,23 +101,8 @@ Use the information in the following tables to determine the set of features tha
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a set of graphical tools and programmable objects for moving, copying, and transforming data. It also includes the [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) component for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. MDS can be configured to manage any domain (products, customers, accounts) and includes hierarchies, granular security, transactions, data versioning, and business rules, as well as an [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] that can be used to manage data.|
 |Machine Learning Services (In-Database)|Machine Learning Services (In-Database) supports distributed, scalable machine learning solutions using enterprise data sources. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, the R language was supported. [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] supports R and Python.|
-|Machine Learning Server (Standalone)|Machine Learning Server (Standalone) supports deployment of distributed, scalable machine learning solutions on multiple platforms and using multiple enterprise data sources, including Linux and Hadoop. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, the R language was supported. [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] supports R and Python.|
-
-### Management tools
-
-|Tool|Description|
-| --- | --- |
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment to access, configure, manage, administer, and develop components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS lets developers and administrators of all skill levels use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The latest edition of SSMS updates SMO, which includes the [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Download and install<br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager provides basic configuration management for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services, server protocols, client protocols, and client aliases.|
-|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] provides a graphical user interface to monitor an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] or [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|
-|[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor|[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor helps create optimal sets of indexes, indexed views, and partitions.|
-|Data Quality Client|Provides a highly simple and intuitive graphical user interface to connect to the DQS server, and perform data cleansing operations. It also allows you to centrally monitor various activities performed during the data cleansing operation.|
-|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] provides an IDE for building solutions for the Business Intelligence components: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].<br /><br />(Formerly called Business Intelligence Development Studio).<br /><br />[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] also includes "Database Projects", which provides an integrated environment for database developers to carry out all their database design work for any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] platform (both on-premises and off-premises) within Visual Studio. Database developers can use the enhanced Server Explorer in Visual Studio to easily create or edit database objects and data, or execute queries.|
-|Connectivity Components|Installs components for communication between clients and servers, and network libraries for DB-Library, ODBC, and OLE DB.|
-
-|Documentation|Description|
-| --- | --- |
-|Offline [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation|Core documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], available [offline](sql-server-offline-documentation.md).|
+|Data Virtualization with PolyBase| Query different types of data on different types of data sources from SQL Server.|
+|Azure connected services | [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] extends Azure connected services and features including Azure Synapse Link, Microsoft Purview access policies, Azure extension for SQL Server, pay-as-you-go billing, and the link feature for SQL Managed Instance. |
 
 ### Developer and Evaluation editions
 
@@ -144,6 +129,20 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>3</sup> MOLAP
 
+## <a id="ACS"></a> Azure connected services
+
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+|Azure Synapse Link <sup>1</sup>|Yes|Yes|Yes|No|No|
+|Link feature for SQL Managed Instance <sup>1</sup> |Yes|Yes|No|No|No|
+|Microsoft Purview access policies <sup>1</sup>|Yes|Yes|Yes<sup>2</sup>|Yes<sup>2</sup>|Yes<sup>2</sup>|
+|Azure extension for SQL Server |Yes|Yes|No|No|No|
+|Pay-as-you-go billing |Yes|Yes|No|No|No|
+
+<sup>1</sup>These features are governed their respective [lifecycle policies](/lifecycle/products/sql-server-2022).
+
+<sup>2</sup> Configure in portal.
+
 ## RDBMS high availability
 
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
@@ -156,11 +155,13 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Always On failover cluster instances<sup>4</sup>|Yes|Yes|No|No|No|
 |Always On availability groups<sup>5</sup>|Yes|No|No|No|No|
 |Basic availability groups<sup>6</sup>|No|Yes|No|No|No|
-|Managed Instance link|Yes|Yes|No|No|No|
+|Contained availability groups<sup>8</sup>|Yes|No|No|No|No|
+|Distributed availability groups |Yes|No|No|No|No|
 |Automatic read write connection re-routing |Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online index create and rebuild|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
+|Resumable online ADD CONSTRAINT |Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
 |Accelerated database recovery|Yes|Yes|Yes|No|No|
@@ -169,6 +170,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Microsoft Azure (backup to URL)|Yes|Yes|Yes|No|No|
+|Backup and restore to S3-compliant object storage over REST API|Yes|Yes|Yes|No|No|
+|Snapshot backup |Yes|Yes|Yes|Yes|Yes|
 |Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
@@ -184,19 +187,22 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>5</sup> On Enterprise edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
 
-<sup>6</sup> Standard edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
+<sup>6</sup> Standard edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic availability groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 
 <sup>7</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
+
+<sup>8</sup> Standard and Web editions support a single database contained availability group.
 
 ## <a id="RDBMSSP"></a> RDBMS scalability and performance
 
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-| ---: | :---: | :---: | :---: | :---: | :---: |
+| :--- | :---: | :---: | :---: | :---: | :---: |
 |Columnstore<sup>1</sup> <sup>2</sup>|Yes|Yes|Yes|Yes|Yes|
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
 |In-Memory Database: In-Memory OLTP<sup>1</sup>|Yes|Yes|Yes|Yes<sup>3</sup>|Yes|
 |In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
+|In-Memory Database: hybrid buffer pool support for direct write|Yes|No|No|No|No|
 |In-Memory Database: memory-optimized `tempdb` metadata|Yes|No|No|No|No|
 |In-Memory Database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
 |Stretch Database|Yes|Yes|Yes|Yes|Yes|
@@ -208,20 +214,33 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Multiple filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA aware and large page memory and buffer array allocation|Yes|No|No|No|No|
 |Buffer pool extension|Yes|Yes|No|No|No|
+|Buffer pool parallel scan|Yes|Yes|No|No|No|
 |I/O resource governance|Yes|No|No|No|No|
 |Read-ahead|Yes|No|No|No|No|
 |Advanced scanning|Yes|No|No|No|No|
 |Delayed durability|Yes|Yes|Yes|Yes|Yes|
+|Intelligent Database: approximate count distinct|Yes|Yes|Yes|Yes|Yes|
+|Intelligent Database: approximate percentile|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: automatic tuning|Yes|No|No|No|No|
 |Intelligent Database: batch mode for row store <sup>1</sup>|Yes|No|No|No|No|
+|Intelligent Database: cardinality estimate feedback|Yes|No|No|No|No|
+|Intelligent Database: degree of parallelism feedback|Yes|No|No|No|No|
+|Intelligent Database: memory grant feedback persistence & percentile|Yes|No|No|No|No|
+|Intelligent Database: optimized plan forcing|Yes|Yes|Yes|Yes|Yes|
+|Intelligent Database: parameter sensitive plan optimization|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: row mode memory grant feedback|Yes|No|No|No|No|
-|Intelligent Database: approximate count distinct|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: table variable deferred compilation|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: scalar UDF inlining|Yes|Yes|Yes|Yes|Yes|
 |Batch mode adaptive joins|Yes|No|No|No|No|
 |Batch mode memory grant feedback|Yes|No|No|No|No|
 |Interleaved execution for multi-statement table valued functions|Yes|Yes|Yes|Yes|Yes|
 |Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
+|Advanced Vector Extension (AVX) 512 integration|Yes|No|No|No|No|
+|Integrated acceleration & offloading (hardware)|Yes|No|No|No|No|
+|Integrated acceleration & offloading (software)|Yes|Yes|No|No|No|
+|Azure Active Directory integration|Yes|Yes|Yes| Yes | Yes |
+|System page latch concurrency enhancements |Yes|Yes|Yes|Yes|Yes|
+
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the [Scale Limits](#scale-limits) section. The degree of parallelism (DOP) for [batch mode](../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition and 1 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web and Express editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
@@ -235,7 +254,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
 |Row-level security|Yes|Yes|Yes|Yes|Yes|
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes|
-|Always Encrypted with Secure Enclaves|Yes|Yes|Yes|Yes|Yes|
+|Always Encrypted with secure enclaves|Yes|Yes|Yes|Yes|Yes|
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|
 |Server audit|Yes|Yes|Yes|Yes|Yes|
 |Database audit|Yes|Yes|Yes|Yes|Yes|
@@ -258,18 +277,16 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Merge replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |Oracle publishing|Yes|No|No|No|No|
 |Peer to peer transactional replication|Yes|No|No|No|No|
+|Peer to peer - last write wins - transactional replication|Yes|No|No|No|No|
 |Snapshot replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tracking|Yes|Yes|Yes|Yes|Yes|
 |Transactional replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |Transactional replication to Azure|Yes|Yes|No|No|No|
-|Transactional replication updateable subscription|Yes|Yes|No|No|No|
+|Transactional replication update-able subscription|Yes|Yes|No|No|No|
 
 <sup>1</sup> Subscriber only
 
 ## <a id="SSMS"></a> Management tools
-
-> [!NOTE]  
-> Distributed Replay has been deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
 | --- | :---: | :---: | :---: | :---: | :---: |
@@ -286,6 +303,9 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 <sup>1</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express with Tools, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express with Advanced Services can be profiled using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.
 
 <sup>2</sup> Tuning enabled only on Standard edition features
+
+> [!NOTE]  
+> Distributed Replay has been deprecated in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
 ## RDBMS manageability
 
@@ -338,23 +358,27 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Basic Python integration|Yes|Yes|Yes|Yes|No|
 |Advanced Python integration|Yes|No|No|No|No|
 |Machine Learning Server (Standalone)|Yes|No|No|No|No|
-|PolyBase compute node|Yes|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup> |
-|PolyBase head node<sup>4</sup>|Yes|Yes|No|No|No|
+|Data Virtualization with PolyBase |Yes|Yes|Yes|Yes|Yes|
 |JSON|Yes|Yes|Yes|Yes|Yes|
 |Query Store|Yes|Yes|Yes|Yes|Yes|
+|Query Store: on by default for new databases|Yes|Yes|Yes|Yes|Yes|
+|Query Store: hint support|Yes|Yes|Yes|Yes|Yes|
+|Query Store: read-replica support|Yes|No|No|No|No|
 |Temporal|Yes|Yes|Yes|Yes|Yes|
 |Common Language Runtime (CLR) Integration|Yes|Yes|Yes|Yes|Yes|
 |Java Language Runtime Integration|Yes|Yes|Yes|Yes|Yes|
 |Native XML support|Yes|Yes|Yes|Yes|Yes|
 |XML indexing|Yes|Yes|Yes|Yes|Yes|
+|XML compression|Yes|Yes|Yes|Yes|Yes|
 |MERGE & UPSERT capabilities|Yes|Yes|Yes|Yes|Yes|
 |FILESTREAM support|Yes|Yes|Yes|Yes|Yes|
 |FileTable|Yes|Yes|Yes|Yes|Yes|
 |Date and Time datatypes|Yes|Yes|Yes|Yes|Yes|
+|Timeseries support|Yes|Yes|Yes|Yes|Yes|
 |Internationalization support|Yes|Yes|Yes|Yes|Yes|
 |Full-text and semantic search|Yes|Yes|Yes|Yes|No|
 |Specification of language in query|Yes|Yes|Yes|Yes|No|
-|Service Broker (messaging)|Yes|Yes|No<sup>5</sup>|No<sup>5</sup>|No<sup>5</sup>|
+|Service Broker (messaging)|Yes|Yes|No<sup>3</sup>|No<sup>3</sup>|No<sup>3</sup>|
 |Transact-SQL endpoints|Yes|Yes|Yes|No|No|
 |Graph|Yes|Yes|Yes|Yes|Yes|
 |UTF-8 support|Yes|Yes|Yes|Yes|Yes|
@@ -363,11 +387,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>2</sup> Advanced integration can use all available cores for parallel processing of data sets at any size subject to hardware limits.
 
-<sup>3</sup> Scale out with multiple compute nodes requires a head node.
-
-<sup>4</sup> Prior to SQL Server 2019 PolyBase head node requires Enterprise edition.
-
-<sup>5</sup> Client only
+<sup>3</sup> Client only
 
 ## Integration Services
 

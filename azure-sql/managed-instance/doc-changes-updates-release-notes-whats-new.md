@@ -31,7 +31,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
-|[Instance stop](instance-stop-start-how-to.md) | Stop and start your managed instance to save on licensing and compute costs. | 
+|[Instance stop / start](instance-stop-start-how-to.md) | Stop and start your managed instance to save on licensing and compute costs. | 
 |[Managed Instance link](managed-instance-link-feature-overview.md)| Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. |
 |[Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications (preview) for databases configured to use a non-default [maintenance window](../database/maintenance-window.md). Advance notifications are in preview for Azure SQL Managed Instance. |
 |[Migrate with Log Replay Service](log-replay-service-migrate.md) | Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service. |
@@ -80,8 +80,8 @@ The following is a list of all features and architecture changes introduced by t
 - Fast Instance provisioning:  a passive benefit that improves the time it takes to deploy an instance. 
 - Relaxed networking requirements: a passive benefit that changes the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
 - Virtual cluster v2: a passive benefit that improves the functionality of the underlying virtual cluster. 
-- Stop / start (preview):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
-- Multi-AZ (preview): a feature in preview that lets you deploy your managed instance to multiple availability zones and improve the availability of your service. 
+- [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
+- Multi-AZ: a feature in preview that lets you deploy your managed instance to multiple availability zones and improve the availability of your service. 
 - Managed DTC: a feature in preview that lets you run distributed transactions in mixed environments. 
 
 

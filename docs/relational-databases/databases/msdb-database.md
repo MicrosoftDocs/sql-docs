@@ -29,7 +29,7 @@ ms.author: wiassaf
   
 > [!IMPORTANT]  
 > - After any operation that updates **msdb**, such as backing up or restoring any database, we recommend that you back up **msdb**. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
-> - There are differences to whats available in the **msdb** database in Azure SQL Managed Instance. Review [backup transparency](/azure/azure-sql/managed-instance/backup-trasparency.md)  to learn more. 
+> - There are differences to whats available in the **msdb** database in Azure SQL Managed Instance. Review [backup transparency](/azure/azure-sql/managed-instance/backup-trasparency)  to learn more. 
   
 ## Physical Properties of msdb  
  The following table lists the initial configuration values of the **msdb** data and log files. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

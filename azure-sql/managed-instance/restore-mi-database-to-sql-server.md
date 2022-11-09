@@ -82,7 +82,7 @@ MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 ```
 
 > [!NOTE]
-> To restore databases that are encrypted at-rest (by using [TDE](../../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the [SQL Server Connector for Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-sql-blog/sql-server-connector-for-azure-key-vault-is-generally-available/ba-p/386105).
+> To restore databases that are encrypted at-rest (by using [TDE](../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the [SQL Server Connector for Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-sql-blog/sql-server-connector-for-azure-key-vault-is-generally-available/ba-p/386105).
 
 
 ## Consideration

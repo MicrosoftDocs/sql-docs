@@ -204,7 +204,7 @@ This article lists the features and fixes delivered by the released versions of 
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Fixed an issue where external user deployment to Managed Instance would fail |
+| Deployment | Fixed an issue where external user deployment to Azure SQL Managed Instance would fail |
 | Deployment | Fix for deployment order involving temporal tables to drop dependencies before turning system versioning off |
 | Deployment | Fix for Always Encrypted deployment bug with error "Invalid object name '#tmpErrors'"  |
 | Export | Validation for SqlPackage parameters ExcludeObjectType(s) and DoNotDropObjectType(s) |
@@ -363,7 +363,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Add Azure Synapse Analytics support for ordered clustered column store index |
 | Deployment | Add support for External Data Source (Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
 | Deployment | Add SQL Database Edge Instance as supported edition |
-| Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
+| Deployment | Support Azure SQL Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
 | Deployment | Add support for copy command in Azure Synapse Analytics |
 | Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure Synapse Analytics |
 | .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of SqlPackage |
@@ -425,7 +425,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Platform | SqlPackage .NET Core generally available for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
-| Deployment | Add Managed Instance support for Azure Active Directory user and groups. |
+| Deployment | Add Azure SQL Managed Instance support for Azure Active Directory user and groups. |
 | Deployment | Support the /AccessToken parameter for SqlPackage on .NET Core. |
 
 ### Known Issues 
@@ -548,7 +548,7 @@ Build: &nbsp; 15.0.4200.1
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Added support for database compatibility level 150. | 
-| Deployment | Added support for Managed Instances. | 
+| Deployment | Added support for Azure SQL Managed Instances. | 
 | Performance | Added MaxParallelism command-line parameter to specify the degree of parallelism for database operations. | 
 | Security | Added AccessToken command-line parameter to specify an authentication token when connecting to SQL Server. | 
 | Import | Added support to stream BLOB/CLOB data types for imports. | 

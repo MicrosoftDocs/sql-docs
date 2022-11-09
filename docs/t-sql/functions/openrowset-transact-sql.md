@@ -567,6 +567,40 @@ SINGLE_CLOB
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
+### L. Use OPENROWSET to access several parquet files using an S3-Compliant Object Storage
+
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] 
+
+The following example uses access several parquet files from different location, all stored on an S3-Compliant Object Storage:
+
+```sql
+
+CREATE DATABASE SCOPED CREDENTIAL s3_dsc
+WITH IDENTITY = 'S3 Access Key',
+SECRET = 'contosoadmin:contosopwd'
+GO
+
+CREATE EXTERNAL DATA SOURCE s3_eds
+WITH
+(
+ LOCATION = 's3://10.199.40.235:9000/movies'
+,CREDENTIAL = s3_dsc
+)
+GO
+
+SELECT *
+FROM  
+    OPENROWSET(
+        BULK (
+            '/decades/1950s/*.parquet',
+			'/decades/1960s/*.parquet',
+			'/decades/1970s/*.parquet'),
+        FORMAT='PARQUET'
+		,DATA_SOURCE = 's3_eds'
+    )
+AS [data]
+
+```
 
 ### Additional Examples
 

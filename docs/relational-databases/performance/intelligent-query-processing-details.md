@@ -251,7 +251,7 @@ For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/fun
 
 These aggregate functions compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions.
 
-For more information, see [APPROX_PERCENTILE_DISC (Transact-SQL)](../../t-sql/approx-percentile-disc-transact-sql.md) and [APPROX_PERCENTILE_CONT (Transact-SQL)](../../t-sql/approx-percentile-cont-transact-sql.md) 
+For more information, see [APPROX_PERCENTILE_DISC (Transact-SQL)](../../t-sql/functions/approx-percentile-disc-transact-sql.md) and [APPROX_PERCENTILE_CONT (Transact-SQL)](../../t-sql/functions/approx-percentile-cont-transact-sql.md) 
 
 ## Batch mode on rowstore
 

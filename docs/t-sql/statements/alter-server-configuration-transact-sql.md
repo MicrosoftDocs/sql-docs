@@ -43,6 +43,7 @@ SET <optionspec>
    | <soft_numa>  
    | <memory_optimized>
    | <hardware_offload>
+   | <suspend_for_snapshot_backup>
 }  
   
 <process_affinity> ::=   
@@ -109,6 +110,10 @@ SET <optionspec>
      ON 
    | OFF
    }
+
+<suspend_for_snapshot_backup> ::=
+    SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | OFF } [ ( GROUP = ( <database>,...n) [ , MODE = COPY_ONLY ] ) ]
+
 ```  
   
 
@@ -292,6 +297,24 @@ OFF <br>
 Disables all instance-level use of integrated acceleration and offloading. Requires a restart to take effect.
 
 For more information, see [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md).
+
+**\<suspend_for_snapshot_backup> ::=**
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)])
+
+Suspends databases for snapshot backup. May define a group of one or more databases. May designate copy only mode.
+
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | **OFF** }
+
+Suspends, or un-suspends databases. Default OFF.
+
+GROUP = ( \<database>,...n)
+
+Optional. Defines a group of one or more databases to suspend. If not specified, the setting applies to all databases.
+
+MODE = COPY_ONLY
+
+Optional. Uses COPY_ONLY mode for all database backups.
 
 ## General Remarks  
 This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. If it's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it doesn't require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  

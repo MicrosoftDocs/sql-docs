@@ -116,11 +116,9 @@ To define the parameters, first update the relevant values in the **USER CONFIGU
 # USER CONFIGURABLE VALUES
 # ===============================================================
 $SubscriptionId = "<SubscriptionID>"
-$SqlMIName = "<Sql-MI-name>”
+$SqlMIName = "<Sql-MI-name>"
 $RgName = "<ResourceGroup>"
 # ===============================================================
-9
-Microsoft Confidential. All rights reserved. --- PLEASE DO NOT SHARE, DO NOT PUBLISH OR TRANSMIT. ---
 # DO NOT MODIFY THE SCRIPT BELOW - NOT USER CONFIGURABLE
 # ===============================================================
 # Constants

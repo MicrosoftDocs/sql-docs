@@ -22,6 +22,12 @@ If you're an administrator, you can use the [!INCLUDE[ssMDSXLS](../../includes/s
   
 With the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This feature helps to prevent duplicate data in MDS.
 
+> [!NOTE]
+> Be aware of the following size limitations when interacting with the workbook in MDS Excel add-in.
+>
+> - Excel on the web has a payload size limit for requests and responses of 5MB. RichAPI.Error will be thrown if that limit is exceeded.
+> - A range is limited to five million cells for get operations.
+
 ## Downloads
 
 - [Master Data Services Add-in for Excel for SQL Server 2016 SP2](https://www.microsoft.com/download/details.aspx?id=56838).

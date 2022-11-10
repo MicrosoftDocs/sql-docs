@@ -25,7 +25,7 @@ SQL Managed Instance is placed inside the Azure virtual network and the subnet t
 - The ability to connect SQL Managed Instance to Azure resources.
 
 > [!NOTE]
-> November 2022 introduced a number of changes to the default connectivity structure for SQL Managed Instance. Instances deployed after November 2022 use the new connectivity architecture by default, but existing instances have to op-in to the feature wave. For instances that have not opted in, review [Connectivity architecture prior to November 2022](connectivity-architecture-prior-november-2022-feature-wave.md). For more information, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
+> November 2022 introduced a number of changes to the default connectivity structure for SQL Managed Instance. For instances that have not yet enrolled in the feature wave, review [Connectivity architecture prior to November 2022](connectivity-architecture-prior-november-2022-feature-wave.md). For more information, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
 
 ## November 2022 feature wave 
 
@@ -36,7 +36,7 @@ The November 2022 feature wave introduced the following changes to the connectiv
 * Simplified Route table (reduced mandatory routes from 13 to 5).
 * Removed management endpoint
 
-The rest of the article describes the connectivity architecture for SQL Managed Instance with the feature wave changes included. 
+The rest of the article describes the connectivity architecture for SQL Managed Instance with the changes from the feature wave included. 
 
 ## Communication overview
 

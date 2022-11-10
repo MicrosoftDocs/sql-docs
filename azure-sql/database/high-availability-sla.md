@@ -61,7 +61,7 @@ The zone-redundant version of the high availability architecture for the General
 > For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central, East US 2 & East US. This is in preview in the following regions: Southeast Asia, Australia East, Japan East, and UK South. 
 
 > [!IMPORTANT]
-> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql#azure-region-support). 
+> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql&preserve-view=true#azure-region-support). 
 
 > [!NOTE]
 > Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the standard-series (Gen5) hardware is selected.
@@ -94,7 +94,7 @@ The zone-redundant version of the high availability architecture is illustrated 
 > This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
 
 > [!IMPORTANT]
-> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql#azure-region-support). 
+> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql&preserve-view=true#azure-region-support). 
 
 
 ## Hyperscale service tier locally redundant availability
@@ -129,7 +129,7 @@ Consider the following limitations:
 > At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
 
 > [!IMPORTANT]
-> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql#azure-region-support). 
+> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql&preserve-view=true#azure-region-support). 
 
 
 ### Create a zone redundant Hyperscale database

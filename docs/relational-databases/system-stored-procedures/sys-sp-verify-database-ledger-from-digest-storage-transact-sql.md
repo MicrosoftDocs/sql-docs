@@ -41,7 +41,7 @@ A JSON document containing a list of ledger digests locations:
 
 |Column name|JSON data type|Description|  
 |-----------------|---------------|-----------------|
-|**path**|**string**|The location of storage digests. For example, a path for a container in Azure blob storage.|
+|**path**|**string**|The location of storage digests. For example, a path for a container in Azure Blob Storage.|
 |**last_digest_block_id**|**int**|The block ID for the last digest uploaded.|
 |**is_current**|**boolean**|Indicates whether this is the current path or a path used in the past.|
 

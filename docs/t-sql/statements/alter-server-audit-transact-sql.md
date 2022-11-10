@@ -73,7 +73,7 @@ ALTER SERVER AUDIT audit_name
  Determines the location of the audit target. The options are a binary file, the Windows application log, or the Windows security log.  
 
 > [!IMPORTANT]
-> In Azure SQL Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
+> In Azure SQL Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure Blob Storage.
   
  FILEPATH **= '**_os\_file\_path_**'**  
  The path of the audit trail. The file name is generated based on the audit name and audit GUID.  

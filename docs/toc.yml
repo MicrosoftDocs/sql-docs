@@ -53,7 +53,7 @@ items:
       items:
       - name: Overview
         href: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-      - name: Azure blob storage
+      - name: Azure Blob Storage
         href: relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
     - name: Quickstarts
       items:
@@ -67,7 +67,7 @@ items:
         items:
         - name: Backup to URL for Microsoft Azure Blob Storage
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup to Azure blob storage with PowerShell
+        - name: Backup to Azure Blob Storage with PowerShell
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
         - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -6567,11 +6567,14 @@ items:
       - name: Schedule Traces
         href: relational-databases/sql-trace/schedule-traces.md
     - name: Query Store
-      href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
+      - name: Monitor performance by using the Query Store
+        href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md      
       - name: Best Practices for Monitoring
         href: relational-databases/performance/best-practice-with-the-query-store.md
-      - name: How Query Store Collects Data
+      - name: Query Store for secondary replicas
+        href: relational-databases/performance/query-store-for-secondary-replicas.md
+      - name: How Query Store collects data
         href: relational-databases/performance/how-query-store-collects-data.md
       - name: In-Memory OLTP
         href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
@@ -8043,10 +8046,8 @@ items:
     items:
     - name: Always Encrypted
       items:
-      - name: Protect sensitive data and store encryption keys in the Windows certificate store >
-        href: /azure/sql-database/sql-database-always-encrypted
-      - name: Protect sensitive data and store encryption keys in Azure Key Vault >
-        href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+      - name: Getting started with Always Encrypted
+        href: relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md
     - name: Always Encrypted with secure enclaves
       items:
       - name: Getting started with Always Encrypted with secure enclaves in SQL Server
@@ -10031,7 +10032,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases
+    - name: Using Azure Blob Storage with SQL Server 2016 databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md
@@ -10132,8 +10133,6 @@ items:
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
     - name: Create & configure availability groups
       href: linux/sql-server-linux-create-availability-group.md
-    - name: Create with HA with HPE Serviceguard
-      href: linux/sql-server-availability-group-ha-hpe.md
     - name: Deploy availability group with DH2i on AKS
       href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Configure replication
@@ -10266,16 +10265,22 @@ items:
             href: linux/sql-server-linux-availability-group-ha.md
           - name: Configure an AG
             href: linux/sql-server-linux-availability-group-configure-ha.md
-          - name: Configure Pacemaker
+          - name: Configure with DH2i
+            href: /azure/azure-sql/virtual-machines/linux/dh2i-high-availability-tutorial
+          - name: Configure with HPE Serviceguard
+            href: linux/sql-server-availability-group-ha-hpe.md
+          - name: Configure with Pacemaker
             items:
+            - name: Pacemaker basics
+              href: linux/sql-server-linux-pacemaker-basics.md
             - name: Configure on RHEL, SLES, and Ubuntu
               href: linux/sql-server-linux-availability-group-cluster-pacemaker.md
-          - name: Configure failover
-            href: linux/sql-server-linux-availability-group-failover-ha.md
-          - name: Operate an AG
-            href: linux/sql-server-linux-availability-group-operate-ha.md
-          - name: Configure multiple subnets for availability
-            href: linux/sql-server-linux-configure-multiple-subnet.md
+            - name: Configure failover
+              href: linux/sql-server-linux-availability-group-failover-ha.md
+            - name: Operate an AG
+              href: linux/sql-server-linux-availability-group-operate-ha.md
+            - name: Configure multiple subnets for availability
+              href: linux/sql-server-linux-configure-multiple-subnet.md
         - name: Create for read-scale only
           items:
           - name: Configure an AG
@@ -12441,8 +12446,10 @@ items:
         href: relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md
       - name: sys.query_store_plan
         href: relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md
+      - name: sys.query_store_plan_feedback
+        href: relational-databases/system-catalog-views/sys-query-store-plan-feedback.md
       - name: sys.query_store_plan_forcing_locations
-        href: relational-databases/system-catalog-views/sys-plan-forcing-locations.md
+        href: relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md
       - name: sys.query_store_query
         href: relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md
       - name: sys.query_store_query_text
@@ -14995,6 +15002,16 @@ items:
         href: relational-databases/system-stored-procedures/sp-change-feed-drop-table-group.md
       - name: sp_help_change_feed
         href: relational-databases/system-stored-procedures/sp-help-change-feed.md
+      - name: sp_change_feed_configure_parameters
+        href: relational-databases/system-stored-procedures/sp-change-feed-configure-parameters.md
+      - name: sp_change_feed_create_table_group
+        href: relational-databases/system-stored-procedures/sp-change-feed-create-table-group.md
+      - name: sp_change_feed_enable_db
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-db.md
+      - name: sp_change_feed_enable_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-enable-table.md
+      - name: sp_change_feed_table
+        href: relational-databases/system-stored-procedures/sp-change-feed-table.md
     - name: SQL Server Agent
       href: relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
@@ -15218,6 +15235,14 @@ items:
       href: relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md
     - name: System Base Tables
       href: relational-databases/system-tables/system-base-tables.md
+    - name: Azure Synapse Link for SQL Tables
+      items:
+      - name: changefeed.change_feed_settings
+        href: relational-databases/system-tables/changefeed-change-feed-settings.md
+      - name: changefeed.change_feed_table_groups
+        href: relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql.md
+      - name: changefeed.change_feed_tables
+        href: relational-databases/system-tables/changefeed-change-feed-tables-transact-sql.md      
     - name: Backup & Restore Tables
       href: relational-databases/system-tables/backup-and-restore-tables-transact-sql.md
       items:

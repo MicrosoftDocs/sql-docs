@@ -108,7 +108,7 @@ To view the migration messages, make sure that the Output pane is visible. Other
 
 ## Migrating data at scale (Preview)
 
-When large data size 100GB and above needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the azure data factory pipeline and the scalability of cloud to migrate on-premise or external Sybase data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data from Sybase.
+When large data size 100GB and above needs to be migrated within a short duration, at scale offline migration is a suitable option. This feature uses the azure data factory pipeline and the scalability of cloud to migrate on-premises or external Sybase data source to Azure SQL platform whether IaaS VM or SQL PaaS. This capability will create the data factory or use an existing data factory to migrate data from Sybase.
 
 1. For large offline migration, click on Migrate data at scale. The offline data migration supports database level migration.
 

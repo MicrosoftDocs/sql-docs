@@ -74,7 +74,7 @@ ALTER TABLE xtp.Product
 Computed columns let you expose values from JSON text and access those values without fetching the value from the JSON text again and without parsing the JSON structure again. Values exposted in this way are strongly typed and physically persisted in the computed columns. Accessing JSON values using persisted computed columns is faster than accessing values in the JSON document directly.
 
 The following example shows how to expose the following two values from the JSON `Data` column:
--   The country where a product is made.
+-   The country/region where a product is made.
 -   The product manufacturing cost.
 
 In this example, the computed columns `MadeIn` and `Cost` are updated every time the JSON document stored in the `Data` column changes.

@@ -42,7 +42,7 @@ azureml.deploy.operationalization.ServiceDefinition(name, op)
 
 Bases: [`azureml.deploy.operationalization.OperationalizationDefinition`](operationalization-definition.md)
 
-Service class defining a *standard* service’s properties for publishing.
+Service class defining a *standard* service's properties for publishing.
 
 
 
@@ -93,7 +93,7 @@ artifact(artifact)
 
 
 
-Define a service’s optional supported file artifact by name. A
+Define a service's optional supported file artifact by name. A
 convenience to calling `.artifacts(['file.png'])` with a list of one.
 
 
@@ -121,7 +121,7 @@ artifacts(artifacts)
 
 
 
-Defines a service’s optional supported file artifacts by name.
+Defines a service's optional supported file artifacts by name.
 
 
 ### Arguments
@@ -257,7 +257,7 @@ description(description)
 
 
 
-Set the service’s optional description.
+Set the service's optional description.
 
 
 ### Arguments
@@ -283,7 +283,7 @@ inputs(**inputs)
 
 
 
-Defines a service’s optional supported inputs by name and type.
+Defines a service's optional supported inputs by name and type.
 
 **Example:**
 
@@ -396,7 +396,7 @@ outputs(**outputs)
 
 
 
-Defines a service’s optional supported outputs by name and type.
+Defines a service's optional supported outputs by name and type.
 
 **Example:**
 
@@ -451,7 +451,7 @@ version(version)
 
 
 
-Set the service’s optional version.
+Set the service's optional version.
 
 
 ### Arguments

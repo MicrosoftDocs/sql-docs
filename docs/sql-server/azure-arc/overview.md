@@ -16,6 +16,8 @@ Azure Arc-enabled SQL Server extends Azure services to SQL Server instances host
 
 To enable Azure services, you must onboard a running SQL Server instance to Azure Arc. The onboarding will install a *Azure  extension for SQL Server* to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will create an Azure resource for each SQL Server instance.  You can see all the Arc-enabled SQL Server resources in the Azure portal under __Azure Arc > SQL Server__. The properties of this resource reflect a subset of the SQL Server configuration settings.
 
+Azure Arc-enabled SQL Server doesn't store any customer data.
+
 ## Architecture
 
 The SQL Server instance can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the [Connected Machine agent](/azure/azure-arc/servers/agent-overview). When you register the SQL Server instance, the agent is installed, and the machine is registered automatically.
@@ -43,10 +45,13 @@ Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 > [!NOTE]
-> Azure Arc-enabled SQL Server does not support container images with SQL Server.
-
-> [!NOTE]
-> SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances. 
+> Azure Arc-enabled SQL Server does not support the following configurations currently:
+> - SQL Server running in containers.
+> - SQL Server Failover Cluster Instances (FCI).
+> - SQL Server roles other than the Database Engine, such as Analysis Services (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).
+> - SQL Server editions: Express, Web, Business Intelligence.
+> - SQL Server 2008, SQL Server 2008 R2, and older.
+> - Installing the Arc agent and SQL Server extension cannot be done as part of sysprep image creation.
 
 ### Required permissions
 

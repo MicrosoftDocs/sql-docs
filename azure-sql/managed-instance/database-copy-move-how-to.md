@@ -51,7 +51,7 @@ This is the workflow when you copy or move your database:
 
 The following diagram shows the workflow for a move operation: 
 
-:::image type="content" source="media/database-copy-move-how-to/database-move-diagram-png.png" alt-text="Diagram showing the workflow of a move operation":::
+:::image type="content" source="media/database-copy-move-how-to/database-move-diagram.png" alt-text="Diagram showing the workflow of a move operation.":::
 
 
 
@@ -72,12 +72,15 @@ To copy or move your database, follow these steps:
 1. Go to your managed instance in the [Azure portal](https://portal.azure.com).
 1. Under **Data management**, select **Databases**, choose one or more databases, and then select either the **Copy** or **Move** options at the top navigation bar. Choosing **Move** drops the source database when the operation completes, whereas **Copy** leaves the source database online when the operation completes. Selecting either option opens the relative **Move Managed Database** or **Copy Managed Database** page. You can select additional databases to include in the operation once the page opens. 
 
-   :::image type="content" source="media/database-copy-move-how-to/start-move-copy-operation.png" alt-text="Screenshot of the Azure portal, databases page for Azure SQL Managed Instance, with move and copy highlighted. ":::
+   :::image type="content" source="media/database-copy-move-how-to/start-move-copy-operation.png" alt-text="Screenshot of the Azure portal, databases page for Azure SQL Managed Instance, with move and copy highlighted.":::
 
 1. Provide details for the source database and managed instance on the **Source details** tab. 
 1. Provide details for the destination managed instance on the **Destination details** tab. 
 1. Select **Review + Start** to validate your source and destination details, and then select **Start** to begin the operation. Selecting **Start** takes you back to the **Databases** page of your instance, where you can monitor the progress of the operation. 
 1. On the **Databases** page, check **Operation details** to view the status of your operation as **Move/Copy in progress**. If you need to cancel, you can select the **In progress**, choose the database of interest, and select **Cancel operation** to stop seeding, and drop the destination database. 
+
+   :::image type="content" source="media/database-copy-move-how-to/copy-in-progress.png" alt-text="Screenshot of the Azure portal, databases page for Azure SQL Managed Instance, showing copy in progress under operation details.":::
+
 1. Monitor the operation. After seeding finishes, the **Operation details** displays **Move/Copy ready for completion**. 
 1. Select **Ready for completion** to open the operation details pane, choose the database(s) you're ready to copy or move, and then select **Complete** once you want to finalize the operation and bring the destination database online. Changes made to the source database are replicated to the destination database during this time, until you select **Complete**. If you don't complete the operation within 24 hours, it's automatically canceled, and the destination database is dropped. Selecting **Complete** finalizes the operation and takes you back to the **Databases** page, where you can see the operation completed, and, if you chose move, the database is grayed out as it's now offline. 
 

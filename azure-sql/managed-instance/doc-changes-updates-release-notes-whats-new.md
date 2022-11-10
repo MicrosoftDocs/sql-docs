@@ -73,13 +73,13 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 ## November 2022 feature wave
 
-November 2022 introduced a wave of new features and passive benefits for Azure SQL Managed Instance. 
+November 2022 introduced a wave of new features and automatic benefits for Azure SQL Managed Instance. 
 
-The passive benefits in the feature wave include: 
+The benefits in the feature wave include: 
 
-- Fast Instance provisioning: a passive benefit that reduces the time it takes to deploy an instance. 
-- [Relaxed networking requirements](connectivity-architecture-overview.md): a passive benefit that simplifies the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
-- Enhanced virtual cluster: a passive benefit that improves the functionality of the underlying virtual cluster. 
+- Fast Instance provisioning: reduces the time it takes to deploy an instance. 
+- [Relaxed networking requirements](connectivity-architecture-overview.md): simplifies the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
+- Enhanced virtual cluster: improves the functionality of the underlying virtual cluster. 
 
 The new features introduced in the feature wave are: 
 

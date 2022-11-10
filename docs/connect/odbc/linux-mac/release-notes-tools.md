@@ -3,7 +3,6 @@ title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 author: David-Engel
 ms.author: v-davidengel
-manager: kenvh
 ms.reviewer: v-davidengel
 ms.date: 08/08/2022
 ms.prod: sql

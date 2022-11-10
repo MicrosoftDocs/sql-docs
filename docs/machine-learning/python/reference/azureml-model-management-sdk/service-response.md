@@ -6,7 +6,6 @@ description: "The ServiceResponse class is for SQL Machine Learning Services and
 keywords: "" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"
@@ -163,7 +162,7 @@ The name of the output.
 
 ### Returns
 
-The service output’s value.
+The service output's value.
 
 
 

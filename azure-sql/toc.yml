@@ -212,11 +212,8 @@
         href: database/transparent-data-encryption-byok-configure.md
       - name: Always Encrypted
         items: 
-        - name: Use the Azure key vault
-          href: database/always-encrypted-azure-key-vault-configure.md
-        - name: Use the certificate store
-          href: database/always-encrypted-certificate-store-configure.md
-
+        - name: Getting started with Always Encrypted
+          href: /sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started
   
     - name: Monitor & tune
       items: 
@@ -647,6 +644,8 @@
         href: database/block-crud-tsql.md
       - name: Azure Automation
         href: database/automation-manage.md
+      - name: Block geo-replication of Azure SQL Database backups
+        href: database/block-geo-redundant-backup-storage.md
       - name: Elastic jobs (preview)
         items:
         - name: Job automation with elastic jobs

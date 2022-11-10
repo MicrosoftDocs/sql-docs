@@ -3,7 +3,6 @@ title: In-place change of SQL Server version
 description: Learn how to change the version of your SQL Server virtual machine in Azure.
 author: ramakoni1
 ms.author: RamaKoni
-manager: ramakoni1
 ms.reviewer: sqlblt, daleche, mathoma
 ms.date: 06/08/2020
 ms.service: virtual-machines-sql

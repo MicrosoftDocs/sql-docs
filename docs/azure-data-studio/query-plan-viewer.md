@@ -13,6 +13,8 @@ ms.topic: conceptual
 
 Azure Data Studio supports capturing both estimated and actual query plans (currently in preview).  Query plans provide a graphical display of the data retrieval (or modification) method chosen by the SQL Server Query Optimizer.  This visual approach helps understand the performance characteristics of a query.
 
+[!INCLUDE [azure-data-studio-preview](../includes/azure-data-studio-preview.md)]
+
 ## Display - estimated plan
 
 To view the estimated plan for a query, highlight the specific query and select the Estimated Plan button.
@@ -38,7 +40,7 @@ From the context of a query plan there are multiple options available for furthe
    | ------------ | ------------------ | ------------------------------------------------- |
    | :::image type="content" source="media/query-plan-viewer/save-button-icon.png" alt-text="Screenshot of a Screenshot of a Save plan icon."::: | Save Plan File | Save the query plan as a .sqlplan file |
    | :::image type="content" source="media/query-plan-viewer/show-xml-icon.png" alt-text="Screenshot of a Show query plan XML icon."::: | Show Query Plan XML | View the query plan in XML format in a new window |
-   | :::image type="content" source="media/query-plan-viewer/open-query-icon.png" alt-text="Screenshot of a Open query icon."::: | Open Query | Open the plan’s query in a new window |
+   | :::image type="content" source="media/query-plan-viewer/open-query-icon.png" alt-text="Screenshot of a Open query icon."::: | Open Query | Open the plan's query in a new window |
    | :::image type="content" source="media/query-plan-viewer/zoom-in-icon.png" alt-text="Screenshot of a Zoom in icon."::: | Zoom In | Zoom in within plan |
    | :::image type="content" source="media/query-plan-viewer/zoom-out-icon.png" alt-text="Screenshot of a Zoom out icon."::: | Zoom Out | Zoom out within the plan |
    | :::image type="content" source="media/query-plan-viewer/zoom-to-fit-icon.png" alt-text="Screenshot of a Zoom to fit icon."::: | Zoom to fit | Size the plan to that of the window |

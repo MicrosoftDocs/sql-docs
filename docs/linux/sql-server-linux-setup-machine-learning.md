@@ -4,7 +4,6 @@ titleSuffix: SQL Server 2019 Machine Learning Services
 description: "Learn how to install SQL Server 2019 Machine Learning Services on Linux: Red Hat, Ubuntu, and SUSE."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-manager: rothja
 ms.date: 05/24/2022
 ms.topic: how-to
 ms.prod: sql

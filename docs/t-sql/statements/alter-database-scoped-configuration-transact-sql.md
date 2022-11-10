@@ -5,7 +5,7 @@ description: Enable several database configuration settings at the individual da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: katsmith, jovanpop, wiassaf
-ms.date: 09/30/2022
+ms.date: 11/01/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: reference
@@ -336,7 +336,7 @@ Allows you to enable or disable row mode memory grant feedback at the database s
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Allows you to disable memory grant feedback percentile for all query executions originating from the database. For complete information, see [Percentile and persistence mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback).
+Allows you to disable memory grant feedback percentile for all query executions originating from the database. Default is **ON**. For complete information, see [Percentile and persistence mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback).
 
 > [!NOTE]  
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
@@ -345,7 +345,7 @@ Allows you to disable memory grant feedback percentile for all query executions 
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
 
-Allows you to disable memory grant feedback persistence for all query executions originating from the database.  For complete information, see [Percentile and persistence mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback).
+Allows you to disable memory grant feedback persistence for all query executions originating from the database. Default is **ON**. For complete information, see [Percentile and persistence mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback).
 
 > [!NOTE]  
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
@@ -418,7 +418,7 @@ Allows you to enable or disable collection of the last query plan statistics (eq
 
 #### PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
-**Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 The `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` option determines how long (in minutes) the resumable index is being paused before being automatically aborted by the engine.
 
@@ -492,7 +492,7 @@ Enables or disables uploading ledger digests to Azure Blob Storage. To enable up
 
 #### FORCE_SHOWPLAN_RUNTIME_PARAMETER_COLLECTION = { ON | OFF }
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Causes SQL Server to generate a Showplan XML fragment with the ParameterRuntimeValue when using the lightweight query execution statistics profiling infrastructure or executing the `sys.dm_exec_query_statistics` DMV while troubleshooting long running queries.
 

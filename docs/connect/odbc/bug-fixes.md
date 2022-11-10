@@ -3,9 +3,8 @@ title: List of bugs fixed
 description: This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server.
 author: v-chojas
 ms.author: v-chojas
-manager: kenvh
 ms.reviewer: v-davidengel
-ms.date: 08/08/2022
+ms.date: 11/03/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -15,6 +14,13 @@ helpviewer_keywords:
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.1.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix VBS-NONE enclave attestation protocol.
+- Fix error when retrieving numeric column with Regional=Yes.
+- Fix intermittent lack of error when server is stopped during bcp out operation.
+- Fix error when stored procedure call contains unquoted string parameter.
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

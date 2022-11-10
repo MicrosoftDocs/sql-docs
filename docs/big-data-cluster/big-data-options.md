@@ -5,7 +5,7 @@ description: This article discusses migration strategies for SQL Server 2019 Big
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 02/22/2022
+ms.date: 10/05/2022
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.topic: conceptual
@@ -31,7 +31,7 @@ Related to the [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-
 
 The PolyBase scale-out groups feature of Microsoft SQL Server has been retired. Scale-out group functionality will be removed from the product in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. In-market SQL Server 2019, 2017, and 2016 will continue to support the functionality to the end of life of those products. PolyBase data virtualization will continue to be fully supported as a scale-up feature in SQL Server. 
 
-Hadoop (HDFS) external data sources will be retired for SQL Server PolyBase.
+Cloudera (CDP) and Hortonworks (HDP) Hadoop external data sources will also be retired for all in-market versions of SQL Server and will not be included in SQL Server 2022. Moving forward, support for external data sources will be limited to product versions in mainstream support by the respective vendor. You are advised encouraged to use the new object storage integration available in [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. 
 
 In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], users will need to configure their external data sources to use new connectors when connecting to Azure Storage. The table below summarizes the change: 
 

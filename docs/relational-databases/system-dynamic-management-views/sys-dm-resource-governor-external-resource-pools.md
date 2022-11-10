@@ -3,7 +3,6 @@ title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
 description: sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-manager: cgronlun
 ms.date: "08/06/2020"
 ms.prod: sql
 ms.technology: machine-learning-services

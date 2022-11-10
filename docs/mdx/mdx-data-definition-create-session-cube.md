@@ -151,7 +151,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
 -   When performing grouping on a cube dimension in a server cube, the grouping affects all cube dimensions based on the same dimension.  
   
 ## Example  
- The following example demonstrates creating a session-scoped version of the Adventure Works cube that contains the Reseller Sales Amount measure, the Reseller dimension, the Product dimension, the Geography dimension, and the Date dimension. Within this session cube, two groups are created; one group contains countries in Europe and one group contains groups in North America. This sample is a simplified version of a CREATE SESSION CUBE statement issued by Microsoft Excel when a user creates a custom grouping of members.  
+ The following example demonstrates creating a session-scoped version of the Adventure Works cube that contains the Reseller Sales Amount measure, the Reseller dimension, the Product dimension, the Geography dimension, and the Date dimension. Within this session cube, two groups are created; one group contains countries/regions in Europe and one group contains groups in North America. This sample is a simplified version of a CREATE SESSION CUBE statement issued by Microsoft Excel when a user creates a custom grouping of members.  
   
 ```  
 CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]   

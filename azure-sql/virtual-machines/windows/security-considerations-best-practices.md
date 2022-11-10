@@ -33,6 +33,7 @@ SQL Server features and capabilities provide a method of security at the data le
 - Leverage [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) to discover and mitigate potential database vulnerabilities, as well as detect anomalous activities that could indicate a threat to your SQL Server instance and database layer.
 - [Vulnerability Assessment](../../database/sql-vulnerability-assessment.md) is a part of [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) that can discover and help remediate potential risks to your SQL Server environment. It provides visibility into your security state, and includes actionable steps to resolve security issues.
 - Use [Azure confidential VMs](#confidential-vms) to reinforce protection of your data in-use, and data-at-rest against host operator access. Azure confidential VMs allow you to confidently store your sensitive data in the cloud and meet strict compliance requirements. 
+- If you're on SQL Server 2022, consider using [Azure Active Directory authentication](#azure-ad-authentication-preview) to connect to your instance of SQL Server. 
 - [Azure Advisor](/azure/advisor/advisor-security-recommendations) analyzes your resource configuration and usage telemetry and then recommends solutions that can help you improve the cost effectiveness, performance, high availability, and security of your Azure resources. Leverage Azure Advisor at the virtual machine, resource group, or subscription level to help identify and apply best practices to optimize your Azure deployments. 
 - Use [Azure Disk Encryption](/azure/virtual-machines/windows/disk-encryption-windows) when your compliance and security needs require you to encrypt the data end-to-end using your encryption keys, including encryption of the ephemeral (locally attached temporary) disk.
 - [Managed Disks are encrypted](/azure/virtual-machines/disk-encryption) at rest by default using Azure Storage Service Encryption, where the encryption keys are Microsoft-managed keys stored in Azure.
@@ -57,7 +58,6 @@ SQL Server features and capabilities provide a method of security at the data le
 [Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-introduction) enables Microsoft Defender for Cloud security features such as [vulnerability assessments](../../database/sql-vulnerability-assessment.md) and security alerts. See [enable Microsoft Defender for SQL](/azure/defender-for-cloud/defender-for-sql-usage) to learn more. 
 
 Use Azure Defender for SQL to discover and mitigate potential database vulnerabilities, and detect anomalous activities that may indicate a threat to your SQL Server instance and database layer. [Vulnerability Assessments](../../database/sql-vulnerability-assessment.md) are a feature of Microsoft Defender for SQL that can discover and help remediate potential risks to your SQL Server environment. It provides visibility into your security state, and it includes actionable steps to resolve security issues. Registering your SQL Server VM with the [SQL Server IaaS Agent Extension](sql-agent-extension-manually-register-single-vm.md) surfaces Microsoft Defender for SQL recommendations to the [SQL virtual machines resource](manage-sql-vm-portal.md) in the Azure portal.  
-
 
 ## Portal management
 
@@ -84,6 +84,33 @@ Azure confidential VMs leverage [AMD processors with SEV-SNP](/azure/confidentia
 For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confidential VM](sql-vm-create-portal-quickstart.md?tabs=confidential-vm). 
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](security-considerations-best-practices.md#azure-confidential-vms) to learn more. 
+
+## Azure AD authentication (Preview)
+
+Starting with SQL Server 2022, you can connect to SQL Server using one of the following Azure Active Directory (Azure AD) identity authentication methods: 
+
+- Azure AD Password
+- Azure AD Integrated
+- Azure AD Universal with Multi-Factor Authentication
+- Azure Active Directory access token 
+
+Using Azure AD with SQL Server on Azure VMs is currently in preview. 
+
+To enable Azure AD authentication, navigate to your [SQL virtual machines resource](manage-sql-vm-portal.md#security-configuration) in the Azure portal, select **Security Configuration** under **Settings** and then enable Azure AD authentication. Choose the type of identity you want to use to connect to your SQL Server instance, and then, if prompted, select the identity you want to use to authenticate to your instance. 
+
+Using Azure AD authentication with SQL Server on Azure VMs has the following prerequisites: 
+
+- Use SQL Server 2022. 
+- Register SQL VM with the [SQL Server Iaas Agent extension](sql-agent-extension-manually-register-single-vm.md). 
+- The identity you choose to authenticate to SQL Server has either the **Azure AD Directory Readers role** permission or the following three Microsoft Graph application permissions (app roles): `User.ReadALL`, `GroupMember.Read.All`, and `Application.Read.All`. 
+
+Consider the following limitations
+
+- Once Azure AD authentication is enabled, there is no way to disable it by using the Azure portal. 
+- Currently, enabling Azure AD authentication is only possible through the Azure portal. 
+- Currently, Azure AD authentication is only available to SQL Server VMs deployed to the public cloud. 
+
+
 
 ## Azure Advisor 
        
@@ -175,7 +202,7 @@ You don't want attackers to easily guess account names or passwords. Use the fol
 
 ## Auditing and reporting
 
-[Auditing with Log Analytics](/azure/azure-monitor/agents/data-sources-windows-events#configuring-windows-event-logs) documents events and writes to an audit log in a secure Azure BLOB storage account. Log Analytics can be used to decipher the details of the audit logs. Auditing gives you the ability to save data to a separate storage account and create an audit trail of all events you select. You can also leverage Power BI against the audit log for quick analytics of and insights about your data, as well as to provide a view for regulatory compliance. To learn more about auditing at the VM and Azure levels, see [Azure security logging and auditing](/azure/security/fundamentals/log-audit). 
+[Auditing with Log Analytics](/azure/azure-monitor/agents/data-sources-windows-events#configuring-windows-event-logs) documents events and writes to an audit log in a secure Azure Blob Storage account. Log Analytics can be used to decipher the details of the audit logs. Auditing gives you the ability to save data to a separate storage account and create an audit trail of all events you select. You can also leverage Power BI against the audit log for quick analytics of and insights about your data, as well as to provide a view for regulatory compliance. To learn more about auditing at the VM and Azure levels, see [Azure security logging and auditing](/azure/security/fundamentals/log-audit). 
 
 ## Virtual Machine level access
 

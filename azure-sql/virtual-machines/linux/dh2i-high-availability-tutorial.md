@@ -11,7 +11,7 @@ ms.topic: tutorial
 ms.custom: kr2b-contr-experiment
 ---
 
-# Tutorial: Setup a three node Always On availability group with DH2i DxEnterprise
+# Tutorial: Set up a three node Always On availability group with DH2i DxEnterprise
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 

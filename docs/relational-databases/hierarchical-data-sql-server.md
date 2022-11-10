@@ -200,7 +200,7 @@ CREATE TABLE SimpleDemo
 );
 ```  
   
- Now insert data for some continents, countries, states, and cities.  
+ Now insert data for some continents, countries/regions, states, and cities.  
   
 ```sql
 INSERT SimpleDemo  
@@ -244,7 +244,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Notice that the hierarchy has a valid structure, even though it isn't internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
+ Notice that the hierarchy has a valid structure, even though it isn't internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country or region. Users must decide if this type of hierarchy is appropriate for their use.  
   
  Add another row and select the results.  
   

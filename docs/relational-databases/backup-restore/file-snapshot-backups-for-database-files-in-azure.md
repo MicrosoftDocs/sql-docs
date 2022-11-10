@@ -1,6 +1,6 @@
 ---
 title: "File-Snapshot Backups for Database Files in Azure | Microsoft Docs"
-description: SQL Server file-snapshot backup uses Azure snapshots to provide fast backups & quicker restores for database files stored using the Azure Blob storage service.
+description: SQL Server file-snapshot backup uses Azure snapshots to provide fast backups & quicker restores for database files stored using Azure Blob Storage.
 ms.custom: ""
 ms.date: "05/23/2016"
 ms.prod: sql
@@ -143,7 +143,7 @@ GO
 ```  
   
 ## Viewing database backup file-snapshots  
- To view file-snapshots of the base blob for each database file, use the **sys.fn_db_backup_file_snapshots** system function. This system function enables you to view all backup file-snapshots of each base blob for a database stored using the Azure Blob Storage Service. A primary use case for this function is to identify backup file-snapshots of a database that remain when the backup file for a file-snapshot backup set is deleted using a mechanism other than the **sys.sp_delete_backup** system stored procedure. To determine the backup file-snapshots that are part of intact backup sets and the ones that are not part of intact backup sets, use the **RESTORE FILELISTONLY**  system stored procedure to list the file-snapshots belonging to each backup file. For more information, see [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ To view file-snapshots of the base blob for each database file, use the **sys.fn_db_backup_file_snapshots** system function. This system function enables you to view all backup file-snapshots of each base blob for a database stored using Azure Blob Storage. A primary use case for this function is to identify backup file-snapshots of a database that remain when the backup file for a file-snapshot backup set is deleted using a mechanism other than the **sys.sp_delete_backup** system stored procedure. To determine the backup file-snapshots that are part of intact backup sets and the ones that are not part of intact backup sets, use the **RESTORE FILELISTONLY**  system stored procedure to list the file-snapshots belonging to each backup file. For more information, see [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) and [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  The following example returns the list of all backup file-snapshots for the specified database.  
   

@@ -3,7 +3,6 @@ title: "sys.dm_exec_query_parallel_workers (Transact-SQL)"
 description: sys.dm_exec_query_parallel_workers (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-manager: ajayj
 ms.date: "05/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"

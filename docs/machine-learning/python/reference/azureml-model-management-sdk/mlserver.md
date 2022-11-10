@@ -6,7 +6,6 @@ description: "The MLServer class is for SQL Machine Learning Services and Machin
 keywords: "" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"
@@ -163,7 +162,7 @@ The web service name.
 
 ### opts
 
-The web service version (*version=’v1.0.1*).
+The web service version (*version='v1.0.1*).
 
 
 ### Returns

@@ -6,7 +6,6 @@ description: "Scores natural language text and assesses the probability the sent
 keywords: "transform, text, sentiment, nlp" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

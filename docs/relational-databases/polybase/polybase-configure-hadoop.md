@@ -42,7 +42,7 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 

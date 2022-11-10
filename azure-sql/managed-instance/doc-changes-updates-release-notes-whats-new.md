@@ -73,22 +73,30 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 ## November 2022 feature wave
 
-November 2022 introduced a wave of new features for Azure SQL Managed Instance:
+November 2022 introduced a wave of new features and passive benefits for Azure SQL Managed Instance. 
+
+The passive benefits in the feature wave include: 
 
 - Fast Instance provisioning: a passive benefit that reduces the time it takes to deploy an instance. 
 - [Relaxed networking requirements](connectivity-architecture-overview.md): a passive benefit that simplifies the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
-- Virtual cluster v2: a passive benefit that improves the functionality of the underlying virtual cluster. 
+- Enhanced virtual cluster: a passive benefit that improves the functionality of the underlying virtual cluster. 
+
+The new features introduced in the feature wave are: 
+
 - [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
-- Multi-AZ: a feature in preview that lets you deploy your managed instance across multiple availability zones and improve the availability of your service. 
+- [Multi-AZ](../database/high-availability-sla.md): a feature in preview that lets you deploy your managed instance across multiple availability zones and improve the availability of your service. 
 - [Managed DTC](distributed-transaction-coordinator-dtc.md): a feature in preview that lets you run distributed transactions in mixed environments. 
 
+
+
 ### How to get access to November 2022 feature wave
-Rollout of the November 2022 Feature Wave rollout will take several months. Initally only instances belonging to Dev/Test subscriptions will have access to the November 2022 feature wave. We will be onboarding other subscription types in the near future. 
 
-Moreover, the onboarding experience is different for the new instances and existing instances:
+Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months.
 
-- New instances created after November 2022 in new or empty subnets will automatically be enrolled in the feature wave and get access to all new features
-- Existing instances created prior to November 2022 can opt into the feature wave to unlock the new features
+The onboarding experience is different for new instances and existing instances:
+
+- New instances created after November 2022 in _new or empty subnets_ will automatically be enrolled in the feature wave and get access to all new benefits and features.
+- Existing instances created prior to November 2022 can opt into the feature wave to unlock the new benefits and features. 
 
 ## Documentation changes
 

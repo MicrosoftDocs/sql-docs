@@ -4,7 +4,7 @@ description: Returns information about all the waits encountered by threads that
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
-ms.date: 10/28/2022
+ms.date: 10/31/2022
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "reference"

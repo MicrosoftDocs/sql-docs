@@ -92,7 +92,7 @@ ms.author: chugu
 |Foreach Nodelist|Specify the source of the XML document and configure the XPath operation.|  
 |Foreach SMO|Specify the connection to a database and the SMO objects to enumerate.|  
 |Foreach HDFS File Enumerator|Specify a folder and the files to enumerate, the format of the file name of the retrieved files, and whether to traverse subfolders.|  
-|Foreach Azure Blob|Specify the Azure blob container that containers blobs to be enumerated.|  
+|Foreach Azure Blob|Specify the Azure Blob Storage container that contains blobs to be enumerated.|  
 |Foreach ADLS File|Specify the Azure Data Lake Store directory that contains the files to be enumerated.|
 |Foreach Data Lake Storage Gen2 File|Specify the Azure Data Lake Storage Gen2 directory that contains the files to be enumerated, along with other options.|
 

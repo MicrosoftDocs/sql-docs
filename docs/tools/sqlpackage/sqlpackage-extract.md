@@ -101,8 +101,8 @@ sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\
 
 |Property|Value|Description|
 |---|---|---|
-|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure blob storage endpoint. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
-|**/p:**|AzureStorageContainer=(STRING)|Azure blob storage container. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure Blob Storage endpoint. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageContainer=(STRING)|Azure Blob Storage container. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
 |**/p:**|AzureStorageKey=(STRING)|Azure storage account key. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
 |**/p:**|AzureStorageRootPath=(STRING)|Storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|

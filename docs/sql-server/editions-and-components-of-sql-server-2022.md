@@ -146,7 +146,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 |Always On failover cluster instances<sup>4</sup>|Yes|Yes|No|No|No|
 |Always On availability groups<sup>5</sup>|Yes|No|No|No|No|
 |Basic availability groups<sup>6</sup>|No|Yes|No|No|No|
-|Contained availability groups<sup>8</sup>|Yes|No|No|No|No|
+|Contained availability groups<sup>7</sup>|Yes|No|No|No|No|
 |Distributed availability groups |Yes|No|No|No|No|
 |Automatic read write connection re-routing |Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
@@ -163,8 +163,8 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 |Backup and restore to S3-compliant object storage over REST API|Yes|Yes|Yes|No|No|
 |Snapshot backup |Yes|Yes|Yes|Yes|Yes|
 |Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
-|Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
-|Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
+|Failover servers for disaster recovery|Yes|Yes|No|No|No|
+|Failover servers for high availability|Yes|Yes|No|No|No|
 
 <sup>1</sup> For more information on installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core,  see [Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).
 
@@ -178,9 +178,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 
 <sup>6</sup> Standard edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic availability groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 
-<sup>7</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
-
-<sup>8</sup> Standard and Web editions support a single database contained availability group.
+<sup>7</sup> Standard and Web editions support a single database contained availability group.
 
 ## <a id="RDBMSSP"></a> RDBMS scalability and performance
 
@@ -422,13 +420,6 @@ For information about the Business Intelligence Client features supported by the
 | --- | :---: | :---: | :---: | :---: | :---: |
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|
 |Database mail|Yes|Yes|Yes|No|No|
-
-## Other components
-
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|
-| --- | :---: | :---: | :---: | :---: | :---: |
-|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No|
-|StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|
 
 ## Next steps
 

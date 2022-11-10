@@ -3,7 +3,6 @@ title: "sys.external_libraries (Transact-SQL)"
 description: sys.external_libraries (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-manager: cgronlun
 ms.date: 06/25/2020
 ms.prod: sql
 ms.technology: machine-learning

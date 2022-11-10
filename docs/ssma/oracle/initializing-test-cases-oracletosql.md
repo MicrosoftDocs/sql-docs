@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Initializing Test Cases (OracleToSQL)
 At this step you specify the initial information for the new test case.  

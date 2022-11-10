@@ -141,7 +141,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 |Azure extension for SQL Server |Yes|Yes|No|No|No|
 |Pay-as-you-go billing |Yes|Yes|No|No|No|
 
-<sup>1</sup>These features are governed their respective [Lifecycle Policies](/lifecycle/products/sql-server-2022).
+<sup>1</sup>These features are governed by their respective [Lifecycle Policies](/lifecycle/products/sql-server-2022).
 
 <sup>2</sup> Configure in portal.
 

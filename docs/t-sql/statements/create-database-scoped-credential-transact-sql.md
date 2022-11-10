@@ -80,17 +80,17 @@ Information about database scoped credentials is visible in the [sys.database_sc
 
 Here are some applications of database scoped credentials:
 
-- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] uses a database scoped credential to access non-public Azure blob storage or Kerberos-secured Hadoop clusters with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] uses a database scoped credential to access non-public Azure Blob Storage or Kerberos-secured Hadoop clusters with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure blob storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md). For more information about Azure Synapse storage authentication, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
+- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] uses a database scoped credential to access non-public Azure Blob Storage with PolyBase. To learn more, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md). For more information about Azure Synapse storage authentication, see [Use external tables with Synapse SQL](/azure/synapse-analytics/sql/develop-tables-external-tables).
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for its global query feature. This is the ability to query across multiple database shards.
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials to write extended event files to Azure blob storage.
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials to write extended event files to Azure Blob Storage.
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](/azure/azure-sql/database/elastic-pool-overview)
 
-- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure blob storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure Blob Storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 ## Permissions
 
@@ -98,7 +98,7 @@ Requires **CONTROL** permission on the database.
 
 ## SQL Server 2022
 
-Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] a new type of connector was introduced, using REST-API calls replacing HADOOP.  For Azure Blog Storage and Azure Data Lake Gen 2 the only supported authentication method supported is `SHARED ACCESS SIGNATURE`.
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] a new type of connector was introduced, using REST-API calls replacing HADOOP.  For Azure Blob Storage and Azure Data Lake Gen 2 the only supported authentication method supported is `SHARED ACCESS SIGNATURE`.
 
 Please refer to [create external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) for more information.
 

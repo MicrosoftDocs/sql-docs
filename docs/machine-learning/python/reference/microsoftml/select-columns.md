@@ -6,7 +6,6 @@ description: "Selects a set of columns to retrain, dropping all others."
 keywords: "transform, schema" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

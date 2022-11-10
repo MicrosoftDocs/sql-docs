@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 
 # Connecting to SQL Server (OracleToSQL)

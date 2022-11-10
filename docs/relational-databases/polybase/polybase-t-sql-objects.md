@@ -1,6 +1,6 @@
 ---
 title: "PolyBase Transact-SQL reference"
-description: "Use PolyBase to query your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, MongoDB, or CSV files."
+description: "Use PolyBase to query your external data in Hadoop, Azure Blob Storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, MongoDB, or CSV files."
 ms.date: 07/25/2022
 ms.prod: sql
 ms.technology: polybase
@@ -143,7 +143,7 @@ Finally, manually create a statistics object on the new external table.
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
 ```  
 
-## Create external tables for Azure blob storage  
+## Create external tables for Azure Blob Storage  
 
 Applies to: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.
 
@@ -163,7 +163,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 Then, create a database scoped credential. `IDENTITY` in this case is any string, as this is not used for authentication to Azure storage. `SECRET` is the Azure storage account key. For more information, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 ```sql  
--- Create a database scoped credential  for Azure blob storage.  
+-- Create a database scoped credential  for Azure Blob Storage.  
 -- IDENTITY: any string (this is not used for authentication to Azure storage).  
 -- SECRET: your Azure storage account key.  
   

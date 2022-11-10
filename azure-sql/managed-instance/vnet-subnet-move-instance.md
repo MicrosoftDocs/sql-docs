@@ -39,18 +39,18 @@ Before you move your managed instance, confirm the subnet is marked as **Ready f
 
 In the **Virtual network** UI of the Azure portal, virtual networks that meet the prerequisites for a managed instance are categorized as **Ready for Managed Instance**. Virtual networks that have subnets with managed instances already deployed to them display an SQL Managed Instance icon before the virtual network name. Empty subnets that are ready for a managed instance display a Virtual network subnet icon. 
 
-Subnets that are marked as **Not ready** don't fullfill all the requirements for SQL Managed Instance deployment. Use the info icon on the right of the subnet name to learn why the subnet is not ready and if subnet can meet [network requirements](connectivity-architecture-overview.md#service-aided-subnet-configuration). This includes:
+Subnets that are marked as **Not ready** don't fulfill all the requirements for SQL Managed Instance deployment. Use the info icon on the right of the subnet name to learn why the subnet isn't ready and if subnet can meet [network requirements](connectivity-architecture-overview.md#service-aided-subnet-configuration). This requirements include:
 
 - delegating to the Microsoft.Sql/managedInstances resource provider
 - attaching a route table
 - attaching a network security group
 
-In the case that subnet is part of some other virtual network, additional requirement is
+In the case that subnet is part of some other virtual network, extra requirement is
  - [bi-directional peering](/azure/virtual-network/virtual-network-peering-overview) between current and destination virtual network.
 
 After all requirements are satisfied, the subnet moves from the **Not ready** to the **Ready for Managed Instance** category and can be used for a managed instance. 
 
-Subnet that is already in use (subnets used for instance deployments cannot contain other resources), or the subnet has a different DNS zone (a cross-subnet instance move limitation) are always part of the **Not ready** category.
+Subnet that is already in use (subnets used for instance deployments can't contain other resources), or the subnet has a different DNS zone (a cross-subnet instance move limitation) are always part of the **Not ready** category.
 
 > [!div class="mx-imgBorder"]
 > ![Screenshot of the Azure SQL Managed Instance subnet dropdown](./media/vnet-subnet-move-instance/subnet-grouping-per-state.png)
@@ -70,10 +70,10 @@ Depending on the subnet state and designation, the following adjustments may be 
 Consider the following limitations when choosing a destination subnet for an existing instance:
 - SQL Managed Instance can be moved to the subnet that is either:
     - In the same virtual network as the currently used,
-    - In a [peered virtual network](/azure/virtual-network/tutorial-connect-virtual-networks-portal), in case of moving to a subnet in another virtual network.
+    - In a [peered virtual network](/azure/virtual-network/tutorial-connect-virtual-networks-portal), if moving to a subnet in another virtual network.
 
-- The DNS zone of the instances in destination subnet must match the DNS zone of the instasnce being moved. This applies if you plan to move to a non-empty subnet.
-    - You can specially prepare the destination subnet to retain the DNS zone of SQL Managed Instance that is being moved. This can be done by creating new SQL Managed Instance in an empty subnet and providing dnsZonePartner parameter in create request. This [parameter as a value accepts the id of SQL Managed Instance](api-references-create-manage-instance.md), and in this case you can use the instance that would later be moved to the new subnet<sup>1</sup>.
+- The DNS zone of the instances in destination subnet must match the DNS zone of the instance being moved. This limitation applies if you plan to move to a non-empty subnet.
+    - You can specially prepare the destination subnet to retain the DNS zone of SQL Managed Instance that is being moved. Preparation can be done by creating new SQL Managed Instance in an empty subnet and providing dnsZonePartner parameter in create request. This [parameter as a value accepts the ID of SQL Managed Instance](api-references-create-manage-instance.md), and in this case you can use the instance that would later be moved to the new subnet<sup>1</sup>.
 
 > [!Note]
 > <sup>1</sup> Apart from this approach there is no other way for you to dictate the DNS zone of SQL Managed Instance since it is randomly generated. There also, as of now, doesn't exist a way to update the DNS zone of an existing SQL Managed Instance.
@@ -83,7 +83,7 @@ Consider the following limitations when choosing a destination subnet for an exi
     - The target subnet needs to have the same security rules needed for failover group replication as the source subnet: 
 Open both inbound and outbound ports 5022 and the range 11000~11999 in the Network Security Group (NSG) for connections from the other managed instance subnet (the one that holds the failover group replica) to allow replication traffic between the two instances. 
     - The target subnet can't have an overlapping address range with the subnet that holds the secondary instance replica of the failover group. 
-For example, if MI1 is in subnet S1, the secondary instance in the failover group is MI2 in subnet S2, and we want to move MI1 to subnet S3, subnet S3 can't have an overlapping address range with subnet S2. 
+For example, if MI1 is in subnet S1, the secondary instance in the failover group is MI2 in subnet S2. We want to move MI1 to subnet S3. Subnet S3 can't have an overlapping address range with subnet S2. 
 
 To learn more about configuring the network for auto-failover groups, review [Enable geo-replication between managed instances](auto-failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances). 
 
@@ -154,7 +154,7 @@ $sqlMIResourceVnetName = 'vnet-name-of-sql-mi'
 $destinationSubnetName = 'name-of-the-destination-subnet-for-sql-mi'
 ```
 
-Skip this command if your subnet already has instances deployed to it. If you are using a new subnet, use the following Azure PowerShell command to prepare your subnet: 
+Skip this command if your subnet already has instances deployed to it. If you're using a new subnet, use the following Azure PowerShell command to prepare your subnet: 
 
 ```powershell-interactive
 ### PART 2 - PREPARE DESTINATION SUBNET

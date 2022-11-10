@@ -737,7 +737,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-### <a id="restore_snapshot"></a> L. Restore from snapshot backup
+### <a id="snapshot_backup"></a> L. Restore from snapshot backup
 
 Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
 

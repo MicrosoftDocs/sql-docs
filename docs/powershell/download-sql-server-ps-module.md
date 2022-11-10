@@ -97,7 +97,7 @@ Update-Module -Name SqlServer -AllowClobber
 
 You can use the `Update-Module` command to install the newest version of the SQLServer PowerShell module, but that doesn't remove older versions. It installs the newer version side by side to allow you the ability to experiment with the latest version, yet still have older modules installed.
 
-However, if you don’t want to keep older module versions, then you can use the `Uninstall-Module` command to remove previous versions.
+However, if you don't want to keep older module versions, then you can use the `Uninstall-Module` command to remove previous versions.
 
 You can use the following command to list if more than one version is installed:
 

@@ -146,7 +146,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Parentheses delimiting *expression* in TOP are required in INSERT, UPDATE, and DELETE statements. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  *table_alias*  
- The alias specified in the FROM clause representing the table or view from which the rows are to be updated.  
+ The alias specified in the UPDATE clause representing the table or view from which the rows are to be updated.  
   
  *server_name*  
  Is the name of the server (using a linked server name or the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server name) on which the table or view is located. If *server_name* is specified, *database_name* and *schema_name* are required.  

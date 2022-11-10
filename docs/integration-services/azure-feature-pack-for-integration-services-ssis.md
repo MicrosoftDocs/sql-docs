@@ -204,7 +204,7 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 #### Bugfixes
 
-1. When accessing Azure blob storage and the machine running SSIS is in a non en-US locale, package execution will fail with error message "String not recognized as a valid DateTime value".
+1. When accessing Azure Blob Storage and the machine running SSIS is in a non en-US locale, package execution will fail with error message "String not recognized as a valid DateTime value".
 1. For Azure Storage Connection Manager, secret is required (and unused) even when Data Factory managed identity is used to authenticate.
 
 ### Version 1.19.0
@@ -232,7 +232,7 @@ This is a hotfix version released for SQL Server 2019 only.
 
 #### Bugfixes
 
-1. In certain cases, package execution reports "Error: Could not load file or assembly ‘Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed’ or one of its dependencies."
+1. In certain cases, package execution reports "Error: Could not load file or assembly 'Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies."
 
 ### Version 1.15.0
 

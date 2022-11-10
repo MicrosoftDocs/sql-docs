@@ -17,7 +17,7 @@ ms.custom: seo-dt-2019
 ---
 # SQL Server Express LocalDB Header and Version Information
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  There is no separate header file for the SQL Server Express LocalDB instance API; the LocalDB function signatures and error codes are defined in the SQL Server Native Client header file (sqlncli.h). To use the LocalDB instance API, you must include the sqlncli.h header file in your project.  
+  There is no separate header file for the SQL Server Express LocalDB instance API; the LocalDB function signatures and error codes are defined in the SQL Server Native Client header file (msoledbsql.h). To use the LocalDB instance API, you must include the msoledbsql.h header file in your project.  
   
 ## LocalDB Versioning  
  The LocalDB installation uses a single set of binaries per major SQL Server version. These LocalDB versions are maintained and patched independently. This means that the user has to specify which LocalDB baseline release (that is, major SQL Server version) he or she will be using. The version is specified in the standard version format defined by the .NET Framework **System.Version** class:  
@@ -70,15 +70,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
  The section of code enabled by this constant provides an implementation of proxies for each of the LocalDB APIs. The proxy implementations use a common function to bind to entry points in the latest installed **SqlUserInstance** DLL, and then forward the requests.  
   
- The proxy functions are enabled only if the constant LOCALDB_DEFINE_PROXY_FUNCTIONS is defined in the user code before including the sqlncli.h file. The constant should be defined in only one source module (.cpp file) because it defines external function names for all of the API entry points. It provides an implementation of proxies for each of the LocalDB APIs.  
+ The proxy functions are enabled only if the constant LOCALDB_DEFINE_PROXY_FUNCTIONS is defined in the user code before including the msoledbsql.h file. The constant should be defined in only one source module (.cpp file) because it defines external function names for all of the API entry points. It provides an implementation of proxies for each of the LocalDB APIs.  
   
  The following code example shows how to use the macro from the native C++ code:  
   
 ```  
 // Define the LOCALDB_DEFINE_PROXY_FUNCTIONS constant to enable the LocalDB proxy functions   
-// The #define has to take place BEFORE the API header file (sqlncli.h) is included  
+// The #define has to take place BEFORE the API header file (msoledbsql.h) is included  
 #define LOCALDB_DEFINE_PROXY_FUNCTIONS  
-#include <sqlncli.h>  
+#include <msoledbsql.h>  
 ...  
 HRESULT hr = S_OK;  
   

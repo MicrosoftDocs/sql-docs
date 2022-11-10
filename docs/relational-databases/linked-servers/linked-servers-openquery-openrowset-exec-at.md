@@ -85,9 +85,11 @@ The following example uses a pass-through `SELECT` query to select the rows with
 
 ```sql
 SELECT a.*
-FROM OPENROWSET('SQLNCLI', [linkedserver],
+FROM OPENROWSET('MSOLEDBSQL', [linkedserver],
      'SELECT * FROM AdventureWorksLT.SalesLT.Customer') AS a;
 ```
+
+[!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
 ### C. Execute a SELECT pass-through query with EXECUTE AT
 

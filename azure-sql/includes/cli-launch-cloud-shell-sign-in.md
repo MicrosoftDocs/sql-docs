@@ -1,7 +1,6 @@
 ---
 author: dbradish-microsoft
 ms.author: dbradish
-manager: barbkess
 ms.date: 01/05/2022
 ms.topic: include
 ms.custom: devx-track-azurecli

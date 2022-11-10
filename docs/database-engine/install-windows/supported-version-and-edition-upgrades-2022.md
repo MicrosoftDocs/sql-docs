@@ -43,8 +43,8 @@ You can upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUD
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports upgrade from the following versions of SQL Server:
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 or later
-- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 or later
-- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 or later
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3 or later
+- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP3 or later
 - [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 - [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
 

@@ -33,10 +33,12 @@ This topic discusses guidance on calling natively compiled stored procedures fro
 - SqlClient does not support the retrieval of schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure (`CommandType.SchemaOnly`).
   - Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### SQL Server Native Client
+### Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server
 
 - Versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do not support the retrieval of schema-only information (metadata discovery) about the result sets returned by a natively compiled stored procedure.
 - Instead, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
+- This sample was originally written for the SQL Server Native Client (sqlncli.h) but has been updated to use the Microsoft OLE DB Driver (msoledbsql.h) for SQL Server. [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
+
 
 ### ODBC
 
@@ -185,7 +187,7 @@ The following is the C code listing.
 #include <windows.h>  
 #include "sql.h"  
 #include "sqlext.h"  
-#include "sqlncli.h"  
+#include "msoledbsql.h"  
   
 // cardinality of order item related array variables
 #define ITEM_ARRAY_SIZE 20  

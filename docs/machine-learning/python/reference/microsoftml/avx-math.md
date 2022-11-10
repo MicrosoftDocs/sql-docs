@@ -6,7 +6,6 @@ description: "Implementation accelerated with AVX instructions."
 keywords: "neural network, math, avx" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

@@ -19,8 +19,6 @@ monikerRange: "= sql-server-ver16"
 
 This article describes requirements, limitations and known issues for [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)].
 
-Complete details about licensing are in `License Terms` folder on the installation media.
-
 ## Hardware and software requirements
 
 For hardware and software requirements, see [SQL Server 2022: Hardware and software requirements](install/hardware-and-software-requirements-for-installing-sql-server-2022.md).
@@ -79,6 +77,10 @@ Windows Server 2022 was released with VCRuntime version 14.28.29914.
 ### Query Store for secondary replicas
 
 [Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
+
+### RPC calls fail with Encrypt=Strict
+- **Issue and customer impact**: Due to defect in TDS 8.0 protocol implementation RPC calls would fail if Encrypt option is set to Strict in connection string. Example would be running "sp_who" stored procedure.
+- **Applies to**: [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] RTM
 
 ## Build number
 

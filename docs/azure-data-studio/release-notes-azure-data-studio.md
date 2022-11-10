@@ -39,8 +39,8 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Table Designer | New checkbox added, "Preview Database Updates", when making database changes to ensure that users are aware of potential risks prior to updating the database.|
 | Table Designer | "Move Up" and "Move Down" buttons added to support column reordering for Primary Keys. |
 | Query Plan Viewer | Announcing the General Availability of the Query Plan Viewer in Azure Data Studio. |
-| Query Plan Viewer | Added support for identification of most expensive operator(s) in a plan. |
-| Query Plan Viewer | Updates were made to the properties window to allow for full display of text upon hovering over a cell. Full text can also be copied. |
+| Query Plan Viewer | Introduced the ability to identify the most expensive operator in plan, based on user-selected metric (e.g. cost, elapsed time). |
+| Query Plan Viewer | Updates were made to the properties window to allow for full display of text when hovering over a cell, and text can now be copied to the clipboard. |
 | Query Plan Viewer | Implemented filter functionality in the Properties pane for an execution plan. |
 | Query Plan Viewer | Added support for collapsing and expanding all subcategories within the Plan Comparison Properties window. |
 | Query History Extension | Announcing the General Availability of the SQL History Extension. |

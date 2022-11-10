@@ -72,19 +72,6 @@ The following table describes the editions of [!INCLUDE[ssNoVersion](../includes
 
 <sup>1</sup> Unlimited virtualization is available on Enterprise edition for customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). Deployments must comply with the licensing guide. For more information, see our pricing and licensing page.
 
-## Use SQL Server with client/server applications
-
-You can install just the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applications.
-
-The client tools option installs the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features: backward compatibility components, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], connectivity components, management tools, software development kit, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online components. For more information, see  [Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../database-engine/install-windows/install-sql-server.md).
-
-### Run with IIS
-
-On an internet server, such as a server that is running Internet Information Services (IIS), you will typically install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client tools. Client tools include the client connectivity components used by an application connecting to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-> [!NOTE]  
-> Although you can install an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a computer that is running IIS, this is typically done only for small Web sites that have a single server computer. Most Web sites have their middle-tier IIS systems on one server or a cluster of servers, and their databases on a separate server or federation of servers.
-
 ## Choose SQL Server features
 
 Use the Feature Selection page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation Wizard to select the components to include in an installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, none of the features in the tree are selected.
@@ -131,6 +118,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 ## <a id="ACS"></a> Azure connected services
 
+SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/azure/synapse-analytics/), [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/), and [Microsoft Purview](/purview/).
+
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
 |Azure Synapse Link <sup>1</sup>|Yes|Yes|Yes|No|No|
@@ -138,10 +127,15 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Microsoft Purview access policies <sup>1</sup>|Yes|Yes|Yes<sup>2</sup>|Yes<sup>2</sup>|Yes<sup>2</sup>|
 |Azure extension for SQL Server |Yes|Yes|No|No|No|
 |Pay-as-you-go billing |Yes|Yes|No|No|No|
+|Azure Active Directory integration|Yes|Yes|Yes| Yes | Yes |
+|Hybrid backup to Microsoft Azure (backup to URL)|Yes|Yes|Yes|No|No|
+|Failover servers for disaster recovery in Azure<sup>3</sup>|Yes|Yes|No|No|No|
 
-<sup>1</sup>These features are governed their respective [lifecycle policies](/lifecycle/products/sql-server-2022).
+<sup>1</sup>These features are governed by their respective [Lifecycle Policies](/lifecycle/products/sql-server-2022).
 
-<sup>2</sup> Configure in portal.
+<sup>2</sup> Configure in Azure portal.
+
+<sup>3</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
 
 ## RDBMS high availability
 
@@ -169,13 +163,11 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Microsoft Azure (backup to URL)|Yes|Yes|Yes|No|No|
 |Backup and restore to S3-compliant object storage over REST API|Yes|Yes|Yes|No|No|
 |Snapshot backup |Yes|Yes|Yes|Yes|Yes|
 |Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
-|Failover servers for disaster recovery in Azure<sup>7</sup>|Yes|Yes|No|No|No|
 
 <sup>1</sup> For more information on installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core,  see [Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).
 
@@ -238,7 +230,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Advanced Vector Extension (AVX) 512 integration|Yes|No|No|No|No|
 |Integrated acceleration & offloading (hardware)|Yes|No|No|No|No|
 |Integrated acceleration & offloading (software)|Yes|Yes|No|No|No|
-|Azure Active Directory integration|Yes|Yes|Yes| Yes | Yes |
 |System page latch concurrency enhancements |Yes|Yes|Yes|Yes|Yes|
 
 

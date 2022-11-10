@@ -36,7 +36,7 @@ During execution, queries frequently acquire and release locks on the resources 
   
 - The lock manager won't use more than 60 percent of the memory available to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and the threshold has already been met.
 
-- You have set up the option **locks** of the system stored procedure [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to a non-default, non-dynamic value.
+- You have set up the configuration option [locks](/sql/database-engine/configure-windows/configure-the-locks-server-configuration-option) of the system stored procedure [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to a non-default, non-dynamic value.
 
 - You have enabled trace flags [1211](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1211), [1224](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1224), or both on your SQL Server to control lock escalation behavior, and you're executing queries that require many locks.
   
@@ -71,7 +71,7 @@ During execution, queries frequently acquire and release locks on the resources 
   
     Take the highest session id, and terminate it by using the [KILL](/sql/t-sql/language-elements/kill-transact-sql) command.  
 
-- If you're using a non-default value for the `locks` configuration option, use the system stored procedure `sp_configure` to change the value of locks to its default setting by using the following statement:
+- If you're using a non-default value for `locks`, use `sp_configure` to change the value of `locks` to its default setting by using the following statement:
 
     ```sql
     EXEC sp_configure 'locks', 0

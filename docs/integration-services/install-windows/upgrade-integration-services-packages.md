@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: erikre
 ---
 # Upgrade Integration Services Packages
 

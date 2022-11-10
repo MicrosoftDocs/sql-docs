@@ -127,10 +127,15 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 |Microsoft Purview access policies <sup>1</sup>|Yes|Yes|Yes<sup>2</sup>|Yes<sup>2</sup>|Yes<sup>2</sup>|
 |Azure extension for SQL Server |Yes|Yes|No|No|No|
 |Pay-as-you-go billing |Yes|Yes|No|No|No|
+|Azure Active Directory integration|Yes|Yes|Yes| Yes | Yes |
+|Hybrid backup to Microsoft Azure (backup to URL)|Yes|Yes|Yes|No|No|
+|Failover servers for disaster recovery in Azure<sup>3</sup>|Yes|Yes|No|No|No|
 
 <sup>1</sup>These features are governed by their respective [Lifecycle Policies](/lifecycle/products/sql-server-2022).
 
-<sup>2</sup> Configure in portal.
+<sup>2</sup> Configure in Azure portal.
+
+<sup>3</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
 
 ## RDBMS high availability
 
@@ -158,13 +163,11 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Microsoft Azure (backup to URL)|Yes|Yes|Yes|No|No|
 |Backup and restore to S3-compliant object storage over REST API|Yes|Yes|Yes|No|No|
 |Snapshot backup |Yes|Yes|Yes|Yes|Yes|
 |Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
-|Failover servers for disaster recovery in Azure<sup>7</sup>|Yes|Yes|No|No|No|
 
 <sup>1</sup> For more information on installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core,  see [Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).
 
@@ -227,7 +230,6 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 |Advanced Vector Extension (AVX) 512 integration|Yes|No|No|No|No|
 |Integrated acceleration & offloading (hardware)|Yes|No|No|No|No|
 |Integrated acceleration & offloading (software)|Yes|Yes|No|No|No|
-|Azure Active Directory integration|Yes|Yes|Yes| Yes | Yes |
 |System page latch concurrency enhancements |Yes|Yes|Yes|Yes|Yes|
 
 

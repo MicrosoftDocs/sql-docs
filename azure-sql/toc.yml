@@ -644,6 +644,8 @@
         href: database/block-crud-tsql.md
       - name: Azure Automation
         href: database/automation-manage.md
+      - name: Block geo-replication of Azure SQL Database backups
+        href: database/block-geo-redundant-backup-storage.md
       - name: Elastic jobs (preview)
         items:
         - name: Job automation with elastic jobs

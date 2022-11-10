@@ -36,7 +36,7 @@ During execution, queries frequently acquire and release locks on the resources 
   
 - The lock manager won't use more than 60 percent of the memory available to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and the threshold has already been met.
 
-- You have set up the [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) option **locks** to a non-default, non-dynamic value.
+- You have set up the option **locks** of the system stored procedure [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to a non-default, non-dynamic value.
 
 - You have enabled trace flags [1211](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1211), [1224](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1224), or both on your SQL Server to control lock escalation behavior, and you're executing queries that require many locks.
   
@@ -60,7 +60,7 @@ During execution, queries frequently acquire and release locks on the resources 
 
   - If you have configured **max server memory**, increase the **max server memory** setting.
   
-- If you suspect that the lock manager has used the maximum amount of available memory, identify the transaction that is holding the most locks and terminate it. The following script will identify the transaction with the most locks:  
+- If you suspect that the lock manager has used the maximum amount of available memory, identify the transaction that is holding the most locks and terminate it. The following script will identify the transaction that has the most locks:  
   
     ```sql
     SELECT request_session_id, COUNT (*) num_locks  

@@ -27,16 +27,13 @@ Auto-failover groups for SQL Managed Instance support only one replica - the rep
 
 ## Cost breakdown
 
-For replicas designated as standby, Microsoft provides you the same number of vCores as the primary instance without charging you SQL Server licensing costs for those vCores. The instance is billed for the entire hour, even if the state is changed in the middle of the hour. 
+For replicas designated as standby, Microsoft does not charge you SQL Server licensing costs for the vCores used by the secondary standby replica. The instance is billed for the entire hour, even if the state is changed in the middle of the hour. 
 
-The benefit translates differently between customers using the pay-as-you-go model vs. customers using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md). Pay-as-you-go customers receive an equal number of vCores as the primary instance for free that are then discounted from their invoice, while customers using the AHB have an equal number of vCores as the primary instance uses returned to their licensing pool. 
+The benefit translates differently between customers using the pay-as-you-go model vs. customers using the [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md). Pay-as-you-go customers see the vCores discounted from their invoice, while customers using the AHB for the standby replica have an equal number of vCores as the secondary replica uses returned to their licensing pool. 
 
-For example, as a pay-as-you go customer, if you have 16 vCores assigned to the primary instance, you'll see a discount for 16 vCores from your invoice when you designate your secondary instance as standby only. Alternatively, if you have 16 AHB licenses, and you deploy two managed instances to a failover group with 8 vCores each, you'll get an extra 8 vCores for free in your license pool to use with other Azure SQL deployments. 
+For example, as a pay-as-you go customer, if you have 16 vCores assigned to the secondary instance, you'll see a discount for 16 vCores from your invoice when you designate your secondary instance as standby only. Alternatively, if you have 16 AHB licenses, and you deploy two managed instances to a failover group with 8 vCores each, you'll get 8 vCores returned your license pool to use with other Azure SQL deployments. 
 
-However, if you have only have eight AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration won't be charged for the vCores used by the secondary instance and will also see 8 vCores subtracted from their invoice. 
-
-
-
+However, if you have only have eight AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration won't be charged for the vCores used by the secondary instance and will also see 8 vCores subtracted from their invoice.
 
 ## Functional capabilities 
 

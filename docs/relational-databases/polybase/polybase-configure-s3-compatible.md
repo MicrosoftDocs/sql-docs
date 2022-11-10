@@ -23,7 +23,7 @@ This article explains how to use PolyBase to query external data in S3-compatibl
 
 Basic Authentication, also known as static credentials, requires the user to store the `access key id` and `secret key id` in SQL Server, it is up to the user to explicitly revoke and rotate the credentials whenever needed. Fine-grain access control would require the administrator to set up static credentials for each login, this approach can be challenging when dealing with dozens or hundreds of unique credentials.
 
-Pass-through (STS) authorization offers a solution for these problems by enabling the use of SQL Server own user's identities to access the S3-compatible object storage. S3-compatible object storages has the ability of assigning a temporary credential through the use of Secure Token Service (STS). These credentials are short termed and dynamically generated. 
+Pass-through (STS) authorization offers a solution for these problems by enabling the use of SQL Server own user's identities to access the S3-compatible object storage. S3-compatible object storage has the ability of assigning a temporary credential through the use of Secure Token Service (STS). These credentials are short termed and dynamically generated.
 
 This article includes instructions for both Basic Authentication and pass-through authorization (STS) authorization.
 
@@ -117,9 +117,7 @@ SELECT * FROM sys.external_data_sources;
 
 ## Pass-through (STS) authorization
 
-The basic authentication also known as static credentials, requires the user to store the `access key id` and `secret key id` in SQL Server, it is up to the user to explicitly revoke and rotate the credentials whenever needed. Fine-grain access control would require the administrator to set up static credentials for each login, this approach can be challenging when dealing with dozens or hundreds of unique credentials.
-
-Pass-through authorization, or STS authorization, offers a solution for these problems by enabling the use of SQL Server own user's identities to access the S3-compatible object storage. S3-compatible object storages has the ability of assigning a temporary credential through the use of Secure Token Service (STS). These credentials are short termed and dynamically generated.
+S3-compatible object storage has the ability of assigning a temporary credential through the use of Secure Token Service (STS). These credentials are short termed and dynamically generated.
 
 Pass-through authorization relies on Active Directory Federation Service (ADFS) acting as OpenID Connect (OIDC) identity provider, it is up to the ADFS to communicate with the S3-compatible object storage STS, request the STS and provide it back to SQL Server.
 
@@ -205,7 +203,7 @@ WITH
 * ADFS should have the same AD (Active directory) as SQL Server as claim trust provider.
 * S3-compatible storage should have STS endpoint service that enables clients to request temporary credentials using JWT of external identities.
 * OPENROWSET and CETAS (Create External Table as Select) queries will be supported for parquet and CSV format.
-* By default, Kerberos ticket renewal time is 7 days and lifetime are 10 hours on Windows and 2 hours on Linux. SQL Server renews Kerberos token of the user up to 7 days. After 7 days the user's ticket expires, therefore pass-through to S3-compatible storage will fail. In this case SQL Server will need to re-authenticate the user to get a new Kerberos ticket.
+* By default, Kerberos ticket renewal time is seven days and lifetime are 10 hours on Windows and 2 hours on Linux. SQL Server renews Kerberos token of the user up to seven days. After seven days the user's ticket expires, therefore pass-through to S3-compatible storage will fail. In this case SQL Server will need to reauthenticate the user to get a new Kerberos ticket.
 * ADFS 2019 with Windows Server 2019 will be supported.
 * S3 REST API calls will use AWS signature version 4.
 <!-- * Supported STS version will be 2011-06-15.-->

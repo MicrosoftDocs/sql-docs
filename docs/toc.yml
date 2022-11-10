@@ -55,7 +55,7 @@ items:
       items:
       - name: Overview
         href: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-      - name: Azure blob storage
+      - name: Azure Blob Storage
         href: relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
     - name: Quickstarts
       items:
@@ -69,7 +69,7 @@ items:
         items:
         - name: Backup to URL for Microsoft Azure Blob Storage
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup to Azure blob storage with PowerShell
+        - name: Backup to Azure Blob Storage with PowerShell
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
         - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -10034,7 +10034,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases
+    - name: Using Azure Blob Storage with SQL Server 2016 databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md

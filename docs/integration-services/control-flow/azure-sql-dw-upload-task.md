@@ -29,7 +29,7 @@ When copying from file system, data will first be uploaded to Azure Blob Storage
 > [!NOTE]
 > Azure Storage connection manager with Data Lake Gen2 service type is not supported.
 >
-> To use Azure Data Lake Gen2 for staging or source, you can connect via Azure Storage connection manager with Blob Storage service type.
+> To use Azure Data Lake Gen2 for staging or source, you can connect via Azure Storage connection manager with the Azure Blob Storage type.
 
 The **Azure Synapse Analytics Task** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 

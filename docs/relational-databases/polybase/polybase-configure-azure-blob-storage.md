@@ -33,16 +33,16 @@ In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], configure your externa
 | Azure Blob Storage   | wasb[s] | abs |
 | ADLS Gen 2           | abfs[s] | adls |
 
-### Configure Azure blob storage connectivity
+### Configure Azure Blob Storage connectivity
 
-First, configure SQL Server PolyBase to use Azure blob storage.
+First, configure SQL Server PolyBase to use Azure Blob Storage.
 
 1. Run [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) with 'hadoop connectivity' set to an Azure Blob Storage provider. To find the value for providers, see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). By Default, the Hadoop connectivity is set to 7.
 
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 
@@ -67,7 +67,7 @@ To query the data in your Hadoop data source, you must define an external table 
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. Create a database scoped credential for Azure blob storage; `IDENTITY` can be anything as it's not used.
+1. Create a database scoped credential for Azure Blob Storage; `IDENTITY` can be anything as it's not used.
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  

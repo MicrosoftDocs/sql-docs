@@ -30,19 +30,19 @@ ms.author: mathoma
   
 ## Explanation
 
-During execution, queries frequently acquire and release locks on the resources they access. Acquiring a lock uses up the lock structures from an available pool of lock structures. When new locks cannot be acquired because there are no more lock structures available in the pool, the error 1204 message is returned. This can be due to any of the following reasons:
+During execution, queries frequently acquire and release locks on the resources they access. Acquiring a lock uses up the lock structures from an available pool of lock structures. When new locks can't be acquired because there are no more lock structures available in the pool, the error 1204 message is returned. This issue can be due to any of the following reasons:
   
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot allocate more memory, either because other processes are using it, or because SQL Server has used up all of its memory and reached the **max server memory** option configured.  
+- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can't allocate more memory, either because other processes are using it, or because SQL Server has used up all of its memory and reached the **max server memory** option configured.  
   
-- The lock manager will not use more than 60 percent of the memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the threshold has already been met.
+- The lock manager won't use more than 60 percent of the memory available to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and the threshold has already been met.
 
 - You have set up the [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) option **locks** to a non-default, non-dynamic value.
 
-- You have enabled trace flags [1211](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1211), [1224](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1224), or both on your SQL Server to control lock escalation behavior, and you are executing queries that require many locks.
+- You have enabled trace flags [1211](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1211), [1224](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1224), or both on your SQL Server to control lock escalation behavior, and you're executing queries that require many locks.
   
 ## User Action
 
-- If you suspect that SQL Server cannot allocate sufficient memory, try the following:  
+- If you suspect that SQL Server can't allocate sufficient memory, try the following:  
 
   - Identify if any other memory clerk inside SQL Server has used up a large part of the SQL Server configured memory by using a query like the following one:
 
@@ -58,7 +58,7 @@ During execution, queries frequently acquire and release locks on the resources 
 
   - If applications besides SQL Server are consuming resources, try stopping these applications or consider running them on a separate server. This will release memory from other processes for SQL Server.
 
-  - If you have configured **max server memory**, increase the **max server memory** setting. 
+  - If you have configured **max server memory**, increase the **max server memory** setting.
   
 - If you suspect that the lock manager has used the maximum amount of available memory, identify the transaction that is holding the most locks and terminate it. The following script will identify the transaction with the most locks:  
   
@@ -71,7 +71,7 @@ During execution, queries frequently acquire and release locks on the resources 
   
     Take the highest session id, and terminate it by using the [KILL](/sql/t-sql/language-elements/kill-transact-sql) command.  
 
-- If you are using a non-default value for the `locks` configuration option, use the system stored procedure `sp_configure` to change the value of locks to its default setting by using the following statement:
+- If you're using a non-default value for the `locks` configuration option, use the system stored procedure `sp_configure` to change the value of locks to its default setting by using the following statement:
 
     ```sql
     EXEC sp_configure 'locks', 0

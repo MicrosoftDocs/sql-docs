@@ -48,7 +48,7 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-|[Restore database to SQL Server](restore-mi-database-to-sql-server.md) | November 2022 |  Restore your database from Azure SQL Managed Instance to SQL Server 2022. | 
+|[Restore database to SQL Server](restore-database-to-sql-server.md) | November 2022 |  Restore your database from Azure SQL Managed Instance to SQL Server 2022. | 
 |[Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | October 2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Managed Instance. | 
 |[Tempdb configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of tempdb files and their growth increments to tune the performance of your instance even more. |
 |[Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
@@ -75,7 +75,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Restore database to SQL Server** | It's now possible to restore your database backup from Azure SQL Managed Instance to SQL Server 2022. The capability to do so is generally available, and enabled by default on all instances, both currently existing, and those deployed in the future. To learn more, review [Restore database to SQL Server](restore-mi-database-to-sql-server.md). | 
+| **Restore database to SQL Server** | It's now possible to restore your database backup from Azure SQL Managed Instance to SQL Server 2022. The capability to do so is generally available, and enabled by default on all instances, both currently existing, and those deployed in the future. To learn more, review [Restore database to SQL Server](restore-database-to-sql-server.md). | 
 
 ### October 2022
 

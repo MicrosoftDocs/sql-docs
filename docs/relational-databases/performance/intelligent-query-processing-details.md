@@ -234,7 +234,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information on PSP optimization, see [Parameter Sensitive Plan optimization](parameter-sensitivity-plan-optimization.md). For more information on surrounding topics of parameterization and parameter sensitivity, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
 ## Approximate query processing
-Approximate query processing is a new feature family. It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical.
+Approximate query processing is a new feature family. It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a `COUNT(DISTINCT())` across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical.
 
 ### Approximate Count Distinct
 

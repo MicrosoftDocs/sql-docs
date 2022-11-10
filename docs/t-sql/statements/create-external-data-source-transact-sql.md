@@ -1539,8 +1539,8 @@ The following sample script creates an external data source `s3_ds` in the sourc
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL s3_dc
 WITH
-    IDENTITY = 'S3 Access Key', -- for s3-compatible object storage the identity must always be S3 Access Key
-    SECRET = <access_key_id>:<secret_key_id> -- provided by the s3-compatible object storage
+    IDENTITY = 'S3 Access Key', -- for S3-compatible object storage the identity must always be S3 Access Key
+    SECRET = <access_key_id>:<secret_key_id> -- provided by the S3-compatible object storage
 GO
 
 CREATE EXTERNAL DATA SOURCE s3_ds
@@ -1557,7 +1557,7 @@ Verify the new external data source with [sys.external_data_sources](../../relat
 SELECT * FROM sys.external_data_sources;
 ```
 
-Then, the following example demonstrates using T-SQL to query a parquet file stored in S3-compliant object storage via OPENROWSET query. For more information, see [Virtualize parquet file in a S3-compatible object storage with PolyBase](../../relational-databases/polybase/polybase-virtualize-parquet-file.md).
+Then, the following example demonstrates using T-SQL to query a parquet file stored in S3-compatible object storage via OPENROWSET query. For more information, see [Virtualize parquet file in a S3-compatible object storage with PolyBase](../../relational-databases/polybase/polybase-virtualize-parquet-file.md).
 
 ```sql
 SELECT  *

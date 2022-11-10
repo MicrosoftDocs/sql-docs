@@ -17,7 +17,7 @@ monikerRange: ">= sql-server-linux-ver16 || >= sql-server-ver16"
 
  [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article explains how to use PolyBase to query external data in an S3-compatible object storage.
+This article explains how to use PolyBase to query external data in S3-compatible object storage.
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces the ability to connect to any S3-compatible object storage, there are two available options for authentication: basic authentication or pass-through authorization (also known as STS authorization).
 
@@ -109,7 +109,7 @@ SELECT * FROM sys.external_data_sources;
 
 ### Limitations of Basic Authentication
 
-1. For S3-compliant object storage, customers are not allowed to create their access key ID with a `:` character in it.
+1. For S3-compatible object storage, customers are not allowed to create their access key ID with a `:` character in it.
 2. The total URL length is limited to 259 characters. This means `s3://<hostname>/<objectkey>` shouldn't exceed 259 characters. The `s3://` counts towards this limit, so the path length cannot exceed 259-5 = 254 characters.
 3. The SQL credential name is limited by 128 characters in UTF-16 format.
 4. The credential name created must contain the bucket name unless this credential is for a new external data source.
@@ -119,9 +119,9 @@ SELECT * FROM sys.external_data_sources;
 
 The basic authentication also known as static credentials, requires the user to store the `access key id` and `secret key id` in SQL Server, it is up to the user to explicitly revoke and rotate the credentials whenever needed. Fine-grain access control would require the administrator to set up static credentials for each login, this approach can be challenging when dealing with dozens or hundreds of unique credentials.
 
-Pass-through authorization, or STS authorization, offers a solution for these problems by enabling the use of SQL Server own user's identities to access the S3-Compatible object storage. S3-Compatible object storages has the ability of assigning a temporary credential through the use of Secure Token Service (STS). These credentials are short termed and dynamically generated.
+Pass-through authorization, or STS authorization, offers a solution for these problems by enabling the use of SQL Server own user's identities to access the S3-compatible object storage. S3-compatible object storages has the ability of assigning a temporary credential through the use of Secure Token Service (STS). These credentials are short termed and dynamically generated.
 
-Pass-through authorization relies on Active Directory Federation Service (ADFS) acting as OpenID Connect (OIDC) identity provider, it is up to the ADFS to communicate with the S3-Compatible object storage STS, request the STS and provide it back to SQL Server.
+Pass-through authorization relies on Active Directory Federation Service (ADFS) acting as OpenID Connect (OIDC) identity provider, it is up to the ADFS to communicate with the S3-compatible object storage STS, request the STS and provide it back to SQL Server.
 
 ### Use pass-through (STS) authorization on SQL Server
 
@@ -134,7 +134,7 @@ CREATE DATABASE SCOPED CREDENTIAL CredName
 WITH IDENTITY = 'User Identity'
 ```
 
-3. Create an external data source to access the S3-Compatible object storage. Use `CONNECTION_OPTIONS`, as JSON format, to inform the required information for both the ADFS and STS. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). As the following example:
+3. Create an external data source to access the S3-compatible object storage. Use `CONNECTION_OPTIONS`, as JSON format, to inform the required information for both the ADFS and STS. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). As the following example:
 
 ```sql
 CREATE EXTERNAL DATA SOURCE EdsName 
@@ -169,11 +169,11 @@ WITH
 ```
 
 - `ADFS` options specify Windows transport endpoint and `relying_party` identifier of SQL Server in ADFS.
-- `STS` options specify S3-Compatible Object Storage STS endpoint and parameters for `AssumeRoleWithWebIdentity` request. The `AssumeRoleWithWebIdentity` is the method used to acquire the temporary security credential used to authenticate. For the complete list of parameters, including optional ones, and information about default values please refer to [STS API Reference](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html).
+- `STS` options specify S3-compatible object storage STS endpoint and parameters for `AssumeRoleWithWebIdentity` request. The `AssumeRoleWithWebIdentity` is the method used to acquire the temporary security credential used to authenticate. For the complete list of parameters, including optional ones, and information about default values please refer to [STS API Reference](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html).
 
 ### Use pass-through (STS) authorization with Active Directory
 
-* Mark SQL Server user accounts properties in AD as non-sensitive to allow pass-through to S3-Compatible storage.
+* Mark SQL Server user accounts properties in AD as non-sensitive to allow pass-through to S3-compatible storage.
 * Allow Kerberos constrained delegation to ADFS services for the user related to SQL server SPN (Service Principal Names).
 
 ### Use pass-through (STS) authorization with Active Directory Federation Service
@@ -189,23 +189,23 @@ WITH
 * Custom claims - These claims can be added by customers if these are needed to determine access policy on the storage side.
 * For more vendor-specific information, check with your S3-compatible platform provider.
 
-### Use pass-through (STS) authorization on S3-Compatible object storage
+### Use pass-through (STS) authorization on S3-compatible object storage
 
-* Follow documentation provided by S3-Compatible storage provider to set up external OIDC identity provider. To set up identity provider mostly following values are commonly needed.
+* Follow documentation provided by S3-compatible storage provider to set up external OIDC identity provider. To set up identity provider mostly following values are commonly needed.
 
     * Configuration end point of OIDC provider.
     * Thumbprint of OIDC provider.
-    * Pass-through authorization to S3-Compatible object storage
+    * Pass-through authorization to S3-compatible object storage
 
 ### Limitations of pass-through (STS) authorization
 
-* Pass-through to S3-Compatible Object Storage will be supported for SQL Server logins with Windows authentication.
-* STS tokens cannot be used for [BACKUP to URL for S3-Compatible Object Storage](../backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
+* Pass-through to S3-compatible object storage will be supported for SQL Server logins with Windows authentication.
+* STS tokens cannot be used for [BACKUP to URL for S3-compatible object storage](../backup-restore/sql-server-backup-to-url-s3-compatible-object-storage.md).
 * ADFS and SQL Server must be in the same domain. ADFS Windows transport endpoint should be disabled from the extranet.
 * ADFS should have the same AD (Active directory) as SQL Server as claim trust provider.
-* S3-Compatible storage should have STS endpoint service that enables clients to request temporary credentials using JWT of external identities.
+* S3-compatible storage should have STS endpoint service that enables clients to request temporary credentials using JWT of external identities.
 * OPENROWSET and CETAS (Create External Table as Select) queries will be supported for parquet and CSV format.
-* By default, Kerberos ticket renewal time is 7 days and lifetime are 10 hours on Windows and 2 hours on Linux. SQL Server renews Kerberos token of the user up to 7 days. After 7 days the user's ticket expires, therefore pass-through to S3-Compatible storage will fail. In this case SQL Server will need to re-authenticate the user to get a new Kerberos ticket.
+* By default, Kerberos ticket renewal time is 7 days and lifetime are 10 hours on Windows and 2 hours on Linux. SQL Server renews Kerberos token of the user up to 7 days. After 7 days the user's ticket expires, therefore pass-through to S3-compatible storage will fail. In this case SQL Server will need to re-authenticate the user to get a new Kerberos ticket.
 * ADFS 2019 with Windows Server 2019 will be supported.
 * S3 REST API calls will use AWS signature version 4.
 <!-- * Supported STS version will be 2011-06-15.-->

@@ -953,7 +953,7 @@ WITH STATS = 5;
 ### J. Backing up to S3-compatible object storage
 **Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**
 
-This example performs a full backup database of the `Sales` database to an S3-compatible object storage platform. The name of the credential is not required in the statement or to match the exact URL path, but will perform a lookup for the proper credential on the URL provided. For more information, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).
+This example performs a full backup database of the `Sales` database to S3-compatible object storage platform. The name of the credential is not required in the statement or to match the exact URL path, but will perform a lookup for the proper credential on the URL provided. For more information, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).
 
 ```sql
 BACKUP DATABASE Sales

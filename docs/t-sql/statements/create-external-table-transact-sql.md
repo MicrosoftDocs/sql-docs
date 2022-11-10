@@ -600,11 +600,11 @@ Create a new external data source named `SQLServerInstance`, and external table 
      );
 ```
 
-### L. Query S3-compliant object storage via external table
+### L. Query S3-compatible object storage via external table
 
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
 
-The following example demonstrates using T-SQL to query a parquet file stored in S3-compliant object storage via querying external table. The sample uses a relative path within the external data source.
+The following example demonstrates using T-SQL to query a parquet file stored in S3-compatible object storage via querying external table. The sample uses a relative path within the external data source.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE s3_ds

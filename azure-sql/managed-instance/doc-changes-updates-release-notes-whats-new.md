@@ -70,8 +70,6 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 Learn about significant changes to the Azure SQL Managed Instance documentation.
 
-### November 2022
-
 ### October 2022
 
 | Changes | Details |

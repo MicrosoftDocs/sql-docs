@@ -204,7 +204,7 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 #### Bugfixes
 
-1. When accessing Azure blob storage and the machine running SSIS is in a non en-US locale, package execution will fail with error message "String not recognized as a valid DateTime value".
+1. When accessing Azure Blob Storage and the machine running SSIS is in a non en-US locale, package execution will fail with error message "String not recognized as a valid DateTime value".
 1. For Azure Storage Connection Manager, secret is required (and unused) even when Data Factory managed identity is used to authenticate.
 
 ### Version 1.19.0

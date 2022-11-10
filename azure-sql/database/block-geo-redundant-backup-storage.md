@@ -39,9 +39,9 @@ The following section describes how you can register or unregister a preview fea
 3. Select **Azure SQL Database Block Geo-Redundant Backup Storage**.
 4. After you select **Azure SQL Database Block Geo-Redundant Backup Storage**, a new window will open, select **Register**, to register this block with Microsoft.Sql resource provider.
 
-:::image type="content" source="./media/block-backup-geo-replication/block-backup-geo-replication.png" alt-text="Screenshot of "Block Geo-replication of Azure SQL Database Backups" in the list of Preview Features.":::
+:::image type="content" source="./media/block-backup-geo-replication/block-backup-geo-replication.png" alt-text="Screenshot of Block Geo-replication of Azure SQL Database Backups in the list of Preview features.":::
 
-:::image type="content" source="./media/block-backup-geo-replication/block-backup-geo-replication-register.png" alt-text="Screenshot of Register "Block Geo-replication of Azure SQL Database Backups" feature.":::
+:::image type="content" source="./media/block-backup-geo-replication/block-backup-geo-replication-register.png" alt-text="Screenshot of Register Block Geo-replication of Azure SQL Database Backups feature.":::
 
 
 ### Removing Block Geo-replication of Azure SQL Database Backups

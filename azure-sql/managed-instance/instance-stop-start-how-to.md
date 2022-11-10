@@ -14,7 +14,7 @@ ms.custom:
 # Instance stop and start (preview) overview - Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you to stop and start your instance to save on billing costs when using Azure SQL Managed Instance. Start and stop your instance by using the Azure Portal, or Azure PowerShell. 
+This article teaches you to stop and start your instance to save on billing costs when using Azure SQL Managed Instance. Start and stop your instance by using the Azure portal, or Azure PowerShell. 
 
 The ability to stop and start your instance is currently in preview and only available for instances in the General Purpose service tier. 
 
@@ -65,7 +65,7 @@ Scheduled items represent points in time when start or stop events are initiated
 
 Consider the following rules for a stop-start schedule: 
 
-- Scheduled items are defined as a stop-and-start pair, and must have both start and stop values populated. It's not possible to have a a populated start value with a missing stop value, and vice versa.
+- Scheduled items are defined as a stop-and-start pair, and must have both start and stop values populated. It's not possible to have a populated start value with a missing stop value, and vice versa.
 - There can't be an overlap of scheduled pairs. If there is an overlap of scheduled times, the API returns an error. 
 - The time span between the two successive actions (start after stop or stop after start) must be at least 1 hour. For example, if a start is scheduled for 10:00 AM, the stop action can't be scheduled before 11:00 AM. 
 - If there are conflicting operations when a stop is triggered (such as scaling vCore in progress), the mechanism retries after 10 minutes. If after 10 minutes the conflicting operation is still active, the stop operation gets skipped.  
@@ -89,7 +89,7 @@ Reservation discounts are [use it or lose it](/azure/cost-management-billing/res
 Consider the following limitations: 
 
 - You cannot stop instances that: 
-    - have ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCores scaling, etc)
+    - have ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCores scaling, etc.)
     - are part of a [failover group](auto-failover-group-sql-mi.md) 
     - use the [Managed Instance link](managed-instance-link-feature-overview.md) 
 - While instance is in a stopped state, it is not possible to change any configuration parameters, and the instance has to be started to change any instance properties. 
@@ -116,11 +116,9 @@ To define the parameters, first update the relevant values in the **USER CONFIGU
 # USER CONFIGURABLE VALUES
 # ===============================================================
 $SubscriptionId = "<SubscriptionID>"
-$SqlMIName = "<Sql-MI-name>”
+$SqlMIName = "<Sql-MI-name>"
 $RgName = "<ResourceGroup>"
 # ===============================================================
-9
-Microsoft Confidential. All rights reserved. --- PLEASE DO NOT SHARE, DO NOT PUBLISH OR TRANSMIT. ---
 # DO NOT MODIFY THE SCRIPT BELOW - NOT USER CONFIGURABLE
 # ===============================================================
 # Constants

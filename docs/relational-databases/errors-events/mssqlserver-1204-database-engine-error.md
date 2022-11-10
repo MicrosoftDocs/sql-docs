@@ -4,7 +4,7 @@ title: "MSSQLSERVER_1204 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: ramakoni
 ms.technology: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -14,7 +14,8 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_1204
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
@@ -27,28 +28,53 @@ ms.author: mathoma
 |Symbolic Name|LK_OUTOF|  
 |Message Text|The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users. Ask the database administrator to check the lock and memory configuration for this instance, or to check for long-running transactions.|  
   
-## Explanation  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot obtain a lock resource. This can be caused by either of the following reasons:  
+## Explanation
+
+During execution, queries frequently acquire and release locks on the resources they access. Acquiring a lock uses up the lock structures from an available pool of lock structures. When new locks cannot be acquired because there are no more lock structures available in the pool, the error 1204 message is returned. This can be due to any of the following reasons:
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot allocate more memory from the operating system, either because other processes are using it, or because the server is operating with the **max server memory** option configured.  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot allocate more memory, either because other processes are using it, or because SQL Server has used up all of its memory and reached the **max server memory** option configured.  
   
--   The lock manager will not use more than 60 percent of the memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- The lock manager will not use more than 60 percent of the memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the threshold has already been met.
+
+- You have set up the [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) option **locks** to a non-default, non-dynamic value.
+
+- You have enabled trace flags [1211](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1211), [1224](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1224), or both on your SQL Server to control lock escalation behavior, and you are executing queries that require many locks.
   
-## User Action  
-If you suspect that SQL Server cannot allocate sufficient memory, try the following:  
+## User Action
+
+- If you suspect that SQL Server cannot allocate sufficient memory, try the following:  
+
+  - Identify if any other memory clerk inside SQL Server has used up a large part of the SQL Server configured memory by using a query like the following one:
+
+    ```sql
+    SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
+    
+    FROM sys.dm_os_memory_clerks
+    
+    ORDER BY pages_kb DESC
+    ```
+
+    Then reduce the memory consumption of that memory clerk to allow for lock memory to use more resources. For more information, see [Troubleshoot out of memory or low memory issues in SQL Server](/troubleshoot/sql/performance/troubleshoot-memory-issues).
+
+  - If applications besides SQL Server are consuming resources, try stopping these applications or consider running them on a separate server. This will release memory from other processes for SQL Server.
+
+  - If you have configured **max server memory**, increase the **max server memory** setting. 
   
--   If applications besides SQL Server are consuming resources, try stopping these applications or consider running them on a separate server. This will remove release memory from other processes for SQL Server.  
+- If you suspect that the lock manager has used the maximum amount of available memory, identify the transaction that is holding the most locks and terminate it. The following script will identify the transaction with the most locks:  
   
--   If you have configured max server memory, increase max server memory setting.  
+    ```sql
+    SELECT request_session_id, COUNT (*) num_locks  
+    FROM sys.dm_tran_locks  
+    GROUP BY request_session_id   
+    ORDER BY count (*) DESC  
+    ```  
   
-If you suspect that the lock manager has used the maximum amount of available memory identify the transaction that is holding the most locks and terminate it. The following script will identify the transaction with the most locks:  
-  
-```  
-SELECT request_session_id, COUNT (*) num_locks  
-FROM sys.dm_tran_locks  
-GROUP BY request_session_id   
-ORDER BY count (*) DESC  
-```  
-  
-Take the highest session id, and terminate it using the KILL command.  
-  
+    Take the highest session id, and terminate it by using the [KILL](/sql/t-sql/language-elements/kill-transact-sql) command.  
+
+- If you are using a non-default value for the `locks` configuration option, use the system stored procedure `sp_configure` to change the value of locks to its default setting by using the following statement:
+
+    ```sql
+    EXEC sp_configure 'locks', 0
+    ```
+
+- If you encountered the above error message when using the SQL Server trace flags 1211, 1224, or both, review their use and disable them while executing queries that require a large number of locks. For more information, review [DBCC TRACEON - Trace Flags (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) and [Resolve blocking problems caused by lock escalation in SQL Server](/troubleshoot/sql/performance/resolve-blocking-problems-caused-lock-escalation).

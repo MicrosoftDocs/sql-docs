@@ -23,7 +23,7 @@ The following prerequisites are required to configure a managed instance for Win
 |---------|---------|
 |Az.Sql PowerShell module | This PowerShell module provides management cmdlets for Azure SQL resources.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module -Name Az.Sql`   |
 |Azure Active Directory PowerShell Module  | This module provides management cmdlets for Azure AD administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name AzureAD`  |
-| A managed instance | You may [create a new managed instance](/azure/azure-arc/data/create-sql-managed-instance) or use an existing managed instance. You must [enable Azure AD authentication](../database/authentication-aad-configure.md) on the managed instance. |
+| A managed instance | You may [create a new managed instance](instance-create-quickstart.md) or use an existing managed instance. You must [enable Azure AD authentication](../database/authentication-aad-configure.md) on the managed instance. |
 
 ## Configure Azure AD Authentication for Azure SQL Managed Instance
 

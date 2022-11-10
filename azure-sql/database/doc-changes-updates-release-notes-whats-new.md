@@ -38,6 +38,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Hyperscale long-term retention](long-term-retention-overview.md) | Save your Hyperscale database backups for up to 10 years with long-term retention (LTR).  | 
 | [Hyperscale RA-GZRS](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Store your Hyperscale database backups on read access geo-zone-redundancy (RA-GZRS) storage. |
 | [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Retain backups from 1 up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured retention period. |
+| [Invoke External REST endpoints](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) | Invoke HTTPS REST endpoint natively using a new system stored procedure. |
 | [JavaScript & Python bindings](/azure/azure-functions/functions-bindings-azure-sql)| Use JavaScript or Python SQL bindings with Azure Functions. | 
 | [Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
 | [Query editor in the Azure portal](connect-query-portal.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com).|
@@ -72,6 +73,12 @@ The following table lists the new generally available (GA) features of Azure SQL
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation.
+
+### November 2022
+
+| Changes | Details |
+| --- | --- |
+| **Invoke external REST endpoints preview** | It's now possible to call a HTTPS REST endpoint natively, using a new system stored procedure. This feature is currently in preview. To learn more, review [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql). | 
 
 ### October 2022
 

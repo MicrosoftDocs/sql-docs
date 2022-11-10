@@ -6,7 +6,6 @@ description: "Selects the top k features across all specified columns ordered by
 keywords: "feature, selection, mutual, information" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

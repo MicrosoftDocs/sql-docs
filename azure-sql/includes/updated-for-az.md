@@ -1,7 +1,6 @@
 ---
 author: mikefrobbins
 ms.author: mirobb
-manager: barbkess
 ms.date: 10/23/2021
 ms.topic: include
 ---

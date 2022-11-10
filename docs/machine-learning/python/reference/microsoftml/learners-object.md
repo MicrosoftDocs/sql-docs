@@ -6,7 +6,6 @@ description: "An instance of the following objects is returned by every training
 keywords: "models, learners" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

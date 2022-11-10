@@ -131,6 +131,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 ## <a id="ACS"></a> Azure connected services
 
+SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/azure/synapse-analytics/), [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/), and [Microsoft Purview](/purview/).
+
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
 |Azure Synapse Link <sup>1</sup>|Yes|Yes|Yes|No|No|
@@ -139,7 +141,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Azure extension for SQL Server |Yes|Yes|No|No|No|
 |Pay-as-you-go billing |Yes|Yes|No|No|No|
 
-<sup>1</sup>These features are governed their respective [lifecycle policies](/lifecycle/products/sql-server-2022).
+<sup>1</sup>These features are governed their respective [Lifecycle Policies](/lifecycle/products/sql-server-2022).
 
 <sup>2</sup> Configure in portal.
 

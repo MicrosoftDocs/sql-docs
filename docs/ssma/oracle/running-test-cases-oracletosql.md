@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 
 # Running Test Cases (OracleToSQL)

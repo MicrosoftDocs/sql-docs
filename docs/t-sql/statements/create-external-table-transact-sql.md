@@ -54,7 +54,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ## Overview: SQL Server
 
-This command creates an external table for PolyBase to access data stored in a Hadoop cluster or Azure blob storage PolyBase external table that references data stored in a Hadoop cluster or Azure blob storage.
+This command creates an external table for PolyBase to access data stored in a Hadoop cluster or Azure Blob Storage PolyBase external table that references data stored in a Hadoop cluster or Azure Blob Storage.
 
 **Applies to:** SQL Server 2016 (or higher)
 
@@ -97,7 +97,7 @@ column_name <data_type>
 
 #### *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 
-The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure Blob Storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]  
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
@@ -124,7 +124,7 @@ To change the default and only read from the root folder, set the attribute `<po
 
 #### DATA_SOURCE = *external_data_source_name*
 
-Specifies the name of the external data source that contains the location of the external data. This location is a Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Specifies the name of the external data source that contains the location of the external data. This location is a Hadoop File System (HDFS), an Azure Blob Storage container, or Azure Data Lake Store. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 #### FILE_FORMAT = *external_file_format_name*
 
@@ -275,7 +275,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ## Security
 
-The data files for an external table are stored in Hadoop or Azure blob storage. These data files are created and managed by your own processes. It is your responsibility to manage the security of the external data.
+The data files for an external table are stored in Hadoop or Azure Blob Storage. These data files are created and managed by your own processes. It is your responsibility to manage the security of the external data.
 
 ## Examples
 
@@ -712,7 +712,7 @@ Specifies the external data source (a non-SQL Server data source) and a distribu
 The DATA_SOURCE clause defines the external data source (a shard map) that is used for the external table. For an example, see [Create external tables](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 > [!IMPORTANT]  
-> Azure SQL Database supports creating external tables to EXTERNAL DATA SOURCE types RDMS and SHARD_MAP_MANAGER. Azure SQL Database does not support creating external tables to Azure blob storage.
+> Azure SQL Database supports creating external tables to EXTERNAL DATA SOURCE types RDMS and SHARD_MAP_MANAGER. Azure SQL Database does not support creating external tables to Azure Blob Storage.
 
 #### SCHEMA_NAME and OBJECT_NAME
 
@@ -868,8 +868,8 @@ Learn more about external tables in Azure SQL Database in the following articles
 
 Use an external table to:
 
-- Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
-- Import and store data from Hadoop or Azure blob storage.
+- Query Hadoop or Azure Blob Storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
+- Import and store data from Hadoop or Azure Blob Storage.
 - Import and store data from Azure Data Lake Store.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).
@@ -924,7 +924,7 @@ column_name <data_type>
 
 #### *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 
-The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored when external tables are created.
+The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure Blob Storage. No actual data is moved or stored when external tables are created.
 
 > [!IMPORTANT]  
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
@@ -940,7 +940,7 @@ The column definitions, including the data types and number of columns, must mat
 
 #### LOCATION = '*folder_or_filepath*'
 
-Specifies the folder or the file path and file name for the actual data in Azure Data Lake, Hadoop, or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source. The [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
+Specifies the folder or the file path and file name for the actual data in Azure Data Lake, Hadoop, or Azure Blob Storage. The location starts from the root folder. The root folder is the data location specified in the external data source. The [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
@@ -1030,7 +1030,7 @@ Requires these user permissions:
 > [!NOTE]  
 > CONTROL DATABASE permissions are required to create only the MASTER KEY, DATABASE SCOPED CREDENTIAL, and EXTERNAL DATA SOURCE
 
-Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
+Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure Blob Storage.
 
 > [!IMPORTANT]  
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
@@ -1175,8 +1175,8 @@ Learn more about external tables and related concepts in the following articles:
 
 Use an external table to:
 
-- Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
-- Import and store data from Hadoop or Azure blob storage into Analytics Platform System.
+- Query Hadoop or Azure Blob Storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
+- Import and store data from Hadoop or Azure Blob Storage into Analytics Platform System.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).
 
@@ -1211,7 +1211,7 @@ column_name <data_type>
 
 #### *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 
-The one to three-part name of the table to create. For an external table, Analytics Platform System stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in Analytics Platform System.
+The one to three-part name of the table to create. For an external table, Analytics Platform System stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure Blob Storage. No actual data is moved or stored in Analytics Platform System.
 
 > [!IMPORTANT]  
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
@@ -1224,7 +1224,7 @@ The column definitions, including the data types and number of columns, must mat
 
 #### LOCATION = '*folder_or_filepath*'
 
-Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source.
+Specifies the folder or the file path and file name for the actual data in Hadoop or Azure Blob Storage. The location starts from the root folder. The root folder is the data location specified in the external data source.
 
 In Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
 
@@ -1238,7 +1238,7 @@ To change the default and only read from the root folder, set the attribute `<po
 
 #### DATA_SOURCE = *external_data_source_name*
 
-Specifies the name of the external data source that contains the location of the external data. This location is either a Hadoop or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Specifies the name of the external data source that contains the location of the external data. This location is either a Hadoop or Azure Blob Storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 #### FILE_FORMAT = *external_file_format_name*
 
@@ -1305,7 +1305,7 @@ Requires these user permissions:
 - **ALTER ANY EXTERNAL FILE FORMAT**
 - **CONTROL DATABASE**
 
-Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
+Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure Blob Storage.
 
 > [!IMPORTANT]  
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
@@ -1371,7 +1371,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ## Security
 
-The data files for an external table are stored in Hadoop or Azure blob storage. These data files are created and managed by your own processes. It is your responsibility to manage the security of the external data.
+The data files for an external table are stored in Hadoop or Azure Blob Storage. These data files are created and managed by your own processes. It is your responsibility to manage the security of the external data.
 
 ## Examples
 
@@ -1467,7 +1467,7 @@ column_name <data_type>
 
 #### *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 
-The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake or Azure blob storage. No actual data is moved or stored when external tables are created.
+The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake or Azure Blob Storage. No actual data is moved or stored when external tables are created.
 
 > [!IMPORTANT]  
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
@@ -1480,7 +1480,7 @@ The column definitions, including the data types and number of columns, must mat
 
 #### LOCATION = '*folder_or_filepath*'
 
-Specifies the folder or the file path and file name for the actual data in Azure Data Lake or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
+Specifies the folder or the file path and file name for the actual data in Azure Data Lake or Azure Blob Storage. The location starts from the root folder. The root folder is the data location specified in the external data source. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
 
 If you specify LOCATION to be a folder, the query from [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] that selects from the external table will retrieve files from the folder but not all of its subfolders. 
 
@@ -1510,7 +1510,7 @@ Requires these user permissions:
 > [!NOTE]  
 > CONTROL DATABASE permissions are required to create only the MASTER KEY, DATABASE SCOPED CREDENTIAL, and EXTERNAL DATA SOURCE
 
-Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
+Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure Blob Storage.
 
 > [!IMPORTANT]  
 > The ALTER ANY EXTERNAL DATA SOURCE permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.

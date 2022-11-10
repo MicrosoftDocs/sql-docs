@@ -3,7 +3,6 @@ title: "sys.dm_os_spinlock_stats (Transact-SQL)"
 description: sys.dm_os_spinlock_stats (Transact-SQL)
 author: "bluefooted"
 ms.author: "pamela"
-manager: amitban
 ms.reviewer: "wiassaf"
 ms.date: "02/10/2021"
 ms.prod: sql

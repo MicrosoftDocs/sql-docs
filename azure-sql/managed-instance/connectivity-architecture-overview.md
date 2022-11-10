@@ -19,7 +19,7 @@ This article explains communication in Azure SQL Managed Instance, describing th
 
 SQL Managed Instance is placed inside the Azure virtual network and the subnet that's dedicated to managed instances. This deployment provides:
 
-- A secure local IP address.
+- A secure VNet-local IP address.
 - The ability to connect an on-premises network to SQL Managed Instance.
 - The ability to connect SQL Managed Instance to a linked server or another on-premises data store.
 - The ability to connect SQL Managed Instance to Azure resources.
@@ -31,10 +31,11 @@ SQL Managed Instance is placed inside the Azure virtual network and the subnet t
 
 The November 2022 feature wave introduced the following changes to the connectivity architecture for SQL Managed Instance: 
 
-* Simplified mandatory Network Security Group rules (removed one mandatory rule).
+* Removed management endpoint
+* Simplified mandatory Network Security Group (NSG) rules (removed one mandatory rule).
 * Mandatory Network Security Group rules no longer include outbound to AzureCloud on port 443.
 * Simplified Route table (reduced mandatory routes from 13 to 5).
-* Removed management endpoint
+
 
 The rest of the article describes the connectivity architecture for SQL Managed Instance with the changes from the feature wave included. 
 
@@ -62,9 +63,9 @@ Customer applications can connect to SQL Managed Instance and can query and upda
 
 To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: **VNet-local endpoint** and **public endpoint**.
 
-### VNet-Local endpoint
+### VNet-local endpoint
 
-The VNet-Local endpoint is the default means to connect to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
+The VNet-local endpoint is the default means to connect to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
 
 ### Public endpoint
 
@@ -86,7 +87,7 @@ To improve service security, manageability and availability, SQL Managed Instanc
 
 Service-aided subnet configuration builds on top of the virtual network [subnet delegation](/azure/virtual-network/subnet-delegation-overview) feature to provide automatic network configuration management and enable service endpoints.
 
-Service endpoints can be used to configure virtual network firewall rules on storage accounts that keep backups and audit logs. Even with service endpoints enabled, customers are encouraged to use [Private Link](/azure/private-link/private-link-overview) in order to access their storage accounts. Private Link provides additional security over service endpoints.
+Service endpoints can be used to configure virtual network firewall rules on storage accounts that keep backups and audit logs. Even with service endpoints enabled, customers are encouraged to use [Private Link](/azure/private-link/private-link-overview) in order to access their storage accounts. Private Link provides additional isolation over service endpoints.
 
 > [!IMPORTANT]
 > Due to control plane configuration specificities, service-aided subnet configuration does not enable service endpoints in national clouds.
@@ -128,6 +129,7 @@ These rules are necessary to ensure outbound management traffic flow. See the [p
 |StorageS-out       |443           |Any     |_subnet_         |Storage._secondaryRegion_ |Allow |
 
 ### Mandatory routes with service-aided subnet configuration
+
 These routes are necessary to ensure that management traffic is routed directly to a destination. They are enforced by the network intent policy and don't need to be deployed by the customer. See the previous [high level connectivity architecture](#high-level-connectivity-architecture) section  for more information on connectivity architecture and management traffic.
 
 |Name                     |Address prefix           |Next hop            |

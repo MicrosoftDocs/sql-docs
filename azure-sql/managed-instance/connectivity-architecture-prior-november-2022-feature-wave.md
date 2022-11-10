@@ -15,7 +15,7 @@ ms.custom:
 # Connectivity architecture for Azure SQL Managed Instance prior to November 2022
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-November 2022 introduced a number of changes to the underlying connectivity architecture for Azure SQL Managed Instance. Instances created after November 2022 use the new architecture by default, but existing instances have to enroll in the feature wave to use the new architecture. This article provides information about the connectivity structure for instances that have not enrolled in the feature wave. 
+November 2022 introduced a number of changes to the underlying connectivity architecture for Azure SQL Managed Instance. This article provides information about the connectivity structure for instances that have not enrolled in the feature wave. 
 
 For information about the connectivity architecture for instances that have enrolled in the feature wave, see [Connectivity architecture](connectivity-architecture-overview.md). For more information about the feature wave, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
 
@@ -44,26 +44,8 @@ To facilitate the communication between the control plane and components deploye
 
 The Azure SQL Managed Instance [mandatory inbound security rules](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration) require management ports 9000, 9003, 1438, 1440, and 1452 to be open from **Any source** on the Network Security Group (NSG) that protects SQL Managed Instance. Although these ports are open at the NSG level, they are protected at the network level by the built-in firewall.
 
-The management endpoint is protected by a built-in firewall on the network level. On the application level, it is protected by mutual certificate verification. When connections start inside SQL Managed Instance (as with backups and audit logs), traffic appears to start from the management endpoint's public IP address. You can limit access to public services from SQL Managed Instance by setting firewall rules to allow only the IP address for SQL Managed Instance.
+The management endpoint is protected by a built-in firewall on the network level. On the application level, it is protected by mutual certificate verification. When connections start inside SQL Managed Instance (as with backups and audit logs), traffic appears to start from the management endpoint's public IP address. 
 
-### How to determine the IP address of the management endpoint
-
-To determine the management IP address, do a [DNS lookup](/windows-server/administration/windows-commands/nslookup) on your SQL Managed Instance FQDN: `mi-name.zone_id.database.windows.net`. This will return a DNS entry that's like `trx.region-a.worker.vnet.database.windows.net`. You can then do a DNS lookup on this FQDN with ".vnet" removed. This will return the management IP address. 
-
-This PowerShell code will do it all for you if you replace \<MI FQDN\> with the DNS entry of SQL Managed Instance: `mi-name.zone_id.database.windows.net`:
-  
-``` powershell
-  $MIFQDN = "<MI FQDN>"
-  resolve-dnsname $MIFQDN | select -first 1  | %{ resolve-dnsname $_.NameHost.Replace(".vnet","")}
-```
-
-For more information about SQL Managed Instance and connectivity, see [Azure SQL Managed Instance connectivity architecture](connectivity-architecture-overview.md).
-
-### How to test the built-in firewall behind the management endpoint
-
-To verify that only the mandatory ports are open on the management endpoint, use any security scanner tool to test these ports. The following screenshot shows how to use one of these tools.
-
-![Verifying built-in firewall](./media/management-endpoint-verify-built-in-firewall/03_verify_firewall.png)
 
 ## Virtual cluster connectivity architecture
 

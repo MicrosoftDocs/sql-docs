@@ -33,8 +33,6 @@ The benefit translates differently between customers using the pay-as-you-go mod
 
 For example, as a pay-as-you go customer, if you have 16 vCores assigned to the secondary instance, you'll see a discount for 16 vCores from your invoice when you designate your secondary instance as standby only. Alternatively, if you have 16 AHB licenses, and you deploy two managed instances to a failover group with 8 vCores each, you'll get 8 vCores returned your license pool to use with other Azure SQL deployments. 
 
-However, if you have only have eight AHB licenses, and you deploy the same failover group configuration, you won't be charged SQL Server licensing costs for the vCores used by the secondary instance. In this case, you'll see 8 vCores subtracted from your monthly invoice. Likewise, pay-as-you-go customers that deploy the same configuration won't be charged for the vCores used by the secondary instance and will also see 8 vCores subtracted from their invoice.
-
 ## Functional capabilities 
 
 The following table describes the functional capabilities of a standby secondary managed instance:
@@ -109,7 +107,7 @@ From the **Compute + storage** page of your *secondary managed instance*, confir
 
 If you don't have Failover rights activated, and you qualify for the benefit, you'll also see the following recommendation on the **Overview** blade for either instance. Selecting it will take you to the **Edit configurations** page so you can activate the benefit: 
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot of the Azure portal, Failover groups page, with failover rights, and license model highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png":::
+:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot of the Azure portal, SQL MI overview page, recommendations showing Failover rights are not used." :::
 
 
 ## Next steps

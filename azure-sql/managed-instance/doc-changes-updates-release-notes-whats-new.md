@@ -42,6 +42,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[SQL Insights](/azure/azure-monitor/insights/sql-insights-overview) | SQL Insights is a comprehensive solution for monitoring any product in the Azure SQL family. SQL Insights uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance. |
 |[Transactional Replication](replication-transactional-overview.md) | Replicate the changes from your tables into other databases in SQL Managed Instance, SQL Database, or SQL Server. Or update your tables when some rows are changed in other instances of SQL Managed Instance or SQL Server. For information, see [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). |
 |[Threat detection](threat-detection-configure.md) | Threat detection notifies you of security threats detected to your database. |
+|[Zone-redundancy](../database/high-availability-sla.md) | Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
 
 
 ## General availability (GA)
@@ -98,6 +99,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 |**Distributed Transaction Coordinator (DTC) preview** | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  This feature is currently in preview. Review [Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md)  to learn more.  | 
 | **Instance stop preview** | It's now possible to save on costs by stopping your General Purpose Azure SQL Managed Instance when you're not using it. To learn more, review [stop and start instance](instance-stop-start-how-to.md). | 
 |**Relaxed networking requirements**| The November 2022 feature wave simplifies the connectivity architecture for SQL Managed Instance, such as reducing the number of mandatory rules, and removing the management endpoint. Instances deployed after November 2022 will automatically benefit from these changes,  but existing instances created before November will need to opt-in to the feature wave. Review [Connectivity architecture](connectivity-architecture-overview.md) to learn more. |
+| **Zone-redundancy preview** | It's now possible to deploy your managed instance to multiple availability zones to improve the availability of your instance. This feature is currently in preview and only available to instances in the Business Critical service tier. Review [High availability](../database/high-availability-sla.md) to learn more. |
 
 
 ### October 2022

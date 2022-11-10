@@ -95,10 +95,9 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-|**Distributed Transaction Coordinator (DTC) preview** | Use DTC to run distributed transactions in in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  This feature is currently in preview. Review [Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md) to learn more. | 
+|**Distributed Transaction Coordinator (DTC) preview** | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  This feature is currently in preview. Review [Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md)  to learn more.  | 
 | **Instance stop preview** | It's now possible to save on costs by stopping your General Purpose Azure SQL Managed Instance when you're not using it. To learn more, review [stop and start instance](instance-stop-start-how-to.md). | 
 |**Relaxed networking requirements**| The November 2022 feature wave simplifies the connectivity architecture for SQL Managed Instance, such as reducing the number of mandatory rules, and removing the management endpoint. Instances deployed after November 2022 will automatically benefit from these changes,  but existing instances created before November will need to opt-in to the feature wave. Review [Connectivity architecture](connectivity-architecture-overview.md) to learn more. |
-
 
 
 ### October 2022

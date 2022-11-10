@@ -31,21 +31,21 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 
 | New Item | Details |
 |----------|---------|
-| Connections | Enabled encryption by default for SQL Server connections. |
-| ARM64 Support for macOS | Support for ARM64 in macOS is now available. |
-| Table Designer | Announcing the General Availability of the Table Designer in Azure Data Studio. |
+| Connections | Connections for SQL now default to Encrypt = 'True'. |
+| ARM64 Support for macOS | ARM64 build for macOS is now available.  |
+| Table Designer | Announcing the General Availability of the Table Designer. |
 | Table Designer | Period columns now added by default when System-Versioning table option is selected. |
-| Table Designer | Added support for hash and column store indexes. |
-| Table Designer | New checkbox added to "Preview Database Updates dialog box to ensure user is aware of potential risks associated with database changes before updating the database. |
+| Table Designer | Added support for hash indexes for In-Memory tables, and added support for columnstore indexes. |
+| Table Designer | New checkbox added, "Preview Database Updates", when making database changes to ensure that users are aware of potential risks prior to updating the database.|
 | Table Designer | "Move Up" and "Move Down" buttons added to support column reordering for Primary Keys. |
 | Query Plan Viewer | Announcing the General Availability of the Query Plan Viewer in Azure Data Studio. |
 | Query Plan Viewer | Added support for identification of most expensive operator(s) in a plan. |
-| Query Plan Viewer | Added new context menu and additional button to add an execution plan. |
 | Query Plan Viewer | Updates were made to the properties window to allow for full display of text upon hovering over a cell. Full text can also be copied. |
-| Query Plan Viewer | Added search feature in properties view. |
-| Query Plan Viewer | Added support for collapsing and expanding all property rows. |
-| SQL History Extension | Announcing the General Availability of the SQL History Extension. |
-| SQL History Extension | Now includes ability to persist history across multiple user sessions. |
+| Query Plan Viewer | Implemented filter functionality in the Properties pane for an execution plan. |
+| Query Plan Viewer | Added support for collapsing and expanding all subcategories within the Plan Comparison Properties window. |
+| Query History Extension | Announcing the General Availability of the SQL History Extension. |
+| Query History Extension | Now includes ability to persist history across multiple user sessions. |
+| Query History Extension | Added the ability to limit the number of entries stored in the history. |
 | Schema Compare | Users can now open .scmp files directly from the context menu for existing files in the file explorer. |
 | Query Editor | Now allows full display for text strings larger than 65,535 characters. |
 | Query Editor | Added support for the SHIFT key when making multiple cell selections.  |
@@ -54,12 +54,13 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Azure SQL Migration Extension | Addition of elastic Azure recommendations model. |
 | Database Migration Assessment for Oracle | Assessment tooling for Oracle database migrations to Azure Database for PostgreSQL and Azure SQL available in preview. |
 | VS Code merge| VS Code merges to version 1.67. Read [their release notes](https://code.visualstudio.com/updates/v1_67) to learn more. |
+|SQL Database Projects|Adds SQL projects support for syntax introduced in SQL Server 2022.|
 
 #### Bug fixes in 1.40
 
 | New Item | Details |
 |----------|---------|
-| Connections | Fixed bug that occurred when trying to connect to the dedicated Admin Connection on SQL Server. |
+| Connections | Fixed bug that occurred when trying to connect to the Dedicated Admin Connection (DAC) on SQL Server. |
 | Connections | Fixed issue with wrong tenant showing up while trying to connect to a database with Azure Active Directory login. |
 | Connections | Fixed zoom reset behavior when adding a new connection. |
 | Connections | Fixed loading bug what occurred when attempting to sign in to Azure via proxy. |
@@ -71,7 +72,7 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Table Designer | Fixed a bug that caused creation of a new table when renaming an existing table. |
 | Query Plan Viewer | Fixed missing index recommendation T-SQL syntax. |
 | SQL Projects | Fixed bug in SQL Projects that led to extension not using output path when publishing a project. |
-| SQL Projects | Fixed bug that caused .NET extension to not be found when using the SQL Projects extension on Linux platforms. |
+| SQL Projects | Fixed bug that caused .NET install to not be found when using the SQL Projects extension on Linux platforms. |
 
 ## Azure Data Studio feedback
 

@@ -33,7 +33,7 @@ Azure Data Studio 1.40 is the latest general availability (GA) version.
 | Platform | Download |
 |----------|----------|
 | Windows | [User installer](https://go.microsoft.com/fwlink/?linkid=2215273) (recommended)<br>[System installer](https://go.microsoft.com/fwlink/?linkid=2215525)<br>[.zip file](https://go.microsoft.com/fwlink/?linkid=2215526) |
-| macOS | [universal](https://go.microsoft.com/fwlink/?linkid=2215527) <br> [.zip file](https://go.microsoft.com/fwlink/?linkid=2215420)<br>[arm64](https://go.microsoft.com/fwlink/?linkid=2215346) |
+| macOS | [universal](https://go.microsoft.com/fwlink/?linkid=2215527) <br> [x64](https://go.microsoft.com/fwlink/?linkid=2215420)<br>[arm64](https://go.microsoft.com/fwlink/?linkid=2215346) |
 | Linux | [.deb file](https://go.microsoft.com/fwlink/?linkid=2215528)<br>[.rpm file](https://go.microsoft.com/fwlink/?linkid=2215347)<br>[.tar.gz file](https://go.microsoft.com/fwlink/?linkid=2215421) |
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).

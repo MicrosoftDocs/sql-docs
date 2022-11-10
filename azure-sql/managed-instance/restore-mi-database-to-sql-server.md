@@ -91,7 +91,7 @@ Consider the following:
 
 - When restoring to SQL Server, you must use the `WITH MOVE` qualifier, and provide explicit paths for the data files. 
 - Databases encrypted with service-managed TDE keys cannot be restored to SQL Server. You can only restore an encrypted database to SQL Server if it was encrypted with a customer-managed key assuming the destination server has access to the same key used to encrypt the database. 
-- It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt in. 
+- It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in. 
 
 ## Next steps
 

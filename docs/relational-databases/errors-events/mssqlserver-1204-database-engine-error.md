@@ -32,7 +32,7 @@ ms.author: mathoma
 
 During execution, queries frequently acquire and release locks on the resources they access. Acquiring a lock uses up the lock structures from an available pool of lock structures. When new locks can't be acquired because there are no more lock structures available in the pool, the error 1204 message is returned. This issue can be due to any of the following reasons:
   
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can't allocate more memory, either because other processes are using it, or because SQL Server has used up all of its memory and reached the **max server memory** option configured.  
+- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can't allocate more memory, either because other processes are using it, or because SQL Server has used up all of its memory and reached the configuration option [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#max_server_memory).  
   
 - The lock manager won't use more than 60 percent of the memory available to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and the threshold has already been met.
 

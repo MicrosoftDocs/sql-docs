@@ -38,6 +38,19 @@
     href: tutorial-build-custom-insight-sql-server.md
   - name: Back up & restore
     href: tutorial-backup-restore-sql-server.md
+  - name: Overview of the Table Designer in Azure Data Studio
+    items:
+    - name: Creating and managing tables using the Table Designer
+      href: overview-of-the-table-designer-in-azure-data-studio.md
+    - name: Create graph tables in Azure Data Studio
+      href: create-graph-tables-in-azure-data-studio.md
+    - name: Create memory-optimized tables in Azure Data Studio
+      href: create-memory-optimized-tables-in-azure-data-studio.md
+    - name: Create system-versioned tables in Azure Data Studio
+      href: create-temporal-tables-in-azure-data-studio.md
+    - name: Using SQL Database Projects to build and deploy changes to tables
+      href: build-and-publish-changes-to-table-using-sql-projects.md
+      
 - name: Concepts
   items:
   - name: Extensions
@@ -132,8 +145,6 @@
     href: server-groups.md
   - name: Source control
     href: source-control.md
-  - name: Table designer
-    href: table-designer-azure-data-studio.md
   - name: Query Plan Viewer
     href: query-plan-viewer.md
 - name: How-to guides

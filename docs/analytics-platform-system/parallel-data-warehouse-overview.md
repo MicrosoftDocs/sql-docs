@@ -210,7 +210,7 @@ For more information, see [Install dwloader Command-Line Loader &#40;SQL Server 
 -->
   
 ### PolyBase for Hadoop Integration  
-With PolyBase technology, you can load non-relational data from a Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster or in an Azure Storage Blob.  
+With PolyBase technology, you can load non-relational data from a Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster or in Azure Blob Storage.  
 
 <!-- MISSING LINKS
 For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).

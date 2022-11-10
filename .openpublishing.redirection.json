@@ -42291,6 +42291,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/azure-data-studio/table-designer-azure-data-studio.md",
+      "redirect_url": "/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/advanced-analytics/install/sql-machine-learning-azure-data-studio.md",
       "redirect_url": "/sql/machine-learning/install/sql-machine-learning-azure-data-studio",
       "redirect_document_id": true

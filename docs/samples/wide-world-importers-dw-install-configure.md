@@ -63,7 +63,7 @@ To import a bacpac into a new SQL Database, you can use Management Studio.
 
 [Applies to SQL Server 2016 (and later) Developer/Evaluation/Enterprise Edition]
 
-The sample database can make use of PolyBase to query files in Hadoop or Azure blob storage. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup. Therefore, a post-installation step is required.
+The sample database can make use of PolyBase to query files in Hadoop or Azure Blob Storage. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup. Therefore, a post-installation step is required.
 
 1. In SQL Server Management Studio, connect to the WideWorldImportersDW database and open a new query window.
 2. Run the following T-SQL command to enable the use of PolyBase in the database:

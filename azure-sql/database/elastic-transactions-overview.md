@@ -136,7 +136,7 @@ using (var scope = new TransactionScope())
 
 ## Transact-SQL development experience
 
-A server-side distributed transactions using Transact-SQL are available only for Azure SQL Managed Instance. Distributed transaction can be executed only between Managed Instances that belong to the same [Server trust group](../managed-instance/server-trust-group-overview.md). In this scenario, Managed Instances need to use [linked server](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#TsqlProcedure) to reference each other.
+A server-side distributed transactions using Transact-SQL are available only for Azure SQL Managed Instance. Distributed transaction can be executed only between instances that belong to the same [Server trust group](../managed-instance/server-trust-group-overview.md). In this scenario, managed instances need to use [linked server](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#TsqlProcedure) to reference each other.
 
 The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql) to start distributed transaction.
 

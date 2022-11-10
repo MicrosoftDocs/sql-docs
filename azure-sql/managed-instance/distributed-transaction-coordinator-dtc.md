@@ -75,7 +75,7 @@ To exchange DNS suffixes, follow these steps:
 1. Go to your managed instance in the [Azure portal](https://portal.azure.com). 
 1. Select **Distributed Transaction Coordinator** under **Settings** and then open the **Networking** tab. 
 
-   :::image type="content" source="media/distributed-transaction-coordinator-dtc/dtc-network-settings.png" alt-text="Screenshot of the Azure portal, Distributed Transaction Coordinator page for you managed instance, with the networking tab selected, and the DNS suffix, and +New external DNS suffix highlighted.":::
+   :::image type="content" source="media/distributed-transaction-coordinator-dtc/dtc-network-settings.png" alt-text="Screenshot of the Azure portal, networking tab of the DTC page for your managed instance, and +New external DNS suffix highlighted.":::
 
 1. Select **+New external DNS suffix**, and then provide the DNS suffix for your external environment, such as `dnszone1.com`.
 1. Copy the _DTC Host DNS suffix_ value and then use the PowerShell command `Set-DnsClientGlobalSetting -SuffixSearchList $list` on your external environment to set the DTC Host DNS suffix. For example, if your suffix is abc1111111.database.windows.net as in the previous sample screenshot, then define your $list parameter to get the existing DNS settings, and append your suffix to it like the following sample: 
@@ -87,7 +87,7 @@ To exchange DNS suffixes, follow these steps:
 
 ## Test network connectivity
 
-After networking and DNS is properly configured, you should be able to run [Test-NetConnection (TNC)](/powershell/module/nettcpip/test-netconnection) between the DTC endpoints of your managed instance and the external DTC host. 
+After networking and DNS are properly configured, you should be able to run [Test-NetConnection (TNC)](/powershell/module/nettcpip/test-netconnection) between the DTC endpoints of your managed instance and the external DTC host. 
 
 First, update the user configurable values and then use the following PowerShell script on the external environment to identify the FQDN of the DTC host managed instance: 
 

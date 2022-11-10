@@ -66,6 +66,9 @@ Each row represents a periodic snapshot of workload group statistics in Azure SQ
 |**max_log_rate_kb**| bigint |Maximum log rate (kilo-bytes per sec) at resource group level.|
 |**max_session**| int |Session limit for the group.|
 |**max_worker**| int |Worker limit for the group.|
+|**active_outbound_connection_worker_count**|int|Total outbound connection workers in current snapshot.|
+|**max_outbound_connection_worker**|int|Outbound connection worker limit for the group.|
+|**max_outbound_connection_worker_percent**|decimal(5,2)|Maximum concurrent outbound connection workers (requests) in percentage based on the limit of the group.|
 
 ## Permissions
 

@@ -104,11 +104,11 @@ More information: [CLR differences in Azure SQL Managed Instance ](../../managed
 **Category**: Issue   
 
 **Description**   
-Azure SQL Managed Instance cannot access file shares or Windows folders. See the "Impacted Objects" section for the specific uses of BULK INSERT statements that do not reference an Azure blob. Objects with 'BULK INSERT' where the source is not Azure blob storage will not work after migrating to Azure SQL Managed Instance.
+Azure SQL Managed Instance cannot access file shares or Windows folders. See the "Impacted Objects" section for the specific uses of BULK INSERT statements that do not reference an Azure blob. Objects with 'BULK INSERT' where the source is not Azure Blob Storage will not work after migrating to Azure SQL Managed Instance.
 
 
 **Recommendation**   
-You will need to convert BULK INSERT statements that use local files or file shares to use files from Azure blob storage instead, when migrating to Azure SQL Managed Instance.
+You will need to convert BULK INSERT statements that use local files or file shares to use files from Azure Blob Storage instead, when migrating to Azure SQL Managed Instance.
 
 More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
 
@@ -411,7 +411,7 @@ More information: [Azure SQL Managed Instance Resource Limits ](../../managed-in
 
 ## OPENROWSET (non-blob data source)<a id="OpenRowsetWithNonBlobDataSourceBulk"></a>
 
-**Title: OpenRowSet used in bulk operation with non-Azure Blob Storage data source is not supported in Azure SQL Managed Instance.**   
+**Title: OpenRowSet used in bulk operation with non-Azure blob storage data source is not supported in Azure SQL Managed Instance.**   
 **Category**: Issue   
 
 **Description**   

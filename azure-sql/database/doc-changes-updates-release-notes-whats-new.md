@@ -72,6 +72,12 @@ The following table lists the features of Azure SQL Database that have transitio
 
 Learn about significant changes to the Azure SQL Database documentation.
 
+### November 2022
+
+| Changes | Details |
+| --- | --- |
+| **Restore progress** | Restore progress tracked in the `percent_complete` column [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) is now generally available. For more information, read the [Restore progress announcement blog post](https://aka.ms/RestoreProgressGA). | 
+
 ### October 2022
 
 | Changes | Details |

@@ -78,9 +78,9 @@ To further explore Python and the database in Azure SQL Database, see [Azure SQL
 
     If you receive an error, check the following:
     - Verify that the server name, database name, username, and password you're using are correct.
-    - Verify that the ODBC driver you installed is the same version as the `driver` variable in the code above. For example, the code uses 17, but you may have installed a different version.
-    - If you running the code from a local environment, verify that the firewall of the Azure resource you're using is configured to allow access to the from you environment's IP address.
-    
+    - Verify that the ODBC driver you installed is the same version as the `driver` variable in the code above. For example, the code shows 17, but you may have installed a different version.
+    - If you running the code from a local environment, verify that the firewall of the Azure resource you're trying to access is configured to allow access from you environment's IP address.
+
 ## Next steps
 
 - [Design your first database in Azure SQL Database](design-first-database-tutorial.md)

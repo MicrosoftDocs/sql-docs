@@ -76,10 +76,10 @@ To further explore Python and the database in Azure SQL Database, see [Azure SQL
 
 1. Verify that the databases and their collations are returned, and then close the command window.
 
-    If you receive an error, check the following:
+    If you receive an error:
     - Verify that the server name, database name, username, and password you're using are correct.
     - Verify that the ODBC driver you installed is the same version as the `driver` variable in the code above. For example, the code shows 17, but you may have installed a different version.
-    - If you running the code from a local environment, verify that the firewall of the Azure resource you're trying to access is configured to allow access from you environment's IP address.
+    - If you're running the code from a local environment, verify that the firewall of the Azure resource you're trying to access is configured to allow access from your environment's IP address.
 
 ## Next steps
 

@@ -29,7 +29,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 ## Troubleshooting and common error causes
 
-Following are some quick ways to troubleshoot errors when backing up to or restoring from the S3-compatible object storage. To avoid errors due to unsupported options or limitations, and to review the list of limitations and support for BACKUP and RESTORE commands, see [SQL Backup and Restore with S3-compliant object storage](sql-server-backup-to-url-s3-compatible-object-storage.md#limitations).
+Following are some quick ways to troubleshoot errors when backing up to or restoring from the S3-compatible object storage. To avoid errors due to unsupported options or limitations, and to review the list of limitations and support for BACKUP and RESTORE commands, see [SQL Backup and Restore with S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md#limitations).
 
 ### Ensure a correctly formed URL
 
@@ -76,7 +76,7 @@ TO URL =  's3://<your-endpoint>/existingBucket/sqlbackups/AdventureWorks2019.bak
 
 ### Create a server-level credential prior to running backup/restore
 
-Before running backup/restore TSQL queries to S3-compliant storage, you must create a server level credential. This credential needs to contain the Access key and Secret Key  set up by customers on their S3-compliant object storage server prior to issuing backup/restore queries.
+Before running backup/restore TSQL queries to S3-compatible storage, you must create a server level credential. This credential needs to contain the Access key and Secret Key set up by customers on their S3-compatible object storage server prior to issuing backup/restore queries.
 
 An example of a credential that needs to be created for URL: `s3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2019.bak` would be the following:
 
@@ -105,7 +105,7 @@ If there are multiple credentials matching search, such as more specific `s3://1
 
 ### Unsupported option FILE_SNAPSHOT
 
-Currently, the BACKUP TSQL option FILE_SNAPSHOT is not supported for S3-compliant object storage. This is an Azure Blob Storage-specific option.
+Currently, the BACKUP TSQL option FILE_SNAPSHOT is not supported for S3-compatible object storage. This is an Azure Blob Storage-specific option.
 
 If the user runs the following TSQL for example:
 
@@ -126,7 +126,7 @@ BACKUP DATABASE is terminating abnormally.
 
 ### Backup stripe exceeding 100,000 MB
 
-Currently, the size of a single backup file created by customers in S3-compliant object storage during a backup cannot exceed 100,000 MB per file, using default `MAXTRANSFERSIZE`. If the backup stripe goes beyond 100,000 MB, the backup T-SQL syntax statement will throw the following error message:
+Currently, the size of a single backup file created by customers in S3-compatible object storage during a backup cannot exceed 100,000 MB per file, using default `MAXTRANSFERSIZE`. If the backup stripe goes beyond 100,000 MB, the backup T-SQL syntax statement will throw the following error message:
 
 ```
 Msg 3202, Level 16, State 1, Line 161
@@ -172,7 +172,7 @@ BACKUP DATABASE is terminating abnormally.
 
 ### SQL Server on Linux support
 
-SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux delegates the certificate validation to SQLPAL which validates the endpoints' HTTPS certificates with the certificate shipped with PAL. Thus, customer-provided self-signed certificates cannot be used on Linux for HTTPS validation.
+SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux delegates the certificate validation to SQLPAL, which validates the endpoints' HTTPS certificates with the certificate shipped with PAL. Thus, customer-provided self-signed certificates cannot be used on Linux for HTTPS validation.
 
 During backup/restore the customer will get the following error message on Linux:
 

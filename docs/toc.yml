@@ -7118,7 +7118,7 @@ items:
           href: relational-databases/polybase/polybase-configure-teradata.md
         - name: MongoDB
           href: relational-databases/polybase/polybase-configure-mongodb.md
-        - name: S3-compliant object storage
+        - name: S3-compatible object storage
           href: relational-databases/polybase/polybase-configure-s3-compatible.md
         - name: Virtualize parquet file
           href: relational-databases/polybase/polybase-virtualize-parquet-file.md       

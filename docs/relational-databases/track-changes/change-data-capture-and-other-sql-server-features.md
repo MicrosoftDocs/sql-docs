@@ -82,7 +82,7 @@ In case of local as well as GeoDR failover scenarios, if the database is enabled
 
 If you enabled change data capture (CDC) on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC as well in the restored DB, unless it is restored to sub-core SLO. If restored to sub-core SLO, CDC artifacts will not be available.
 
-If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to sub-core SLO will fail as mentioned under [limitations](./about-change-data-capture-sql-server.md?#limitations).
+If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to sub-core SLO will fail as mentioned under [known limitations and issues](./about-change-data-capture-sql-server.md?#known-limitations-and-issues).
 
 ##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database 
 

@@ -34,7 +34,6 @@ To complete this quickstart, you need:
   [!INCLUDE[create-configure-database](../includes/create-configure-database.md)]
 
 - [Python](https://python.org/downloads) 3 and related software
-    
 
     |**Action**|**macOS**|**Ubuntu**|**Windows**|
     |----------|-----------|------------|---------|
@@ -42,16 +41,14 @@ To complete this quickstart, you need:
     |Install Python and other required packages|    |Use `sudo apt-get install python python-pip gcc g++ build-essential`.|    |
     |Further information|[Microsoft ODBC driver on macOS](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)  |[Microsoft ODBC driver on Linux](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)|[Microsoft ODBC driver on Linux](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)|
 
-
-
 To further explore Python and the database in Azure SQL Database, see [Azure SQL Database libraries for Python](/python/api/overview/azure/sql), the [pyodbc repository](https://github.com/mkleehammer/pyodbc/wiki/), and a [pyodbc sample](https://github.com/mkleehammer/pyodbc/wiki/Getting-started).
 
 ## Create code to query your database 
 
-1. In a text editor, create a new file named *sqltest.py*.  
-   
+1. In a text editor, create a new file named *sqltest.py*.
+
 1. Add the following code. Get the connection information from the prerequisites section and substitute your own values for \<server>, \<database>, \<username>, and \<password>.
-   
+
    ```python
    import pyodbc
    server = '<server>.database.windows.net'
@@ -68,7 +65,6 @@ To further explore Python and the database in Azure SQL Database, see [Azure SQL
                print (str(row[0]) + " " + str(row[1]))
                row = cursor.fetchone()
    ```
-   
 
 ## Run the code
 

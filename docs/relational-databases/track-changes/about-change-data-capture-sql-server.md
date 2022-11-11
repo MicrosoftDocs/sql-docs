@@ -199,10 +199,10 @@ For Change data capture (CDC) to function properly, you shouldn't manually modif
 Any objects in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md) with `is_ms_shipped` property set to `1` shouldn't be modified.
 
 ```sql
-SELECT	name AS object_name   
-		,SCHEMA_NAME(schema_id) AS schema_name  
-		,type_desc  
-		,is_ms_shipped  
+SELECT    name AS object_name   
+        ,SCHEMA_NAME(schema_id) AS schema_name  
+        ,type_desc  
+        ,is_ms_shipped  
 FROM sys.objects 
 WHERE is_ms_shipped= 1 AND SCHEMA_NAME(schema_id) = 'cdc'
 
@@ -241,9 +241,7 @@ If you create a database in Azure SQL Database as a Microsoft Azure Active Direc
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work.
 
 **Aggressive log truncation**  
-While enabling change data capture (CDC) on your Azure SQL Database, please be aware that aggressive log truncation is disabled (the CDC scan uses the database transaction log).
-
-Enabling change data capture (CDC) on a database disables aggressive log truncation behavior. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log getting full and the database going into read-only mode.
+While enabling change data capture (CDC) on Azure SQL Database or SQL Server, please be aware that the aggressive log truncation feature of Accelerated Database Recovery (ADR) is disabled. This is because the CDC scan accesses the database transaction log. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log filling up more than usual and should be monitored so that the transaction log does not fill.
 
 **CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
 When the datatype of a column on a CDC-enabled table is changed from `TEXT` to `VARCHAR` or `IMAGE` to `VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.

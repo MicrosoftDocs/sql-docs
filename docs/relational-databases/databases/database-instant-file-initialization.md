@@ -32,7 +32,7 @@ By default, data and log files are initialized to overwrite any existing data le
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], for data files only, instant file initialization (IFI) allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. 
 
-Transaction log files cannot be initialized instantaneously, however, starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], instant file initialization can benefit transaction log autogrowth events up to 64 MB. The default auto growth size increment for new databases is 64 MB. Autogrowth events larger than 64 MB cannot benefit from instant file initialization.
+Transaction log files cannot be initialized instantaneously, however, starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], instant file initialization can benefit transaction log autogrowth events up to 64 MB. The default auto growth size increment for new databases is 64 MB. Transaction log file autogrowth events larger than 64 MB cannot benefit from instant file initialization.
 
 
 ## Enable instant file initialization

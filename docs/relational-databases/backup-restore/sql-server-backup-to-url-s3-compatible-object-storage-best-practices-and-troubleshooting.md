@@ -172,7 +172,7 @@ BACKUP DATABASE is terminating abnormally.
 
 ### SQL Server on Linux support
 
-SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux delegates the certificate validation to SQLPAL which validates the endpoints' HTTPS certificates with the certificate shipped with PAL. Thus, customer-provided self-signed certificates cannot be used on Linux for HTTPS validation.
+SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux delegates the certificate validation to SQLPAL, which validates the endpoints' HTTPS certificates with the certificate shipped with PAL. Thus, customer-provided self-signed certificates cannot be used on Linux for HTTPS validation.
 
 During backup/restore the customer will get the following error message on Linux:
 

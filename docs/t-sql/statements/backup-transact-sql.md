@@ -466,7 +466,7 @@ Specifying FORMAT implies `SKIP`; `SKIP` does not need to be explicitly stated.
 Specifies the free-form text description, maximum of 255 characters, of the media set.
 
 #### MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }    
-Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
+Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters. If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
 
 #### BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }    
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.

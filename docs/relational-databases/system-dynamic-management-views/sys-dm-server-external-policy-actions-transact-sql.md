@@ -34,4 +34,9 @@ List all available data actions, independently of them being used or not.
 ## Permissions  
 
 Principals must have the **VIEW SERVER SECURITY STATE** permission.  
-    
+
+## See also
+
+- [Provision access by data owner for Azure SQL Database](/azure/purview/how-to-policies-data-owner-azure-sql-db)
+
+- [Provision access by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-policies-data-owner-arc-sql-server)

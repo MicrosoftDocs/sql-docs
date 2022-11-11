@@ -4,7 +4,7 @@ description: Overview of Elastic Database Transactions with Azure SQL Database a
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
-ms.date: 11/02/2021
+ms.date: 11/03/2022
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
@@ -139,7 +139,7 @@ The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql
     EXEC sp_addlinkedserver
         @server='RemoteServer', -- Linked server name
         @srvproduct='',
-        @provider='sqlncli', -- SQL Server Native Client
+        @provider='MSOLEDBSQL', -- Microsoft OLE DB Driver for SQL Server
         @datasrc='managed-instance-server.46e7afd5bc81.database.windows.net' -- SQL Managed Instance endpoint
 
     -- Add credentials and options to this Linked Server

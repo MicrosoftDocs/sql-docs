@@ -14,7 +14,7 @@ ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-You can take backups of databases from SQL Server on Linux with many different options. On a Linux server, you can use **sqlcmd** to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+You can take backups of databases from SQL Server on Linux with many different options. On a Linux server, you can use **sqlcmd** to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 > [!IMPORTANT]
 > SQL Server on Linux only supports backing up to Azure Blob storage using block blobs. Using a storage key for backup and restore will result in a page blog being used, which isn't supported. Use a Shared Access Signature instead. For information on block blogs versus page blogs, see [Backup to block blob vs. page blob](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).

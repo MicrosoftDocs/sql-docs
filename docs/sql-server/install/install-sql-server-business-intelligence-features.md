@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ---
 
 # Install SQL Server Business Intelligence Features

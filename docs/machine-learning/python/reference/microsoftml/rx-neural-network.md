@@ -6,7 +6,6 @@ description: "Neural networks for regression modeling and for Binary and multi-c
 keywords: "models, classification, regression, neural network, dnn" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

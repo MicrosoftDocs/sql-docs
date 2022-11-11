@@ -4,7 +4,6 @@ titleSuffix: SQL Server Machine Learning Services
 description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Docker.'
 author: rothja
 ms.author: jroth
-manager: cgronlun
 ms.date: 05/11/2020
 ms.topic: how-to
 ms.prod: sql

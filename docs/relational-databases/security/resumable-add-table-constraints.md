@@ -28,7 +28,7 @@ The resumable operation for online index creation and rebuild are already suppor
 
 - When an index operation is paused, both the original index and the newly created one require disk space and need to be updated during [Data Manipulation Language (DML)](../../t-sql/statements/statements.md#data-manipulation-language) operations.
 
-The new extensions for SQL Server 2022, SQL Database, and Managed Instance allow a resumable operation for the [Data Definition Language (DDL)](../../t-sql/statements/statements.md#data-definition-language) command [ALTER TABLE ADD CONSTRAINT](../../t-sql/statements/alter-table-transact-sql.md) and adding a Primary or Unique Key. For more information on adding a Primary or Unique Key, see [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).
+The new extensions for SQL Server 2022, SQL Database, and SQL Managed Instance allow a resumable operation for the [Data Definition Language (DDL)](../../t-sql/statements/statements.md#data-definition-language) command [ALTER TABLE ADD CONSTRAINT](../../t-sql/statements/alter-table-transact-sql.md) and adding a Primary or Unique Key. For more information on adding a Primary or Unique Key, see [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).
 
 > [!NOTE]
 > Resumable add table constraints apply only to PRIMARY KEY and UNIQUE KEY constraints. Resumable add table constraints is not supported for FOREIGN KEY constraints.

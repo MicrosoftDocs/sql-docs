@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.access.migratedata.f1"
 ---

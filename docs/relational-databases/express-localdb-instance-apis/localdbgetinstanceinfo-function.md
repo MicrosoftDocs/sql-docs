@@ -68,7 +68,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

@@ -133,6 +133,7 @@ The following table lists all available configuration options, the range of poss
 | [ft crawl bandwidth (min)](ft-crawl-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 0 |
 | [ft notify bandwidth (max)](ft-notify-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 100 |
 | [ft notify bandwidth (min)](ft-notify-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 0 |
+| [hardware offload enabled](hardware-offload-enable-configuration-option.md) (A) <br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later. | 0 | 1  | 0 |
 | [hadoop connectivity](polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later.| 0 | 7 | 0 |
 | [in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A) | 0 | 2 | 0 |
 | [index create memory](configure-the-index-create-memory-server-configuration-option.md) (A, SC) | 704 | 2147483647 | 0 |

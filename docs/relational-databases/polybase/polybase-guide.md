@@ -53,7 +53,7 @@ PolyBase provides these same functionalities for the following SQL products from
 
 | New to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Details |
 | :-- | :-- |
-| S3-compatible object storage | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] adds new connector, S3-compatible object storage, using the S3 REST API. You can use both `OPENROWSET` and `EXTERNAL TABLES` to query data files in S3 compatible object storage. |
+| S3-compatible object storage | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] adds new connector, S3-compatible object storage, using the S3 REST API. You can use both `OPENROWSET` and `EXTERNAL TABLES` to query data files in S3-compatible object storage. |
 | Some connectors separate from PolyBase services | The S3-compatible object storage connector, as well as ADSL Gen2, and Azure Blob Storage, are no longer dependent of PolyBase services. PolyBase services must still run to support connectivity with Oracle, Teradata, MongoDB, and Generic ODBC. The PolyBase feature must still be installed on your SQL Server instance. |
 | Parquet file format | PolyBase is now capable of querying data from Parquet files stored on S3-compatible object storage. For more information, see to [Virtualize parquet file in a S3-compatible object storage with PolyBase](polybase-virtualize-parquet-file.md). |
 | Delta table format | PolyBase is now capable of querying (read-only) data from Delta Table format stored on S3-compatible object storage, Azure Storage Account V2, and Azure Data Lake Storage Gen2. For more information, see to [Virtualize Delta Table format](virtualize-delta.md)|
@@ -79,7 +79,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 * [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] does not support Hadoop.
 * [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
-* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-Compliant Storage connector.
+* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-compatible storage connector.
 
 
  Examples of external connectors include:

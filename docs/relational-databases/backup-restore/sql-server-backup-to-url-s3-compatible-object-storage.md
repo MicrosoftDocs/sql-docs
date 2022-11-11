@@ -23,7 +23,7 @@ For information on supported platforms, see [providers of S3-compatible object s
 
 ## Overview
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3 compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API.
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API.
 
 URLs pointing to S3-compatible resources are prefixed with `s3://` to denote that the S3 connector is being used. URLs beginning with `s3://` will always assume that the underlying protocol will be `https`.
 
@@ -50,7 +50,7 @@ The S3 endpoint must have been configured as follows:
 
 ### Backup Permissions
 
-To connect SQL Server to an S3-compatible object storage, two sets of permissions need to be established, one on SQL Server and also on the storage layer.
+To connect SQL Server to S3-compatible object storage, two sets of permissions need to be established, one on SQL Server and also on the storage layer.
 
 On SQL Server the user account that is used to issue BACKUP or RESTORE commands should be in the **db_backupoperator** database role with **Alter any credential** permissions.
 
@@ -217,7 +217,7 @@ Only super user should be able to write in the folder, while the `mssql` user mu
 
 The following are the current limitations of backup and restore with S3-compatible object storage:
 
-1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compliant object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks will continue to persist in the S3-compliant object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are removed automatically by the object store to form the final backup file. Some S3-providers will handle this through their garbage collector system.
+1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compatible object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks will continue to persist in S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are removed automatically by the object store to form the final backup file. Some S3-compatible storage providers will handle this through their garbage collector system.
 1. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. Consequently, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
 1. The SQL credential name is limited by 128 characters in UTF-16 format.
 1. Secret key ID only supports alphanumeric values.
@@ -236,7 +236,7 @@ Virtual host example: `s3://<bucket>.<domain>/<backup_file_name>`
 
 <!-- The name of the credential must include the bucket name. -->
 - The IDENTITY should always be `'S3 Access Key'` when using the S3 connector.
-- The Access Key ID and Secret Key ID must not contain a colon. Access Key ID and Secret Key ID is the user and password created on the S3-compliant object storage.
+- The Access Key ID and Secret Key ID must not contain a colon. Access Key ID and Secret Key ID is the user and password created on the S3-compatible object storage.
 - Only alphanumeric values are allowed.
 - The Access Key ID must have proper permissions on the S3-compatible object storage.
 

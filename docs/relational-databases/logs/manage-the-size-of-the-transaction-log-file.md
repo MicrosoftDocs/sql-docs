@@ -87,7 +87,7 @@ Following are some general recommendations when you are working with transaction
 
 -   When setting **autogrow** for data and log files using the `FILEGROWTH` option, it might be preferred to set it in **size** instead of **percentage**, to allow better control on the growth ratio, as percentage is an ever-growing amount.
     -  In versions prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], transaction logs cannot leverage [Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md), so extended log growth times are especially critical. 
-    -  Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], instant file initialization can benefit transaction log growth events up to 64 MB. The default auto growth size increment for new databases is 64 MB.
+    -  Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] (all editions) and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], instant file initialization can benefit transaction log growth events up to 64 MB. The default auto growth size increment for new databases is 64 MB. Autogrowth events larger than 64 MB are unaffected. 
     -  As a best practice, do not set the `FILEGROWTH` option value above 1,024 MB for transaction logs. The default values for `FILEGROWTH` option are:  
   
       |Version|Default values|  

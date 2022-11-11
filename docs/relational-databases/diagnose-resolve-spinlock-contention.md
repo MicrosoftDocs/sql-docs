@@ -32,7 +32,7 @@ Spinlocks are lightweight synchronization primitives that are used to protect ac
 
 SQL Server utilizes spinlocks to protect access to some of its internal data structures. Spinlocks are used within the engine to serialize access to certain data structures in a similar fashion to latches. The main difference between a latch and a spinlock is the fact that spinlocks will spin (execute a loop) for a period of time checking for availability of a data structure while a thread attempting to acquire access to a structure protected by a latch will immediately yield if the resource is not available. Yielding requires context switching of a thread off the CPU so that another thread can execute. This is a relatively expensive operation and for resources that are held for a short duration it is more efficient overall to allow a thread to execute in a loop periodically checking for availability of the resource.
 
-Internal adjustments to the Database Engine introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] make spinlocks more efficient.
+Internal adjustments to the Database Engine introduced in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] make spinlocks more efficient.
 
 ## Symptoms
 

@@ -78,7 +78,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Invoke external REST endpoints preview** | It's now possible to call a HTTPS REST endpoint natively, using a new system stored procedure. This feature is currently in preview. To learn more, review [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql). | 
+| **Invoke external REST endpoints preview** | It's now possible to call an HTTPS REST endpoint natively, using a new system stored procedure. This feature is currently in preview. To learn more, review [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql). | 
 
 ### October 2022
 

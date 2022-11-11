@@ -17,7 +17,7 @@ ms.custom: sqldbrb=1
 
 Today you have multiple choices when deciding how and where you host your application.
 
-You may choose to host application in the cloud by using Azure App Service or some of Azure's virtual network integrated options like Azure App Service Environment, Azure Virtual Machines, and virtual machine scale sets. You could also take hybrid cloud approach and keep your applications on-premises.
+You may choose to host application in the cloud by using Azure App Service or some of Azure's virtual network integrated options like Azure App Service Environment, Azure Virtual Machines, and Virtual Machine Scale Sets. You could also take hybrid cloud approach and keep your applications on-premises.
 
 Whatever choice you make, you can connect it to Azure SQL Managed Instance.
 

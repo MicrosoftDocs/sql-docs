@@ -24,15 +24,15 @@ For information about the connectivity architecture for instances that have enro
 
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
 
-![Entities in connectivity architecture](./media/connectivity-architecture-prior-november-2022-feature-wave/01-connectivity-architecture-entitites.png)
+![Diagram showing entities in connectivity architecture for SQL Managed Instance.](./media/connectivity-architecture-prior-november-2022-feature-wave/01-connectivity-architecture-entitites.png)
 
-SQL Managed Instance is a single-tenant Platform-as-a-Service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet, and it is typically accessed via its VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services such as Azure Storage, Azure Active Directory (AAD), Azure Key Vault, Event Hub, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
+SQL Managed Instance is a single-tenant Platform-as-a-Service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet, and it is typically accessed via its VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services such as Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Event Hubs, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
 
 Deployment, management and core service maintenance operations are carried out via automated agents. These agents have exclusive access to the compute resources operating the service: it is not possible to `ssh` or RDP to those hosts. All internal communications are encrypted and signed using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates through certificate revocation lists.
 
 ## High-level connectivity architecture
 
-![Diagram showing the connectivity architecture of Azure SQL Managed Instance](./media/connectivity-architecture-prior-november-2022-feature-wave/02-connectivity-architecture-sql-managed-instance.png)
+![Diagram showing the connectivity architecture of Azure SQL Managed Instance.](./media/connectivity-architecture-prior-november-2022-feature-wave/02-connectivity-architecture-sql-managed-instance.png)
 
 
 ## Management endpoint
@@ -49,7 +49,7 @@ The management endpoint is protected by a built-in firewall on the network level
 
 ## Virtual cluster connectivity architecture
 
-![Connectivity architecture of the virtual cluster](./media/connectivity-architecture-prior-november-2022-feature-wave/03-connectivity-architecture-virtual-cluster.png)
+![Diagram showing connectivity architecture of the virtual cluster for SQL Managed Instance.](./media/connectivity-architecture-prior-november-2022-feature-wave/03-connectivity-architecture-virtual-cluster.png)
 
 ## Mandatory inbound security rules with service-aided subnet configuration
 

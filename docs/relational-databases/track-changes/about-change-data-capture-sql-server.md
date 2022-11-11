@@ -208,9 +208,9 @@ WHERE is_ms_shipped= 1 AND SCHEMA_NAME(schema_id) = 'cdc'
 
 ```
 
-## Limitations
+## Known limitations and issues
 
-Change data capture has the following limitations: 
+This is the list of known limitations and issue with Change data capture (CDC). 
 
 **Linux**   
 CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
@@ -259,6 +259,18 @@ ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<azuread_admin_login_n
 
 EXEC sys.sp_cdc_enable_db
 ```
+
+**Attempt to enable CDC will fail if the custom schema or user named `cdc` pre-exist in database**  
+When you enable CDC on database, it creates a new schema and user named `cdc`. So, it is recommended to not use this, as it is reserved for system use.  
+If you have manually defined a custom schema or user named `cdc` in your database, that is not related to CDC, the system stored procedure `sys.sp_cdc_enable_db` will fail to enable CDC on the database.
+
+To resolve this issue:
+- Manually drop the empty `cdc` schema and `cdc` user. Then, CDC can be enabled successfully on the database.
+
+**Import database using SSDT, SQLPackage for Import/Export and Extract/Deploy operations**  
+For CDC enabled SQL databases, when you use SSDT Import/Export and Extract/Deploy operations to import/setup a new database, the `cdc` schema and user get excluded in the new database. Also, the tables for the CDC marked as `is_ms_shipped=1` in sys.objects, and other objects are *not* included in SSDT Import/Export and Extract/Deploy operations.
+
+Even if CDC is not enabled and you have defined a custom schema or user named `cdc` in your database, that will also be excluded when you use SSDT Import/Export and Extract/Deploy operations to import/setup a new database.
 
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

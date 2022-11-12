@@ -7120,7 +7120,7 @@ items:
           href: relational-databases/polybase/polybase-configure-teradata.md
         - name: MongoDB
           href: relational-databases/polybase/polybase-configure-mongodb.md
-        - name: S3-compliant object storage
+        - name: S3-compatible object storage
           href: relational-databases/polybase/polybase-configure-s3-compatible.md
         - name: Virtualize parquet file
           href: relational-databases/polybase/polybase-virtualize-parquet-file.md       
@@ -12454,8 +12454,12 @@ items:
         href: relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md
       - name: sys.query_store_query
         href: relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md
+      - name: sys.query_store_query_hints
+        href: relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md
       - name: sys.query_store_query_text
         href: relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md
+      - name: sys.query_store_query_variant
+        href: relational-databases/system-catalog-views/sys-query-store-query-variant.md
       - name: sys.query_store_replicas
         href: relational-databases/system-catalog-views/sys-query-store-replicas.md
       - name: sys.query_store_runtime_stats
@@ -12464,8 +12468,6 @@ items:
         href: relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md
       - name: sys.query_store_runtime_stats_interval
         href: relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md
-      - name: sys.query_store_query_hints
-        href: relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md
       - name: sys.database_query_store_internal_state
         href: relational-databases/system-catalog-views/sys-database-query-store-internal-state-transact-sql.md        
     - name: Scalar Types

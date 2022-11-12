@@ -100,7 +100,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 
 #### 3. Create external file format
 
-Create an external file format, where `FORMAT_TYPE` ius the format in Hadoop, such as `DELIMITEDTEXT`, `RCFILE`, `ORC`, or `PARQUET`. 
+Create an external file format, where `FORMAT_TYPE` is the format in Hadoop, such as `DELIMITEDTEXT`, `RCFILE`, `ORC`, or `PARQUET`. 
 
 ```sql  
 -- Create an external file format.  
@@ -262,7 +262,7 @@ Create a database master key on the database if one does not already exist. This
 CREATE MASTER KEY;
 ```
 
-Then, create a database scoped credential. `IDENTITY` is both the client id and OAuth 2.0 Token Endpoint token from your Azure Active Directory Application, separated by a `@`. `SECRET` is the AAD Application Service Principal key. For more information, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+Then, create a database scoped credential. `IDENTITY` is both the client ID and OAuth 2.0 Token Endpoint token from your Azure Active Directory Application, separated by a `@`. `SECRET` is the Azure AD Application Service Principal key. For more information, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 
 ```sql
@@ -388,7 +388,7 @@ Then, create a database scoped credential. `IDENTITY` is the user name to authen
 
 Create the external data source to the other SQL Server. 
 
-- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `sqlserver://servername` or `sqlserver://servername\instance` or `sqlserver://servername:port`. For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use the fully-qualified domain name (FQDN) such as `sqlserver://servername.database.windows.net`. Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- LOCATION should be `<vendor>://<server>[:<port>]`, in this case, `sqlserver://servername` or `sqlserver://servername\instance` or `sqlserver://servername:port`. For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use the fully qualified domain name (FQDN) such as `sqlserver://servername.database.windows.net`. Be aware that options for `LOCATION` prefixes vary in different versions of SQL Server and platforms in Azure SQL, always refer to [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
 - PUSHDOWN is ON by default for PolyBase in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later. Specify whether computation should be pushed down to the source.
 - CREDENTIAL is the database scoped credential name created in the previous step.
 
@@ -849,7 +849,7 @@ CREATE EXTERNAL FILE FORMAT DeltaTableFormat WITH(FORMAT_TYPE = DELTA);
 
 #### 4. Create external table
 
-The delta table files are located at `/delta/Delta_yob/` and the external data source for this example, is an S3-compatible object storage, previously configured under the data source `s3_eds`. PolyBase can use the as LOCATION the delta table folder or the absolute file itself, which would be located at `delta/Delta_yob/_delta_log/00000000000000000000.json`.
+The delta table files are located at `/delta/Delta_yob/` and the external data source for this example is S3-compatible object storage, previously configured under the data source `s3_eds`. PolyBase can use the as LOCATION the delta table folder or the absolute file itself, which would be located at `delta/Delta_yob/_delta_log/00000000000000000000.json`.
 
 ```sql
 -- Create External Table using delta

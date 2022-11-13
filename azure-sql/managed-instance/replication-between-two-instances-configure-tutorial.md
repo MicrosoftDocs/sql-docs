@@ -40,7 +40,7 @@ This tutorial is intended for an experienced audience and assumes that the user 
 
 Configuring SQL Managed Instance to function as a publisher and/or a distributor requires:
 
-- That the publisher managed instance is on the same virtual network as the distributor and the subscriber, or [VPN gateways](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal) have been configured between the virtual networks of all three entities. 
+- That the publisher managed instance is on the same virtual network as the distributor and the subscriber, or [VNet perring](/azure/virtual-network/tutorial-connect-virtual-networks-portal) or [VPN gateways](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal) have been configured between the virtual networks of all three entities.
 - Connectivity uses SQL Authentication between replication participants.
 - An Azure storage account share for the replication working directory.
 - Port 445 (TCP outbound) is open in the security rules of NSG for the managed instances to access the Azure file share.  If you encounter the error `failed to connect to azure storage <storage account name> with os error 53`, you will need to add an outbound rule to the NSG of the appropriate SQL Managed Instance subnet.

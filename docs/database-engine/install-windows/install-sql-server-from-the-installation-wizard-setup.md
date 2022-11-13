@@ -476,7 +476,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 1. On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable integration scenarios with Azure (like [Azure Arc-enabled SQL Server](../../sql-server/azure-arc/overview.md)), and is required to enable Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and other Azure services. 
+1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others.
 
    This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
 

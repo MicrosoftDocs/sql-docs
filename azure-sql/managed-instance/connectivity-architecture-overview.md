@@ -91,8 +91,23 @@ The [public endpoint](public-endpoint-configure.md) is an optional domain name o
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
+At a high level, SQL Managed Instance is a set of service components hosted on a dedicated set of isolated virtual machines joined to a virtual cluster. Service components are deployed inside the customer's virtual network subnet.
+
+A virtual cluster can host multiple managed instances. The cluster automatically expands or contracts as needed to accommodate for new or removed instances.
+
+Customer applications can connect to SQL Managed Instance and can query and update databases inside the virtual network, peered virtual network, or network connected by VPN or Azure ExpressRoute.
+
 ![Diagram showing the connectivity architecture of Azure SQL Managed Instance.](./media/connectivity-architecture-overview/02-connectivity-architecture-sql-managed-instance.png)
 
+To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: **VNet-local endpoint** and **public endpoint**.
+
+### VNet-local endpoint
+
+The VNet-local endpoint is the default means to connect to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
+
+### Public endpoint
+
+The [public endpoint](public-endpoint-configure.md) is an optional domain name of the form `<mi_name>.public.<dns_zone>.database.windows.net` that resolves to a public IP address reachable from the Internet. This endpoint allows only TDS traffic to reach SQL Managed Instance and cannot be used for integration scenarios (such as failover groups, Managed Instance link, and other similar technologies).
 
 ### Management endpoint
 
@@ -122,7 +137,13 @@ This private IP address belongs to the internal load balancer for SQL Managed In
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
+Let's take a deeper dive into connectivity architecture for SQL Managed Instance. The following diagram shows the conceptual layout of the virtual cluster.
+
 ![Diagram showing connectivity architecture of the virtual cluster for SQL Managed Instance.](./media/connectivity-architecture-overview/03-connectivity-architecture-virtual-cluster.png)
+
+Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. This host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable. The `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster. For more information, see [Use auto failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-mi.md#terminology-and-capabilities).
+
+This private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to the SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name to redirect traffic to the correct SQL engine service.
 
 ---
 
@@ -215,7 +236,6 @@ These routes are necessary to ensure that management traffic is routed directly 
 > <sup>*</sup> **Internet** - this value in the "next hop" field instructs the gateway to route the traffic outside of the virtual network. However, if the destination address is for one of Azure's services, Azure routes the traffic directly to the service over Azure's backbone network, rather than outside of Azure cloud. Traffic between Azure services does not traverse the Internet, regardless of which Azure region the virtual network exists in, or which Azure region an instance of the Azure service is deployed to. For more details, visit the page on [Azure's virtual network traffic routing](/azure/virtual-network/virtual-networks-udr-overview).
 
 In addition, you can add entries to the route table to route traffic that has on-premises private IP ranges as a destination through the virtual network gateway or virtual network appliance (NVA).
-
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 

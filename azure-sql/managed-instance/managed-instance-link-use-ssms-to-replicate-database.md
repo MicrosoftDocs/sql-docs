@@ -17,7 +17,8 @@ ms.topic: guide
 This article teaches you how to replicate your database from SQL Server to Azure SQL Managed Instance by using [the link feature](managed-instance-link-feature-overview.md) in SQL Server Management Studio (SSMS).  
 
 > [!NOTE]
-> The link is a feature of Azure SQL Managed Instance and is currently in preview. 
+> - Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
+> - You can also use [T-SQL and PowerShell](managed-instance-link-use-scripts-to-replicate-database.md) to set up the link to replicate your database. 
 
 ## Prerequisites 
 
@@ -26,7 +27,7 @@ To replicate your databases to SQL Managed Instance through the link, you need t
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- [SQL Server Management Studio v18.12.1 or later](/sql/ssms/download-sql-server-management-studio-ssms).
+- [SQL Server Management Studio v19.0 or later](/sql/ssms/download-sql-server-management-studio-ssms).
 - A properly [prepared environment](managed-instance-link-preparation.md).
 
 ### Set up database recovery and backup
@@ -105,4 +106,4 @@ Connect to your managed instance and use Object Explorer to view your replicated
 
 ## Next steps
 
-To break the link and fail over your database to SQL Managed Instance, see [Failover a database](managed-instance-link-use-ssms-to-failover-database.md). To learn more, see [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md).
+To fail over your database to SQL Managed Instance, see [Failover a database](managed-instance-link-use-ssms-to-failover-database.md). To learn more, see [Link feature for Azure SQL Managed Instance](managed-instance-link-feature-overview.md).

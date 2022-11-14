@@ -33,7 +33,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
 |[License-free standby replica](auto-failover-group-standby-replica-how-to-configure.md) | Save on licensing costs when you designate your secondary replica as **Standby**. | 
 |[Instance stop](instance-stop-start-how-to.md) | Stop and start your managed instance to save on licensing and compute costs. | 
-|[Managed Instance link](managed-instance-link-feature-overview.md)| Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. |
+|[Managed Instance link](managed-instance-link-feature-overview.md)| Online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance. Using the link feature with SQL Server 2019 and earlier, as well as failing back from SQL MI to SQL Server 2022 is in preview. |
 |[Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications (preview) for databases configured to use a non-default [maintenance window](../database/maintenance-window.md). Advance notifications are in preview for Azure SQL Managed Instance. |
 |[SDK-style SQL project](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or VS Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.| 
 |[Service Broker cross-instance message exchange](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker on Azure SQL Managed Instance. |
@@ -52,6 +52,7 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 |[Backup transparency](backup-transparency.md) | November 2022 |  Query the **msdb** database to explore your backup history. | 
 |[Cross-subscription PITR](point-in-time-restore.md) | November 2022 | Restore your database to an instance in a different subscription than your original managed instance by using point-in-time restore (PITR) . 
 |[Migrate to SQL MI with Log Replay Service](log-replay-service-migrate.md) | November 2022 |  Migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service. |
+|[One-way Managed Instance link for SQL Server 2022](managed-instance-link-feature-overview.md)| November 2022 | Online one-way replication of SQL Server databases hosted on SQL Server 2022 to Azure SQL Managed Instance. |
 |[Restore database from SQL MI to SQL Server](restore-database-to-sql-server.md) | November 2022 |  Restore your database from Azure SQL Managed Instance to SQL Server 2022. | 
 |[Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | October 2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Managed Instance. | 
 |[Tempdb configurations](https://techcommunity.microsoft.com/t5/azure-sql-blog/improve-your-sql-managed-instance-performance-with-new-tempdb/ba-p/3640094)| September 2022 | Configure the number of tempdb files and their growth increments to tune the performance of your instance even more. |
@@ -84,8 +85,9 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | **Free license for standby replica preview** | It's now possible to designate your secondary DR-only instance as **Standby**, saving on licensing costs. This feature is currently in preview. To learn more, review [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
 | **Instance stop preview** | It's now possible to save on costs by stopping your General Purpose Azure SQL Managed Instance when you're not using it. To learn more, review [stop and start instance](instance-stop-start-how-to.md). | 
 | **Log Replay Service GA** | Migrate your databases to Azure SQL Managed Instance using the Log Replay Service (LRS). This feature is now generally available. To learn more, review [Log Replay Service overview](log-replay-service-overview.md). To get started, review [Migrate with LRS](log-replay-service-migrate.md) | 
+| **Managed Instance link for SQL Server 2022 GA** | Using the Managed Instance link to replicate data from SQL Server 2022 to Azure SQL Managed Instance is now generally available. Using the link feature with versions older than SQL Server 2022 is still in preview. To learn more, review [Managed Instance link](managed-instance-link-feature-overview.md).  | 
+| **Managed Instance link fail over to SQL Server 2022 preview** | It's now possible to use the Managed Instance link feature to fail back from Azure SQL Managed Instance to SQL Server 2022. This feature is currently in preview. To learn more, review [Managed Instance link](managed-instance-link-feature-overview.md).  | 
 | **Restore database to SQL Server GA** | It's now possible to restore your database backup from Azure SQL Managed Instance to SQL Server 2022. The capability to do so is generally available, and enabled by default on all instances, both currently existing, and those deployed in the future. To learn more, review [Restore database to SQL Server](restore-database-to-sql-server.md). | 
-
 
 
 ### October 2022

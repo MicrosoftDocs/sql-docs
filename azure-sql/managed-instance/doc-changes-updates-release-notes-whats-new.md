@@ -81,20 +81,9 @@ The following table lists new features of Azure SQL Managed Instance that are ge
 
 November 2022 introduced a wave of new features and automatic benefits for Azure SQL Managed Instance. 
 
-The benefits in the feature wave include: 
+Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months. 
 
-- Fast Instance provisioning: reduces the time it takes to deploy an instance. 
-- [Relaxed networking requirements](connectivity-architecture-overview.md): simplifies the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
-- [Enhanced virtual cluster](connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture?tab=current): improves the functionality of the underlying virtual cluster. 
-
-The new features introduced in the feature wave are: 
-
-- [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
-- [Zone redundancy for BC](../database/high-availability-sla.md): a feature in preview that lets you deploy your Business Critical managed instance across multiple availability zones to improve the availability of your service. 
-- [Managed DTC](distributed-transaction-coordinator-dtc.md): a feature in preview that lets you run distributed transactions in mixed environments. 
-
-
-Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months. To get started, review [Enroll in the feature wave](november-2022-feature-wave-enroll.md)
+However, it may be possible to enroll early. To get started, review [Enroll in the feature wave](november-2022-feature-wave-enroll.md)
 
 
 ## Documentation changes
@@ -104,19 +93,20 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the **msdb** database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 
-| **Cross-subscription PITR GA** | It's now possible to restore your database for your SQL Managed Instance across subscriptions by using point-in-time restore (PITR). This feature is generally available. To learn more, review [Point-in-time restore](point-in-time-restore.md). | 
-| **Database copy and move preview** | Perform an online copy or move operation of your database across managed instances. This feature is currently in preview. To learn more, review [Copy or move your database](database-copy-move-how-to.md). | 
+|**Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the **msdb** database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 
+|**Cross-subscription PITR GA** | It's now possible to restore your database for your SQL Managed Instance across subscriptions by using point-in-time restore (PITR). This feature is generally available. To learn more, review [Point-in-time restore](point-in-time-restore.md). | 
+|**Database copy and move preview** | Perform an online copy or move operation of your database across managed instances. This feature is currently in preview. To learn more, review [Copy or move your database](database-copy-move-how-to.md). | 
 |**Distributed Transaction Coordinator (DTC) preview** | Use DTC to run distributed transactions in mixed environments such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure.  This feature is currently in preview. Review [Distributed Transaction Coordinator (DTC)](distributed-transaction-coordinator-dtc.md)  to learn more.  | 
-| **Free license for standby replica preview** | It's now possible to designate your secondary DR-only instance as **Standby**, saving on licensing costs. This feature is currently in preview. To learn more, review [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
-| **Instance stop preview** | It's now possible to save on costs by stopping your General Purpose Azure SQL Managed Instance when you're not using it. To learn more, review [stop and start instance](instance-stop-start-how-to.md). | 
-| **Log Replay Service GA** | Migrate your databases to Azure SQL Managed Instance using the Log Replay Service (LRS). This feature is now generally available. To learn more, review [Log Replay Service overview](log-replay-service-overview.md). To get started, review [Migrate with LRS](log-replay-service-migrate.md) | 
-| **Managed Instance link for SQL Server 2022 GA** | Using the Managed Instance link to replicate data from SQL Server 2022 to Azure SQL Managed Instance is now generally available. Using the link feature with versions older than SQL Server 2022 is still in preview. To learn more, review [Managed Instance link](managed-instance-link-feature-overview.md).  | 
-| **Managed Instance link fail over to SQL Server 2022 preview** | It's now possible to use the Managed Instance link feature to fail back from Azure SQL Managed Instance to SQL Server 2022. This feature is currently in preview. To learn more, review [Managed Instance link](managed-instance-link-feature-overview.md).  | 
-|**Relaxed networking requirements**| The November 2022 feature wave significantly simplifies the connectivity architecture for SQL Managed Instance, such as removing the management endpoint, and reducing the number of mandatory rules. Review [Connectivity architecture](connectivity-architecture-overview.md) to learn more. |
-| **Restore database to SQL Server GA** | It's now possible to restore your database backup from Azure SQL Managed Instance to SQL Server 2022. The capability to do so is generally available, and enabled by default on all instances, both currently existing, and those deployed in the future. To learn more, review [Restore database to SQL Server](restore-database-to-sql-server.md). | 
-| **Transactional replication GA** | Replicate data from SQL Managed Instance to database hosted on SQL Server, SQL Managed Instance or SQL Database, or from SQL Server to SQL Managed Instance. This feature is now generally available. To learn more, review [Transactional Replication](replication-transactional-overview.md). To get started, review [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). | 
-
+|**Free license for standby replica preview** | It's now possible to designate your secondary DR-only instance as **Standby**, saving on licensing costs. This feature is currently in preview. To learn more, review [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
+|**Instance stop preview** | It's now possible to save on costs by stopping your General Purpose Azure SQL Managed Instance when you're not using it. To learn more, review [stop and start instance](instance-stop-start-how-to.md). | 
+|**Log Replay Service GA** | Migrate your databases to Azure SQL Managed Instance using the Log Replay Service (LRS). This feature is now generally available. To learn more, review [Log Replay Service overview](log-replay-service-overview.md). To get started, review [Migrate with LRS](log-replay-service-migrate.md) | 
+|**Managed Instance link for SQL Server 2022 GA** | Using the Managed Instance link to replicate data from SQL Server 2022 to Azure SQL Managed Instance is now generally available. Using the link feature with versions older than SQL Server 2022 is still in preview. To learn more, review [Managed Instance link](managed-instance-link-feature-overview.md).  | 
+|**Managed Instance link fail over to SQL Server 2022 preview** | It's now possible to use the Managed Instance link feature to fail back from Azure SQL Managed Instance to SQL Server 2022. This feature is currently in preview. To learn more, review [Managed Instance link](managed-instance-link-feature-overview.md).  | 
+|**November 2022 feature wave early enrollment** | The November 2022 feature wave is being rolled out over several months but it may be possible to enroll early. Review [Enroll in the feature wave](november-2022-feature-wave-enroll.md) to learn more. | 
+|**Simplified connectivity architecture**| The November 2022 feature wave significantly simplifies the connectivity architecture for SQL Managed Instance, such as removing the management endpoint, and reducing the number of mandatory rules. Review [Connectivity architecture](connectivity-architecture-overview.md) to learn more. |
+|**Restore database to SQL Server GA** | It's now possible to restore your database backup from Azure SQL Managed Instance to SQL Server 2022. The capability to do so is generally available, and enabled by default on all instances, both currently existing, and those deployed in the future. To learn more, review [Restore database to SQL Server](restore-database-to-sql-server.md). | 
+|**Transactional replication GA** | Replicate data from SQL Managed Instance to database hosted on SQL Server, SQL Managed Instance or SQL Database, or from SQL Server to SQL Managed Instance. This feature is now generally available. To learn more, review [Transactional Replication](replication-transactional-overview.md). To get started, review [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). | 
+|**Zone redundancy preview** |  Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. The ability to use multiple availability zones with your instance is currently in preview. Review [Zone-redundancy](../database/high-availability-sla.md) to learn more. | 
 
 
 ### October 2022

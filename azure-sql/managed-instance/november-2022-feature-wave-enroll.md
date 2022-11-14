@@ -7,13 +7,17 @@ ms.author: mathoma
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: service-overview
-ms.topic: how to
+ms.topic: how-to
 ms.custom:
 ---
 # Enroll in November 2022 feature wave - Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article explains how to enroll new and existing instances to the November 2022 feature wave for Azure SQL Managed Instance. 
+
+Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months. 
+
+However, it may be possible to enroll early.
 
 ## Overview
 
@@ -22,14 +26,16 @@ November 2022 introduced a wave of new features and automatic benefits for Azure
 The benefits in the feature wave include: 
 
 - Fast Instance provisioning: reduces the time it takes to deploy an instance. 
-- [Relaxed networking requirements](connectivity-architecture-overview.md): simplifies the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
-- Enhanced virtual cluster: improves the functionality of the underlying virtual cluster. 
+- [Simplified connectivity architecture ](connectivity-architecture-overview.md): simplifies the connectivity architecture of SQL Managed Instance by removing the management endpoint, and reducing the number of mandatory rules. 
+- [Enhanced virtual cluster](connectivity-architecture-overview.md?tab=current#virtual-cluster-connectivity-architecture): improves the functionality of the underlying virtual cluster. 
 
 The new features introduced in the feature wave are: 
 
 - [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
 - [Zone redundancy for BC](../database/high-availability-sla.md): a feature in preview that lets you deploy your Business Critical managed instance across multiple availability zones to improve the availability of your service. 
 - [Managed DTC](distributed-transaction-coordinator-dtc.md): a feature in preview that lets you run distributed transactions in mixed environments. 
+
+## Feature wave rollout 
 
 Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months.
 
@@ -101,7 +107,7 @@ To confirm that your new instance is enrolled in the feature wave during deploym
 
 To learn about specific changes related to the feature wave, review: 
 
-- [Relaxed networking requirements](connectivity-architecture-overview.md): simplifies the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
-- [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
-- [Zone redundancy for BC](../database/high-availability-sla.md): a feature in preview that lets you deploy your Business Critical managed instance across multiple availability zones to improve the availability of your service. 
-- [Managed DTC](distributed-transaction-coordinator-dtc.md): a feature in preview that lets you run distributed transactions in mixed environments. 
+- [Simplified connectivity architecture](connectivity-architecture-overview.md)
+- [Instance stop / start](instance-stop-start-how-to.md)
+- [Zone redundancy for BC](../database/high-availability-sla.md)
+- [Managed DTC](distributed-transaction-coordinator-dtc.md)

@@ -276,7 +276,7 @@ Triage an incident with insufficient workers by following these steps:
 
 #### Increase worker limits
 
-If the database consistently reaches its limit despite addressing blocking, optimizing queries, and validating your MAXDOP setting, consider adding more resources to the database to increase the worker limit.
+If the database or elastic pool consistently reaches its worker limit despite addressing blocking, optimizing queries, and validating your MAXDOP setting, consider scaling up the database or elastic pool to increase the worker limit.
 
 Find resource limits for Azure SQL Database by service tier and compute size:
 

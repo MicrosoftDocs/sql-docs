@@ -4,12 +4,51 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/07/2022
+ms.date: 11/05/2022
 ms.prod: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+## November 2022
+
+This release is published November 12, 2022
+
+### Image tag
+
+`1.1.2132.21`
+
+> [!IMPORTANT]
+> Billing for this extension will not be enabled until December 1, 2022.
+
+### Azure extension for SQL Server
+
+- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). 
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] includes the pay-as-you-go activation option, that forces the installation of Azure extension for SQL Server during set up.
+- Billing meters are introduced to support pay-as-you-go billing through Azure
+
+### Other changes
+
+The *LicenseType* property of `SQL Server - Azure Arc` has been extended to provide more granular license information. The values now include:
+
+| **Value** | **Description** |
+|:--|:--|
+|Paid|SQL Server instance is installed using a product key with Software Assurance or SQL subscription|
+|LicenseOnly|SQL Server instance is installed using a product key without Software Assurance or SQL subscription|
+|PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]|
+|Free|Indicates that the instance uses Evaluation or Developer edition of SQL Server|
+|HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it may not require a license. For more information, see [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
+|||
+
+### Known issues and limitations
+
+- Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
+- The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+- Azure extension for SQL Server is not supported in the following environments:
+  - SQL Server in Linux containers
+  - SQL Server on VMware clusters or on Azure VMware Solution
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms.md).
 
 ## September 2022
 
@@ -137,7 +176,7 @@ The following issues apply to the October release:
 
 ## September 2020
 
-Azure Arc-enabled SQL Server is released for public preview. Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure in the customer's datacenter, on the edge or in a multi-cloud environment.
+Azure Arc-enabled SQL Server is released for public preview. Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure in the customer's datacenter, on the edge or in a multicloud environment.
 
 For details, see [Azure Arc-enabled SQL Server Overview](overview.md)
 

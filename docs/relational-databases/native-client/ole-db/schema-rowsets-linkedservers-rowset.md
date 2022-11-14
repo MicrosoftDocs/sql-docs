@@ -19,6 +19,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Schema Rowsets - LINKEDSERVERS Rowset in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
+
   The **LINKEDSERVERS** rowset enumerates organization data sources that can participate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries.  
   
  The **LINKEDSERVERS** rowset contains the following columns.  

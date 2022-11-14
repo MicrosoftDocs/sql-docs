@@ -24,6 +24,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Stored Procedures - Calling in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
+
   A stored procedure can have zero or more parameters. It can also return a value. When using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, parameters to a stored procedure can be passed by:  
   
 -   Hard-coding the data value.  

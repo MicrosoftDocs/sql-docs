@@ -308,7 +308,15 @@ Be aware that using LOADHISTORY for backups which already exist in the `msdb` hi
   
 > [!IMPORTANT]  
 >  This password provides only weak protection for the media set. For more information, see the Permissions section for the relevant statement.  
-  
+
+#### [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { \<database_name> | @database_name_variable } ]
+
+Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+
+Required to restore from snapshot backup. `BACKUP SERVER`, or `BACKUP GROUP...` See [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
+
+METADATA_ONLY is synonymous with SNAPSHOT. Virtual device interface (VDI) uses SNAPSHOT. For information about VDI, see [Virtual device interface (VDI) reference](../../relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md).
+
 #### Media Set Options  
  These options operate on the media set as a whole.  
   

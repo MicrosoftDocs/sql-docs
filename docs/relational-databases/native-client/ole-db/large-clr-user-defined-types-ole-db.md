@@ -18,6 +18,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Large CLR User-Defined Types in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
+
   This topic discusses the changes to OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
   
  For more information about support for large CLR UDTs in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Large CLR User-Defined Types](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). For a sample, see [Use Large CLR UDTs &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  

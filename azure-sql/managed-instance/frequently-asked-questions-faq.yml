@@ -279,7 +279,7 @@ sections:
           
           ### How can I see when automated backups are made on my managed instance?
           
-          To track when automated backups have been performed on a managed instance, see [How to track the automated backup for an Azure SQL Managed Instance](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-128-how-to-track-the-automated-backup-for-an/ba-p/1442355).
+          To track when automated backups have been performed on a managed instance, review [Monitor backup activity](backup-activity-monitor.md).
           
           ### Is on-demand backup supported?
           
@@ -287,8 +287,12 @@ sections:
           
           ### Is native restore (from .bak files) to SQL Managed Instance supported?
           
-          Yes, it is supported and available for SQL Server 2005+ versions.  To use native restore, upload your .bak file to Azure Blob Storage and execute T-SQL commands. For more information, see [Native restore from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
-          
+          Yes, it is supported and available for SQL Server 2005+ versions.  To use native restore, upload your .bak file to Azure blob storage and execute T-SQL commands. For more information, see [Native restore from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
+
+          ### Is native restore from SQL Managed Instance to SQL Server supported?           
+         
+          Yes, but only to SQL Server 2022, during the [mainstream support period of SQL Server 2022](https://learn.microsoft.com/lifecycle/products/sql-server-2022). It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in.
+
       - question: |
           Business continuity
         answer: |

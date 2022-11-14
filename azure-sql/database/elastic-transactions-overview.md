@@ -146,7 +146,7 @@ The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql
     EXEC sp_addlinkedserver
         @server='RemoteServer', -- Linked server name
         @srvproduct='',
-        @provider='sqlncli', -- SQL Server Native Client
+        @provider='MSOLEDBSQL', -- Microsoft OLE DB Driver for SQL Server
         @datasrc='managed-instance-server.46e7afd5bc81.database.windows.net' -- SQL Managed Instance endpoint
 
     -- Add credentials and options to this Linked Server

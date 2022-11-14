@@ -231,7 +231,13 @@ These rules are necessary to ensure outbound management traffic flow.
 |management  |443, 12000    |TCP     |MI SUBNET        |AzureCloud |Allow |
 |mi_subnet   |Any           |Any     |MI SUBNET        |MI SUBNET  |Allow |
 
-### Mandatory user defined routes with service-aided subnet configuration
+## Mandatory user defined routes with service-aided subnet configuration
+
+## [Current architecture](#tab/current)
+
+Mandatory user defined routes were removed in the November 2022 feature wave, and are no longer applicable. 
+
+## [Architecture prior to November 2022](#tab/before-feature-wave)
 
 These routes are necessary to ensure that management traffic is routed directly to a destination. 
 

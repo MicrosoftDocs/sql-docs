@@ -193,5 +193,6 @@ For more information on the link feature, see the following:
 
 For other replication and migration scenarios, consider: 
 
-- [Transactional replication with Azure SQL Managed Instance (Preview)](replication-transactional-overview.md)
+- [Transactional replication with Azure SQL Managed Instance](replication-transactional-overview.md)
 - [Log Replay Service (LRS)](log-replay-service-overview.md)
+

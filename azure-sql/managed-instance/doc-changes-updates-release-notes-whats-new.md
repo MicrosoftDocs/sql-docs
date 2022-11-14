@@ -85,7 +85,7 @@ The benefits in the feature wave include:
 
 - Fast Instance provisioning: reduces the time it takes to deploy an instance. 
 - [Relaxed networking requirements](connectivity-architecture-overview.md): simplifies the [connectivity architecture](connectivity-architecture-overview.md) of SQL Managed Instance. 
-- Enhanced virtual cluster: improves the functionality of the underlying virtual cluster. 
+- [Enhanced virtual cluster](connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture?tab=current): improves the functionality of the underlying virtual cluster. 
 
 The new features introduced in the feature wave are: 
 
@@ -94,15 +94,8 @@ The new features introduced in the feature wave are:
 - [Managed DTC](distributed-transaction-coordinator-dtc.md): a feature in preview that lets you run distributed transactions in mixed environments. 
 
 
+Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months. To get started, review [Enroll in the feature wave](november-2022-feature-wave-enroll.md)
 
-### How to get access to November 2022 feature wave
-
-Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months.
-
-The onboarding experience is different for new instances and existing instances:
-
-- New instances created after November 2022 in _new or empty subnets_ will automatically be enrolled in the feature wave and get access to all new benefits and features.
-- Existing instances created prior to November 2022 can opt into the feature wave to unlock the new benefits and features. 
 
 ## Documentation changes
 

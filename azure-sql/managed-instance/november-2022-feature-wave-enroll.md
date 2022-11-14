@@ -29,11 +29,11 @@ The benefits in the feature wave include:
 - [Simplified connectivity architecture ](connectivity-architecture-overview.md): simplifies the connectivity architecture of SQL Managed Instance by removing the management endpoint, and reducing the number of mandatory rules. 
 - [Enhanced virtual cluster](connectivity-architecture-overview.md?tab=current#virtual-cluster-connectivity-architecture): improves the functionality of the underlying virtual cluster. 
 
-The new features introduced in the feature wave are: 
+The new preview features introduced in the wave are: 
 
-- [Instance stop / start](instance-stop-start-how-to.md):  a feature in preview that allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
-- [Zone redundancy for BC](../database/high-availability-sla.md): a feature in preview that lets you deploy your Business Critical managed instance across multiple availability zones to improve the availability of your service. 
-- [Managed DTC](distributed-transaction-coordinator-dtc.md): a feature in preview that lets you run distributed transactions in mixed environments. 
+- [Instance stop / start](instance-stop-start-how-to.md):  allows you to start and stop your instance at your discretion to save on billing costs for vCores and SQL licensing. 
+- [Zone redundancy for BC](../database/high-availability-sla.md): lets you deploy your Business Critical managed instance across multiple availability zones to improve the availability of your service. 
+- [Managed DTC](distributed-transaction-coordinator-dtc.md): lets you run distributed transactions in mixed environments. 
 
 ## Feature wave rollout 
 
@@ -41,12 +41,12 @@ Rollout of the November 2022 Feature Wave is happening over the course of severa
 
 The onboarding experience is different for new instances and existing instances:
 
-- New instances created after November 2022 in _new or empty subnets_ will automatically be enrolled in the feature wave and get access to all new benefits and features.
-- Onboarding existing instances to the November 2022 feature wave will happen gradually and automatically in subsequent months. However, existing instances created prior to November 2022 can opt into the feature wave immediately to unlock the new benefits and features. 
+- New instances created after November 2022 in eligible subnets will automatically be enrolled in the feature wave and get access to the new benefits and features.
+- Onboarding existing instances to the November 2022 feature wave will happen gradually and automatically. However, existing instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features. 
 
 ## Existing instances 
 
-Existing instances that were created before November 2022 will eventually be enrolled in the feature wave automatically in subsequent months. However, you can choose to opt into the feature wave immediately if the following conditions are met: 
+Existing instances that were created before November 2022 will eventually be enrolled in the feature wave automatically. However, you can choose to enroll your existing instance immediately if the following conditions are met: 
 
 - Your instance is hosted in a subscription type that is ready for the November 2022 feature wave - currently only Dev/Test subscriptions are supported. 
 - You are able to update the virtual network subnet to one of the supported types: **new subnet**, **empty subnet** or a subnet that's **only hosting instances that have already enrolled in the feature wave**. 
@@ -62,7 +62,7 @@ To onboard an existing instance to the feature wave by using the Azure portal, f
 
    :::image type="content" source="media/november-2022-feature-wave-enroll/feature-wave-details.png" alt-text="Screenshot of the Azure portal showing the November 2022 feature wave info page.":::
 
-1. From the **Virtual network / subnet** page, either select **Create new** to create a new subnet, or choose an existing subnet from the drop-down under **Ready for November 2022 feature wave**. Selecting **Save** moves your managed instance to the chosen subnet. 
+1. From the **Virtual network / subnet** page, either select **Create new** to create a new subnet, or choose an existing eligible subnet from the drop-down under **Ready for November 2022 feature wave**. Selecting **Save** moves your managed instance to the chosen subnet. 
 
    :::image type="content" source="media/november-2022-feature-wave-enroll/virtual-network-subnet.png" alt-text="Screenshot of the Azure portal, virtual network / subnet page, with a subnet selected in the drop-down.":::
 

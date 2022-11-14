@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Performance Dashboard
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

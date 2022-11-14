@@ -53,7 +53,7 @@ items:
       items:
       - name: Overview
         href: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-      - name: Azure blob storage
+      - name: Azure Blob Storage
         href: relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
     - name: Quickstarts
       items:
@@ -67,7 +67,7 @@ items:
         items:
         - name: Backup to URL for Microsoft Azure Blob Storage
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup to Azure blob storage with PowerShell
+        - name: Backup to Azure Blob Storage with PowerShell
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
         - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -7118,7 +7118,7 @@ items:
           href: relational-databases/polybase/polybase-configure-teradata.md
         - name: MongoDB
           href: relational-databases/polybase/polybase-configure-mongodb.md
-        - name: S3-compliant object storage
+        - name: S3-compatible object storage
           href: relational-databases/polybase/polybase-configure-s3-compatible.md
         - name: Virtualize parquet file
           href: relational-databases/polybase/polybase-virtualize-parquet-file.md       
@@ -10032,7 +10032,7 @@ items:
       href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
       href: relational-databases/tutorial-ownership-chains-and-context-switching.md
-    - name: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases
+    - name: Using Azure Blob Storage with SQL Server 2016 databases
       href: relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
   - name: Writing T-SQL Statements
     href: t-sql/tutorial-writing-transact-sql-statements.md
@@ -12452,8 +12452,12 @@ items:
         href: relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md
       - name: sys.query_store_query
         href: relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md
+      - name: sys.query_store_query_hints
+        href: relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md
       - name: sys.query_store_query_text
         href: relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md
+      - name: sys.query_store_query_variant
+        href: relational-databases/system-catalog-views/sys-query-store-query-variant.md
       - name: sys.query_store_replicas
         href: relational-databases/system-catalog-views/sys-query-store-replicas.md
       - name: sys.query_store_runtime_stats
@@ -12462,8 +12466,6 @@ items:
         href: relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md
       - name: sys.query_store_runtime_stats_interval
         href: relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md
-      - name: sys.query_store_query_hints
-        href: relational-databases/system-catalog-views/sys-query-store-query-hints-transact-sql.md
       - name: sys.database_query_store_internal_state
         href: relational-databases/system-catalog-views/sys-database-query-store-internal-state-transact-sql.md        
     - name: Scalar Types
@@ -15235,14 +15237,14 @@ items:
       href: relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md
     - name: System Base Tables
       href: relational-databases/system-tables/system-base-tables.md
-    - name: Azure Synapse Link to SQL Tables
+    - name: Azure Synapse Link for SQL Tables
       items:
-      - name: cdc.change_feed_settings
-        href: relational-databases/system-tables/cdc-change-feed-settings.md
-      - name: cdc.change_feed_table_groups
-        href: relational-databases/system-tables/cdc-change-feed-table-groups-transact-sql.md
-      - name: cdc.change_feed_tables
-        href: relational-databases/system-tables/cdc-change-feed-tables-transact-sql.md      
+      - name: changefeed.change_feed_settings
+        href: relational-databases/system-tables/changefeed-change-feed-settings.md
+      - name: changefeed.change_feed_table_groups
+        href: relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql.md
+      - name: changefeed.change_feed_tables
+        href: relational-databases/system-tables/changefeed-change-feed-tables-transact-sql.md      
     - name: Backup & Restore Tables
       href: relational-databases/system-tables/backup-and-restore-tables-transact-sql.md
       items:

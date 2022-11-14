@@ -16,6 +16,16 @@ ms.author: cpichuka
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
 
+## SSMA v9.2
+
+The v9.2 release of SSMA for Oracle contains the following changes:
+ * Added Support for legacy unicode string literals
+ * Added Support for arbitary expressions in ESCAPE clause
+ * Conversion Support for EXTRACT(XML) and XMLQUERY
+ * Enhanced data pipeline monitoring for at scale migration
+ * Conversion Support for EXTRACT(XML),EXTRACTVALUE and XMLQUERY
+ * Support for Azure Data Factory (ADF) pipeline monitoring
+
 ## SSMA v9.1
 
 The v9.1 release of SSMA for Oracle contains the following changes:

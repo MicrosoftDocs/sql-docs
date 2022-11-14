@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "PolyBase, import and export"
   - "Hadoop, import with PolyBase"
   - "Hadoop, export with PolyBase"
-  - "Azure blob storage, import with PolyBase"
-  - "Azure blob storage, export with PolyBase"
+  - "Azure Blob Storage, import with PolyBase"
+  - "Azure Blob Storage, export with PolyBase"
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: MikeRayMSFT
 ms.author: mikeray

@@ -4,7 +4,6 @@ description: "The sys.dm_db_log_info (Transact-SQL) dynamic management function 
 author: "savjani"
 ms.author: "pariks"
 ms.reviewer: wiassaf
-manager: ajayj
 ms.date: 06/20/2022
 ms.prod: sql
 ms.technology: system-objects

@@ -1,6 +1,6 @@
 ---
 title: "Introducing data virtualization with PolyBase"
-description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
+description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
 ms.date: 08/22/2022
 ms.prod: sql
 ms.technology: polybase
@@ -53,7 +53,7 @@ PolyBase provides these same functionalities for the following SQL products from
 
 | New to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Details |
 | :-- | :-- |
-| S3-compatible object storage | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] adds new connector, S3-compatible object storage, using the S3 REST API. You can use both `OPENROWSET` and `EXTERNAL TABLES` to query data files in S3 compatible object storage. |
+| S3-compatible object storage | [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] adds new connector, S3-compatible object storage, using the S3 REST API. You can use both `OPENROWSET` and `EXTERNAL TABLES` to query data files in S3-compatible object storage. |
 | Some connectors separate from PolyBase services | The S3-compatible object storage connector, as well as ADSL Gen2, and Azure Blob Storage, are no longer dependent of PolyBase services. PolyBase services must still run to support connectivity with Oracle, Teradata, MongoDB, and Generic ODBC. The PolyBase feature must still be installed on your SQL Server instance. |
 | Parquet file format | PolyBase is now capable of querying data from Parquet files stored on S3-compatible object storage. For more information, see to [Virtualize parquet file in a S3-compatible object storage with PolyBase](polybase-virtualize-parquet-file.md). |
 | Delta table format | PolyBase is now capable of querying (read-only) data from Delta Table format stored on S3-compatible object storage, Azure Storage Account V2, and Azure Data Lake Storage Gen2. For more information, see to [Virtualize Delta Table format](virtualize-delta.md)|
@@ -77,9 +77,9 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 | S3-compatible object storage                              | **No**             | Read/Write         | **No**     | **No**     |
 
 * [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] does not support Hadoop.
-* [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure blob storage.
+* [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
-* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-Compliant Storage connector.
+* [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced the S3-compatible storage connector.
 
 
  Examples of external connectors include:
@@ -105,7 +105,7 @@ For an example using PolyBase in [!INCLUDE[sssql22-md](../../includes/sssql22-md
 
 ### Azure integration
 
-With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure blob storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] to import and export data from Azure Data Lake Store, and from Azure blob storage.
+With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
 
 ## Why use PolyBase?
 
@@ -124,11 +124,11 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 - **Query data stored in Hadoop from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
 
-- **Query data stored in Azure blob storage.** Azure blob storage is a convenient place to store data for use by Azure services. PolyBase makes it easy to access the data by using T-SQL.
+- **Query data stored in Azure Blob Storage.** Azure Blob Storage is a convenient place to store data for use by Azure services. PolyBase makes it easy to access the data by using T-SQL.
 
-- **Import data from Hadoop, Azure blob storage, or Azure Data Lake Store.** Leverage the speed of Microsoft SQL's columnstore technology and analysis capabilities by importing data from Hadoop, Azure blob storage, or Azure Data Lake Store into relational tables. There is no need for a separate ETL or import tool.
+- **Import data from Hadoop, Azure Blob Storage, or Azure Data Lake Store.** Leverage the speed of Microsoft SQL's columnstore technology and analysis capabilities by importing data from Hadoop, Azure Blob Storage, or Azure Data Lake Store into relational tables. There is no need for a separate ETL or import tool.
 
-- **Export data to Hadoop, Azure blob storage, or Azure Data Lake Store.** Archive data to Hadoop, Azure blob storage, or Azure Data Lake Store to achieve cost-effective storage and keep it online for easy access.
+- **Export data to Hadoop, Azure Blob Storage, or Azure Data Lake Store.** Archive data to Hadoop, Azure Blob Storage, or Azure Data Lake Store to achieve cost-effective storage and keep it online for easy access.
 
 - **Integrate with BI tools.** Use PolyBase with Microsoft's business intelligence and analysis stack, or use any third-party tools that are compatible with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -158,7 +158,7 @@ Before using PolyBase, you must [install PolyBase on Windows](polybase-installat
 Review [PolyBase Transact-SQL reference](polybase-t-sql-objects.md) with examples of external data sources and external tables for a variety of data sources. For more tutorials, review the following articles:
 
 - [Hadoop](polybase-configure-hadoop.md)
-- [Azure blob storage](polybase-configure-azure-blob-storage.md)
+- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)

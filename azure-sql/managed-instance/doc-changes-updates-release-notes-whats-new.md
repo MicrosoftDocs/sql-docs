@@ -89,12 +89,6 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-
-
-### November 2022
-
-| Changes | Details |
-| --- | --- |
 | **Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the **msdb** database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 
 | **Cross-subscription PITR GA** | It's now possible to restore your database for your SQL Managed Instance across subscriptions by using point-in-time restore (PITR). This feature is generally available. To learn more, review [Point-in-time restore](point-in-time-restore.md). | 
 | **Database copy and move preview** | Perform an online copy or move operation of your database across managed instances. This feature is currently in preview. To learn more, review [Copy or move your database](database-copy-move-how-to.md). | 

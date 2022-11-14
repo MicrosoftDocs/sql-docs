@@ -1375,8 +1375,10 @@
         items: 
         - name: Create failover group
           href: managed-instance/auto-failover-group-configure-sql-mi.md
+        - name: Configure standby replica
+          href: managed-instance/auto-failover-group-standby-replica-how-to-configure.md
         - name: Manually initiate a failover
-          href: managed-instance/user-initiated-failover.md
+          href: managed-instance/user-initiated-failover.md          
   - name: Samples
     items:
     - name: Azure CLI

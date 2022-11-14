@@ -171,6 +171,22 @@ These exceptions can occur either because of connection or query issues. To conf
 
 Connection timeouts occur because the application can't connect to the server. To resolve this issue, try the steps (in the order presented) in the [Steps to fix common connection issues](#steps-to-fix-common-connection-issues) section.
 
+## Network connection termination errors
+
+SQL client libraries connect to Azure SQL Database and Azure SQL Managed Instance using the TCP network protocol. A client library uses a lower level component called TCP provider to manage TCP connections. When the TCP provider detects that the remote host has unexpectedly terminated an existing TCP connection, the client library raises an error. Because the error is a client error and not a SQL server error, there is no SQL error number included. Instead, the error number is 0, and the error message from the TCP provider is used.
+
+Examples of network connection termination errors include:
+
+`A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) An existing connection was forcibly closed by the remote host`
+
+`A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+`The client was unable to establish a connection because of an error during connection initialization process before login. Possible causes include the following: the client tried to connect to an unsupported version of SQL Server; the server was too busy to accept new connections; or there was a resource limitation (insufficient memory or maximum allowed connections) on the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+`A connection was successfully established with the server, but then an error occurred during the login process. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+Most commonly, connection termination errors occur because of various problems in the network infrastructure between the SQL server and the client application. These problems may be transient or permanent. As a general guidance, applications should use a fixed number of retry attempts for these errors before considering them permanent failures.
+
 ## Resource governance errors
 
 Azure SQL Database uses a resource governance implementation based on [Resource Governor](/sql/relational-databases/resource-governor/resource-governor) to enforce resource limits. Learn more about [resource management in Azure SQL Database](resource-limits-logical-server.md).

@@ -9,14 +9,11 @@ ms.prod: azure-data-studio
 ms.topic: tutorial
 ---
 
-# Table Designer in Azure Data Studio (Preview)
+# Table Designer in Azure Data Studio
 
 [!INCLUDE [sql-asdb-asdbmi](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The Table Designer in Azure Data Studio provides a visual editor experience alongside the Transact-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.
-
-> [!NOTE]
-> This feature is in preview and may be changed prior to general availability. Enabling preview features in Azure Data Studio is required to use this feature, see [preview features](/docs/azure-data-studio/preview-features.md) for more information.
 
 ## Why Table Designer?
 

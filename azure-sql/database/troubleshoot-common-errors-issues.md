@@ -4,7 +4,7 @@ description: Provides steps to troubleshoot Azure SQL Database connection issues
 author: ramakoni1
 ms.author: ramakoni
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 01/18/2022
+ms.date: 11/13/2022
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: troubleshooting
@@ -177,15 +177,17 @@ Azure SQL Database uses a resource governance implementation based on [Resource 
 
 The most common resource governance errors are listed first with details, followed by a table of resource governance error messages.
 
-### Error 10928: Resource ID : 1. The request limit for the database is *%d* and has been reached.
+### Errors 10928 and 10936: Resource ID : 1. The request limit for the [database or elastic pool] is *%d* and has been reached
 
-The detailed error message in this case reads: `Resource ID : 1. The request limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.`
+If the database level limit is reached, the detailed error message in this case reads: `Resource ID : 1. The request limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.`
 
-This error message indicates that the worker limit for Azure SQL Database has been reached. A value will be present instead of the placeholder *%d*. This value indicates the worker limit for your database at the time the limit was reached.
+If the elastic pool limit is reached, the detailed error message in this case reads: `Resource ID : 1. The request limit for the elastic pool is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.` Elastic pool limits are higher than database limits. They may be reached when multiple databases in the pool use a resource (such as workers) concurrently.
+
+This error message indicates that the worker limit for the database or elastic pool has been reached. The maximum concurrent workers value for the service objective of the database or elastic pool will be present instead of the placeholder *%d*.
 
 > [!NOTE]
-> The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error message 10928 in Azure SQL Database contains the wording "The request limit for the database is *N* and has been reached" for backwards compatibility purposes. The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one.
-> 
+> The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error messages 10928 and 10936 in Azure SQL Database contain the wording "The request limit [...] is *N* and has been reached" for backwards compatibility purposes. The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one.
+>
 > Learn more about [Sessions, workers, and requests](resource-limits-logical-server.md#sessions-workers-and-requests).
 
 #### Connect with the Dedicated Admin Connection (DAC) if needed

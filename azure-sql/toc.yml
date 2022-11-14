@@ -279,7 +279,7 @@
         - name: Use Spring Data R2DBC
           href: /azure/developer/java/spring-framework/configure-spring-data-r2dbc-with-azure-sql-server?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
 
-- name: SQL Database (SQL DB)
+- name: Azure SQL Database (SQL DB)
   items:
   - name: Documentation
     href: database/index.yml
@@ -1052,20 +1052,24 @@
     items:
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
-    - name: Automated backups
-      href: managed-instance/automated-backups-overview.md 
-    - name: Auto-failover groups
-      href: managed-instance/auto-failover-group-sql-mi.md
     - name: T-SQL differences
       href: managed-instance/transact-sql-tsql-differences-sql-server.md
-    - name: Transactional replication
-      href: managed-instance/replication-transactional-overview.md
     - name: Managed Instance link
       href: managed-instance/managed-instance-link-feature-overview.md
+    - name: Log Replay Service (LRS)
+      href: managed-instance/log-replay-service-overview.md      
     - name: Instance pools
       href: managed-instance/instance-pools-overview.md
     - name: Data virtualization 
       href: managed-instance/data-virtualization-overview.md
+    - name: Business continuity
+      items: 
+      - name: Automated backups
+        href: managed-instance/automated-backups-overview.md 
+      - name: Backup transparency
+        href: managed-instance/backup-transparency.md
+      - name: Auto-failover groups
+        href: managed-instance/auto-failover-group-sql-mi.md
     - name: Management operations
       items:
       - name: Overview
@@ -1245,6 +1249,8 @@
             href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current   
     - name: Features
       items:
+      - name: Transactional replication
+        href: managed-instance/replication-transactional-overview.md
       - name: Linked servers
         href: /sql/relational-databases/linked-servers/linked-servers-database-engine?toc=/azure/azure-sql/toc.json
       - name: Service Broker
@@ -1291,10 +1297,18 @@
     items:
     - name: How-to documentation
       href: managed-instance/how-to-content-reference-guide.md      
+    - name: Start & stop instance
+      href: managed-instance/instance-stop-start-how-to.md
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
+    - name: Copy or move a database
+      href: managed-instance/database-copy-move-how-to.md
     - name: Job automation with SQL Agent 
       href: managed-instance/job-automation-managed-instance.md
+    - name: Distributed transactions with DTC
+      displayName: distributed transaction coordinator 
+      href: managed-instance/distributed-transaction-coordinator-dtc.md
+
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks
@@ -1304,7 +1318,8 @@
         - name: Azure Monitor for Azure SQL Managed Instance
           href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Azure Monitor for Azure SQL Managed Instance reference 
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md           
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
+          
     - name: Configure settings
       items: 
       - name: Customize time zone
@@ -1369,14 +1384,18 @@
         href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
+      - name: Restore database to SQL Server
+        href: managed-instance/restore-database-to-sql-server.md
       - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
       - name: Auto-failover groups
         items: 
         - name: Create failover group
           href: managed-instance/auto-failover-group-configure-sql-mi.md
+        - name: Configure standby replica
+          href: managed-instance/auto-failover-group-standby-replica-how-to-configure.md
         - name: Manually initiate a failover
-          href: managed-instance/user-initiated-failover.md
+          href: managed-instance/user-initiated-failover.md          
   - name: Samples
     items:
     - name: Azure CLI
@@ -1541,18 +1560,21 @@
           - name: Configure AG (multi-subnet)
             displayName: Always On, alwayson, availability group
             items: 
-            - name: Prerequisites
-              href: virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md
+            - name: Azure portal
               displayName: Always On, alwayson, availability group
-            - name: Create availability group
-              href: virtual-machines/windows/availability-group-manually-configure-tutorial-multi-subnet.md
-              displayName: Always On, alwayson, availability group
+              href: virtual-machines/windows/availability-group-azure-portal-configure.md
+            - name: Manually
+              items: 
+              - name: Prerequisites
+                href: virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md
+                displayName: Always On, alwayson, availability group
+              - name: Create availability group
+                displayName: Always On, alwayson, availability group
+                href: virtual-machines/windows/availability-group-manually-configure-tutorial-multi-subnet.md
+              
           - name: Configure AG (single subnet)
             displayName: Always On, alwayson, availability group
-            items: 
-            - name: Azure portal
-              href: virtual-machines/windows/availability-group-azure-portal-configure.md
-              displayName: Always On, alwayson, availability group
+            items:               
             - name: PowerShell or Az CLI
               href: virtual-machines/windows/availability-group-az-commandline-configure.md
               displayName: Always On, alwayson, availability group

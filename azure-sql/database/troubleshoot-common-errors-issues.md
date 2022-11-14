@@ -173,7 +173,7 @@ Connection timeouts occur because the application can't connect to the server. T
 
 ## Network connection termination errors
 
-SQL client libraries connect to Azure SQL Database and Azure SQL Managed Instance using the TCP network protocol. A client library uses a lower level component called TCP provider to manage TCP connections. When the TCP provider detects that the remote host has unexpectedly terminated an existing TCP connection, the client library raises an error. Because the error is a client error and not a SQL server error, there is no SQL error number included. Instead, the error number is 0, and the error message from the TCP provider is used.
+SQL client libraries connect to Azure SQL Database and Azure SQL Managed Instance using the TCP network protocol. A client library uses a lower level component called TCP provider to manage TCP connections. When the TCP provider detects that a remote host has unexpectedly terminated an existing TCP connection, the client library raises an error. Because the error is a client error and not a SQL server error, there is no SQL error number included. Instead, the error number is 0, and the error message from the TCP provider is used.
 
 Examples of network connection termination errors include:
 
@@ -185,7 +185,7 @@ Examples of network connection termination errors include:
 
 `A connection was successfully established with the server, but then an error occurred during the login process. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
 
-Most commonly, connection termination errors occur because of various problems in the network infrastructure between the SQL server and the client application. These problems may be transient or permanent. As a general guidance, applications should use a fixed number of retry attempts for these errors before considering them permanent failures.
+Connection termination errors may occur because the database or elastic pool is temporarily unavailable. They may also occur because of various problems in the network infrastructure between the database server and the client application, including firewalls, network appliances, etc. These problems may be transient or permanent. As a general guidance, applications should use a fixed number of retry attempts for these errors before considering them permanent failures.
 
 ## Resource governance errors
 

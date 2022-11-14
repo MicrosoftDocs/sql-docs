@@ -30,7 +30,6 @@ The following table lists the features of Azure SQL Database that are currently 
 | Feature | Details |
 | ---| --- |
 | [Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
-| [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) | Azure Synapse Link for SQL enables near real time analytics over operational data in Azure SQL Database or SQL Server 2022. |
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering.  |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Retain backups from 1 up to 35 days for Hyperscale databases, and perform a point-in-time restore within the configured retention period. |
@@ -52,6 +51,8 @@ The following table lists the features of Azure SQL Database that have transitio
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
+| [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) | November 2022|  Azure Synapse Link for SQL enables near real time analytics over operational data in Azure SQL Database or SQL Server 2022. |
+| [Restore progress](sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database)) |November 2022 | Restore progress tracked in the `percent_complete` column sys.dm_operation_status. | 
 |[Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | October 2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Database. | 
 | [Database copy from Hyperscale replica](service-tier-hyperscale.md) | October 2022 | Use a Hyperscale geo-secondary replica as source for a database copy. | 
 | [Reverse migrate from Hyperscale](manage-hyperscale-database.md#reverse-migrate-from-hyperscale) | September 2022 | Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. |
@@ -69,6 +70,7 @@ The following table lists the features of Azure SQL Database that have transitio
 | [Azure AD service principal](authentication-aad-service-principal.md) |  September 2021 | Azure Active Directory (Azure AD) supports user creation in Azure SQL Database on behalf of Azure AD applications (service principals).|
 | [Audit management operations](../database/auditing-overview.md#auditing-of-microsoft-support-operations) |  March 2021 | Azure SQL audit capabilities enable you to audit operations done by Microsoft support engineers when they need to access your SQL assets during a support request, enabling more transparency in your workforce. |
 
+
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation.
@@ -77,8 +79,11 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Restore progress** | Restore progress tracked in the `percent_complete` column [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) is now generally available. For more information, read the [Restore progress announcement blog post](https://aka.ms/RestoreProgressGA). |
-| **Invoke external REST endpoints preview** | It's now possible to call a HTTPS REST endpoint natively, using a new system stored procedure. This feature is currently in preview. To learn more, review [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql). |
+| **Azure Synapse Link for Azure SQL Database GA** |  Azure Synapse Link for SQL is now generally available and enables near real time analytics over operational data in Azure SQL Database or SQL Server 2022. Review [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)  to learn more.  | 
+| **Invoke external REST endpoints preview** | It's now possible to call an HTTPS REST endpoint natively, using a new system stored procedure. This feature is currently in preview. To learn more, review [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql). |
+| **Restore progress GA** | Restore progress tracked in the `percent_complete` column [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) is now generally available. For more information, read the [Restore progress announcement blog post](https://aka.ms/RestoreProgressGA). |
+ 
+
 
 ### October 2022
 

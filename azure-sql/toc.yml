@@ -1301,6 +1301,8 @@
       href: managed-instance/instance-stop-start-how-to.md
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
+    - name: Copy or move a database
+      href: managed-instance/database-copy-move-how-to.md
     - name: Job automation with SQL Agent 
       href: managed-instance/job-automation-managed-instance.md
     - name: Monitor & Tune

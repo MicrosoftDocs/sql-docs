@@ -29,6 +29,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 | Feature | Details |
 | ---| --- |
 |[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql) | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
+|[Database copy and move](database-copy-move-how-to.md) | Perform an online database copy or move operation across managed instances. | 
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |
 |[License-free standby replica](auto-failover-group-standby-replica-how-to-configure.md) | Save on licensing costs when you designate your secondary replica as **Standby**. | 
@@ -82,6 +83,7 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 | --- | --- |
 | **Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the **msdb** database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 
 | **Cross-subscription PITR GA** | It's now possible to restore your database for your SQL Managed Instance across subscriptions by using point-in-time restore (PITR). This feature is generally available. To learn more, review [Point-in-time restore](point-in-time-restore.md). | 
+| **Database copy and move preview** | Perform an online copy or move operation of your database across managed instances. This feature is currently in preview. To learn more, review [Copy or move your database](database-copy-move-how-to.md). | 
 | **Free license for standby replica preview** | It's now possible to designate your secondary DR-only instance as **Standby**, saving on licensing costs. This feature is currently in preview. To learn more, review [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
 | **Instance stop preview** | It's now possible to save on costs by stopping your General Purpose Azure SQL Managed Instance when you're not using it. To learn more, review [stop and start instance](instance-stop-start-how-to.md). | 
 | **Log Replay Service GA** | Migrate your databases to Azure SQL Managed Instance using the Log Replay Service (LRS). This feature is now generally available. To learn more, review [Log Replay Service overview](log-replay-service-overview.md). To get started, review [Migrate with LRS](log-replay-service-migrate.md) | 

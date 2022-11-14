@@ -4300,6 +4300,8 @@ items:
       href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Hardware & software requirements
       items:
+      - name: SQL Server 2022
+        href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md
       - name: SQL Server 2019
         href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019.md
       - name: SQL Server 2016 & 2017
@@ -10378,8 +10380,12 @@ items:
       href: sql-server/azure-arc/connect-at-scale.md
     - name: Assess
       href: sql-server/azure-arc/assess.md
+    - name: View databases
+      href: sql-server/azure-arc/view-databases.md
     - name: Configure advanced data Security
       href: sql-server/azure-arc/configure-advanced-data-security.md
+    - name: Billing through Microsoft Azure
+      href: sql-server/azure-arc/billing.md
 - name: Big Data Clusters
   items:
   - name: Big Data Clusters
@@ -13250,13 +13256,25 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql.md
       - name: sys.dm_database_encryption_keys
         href: relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md
-      - name: sys.dm_server_audit_status
-        href: relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md
     - name: Server-Related
       href: relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md
       items:
       - name: sys.dm_server_accelerator_status
         href: relational-databases/system-dynamic-management-views/sys-dm-server-accelerator-status-transact-sql.md
+      - name: sys.dm_server_audit_status
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md
+      - name: sys.dm_server_external_policy_actions
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-actions-transact-sql.md
+      - name: sys.dm_server_external_policy_principals
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-principals-transact-sql.md
+      - name: sys.dm_server_external_policy_role_actions
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-role-actions-transact-sql.md
+      - name: sys.dm_server_external_policy_role_members
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-role-members-transact-sql.md
+      - name: sys.dm_server_external_policy_roles
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-roles-transact-sql.md
+      - name: sys.dm_server_external_policy_principal_assigned_actions
+        href: relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-principal-assigned-actions-transact-sql.md
       - name: sys.dm_server_memory_dumps
         href: relational-databases/system-dynamic-management-views/sys-dm-server-memory-dumps-transact-sql.md
       - name: sys.dm_server_services
@@ -14917,6 +14935,8 @@ items:
         href: relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md
       - name: sp_enclave_send_keys
         href: relational-databases/system-stored-procedures/sp-enclave-send-keys-sql.md
+      - name: sp_external_policy_refresh
+        href: relational-databases/system-stored-procedures/sp-external-policy-refresh-transact-sql.md
       - name: sp_grantdbaccess
         href: relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
       - name: sp_grantlogin

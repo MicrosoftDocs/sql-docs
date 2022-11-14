@@ -21,6 +21,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Stored Procedures in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-only](../../../includes/snac-removed-oledb-only.md)]
+
   A stored procedure ([Stored Procedures &#40;Database Engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) is an executable object stored in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports:  
   
 -   Stored procedures  

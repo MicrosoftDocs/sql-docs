@@ -58,7 +58,7 @@ The **control plane** carries the deployment, management and core service mainte
 
 The following diagram shows entities that connect to SQL Managed Instance. It also shows the resources that need to communicate with a managed instance. The communication process at the bottom of the diagram represents customer applications and tools that connect to SQL Managed Instance as data sources.  
 
-![Diagram showing entities in connectivity architecture for SQL Managed Instance.](./media/connectivity-architecture-prior-november-2022-feature-wave/01-connectivity-architecture-entitites.png)
+![Diagram showing entities in connectivity architecture for SQL Managed Instance.](./media/connectivity-architecture-overview/01-connectivity-architecture-entitites.png)
 
 SQL Managed Instance is a single-tenant Platform-as-a-Service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet, and it is typically accessed via its VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services such as Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Event Hubs, and telemetry collection services. Customers will observe traffic to those services originating from subnets containing SQL Managed Instance.
 
@@ -91,7 +91,7 @@ The [public endpoint](public-endpoint-configure.md) is an optional domain name o
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
-![Diagram showing the connectivity architecture of Azure SQL Managed Instance.](./media/connectivity-architecture-prior-november-2022-feature-wave/02-connectivity-architecture-sql-managed-instance.png)
+![Diagram showing the connectivity architecture of Azure SQL Managed Instance.](./media/connectivity-architecture-overview/02-connectivity-architecture-sql-managed-instance.png)
 
 
 ### Management endpoint
@@ -122,7 +122,7 @@ This private IP address belongs to the internal load balancer for SQL Managed In
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
-![Diagram showing connectivity architecture of the virtual cluster for SQL Managed Instance.](./media/connectivity-architecture-prior-november-2022-feature-wave/03-connectivity-architecture-virtual-cluster.png)
+![Diagram showing connectivity architecture of the virtual cluster for SQL Managed Instance.](./media/connectivity-architecture-overview/03-connectivity-architecture-virtual-cluster.png)
 
 ---
 

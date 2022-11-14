@@ -25,7 +25,7 @@ SQL Managed Instance is placed inside the Azure virtual network and the subnet t
 - The ability to connect SQL Managed Instance to Azure resources.
 
 > [!NOTE]
-> November 2022 introduced a number of changes to the default connectivity structure for SQL Managed Instance. For instances that have not yet enrolled in the feature wave, review [Connectivity architecture prior to November 2022](connectivity-architecture-prior-november-2022-feature-wave.md). For more information, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
+> November 2022 introduced a number of changes to the default connectivity structure for SQL Managed Instance. This article provides information about the current architecture, as well as the architecture of instances that have not yet enrolled in the feature wave. For more information, review [November 2022 feature wave](doc-changes-updates-release-notes-whats-new.md#november-2022-feature-wave). 
 
 ## November 2022 feature wave 
 
@@ -37,14 +37,6 @@ The November 2022 feature wave introduced the following changes to the connectiv
 * Simplified Route table (reduced mandatory routes from 13 to 5).
 
 
-The rest of the article describes the connectivity architecture for SQL Managed Instance with the changes from the feature wave included. 
-
-## [Current architecture](#tab/current)
-
-## [Architecture prior to November 2022](#tab/before-feature-wave)
-
-
----
 
 ## Communication overview
 
@@ -184,11 +176,9 @@ These rules are necessary to ensure outbound management traffic flow. See the [p
 |StorageP-out       |443           |Any     |_subnet_         |Storage._primaryRegion_   |Allow |
 |StorageS-out       |443           |Any     |_subnet_         |Storage._secondaryRegion_ |Allow |
 
-
-
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
-These rules are necessary to ensure inbound management traffic flow. See [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
+These rules are necessary to ensure inbound management traffic flow. 
 
 | Name       |Port                        |Protocol|Source           |Destination|Action|
 |------------|----------------------------|--------|-----------------|-----------|------|
@@ -198,15 +188,20 @@ These rules are necessary to ensure inbound management traffic flow. See [paragr
 |mi_subnet   |Any                         |Any     |MI SUBNET        |MI SUBNET  |Allow |
 |health_probe|Any                         |Any     |AzureLoadBalancer|MI SUBNET  |Allow |
 
+These rules are necessary to ensure outbound management traffic flow. 
+
+| Name       |Port          |Protocol|Source           |Destination|Action|
+|------------|--------------|--------|-----------------|-----------|------|
+|management  |443, 12000    |TCP     |MI SUBNET        |AzureCloud |Allow |
+|mi_subnet   |Any           |Any     |MI SUBNET        |MI SUBNET  |Allow |
+
 ---
-
-
 
 ### Mandatory routes with service-aided subnet configuration
 
 ## [Current architecture](#tab/current)
 
-These routes are necessary to ensure that management traffic is routed directly to a destination. They are enforced by the network intent policy and don't need to be deployed by the customer. S
+These routes are necessary to ensure that management traffic is routed directly to a destination. They are enforced by the network intent policy and don't need to be deployed by the customer. See the previous [high level connectivity architecture](#high-level-connectivity-architecture) section  for more information on connectivity architecture and management traffic.
 
 |Name                     |Address prefix           |Next hop            |
 |-------------------------|-------------------------|--------------------|
@@ -221,21 +216,6 @@ These routes are necessary to ensure that management traffic is routed directly 
 
 In addition, you can add entries to the route table to route traffic that has on-premises private IP ranges as a destination through the virtual network gateway or virtual network appliance (NVA).
 
-## [Architecture prior to November 2022](#tab/before-feature-wave)
-
-
-These rules are necessary to ensure outbound management traffic flow. 
-
-| Name       |Port          |Protocol|Source           |Destination|Action|
-|------------|--------------|--------|-----------------|-----------|------|
-|management  |443, 12000    |TCP     |MI SUBNET        |AzureCloud |Allow |
-|mi_subnet   |Any           |Any     |MI SUBNET        |MI SUBNET  |Allow |
-
-## Mandatory user defined routes with service-aided subnet configuration
-
-## [Current architecture](#tab/current)
-
-Mandatory user defined routes were removed in the November 2022 feature wave, and are no longer applicable. 
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
@@ -258,8 +238,6 @@ These routes are necessary to ensure that management traffic is routed directly 
 |mi-azureactivedirectory-internet|AzureActiveDirectory|Internet|
 
 ---
-
-
 
 ### Networking constraints
 

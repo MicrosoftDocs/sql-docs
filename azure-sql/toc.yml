@@ -1305,6 +1305,10 @@
       href: managed-instance/database-copy-move-how-to.md
     - name: Job automation with SQL Agent 
       href: managed-instance/job-automation-managed-instance.md
+    - name: Distributed transactions with DTC
+      displayName: distributed transaction coordinator 
+      href: managed-instance/distributed-transaction-coordinator-dtc.md
+
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks
@@ -1314,7 +1318,8 @@
         - name: Azure Monitor for Azure SQL Managed Instance
           href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Azure Monitor for Azure SQL Managed Instance reference 
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md           
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
+          
     - name: Configure settings
       items: 
       - name: Customize time zone

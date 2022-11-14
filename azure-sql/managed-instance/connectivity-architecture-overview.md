@@ -39,7 +39,7 @@ The November 2022 feature wave introduced the following changes to the connectiv
 
 The rest of the article describes the connectivity architecture for SQL Managed Instance with the changes from the feature wave included. 
 
-## [Current architecture](#tab/azure-portal)
+## [Current architecture](#tab/current)
 
 ## Communication overview
 
@@ -160,7 +160,7 @@ The following virtual network features are currently *not supported* with SQL Ma
 - **IPv6 for Azure Virtual Network**: Deploying SQL Managed Instance to [dual stack IPv4/IPv6 virtual networks](/azure/virtual-network/ip-services/ipv6-overview) is expected to fail. Associating network security group (NSG) or route table (UDR) containing IPv6 address prefixes to SQL Managed Instance subnet, or adding IPv6 address prefixes to NSG or UDR that is already associated with Managed instance subnet, would render SQL Managed Instance unavailable. SQL Managed Instance deployments to a subnet with NSG and UDR that already have IPv6 prefixes are expected to fail.
 - **Azure DNS private zones with a name reserved for Microsoft services**: Following is the list of reserved names: windows.net, database.windows.net, core.windows.net, blob.core.windows.net, table.core.windows.net, management.core.windows.net, monitoring.core.windows.net, queue.core.windows.net, graph.windows.net, login.microsoftonline.com, login.windows.net, servicebus.windows.net, vault.azure.net. Deploying SQL Managed Instance to a virtual network with associated [Azure DNS private zone](/azure/dns/private-dns-privatednszone) with a name reserved for Microsoft services would fail. Associating Azure DNS private zone with a reserved name to a virtual network containing an instance would render SQL Managed Instance unavailable. Please follow [Azure Private Endpoint DNS configuration](/azure/private-link/private-endpoint-dns) for the proper Private Link configuration.
 
-## [Architecture prior to November 2022](#tab/azure-portal)
+## [Architecture prior to November 2022](#tab/before-feature-wave)
 
 ## Communication overview
 

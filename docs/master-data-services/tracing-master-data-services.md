@@ -16,7 +16,7 @@ ms.author: jiwang6
 
 [!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-Once you have installed Master Data Services (MDS), you may find the trace logging feature useful for error diagnostics, support requests, and monitoring of application usage and performance. This article covers the steps to turn on and configure trace logging. Specifically, this article covers tracing to a text log file. This article also discusses the procedure you can use to create a log file that can help troubleshoot failures that may occur when creating an MDS database.
+Once you have installed Master Data Services (MDS), you may find the trace logging feature useful for error diagnostics, support requests, and monitoring of application usage and performance. This article covers the steps to turn on and configure trace logging. Specifically, this article covers tracing to a text log file. This article also discusses the procedure to create a log file that can help troubleshoot failures that may occur when creating an MDS database.
 
 ## Background
 
@@ -53,14 +53,14 @@ The *Web.config* file contains a tracing section, as shown below. This section i
 <sources>  
      <!-- Adjust the switch value to control the types of messages that should be logged.   
            https://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
-           Use the a switchValue of Verbose to generate a full log. Please be aware that   
-           the trace file can get quite large very quickly -->  
+           Use a switchValue of Verbose to generate a full log. Please be aware that   
+           the trace file can get quite large very quickly. -->  
      <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
           <listeners>  
           <!-- Set a directory path where the service account you chose while setting up Master Data Services has read and write privileges.  
                Default path is Logs in WebApplication folder, for example C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication  
                New log file will be created every day or every 10 mb.  
-               When directory size hits the 200mb limitation, the oldest file will be deleted.-->  
+               When directory size hits the 200 mb limitation, the oldest file will be deleted. -->  
           <add name="FileTraceListener"  
                type="Microsoft.MasterDataServices.Core.Logging.FileTraceListener, Microsoft.MasterDataServices.Core"   
                initializeData="DirectoryPath = Logs; FileSizeInMb = 10; MaxDirectorySizeInMb = 200"/>  
@@ -86,11 +86,11 @@ The following is the default tracing behavior:
   
     |Element|Description|  
     |-------------|-----------------|  
-    |Time|When the trace entry occurs.|  
-    |CorrelationID|One correlation ID is assigned for each request. All the traces triggered by this request will share the same correlation ID.<br/> When an error occurs in the UI, the correlation ID appears in the error message.|  
-    |Operation|Request operation name. If the request is a web UI request, the operation name is the url. If the request is an API request, the operation name is the service name.|  
-    |Level|Level of this trace entry.|  
-    |Message|Message body of the trace.|  
+    |Time|When the trace entry occurs|  
+    |CorrelationID|One correlation ID is assigned for each request. All the traces triggered by this request will share the same correlation ID.<br/> When an error occurs in the UI, the correlation ID appears in the error message|  
+    |Operation|Request operation name. If the request is a web UI request, the operation name is the url. If the request is an API request, the operation name is the service name|  
+    |Level|Level of this trace entry|  
+    |Message|Message body of the trace|  
 
 ### SQL Server 2014 and earlier versions
 
@@ -115,13 +115,13 @@ The following file snippet shows the diagnostics section from the originally ins
           </listeners>  
          </source>  
      </sources>  
-     <trace autoflush="true" />  
+     <trace autoflush="true"/>  
 </system.diagnostics>
 ```
 
 #### Turning on log file tracing
 
-To enable logging, change `switchValue` to `All` or another valid value as described below in [Table 2](#table-2---switchvalue-settings-for-logging). To enable the output to a log file, uncomment the `LogFileListener` line as shown in the following file snippet.
+To enable logging, change `switchValue` to `All` or another valid value as described below in [Table 1](#table-1---switchvalue-settings-for-logging). To enable the output to a log file, uncomment the `LogFileListener` line as shown in the following file snippet:
 
 ```xml
 <system.diagnostics>  
@@ -130,15 +130,27 @@ To enable logging, change `switchValue` to `All` or another valid value as descr
           <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="All">  
           <listeners>  
           <!-- Enable and configure listeners as desired to obtain trace messages. -->  
-          <add name="LogFileListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="MdsTrace.log" traceOutputOptions="DateTime" />  
+          <add name="LogFileListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="MdsTrace.log" traceOutputOptions="DateTime"/>  
           <!-- <add name="EtwListener" type="System.Diagnostics.Eventing.EventProviderTraceListener, System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" initializeData="{F2A341B8-CA5F-49ad-B00C-A82D3FCF948B}"/> -->  
           <!-- <remove name="Default"/> -->  
           </listeners>
           </source>  
      </sources>  
-     <trace autoflush="true" />  
+     <trace autoflush="true"/>  
 </system.diagnostics> 
 ```
+
+##### Table 1 - SwitchValue settings for logging
+
+|Setting|What is logged|
+|-|-|
+|Off|nothing|
+|Error|errors only|
+|Warning|errors and warnings|
+|Information|errors, warnings, informational messages |
+|Verbose|"Information" and other debugging trace information including API requests and responses in XML format |
+|ActivityTracing |start and stop events only |
+|All|"Verbose" and "ActivityTracing" |
 
 #### File name and path
 
@@ -149,7 +161,19 @@ The `initializeData` value is the name of the log file. This may be modified to 
 
 #### Logging level of detail
 
-[Table 1](#table-1---mds-logging-event-types) below describes the categories of trace events that may be logged or sorted with the most important/critical events at the top. [Table 2](#table-2---switchvalue-settings-for-logging) below lists the valid settings for the logging `switchValue`. This setting may be adjusted to produce the right amount of logging details to suit the situation.
+[Table 2](#table-2---mds-logging-event-types) below describes the categories of trace events that may be logged or sorted with the most important/critical events at the top. [Table 1](#table-1---switchvalue-settings-for-logging) above lists the valid settings for the logging `switchValue`. This setting may be adjusted to produce the right amount of logging details to suit the situation.
+
+##### Table 2 - MDS logging event types
+
+|Event Type |Description|
+|-|-|
+|Critical |a fatal error or application crash |
+|Error|a recoverable error |
+|Warning|a noncritical problem |
+|Information|an informational message |
+|Verbose |a debugging trace message |
+|Start|starting of a logical operation |
+|Stop|stopping of a logical operation |
 
 #### Log setting recommendations
 
@@ -200,19 +224,19 @@ To produce a concise and helpful log file, follow these steps:
     1. Stop the application pool.
     1. Retrieve the log file (you may need to wait for processes to finish; there could be a delay after stopping the app pool).
 
-    Or else, open the log file by using an editor that doesn't lock the file (like notepad.exe) and copy the relevant tracing messages.
+    Or else, open the log file by using an editor that doesn't lock the file (like *notepad.exe*) and copy the relevant tracing messages.
 
 1. Open the *Web.config* file by using a text editor and change `switchValue` back to `Off` or the prior value.
 
 1. Start the application pool if stopped.
 
-    Error Handling: All service operations return an array or collection of errors within the OperationResult object of a response message. When an error occurs, the error array is also serialized to XML and written to the web application log file for certain `switchValue` settings, as described above.
+    Error Handling: All service operations return an array or collection of errors within the `OperationResult` object of a response message. When an error occurs, the error array is also serialized to XML and written to the web application log file for certain `switchValue` settings, as described above.
 
-Example of an API response error that has been written to the log file:
+An example of an API response error that has been written to the log file:
 
-```xml
-<ArrayOfError xmlns=”
-http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09” xmlns:i=”http://www.w3.org/2001/XMLSchema-instance”> 
+```XML
+MDS Error: 0 :
+<ArrayOfError xmlns="http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"> 
      <Error> 
      <Code>110003</Code> 
           <Context> 
@@ -224,41 +248,18 @@ http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09” xmlns:i=”
           <Type>Model</Type> 
           </Context> 
      <Description>The name already exists. Type a different name.</Description> 
-    </Error> 
+     </Error> 
 </ArrayOfError> 
 DateTime=2009-12-10T20:48:05.6949548Z error object contents 
 ```
 
-#### Table 1 - MDS logging event types
-
-|Event Type |Description|
-|-|-|
-|Critical |a fatal error or application crash |
-|Error|a recoverable error |
-|Warning|a noncritical problem |
-|Information|an informational message |
-|Verbose |a debugging trace message |
-|Start|starting of a logical operation |
-|Stop|stopping of a logical operation |
-
-#### Table 2 - SwitchValue settings for logging
-
-|Setting|nothing|
-|-|-|
-|Error|errors only|
-|Warning|errors and warnings|
-|Information|errors, warnings, informational messages |
-|Verbose|“Information” plus other debugging trace information including API requests and responses in XML format |
-|ActivityTracing |start and stop events only |
-|All|“Verbose” plus “ActivityTracing” |
-
-#### Table 3 – As shown in the example above, each error includes the following data properties
+As shown in the example above, each error includes the following data properties:
 
 |Property|Description|
 |-|-|
 |Code|The unique error number identifying the type of error|
 |Description|Localized error message text |
-|Context.FullyQualifiedName |The fully qualified name of the object involved in the error: Some names are only unique within their context. An entity would be qualified with a Model name prefix such as ModelName : EntityName.|
+|Context.FullyQualifiedName |The fully qualified name of the object involved in the error. Some names are only unique within their context. An entity would be qualified with a Model name prefix such as ModelName : EntityName|
 |Context.Type |The type of object involved in the error |
 |Context.Identifier |The identifier of the object involved in the error |
 |Context.Identifier.Id |The unique GUID of the object, if specified or available |
@@ -267,19 +268,19 @@ DateTime=2009-12-10T20:48:05.6949548Z error object contents
 
 ## Tracing MDS database creation issues
 
-You can use the following procedure to create a log file that can help troubleshoot failures that may occur when creating an MDS database.
+You can use the following procedure to create a log file that can help troubleshoot failures that may occur when creating an MDS database:
 
-1. Open the *MDSConfigTool.exe.config* file in *C:\Program Files\Microsoft SQL Server\Master Data Services\Configuration* by using notepad.exe.
+1. Open the *MDSConfigTool.exe.config* file in the path *C:\Program Files\Microsoft SQL Server\Master Data Services\Configuration* by using *notepad.exe*.
 
 1. Uncomment the following line in the file by removing the <!-- prefix characters and --> suffix characters on that line:
 
-    `<add name="LogFileListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="MdsConfigManagerTrace.log" traceOutputOptions="DateTime" />`
+    `<add name="LogFileListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="MdsConfigManagerTrace.log" traceOutputOptions="DateTime"/>`
 
 1. Make sure `switchValue` is set to `All`.
 
     `<source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="All">`
 
-1. Try again to create the database. Then, open the *MdsConfigManagerTrace.log* that is saved to *C:\Program Files\Microsoft SQL Server\Master Data Services\Configuration* and review the same for other information regarding the failure.
+1. Try again to create the database. Then, open the file *MdsConfigManagerTrace.log* that is saved to *C:\Program Files\Microsoft SQL Server\Master Data Services\Configuration* and review the same for other information regarding the failure.
 
 ## External Resources
 

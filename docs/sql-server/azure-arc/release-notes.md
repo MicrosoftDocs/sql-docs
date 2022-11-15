@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 This release is published November 12, 2022
 
-### Image tag
+### Extension version
 
 `1.1.2132.21`
 

@@ -284,4 +284,4 @@ You can use the following procedure to create a log file that can help troublesh
 
 ## External Resources
 
-[Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)
+[Troubleshooting logging improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)

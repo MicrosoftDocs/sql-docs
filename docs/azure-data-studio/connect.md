@@ -52,7 +52,7 @@ After upgrading to Azure Data Studio 1.40, the initial launch of the application
 
 :::image type="content" source="connect/connect-import-update-after-upgrade.png" alt-text="":::
 
-You should review the options selected for Encrypt and Trust server certificate for existing connections in Azure Data Studio before connecting.  In some scenarios, it may be necessary to configure a signed certificate, or change the value for one or both properties.  
+You should review the options selected for **Encrypt** and **Trust server certificate** for existing connections in Azure Data Studio before connecting. In some scenarios, it may be necessary to configure a signed certificate, or change the value for one or both properties.  
 
 ## More information
 

@@ -39,7 +39,7 @@ Before you move your managed instance, confirm the subnet is marked as **Ready f
 
 In the **Virtual network** UI of the Azure portal, virtual networks that meet the prerequisites for a managed instance are categorized as **Ready for Managed Instance**. Virtual networks that have subnets with managed instances already deployed to them display an SQL Managed Instance icon before the virtual network name. Empty subnets that are ready for a managed instance display a Virtual network subnet icon. 
 
-Subnets that are marked as **Not ready** don't fulfill all the requirements for SQL Managed Instance deployment. Use the info icon on the right of the subnet name to learn why the subnet isn't ready and if subnet can meet [network requirements](connectivity-architecture-overview.md#service-aided-subnet-configuration). This requirements include:
+Subnets that are marked as **Not ready** don't fulfill all the requirements for SQL Managed Instance deployment. Use the info icon on the right of the subnet name to learn why the subnet isn't ready and if subnet can meet [network requirements](connectivity-architecture-overview.md#service-aided-subnet-configuration). These requirements include:
 
 - delegating to the Microsoft.Sql/managedInstances resource provider
 - attaching a route table

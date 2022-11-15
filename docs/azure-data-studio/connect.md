@@ -12,7 +12,7 @@ ms.custom:
 
 # Connect with Azure Data Studio
 
-This article describes how to connect to an instance of SQL Server with Azure Data Studio 1.40 and higher.
+This article describes how to connect to SQL Server with Azure Data Studio 1.40 and higher.
 
 ## Encrypt and Trust server certificate
 

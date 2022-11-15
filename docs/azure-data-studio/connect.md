@@ -31,7 +31,7 @@ For workstation with a fresh installation of Azure Data Studio 1.40 and higher:
 
    Azure Data Studio shows **Connection Details**.
 
-:::image type="content" source="connect/connect-connection-details.png" alt-text="":::
+:::image type="content" source="connect/connect-connection-details.png" alt-text="Screenshot of Connection Details.":::
 
 3. Set the connection details for your server.
 
@@ -50,7 +50,7 @@ For workstation with a fresh installation of Azure Data Studio 1.40 and higher:
 
 After upgrading to Azure Data Studio 1.40, the initial launch of the application will display the following message:
 
-:::image type="content" source="connect/connect-import-update-after-upgrade.png" alt-text="":::
+:::image type="content" source="connect/connect-import-update-after-upgrade.png" alt-text="Screenshot of important update message after upgrading Azure Data Studio.":::
 
 You should review the options selected for **Encrypt** and **Trust server certificate** for existing connections in Azure Data Studio before connecting. In some scenarios, it may be necessary to configure a signed certificate, or change the value for one or both properties.  
 

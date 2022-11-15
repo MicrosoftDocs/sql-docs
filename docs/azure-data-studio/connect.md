@@ -16,15 +16,15 @@ This article describes how to connect to SQL Server with Azure Data Studio 1.40 
 
 ## Encrypt and Trust server certificate
 
-Azure Data Studio 1.40 includes an important change to the **Encrypt** property, which is now enabled (set to **True**) by default for MSSQL provider connections, and SQL Server must be configured with TLS certificates signed by a trusted root certificate authority. In addition, the **Encrypt** and **Trust server certificate** properties have moved from the **Advanced** pane to the front of the **Connection Details** pane. Both properties have information icons to provide more detail on hover. The [best practice](/sql/relational-databases/security/securing-sql-server) is to support a trusted encrypted connection to the server.
+Azure Data Studio 1.40 and later includes an important change to the **Encrypt** property, which is now enabled (set to **True**) by default for MSSQL provider connections, and SQL Server must be configured with TLS certificates signed by a trusted root certificate authority. In addition, the **Encrypt** and **Trust server certificate** properties have moved from the **Advanced** pane to the front of the **Connection Details** pane. Both properties have information icons to provide more detail on hover. The [best practice](/sql/relational-databases/security/securing-sql-server) is to support a trusted encrypted connection to the server.
 
 For users connecting to Azure SQL Database, no changes to existing, saved connections in Azure Data Studio are needed; Azure SQL Database supports encrypted connections and is configured with trusted certificates. 
 
 For users connecting to on-premises SQL Server, or SQL Server in a Virtual Machine, if **Encrypt** is set to **True**, ensure that you have a certificate from a trusted certificate authority (e.g. not a self-signed certificate). Alternatively, you may choose to connect without encryption (**Encrypt** set to **False**), or to trust the server certificate (**Encrypt** set to **True** and **Trust server certificate** set to **True**).   
 
-## New installation of Azure Data Studio 1.40
+## New installation of Azure Data Studio 1.40 and higher
 
-For workstation with a fresh installation of Azure Data Studio 1.40 and higher:
+For workstations with a new installation:
 
 1. Select **New Connection** on the **Welcome** page to open the **Connection** pane.
 2. From the **Connection** pane, select  **Servers** > **New Connection**.
@@ -46,9 +46,9 @@ For workstation with a fresh installation of Azure Data Studio 1.40 and higher:
 - **Database Name:** \<Default\>
 - **Server Group:** \<Default\>
 
-## Connections after upgrading to Azure Data Studio 1.40
+## Connections after upgrading to Azure Data Studio 1.40 and higher
 
-After upgrading to Azure Data Studio 1.40, the initial launch of the application will display the following message:
+After upgrading to Azure Data Studio 1.40 and higher, the initial launch of the application will display the following message:
 
 :::image type="content" source="connect/connect-import-update-after-upgrade.png" alt-text="Screenshot of important update message after upgrading Azure Data Studio.":::
 

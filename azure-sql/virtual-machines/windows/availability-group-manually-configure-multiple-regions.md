@@ -70,15 +70,15 @@ To create a [virtual network and subnet in the new region](/azure/virtual-networ
     1. Under **Project details**, choose the appropriate Azure **Subscription**, and the **Resource group** you created previously, such as **SQL-HA-RG**.
     1. Under **Instance details**, provide a name for your virtual network, such as **remote_HAVNET**, and choose a new remote region.
 
-     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-create-vnet-basics.png" alt-text="Screenshot of creating virtual network in remote region.":::
+     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-create-vnet-basics.png" alt-text="Screenshot the Azure portal, Create virtual network page, showing creating virtual network in remote region.":::
 
 1. On the **IP addresses** tab, click the "..." next to **+ Add a subnet** and select **Delete address space** to remove the existing address space, if you need a different address range.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png" alt-text="Screenshot of how to delete the existing address space in a virtual network.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png" alt-text="Screenshot the Azure portal, Create virtual network page, showing how to delete the existing address space in a virtual network." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png":::
 
 1. Select **Add an IP address space** to open the blade to create the address space you need. For this tutorial, the address space of the remote region is **10.36.0.0/16** is being used.  Select **Add**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-add-address-space.png" alt-text="Screenshow of how to add the address space for a virtual network.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-add-address-space.png" alt-text="Screenshot the Azure portal, Add an IP address space page, showing how to add the address space for a virtual network." lightbox="./media/availability-group-manually-configure-multiple-regions/multi-region-add-address-space.png":::
 
 1. Select **+ Add a subnet**
    1. Provide a value for the **Subnet name**, such as **Admin**
@@ -86,7 +86,7 @@ To create a [virtual network and subnet in the new region](/azure/virtual-networ
       - For example, if your address range is *10.36.0.0/16*, enter the IP address range `10.36.1.0/24` for the **Admin** subnet.
    1. Select **Add** to add your new subnet.
 
-     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-configure-virtual-network.png" alt-text="Screenshot of adding the subnet to a virtual network.":::
+     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-configure-virtual-network.png" alt-text="Screenshot the Azure portal, Add a subnet page, showing how to add the subnet to a virtual network." lightbox="./media/availability-group-manually-configure-multiple-regions/multi-region-configure-virtual-network.png":::
 
 ## Connect the Virtual Networks in the two Azure Regions
 
@@ -94,18 +94,20 @@ After you have create the new virtual network and subnet, you're ready to connec
 
 - [Virtual Network Peering - Connect virtual networks with virtual network peering using the Azure portal](/azure/virtual-network/tutorial-connect-virtual-networks-portal) (Recommended)
 
+  In some cases, you may have to use PowerShell to create the VNet-to-VNet connection. For example, if you use different Azure accounts you cannot configure the connection in the portal. In this case, review  [Configure a VNet-to-VNet connection using the Azure portal](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps).
+
 - [Site to Site VPN Gateway - Configure a VNet-to-VNet connection using the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal).
 
-   >[!NOTE]
-   >In some cases, you may have to use PowerShell to create the VNet-to-VNet connection. For example, if you use different Azure accounts you cannot configure the connection in the portal. In this case see, [Configure a VNet-to-VNet connection using the Azure portal](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps).
+This tutorial uses virtual network peering. 
 
-For this tutorial, Virtual Network Peering will be used.
+To configure virtual network peering, follow these steps: 
+
 
 1. In the search box at the top of the Azure portal, look for *autoHAVNET* the virtual network in your local region. When **autoHAVNET** appears in the search results, select it.
 
 1. Under **Settings**, select **Peerings**, and then select **+ Add**, as shown in the following picture:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-peering.png" alt-text="Screenshot to add the virtual network peering.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-peering.png" alt-text="Screenshot of the Azure portal, Peerings page, showing how to add the virtual network peering.":::
 
 1. Enter or select the following information, accept the defaults for the remaining settings, and then select **Add**.
 
@@ -118,11 +120,11 @@ For this tutorial, Virtual Network Peering will be used.
     | Subscription | Select your subscription of the remote virtual network. |
     | Virtual network  | Select **remote_HAVNET** for the name of the remote virtual network. The remote virtual network can be in the same region of **autoHAVNET** or in a different region. |
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-settings-bidirectional.png" alt-text="Screenshot of the peering settings.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-settings-bidirectional.png" alt-text="Screenshot the Azure portal, Peerings page for the virtual network, showing peering settings." lightbox="./media/availability-group-manually-configure-multiple-regions/peering-settings-bidirectional.png" :::
 
-   In the **Peerings** page, the **Peering status** is **Connected**, as shown in the following picture:
+   On the **Peerings** page, the **Peering status** is **Connected**, as shown in the following picture:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-status.png" alt-text="Screenshot of the connected status of the virtual network peering.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-status.png" alt-text="Screenshot of the Azure portal, Peerings page, showing connected status of the virtual network peering.":::
 
    If you don't see a **Connected** status, select the **Refresh** button.
 
@@ -169,20 +171,20 @@ In the following steps, configure the **ad-remote-dc** machine as a domain contr
 
 1. In **Network and Sharing Center**, select the network interface.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/26-networkinterface.png" alt-text="Screenshot of the Network interface on a VM.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/26-network-interface.png" alt-text="Screenshot of the Networking and Sharing center on a VM, with the ethernet2 connection selected..":::
 
 1. Select **Properties**.
 1. Select **Internet Protocol Version 4 (TCP/IPv4)** and then select **Properties**.
 1. Select **Use the following DNS server addresses** and then specify the address of the primary domain controller in **Preferred DNS server**.
 1. Select **OK**, and then **Close** to commit the changes. You are now able to join the VM to **corp.contoso.com**.
 
-   >[!IMPORTANT]
-   >If you lose the connection to your remote desktop after changing the DNS setting, go to the Azure portal and restart the virtual machine.
+   > [!IMPORTANT]
+   > If you lose the connection to your remote desktop after changing the DNS setting, go to the Azure portal and restart the virtual machine.
 
 1. From the remote desktop to the secondary domain controller, open **Server Manager Dashboard**.
 1. Select the **Add roles and features** link on the dashboard.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Select the Add roles and features link on the dashboard.":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the Server Manger on a VM, with Select the Add roles and features link on the dashboard highlighted.":::
 
 1. Select **Next** until you get to the **Server Roles** section.
 1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any additional features that are required by these roles.
@@ -192,7 +194,7 @@ In the following steps, configure the **ad-remote-dc** machine as a domain contr
 1. In the **Action** column of the **All Server Task Details** dialog, select **Promote this server to a domain controller**.
 1. Under **Deployment Configuration**, select **Add a domain controller to an existing domain**.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/28-deploymentconfig.png" alt-text="Screenshot of the deployment configuration on a VM.":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/28-deployment-config.png" alt-text="Screenshot of the Active Directory Services Configuration Manager, showing the deployment configuration on a VM.":::
 
 1. Click **Select**.
 1. Connect by using the administrator account (**CORP.CONTOSO.COM\domainadmin**) and password (**Contoso!0000**).
@@ -268,8 +270,8 @@ After the SQL Server virtual machine restarts as a member of the domain, add **C
 
 1. Wait until the VM is restarted, then launch the RDP file again from the primary domain controller to sign in to **sqlserver-2** by using the **CORP\DomainAdmin** account.
 
-   >[!TIP]
-   >Make sure that you sign in with the domain administrator account. In the previous steps, you were using the BUILT IN administrator account. Now that the server is in the domain, use the domain account. In your RDP session, specify *DOMAIN*\\*username*.
+   > [!TIP]
+   > Make sure that you sign in with the domain administrator account. In the previous steps, you were using the BUILT IN administrator account. Now that the server is in the domain, use the domain account. In your RDP session, specify *DOMAIN*\\*username*.
    >
 
 1. In **Server Manager**, select **Tools**, and then select **Computer Management**.
@@ -378,13 +380,13 @@ The steps to [create the load balancer](availability-group-manually-configure-tu
 
    The Azure portal blade should look like this:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" alt-text="Screenshot of the create Load Balancer UI.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page. " lightbox="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png":::
 
 1. Select **Next: Frontend IP Configuration**
 
 1. Select **Add a frontend IP Configuration**
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of add a frontend IP configuration.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page with  add a frontend IP configuration highlighted.":::
 
 1. Set up the frontend IP using the following values:
 
@@ -397,7 +399,7 @@ The steps to [create the load balancer](availability-group-manually-configure-tu
 
    The following image shows the **Add frontend IP Configuration** UI:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal, Add fronted IP configuration page.":::
 
 1. Select **Add** to create the frontend IP.
 
@@ -470,7 +472,7 @@ To add Failover Clustering features, do the following steps on both SQL Server V
 1. Connect to the SQL Server virtual machine through the Remote Desktop Protocol (RDP) by using the *CORP\install* account. Open **Server Manager Dashboard**.
 1. Select the **Add roles and features** link on the dashboard.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Select the Add roles and features link on the dashboard for the SQL Server VM.":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the Server manager, showing Add roles and features link highlighted on the dashboard page. ":::
 
 1. Select **Next** until you get to the **Server Features** section.
 1. In **Features**, select **Failover Clustering**.
@@ -507,7 +509,7 @@ The method of opening the ports depends on the firewall solution that you use. T
 1. For **Rule Type**, choose **Port**.
 1. For the port, specify **TCP** and type the appropriate port numbers. See the following example:
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/35-tcpports.png" alt-text="Screenshot of creating a new Inbound Rule for the SQL firewall.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/35-tcp-ports.png" alt-text="Screenshot of creating a new Inbound Rule for the SQL firewall.":::
 
 1. Select **Next**.
 1. On the **Action** page, keep **Allow the connection** selected, and then select **Next**.
@@ -554,7 +556,7 @@ Next, add the IP address resource to the cluster for the new SQL Server VM.
 
 1. On the **Properties** dialog box, select **Add** under **IP Address**, and then add the IP address of the cluster name from the remote network region. Select **OK** on the **IP Address** dialog box, and then select **OK** again on the **Cluster Properties** dialog box to save the new IP address.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-cluster-ip-address.png" alt-text="Screenshot of adding the cluster IP.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-cluster-ip-address.png" alt-text="Screenshot of Cluster name properties, and IP address dialog box, showing how to add the cluster IP.":::
 
 1. Add the IP address as a dependency for the core cluster name.
 
@@ -568,24 +570,24 @@ The IP address for the listener in the remote region needs to be added to the cl
 
 1. Right-click the availability group role in Failover Cluster Manager, choose **Add Resource**, **More Resources**, and select **IP Address**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/20-add-ip-resource.png" alt-text="Screenshot of where to create IP Address resource.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/20-add-ip-resource.png" alt-text="Screenshot of the Failover Cluster Manager, selecting IP address on the availability group right-click menu." lightbox="./media/availability-group-manually-configure-multiple-regions/20-add-ip-resource.png":::
 
 1. To configure this IP address, right click the resource under **Other Resources** and select **Properties**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/configure-listener-ip-cluster.png" alt-text="Screenshot of configuring the listener IP in the cluster.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/configure-listener-ip-cluster.png" alt-text="Screenshot of Failover Cluster Manager, with the right-click menu open, selecting properties. ":::
 
 1. Provide a **Name** for the new resource, select the network from the remote data center, assign the static IP address from the new Azure load balancer.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/assign-listener-ip-cluster.png" alt-text="Screenshot of assigning the listener IP in the cluster.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/assign-listener-ip-cluster.png" alt-text="Screenshot of the IP address properties dialog box, showing assigning ning the listener IP in the cluster.":::
 
-1. Click **Apply**, and then **OK**.
+1. Select **Apply**, and then **OK**.
 
 1. Add the IP address resource as a dependency for the listener client access point (network name) cluster, by right-clicking on the listener client access point, and choosing **Properties**. Browse to the **Dependencies** tab and add the new IP address resource to the listener client access point. The following screenshot shows a properly configured IP address cluster resource:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/50-configure-dependency-multiple-ip.png" alt-text="Screenshot of the IP Addresses configured for the Availability Group.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/50-configure-dependency-multiple-ip.png" alt-text="Screenshot of Failover Cluster Manager, the Server name properties dialog, showing the configured the IP addresses for the availability group." lightbox="./media/availability-group-manually-configure-multiple-regions/50-configure-dependency-multiple-ip.png" :::
 
-   >[!IMPORTANT]
-   >The cluster resource group includes both IP addresses. Both IP addresses are dependencies for the listener client access point. Use the **OR** operator in the cluster dependency configuration.
+   > [!IMPORTANT]
+   > The cluster resource group includes both IP addresses. Both IP addresses are dependencies for the listener client access point. Use the **OR** operator in the cluster dependency configuration.
 
 1. [Set the cluster parameters in PowerShell](availability-group-manually-configure-tutorial-single-subnet.md#setparam).
 
@@ -601,6 +603,7 @@ The IP address for the listener in the remote region needs to be added to the cl
 
    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"EnableDhcp"=0}
    ```
+
 ## Enable availability groups
 
 Next, enable the **Always On availability groups** feature. Do these steps on the new SQL Server.
@@ -609,7 +612,7 @@ Next, enable the **Always On availability groups** feature. Do these steps on th
 1. In the browser tree, select **SQL Server Services**, then right-click the **SQL Server (MSSQLSERVER)** service and select **Properties**.
 1. Select the **Always On High Availability** tab, then select **Enable Always On availability groups**, as follows:
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/54-enableAlwaysOn.png" alt-text="Screenshot of enabling Always On availability groups.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/54-enable-Always-On.png" alt-text="Screenshot of SQL Server properties, AlwaysOn High Availability tab, with the checkbox to enable emphasized.":::
 
 1. Select **Apply**. Select **OK** in the pop-up dialog.
 
@@ -632,11 +635,11 @@ Once SQL Server has restarted on the newly created virtual machine, it can be ad
    >Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, full synchronization is not recommended because it may take a long time. You can reduce this time by manually taking a backup of the database and restoring it with `NO RECOVERY`. If the database is already restored with `NO RECOVERY` on the second SQL Server before configuring the availability group, choose **Join only**. If you want to take the backup after configuring the availability group, choose **Skip initial data synchronization**.
    >
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/70-datasynchronization.png" alt-text="Screenshot of Choose Skip initial data synchronization.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/70-data-synchronization.png" alt-text="Screenshot of the New Availability Group window in SSMS, Select Data Synchronization page, with Full selected.":::
 
 1. In the **Validation** page, select **Next**. This page should look similar to the following image:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-validation.png" alt-text="Screenshot of the validation screen for an availability group.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-validation.png" alt-text="Screenshot of the Add Replica to Availability Group window in SSMS, showing the Validation page.":::
 
     >[!NOTE]
     >There is a warning for the listener configuration because you have not configured an availability group listener. You can ignore this warning because the listener is already setup, it was created after creating the Azure load balancer in the local region.
@@ -648,11 +651,11 @@ Once SQL Server has restarted on the newly created virtual machine, it can be ad
 
 1. In **Object Explorer**, expand **Always On High Availability**, and then expand **availability groups**. Right-click the availability group and select **Show Dashboard**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/76-showdashboard.png" alt-text="Screenshot of Show availability group dashboard.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/76-show-dashboard.png" alt-text="Screenshot of Object Explorer in SSMS, right-click menu open for the availability group, show dashboard selected.":::
 
    Your **Always On Dashboard** should look similar to the following screenshot, now with another replica:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of availability group dashboard.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of SSMS availability group dashboard." lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png":::
 
    You can see the replicas, the failover mode of each replica, and the synchronization state.
 
@@ -660,7 +663,7 @@ Once SQL Server has restarted on the newly created virtual machine, it can be ad
 
 1. In **Object Explorer**, expand **Always On High Availability**, expand **availability groups**, and then expand **Availability Group Listener**. Right-click the listener name and select **Properties**. You should now see both IP addresses for the listener, one in each region:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-listener.png" alt-text="Screenshot of both IP addresses being used for the listener.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-listener.png" alt-text="Screenshot of the Availability Group Listener Properties window in SSMS, showing both IP addresses being used for the listener.":::
 
 ## Set connection for multiple subnets
 

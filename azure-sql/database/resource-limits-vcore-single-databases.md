@@ -260,6 +260,152 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 
 <sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
+
+## Hyperscale - Premium-series memory optimized (part 1 of 3)
+
+SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+
+|vCores|2|4|6|8|10|
+|:--- | --: |--: |--: |--: |--: |
+|Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
+|Memory (GB)| 20.8|41.5|62.3|83|103.8|
+|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |100 |
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|64|128|192|256|320|
+|Max local SSD IOPS <sup>1</sup>|10,240|20,480|30,720|40,960|51,200|
+|Max log rate (MBps)|105 |105 |105 |105 |105 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|200|400|600|800|1000|
+|Max concurrent external connections <sup>4</sup>||||||
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
+|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+
+<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+
+## Hyperscale - Premium-series memory optimized (part 2 of 3)
+
+SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+
+|vCores|12|14|16|18|20|
+|:--- | --: |--: |--: |--: |--: |
+|Hardware|Premium-series|Premium-series|Premium-series|Premium-series|Premium-series|
+|Memory (GB)|124.6|145.3|166.1|186.9|207.6|
+|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|3X Memory|
+|Columnstore support|Yes|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |100 |
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|64|128|192|256|320|
+|Max local SSD IOPS <sup>1</sup>|10,240|20,480|30,720|40,960|51,200|
+|Max log rate (MBps)|105 |105 |105 |105 |105 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|200|400|600|800|1000|
+|Max concurrent external connections <sup>4</sup>||||||
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
+|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+
+<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+
+## Hyperscale - Premium-series memory optimized (part 3 of 3)
+
+SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
+
+|vCores|24|32|40|80|
+|:--- | --: |--: |--: |--: |--: |
+|Memory (GB)| 249.1|332.2|415.2|830.5|
+|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|
+|Columnstore support|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|768|1024|1280|2560|
+|Max local SSD IOPS <sup>1</sup>|122,880|163,840|204,800|327,680|
+|Max log rate (MBps)|105 |105 |105 |105 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|2,400|3,200|4,000|8,000)
+|Max concurrent external connections <sup>4</sup>||||||
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
+|Secondary replicas|0-4|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|7 days|
+
+<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+## Hyperscale - Premium-series memory optimized
+
+|Compute size (service objective)|HS_DC_2|HS_DC_4|HS_DC_6|HS_DC_8|
+|:--- | --: |--: |--: |--: |
+|Hardware|DC-series|DC-series|DC-series|DC-series|
+|vCores|2|4|6|8|
+|Memory (GB)|9|18|27|36|
+|[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|
+|Columnstore support|Yes|Yes|Yes|Yes|
+|In-memory OLTP storage (GB)|N/A|N/A|N/A|N/A|
+|Max data size (TB)|100 |100 |100 |100 |
+|Max log size (TB)|Unlimited |Unlimited |Unlimited |Unlimited |
+|Tempdb max data size (GB)|64|128|192|256|
+|Max local SSD IOPS <sup>1</sup>|14000|28000|42000|44800|
+|Max log rate (MBps)|100 |100 |100 |100 |
+|Local read IO latency<sup>2</sup> |1-2 ms|1-2 ms|1-2 ms|1-2 ms|
+|Remote read IO latency<sup>2</sup>|1-5 ms|1-5 ms|1-5 ms|1-5 ms|
+|Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
+|Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
+|Max concurrent workers|160|320|480|640|
+|Max concurrent external connections <sup>4</sup>|16|32|48|64|
+|Max concurrent sessions|30,000|30,000|30,000|30,000|
+|Secondary replicas|0-4|0-4|0-4|0-4|
+|Multi-AZ|N/A|N/A|N/A|N/A|
+|Read Scale-out|Yes|Yes|Yes|Yes|
+|Backup storage retention|7 days|7 days|7 days|7 days|
+
+<sup>1</sup> Besides local SSD IO, workloads will use remote [page server](hyperscale-architecture.md#page-server) IO. Effective IOPS will depend on workload. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance), and [Data IO in resource utilization statistics](hyperscale-performance-diagnostics.md#data-io-in-resource-utilization-statistics).
+
+<sup>2</sup> Latency numbers are representative for typical workloads at steady state, but are not guaranteed. 
+
+<sup>3</sup> Hyperscale is a multi-tiered architecture with separate compute and storage components. For more information, see [Hyperscale service tier architecture](hyperscale-architecture.md).
+
+<sup>4</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
+
 ## General purpose - provisioned compute - Gen5
 
 ### Gen5 hardware (part 1)

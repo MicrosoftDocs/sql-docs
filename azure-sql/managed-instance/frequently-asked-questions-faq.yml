@@ -615,7 +615,7 @@ sections:
                     
           ### How can I onboard using a region that is not yet supported?
           
-          Most Azure public regions already support the November 2022 feature wave, with support for the remaining ones coming soon.  Azure government and sovereign clouds are currently unsupported. 
+          Most Azure public regions already support the November 2022 feature wave, with support for the remaining ones coming soon.  Azure Government and sovereign clouds are currently unsupported. 
 
 
 

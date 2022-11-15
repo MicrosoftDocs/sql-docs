@@ -82,15 +82,15 @@ MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 ```
 
 > [!NOTE]
-> To restore databases that are encrypted at-rest (by using [TDE](../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the [SQL Server Connector for Azure Key Vault](https://techcommunity.microsoft.com/t5/azure-sql-blog/sql-server-connector-for-azure-key-vault-is-generally-available/ba-p/386105).
+> To restore databases that are encrypted at-rest (by using [Transparent Data Encryption (TDE)](../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the SQL Server Connector for Azure Key Vault. For details, review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
 
 
-## Consideration
+## Considerations
 
 Consider the following:
 
 - When restoring to SQL Server, you must use the `WITH MOVE` qualifier, and provide explicit paths for the data files. 
-- Databases encrypted with service-managed TDE keys cannot be restored to SQL Server. You can only restore an encrypted database to SQL Server if it was encrypted with a customer-managed key assuming the destination server has access to the same key used to encrypt the database. 
+- Databases encrypted with service-managed Transparent Data Encryption (TDE) keys cannot be restored to SQL Server. You can only restore an encrypted database to SQL Server if it was encrypted with a customer-managed key and the destination server has access to the same key used to encrypt the database. Review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) to learn more. 
 - It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in. 
 
 ## Next steps

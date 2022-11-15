@@ -92,4 +92,3 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 
 - To obtain comprehensive support of the on-demand SQL Assessment feature, a Premier or Unified support subscription is required. For details, see [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
 
-- [View SQL Server databases - Azure Arc](view-databases.md)

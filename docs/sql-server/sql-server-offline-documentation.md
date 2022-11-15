@@ -19,17 +19,19 @@ ms.custom:
 
 This article describes how to download and view offline SQL Server content in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Offline content enables you to access the documentation without an internet connection (although an internet connection is initially required to download it).
 
+## Overview
+
 Offline documentation is available for versions of SQL Server 2012 and later. Although you can view content for [previous versions online](/previous-versions/sql/), an offline option provides a convenient way to access the older content.
 
 - [SQL Server 2016 and later](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
 - [SQL Server 2012](#sql-server-2012-offline-content)
 
+If your system doesn't have internet access and you want to install the offline content, first downlad the content on a system that has internet, and then move the package over to the offline system, using SSMS to locate the installation file path and load the files. 
+
 ## SQL Server 2016 and later offline content
 
-The following steps explain how to load offline content for SQL Server 2016 and later. 
-
-If your system doesn't have internet access and you want to install the offline content, first downlad the content by using SQL Server Management Studio (SSMS) on a system that has internet, and then move the package over to the offline system, using SSMS to locate the installation file path and loading the files. 
+The following steps explain how to load offline content for SQL Server 2016 and later by using SQL Server Management Studio (SSMS) that has access to the internet. 
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -55,7 +57,7 @@ If your system doesn't have internet access and you want to install the offline 
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2016-content.png)
    
-5. (Optional) To move the content to an offline system, go to the **Local store path** where the files were installed, and move them to the offline system. Next, use the SSMS UI to install the content again, but this time choose **Disk** as the **Installation source**. 
+5. (Optional) To move the content to an offline system, go to the **Local store path** where the files were installed, and move them to the offline system. Next, use the SSMS UI to install the content again, but this time choose **Disk** as the **Installation source** and provide the location where you saved the files after moving them. 
 
 ## SQL Server 2014 offline content
 

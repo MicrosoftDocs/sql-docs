@@ -16,7 +16,7 @@ This article describes how to connect to an instance of SQL Server with Azure Da
 
 ## Encrypt and Trust server certificate
 
-Azure Data Studio 1.40 includes an important change to the **Encrypt** property, which is now enabled (set to **True**) by default for MSSQL provider connections, and SQL Server must be configured with TLS certificates signed by a trusted root certificate authority.  In addition, the **Encrypt** and **Trust server certificate** properties have moved from the **Advanced** pane to the front of the **Connection Details** pane.  Both properties have information icons to provide more detail on hover.  The [best practice](https://learn.microsoft.com/sql/relational-databases/security/securing-sql-server) is to support a trusted encrypted connection to the server.
+Azure Data Studio 1.40 includes an important change to the **Encrypt** property, which is now enabled (set to **True**) by default for MSSQL provider connections, and SQL Server must be configured with TLS certificates signed by a trusted root certificate authority. In addition, the **Encrypt** and **Trust server certificate** properties have moved from the **Advanced** pane to the front of the **Connection Details** pane. Both properties have information icons to provide more detail on hover. The [best practice](/sql/relational-databases/security/securing-sql-server) is to support a trusted encrypted connection to the server.
 
 For users connecting to Azure SQL Database, no changes to existing, saved connections in Azure Data Studio are needed; Azure SQL Database supports encrypted connections and is configured with trusted certificates. 
 

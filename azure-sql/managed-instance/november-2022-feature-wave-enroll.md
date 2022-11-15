@@ -15,7 +15,7 @@ ms.custom:
 
 This article explains how to enroll new and existing instances to the November 2022 feature wave for Azure SQL Managed Instance. 
 
-Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months. 
+Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types enrolling in subsequent months. 
 
 Eligible existing instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features. 
 
@@ -39,12 +39,12 @@ For specifics, check out the [Frequently asked questions](frequently-asked-quest
 
 ## Feature wave rollout 
 
-Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months.
+Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types enrolled in subsequent months.
 
-The onboarding experience is different for new instances and existing instances:
+The enrollment experience is different for new instances and existing instances:
 
 - New instances created after November 2022 in eligible subnets will automatically be enrolled in the feature wave and get access to the new benefits and features.
-- Onboarding existing instances to the November 2022 feature wave will happen gradually and automatically. However, existing eligible instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features. 
+- Enrolling existing instances to the November 2022 feature wave will happen gradually and automatically. However, existing eligible instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features. 
 
 ## Enroll existing instances 
 
@@ -53,7 +53,7 @@ Existing eligible instances that were created before November 2022 will eventual
 - Your instance is hosted in a subscription type that is ready for the November 2022 feature wave - currently only Dev/Test subscriptions are supported. 
 - You're able to update the virtual network subnet to one of the supported types: **new subnet**, **empty subnet** or a subnet that's **only hosting instances that have already enrolled in the feature wave**. 
 
-To onboard an existing instance to the feature wave by using the Azure portal, follow these steps: 
+To enroll an existing instance to the feature wave by using the Azure portal, follow these steps: 
 
 1. Go to the **Overview** page for your eligible SQL Managed Instance in the [Azure portal](https://portal.azure.com). 
 1. Select **November 2022 feature wave** either from the menu, or from the information box to open the **November 2022 feature wave** info page. 

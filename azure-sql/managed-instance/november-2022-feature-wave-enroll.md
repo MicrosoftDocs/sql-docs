@@ -35,7 +35,7 @@ The new preview features introduced in the wave are:
 - [Zone redundancy for BC](../database/high-availability-sla.md): lets you deploy your Business Critical managed instance across multiple availability zones to improve the availability of your service. 
 - [Managed DTC](distributed-transaction-coordinator-dtc.md): lets you run distributed transactions in mixed environments. 
 
-For specifics, check out the [Frequently asked questions](frequentlyi-asked-questions-faq.yml#november-2022-feature-wave). 
+For specifics, check out the [Frequently asked questions](frequently-asked-questions-faq.yml#november-2022-feature-wave). 
 
 ## Feature wave rollout 
 
@@ -44,18 +44,18 @@ Rollout of the November 2022 Feature Wave is happening over the course of severa
 The onboarding experience is different for new instances and existing instances:
 
 - New instances created after November 2022 in eligible subnets will automatically be enrolled in the feature wave and get access to the new benefits and features.
-- Onboarding existing instances to the November 2022 feature wave will happen gradually and automatically. However, existing instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features. 
+- Onboarding existing instances to the November 2022 feature wave will happen gradually and automatically. However, existing eligible instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features. 
 
 ## Enroll existing instances 
 
-Existing instances that were created before November 2022 will eventually be enrolled in the feature wave automatically. However, you can choose to enroll your existing instance immediately if the following conditions are met: 
+Existing eligible instances that were created before November 2022 will eventually be enrolled in the feature wave automatically. However, you can choose to enroll your existing instance immediately if the following conditions are met: 
 
 - Your instance is hosted in a subscription type that is ready for the November 2022 feature wave - currently only Dev/Test subscriptions are supported. 
-- You are able to update the virtual network subnet to one of the supported types: **new subnet**, **empty subnet** or a subnet that's **only hosting instances that have already enrolled in the feature wave**. 
+- You're able to update the virtual network subnet to one of the supported types: **new subnet**, **empty subnet** or a subnet that's **only hosting instances that have already enrolled in the feature wave**. 
 
 To onboard an existing instance to the feature wave by using the Azure portal, follow these steps: 
 
-1. Go to the **Overview** page for your SQL Managed Instance in the [Azure portal](https://portal.azure.com). 
+1. Go to the **Overview** page for your eligible SQL Managed Instance in the [Azure portal](https://portal.azure.com). 
 1. Select **November 2022 feature wave** either from the menu, or from the information box to open the **November 2022 feature wave** info page. 
 
    :::image type="content" source="media/november-2022-feature-wave-enroll/existing-instance-overview-page.png" alt-text="Screenshot of the Azure portal showing the MI overview page, with November 2022 feature wave info highlighted." lightbox="media/november-2022-feature-wave-enroll/existing-instance-overview-page.png":::
@@ -64,19 +64,20 @@ To onboard an existing instance to the feature wave by using the Azure portal, f
 
    :::image type="content" source="media/november-2022-feature-wave-enroll/feature-wave-details.png" alt-text="Screenshot of the Azure portal showing the November 2022 feature wave info page.":::
 
-   However, if your subscription is eligible but your instance is not, you'll see **Create new instance** on the *feature wave* page instead. Select **Create new instance** to go to the instance deployment page. Skip to the [Enroll new instances](#enroll-new-intances) section. 
+   However, if your subscription is eligible but your instance isn't, you'll see **Create new instance** on the *feature wave* page instead. Select **Create new instance** to go to the instance deployment page and skip to the [Enroll new instances](#enroll-new-instances) section. 
 
 1. From the **Virtual network / subnet** page, either select **Create new** to create a new subnet, or choose an existing eligible subnet from the drop-down under **Ready for November 2022 feature wave**. Selecting **Save** moves your managed instance to the chosen subnet. 
 
    :::image type="content" source="media/november-2022-feature-wave-enroll/virtual-network-subnet.png" alt-text="Screenshot of the Azure portal, virtual network / subnet page, with a subnet selected in the drop-down.":::
 
-1. After the subnet update is complete, you'll see a green **November 2022 feature wave is ready to use for this instance** message. Your instance is now enrolled to the feature wave, and gets access to all the benefits and features.
+1. After the subnet update is complete, you'll see a green **November 2022 feature wave is ready to use for this instance** message. Your instance is now enrolled in the feature wave, and gets access to all the benefits and features.
 
 ## Enroll new instances 
 
-Once your subscription has been enrolled in the feature wave, you can deploy a new instance with the feature wave already enabled as long as you choose an enrolled subscription, supported region, and eligible subnet type during deployment. Use the Azure portal to deploy your instance, and confirm that your new instance is enrolled in the feature wave. 
+Once your subscription has been enrolled in the feature wave, you can deploy a new instance with the feature wave already enabled as long as you choose an enrolled subscription, supported region, and eligible subnet type during deployment. 
 
-New instances deployed to eligible subnets will automatically be enrolled in the feature wave once the subscription is eligible. 
+Use the Azure portal to deploy your instance, and confirm that it's enrolled in the feature wave. 
+
 
 The following subnet types are eligible: 
 
@@ -111,15 +112,15 @@ To confirm that your new instance is enrolled in the feature wave during deploym
 
 ## Known issues
 
-For specifics, check out the [Frequently asked questions](frequentlyi-asked-questions-faq.yml#november-2022-feature-wave). 
+For specifics, check out the [Frequently asked questions](frequently-asked-questions-faq.yml#november-2022-feature-wave). 
 
 **I don't see the feature wave option when I open the overview page for my instance**
 
-This is likely because your subscription has not been enrolled in the feature wave yet. Check back soon. 
+This is likely because your subscription hasn't been enrolled in the feature wave yet. Check back soon. 
 
 **I don't see the feature wave enabled when I create a new instance** 
 
-This is likely because you have selected a subscription, region, or subnet type that is ineligible for the feature wave. Update these parameters and try again. 
+This is likely because you've selected a subscription, region, or subnet type that is ineligible for the feature wave. Update these parameters and try again. 
 
 
 ## Next steps
@@ -130,5 +131,5 @@ To learn about specific changes related to the feature wave, review:
 - [Instance stop / start](instance-stop-start-how-to.md)
 - [Zone redundancy for BC](../database/high-availability-sla.md)
 - [Managed DTC](distributed-transaction-coordinator-dtc.md)
-- [Frequently asked questions](frequentlyi-asked-questions-faq.yml#november-2022-feature-wave)
+- [Frequently asked questions](frequently-asked-questions-faq.yml#november-2022-feature-wave)
 

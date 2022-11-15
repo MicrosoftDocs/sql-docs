@@ -83,7 +83,7 @@ November 2022 introduced a wave of new features and automatic benefits for Azure
 
 Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types onboarding in subsequent months. 
 
-However, it may be possible to enroll early. To get started, review [Enroll in the feature wave](november-2022-feature-wave-enroll.md).
+Eligible existing instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features.  To get started, review [Enroll in the feature wave](november-2022-feature-wave-enroll.md).
 
 
 ## Documentation changes

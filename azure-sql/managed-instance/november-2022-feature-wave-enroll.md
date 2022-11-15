@@ -39,14 +39,15 @@ For specifics, check out the [Frequently asked questions](frequently-asked-quest
 
 ## Feature wave rollout 
 
-Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to Dev/Test subscriptions, with other subscription types enrolled in subsequent months. Unsupported subscription types cannot be enabled individually.
+Rollout of the November 2022 Feature Wave is happening over the course of several months.  The initial rollout phase targets instances that belong to [Dev/Test subscriptions](frequently-asked-questions-faq.yml#what-azure-offers-and-subscription-types-are-enrolled-in-the-november-2022-feature-wave), with other subscription types enrolled in subsequent months. Unsupported subscription types cannot be enabled individually.
 
 The enrollment experience is different for new instances and existing instances:
 
 - New instances created after November 2022 in eligible subnets will automatically be enrolled in the feature wave and get access to the new benefits and features.
 - Enrolling existing instances to the November 2022 feature wave will happen gradually and automatically. However, existing eligible instances created prior to November 2022 can enroll into the feature wave immediately to unlock the new benefits and features. 
 
-
+> [!NOTE]
+> Benefits and features cannot be enabled individually on instances that have not enrolled into the feature wave. 
 
 ## Enroll existing instances 
 

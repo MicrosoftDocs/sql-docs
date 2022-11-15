@@ -4,7 +4,7 @@ titleSuffix: Azure SQL Database
 description: Learn about the new features and documentation improvements for Azure SQL Database.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 10/04/2022
+ms.date: 11/15/2022
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -79,7 +79,8 @@ Learn about significant changes to the Azure SQL Database documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Azure Synapse Link for Azure SQL Database GA** |  Azure Synapse Link for SQL is now generally available and enables near real time analytics over operational data in Azure SQL Database or SQL Server 2022. Review [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview)  to learn more.  | 
+| **Azure Synapse Link for SQL** | Azure Synapse Link for SQL, now generally available, enables near real-time analytics over operational data in SQL Server 2022 and Azure SQL Database. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Azure Synapse Link for SQL?](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).|
+| **Invoke external REST endpoints preview** | It's now possible to call a HTTPS REST endpoint natively, using a new system stored procedure. This feature is currently in preview. To learn more, review [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql). | 
 | **Invoke external REST endpoints preview** | It's now possible to call an HTTPS REST endpoint natively, using a new system stored procedure. This feature is currently in preview. To learn more, review [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql). |
 | **Restore progress GA** | Tracking the progress of your restore by using the `percent_complete` column [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) is now generally available. For more information, read the [Restore progress announcement blog post](https://aka.ms/RestoreProgressGA). |
  
@@ -127,7 +128,7 @@ Learn about significant changes to the Azure SQL Database documentation.
 | **Local development experience** | The Azure SQL Database local development experience is a combination of tools and procedures that empowers application developers and database professionals to design, edit, build/validate, publish, and run database schemas for databases directly on their workstation using an Azure SQL Database containerized environment. To learn more, see [Local development experience for Azure SQL Database](local-dev-experience-overview.md). |
 | **SQL Database emulator** | The Azure SQL Database emulator provides the ability to locally validate database and query design together with client application code in a simple and frictionless model as part of the application development process. The SQL Database emulator is currently in preview. Review [SQL Database emulator](local-dev-experience-sql-database-emulator.md) to learn more.  |
 | **SDK-style SQL projects**| Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or Visual Studio Code. This feature is currently in preview. To learn more, see [SDK-style SQL projects](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects). |
-| **Azure Synapse Link for Azure SQL Database** | Azure Synapse Link enables near real-time analytics over operational data in SQL Server 2022 and Azure SQL Database. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Azure Synapse Link for SQL? (Preview)](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).
+| **Azure Synapse Link for SQL for Azure SQL Database** | Azure Synapse Link for SQL enables near real-time analytics over operational data in SQL Server 2022 and Azure SQL Database. With a seamless integration between operational stores and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology. For more information, see [What is Azure Synapse Link for SQL? (Preview)](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview).|
 
 ### April 2022
 

@@ -22,7 +22,7 @@ tags: azure-service-management
 
 This tutorial shows how to complete the prerequisites for creating a [SQL Server Always On availability group on Azure Virtual Machines (VMs)](availability-group-manually-configure-tutorial-single-subnet.md) within a single subnet. When you've completed the prerequisites, you'll have a domain controller, two SQL Server VMs, and a witness server in a single resource group.
 
-While this article manually configures the availability group environment, it is also possible to do so using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure Quickstart templates](availability-group-quickstart-template-configure.md) as well.
+While this article manually configures the availability group environment, it is also possible to do so using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure Quickstart Templates](availability-group-quickstart-template-configure.md) as well.
 
 **Time estimate**: It might take a couple of hours to complete the prerequisites. Much of this time is spent creating virtual machines.
 
@@ -48,11 +48,11 @@ To create the resource group in the Azure portal, follow these steps:
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Select **+ Create a resource** to create a new resource in the portal.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/01-portal-plus.png" alt-text="Screenshot of +Create a resource to create a new resource in the portal.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/01-portal-plus.png" alt-text="Screenshot the Azure portal, with +Create a resource highlighted.":::
 
 1. Search for **resource group** in the **Marketplace** search box and choose the **Resource group** tile from Microsoft. Select **Create** on the **Resource group** page.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/01-resource-group-search.png" alt-text="Screenshot of searching for resource group in the Marketplace and then choose to create the Resource group.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/01-resource-group-search.png" alt-text="Screenshot of the Azure portal, Marketplace, with resource group in the search box, and resource group selected. ":::
 
 1. On the **Create a resource group** page, fill out the values to create the resource group:
    1. Choose the appropriate Azure subscription from the drop-down.

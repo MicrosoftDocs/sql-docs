@@ -51,7 +51,7 @@ When availability group replicas are on Azure virtual machines in different Azur
 
 ## Create the network and subnet
 
-Before creating a virtual network and subnet in a new region, decide the address space, subnet starting address, Cluster IP, and AG listener IP addresses you will use for the remote region. 
+Before creating a virtual network and subnet in a new region, decide the address space, subnet starting address, Cluster IP, and AG listener IP addresses you'll use for the remote region. 
 
 The following table lists details for the local (current) region and what will be set up in the new remote region for easy reference.
 
@@ -72,7 +72,7 @@ To create a [virtual network and subnet in the new region](/azure/virtual-networ
 
      :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-create-vnet-basics.png" alt-text="Screenshot the Azure portal, Create virtual network page, showing creating virtual network in remote region.":::
 
-1. On the **IP addresses** tab, click the "..." next to **+ Add a subnet** and select **Delete address space** to remove the existing address space, if you need a different address range.
+1. On the **IP addresses** tab, select the "..." next to **+ Add a subnet** and select **Delete address space** to remove the existing address space, if you need a different address range.
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png" alt-text="Screenshot the Azure portal, Create virtual network page, showing how to delete the existing address space in a virtual network." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png":::
 
@@ -90,7 +90,7 @@ To create a [virtual network and subnet in the new region](/azure/virtual-networ
 
 ## Connect the Virtual Networks in the two Azure Regions
 
-After you have create the new virtual network and subnet, you're ready to connect the two regions so they can communicate with each other. There are two methods to do this:
+After you've create the new virtual network and subnet, you're ready to connect the two regions so they can communicate with each other. There are two methods to do this:
 
 - [Virtual Network Peering - Connect virtual networks with virtual network peering using the Azure portal](/azure/virtual-network/tutorial-connect-virtual-networks-portal) (Recommended)
 
@@ -196,7 +196,7 @@ In the following steps, configure the **ad-remote-dc** machine as a domain contr
 
     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/28-deployment-config.png" alt-text="Screenshot of the Active Directory Services Configuration Manager, showing the deployment configuration on a VM.":::
 
-1. Click **Select**.
+1. Select **Select**.
 1. Connect by using the administrator account (**CORP.CONTOSO.COM\domainadmin**) and password (**Contoso!0000**).
 1. In **Select a domain from the forest**, choose your domain and then select **OK**.
 1. In **Domain Controller Options**, use the default values and set a DSRM password.
@@ -359,7 +359,7 @@ The load balancer must:
    - Include a backend pool consisting of only the virtual machines in the same region as the load balancer.
    - Use a TCP port probe specific to the IP address.
    - Have a load balancing rule specific to the SQL Server in the same region.  
-   - Be a Standard Load Balancer if the virtual machines in the backend pool are not part of either a single availability set or virtual machine scale set. For additional information review [Azure Load Balancer Standard overview](/azure/load-balancer/load-balancer-overview).
+   - Be a Standard Load Balancer if the virtual machines in the backend pool aren't part of either a single availability set or Virtual Machine Scale Set. For additional information review [Azure Load Balancer Standard overview](/azure/load-balancer/load-balancer-overview).
    - Be a Standard Load Balancer if the two virtual networks in two different regions are peered over global VNet peering. For more information, see [Azure Virtual Network frequently asked questions (FAQ)](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers).
 
 The steps to [create the load balancer](availability-group-manually-configure-tutorial-single-subnet.md#configure-internal-load-balancer) are:
@@ -525,13 +525,13 @@ To add the SQL Server to the cluster, perform the following steps:
 1. Use Remote Desktop Protocol (RDP) to connect to a SQL Server in the existing cluster. Use a domain account that is an administrator on both SQL Servers and the witness server.
 1. In the **Server Manager** dashboard, select **Tools**, and then select **Failover Cluster Manager**.
 1. In the left pane, right-click **Failover Cluster Manager**, and then select **Connect to Cluster**.
-1. In the **Select Cluster** window under **Cluster name**, choose **\<Cluster on this server...\>**, click **Ok**.
+1. In the **Select Cluster** window under **Cluster name**, choose **\<Cluster on this server...\>**, select **Ok**.
 1. In the browser tree, right-click the cluster and select **Add Node**.
-1. In the **Add Node Wizard**, select **Next**. In the **Select Servers** page, add the name of the new SQL Server. Type the server name in **Enter server name** and then select **Add**. When you are done, select **Next**.
+1. In the **Add Node Wizard**, select **Next**. In the **Select Servers** page, add the name of the new SQL Server. Type the server name in **Enter server name** and then select **Add**. When you're done, select **Next**.
 
 1. In the **Validation Warning** page, select **No** (in a production scenario you should perform the validation tests). Then, select **Next**.
 
-1. In the **Confirmation** page if you are using Storage Spaces, clear the checkbox labeled **Add all eligible storage to the cluster.**
+1. In the **Confirmation** page if you're using Storage Spaces, clear the checkbox labeled **Add all eligible storage to the cluster.**
 
    >[!WARNING]
    >If you do not uncheck **Add all eligible storage to the cluster**, Windows detaches the virtual disks during the clustering process. As a result, they don't appear in Disk Manager or Explorer until the storage is removed from the cluster and reattached using PowerShell.
@@ -566,19 +566,19 @@ Next, add the IP address resource to the cluster for the new SQL Server VM.
 
 ### Add IP Address for the Availability Group Listener
 
-The IP address for the listener in the remote region needs to be added to the cluster. To add the IP Address follow these steps:
+The IP address for the listener in the remote region needs to be added to the cluster. To add the IP Address, follow these steps:
 
 1. Right-click the availability group role in Failover Cluster Manager, choose **Add Resource**, **More Resources**, and select **IP Address**.
 
    :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/20-add-ip-resource.png" alt-text="Screenshot of the Failover Cluster Manager, selecting IP address on the availability group right-click menu." lightbox="./media/availability-group-manually-configure-multiple-regions/20-add-ip-resource.png":::
 
-1. To configure this IP address, right click the resource under **Other Resources** and select **Properties**.
+1. To configure this IP address, right select the resource under **Other Resources** and select **Properties**.
 
    :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/configure-listener-ip-cluster.png" alt-text="Screenshot of Failover Cluster Manager, with the right-click menu open, selecting properties. ":::
 
 1. Provide a **Name** for the new resource, select the network from the remote data center, assign the static IP address from the new Azure load balancer.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/assign-listener-ip-cluster.png" alt-text="Screenshot of the IP address properties dialog box, showing assigning ning the listener IP in the cluster.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/assign-listener-ip-cluster.png" alt-text="Screenshot of the IP address properties dialog box, showing assigning the listener IP in the cluster.":::
 
 1. Select **Apply**, and then **OK**.
 
@@ -671,7 +671,7 @@ The replica in the remote data center is part of the availability group but it i
 
 Preferably, update the cluster configuration to set `RegisterAllProvidersIP=1` and the client connection strings to set `MultiSubnetFailover=Yes`. See [Connecting With MultiSubnetFailover](/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery#Anchor_0).
 
-If you cannot modify the connection strings, you can configure name resolution caching. See [Time-out error and you cannot connect to a SQL Server 2012 Always On availability group listener in a multi-subnet environment](https://support.microsoft.com/help/2792139/time-out-error-and-you-cannot-connect-to-a-sql-server-2012-alwayson-av).
+If you can't modify the connection strings, you can configure name resolution caching. See [Time-out error and you can't connect to a SQL Server 2012 Always On availability group listener in a multi-subnet environment](https://support.microsoft.com/help/2792139/time-out-error-and-you-cannot-connect-to-a-sql-server-2012-alwayson-av).
 
 ## Fail over to remote region
 
@@ -699,7 +699,7 @@ After testing connectivity, move the primary replica back to your primary data c
 
 ### More information about planned and forced manual failover
 
-For more information, see the following topics:
+For more information, see the following articles:
 
 - [Perform a Planned Manual Failover of an Availability Group (SQL Server)](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server)
 - [Perform a Forced Manual Failover of an Availability Group (SQL Server)](/sql/database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server)

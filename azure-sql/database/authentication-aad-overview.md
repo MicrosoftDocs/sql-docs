@@ -18,10 +18,8 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-Azure Active Directory (Azure AD) authentication is a mechanism for connecting to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), and [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) by using identities in Azure AD.
+Azure Active Directory (Azure AD) authentication is a mechanism for connecting to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [SQL Server on Windows Azure VMs](../virtual-machines/windows/security-considerations-best-practices.md#azure-ad-authentication-preview.md) and [Synapse SQL in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) by using identities in Azure AD.
 
-> [!NOTE]
-> This article applies to Azure SQL Database, SQL Managed Instance, and Azure Synapse Analytics.
 
 With Azure AD authentication, you can centrally manage the identities of database users and other Microsoft services in one central location. Central ID management provides a single place to manage database users and simplifies permission management. Benefits include the following:
 
@@ -44,9 +42,6 @@ With Azure AD authentication, you can centrally manage the identities of databas
 
 - Azure AD supports similar connections from SQL Server Data Tools (SSDT) that use Active Directory Interactive Authentication. For more information, see [Azure Active Directory support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory)
 
-> [!NOTE]  
-> Connecting to a SQL Server instance that's running on an Azure virtual machine (VM) is not supported using Azure Active Directory or Azure Active Directory Domain Services. Use an Active Directory domain account instead.
-
 The configuration steps include the following procedures to configure and use Azure Active Directory authentication.
 
 1. Create and populate Azure AD.
@@ -61,7 +56,7 @@ The configuration steps include the following procedures to configure and use Az
 
 ## Trust architecture
 
-- Only the cloud portion of Azure AD, SQL Database, SQL Managed Instance, and Azure Synapse is considered to support Azure AD native user passwords.
+- Only the cloud portion of Azure AD, SQL Database, SQL Managed Instance, [SQL Server on Windows Azure VMs], and Azure Synapse is considered to support Azure AD native user passwords.
 - To support Windows single sign-on credentials (or user/password for Windows credential), use Azure Active Directory credentials from a federated or managed domain that is configured for seamless single sign-on for pass-through and password hash authentication. For more information, see [Azure Active Directory Seamless Single Sign-On](/azure/active-directory/hybrid/how-to-connect-sso).
 - To support Federated authentication (or user/password for Windows credentials), the communication with ADFS block is required.
 

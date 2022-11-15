@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
-ms.date: 08/12/2020
+ms.date: 11/15/2022
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ms.custom:
   - intro-installation
@@ -27,7 +27,9 @@ Offline documentation is available for versions of SQL Server 2012 and later. Al
 
 ## SQL Server 2016 and later offline content
 
-The following steps explain how to load offline content for SQL Server 2016 and later.
+The following steps explain how to load offline content for SQL Server 2016 and later. 
+
+If your system doesn't have internet access and you want to install the offline content, first downlad the content by using SQL Server Management Studio (SSMS) on a system that has internet, and then move the package over to the offline system, using SSMS to locate the installation file path and loading the files. 
 
 1. In SSMS, select **Add and Remove Help Content** on the Help menu.
 
@@ -52,6 +54,8 @@ The following steps explain how to load offline content for SQL Server 2016 and 
 4. You can verify that the SQL Server 2016 and later content loaded by searching under the left content pane for *sql server 2016*.
 
    ![SQL Server 2016 books automatically updated](../sql-server/media/sql-server-offline-documentation/sql-2016-content.png)
+   
+5. (Optional) To move the content to an offline system, go to the **Local store path** where the files were installed, and move them to the offline system. Next, use the SSMS UI to install the content again, but this time choose **Disk** as the **Installation source**. 
 
 ## SQL Server 2014 offline content
 

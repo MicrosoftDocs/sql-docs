@@ -56,7 +56,7 @@ You should review the options selected for **Encrypt** and **Trust server certif
 
 ## More information
 
-These changes are the result of updates at the driver level in Microsoft.Data.SqlClient.  Recent releases of Microsoft.Data.SqlClient have offered increased security in the connection options.  Read more in the [release notes](https://learn.microsoft.com/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) for Microsoft.Data.SqlClient.
+These changes are the result of updates at the driver level in Microsoft.Data.SqlClient. Recent releases of Microsoft.Data.SqlClient have offered increased security in the connection options. Read more in the [release notes](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) for Microsoft.Data.SqlClient.
 
 If you have previously been connecting to a SQL Server that does not have encrypted connections enable and would like to enable encryption, you will be prompted to trust server certificate. You may choose to connect with the 'Trust Server Certificate' property enabled, or cancel and review client configuration to verify a valid server certificate is installed. For more information please visit the [SQL Server documentation](https://learn.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
 

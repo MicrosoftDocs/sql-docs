@@ -594,3 +594,30 @@ sections:
           ### How can I create Azure support request?
           
           To learn how to create Azure support request, see [How to create Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+
+      - question: |
+          November 2022 feature wave
+        answer: |
+          ### What Azure offers and subscription types are enrolled in the November 2022 Feature Wave?
+          
+          Initially, only [Azure Dev/Test offers](/azure/devtest/offer/) and subscriptions designated for Dev/Test workloads are enrolled in the feature wave. The supported offer types include: 
+
+          - [Enterprise Dev/Test - MS-AZR-0148P](https://azure.microsoft.com/offers/ms-azr-0148p/)
+          - [Pay-as-you-go Dev/Test - MS-AZR-0023P](https://azure.microsoft.com/offers/ms-azr-0023p/)
+          - [Visual Studio Test Professional Credit - MS-AZR-0060P](https://azure.microsoft.com/offers/ms-azr-0060p/) - May need to [Request a quota increase](../database/quota-increase-request.md)
+          - Other Offer IDs that are eligible for DevTest workload types 
+
+          You can check the offer type for your subscription on the **Overview** page for your subscription in the [Azure portal](https://portal.azure.com). 
+          
+          ### How can I onboard a subscription that is not part of the already enabled subscription types?
+          
+          Support for other subscription types, including subscriptions designated for Production workloads, will continue to roll out over the course of several months. Unsupported subscription types cannot be enabled individually. 
+                    
+          ### How can I onboard using a region that is not yet supported?
+          
+          Most Azure public regions already support the November 2022 feature wave, with support for the remaining ones coming soon.  Azure Government and sovereign clouds are currently unsupported. 
+
+
+
+          
+                    

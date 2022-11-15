@@ -13,23 +13,23 @@ ms.topic: conceptual
 
 This article describes how to connect multiple instances of SQL Server to Azure Arc as a single task. The easiest  way to do that is by using Azure policy. Alternatively, you can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using a script.
 
-## Prerequisites 
+## Prerequisites
 
-Each server must meet the following prerequisites:
+* Each server has at least one instance of SQL Server installed
 
-* At least one instance of SQL Server installed
-* Registered service providers
+   > [!NOTE]
+   > SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
 
-  * **Microsoft.AzureArcData**
-  * **Microsoft.HybridCompute**
+* The user onboarding Arc-enabled SQL Server resources has the following permissions:
 
-* The user onboarding Arc-enabled SQL Server resources must have the following permissions:
+   * Microsoft.AzureArcData/sqlServerInstances/read
+   * Microsoft.AzureArcData/sqlServerInstances/write
 
-* Microsoft.AzureArcData/sqlServerInstances/read
-* Microsoft.AzureArcData/sqlServerInstances/write
+* The subscription has registered the following resource providers
+   * **Microsoft.AzureArcData**
+   * **Microsoft.HybridCompute**
 
-> [!NOTE]
-> SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
+### Register resource providers
 
 To register the resource providers, use one of the methods below:
 

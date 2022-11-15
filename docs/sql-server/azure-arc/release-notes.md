@@ -102,7 +102,7 @@ The introduction of SQL Server extension requires that the user accounts have mo
 
 ### Other changes
 
-This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connecting-at-scale-using-azure-policy).
+This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connect-at-scale-using-azure-policy).
 
 ## April 2021
 

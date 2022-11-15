@@ -20,7 +20,7 @@ Azure Data Studio 1.40 includes an important change to the **Encrypt** property,
 
 For users connecting to Azure SQL Database, no changes to existing, saved connections in Azure Data Studio are needed; Azure SQL Database supports encrypted connections and is configured with trusted certificates. 
 
-For users connecting to on-premises SQL Server, or SQL Server in a Virtual Machine, if **Encrypt** is set to **True**, ensure that you have a certificate from a trusted certificate authority (e.g. not a self-signed certificate).  Alternatively, you may choose to connect without encryption (**Encrypt** set to **False**), or to trust the server certificate (**Encrypt** set to **True** and **Trust server certificate** set to **True**).   
+For users connecting to on-premises SQL Server, or SQL Server in a Virtual Machine, if **Encrypt** is set to **True**, ensure that you have a certificate from a trusted certificate authority (e.g. not a self-signed certificate). Alternatively, you may choose to connect without encryption (**Encrypt** set to **False**), or to trust the server certificate (**Encrypt** set to **True** and **Trust server certificate** set to **True**).   
 
 ## New installation of Azure Data Studio 1.40
 

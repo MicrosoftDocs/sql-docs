@@ -28,7 +28,7 @@ To complete this quickstart, you need Azure Data Studio, the PostgreSQL extensio
 
 1. The first time you start Azure Data Studio, the **Connection** dialog opens. If the **Connection** dialog doesn't open, select the **New Connection** icon in the **SERVERS** page:
 
-   :::image type="content" source="media/quicstart-timescaledb/new-connection-icon.png" alt-text="Screenshot of the New Connection icon.":::
+   :::image type="content" source="media/quickstart-timescaledb/new-connection-icon.png" alt-text="Screenshot of the New Connection icon.":::
 
 D:\GitHub\sql-docs-pr\docs\azure-data-studio\media\quicstart-timescaledb\new-connection-icon.png
 
@@ -36,9 +36,7 @@ D:\GitHub\sql-docs-pr\docs\azure-data-studio\media\quicstart-timescaledb\new-con
 
 1. Fill in the remaining fields using the host, port, user, database name, and password for your Managed Service for TimescaleDB on Azure.
 
-   :::image type="content" source="media/quicstart-timescaledb/new-connection-screen.png" alt-text="SCreenshot of the New Connection screen.":::
-
-media/quicstart-timescaledb/new-connection-screen.png
+   :::image type="content" source="media/quickstart-timescaledb/new-connection-screen.png" alt-text="SCreenshot of the New Connection screen.":::
 
    | Setting | Example value | Description |
    | --- | --- | --- |
@@ -99,7 +97,7 @@ Paste the following snippet into the query window and select **Run**:
 
 1. The results of the query are displayed:
 
-   :::image type="content" source="media/quicstart-timescaledb/view-results.png" alt-text="Screenshot of results.":::
+   :::image type="content" source="media/quickstart-timescaledb/view-results.png" alt-text="Screenshot of results.":::
 
 ## Next steps
 

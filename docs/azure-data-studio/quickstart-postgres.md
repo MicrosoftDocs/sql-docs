@@ -39,8 +39,8 @@ To complete this quickstart, you need Azure Data Studio, the PostgreSQL extensio
    | Setting | Example value | Description |
    | --- | --- | --- |
    | **Server name** | localhost | The fully qualified server name |
-   | **User name** | postgres | The user name you want to log in with. |
-   | **Password (SQL Login)** | *password* | The password for the account you are logging in with. |
+   | **User name** | postgres | The user name you want to sign in with. |
+   | **Password (SQL Login)** | *password* | The password for the account you're logging in with. |
    | **Password** | *Check* | Check this box if you don't want to enter the password each time you connect. |
    | **Database name** | \<Default\> | Fill this if you want the connection to specify a database. |
    | **Server group** | \<Default\> | This option lets you assign this connection to a specific server group you create. |
@@ -67,7 +67,7 @@ The following steps create a database named **tutorialdb**:
 > [!TIP]  
 > You can use **F5** on your keyboard to execute the statement instead of using **Run**.
 
-After the query completes, right-click **Databases** and select **Refresh** to see **tutorialdb** in the list under the **Databases** node.
+After the query completes, right-click **Databases,** and select **Refresh** to see **tutorialdb** in the list under the **Databases** node.
 
 ## Create a table
 

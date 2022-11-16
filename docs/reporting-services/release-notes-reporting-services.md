@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 11/4/2022
+ms.date: 11/16/2022
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -46,7 +46,27 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
+
+## 16.0.1112.48, 2022/11/16
+*(Product Version: 16.0.8353.8096)*
+
+Initial release.
+
+- Major changes from SQL Server 2019 Reporting Services:
+    - New portal experience with performance improvements using Angular
+    - Accessibility fixes to many parts of the portal
+    - New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal
+    - Ability to turn off size calculation for snapshots via configuration propery **EnableListHistorySnapshotsSize** if History Snapshots page loads slow due to a large number of snapshots
+    - Security enhancements
+    - Bug fixes
+- [Deprecated features](/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs): 
+    - Report Parts support 
+- [Discontinued features](/sql/reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server): 
+    - Pin to PowerBI functionality
+    - Mobile Reports functionality (.rsmobile) and Mobile Report Publisher
 
 ## 15.0.8264.8408, 2022/08/19
 *(Product Version: 15.0.1111.106)*
@@ -59,6 +79,7 @@ Release Candidate 0 (RC0)
 - Bug fixes.
 - Discontinuation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
 
+::: moniker-end
 
 ## SQL Server 2019 Reporting Services
 

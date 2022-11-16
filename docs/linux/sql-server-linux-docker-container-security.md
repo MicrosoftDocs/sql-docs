@@ -4,7 +4,7 @@ description: Understand the different ways to secure SQL Server Linux containers
 author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 11/16/2022
+ms.date: 09/30/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual

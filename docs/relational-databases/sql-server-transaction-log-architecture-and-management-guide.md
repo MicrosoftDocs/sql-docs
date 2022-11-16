@@ -74,8 +74,8 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divides each phys
 > Virtual log file (VLF) creation follows this method:
 > - If the next growth is less than 1/8 of current log physical size, then create 1 VLF that covers the growth size. (Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]).
 > - If the next growth is more than 1/8 of the current log size, then use the pre-2014 method:
->    - If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256KB VLFs).
->        - In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and starting in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this is slightly different. If the growth is less than or equal to 64MB, create only one VLF to cover the growth size.
+>    - If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256 KB VLFs).
+>        - In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] and starting in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions), this is slightly different. If the growth is less than or equal to 64MB, the Database Engine creates only one VLF to cover the growth size.
 >    - If growth is from 64MB up to 1GB, create 8 VLFs that cover the growth size (e.g. for 512 MB growth, create eight 64MB VLFs).
 >    - If growth is larger than 1GB, create 16 VLFs that cover the growth size (e.g. for 8 GB growth, create sixteen 512MB VLFs).
 

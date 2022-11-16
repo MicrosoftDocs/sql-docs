@@ -21,7 +21,7 @@ ms.author: maghan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Shares the specified SQL Server Express LocalDB instance with other users of the computer, using the specified shared name.  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

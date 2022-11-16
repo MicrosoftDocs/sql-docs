@@ -157,7 +157,7 @@ helpviewer_keywords:
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
-    @provider=N'SQLNCLI11',   
+    @provider=N'MSOLEDBSQL',   
     @datasrc=N'AG_Listener_Name',   
     @provstr=N'ApplicationIntent=ReadOnly',   
     @catalog=N'MY_DB_NAME';  

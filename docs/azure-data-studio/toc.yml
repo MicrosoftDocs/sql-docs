@@ -185,6 +185,8 @@
       href: deploy-azure-sql-server-vm.md
     - name: Deploy SQL Server in a container
       href: deploy-sql-container.md
+  - name: Connect
+    href: connect.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

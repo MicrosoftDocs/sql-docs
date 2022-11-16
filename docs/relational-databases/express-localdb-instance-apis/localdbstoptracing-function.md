@@ -21,7 +21,7 @@ ms.author: maghan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Disables tracing of API calls for all the SQL Server Express LocalDB instances owned by the current Windows user.  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

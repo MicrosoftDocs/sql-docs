@@ -1,6 +1,6 @@
 ---
-title: Documentation changes for SQL Server on Azure Virtual Machines
-description: Learn about the new features and improvements for different releases of SQL Server on Azure Virtual Machines.
+title: What's new? 
+description: Learn about the new features for and improvements to SQL Server on Azure Virtual Machines.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
@@ -11,7 +11,7 @@ ms.topic: reference
 ms.custom: ignite-2022
 tags: azure-service-management
 ---
-# Documentation changes for SQL Server on Azure Virtual Machines
+# What's new with SQL Server on Azure Virtual Machines?
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 

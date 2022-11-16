@@ -18,7 +18,7 @@ The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.m
 These release notes are specifically for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] releases. For release notes on other editions, see the following articles:
 
 - [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)
-- [Release notes for SQL Server 2022 (Preview) on Linux](sql-server-linux-release-notes-2022.md?view=sql-server-ver16&preserve-view=true)
+- [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md?view=sql-server-ver16&preserve-view=true)
 
 ## Supported platforms
 

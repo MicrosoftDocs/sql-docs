@@ -20,6 +20,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Service Principal Name (SPN) Support in Client Connections in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
   Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], support for service principal names (SPNs) has been extended to enable mutual authentication across all protocols. In previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPNs were only supported for Kerberos over TCP when the default SPN for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance was registered with Active Directory.  
   
  SPNs are used by the authentication protocol to determine the account in which a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance runs. If the instance account is known, Kerberos authentication can be used to provide mutual authentication by the client and server. If the instance account is not known, NTLM authentication, which only provides authentication of the client by the server, is used. Currently, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client performs the authentication lookup, deriving the SPN from the instance name and network connection properties. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances will attempt to register SPNs on startup, or they can be registered manually. However, registration will fail if there are insufficient access rights for the account that attempts to register the SPNs.  

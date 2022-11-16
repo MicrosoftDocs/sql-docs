@@ -17,6 +17,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Updating an Application from SQL Server 2005 Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
   This topic discusses the breaking changes in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client since [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
  When you upgrade from Microsoft Data Access Components (MDAC) to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, you might also see some behavior differences. For more information, see [Updating an Application to SQL Server Native Client from MDAC](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  

@@ -22,7 +22,7 @@ tags: azure-service-management
 
 This tutorial shows how to complete the prerequisites for creating a [SQL Server Always On availability group on Azure Virtual Machines (VMs)](availability-group-manually-configure-tutorial-single-subnet.md) within a single subnet. When you've completed the prerequisites, you'll have a domain controller, two SQL Server VMs, and a witness server in a single resource group.
 
-While this article manually configures the availability group environment, it is also possible to do so using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure Quickstart Templates](availability-group-quickstart-template-configure.md) as well.
+While this article manually configures the availability group environment, it's also possible to do so using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure Quickstart Templates](availability-group-quickstart-template-configure.md) as well.
 
 **Time estimate**: It might take a couple of hours to complete the prerequisites. Much of this time is spent creating virtual machines.
 
@@ -81,11 +81,11 @@ To create the virtual network in the Azure portal, follow these steps:
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/03-create-vnet-basics.png" alt-text="Screenshot of the Azure portal, create virtual network page, providing a name for your virtual network, such as autoHAVNET.":::
 
-1. On the **IP addresses** tab, click the "..." next to **+ Add a subnet** and select **Delete address space** to remove the existing address space, if you need a different address range.
+1. On the **IP addresses** tab, select the "..." next to **+ Add a subnet** and select **Delete address space** to remove the existing address space, if you need a different address range.
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png" alt-text="Screenshot the Azure portal, create virtual network page, with ellipses selected and delete address space highlighted.":::
 
-1. Select **Add an IP address space** to open the blade to create the address space you need. For this tutorial, the address space of **192.168.0.0/16** is being used.  Click **Add** to create the address space.
+1. Select **Add an IP address space** to open the blade to create the address space you need. For this tutorial, the address space of **192.168.0.0/16** is being used.  Select **Add** to create the address space.
 
    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/05-add-address-space.png" alt-text="Screenshot of the Azure portal, Add an IP address space page, showing adding a new address space.":::
 
@@ -253,7 +253,7 @@ After the primary domain controller reboots, you can configure the second domain
 1. Select **Properties**.
 1. Select **Internet Protocol Version 4 (TCP/IPv4)** and then select **Properties**.
 1. Select **Use the following DNS server addresses** and then specify the address of the primary domain controller in **Preferred DNS server**.
-1. Select **OK**, and then **Close** to commit the changes. You are now able to join the VM to **corp.contoso.com**.
+1. Select **OK**, and then **Close** to commit the changes. You're now able to join the VM to **corp.contoso.com**.
 
    >[!IMPORTANT]
    >If you lose the connection to your remote desktop after changing the DNS setting, go to the Azure portal and restart the virtual machine.
@@ -273,7 +273,7 @@ After the primary domain controller reboots, you can configure the second domain
 
     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/28-deployment-config.png" alt-text="Screenshot of the Active Directory Domain Services Configuration Wizard, domain controller deployment configuration.":::
 
-1. Click **Select**.
+1. Select **Select**.
 1. Connect by using the administrator account (**CORP.CONTOSO.COM\domainadmin**) and password (**Contoso!0000**).
 1. In **Select a domain from the forest**, choose your domain and then select **OK**.
 1. In **Domain Controller Options**, use the default values and set a DSRM password.
@@ -323,7 +323,7 @@ Use the following steps to create each account.
 
 1. Select **Extensions**, and then select the **Advanced** button on the **Security** tab.
 1. In the **Advanced Security Settings for corp** dialog, select **Add**.
-1. Click **Select a principal**, search for **CORP\Install**, and then select **OK**.
+1. Select **Select a principal**, search for **CORP\Install**, and then select **OK**.
 1. Select the **Read all properties** check box.
 
 1. Select the **Create Computer objects** check box.

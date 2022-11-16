@@ -37,7 +37,7 @@ When viewing an estimated or actual plan, three tabs are available in addition t
 From the context of a query plan there are multiple options available for further analysis of a plan.  These options are accessed by right-clicking anywhere in the plan, or from the right menu bar.
 
    | Icon       | Option     | Description |
-   | ------------ | ------------------ | ------------------------------------------------- |
+   | ---------- | ---------- | ----------- |
    | :::image type="content" source="media/query-plan-viewer/save-button-icon.png" alt-text="Screenshot of a Screenshot of a Save plan icon."::: | Save Plan File | Save the query plan as a .sqlplan file |
    | :::image type="content" source="media/query-plan-viewer/show-xml-icon.png" alt-text="Screenshot of a Show query plan XML icon."::: | Show Query Plan XML | View the query plan in XML format in a new window |
    | :::image type="content" source="media/query-plan-viewer/open-query-icon.png" alt-text="Screenshot of a Open query icon."::: | Open Query | Open the plan's query in a new window |
@@ -54,11 +54,7 @@ From the context of a query plan there are multiple options available for furthe
 
 ## Top operations
 
-<<<<<<< HEAD
-Within the Top Operations tab, in addition to sorting columns, the Filter window on the right can be used to find operators with a common field value.  For example, it may be helpful to find all Nested Loop operators in a plan all operators that access a specific database object, or specific values for a given attribute.
-=======
 Within the Top Operations tab, in addition to sorting columns, the Filter window on the right can be used to find operators with a common field value.  For example, it may be helpful to find all Nested Loop operators in a plan that access a specific database object, or filter on specific values for a given attribute.
->>>>>>> 30aa15c93de1fe65974f7ae89328e830d9aee802
 
 :::image type="content" source="media/query-plan-viewer/top-operations-filtered.png" alt-text="Screenshot of a Top Operations tab after filtering for clustered.":::
 
@@ -74,11 +70,7 @@ The compare plans menu offers several of the same icons as in the query plan men
 
    :::image type="content" source="media/query-plan-viewer/compare-plans-properties.png" alt-text="Screenshot of Two plans compared with the properties window displayed." lightbox="media/query-plan-viewer/compare-plans-properties.png":::
 
-<<<<<<< HEAD
-The default view of the Properties plan for plan comparison lists attributes with different values at the top, and attributes with the same values are collapsed under the Equivalent Properties heading.  This view can be changed using the sort icons, and the attribute lists can be expanded or collapsed to aid in displaying and finding information.  The Properties pane also has a filter menu, allowing quickly navigating to the attribute of interest.
-=======
 The default view of the Properties plan for plan comparison lists attributes with different values at the top, and attributes with the same values are collapsed under the Equivalent Properties heading.  This view can be changed using the sort icons, and the attribute lists can be expanded or collapsed to aid in displaying and finding information.  The Properties pane also has a filter menu, providing the ability to  quickly navigate to the attribute of interest.
->>>>>>> 30aa15c93de1fe65974f7ae89328e830d9aee802
 
 ## Next steps
 

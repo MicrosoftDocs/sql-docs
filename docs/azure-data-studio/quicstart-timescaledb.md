@@ -48,7 +48,7 @@ media/quicstart-timescaledb/new-connection-screen.png
    | **Password (SQL Login)** | *P@ssw0rd* | Your password. |
    | **Password** | *Check* | Check this box to avoid entering the password each time you connect. |
    | **Database name** | *defaultdb* | The default database for Managed Service for TimescaleDB service is defaultdb. You can also specify the name of the database. |
-   | **Server group** | `<Default>` | This option lets you assign this connection to a specific server group you create. |
+   | **Server group** | *<Default>* | This option lets you assign this connection to a specific server group you create. |
    | **Name (optional)** | *leave blank* | This option lets you specify a friendly name for your server. |
 
 1. Select **Advanced**.

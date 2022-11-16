@@ -13,14 +13,58 @@ ms.topic: conceptual
 
 This article describes how to connect multiple instances of SQL Server to Azure Arc as a single task. The easiest  way to do that is by using Azure policy. Alternatively, you can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using a script.
 
-## Connecting at-scale using Azure policy
+## Prerequisites
+
+* Each server has at least one instance of SQL Server installed
+
+   > [!NOTE]
+   > SQL Server on Azure Arc-enabled servers does not support SQL Server Failover Cluster Instances.
+
+* The user onboarding Arc-enabled SQL Server resources has the following permissions:
+
+   * Microsoft.AzureArcData/sqlServerInstances/read
+   * Microsoft.AzureArcData/sqlServerInstances/write
+
+* The subscription has registered the following resource providers
+   * **Microsoft.AzureArcData**
+   * **Microsoft.HybridCompute**
+
+### Register resource providers
+
+To register the resource providers, use one of the methods below:
+
+# [Azure portal](#tab/azure)
+
+1. Select **Subscriptions**
+2. Choose your subscription
+3. Under **Settings**, select **Resource providers**
+4. Search for `Microsoft.AzureArcData` and `Microsoft.HybridCompute` and select **Register**
+
+# [PowerShell](#tab/powershell)
+
+Run:
+
+```powershell
+Register-AzResourceProvider -ProviderNamespace Microsoft.AzureArcData
+```
+
+# [Azure CLI](#tab/az)
+
+Run:
+
+```azurecli
+az provider register --namespace 'Microsoft.AzureArcData'
+```
+---
+
+## Connect at-scale using Azure policy
 
 You can automatically register the SQL Server instances on multiple machines using a built-in Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. This policy is disabled by default. If you assign this policy to a scope of your choice, it will install the *Azure extension for SQL Server* on all Azure Arc connected servers. Once installed, the extension will connect the SQL Server instances on the machine with Azure. After that, the extension will run continuously to detect changes of the SQL Server configuration and synchronize them with Azure. For example, if a new SQL Server instance is installed on the machine, the extension will automatically register it with Azure. See [Azure Policy documentation](/azure/governance/policy) for instructions how to assign an Azure policy using Azure portal or an API of your choice.
 
 > [!IMPORTANT]
 >The Arc-enabled SQL Server resources for the SQL Server instances use the type `SQL Server - Azure Arc` and will be created in the same region and the resource group as the corresponding `Server - Azure Arc` resources. Because Azure extension for SQL Server  synchronizes with Azure once an hour, it may take up to one hour before these resources are created.
 
-## Connecting multiple SQL Server instances using script
+## Connect multiple SQL Server instances using script
 
 You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same [script your generated for a single machine](connect.md). The script will connect each machine and all installed SQL Server instances on it to Azure Arc.
 
@@ -48,9 +92,10 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
 2. Give the service principal permissions to access Microsoft Graph.
 
    > [!NOTE]
-   > - When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
+   >
+   > * When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines. The instructions on how to create a custom role are provided in [Required permissions](overview.md#required-permissions).
    > 
-   > - The service principal must have *Directory.ReadAll* permissions in Microsoft graph. For instructions how to assign [Directory permissions](/graph/permissions-reference#directory-permissions) to a service principal, see [Manage API permissions](/graph/migrate-azure-ad-graph-configure-permissions#option-1-use-the-azure-portal-to-find-the-apis-your-organization-uses).
+   > * The service principal must have *Directory.ReadAll* permissions in Microsoft graph. For instructions how to assign [Directory permissions](/graph/permissions-reference#directory-permissions) to a service principal, see [Manage API permissions](/graph/migrate-azure-ad-graph-configure-permissions#option-1-use-the-azure-portal-to-find-the-apis-your-organization-uses).
 
 1. Retrieve the password stored in the `$sp` variable:
 

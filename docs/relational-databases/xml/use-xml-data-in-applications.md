@@ -58,7 +58,7 @@ CommandText = "SELECT Demographics" & _
               " WHERE Sales.Customer.CustomerID = 3" & _
               " OR Sales.Customer.CustomerID = 4"
 
-ConnectionString = "Provider=SQLNCLI11" & _
+ConnectionString = "Provider=MSOLEDBSQL" & _
                    ";Data Source=" & DS & _
                    ";Initial Catalog=" & DB & _
                    ";Integrated Security=SSPI;" & _
@@ -88,7 +88,8 @@ Set objConn = Nothing
 
 This example shows how to set the data type compatibility property. By default, this is set to 0 when you're using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. If you set the value to 80, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provider will make **xml** and user-defined type columns appear as [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] data types. This would be DBTYPE_WSTR and DBTYPE_BYTES, respectively.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client must also be installed on the client computer and the connection string must specify it for use as the data provider with "`Provider=SQLNCLI11;...`".
+> [!NOTE]
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
 ### Test this example
 

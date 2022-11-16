@@ -168,7 +168,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview** | 2022 (Preview) | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-preview.repo` |
+| **Preview** | 2022 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo` |
 | **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
 
@@ -180,7 +180,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview** | 2022 (Preview) | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-preview.repo` |
+| **Preview** | 2022 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo` |
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo` |
 | **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 
@@ -206,7 +206,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
    | Repository | Version | Command |
    |---|---|---|
-   | **Preview** | 2022 (Preview) | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-preview.list)"` |
+   | **Preview** | 2022 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"` |
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
 

@@ -155,7 +155,7 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    The Azure Arc server agent can only update once the previous action has completed. This means that saving a new Azure AD configuration before the last one has finalized can cause a failure. If you see the message **Extended call failed** when you select **Save**, wait 5 minutes and then try again.
 
-   The Azure AD admin login is listed in `sys.server_principals`, but is not part of the `sysadmin` role. To grant the Azure AD admin the `sysadmin` role, use the [sp_addsrvrolemember](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql) stored procedure.
+   The Azure AD admin login is listed in `sys.server_principals`, but is not part of the `sysadmin` role. To grant the Azure AD admin the `sysadmin` role, use the [sp_addsrvrolemember](../../system-stored-procedures/sp-addsrvrolemember-transact-sql.md) stored procedure.
 
    ```sql
    ALTER SERVER ROLE sysadmin ADD MEMBER [aadadmin@contoso.com]

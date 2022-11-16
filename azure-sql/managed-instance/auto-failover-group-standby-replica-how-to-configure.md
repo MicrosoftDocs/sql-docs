@@ -46,7 +46,7 @@ The following table describes the functional capabilities of a standby secondary
 |Backup / restore| There's no difference in backup and restore behavior between a standby replica and a readable secondary managed instance.         |
 |Monitoring     | All monitoring operations that are supported by a readable secondary replica are supported by the standby replica.         |
 |RPO & RTO| The standby replica provides the same RPO and RTO as a readable secondary replica.          |
-|Removing failover group  | If the failover group is removed (using something like [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup)), the standby replica becomes a read-write standalone instance, and will now be charged the license price.      |
+|Removing failover group  | If the failover group is removed (using something like [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup)), the standby replica becomes a read-write standalone instance, and the licensing model returns to what it was before it was designated for standby (either AHB or PAYG).  |
 
 The secondary instance must be used as DR-only, with no production applications connected to the replica. The following lists the only activities that are permitted on the standby replica: 
 

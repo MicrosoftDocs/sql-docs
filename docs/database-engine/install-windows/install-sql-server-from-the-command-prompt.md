@@ -279,26 +279,26 @@ To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../i
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS
 ```
 
-#### Deploy - connected to Azure Arc
+#### Install and connect to Azure
 
-Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] you can install the Azure Arc agent with the SQL Server extension when you are install SQL Server. When you install the Azure Arc agent with SQL Server extension you can automatically enable the instance for Azure Arc which will register the SQL Server instance as a resource in Azure and make it eligible to attach additional Azure management services to it.
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can install the Azure Arc agent with the Azure extension for SQL Server using SQL Server setup. When you install the Azure Arc agent and SQL Server extension, you automatically Arc-enable all the instances on the host which will register the SQL Server instances as resources in Azure and make them eligible to have additional Azure management services attached.
 
-The following example deploys a SQL Server instance that is connected to Azure Arc. Before you run the example, replace the information in angle brackets ( `< ... >` ) with your information.
+The following example installs a SQL Server instance, the Azure Arc agent, and the Azure extension for SQL Server so that the SQL Server instance is connected to Azure after installation. Before you run the example, replace the information in angle brackets ( `< ... >` ) with your information.
 
 ```console
 setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,AZUREEXTENSION /INSTANCENAME=<instance name> /SQLSYSADMINACCOUNTS="<sysadmin account>" /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<Azure tenant ID>" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
 ```
 
-The following example installs the Azure Arc agent and SQL Server extension to manage an existing SQL Server instance and any other SQL Server instances that are installed.
+The following example installs the Azure Arc agent and Azure extension for SQL Server to manage all the existing SQL Server instances that are installed.
 
 ```console
 setup.exe /qs /ACTION=Install /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<Azure tenant ID>" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
 ```
 
-The following example shows how to remove the SQL Server extension for Azure Arc agent from setup.
+The following example shows how to remove the Azure extension for SQL Server using SQL Server setup.
 
 > [!NOTE]
-> This command will not physically uninstall the SQL Server extension. Instead, the command will mark this feature as not selected in the setup. To remove the Azure resource for this instance, go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/sqlServers) and delete.
+> This command will not physically uninstall the Azure extension for SQL Server. Instead, the command will mark this feature as not selected in the setup. To remove the Azure resource for this instance, go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/sqlServers) and delete.
 
 ```console
 setup.exe /qs /ACTION=Uninstall /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLICENSETERMS

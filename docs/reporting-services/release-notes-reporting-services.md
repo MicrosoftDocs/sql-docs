@@ -50,8 +50,8 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
 
-## 16.0.1112.48, 2022/11/16
-*(Product Version: 16.0.8353.8096)*
+## 16.0.8353.8096, 2022/11/16
+*(Product Version: 16.0.1112.48)*
 
 Initial release.
 
@@ -59,7 +59,7 @@ Initial release.
     - New portal experience with performance improvements using Angular
     - Accessibility fixes to many parts of the portal
     - New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal
-    - Ability to turn off size calculation for snapshots via configuration propery **EnableListHistorySnapshotsSize** if History Snapshots page loads slow due to a large number of snapshots
+    - Ability to turn off size calculation for snapshots via configuration property **EnableListHistorySnapshotsSize** if History Snapshots page loads slow due to a large number of snapshots
     - Security enhancements
     - Bug fixes
 - [Deprecated features](/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs): 
@@ -197,7 +197,7 @@ Initial release.
 | Paginated reports didn't work properly with filter parameters when snapshot is enabled  | &nbsp; |
 | Users with Browser role and default settings didn't have permissions to download Excel files  | &nbsp; |
 | Upgrading to Power BI Report Server from SQL Server 2016 Reporting Services failed during upgrade | &nbsp; |
-| After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with "An invalid character was found in the mail header: ','" message | &nbsp; |
+| After you upgrade from SQL Server 2012 Reporting Services, subscriptions failed with "An invalid character was found in the mail header: ','" message | &nbsp; |
 | Configuration tool: canceling modal windows in Database section would restart the Reporting Services service | &nbsp; |
 | BorderStyle property expression of Textbox controls weren't rendered to Excel format  | &nbsp; |
 | Pagination issue that could get certain reports stuck with rendering the same page without ever reaching the last page of the report | &nbsp; |
@@ -249,7 +249,7 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Textbox inside Rectangle causes the rectangle to not grow vertically when rc:Toolbar=False and it has long text. | &nbsp; |
-| Text size isn't scaling if pageHeight is less than 0.5 inches. | &nbsp; |
+| Text size isn't scaling if pageHeight is less than 0.5 inch. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
 | Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |

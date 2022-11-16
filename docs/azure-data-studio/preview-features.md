@@ -63,7 +63,6 @@ You can enable or disable preview features anytime in your Settings.
 * Oracle
 * MySQL
 * PostgreSQL
-* Query History
 * SandDance for Azure Data Studio
 * Server Reports
 * SQL Assessment

@@ -433,7 +433,9 @@ This method is an alternative to accessing tables in a linked server and is a on
 
 
 **Recommendation**   
-OPENROWSET function can be used to execute queries only on SQL Server instances (either managed, on-premises, or in Virtual Machines). Only SQLNCLI, SQLNCLI11, and SQLOLEDB values are supported as provider. Therefore, the recommendation action is that identify the dependent database(s) from remote non-SQL Servers and consider moving these into the database being migrated.
+OPENROWSET function can be used to execute queries only on SQL Server instances (either managed, on-premises, or in Virtual Machines). The providers `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` (recommended) are supported. The [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server.md) is recommended for new development.
+
+The recommendation action is to identify the dependent database(s) from remote non-SQL Servers and consider moving these into the instance being migrated.
 
 More information: [Bulk Insert and OPENROWSET differences in Azure SQL Managed Instance ](../../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset)
 

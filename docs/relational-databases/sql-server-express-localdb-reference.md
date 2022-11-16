@@ -29,11 +29,11 @@ ms.author: maghan
 #include <SDKDDKVer.h>  
 #include <stdio.h>  
   
-// To use LocalDB API, you must define LOCALDB_DEFINE_PROXY_FUNCTIONS before you include sqlncli.h in one (and only one) of the   
+// To use LocalDB API, you must define LOCALDB_DEFINE_PROXY_FUNCTIONS before you include msoledbsql.h in one (and only one) of the   
 // source files in your program. LOCALDB_DEFINE_PROXY_FUNCTIONS causes code to be generated that binds to the LocalDB API at runtime.  
   
 #define LOCALDB_DEFINE_PROXY_FUNCTIONS  
-#include "sqlncli.h"  
+#include "msoledbsql.h"  
   
 HRESULT CreateAndStartLocalDBInstance(PWCHAR wszVersion, PWCHAR wszInstanceName) {  
    HRESULT hr;  

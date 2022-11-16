@@ -306,7 +306,7 @@ Use the following steps to create each account.
 1. Select **corp (local)** from the left pane.
 1. On the right **Tasks** pane, select **New**, and then select **User**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/29-ad-dc-new-user.png" alt-text="Screenshot of the Active Directory Administrative Center in the VM, showing to add a new user." lightbox"./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/29-ad-dc-new-user.png" :::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/29-ad-dc-new-user.png" alt-text="Screenshot of the Active Directory Administrative Center in the VM, showing to add a new user." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/29-ad-dc-new-user.png" :::
 
    >[!TIP]
    >Set a complex password for each account.<br/> For non-production environments, set the user account to never expire.

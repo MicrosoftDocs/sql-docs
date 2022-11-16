@@ -380,13 +380,13 @@ The steps to [create the load balancer](availability-group-manually-configure-tu
 
    The Azure portal blade should look like this:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page. " lightbox="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" lightbox="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page." lightbox="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png":::
 
 1. Select **Next: Frontend IP Configuration**
 
 1. Select **Add a frontend IP Configuration**
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page with  add a frontend IP configuration highlighted.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page with add a frontend IP configuration highlighted.":::
 
 1. Set up the frontend IP using the following values:
 
@@ -655,7 +655,7 @@ Once SQL Server has restarted on the newly created virtual machine, it can be ad
 
    Your **Always On Dashboard** should look similar to the following screenshot, now with another replica:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of SSMS availability group dashboard." lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of SSMS availability group dashboard." lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" :::
 
    You can see the replicas, the failover mode of each replica, and the synchronization state.
 

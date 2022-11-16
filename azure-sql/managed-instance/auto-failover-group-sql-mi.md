@@ -73,7 +73,7 @@ There is some overlap of content in the following articles, be sure to make chan
 
 ## Failover group architecture
 
-The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like `master` and `msdb` will not be replicated.
+The auto-failover group must be configured on the primary instance and will connect it to the secondary instance in a different Azure region.  All user databases in the instance will be replicated to the secondary instance. System databases like **master** and **msdb** will not be replicated.
 
 The following diagram illustrates a typical configuration of a geo-redundant cloud application using managed instance and auto-failover group:
 
@@ -170,9 +170,20 @@ The DNS update of the read-write listener will happen immediately after the fail
 > [!IMPORTANT]  
 > Use manual planned failover to move the primary back to the original location once the outage that caused the geo-failover is mitigated.
 
+## Save costs with a license-free DR replica
+
+You can save on SQL Server license costs by configuring your secondary managed instance to be used for disaster recovery (DR) only. To set this up, see [Configure free DR replica](auto-failover-group-standby-replica-how-to-configure.md). 
+
+As long as the secondary instance is not used for read-workloads, Microsoft provides you with a free number of vCores to match the primary instance. You're still charged for compute and storage used by the secondary instance. Auto-failover groups support only one replica - the replica must either be a readable replica, or designated as a DR-only replica. 
+
+
 ## Enable scenarios dependent on objects from the system databases
 
-System databases are **not** replicated to the secondary instance in a failover group. To enable scenarios that depend on objects from the system databases, make sure to create the same objects on the secondary instance and keep them synchronized with the primary instance.
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-configure-sql-mi.md. Please ensure changes are made to both documents. 
+-->
+
+System databases are **not** replicated to the secondary instance in a failover group. To enable scenarios that depend on objects from the system databases, make sure to create the same objects on the secondary instance and keep them synchronized with the primary instance. 
 
 For example, if you plan to use the same logins on the secondary instance, make sure to create them with the identical SID.
 
@@ -185,9 +196,17 @@ To learn more, see [Replication of logins and agent jobs](https://techcommunity.
 
 ## Synchronize instance properties and retention policies instances
 
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-configure-sql-mi.md. Please ensure changes are made to both documents. 
+-->
+
 Instances in a failover group remain separate Azure resources, and no changes made to the configuration of the primary instance will be automatically replicated to the secondary instance. Make sure to perform all relevant changes both on primary _and_ secondary instance. For example, if you change backup storage redundancy or long-term backup retention policy on primary instance, make sure to change it on secondary instance as well.
 
 ## <a id="scaling-instances"></a> Scale instances
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-configure-sql-mi.md. Please ensure changes are made to both documents. 
+-->
 
 You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
 
@@ -287,10 +306,9 @@ Auto-failover groups can also be managed programmatically using Azure PowerShell
 
 ## Next steps
 
-- For detailed tutorials, see
-- [Add a SQL Managed Instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md)
-- For a sample script, see:
-- [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md)
-- For a business continuity overview and scenarios, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
-- To learn about automated backups, see [SQL Database automated backups](../database/automated-backups-overview.md).
-- To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).
+- For instructions to configure a failover group, review the [how to guide](auto-failover-group-configure-sql-mi.md) or the detailed [tutorial](failover-group-add-instance-tutorial.md). 
+- For a sample script, review: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md)
+- To learn how to save on licensing costs, see [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 
+- For a business continuity overview and scenarios, review [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
+- To learn about automated backups, review [SQL Database automated backups](../database/automated-backups-overview.md).
+- To learn about using automated backups for recovery, review [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).

@@ -18,6 +18,9 @@ ms.author: maghan
 # FILESTREAM Support
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
   FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
  When a database connection is opened, **\@\@TEXTSIZE** will be set to -1 ("unlimited"), by default.  

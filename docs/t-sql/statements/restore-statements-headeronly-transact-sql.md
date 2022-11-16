@@ -42,6 +42,7 @@ FROM <backup_device>
 --Backup Set Options  
    FILE = { backup_set_file_number | @backup_set_file_number }   
  | PASSWORD = { password | @password_variable }   
+ | [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { database_name | @database_name_variable } ]
   
 --Media Set Options  
  | MEDIANAME = { media_name | @media_name_variable }   

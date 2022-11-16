@@ -28,6 +28,9 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 /includes/snac-deprecated.md
 -->
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
 
 A distributed transaction can be created for different Microsoft SQL systems in different ways.
 

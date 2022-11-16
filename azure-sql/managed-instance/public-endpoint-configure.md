@@ -109,7 +109,7 @@ Set-AzSqlInstance -PublicDataEndpointEnabled $false -force
 1. Navigate to the managed instance configuration page that has been enabled for public endpoint. Select the **Connection strings** tab under the **Settings** configuration.
 1. Note that the public endpoint host name comes in the format <mi_name>.**public**.<dns_zone>.database.windows.net and that the port used for the connection is 3342. Here's an example of a server value of the connection string denoting the public endpoint port that can be used in SQL Server Management Studio or Azure Data Studio connections: `<mi_name>.public.<dns_zone>.database.windows.net,3342`
 
-    ![Screenshot shows the connection strings for your public and private endpoints.](./media/public-endpoint-configure/mi-public-endpoint-conn-string.png)
+    ![Screenshot shows the connection strings for your public and VNet-local endpoints.](./media/public-endpoint-configure/mi-public-endpoint-conn-string.png)
 
 ## Next steps
 

@@ -124,7 +124,7 @@ To configure virtual network peering, follow these steps:
 
    On the **Peerings** page, the **Peering status** is **Connected**, as shown in the following picture:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-status.png" alt-text="Screenshot of the Azure portal, Peerings page, showing connected status of the virtual network peering.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-status.png" alt-text="Screenshot of the Azure portal, Peerings page, showing connected status of the virtual network peering." lightbox="./media/availability-group-manually-configure-multiple-regions/peering-status.png":::
 
    If you don't see a **Connected** status, select the **Refresh** button.
 
@@ -380,7 +380,7 @@ The steps to [create the load balancer](availability-group-manually-configure-tu
 
    The Azure portal blade should look like this:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page. " lightbox="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page. " lightbox="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png" lightbox="./media/availability-group-manually-configure-multiple-regions/create-load-balancer.png":::
 
 1. Select **Next: Frontend IP Configuration**
 
@@ -552,11 +552,11 @@ Next, add the IP address resource to the cluster for the new SQL Server VM.
 
 1. Create the IP address resource in **Failover Cluster Manager**, select the name of the cluster, then right-click the cluster name under **Cluster Core Resources** and select **Properties**:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/cluster-name-properties.png" alt-text="Screenshot that shows the Failover Cluster Manager with a cluster name Server Name and Properties selected.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/cluster-name-properties.png" alt-text="Screenshot that shows the Failover Cluster Manager with a cluster name Server Name and Properties selected." lightbox="./media/availability-group-manually-configure-multiple-regions/cluster-name-properties.png":::
 
 1. On the **Properties** dialog box, select **Add** under **IP Address**, and then add the IP address of the cluster name from the remote network region. Select **OK** on the **IP Address** dialog box, and then select **OK** again on the **Cluster Properties** dialog box to save the new IP address.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-cluster-ip-address.png" alt-text="Screenshot of Cluster name properties, and IP address dialog box, showing how to add the cluster IP.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-cluster-ip-address.png" alt-text="Screenshot of Cluster name properties, and IP address dialog box, showing how to add the cluster IP." lightbox="./media/availability-group-manually-configure-multiple-regions/add-cluster-ip-address.png":::
 
 1. Add the IP address as a dependency for the core cluster name.
 
@@ -655,7 +655,7 @@ Once SQL Server has restarted on the newly created virtual machine, it can be ad
 
    Your **Always On Dashboard** should look similar to the following screenshot, now with another replica:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of SSMS availability group dashboard." lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of SSMS availability group dashboard." lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png":::
 
    You can see the replicas, the failover mode of each replica, and the synchronization state.
 

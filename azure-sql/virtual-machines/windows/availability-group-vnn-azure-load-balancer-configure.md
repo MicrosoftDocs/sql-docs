@@ -57,13 +57,13 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    The following image shows the **Create load balancer** UI:
 
-     :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the create Load Balancer UI.":::
+     :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the Azure portal, create Load Balancer page":::
 
 1. Select **Next: Frontend IP Configuration**
 
 1. Select **Add a frontend IP Configuration**
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of add a frontend IP configuration.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of Azure portal, with add a frontend IP configuration selected..":::
 
 1. Set up the frontend IP using the following values:
 
@@ -76,7 +76,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    The following image shows the **Add frontend IP Configuration** UI:
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of Azure portal, add a frontend IP configuration page.":::
 
 1. Select **Add** to create the frontend IP.
 
@@ -250,8 +250,8 @@ Failover succeeds when the replicas switch roles and are both synchronized.
 
 To test connectivity, sign in to another virtual machine in the same virtual network. Open **SQL Server Management Studio** and connect to the availability group listener.
 
->[!NOTE]
->If you need to, you can [download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms).
+> [!NOTE]
+> If you need to, you can [download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## Next steps
 

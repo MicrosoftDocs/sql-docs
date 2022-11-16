@@ -4,7 +4,7 @@ description: "This tutorial shows how to configure the prerequisites for creatin
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/02/2022
+ms.date: 11/18/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -79,7 +79,7 @@ To create the virtual network in the Azure portal, follow these steps:
    1. Under **Project details**, choose the appropriate Azure **Subscription**, and the **Resource group** you created previously, such as **SQL-HA-RG**.
    1. Under **Instance details**, provide a name for your virtual network, such as **autoHAVNET**, and choose the same region as your resource group from the drop-down.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/03-create-vnet-basics.png" alt-text="Screenshot of the Azure portal, create virtual network page, providing a name for your virtual network, such as autoHAVNET.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/03-create-vnet-basics.png" alt-text="Screenshot of the Azure portal, create virtual network page, providing a name for your virtual network, such as autoHAVNET." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/03-create-vnet-basics.png":::
 
 1. On the **IP addresses** tab, select the "..." next to **+ Add a subnet** and select **Delete address space** to remove the existing address space, if you need a different address range.
 
@@ -87,7 +87,7 @@ To create the virtual network in the Azure portal, follow these steps:
 
 1. Select **Add an IP address space** to open the blade to create the address space you need. For this tutorial, the address space of **192.168.0.0/16** is being used.  Select **Add** to create the address space.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/05-add-address-space.png" alt-text="Screenshot of the Azure portal, Add an IP address space page, showing adding a new address space.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/05-add-address-space.png" alt-text="Screenshot of the Azure portal, Add an IP address space page, showing adding a new address space." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/05-add-address-space.png" :::
 
 1. Select **+ Add a subnet**
     1. Provide a value for the **Subnet name**, such as **Admin**
@@ -306,7 +306,7 @@ Use the following steps to create each account.
 1. Select **corp (local)** from the left pane.
 1. On the right **Tasks** pane, select **New**, and then select **User**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/29-ad-dc-new-user.png" alt-text="Screenshot of the Active Directory Administrative Center in the VM, showing to add a new user.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/29-ad-dc-new-user.png" alt-text="Screenshot of the Active Directory Administrative Center in the VM, showing to add a new user." lightbox"./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/29-ad-dc-new-user.png" :::
 
    >[!TIP]
    >Set a complex password for each account.<br/> For non-production environments, set the user account to never expire.
@@ -319,7 +319,7 @@ Use the following steps to create each account.
 
 1. In the **Active Directory Administrative Center**, select **corp (local)** in the left pane. Then in the right-hand **Tasks** pane, select **Properties**.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/31-ad-dc-properties.png" alt-text="Screenshot of the Active Directory Administrative Center, CORP user properties selected.":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/31-ad-dc-properties.png" alt-text="Screenshot of the Active Directory Administrative Center, CORP user properties selected." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/31-ad-dc-properties.png" :::
 
 1. Select **Extensions**, and then select the **Advanced** button on the **Security** tab.
 1. In the **Advanced Security Settings for corp** dialog, select **Add**.
@@ -328,7 +328,7 @@ Use the following steps to create each account.
 
 1. Select the **Create Computer objects** check box.
 
-     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/33-add-permissions.png" alt-text="Screenshot of the corp user permissions UI.":::
+     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/33-add-permissions.png" alt-text="Screenshot of the corp user permissions UI." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/33-add-permissions.png" :::
 
 1. Select **OK**, and then select **OK** again. Close the **corp** properties window.
 

@@ -4,7 +4,7 @@ description: "This tutorial shows how to create a SQL Server Always On availabil
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/02/2022
+ms.date: 11/18/2022
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -83,7 +83,7 @@ After the prerequisites are completed, the first step is to create a Windows Ser
 
 1. Right-click the failed **IP Address** resource, and then select **Properties**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/42-ip-properties.png" alt-text="Screenshot of Failover Cluster Manager, with the menu open on the IP address, and properties highlighted.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/42-ip-properties.png" alt-text="Screenshot of Failover Cluster Manager, with the menu open on the IP address, and properties highlighted." lightbox="./media/availability-group-manually-configure-tutorial-single-subnet/42-ip-properties.png":::
 
 1. Select **Static IP Address** and specify an available address from the same subnet as your virtual machines.
 
@@ -307,8 +307,8 @@ You're now ready to configure an availability group using the following steps:
 
 1. In the **Select Initial Data Synchronization** page, select **Full** and specify a shared network location. For the location, use the [backup share that you created](#backupshare). In the example it was, **\\\\<First SQL Server\>\Backup\\**. Select **Next**.
 
-   >[!NOTE]
-   >Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, full synchronization is not recommended because it may take a long time. You can reduce this time by manually taking a backup of the database and restoring it with `NO RECOVERY`. If the database is already restored with `NO RECOVERY` on the second SQL Server before configuring the availability group, choose **Join only**. If you want to take the backup after configuring the availability group, choose **Skip initial data synchronization**.
+   > [!NOTE]
+   > Full synchronization takes a full backup of the database on the first instance of SQL Server and restores it to the second instance. For large databases, full synchronization is not recommended because it may take a long time. You can reduce this time by manually taking a backup of the database and restoring it with `NO RECOVERY`. If the database is already restored with `NO RECOVERY` on the second SQL Server before configuring the availability group, choose **Join only**. If you want to take the backup after configuring the availability group, choose **Skip initial data synchronization**.
    >
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/70-data-synchronization.png" alt-text="Screenshot of new availability group wizard in SSMS, Choose Skip initial data synchronization.":::
@@ -377,7 +377,7 @@ A load balancer in Azure can be either a Standard Load Balancer or a Basic Load 
 
    The Azure portal blade should look like this:
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the Azure portal, Create Load Balancer page." lightbox="./media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png":::
 
 1. Select **Next: Frontend IP Configuration**
 

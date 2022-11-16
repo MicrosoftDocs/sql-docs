@@ -56,7 +56,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    The following image shows the **Create load balancer** UI:
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-createloadbalancer.png" alt-text="Screenshot of the create Load Balancer UI.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the create Load Balancer UI." lightbox="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png":::
 
 1. Select **Next: Frontend IP Configuration**
 
@@ -75,7 +75,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    The following image shows the **Add frontend IP Configuration** UI:
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade." lightbox="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png":::
 
 1. Select **Add** to create the frontend IP.
 

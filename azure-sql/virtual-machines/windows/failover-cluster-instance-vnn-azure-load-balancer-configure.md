@@ -51,7 +51,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
    - **Name**: A name that identifies the load balancer.
    - **Region**: The Azure location that contains your virtual machines.
    - **SKU**: Standard.
-   - **Type**: Either public or internal. An internal load balancer can be accessed from within the virtual network. Most Azure applications can use a internal load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
+   - **Type**: Either public or internal. An internal load balancer can be accessed from within the virtual network. Most Azure applications can use an internal load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
    - **Tier**: Regional.
 
    The following image shows the **Create load balancer** UI:

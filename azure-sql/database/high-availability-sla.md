@@ -93,9 +93,9 @@ The zone-redundant version of the high availability architecture is illustrated 
 > - This feature is currently in preview for SQL Managed Instance, and only available on the Business Critical service tier. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
 > - For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support). 
 
-### SQL MI regional availability
+### Supported regions for SQL MI zone redundancy
 
-Zone redundancy for SQL Managed Instance is currently in preview, only available in the Business Critical service tier, and supported in the following regions: 
+During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions: 
 
 - Brazil South
 - East US

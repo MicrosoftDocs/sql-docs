@@ -64,7 +64,7 @@ The *partition_by_clause* divides the result set produced by the `FROM` clause i
   
 ## Remarks  
 
-* `COUNT(\*)` without `GROUP BY` returns the cardinality (number of rows) in the resultset. This includes rows comprised of all-`NULL` values and duplicates.
+* `COUNT(*)` without `GROUP BY` returns the cardinality (number of rows) in the resultset. This includes rows comprised of all-`NULL` values and duplicates.
 * `COUNT(\*)` with `GROUP BY` returns the number of rows in each group. This includes `NULL` values and duplicates.
 * `COUNT(ALL *expression*)` evaluates *expression* for each row in a group, and returns the number of nonnull values.
 * `COUNT(DISTINCT *expression*)` evaluates *expression* for each row in a group, and returns the number of unique, nonnull values.

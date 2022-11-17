@@ -285,26 +285,26 @@ To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../i
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\NETWORK SERVICE" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS
 ```
 
-#### Deploy - connected to Azure Arc
+#### Install and connect to Azure
 
-Beginning with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] you can install the Azure Arc agent with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extension when you are install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When you install the Azure Arc agent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extension, you can automatically enable the instance for Azure Arc, which will register the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance as a resource in Azure and make it eligible to attach additional Azure management services to it.
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can install the Azure Arc agent with the Azure extension for SQL Server using SQL Server setup. When you install the Azure Arc agent and SQL Server extension, you automatically Arc-enable all the instances on the host which will register the SQL Server instances as resources in Azure and make them eligible to have additional Azure management services attached.
 
-The following example deploys a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that is connected to Azure Arc. Before you run the example, replace the information in angle brackets ( `< ... >` ) with your information.
+The following example installs a SQL Server instance, the Azure Arc agent, and the Azure extension for SQL Server so that the SQL Server instance is connected to Azure after installation. Before you run the example, replace the information in angle brackets ( `< ... >` ) with your information.
 
 ```console
 setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,AZUREEXTENSION /INSTANCENAME=<instance name> /SQLSYSADMINACCOUNTS="<sysadmin account>" /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<Azure tenant ID>" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
 ```
 
-The following example installs the Azure Arc agent and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extension to manage an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and any other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that are installed.
+The following example installs the Azure Arc agent and Azure extension for SQL Server to manage all the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that are installed.
 
 ```console
 setup.exe /qs /ACTION=Install /FEATURES=AZUREEXTENSION /IACCEPTSQLSERVERLICENSETERMS /AZURESUBSCRIPTIONID="<Azure subscription>" /AZURETENANTID="<Azure tenant ID>" /AZURERESOURCEGROUP="<resource group name>" /AZURESERVICEPRINCIPAL="<service principal>" /AZURESERVICEPRINCIPALSECRET="<secret>" /AZUREREGION=<Azure region>
 ```
 
-The following example shows how to remove the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extension for Azure Arc agent from setup.
+The following example shows how to remove the Azure extension for SQL Server using SQL Server setup.
 
-> [!NOTE]  
-> This command will not physically uninstall the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extension. Instead, the command will mark this feature as not selected in the setup. To remove the Azure resource for this instance, go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/sqlServers) and delete.
+> [!NOTE]
+> This command will not physically uninstall the Azure extension for SQL Server. Instead, the command will mark this feature as not selected in the setup. To remove the Azure resource for this instance, go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_HybridCompute/AzureArcCenterBlade/sqlServers) and delete.
 
 ```console
 setup.exe /qs /ACTION=Uninstall /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLICENSETERMS

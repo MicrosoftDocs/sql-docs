@@ -1,7 +1,7 @@
 ---
-title: Point-in-time restore (PITR)
+title: Point-in-time restore
 titleSuffix: Azure SQL Managed Instance
-description: Restore a database on Azure SQL Managed Instance to a previous point in time.
+description: Restore a database in your Azure SQL Managed Instance deployment to a previous point in time.
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: mathoma, nvraparl
@@ -12,90 +12,88 @@ ms.topic: how-to
 ms.custom: devx-track-azurepowershell
 ---
 # Restore a database in Azure SQL Managed Instance to a previous point in time
+
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Use point-in-time restore (PITR) to create a database as a copy of another database from some time in the past. This article describes how to do a point-in-time restore of a database in Azure SQL Managed Instance.
+You can use point-in-time restore to create a database that's a copy of a different database at a specific, earlier point in time. This article describes how to do a point-in-time restore of a database in your Azure SQL Managed Instance deployment.
 
 > [!NOTE]
-> The [Create or Update v02.01.2022](/rest/api/sql/2022-02-01-preview/managed-databases/create-or-update) is being deprecated. Starting January 2022, use the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) replacement API call for all database restore operations. 
+> The [Create or Update v02.01.2022](/rest/api/sql/2022-02-01-preview/managed-databases/create-or-update) API is deprecated. Beginning in January 2022, use the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) replacement API call for all database restore operations.
 
-## Overview
+## Scenarios
 
-Point-in-time restore is useful in recovery scenarios, such as incidents caused by errors, incorrectly loaded data, or deletion of crucial data. You can also use it simply for testing or auditing. Backup files are kept for 7 to 35 days, depending on your database settings.
+Point-in-time restore is useful in recovery scenarios, like in an incident that's caused by errors, data that doesn't load correctly, or if crucial data is deleted. You can also use it simply to test and audit your database deployment. The Azure backup files are kept for 7 to 35 days depending on your database settings.
 
-Point-in-time restore can restore a database:
+Point-in-time restore can restore a database in these scenarios:
 
-- from an existing database.
-- from a deleted database.
-- to the same SQL Managed Instance, or to another SQL Managed Instance. 
-- to an instance in the same subscription or in a different subscription from the source instance. 
+- From an existing database
+- From a deleted database
+- To the same managed instance or to a different managed instance
+- To a managed instance in the same subscription or to a managed instance in a different subscription
 
-The following table shows point-in-time restore scenarios for SQL Managed Instance: 
+The following table shows point-in-time restore scenarios for SQL Managed Instance:
 
-| **Scenario** | **Azure Portal** | **Azure CLI** | **PowerShell** | 
+| Scenario | Azure portal | Azure CLI | PowerShell |
 |:----------|:----------|:----------|:----------|
-|Restore existing DB to the same instance of SQL Managed Instance| Yes | Yes | Yes| 
-|Restore existing DB to another SQL Managed Instance| Yes |  Yes | Yes | 
-|Restore dropped DB to same SQL Managed Instance| Yes | No| Yes | 
-|Restore dropped DB to another SQL Managed Instance | Yes | No | Yes 
-|Restore existing DB to an instance in another subscription | Yes | No | No | 
-|Restore dropped DB to an instance in another subscription | Yes | No | No | 
-
+| Restore an existing database to the same managed instance | Yes | Yes | Yes|
+| Restore an existing database to a different managed instance | Yes |  Yes | Yes |
+| Restore a dropped database to the same managed instance | Yes | No| Yes |
+| Restore a dropped database to a different managed instance | Yes | No | Yes |
+| Restore an existing database to a managed instance in another subscription | Yes | No | No |
+| Restore a dropped database to a managed instance in another subscription | Yes | No | No |
 
 ## Limitations
 
-Point-in-time restore of a whole SQL Managed Instance isn't possible. This article explains only what's possible: point-in-time restore of a database that's hosted on SQL Managed Instance. 
+These limitations apply to point-in-time restore in SQL Managed Instance:
 
-Limitations differ if you're restoring your database to an instance in the same subscription, or to a different subscription. 
+- You can't use point-in-time restore to recover an entire SQL Managed Instance deployment. Use point-in-time restore only to make a copy of a database that's hosted on SQL Managed Instance.
 
-When [service endpoint policies](/service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet, prevents point-in-time restores (PITR) from instances in different subnets. 
+- Limitations in point-in-time restore depend on whether you're restoring your database to a managed instance in the same subscription or to a managed instance in a different subscription.
 
+- If you enable [service endpoint policies](/service-endpoint-policies-configure.md) for your managed instance, placing a service endpoint policy on a subnet prevents point-in-time restore from a managed instance that's in a different subnet.
 
 > [!WARNING]
-> Be aware of the storage size of your SQL Managed Instance. Depending on size of the data to be restored, you might run out of instance storage. If there isn't enough space for the restored data, use a different approach.
+> Be aware of the storage size of your managed instance. Depending on size of the data to be restored, you might run out of storage for your managed instance. If you don't have enough storage space in your managed instance for the restored data, use a different approach.
 
 ### Restore to same subscription
 
-Point-in-time restore to SQL Managed Instance in the same subscription has the following limitation:
+If you restore from one managed instance to another managed instance in the same Azure subscription, both managed instances must be in the same region. Currently, cross-region restore isn't supported.
 
-- When you're restoring from one instance of SQL Managed Instance to another, both instances must be in the same region. Cross-region restore aren't currently supported.
+### Restore to a different subscription
 
-### Restore to a different subscription 
+Restoring a point-in-time restore backup across subscriptions has the following limitations:
 
-Restoring a PITR backup across subscriptions has the following limitations: 
-
-- Both subscriptions must be in the same region. 
-- Both subscriptions must be in the same tenant. 
-- The subscription type has to be either EA, CSP, MCA, or PayGo. 
-- The restore operation can only be performed on the primary instance. 
-- Geo-replicated backups aren't currently supported for cross-subscription point-in-time restore. 
-- The user performing the restore must either be part of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
-- If you're bringing your own key (BYOK), then the key must be present in both subscriptions. 
-
+- Both subscriptions must be in the same region.
+- Both subscriptions must be in the same tenant.
+- The subscription type must be either EA, CSP, MCA, or PayGo.
+- You can do a restore operation only only on the primary instance.
+- Geo-replicated backups aren't currently supported for cross-subscription point-in-time restore.
+- The user performing the restore must either be part of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**.
+- If you're bringing your own key (BYOK), then the key must be present in both subscriptions.
 
 ## Restore an existing database
 
-Restore an existing database in the same subscription by using the Azure portal, PowerShell, or the Azure CLI. If you're restoring to a different instance in the same subscription and using PowerShell or the Azure CLI, be sure to specify the properties for the target SQL Managed Instance or the database will be restored to the same instance by default. 
+Restore an existing database in the same subscription by using the Azure portal, PowerShell, or the Azure CLI. If you're restoring to a different instance in the same subscription and using PowerShell or the Azure CLI, be sure to specify the properties for the target SQL Managed Instance or the database will be restored to the same instance by default.
 
-Restoring your database to an instance in a different subscription is currently only possible by using the Azure portal. If you're restoring to a different subscription, the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call underlying the restore action must contain `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and `crossSubscriptionSourceDatabaseId` **OR** `crossSubscriptionRestorableDroppedDatabaseId`. 
-
+Restoring your database to an instance in a different subscription is currently only possible by using the Azure portal. If you're restoring to a different subscription, the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call underlying the restore action must contain `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and `crossSubscriptionSourceDatabaseId` *or* `crossSubscriptionRestorableDroppedDatabaseId`.
 
 # [Portal](#tab/azure-portal)
 
-1. Sign in to the [Azure portal](https://portal.azure.com). 
-1. Go to your source SQL Managed Instance and under **Managed Instance Databases**, choose the database that you want to restore.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. In SQL Managed Instance, go to your source managed instance.
+1. In **Managed Instance databases**, select the database you want to restore.
 
    :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot of the Azure portal, SQL Managed Instance overview blade, with a database selected. ":::
 
-1. Select **Restore** on the database page to open the **Create Azure SQL Managed Database** page: 
+1. Select **Restore** on the database page to open the **Create Azure SQL Managed Database** page:
 
     :::image type="content" source="./media/point-in-time-restore/restore-database-to-mi.png" alt-text="Screenshot of the Azure portal, databases page, with Restore a database selected.":::
 
-1. On the **Basics** tab, under **Project details**, choose the target destination subscription and resource group that contains the managed instance you want to restore the database to. 
-1. Under **Database details**, provide the new name your restored database will use, and the target SQL Managed Instance you want to restore the database to. 
-1. On the **Data source** tab, select **Continuous backup**, and then choose the subscription and resource group from the source database you want to restore. 
-1. Once you provide the source subscription and resource group, choose the database you want to restore from the **Managed Database** drop-down and then select the point in time restore point you want to restore the database from. 
-1. On the **Additional settings** tab, you can check the box if you want your restored database to inherit the retention settings of the source database, or you can uncheck the box and specify a new retention policy by selecting **Configure retention**. 
+1. On the **Basics** tab under **Project details**, select the target destination subscription and resource group that contains the managed instance you want to restore the database to.
+1. Under **Database details**, provide the new name your restored database will use, and the target SQL Managed Instance you want to restore the database to.
+1. On the **Data source** tab, select **Continuous backup**, and then choose the subscription and resource group from the source database you want to restore.
+1. Once you provide the source subscription and resource group, choose the database you want to restore from the **Managed Database** dropdown and then select the point in time restore point you want to restore the database from.
+1. On the **Additional settings** tab, you can check the box if you want your restored database to inherit the retention settings of the source database, or you can uncheck the box and specify a new retention policy by selecting **Configure retention**.
 1. Select **Review + Create**  to validate your database restore settings and then select **Create** to restore your database. This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).
 
 # [PowerShell](#tab/azure-powershell)
@@ -167,35 +165,36 @@ For a detailed explanation of the available parameters, see the [CLI documentati
 
 ## Restore a deleted database
 
-Restoring a deleted database can be done by using the Azure portal or PowerShell. 
+You can restore a deleted database by using the Azure portal or PowerShell.
 
-### Portal 
+### Portal
 
-To recover a deleted managed database by using the Azure portal, follow these steps: 
+To recover a deleted managed database by using the Azure portal:
 
-1. Go to your source SQL Managed Instance. 
-1. Select **Backups** under **Data management**.
-1. Choose **Deleted** under **Show databases**. 
-1. Select **Restore** for the deleted database you want to restore to open the **Create Azure SQL Managed Database** page. 
+1. In the Azure portal, go to your source managed instance.
+1. In the left menu under **Data management**, select **Backups**.
+1. Under **Show databases**, select **Deleted**.
+1. Select **Restore** for the deleted database you want to restore.
 
   :::image type="content" source="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png" alt-text="Screenshot of Azure portal, databases page, with restore deleted Azure SQL instance database highlighted." lightbox="./media/point-in-time-restore/restore-deleted-sql-managed-instance-annotated.png":::
 
-1. Provide details for the target managed instance you want to restore your database to on the **Basics** tab, and provide details of your source database on the **Data source** tab. Configure retention settings on the **Additional settings** tab. 
-1. Once you're done, select **Review + Create** followed by **Create** to restore your deleted database. 
-
+1. In **Create Azure SQL Managed database** under **Basics**, enter or select details for the target managed instance you want to restore your database to.
+1. In **Data source**, enter or select details for your source database.
+1. In **Additional settings**, configure retention settings.
+1. In **Review + Create**, select **Create** to restore your deleted database.
 
 ### PowerShell
 
-To restore a deleted database to the same instance, update the parameter values and then run the following PowerShell command: 
+To restore a deleted database to the same managed instance, update the parameter values and then run the following PowerShell command:
 
-```powershell-interactive
-$subscriptionId = "<Subscription ID>"
+```powershell
+$subscriptionId = "<subscription ID>"
 Get-AzSubscription -SubscriptionId $subscriptionId
 Select-AzSubscription -SubscriptionId $subscriptionId
 
-$resourceGroupName = "<Resource group name>"
-$managedInstanceName = "<SQL Managed Instance name>"
-$deletedDatabaseName = "<Source database name>"
+$resourceGroupName = "<resource group name>"
+$managedInstanceName = "<managed instance name>"
+$deletedDatabaseName = "<source database name>"
 $targetDatabaseName = "<target database name>"
 
 $deletedDatabase = Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName $resourceGroupName `
@@ -209,11 +208,11 @@ Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name
    -TargetInstanceDatabaseName $targetDatabaseName
 ```
 
-To restore the database to another SQL Managed Instance, also specify the names of the target resource group and target SQL Managed Instance:
+To restore the database to a different managed instance, also specify the names of the target resource group and the target managed instance:
 
-```powershell-interactive
-$targetResourceGroupName = "<Resource group of target SQL Managed Instance>"
-$targetInstanceName = "<Target SQL Managed Instance name>"
+```powershell
+$targetResourceGroupName = "<resource group of target managed instance>"
+$targetInstanceName = "<target managed instance name>"
 
 Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name `
    -InstanceName $deletedDatabase.ManagedInstanceName `
@@ -225,51 +224,50 @@ Restore-AzSqlinstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name
    -TargetInstanceName $targetInstanceName 
 ```
 
-
 ## Overwrite an existing database
 
-To overwrite an existing database, you must:
+To overwrite an existing database:
 
-1. Drop the existing database that you want to overwrite.
-2. Rename the point-in-time-restored database to the name of the database that you dropped.
+1. Delete the existing database that you want to overwrite.
+2. Rename the point-in-time restore database to the name of the database you deleted.
 
-### Drop the original database
+### Delete the original database
 
-You can drop the database by using the Azure portal, PowerShell, or the Azure CLI.
+You can delete the database by using the Azure portal, PowerShell, or the Azure CLI.
 
-You can also drop the database by connecting to the SQL Managed Instance directly, starting SQL Server Management Studio (SSMS), and then running the following Transact-SQL (T-SQL) command:
+Another option to delete the database is to connect to your managed instance directly, open SQL Server Management Studio, and then use the `DROP` Transact-SQL (T-SQL) command:
 
 ```sql
 DROP DATABASE WorldWideImporters;
 ```
 
-Use one of the following methods to connect to your database in the SQL Managed Instance:
+Use one of the following methods to connect to the database in your managed instance:
 
-- [SSMS/Azure Data Studio via an Azure virtual machine](./connect-vm-instance-configure.md)
+- [SQL Server Management Studio and Azure Data Studio via an Azure virtual machine](./connect-vm-instance-configure.md)
 - [Point-to-site](./point-to-site-p2s-configure.md)
 - [Public endpoint](./public-endpoint-configure.md)
 
 # [Portal](#tab/azure-portal)
 
-In the Azure portal, select the database from the SQL Managed Instance, and then select **Delete**.
+In the Azure portal, select the database in your your managed instance. In the menu bar, select **Delete**.
 
-   :::image type="content" source="./media/point-in-time-restore/delete-database-from-mi.png" alt-text="Delete a database by using the Azure portal":::
+:::image type="content" source="./media/point-in-time-restore/delete-database-from-mi.png" alt-text="Screenshot that shows how to delete a database by using the Azure portal.":::
 
 # [PowerShell](#tab/azure-powershell)
 
-Use the following PowerShell command to drop an existing database from a SQL Managed Instance:
+Use the following PowerShell command to delete an existing database from your managed instance:
 
 ```powershell
-$resourceGroupName = "<Resource group name>"
-$managedInstanceName = "<SQL Managed Instance name>"
-$databaseName = "<Source database>"
+$resourceGroupName = "<resource group name>"
+$managedInstanceName = "<managed instance name>"
+$databaseName = "<source database name>"
 
 Remove-AzSqlInstanceDatabase -Name $databaseName -InstanceName $managedInstanceName -ResourceGroupName $resourceGroupName
 ```
 
 # [Azure CLI](#tab/azure-cli)
 
-Use the following Azure CLI command to drop an existing database from a SQL Managed Instance:
+Use the following Azure CLI command to delete an existing database from your managed instance:
 
 ```azurecli-interactive
 az sql midb delete -g mygroupname --mi myinstancename -n mymanageddbname
@@ -277,15 +275,15 @@ az sql midb delete -g mygroupname --mi myinstancename -n mymanageddbname
 
 ---
 
-### Alter the new database name to match the original database name
+### Change the new database name to match the original database name
 
-Connect directly to the SQL Managed Instance and start SQL Server Management Studio. Then, run the following Transact-SQL (T-SQL) query. The query will change the name of the restored database to that of the dropped database that you intend to overwrite.
+Connect directly to your managed instance and start SQL Server Management Studio. Then, run the following T-SQL query. The query changes the name of the restored database to the name of the deleted database you intend to overwrite.
 
 ```sql
 ALTER DATABASE WorldWideImportersPITR MODIFY NAME = WorldWideImporters;
 ```
 
-Use one of the following methods to connect to your database in SQL Managed Instance:
+Use one of the following methods to connect to the database in your managed instance:
 
 - [Azure virtual machine](./connect-vm-instance-configure.md)
 - [Point-to-site](./point-to-site-p2s-configure.md)

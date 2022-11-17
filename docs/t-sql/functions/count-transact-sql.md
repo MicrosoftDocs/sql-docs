@@ -74,7 +74,7 @@ The *partition_by_clause* divides the result set produced by the `FROM` clause i
 
 ### `ARITHABORT` and `ANSI_WARNINGS`
 
-When `COUNT` will have a return value exceeding the maximum value of `int` (i.e. 2<sup>31</sup>-1 or 2,147,483,647) then the `COUNT` function will fail due to integer overflow. When `COUNT` overflows and _both_ the `ARITHABORT` and `ANSI_WARNINGS` options are `OFF` then `COUNT` will return `NULL`; otherwise (when _either_ of `ARITHABORT` or `ANSI_WARNINGS` are `ON`) then the query will be aborted and the arithmetic overflow error "Msg 8115, Level 16, State 2; Arithmetic overflow error converting expression to data type int." will be raised. To correctly handle these large results instead use `COUNT_BIG` which returns `bigint`.
+When `COUNT` has a return value exceeding the maximum value of **int** (i.e. 2<sup>31</sup>-1 or 2,147,483,647), the `COUNT` function will fail due to an integer overflow. When `COUNT` overflows and *both* the `ARITHABORT` and `ANSI_WARNINGS` options are `OFF`, `COUNT` will return `NULL`. Otherwise, when *either* of `ARITHABORT` or `ANSI_WARNINGS` are `ON`, the query will abort and the arithmetic overflow error `Msg 8115, Level 16, State 2; Arithmetic overflow error converting expression to data type int.` will be raised. To correctly handle these large results, use `COUNT_BIG` instead, which returns **bigint**.
 
 When both ``ARITHABORT`` and `ANSI_WARNINGS` are `ON` you can safely wrap `COUNT` call-sites in `ISNULL( <count-expr>, 0 )` to coerce the expression's type to `int NOT NULL` instead of `int NULL`; otherwise then wrapping `COUNT` is `ISNULL` means any overflow error will be silently suppressed which should be carefully considered for correctness.
   

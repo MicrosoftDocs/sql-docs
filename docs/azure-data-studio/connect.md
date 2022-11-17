@@ -16,7 +16,7 @@ This article describes how to connect to SQL Server with Azure Data Studio 1.40 
 
 ## Encrypt and Trust server certificate
 
-Azure Data Studio 1.40 and later includes an important change to the **Encrypt** property, which is now enabled (set to **True**) by default for MSSQL provider connections, and SQL Server must be configured with TLS certificates signed by a trusted root certificate authority. In addition, the **Encrypt** and **Trust server certificate** properties have moved from the **Advanced** pane to the front of the **Connection Details** pane. Both properties have information icons to provide more detail on hover. The [best practice](/sql/relational-databases/security/securing-sql-server) is to support a trusted encrypted connection to the server.
+Azure Data Studio 1.40 and later includes an important change to the **Encrypt** property, which is now enabled (set to **True**) by default for MSSQL provider connections, and SQL Server must be configured with TLS certificates signed by a trusted root certificate authority. In addition, the **Encrypt** and **Trust server certificate** properties have moved from the **Advanced** pane to the front of the **Connection Details** pane. Both properties have information icons to provide more detail on hover. The [best practice](../relational-databases/security/securing-sql-server.md) is to support a trusted encrypted connection to the server.
 
 For users connecting to Azure SQL Database, no changes to existing, saved connections in Azure Data Studio are needed; Azure SQL Database supports encrypted connections and is configured with trusted certificates. 
 
@@ -56,9 +56,9 @@ You should review the options selected for **Encrypt** and **Trust server certif
 
 ## More information
 
-These changes are the result of updates at the driver level in Microsoft.Data.SqlClient. Recent releases of Microsoft.Data.SqlClient have offered increased security in the connection options. Read more in the [release notes](/sql/connect/ado-net/introduction-microsoft-data-sqlclient-namespace) for Microsoft.Data.SqlClient.
+These changes are the result of updates at the driver level in Microsoft.Data.SqlClient. Recent releases of Microsoft.Data.SqlClient have offered increased security in the connection options. Read more in the [release notes](../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md) for Microsoft.Data.SqlClient.
 
-If you have previously been connecting to a SQL Server that does not have encrypted connections enable and would like to enable encryption, you will be prompted to trust server certificate. You may choose to connect with the 'Trust Server Certificate' property enabled, or cancel and review client configuration to verify a valid server certificate is installed. For more information, please visit the [SQL Server documentation](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
+If you have previously been connecting to a SQL Server that does not have encrypted connections enable and would like to enable encryption, you will be prompted to trust server certificate. You may choose to connect with the 'Trust Server Certificate' property enabled, or cancel and review client configuration to verify a valid server certificate is installed. For more information, please visit the [SQL Server documentation](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## Next steps
 

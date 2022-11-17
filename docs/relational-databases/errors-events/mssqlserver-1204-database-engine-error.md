@@ -32,14 +32,14 @@ ms.author: mathoma
 
 During execution, queries frequently acquire and release locks on the resources they access. Acquiring a lock uses up the lock structures from an available pool of lock structures. When new locks can't be acquired because there are no more lock structures available in the pool, the error 1204 message is returned. This issue can be due to any of the following reasons:
   
-- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can't allocate more memory, either because other processes are using it, or because SQL Server has used up all of its memory and reached the value configured using the configuration option [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#max_server_memory).  
+- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can't allocate more memory, either because other processes are using it, or because SQL Server has used up all of its memory and reached the value configured using the configuration option [max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md#max_server_memory).  
 
   
 - The lock manager won't use more than 60 percent of the memory available to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and the threshold has already been met.
 
-- You have set up the configuration option [locks](/sql/database-engine/configure-windows/configure-the-locks-server-configuration-option) of the system stored procedure [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to a non-default, non-dynamic value.
+- You have set up the configuration option [locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) of the system stored procedure [sp_configure](../system-stored-procedures/sp-configure-transact-sql.md) to a non-default, non-dynamic value.
 
-- You have enabled trace flags [1211](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1211), [1224](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1224), or both on your SQL Server to control lock escalation behavior, and you're executing queries that require many locks.
+- You have enabled trace flags [1211](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf1211), [1224](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf1224), or both on your SQL Server to control lock escalation behavior, and you're executing queries that require many locks.
   
 ## User Action
 
@@ -70,7 +70,7 @@ During execution, queries frequently acquire and release locks on the resources 
     ORDER BY count (*) DESC  
     ```  
   
-    Take the highest session id, and terminate it by using the [KILL](/sql/t-sql/language-elements/kill-transact-sql) command.  
+    Take the highest session id, and terminate it by using the [KILL](../../t-sql/language-elements/kill-transact-sql.md) command.  
 
 - If you're using a non-default value for `locks`, use `sp_configure` to change the value of `locks` to its default setting by using the following statement:
 
@@ -78,4 +78,4 @@ During execution, queries frequently acquire and release locks on the resources 
     EXEC sp_configure 'locks', 0
     ```
 
-- If you encountered the above error message when using the SQL Server trace flags 1211, 1224, or both, review their use and disable them while executing queries that require a large number of locks. For more information, review [DBCC TRACEON - Trace Flags (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) and [Resolve blocking problems caused by lock escalation in SQL Server](/troubleshoot/sql/performance/resolve-blocking-problems-caused-lock-escalation).
+- If you encountered the above error message when using the SQL Server trace flags 1211, 1224, or both, review their use and disable them while executing queries that require a large number of locks. For more information, review [DBCC TRACEON - Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) and [Resolve blocking problems caused by lock escalation in SQL Server](/troubleshoot/sql/performance/resolve-blocking-problems-caused-lock-escalation).

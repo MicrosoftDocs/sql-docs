@@ -98,7 +98,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" --cap-add 
 You can start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] with a custom user and group. In this example, the mounted volume has permissions configured for the user or group on the host machine.
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):$(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ## <a id="storagepermissions"></a> Configure persistent storage permissions for non-root containers

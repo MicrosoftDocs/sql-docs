@@ -28,6 +28,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Working with Snapshot Isolation in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new "snapshot" isolation level that is intended to enhance concurrency for online transaction processing (OLTP) applications. In earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], concurrency was based solely on locking, which can cause blocking and deadlocking problems for some applications. Snapshot isolation depends on enhancements to row versioning and is intended to improve performance by avoiding reader-writer blocking scenarios.  
   
  Transactions that start under snapshot isolation read a database snapshot as of the time when the transaction starts. One result of this is that keyset, dynamic and static server cursors, when opened within a snapshot transaction context, behave much like static cursors opened within serializable transactions. However, when the cursors are opened under the snapshot isolation level locks are not taken, which can reduce blocking on the server.  

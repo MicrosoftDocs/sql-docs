@@ -3,7 +3,7 @@ title: "Configure transactional replication between Azure SQL Managed Instance a
 description: "A tutorial that configures replication between a publisher managed instance, a distributor managed instance, and a SQL Server subscriber on an Azure VM, along with necessary networking components such as private DNS zone and VNet peering."
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 11/21/2019
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: tutorial
@@ -14,7 +14,6 @@ ms.custom: sqldbrb=1
 
 Transactional replication allows you to replicate data from one database to another hosted on either SQL Server or [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). SQL Managed Instance can be a publisher, distributor or subscriber in the replication topology. See [transactional replication configurations](replication-transactional-overview.md#common-configurations) for available configurations. 
 
-Transactional replication is currently in public preview for SQL Managed Instance. 
 
 In this tutorial, you learn how to:
 

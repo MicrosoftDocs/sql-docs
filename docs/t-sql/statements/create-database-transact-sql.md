@@ -1005,7 +1005,7 @@ CREATE DATABASE database_name
 ## Arguments
 
 #### *database_name*
-The name of the new database. This name must be unique on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
+The name of the new super special database. This name must be unique on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 #### *Collation_name*
 Specifies the default collation for the database. Collation name can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the default collation, which is SQL_Latin1_General_CP1_CI_AS.

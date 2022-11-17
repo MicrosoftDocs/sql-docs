@@ -48,7 +48,7 @@ The following table describes the regular expressions available in the **Referen
 |Any one character in the set|[]|Matches any one of the characters within the []. To specify a range of characters, list the starting and ending character separated by a dash (-), as in [a-z].|
 |Any one character not in the set|[^...]|Matches any character not in the set of characters following the ^.|
 |Or|&#124;|Matches either the expression before or the one after the OR symbol (&#124;). Mostly used within a group. For example, (sponge&#124;mud) bath matches "sponge bath" and "mud bath."|
-|Escape|&#92;|Matches the character that follows the backslash (\\) as a literal. This allows you to find the characters used in regular expression notation, such as { and ^. For example, \\^ Searches for the ^ character.|
+|Escape| \\ |Matches the character that follows the backslash (\\) as a literal. This allows you to find the characters used in regular expression notation, such as { and ^. For example, \\^ Searches for the ^ character.|
 |Tagged expression|{}|Matches text tagged with the enclosed expression.|
 |C/C++ Identifier|:i|Matches the expression ([a-zA-Z_$][a-zA-Z0-9_$]*).|
 |Quoted string|:q|Matches the expression (("[^"]*")&#124;('[^']\*')).|

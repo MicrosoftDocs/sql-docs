@@ -26,14 +26,25 @@ Restoring databases from SQL Managed Instance to SQL Server 2022 unlocks the fol
 - Provide database copies to end customers or eligible parties. 
 - Refresh environments outside of SQL Managed Instance.
 
-The ability to restore databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed instances.
+The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed instances.
 
+> [!IMPORTANT]
+> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of the [mainstream support for SQL Server 2022](https://learn.microsoft.com/lifecycle/products/sql-server-2022). Upon the expiry of this period, ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server, following the SQL Server 2022 version.
 
 ## Take backup on SQL Managed Instance 
 
 First, create a credential to access the storage account from SQL Managed Instance, and then take a copy-only backup of your database. 
 
 You can create your credential by using an SAS token, or a managed identity. 
+
+### [Managed identity](#tab/managed-identity)
+
+To create a credential using a [managed identity](/azure/active-directory/managed-identities-azure-resources/howto-assign-access-portal), run the following sample T-SQL command: 
+
+```sql
+CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
+WITH IDENTITY = 'MANAGED IDENTITY'
+```
 
 ### [SAS token](#tab/sas-token)
 
@@ -43,15 +54,6 @@ To create a credential using an [SAS token](/sql/relational-databases/tutorial-u
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
 SECRET = '<SAS_TOKEN>';  
-```
-
-### [Managed identity](#tab/managed-identity)
-
-To create a credential using a [managed identity](/azure/active-directory/managed-identities-azure-resources/howto-assign-access-portal), run the following sample T-SQL command: 
-
-```sql
-CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
-WITH IDENTITY = 'MANAGED IDENTITY'
 ```
 
 ---
@@ -68,9 +70,9 @@ WITH COPY_ONLY
 
 ## Restore to SQL Server 
 
-Restore the database to SQL Server by using the `WITH MOVE` command, and providing explicit file paths for your files on the destination server.
+Restore the database to SQL Server by using the `WITH MOVE` option of the RESTORE DATABASE T-SQL command, and providing explicit file paths for your files on the destination server.
 
-To restore your database to SQL Server, run the following sample T-SQL command: 
+To restore your database to SQL Server, run the following sample T-SQL command with file paths appropriate to your environment: 
 
 ```sql
 RESTORE DATABASE [SampleDB]
@@ -82,7 +84,7 @@ MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 ```
 
 > [!NOTE]
-> To restore databases that are encrypted at-rest (by using [Transparent Data Encryption (TDE)](../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the SQL Server Connector for Azure Key Vault. For details, review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+> To restore databases that are encrypted at-rest (by using [Transparent Data Encryption - TDE](../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the SQL Server Connector for Azure Key Vault. For details, review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
 
 
 ## Considerations

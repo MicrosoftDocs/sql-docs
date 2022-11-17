@@ -175,7 +175,7 @@ The [serverless compute tier](serverless-tier-overview.md) is currently availabl
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|1200|1400|
-|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|150|150|
+|Max concurrent external connections <sup>4</sup>|20|40|60|80|100|120|140|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -282,7 +282,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
-|Max concurrent external connections <sup>4</sup>||||||
+|Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
@@ -319,7 +319,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
-|Max concurrent external connections <sup>4</sup>||||||
+|Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
@@ -354,7 +354,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|2,400|3,200|4,000|8,000|12,800|
-|Max concurrent external connections <sup>4</sup>|||||||
+|Max concurrent external connections <sup>4</sup>|150|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
@@ -391,7 +391,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
-|Max concurrent external connections <sup>4</sup>||||||
+|Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
@@ -428,7 +428,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
-|Max concurrent external connections <sup>4</sup>||||||
+|Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
@@ -464,7 +464,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Write IO latency<sup>2</sup>|3-5 ms|3-5 ms|3-5 ms|3-5 ms|
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|2,400|3,200|4,000|8,000|
-|Max concurrent external connections <sup>4</sup>|||||
+|Max concurrent external connections <sup>4</sup>|150|150|150|150|
 |Max concurrent sessions|30,000|30,000|30,000|30,000| 
 |Secondary replicas|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|

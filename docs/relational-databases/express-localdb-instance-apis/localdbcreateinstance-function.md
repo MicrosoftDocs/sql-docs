@@ -21,7 +21,7 @@ ms.author: maghan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Creates a new SQL Server Express LocalDB instance.  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

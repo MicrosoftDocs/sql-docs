@@ -6,7 +6,6 @@ description: "Reports per-instance scoring results in a data frame or revoscalep
 keywords: "models, prediction" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019 
 ms.topic: "reference" 
 ms.prod: "sql"

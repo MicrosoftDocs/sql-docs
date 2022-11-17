@@ -3,7 +3,6 @@ title: "DBCC CLONEDATABASE (Transact-SQL)"
 description: "DBCC CLONEDATABASE (Transact-SQL)"
 author: "bluefooted"
 ms.author: "pamela"
-manager: amitban
 ms.date: 04/23/2019
 ms.prod: "sql"
 ms.technology: t-sql

@@ -16,7 +16,7 @@ ms.topic: conceptual
 The following table lists the release history for [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]. For release history on other editions, see the following articles:
 
 - [Release history for SQL Server 2017 on Linux](sql-server-linux-release-history-2017.md?view=sql-server-ver14&preserve-view=true).
-- [Release history for SQL Server 2022 (Preview) on Linux](sql-server-linux-release-history-2022.md?view=sql-server-ver16&preserve-view=true).
+- [Release history for SQL Server 2022 on Linux](sql-server-linux-release-history-2022.md?view=sql-server-ver16&preserve-view=true).
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |

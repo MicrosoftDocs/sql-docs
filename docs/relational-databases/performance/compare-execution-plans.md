@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Compare execution plans
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

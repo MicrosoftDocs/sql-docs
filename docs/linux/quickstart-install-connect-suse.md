@@ -192,7 +192,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] SLES repository configuration file:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo
    ```
 
    > [!TIP]  

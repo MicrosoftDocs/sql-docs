@@ -44,7 +44,7 @@ typedef struct _LocalDBVersionInfo
   
 ```  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

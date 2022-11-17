@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.globalsettinglogging.f1"
 

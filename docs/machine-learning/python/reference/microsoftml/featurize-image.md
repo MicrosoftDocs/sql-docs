@@ -6,7 +6,6 @@ description: "Featurizes an image using a pre-trained deep neural network model.
 keywords: "transform, image, featurize, dnn, cnn, resnet, alexnet" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"

@@ -79,6 +79,20 @@ You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
 
+### Rev. 257
+
+**Bug fixes**
+
+- Memory leak in Teradata Destination.
+- Teradata Destination fails with error message "an error occurred when converting string from source codepage" when consuming empty strings.
+- Under certain circumstances, Data Flow Task reports success despite errors occurred in Teradata Destination.
+- Teradata Destination fails when writing `VARCHAR` values with a very large length.
+
+**Improvements**
+
+- Improved performance of Teradata Destination.
+- Teradata Connection Manager logs error detail for connection failure.
+
 ### Rev. 240
 
 **Bug fixes**

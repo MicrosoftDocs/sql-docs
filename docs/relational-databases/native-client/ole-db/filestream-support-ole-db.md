@@ -18,6 +18,9 @@ ms.author: maghan
 # FILESTREAM Support (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-only.md)]
+
   Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, OLE DB supports the enhanced FILESTREAM feature. For more information about this feature, see [FILESTREAM Support](../../../relational-databases/native-client/features/filestream-support.md). For samples, see [Filestream and OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
   
  To send and receive **varbinary(max)** values greater than 2 GB, an application uses **DBTYPE_IUNKNOWN** in parameter and result bindings. For parameters the provider must call IUnknown::QueryInterface for ISequentialStream and for results that return ISequentialStream.  

@@ -21,6 +21,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # ISSAbort::Abort (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
+
   Cancels the current rowset plus any batched commands associated with the current command.  
   
 The **ISSAbort** interface, which is exposed in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, provides the **ISSAbort::Abort** method that is used to cancel the current rowset plus any commands batched with the command that initially generated the rowset, and that have not yet completed execution.  

@@ -60,7 +60,8 @@ The *partition_by_clause* divides the result set produced by the `FROM` clause i
 ## Return types
  
 - **int NOT NULL** when `ANSI_WARNINGS` is `ON`, however SQL Server will always treat `COUNT` expressions as `int NULL` in metadata, unless wrapped in `ISNULL`.
- * **int NULL** when `ANSI_WARNINGS` is `OFF`.
+
+- **int NULL** when `ANSI_WARNINGS` is `OFF`.
   
 ## Remarks  
 

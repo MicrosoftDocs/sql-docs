@@ -441,5 +441,5 @@ SSMS provides a wizard that helps you easily configure Always Encrypted by setti
 - [Always Encrypted with secure enclaves documentation](/azure/azure-sql/database/always-encrypted-with-secure-enclaves-landing)
 - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
-- [Always Encrypted wizard](/sql/relational-databases/security/encryption/always-encrypted-wizard)
+- [Always Encrypted wizard](./always-encrypted-wizard.md)
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

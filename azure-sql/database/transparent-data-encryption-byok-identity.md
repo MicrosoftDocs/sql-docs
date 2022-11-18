@@ -1,17 +1,17 @@
 ---
-title: Customer-managed transparent data encryption using user-assigned managed identity
+title: Customer-managed keys with transparent data encryption using user-assigned managed identity
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) using user-assigned managed identity (UMI)
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: vanto
-ms.date: 12/16/2021
+ms.date: 11/18/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
-# Managed identities for transparent data encryption with BYOK
+# Managed identities for transparent data encryption with customer-managed key
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 Managed identities in Azure Active Directory (Azure AD) provide Azure services with an automatically managed identity in Azure AD. This identity can be used to authenticate to any service that supports Azure AD authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without any credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.

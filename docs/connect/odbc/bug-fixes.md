@@ -38,6 +38,10 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix loss of Azure Active Directory authentication mode when reconnecting an idle connection.
 - Fix an issue with federated authentication when using PingFed.
 
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- TODO, INSERT BUG-FIEXES HERE
+
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix intermittent issue with polling for first successful connection when multiple IP addresses are resolved.

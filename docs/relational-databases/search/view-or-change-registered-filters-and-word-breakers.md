@@ -2,9 +2,8 @@
 description: "View or Change Registered Filters and Word Breakers"
 title: "View or change registered filters & word breakers"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], word breakers"

@@ -2,9 +2,8 @@
 description: "Search for Words Close to Another Word with NEAR"
 title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"

@@ -3,10 +3,9 @@ description: "New Subscription Wizard (UI Reference)"
 title: "New Subscription Wizard (UI Reference) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "New Subscription Wizard"

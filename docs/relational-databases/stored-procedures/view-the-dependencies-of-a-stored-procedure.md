@@ -3,8 +3,8 @@ title: "View the Dependencies of a Stored Procedure | Microsoft Docs"
 description: Learn  how to view stored procedure dependencies in SQL Server 2019 (15.x) by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

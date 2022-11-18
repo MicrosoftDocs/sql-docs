@@ -3,8 +3,8 @@ description: "Index JSON data"
 title: "Index JSON data"
 ms.custom: ""
 ms.date: 11/29/2021
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, indexing JSON data"

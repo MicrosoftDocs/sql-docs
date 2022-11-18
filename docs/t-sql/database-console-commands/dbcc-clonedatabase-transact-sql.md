@@ -4,8 +4,8 @@ description: "DBCC CLONEDATABASE (Transact-SQL)"
 author: "bluefooted"
 ms.author: "pamela"
 ms.date: 04/23/2019
-ms.prod: "sql"
-ms.technology: t-sql
+ms.service: "sql"
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "CLONEDATABASE"

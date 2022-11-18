@@ -3,10 +3,9 @@ description: "catalog.set_worker_agent_property (SSISDB Database)"
 title: "catalog.set_worker_agent_property (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace

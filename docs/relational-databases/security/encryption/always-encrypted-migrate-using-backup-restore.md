@@ -3,9 +3,9 @@ description: "Backup and restore databases using Always Encrypted"
 title: "Backup and restore databases using Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas

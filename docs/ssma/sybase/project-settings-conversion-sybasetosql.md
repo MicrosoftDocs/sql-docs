@@ -3,9 +3,9 @@ description: "Project Settings (Conversion) (SybaseToSQL)"
 title: "Project Settings (Conversion) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2020"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: cpichuka 

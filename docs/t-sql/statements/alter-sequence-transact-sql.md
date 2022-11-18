@@ -4,9 +4,8 @@ description: ALTER SEQUENCE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "08/08/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_SEQUENCE_TSQL"

@@ -4,9 +4,9 @@ description: "Summary of a Microsoft R Machine Learning model."
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
+ms.service: sql
 ms.service: ""
-ms.technology: machine-learning
+ms.subservice: machine-learning
 ms.topic: "reference"
 ms.custom: ""
 keywords: (MicrosoftML), summary.mlModel, coef.mlModel, file, manip

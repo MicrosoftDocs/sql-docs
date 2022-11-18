@@ -4,9 +4,9 @@ description: "A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer  f
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
+ms.service: sql
 ms.service: ""
-ms.technology: machine-learning
+ms.subservice: machine-learning
 ms.topic: "reference"
 ms.custom: ""
 keywords: (MicrosoftML), rxFastLinear, classification, fast, linear, regression, sdca, stochastic

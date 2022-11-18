@@ -1,12 +1,12 @@
 ---
 description: "Installing SSMA Components on SQL Server (DB2ToSQL)"
 title: "Installing SSMA Components on SQL Server (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-installation
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
 author: cpichuka 

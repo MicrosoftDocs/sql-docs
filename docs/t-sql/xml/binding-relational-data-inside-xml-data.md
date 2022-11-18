@@ -1,8 +1,8 @@
 ---
 title: Binding Relational Data Inside XML Data
 description: "Binding Relational Data Inside XML Data"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"

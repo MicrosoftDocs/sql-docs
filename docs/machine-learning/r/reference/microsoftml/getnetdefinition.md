@@ -4,9 +4,9 @@ description: "Returns the Net# definition from a trained neural network model."
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
+ms.service: sql
 ms.service: ""
-ms.technology: machine-learning
+ms.subservice: machine-learning
 ms.topic: "reference"
 ms.custom: ""
 keywords: (MicrosoftML), getNetDefinition, transform

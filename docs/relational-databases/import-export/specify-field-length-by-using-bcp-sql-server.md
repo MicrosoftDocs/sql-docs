@@ -4,9 +4,8 @@ description: In SQL Server, if necessary, bcp prompts for field length, default 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
   - "native data format [SQL Server]"

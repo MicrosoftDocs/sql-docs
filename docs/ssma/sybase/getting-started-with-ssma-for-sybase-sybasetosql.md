@@ -4,9 +4,9 @@ description: Learn about the SQL Server Migration Assistant (SSMA) for SAP ASE i
 ms.custom:
   - intro-get-started
 ms.date: "09/30/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: cpichuka 

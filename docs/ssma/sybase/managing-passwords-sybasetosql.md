@@ -3,9 +3,9 @@ description: "Managing Passwords (SybaseToSQL)"
 title: "Managing Passwords (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/07/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Exporting or Importing Encrypted Passwords"

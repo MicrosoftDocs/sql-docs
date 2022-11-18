@@ -3,9 +3,9 @@ description: "Executing the SSMA Console (SybaseToSQL)"
 title: "Executing the SSMA Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Database Connection Commands"

@@ -6,9 +6,9 @@ ms.custom:
    - seo-lt-2019
    - sqlfreshmay19
 ms.date: 03/26/2021
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"

@@ -4,8 +4,8 @@ description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/07/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:

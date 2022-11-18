@@ -1,9 +1,8 @@
 ---
 title: "Set a database to single-user mode"
 description: "Set a database to single-user mode"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "single-user mode [SQL Server], database option"

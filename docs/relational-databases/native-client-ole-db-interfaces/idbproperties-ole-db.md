@@ -3,10 +3,9 @@ description: "IDBProperties (Native Client OLE DB provider)"
 title: "IDBProperties (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 2e5a4fd8-5164-495a-9986-3477aef8d8a5
 author: markingmyname

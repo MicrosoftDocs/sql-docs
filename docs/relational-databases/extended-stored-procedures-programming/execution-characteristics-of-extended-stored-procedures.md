@@ -4,8 +4,7 @@ description: Execution Characteristics of Extended Stored Procedures
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 helpviewer_keywords:

@@ -4,9 +4,9 @@ description: "The loss functions for classification and regression."
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
+ms.service: sql
 ms.service: ""
-ms.technology: machine-learning
+ms.subservice: machine-learning
 ms.topic: "reference"
 ms.custom: ""
 keywords: (MicrosoftML), loss functions, expLoss, hingeLoss, logLoss, poissonLoss, smoothHingeLoss, squaredLoss, loss

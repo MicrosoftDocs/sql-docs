@@ -6,8 +6,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 08/12/2020
 ms.topic: conceptual
-ms.prod: sql  
-ms.technology: linux
+ms.service: sql  
+ms.subservice: linux
 ms.assetid:
 ---
 # New to Linux resources for SQL users

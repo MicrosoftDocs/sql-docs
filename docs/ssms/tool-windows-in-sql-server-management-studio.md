@@ -1,9 +1,8 @@
 ---
 title: "Tool Windows in SQL Server Management Studio"
 description: "Tool Windows in SQL Server Management Studio"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], tool windows"

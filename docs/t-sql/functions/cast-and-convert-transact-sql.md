@@ -4,8 +4,8 @@ description: "Reference for the CAST and CONVERT Transact-SQL functions. These f
 author: markingmyname
 ms.author: maghan
 ms.date: "08/23/2019"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CAST_TSQL"

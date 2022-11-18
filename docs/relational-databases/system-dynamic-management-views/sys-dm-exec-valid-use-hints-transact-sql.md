@@ -4,8 +4,8 @@ description: sys.dm_exec_valid_use_hints (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/17/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_exec_valid_use_hints"

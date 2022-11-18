@@ -6,8 +6,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/26/2022
 ms.topic: how-to
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ms.custom:
 - intro-installation

@@ -3,9 +3,9 @@ description: "Plan Guide Successful Event Class"
 title: "Plan Guide Successful Event Class"
 ms.custom: ""
 ms.date: "06/22/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Plan Guide Successful event class"

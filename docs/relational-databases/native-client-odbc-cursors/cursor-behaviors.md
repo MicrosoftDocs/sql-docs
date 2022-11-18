@@ -3,10 +3,9 @@ description: "Cursor Behaviors"
 title: "Cursor Behaviors | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "scrollable cursors [SQL Server]"

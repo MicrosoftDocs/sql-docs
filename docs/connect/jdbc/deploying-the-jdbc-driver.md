@@ -4,8 +4,8 @@ description: Learn how you can redistribute and deploy the Microsoft JDBC Driver
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 07/31/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.custom: intro-deployment
 ---

@@ -4,8 +4,8 @@ description: This article provides information on how to upgrade your existing i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/29/2020
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---

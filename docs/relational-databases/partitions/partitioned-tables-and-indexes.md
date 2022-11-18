@@ -5,7 +5,7 @@ description: "With partitioned tabled and indexes, the data can be divided into 
 author: VanMSFT
 ms.author: vanto
 ms.date: "8/17/2022"
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "partitioned tables [SQL Server], about partitioned tables"

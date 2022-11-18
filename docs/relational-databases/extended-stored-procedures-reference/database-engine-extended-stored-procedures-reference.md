@@ -4,9 +4,8 @@ description: Learn how the Database Engine Extended Stored Procedures provide a 
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], listed"

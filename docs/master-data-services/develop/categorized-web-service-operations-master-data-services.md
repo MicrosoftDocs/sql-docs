@@ -3,10 +3,9 @@ description: "Categorized Web Service Operations (Master Data Services)"
 title: Categorized Web Service Operations
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 
 ms.topic: "reference"
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289

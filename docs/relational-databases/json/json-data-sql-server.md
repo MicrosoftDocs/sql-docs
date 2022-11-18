@@ -1,8 +1,8 @@
 ---
 title: "Work with JSON data"
 description: "JSON data in SQL Server"
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: quickstart
 helpviewer_keywords:
   - "JSON"

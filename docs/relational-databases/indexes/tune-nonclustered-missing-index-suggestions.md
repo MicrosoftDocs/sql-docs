@@ -4,9 +4,8 @@ description: How to use missing index suggestions to create and tune nonclustere
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 3/15/2022
-ms.prod: sql
+ms.service: sql
 ms.service:
-ms.prod_service: "database-engine, sql-database"
 ms.topic: how-to
 ms.custom: "template-how-to #Required; leave this attribute/value as-is."
 ---

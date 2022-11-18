@@ -1,9 +1,8 @@
 ---
 title: "Manage Objects by Using Object Explorer"
 description: "Manage Objects by Using Object Explorer"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP"

@@ -4,8 +4,8 @@ description: "Describes how to configure a flexible failover policy for an Alway
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "11/05/2019"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seo-lt-2019
 helpviewer_keywords:

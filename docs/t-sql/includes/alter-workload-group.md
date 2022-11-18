@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/15/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: include
 ---
 Changes an existing Resource Governor workload group configuration, and optionally assigns it to a Resource Governor resource pool.

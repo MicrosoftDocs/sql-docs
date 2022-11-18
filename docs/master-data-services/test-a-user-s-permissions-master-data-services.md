@@ -3,10 +3,9 @@ description: "Test a User&#39;s Permissions (Master Data Services)"
 title: Test a User&#39;s Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: CordeliaGrey

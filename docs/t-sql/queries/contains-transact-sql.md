@@ -2,10 +2,9 @@
 title: "CONTAINS (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the CONTAINS language element. Used to search for words or phrases within another expression."
 ms.date: "08/23/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "CONTAINS_TSQL"

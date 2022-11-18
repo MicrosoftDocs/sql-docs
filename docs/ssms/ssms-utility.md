@@ -1,9 +1,8 @@
 ---
 title: SSMS Utility
 description: "SSMS Utility"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], opening"

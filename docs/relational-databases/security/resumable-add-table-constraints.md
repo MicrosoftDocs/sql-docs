@@ -4,9 +4,9 @@ description: New resumable capabilities to support pausing and resuming a runnin
 ms.custom:
 - event-tier1-build-2022
 ms.date: 11/16/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto

@@ -6,8 +6,8 @@ author: rothja
 ms.author: jroth
 ms.date: 11/10/2020
 ms.topic: overview
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ms.custom:
   - intro-overview

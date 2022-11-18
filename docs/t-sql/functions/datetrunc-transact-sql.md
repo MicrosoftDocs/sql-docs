@@ -5,8 +5,8 @@ author: aashnabafna-ms
 ms.author: aashnabafna
 ms.reviewer: derekw, maghan, randolphwest
 ms.date: 09/13/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATETRUNC_TSQL"

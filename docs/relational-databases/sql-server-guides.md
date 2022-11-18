@@ -3,10 +3,9 @@ description: "SQL Server Guides"
 title: "SQL Server Guides | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide"

@@ -4,9 +4,8 @@ description: Job Activity Monitor (Filter Settings)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.jobactivitymon.filter.f1"

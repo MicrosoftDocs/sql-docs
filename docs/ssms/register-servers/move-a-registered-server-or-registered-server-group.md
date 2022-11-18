@@ -1,10 +1,9 @@
 ---
 description: "Move a Registered Server or Registered Server Group"
 title: Move a Registered Server or Server Group
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "moving registered server or server group"

@@ -4,8 +4,8 @@ description: "Cleanse Data in a Composite Domain"
 author: swinarko
 ms.author: sawinark
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 ---
 # Cleanse Data in a Composite Domain

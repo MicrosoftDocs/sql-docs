@@ -4,9 +4,8 @@ description: sys.dm_resource_governor_workload_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/04/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_resource_governor_workload_groups"

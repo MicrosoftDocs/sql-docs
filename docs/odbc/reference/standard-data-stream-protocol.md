@@ -3,10 +3,9 @@ description: "Standard Data Stream Protocol"
 title: "Standard Data Stream Protocol | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/14/2018
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC], database access"

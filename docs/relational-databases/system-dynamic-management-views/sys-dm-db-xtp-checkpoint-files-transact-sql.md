@@ -4,9 +4,8 @@ description: sys.dm_db_xtp_checkpoint_files displays information about In-Memory
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_xtp_checkpoint_files"

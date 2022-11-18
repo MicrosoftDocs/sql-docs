@@ -3,10 +3,9 @@ description: "catalog.execution_property_override_values"
 title: "catalog.execution_property_override_values | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace

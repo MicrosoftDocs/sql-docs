@@ -7,8 +7,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf 
 ms.date: 2/16/2018
 ms.topic: "reference"
-ms.prod: "sql"
-ms.technology: "machine-learning-services"
+ms.service: "sql"
+ms.subservice: "machine-learning-services"
 
 # optional metadata
 #ROBOTS: ""
@@ -17,7 +17,7 @@ ms.technology: "machine-learning-services"
 #ms.reviewer: ""
 #ms.suite: ""
 #ms.tgt_pltfrm: ""
-#ms.technology: ""
+#ms.subservice: ""
 #ms.custom: ""
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---

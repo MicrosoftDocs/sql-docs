@@ -1,8 +1,8 @@
 ---
 title: Update Statistics
 description: Learn how to update query optimization statistics on a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL. 
-ms.prod: sql
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating statistics"

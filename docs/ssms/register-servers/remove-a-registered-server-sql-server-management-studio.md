@@ -1,9 +1,8 @@
 ---
 description: "Remove a Registered Server (SQL Server Management Studio)"
 title: Remove a Registered Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing registered servers"

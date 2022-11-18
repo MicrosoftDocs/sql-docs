@@ -4,8 +4,8 @@ description: OLE DB Driver for SQL Server supports handling password expiration 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], password expiration"

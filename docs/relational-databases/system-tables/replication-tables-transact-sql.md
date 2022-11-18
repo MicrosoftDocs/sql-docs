@@ -4,9 +4,8 @@ description: Replication system tables support a replication topology. Replicati
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 helpviewer_keywords:
   - "system tables [SQL Server], replication"

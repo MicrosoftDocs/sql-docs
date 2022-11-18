@@ -4,9 +4,9 @@ description: "Kernels supported for use in computing inner products."
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
+ms.service: sql
 ms.service: ""
-ms.technology: machine-learning
+ms.subservice: machine-learning
 ms.topic: "reference"
 ms.custom: ""
 keywords: (MicrosoftML), kernel, linearKernel, maKernel, polynomialKernel, rbfKernel, sigmoidKernel

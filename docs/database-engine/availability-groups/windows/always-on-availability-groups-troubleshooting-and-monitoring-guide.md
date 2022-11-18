@@ -4,8 +4,8 @@ description: "An index of content to help you get started on monitoring and trou
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/10/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: reference
 ms.custom: seo-lt-2019
 ---

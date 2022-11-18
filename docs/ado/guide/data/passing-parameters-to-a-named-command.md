@@ -4,8 +4,8 @@ description: "Passing Parameters to a Named Command"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "named commands [ADO]"

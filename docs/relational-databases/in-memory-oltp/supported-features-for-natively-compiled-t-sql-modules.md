@@ -4,9 +4,8 @@ description: Learn about T-SQL surface area and supported features in the body o
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 07/01/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b

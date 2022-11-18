@@ -5,8 +5,8 @@ author: "bluefooted"
 ms.author: "pamela"
 ms.reviewer: "wiassaf"
 ms.date: "02/10/2021"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_spinlock_stats_TSQL"

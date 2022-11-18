@@ -2,9 +2,9 @@
 title: "Azure Synapse Link change feed for SQL Server 2022 and Azure SQL Database"
 description: Learn about the Azure Synapse Link for SQL change feed, introduced for SQL Server 2022 and Azure SQL Database, to allow for real-time analytics of data from SQL Server or Azure SQL Database to Azure Synapse.
 ms.date: 05/24/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: data-movement
+ms.subservice: data-movement
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf

@@ -1,9 +1,8 @@
 ---
 title: Web Browser
 description: "SQL Server Management Studio Web Browser"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "hosting Web browsers"

@@ -4,9 +4,8 @@ description: sys.dm_database_encryption_keys (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 03/27/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_database_encryption_keys"

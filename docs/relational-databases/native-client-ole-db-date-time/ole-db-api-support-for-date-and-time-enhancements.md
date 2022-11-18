@@ -3,10 +3,9 @@ description: "OLE DB API Support for Date and Time Enhancements (Native Client O
 title: API support for date and time enhancements (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966

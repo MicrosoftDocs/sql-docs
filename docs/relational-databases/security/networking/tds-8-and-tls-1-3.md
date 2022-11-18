@@ -1,8 +1,8 @@
 ---
 title: TDS 8.0 and TLS 1.3 support
 description: This article discusses TDS 8.0 and TLS 1.3 support with SQL Server 2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022

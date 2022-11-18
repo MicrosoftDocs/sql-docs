@@ -3,10 +3,9 @@ title: "Back Up Database (General Page) | Microsoft Docs"
 description: In SQL Server, use the General page of the Back Up Database dialog box to view or modify source and destination settings for a database back up operation.
 ms.custom: ""
 ms.date: "07/01/2016"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.backupdatabase.general.f1"

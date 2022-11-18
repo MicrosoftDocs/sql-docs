@@ -5,8 +5,8 @@ author: "v-makouz"
 ms.author: v-makouz
 ms.reviewer: v-davidengel
 ms.date: "07/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "driver"

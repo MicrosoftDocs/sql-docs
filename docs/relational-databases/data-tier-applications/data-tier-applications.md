@@ -3,9 +3,9 @@ description: "A data-tier application (DAC) is a logical database entity that de
 title: "Data-tier applications (DAC)"
 ms.custom: ""
 ms.date: 7/12/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: dzsquared
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
     - "designing DACs"

@@ -4,8 +4,8 @@ description: Learn best practices for using SQL Server Query Store with your wor
 ms.custom:
 - event-tier1-build-2022
 ms.date: 09/20/2022
-ms.prod: sql
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, best practices"

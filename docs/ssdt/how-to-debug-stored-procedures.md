@@ -1,8 +1,8 @@
 ---
 title: Debug Stored Procedures
 description: Learn how to use the Transact-SQL debugger to interactively debug a stored procedure. See how to display the SQL call stack, local variables, and parameters.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG"

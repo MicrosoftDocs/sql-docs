@@ -38,23 +38,22 @@ In addition to the system-assigned managed identity that is already supported fo
 
 - Enables the same user-assigned managed identity to be assigned to multiple servers, eliminating the need to individually turn on system-assigned managed identity for each Azure SQL logical server or managed instance, and providing it access to key vault
 
-- Provides the capability to enforce CMK at server or database creation time with an available built-in Azure policy
+- Provides the capability to enforce CMK at server creation time with an available built-in Azure policy
 
 ## Considerations while using UMI for customer-managed TDE
 
 - By default, TDE in Azure SQL uses the primary user-assigned managed identity set on the server for key vault access. If no user-assigned identities have been assigned to the server, then the system-assigned managed identity of the server is used for key vault access.
-- When using the system-assigned managed identity for TDE with CMK, no user-assigned managed identities should be assigned to the server 
 - When using a user-assigned managed identity for TDE with CMK, assign the identity to the server and set it as the primary identity for the server
 - The primary user-assigned managed identity requires continuous key vault access (*get, wrapKey, unwrapKey* permissions). If the identity's access to key vault is revoked or sufficient permissions are not provided, the database will move to *Inaccessible* state 
 - If the primary user-assigned managed identity is being updated to a different user-assigned managed identity, the new identity must be given required permissions to the key vault prior to updating the primary 
 - To switch the server from user-assigned to system-assigned managed identity for key vault access, provide the system-assigned managed identity with the required key vault permissions, then remove all user-assigned managed identities from the server
 
-> [!Important]
+> [!IMPORTANT]
 > The primary user-assigned managed identity being used for TDE with CMK should not be deleted from Azure. Deleting this identity will lead to the server losing access to key vault and databases becoming *inaccessible*. 
 
 ## Limitations and known issues
 
-- If the key vault is behind a VNet that uses a firewall, the option to **Allow Trusted Microsoft Services to bypass this firewall** must be enabled in the key vault's **Networking** menu if you want to use a user-assigned managed identity. A system-assigned managed identity can be used without the option to **Allow Trusted Microsoft Services to bypass this firewall** enabled. For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
+- If the key vault is behind a VNet that uses a firewall, the option to **Allow Trusted Microsoft Services to bypass this firewall** must be enabled in the key vault's **Networking** menu if you want to use a user-assigned managed identity. Once this option is enabled, available keys cannot be listed in the SQL server TDE menu. To set an individual CMK, a *key identifier* must be used . A system-assigned managed identity can be used without the option to **Allow Trusted Microsoft Services to bypass this firewall** enabled. For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
 - When multiple user-assigned managed identities are assigned to the server or managed instance, if a single identity is removed from the server using the *Identity* blade of the Azure Portal, the operation succeeds but the identity does not get removed from the server. Removing all user-assigned managed identities together from the Azure portal works successfully.
 - When the server or managed instance is configured with customer-managed TDE and both system-assigned and user-assigned managed identities are enabled on the server, removing the user-assigned managed identities from the server without first giving the system-assigned managed identity access to the key vault results in an *Unexpected error occurred* message. Ensure the system-assigned managed identity has been provided key vault access prior to removing the primary user-assigned managed identity (and any other user-assigned managed identities) from the server.
 
@@ -62,3 +61,7 @@ In addition to the system-assigned managed identity that is already supported fo
 
 > [!div class="nextstepaction"]
 > [Create Azure SQL database configured with user-assigned managed identity and customer-managed TDE](transparent-data-encryption-byok-create-server.md)
+
+## See also
+
+- [Create an Azure SQL Managed Instance with a user-assigned managed identity](/azure/azure-sql/managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance)

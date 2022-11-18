@@ -7,7 +7,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf 
 ms.date: 2/16/2018
 ms.topic: "reference"
-ms.service: "sql"
+ms.service: sql
 ms.subservice: "machine-learning-services"
 
 # optional metadata

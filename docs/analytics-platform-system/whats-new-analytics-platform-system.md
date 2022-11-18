@@ -5,7 +5,7 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: "martinle"
 ms.date: "12/01/2021"
-ms.service: "sql"
+ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: "conceptual"
 ms.custom:

@@ -3,10 +3,9 @@ description: "Reduce (geography Data Type )"
 title: Reduce (geography Data Type )
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "Reduce_TSQL"

@@ -4,8 +4,8 @@ description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Data
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "01/05/2021"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_resource_governor_workload_groups_history_ex_TSQL"

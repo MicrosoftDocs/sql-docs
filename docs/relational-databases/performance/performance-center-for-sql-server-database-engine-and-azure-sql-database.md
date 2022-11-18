@@ -3,9 +3,9 @@ title: "Performance Center"
 description: Find the information that you need about performance in the SQL Server Database Engine and Azure SQL Database.
 ms.custom: seo-dt-2019
 ms.date: "09/08/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 f1_keywords: 
   - "Performance (SQL Server)"

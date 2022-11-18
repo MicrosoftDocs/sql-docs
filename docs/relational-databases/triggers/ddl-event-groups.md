@@ -3,9 +3,9 @@ description: "DDL Event Groups"
 title: "DDL Event Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2018"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event groups"

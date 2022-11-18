@@ -3,7 +3,6 @@ title: "Performance Counters - ReportServer Service, Performance Objects | Micro
 description: Learn about performance counters for the ReportServer:Service and ReportServerSharePoint:Service performance objects, part of a SQL Server 2012 deployment.
 ms.date: 06/26/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 

@@ -3,9 +3,9 @@ title: "Create Client Applications for FILESTREAM Data | Microsoft Docs"
 description: Learn how to use Win32 APIs to create client applications that access FILESTREAM data. See available functions, required steps, examples, and best practices.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: filestream
+ms.subservice: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], Win32"

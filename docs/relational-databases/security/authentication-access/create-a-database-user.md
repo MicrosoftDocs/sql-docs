@@ -3,10 +3,9 @@ title: "Create a Database User | Microsoft Docs"
 description: Learn how to create the most common types of database users by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "04/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.user.securables.f1"

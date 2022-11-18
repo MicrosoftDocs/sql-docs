@@ -3,10 +3,9 @@ title: "Database States | Microsoft Docs"
 description: "Find out about various database states, such as ONLINE, OFFLINE, or SUSPECT. Learn how to verify the current state of a database."
 ms.custom: ""
 ms.date: "07/14/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.DATABASESTATES.F1"

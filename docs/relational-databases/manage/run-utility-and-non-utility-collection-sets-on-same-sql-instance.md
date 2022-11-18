@@ -3,10 +3,9 @@ title: "Run Utility and non-Utility Collection Sets on Same SQL Instance | Micro
 description: Learn how to monitor an instance of SQL Server by using utility and non-utility collection sets that work side by side. View configuration requirements.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 ms.assetid: ca7ee9b3-ef9a-4ba4-83d0-9ee9f80dab27
 author: MikeRayMSFT

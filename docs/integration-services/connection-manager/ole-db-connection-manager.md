@@ -3,10 +3,9 @@ title: "OLEDB connection manager | Microsoft Docs"
 description: An OLEDB connection manager enables a package to connect to a data source by using an OLEDB provider.
 ms.custom: ""
 ms.date: "07/19/2021"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbconnection.f1"

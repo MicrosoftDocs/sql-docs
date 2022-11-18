@@ -2,7 +2,7 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/09/2022
-ms.service: sql-server
+ms.service: sql
 ms.topic: include
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: insert (XML DML)
 description: "insert (XML DML)"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"

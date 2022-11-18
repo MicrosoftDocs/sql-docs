@@ -6,8 +6,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: katsmith, jovanpop, wiassaf
 ms.date: 11/01/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom:
   - "seo-lt-2019"

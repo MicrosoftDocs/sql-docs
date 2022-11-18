@@ -6,9 +6,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
 ms.topic: article
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # SQL Server Replication on Linux

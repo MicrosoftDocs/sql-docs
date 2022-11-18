@@ -4,9 +4,8 @@ description: View information about using Microsoft .NET Framework DiffGrams in 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "data deletions [SQLXML]"

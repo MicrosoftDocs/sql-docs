@@ -3,10 +3,9 @@ title: "SQL Server, Databases object"
 description: Learn about the SQLServer:Databases object, which provides counters for bulk copy operations, backup and restore throughput, and transaction log activities.
 ms.custom: ""
 ms.date: "10/05/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"

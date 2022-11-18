@@ -6,7 +6,7 @@ summary: Tutorials, quickstarts, and other educational resources meant to teach 
 metadata:
   title: Educational SQL resources 
   description: A collection of tutorials and quickstarts meant to teach you to use SQL Server and Azure SQL Database. 
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma

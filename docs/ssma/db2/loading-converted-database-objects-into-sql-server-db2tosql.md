@@ -1,11 +1,11 @@
 ---
 description: "Loading Converted Database Objects into SQL Server (DB2ToSQL)"
 title: "Loading Converted Database Objects into SQL Server (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: cpichuka 

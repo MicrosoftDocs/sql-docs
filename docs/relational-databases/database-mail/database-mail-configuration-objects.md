@@ -3,10 +3,9 @@ description: "Describes the Database Mail configuration objects for configuratio
 title: "Database Mail Configuration Objects"
 ms.custom: ""
 ms.date: "07/26/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlimail.profileandaccountmanagement.f1"

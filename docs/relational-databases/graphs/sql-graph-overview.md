@@ -3,10 +3,9 @@ description: "Graph processing with SQL Server and Azure SQL Database"
 title: "Graph processing"
 titleSuffix:  SQL Server and Azure SQL Database
 ms.date: "06/26/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "SQL graph"

@@ -3,7 +3,6 @@ description: "URL Reservation Syntax  (Report Server Configuration Manager)"
 title: "URL Reservation Syntax  (Configuration Manager) | Microsoft Docs"
 ms.date: 10/05/2022
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -4,9 +4,9 @@ description: SQL Server Native Client 11.0 is installed with SQL Server 2016. Le
 ms.custom:
   - intro-installation
 ms.date: "07/15/2016"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 author: markingmyname
 ms.author: maghan
 ms.topic: "reference"

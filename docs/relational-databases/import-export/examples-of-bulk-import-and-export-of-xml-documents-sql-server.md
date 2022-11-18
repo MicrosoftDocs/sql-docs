@@ -4,9 +4,8 @@ description: "Examples of bulk importing and exporting of XML documents with SQL
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

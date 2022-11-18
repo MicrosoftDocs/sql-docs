@@ -4,8 +4,8 @@ description: "Find out about the backup compression default option. See how it d
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], backup compression default option"

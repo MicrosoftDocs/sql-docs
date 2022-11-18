@@ -1,9 +1,8 @@
 ---
 title: "File Element (DTA)"
 description: In the dta utility, the File element specifies a workload file, which includes Transact-SQL statements that execute for a database to tune.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"

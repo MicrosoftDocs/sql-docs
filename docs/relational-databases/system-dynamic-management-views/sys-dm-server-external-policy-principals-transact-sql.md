@@ -4,8 +4,8 @@ description: Reference documentation to explain sys.dm_server_external_policy_pr
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.date: "11/07/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_server_external_policy_principals_TSQL"

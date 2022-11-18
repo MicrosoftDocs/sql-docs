@@ -4,8 +4,8 @@ description: This article explains the place of using the query store to establi
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

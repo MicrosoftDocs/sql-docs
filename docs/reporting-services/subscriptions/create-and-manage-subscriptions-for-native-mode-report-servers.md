@@ -3,7 +3,6 @@ title: "Create and Manage Subscriptions for Native Mode Report Servers | Microso
 description: Learn to create and manage a standard subscription as an individual user who wants a report delivered through email or to a shared folder.
 ms.date: 05/28/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
 
 

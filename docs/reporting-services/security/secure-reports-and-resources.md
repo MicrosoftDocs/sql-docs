@@ -3,7 +3,6 @@ description: "Secure Reports and Resources"
 title: "Secure Reports and Resources | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 

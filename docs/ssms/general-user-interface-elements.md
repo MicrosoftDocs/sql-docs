@@ -1,9 +1,8 @@
 ---
 title: "General User Interface Elements"
 description: "General User Interface Elements"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], user interface elements"

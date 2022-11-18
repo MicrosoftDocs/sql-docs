@@ -1,11 +1,11 @@
 ---
 description: "Project Settings (GUI)  (MySQLToSQL)"
 title: "Project Settings (GUI)  (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: cpichuka 

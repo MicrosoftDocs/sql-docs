@@ -1,11 +1,11 @@
 ---
 description: "Connect to Azure SQL Database (MySQLToSQL)"
 title: "Connect to Azure SQL Database (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: cpichuka 

@@ -4,8 +4,8 @@ description: sys.dm_os_enumerate_fixed_drives (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/18/2019"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_enumerate_fixed_drives"

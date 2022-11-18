@@ -3,10 +3,9 @@ description: "Arguments and Properties of Spatial Index Stored Procedures"
 title: "Arguments and Properties of Spatial Index Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

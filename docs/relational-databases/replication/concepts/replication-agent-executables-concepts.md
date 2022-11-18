@@ -3,10 +3,9 @@ description: "Replication Agent Executables Concepts"
 title: "Replication Agent Executables Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 helpviewer_keywords: 
   - "programming interfaces [SQL Server replication]"

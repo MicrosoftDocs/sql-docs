@@ -1,11 +1,11 @@
 ---
 description: "Data Migration Report (DB2ToSQL)"
 title: "Data Migration Report (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: cpichuka 

@@ -3,10 +3,9 @@ title: "Reduce the Production Server Tuning Load | Microsoft Docs"
 description: Learn how Database Engine Tuning Advisor relies on the query optimizer to analyze a workload and to make tuning recommendations in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "overhead [Database Engine Tuning Advisor]"

@@ -4,8 +4,8 @@ description: "Example demonstrating use of Azure Key Vault provider with Always 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/03/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: tutorial
 ---
 

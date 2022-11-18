@@ -3,7 +3,6 @@ title: "Use URL Access in Windows Applications"
 description: URL access to a report server is optimized for a Web environment, but you can also use URL access to embed Reporting Services reports in a Windows application.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 
 ms.custom: seo-lt-2019

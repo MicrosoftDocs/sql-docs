@@ -5,8 +5,8 @@ author: aciortea
 ms.author: aciortea
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom: intro-whats-new
 helpviewer_keywords:

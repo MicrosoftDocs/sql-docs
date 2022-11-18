@@ -3,10 +3,9 @@ title: "Contained Database Collations | Microsoft Docs"
 description: "Learn how collation works in contained and non-contained databases. See issues that can arise when sessions cross between contained and non-contained contexts."
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, collations"

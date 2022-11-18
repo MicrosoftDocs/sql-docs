@@ -4,9 +4,8 @@ description: Integration Services Tables (Transact-SQL)
 author: lrtoyou1223
 ms.author: lle
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "SQL Server Integration Services system tables"

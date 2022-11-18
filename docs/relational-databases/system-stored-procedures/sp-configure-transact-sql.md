@@ -3,10 +3,9 @@ description: "sp_configure (Transact-SQL)"
 title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_configure"

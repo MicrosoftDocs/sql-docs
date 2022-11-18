@@ -3,10 +3,9 @@ description: "Create Unique Constraints"
 title: "Create Unique Constraints"
 ms.custom: FY22Q2Fresh
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "UNIQUE_TSQL"

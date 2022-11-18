@@ -1,9 +1,8 @@
 ---
 title: "Cardinality Estimation (SQL Server)"
 description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cardinality estimator"

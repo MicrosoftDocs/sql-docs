@@ -3,10 +3,9 @@ description: "catalog.event_messages"
 title: "catalog.event_messages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace

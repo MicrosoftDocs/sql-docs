@@ -2,9 +2,8 @@
 description: "Configure and Manage Thesaurus Files for Full-Text Search"
 title: "Configure & manage thesaurus files for Full-Text Search"
 ms.date: 07/01/2020
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], thesaurus files"

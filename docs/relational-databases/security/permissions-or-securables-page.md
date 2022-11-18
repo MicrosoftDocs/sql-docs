@@ -3,10 +3,9 @@ title: "Permissions or Securables Page | Microsoft Docs"
 description: Use the Permissions page or the Securables page to view or set the permissions for securables in SQL Server. 
 ms.custom: ""
 ms.date: "01/07/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.permissions.f1"

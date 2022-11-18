@@ -3,8 +3,8 @@ description: "MSSQLSERVER_701"
 title: "MSSQLSERVER_701"
 ms.custom: ""
 ms.date: "03/16/2021"
-ms.prod: sql
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "701 (Database Engine error)"

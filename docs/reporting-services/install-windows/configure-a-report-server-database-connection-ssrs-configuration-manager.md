@@ -2,7 +2,6 @@
 title: "Configure a Report Server Database Connection (Configuration Manager) | Microsoft Docs"
 description: "Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server."
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies

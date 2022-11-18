@@ -4,8 +4,8 @@ description: This article provides a step-by-step procedure for adding instance-
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "feature adding [SQL Server]"

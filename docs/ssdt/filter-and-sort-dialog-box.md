@@ -1,8 +1,8 @@
 ---
 title: Filter and Sort Dialog Box
 description: Learn how to modify the data that SQL Server Data Tools displays in a table or view. See how to adjust the number of rows, the sort order, and other factors.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datafilterdialog.dialog"

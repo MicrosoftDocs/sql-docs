@@ -3,9 +3,9 @@ title: "Output from DTA"
 description: Learn about how to use the summaries, recommendations, reports, and tuning logs that the Database Engine Tuning Advisor creates in your SQL Server installation.
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.sessionmonitor.f1"

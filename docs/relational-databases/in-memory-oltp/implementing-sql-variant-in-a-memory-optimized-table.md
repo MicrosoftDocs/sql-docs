@@ -4,9 +4,8 @@ description: Use this example to learn how to implement SQL_VARIANT in a memory-
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46

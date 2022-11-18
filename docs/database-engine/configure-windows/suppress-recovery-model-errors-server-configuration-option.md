@@ -4,8 +4,8 @@ description: "Suppress recovery model errors - server configuration option"
 author: MladjoA
 ms.author: mlandzic
 ms.date: "07/20/2020"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 

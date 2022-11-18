@@ -5,8 +5,8 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 10/20/2022
-ms.prod: sql
-ms.technology: samples
+ms.service: sql
+ms.subservice: samples
 ms.topic: conceptual
 ---
 # SQL samples

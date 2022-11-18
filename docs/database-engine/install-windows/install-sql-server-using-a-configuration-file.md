@@ -4,8 +4,8 @@ description: You can use SQL Server Setup to generate a configuration file to de
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/22/2020
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"

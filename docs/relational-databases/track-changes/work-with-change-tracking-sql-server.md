@@ -3,10 +3,9 @@ description: "Work with Change Tracking (SQL Server)"
 title: "Work with Change Tracking"
 ms.custom: seo-dt-2019
 ms.date: 05/06/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology:
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords:
   - "change tracking [SQL Server], making changes"

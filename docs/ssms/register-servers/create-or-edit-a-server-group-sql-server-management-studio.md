@@ -1,9 +1,8 @@
 ---
 description: "Create or Edit a Server Group (SQL Server Management Studio)"
 title: Create or Edit a Server Group
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.editgroup.f1"

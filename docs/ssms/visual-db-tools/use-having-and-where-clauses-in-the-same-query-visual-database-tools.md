@@ -3,9 +3,8 @@ description: "Use HAVING and WHERE Clauses in the Same Query (Visual Database To
 title: Use HAVING and WHERE Clauses in the Same Query
 ms.custom: seo-lt-2019
 ms.date: 01/28/2022
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], excluding rows"

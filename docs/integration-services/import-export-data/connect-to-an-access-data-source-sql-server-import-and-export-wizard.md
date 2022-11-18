@@ -3,9 +3,9 @@ description: "Connect to an Access Data Source (SQL Server Import and Export Wiz
 title: "Connect to an Access Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace

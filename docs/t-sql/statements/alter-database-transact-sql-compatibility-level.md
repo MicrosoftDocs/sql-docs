@@ -1,9 +1,8 @@
 ---
 title: "ALTER DATABASE compatibility level (Transact-SQL)"
 description: ALTER DATABASE compatibility level (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "COMPATIBILITY_LEVEL_TSQL"

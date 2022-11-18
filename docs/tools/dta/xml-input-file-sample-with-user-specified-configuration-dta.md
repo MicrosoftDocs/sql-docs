@@ -2,9 +2,8 @@
 title: XML Input file sample with user-specified configuration
 description: This article contains an XML input file sample with user-specified configuration to use for tuning workloads to use with Database Engine Tuning Advisor.
 titleSuffix: DTA
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
 author: markingmyname

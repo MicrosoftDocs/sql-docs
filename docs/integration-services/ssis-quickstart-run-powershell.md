@@ -3,11 +3,10 @@ description: "Run an SSIS package with PowerShell"
 title: "Run an SSIS package with PowerShell | Microsoft Docs"
 ms.date: "09/17/2020"
 ms.topic: quickstart
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.custom:
   - intro-quickstart
-ms.technology: integration-services
+ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
 ---

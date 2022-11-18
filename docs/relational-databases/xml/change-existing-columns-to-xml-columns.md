@@ -3,10 +3,9 @@ title: "Change existing columns to XML columns"
 description: Learn how to use the ALTER TABLE statement to change a string type column to an xml data type column.
 ms.custom: "fresh2019may"
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "tables [XML]"

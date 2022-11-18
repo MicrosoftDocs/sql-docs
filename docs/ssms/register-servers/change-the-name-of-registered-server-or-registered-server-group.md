@@ -1,9 +1,8 @@
 ---
 description: "Change the Name of Registered Server or Registered Server Group"
 title: Change the Name of Registered Server or Server Group
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 author: markingmyname

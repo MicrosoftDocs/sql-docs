@@ -3,9 +3,9 @@ description: "Project Settings (Azure SQL Database ) (SybaseToSQL)"
 title: "Project Settings (Azure SQL Database ) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: cpichuka 

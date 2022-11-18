@@ -3,10 +3,9 @@ description: "xp_sprintf (Transact-SQL)"
 title: "xp_sprintf (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "xp_sprintf_TSQL"

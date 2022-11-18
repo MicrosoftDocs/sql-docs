@@ -3,10 +3,9 @@ description: "sp_dropmergearticle (Transact-SQL)"
 title: "sp_dropmergearticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

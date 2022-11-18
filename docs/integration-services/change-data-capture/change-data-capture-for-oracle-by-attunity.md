@@ -3,10 +3,9 @@ description: "Change Data Capture for Oracle by Attunity"
 title: "Change Data Capture for Oracle by Attunity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace

@@ -4,8 +4,8 @@ description: "Find out about the backup compression algorithm option. See how it
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "08/24/2022"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "backup compression algorithm [SQL Server], backup compression algorithm Option"

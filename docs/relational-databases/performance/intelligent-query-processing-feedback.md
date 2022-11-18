@@ -5,8 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith
 ms.date: 09/29/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "parallel queries [SQL Server]"

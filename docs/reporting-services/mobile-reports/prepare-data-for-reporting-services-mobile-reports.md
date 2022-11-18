@@ -37,7 +37,7 @@ Date fields in [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 
 ## Preparing filter data ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] can filter data based on both date/time fields and key fields. Though key fields can be numeric, in most cases they're either an ID or a string value. To prepare a filter field for use with a navigator element such as the Selection List, the filter key should be a single column in the data table. That way, you can group the table rows according to the value in the filter column. Having multiple columns contain different filter keys, or filter criteria, allows for mobile reports with multiple filter navigators to be used together hierarchically or individually.  
   
-| Industry  | Country   | Region    |  
+| Industry  | Location   | Region    |  
 | ------------- | ------------- | ------------- |  
 | Banks     | AFGHANISTAN   | ASIA      |  
 | Commercial & Professional Services | AFGHANISTAN | ASIA |  

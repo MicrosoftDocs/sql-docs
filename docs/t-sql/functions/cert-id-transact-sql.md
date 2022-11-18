@@ -28,7 +28,7 @@ This function returns the ID value of a certificate.
 ## Syntax  
   
 ```syntaxsql
-Cert_ID ( 'cert_name' )  
+CERT_ID ( 'cert_name' )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

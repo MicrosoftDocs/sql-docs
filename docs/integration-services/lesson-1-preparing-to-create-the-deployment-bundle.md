@@ -3,10 +3,9 @@ description: "Lesson 1: Preparing to Create the Deployment Bundle"
 title: "Lesson 1: Preparing to Create the Deployment Bundle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace

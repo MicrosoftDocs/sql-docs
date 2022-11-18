@@ -1,11 +1,11 @@
 ---
 description: "Command Line Options in SSMA Console (OracleToSQL)"
 title: "Command Line Options in SSMA Console (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Command Line Options, Help Option"

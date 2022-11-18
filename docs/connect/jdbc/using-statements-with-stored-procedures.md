@@ -4,8 +4,8 @@ description: "Learn how to execute stored procedures using the Microsoft JDBC Dr
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/12/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using statements with stored procedures

@@ -3,10 +3,9 @@ description: "Change Tracking stored procedures (Transact-SQL)"
 title: "Change Tracking stored procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

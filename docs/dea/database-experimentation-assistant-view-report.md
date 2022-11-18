@@ -5,8 +5,8 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
 ms.date: 02/04/2020
-ms.prod: sql
-ms.technology: dea
+ms.service: sql
+ms.subservice: dea
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 ---

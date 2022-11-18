@@ -4,8 +4,8 @@ description: Learn the format of the connection string used by the Microsoft JDB
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/06/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Building the connection URL

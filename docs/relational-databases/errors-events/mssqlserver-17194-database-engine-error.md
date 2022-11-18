@@ -3,9 +3,9 @@ description: "MSSQLSERVER_17194"
 title: "MSSQLSERVER_17194 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "17194"

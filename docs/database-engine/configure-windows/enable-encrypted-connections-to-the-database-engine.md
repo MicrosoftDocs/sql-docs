@@ -4,8 +4,8 @@ description: Encrypt data across communication channels. Enable encrypted connec
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/31/2022"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ms.custom: contperf-fy20q4
 helpviewer_keywords:

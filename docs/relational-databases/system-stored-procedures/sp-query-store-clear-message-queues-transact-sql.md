@@ -4,10 +4,9 @@ title: "sp_query_store_clear_message_queues (Transact-SQL)"
 ms.custom:
 - event-tier1-build-2022
 ms.date: "04/26/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_query_store_clear_message_queues_TSQL"

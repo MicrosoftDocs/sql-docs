@@ -2,12 +2,12 @@
 title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Access (AccessToSQL) for each release.
 author: cpichuka
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-whats-new
 ms.date: "04/29/2021"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.author: cpichuka
 ---

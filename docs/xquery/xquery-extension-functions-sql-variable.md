@@ -3,10 +3,9 @@ title: "sql:variable() Function (XQuery) | Microsoft Docs"
 description: Learn how to use the XQuery Extension function sql:variable() to expose a variable that contains a SQL relational value inside an XQuery expression.
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

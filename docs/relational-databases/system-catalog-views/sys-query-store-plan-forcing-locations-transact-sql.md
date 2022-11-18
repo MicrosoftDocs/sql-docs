@@ -4,8 +4,8 @@ description: "The sys.query_store_plan_forcing_locations system view contains in
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom:
 f1_keywords:

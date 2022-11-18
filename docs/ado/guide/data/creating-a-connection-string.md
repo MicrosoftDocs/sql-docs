@@ -4,8 +4,8 @@ description: "Creating a Connection String"
 author: rothja
 ms.author: jroth
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "connections [ADO]"

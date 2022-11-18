@@ -3,7 +3,6 @@ title: "Supported combinations of SharePoint & Reporting Services server | Micro
 description: "A SQL Server Reporting Services report server installed in SharePoint mode requires a version of SharePoint and the SQL Server Reporting Services add-in (rsSharePoint.msi) for SharePoint products, which you install on the SharePoint servers."
 ms.date: 08/15/2021
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint"
 ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual

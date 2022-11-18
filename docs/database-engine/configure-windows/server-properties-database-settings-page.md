@@ -4,8 +4,8 @@ description: Become familiar with database settings in SQL Server. Learn about o
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/23/2019
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.serverproperties.databasesettings.f1"

@@ -4,9 +4,9 @@ title: "Migrate Sybase ASE Data into SQL Server - Azure SQL Database | Microsoft
 ms.custom:
   - intro-migration
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Migrating data,Client Side Data Migration"

@@ -3,10 +3,9 @@ description: "sp_polybase_join_group (Transact-SQL)"
 title: "sp_polybase_join_group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"

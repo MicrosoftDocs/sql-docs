@@ -3,10 +3,9 @@ description: "Mapping Deprecated Functions"
 title: "Mapping Deprecated Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], about mapping deprecated functions"

@@ -4,9 +4,8 @@ description: sys.database_role_members (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "01/31/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_role_members_TSQL"

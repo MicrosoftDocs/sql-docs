@@ -8,8 +8,8 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 monikerRange: ">= sql-server-ver15"
 ms.metadata: seo-lt-2019
 ---

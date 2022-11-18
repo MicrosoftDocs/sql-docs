@@ -3,10 +3,9 @@ description: "Registry Settings"
 title: "Registry Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2022"
-ms.prod: sql
-ms.prod_service:  connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel

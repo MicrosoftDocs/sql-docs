@@ -3,10 +3,9 @@ title: "Permissions Hierarchy (Database Engine) | Microsoft Docs"
 description: Learn about the hierarchy of entities that can be secured with permissions, known as securables, in SQL Server Database Engine. 
 ms.custom: ""
 ms.date: "03/23/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.server.permissions.f1--May use common.permissions"

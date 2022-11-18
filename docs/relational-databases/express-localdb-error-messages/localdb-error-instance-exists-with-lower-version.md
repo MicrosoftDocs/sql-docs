@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION"
 title: "LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: WilliamDAssafMSFT

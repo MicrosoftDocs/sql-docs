@@ -4,8 +4,8 @@ description: sys.dm_xe_session_events (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/30/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_xe_session_events"

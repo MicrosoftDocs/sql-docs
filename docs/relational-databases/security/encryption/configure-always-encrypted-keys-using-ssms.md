@@ -3,9 +3,9 @@ title: "Provision Always Encrypted keys using SQL Server Management Studio | Mic
 description: Learn how to provision column master keys and column encryption keys for Always Encrypted using SQL Server Management Studio.
 ms.custom: ""
 ms.date: 04/15/2021
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"

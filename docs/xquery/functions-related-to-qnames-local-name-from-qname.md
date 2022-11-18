@@ -3,10 +3,9 @@ title: "local-name-from-QName (XQuery) | Microsoft Docs"
 description: Learn how to use the local-name-from-QName() function to return the local name part of a QName.
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

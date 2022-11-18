@@ -4,8 +4,8 @@ description: "Learn about the remote query timeout option. See how it determines
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/08/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "time limit for remote queries [SQL Server]"

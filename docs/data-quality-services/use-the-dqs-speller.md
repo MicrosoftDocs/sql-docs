@@ -4,8 +4,8 @@ description: "Use the DQS Speller"
 author: swinarko
 ms.author: sawinark
 ms.date: "11/08/2011"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 ---
 # Use the DQS Speller

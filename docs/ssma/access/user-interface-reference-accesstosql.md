@@ -1,11 +1,11 @@
 ---
 description: "User Interface Reference (AccessToSQL)"
 title: "User Interface Reference (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reference, user interface"

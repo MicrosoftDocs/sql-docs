@@ -2,10 +2,9 @@
 description: "New Date and Time Features with Previous SQL Server Versions (OLE DB)"
 title: "Date and Time OLE DB Features with Previous SQL Server Versions"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5

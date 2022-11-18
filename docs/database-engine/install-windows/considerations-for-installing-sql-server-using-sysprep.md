@@ -4,8 +4,8 @@ description: SQL Server SysPrep allows you to prepare a stand-alone instance of 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/31/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom:
   - seo-lt-2019

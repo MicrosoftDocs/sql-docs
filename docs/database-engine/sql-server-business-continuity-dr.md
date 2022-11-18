@@ -5,8 +5,8 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mikeray
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ---
 # Business continuity and database recovery - SQL Server

@@ -3,7 +3,6 @@ title: "Formatting data points on a paginated report chart | Microsoft Docs"
 description: Find out about different types of formatting of data points on charts in your paginated reports in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

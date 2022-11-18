@@ -3,10 +3,9 @@ description: "sp_filestream_force_garbage_collection (Transact-SQL)"
 title: "sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_filestream_force_garbage_collection"

@@ -4,10 +4,9 @@ description: Learn about best practices and troubleshooting tips for SQL Server 
 ms.custom:
 - event-tier1-build-2022
 ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf

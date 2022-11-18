@@ -4,9 +4,9 @@ titleSuffix: SQL Server 2017
 description: This article describes features supported by the various editions of SQL Server 2017, which accommodate different performance, runtime, and price requirements.
 ms.custom: "seo-lt-2019"
 ms.date: "03/26/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"

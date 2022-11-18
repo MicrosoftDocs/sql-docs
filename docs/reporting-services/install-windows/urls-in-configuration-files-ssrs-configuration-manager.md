@@ -3,7 +3,6 @@ description: "URLs in Configuration Files  (Report Server Configuration Manager)
 title: "URLs in Configuration Files  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/18/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 
 ms.topic: conceptual
 helpviewer_keywords: 

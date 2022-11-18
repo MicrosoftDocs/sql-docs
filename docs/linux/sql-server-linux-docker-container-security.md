@@ -5,8 +5,8 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 09/30/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom:
   - contperf-fy21q1

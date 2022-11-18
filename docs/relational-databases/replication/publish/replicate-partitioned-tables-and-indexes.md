@@ -3,10 +3,9 @@ description: "Replicate Partitioned Tables and Indexes"
 title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned indexes [SQL Server], replicating"

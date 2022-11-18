@@ -1,9 +1,8 @@
 ---
 title: SQL Command Prompt Utilities (Database Engine)
 description: Command prompt utilities enable you to script SQL Server operations. This article lists many command prompt utilities that ship with SQL Server.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "command prompt utilities [SQL Server]"

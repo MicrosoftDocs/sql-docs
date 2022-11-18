@@ -3,10 +3,9 @@ description: "SQLFreeStmt"
 title: "SQLFreeStmt | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 

@@ -4,8 +4,8 @@ description: When you bulk import or export a SQL Server table, a format file al
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/29/2022
-ms.prod: sql
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
   - "format files [SQL Server], creating"

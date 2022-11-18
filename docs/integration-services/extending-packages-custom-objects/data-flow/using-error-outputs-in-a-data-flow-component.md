@@ -3,10 +3,9 @@ description: "Using Error Outputs in a Data Flow Component"
 title: "Using Error Outputs in a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"

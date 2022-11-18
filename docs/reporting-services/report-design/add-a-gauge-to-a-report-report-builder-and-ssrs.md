@@ -3,7 +3,6 @@ title: "Add a gauge to a paginated report | Microsoft Docs"
 description: Learn how to summarize data in a paginated report in a visual format by creating a gauge data region and dragging report dataset fields to a pane on the gauge in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

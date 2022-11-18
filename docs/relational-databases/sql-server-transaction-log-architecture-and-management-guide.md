@@ -3,10 +3,9 @@ description: "SQL Server Transaction Log Architecture and Management Guide"
 title: "Transaction Log Architecture and Management Guide"
 ms.custom: ""
 ms.date: 06/20/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction log architecture guide"

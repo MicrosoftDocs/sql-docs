@@ -1,11 +1,11 @@
 ---
 description: "Managing Passwords (DB2ToSQL)"
 title: "Managing Passwords (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: 07/05/2020
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: cpichuka 

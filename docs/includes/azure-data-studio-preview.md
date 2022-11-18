@@ -1,7 +1,7 @@
 ---
 author: dzsquared
 ms.author: drskwier
-ms.prod: sql
+ms.service: sql
 ms.topic: include
 ---
 

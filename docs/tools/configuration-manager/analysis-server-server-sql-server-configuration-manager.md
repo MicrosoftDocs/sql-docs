@@ -1,10 +1,9 @@
 ---
 title: "Analysis Server &lt;server&gt; (SQL Server Configuration Manager)"
 description: In SQL Server Configuration Manager, learn how to view the properties of the SQL Server Analysis Services (SSAS) tool.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 f1_keywords:
   - sql13.swb.registerserver.general.analysisservices.f1

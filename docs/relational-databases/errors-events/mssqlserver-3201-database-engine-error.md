@@ -3,9 +3,9 @@ description: "MSSQLSERVER_3201"
 title: "MSSQLSERVER_3201 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "3201 (Database Engine error)"

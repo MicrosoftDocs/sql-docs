@@ -3,10 +3,9 @@ title: "Select Backup Destination | Microsoft Docs"
 description: For SQL Server restore, use the Select Backup Destination dialog box to select a either a disk or a logical backup device as your backup destination. 
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.selectbackupdest.f1"

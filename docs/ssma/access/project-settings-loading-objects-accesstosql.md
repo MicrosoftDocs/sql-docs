@@ -1,11 +1,11 @@
 ---
 description: "Project Settings (Loading Objects) (AccessToSQL)"
 title: "Project Settings (Loading Objects) (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: cpichuka 

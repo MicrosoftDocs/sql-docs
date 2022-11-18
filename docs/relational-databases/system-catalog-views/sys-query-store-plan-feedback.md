@@ -4,8 +4,8 @@ description: "The sys.query_store_plan_feedback system view contains information
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/02/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SYS.QUERY_STORE_PLAN_FEEDBACK_TSQL"

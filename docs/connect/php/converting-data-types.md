@@ -4,8 +4,8 @@ description: "Learn how to specify data types and provide details about default 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Converting Data Types

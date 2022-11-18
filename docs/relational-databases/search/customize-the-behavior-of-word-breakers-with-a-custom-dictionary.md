@@ -2,9 +2,8 @@
 description: "Customize behavior of word breakers with a custom dictionary (SQL Server Search)"
 title: "Customize behavior of word breakers with a custom dictionary"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 author: rwestMSFT

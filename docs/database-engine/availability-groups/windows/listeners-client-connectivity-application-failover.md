@@ -4,8 +4,8 @@ description: "Contains information about connecting to an Always On availability
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "02/27/2020"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: contperf-fy21q1
 helpviewer_keywords:

@@ -4,8 +4,8 @@ description: This article provides a step-by-step procedure for installing a new
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/12/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom:
   - seo-lt-2019

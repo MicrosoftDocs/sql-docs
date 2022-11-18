@@ -1,9 +1,8 @@
 ---
 title: Tips and tricks using SSMS
 description: Learn to comment & uncomment code, indent text, filter objects, access error logs, & find SQL Server instance names with SQL Server Management Studio.
-ms.prod: sql
-ms.technology: ssms
-ms.prod_service: sql-tools
+ms.service: sql
+ms.subservice: ssms
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan

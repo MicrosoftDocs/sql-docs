@@ -4,8 +4,8 @@ description: Learn best practices for migrating SQL Server databases with Data M
 author: rajeshsetlem
 ms.author: rajpo
 ms.date: "03/12/2019"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

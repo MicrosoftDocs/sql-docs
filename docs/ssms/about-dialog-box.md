@@ -1,9 +1,8 @@
 ---
 title: "About Dialog Box"
 description: "About Dialog Box"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "status information [SQL Server Management Studio]"

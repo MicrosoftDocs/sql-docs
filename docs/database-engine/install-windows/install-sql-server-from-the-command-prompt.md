@@ -4,8 +4,8 @@ description: This article describes command prompt parameters for SQL Server ins
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/01/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom:
   - intro-installation

@@ -3,9 +3,6 @@ metadata:
   title: SQL Server Big Data Clusters FAQ
   titleSuffix: SQL Server Big Data Clusters
   description: FAQ on SQL Server Big Data Clusters concepts, capabilities, deployment, supportability, and tools
-  services: sql-database
-  ms.service: sql
-  ms.subservice: 
   ms.topic: conceptual
   ms.service: sql
   ms.subservice: big-data-cluster

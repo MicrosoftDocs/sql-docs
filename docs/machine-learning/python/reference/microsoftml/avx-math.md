@@ -10,7 +10,6 @@ ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.service: sql
 ms.subservice: "machine-learning-services" 
-ms.service: "" 
 ms.assetid: "" 
  
 # optional metadata 

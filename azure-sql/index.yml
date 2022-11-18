@@ -122,8 +122,6 @@ landingContent:
             url: /shows/Azure-SQL-for-Beginners/SQL-Server-on-Azure-VM-Overview-4-of-61
       - linkListType: concept
         links:
-          - text: Migrate from SQL Server
-            url: virtual-machines/windows/migrate-to-vm-from-sql-server.md
           - text: Security considerations
             url: virtual-machines/windows/security-considerations-best-practices.md
           - text: High availability & disaster recovery

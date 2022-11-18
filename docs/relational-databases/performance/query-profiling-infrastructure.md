@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Query Profiling Infrastructure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

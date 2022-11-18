@@ -6,7 +6,6 @@ description: "The DeployClient class is for SQL Machine Learning Services and Ma
 keywords: "" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"
@@ -105,4 +104,4 @@ clients require authentication. The *auth* is  **required** for
 ### use
 
 (required) Deployment implementation to use (ex)
-*use=’MLServer’* to use The ML Server.
+*use='MLServer'* to use The ML Server.

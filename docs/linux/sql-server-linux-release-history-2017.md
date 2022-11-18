@@ -16,7 +16,7 @@ ms.topic: conceptual
 The following table lists the release history for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. For release history on other editions, see the following articles:
 
 - [Release history for SQL Server 2019 on Linux](sql-server-linux-release-history-2019.md?view=sql-server-ver15&preserve-view=true).
-- [Release history for SQL Server 2022 (Preview) on Linux](sql-server-linux-release-history-2022.md?view=sql-server-ver16&preserve-view=true).
+- [Release history for SQL Server 2022 on Linux](sql-server-linux-release-history-2022.md?view=sql-server-ver16&preserve-view=true).
 
 | Release               | Version       | Release date |
 | --------------------- | ------------- | ------------ |
@@ -767,5 +767,5 @@ Go back to the [release history](#release-history).
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+- [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)

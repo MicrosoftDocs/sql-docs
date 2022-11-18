@@ -59,9 +59,9 @@ Syntax:
     CREATE EXTERNAL DATA SOURCE <data_source_name> WITH
         (TYPE = SHARD_MAP_MANAGER,
                    LOCATION = '<fully_qualified_server_name>',
-        DATABASE_NAME = ‘<shardmap_database_name>',
+        DATABASE_NAME = '<shardmap_database_name>',
         CREDENTIAL = <credential_name>,
-        SHARD_MAP_NAME = ‘<shardmapname>’
+        SHARD_MAP_NAME = '<shardmapname>'
                ) [;]
 ```
 
@@ -146,7 +146,7 @@ DROP EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 
 The DATA\_SOURCE clause defines the external data source (a shard map) that is used for the external table.  
 
-The SCHEMA\_NAME and OBJECT\_NAME clauses map the external table definition to a table in a different schema. If omitted, the schema of the remote object is assumed to be “dbo” and its name is assumed to be identical to the external table name being defined. This is useful if the name of your remote table is already taken in the database where you want to create the external table. For  example, you want to define an external table to get an aggregate view of catalog views or DMVs on your scaled out data tier. Since catalog views and DMVs already exist locally, you cannot use their names for the external table definition. Instead, use a different name and use the catalog view’s or the DMV’s name in the SCHEMA\_NAME and/or OBJECT\_NAME clauses. (See the example below.)
+The SCHEMA\_NAME and OBJECT\_NAME clauses map the external table definition to a table in a different schema. If omitted, the schema of the remote object is assumed to be `dbo` and its name is assumed to be identical to the external table name being defined. This is useful if the name of your remote table is already taken in the database where you want to create the external table. For  example, you want to define an external table to get an aggregate view of catalog views or DMVs on your scaled out data tier. Since catalog views and DMVs already exist locally, you cannot use their names for the external table definition. Instead, use a different name and use the catalog view's or the DMV's name in the SCHEMA\_NAME and/or OBJECT\_NAME clauses. (See the example below.)
 
 The DISTRIBUTION clause specifies the data distribution used for this table. The query processor utilizes the information provided in the DISTRIBUTION clause to build the most efficient query plans.
 

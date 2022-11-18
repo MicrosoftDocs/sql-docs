@@ -450,11 +450,15 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 1. The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.
 
-1. On the **Edition** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or you have purchased a license for a specific edition and have a product key.
+1. On the **Edition** page, select the edition you want to install.
+
+   * **Specify a free edition** allows you to select Evaluation, Developer, or Web edition.
+   * **Use pay-as-you-go billing through Microsoft Azure** is an alternative to using the traditional license agreement. [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces this option in setup and allows you to activate your instance for use in production without supplying a product key. This option requires an active Azure subscription. For more information, see [Billing through Microsoft Azure](../../sql-server/azure-arc/billing.md). With this option you can specify Standard or Enterprise edition.
+   * **Enter the product key** allows you to provide a product key for a specific edition of SQL Server. You may also specify if you have a license with Software Assurance or SQL Software Subscription, and if you have a SQL Server license only.
 
    To continue, select **Next**.
 
-1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
+1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [Privacy Statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
    > [!NOTE]  
    > If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a product key that supports the operating system maximum number of processors.
@@ -462,7 +466,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
    > [!NOTE]  
    > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
-1. In the **Global Rules** page, Setup automatically advances to the **Product Updates** page if there are no rule errors.
+1. In the **Global Rules** page, Setup automatically advances to the **Microsoft Update** page if there are no rule errors.
 
 1. The **Microsoft Update** page will appear next if the **Microsoft Update** check box in **Control Panel** > **All Control Panel Items** > **Windows Update** > **Change settings** isn't selected. Selecting the **Microsoft Update** check box changes the computer settings to include the latest updates for all Microsoft products when you scan for Windows updates.
 
@@ -472,16 +476,25 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
 
 1. On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable integration scenarios with Azure (like [SQL Server on Azure Arc-enabled servers](../../sql-server/azure-arc/overview.md)), and is required to enable Microsoft Defender for Cloud, Purview, Azure Active Directory and other Azure services. This feature is selected by default.  
+1. On the **Azure Extension for SQL Server** page, you can configure SQL Server to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others.
 
-   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/connect.md#prerequisites) are registered in your subscription.  If you wish to proceed without connecting to Azure, you can unselect the Azure Extension for SQL Server checkbox. 
-   
+   This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
+
+   To use the Azure extension for SQL Server, you must have an active Azure subscription and provide a set of additional Azure-related parameters. You also need to make sure the following [Azure resource providers](../../sql-server/azure-arc/connect.md#prerequisites) are registered in your subscription:
+
+   * **Microsoft.AzureArcData**
+   * **Microsoft.HybridCompute**
+
    To authenticate the SQL Server instance with Azure, you can sign in using an Azure account, or you can use an Azure service principal. For specific security requirements to install the extension, see [Required permissions](../../sql-server/azure-arc/overview.md#required-permissions).
 
-   The following information is required:
+   To sign in with your Azure account, select **Use Azure Login**. Windows may prompt you to add one or more sites to the Trusted sites zone. Follow your organization's security requirements. After you sign in to Azure, proceed to provide the additional registration information.
 
-   * Azure service principal. If you provide the service principal, provide the service principal secret. This is used to authenticate the SQL Server instance to Azure.
+   Alternatively, you can use a service principal.
+   * **Azure service principal**: If you provide the service principal, provide the service principal secret. This is used to authenticate the SQL Server instance to Azure.
    * **Azure subscription ID**: Azure subscription where the SQL Server instance resource will be created.
+
+   Provide the following information:
+
    * **Azure resource group**: Azure resource group where the SQL Server instance resource will be created.
    * **Azure region**: Azure region where the SQL Server instance resource will be created.
    * **Azure tenant ID**: Azure tenant ID in which the service principal exists.
@@ -490,7 +503,7 @@ This isn't applicable to [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md
    > [!NOTE]  
    > To create a service principal, retrieve its password and Tenant ID, see [Connect multiple SQL Server instances to Azure Arc](../../sql-server/azure-arc/connect-at-scale.md#connect-multiple-instances). If the server is already connected to Azure via Azure Arc, the subscription ID, resource group, and region will be populated and you won't be able to change them.
 
-1. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation, or to add features to an existing installation. To continue, select **Next**.
+   Select **Next** to proceed.
 
 1. On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 

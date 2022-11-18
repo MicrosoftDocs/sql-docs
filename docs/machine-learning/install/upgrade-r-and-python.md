@@ -290,9 +290,9 @@ Use R commands to synchronize installed packages to the file system using record
 ### Problems with overwritten sqlbinr.ini file in SQL Server
 
 Scenario:
-This issue occurs when binding Machine Learning Server 9.4.7 to SQL Server 2017.  When Python is updated and bound or when you update to a new CU, it doesn’t understand that Python is bound, and overwrites files. There isn't a known issue with R.
+This issue occurs when binding Machine Learning Server 9.4.7 to SQL Server 2017.  When Python is updated and bound or when you update to a new CU, it doesn't understand that Python is bound, and overwrites files. There isn't a known issue with R.
 
-As a workaround, create a `sqlbindr.ini` file in the PYTHON_SERVICES directory that isn’t empty. The contents doesn't impact how the file functions.
+As a workaround, create a `sqlbindr.ini` file in the PYTHON_SERVICES directory that isn't empty. The contents doesn't impact how the file functions.
 
 Create a `sqlbindr.ini` file, containing **9.4.7.82**, save to this location:  
 

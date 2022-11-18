@@ -17,7 +17,7 @@ ms.custom:
 
 [!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-This article includes detail on how the Azure Synapse Link change feed works. This new [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and Azure SQL Database feature is currently in preview. 
+This article includes detail on how the Azure Synapse Link for SQL change feed works, a feature new to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and Azure SQL Database. 
 
 [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] introduces a new feature that allows connectivity between SQL Server tables and the Microsoft Azure Synapse platform, called Azure Synapse Link for SQL. Azure Synapse Link for SQL provides automatic change feeds that capture the changes within SQL Server and load them into Azure Synapse Analytics. 
 
@@ -26,10 +26,13 @@ This article includes detail on how the Azure Synapse Link change feed works. Th
     - [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
     - [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link).
 - To get started quickly, see: 
-    - [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
-    - [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
+    - [Get started with Azure Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
+    - [Get started with Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
 
 This feature is not currently available for Azure SQL Managed Instance.
+
+> [!NOTE]
+> Enabling Azure Synapse Link for SQL will create a `changefeed` database user, a `changefeed` schema, and several tables within the `changefeed` schema in your source database. Please do not alter any of these objects - they are system-managed.
 
 ## Landing zone
 

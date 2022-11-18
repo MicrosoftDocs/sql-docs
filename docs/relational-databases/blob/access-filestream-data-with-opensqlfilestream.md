@@ -57,7 +57,7 @@ HANDLE OpenSqlFilestream (
 |SQL_FILESTREAM_READWRITE|2|Data can be read and written from the file.|  
   
 > [!NOTE]  
->  These values are defined in the SQL_FILESTREAM_DESIRED_ACCESS enumeration in sqlncli.h.  
+>  These values are defined in the SQL_FILESTREAM_DESIRED_ACCESS enumeration in msoledbsql.h.  
   
  *OpenOptions*  
  [in] The file attributes and flags. This parameter can also include any combination of the following flags.  
@@ -93,7 +93,8 @@ HANDLE OpenSqlFilestream (
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
 ## Remarks  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client must be installed to use this API. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client tools. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+
+This sample was originally written for the SQL Server Native Client (sqlncli.h) but has been updated to use the Microsoft OLE DB Driver (msoledbsql.h) for SQL Server. [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
   
 ## See Also  
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

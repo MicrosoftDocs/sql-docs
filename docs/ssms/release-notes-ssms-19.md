@@ -58,9 +58,9 @@ SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier 
 | Accessibility | Fixed accessibility issue when navigating in the data classification window. |
 | Analysis Services | Connection to Analysis Services is now available. |
 | Copy Database Wizard | Fixed the log provider type error, which occurred when copying a database using The SQL Management Object method. | 
-| Replication | Fixed error “Merge publications can't be created from this database until the compatibility level is set to 70 or higher.” when using the publication wizard to create a new merge publication. |
+| Replication | Fixed error "Merge publications can't be created from this database until the compatibility level is set to 70 or higher." when using the publication wizard to create a new merge publication. |
 | SqlParser | Added missing options for CREATE USER and CREATE LOGIN. |
-| SSIS | The “Schedule…” menu item is now visible in the Azure SSIS Catalog. |
+| SSIS | The "Schedule..." menu item is now visible in the Azure SSIS Catalog. |
 | XEvents | Fixed an issue where reading target data for event sessions whose name overlaps with another session name caused data from the incorrect event session to appear in the viewer. |
 
 #### Known issues 19.0 Preview 3
@@ -71,7 +71,8 @@ SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier 
 | Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | Ledger | Importing a bacpac or dacpac created from a database with the LEDGER = ON option, into a new database on-premises, fails due to the LEDGER property not being set. | Use backup and restore to create a new database on-premises with the LEDGER property enabled. |
 | Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | Use SSMS 18.11.1 to view or edit Maintenance Plans. |
-| SSIS | Trying to connect to SSIS, or running the upgrade wizard in SSIS, generates an error message. “The 'MSOLEDBSQL19' provider isn't registered on the local machine. (MsDtsSrvr)” | Install the [Microsoft OLE DB Driver 19 for SQL Server (x64)](../connect/oledb/download-oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver 18 for SQL Server (x64)](../connect/odbc/download-odbc-driver-for-sql-server.md) if using SSIS; this will be resolved in a later preview of SSMS 19. |
+| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.Net SqlClient Data Provider)". | There is a known problem due to incorrect data in msdb. To resolve, remove backup history. For example `EXEC msdb..sp_delete_backuphistory @oldest_date = '<current date>'`.|
+| SSIS | Trying to connect to SSIS, or running the upgrade wizard in SSIS, generates an error message. "The 'MSOLEDBSQL19' provider isn't registered on the local machine. (MsDtsSrvr)" | Install the [Microsoft OLE DB Driver 19 for SQL Server (x64)](../connect/oledb/download-oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver 18 for SQL Server (x64)](../connect/odbc/download-odbc-driver-for-sql-server.md) if using SSIS; this will be resolved in a later preview of SSMS 19. |
 | Registered Servers | SSMS 19 can't share a registered servers XML file with SSMS 18.x and earlier. | Don't edit registered servers in SSMS 19, or don't use registered servers in SSMS 18.x and earlier after editing them in SSMS 19. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |

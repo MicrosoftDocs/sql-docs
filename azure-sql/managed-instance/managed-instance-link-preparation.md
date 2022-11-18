@@ -1,23 +1,23 @@
 ---
-title: Prepare environment for Managed Instance link
+title: Prepare environment for Azure SQL Managed Instance link
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 08/30/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to prepare your environment for a [Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
+This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
-> The link is a feature of Azure SQL Managed Instance and is currently in preview. 
+> Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
 
 ## Prerequisites 
 
@@ -50,11 +50,12 @@ SELECT @@VERSION as 'SQL Server version'
 
 Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
 
-| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+| SQL Server Version  |  Operating system (OS) | Servicing update requirement |
 |---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Windows Server & Linux | SQL Server 2022 RTM | 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server |  [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] | N/A | Not supported | 
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Windows Server |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
@@ -176,11 +177,14 @@ For the link to work, you must have network connectivity between SQL Server and 
 
 Deploying SQL Server on Azure Virtual Machines in the same Azure virtual network that hosts SQL Managed Instance is the simplest method, because network connectivity will automatically exist between the two instances. To learn more, see the detailed tutorial [Deploy and configure an Azure VM to connect to Azure SQL Managed Instance](./connect-vm-instance-configure.md). 
 
-If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, either connect the two Azure virtual networks by using [global virtual network peering](https://techcommunity.microsoft.com/t5/azure-sql/new-feature-global-vnet-peering-support-for-azure-sql-managed/ba-p/1746913) or configure [VPN gateways](/azure/vpn-gateway/tutorial-create-gateway-portal). 
+If your SQL Server on Azure Virtual Machines instance is in a different virtual network from your managed instance, you need to make a connection between both virtual networks. The virtual networks don't have to be in the same subscription for this scenario to work.
 
->[!NOTE]
-> Global virtual network peering is enabled by default on managed instances provisioned after November 2020. [Raise a support ticket](../database/quota-increase-request.md) to enable global virtual network peering on older instances. 
+There are two options for connecting virtual networks:
 
+- [Azure VNet peering](/azure/virtual-network/virtual-network-peering-overview)
+- VNet-to-VNet VPN gateway ([Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps), [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-cli))
+
+Peering is preferable because it uses the Microsoft backbone network, so from the connectivity perspective, there is no noticeable difference in latency between virtual machines in a peered virtual network and in the same virtual network. Virtual network peering is supported between the networks in the same region. Global virtual network peering is [supported for instances hosted in subnets created starting 9/22/2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering).
 
 ### SQL Server outside Azure 
 
@@ -227,19 +231,112 @@ Bidirectional network connectivity between SQL Server and SQL Managed Instance i
 
 ### Test the connection from SQL Server to SQL Managed Instance 
 
-To check if SQL Server can reach SQL Managed Instance, use the following `tnc` command in PowerShell from the SQL Server host machine. Replace `<ManagedInstanceFQDN>` with the fully qualified domain name (FQDN) of the managed instance. You can copy the FQDN from the managed instance's overview page in the Azure portal.
+We will use SQL Agent on SQL Server to run connectivity tests from SQL Server to SQL Managed Instance.
 
-```powershell
-tnc <ManagedInstanceFQDN> -port 5022
-```
+1. Connect to SQL Managed Instance and run the following script to generate some parameters we will need later:
 
-A successful test shows `TcpTestSucceeded : True`. 
+   ```sql
+   SELECT 'DECLARE @serverName NVARCHAR(512) = N'''+ value + ''''
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE parameter_name = 'DnsRecordName'
+   UNION
+   SELECT 'DECLARE @node NVARCHAR(512) = N'''+ NodeName + '.' + Cluster + ''''
+   FROM 
+   (SELECT SUBSTRING(replica_address,0, CHARINDEX('\', replica_address)) as NodeName
+   , RIGHT(service_name,CHARINDEX('/', REVERSE(service_name))-1) AppName, JoinCol = 1
+   FROM sys.dm_hadr_fabric_partitions fp
+   JOIN sys.dm_hadr_fabric_replicas fr ON fp.partition_id = fr.partition_id
+   JOIN sys.dm_hadr_fabric_nodes fn ON fr.node_name = fn.node_name
+   WHERE service_name like '%ManagedServer%' and replica_role = 2) t1
+   LEFT JOIN
+   (SELECT value as Cluster, JoinCol = 1
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE parameter_name  = 'ClusterName') t2
+   ON (t1.JoinCol = t2.JoinCol)
+   INNER JOIN
+   (SELECT [value] AS AppName
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE section_name = 'SQL' and parameter_name = 'InstanceName') t3 
+   ON (t1.AppName = t3.AppName)
+   UNION
+   SELECT 'DECLARE @port NVARCHAR(512) = N'''+ value + ''''
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE parameter_name = 'HadrPort';
+   ```
 
-:::image type="content" source="./media/managed-instance-link-preparation/powershell-output-tnc-command.png" alt-text="Screenshot that shows the output of the command for testing a network connection in PowerShell.":::
+   You will get something like:
 
-If the response is unsuccessful, verify the following network settings:
-- There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
-- There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
+   :::image type="content" source="./media/managed-instance-link-preparation/test-connectivity-parameters-output.png" alt-text="Screenshot that shows the output of the script that generates parameter values for testing connectivity in SSMS.":::
+
+   Save the result to be used in the next steps. Note that the parameters we just generated may change after any failover on SQL Managed Instance, be sure to generate them again if needed.
+
+1. Connect to SQL Server
+
+1. Open a new query window and paste the following:
+
+   ```sql
+   --START
+   -- Parameters section
+   DECLARE @node NVARCHAR(512) = N''
+   DECLARE @port NVARCHAR(512) = N''
+   DECLARE @serverName NVARCHAR(512) = N''
+   
+   --Script section
+   IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs_view WHERE name = N'TestMILinkConnection')
+   EXEC msdb.dbo.sp_delete_job @job_name = N'TestMILinkConnection', @delete_unused_schedule=1
+   
+   DECLARE @jobId BINARY(16), @cmd NVARCHAR(MAX)
+   
+   EXEC  msdb.dbo.sp_add_job @job_name=N'TestMILinkConnection', @enabled=1, @job_id = @jobId OUTPUT
+   
+   SET @cmd = (N'tnc ' + @serverName + N' -port 5022 | select ComputerName, RemoteAddress, TcpTestSucceeded | Format-List')
+   EXEC msdb.dbo.sp_add_jobstep @job_id = @jobId, @step_name = N'Test Port 5022'
+   , @step_id = 1, @cmdexec_success_code = 0, @on_success_action = 3, @on_fail_action = 3
+   , @subsystem = N'PowerShell', @command = @cmd, @database_name = N'master'
+   
+   SET @cmd = (N'tnc ' + @node + N' -port ' + @port +' | select ComputerName, RemoteAddress, TcpTestSucceeded | Format-List')
+   EXEC msdb.dbo.sp_add_jobstep @job_id = @jobId, @step_name = N'Test HADR Port'
+   , @step_id = 2, @cmdexec_success_code = 0, @subsystem = N'PowerShell', @command = @cmd, @database_name = N'master'
+   
+   EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
+   GO
+   EXEC msdb.dbo.sp_start_job @job_name = N'TestMILinkConnection'
+   GO
+   --Check status every 5 seconds
+   DECLARE @RunStatus INT 
+   SET @RunStatus=10
+   WHILE ( @RunStatus >= 4)
+   BEGIN
+   SELECT distinct @RunStatus = run_status
+   FROM [msdb].[dbo].[sysjobhistory] JH JOIN [msdb].[dbo].[sysjobs] J ON JH.job_id = J.job_id 
+   WHERE J.name=N'TestMILinkConnection' and step_id = 0
+   WAITFOR DELAY '00:00:05'; 
+   END
+   
+   --Get logs once job completes
+   SELECT [step_name]
+   ,SUBSTRING([message], CHARINDEX('TcpTestSucceeded',[message]), CHARINDEX('Process Exit', [message])-CHARINDEX('TcpTestSucceeded',[message])) as TcpTestResult
+   ,SUBSTRING([message], CHARINDEX('RemoteAddress',[message]), CHARINDEX ('TcpTestSucceeded',[message])-CHARINDEX('RemoteAddress',[message])) as RemoteAddressResult
+   ,[run_status] ,[run_duration], [message]
+   FROM [msdb].[dbo].[sysjobhistory] JH JOIN [msdb].[dbo].[sysjobs] J ON JH.job_id= J.job_id
+   WHERE J.name = N'TestMILinkConnection' and step_id <> 0
+   --END
+   ```
+
+1. Replace the *@node*, *@port* and *@serverName* parameters with the values you got from Step 1.
+
+1. Run the script and check the results, you will get something like:
+
+   :::image type="content" source="./media/managed-instance-link-preparation/test-connectivity-results.png" alt-text="Screenshot that shows the output with the test results in SSMS.":::
+
+1. Verify the results:
+
+   - The outcome of each test at TcpTestSucceeded should be `TcpTestSucceeded : True`.
+   - The RemoteAddresses should belong to the IP range for the SQL Managed Instance subnet.
+
+   If the response is unsuccessful, verify the following network settings:
+   - There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
+   - There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
 
 ### Test the connection from SQL Managed Instance to SQL Server
 
@@ -293,7 +390,7 @@ EXEC msdb.dbo.sp_add_job @job_name=N'NetHelper',
     @enabled=1,
     @description=N'Test Managed Instance to SQL Server network connectivity on port 5022.',
     @category_name=N'[Uncategorized (Local)]',
-    @owner_login_name=N'cloudSA', @job_id = @jobId OUTPUT
+    @owner_login_name=N'sa', @job_id = @jobId OUTPUT
 
 EXEC msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'TNC network probe from MI to SQL Server',
     @step_id=1,
@@ -400,11 +497,26 @@ If you're migrating a SQL Server database protected by Transparent Data Encrypti
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use the Managed Instance link. [Download SSMS version 19.0, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-database-context-menu-managed-instance-link.png" alt-text="Screenshot that shows the Azure SQL Managed Instance link option on the context menu.":::
+
+## Configure SSMS for government cloud 
+
+If you want to deploy your SQL Managed Instance to a government cloud, you'll need to modify your SQL Server Management Studio (SSMS) settings to use the correct cloud. If you're not deploying your SQL Managed Instance to a government cloud, skip this step. 
+
+To update your SSMS settings, follow these steps: 
+
+1. Open SSMS. 
+1. From the menu, select **Tools** and then choose **Options**. 
+1. Expand **Azure Services** and select **Azure Cloud**. 
+1. Under **Select an Azure Cloud**, use the drop-down to choose **AzureUSGovernment**, or another government cloud: 
+
+  :::image type="content" source="media/managed-instance-link-preparation/ssms-for-government-cloud.png" alt-text="Screenshot of SSMS UI, options page, Azure services, with Azure cloud highlighted. ":::
+
+
 
 ## Next steps
 

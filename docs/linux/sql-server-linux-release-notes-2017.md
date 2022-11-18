@@ -18,7 +18,7 @@ The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.m
 These release notes are specifically for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] releases. For release notes on other editions, see the following articles:
 
 - [Release notes for SQL Server 2019 on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)
-- [Release notes for SQL Server 2022 (Preview) on Linux](sql-server-linux-release-notes-2022.md?view=sql-server-ver16&preserve-view=true)
+- [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md?view=sql-server-ver16&preserve-view=true)
 
 ## Supported platforms
 
@@ -131,5 +131,5 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+- [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)

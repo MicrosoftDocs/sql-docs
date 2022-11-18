@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Preparing Access databases for migration (AccessToSQL)
 Before you migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must determine which databases to migrate and ensure that those databases are ready for migration.  

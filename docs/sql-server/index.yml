@@ -54,7 +54,7 @@ landingContent:
     linkLists:
     - linkListType: whats-new
       links:
-      - text: SQL Server 2022 Preview
+      - text: SQL Server 2022
         url: ./what-s-new-in-sql-server-2022.md
       - text: SQL Server 2019 
         url: ./what-s-new-in-sql-server-2019.md
@@ -64,7 +64,7 @@ landingContent:
         url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: SQL Server on Linux
         url: ../linux/sql-server-linux-overview.md
-      - text: SQL Server on Azure Arc-enabled servers
+      - text: Azure Arc-enabled SQL Server
         url: azure-arc/overview.md
     - linkListType: quickstart
       links:

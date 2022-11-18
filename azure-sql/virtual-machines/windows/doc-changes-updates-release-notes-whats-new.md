@@ -1,24 +1,42 @@
 ---
-title: Documentation changes for SQL Server on Azure Virtual Machines
-description: Learn about the new features and improvements for different releases of SQL Server on Azure Virtual Machines.
+title: What's new? 
+description: Learn about the new features for and improvements to SQL Server on Azure Virtual Machines.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/24/2022
+ms.date: 11/16/2022
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: reference
-ms.custom: ignite-fall-2021
+ms.custom: ignite-2022
 tags: azure-service-management
 ---
-# Documentation changes for SQL Server on Azure Virtual Machines
+# What's new with SQL Server on Azure Virtual Machines?
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
 
+## November 2022
+
+| Changes | Details |
+| --- | --- |
+| **Configure AG from Azure portal** | There is a new experience to deploy an Always On availability group to multiple subnets by using the Azure portal. The new availability group deployment method replaces the previous deployment through the SQL virtual machines resource. This feature is currently in preview. To learn more, review [Configure availability group through the Azure portal](availability-group-azure-portal-configure.md). | 
 
 
+## October 2022
+
+| Changes | Details |
+| --- | --- |
+| **Azure AD authentication** | It's now possible to configure Azure Active Directory (Azure AD) authentication to your SQL Server 2022 on Azure VM by using the Azure portal. This feature is currently in preview. To get started, review [Azure AD with SQL Server VMs](security-considerations-best-practices.md#azure-ad-authentication-preview). | 
+| **Least privilege permission model for SQL IaaS Agent extension** | There is a new permissions model available for the SQL Server IaaS Agent extension that grants the least privileged permission for each feature used by the extension. To learn more, review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions). | 
+
+
+## September 2022
+
+| Changes | Details |
+| --- | --- |
+| **Confidential VMs** | SQL Server on Azure VMs has added support to deploy to [SQL Server on Azure confidential VMs](sql-vm-create-confidential-vm-how-to.md). To get started, review the [Quickstart: Deploy SQL Server to an Azure confidential VM](sql-vm-create-portal-quickstart.md?tabs=confidential-vm). 
 
 ## July 2022
 
@@ -26,7 +44,6 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 | --- | --- |
 | **Azure CLI for SQL best practices assessment**| It's now possible to configure the [SQL best practices assessment](sql-assessment-for-sql-vm.md) feature using the Azure CLI. |
 | **Configure tempdb from Azure portal** | It's now possible to configure your tempdb settings, such as the number of files, initial size, and autogrowth ratio for an existing SQL Server instance by using the Azure portal. See [manage SQL Server VM from portal](manage-sql-vm-portal.md#storage) to learn more. |
-
 
 
 ## May 2022
@@ -123,7 +140,7 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
 * [Provision SQL Server on a Windows VM](create-sql-vm-portal.md)
-* [Migrate a database to SQL Server on an Azure VM](migrate-to-vm-from-sql-server.md)
+* [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md)
 * [High availability and disaster recovery for SQL Server on Azure Virtual Machines](business-continuity-high-availability-disaster-recovery-hadr-overview.md)
 * [Performance best practices for SQL Server on Azure Virtual Machines](./performance-guidelines-best-practices-checklist.md)
 * [Application patterns and development strategies for SQL Server on Azure Virtual Machines](application-patterns-development-strategies.md)

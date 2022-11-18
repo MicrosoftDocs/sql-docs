@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # The CDC Designer Console Introduction
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  
   
 ## Installation  
@@ -31,6 +28,7 @@ ms.author: chugu
 -   Windows 10  
 -   Windows Server 2012 and 2012 R2
 -   Windows Server 2016
+- Windows Server 2019
 
 ## Database Prerequisites  
  To work with the Change Data Capture Designer for Oracle by Attunity, you work with an Oracle database. The Change Data Capture Designer for Oracle by Attunity supports the following versions:  

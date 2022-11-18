@@ -3,7 +3,7 @@ title: Configure an auto-failover group
 description: Learn how to configure an auto-failover group for Azure SQL Managed Instance by using the Azure portal, and Azure PowerShell.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: mathoma
 ms.date: 07/09/2022
 ms.service: sql-managed-instance
 ms.subservice: high-availability
@@ -71,7 +71,7 @@ Connectivity between the virtual network subnets hosting primary and secondary i
     | Virtual network gateway or Route Server | Select **None**. For more information about the other options available, see [Create a peering](/azure/virtual-network/virtual-network-manage-peering#create-a-peering). |
 
 
-1. Select **Add** to configure the peering with the virtual network you selected. After a few seconds, select the **Refresh** button and the peering status will change from *Updating* to *Connected*.
+1. Select **Add** to configure peering with the virtual network you selected. After a few seconds, select the **Refresh** button and the peering status will change from *Updating* to *Connected*.
 
    ![Virtual network peering status on peerings page](./media/failover-group-add-instance-tutorial/vnet-peering-connected.png)
 
@@ -165,6 +165,7 @@ Create the failover group for your managed instances using PowerShell.
 
 ---
 
+
 ## Test failover
 
 Test failover of your failover group using the Azure portal or PowerShell.
@@ -228,8 +229,6 @@ Test failover of your failover group using PowerShell.
 
 ---
 
-
-
 ## Locate listener endpoint
 
 Once your failover group is configured, update the connection string for your application to the listener endpoint. It will keep your application connected to the failover group listener, rather than the primary database, elastic pool, or instance database. That way, you don't have to manually update the connection string every time your database entity fails over, and traffic is routed to whichever entity is currently primary.
@@ -240,10 +239,14 @@ The listener endpoint is in the form of `fog-name.database.windows.net`, and is 
 
 ## <a name="creating-a-failover-group-between-managed-instances-in-different-subscriptions"></a> Create group between instances in different subscriptions
 
-You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Azure Active Directory Tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology). When using PowerShell API, you can do it by specifying the `PartnerSubscriptionId` parameter for the secondary SQL Managed Instance. When using REST API, each instance ID included in the `properties.managedInstancePairs` parameter can have its own Subscription ID.
+You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Azure Active Directory Tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology). 
+
+- When using PowerShell API, you can do it by specifying the `PartnerSubscriptionId` parameter for the secondary SQL Managed Instance. 
+- When using REST API, each instance ID included in the `properties.managedInstancePairs` parameter can have its own Subscription ID.
+- Azure portal does not support creation of failover groups across different subscriptions. 
   
 > [!IMPORTANT]
-> Azure portal does not support creation of failover groups across different subscriptions. Also, for the existing failover groups across different subscriptions and/or resource groups, failover can't be initiated manually via portal from the primary SQL Managed Instance. Initiate it from the geo-secondary instance instead.
+> Azure portal does not support creation of failover groups across different subscriptions. For failover groups across different subscriptions and/or resource groups, failover can't be initiated manually via the Azure portal from the primary SQL managed instance. Initiate it from the geo-secondary instance instead.
 
 ## Change the secondary region
 
@@ -274,6 +277,42 @@ Let's assume instance A is the primary instance, instance B is the existing seco
 > [!IMPORTANT]
 > When the failover group is deleted, the DNS records for the listener endpoints are also deleted. At that point, there's a non-zero probability of somebody else creating a failover group with the same name. Because failover group names must be globally unique, this will prevent you from using the same name again. To minimize this risk, don't use generic failover group names.
 
+## Enable scenarios dependent on objects from the system databases
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-sql-mi.md. Please ensure changes are made to both documents. 
+-->
+
+System databases are **not** replicated to the secondary instance in a failover group. To enable scenarios that depend on objects from the system databases, make sure to create the same objects on the secondary instance and keep them synchronized with the primary instance. 
+
+For example, if you plan to use the same logins on the secondary instance, make sure to create them with the identical SID. 
+
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+``` 
+
+To learn more, see [Replication of logins and agent jobs](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/azure-sql-managed-instance-sync-agent-jobs-and-logins-in/ba-p/2860495). 
+
+## Synchronize instance properties and retention policies instances
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-sql-mi.md. Please ensure changes are made to both documents. 
+-->
+
+Instances in a failover group remain separate Azure resources, and no changes made to the configuration of the primary instance will be automatically replicated to the secondary instance. Make sure to perform all relevant changes both on primary _and_ secondary instance. For example, if you change backup storage redundancy or long-term backup retention policy on primary instance, make sure to change it on secondary instance as well.
+
+## Scaling instances
+
+<!--
+This section is duplicated in /managed-instance/auto-failover-group-sql-mi.md.. Please ensure changes are made to both documents. 
+-->
+
+You can scale up or scale down the primary and secondary instance to a different compute size within the same service tier. When scaling up, we recommend that you scale up the geo-secondary first, and then scale up the primary. When scaling down, reverse the order: scale down the primary first, and then scale down the secondary. When you scale instance to a different service tier, this recommendation is enforced.
+
+The sequence is recommended specifically to avoid the problem where the geo-secondary at a lower SKU gets overloaded and must be re-seeded during an upgrade or downgrade process.
+
+
 ## Permissions
 
 
@@ -302,6 +341,6 @@ The following table lists specific permission scopes for Azure SQL Managed Insta
 
 ## Next steps
 
-For detailed steps configuring a failover group, see the [Add a managed instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md) tutorial
+For detailed steps configuring a failover group, see the [Add a managed instance to a failover group](failover-group-add-instance-tutorial.md) tutorial. 
 
-For an overview of the feature, see [Auto-failover groups](auto-failover-group-sql-mi.md).
+For an overview of the feature, see [Auto-failover groups](auto-failover-group-sql-mi.md). To learn how to save on licensing costs, see [Configure standby replica](auto-failover-group-standby-replica-how-to-configure.md). 

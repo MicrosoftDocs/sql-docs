@@ -1,10 +1,10 @@
 ---
-title: SQL Server on Azure Arc-enabled servers
-description: Manage instances of SQL Server on Azure Arc-enabled servers
+title: Azure Arc-enabled SQL Server
+description: Manage instances of Azure Arc-enabled SQL Server
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/12/2022
+ms.date: 10/12/2022
 ms.prod: sql
 ms.topic: conceptual
 ms.custom: references_regions
@@ -15,6 +15,8 @@ ms.custom: references_regions
 Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multi-cloud environment.
 
 To enable Azure services, you must onboard a running SQL Server instance to Azure Arc. The onboarding will install a *Azure  extension for SQL Server* to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will create an Azure resource for each SQL Server instance.  You can see all the Arc-enabled SQL Server resources in the Azure portal under __Azure Arc > SQL Server__. The properties of this resource reflect a subset of the SQL Server configuration settings.
+
+Azure Arc-enabled SQL Server doesn't store any customer data.
 
 ## Architecture
 
@@ -43,25 +45,19 @@ Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 > [!NOTE]
-> SQL Server on Azure Arc-enabled servers does not support container images with SQL Server.
+> Azure Arc-enabled SQL Server does not support the following configurations currently:
+> - SQL Server running in containers.
+> - SQL Server Failover Cluster Instances (FCI).
+> - SQL Server roles other than the Database Engine, such as Analysis Services (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).
+> - SQL Server editions: Express, Web, Business Intelligence.
+> - SQL Server 2008, SQL Server 2008 R2, and older.
+> - Installing the Arc agent and SQL Server extension cannot be done as part of sysprep image creation.
 
 ### Required permissions
 
-To connect the SQL Server instances and the hosting machine to Azure Arc, you must have a user account or Azure service principal with privileges to perform the following actions:
+To connect the SQL Server instances and the hosting machine to Azure Arc, you must have a user account or Azure service principal with [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role for the resource group in which the SQL Server will be managed.
 
-- Microsoft.HybridCompute/machines/extensions/read
-- Microsoft.HybridCompute/machines/extensions/write
-- Microsoft.HybridCompute/machines/extensions/delete
-- Microsoft.HybridCompute/machines/read
-- Microsoft.HybridCompute/machines/write
-- Microsoft.GuestConfiguration/guestConfigurationAssignments/read
-- Microsoft.Authorization/roleAssignments/write
-- Microsoft.Authorization/roleAssignments/read
-
-For optimal security, create a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see the appropriate article from the following list:
-
-- [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal)
-- [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli)
+Deploying the Connected Machine agent on a SQL Server machine requires that you have administrator permissions to install and configure the agent. On Linux this is done by using the root account, and on Windows, with an account that is a member of the Local Administrators group
 
 ### Azure subscription and service limits
 

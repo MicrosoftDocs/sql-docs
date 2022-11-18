@@ -6,7 +6,6 @@ description: "A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer fo
 keywords: "models, linear, SDCA, stochastic, classification, regression" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
 ms.prod: "sql"
@@ -295,7 +294,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenv is used instead.
 
 

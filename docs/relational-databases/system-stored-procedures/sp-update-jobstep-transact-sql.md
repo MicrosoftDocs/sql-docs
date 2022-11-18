@@ -167,7 +167,7 @@ sp_update_jobstep
   
  For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Only members of **sysadmin** can update a job step owned by another user.  
+ Only members of **sysadmin** can update a job step of a job owned by another user.  
   
  If the job step requires access to a proxy, the creator of the job step must have access to the proxy for the job step. All subsystems, except Transact-SQL, require a proxy account. Members of **sysadmin** have access to all proxies, and can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account for the proxy.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2017 ~ Linux"
 description: This article describes features supported by the various editions of SQL Server 2017 on Linux. It helps you choose from available editions and components.
-ms.date: 01/14/2020
+ms.date: 09/30/2022
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -52,7 +52,7 @@ For a list of SQL Server features not available on Linux, see [Unsupported featu
 |Enterprise|The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance enabling high service levels for mission-critical workloads.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management for departments and small organizations to run their applications and supports common development tools for on-premises and cloud - enabling effective database management with minimal IT resources.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large scale Web properties.|  
-|Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications.|  
+|Developer|[!INCLUDE [ssdeveloper-md](../includes/ssdeveloper-md.md)] edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications.|  
 |Express edition|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with client/server applications  
@@ -190,9 +190,6 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Transact-SQL endpoints|Yes|Yes|Yes|No|
 |Graph|Yes|Yes|Yes|Yes|  
 
-
-<sup>1</sup> Scale out with multiple compute nodes requires a head node.
-
 ## <a name="IS"></a> Integration Services
 
 For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services features supported by the editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
@@ -208,7 +205,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 
 ## <a name="Unsupported"></a> Unsupported features & services
 
-The following features and services are not available SQL Server 2017 on Linux. The support of these features will be increasingly enabled over time.
+The following features and services are not available for SQL Server 2017 on Linux. The support of these features will be increasingly enabled over time.
 
 | Area | Unsupported feature or service |
 |-----|-----|

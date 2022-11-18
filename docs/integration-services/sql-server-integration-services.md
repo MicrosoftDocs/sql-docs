@@ -46,7 +46,7 @@ You can start by installing SQL Server Integration Services, which is part of SQ
 
 For installation instructions and guidance, see [Install Integration Services](install-windows/install-integration-services.md).
 
-## ![info_tip](../sql-server/media/info-tip.png) Resources
+## :::image type="icon" source="../includes/media/info-tip.svg" border="false"::: Get help
 
 - [Get help in the SSIS forum](/answers/topics/sql-server-integration-services.html)
 - [Get help on Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  

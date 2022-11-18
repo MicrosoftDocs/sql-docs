@@ -14,9 +14,6 @@ ms.author: chugu
 ---
 # How to Manage a CDC Service from the CDC Designer Console
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
   This procedure describes how to use the CDC Designer Console to manage a CDC service.  
   
 ### To manage a CDC service from the CDC Designer Console  

@@ -3,9 +3,8 @@ title: Release Notes ODBC Driver for SQL Server on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 author: v-chojas
 ms.author: v-chojas
-manager: kenvh
 ms.reviewer: v-davidengel
-ms.date: 08/08/2022
+ms.date: 11/03/2022
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -28,6 +27,12 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 18.1.2, November 2022
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.1, August 2022
 

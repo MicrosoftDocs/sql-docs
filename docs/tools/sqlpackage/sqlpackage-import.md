@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan"
-ms.date: 7/29/2022
+ms.date: 9/29/2022
 ---
 
 # SqlPackage Import parameters and properties
@@ -76,11 +76,12 @@ sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\A
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action from local storage. If this parameter is used, no other source parameter shall be valid. |
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage.exe Action. |
-|**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|Specifies if SQL encryption should be used for the target database connection. |
+|**/TargetEncryptConnection:**|**/tec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
+|**/TargetHostNameInCertificate:**|**/thnic**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
 |**/TargetPassword:**|**/tp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
 |**/TargetServerName:**|**/tsn**|{string}|Defines the name of the server hosting the target database. |
 |**/TargetTimeout:**|**/tt**|{int}|Specifies the timeout for establishing a connection to the target database in seconds. For Azure AD, it is recommended that this value be greater than or equal to 30 seconds.|
-|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|Specifies whether to use TLS to encrypt the target database connection and bypass walking the certificate chain to validate trust. |
+|**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|Specifies whether to use TLS to encrypt the target database connection and bypass walking the certificate chain to validate trust. Default value is False. |
 |**/TargetUser:**|**/tu**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the target database. |
 |**/TenantId:**|**/tid**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 |**/ThreadMaxStackSize:**|**/tmss**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage.exe action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large TSQL statements.|
@@ -93,17 +94,17 @@ sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\A
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
 |**/p:**|DatabaseEdition=({ Basic &#124; Standard &#124; Premium &#124; DataWarehouse &#124; GeneralPurpose &#124; BusinessCritical &#124; Hyperscale &#124; Default } 'Default')|Defines the edition of an Azure SQL Database. See [Azure SQL Database service tiers](/azure/azure-sql/database/service-tiers-general-purpose-business-critical).|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifies the database lock timeout in seconds when executing queries against SQLServer. Use -1 to wait indefinitely.|
-|**/p:**|DatabaseMaximumSize=(INT32)|Defines the maximum size in GB of an Azure SQL Database.|
+|**/p:**|DatabaseMaximumSize=(INT32 '0')|Defines the maximum size in GB of an Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Defines the performance level of an Azure SQL Database such as "P0" or "S1".|
-|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|When true (default), disables indexes before importing data. When false, indexes are not rebuilt. |
-|**/p:**|DisableParallelismForEnablingIndexes=(BOOLEAN)|Not using parallelism when rebuilding indexes while importing data into SQL Server.|
-|**/p:**|HashObjectNamesInLogs=(BOOLEAN)|Specifies whether to replace all object names in logs with a random hash value.|
+|**/p:**|DisableIndexesForDataPhase=(BOOLEAN 'True')|When true (default), disables indexes before importing data. When false, indexes are not rebuilt. |
+|**/p:**|DisableParallelismForEnablingIndexes=(BOOLEAN 'False')|Not using parallelism when rebuilding indexes while importing data into SQL Server.|
+|**/p:**|HashObjectNamesInLogs=(BOOLEAN 'False')|Specifies whether to replace all object names in logs with a random hash value.|
 |**/p:**|ImportContributorArguments=(STRING)|Specifies deployment contributor arguments for the deployment contributors. This property should be a semi-colon delimited list of values.|
-|**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional deployment contributors. This property should be a semi-colon delimited list of values.|
+|**/p:**|ImportContributorPaths=(STRING)|Specifies paths to load additional import contributors. This property should be a semi-colon delimited list of values.|
 |**/p:**|ImportContributors=(STRING)|Specifies the deployment contributors, which should run when the bacpac is imported. This property should be a semi-colon delimited list of fully qualified build contributor names or IDs.|
-|**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
-|**/p:**|PreserveIdentityLastValues=(BOOLEAN)|Specifies whether last values for identity columns should be preserved during deployment.|
-|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|When true, rebuilds indexes offline after importing data into SQL Server.|
+|**/p:**|LongRunningCommandTimeout=(INT32 '0')|Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
+|**/p:**|PreserveIdentityLastValues=(BOOLEAN 'False')|Specifies whether last values for identity columns should be preserved during deployment.|
+|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')|When true, rebuilds indexes offline after importing data into SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies how elements are stored when building the database model. For performance reasons the default is InMemory. For large databases, File backed storage is required.|
 
 ## Next Steps

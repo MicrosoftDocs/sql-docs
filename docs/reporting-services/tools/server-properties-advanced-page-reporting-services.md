@@ -4,7 +4,6 @@ description: Use the Advanced Server Properties page to set system properties on
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/17/2022

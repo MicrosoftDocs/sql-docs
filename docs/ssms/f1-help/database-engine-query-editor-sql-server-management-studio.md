@@ -1,9 +1,8 @@
 ---
 title: SSMS Query Editor 
 description: SQL Server Management Studio (SSMS) Query Editor
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - sql13.swb.query.advanced.f1

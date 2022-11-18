@@ -5,7 +5,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 09/14/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "page and extent architecture guide"

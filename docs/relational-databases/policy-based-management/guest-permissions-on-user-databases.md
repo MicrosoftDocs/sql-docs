@@ -3,10 +3,9 @@ title: "Guest Permissions on User Databases | Microsoft Docs"
 description: Determine whether the guest user has permission to access user databases in SQL Server. Revoke the guest user permission if it is not required.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"

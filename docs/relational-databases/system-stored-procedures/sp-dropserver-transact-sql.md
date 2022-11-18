@@ -1,10 +1,9 @@
 ---
 title: sp_dropserver (Transact-SQL)
 description: "sp_dropserver (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_dropserver_TSQL"

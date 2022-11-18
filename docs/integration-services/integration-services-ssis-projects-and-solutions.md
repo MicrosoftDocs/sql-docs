@@ -3,10 +3,9 @@ description: "Integration Services (SSIS) Projects and Solutions"
 title: "Integration Services (SSIS) Projects and Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: "vanto"
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.importprojectwizard.f1"

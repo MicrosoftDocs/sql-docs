@@ -1,9 +1,8 @@
 ---
 title: Make a master server
 description: Make a Master Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.msxwiz.operator.f1"

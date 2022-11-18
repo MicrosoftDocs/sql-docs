@@ -1,8 +1,8 @@
 ---
 title: Escape SQL Server Identifiers
 description: Some characters that can appear in SQL Server-delimited identifiers aren't supported in Windows PowerShell paths. Learn how some of these can be escaped with the back-tick character.
-ms.prod: sql
-ms.technology: sql-server-powershell
+ms.service: sql
+ms.subservice: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan

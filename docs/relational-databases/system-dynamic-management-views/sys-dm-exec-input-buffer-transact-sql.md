@@ -4,9 +4,8 @@ description: sys.dm_exec_input_buffer (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/14/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_input_buffer"

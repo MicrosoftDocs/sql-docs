@@ -4,8 +4,8 @@ description: Learn how to install certificates in various SQL Server configurati
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/12/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "connections [SQL Server], encrypted"

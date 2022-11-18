@@ -3,7 +3,6 @@ title: "Choose between URL access and SOAP"
 description: "There are two ways to integrate Reporting Services into custom applications: URL access and the Reporting Services SOAP API. Find out how to choose."
 ms.date: 10/19/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 
 ms.custom: seo-lt-2019

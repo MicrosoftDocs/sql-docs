@@ -3,9 +3,9 @@ description: "Modify or Rename DML Triggers"
 title: "Modify or Rename DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "renaming triggers"

@@ -4,8 +4,8 @@ description: Learn about Service Broker. See how it provides native support for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/07/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1"

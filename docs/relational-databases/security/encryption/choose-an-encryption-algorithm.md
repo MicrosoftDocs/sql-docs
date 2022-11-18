@@ -3,10 +3,9 @@ title: "Choose an Encryption Algorithm | Microsoft Docs"
 description: Use this guidance to choose an encryption algorithm to help secure an instance of SQL Server, which supports several common algorithms.
 ms.custom: ""
 ms.date: "08/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cryptography [SQL Server], algorithms"

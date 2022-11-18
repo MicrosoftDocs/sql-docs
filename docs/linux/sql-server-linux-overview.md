@@ -6,8 +6,8 @@ ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 06/08/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ---
 # SQL Server on Linux

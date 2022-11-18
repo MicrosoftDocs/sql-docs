@@ -1,8 +1,8 @@
 ---
 title: Install R custom runtime
 description: Learn how to install an R custom runtime for SQL Server using Language Extensions. The Python custom runtime can run machine learning scripts.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 11/09/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT

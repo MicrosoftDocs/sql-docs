@@ -2,10 +2,9 @@
 description: "Create, Modify, and Drop Spatial Indexes"
 title: "Create, Modify, and Drop Spatial Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], creating"

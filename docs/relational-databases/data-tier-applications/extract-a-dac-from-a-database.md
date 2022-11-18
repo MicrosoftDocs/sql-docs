@@ -3,8 +3,8 @@ description: "Extract a DAC From a Database"
 title: "Extract a DAC From a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.extractdacwizard.validationandsummary.f1"

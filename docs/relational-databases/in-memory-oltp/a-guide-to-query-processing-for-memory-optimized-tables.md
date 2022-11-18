@@ -4,9 +4,8 @@ description: Learn about query processing for both memory-optimized tables and n
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/09/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f

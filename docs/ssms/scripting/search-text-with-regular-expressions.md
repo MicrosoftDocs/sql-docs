@@ -1,8 +1,8 @@
 ---
 title: Search Text with Regular Expressions
 description: Learn how to use a regular expression in the "Find what" field of a Find and Replace dialog box to specify a pattern to be matched.
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords:
   - "vs.regularexpressionbuilder"

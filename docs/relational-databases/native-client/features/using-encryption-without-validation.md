@@ -3,9 +3,9 @@ title: "Using Encryption Without Validation | Microsoft Docs"
 description: Learn how the SQL Server Native Client OLE DB provider and ODBC driver support encryption without validation and recommendations for when to use it.
 ms.custom: ""
 ms.date: "12/21/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], encryption"

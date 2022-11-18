@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_INSUFFICIENT_BUFFER"
 title: "LOCALDB_ERROR_INSUFFICIENT_BUFFER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 author: WilliamDAssafMSFT

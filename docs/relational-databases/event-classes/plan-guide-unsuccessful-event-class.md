@@ -3,9 +3,9 @@ description: "Plan Guide Unsuccessful Event Class"
 title: "Plan Guide Unsuccessful Event Class"
 ms.custom: ""
 ms.date: "06/22/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Plan Guide Unsuccessful event class"

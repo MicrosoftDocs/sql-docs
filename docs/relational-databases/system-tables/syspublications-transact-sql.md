@@ -4,9 +4,8 @@ description: syspublications (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/05/2021
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "syspublications"

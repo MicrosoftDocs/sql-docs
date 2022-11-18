@@ -4,8 +4,8 @@ description: Learn how to redirect read/write connections to the primary replica
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.date: 01/09/2019
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: "article"
 ms.custom: seo-lt-2019
 helpviewer_keywords:

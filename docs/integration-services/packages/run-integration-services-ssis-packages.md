@@ -3,10 +3,9 @@ description: "Run Integration Services (SSIS) Packages"
 title: "Run Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/04/2018
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecute.f1"

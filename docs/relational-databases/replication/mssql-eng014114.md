@@ -3,10 +3,9 @@ description: "MSSQL_ENG014114"
 title: "MSSQL_ENG014114 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG014114 error"

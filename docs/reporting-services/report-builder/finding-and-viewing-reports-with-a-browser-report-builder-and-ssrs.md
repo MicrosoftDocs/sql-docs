@@ -3,7 +3,6 @@ title: "Finding and Viewing Reports with a Browser (Report Builder) | Microsoft 
 description: You can view a report with a Web browser with a direct connection to a report server. The report includes the report toolbar, so you can navigate and search.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 

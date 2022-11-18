@@ -3,10 +3,9 @@ description: "Showplan Logical and Physical Operators Reference"
 title: "Showplan Logical & Physical Operators Reference"
 ms.custom: seo-dt-2019
 ms.date: "10/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.showplan.leftouterjoin.f1"

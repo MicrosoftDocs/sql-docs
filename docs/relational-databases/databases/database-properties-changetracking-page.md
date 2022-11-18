@@ -3,10 +3,9 @@ title: "Database Properties (ChangeTracking Page) | Microsoft Docs"
 description: "Learn how to use the ChangeTracking tab in the Database Properties dialog box to view or modify change-tracking settings for a database."
 ms.custom: ""
 ms.date: "01/07/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.changetracking.f1"

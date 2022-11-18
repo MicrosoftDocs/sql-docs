@@ -1,8 +1,8 @@
 ---
 title: Monitor scripts with custom reports
 description: Use custom reports in SQL Server Management Studio (SSMS) to monitor the execution of external scripts (Python and R), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 10/14/2020
 ms.topic: how-to
 author: WilliamDAssafMSFT

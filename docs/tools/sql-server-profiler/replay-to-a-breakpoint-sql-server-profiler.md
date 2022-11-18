@@ -2,10 +2,9 @@
 title: Replay to a Breakpoint
 titleSuffix: SQL Server Profiler
 description: Make debugging easier by setting breakpoints so replays pause at specific events. Use SQL Server Profiler to set breakpoints in a trace file or table.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: markingmyname

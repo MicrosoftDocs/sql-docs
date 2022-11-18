@@ -4,8 +4,8 @@ description: Step 4 is a demo program designed to showcase how transient errors 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 05/05/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Step 4: Connect resiliently to SQL with PHP

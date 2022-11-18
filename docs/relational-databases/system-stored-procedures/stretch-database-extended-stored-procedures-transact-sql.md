@@ -4,9 +4,9 @@ description: Learn about extended stored procedures that you can use when you wo
 titleSuffix: SQL Server Stretch Database
 ms.custom: seo-dt-2019
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

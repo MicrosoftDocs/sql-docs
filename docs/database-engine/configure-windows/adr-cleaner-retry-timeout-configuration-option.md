@@ -4,8 +4,8 @@ description: "Explains the SQL Server instance configuration setting for ADR cle
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "06/01/2020"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADR cleaner retry timeout (min)"

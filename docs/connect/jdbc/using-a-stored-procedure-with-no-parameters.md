@@ -4,8 +4,8 @@ description: "The JDBC driver provides the SQLServerStatement class, which can b
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/12/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

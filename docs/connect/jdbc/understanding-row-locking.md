@@ -4,8 +4,8 @@ description: Learn how row locking is used to control how concurrent users acces
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "12/08/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

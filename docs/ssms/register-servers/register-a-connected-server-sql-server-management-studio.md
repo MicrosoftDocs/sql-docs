@@ -1,9 +1,8 @@
 ---
 description: "Register a Connected Server (SQL Server Management Studio)"
 title: Register a Connected Server
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.registerserver.f1"

@@ -2,10 +2,9 @@
 description: "Transaction locking and row versioning guide"
 title: "Transaction locking and row versioning guide"
 ms.custom: seo-dt-2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, transaction locking and row versioning"

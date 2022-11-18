@@ -3,10 +3,9 @@ description: "SELECT - HAVING (Transact-SQL)"
 title: "HAVING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/21/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "HAVING"

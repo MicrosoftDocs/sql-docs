@@ -3,9 +3,9 @@ description: "MSSQLSERVER_16594"
 title: "MSSQLSERVER_16594 | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "16594 (Database Engine error)"

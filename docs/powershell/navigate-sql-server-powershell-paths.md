@@ -1,8 +1,8 @@
 ---
 title: Navigate SQL Server PowerShell Paths
 description: Learn how to use PowerShell cmdlets to navigate the path structures that represent the hierarchy of objects supported by a PowerShell provider. 
-ms.prod: sql
-ms.technology: sql-server-powershell
+ms.service: sql
+ms.subservice: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan

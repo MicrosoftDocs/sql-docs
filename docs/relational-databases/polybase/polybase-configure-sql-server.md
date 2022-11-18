@@ -3,8 +3,8 @@ title: "Access external data: SQL Server - PolyBase"
 description: Learn how to use PolyBase on a SQL Server instance to query external data in another SQL Server instance. Create external tables to reference external data.
 ms.date: 10/18/2022
 ms.custom: seo-lt-2019
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray

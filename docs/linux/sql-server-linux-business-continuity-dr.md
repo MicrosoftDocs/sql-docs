@@ -6,8 +6,8 @@ ms.author: vanto
 ms.reviewer: mihaelab
 ms.date: 06/10/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 ---

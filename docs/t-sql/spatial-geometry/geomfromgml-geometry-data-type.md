@@ -1,8 +1,8 @@
 ---
 title: GeomFromGml (geometry Data Type)
 description: "GeomFromGml (geometry Data Type)"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "GeomFromGML_TSQL"

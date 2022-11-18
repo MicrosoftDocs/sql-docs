@@ -3,10 +3,9 @@ title: "Replicate encrypted columns (SSMS)"
 description: Learn how to replicate data in encrypted columns using SQL Server Management Studio (SSMS). 
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], replicating data"

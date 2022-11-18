@@ -3,10 +3,9 @@ description: "ODBC Function Summary"
 title: "ODBC Function Summary | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "functions [ODBC], listed by task"

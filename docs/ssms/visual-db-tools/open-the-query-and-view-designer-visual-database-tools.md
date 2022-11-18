@@ -1,9 +1,8 @@
 ---
 title: Open the Query and View Designer
 description: Open the Query and View Designer (Visual Database Tools)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening View Designer"

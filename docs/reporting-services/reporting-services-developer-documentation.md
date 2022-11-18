@@ -4,7 +4,6 @@ description: Use the documentation to understand Reporting Services features and
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords: 

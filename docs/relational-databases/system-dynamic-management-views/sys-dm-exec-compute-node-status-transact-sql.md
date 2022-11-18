@@ -4,9 +4,8 @@ description: sys.dm_exec_compute_node_status (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "DM_EXEC_COMPUTE_NODE_STATUS_TSQL"

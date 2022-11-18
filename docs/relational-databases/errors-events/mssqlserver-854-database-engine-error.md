@@ -3,9 +3,9 @@ description: "MSSQLSERVER_854"
 title: MSSQLSERVER_854
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "854 (Database Engine error)"

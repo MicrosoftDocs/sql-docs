@@ -3,10 +3,9 @@ title: "Create a Database Snapshot (Transact-SQL) | Microsoft Docs"
 description: "Find out how to create a SQL Server database snapshot by using Transact-SQL. Learn about prerequisites and best practices for creating snapshots."
 ms.custom: ""
 ms.date: "08/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], creating"

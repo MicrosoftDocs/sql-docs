@@ -3,10 +3,9 @@ title: "Subscription Properties dialog box"
 description: Describes the 'Subscription Properties' dialog box within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newsubwizard.subproperties.publisher.f1"

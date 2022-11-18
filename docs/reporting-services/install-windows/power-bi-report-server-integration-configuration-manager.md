@@ -4,7 +4,6 @@ title: "Power BI Report Server Integration (Configuration Manager) | Microsoft D
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 ms.date: 09/17/2017
 ---

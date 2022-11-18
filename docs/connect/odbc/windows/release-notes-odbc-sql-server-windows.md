@@ -5,8 +5,8 @@ author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
 ms.date: 11/03/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Release Notes for Microsoft ODBC Driver for SQL Server on Windows

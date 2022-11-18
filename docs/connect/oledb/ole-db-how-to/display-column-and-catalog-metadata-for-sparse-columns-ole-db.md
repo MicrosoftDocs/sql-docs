@@ -4,8 +4,8 @@ description: Learn how to display column and catalog metadata for sparse columns
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Display Column and Catalog Metadata for Sparse Columns (OLE DB)

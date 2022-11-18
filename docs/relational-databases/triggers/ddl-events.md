@@ -3,9 +3,9 @@ description: "DDL Events"
 title: "DDL Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2016"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DDL events"

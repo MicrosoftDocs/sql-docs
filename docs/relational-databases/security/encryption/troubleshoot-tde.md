@@ -8,8 +8,8 @@ helpviewer_keywords:
   - "tde troubleshooting"
 author: rwestMSFT
 ms.author: randolphwest
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 03/04/2022

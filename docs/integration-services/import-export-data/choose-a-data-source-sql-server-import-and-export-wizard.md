@@ -3,9 +3,9 @@ description: "Choose a Data Source (SQL Server Import and Export Wizard)"
 title: "Choose a Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.chooseadatasource.f1"

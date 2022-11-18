@@ -4,10 +4,9 @@ description: Learn how creating XML indexes on xml data type columns can benefit
 ms.custom:
 - event-tier1-build-2022
 ms.date: 05/09/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "removing indexes"

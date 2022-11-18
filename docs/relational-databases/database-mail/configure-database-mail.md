@@ -3,10 +3,9 @@ description: "Configure Database Mail using the Database Mail Configuration Wiza
 title: "Configure Database Mail"
 ms.custom: ""
 ms.date: "04/19/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlimail.profileandaccountmanagement.f1"

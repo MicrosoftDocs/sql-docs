@@ -3,10 +3,9 @@ description: "Point (geography Data Type)"
 title: "Point (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/10/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "Point"

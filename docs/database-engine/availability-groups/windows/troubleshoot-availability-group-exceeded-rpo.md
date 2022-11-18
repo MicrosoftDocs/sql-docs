@@ -4,8 +4,8 @@ description: "Common issues and resolutions for when your Always On availability
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "06/13/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: troubleshooting
 ms.custom: seo-lt-2019
 ---

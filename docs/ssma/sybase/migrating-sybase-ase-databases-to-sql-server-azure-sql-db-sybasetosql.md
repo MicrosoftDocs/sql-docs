@@ -4,9 +4,9 @@ description: Use this recommended process to migrate SAP Adaptive Server Enterpr
 ms.custom:
   - intro-migration
 ms.date: "11/30/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: cpichuka 

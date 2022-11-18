@@ -5,9 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 06/29/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "computed columns, XML"

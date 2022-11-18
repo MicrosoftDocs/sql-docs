@@ -3,10 +3,9 @@ title: "Use FOR XML Results in Application Code"
 description: Learn how to use the results of an SQL query with FOR XML clauses in an application.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML clause, application code usage"

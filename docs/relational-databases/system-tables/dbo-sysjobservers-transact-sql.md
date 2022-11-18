@@ -4,9 +4,8 @@ description: dbo.sysjobservers (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/26/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysjobservers"

@@ -3,10 +3,9 @@ description: "Enable and Disable Change Tracking (SQL Server)"
 title: "Enable and Disable Change Tracking"
 ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], disabling"

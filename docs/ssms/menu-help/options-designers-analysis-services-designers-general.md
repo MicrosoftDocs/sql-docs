@@ -3,10 +3,9 @@ description: "Options (Designers - Analysis Services Designers - General)"
 title: "Options (Designers - Analysis Services Designers - General)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.Analysis_Services_Designers.General"

@@ -1,9 +1,8 @@
 ---
 title: "External Tools Dialog Box"
 description: "External Tools Dialog Box"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "adding external tools"

@@ -4,9 +4,8 @@ description: RESTORE Statements - Arguments that are described in the Syntax sec
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 05/10/2022
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:

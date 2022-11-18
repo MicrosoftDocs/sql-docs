@@ -3,10 +3,9 @@ description: "sp_columns (Transact-SQL)"
 title: "sp_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_columns_TSQL"

@@ -4,8 +4,8 @@ description: "Learn how to get started with PHP programming using the Microsoft 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Programming Guide for the Microsoft Drivers for PHP for SQL Server

@@ -2,11 +2,10 @@
 title: "Support policies for OLE DB Driver for SQL Server"
 description: "Learn about the support policies for OLE DB Driver for SQL Server and what operating systems and SQL database versions are supported with each driver version."
 ms.date: "10/26/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel

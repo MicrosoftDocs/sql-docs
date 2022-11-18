@@ -3,7 +3,6 @@ description: "Configure E-mail for a Reporting Services Service Application"
 title: "Configure E-mail for a Reporting Services Service Application | Microsoft Docs"
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint"
 
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f

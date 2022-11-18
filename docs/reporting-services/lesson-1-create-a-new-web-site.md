@@ -3,7 +3,6 @@ title: "Lesson 1: Create a new website | Microsoft Docs"
 description: Learn how to create a new website project by using the ASP.NET website template for Visual C#.
 ms.date: 05/18/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 ms.topic: conceptual

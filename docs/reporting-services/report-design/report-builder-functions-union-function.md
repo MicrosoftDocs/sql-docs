@@ -3,7 +3,6 @@ title: "Union function in a paginated report | Microsoft Docs"
 description: Find out about this function that returns the union of all the non-null numeric values in a paginated report that are specified by an expression.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

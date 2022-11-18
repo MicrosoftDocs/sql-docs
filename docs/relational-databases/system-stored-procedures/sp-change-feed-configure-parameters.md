@@ -3,7 +3,6 @@ description: "The sp_change_feed_configure_parameters system stored procedure is
 title: "sp_change_feed_configure_parameters (Transact-SQL)"
 ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 

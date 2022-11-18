@@ -7,7 +7,6 @@ ms.author: wiassaf
 ms.reviewer: dfurman, arvindsh
 ms.date: 08/11/2022
 ms.service: sql-database
-ms.prod_service: "sql-database"
 ms.topic: "reference"
 ms.custom: 
 f1_keywords:

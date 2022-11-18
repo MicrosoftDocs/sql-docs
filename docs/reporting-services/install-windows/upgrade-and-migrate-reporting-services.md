@@ -2,7 +2,6 @@
 description: "Upgrade and Migrate Reporting Services"
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 helpviewer_keywords: 
   - "SSRS, upgrading"
   - "Reporting Services, upgrades"

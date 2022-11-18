@@ -3,7 +3,6 @@ title: "Behavior changes to SQL Server Reporting Services in SQL Server 2016 | M
 description: Learn about behavior changes in Reporting Services and how the features work or interact in SQL Server 2016 as compared to previous versions of SQL Server.
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 

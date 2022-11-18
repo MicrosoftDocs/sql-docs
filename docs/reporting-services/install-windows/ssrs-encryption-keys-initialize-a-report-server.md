@@ -3,7 +3,6 @@ description: "Initialize a Report Server (Configuration Manager)"
 title: "Initialize a Report Server (Configuration Manager) | Microsoft Docs"
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 
 ms.topic: conceptual
 helpviewer_keywords: 

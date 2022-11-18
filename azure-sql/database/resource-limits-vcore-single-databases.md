@@ -283,7 +283,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
@@ -320,7 +320,7 @@ SLOs in the Hyperscale premium-series tier use the naming convention `SQLDB_HS_P
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
@@ -392,7 +392,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|200|400|600|800|1000|
 |Max concurrent external connections <sup>4</sup>|20|40|60|80|100|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
@@ -429,7 +429,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|1,200|1,400|1,600|1,800|2,000|
 |Max concurrent external connections <sup>4</sup>|120|140|150|150|150|
-|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000
+|Max concurrent sessions|30,000|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|N/A|
 |Read Scale-out|Yes|Yes|Yes|Yes|Yes|
@@ -449,7 +449,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 SLOs in the Premium-series memory optimized tier use the naming convention `SQLDB_HS_MOPRMS_` followed by the number of vCores, for example, `SQLDB_HS_MOPRMS_10`.
 
 |vCores|24|32|40|80|
-|:--- | --: |--: |--: |--: |--: |
+|:--- | --: |--: |--: |--: |
 |Memory (GB)| 249.1|332.2|415.2|830.5|
 |[RBPEX](hyperscale-architecture.md#compute) Size|3X Memory|3X Memory|3X Memory|3X Memory|
 |Columnstore support|Yes|Yes|Yes|Yes|
@@ -465,7 +465,7 @@ SLOs in the Premium-series memory optimized tier use the naming convention `SQLD
 |Storage type|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|Multi-tiered<sup>3</sup>|
 |Max concurrent workers|2,400|3,200|4,000|8,000|
 |Max concurrent external connections <sup>4</sup>|150|150|150|150|
-|Max concurrent sessions|30,000|30,000|30,000|30,000| 
+|Max concurrent sessions|30,000|30,000|30,000|30,000|
 |Secondary replicas|0-4|0-4|0-4|0-4|
 |Multi-AZ|N/A|N/A|N/A|N/A|
 |Read Scale-out|Yes|Yes|Yes|Yes|

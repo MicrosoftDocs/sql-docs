@@ -93,7 +93,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
     install.packages("jsonlite", lib="/usr/lib/R/library")
     ```
 
-1. Download and install `CompatibilityAPI` amd `RevoScaleR` for Linux.
+1. Download and install `CompatibilityAPI` and `RevoScaleR` for Linux.
 
     ```r
     install.packages("https://aka.ms/sqlml/r4.2/linux/CompatibilityAPI_1.1.0_R_x86_64-pc-linux-gnu.tar.gz", repos=NULL, lib="/usr/lib/R/library")
@@ -107,6 +107,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
     ```
 
 ### Configure R runtime with SQL Server
+
 1. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the R binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
 
     ```bash  
@@ -137,7 +138,9 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
     ```
 
 ## Setup Python support
+
 ### Install Python runtime
+
 1. Download and install the version of Python that is desired. Choose a version of Python 3.10 or higher, [available for download directly from python.org](https://docs.python.org/3/using/unix.html). Follow the instructions for the desired runtime. Also, install the shared python runtime library for the desired runtime version. For example, to install `libpython3.10` for Ubuntu: `sudo apt-get install libpython3.10`.
 
 1. Download and install `revoscalepy` for the root user.
@@ -151,6 +154,7 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
     ```python
     import revoscalepy
     ```
+
 ### Configure Python runtime with SQL Server
 
 1. Configure the installed Python runtime with SQL Server, where `pythonbinbath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
@@ -225,6 +229,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 > Several of the package management tools provide commands that can help you determine package dependencies. For yum, use `sudo yum deplist [package]`. For Ubuntu, use `sudo apt-get install --reinstall --download-only [package name]` followed by `dpkg -I [package name].deb`.
 
 ## Standalone RevoScale packages for Python and R runtime
+
 RevoScale packages are also supported as a standalone package with Python and R runtimes. In order to setup Python or R runtime for the standalone scenario, follow the instructions in the [Install Python runtime](#install-python-runtime) and [Install R runtime](#install-r-runtime) sections respectively.
 
 ## Next steps

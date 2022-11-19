@@ -79,6 +79,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 ### Setup R support
 
 #### Install R runtime
+
 1. Download and install the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/).
 
 1. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From the R terminal of the version that you installed, run the following commands:
@@ -98,7 +99,9 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
     install.packages("https://aka.ms/sqlml/r4.2/windows/RevoScaleR_10.0.1.zip", repos=NULL)
     ```
+
 #### Configure R runtime with SQL Server
+
 1. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder that depends on the installation. Usually, it's in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
    You can use the following script to configure the installed R runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
@@ -132,7 +135,9 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     ```
 
 ### Setup Python support
+
 #### Install Python runtime
+
 1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/). Install it by using the following options:
     
     1. Open the Python Setup application and select **Customize installation**. 
@@ -148,7 +153,9 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     cd "C:\Program Files\Python310\"
     python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
+
 #### Configure Python runtime with SQL Server
+
 1. Configure the installed Python runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in the custom installation location (for example, `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`).
 
     You can use the following script to configure the installed Python runtime from the installation folder location of `RegisterRext.exe`. The instance name is `MSSQLSERVER` for a default instance of SQL Server, or the instance name for a named instance of SQL Server.
@@ -240,6 +247,7 @@ Packages that you want to use from SQL Server must be installed in the default l
 To install and manage additional packages, you can set up user groups to share packages on a per-database level. Or you can configure database roles to enable users to install their own packages. For more information, see [Install Python packages](../package-management/install-additional-python-packages-on-sql-server.md) and [Install new R packages](../package-management/install-additional-r-packages-on-sql-server.md).
 
 ### Standalone RevoScale packages for Python and R runtime
+
 RevoScale packages are also supported as a standalone package with Python and R runtimes. In order to setup Python or R runtime for the standalone scenario, follow the instructions in the [Install Python runtime](#install-python-runtime) and [Install R runtime](#install-r-runtime) sections respectively.
 
 ## Next steps

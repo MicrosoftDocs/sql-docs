@@ -30,7 +30,7 @@ ms.author: jopilov
 
 Error 19407 is raised in the SQL Server error log when the communication between SQL Server and the Windows Server Failover cluster is lost. Typically a  corrective action occurs - a failover to another Always On node. 
 
-A lease is a time-based communication mechanism that takes place between the SQL Server and the Windows Server Failover Cluster (WSFC) process, specifically the RHS.EXE process. The two processes communicate with each other periodically to ensure the other process is running and responding. This communication takes place using Windows [event objects](/windows/win32/sync/event-objects) and ensures that a failover of the AG resource doesn't occur without the knowledge of the WSFC. If one the processes doesn't respond to the lease communication based on a predefined lease period, a lease timeout occurs. For detailed information, see [Lease Mechanism](../../database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout.md). Also see [How It Works: SQL Server AlwaysOn Lease Timeout[(https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)
+A lease is a time-based communication mechanism that takes place between the SQL Server and the Windows Server Failover Cluster (WSFC) process, specifically the RHS.EXE process. The two processes communicate with each other periodically to ensure the other process is running and responding. This communication takes place using Windows [event objects](/windows/win32/sync/event-objects) and ensures that a failover of the AG resource doesn't occur without the knowledge of the WSFC. If one of the processes doesn't respond to the lease communication based on a predefined lease period, a lease timeout occurs. For detailed information, see [Lease Mechanism](../../database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout.md). Also see [How It Works: SQL Server AlwaysOn Lease Timeout[(https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)
 
 ### Causes
 
@@ -42,7 +42,7 @@ Since Windows Events are light-weight synchronization objects, there's relativel
 - WSFC going offline (e.g due to quorum loss)
 
  
-## User Action  
+## User action  
 
 ### Troubleshoot high CPU issues
 
@@ -58,7 +58,7 @@ Since Windows Events are light-weight synchronization objects, there's relativel
     Select-Object -ExpandProperty CounterSamples | Select-Object TimeStamp, Path, CookedValue
   ```
 
-### Troubleshoot Low memory issues
+### Troubleshoot low memory issues
 
 If there are occurrences of low virtual or physical memory on the system, the SQL Server or the cluster resource host service (RHS.EXE) process could be paged out. If the process is paged out to disk, it will not be executing actively, and the lease timeout may be reached by the time memory is available and the process virtual bytes are paged back into physical memory. Low virtual memory could be caused by applications, drivers, or OS consuming the entire memory on the system. Use the following methods to troubleshoot this issue:
 
@@ -68,18 +68,18 @@ If there are occurrences of low virtual or physical memory on the system, the SQ
 
 1. You can alternatively use Performance Monitor and monitor these counters over time:
 
-  - **Process\Working Set** - to check individual processes memory usage
-  - **Memory\Available MBytes** - to check overall memory usage on the system
+   - **Process\Working Set** - to check individual processes memory usage
+   - **Memory\Available MBytes** - to check overall memory usage on the system
 
-  Below is a PowerShell script to identify overall memory usage across all process and the available memory on the system. If you would like to get individual processes memory usage, change it `"\Process(_Total)\Working Set"` to `"\Process(*)\Working Set"`.
+   Below is a PowerShell script to identify overall memory usage across all process and the available memory on the system. If you would like to get individual processes memory usage, change it `"\Process(_Total)\Working Set"` to `"\Process(*)\Working Set"`.
 
-  ```powershell
-  $serverName = $env:COMPUTERNAME
-  $Counters = @(
-    ("\\$serverName" + "\Process(_Total)\Working Set") , ("\\$serverName" + "\Memory\Available Bytes")
-   )
+   ```powershell
+   $serverName = $env:COMPUTERNAME
+   $Counters = @(
+     ("\\$serverName" + "\Process(_Total)\Working Set") , ("\\$serverName" + "\Memory\Available Bytes")
+    )
 
-  Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
+   Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
     $_.CounterSamples | ForEach {
         [pscustomobject]@{
             TimeStamp = $_.TimeStamp
@@ -87,9 +87,9 @@ If there are occurrences of low virtual or physical memory on the system, the SQ
             Value_MB = ([Math]::Round($_.CookedValue, 3))/1024/1024
         }
         Start-Sleep -s 5
+      }
     }
-  }
-  ```  
+   ```
 
 
 1. If you identify specific applications that are consuming large amounts of memory, consider stopping or moving those applications on another system or control their memory usage. 

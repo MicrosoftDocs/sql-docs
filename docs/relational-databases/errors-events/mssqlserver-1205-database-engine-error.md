@@ -32,15 +32,19 @@ ms.author: mathoma
 Resources are accessed in conflicting order on separate transactions, causing a [deadlock](../sql-server-transaction-locking-and-row-versioning-guide.md?#deadlocks). For example:  
   
 - Transaction1 updates **Table1.Row1**, while Transaction2 updates **Table2.Row2**
-- Transaction1 tries to update **Table2.Row2** but is blocked because Transaction2 has not yet committed  
-- Transaction2 now tries to update **Table1.Row1** but is blocked because Transaction1 has not committed
+- Transaction1 tries to update **Table2.Row2** but is blocked because Transaction2 has not yet committed and has not released its locks 
+- Transaction2 now tries to update **Table1.Row1** but is blocked because Transaction1 has not committed and has not released its locks
 - A deadlock occurs because Transaction1 is waiting for Transaction2 to complete, but Transaction2 is waiting for Transaction1 to complete.  
   
 The system will detect this deadlock and will choose one of the transactions involved as a 'victim'. It will then issue this error message, rolling back the victim's transaction.  For detailed information see [Deadlocks](../sql-server-transaction-locking-and-row-versioning-guide.md?#deadlocks).
 
+
+
 ## User Action  
 
-Execute the transaction again. You can also revise the application to avoid deadlocks. The transaction that was chosen as a victim can be retried and will likely succeed, depending on what operations are being executed simultaneously.  
+Deadlocks are in the large majority of cases application-related issues and require application developers to make code changes. One approach when you receive error 1205 is to execute the queries again. See this blog for an example of how to retry - handle the deadlock and re-execute the query: [Deadlock Simulator app for Developers: How to Handle a SQL Deadlock issue in Your App](https://techcommunity.microsoft.com/t5/sql-server-support-blog/deadlock-simulator-app-for-developers-how-to-handle-a-sql/ba-p/334019)
+
+You can also revise the application to avoid deadlocks. The transaction that was chosen as a victim can be retried and will likely succeed, depending on what operations are being executed simultaneously.  
   
 To prevent or avoid deadlocks from occurring, consider having all transactions access rows in the same order (**Table1**, then **Table2**). This way, although blocking might occur, a deadlock will be avoided.  
   

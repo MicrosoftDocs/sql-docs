@@ -159,7 +159,7 @@ There are several improvements to address persistent version store (PVS) storage
   
   Beginning with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this process uses multi-threaded version cleanup at the database level. This allows multiple threads for cleanup for each database. This improvement is valuable when you have multiple large databases.
 
-  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`.
+  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`. The thread count is capped at the number of cores for the instance.
 
   The example below changes the thread count to 4:
 

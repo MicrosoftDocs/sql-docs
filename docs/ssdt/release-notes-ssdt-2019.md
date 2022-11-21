@@ -31,12 +31,6 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Known issues
  **Version 0.1**
-- Release Date: Nov 24, 2022
-- Build Version: 16.0.948.0
-- Tested against Visual Studio 2022 17.4
-- What’s new:
-    1. Support SSIS in VS2022
-- Known issue:
     1. Target sever version supported: SQL server 2019 and SQL server 2022 
     2. Cannot design Dimension Processing and Partition Processing.
     3. Cannot design DQS related component.

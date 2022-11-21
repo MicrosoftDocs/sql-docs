@@ -5,7 +5,7 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 11/18/2022
+ms.date: 11/21/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual

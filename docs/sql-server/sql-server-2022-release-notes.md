@@ -39,7 +39,7 @@ In certain localized languages, the Azure Extension configuration screen control
 
 #### Software Assurance installation parameter
 
-There is a new Setup command line installation parameter - `/PRODUCTCOVERDBYSA`. The parameter indicates if the provided product key (`/PID=`) license is covered under a Software Assurance or SQL Server Subscription contract, or just a SQL Server license.
+There is a new Setup command line installation parameter - `/PRODUCTCOVEREDBYSA`. The parameter indicates if the provided product key (`/PID=`) license is covered under a Software Assurance or SQL Server Subscription contract, or just a SQL Server license.
 
 [Install SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) describes this parameter.
 

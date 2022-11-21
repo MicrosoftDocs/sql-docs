@@ -24,8 +24,6 @@
     href: quickstart-mysql.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md
-  - name: Connect & query PostgreSQL
-    href: quickstart-postgres.md
   - name: Connect and query Managed Service for TimescaleDB
     href: quickstart-timescaledb.md
 - name: Tutorials

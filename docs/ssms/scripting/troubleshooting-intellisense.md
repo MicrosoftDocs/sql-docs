@@ -3,8 +3,8 @@ title: "Identify issues with IntelliSense (SSMS)"
 description: Learn about the cases where Intellisense in SQL Server Management Studio (SSMS) does not work as you might expect.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

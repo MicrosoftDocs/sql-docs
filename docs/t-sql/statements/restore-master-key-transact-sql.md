@@ -4,9 +4,8 @@ description: RESTORE MASTER KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -32,7 +31,7 @@ dev_langs:
   Imports a database master key from a backup file.  
 
 > [!IMPORTANT]
-> SQL Server 2022 introduces backup and restore support for the database master key to and from an Azure Blob storage. The `URL` syntax is only available for SQL Server 2022 or later.
+> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces backup and restore support for the database master key to and from an Azure Blob storage. The `URL` syntax is only available for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +56,7 @@ RESTORE MASTER KEY FROM
  Specifies the complete path, including file name, to the stored database master key. *path_to_file* can be a local path or a UNC path to a network location.  
 
  URL **='***Azure Blob storage URL***'**   
- **Applies to:** SQL Server 2022 or later   
+ **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later   
  Is the URL for your Azure Blob storage, in the format similar to `https://<storage_account_name>.blob.core.windows.net/<storage_container_name>/<backup_file_name>.bak`.
   
  DECRYPTION BY PASSWORD ='*password*'  
@@ -79,7 +78,7 @@ RESTORE MASTER KEY FROM
   
  If there's no master key in the current database, RESTORE MASTER KEY creates a master key. The new master key won't be automatically encrypted with the service master key.  
 
- If you're using SQL Server 2022 or later, and want to restore the database master key from an Azure Blob storage, the following prerequisites apply:
+ If you're using [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and want to restore the database master key from an Azure Blob storage, the following prerequisites apply:
 
  1. Have an [Azure storage account](/azure/storage/common/storage-account-create).
  1. [Create stored access policy and shared access storage](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).

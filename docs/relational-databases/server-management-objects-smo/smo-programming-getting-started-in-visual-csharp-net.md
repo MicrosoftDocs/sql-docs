@@ -4,8 +4,8 @@ title: "Getting Started in Visual C# .NET | Microsoft Docs"
 ms.custom:
   - intro-quickstart
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: quickstart
 helpviewer_keywords:
   - "Visual C# [SMO]"
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 ## References and Imports  
  After you have started the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] project, you must add references to the SMO assemblies. You then import the required namespaces so that your program can recognize the SMO types.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ folder.  
+ In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the SMO assemblies are located in the C:\Program Files\Microsoft SQL Server\160\SDK\Assemblies\ folder.  
   
 ## See Also  
  [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  

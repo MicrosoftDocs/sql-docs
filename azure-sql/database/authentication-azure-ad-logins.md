@@ -101,7 +101,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Az
 
 ## Limitations and remarks
 
-- The SQL server admin can’t create Azure AD logins or users in any databases.
+- The SQL server admin can't create Azure AD logins or users in any databases.
 - Changing a database ownership to an Azure AD group as database owner isn't supported.
   - `ALTER AUTHORIZATION ON database::<mydb> TO [my_aad_group]` fails with an error message:
     ```output
@@ -109,7 +109,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Az
     The new owner cannot be Azure Active Directory group.
     ```
   - Changing a database ownership to an individual user is supported.
-- A SQL admin or SQL user can’t execute the following Azure AD operations: 
+- A SQL admin or SQL user can't execute the following Azure AD operations: 
   - `CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER` 
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER` 
   - `EXECUTE AS USER [bob@contoso.com]`

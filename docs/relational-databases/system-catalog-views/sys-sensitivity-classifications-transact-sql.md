@@ -4,8 +4,8 @@ description: sys.sensitivity_classifications (Transact-SQL)
 author: Madhumitatripathy
 ms.author: matripathy
 ms.date: 04/19/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 f1_keywords:
   - "sys.sensitivity_classifications "
@@ -40,7 +40,6 @@ Returns a row for each classified item in the database.
 |**information_type_id**|**sysname**|An ID associated with the information type, which can be used by an information protection system such as Azure Information Protection (AIP)|  
 |**rank**|**int**|A numerical value of the rank: <br><br>0 for NONE<br>10 for LOW<br>20 for MEDIUM<br>30 for HIGH<br>40 for CRITICAL| 
 |**rank_desc**|**sysname**|Textual representation of the rank:  <br><br>NONE, LOW, MEDIUM, HIGH, CRITICAL|  
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Remarks  
 

@@ -11,7 +11,7 @@ ms.topic: tutorial
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!NOTE]
-> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure the pacemake cluster and availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
+> We use SQL Server 2017 with RHEL 7.6 in this tutorial, but it is possible to use SQL Server 2019 in RHEL 7 or RHEL 8 to configure high availability. The commands to configure the pacemake cluster and availability group resources has changed in RHEL 8, and you'll want to look at the article [Create availability group resource](/sql/linux/sql-server-linux-availability-group-cluster-pacemaker?tabs=rhel#create-availability-group-resource) and RHEL 8 resources for more information on the correct commands.
 
 In this tutorial, you learn how to:
 
@@ -278,7 +278,7 @@ Type `exit` to leave the SSH session.
 > [!IMPORTANT]
 > In order to complete this portion of the tutorial, you must have a subscription for RHEL and the High Availability Add-on. If you are using an image recommended in the previous section, you do not have to register another subscription.
  
-Connect to each VM node and follow the guide below to enable HA. For more information, see [enable high availability subscription for RHEL](/sql/linux/sql-server-linux-availability-group-cluster-rhel#enable-the-high-availability-subscription-for-rhel).
+Connect to each VM node and follow the guide below to enable HA. For more information, see [enable high availability subscription for RHEL](/sql/linux/sql-server-linux-availability-group-cluster-pacemaker?tabs=rhel#enable-the-high-availability-subscription-for-rhel).
 
 > [!TIP]
 > It will be easier if you open an SSH session to each of the VMs simultaneously as the same commands will need to be run on each VM throughout the article.
@@ -667,7 +667,7 @@ You should see the following output:
 ● mssql-server.service - Microsoft SQL Server Database Engine
    Loaded: loaded (/usr/lib/systemd/system/mssql-server.service; enabled; vendor preset: disabled)
    Active: active (running) since Thu 2019-12-05 17:30:55 UTC; 20min ago
-     Docs: https://docs.microsoft.com/en-us/sql/linux
+     Docs: https://learn.microsoft.com/sql/linux
  Main PID: 11612 (sqlservr)
    CGroup: /system.slice/mssql-server.service
            ├─11612 /opt/mssql/bin/sqlservr
@@ -940,7 +940,7 @@ If the `synchronization_state_desc` lists SYNCHRONIZED for `db1`, this means the
 We will be following the guide to [create the availability group resources in the Pacemaker cluster](/sql/linux/sql-server-linux-create-availability-group#create-the-availability-group-resources-in-the-pacemaker-cluster-external-only).
 
 > [!NOTE]
-> This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
+> This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we'll remove it from this article.
 
 ### Create the AG cluster resource
 

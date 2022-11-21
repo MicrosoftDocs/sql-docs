@@ -18,7 +18,8 @@ This guide helps you migrate your SQL Server instance to Azure SQL Managed Insta
 You can migrate SQL Server running on-premises or on: 
 
 - SQL Server on Virtual Machines  
-- Amazon Web Services (AWS) EC2
+- Amazon EC2
+- Amazon RDS for SQL Server
 - Compute Engine (Google Cloud Platform - GCP)  
 - Cloud SQL for SQL Server (Google Cloud Platform – GCP) 
 
@@ -166,7 +167,7 @@ To perform a minimal downtime migration using Azure Data Studio, follow the high
 1. Launch the Migrate to Azure SQL wizard in the extension in Azure Data Studio.
 1. Select databases for assessment and view migration readiness or issues (if any). Additionally, collect performance data and get right-sized Azure recommendation.
 1. Select your Azure account and your target Azure SQL Managed Instance from your subscription.
-1. Select the location of your database backups. Your database backups can either be located on an on-premises network share or in an Azure storage blob container.
+1. Select the location of your database backups. Your database backups can either be located on an on-premises network share or in Azure Blob Storage container.
 1. Create a new Azure Database Migration Service using the wizard in Azure Data Studio. If you've previously created an Azure Database Migration Service using Azure Data Studio, you can reuse the same if desired.
 1. *Optional*: If your backups are on an on-premises network share, download and install [self-hosted integration runtime](https://www.microsoft.com/download/details.aspx?id=39717) on a machine that can connect to the source SQL Server, and the location containing the backup files.
 1. Start the database migration and monitor the progress in Azure Data Studio. You can also monitor the progress under the Azure Database Migration Service resource in Azure portal.
@@ -207,7 +208,7 @@ source SQL Server version you're running:
 
 To migrate using backup and restore, follow these steps: 
 
-1. Back up your database to Azure blob storage. For example, use [backup to url](/sql/relational-databases/backup-restore/sql-server-backup-to-url) in [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms). Use the [Microsoft Azure Tool](https://go.microsoft.com/fwlink/?LinkID=324399) to support databases earlier than SQL Server 2012 SP1 CU2. 
+1. Back up your database to Azure Blob Storage. For example, use [backup to url](/sql/relational-databases/backup-restore/sql-server-backup-to-url) in [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms). Use the [Microsoft Azure Tool](https://go.microsoft.com/fwlink/?LinkID=324399) to support databases earlier than SQL Server 2012 SP1 CU2. 
 1. Connect to your Azure SQL Managed Instance using SQL Server Management Studio. 
 1. Create a credential using a Shared Access Signature to access your Azure Blob storage account with your database backups. For example:
 

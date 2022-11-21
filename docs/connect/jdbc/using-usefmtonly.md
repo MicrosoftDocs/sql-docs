@@ -3,11 +3,10 @@ title: Retrieving ParameterMetaData via useFmtOnly
 description: When retrieving ParameterMetaData, learn about the useFmtOnly option to change the way the driver queries underlying metadata from the server.
 author: DavidEngel
 ms.author: v-davidengel
-manager: kenvh
 ms.reviewer: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Retrieving ParameterMetaData via useFmtOnly
@@ -42,7 +41,7 @@ SET FMTONLY OFF;
 
 ## Turning the feature on/off
 
-The feature **useFmtOnly** is off by default. Users can enable this feature through the connection string by specifying `useFmtOnly=true`. For example: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`.
+The feature **useFmtOnly** is off by default. Users can enable this feature through the connection string by specifying `useFmtOnly=true`. For example: `jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`.
 
 The feature is also available through `SQLServerDataSource`.
 

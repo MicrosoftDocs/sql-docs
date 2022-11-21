@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 4: Dropping the Conversation Objects'
+title: "Lesson 4: Dropping the Conversation Objects"
 description: "In this lesson, you will learn to drop the objects that enabled a database to support a conversation using an internal activation stored procedure."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 4: Dropping the Conversation Objects

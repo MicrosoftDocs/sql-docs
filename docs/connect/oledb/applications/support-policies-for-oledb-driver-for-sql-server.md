@@ -1,12 +1,14 @@
 ---
 title: "Support policies for OLE DB Driver for SQL Server"
 description: "Learn about the support policies for OLE DB Driver for SQL Server and what operating systems and SQL database versions are supported with each driver version."
+ms.date: "10/26/2022"
+ms.service: sql
+ms.reviewer: ""
+ms.custom: ""
+ms.subservice: connectivity
+ms.topic: "reference"
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "02/15/2022"
-ms.prod: sql
-ms.technology: connectivity
-ms.topic: "reference"
 ---
 # Support policies for OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -21,6 +23,8 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 
 | Database version&nbsp;&#8594;<br />&#8595; Driver version | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|
+|19.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.5|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -29,7 +33,6 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 |18.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.1|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|
 |18.0|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## Supported operating system versions  
 
@@ -37,6 +40,8 @@ The following table lists which operating systems are supported by OLE DB Driver
 
 | Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2022 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|---|
+|19.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.5|   |Yes|Yes|Yes|Yes|Yes|Yes|
@@ -45,7 +50,6 @@ The following table lists which operating systems are supported by OLE DB Driver
 |18.2|   |Yes|Yes|Yes|Yes|Yes|Yes|
 |18.1|   |   |Yes|Yes|Yes|Yes|Yes|
 |18.0|   |   |Yes|Yes|Yes|Yes|Yes|
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Supported on Windows Server 2012 with [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Supported on Windows Server 2012 R2 with [April 2014 update](https://go.microsoft.com/fwlink/?linkid=2073785) and [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  

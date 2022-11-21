@@ -2,10 +2,9 @@
 title: Replay a Transact-SQL Script
 titleSuffix: SQL Server Profiler
 description: Discover how to use SQL Server Profiler to replay Transact-SQL scripts so that you can compare different possible solutions to a performance problem.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 author: markingmyname

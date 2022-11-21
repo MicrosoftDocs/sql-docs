@@ -1,19 +1,14 @@
 ---
-title: " Get Azure SQL SKU recommendations (Data Migration Assistant) | Microsoft Docs"
+title: "Get Azure SQL SKU recommendations (Data Migration Assistant)"
 description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database, Azure SQL Managed Instance or SQL Server on Azure VM SKU for your on-premises database
-ms.custom: ""
-ms.date: "06/08/2021"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
-ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
-  - "Data Migration Assistant, Assess"
-ms.assetid: ""
 author: aciortea
 ms.author: aciortea
+ms.date: "06/08/2021"
+ms.service: sql
+ms.subservice: dma
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Data Migration Assistant, Assess"
 ---
 
 # Identify the right Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VM SKU for your on-premises database

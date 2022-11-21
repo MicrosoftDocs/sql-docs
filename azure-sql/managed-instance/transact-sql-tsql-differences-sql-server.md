@@ -226,6 +226,7 @@ For more information, see [ALTER DATABASE SET PARTNER and SET WITNESS](/sql/t-sq
 The following limitations apply to `CREATE DATABASE`:
 
 - Files and filegroups can't be defined. 
+- A memory-optimized filegroup and file are automatically added and are called XTP.
 - The `CONTAINMENT` option isn't supported. 
 - `WITH` options aren't supported. 
    > [!TIP]
@@ -242,6 +243,7 @@ Some file properties can't be set or changed:
 
 - A file path can't be specified in the `ALTER DATABASE ADD FILE (FILENAME='path')` T-SQL statement. Remove `FILENAME` from the script because SQL Managed Instance automatically places the files. 
 - A file name can't be changed by using the `ALTER DATABASE` statement.
+- Altering XTP file or filegroup is not allowed.
 
 The following options are set by default and can't be changed:
 
@@ -348,7 +350,7 @@ Undocumented DBCC statements that are enabled in SQL Server aren't supported in 
 
 ### Distributed transactions
 
-Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is currently in public preview. Distributed transactions are supported under following conditions (all of them must be met):
+Partial support for [distributed transactions](../database/elastic-transactions-overview.md) is generally available. Distributed transactions are supported under following conditions (all of them must be met):
 * all transaction participants are Azure SQL Managed Instances that are part of the [Server trust group](./server-trust-group-overview.md).
 * transactions are initiated either from .NET (TransactionScope class) or Transact-SQL.
 
@@ -397,8 +399,8 @@ Operations:
 - [Cross-instance](../database/elastic-transactions-overview.md) write transactions are supported only for SQL Managed Instances.
 - `sp_dropserver` is supported for dropping a linked server. See [sp_dropserver](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).
 - The `OPENROWSET` function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. See [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql).
-- The `OPENDATASOURCE` function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. Only the `SQLNCLI`, `SQLNCLI11`, and `SQLOLEDB` values are supported as a provider. An example is `SELECT * FROM OPENDATASOURCE('SQLNCLI', '...').AdventureWorks2012.HumanResources.Employee`. See [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql).
-- Linked servers cannot be used to read files (Excel, CSV) from the network shares. Try to use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#e-importing-data-from-a-csv-file), [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#g-accessing-data-from-a-csv-file-with-a-format-file) that reads CSV files from Azure Blob Storage, or a [linked server that references a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/). Track this requests on [SQL Managed Instance Feedback item](https://feedback.azure.com/d365community/idea/db80cf6e-3425-ec11-b6e6-000d3a4f0f84)|
+- The [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. An example is `SELECT * FROM OPENDATASOURCE('SQLNCLI', '...').AdventureWorks2012.HumanResources.Employee`. Only the `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` values are supported as a provider. The [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client.md) (often abbreviated SNAC) has been removed from SQL Server 2022 and SQL Server Management Studio 19 (SSMS). The SQL Server Native Client (SQLNCLI or SQLNCLI11) and the legacy Microsoft OLE DB Provider for SQL Server (SQLOLEDB) are not recommended for new development. Switch to the new [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server.md) or the latest [Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server.md) going forward.
+- Linked servers cannot be used to read files (Excel, CSV) from the network shares. Try to use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#e-importing-data-from-a-csv-file), [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#g-accessing-data-from-a-csv-file-with-a-format-file) that reads CSV files from Azure Blob Storage, or a [linked server that references a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/). Track this requests on [SQL Managed Instance Feedback item](https://feedback.azure.com/d365community/idea/db80cf6e-3425-ec11-b6e6-000d3a4f0f84)
 
 Linked servers on Azure SQL Managed Instance support SQL authentication and [Azure AD authentication](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#linked-servers-with-azure-sql-managed-instance).
 
@@ -409,7 +411,7 @@ Linked servers on Azure SQL Managed Instance support SQL authentication and [Azu
 ### Replication
 
 - Snapshot and Bi-directional replication types are supported. Merge replication, Peer-to-peer replication, and updatable subscriptions are not supported.
-- [Transactional Replication](replication-transactional-overview.md) is available for public preview on SQL Managed Instance with some constraints:
+- [Transactional Replication](replication-transactional-overview.md) is available for SQL Managed Instance with some constraints:
     - All types of replication participants (Publisher, Distributor, Pull Subscriber, and Push Subscriber) can be placed on SQL Managed Instance, but the publisher and the distributor must be either both in the cloud or both on-premises.
     - SQL Managed Instance can communicate with the recent versions of SQL Server. See the [supported versions matrix](replication-transactional-overview.md#supportability-matrix) for more information.
     - Transactional Replication has some [additional networking requirements](replication-transactional-overview.md#requirements).

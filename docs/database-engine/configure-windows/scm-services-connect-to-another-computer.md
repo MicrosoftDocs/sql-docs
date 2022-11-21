@@ -1,18 +1,14 @@
 ---
-title: "Connect to Another Computer (SQL Server Configuration Manager) | Microsoft Docs"
+title: "Connect to Another Computer (SQL Server Configuration Manager)"
 description: "Find out how to manage a remote computer's services. See how to use SQL Server Configuration Manager or SQL Server Management Studio for this task."
-ms.custom: ""
-ms.date: "11/19/2019"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "connections [SQL Server], other computers"
-ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "11/19/2019"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "connections [SQL Server], other computers"
 ---
 # SCM Services - Connect to Another Computer
 

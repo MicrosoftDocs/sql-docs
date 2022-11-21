@@ -1,24 +1,22 @@
 ---
 title: "Fail over an availability group"
 description: Describes how to perform a planned/forced manual failover of an Always On availability group with SQL Server Management Studio, Transact-SQL, or SQL PowerShell.
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.failoverwizard.connecttoreplicas.f1"
   - "sql13.swb.failoverwizard.selectnewprimary.f1"
   - "sql13.swb.failoverwizard.f1"
   - "sql13.swb.failoverwizard.confirmdataloss.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "failover [SQL Server], failover"
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], configuring"
-ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

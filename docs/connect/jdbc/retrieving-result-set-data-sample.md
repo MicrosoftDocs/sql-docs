@@ -4,8 +4,8 @@ description: Learn how to retrieve a set of data from a SQL database and display
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -46,7 +46,7 @@ public class RetrieveResultSet {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
             createTable(stmt);

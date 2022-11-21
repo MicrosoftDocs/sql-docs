@@ -3,7 +3,6 @@ title: "Export paginated reports (Report Builder) | Microsoft Docs"
 description: You can export a Reporting Services report to another file format, like PowerPoint or PDF, using Report Builder, Report Designer, or the report server.
 ms.date: 09/06/2022
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT

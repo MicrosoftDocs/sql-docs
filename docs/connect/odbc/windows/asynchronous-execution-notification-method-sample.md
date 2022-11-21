@@ -4,8 +4,8 @@ description: "Example code demonstrating how to use asynchronous execution (usin
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 09/01/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Asynchronous Execution (Notification Method) Sample
@@ -308,7 +308,7 @@ int _tmain(int argc, _TCHAR* argv[])
     for(int i = 0; i < g_nConnection; i++)  
     {  
         SQLDriverConnect(g_hDbcs[i],NULL,
-            (SQLCHAR*)"DRIVER={ODBC Driver 17 for SQL Server};Server=your_server;database=your_database;uid=usr;pwd=your_password",
+            (SQLCHAR*)"DRIVER={ODBC Driver 18 for SQL Server};Server=your_server;Encrypt=yes;database=your_database;uid=usr;pwd=your_password",
             SQL_NTS, (SQLCHAR*)g_connOut[i].szOutConnectionString, 500, &g_connOut[i].iLen, SQL_DRIVER_NOPROMPT);  
     }
 

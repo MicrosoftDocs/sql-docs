@@ -4,8 +4,8 @@ description: Learn about the Admin Console alerts in Analytics Platform System, 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 06/23/2022
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: troubleshooting
 ms.custom:
   - seo-dt-2019

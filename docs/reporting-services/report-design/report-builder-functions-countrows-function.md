@@ -3,7 +3,6 @@ title: "CountRows function in a paginated report | Microsoft Docs"
 description: Learn about the CountRows function, which returns the number of rows in a specified scope, including rows with null values in a paginated report. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

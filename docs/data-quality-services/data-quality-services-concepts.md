@@ -1,15 +1,12 @@
 ---
-description: "Data Quality Services Concepts"
 title: "Data Quality Services Concepts"
-ms.date: "01/01/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
+description: "Data Quality Services Concepts"
 author: swinarko
 ms.author: sawinark
+ms.date: "01/01/2012"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Data Quality Services Concepts
 

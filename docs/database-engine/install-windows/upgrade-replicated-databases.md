@@ -1,21 +1,18 @@
 ---
-title: "Upgrade or patch replicated databases | Microsoft Docs"
+title: "Upgrade or patch replicated databases"
 description: SQL Server supports upgrading replicated databases from previous versions of SQL Server without stopping activity on other nodes.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "07/24/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "merge replication database upgrades [SQL Server replication]"
   - "replication [SQL Server], upgrading"
   - "transactional replication, upgrading databases"
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
-ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade or patch replicated databases
@@ -41,7 +38,7 @@ The majority of this article is scoped towards upgrading the version of SQL Serv
  >[!WARNING]
  > Upgrading a replication topology is a multi-step process. We recommend attempting an upgrade of a replica of your replication topology in a test environment before running the upgrade on the actual production environment. This will help iron out any operational documentation that is required for handling the upgrade smoothly without incurring expensive and long downtimes during the actual upgrade process. We have seen customers reduce downtime significantly with the use of Always On Availability Groups and/or SQL Server Failover Cluster Instances for their production environments while upgrading their replication topology. Additionally, we recommend taking backups of all the databases including MSDB, Master, Distribution database(s) and the user databases participating in replication before attempting the upgrade.
  > 
- > When you have a distribution database in a failover cluster instance, make sure that all participating nodes use the same build. We don’t recommend a setup in which one node is a SQL Server version earlier than SQL Server 2016 SP2-CU3 or SQL Server 2017 CU6 and the other node is a SQL Server version later than SQL Server 2016 SP2-CU3 or SQL Server 2017 CU6. Beginning in SQL Server 2016 SP2-CU3 and SQL Server 2017 CU6, support is added for using a distribution database in an Always On Availability Group and for new objects (tables, stored procedures) in distribution databases. If your distribution database is in a failover cluster instance and you're doing a phased migration (and you can't upgrade all nodes to the same version of SQL Server), for the narrow migration timeframe, we recommend that you do account tasks like adding a new subscriber, subscription, publisher, or publication on the node that has the later version of SQL Server.
+ > When you have a distribution database in a failover cluster instance, make sure that all participating nodes use the same build. We don't recommend a setup in which one node is a SQL Server version earlier than SQL Server 2016 SP2-CU3 or SQL Server 2017 CU6 and the other node is a SQL Server version later than SQL Server 2016 SP2-CU3 or SQL Server 2017 CU6. Beginning in SQL Server 2016 SP2-CU3 and SQL Server 2017 CU6, support is added for using a distribution database in an Always On Availability Group and for new objects (tables, stored procedures) in distribution databases. If your distribution database is in a failover cluster instance and you're doing a phased migration (and you can't upgrade all nodes to the same version of SQL Server), for the narrow migration timeframe, we recommend that you do account tasks like adding a new subscriber, subscription, publisher, or publication on the node that has the later version of SQL Server.
 
 
 ## Replication Matrix

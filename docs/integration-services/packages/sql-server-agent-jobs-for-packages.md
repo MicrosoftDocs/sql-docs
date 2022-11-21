@@ -5,9 +5,8 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "jobs [Integration Services]"
@@ -132,7 +131,6 @@ You can automate and schedule the execution of [!INCLUDE[ssNoVersion](../../incl
     |**SQL Server**|Packages that are stored in the MSDB database. You use the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service to manage these packages.|  
     |**SSIS Package Store**|Packages that are stored in the default folder on your computer. The default folder is *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. You use the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service to manage these packages.<br /><br /> Note: You can specify a different folder or specify additional folders in the file system to be managed by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, by modifying the configuration file for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. For more information, see [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**File System**|Packages that are stored in any folder on your local machine.|  
-    |||
   
     **The following tables describe the configuration options that are available for the job step depending on the package source you select.**  
   

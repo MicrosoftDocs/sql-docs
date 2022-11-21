@@ -1,9 +1,8 @@
 ---
 title: XML data (SQL Server)
 description: Use XML data for developing rich applications for semi-structured data management.
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "XML [SQL Server]"

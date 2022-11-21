@@ -4,8 +4,8 @@ description: These articles describe some common security concerns including con
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/31/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Securing JDBC driver applications

@@ -3,10 +3,9 @@ description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODB
 title: "Bulk Copy, enhanced types, OLE DB"
 ms.custom: ""
 ms.date: 12/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, bulk copy operations"
@@ -20,6 +19,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   This topic describes the date/time enhancements to support bulk copy functionality. The information in this topic is valid for both OLE DB and ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
+
 ## Format Files  
  When building format files interactively, the following table describes the input used to specify date/time types and the corresponding host-file data type names.  
   
@@ -31,7 +33,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
-||||
 
  The XML format file XSD will have the following additions:  
   
@@ -73,7 +74,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
-|||
 
  The sizes are as follows for ODBC. Note that it is not necessary to store precision in either format or data files, because BCP.exe will always retrieve precision from the server.  
   
@@ -85,7 +85,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |time (te)|6|TDS|  
 |datetime2 (d2)|9|TDS|  
 |datetimeoffset (do)|11|TDS|  
-||||
 
 ## BCP Types in sqlncli.h  
  The following types are defined in sqlncli.h to be used with the BCP API extensions to ODBC. These types are passed with the *eUserDataType* parameter of IBCPSession::BCPColFmt in OLE DB.  
@@ -98,7 +97,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
-|||||
 
 ## BCP Data Type Conversions  
  The following tables provide conversion information.  
@@ -117,7 +115,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/A|N/A|  
 |Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/A|N/A|  
 |Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/A|N/A|  
-||||||||||
 
 #### Key to Symbols  
   
@@ -137,7 +134,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |11|If truncation with data loss occurs, a diagnostic record is generated.<br /><br /> On a server-to-client conversion, this is a warning (ODBC SQLSTATE S1000).<br /><br /> On a client-to-server conversion, this is an error (ODBC SQLSTATE 22001).|  
 |12|Seconds are set to zero and fractional seconds are discarded. No truncation error is possible.|  
 |N/A|Existing [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and earlier behavior is maintained.|  
-|||
 
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   

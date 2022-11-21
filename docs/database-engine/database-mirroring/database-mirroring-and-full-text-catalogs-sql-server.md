@@ -1,20 +1,17 @@
 ---
 title: "Database mirroring and full-text catalogs"
 description: Learn how to configure a database mirror on a database that has a full-text catalog and about indexes before and after failover.
-ms.custom: "seo-lt-2019"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database mirroring [SQL Server], interoperability"
   - "full-text catalogs [SQL Server], database mirroring"
   - "catalogs [SQL Server], database mirroring"
-ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Database mirroring and full-text catalogs (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

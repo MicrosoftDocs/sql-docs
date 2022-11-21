@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (Advanced Page) | Microsoft Docs"
+title: "Server Properties (Advanced Page)"
 description: Get acquainted with SQL Server advanced server settings. Learn about FILESTREAM options, various thresholds, full-text upgrade alternatives, and other settings.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.advanced.f1"
-ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.advanced.f1"
 ---
 # Server Properties - Advanced Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,21 @@
 ---
 title: "Prepare a secondary database for an availability group"
 description: "A description for how to manually prepare a secondary database to join an Always On availability group."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "07/25/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seodec18
+f1_keywords:
   - "sql13.swb.availabilitygroup.preparedbs.f1"
   - "sql13.swb.availabilitygroup.configsecondarydbs.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "secondary databases [SQL Server]"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
-ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Prepare a secondary database for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

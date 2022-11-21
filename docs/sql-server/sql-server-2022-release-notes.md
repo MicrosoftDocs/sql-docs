@@ -1,10 +1,10 @@
 ---
 title: "SQL Server 2022 Release Notes"
-description: Find information about SQL Server 2019 (16.x) limitations, known issues, help resources, and other release notes.
-ms.date: 08/23/2022
-ms.prod: sql
+description: Find information about SQL Server 2022 (16.x) limitations, known issues, help resources, and other release notes.
+ms.date: 11/01/2022
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: "article"
 ms.custom:
 - event-tier1-build-2022
@@ -12,38 +12,82 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: "= sql-server-ver16"
 ---
+
 # [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release notes
 
 [!INCLUDE[SQL Server 2022](../includes/applies-to-version/sqlserver2022.md)]
 
-This article describes requirements, limitations and known issues for the [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] release candidate (RC) 0.
-
-Complete details about licensing are in `License Terms` folder on the installation media.
+This article describes requirements, limitations and known issues for [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)].
 
 ## Hardware and software requirements
 
-This release has the same hardware and software requirements as [SQL Server 2019](install/hardware-and-software-requirements-for-installing-sql-server-2019.md), except as noted below:
-
-- .NET Framework: 4.7.2. [Download](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+For hardware and software requirements, see [SQL Server 2022: Hardware and software requirements](install/hardware-and-software-requirements-for-installing-sql-server-2022.md).
 
 ## Feature notes
 
-This section identifies known issues you may experience with this product:
+This section identifies known issues you may experience with this product.
 
-- If you choose to add the Azure extension for SQL Server to an existing instance, Setup currently requires that you also add at least 1 other feature from the **Feature Selection** page in order to complete adding the Arc extension feature.
+### SQL Setup
 
-- When you install Azure extension for SQL Server during setup, in some cases a timeout may occur. In this case, setup returns a timeout exception but setup should succeed and the extension should be installed.
+#### Help
 
-- When you set encryption to **Force Encryption** with SQL Server Configuration Manager, the setting won't change the encryption and may cause errors.
+When you execute `setup /HELP` the information returned does not include the new `/AZUREEXTENSION` feature. Complete information for `setup` is at [Install SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 
-- Query Store for secondary replicas is available for preview. It isn't available for use in production environments.
+#### Localized language interface
 
-- Certain SSIS functions require the [Microsoft ODBC Driver 18 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) and [Microsoft OLE DB Driver 19 for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md), which aren't packaged in SQL Server 2022 RC 0 installation. For RC 0, install the two drivers from the provided links as necessary.
+In certain localized languages, the Azure Extension configuration screen controls may be partially overwritten or missing. To resolve issue, expand or maximize the Setup window from the default window sizing.
+
+#### Software Assurance installation parameter
+
+There is a new Setup command line installation parameter - `/PRODUCTCOVEREDBYSA`. The parameter indicates if the provided product key (`/PID=`) license is covered under a Software Assurance or SQL Server Subscription contract, or just a SQL Server license.
+
+[Install SQL Server on Windows from the command prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) describes this parameter.
+
+#### Deprecated feature parameters
+
+The following features are not available in Setup in SQL Server 2022. If specified in command line installations or scripts, these previously supported parameters may fail.
+
+:::row:::
+    :::column:::
+     - `\PolyBaseJava`
+     - `\SQL_INST_MR`
+     - `\SQL_INST_JAVA`
+     - `\SQL_INST_MPY`
+    :::column-end:::
+    :::column:::
+     - `\SQLJAVADIR`
+     - `\SQL_SHARED_MPY`
+     - `\SNAC_SDK`
+     - `\SQL_SHARED_MR`
+    :::column-end:::
+    :::column:::
+     - `\SDK`
+     - `\DREPLAY_CTLR`
+     - `\TOOLS`
+     - `\DREPLAY_CLT`
+    :::column-end:::
+:::row-end:::
+
+#### Reboot requirement
+
+When you install an initial SQL Server 2022 instance on a Windows Server 2022 machine, if the server does not have `VCRuntime140` version 14.29.30139 or later installed, Setup will require reboot.
+
+Windows Server 2022 was released with VCRuntime version 14.28.29914. 
+
+### Query Store for secondary replicas
+
+[Query Store for secondary replicas](../relational-databases/performance/query-store-for-secondary-replicas.md) is available for preview. It isn't available for use in production environments.
+
+### RPC calls fail with Encrypt=Strict
+- **Issue and customer impact**: Due to defect in TDS 8.0 protocol implementation RPC calls would fail if Encrypt option is set to Strict in connection string. Example would be running "sp_who" stored procedure.
+- **Applies to**: [!INCLUDE[SQL Server 2022](../includes/sssql22-md.md)] RTM
 
 ## Build number
 
 | Preview build | Version number | Date |
 |:--|:--|:--|
+| General release to market (RTM) | 16.0.1000.6  | November 16, 2022 |
+| RC 1    | 16.0.950.9 | September 22, 2022|
 | RC 0    | 16.0.900.6 | August 23, 2022|
 | CTP 2.1 | 16.0.700.4 | July 27, 2022 |
 | CTP 2.0 | 16.0.600.9 | May 20, 2022 |

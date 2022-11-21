@@ -2,10 +2,9 @@
 title: Import a Trace Template
 titleSuffix: SQL Server Profiler
 description: Learn how to import a user-defined template in SQL Server Profiler to make it available for traces along with the predefined system templates.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: markingmyname

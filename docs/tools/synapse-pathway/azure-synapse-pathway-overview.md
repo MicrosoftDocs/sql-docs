@@ -5,8 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf 
 ms.topic: overview
 ms.date: 02/11/2022
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom:
   - template-overview

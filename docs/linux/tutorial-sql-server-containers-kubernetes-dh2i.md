@@ -6,8 +6,8 @@ ms.author: amitkh
 ms.reviewer: amitkh, vanto
 ms.date: 04/01/2022
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.custom:
   - intro-deployment
 ---
@@ -86,7 +86,7 @@ ENTRYPOINT ["/opt/dh2i/sbin/dxstart.sh"]
 On a Linux machine, run the following commands to build the image:
 
 ```bash
-$mkdir dockefiles 
+$mkdir dockerfiles 
 $cd dockerfiles 
 $nano Dockerfile  
 # paste the sample dockerfile content shared above 

@@ -1,14 +1,13 @@
 ---
-title: "SQL Writer Service | Microsoft Docs"
+title: "SQL Writer Service"
 description: Learn about the SQL Writer Service. See how it provides added backup and restore functionality in SQL Server through the Volume Shadow Copy Service framework.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "VDI [SQL Server]"
   - "restoring [SQL Server], SQL Writer Service"
   - "backups [SQL Server], while SQL Server running"
@@ -19,9 +18,6 @@ helpviewer_keywords:
   - "services [SQL Server], SQL Writer"
   - "MSDE Writer"
   - "VSS"
-ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # SQL Writer Service
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

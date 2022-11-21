@@ -2,8 +2,8 @@
 title: Integrated acceleration & offloading
 description: Learn to leverage integrated solutions from third party providers to offload and accelerate workloads for an instance of SQL Server.
 ms.date: 08/18/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
@@ -30,14 +30,14 @@ Backup compression is enabled by including the COMPRESSION keyword for BACKUP T-
 
 Integrated acceleration and offloading are supported starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] on Windows.
 
-- Enterprise edition supports hardware offloading - can use a physical device. If no device is available, it falls back to software based compression.
+Preview software is Evaluation Edition. It supports:
 
-- Standard edition supports software compression. Standard edition does not offload to hardware even if a device is available.
-
-- Express edition allows compressed backups to be restored if the drivers are available. All editions lower than SQL Server Standard edition will only allow backups to be performed with the default MS_XPRESS algorithm.
+- Hardware offloading - can use a physical device. If no device is available, it falls back to software based compression.
+- Software compression.
+- Compressed backups to be restored if the drivers are available.
 
 > [!NOTE]
-> Hardware is not required to successfully restore a previously compressed backup, regardless of the SQL Server edition. However, to back up or restore databases with accelerated compression, you must install product drivers.
+> Hardware is not required to successfully restore a previously compressed backup. However, to back up or restore databases with accelerated compression, you must install product drivers.
 
 ## Limitations
 

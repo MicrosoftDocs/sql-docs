@@ -3,17 +3,16 @@ description: "Require Attribute Values (Master Data Services)"
 title: Require Attribute Values
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "business rules [Master Data Services], requiring attribute values"
   - "attributes [Master Data Services], requiring values"
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Require Attribute Values (Master Data Services)
 

@@ -1,13 +1,13 @@
 ---
 title: Service Broker Routing Examples
 description: "This section presents examples of the Service Broker routing process."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Service Broker Routing Examples

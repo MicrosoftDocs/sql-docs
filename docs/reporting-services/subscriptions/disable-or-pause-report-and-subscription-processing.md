@@ -3,7 +3,6 @@ title: "Disable or Pause Report and Subscription Processing | Microsoft Docs"
 description: Manage subscriptions, pause shared schedules, disable shared data sources, block report access, manage subscription permissions, & remove delivery extensions.
 ms.date: 06/19/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
 
 

@@ -1,20 +1,18 @@
 ---
 title: "Fail over to a log shipping secondary"
 description: Learn how to fail over to a SQL Server log shipping secondary by using SQL Server Management Studio or Transact-SQL.
-ms.custom: "seo-lt-2019"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "primary databases [SQL Server]"
   - "secondary data files [SQL Server], manual fail over"
   - "log shipping [SQL Server], failover"
   - "failover [SQL Server], log shipping"
-ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

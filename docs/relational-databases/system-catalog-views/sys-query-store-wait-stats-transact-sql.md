@@ -3,10 +3,9 @@ title: "sys.query_store_wait_stats (Transact-SQL)"
 description: sys.query_store_wait_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "4/26/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: 09/19/2022
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -24,32 +23,32 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-  Contains  information about the wait information for the query.  
-  
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|**wait_stats_id**|**bigint**|Identifier of the row representing wait statistics for the plan_id, runtime_stats_interval_id, execution_type and wait_category. It is unique only for the past runtime statistics intervals. For the currently active interval, there may be multiple rows representing wait statistics for the plan referenced by plan_id, with the execution type represented by execution_type and the wait category represented by wait_category. Typically, one row represents wait statistics that are flushed to disk, while other(s) represent in-memory state. Hence, to get actual state for every interval you need to aggregate metrics, grouping by plan_id, runtime_stats_interval_id, execution_type and wait_category. |  
-|**plan_id**|**bigint**|Foreign key. Joins to [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Foreign key. Joins to [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+  Contains  information about the wait information for the query.
+
+|Column name|Data type|Description|
+|-----------------|---------------|-----------------|
+|**wait_stats_id**|**bigint**|Identifier of the row representing wait statistics for the plan_id, runtime_stats_interval_id, execution_type and wait_category. It is unique only for the past runtime statistics intervals. For the currently active interval, there may be multiple rows representing wait statistics for the plan referenced by plan_id, with the execution type represented by execution_type and the wait category represented by wait_category. Typically, one row represents wait statistics that are flushed to disk, while other(s) represent in-memory state. Hence, to get actual state for every interval you need to aggregate metrics, grouping by plan_id, runtime_stats_interval_id, execution_type and wait_category. |
+|**plan_id**|**bigint**|Foreign key. Joins to [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|
+|**runtime_stats_interval_id**|**bigint**|Foreign key. Joins to [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|
 |**wait_category**|**tinyint**|Wait types are categorized using the table below, and then wait time is aggregated across these wait categories. Different wait categories require a different follow-up analysis to resolve the issue, but wait types from the same category lead to similar troubleshooting experiences, and providing the affected query in addition to the waits is the missing piece to complete the majority of such investigations successfully.|
 |**wait_category_desc**|**nvarchar(128)**|For textual description of the wait category field, review the table below.|
-|**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 - Regular execution (successfully finished)<br /><br /> 3 - Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|  
-|**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 -  Regular<br /><br /> 3 -  Aborted<br /><br /> 4 -  Exception|  
+|**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 - Regular execution (successfully finished)<br /><br /> 3 - Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|
+|**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 -  Regular<br /><br /> 3 -  Aborted<br /><br /> 4 -  Exception|
 |**total_query_wait_time_ms**|**bigint**|Total `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**avg_query_wait_time_ms**|**float**|Average wait duration for the query plan per execution within the aggregation interval and wait category (reported in milliseconds).|
 |**last_query_wait_time_ms**|**bigint**|Last wait duration for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**min_query_wait_time_ms**|**bigint**|Minimum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**max_query_wait_time_ms**|**bigint**|Maximum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` duration standard deviation for the query plan within the aggregation interval and wait category (reported in milliseconds).|
-|**replica_group_id**|**bigint**|Identifies the replica set number for this replica.<BR/><BR/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|
+|**replica_group_id**|**bigint**|Identifies the replica set number for this replica. Foreign key to [sys.query_store_replicas](sys-query-store-replicas.md).<BR/><BR/>**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])|
 
 ## Wait categories mapping table
 
 "%" is used as a wildcard
-  
-|Integer value|Wait category|Wait types include in the category|  
-|-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
+
+|Integer value|Wait category|Wait types include in the category|
+|-----------------|---------------|-----------------|
+|**0**|**Unknown**|Unknown |
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Worker Thread***|THREADPOOL|
 |**3**|**Lock**|LCK_M_%|
@@ -78,18 +77,19 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
 ## Permissions
 
- Requires the `VIEW DATABASE STATE` permission.  
-  
+ Requires the `VIEW DATABASE STATE` permission.
+
 ## Next steps
 
 Learn more about Query Store in the following articles:
 
-- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
-- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
-- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
-- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
-- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
-- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [sys.query_store_replicas (Transact-SQL)](sys-query-store-replicas.md)
+- [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
 - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)

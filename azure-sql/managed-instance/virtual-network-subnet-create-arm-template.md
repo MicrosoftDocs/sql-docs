@@ -31,7 +31,7 @@ Azure SQL Managed Instance must be deployed within an Azure [virtual network](/a
 > After a managed instance is created, moving the managed instance or virtual network to another resource group or subscription is not supported. 
  
 > [!IMPORTANT]
-> You can [move the instance to another subnet inside the Vnet](vnet-subnet-move-instance.md). Moving a managed instance from one subnet to another within the same VNET is allowed and supported. Moving a managed instance across VNET is not supported.
+> You can [move the instance to another subnet inside the same Vnet or a different Vnet](vnet-subnet-move-instance.md). 
 
 ## Create a virtual network
 
@@ -60,4 +60,4 @@ The easiest way to create and configure a virtual network is to use an Azure Res
 - Learn about [connectivity architecture in SQL Managed Instance](connectivity-architecture-overview.md).
 - Learn how to [modify an existing virtual network for SQL Managed Instance](vnet-existing-add-subnet.md).
 - For a tutorial that shows how to create a virtual network, create a managed instance, and restore a database from a database backup, see [Create a managed instance](instance-create-quickstart.md).
-- For DNS issues, see [Configure a custom DNS](custom-dns-configure.md).
+- For DNS issues, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).

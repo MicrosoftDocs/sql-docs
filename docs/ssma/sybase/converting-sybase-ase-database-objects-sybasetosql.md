@@ -3,9 +3,9 @@ description: "Converting Sybase ASE Database Objects (SybaseToSQL)"
 title: "Converting Sybase ASE Database Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Converting Database Objects"

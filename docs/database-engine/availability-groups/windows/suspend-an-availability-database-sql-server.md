@@ -1,22 +1,20 @@
 ---
 title: "Suspend an availability database"
 description: Learn about suspending the data movement for a database within an Always On availability group using SQL Server Management Studio, Transact-SQL or PowerShell.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.availabilitygroup.suspenddatamove.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], suspending a database"
   - "Availability Groups [SQL Server], databases"
-ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Suspend an Availability Database (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

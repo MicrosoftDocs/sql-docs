@@ -5,9 +5,9 @@ description: This article describes the updates and known issues for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 08/15/2022
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.date: 09/28/2022
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 
@@ -19,13 +19,22 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
 For the latest release notes, see [SQL Server 2019 Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
 
-## <a id="cu17"></a> CU17 (August 2022)
+## <a id="cu18"></a> CU18 (September 2022)
 
-Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters, [KB 5016394](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7).
+Cumulative Update 18 (CU18) release for SQL Server 2019 Big Data Clusters, [KB 5017593](https://support.microsoft.com/help/5017593).
 
 |Package version | Image tag | Contents |
 |-----|-----| ----- |
-|15.0.4249.2| 2019-CU17-ubuntu-20.04| [KB 5016394](https://support.microsoft.com/help/5016394) |
+|15.0.4261.1|[2019-CU18-ubuntu-20.04]| [SQL Server Big Data Clusters Cumulative Update 18](release-notes-cumulative-update-18.md)   |
+
+
+## <a id="cu17"></a> CU17 (August 2022)
+
+Cumulative Update 17 (CU17) release for SQL Server 2019 Big Data Clusters, [KB 5016394](https://support.microsoft.com/help/5016394).
+
+|Package version | Image tag | Contents |
+|-----|-----| ----- |
+|15.0.4249.2|[2019-CU17-ubuntu-20.04]| [KB 5016394](https://support.microsoft.com/help/5016394) |
 
 ## <a id="cu16"></a> CU16 GDR (June 2022)
 

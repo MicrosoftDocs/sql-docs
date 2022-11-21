@@ -3,10 +3,9 @@ description: "Connect to Oracle"
 title: "Connect to Oracle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "connOra"
@@ -15,9 +14,6 @@ author: chugugrace
 ms.author: chugu
 ---
 # Connect to Oracle
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   When you add or edit the tables used in the CDC instance for the first time, you may be asked to connect to the Oracle database. You should enter the credentials of an Oracle user who can access the schema of the tables to be captured. Enter the following in this dialog box:  
   

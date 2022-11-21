@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: xiaoyul
 ms.date: 07/20/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics"
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: reference
 f1_keywords:
   - "CREATE VIEW"

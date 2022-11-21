@@ -1,13 +1,13 @@
 ---
 title: Service Broker Applications
 description: "Service Broker applications are made up of one or more programs and the database objects that those programs use."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Service Broker Applications

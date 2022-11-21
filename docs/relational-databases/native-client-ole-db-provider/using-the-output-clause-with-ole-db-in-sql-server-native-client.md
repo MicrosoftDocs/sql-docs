@@ -3,10 +3,9 @@ description: "Using the OUTPUT Clause with OLE DB in SQL Server Native Client"
 title: "OUTPUT clause, OLE DB"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 53deeb99-c088-4fde-844b-b2d91d6de1eb
 author: markingmyname

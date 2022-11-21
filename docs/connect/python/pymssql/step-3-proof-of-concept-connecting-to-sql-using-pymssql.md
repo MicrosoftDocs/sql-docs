@@ -1,16 +1,12 @@
 ---
 title: "Step 3: Connecting to SQL using pymssql"
 description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pymssql. The basic examples demonstrate selecting and inserting data."
-ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-davidengel
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

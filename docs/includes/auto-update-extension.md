@@ -1,9 +1,9 @@
 ---
 author: MikeRayMSFT
-ms.prod: sql
-ms.topic: include
-ms.date: 08/30/2021
 ms.author: mikeray
+ms.date: 08/30/2021
+ms.service: sql
+ms.topic: include
 ---
 
 You can check for updates to the extension and have them automatically updated by configuring **Auto Update** in Azure Data Studio settings.

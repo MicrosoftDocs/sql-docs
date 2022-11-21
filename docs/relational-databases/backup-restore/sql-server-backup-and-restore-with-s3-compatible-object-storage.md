@@ -5,10 +5,9 @@ storage: Learn about SQL Server backup to and restore from S3-compatible object 
 ms.custom:
 - event-tier1-build-2022
 ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -21,15 +20,15 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 This article introduces the concepts, requirements and components necessary to use S3-compatible object storage as a backup destination. 
 
 > [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of SQL Server 2022.
+> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
   
 ## Overview
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3 compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
 
 This article contains information on using Backup to URL for S3-compatible object storage. To learn more about using Backup to URL for S3-compatible object storage, see [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
-### Backup and Restore to S3 compatible storage
+### Backup and Restore to S3-compatible storage
 
 The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support the S3 connector. For more information on Backup to URL functionality, see: 
 
@@ -42,7 +41,7 @@ The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support t
 
 There are many providers of S3-compatible object storage in the market today. Object storage is either provided as software-defined, as hardware appliances, or as a combination for hybrid cloud scenarios.
 
-The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of SQL Server 2022.
+The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 | **Vendor (alphabetical)**       | **Offering**                  | 
 |---------------------------------|-------------------------------|

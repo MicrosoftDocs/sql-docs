@@ -4,8 +4,8 @@ description: The Microsoft JDBC Driver for SQL Server is a Type 4 Java Database 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/06/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Overview of the JDBC driver
@@ -36,7 +36,6 @@ The articles in this section provide a general overview of the JDBC driver, incl
 |[Microsoft JDBC Driver for SQL Server support matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Support matrix and support lifecycle policy for the Microsoft JDBC driver for SQL Server.|
 |[Frequently asked questions &#40;FAQ&#41; for JDBC driver](frequently-asked-questions-faq-for-jdbc-driver.yml)|Frequently asked questions about the Microsoft JDBC driver.|
 |[Feature dependencies of Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Feature dependencies of Microsoft JDBC Driver for SQL Server.|
-| &nbsp; | &nbsp; |
 
 ## See also
 

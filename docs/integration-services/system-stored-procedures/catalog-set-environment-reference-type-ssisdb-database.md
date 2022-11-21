@@ -3,10 +3,9 @@ description: "catalog.set_environment_reference_type (SSISDB Database)"
 title: "catalog.set_environment_reference_type (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace

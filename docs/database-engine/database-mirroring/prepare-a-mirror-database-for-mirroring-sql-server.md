@@ -1,20 +1,17 @@
 ---
 title: "Prepare a database for mirroring"
 description: Learn how to prepare a SQL Server database for database mirroring by using SQL Server Management Studio or Transact-SQL in SQL Server.
-ms.custom: seo-lt-2019
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/10/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database mirroring [SQL Server], preparing for mirroring"
   - "logins [SQL Server], database mirroring"
   - "mirror database [SQL Server]"
-ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Prepare a Mirror Database for Mirroring (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

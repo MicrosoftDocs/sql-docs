@@ -3,9 +3,9 @@ description: "MSSQLSERVER_17890"
 title: MSSQLSERVER_17890
 ms.custom: ""
 ms.date: 12/25/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "17890 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SRV_WS_TRIMMED|
 |Message Text|A significant part of SQL Server process memory has been paged out. This may result in a performance degradation. Duration: %d seconds. Working set (KB): %I64d, committed (KB): %I64d, memory utilization: %d%%.|
-||
 
 ## Explanation
 

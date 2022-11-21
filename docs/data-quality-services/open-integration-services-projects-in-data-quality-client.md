@@ -1,16 +1,13 @@
 ---
 title: "Open Integration Services (SSIS) projects in Data Quality Client"
-description: Learn how to open a SQL Server Integration Services (SSIS) project using the Data Quality Client for SQL Server Data Quality Services. 
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
+description: Learn how to open a SQL Server Integration Services (SSIS) project using the Data Quality Client for SQL Server Data Quality Services.
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 # Open Integration Services Projects in Data Quality Client
 

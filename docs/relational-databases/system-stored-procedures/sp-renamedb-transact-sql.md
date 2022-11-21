@@ -3,10 +3,9 @@ description: "sp_renamedb (Transact-SQL)"
 title: "sp_renamedb (Transact-SQL)"
 ms.custom: ""
 ms.date: "04/06/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_renamedb"

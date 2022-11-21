@@ -3,9 +3,8 @@ description: "Change Steps of a SQL Server Agent Master Job"
 title: "Change Steps of a SQL Server Agent Master Job"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: markingmyname

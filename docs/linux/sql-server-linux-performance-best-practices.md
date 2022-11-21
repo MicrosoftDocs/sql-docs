@@ -4,10 +4,10 @@ description: This article provides performance best practices and guidelines for
 author: tejasaks 
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 01/19/2021
+ms.date: 09/27/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 
 # Performance best practices and configuration guidelines for SQL Server on Linux
@@ -26,7 +26,7 @@ Consider using the following Linux OS configuration settings to experience the b
 
 #### Use storage subsystem with appropriate IOPS, throughput, and redundancy
 
-The storage subsystem hosting data, transaction logs, and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally, in on-premise environments, the storage vendor support appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, throughput, and redundancy. Though, this can differ across different storage vendors and different storage offerings with varying architectures.
+The storage subsystem hosting data, transaction logs, and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally, in on-premises environments, the storage vendor support appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, throughput, and redundancy. Though, this can differ across different storage vendors and different storage offerings with varying architectures.
 
 For SQL Server on Linux deployed on Azure Virtual Machines, consider using software RAID to ensure appropriate IOPS and throughput requirements are achieved. Refer to following article when configuring SQL Server on Azure virtual machines for similar storage considerations: [Storage configuration for SQL Server VMs](/azure/azure-sql/virtual-machines/windows/storage-configuration)
 
@@ -52,8 +52,8 @@ For SQL Server, it is recommended to use RAID configurations. The deployed files
 # Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
 mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=6 /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf
 
-mkfs.xfs /dev/sda1 -f -L log 
-meta-data=/dev/sda1              isize=512    agcount=32, agsize=18287648 blks 
+mkfs.xfs /dev/md3 -f -L log 
+meta-data=/dev/md3              isize=512    agcount=32, agsize=18287648 blks 
          =                       sectsz=4096  attr=2, projid32bit=1 
          =                       crc=1        finobt=1, sparse=1, rmapbt=0 
          =                       reflink=1 
@@ -91,6 +91,15 @@ mkfs.xfs /dev/md2 -f -L tempdb
 ##### Persistent Memory filesystem recommendation
 
 For the filesystem configuration on Persistent Memory devices, the block allocation for the underlying filesystem should be 2 MB. For more information on this topic, review the article [Technical considerations](sql-server-linux-configure-pmem.md#technical-considerations).
+
+##### Open file limitation
+
+The default open file limit is often set at 1024. Your production environment may require more connections than the default limit. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
+
+```ini
+mssql hard nofile 32727
+mssql soft nofile 16000
+```
 
 #### Disable last accessed date/time on file systems for SQL Server data and log files
 

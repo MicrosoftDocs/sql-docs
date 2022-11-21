@@ -3,10 +3,9 @@ description: "Review and Generate Supplemental Logging Scripts"
 title: "Review and Generate Supplemental Logging Scripts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "scripts"
@@ -15,9 +14,6 @@ author: chugugrace
 ms.author: chugu
 ---
 # Review and Generate Supplemental Logging Scripts
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   Use the **Scripts** tab to run or re-run a script on the Oracle source database that sets up supplemental logging.  
   

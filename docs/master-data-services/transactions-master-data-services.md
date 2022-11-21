@@ -3,17 +3,16 @@ description: "Transactions (Master Data Services)"
 title: Transactions
 ms.custom: ""
 ms.date: "01/10/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Master Data Services], about transactions"
   - "transactions [Master Data Services]"
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Transactions (Master Data Services)
 

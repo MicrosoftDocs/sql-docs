@@ -5,8 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith, randolphwest
 ms.date: 07/22/2022
-ms.prod: sql
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 f1_keywords:

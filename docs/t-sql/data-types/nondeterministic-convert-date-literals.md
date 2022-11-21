@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: "11/19/2018"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
@@ -66,18 +66,18 @@ The preceding **dmy** format says that an example date string of '01-03-2018' wo
 
 If instead **mdy** was specified, then the same '01-03-2018' string would mean _the third day of January in 2018_.
 
-And if **ymd** was specified, there is no guarantee of what the output would be. The numeric value of '2018' is too large to be a day.
+And if **ymd** was specified, there's no guarantee of what the output would be. The numeric value of '2018' is too large to be a day.
 <!--
 The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
-#### Specific countries
+#### Specific countries/regions
 
-In Japan and China, the DATEFORMAT of **ymd** is used. The format's parts are in a sensible sequence of largest unit to smallest. Consequently, this format sorts well. This format is considered to be the _international_ format. It is international because the four digits of the year are unambiguous, and no country on Earth uses the archaic format of **ydm**.
+In Japan and China, the DATEFORMAT of **ymd** is used. The format's parts are in a sensible sequence of largest unit to smallest. So, this format sorts well. This format is considered to be the _international_ format. It's international because the four digits of the year are unambiguous, and no country/region on Earth uses the archaic format of **ydm**.
 
-In other countries such as Germany and France, the DATEFORMAT is **dmy**, meaning **'dd-mm-yyyy'**. The **dmy** format does not sort well, but it is a sensible sequence of smallest unit to largest.
+In other countries/regions such as Germany and France, the DATEFORMAT is **dmy**, meaning **'dd-mm-yyyy'**. The **dmy** format doesn't sort well, but it's a sensible sequence of smallest unit to largest.
 
-The United States, and the Federated States of Micronesia, are the only countries that use **mdy**, which does not sort. The format's mixed sequence matches a pattern of verbal speech in spoken dates.
+The United States, and the Federated States of Micronesia, are the only countries/regions that use **mdy**, which doesn't sort. The format's mixed sequence matches a pattern of verbal speech in spoken dates.
 
 #### Code example of SET DATEFORMAT: *mdy* versus *dmy*
 
@@ -111,7 +111,7 @@ YMD-Interpretation--?--NotGuaranteed
 ***/
 ```
 
-In the preceding code example, the final example has a mismatch between format **ymd** versus the input string. The third node of the input string represents a numeric value that is too large to be a day. Microsoft does not guarantee the output value from such mismatches.
+In the preceding code example, the final example has a mismatch between format **ymd** versus the input string. The third node of the input string represents a numeric value that is too large to be a day. Microsoft doesn't guarantee the output value from such mismatches.
 
 #### CONVERT offers explicit codes for _deterministic_ control of date formats
 

@@ -4,16 +4,15 @@ description: Explore features and capabilities of SQL Server 2019 Master Data Se
 ms.custom:
   - intro-quickstart
 ms.date: "02/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: quickstart
 keywords:
   - "learn sql"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-author: chugugrace
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Learn SQL Server Master Data Services
 

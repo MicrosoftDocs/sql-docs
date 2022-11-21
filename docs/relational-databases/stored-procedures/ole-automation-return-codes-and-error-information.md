@@ -3,9 +3,9 @@ title: "OLE automation return codes and error information"
 description: Learn the details about OLE automation return codes and how to convert error code information. 
 ms.custom: ""
 ms.date: "03/10/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [SQL Server]"

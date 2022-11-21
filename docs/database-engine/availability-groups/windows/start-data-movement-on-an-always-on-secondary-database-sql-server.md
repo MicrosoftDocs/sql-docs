@@ -1,17 +1,15 @@
 ---
 title: "Start data movement on a secondary database"
-description: Learn how to start data movement for a secondary database participating in an Always On availability group on SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], databases"
-ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
+description: Learn how to start data movement for a secondary database participating in an Always On availability group on SQL Server.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], databases"
 ---
 # Start Data Movement on an Always On Secondary Database (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

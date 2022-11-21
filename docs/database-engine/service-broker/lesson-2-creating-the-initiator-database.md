@@ -1,13 +1,13 @@
 ---
-title: 'Lesson 2: Creating the Initiator Database'
+title: "Lesson 2: Creating the Initiator Database"
 description: "In this lesson, you will learn to create the initiator database and all the initiator Service Broker objects that are used in this tutorial."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Lesson 2: Creating the Initiator Database

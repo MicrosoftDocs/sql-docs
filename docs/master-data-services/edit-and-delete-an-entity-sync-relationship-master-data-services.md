@@ -3,14 +3,13 @@ description: "Edit and Delete an Entity Sync Relationship (Master Data Services)
 title: Edit and Delete an Entity Sync Relationship
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Edit and Delete an Entity Sync Relationship (Master Data Services)
 

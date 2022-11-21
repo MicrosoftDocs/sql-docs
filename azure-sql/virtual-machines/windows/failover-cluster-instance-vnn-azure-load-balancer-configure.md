@@ -1,8 +1,8 @@
 ---
 title: Configure Azure Load Balancer a failover cluster instance VNN
 description: Learn to configure an Azure Load Balancer to route traffic to the virtual network name (VNN) for your failover cluster instance (FCI) with SQL Server on Azure VMs for high availability and disaster recovery (HADR).
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 11/10/2021
 ms.service: virtual-machines-sql
@@ -50,34 +50,59 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
    - **Resource group**: The resource group that contains your virtual machines.
    - **Name**: A name that identifies the load balancer.
    - **Region**: The Azure location that contains your virtual machines.
-   - **Type**: Either public or private. A private load balancer can be accessed from within the virtual network. Most Azure applications can use a private load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
    - **SKU**: Standard.
-   - **Virtual network**: The same network as the virtual machines.
-   - **IP address assignment**: Static. 
-   - **Private IP address**: The IP address that you assigned to the clustered network resource.
+   - **Type**: Either public or internal. An internal load balancer can be accessed from within the virtual network. Most Azure applications can use an internal load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
+   - **Tier**: Regional.
 
    The following image shows the **Create load balancer** UI:
 
-   ![Set up the load balancer](./media/failover-cluster-instance-premium-file-share-manually-configure/30-load-balancer-create.png)
-   
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the create Load Balancer UI." lightbox="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png":::
+
+1. Select **Next: Frontend IP Configuration**
+
+1. Select **Add a frontend IP Configuration**
+
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of add a frontend IP configuration.":::
+
+1. Set up the frontend IP using the following values:
+
+   - **Name**: A name that identifies the frontend IP configuration
+   - **Virtual network**: The same network as the virtual machines.
+   - **Subnet**: The subnet as the virtual machines.
+   - **IP address assignment**: Static.
+   - **Private IP address**: The IP address that you assigned to the clustered network resource.
+   - **Availability zone**: Optionally choose and availability zone to deploy your IP to.
+
+   The following image shows the **Add frontend IP Configuration** UI:
+
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade." lightbox="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png":::
+
+1. Select **Add** to create the frontend IP.
+
+1. Choose **Review + Create** to create the load balancer and the frontend IP.
+
 
 ## Configure backend pool
 
 1. Return to the Azure resource group that contains the virtual machines and locate the new load balancer. You might need to refresh the view on the resource group. Select the load balancer.
 
-1. Select **Backend pools**, and then select **Add**.
+1. Select **Backend pools**, and then select **+Add**.
 
-1. Associate the backend pool with the availability set that contains the VMs.
+1. Provide a **Name** for the Backend pool.
 
-1. Under **Target network IP configurations**, select **VIRTUAL MACHINE** and choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the FCI. Only add the primary IP address of each VM, do not add any secondary IP addresses. 
+1. Select **NIC** for Backend Pool Configuration.
 
-1. Select **OK** to create the backend pool.
+1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
+
+1. Under **Virtual machine** choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the FCI. Only add the primary IP address of each VM, do not add any secondary IP addresses.
+
+1. Select **Add** to add the virtual machines to the backend pool.
+
+1. Select **Save** to create the backend pool.
 
 ## Configure health probe
 
 1. On the load balancer pane, select **Health probes**.
-
-1. Select **Add**.
 
 1. On the **Add health probe** pane, <span id="probe"> </span> set the following health probe parameters:
 
@@ -85,57 +110,30 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
    - **Protocol**: TCP.
    - **Port**: The port you created in the firewall for the health probe [when preparing the VM](failover-cluster-instance-prepare-vm.md#uninstall-sql-server-1). In this article, the example uses TCP port `59999`.
    - **Interval**: 5 Seconds.
-   - **Unhealthy threshold**: 2 consecutive failures.
 
-1. Select **OK**.
+1. Select **Add**.
 
 ## Set load-balancing rules
 
-Set the load-balancing rules for the load balancer. 
-
-
-# [Private load balancer](#tab/ilb)
-
-Set the load-balancing rules for the private load balancer by following these steps: 
+Set the load-balancing rules for the load balancer.
 
 1. On the load balancer pane, select **Load-balancing rules**.
 1. Select **Add**.
 1. Set the load-balancing rule parameters:
 
    - **Name**: A name for the load-balancing rules.
-   - **Frontend IP address**: The IP address for the clustered network resource of the SQL Server FCI.
+   - **Frontend IP address**: The IP address set when configuring the frontend IP.
+   - **Backend pool**: Select the backend pool containing the virtual machines targeted for the load balancer.
+   - **HA Ports**: Enables load balancing on all ports for TCP and UDP protocols.
+   - **Protocol**: Choose TCP.
    - **Port**: The SQL Server TCP port. The default instance port is 1433.
    - **Backend port**: The same port as the **Port** value when you enable **Floating IP (direct server return)**.
-   - **Backend pool**: The backend pool name that you configured earlier.
    - **Health probe**: The health probe that you configured earlier.
    - **Session persistence**: None.
    - **Idle timeout (minutes)**: 4.
    - **Floating IP (direct server return)**: Enabled.
 
-1. Select **OK**.
-
-# [Public load balancer](#tab/elb)
-
-Set the load-balancing rules for the public load balancer by following these steps: 
-
-1. On the load balancer pane, select **Load-balancing rules**.
-1. Select **Add**.
-1. Set the load-balancing rule parameters:
-
-   - **Name**: A name for the load-balancing rules.
-   - **Frontend IP address**: The public IP address that clients use to connect to the public endpoint. 
-   - **Port**: The SQL Server TCP port. The default instance port is 1433.
-   - **Backend port**: The port used by the FCI instance. The default is 1433. 
-   - **Backend pool**: The backend pool name that you configured earlier.
-   - **Health probe**: The health probe that you configured earlier.
-   - **Session persistence**: None.
-   - **Idle timeout (minutes)**: 4.
-   - **Floating IP (direct server return)**: Disabled.
-
-1. Select **OK**.
-
----
-
+1. Select **Save**.
 
 
 ## Configure cluster probe

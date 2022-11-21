@@ -1,22 +1,17 @@
 ---
 title: "Reporting Services with availability groups"
 description: Learn about configuring Reporting Services to work with Always On availability groups in SQL Server. Supported functionality differs for different scenarios.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-
-
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Reporting Services, AlwaysOn Availability Groups"
   - "Reporting Services, Always On Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
-ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-author: MashaMSFT
-ms.author: mathoma
-manager: erikre
 ---
 # Reporting Services with Always On Availability Groups (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

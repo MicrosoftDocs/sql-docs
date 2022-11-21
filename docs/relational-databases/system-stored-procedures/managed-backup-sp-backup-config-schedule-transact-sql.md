@@ -3,10 +3,9 @@ description: "managed_backup.sp_backup_config_schedule (Transact-SQL)"
 title: "managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/20/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_backup_config_schedule_TSQL"

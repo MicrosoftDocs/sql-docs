@@ -2,9 +2,9 @@
 title: Configure integrated acceleration and offloading
 description: Describes how to use integrated acceleration and offloading solution for an instance of SQL Server.
 ms.date: 08/16/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: david.pless, wiassaf 
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
@@ -80,8 +80,6 @@ After the drivers are installed, configure the server instance.
    ALTER SERVER CONFIGURATION
    SET HARDWARE_OFFLOAD = ON (ACCELERATOR = QAT, MODE = SOFTWARE)
    ```
-
-   Standard edition only supports SOFTWARE mode. For more information on edition specifics, see [Edition specific capabilities](intel-quickassist.md#edition-specific-capabilities).
 
    > [!IMPORTANT]
    > The performance of the QAT_DEFLATE algorithm in terms of SOFTWARE vs. HARDWARE mode compared to MS_XPRESS varies based on several factors. The workload pressure the host system may be under during backup execution and the available memory and processing power of the Intel® QuickAssist Technology (QAT) hardware device are all factors that could impact the performance of the leveraged compression algorithm.
@@ -211,7 +209,7 @@ Use RESTORE HEADERONLY to view the compression algorithm. See [RESTORE Statement
 > [!NOTE]
 > If the server-scope configuration `HARDWARE_OFFLOAD` option is not enabled, and/or the Intel&reg; QAT drivers have not been installed, SQL Server returns error 17441, (`Msg 17441, Level 16, State 1, Line 175 This operation requires Intel(R) QuickAssist Technology (QAT) libraries to be loaded.`)
 
-To restore an Intel&reg; QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation. It’s not required to have QAT hardware to restore QAT compressed backups. However, to restore QAT backups requires the following:
+To restore an Intel&reg; QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation. It's not required to have QAT hardware to restore QAT compressed backups. However, to restore QAT backups requires the following:
 
 - QAT driver needs to be installed on the machine
 - Hardware offloading needs to be enabled (`sp_configure 'hardware offload enabled', 1;`)

@@ -1,22 +1,20 @@
 ---
 title: "Resume an availability group database"
 description: Resume a suspended availability database in Always On availability groups by using SQL Server Management Studio, Transact-SQL, or PowerShell in SQL Server.
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.availabilitygroup.resumedatamove.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], resuming a database"
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], databases"
-ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Resume an Availability Database (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

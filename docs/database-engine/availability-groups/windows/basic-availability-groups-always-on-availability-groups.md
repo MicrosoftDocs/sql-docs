@@ -1,15 +1,13 @@
 ---
 title: "Basic availability groups for a single database"
 description: "Describes the differences between a regular and basic Always On availability group, as well as how to configure a basic availability group. "
-ms.custom: "seodec18"
-ms.date: "02/01/2018"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "02/01/2018"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: how-to
+ms.custom: seodec18
 ---
 # Basic Always On availability groups for a single database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

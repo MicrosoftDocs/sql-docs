@@ -1,19 +1,17 @@
 ---
 title: "Add a database to an availability group"
 description: "Add a database to an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio. "
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+ms.custom: seodec18
+helpviewer_keywords:
   - "primary databases [SQL Server], in availability group"
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
-ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Add a Database to an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

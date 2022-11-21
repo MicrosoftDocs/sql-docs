@@ -1,19 +1,15 @@
 ---
-title: "Check the ODBC SQL Server Driver Version (Windows) | Microsoft Docs"
+title: "Check the ODBC SQL Server Driver Version (Windows)"
 description: Discover how to use the Windows ODBC Data Source Administrator to check the version of the ODBC drivers that are installed on your computer.
-ms.custom: ""
-ms.date: "11/07/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "driver version number [ODBC]"
-  - "ODBC drivers, version number"
-ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "11/07/2016"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "driver version number [ODBC]"
+  - "ODBC drivers, version number"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Check the ODBC SQL Server Driver Version (Windows)

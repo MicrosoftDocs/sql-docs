@@ -3,10 +3,9 @@ description: "Integration Services (SSIS) Variables"
 title: "Integration Services (SSIS) Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "variables [Integration Services], passing between packages"
@@ -134,7 +133,6 @@ The value of a user-defined variable can be a literal or an expression. The valu
 | Numeric and binary data types | 0 (zero) |
 | Char and string data types | (empty string) |
 | Object | System.Object |
-| | |
 
 A variable has options for setting the variable value and the data type of the value. The two properties must be compatible: for example, the use of a string value together with an integer data type is not valid.  
   

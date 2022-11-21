@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
 ms.date: "09/26/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"
@@ -27,7 +27,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 With Windows authentication, users are already logged onto Windows and do not have to log on separately to SQL Server. The following `SqlConnection.ConnectionString` specifies Windows authentication without requiring users to provide a user name or password.  
   
 ```csharp
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;Encrypt=True;"
 ```  
   
 > [!NOTE]

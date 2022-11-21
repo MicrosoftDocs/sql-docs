@@ -4,9 +4,8 @@ description: This article describes methods to import data from Excel to SQL Ser
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom:
   - sqlfreshmay19
@@ -34,7 +33,6 @@ You can use the following tools to import data from Excel:
 | [BCP](#bcp)                                        |[OPENROWSET](#openrowset) function <br>            |
 | [Copy Wizard (Azure Data Factory)](#adf-wiz)       |                                                   |
 | [Azure Data Factory](#adf)                         |                                                   |
-| &nbsp; | &nbsp; |
 
 If you want to import multiple worksheets from an Excel workbook, you typically have to run any of these tools once for each sheet.
 

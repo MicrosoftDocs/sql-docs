@@ -3,10 +3,9 @@ description: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 ms.custom: ""
 ms.date: "09/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_net_changes_TSQL"
@@ -90,7 +89,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 -   M, if the row must be inserted or updated.  
   
- The logic to determine whether an insert or update is needed to apply a change to the target adds to query complexity. Use this option for improved performance when it is not necessary to differentiate between insert and update operations. This approach works best in target environments where a merge operation is available directly, such as a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] environment.  
+ The logic to determine whether an insert or update is needed to apply a change to the target adds to query complexity. Use this option for improved performance when it is not necessary to differentiate between insert and update operations. This approach works best in target environments where a merge operation is available directly.  
   
 ## Table Returned  
   

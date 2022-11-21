@@ -1,8 +1,8 @@
 ---
 title: Disaster recovery drills
 description: Learn guidance and best practices for using Azure SQL Database to perform disaster recovery drills.
-author: rajeshsetlem
-ms.author: rsetlem
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/18/2018
 ms.service: sql-database
@@ -24,7 +24,7 @@ Depending on how you [designed your application for business continuity](busines
 
 ## Geo-restore
 
-To prevent the potential data loss when conducting a disaster recovery drill, perform the drill using a test environment by creating a copy of the production environment and using it to verify the application’s failover workflow.
+To prevent the potential data loss when conducting a disaster recovery drill, perform the drill using a test environment by creating a copy of the production environment and using it to verify the application's failover workflow.
 
 ### Outage simulation
 

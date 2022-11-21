@@ -5,7 +5,7 @@ description: Data Discovery & Classification for Azure SQL Database, Azure SQL M
 author: Madhumitatripathy
 ms.author: matripathy
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 05/02/2022
+ms.date: 09/14/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -77,7 +77,7 @@ After the organization-wide policy has been defined, you can continue classifyin
 
 1. Go to the [Azure portal](https://portal.azure.com).
 
-1. Go to **Data Discovery & Classification** under the **Security** heading in your Azure SQL Database pane. The Overview tab includes a summary of the current classification state of the database. The summary includes a detailed list of all classified columns, which you can also filter to show only specific schema parts, information types, and labels. If you haven’t classified any columns yet, [skip to step 4](#step-4).
+1. Go to **Data Discovery & Classification** under the **Security** heading in your Azure SQL Database pane. The Overview tab includes a summary of the current classification state of the database. The summary includes a detailed list of all classified columns, which you can also filter to show only specific schema parts, information types, and labels. If you haven't classified any columns yet, [skip to step 4](#step-4).
 
     ![Overview](./media/data-discovery-and-classification-overview/data-discovery-and-classification.png)
 
@@ -116,7 +116,8 @@ Microsoft Information Protection (MIP) labels provide a simple and uniform way f
 
 #### Prerequisites to switch to MIP policy
 
-- The current user has tenant wide security admin permissions to apply policy at the tenant root management group level. For more information, see [Grant tenant-wide permissions to yourself](/azure/defender-for-cloud/tenant-wide-permissions-management#grant-tenant-wide-permissions-to-yourself).
+- The current user has tenant wide **Security Admin** permissions to apply policy at the tenant root management group level. For more information, see [Grant tenant-wide permissions to yourself](/azure/defender-for-cloud/tenant-wide-permissions-management#grant-tenant-wide-permissions-to-yourself).
+  :::image type="content" source="media/data-discovery-and-classification-overview/request-security-admin-permissions.png" alt-text="Screenshot of Azure portal request for tenant level Security Admin permissions.":::
 - Your tenant has an active Microsoft 365 subscription and you have labels published for the current user. For more information, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
 
 ### Classify database in Microsoft Information Protection policy mode
@@ -149,6 +150,7 @@ An important aspect of the classification is the ability to monitor access to se
 These are the activities that are actually auditable with sensitivity information:
 - ALTER TABLE ... DROP COLUMN
 - BULK INSERT
+- SELECT
 - DELETE
 - INSERT
 - MERGE
@@ -251,6 +253,7 @@ You can use the REST API to programmatically manage classifications and recommen
 
 You can use the following SQL drivers to retrieve classification metadata:
 
+- [Microsoft.Data.SqlClient](/sql/connect/ado-net/sql/data-classification)
 - [ODBC Driver](/sql/connect/odbc/data-classification)
 - [OLE DB Driver](/sql/connect/oledb/features/using-data-classification)
 - [JDBC Driver](/sql/connect/jdbc/data-discovery-classification-sample)

@@ -63,8 +63,6 @@ For a single subscription, you have the following limitations on the number of c
 |Single database (per subscription)|30|100|
 |Elastic pool (per pool)|4|2,000|
 
-There's no built-in method to restore the entire server. For an example of how to accomplish this task, see [Azure SQL Database: Full server recovery](https://gallery.technet.microsoft.com/Azure-SQL-Database-Full-82941666).
-
 ## Permissions
 
 To recover by using automated backups, you must be either:
@@ -88,6 +86,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 > - You can run a restore only on the same server. Point-in-time restore doesn't support cross-server restoration.
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 > - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
+> - Database restore operations are resource-intensive and may require a service tier of S3 or greater for the restoring (target) database. Once restore completes, the database or elastic pool may be scaled down, if required.
 
 - **Database replacement**
 

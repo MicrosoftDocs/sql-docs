@@ -54,8 +54,8 @@ Syntax:
 <External_Data_Source> ::=
 CREATE EXTERNAL DATA SOURCE <data_source_name> WITH
     (TYPE = RDBMS,
-    LOCATION = ’<fully_qualified_server_name>’,
-    DATABASE_NAME = ‘<remote_database_name>’,  
+    LOCATION = '<fully_qualified_server_name>',
+    DATABASE_NAME = '<remote_database_name>',  
     CREDENTIAL = <credential_name>
     ) [;]
 ```
@@ -109,7 +109,10 @@ CREATE EXTERNAL TABLE [dbo].[customer]
       [c_lastname] nvarchar(256) NOT NULL,
       [street] nvarchar(256) NOT NULL,
       [city] nvarchar(256) NOT NULL,
-      [state] nvarchar(20) NULL,
+      [state] nvarchar(20) NULL
+   )
+   WITH
+   (
       DATA_SOURCE = RemoteReferenceData
    );
 ```

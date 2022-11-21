@@ -1,13 +1,14 @@
 ---
 title: "Availability group: Prerequisites, restrictions, & recommendations"
 description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group to SQL Server."
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 07/22/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -16,9 +17,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Failover Cluster Instances"
   - "Availability Groups [SQL Server], databases"
   - "Availability Groups [SQL Server]"
-ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Prerequisites, Restrictions, and Recommendations for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +148,7 @@ ms.author: mathoma
   
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
 
-    -   A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Serial Redo threads are released after ~15 seconds of inactivity. 
+    -   A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Serial redo threads are released after ~15 seconds of inactivity.
      
 -   In addition, availability groups use unshared threads, as follows:  
   

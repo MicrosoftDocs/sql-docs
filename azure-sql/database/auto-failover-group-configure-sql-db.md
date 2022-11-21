@@ -2,8 +2,8 @@
 title: Configure an auto-failover group
 titleSuffix: Azure SQL Database
 description: Learn how to configure an auto-failover group for a single or pooled database in Azure SQL Database  using the Azure portal  and PowerShell.
-author: rajeshsetlem
-ms.author: rsetlem
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/01/2022
 ms.service: sql-database
@@ -106,6 +106,9 @@ Create your failover group and add your database to it using PowerShell.
       -FailoverGroupName $failoverGroupName
    Write-host "Successfully added the database to the failover group..."
    ```
+
+> [!NOTE]
+> It's possible to deploy your auto-failover group across subscriptions by using the `-PartnerSubscriptionId` parameter in Azure Powershell starting with [Az.SQL 3.11.0](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). To learn more, review the following [Example](/powershell/module/az.sql/new-azsqldatabasefailovergroup#example-3). 
 
 ---
 

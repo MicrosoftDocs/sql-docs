@@ -1,13 +1,13 @@
 ---
 title: Creating Service Broker Objects
 description: "An application uses Service Broker by executing Transact-SQL statements that operate on Service Broker objects defined in a database."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Creating Service Broker Objects

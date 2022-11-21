@@ -4,8 +4,8 @@ description: This Microsoft JDBC Driver for SQL Server sample application demons
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -60,7 +60,7 @@ public class DatatypesTest {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);) {

@@ -1,21 +1,18 @@
 ---
 title: "Specify a server network address (database mirroring)"
 description: Learn how to specify a server network address for a database mirroring endpoint. A database mirroring session requires an address for each server instance.
-ms.custom: seo-lt-2019
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
   - "endpoints [SQL Server], database mirroring"
   - "server network addresses [SQL Server]"
-ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Specify a Server Network Address (Database Mirroring)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

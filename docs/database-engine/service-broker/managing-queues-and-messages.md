@@ -1,13 +1,13 @@
-﻿---
+---
 title: Managing Queues and Messages
 description: "When a Service Broker application is in production, most day-to-day management occurs as a normal part of maintenance of the Database Engine."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Managing Queues and Messages

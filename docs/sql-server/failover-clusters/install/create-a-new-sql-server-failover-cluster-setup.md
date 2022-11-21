@@ -4,8 +4,8 @@ description: This article describes how to use the Setup program to install or u
 ms.custom: "seo-lt-2019"
 ms.date: 10/05/2021
 ms.reviewer: ""
-ms.prod: sql
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "adding nodes"

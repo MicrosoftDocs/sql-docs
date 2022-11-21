@@ -4,9 +4,8 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.date: 06/01/2022
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom:
   - "references_regions"
@@ -44,7 +43,7 @@ Creates a new database.
 
 Select one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular SQL version with which you are working.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
@@ -377,6 +376,9 @@ Is the path and file name used by the operating system when you create the file.
 SIZE, MAXSIZE, and FILEGROWTH parameters can be set when a UNC path is specified for the file.
 
 If the file is on a raw partition, *os_file_name* must specify only the drive letter of an existing raw partition. Only one data file can be created on each raw partition.
+
+> [!NOTE]  
+> Raw partitions are not supported in SQL Server 2014 and later versions.
 
 Data files should not be put on compressed file systems unless the files are read-only secondary files, or the database is read-only. Log files should never be put on compressed file systems.
 
@@ -939,7 +941,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <with_options> ::=
 {
   CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
-  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' | 'GEOZONE'}
   | LEDGER = {ON | OFF}
 }
 

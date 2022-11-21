@@ -1,21 +1,17 @@
 ---
-title: "max full-text crawl range Server Configuration Option | Microsoft Docs"
-description: 'Find out about the "max full-text crawl range" option. See how it optimizes SQL Server CPU utilization to improve crawl performance during a full crawl.'
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "crawls [full-text search]"
-  - "max full-text crawl range option"
-ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
+title: "max full-text crawl range Server Configuration Option"
+description: "Find out about the max full-text crawl range option. See how it optimizes SQL Server CPU utilization to improve crawl performance during a full crawl."
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "crawls [full-text search]"
+  - "max full-text crawl range option"
+dev_langs:
+  - "TSQL"
 ---
 # max full-text crawl range Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

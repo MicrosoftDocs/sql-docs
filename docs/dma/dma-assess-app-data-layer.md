@@ -1,21 +1,17 @@
 ---
 title: "Assess an app's data access layer with Data Migration Assistant"
 description: Learn how to use the Data Migration Assistant to assess the data access layer for an application. The data access layer gives access to persisted data.
-ms.date: 05/18/2022
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
-ms.topic: how-to
-keywords: ""
-helpviewer_keywords: 
-  - "Data Migration Assistant, Assess"
-ms.assetid: ""
 author: rajeshsetlem
 ms.author: rajpo
+ms.date: 05/18/2022
+ms.service: sql
+ms.subservice: dma
+ms.topic: how-to
 ms.custom:
-- "seo-lt-2019"
-- kr2b-contr-experiment
+  - "seo-lt-2019"
+  - kr2b-contr-experiment
+helpviewer_keywords:
+  - "Data Migration Assistant, Assess"
 ---
 
 # Assess an application's data access layer with Data Migration Assistant
@@ -30,7 +26,7 @@ In this case, you can see that the application is using a SQL query to get the n
 
 ![Screenshot shows a line of the sample C# code segment.](../dma/media/dma-assess-app-data-layer/dma-sample-c-sharp-code-detail.png)
 
-As an application owner, you need to be able to identify the various databases that the application can connect to and the queries embedded in the application’s data access layer. In addition, you need to identify any changes required to modernize the application to Azure Data services.
+As an application owner, you need to be able to identify the various databases that the application can connect to and the queries embedded in the application's data access layer. In addition, you need to identify any changes required to modernize the application to Azure Data services.
 
 ## Assess an application with Data Access Migration Toolkit
 
@@ -63,7 +59,7 @@ To enable this assessment, use the Data Access Migration Toolkit (DAMT), a Visua
 
    These queries can be analyzed through DMA for compatibility and feature parity issues based on the target SQL platform.
 
-7. To assess the application’s data layer, export the report in JSON format.
+7. To assess the application's data layer, export the report in JSON format.
 
    ![Screenshot shows Visual Studio Code exporting the report as a json file.](../dma/media/dma-assess-app-data-layer/dma-json-file-export.png)
 

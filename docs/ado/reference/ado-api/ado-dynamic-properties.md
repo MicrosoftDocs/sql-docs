@@ -4,8 +4,8 @@ description: "ADO Dynamic Properties"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "dynamic properties [ADO]"
@@ -26,7 +26,6 @@ Dynamic properties can be added to the [Properties](./properties-collection-ado.
 |[Resync Command](./resync-command-property-dynamic-ado.md)|Specifies a user-supplied command string that the **Resync** method issues to refresh the data in the table named in the **Unique Table** dynamic property.|  
 |[Unique Table, Unique Schema, Unique Catalog](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Unique Table** Specifies the name of the base table upon which updates, insertions, and deletions are allowed.<br /><br /> **Unique Schema** Specifies the schema, or name of the owner of the table.<br /><br /> **Unique Catalog** Specifies the catalog, or name of the database that contains the table.|  
 |[Update Resync](./update-resync-property-dynamic-ado.md)|Specifies whether the **UpdateBatch** method is followed by an implicit **Resync** method operation, and if so, the scope of that operation.|
-| &nbsp; | &nbsp; |
 
 ## See Also  
  [ADO API Reference](./ado-api-reference.md)   

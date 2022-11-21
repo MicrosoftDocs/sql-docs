@@ -1,19 +1,16 @@
 ---
-description: "Run a Matching Project"
 title: "Run a Matching Project"
+description: "Run a Matching Project"
+author: swinarko
+ms.author: sawinark
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dqs.matchingproject.map.f1"
   - "sql13.dqs.matchingproject.matching.f1"
   - "sql13.dqs.matchingproject.export.f1"
-ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: swinarko
-ms.author: sawinark
 ---
 # Run a Matching Project
 

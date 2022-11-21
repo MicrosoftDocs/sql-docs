@@ -3,10 +3,9 @@ title: "Upgrade replication scripts (Replication SP)"
 description: Learn how to use Replication Stored Procedures to upgrade the scripts used to programmatically configure a replication topology.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"

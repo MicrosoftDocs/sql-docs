@@ -31,9 +31,6 @@ This article describes the automated backup feature for Azure SQL Managed Instan
 
 To change backup settings, see [Change settings](automated-backups-change-settings.md). To restore a backup, see [Recover using automated database backups](recovery-using-backups.md). 
 
-
-[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
-
 ## What is a database backup?
 
 Database backups are an essential part of any business continuity and disaster recovery strategy, because they help protect your data from corruption or deletion. These backups enable database restore to a point in time within the configured retention period. If your data protection rules require that your backups are available for an extended time (up to 10 years), you can configure [long-term retention (LTR)](../database/long-term-retention-overview.md) for both single and pooled databases.
@@ -57,7 +54,7 @@ By default, Azure SQL Managed Instance stores data in geo-redundant [storage blo
 
 The storage redundancy mechanism stores multiple copies of your data so that it's protected from planned and unplanned events. Those events might include transient hardware failures, network or power outages, or massive natural disasters. 
 
-To ensure that your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. The configured backup storage redundancy is applied to both:To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
+To ensure that your backups stay within the same region where your database is deployed, you can change backup storage redundancy from the default geo-redundant storage to other types of storage that keep your data within the region. To learn more about storage redundancy, see [Data redundancy](/azure/storage/common/storage-redundancy). 
 
 You can configure backup storage redundancy when you create your instance, and you can update it at a later time at the instance level. The changes that you make to an existing instance apply to future backups only. After you update the backup storage redundancy of an existing instance, it might take up to 24 hours for the changes to be applied. Changes made to backup storage redundancy apply to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups when the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
 
@@ -94,10 +91,10 @@ You can choose one of the following storage redundancies for backups:
 
 You can use these backups to:
 
-- [Restore an existing database to a point in time](recovery-using-backups.md#point-in-time-restore) in the past within the retention period by using the Azure portal, Azure PowerShell, the Azure CLI, or the REST API. This operation creates a new database on either the same instance as the original database or a different instance in the same subscription and region. It uses a different name to avoid overwriting the original database. 
+- [Restore an existing database to a point in time](recovery-using-backups.md#point-in-time-restore) in the past within the retention period by using the Azure portal, Azure PowerShell, the Azure CLI, or the REST API. This operation creates a new database on either the same instance as the original database or a different instance in the same subscription and region. It uses a different name to avoid overwriting the original database. You can also use the Azure portal to restore your point-in-time database backup to an instance in a different subscription from your source instance. 
 
   After the restore finishes, you can delete the original database. Alternatively, you can both [rename](/sql/relational-databases/databases/rename-a-database) the original database and rename the restored database to the original database name.
-- [Restore a deleted database to a point in time](recovery-using-backups.md#deleted-database-restore) within the retention period, including the time of deletion. You can restore the deleted database only on the same managed instance where you created the original database. Before you delete a database, the service takes a final transaction log backup to prevent any data loss.
+- [Restore a deleted database to a point in time](recovery-using-backups.md#deleted-database-restore) within the retention period, including the time of deletion. You can restore the deleted database to the same managed instance where the backup was taken, or another instance in the same, or different subscription to the source instance. Before you delete a database, the service takes a final transaction log backup to prevent any data loss.
 - [Restore a database to another geographic region](recovery-using-backups.md#geo-restore). Geo-restore allows you to recover from a geographic disaster when you can't access your database or backups in the primary region. It creates a new database on any existing managed instance in any Azure region.
    > [!IMPORTANT]
    > Geo-restore is available only for databases that are configured with geo-redundant backup storage. If you're not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
@@ -116,10 +113,10 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | **Azure storage**  | Geo-redundant by default. You can optionally configure zone-redundant or locally redundant storage. | Available when PITR backup storage redundancy is set to geo-redundant. Not available when PITR backup storage is zone-redundant or locally redundant. | Geo-redundant by default. You can configure zone-redundant or locally redundant storage. |
 | **Restoring a new database in the same region** | Supported | Supported | Supported |
 | **Restoring a new database in another region** | Not supported | Supported in any Azure region | Supported in any Azure region |
-| **Restoring a new database in another subscription** |  Not supported  |  Not supported\*\*\* | Not supported\*\*\*  |
+| **Restoring a new database in another subscription** |  Supported  |  Not supported\*\*\* | Not supported\*\*\*  |
 | **Restoring via Azure portal**|Yes|Yes|Yes|
 | **Restoring via PowerShell** |Yes|Yes|Yes|
-| **Restoring via Azure CLI** |Yes|Yes|Yes|
+| **Restoring via Azure CLI** |Yes|No|Yes|
 
 
 \* For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-mi.md). 
@@ -275,6 +272,8 @@ If your database is encrypted with TDE, backups are automatically encrypted at r
 
 All database backups are taken with the CHECKSUM option to provide additional backup integrity. Automatic testing of automated database backups by the Azure SQL engineering team is not currently available for Azure SQL Managed Instance. Schedule test backup restoration and DBCC CHECKDB on your databases in SQL Managed Instance around your workload. 
 
+Although the system does not verify the integrity of the backups, there is still built-in protection of your backups that alerts Microsoft if there's an issue with the backup service. Additionally, Microsoft supports you if an issue occurs with a backup, such as if a full backup is not taken, the backup service is stuck, a log backup is out of SLA, or if the backup hardware or software is corrupted.
+
 ## Use Azure Policy to enforce backup storage redundancy
 
 If you have data residency requirements that require you to keep all your data in a single Azure region, you might want to enforce zone-redundant or locally redundant backups for your SQL managed instance by using Azure Policy. 
@@ -289,6 +288,14 @@ For a full list of built-in policy definitions for SQL Managed Instance, review 
 
 > [!IMPORTANT]
 > Azure policies are not enforced when you're creating a database via T-SQL. To enforce data residency when you're creating a database by using T-SQL, [use LOCAL or ZONE as input to the BACKUP_STORAGE_REDUNDANCY parameter in the CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
+
+## Compliance
+
+If the default retention doesn't meet your compliance requirements, you can change the PITR retention period. For more information, see [Change the PITR backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy).
+
+> [!NOTE]
+> The [Change automated backup settings](automated-backups-change-settings.md) article provides steps about how to delete personal data from the device or service and can be used to support your obligations under the GDPR. For general information about GDPR, see the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-overview) and the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
 
 ## Next steps
 

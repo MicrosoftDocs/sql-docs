@@ -3,10 +3,9 @@ title: "Log File Viewer F1 Help | Microsoft Docs"
 description: Get guidance from F1 Help for frequently displayed columns, permissions, and other options for Log File Viewer in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.configurelogs.errorlog.f1"

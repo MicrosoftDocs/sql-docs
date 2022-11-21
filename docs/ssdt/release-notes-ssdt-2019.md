@@ -1,9 +1,8 @@
 ---
 title: SSIS Projects extension for VS2019 troubleshooting guide
 description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2019 and earlier Visual Studio versions."
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
@@ -48,7 +47,7 @@ Follow the below steps to install this product in an offline environment:
 
 - Sometimes this product or Visual Studio Tools for Applications 2019 may be somehow deleted during VS instance upgrade. If your existing SSIS projects cannot be loaded, try to repair this product via control panel. If VS doesn't pop up when clicking on "Edit Script", try to repair VSTA 2019 via control panel. We've reported this issue to VS team. Sorry for any inconvenience.
 
-- SQL Server Native Client (SQLNCLI11.1) is deprecated and not installed by VS2019. We recommend upgrading to the new [Microsoft OLE DB driver for SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md). If you want to continue using SQL Server Native Client, you can download and install it from [here](https://www.microsoft.com/download/details.aspx?id=50402).
+- [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
 **Version 4.2**
@@ -63,7 +62,7 @@ Follow the below steps to install this product in an offline environment:
 **Version 4.0 preview:**
 - Known issues:
     1. **Cannot design Oracle and Teradata Components.**
-    2. CDC source component in target SQL Server 2022 can’t do preview.
+    2. CDC source component in target [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] can't do preview.
     3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
 

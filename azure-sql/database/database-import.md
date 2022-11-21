@@ -4,7 +4,7 @@ description: Create a new database in Azure SQL Database or Azure SQL Managed In
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/29/2020
+ms.date: 9/29/2022
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: quickstart
@@ -27,13 +27,12 @@ You can import a SQL Server database into Azure SQL Database or SQL Managed Inst
 
 > [!NOTE]
 > [Import and Export using Private Link](database-import-export-private-link.md) is in preview.
-> Import functionality on Azure SQL Hyperscale databases is now in preview.
 
 ## Using Azure portal
 
 Watch this video to see how to import from a BACPAC file in the Azure portal or continue reading below:
 
-> [!VIDEO https://docs.microsoft.com/Shows/Data-Exposed/Its-just-SQL-Restoring-a-database-to-Azure-SQL-DB-from-backup/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn.microsoft.com/Shows/Data-Exposed/Its-just-SQL-Restoring-a-database-to-Azure-SQL-DB-from-backup/player?WT.mc_id=dataexposed-c9-niner]
 
 The [Azure portal](https://portal.azure.com) *only* supports creating a single database in Azure SQL Database and *only* from a BACPAC file stored in Azure Blob storage.
 
@@ -158,6 +157,10 @@ or the PowerShell [Stop-AzSqlDatabaseActivity command](/powershell/module/az.sql
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId
 ```
 
+> [!NOTE]
+> To cancel import operation you will need to have one of the following roles:
+> - The [SQL DB Contributor](/azure/role-based-access-control/built-in-roles#sql-db-contributor) role or 
+> - A [custom Azure RBAC role](/azure/role-based-access-control/custom-roles) with `Microsoft.Sql/servers/databases/operations` permission
 
 ## Limitations
 

@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
 ms.date: 04/20/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -64,7 +64,7 @@ namespace FileStreamTest
     {
         static void Main(string[] args)
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;database=myDB");
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;Encrypt=True;database=myDB");
             ReadFileStream(builder);
             OverwriteFileStream(builder);
             InsertFileStream(builder);

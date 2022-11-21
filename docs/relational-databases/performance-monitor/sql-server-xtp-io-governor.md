@@ -3,10 +3,9 @@ title: "SQL Server XTP IO Governor object"
 description: Learn about the SQL Server XTP IO Governor performance object, which contains counters related to the In-Memory OLTP IO Rate Governor.
 ms.custom: ""
 ms.date: "07/13/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2016 XTP IO Governor"

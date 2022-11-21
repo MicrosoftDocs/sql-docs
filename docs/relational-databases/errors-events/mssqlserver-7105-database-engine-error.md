@@ -3,9 +3,9 @@ description: "MSSQLSERVER_7105"
 title: MSSQLSERVER_7105
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "7105 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|TXT_PGNOTEXIST|
 |Message Text|The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE|
-||
 
 ## Explanation
 

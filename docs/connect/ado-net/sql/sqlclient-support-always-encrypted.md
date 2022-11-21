@@ -3,9 +3,9 @@ title: Using Always Encrypted with SqlClient
 description: Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 10/25/2022
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -19,7 +19,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Prerequisites
 
-- Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Configure Always Encrypted in your database. This process involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md).
 - If you're using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for more prerequisites.
 - Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. With Microsoft.Data.SqlClient version 2.1.0 and higher, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
@@ -207,7 +207,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 >
 > - All values printed by the program will be in plaintext, as the **Microsoft .NET Data Provider for SQL Server** will transparently decrypt the data retrieved from the `SSN` and `BirthDate` columns.
 >
-> - Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see [Selecting Deterministic or Randomized Encryption](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> - Queries can perform equality comparisons on columns if they are encrypted using [deterministic encryption](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ### Retrieving encrypted data example
 
@@ -334,7 +334,6 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 | 1.2.0 | 1.0.19269.1+ <br/> 2.1.0+ | .NET Framework 4.6+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
 | 1.1.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
 | 1.0.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
-|||
 
 Starting with **v3.0.0**, the `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` supports column encryption key caching capabilities when registering the provider using [SqlConnection.RegisterColumnEncryptionKeyStoreProvidersOnConnection](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreprovidersonconnection) or [SqlCommand.RegisterColumnEncryptionKeyStoreProvidersOnCommand](/dotnet/api/microsoft.data.sqlclient.sqlcommand.registercolumnencryptionkeystoreprovidersoncommand) APIs.
 

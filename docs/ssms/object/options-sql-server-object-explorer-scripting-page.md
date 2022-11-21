@@ -3,10 +3,9 @@ description: "Options (SQL Server Object Explorer - Scripting Page)"
 title: "Options (SQL Server Object Explorer - Scripting Page)"
 ms.custom: seo-lt-2019
 ms.date: "08/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.ObjectExplorerScripting"

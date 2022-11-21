@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
 ms.date: 02/01/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Driver feature support matrix for Microsoft SQL Server
@@ -46,7 +46,6 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](ado-net/sql/table-valued-parameters.md) | [Yes](ado-net/sql/table-valued-parameters.md) | [Yes](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Yes](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0&preserve-view=true) | [Yes](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8&preserve-view=true) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | | [Yes](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1&preserve-view=true) | | [Yes](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true) |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 | <a id="table2"></a>Feature | [ODBC Driver for SQL Server on Windows](odbc/microsoft-odbc-driver-for-sql-server.md) | [ODBC Driver for SQL Server on Linux and macOS](odbc/microsoft-odbc-driver-for-sql-server.md) | [JDBC Driver for SQL Server](jdbc/microsoft-jdbc-driver-for-sql-server.md) | [OLE DB Driver for SQL Server](oledb/oledb-driver-for-sql-server.md) |
 | :-- | :-- | :-- | :-- | :-- |
@@ -66,7 +65,6 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md) | [Yes](../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md) | [Yes](jdbc/using-table-valued-parameters.md) (v6.0+) | [Yes](oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md) |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) | [Yes](oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](odbc/using-transparent-network-ip-resolution.md) (v13.0+) | [Yes](odbc/using-transparent-network-ip-resolution.md) (v13.1+) | [Yes](jdbc/setting-the-connection-properties.md) (v6.0+) | [Yes](oledb/features/using-transparent-network-ip-resolution.md) (v18.4+) |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 | <a id="table3"></a>Feature | [Drivers for PHP for SQL Server on Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Drivers for PHP for SQL Server on Linux and macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
@@ -86,7 +84,6 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](https://tediousjs.github.io/tedious/parameters.html) | Yes |
 | [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) |
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](odbc/using-transparent-network-ip-resolution.md) |
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <a id="note1"></a><sup>1</sup> Since these drivers rely on the Microsoft ODBC Driver for SQL Server, a version of that driver that supports the feature must also be used.
 

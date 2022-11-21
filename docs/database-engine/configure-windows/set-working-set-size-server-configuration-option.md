@@ -1,18 +1,14 @@
 ---
-title: "set working set size Server Configuration Option | Microsoft Docs"
-description: 'View information on the "set working set size" configuration option. This setting has no effect because its functionality is no longer available in SQL Server.'
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "set working set size option"
-ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
+title: "set working set size Server Configuration Option"
+description: "View information on the set working set size configuration option. This setting has no effect because its functionality is no longer available in SQL Server."
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "set working set size option"
 ---
 # set working set size Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

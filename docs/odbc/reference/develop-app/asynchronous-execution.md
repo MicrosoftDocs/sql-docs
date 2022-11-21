@@ -3,10 +3,9 @@ description: "Asynchronous Execution"
 title: "Asynchronous Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.assetid: f30f026c-7e8d-4ef2-a2ee-877ce19dd6a3
 author: David-Engel

@@ -2,10 +2,9 @@
 description: "Spatial Data (SQL Server)"
 title: "Spatial Data (SQL Server) | Microsoft Docs"
 ms.date: "10/11/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geography data type [SQL Server], spatial storage design"
@@ -24,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Spatial data represents information about the physical location and shape of geometric objects. These objects can be point locations or more complex objects such as countries, roads, or lakes.  
+  Spatial data represents information about the physical location and shape of geometric objects. These objects can be point locations or more complex objects such as countries/regions, roads, or lakes.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two spatial data types: the **geometry** data type and the **geography** data type.  
   

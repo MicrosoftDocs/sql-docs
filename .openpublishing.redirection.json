@@ -41596,7 +41596,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "    docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
       "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-session",
       "redirect_document_id": false
     },
@@ -42288,6 +42288,11 @@
     {
       "source_path": "docs/machine-learning/data-collection-ml-troubleshooting-process.md",
       "redirect_url": "/sql/machine-learning/troubleshooting/data-collection-ml-troubleshooting-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/table-designer-azure-data-studio.md",
+      "redirect_url": "/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio",
       "redirect_document_id": true
     },
     {
@@ -43678,6 +43683,21 @@
     {
       "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
       "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md",
+      "redirect_url": "/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md",
+      "redirect_url": "/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md",
+      "redirect_url": "/sql/reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server",
       "redirect_document_id": false
     },
     {
@@ -59021,6 +59041,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/relational-databases/system-catalog-views/sys-plan-forcing-locations.md",
+      "redirect_url": "/sql/relational-databases/system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/azure-data-studio/download.md",
       "redirect_url": "/sql/azure-data-studio/download-azure-data-studio",
       "redirect_document_id": true
@@ -59453,6 +59478,56 @@
     {
       "source_path": "docs/tools/sqlpackage/troubleshooting-import-export-sqlpackage.md",
       "redirect_url": "/sql/tools/sqlpackage/troubleshooting-issues-and-performance-with-sqlpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/partner-big-data-cluster.md",
+      "redirect_url": "/sql/big-data-cluster/partner-big-data-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/ledger-digest-management-and-database-verification.md",
+      "redirect_url": "/sql/relational-databases/security/ledger/ledger-digest-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-release-notes.md",
+      "redirect_url": "/sql/linux/sql-server-linux-release-notes-2017",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-setup-2022.md",
+      "redirect_url": "/sql/linux/sql-server-linux-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-rhel.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-sles.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/linux/sql-server-linux-availability-group-cluster-ubuntu.md",
+      "redirect_url": "/sql/linux/sql-server-linux-availability-group-cluster-pacemaker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-tables-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-tables-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-table-groups-transact-sql.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-table-groups-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/system-tables/cdc-change-feed-settings.md",
+      "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-settings",
       "redirect_document_id": false
     }
   ]

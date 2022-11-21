@@ -4,9 +4,8 @@ description: Learn how to use the remote data archive option in SQL Server to sp
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 # Configure the remote data archive Server Configuration Option

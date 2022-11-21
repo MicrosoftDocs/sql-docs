@@ -1,19 +1,15 @@
 ---
-title: "contained database authentication Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "contained database authentication" option. See how to turn it on so that you can attach contained databases to the SQL Server Database Engine.'
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "contained database, enabling"
-  - "contained database authentication option"
-ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
+title: "contained database authentication Server Configuration Option"
+description: "Learn about the contained database authentication option. See how to turn it on so that you can attach contained databases to the SQL Server Database Engine."
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "contained database, enabling"
+  - "contained database authentication option"
 ---
 # contained database authentication Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

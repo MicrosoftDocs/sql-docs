@@ -1,13 +1,13 @@
 ---
-title: 'How to: Allow Service Broker Network Access by Using Certificates (Transact-SQL)'
+title: "How to: Allow Service Broker Network Access by Using Certificates (Transact-SQL)"
 description: "To allow another instance to send messages using certificate-based Service Broker transport security, you create a user for the other instance and install the certificate for the other instance."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # How to: Allow Service Broker Network Access by Using Certificates (Transact-SQL)

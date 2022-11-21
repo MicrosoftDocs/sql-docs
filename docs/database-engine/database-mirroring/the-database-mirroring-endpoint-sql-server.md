@@ -1,23 +1,19 @@
 ---
-title: "The Database Mirroring Endpoint (SQL Server) | Microsoft Docs"
+title: "The Database Mirroring Endpoint (SQL Server)"
 description: Learn about a dedicated database mirroring endpoint, which is required for each server to participate in Always On availability groups or database mirroring.
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
   - "database mirroring [SQL Server], endpoint"
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
   - "endpoints [SQL Server], Always On Availability Groups"
   - "endpoints [SQL Server], database mirroring"
   - "Availability Groups [SQL Server], endpoint"
-ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: ">=sql-server-2016"
 ---
 # The Database Mirroring Endpoint (SQL Server)

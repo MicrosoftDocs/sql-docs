@@ -3,10 +3,9 @@ title: "Example: Specifying the ID and IDREF Directives"
 description: View an example of how to specify the ID and IDREF directives in an SQL query.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "IDREF directive"

@@ -4,8 +4,8 @@ description: "Filter Property"
 author: rothja
 ms.author: jroth
 ms.date: "03/20/2018"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 f1_keywords:
   - "Recordset15::Filter"
@@ -86,7 +86,6 @@ The following table summarizes the effects of **adFilterPendingRecords** in diff
 |**Non keys**|+|+|+|
 |**Single Key**|+|-|N/A|
 |**Multiple Keys**|+|N/A|+|
-|||||
   
 ## Applies To
 

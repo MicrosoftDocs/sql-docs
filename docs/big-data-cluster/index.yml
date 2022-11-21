@@ -8,11 +8,10 @@ metadata:
   description: Learn how to use SQL Server Big Data Cluster. Tutorials, code examples, installation guides, and other documentation.
   ms.service: sql
   ms.topic: landing-page
-  ms.technology: big-data-cluster
+  ms.subservice: big-data-cluster
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.date: 02/22/2022
-  ms.prod: sql
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -235,20 +234,20 @@ landingContent:
       - linkListType: reference
         links:
         - text: Integration partners
-          url: ../sql-server/partner-big-data-cluster.md
+          url: partner-big-data-cluster.md
         - text: Apache Spark
           url: /azure/hdinsight/spark/apache-spark-overview
         - text: Samples (GitHub)
           url: https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster
         - text: Solution partners
-          url: ../sql-server/partner-big-data-cluster.md
+          url: partner-big-data-cluster.md
       - linkListType: learn
         links:
           - text: Introduction to Kubernetes
-            url: /learn/modules/intro-to-kubernetes/
+            url: /training/modules/intro-to-kubernetes/
           - text: Distributed file systems
-            url: /learn/modules/cmu-case-study-distributed-file-systems/
+            url: /training/modules/cmu-case-study-distributed-file-systems/
           - text: Introduction to Python
-            url: /learn/modules/intro-to-python/
+            url: /training/modules/intro-to-python/
           - text: Big Data Clusters Architecture Workshop
             url: https://github.com/microsoft/sqlworkshops-bdc

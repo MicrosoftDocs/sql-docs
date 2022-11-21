@@ -106,11 +106,11 @@ When a block is formed, its associated database digest is published and stored o
 Ledger provides the ability to automatically generate and store the database digests in [immutable storage](/azure/storage/blobs/immutable-storage-overview) or [Azure Confidential Ledger](/azure/confidential-ledger/index), to prevent tampering. Alternatively, users can manually generate database digests and store them in the location of their choice. Database digests are used for later verifying that the data stored in ledger tables hasn't been tampered with.
 
 > [!NOTE]
-> [Automatic digest management](ledger-how-to-enable-automatic-digest-storage.md) is only supported in Azure SQL Database and SQL Server 2022 CTP 2.1 or higher. Managing digests manually is supported both in Azure SQL Database and SQL Server.
+> [Automatic digest management](ledger-how-to-enable-automatic-digest-storage.md) is only supported in Azure SQL Database and [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or higher. Managing digests manually is supported both in Azure SQL Database and SQL Server.
 
 ### Ledger verification
 
-The ledger feature doesn’t allow modifying the content of ledger system views, append-only tables and history tables. However, an attacker or system administrator who has control of the machine can bypass all system checks and directly tamper with the data. For example, an attacker or system administrator can edit the database files in storage. Ledger can't prevent such attacks but guarantees that any tampering will be detected when the ledger data is verified.
+The ledger feature doesn't allow modifying the content of ledger system views, append-only tables and history tables. However, an attacker or system administrator who has control of the machine can bypass all system checks and directly tamper with the data. For example, an attacker or system administrator can edit the database files in storage. Ledger can't prevent such attacks but guarantees that any tampering will be detected when the ledger data is verified.
 
 The [ledger verification](ledger-database-verification.md) process takes as input one or more previously generated database digests and recomputes the hashes stored in the database ledger based on the current state of the ledger tables. If the computed hashes don't match the input digests, the verification fails, indicating that the data has been tampered with. Ledger then reports all inconsistencies that it has detected.
 

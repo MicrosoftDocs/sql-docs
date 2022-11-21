@@ -1,20 +1,16 @@
 ---
-title: "Configure the query wait Server Configuration Option | Microsoft Docs"
+title: "Configure the query wait Server Configuration Option"
 description: Learn about the query wait option. See how to use it to specify the number of seconds a SQL Server query waits for resources before it times out.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "queries [SQL Server], timing out"
   - "time [SQL Server], query wait time"
   - "query wait option [SQL Server]"
-ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure the query wait Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

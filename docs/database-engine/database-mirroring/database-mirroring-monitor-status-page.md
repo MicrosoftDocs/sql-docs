@@ -1,18 +1,14 @@
 ---
-title: "Database Mirroring Monitor (Status Page) | Microsoft Docs"
+title: "Database Mirroring Monitor (Status Page)"
 description: Use this read-only Database Mirroring Monitor page to view the mirroring status for the principal and mirror server instances of a selected database.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.status.f1"
-ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dbmmonitor.status.f1"
 ---
 # Database Mirroring Monitor (Status Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

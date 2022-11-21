@@ -4,7 +4,6 @@ title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microso
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint"
 ms.topic: conceptual
 ms.date: 09/09/2021
 ---
@@ -22,7 +21,7 @@ C2WTS is also required with SQL Server Reporting Services SharePoint mode if you
 
 ## Report Viewer (Native Mode) web part configuration
 
-The Report Viewer web part is a custom web part that can be used to view SQL Server Reporting Services (native mode) reports within your SharePoint site. You can use the web part to view, navigate, print, and export reports on a report server. The Report Viewer web part is associated with report definition (.rdl) files that are processed by a SQL Server Reporting Services report server or a Power BI Report Server. This Report Viewer web part can’t be used with Power BI reports hosted in Power BI Report Server. 
+The Report Viewer web part is a custom web part that can be used to view SQL Server Reporting Services (native mode) reports within your SharePoint site. You can use the web part to view, navigate, print, and export reports on a report server. The Report Viewer web part is associated with report definition (.rdl) files that are processed by a SQL Server Reporting Services report server or a Power BI Report Server. This Report Viewer web part can't be used with Power BI reports hosted in Power BI Report Server. 
 
 SharePoint Server 2013, SharePoint Server 2016, and SharePoint Server 2019 all make use of claims authentication. As a result, C2WTS needs to be configured properly and Reporting Services needs to be configured for Kerberos authentication for reports to render correctly.
 

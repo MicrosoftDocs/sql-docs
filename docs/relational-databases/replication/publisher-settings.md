@@ -4,10 +4,9 @@ title: "'Publisher Settings' (SSMS) | Microsoft Docs"
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publishersettings.f1"

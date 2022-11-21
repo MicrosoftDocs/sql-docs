@@ -3,7 +3,6 @@ title: "Open a mobile report with specific query string parameters | Microsoft D
 description: For a Reporting Services mobile report with parameters and a data source, you can use query parameters in the report URL to open it with specified values.
 ms.date: 07/21/2022
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
 
 ms.topic: conceptual

@@ -1,19 +1,17 @@
 ---
 title: "Manage a replicated Publisher database as part of an availability group"
 description: "A description for how to manage and maintain a database that is acting as a Publisher in a SQL replication and is also participating in an Always On availability group."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/18/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+ms.custom: seodec18
+helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
   - "replication [SQL Server], Always On Availability Groups"
-ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Manage a replicated Publisher database as part of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

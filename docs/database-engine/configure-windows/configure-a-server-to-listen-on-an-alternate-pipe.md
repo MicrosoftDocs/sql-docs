@@ -1,21 +1,17 @@
 ---
-title: "Configure a Server to Listen on an Alternate Pipe | Microsoft Docs"
+title: "Configure a Server to Listen on an Alternate Pipe"
 description: Find out how to configure the named pipe that the SQL Server Database Engine listens on. Learn how to connect a client application to a specific named pipe.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Named Pipes [SQL Server], configuring"
   - "listening [SQL Server], pipes"
   - "pipes [SQL Server], alternate"
   - "alternate pipes [SQL Server]"
-ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # Configure a Server to Listen on an Alternate Pipe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

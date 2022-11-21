@@ -3,10 +3,9 @@ description: "Move User Databases"
 title: "Move User Databases"
 ms.custom: ""
 ms.date: "11/02/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "disaster recovery [SQL Server], moving database files"

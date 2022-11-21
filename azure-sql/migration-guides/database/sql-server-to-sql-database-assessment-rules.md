@@ -29,7 +29,7 @@ This article provides a list of the rules used to assess the feasibility of migr
  | CryptographicProvider | Database | Issue | [A use of CREATE CRYPTOGRAPHIC PROVIDER or ALTER CRYPTOGRAPHIC PROVIDER was found, which isn't supported in Azure SQL Database.](#CryptographicProvider) | 
  | DatabaseMail | Instance | Warning | [Database Mail isn't supported in Azure SQL Database.](#DatabaseMail) | 
  | DatabasePrincipalAlias | Database | Issue | [SYS.DATABASE_PRINCIPAL_ALIASES is no longer supported and has been removed.](#DatabasePrincipalAlias) | 
- | DbCompatLevelLowerThan100 | Database | Warning | [Azure SQL Database doesn’t support compatibility levels below 100.](#DbCompatLevelLowerThan100) | 
+ | DbCompatLevelLowerThan100 | Database | Warning | [Azure SQL Database doesn't support compatibility levels below 100.](#DbCompatLevelLowerThan100) | 
  | DisableDefCNSTCHK | Database | Issue | [SET option DISABLE_DEF_CNST_CHK is no longer supported and has been removed.](#DisableDefCNSTCHK) | 
  | FastFirstRowHint | Database | Warning | [FASTFIRSTROW query hint is no longer supported and has been removed.](#FastFirstRowHint) | 
  | FileStream | Database | Issue | [Filestream isn't supported in Azure SQL Database.](#FileStream) | 
@@ -58,11 +58,11 @@ This article provides a list of the rules used to assess the feasibility of migr
 **Category**: Issue   
 
 **Description**   
-Azure SQL Database cannot access file shares or Windows folders. See the "Impacted Objects" section for the specific uses of BULK INSERT statements that do not reference an Azure blob. Objects with 'BULK INSERT' where the source isn't Azure blob storage will not work after migrating to Azure SQL Database. 
+Azure SQL Database cannot access file shares or Windows folders. See the "Impacted Objects" section for the specific uses of BULK INSERT statements that do not reference an Azure blob. Objects with 'BULK INSERT' where the source isn't Azure Blob Storage will not work after migrating to Azure SQL Database. 
 
 
 **Recommendation**   
-You will need to convert BULK INSERT statements that use local files or file shares to use files from Azure blob storage instead, when migrating to Azure SQL Database. Alternatively, migrate to SQL Server on Azure Virtual Machine.
+You will need to convert BULK INSERT statements that use local files or file shares to use files from Azure Blob Storage instead, when migrating to Azure SQL Database. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
 ## Compute clause<a id="ComputeClause"></a>
 
@@ -242,10 +242,9 @@ Distributed transaction started by Transact SQL BEGIN DISTRIBUTED TRANSACTION an
 
 
 **Recommendation**   
-Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported (Currently in preview). Alternatively, migrate to SQL Server on Azure Virtual Machine.
+Review impacted objects section in Azure Migrate to see all objects using BEGIN DISTRUBUTED TRANSACTION. Consider migrating the participant databases to Azure SQL Managed Instance where distributed transactions across multiple instances are supported. For more information, see [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance). 
 
-More information: [Transactions across multiple servers for Azure SQL Managed Instance ](../../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance)
-
+Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
 ## OPENROWSET (bulk)<a id="OpenRowsetWithNonBlobDataSourceBulk"></a>
 
@@ -257,7 +256,7 @@ OPENROWSET supports bulk operations through a built-in BULK provider that enable
 
 
 **Recommendation**   
-Azure SQL Database cannot access file shares and Windows folders, so the files must be imported from Azure blob storage. Therefore, only blob type DATASOURCE is supported in OPENROWSET function. Alternatively, migrate to SQL Server on Azure Virtual Machine
+Azure SQL Database cannot access file shares and Windows folders, so the files must be imported from Azure Blob Storage. Therefore, only blob type DATASOURCE is supported in OPENROWSET function. Alternatively, migrate to SQL Server on Azure Virtual Machine
 
 More information: [Resolving Transact-SQL differences during migration to SQL Database](../../database/transact-sql-tsql-differences-sql-server.md#t-sql-syntax-not-supported-in-azure-sql-database)
 
@@ -272,7 +271,7 @@ OpenRowSet with SQL or non-SQL provider is an alternative to accessing tables in
 
 
 **Recommendation**   
-Azure SQL Database supports OPENROWSET only to import from Azure blob storage. Alternatively, migrate to SQL Server on Azure Virtual Machine
+Azure SQL Database supports OPENROWSET only to import from Azure Blob Storage. Alternatively, migrate to SQL Server on Azure Virtual Machine
 
 More information: [Resolving Transact-SQL differences during migration to SQL Database](../../database/transact-sql-tsql-differences-sql-server.md#t-sql-syntax-not-supported-in-azure-sql-database)
 

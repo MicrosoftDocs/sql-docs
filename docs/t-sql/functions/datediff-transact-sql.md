@@ -4,8 +4,8 @@ description: "Transact-SQL reference for the DATEDIFF function. Returns the nume
 author: markingmyname
 ms.author: maghan
 ms.date: "07/18/2019"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATEDIFF_TSQL"
@@ -70,7 +70,6 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.

@@ -2,11 +2,10 @@
 title: "Import from Excel or export to Excel with SSIS | Microsoft Docs"
 description: "Learn how to import or export Excel data with SQL Server Integration Services (SSIS), along with prerequisites, known issues, and limitations."
 ms.date: "06/29/2018"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
@@ -214,7 +213,6 @@ To import data from a memo column without truncation, you have two options:
 |---|---|
 | Excel 2016 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel |
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
-| | |
 
 ## <a name="issues-exporting"></a> Issues with exporting
 

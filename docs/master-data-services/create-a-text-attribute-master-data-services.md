@@ -3,17 +3,16 @@ description: "Create a Text Attribute (Master Data Services)"
 title: Create a Text Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], creating text attributes"
   - "creating text attributes [Master Data Services]"
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Text Attribute (Master Data Services)
 

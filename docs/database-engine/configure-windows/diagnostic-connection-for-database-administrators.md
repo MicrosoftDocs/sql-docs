@@ -3,11 +3,9 @@ title: "Diagnostic Connection for Database Administrators"
 description: "Find out about the dedicated administrator connection (DAC). View its restrictions, instructions on how to establish it, and examples demonstrating its use."
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer:
 ms.date: 08/12/2022
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "server management [SQL Server], connections"

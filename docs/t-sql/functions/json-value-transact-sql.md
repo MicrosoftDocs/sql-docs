@@ -4,8 +4,8 @@ description: "JSON_VALUE (Transact-SQL)"
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "JSON_VALUE"
@@ -94,7 +94,6 @@ SET @jsonInfo=N'{
 |$.info.tags|NULL|Error|Not a scalar value.<br /><br /> Use **JSON_QUERY** instead.|  
 |$.info.type[0]|NULL|Error|Not an array.|  
 |$.info.none|NULL|Error|Property does not exist.|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## Examples  
   

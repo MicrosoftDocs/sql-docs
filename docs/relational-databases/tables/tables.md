@@ -3,10 +3,9 @@ description: "Tables"
 title: "Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [SQL Server]"

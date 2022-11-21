@@ -5,9 +5,9 @@ ms.custom: seo-dt-2019
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/27/2018
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 ---
 

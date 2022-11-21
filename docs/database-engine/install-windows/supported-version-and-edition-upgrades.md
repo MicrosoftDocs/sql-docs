@@ -1,20 +1,17 @@
 ---
 title: "Supported Version and Edition Upgrades (SQL Server 2016)"
-description: The supported version and edition upgrades for SQL Server 2016. 
-ms.custom: ""
+description: The supported version and edition upgrades for SQL Server 2016.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/27/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Supported version & edition upgrades (SQL Server 2016)

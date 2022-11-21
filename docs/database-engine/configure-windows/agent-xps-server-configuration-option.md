@@ -1,19 +1,15 @@
 ---
-title: "Agent XPs Server Configuration Option | Microsoft Docs"
+title: "Agent XPs Server Configuration Option"
 description: Discover how to use the Agent XPs option to enable SQL Server Agent extended stored procedures. View an example that uses this option.
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Agent XPs option"
-  - "extended stored procedures [SQL Server], SQL Server Agent"
-ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/02/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Agent XPs option"
+  - "extended stored procedures [SQL Server], SQL Server Agent"
 ---
 # Agent XPs Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

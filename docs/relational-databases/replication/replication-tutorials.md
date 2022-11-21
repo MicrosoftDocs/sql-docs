@@ -3,10 +3,9 @@ title: "Replication tutorials | Microsoft Docs"
 description: Use these tutorials to help prepare your server for replication in SQL Server, and then learn to configure both transactional and merge replication.
 ms.custom: ""
 ms.date: "04/09/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [SQL Server replication]"

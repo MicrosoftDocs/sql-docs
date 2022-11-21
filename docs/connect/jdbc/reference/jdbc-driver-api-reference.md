@@ -4,8 +4,8 @@ description: The technical API reference for the JDBC classes in the JDBC Driver
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/11/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # JDBC driver API reference
@@ -66,7 +66,6 @@ Documentation for JDBC driver version 6.0, and some later versions, is also here
 |[ISQLServerPreparedStatement](isqlserverpreparedstatement-interface.md)|Represents the basic implementation of JDBC prepared statement functionality.|
 |[ISQLServerResultSet](isqlserverresultset-interface.md)|Represents a JDBC result set.|
 |[ISQLServerStatement](isqlserverstatement-interface.md)|Represents the basic implementation of JDBC statement functionality.|
-| &nbsp; | &nbsp; |
 
 ## Classes
 
@@ -95,7 +94,6 @@ Documentation for JDBC driver version 6.0, and some later versions, is also here
 |[SQLServerXAConnection](sqlserverxaconnection-class.md)|Represents JDBC connections that can participate in distributed (XA) transactions.|
 |[SQLServerXADataSource](sqlserverxadatasource-class.md)|Represents a factory for [SQLServerXAConnection](sqlserverxaconnection-class.md) objects that is used internally.|
 |[SQLServerXAResource](sqlserverxaresource-class.md)|Represents an XAResource for XA distributed transaction management.|
-| &nbsp; | &nbsp; |
 
 ## See also
 

@@ -3,17 +3,16 @@ description: "Model Object Permissions (Master Data Services)"
 title: Model Object Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Master Data Services], model objects"
   - "models [Master Data Services], object permissions"
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Model Object Permissions (Master Data Services)
 

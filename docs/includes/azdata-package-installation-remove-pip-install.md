@@ -1,9 +1,9 @@
 ---
 author: MikeRayMSFT
-ms.prod: sql
-ms.topic: include
-ms.date: 01/07/2020
 ms.author: mikeray
+ms.date: 01/07/2020
+ms.service: sql
+ms.topic: include
 ---
 
 ### Python/Pip installation

@@ -1,22 +1,20 @@
 ---
 title: "Availability groups: a high-availability and disaster-recovery solution"
 description: "Always On availability groups are a SQL Server high-availability and disaster-recovery solution that provide an enterprise-level alternative to database mirroring, with greater functionality. Learn about the basics and functionality of this feature."
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 04/23/2019
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seodec18
+helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
   - "secondary replicas, see Availability Groups [SQL Server]"
   - "availability [SQL Server]"
   - "AlwaysOn [SQL Server], see Availability Groups [SQL Server]"
   - "Always On [SQL Server], see Availability Groups [SQL Server]"
   - "Availability Groups [SQL Server]"
-ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Always On availability groups: a high-availability and disaster-recovery solution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

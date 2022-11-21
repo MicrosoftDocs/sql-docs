@@ -4,8 +4,8 @@ description: SQL Server integration with the .NET Framework CLR security manages
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/22/2020
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "security [CLR integration]"

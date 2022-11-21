@@ -1,8 +1,8 @@
 ---
 title: Overview of SQL Server Always On availability groups
 description: This article introduces SQL Server Always On availability groups on Azure Virtual Machines.
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 11/10/2021
 ms.service: virtual-machines-sql
@@ -116,17 +116,17 @@ The following table provides a comparison of the options available:
 |**SQL Server edition** |Enterprise |Enterprise |Enterprise |Enterprise, Standard|Enterprise, Standard|
 |**Windows Server version**| 2016 + | 2016 + | 2016 + | All| All|
 |**Creates the cluster for you**|Yes|Yes | Yes |No| No| 
-|**Creates the availability group for you** |Yes |No|No|No| No| 
-|**Creates listener and load balancer independently** |No|No|No|Yes|N/A|
-|**Possible to create DNN listener using this method?**|No|No|No|Yes|N/A|
+|**Creates the availability group and listener for you** |Yes |No|No|No| No| 
+|**Creates listener and load balancer independently** |N/A|No|No|Yes|N/A|
+|**Possible to create DNN listener using this method?**|N/A|No|No|Yes|N/A|
 |**WSFC quorum configuration**|Cloud witness|Cloud witness|Cloud witness|All|All|
 |**DR with multiple regions** |No|No|No|Yes|Yes|
-|**Multisubnet support** |No|No|No|N/A|Yes|
+|**Multisubnet support** |Yes|No|No|N/A|Yes|
 |**Support for an existing AD**|Yes|Yes|Yes|Yes|Yes|
 |**DR with multizone in the same region**|Yes|Yes|Yes|Yes|Yes|
 |**Distributed AG with no AD**|No|No|No|Yes| Yes| 
 |**Distributed AG with no cluster** |No|No|No|Yes|Yes|
-|**Requires load balancer or DNN**| Yes | Yes | Yes | Yes | No|
+|**Requires load balancer or DNN**| No | Yes | Yes | Yes | No|
 
 ## Next steps
 

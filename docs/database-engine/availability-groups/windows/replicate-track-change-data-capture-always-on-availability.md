@@ -1,13 +1,14 @@
 ---
 title: "Replication, change tracking, change data capture & availability groups"
-description: Learn about the interoperability of replication, change tracking, and change data capture when used with SQL Server Always On availability groups. 
-ms.custom: seo-lt-2019
+description: Learn about the interoperability of replication, change tracking, and change data capture when used with SQL Server Always On availability groups.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 10/05/2021
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change tracking [SQL Server], Always On Availability Groups"
   - "change data capture [SQL Server], AlwaysOn Availability Groups"
@@ -15,9 +16,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
   - "replication [SQL Server], Always On Availability Groups"
-ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Replication, change tracking, & change data capture - Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -159,7 +157,7 @@ ms.author: mathoma
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
-    @provider=N'SQLNCLI11',   
+    @provider=N'MSOLEDBSQL',   
     @datasrc=N'AG_Listener_Name',   
     @provstr=N'ApplicationIntent=ReadOnly',   
     @catalog=N'MY_DB_NAME';  
@@ -183,7 +181,11 @@ If Change Data Capture needs to be disabled on a database that is part of an Alw
 >  Msg 22117, Level 16, State 1, Line1  
 >   
 >  For databases that are members of a secondary replica (that is, for secondary databases), change tracking is not supported. As an alternative to running change tracking queries on the primary replica, you can create a database snapshot of an AG database from the secondary replica and then use that to query change data. A database snapshot is a read-only, static view of a SQL Server database (the source database), so change tracking data in the database snapshot will be of the time when the snapshot was taken on the AG database from the secondary replica.
-  
+
+> [!NOTE]  
+>  When a failover occurs on a database with Change Tracking enabled, recovery time on the new primary replica may take longer than usual as Change Tracking requires a full database restart. 
+
+
 ##  <a name="Prereqs"></a> Prerequisites, Restrictions, and Considerations for Using Replication  
  This section describes considerations for deploying replication with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations.  
   

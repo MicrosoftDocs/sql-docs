@@ -4,9 +4,8 @@ description: BACKUP MASTER KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -30,7 +29,7 @@ dev_langs:
   Exports the database master key.  
 
 > [!IMPORTANT]
-> SQL Server 2022 introduces backup and restore support for the database master key to and from an Azure Blob storage. The `URL` syntax is only available for SQL Server 2022 or later.
+> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces backup and restore support for the database master key to and from an Azure Blob storage. The `URL` syntax is only available for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +52,7 @@ BACKUP MASTER KEY TO
  Specifies the complete path, including file name, to the file to which the master key will be exported. The path may be a local path or a UNC path to a network location.  
 
  URL **='***Azure Blob storage URL***'**   
- **Applies to:** SQL Server 2022 or later   
+ **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later   
  Is the URL for your Azure Blob storage, in the format similar to `https://<storage_account_name>.blob.core.windows.net/<storage_container_name>/<backup_file_name>.bak`.
   
  ENCRYPTION BY PASSWORD **='***password***'**  
@@ -63,9 +62,13 @@ BACKUP MASTER KEY TO
 
  The master key must be open and, therefore, decrypted before it's backed up. If it's encrypted with the service master key, the master key doesn't have to be explicitly opened. But if the master key is encrypted only with a password, it must be explicitly opened.  
   
- We recommend that you back up the master key as soon as it's created, and store the backup in a secure, off-site location.  
-  
- If you're using SQL Server 2022 or later, and want to back up the database master key to an Azure Blob storage, the following prerequisites apply:
+ Back up the master key as soon as it's created, and store the backup in a secure, off-site location.  
+
+## Authenticate to Azure Blob storage
+
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
+
+To back up the database master key to an Azure Blob storage, the following prerequisites apply:
 
 1. Have an [Azure storage account](/azure/storage/common/storage-account-create).
 1. [Create stored access policy and shared access storage](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).

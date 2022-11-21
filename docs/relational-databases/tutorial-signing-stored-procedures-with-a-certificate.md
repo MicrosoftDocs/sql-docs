@@ -5,10 +5,9 @@ ms.custom:
   - seo-dt-2019
   - intro-quickstart
 ms.date: "08/23/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: quickstart
 helpviewer_keywords:
   - "signing stored procedures tutorial [SQL Server]"

@@ -1,8 +1,8 @@
 ---
 title: Custom R functions using rxExec
 description: "Learn to use simulated data to demonstrate execution of a custom R function that runs on a remote server."
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial

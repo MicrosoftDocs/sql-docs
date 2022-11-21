@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:
@@ -172,7 +171,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
 
  RESUMABLE = { ON | OFF}  
- **Applies to**: SQL Server 2022 and later.
+ **Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
  Specifies whether an `ALTER TABLE ADD CONSTRAINT` operation is resumable. Add table constraint operation is resumable when `ON`. Add table constraint operation is not resumable when `OFF`. Default is `OFF`. When the `RESUMABLE` option is set to `ON`, the option `ONLINE = ON` is required.
 

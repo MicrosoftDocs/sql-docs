@@ -1,16 +1,14 @@
 ---
-title: "View or configure the backup compression algorithm Server Configuration Option | Microsoft Docs"
-description: 'Find out about the "backup compression algorithm" option. See how it determines the algorithm to use for backup compression, and learn how to set it.'
-ms.custom: ""
-ms.date: "08/24/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "backup compression algorithm [SQL Server], backup compression algorithm Option"
+title: "View or configure the backup compression algorithm Server Configuration Option"
+description: "Find out about the backup compression algorithm option. See how it determines the algorithm to use for backup compression, and learn how to set it."
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "08/24/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+helpviewer_keywords:
+  - "backup compression algorithm [SQL Server], backup compression algorithm Option"
 ---
 
 # View or configure the backup compression algorithm Server Configuration option

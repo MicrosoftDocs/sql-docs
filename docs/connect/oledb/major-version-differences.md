@@ -4,8 +4,8 @@ description: A description of the differences between the OLE DB Driver 19 for S
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/16/2022"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "MSOLEDBSQL, additional resources"
@@ -34,4 +34,5 @@ The new Microsoft OLE DB Driver 19 for SQL Server supports side by side installa
 [Universal Data Link (UDL) Configuration](help-topics/data-link-pages.md)  
 [SQL Server Login Dialog Box (OLE DB)](help-topics/sql-server-login-dialog.md)  
 [Initialization and authorization properties (OLE DB driver)](ole-db-data-source-objects/initialization-and-authorization-properties.md)  
+[Registry settings](features/registry-settings.md)  
   

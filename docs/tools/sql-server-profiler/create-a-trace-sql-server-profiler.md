@@ -2,10 +2,9 @@
 title: Create a Trace
 titleSuffix: SQL Server Profiler
 description: Learn how to capture event data in SQL Server Profiler by creating a trace. Read about the various options you can specify for traces.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname

@@ -1,9 +1,8 @@
 ---
 title: "What is SQL Server Reporting Services | Microsoft Docs"
 description: "Learn about tools and services for Reporting Services reports on premises."
-ms.date: 08/12/2022
+ms.date: 09/16/2022
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +22,11 @@ ms.custom:
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Looking for Power BI Report Server? See [What is Power BI Report Server?](/power-bi/report-server/get-started)
-
-SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage paginated reports.
+SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage paginated reports. Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
 ![Screenshot showing SQL Server 2022 Reporting Services report.](../reporting-services/media/report-server-2022-coho-winery.png "Screenshot showing SQL Server 2022 Reporting Services report.")
+
+Looking for Power BI Report Server? See [What is Power BI Report Server?](/power-bi/report-server/get-started)
 
 ## Create, deploy, and manage reports
 

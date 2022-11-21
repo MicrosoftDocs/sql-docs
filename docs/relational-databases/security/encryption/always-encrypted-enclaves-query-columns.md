@@ -5,9 +5,8 @@ ms.custom:
 - event-tier1-build-2022
 ms.date: 05/24/2022
 ms.reviewer: vanto
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
@@ -40,15 +39,16 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supports only nested loop joins. SQL Server 2022 and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash, and merge joins
-  - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in SQL Server 2022 and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
-  - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in SQL Server 2022 and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
+  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supports only nested loop joins. [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash, and merge joins
+  - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
+  - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
 - Queries that insert, update, or delete rows, which in turn triggers inserting and/or removing an index key to/from an index on an enclave-enabled column. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Operations on indexes and confidential DML queries using enclaves are only supported on enclave-enabled columns that use randomized encryption. Deterministic encryption is not supported.
->
-> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or later, confidential queries using enclaves on character string columns (`char`, `nchar`) require a binary2 sort order (BIN2) collation configured for the column. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], using BIN2 or UTF-8 collations is required.
+
+> [!NOTE]
+> In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required. 
 
 ### DBCC commands using secure enclaves
 
@@ -77,16 +77,20 @@ Minimum version requirements for SQL Server Management Studio:
 - SSMS 18.3 when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 - SSMS 18.8 when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
-Make sure you run your statements from a query window that uses a connection that has Always Encrypted and the correct attestation URL configured.
+Make sure you run your statements from a query window that uses a connection that has Always Encrypted and attestation parameters correctly configured.
 
 1. In the **Connect to Server** dialog, specify your server name, select an authentication method, and specify your credentials.
-2. Click **Options >>** and select the **Always Encrypted** tab.
-3. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
+2. Click **Options >>** and select the **Connection Properties** tab. Specify your database name.
+3. Select the **Always Encrypted** tab.
+4. Select **Enable Always Encrypted (column encryption)**.
+5. (This step applies to SSMS 19 or later.) Select **Enable secure enclaves**.
+6. (This step applies to SSMS 19 or later.) Set **Protocol** to **Host Guardian Service** (if you're using  [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]) or **Microsoft Azure Attestation** (if you're using a DC-series database with Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]). 
+7. Specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
 
-    ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/column-encryption-setting.png)
+    ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/ssms-connect-microsoft-azure-attestation.png)
 
-4. Select **Connect**.
-5. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable** if you plan to run parameterized DML queries. For more information, see [Parameterization for Always Encrypted](always-encrypted-query-columns-ssms.md#param).
+8. Select **Connect**.
+9. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
 
 For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ssms.md#en-dis).
 
@@ -99,8 +103,8 @@ Make sure you run your statements from a query window that uses a connection tha
 1. In the **Connection** dialog, click **Advanced...**.
 2. To enable Always Encrypted for the connection, set the **Always Encrypted** field to **Enabled**.
 3. Specify the attestation protocol and the attestation URL.
-    - If you're using [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
-    - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
+    - If you're using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
+    - If you're using if you're using a DC-series database with Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
 
     ![Connect to server with attestation using Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
 
@@ -186,7 +190,7 @@ GO
 
 The below query sorts employee records based on the encrypted `Salary` column, retrieving 10 employees with the highest salaries.
 > [!NOTE]
-> Sorting encrypted columns is supported in SQL Server 2022 and Azure SQL Database, but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
+> Sorting encrypted columns is supported in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and Azure SQL Database, but not in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

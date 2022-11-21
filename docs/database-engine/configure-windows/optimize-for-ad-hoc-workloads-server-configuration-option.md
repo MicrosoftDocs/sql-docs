@@ -4,9 +4,8 @@ description: "Learn about the optimize for ad hoc workloads option. Use it to im
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/12/2022
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "optimize for ad hoc workloads option"

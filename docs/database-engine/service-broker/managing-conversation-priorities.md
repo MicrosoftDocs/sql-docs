@@ -1,13 +1,13 @@
 ---
 title: Managing Conversation Priorities
 description: "Service Broker conversation priorities let you specify which conversations to prioritize so that their messages are not blocked by large numbers of messages from less important conversations."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Managing Conversation Priorities

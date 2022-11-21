@@ -1,11 +1,11 @@
 ---
 description: "Menu commands and other shortcut keys (DB2ToSQL)"
 title: "Menu commands and other shortcut keys (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: cpichuka 

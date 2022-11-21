@@ -5,9 +5,8 @@ author: rajeshsetlem
 ms.author: rajpo
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "dma"
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

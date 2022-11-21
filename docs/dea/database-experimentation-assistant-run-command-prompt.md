@@ -1,19 +1,16 @@
 ---
 title: Run Database Experimentation Assistant at a command prompt
 description: Learn how to capture a trace in Database Experimentation Assistant (DEA) and then analyze the results, all from a command prompt.
-ms.custom:
-- "seo-lt-2019"
-- kr2b-contr-experiment
-ms.date: 05/18/2022
-ms.prod: sql
-ms.prod_service: dea
-ms.suite: sql
-ms.technology: dea
-ms.tgt_pltfrm: ""
-ms.topic: how-to
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
+ms.date: 05/18/2022
+ms.service: sql
+ms.subservice: dea
+ms.topic: how-to
+ms.custom:
+  - "seo-lt-2019"
+  - kr2b-contr-experiment
 ---
 
 # Run Database Experimentation Assistant at a command prompt

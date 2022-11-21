@@ -3,9 +3,9 @@ description: "MSSQLSERVER_18483"
 title: MSSQLSERVER_18483
 ms.custom: ""
 ms.date: 12/25/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "18483 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|REMLOGIN_INVALID_USER|
 |Message Text|Could not connect to server '%.ls' because '%.ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.|
-||
 
 ## Explanation
 

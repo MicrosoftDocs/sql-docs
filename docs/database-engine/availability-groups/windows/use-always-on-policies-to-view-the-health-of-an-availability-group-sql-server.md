@@ -1,17 +1,15 @@
 ---
 title: "Policies to view availability group health"
-description: Use the Always On policies or PowerShell to determine the operational health of an Always On availability group. 
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], policies"
-ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
+description: Use the Always On policies or PowerShell to determine the operational health of an Always On availability group.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], policies"
 ---
 # Use Always On Policies to View the Health of an Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

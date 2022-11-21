@@ -1,15 +1,12 @@
 ---
-description: "Data Matching"
 title: "Data Matching"
-ms.date: "10/01/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
+description: "Data Matching"
 author: swinarko
 ms.author: sawinark
+ms.date: "10/01/2012"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Data Matching
 

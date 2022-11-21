@@ -2,8 +2,8 @@
 title: SQL Server privacy supplement
 description: SQL Server privacy supplement
 ms.date: 05/31/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.reviewer: "wopeter"
 ms.custom: ""
 ms.topic: conceptual
@@ -58,7 +58,6 @@ Credential-related information used to secure logins, users, or accounts within 
 |These credentials never leave the user machine via Usage and Diagnostics Data. |- |- |
 |Crash Dumps may contain Access Control Data. |- |Crash Dumps: Maximum 30 days. |
 |These credentials never leave the user machine via User Feedback unless customer injects it manually |Limit to Microsoft internal use with no third-party access. |User Feedback: Max 1 year|
-|&nbsp;|&nbsp;|&nbsp;|
 
 ## Customer data
 

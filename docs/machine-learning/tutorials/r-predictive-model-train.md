@@ -2,8 +2,8 @@
 title: "Tutorial: Train and compare predictive models in R"
 titleSuffix: SQL machine learning 
 description: In part three of this four-part tutorial series, you'll develop two predictive models in R with SQL machine learning, and then select the most accurate model.
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf

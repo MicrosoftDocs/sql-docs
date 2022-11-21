@@ -1,14 +1,15 @@
 ---
 title: "What is an availability group listener?"
 description: "An overview of the Always On availability group listener and how it functions to direct traffic automatically to the intended server. "
+author: MashaMSFT
+ms.author: mathoma
+ms.date: "05/23/2022"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
 ms.custom:
   - seodec18
   - intro-overview
-ms.date: "05/23/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
 helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], read-only routing"
   - "Availability Groups [SQL Server], client connectivity"
-ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
 ---
 # What is an availability group listener?  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

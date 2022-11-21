@@ -1,22 +1,18 @@
 ---
-title: "ft crawl bandwidth Server Configuration Option | Microsoft Docs"
-description: 'Learn about the "ft crawl bandwidth" option. See how it affects the number of buffers that SQL Server maintains in the pool of large memory buffers.'
-ms.custom: ""
+title: "ft crawl bandwidth Server Configuration Option"
+description: "Learn about the ft crawl bandwidth option. See how it affects the number of buffers that SQL Server maintains in the pool of large memory buffers."
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "large memory buffers"
   - "memory [SQL Server], buffers"
   - "ft crawl bandwidth option"
-ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # ft crawl bandwidth Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

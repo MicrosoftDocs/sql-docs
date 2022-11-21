@@ -4,8 +4,8 @@ description: DELETE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "11/19/2021"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DELETE"
@@ -503,7 +503,7 @@ SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 
 ### P. Delete based on the result of joining with another table
 
-This example shows how to delete from a table based on the result from joining wiht another table.
+This example shows how to delete from a table based on the result from joining with another table.
 
 ```sql
 CREATE TABLE dbo.Table1   

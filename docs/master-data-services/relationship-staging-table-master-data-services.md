@@ -3,17 +3,16 @@ description: "Relationship Staging Table (Master Data Services)"
 title: Relationship Staging Table
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships staging table [Master Data Services]"
   - "database [Master Data Services], relationships table"
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Relationship Staging Table (Master Data Services)
 

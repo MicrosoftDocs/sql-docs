@@ -4,8 +4,8 @@ description: "COLUMNPROPERTY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "COLUMNPROPERTY"
@@ -53,7 +53,7 @@ For the *id* argument, the *property* argument specifies the information type th
 |**IsCursorType**|Procedure parameter is of type CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsDeterministic**|Column is deterministic. This property applies only to computed columns and view columns.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input. Not a computed column or view column.|  
 |**IsFulltextIndexed**|Column is registered for full-text indexing.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
-|**IsHidden**|Is column value system-generated. Corresponds to **sys.columns.is_hidden**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] and later.<br /><br /> 0: Not hidden<br /><br /> 1: Hidden|  
+|**IsHidden**|Is column value system-generated. Corresponds to **sys.columns.is_hidden**|**Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> 0: Not hidden<br /><br /> 1: Hidden|  
 |**IsIdentity**|Column uses the IDENTITY property.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsIdNotForRepl**|Column checks for the IDENTITY_INSERT setting.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsIndexable**|Column can be indexed.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  

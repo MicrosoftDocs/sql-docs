@@ -6,12 +6,10 @@ description: "Machine Learning One Class Support Vector Machines"
 keywords: "models, anomaly, detection" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
+ms.service: sql
+ms.subservice: "machine-learning-services" 
 ms.assetid: "" 
  
 # optional metadata 
@@ -135,7 +133,7 @@ support vectors (represented by the Greek letter nu). Must be between 0 and
 ### shrink
 
 Uses the shrinking heuristic if `True`. In this case,
-some samples will be “shrunk” during the training procedure, which may speed
+some samples will be "shrunk" during the training procedure, which may speed
 up training. The default value is `True`.
 
 
@@ -238,7 +236,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenv is used instead.
 
 

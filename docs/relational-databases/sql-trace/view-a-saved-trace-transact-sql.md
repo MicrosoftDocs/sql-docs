@@ -3,10 +3,9 @@ description: "View a Saved Trace (Transact-SQL)"
 title: "View a Saved Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], viewing"

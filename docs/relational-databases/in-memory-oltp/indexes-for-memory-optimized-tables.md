@@ -4,9 +4,8 @@ description: Learn how an index on a memory-optimized table differs from a tradi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "09/16/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -216,7 +215,6 @@ The following table lists all operations that are supported by the different ind
 | Index seek on inequality and range predicates <br/> (>, <, <=, >=, `BETWEEN`). | No <br/> (Results in an index scan.) | Yes <sup>1</sup> | Yes |  
 | Retrieve rows in a sort order that matches the index definition. | No | Yes | Yes |  
 | Retrieve rows in a sort-order that matches the reverse of the index definition. | No | No | Yes |  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> For a memory-optimized Nonclustered index, the full key is not required to perform an index seek.  
 

@@ -1,16 +1,14 @@
 ---
-title: Overview of the Database Experimentation Assistant 
+title: Overview of the Database Experimentation Assistant
 description: Learn details about Database Experimentation Assistant (DEA), for example how to evaluate a targeted version of SQL Server for a specific workload.
-ms.date: 12/12/2019
-ms.prod: sql
-ms.suite: sql
-ms.technology: dea
-ms.tgt_pltfrm: ""
-ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.custom: "seo-lt-2019"
+ms.date: 12/12/2019
+ms.service: sql
+ms.subservice: dea
+ms.topic: conceptual
+ms.custom: seo-lt-2019
 ---
 # Overview of Database Experimentation Assistant
 

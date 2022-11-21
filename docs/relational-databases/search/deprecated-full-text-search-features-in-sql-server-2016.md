@@ -2,9 +2,8 @@
 description: "Deprecated Full-Text Search features in SQL Server 2016"
 title: "Deprecated Full-Text Search features in SQL Server 2016"
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [full-text search]"

@@ -1,20 +1,17 @@
 ---
 title: "Configure a witness"
 description: "Describes how to configure a database mirroring witness with Windows authentication using Transact-SQL. "
-ms.custom: "seo-lt-2019"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "witness [SQL Server], establishing"
   - "Windows authentication [SQL Server]"
   - "database mirroring [SQL Server], witness"
-ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Add a Database Mirroring Witness Using Windows Authentication (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

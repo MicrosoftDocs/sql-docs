@@ -3,9 +3,9 @@ description: "Configure column encryption using Always Encrypted with a DAC pack
 title: "Configure column encryption using Always Encrypted with a DAC package   | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"

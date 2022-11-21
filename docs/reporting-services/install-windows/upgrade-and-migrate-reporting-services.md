@@ -2,7 +2,6 @@
 description: "Upgrade and Migrate Reporting Services"
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 helpviewer_keywords: 
   - "SSRS, upgrading"
   - "Reporting Services, upgrades"
@@ -22,7 +21,7 @@ ms.date: 05/06/2021
  
 - **Upgrade *to* Reporting Services 2016 and older *from* Reporting Services 2016 and older:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an "in place" upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the [SharePoint mode upgrade and migration scenarios](#bkmk_sharePoint_scenarios) section later in this document.  
 
-- **Upgrade *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older** isn’t the same upgrade scenario as in previous versions. When upgrading *to* Reporting Services 2016 and older versions, you could following an in-place upgrade process using SQL Server installation media. When upgrading *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older, you can’t follow the same steps because the new Reporting Services installation is a standalone product. It's no longer part of the SQL Server installation media. 
+- **Upgrade *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older** isn't the same upgrade scenario as in previous versions. When upgrading *to* Reporting Services 2016 and older versions, you could following an in-place upgrade process using SQL Server installation media. When upgrading *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older, you can't follow the same steps because the new Reporting Services installation is a standalone product. It's no longer part of the SQL Server installation media. 
 
     To upgrade from Reporting Services 2016 and older versions to Reporting Services 2017 and later, follow the [Migrate a Reporting Services Installation (Native Mode)](migrate-a-reporting-services-installation-native-mode.md) article, with Reporting Services 2017 or later as your destination instance. 
 

@@ -1,17 +1,15 @@
 ---
 title: "Automatic seeding for secondary replicas"
 description: "Learn about how automatic seeding can initialize secondary replicas as part of an Always On availability group with SQL 2016 and greater."
-ms.custom: seo-lt-2019 
-ms.date: "03/05/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-helpviewer_keywords: 
-- "Automatic seeding [SQL Server], secondary replica"
-ms.assetid: 
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/05/2021"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: how-to
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Automatic seeding [SQL Server], secondary replica"
 ---
 # Use automatic seeding to initialize a secondary replica for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -23,7 +21,7 @@ In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a
 Security permissions vary depending on the type of replica being initialized:
 
 * For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* For a distributed availability group where the replica's databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
+* For a distributed availability group where the replica's databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary. However, if there's only one replica on the second availability group, then grant the `CREATE ANY DATABASE` permission to the secondary availability group name, or automatic seeding may fail. 
 * For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica is seeded from the primary of the second availability group.
 
 ## Performance and transaction log impact on the primary replica

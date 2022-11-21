@@ -6,8 +6,8 @@ ms.author: lle
 ms.reviewer: maghan
 ms.date: 10/02/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf
 
@@ -22,7 +22,6 @@ You can also use the `ssis-conf` utility to configure the following properties:
 | set-edition | Set the edition of SQL Server                                       |
 | telemetry   | Enable or disable SQL Server Integration Services telemetry service |
 | setup       | Initialize and set up Microsoft SQL Server Integration Services      |
-|||
 
 ## Run ssis-conf
 

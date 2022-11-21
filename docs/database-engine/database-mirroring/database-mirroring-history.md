@@ -1,18 +1,14 @@
 ---
-title: "Database Mirroring History | Microsoft Docs"
+title: "Database Mirroring History"
 description: Learn how to view the history of mirroring status for a mirrored database on a specified server instance in SQL Server Management Studio.
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
-ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/07/2017"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
 ---
 # Database Mirroring History
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

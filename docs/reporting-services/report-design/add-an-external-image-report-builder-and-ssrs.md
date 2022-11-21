@@ -3,7 +3,6 @@ title: "Add an external image to a paginated report | Microsoft Docs"
 description: Learn how to add an image to your paginated report from an external source with appropriate verification and permissions in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

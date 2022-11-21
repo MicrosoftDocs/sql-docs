@@ -3,10 +3,9 @@ description: "Integration Services Backward Compatibility"
 title: "Integration Services Backward Compatibility | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [Integration Services]"

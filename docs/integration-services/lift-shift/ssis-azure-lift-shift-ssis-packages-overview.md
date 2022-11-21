@@ -3,11 +3,10 @@ title: "Deploy and run SSIS packages in Azure | Microsoft Docs"
 description: Learn how you can move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Microsoft Azure cloud.
 ms.date: "04/06/2022"
 ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.custom:
   - intro-deployment
-ms.technology: integration-services
+ms.subservice: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
@@ -34,7 +33,6 @@ The most significant difference is the separation of storage from runtime. Azure
 |---|---|---|---|
 | On premises | SQL Server | SSIS runtime hosted by SQL Server | SSIS Scale Out (in SQL Server 2017 and later)<br/><br/>Custom solutions (in prior versions of SQL Server) |
 | On Azure | SQL Database or SQL Managed Instance | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
-| | | | |
 
 ## Provision SSIS on Azure
 

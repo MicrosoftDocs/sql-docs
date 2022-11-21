@@ -1,19 +1,15 @@
 ---
 title: "Run Data Migration Assistant from the command line"
 description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
-ms.custom: "seo-lt-2019"
-ms.date: "05/06/2019"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
-ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
-  - "Data Migration Assistant, Command Line"
-ms.assetid: ""
 author: rajeshsetlem
 ms.author: rajpo
+ms.date: "05/06/2019"
+ms.service: sql
+ms.subservice: dma
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Data Migration Assistant, Command Line"
 ---
 
 # Run Data Migration Assistant from the command line

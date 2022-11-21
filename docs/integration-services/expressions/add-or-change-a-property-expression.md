@@ -3,10 +3,9 @@ description: "Add or Change a Property Expression"
 title: "Add or Change a Property Expression | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Integration Services], creating"

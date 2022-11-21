@@ -3,10 +3,9 @@ description: "sp_helplanguage (Transact-SQL)"
 title: "sp_helplanguage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_helplanguage"
@@ -24,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Reports information about a particular alternative language or about all languages in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Reports information about a particular alternative language or about all languages in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

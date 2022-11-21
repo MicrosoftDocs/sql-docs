@@ -3,16 +3,15 @@ description: "Connect to a Master Data Services Database Dialog Box"
 title: Connect to a MDS Database Dialog Box
 ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.srvconnect.f1"
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Connect to a Master Data Services Database Dialog Box
 

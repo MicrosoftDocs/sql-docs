@@ -290,7 +290,7 @@ WHERE SalesOrderNumber IN (N'SO53115',N'SO55981');
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
 ```output
-ProductCount   SalesOrderID`
+ProductCount   SalesOrderID
 ------------   -----------------
 3              SO53115
 1              SO55981

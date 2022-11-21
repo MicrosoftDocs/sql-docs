@@ -1,15 +1,13 @@
 ---
 title: "Generate & analyze CLUSTER.LOG for availability groups"
 description: "Learn details about how to generate and analyze the cluster log for an Always On availability group."
-ms.custom: seo-lt-2019
-ms.date: "06/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "06/14/2017"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: how-to
+ms.custom: seo-lt-2019
 ---
 # Generate and analyze the CLUSTER.LOG for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

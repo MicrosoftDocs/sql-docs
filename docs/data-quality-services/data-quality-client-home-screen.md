@@ -1,17 +1,14 @@
 ---
-description: "Data Quality Client Home Screen"
 title: "Data Quality Client Home Screen"
-ms.date: "02/29/2012"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
-ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
+description: "Data Quality Client Home Screen"
 author: swinarko
 ms.author: sawinark
+ms.date: "02/29/2012"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dqs.clienthome.f1"
 ---
 # Data Quality Client Home Screen
 

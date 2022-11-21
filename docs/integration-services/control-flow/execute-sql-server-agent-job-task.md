@@ -2,9 +2,9 @@
 description: "Execute SQL Server Agent Job Task"
 title: "Execute SQL Server Agent Job Task"
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.executesqlserveragentjobtask.f1"

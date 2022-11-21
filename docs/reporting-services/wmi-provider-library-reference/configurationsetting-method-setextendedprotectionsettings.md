@@ -3,7 +3,6 @@ description: "SetExtendedProtectionSettings Method (WMI MSReportServer_Configura
 title: "SetExtendedProtectionSettings Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 

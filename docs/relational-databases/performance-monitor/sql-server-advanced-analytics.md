@@ -3,10 +3,9 @@ title: "SQL Server, Advanced Analytics object"
 description: Learn about the SQLServer:Advanced Analytics object, which provides counters to monitor advanced analytics predictive functions.
 ms.custom: ""
 ms.date: "07/13/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

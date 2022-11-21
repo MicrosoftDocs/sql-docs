@@ -3,7 +3,6 @@ title: "Expressions in a paginated report | Microsoft Docs"
 description: Control the content, design, and interactivity of your paginated report with expressions that enable you to retrieve, display, filter, and format data in Report Builder.
 ms.date: 09/06/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

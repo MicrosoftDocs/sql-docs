@@ -3,10 +3,9 @@ description: "Manage a CDC Service"
 title: "Manage a CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "manSer"
@@ -15,9 +14,6 @@ author: chugugrace
 ms.author: chugu
 ---
 # Manage a CDC Service
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   You can use the CDC Designer Console to view the services you created with the CDC Service Configuration Console and manage all of the instances in the Oracle CDC Service.  
   

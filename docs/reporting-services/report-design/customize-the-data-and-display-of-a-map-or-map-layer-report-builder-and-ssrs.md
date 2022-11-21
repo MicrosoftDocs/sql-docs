@@ -3,7 +3,6 @@ title: "Customize the display of a map or map layer in a paginated report | Micr
 description:  Improve the user experience of data and display in a paginated report with changes to legends, color, labels, and resolution in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

@@ -1,8 +1,8 @@
 ---
 title: "Oracle to Azure SQL Database: Migration guide"
 description: In this guide, you learn how to migrate your Oracle schema to Azure SQL Database by using SQL Server Migration Assistant for Oracle.
-author: mokabiru
-ms.author: chadam
+author: croblesm
+ms.author: roblescarlos
 ms.reviewer: mathoma, kendralittle
 ms.date: 08/25/2020
 ms.service: sql-database

@@ -4,8 +4,8 @@ description: "This topic lists the options that are permitted in the associative
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connection Options
@@ -53,7 +53,6 @@ This topic lists the options that are permitted in the associative array (when u
 |TrustServerCertificate|1 or **true** to trust certificate.<br /><br />0 or **false** to not trust certificate.|Specifies whether the client should trust (1 or **true**) or reject (0 or **false**) a self-signed server certificate.|**false** (0)|  
 |UID<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the User ID to be used when connecting with SQL Server Authentication<sup>4</sup>.|Not set.|  
 |WSID|String|Specifies the name of the computer for tracing.|Not set.|  
-| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 1. The `ConnectionPooling` attribute cannot be used to enable/disable connection pooling in Linux and macOS. See [Connection Pooling (Microsoft Drivers for PHP for SQL Server)](connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 

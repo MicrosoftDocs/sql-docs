@@ -4,9 +4,8 @@ description: sys.dm_exec_sql_text (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/20/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_sql_text"
@@ -69,7 +68,7 @@ The *plan_handle* can be obtained from the following dynamic management objects:
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**smallint**|ID of database.<br /><br /> For ad hoc and prepared SQL statements, the ID of the database where the statements were compiled.|  
+|**dbid**|**smallint**|ID of database.<br /><br /> For static SQL in a stored procedure, the ID of the database containing the stored procedure.  Null otherwise.|  
 |**objectid**|**int**|ID of object.<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  
 |**number**|**smallint**|For a numbered stored procedure, this column returns the number of the stored procedure. For more information, see [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Is NULL for ad hoc and prepared SQL statements.|  
 |**encrypted**|**bit**|1 = SQL text is encrypted.<br /><br /> 0 = SQL text is not encrypted.|  

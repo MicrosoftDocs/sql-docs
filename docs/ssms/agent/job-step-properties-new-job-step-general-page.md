@@ -1,9 +1,8 @@
 ---
 description: "Job Step Properties - New Job Step (General Page)"
 title: New Job Step Properties (General Page)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.stepgeneral.f1"

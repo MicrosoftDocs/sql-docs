@@ -1,15 +1,13 @@
 ---
 title: "Monitor and troubleshoot availability groups guide"
 description: "An index of content to help you get started on monitoring and troubleshooting some of the common issues found with Always On availability groups."
-ms.custom: "seo-lt-2019"
-ms.date: "05/10/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: reference
-ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/10/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: reference
+ms.custom: seo-lt-2019
 ---
 # Monitor and troubleshoot availability groups
  This guide helps you get started on monitoring Always On Availability Groups and troubleshooting some of the common issues in availability groups. It provides original content as well as a landing page of useful information that is published elsewhere. While this guide cannot fully discuss all the issues that can occur in the large area of availability groups, it can point you in the right direction in your root-cause analysis and resolution of issues. 

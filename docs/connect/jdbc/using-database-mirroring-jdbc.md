@@ -4,8 +4,8 @@ description: Learn about using database mirroring with the JDBC Driver for SQL S
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/12/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -62,7 +62,7 @@ public class ClientFailover {
     public static void main(String[] args) {
 
         String connectionUrl = "jdbc:sqlserver://serverA:1433;"
-                + "databaseName=AdventureWorks;integratedSecurity=true;"
+                + "encrypt=true;databaseName=AdventureWorks;integratedSecurity=true;"
                 + "failoverPartner=serverB";
 
         // Establish the connection to the principal server.

@@ -4,8 +4,8 @@ description: The Microsoft JDBC Driver for SQL Server provides support for Java 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 06/01/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Understanding XA transactions
@@ -195,7 +195,7 @@ public class testXA {
         String user = "UserName";
         String password = "*****";
 
-        String connectionUrl = prefix + serverName + ":" + portNumber + ";databaseName=" + databaseName + ";user="
+        String connectionUrl = prefix + serverName + ":" + portNumber + ";encrypt=true;databaseName=" + databaseName + ";user="
                 + user + ";password=" + password;
 
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

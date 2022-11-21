@@ -3,10 +3,9 @@ description: "sp_attach_db (Transact-SQL)"
 title: "sp_attach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_attach_db_TSQL"
@@ -51,7 +50,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 > [!NOTE]  
 >  This argument maps to the FILENAME parameter of the CREATE DATABASE statement. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 >   
->  When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
+>  When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a newer server instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

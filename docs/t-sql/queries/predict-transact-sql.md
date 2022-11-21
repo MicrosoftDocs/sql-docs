@@ -4,10 +4,9 @@ title: "PREDICT (Transact-SQL)"
 titleSuffix: SQL machine learning
 ms.custom: ""
 ms.date: "04/18/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.subservice: machine-learning
 ms.topic: reference
 f1_keywords: 
   - "PREDICT"
@@ -29,7 +28,7 @@ Generates a predicted value or scores based on a stored model. For more informat
 > [!IMPORTANT]
 > Support for `PREDICT` is in Preview in Azure SQL Managed Instance.
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-2017"
 :::row:::

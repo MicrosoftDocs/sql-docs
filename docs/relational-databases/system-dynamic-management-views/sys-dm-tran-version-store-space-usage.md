@@ -3,10 +3,9 @@ title: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
 description: sys.dm_tran_version_store_space_usage (Transact-SQL)
 author: "savjani"
 ms.author: "pariks"
-manager: ajayj
 ms.date: "04/24/2018"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_tran_version_store_space_usage_TSQL"

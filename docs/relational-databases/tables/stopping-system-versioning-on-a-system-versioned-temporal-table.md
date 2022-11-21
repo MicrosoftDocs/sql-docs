@@ -1,9 +1,8 @@
 ---
 title: Stopping System-Versioning on a System-Versioned Temporal Table
 description: "Stopping System-Versioning on a System-Versioned Temporal Table"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan

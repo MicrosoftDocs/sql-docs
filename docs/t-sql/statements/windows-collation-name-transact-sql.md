@@ -4,9 +4,8 @@ description: Windows Collation Name (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "Windows collations [SQL Server]"
@@ -228,11 +227,10 @@ The following table lists all Windows collations supported in [!INCLUDE[ssnovers
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Macedonian|Macedonian|
-||||
 
 <sup>1</sup> Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 
-<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
+<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao SAR) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
 
 ## See Also
 

@@ -3,14 +3,13 @@ description: "Save a Shortcut Query File (MDS Add-in for Excel)"
 title: Save a Shortcut Query File
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Save a Shortcut Query File (MDS Add-in for Excel)
 

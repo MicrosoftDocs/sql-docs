@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (Security Page) | Microsoft Docs"
+title: "Server Properties (Security Page)"
 description: Become familiar with server security settings in SQL Server. Learn about options that control server authentication, proxy accounts, and other features.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.security.f1"
-ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.security.f1"
 ---
 # Server Properties - Security Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

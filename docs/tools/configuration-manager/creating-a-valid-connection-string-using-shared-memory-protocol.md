@@ -3,10 +3,9 @@ title: "Creating a Valid Connection String Using Shared Memory Protocol"
 description: Find out when connections to SQL Server use the shared memory protocol and how to create a valid connection string for this protocol.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection strings [Database Engine], shared memory"

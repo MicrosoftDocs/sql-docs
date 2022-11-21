@@ -3,9 +3,9 @@ description: "MSSQLSERVER_1505"
 title: "MSSQLSERVER_1505 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "1505 (Database Engine error)"
@@ -54,7 +54,7 @@ Consider the following solutions.
   
 -   Select columns that are defined as NOT NULL when you choose columns for a unique index or constraint. This eliminates the possibility of a uniqueness violation caused when more than one row contains NULL in the key values.  
   
--   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, see Knowledge Base article 139444: [How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444).  
+-   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, review [Remove duplicate rows from a SQL Server table](/troubleshoot/sql/database-design/remove-duplicate-rows-sql-server-tab).  
   
 ## See Also  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

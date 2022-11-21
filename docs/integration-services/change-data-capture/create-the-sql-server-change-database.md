@@ -3,10 +3,9 @@ description: "Create the SQL Server Change Database"
 title: "Create the SQL Server Change Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "oraIns"
@@ -15,9 +14,6 @@ author: chugugrace
 ms.author: chugu
 ---
 # Create the SQL Server Change Database
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   When you start the New Instance wizard, the Create CDC Database page opens. Use the Create CDC Database page to provide information about the new CDC instance and create a new Change database.  
   

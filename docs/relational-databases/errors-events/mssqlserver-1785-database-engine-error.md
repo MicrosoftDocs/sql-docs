@@ -3,9 +3,9 @@ description: "MSSQLSERVER_1785"
 title: MSSQLSERVER_1785
 ms.custom: ""
 ms.date: 12/25/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "1785 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|CRTFKINVTOPO|
 |Message Text|Introducing FOREIGN KEY constraint '%.ls' on table '%.ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.|
-||
 
 ## Explanation
 

@@ -1,15 +1,12 @@
 ---
-description: "Detaching and Attaching DQS Databases"
 title: "Detaching and Attaching DQS Databases"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
+description: "Detaching and Attaching DQS Databases"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Detaching and Attaching DQS Databases
 

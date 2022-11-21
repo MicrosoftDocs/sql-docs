@@ -3,10 +3,9 @@ description: "Import Policies Dialog Box"
 title: "Import Policies Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.importpolicy.f1"

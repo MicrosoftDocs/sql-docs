@@ -4,9 +4,8 @@ description: "CREATE TABLE AS SELECT in Azure Synapse Analytics creates a new ta
 author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
-ms.date: 08/16/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.date: 09/12/2022
+ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
@@ -104,7 +103,7 @@ Distributes the rows based on the hash values of up to eight columns, allowing f
 > - To opt-out the preview, run this command to change the database's compatibility level to AUTO. For example: `ALTER DATABASE SCOPED CONFIGURATION SET DW_COMPATIBILITY_LEVEL = AUTO;` This will disable the multi-column distribution (MCD) feature (preview). Existing MCD tables will stay but become unreadable. Queries over MCD tables will return this error: `Related table/view is not readable because it distributes data on multiple columns and multi-column distribution is not supported by this product version or this feature is disabled.`
 >     - To regain access to MCD tables, opt-in the preview again. 
 >     - To load data into a MCD table, use CTAS statement and the data source needs be Synapse SQL tables.  
-> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is supported in [SSMS 19 Preview 3](../../ssms/download-sql-server-management-studio-ssms.md).
+> - Using SSMS for [generating a script](../../ssms/scripting/generate-scripts-sql-server-management-studio.md) to create MCD tables is not currently supported.
 
 For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 
@@ -436,10 +435,10 @@ Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPD
 
 To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is the same as the syntax for selecting data from a regular table.  
   
- The following example defines an external table on data in an Azure blob storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure blob storage text-delimited files and stores the data into a new [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table.  
+ The following example defines an external table on data in an Azure Blob Storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure Blob Storage text-delimited files and stores the data into a new [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table.  
   
 ```sql  
---Use your own processes to create the text-delimited files on Azure blob storage.  
+--Use your own processes to create the text-delimited files on Azure Blob Storage.  
 --Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
     url VARCHAR(50),  
@@ -452,7 +451,7 @@ WITH (
     FILE_FORMAT = TextFileFormat)  
 ;  
   
---Use CREATE TABLE AS SELECT to import the Azure blob storage data into a new   
+--Use CREATE TABLE AS SELECT to import the Azure Blob Storage data into a new   
 --Synapse Analytics table called ClickStreamData  
 CREATE TABLE ClickStreamData   
 WITH  

@@ -4,8 +4,8 @@ description: sys.dm_hadr_automatic_seeding (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/20/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_hadr_automatic_seeding_TSQL"

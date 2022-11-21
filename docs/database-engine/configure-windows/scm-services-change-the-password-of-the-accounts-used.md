@@ -1,14 +1,13 @@
 ---
-title: "SCM Services - Change the Password of the Accounts Used | Microsoft Docs"
+title: "SCM Services - Change the Password of the Accounts Used"
 description: Find out how to change the password of the accounts that the Database Engine and the SQL Server Agent use. Learn when it is important to change the password.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/06/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "expired password [SQL Server], SQL Server Agent"
   - "passwords [SQL Server], SQL Server Agent service"
   - "passwords [SQL Server], changing"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], passwords"
   - "changing passwords used by SQL Server"
   - "modifying passwords"
-ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
-author: rwestMSFT
-ms.author: randolphwest
 ---
 # SCM Services - Change the Password of the Accounts Used
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

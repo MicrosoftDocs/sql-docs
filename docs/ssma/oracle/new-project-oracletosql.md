@@ -1,16 +1,15 @@
 ---
 description: "New Project (OracleToSQL)"
 title: "New Project (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # New Project (OracleToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

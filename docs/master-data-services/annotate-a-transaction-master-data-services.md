@@ -3,16 +3,15 @@ description: "Annotate a Transaction (Master Data Services)"
 title: Annotate a Transaction
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "annotations [Master Data Services], for transactions"
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Annotate a Transaction (Master Data Services)
 

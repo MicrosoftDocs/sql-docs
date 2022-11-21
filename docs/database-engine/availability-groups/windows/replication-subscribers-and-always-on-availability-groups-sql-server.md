@@ -1,21 +1,19 @@
 ---
 title: "Replication Subscribers & availability groups (SQL Server)"
 description: Learn what happens if an Always On availability group containing a database that is a replication subscriber fails over in SQL Server.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "08/08/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "failover subscribers with AlwaysOn"
   - "failover subscribers with Always On"
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
   - "replication [SQL Server], Always On Availability Groups"
-ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Replication Subscribers and Always On Availability Groups (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

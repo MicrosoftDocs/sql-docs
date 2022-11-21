@@ -2,7 +2,6 @@
 title: "The web portal of a report server (Native Mode) | Microsoft Docs"
 ms.date: 08/16/2022
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
@@ -32,7 +31,6 @@ Use the web portal for these and other tasks:
 - Download common tools such as [Report Builder](install-windows/install-report-builder.md).
 - [Create KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
 - Create [branding for the web portal](../reporting-services/branding-the-web-portal.md).
-- Create [KPIs](../reporting-services/working-with-kpis-in-reporting-services.md).
 - Work with [shared datasets](../reporting-services/work-with-shared-datasets-web-portal.md).
 - Send feedback or make feature requests.
 

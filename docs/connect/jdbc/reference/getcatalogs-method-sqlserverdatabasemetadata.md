@@ -4,8 +4,8 @@ description: "getCatalogs Method (SQLServerDatabaseMetaData)"
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 apilocation: "sqljdbc.jar"
 apiname: "SQLServerDatabaseMetaData.getCatalogs"
@@ -33,7 +33,7 @@ public java.sql.ResultSet getCatalogs()
  This getCatalogs method is specified by the getCatalogs method in the java.sql.DatabaseMetaData interface.  
   
 > [!NOTE]  
->  On Azure SQL Database, you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on SQL >  On Azure SQL Database, you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on SQL Database.                      .  
+>  On Azure SQL Database, you should connect to the `master` database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the `sys.databases` view to get the catalogs. 
   
  The result set returned by the getCatalogs method will contain the following information:  
   

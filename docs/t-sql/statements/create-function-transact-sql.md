@@ -4,9 +4,8 @@ description: CREATE FUNCTION (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: 03/16/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "FUNCTION"
@@ -73,7 +72,7 @@ Creates a user-defined function. A user-defined function is a [!INCLUDE[tsql](..
 ```syntaxsql
 -- Transact-SQL Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type
+( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type [ NULL ]
  [ = default ] [ READONLY ] }
     [ ,...n ]
   ]
@@ -91,7 +90,7 @@ RETURNS return_data_type
 ```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
+( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] [ READONLY ] }
     [ ,...n ]
   ]
@@ -106,7 +105,7 @@ RETURNS TABLE
 ```syntaxsql
 -- Transact-SQL Multi-Statement Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
+( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] [READONLY] }
     [ ,...n ]
   ]
@@ -186,7 +185,7 @@ column_name AS computed_column_expression
 ```syntaxsql
 -- CLR Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
+( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] }
     [ ,...n ]
 )
@@ -199,7 +198,7 @@ RETURNS { return_data_type }
 ```syntaxsql
 -- CLR Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
+( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] }
     [ ,...n ]
 )

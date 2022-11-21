@@ -4,10 +4,9 @@ description: "Removes the space character or other specified characters from the
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/22/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.date: 09/14/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "TRIM"
@@ -42,6 +41,9 @@ TRIM ( [ characters FROM ] string )
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
+
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
 
 ```syntaxsql
 TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )
@@ -137,6 +139,9 @@ In this example, only the trailing period and spaces from before `#` and after t
 
 ### C. Remove specified characters from the start of a string
 
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+
 The following example removes the leading `.` from the start of the string before the word `test`.
 
 ```sql
@@ -151,6 +156,9 @@ SELECT TRIM(LEADING '.,! ' FROM  '     .#     test    .') AS Result;
 
 ### D. Remove specified characters from the end of a string
 
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+
 The following example removes the trailing `.` from the end of the string after the word `test`.
 
 ```sql
@@ -164,6 +172,9 @@ SELECT TRIM(TRAILING '.,! ' FROM '     .#     test    .') AS Result;
 ```
 
 ### E. Remove specified characters from the beginning and end of a string
+
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
 
 The following example removes the characters `123` from the beginning and end of the string `123abc123`.
 

@@ -2,9 +2,9 @@
 description: "Add a Collection Item to a Collection Set (Transact-SQL)"
 title: "Add Collection Item to Collection Set (T-SQL)"
 ms.date: 06/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collection items [SQL Server]"

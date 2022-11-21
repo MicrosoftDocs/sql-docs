@@ -3,9 +3,9 @@ title: "Query Profling Infrastructure | Microsoft Docs"
 description: Learn how the SQL Server Database Engine accesses runtime information on query execution plans to understand the workload and how resource usage is driven.
 ms.custom: ""
 ms.date: 04/23/2019
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query plans [SQL Server]"
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Query Profiling Infrastructure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

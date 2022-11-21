@@ -4,7 +4,7 @@ description: Provides steps to troubleshoot Azure SQL Database connection issues
 author: ramakoni1
 ms.author: ramakoni
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 01/18/2022
+ms.date: 11/13/2022
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: troubleshooting
@@ -19,6 +19,9 @@ ms.custom:
 
 You receive error messages when the connection to Azure SQL Database or Azure SQL Managed Instance fails. These connection problems can be caused by reconfiguration, firewall settings, a connection timeout, incorrect login information, or failure to apply best practices and design guidelines during the [application design](develop-overview.md) process. Additionally, if the maximum limit on some Azure SQL Database or SQL Managed Instance resources is reached, you can no longer connect.
 
+ > [!NOTE]
+   > You can use [Azure SQL Connectivity Checker](https://github.com/Azure/SQL-Connectivity-Checker) to detect and fix a wide variety of connectivity errors to Azure SQL Database, Azure SQL Managed Instance and in Azure Synapse Analytics environments.
+   
 ## Transient fault error messages (40197, 40613 and others)
 
 The Azure infrastructure has the ability to dynamically reconfigure servers when heavy workloads arise in the SQL Database service.  This dynamic behavior might cause your client program to lose its connection to the database or instance. This kind of error condition is called a *transient fault*. Database reconfiguration events occur because of a planned event (for example, a software upgrade) or an unplanned event (for example, a process crash, or load balancing). Most reconfiguration events are generally short-lived and should be completed in less than 60 seconds at most. However, these events can occasionally take longer to finish, such as when a large transaction causes a long-running recovery. The following table lists various transient errors that applications can receive when connecting to Azure SQL Database.
@@ -168,21 +171,39 @@ These exceptions can occur either because of connection or query issues. To conf
 
 Connection timeouts occur because the application can't connect to the server. To resolve this issue, try the steps (in the order presented) in the [Steps to fix common connection issues](#steps-to-fix-common-connection-issues) section.
 
+## Network connection termination errors
+
+SQL client libraries connect to Azure SQL Database and Azure SQL Managed Instance using the TCP network protocol. A client library uses a lower level component called TCP provider to manage TCP connections. When the TCP provider detects that a remote host has unexpectedly terminated an existing TCP connection, the client library raises an error. Because the error is a client error and not a SQL server error, there is no SQL error number included. Instead, the error number is 0, and the error message from the TCP provider is used.
+
+Examples of network connection termination errors include:
+
+`A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) An existing connection was forcibly closed by the remote host`
+
+`A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+`The client was unable to establish a connection because of an error during connection initialization process before login. Possible causes include the following: the client tried to connect to an unsupported version of SQL Server; the server was too busy to accept new connections; or there was a resource limitation (insufficient memory or maximum allowed connections) on the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+`A connection was successfully established with the server, but then an error occurred during the login process. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+Connection termination errors may occur because the database or elastic pool is temporarily unavailable. They may also occur because of various problems in the network infrastructure between the database server and the client application, including firewalls, network appliances, etc. These problems may be transient or permanent. As a general guidance, applications should use a fixed number of retry attempts for these errors before considering them permanent failures.
+
 ## Resource governance errors
 
 Azure SQL Database uses a resource governance implementation based on [Resource Governor](/sql/relational-databases/resource-governor/resource-governor) to enforce resource limits. Learn more about [resource management in Azure SQL Database](resource-limits-logical-server.md).
 
 The most common resource governance errors are listed first with details, followed by a table of resource governance error messages.
 
-### Error 10928: Resource ID : 1. The request limit for the database is *%d* and has been reached.
+### Errors 10928 and 10936: Resource ID : 1. The request limit for the [database or elastic pool] is *%d* and has been reached
 
-The detailed error message in this case reads: `Resource ID : 1. The request limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.`
+If the database level limit is reached, the detailed error message in this case reads: `Resource ID : 1. The request limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.`
 
-This error message indicates that the worker limit for Azure SQL Database has been reached. A value will be present instead of the placeholder *%d*. This value indicates the worker limit for your database at the time the limit was reached.
+If the elastic pool limit is reached, the detailed error message in this case reads: `Resource ID : 1. The request limit for the elastic pool is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.` Elastic pool limits are higher than database limits. They may be reached when multiple databases in the pool use a resource (such as workers) concurrently.
+
+This error message indicates that the worker limit for the database or elastic pool has been reached. The maximum concurrent workers value for the service objective of the database or elastic pool will be present instead of the placeholder *%d*.
 
 > [!NOTE]
-> The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error message 10928 in Azure SQL Database contains the wording "The request limit for the database is *N* and has been reached" for backwards compatibility purposes. The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one.
-> 
+> The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error messages 10928 and 10936 in Azure SQL Database contain the wording "The request limit [...] is *N* and has been reached" for backwards compatibility purposes. The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one.
+>
 > Learn more about [Sessions, workers, and requests](resource-limits-logical-server.md#sessions-workers-and-requests).
 
 #### Connect with the Dedicated Admin Connection (DAC) if needed
@@ -255,7 +276,7 @@ Triage an incident with insufficient workers by following these steps:
 
 #### Increase worker limits
 
-If the database consistently reaches its limit despite addressing blocking, optimizing queries, and validating your MAXDOP setting, consider adding more resources to the database to increase the worker limit.
+If the database or elastic pool consistently reaches its worker limit despite addressing blocking, optimizing queries, and validating your MAXDOP setting, consider scaling up the database or elastic pool to increase the worker limit.
 
 Find resource limits for Azure SQL Database by service tier and compute size:
 
@@ -381,7 +402,8 @@ For more information on other out of memory errors and sample queries, see [Trou
 
 | Error code | Severity | Description |
 | ---:| ---:|:--- |
-| 10928 |20 |Resource ID: %d. The %s limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance..<br/><br/>The Resource ID indicates the resource that has reached the limit. When Resource ID = 1, this indicates a worker limit has been reached. Learn more in [Error 10928: Resource ID : 1. The request limit for the database is *%d* and has been reached.](#error-10928-resource-id--1-the-request-limit-for-the-database-is-d-and-has-been-reached) When Resource ID = 2, this indicates the session limit has been reached.<br/><br/>Learn more about resource limits: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md)<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
+| 10928 |20 |Resource ID: %d. The %s limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance..<br/><br/>The Resource ID indicates the resource that has reached the limit. When Resource ID = 1, this indicates a worker limit has been reached. Learn more in [Error 10928: Resource ID : 1. The request limit for the database is *%d* and has been reached.](#errors-10928-and-10936-resource-id--1-the-request-limit-for-the-database-or-elastic-pool-is-d-and-has-been-reached) When Resource ID = 2, this indicates the session limit has been reached.<br/><br/>Learn more about resource limits: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md)<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
+| 10936 |20 |Resource ID: %d. The %s limit for the elastic pool is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance..<br/><br/>The Resource ID indicates the resource that has reached the limit. When Resource ID = 1, this indicates a worker limit has been reached. Learn more in [Error 10936: Resource ID : 1. The request limit for the elastic pool is *%d* and has been reached.](#errors-10928-and-10936-resource-id--1-the-request-limit-for-the-database-or-elastic-pool-is-d-and-has-been-reached) When Resource ID = 2, this indicates the session limit has been reached.<br/><br/>Learn more about resource limits: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
 | 10929 |20 |Resource ID: %d. The %s minimum guarantee is %d, maximum limit is %d, and the current usage for the database is %d. However, the server is currently too busy to support requests greater than %d for this database. The Resource ID indicates the resource that has reached the limit. For worker threads, the Resource ID = 1. For sessions, the Resource ID = 2. For more information, see: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md)<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). <br/>Otherwise, try again later. |
 | 40544 |20 |The database has reached its size quota. Partition or delete data, drop indexes, or consult the documentation for possible resolutions. For database scaling, see [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).|
 | 40549 |16 |Session is terminated because you have a long-running transaction. Try shortening your transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).|
@@ -464,7 +486,7 @@ FROM sys.databases
 WHERE database_id = DB_ID();
 ```
 
-You can modify the read-only status for a database in Azure SQL Database using [ALTER DATABASE Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true). You can’t currently set a database in a managed instance to read-only.
+You can modify the read-only status for a database in Azure SQL Database using [ALTER DATABASE Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true). You can't currently set a database in a managed instance to read-only.
 
 ## Confirm whether an error is caused by a connectivity issue
 

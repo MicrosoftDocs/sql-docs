@@ -4,9 +4,8 @@ description: CREATE USER (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "WITHOUT_LOGIN_TSQL"
@@ -189,7 +188,7 @@ CREATE USER user_name
  #### '*Azure_Active_Directory_principal*'  
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], Managed Instance, [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
- Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users can’t have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
+ Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users can't have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
 
  For Azure AD principals, the CREATE USER syntax requires:
 
@@ -259,7 +258,7 @@ Specifies that the user is for Azure AD Authentication.
   
  DEFAULT_SCHEMA can be set before the schema that it points to is created.  
   
- DEFAULT_SCHEMA can’t be specified when you're creating a user mapped to a certificate, or an asymmetric key.  
+ DEFAULT_SCHEMA can't be specified when you're creating a user mapped to a certificate, or an asymmetric key.  
   
  The value of DEFAULT_SCHEMA is ignored if the user is a member of the sysadmin fixed server role. All members of the sysadmin fixed server role have a default schema of `dbo`.  
   
@@ -267,7 +266,7 @@ Specifies that the user is for Azure AD Authentication.
   
  Only users that are mapped to Windows principals can contain the backslash character (**\\**).
   
- CREATE USER can’t be used to create a guest user because the guest user already exists inside every database. You can enable the guest user by granting it CONNECT permission, as shown:  
+ CREATE USER can't be used to create a guest user because the guest user already exists inside every database. You can enable the guest user by granting it CONNECT permission, as shown:  
   
 ```  
 GRANT CONNECT TO guest;  
@@ -327,7 +326,7 @@ When creating the user in the Azure SQL database, the *login_name* must correspo
   
 **Users that cannot authenticate**  
   
- The following list shows possible syntax for users that can’t login to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following list shows possible syntax for users that can't login to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   `CREATE USER RIGHTSHOLDER WITHOUT LOGIN`  
 -   `CREATE USER CERTUSER FOR CERTIFICATE SpecialCert`  

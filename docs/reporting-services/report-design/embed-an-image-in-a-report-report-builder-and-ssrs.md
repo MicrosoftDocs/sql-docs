@@ -2,7 +2,6 @@
 title: "Embed an image in a paginated report | Microsoft Docs"
 description: Make an image readily available to a paginated report. Use an image that's embedded in the report and listed in the Report Data pane of Report Builder.
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords: 

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Launchpad for Python and R scripts
 description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Launchpad service from starting, including configuration problems or changes, or missing network protocols. The Launchpad service supports external script execution for R and Python.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 04/08/2021
 ms.topic: troubleshooting
 author: WilliamDAssafMSFT

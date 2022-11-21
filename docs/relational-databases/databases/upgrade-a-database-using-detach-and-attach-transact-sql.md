@@ -2,9 +2,9 @@
 description: "Upgrade a database using detach and attach (Transact-SQL)"
 title: "Upgrade a database using detach & attach (Transact-SQL)"
 ms.date: 06/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database attaching [SQL Server]"

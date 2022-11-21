@@ -1,17 +1,16 @@
 ---
 title: "Install: PowerShell Desired State Configuration"
 description: "Install SQL Server by using PowerShell DSC and learn about the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016."
+author: randomnote1
+ms.author: dareist
+ms.date: "09/17/2021"
+ms.service: sql
+ms.subservice: install
+ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
   - intro-installation
-ms.date: "09/17/2021"
 ms.devlang: PowerShell
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-author: randomnote1
-ms.author: dareist
 monikerRange: ">=sql-server-2016"
 ---
 

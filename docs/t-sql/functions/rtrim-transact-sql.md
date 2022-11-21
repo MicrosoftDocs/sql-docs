@@ -4,10 +4,9 @@ description: "RTRIM (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 08/29/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.date: 09/14/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "RTRIM_TSQL"
@@ -45,6 +44,9 @@ RTRIM ( character_expression )
 
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later:
+
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the optional *characters* argument.
 
 ```syntaxsql
 RTRIM ( character_expression , [ characters ] )
@@ -124,6 +126,9 @@ Four spaces are after the period in this sentence. Next string.
 ::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16"
 
 ### C. Remove specified characters from the end of a string
+
+> [!IMPORTANT]
+> You will need your database compatibility level set to 160 to use the optional *characters* argument.
 
 The following example removes the characters `abc.` from the end of the `.123abc.` string.
 

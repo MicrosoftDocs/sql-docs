@@ -3,10 +3,9 @@ description: "Lesson 3-3: Test the Lesson 3 tutorial package"
 title: "Step 3: Test the Lesson 3 tutorial package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: chugugrace

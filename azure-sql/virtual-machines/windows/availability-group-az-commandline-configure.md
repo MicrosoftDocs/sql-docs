@@ -1,8 +1,8 @@
 ---
 title: Configure an availability group (PowerShell & Az CLI)
 description: "Use either PowerShell or the Azure CLI to create the Windows failover cluster, the availability group listener, and the internal load balancer on a SQL Server VM in Azure."
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 11/10/2021
 ms.service: virtual-machines-sql
@@ -215,7 +215,7 @@ Manually create the availability group as you normally would, by using [SQL Serv
 
 [!INCLUDE [sql-ag-use-dnn-listener](../../includes/sql-ag-use-dnn-listener.md)]
 
-The Always On availability group listener requires an internal instance of Azure Load Balancer. The internal load balancer provides a “floating” IP address for the availability group listener that allows for faster failover and reconnection. If the SQL Server VMs in an availability group are part of the same availability set, you can use a Basic load balancer. Otherwise, you need to use a Standard load balancer.  
+The Always On availability group listener requires an internal instance of Azure Load Balancer. The internal load balancer provides a "floating" IP address for the availability group listener that allows for faster failover and reconnection. If the SQL Server VMs in an availability group are part of the same availability set, you can use a Basic load balancer. Otherwise, you need to use a Standard load balancer.  
 
 > [!NOTE]
 > The internal load balancer should be in the same virtual network as the SQL Server VM instances. 

@@ -2,10 +2,9 @@
 description: "Transaction locking and row versioning guide"
 title: "Transaction locking and row versioning guide"
 ms.custom: seo-dt-2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, transaction locking and row versioning"
@@ -22,7 +21,7 @@ ms.date: "03/2/2022"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transaction locking and row versioning guide
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In any database, mismanagement of transactions often leads to contention and performance problems in systems that have many users. As the number of users that access the data increases, it becomes important to have applications that use transactions efficiently. This guide describes the locking and row versioning mechanisms the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses to ensure the physical integrity of each transaction and provides information on how applications can control transactions efficiently.  
 
@@ -729,7 +728,7 @@ In most cases, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] delivers the best
   
     ```sql
     BEGIN TRAN
-    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    SELECT * FROM mytable WITH (UPDLOCK, HOLDLOCK) WHERE 1=0
     WAITFOR DELAY '1:00:00'
     COMMIT TRAN
     ```
@@ -1947,7 +1946,7 @@ GO
   
 The only lock taken that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
 
-In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).
+In [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can be used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).
 
 ###  <a name="Customize"></a> Customizing locking for an index  
 

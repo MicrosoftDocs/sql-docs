@@ -4,8 +4,8 @@ description: This Microsoft JDBC Driver for SQL Server sample application demons
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -47,7 +47,7 @@ public class ConnectURL {
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;encrypt=true;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
             String SQL = "SELECT TOP 10 * FROM Person.Contact";

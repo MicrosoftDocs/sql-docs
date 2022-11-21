@@ -2,8 +2,8 @@
 description: "StrToSet (MDX)"
 title: "StrToSet (MDX) | Microsoft Docs"
 ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.custom: mdx
 ms.topic: reference
 ms.author: owend
@@ -54,7 +54,7 @@ FROM [Adventure Works]
   
 ```  
   
- The following example returns the Reseller Sales Amount measure for the countries of Germany and Canada. The set specification provided in the specified string contains qualified member names, as required by the CONSTRAINED flag.  
+ The following example returns the Reseller Sales Amount measure for Germany and Canada. The set specification provided in the specified string contains qualified member names, as required by the CONSTRAINED flag.  
   
 ```  
 SELECT StrToSet ('{[Geography].[Geography].[Country].[Germany],[Geography].[Geography].[Country].[Canada]}', CONSTRAINED)  

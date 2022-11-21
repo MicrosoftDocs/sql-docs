@@ -1,21 +1,18 @@
 ---
-title: "Use Object Explorer Details to Monitor Availability Groups | Microsoft Docs"
+title: "Use Object Explorer Details to Monitor Availability Groups"
 description: Learn how to use SQL Server Management Studio to monitor and manage existing Always On availability groups, availability replicas, and availability databases.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.availabilitygroup.OEdetails.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "Availability Groups [SQL Server], databases"
   - "Availability Groups [SQL Server]"
-ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Use Object Explorer Details to Monitor Availability Groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -110,7 +107,6 @@ ms.author: mathoma
 |Value|Description|  
 |-----------|-----------------|  
 |Synchronizing|The secondary database has received the transaction log records for the primary database that are not yet written to disk (hardened).<br /><br /> Note: In asynchronous-commit mode, the synchronization state is always **Synchronizing**.|  
-|||  
   
  **Suspended**  
  Indicates whether the availability database is currently online. The possible values are as follows:  

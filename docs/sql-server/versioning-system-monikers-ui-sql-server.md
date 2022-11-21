@@ -2,8 +2,8 @@
 description: "Versioning system for SQL documentation"
 title: Versioning system SQL docs
 ms.date: 08/12/2020
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
@@ -44,7 +44,7 @@ If you want to see the documentation for a different version of SQL Server, you 
 
 ### HTTPS parameter :::no-loc text="view=":::
 
-Each article whose web address begins with `https://docs.microsoft.com/sql/` has a parameter named `?view=` appended to its address. This parameter value is the versioning moniker code.
+Each article whose web address begins with `https://learn.microsoft.com/sql/` has a parameter named `?view=` appended to its address. This parameter value is the versioning moniker code.
 
 The moniker _code_ in the `https` address always matches the moniker _name_ that is displayed in the versioning control.
 
@@ -62,9 +62,9 @@ For SQL, versioning monikers make distinctions between products, but not between
 
 #### Azure cloud SQL products
 
-For articles whole web addresses start with `https://docs.microsoft.com/sql/`, almost all apply to at least one version of the product named SQL Server. A large subset of those articles also apply to one or more of our SQL service products that are hosted in our Azure cloud. One such SQL cloud product is named Azure SQL Database.
+For articles whole web addresses start with `https://learn.microsoft.com/sql/`, almost all apply to at least one version of the product named SQL Server. A large subset of those articles also apply to one or more of our SQL service products that are hosted in our Azure cloud. One such SQL cloud product is named Azure SQL Database.
 
-Naturally, the Azure SQL Database product has only one version. Almost all the articles that apply to Azure SQL Database, but not to SQL Server, have web addresses starting with `https://docs.microsoft.com/azure/sql-database/`.
+Naturally, the Azure SQL Database product has only one version. Almost all the articles that apply to Azure SQL Database, but not to SQL Server, have web addresses starting with `https://learn.microsoft.com/azure/sql-database/`.
 
 ## Scenarios of version filtering
 
@@ -111,8 +111,7 @@ The following article was added new for SQL Server 2017. The article describes f
 | :-------- | :---- |
 | Title | What's new in SQL Server 2017 |
 | moniker range | `=">= sql-server-2017"` |
-| `https` address | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
-| &nbsp; | &nbsp; |
+| `https` address | `https://learn.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 
 Given the base `https` address, the following table explains what happens when the `?view=` parameter is appended by the user, and with various values.
 
@@ -122,7 +121,6 @@ Given the base `https` address, the following table explains what happens when t
 | `sql-server-2016` | The versioning system would realize that the moniker range of the article does not include version 2016.<br/><br/>The system would then choose one of the monikers that does satisfy the range.<br/><br/>Then as in the version 2016 case, the parameter `?view=` would be appended, and the control name would match the parameter value. |
 | `sql-server-2017` | The versioning system understands that the parameter value is included in the moniker range of the article.<br/><br/>The versioning control would be set to match the parameter value. |
 | `sql-server-2019` | Same as for the case of value `sql-server-2017`, except the parameter and control are set to 2019. |
-| &nbsp; | &nbsp; |
 
 ### <a name="anchor-allsql-hidenothing"></a> All SQL - Hide nothing, special moniker
 

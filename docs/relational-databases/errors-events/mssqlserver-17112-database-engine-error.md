@@ -3,9 +3,9 @@ description: "MSSQLSERVER_17112"
 title: MSSQLSERVER_17112
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "17112 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|INIT_INVCOMMAND|
 |Message Text|An invalid startup option a was supplied, either from the registry or the command prompt. Correct or remove the option.|
-||
 
 ## Explanation
 

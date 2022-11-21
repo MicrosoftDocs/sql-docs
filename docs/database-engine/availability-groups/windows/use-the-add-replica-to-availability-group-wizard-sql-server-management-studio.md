@@ -1,20 +1,18 @@
 ---
 title: "Add replica to an availability group (SSMS)"
 description: "Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio."
-ms.custom: seo-lt-2019
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.f1"
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], availability replicas"
-  - "Availability Groups [SQL Server], wizards"
-ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.addreplicawizard.f1"
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], availability replicas"
+  - "Availability Groups [SQL Server], wizards"
 ---
 # Add a replica to your Always On Availability group using the Availability Group Wizard in SQL Server Management
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

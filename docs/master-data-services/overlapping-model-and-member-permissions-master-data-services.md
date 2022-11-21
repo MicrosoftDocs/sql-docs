@@ -3,18 +3,17 @@ description: "Overlapping Model and Member Permissions (Master Data Services)"
 title: Overlapping Model and Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], effective permissions"
   - "permissions [Master Data Services], model and member overlaps"
   - "members [Master Data Services], effective permissions"
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Overlapping Model and Member Permissions (Master Data Services)
 

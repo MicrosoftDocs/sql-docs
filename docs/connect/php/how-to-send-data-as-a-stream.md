@@ -4,8 +4,8 @@ description: "Learn how to use streams to send large objects to the database usi
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/28/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "updating data"

@@ -4,8 +4,8 @@ description: ALTER CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/07/2018
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER CREDENTIAL"

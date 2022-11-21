@@ -1,19 +1,15 @@
 ---
 title: "Upgrade SQL Server using the Data Migration Assistant"
 description: Learn how to use Data Migration Assistant to upgrade an on-premises SQL Server to a later version of SQL Server or to SQL Server on Azure VMs
-ms.custom: "seo-lt-2019"
-ms.date: "05/18/2019"
-ms.prod: sql
-ms.prod_service: "dma"
-ms.reviewer: ""
-ms.technology: dma
-ms.topic: conceptual
-keywords: ""
-helpviewer_keywords: 
-  - "Data Migration Assistant, on-premises SQL Server"
-ms.assetid: ""
 author: rajeshsetlem
 ms.author: rajpo
+ms.date: "05/18/2019"
+ms.service: sql
+ms.subservice: dma
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+helpviewer_keywords:
+  - "Data Migration Assistant, on-premises SQL Server"
 ---
 
 # Upgrade SQL Server using the Data Migration Assistant

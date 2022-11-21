@@ -76,7 +76,7 @@ The following section describes the configuration of auditing on your managed in
 
           - **Allowed services**: Blob
 
-          - **Start date**: to avoid time zone-related issues, use yesterday’s date
+          - **Start date**: to avoid time zone-related issues, use yesterday's date
 
           - **End date**: choose the date on which this SAS token expires
 
@@ -92,7 +92,7 @@ The following section describes the configuration of auditing on your managed in
           ![Copy SAS token](./media/auditing-configure/8_sas_copy.png)
 
           > [!IMPORTANT]
-          > Remove the question mark (“?”) character from the beginning of the token.
+          > Remove the question mark (`?`) character from the beginning of the token.
 
      1. Connect to your managed instance via SQL Server Management Studio or any other supported tool.
 

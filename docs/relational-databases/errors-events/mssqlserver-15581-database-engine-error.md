@@ -3,9 +3,9 @@ description: "MSSQLSERVER_15581"
 title: MSSQLSERVER_15581
 ms.custom: ""
 ms.date: 09/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha, VenCher
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "15581 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SEC_NODBMASTERKEYERR|
 |Message Text|Please create a master key in the database or open the master key in the session before performing this operation.|
-||
 
 ## Explanation
 

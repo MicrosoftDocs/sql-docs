@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: "derekw"
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATEPART_TSQL"
@@ -150,7 +150,7 @@ The values that are returned for DATEPART (**year**, *date*), DATEPART (**month*
   
 ## iso_week datepart
 
-ISO 8601 includes the ISO week-date system, a numbering system for weeks. Each week is associated with the year in which Thursday occurs. For example, week 1 of 2004 (2004W01) covered Monday, 29 December 2003 to Sunday, 4 January 2004. European countries / regions typically use this style of numbering. Non-European countries / regions typically don't use it.
+ISO 8601 includes the ISO week-date system, a numbering system for weeks. Each week is associated with the year in which Thursday occurs. For example, week 1 of 2004 (2004W01) covered Monday, 29 December 2003 to Sunday, 4 January 2004. European countries/regions typically use this style of numbering. Non-European countries/regions typically don't use it.
 
 Note: the highest week number in a year could be either 52 or 53.
   
@@ -218,7 +218,7 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 
 `DATEPART` can be used in the select list, WHERE, HAVING, GROUP BY, and ORDER BY clauses.
   
-DATEPART implicitly casts string literals as a **datetime2** type in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This means that DATENAME doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+DATEPART implicitly casts string literals as a **datetime2** type in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later. This means that DATENAME doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
 ## Examples
 

@@ -1,13 +1,13 @@
 ---
-title: 'How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)'
+title: "How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)"
 description: "SQL Server uses dialog security for any conversation to a service for which a remote service binding exists."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # How to: Configure Initiating Services for Anonymous Dialog Security (Transact-SQL)

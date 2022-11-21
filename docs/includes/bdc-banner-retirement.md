@@ -1,10 +1,10 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.prod: sql
-ms.technology: big-data-cluster
-ms.topic: include
 ms.date: 03/07/2022
+ms.service: sql
+ms.subservice: big-data-cluster
+ms.topic: include
 ---
 
 > [!IMPORTANT]

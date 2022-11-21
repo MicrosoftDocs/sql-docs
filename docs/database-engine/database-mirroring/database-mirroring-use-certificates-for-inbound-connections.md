@@ -1,20 +1,17 @@
 ---
 title: "Use certificates for inbound connection"
-description: Describes the steps for configuring server instances to use certificates to authenticate inbound connections for database mirroring. 
-ms.custom: "seo-lt-2019"
+description: Describes the steps for configuring server instances to use certificates to authenticate inbound connections for database mirroring.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "certificates [SQL Server], database mirroring"
   - "inbound connections"
   - "database mirroring [SQL Server], security"
-ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Database Mirroring - Use Certificates for Inbound Connections
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

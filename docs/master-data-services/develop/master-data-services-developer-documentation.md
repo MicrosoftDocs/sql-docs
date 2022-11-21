@@ -3,15 +3,14 @@ description: "Master Data Services Developer Documentation"
 title: Developer Documentation
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 
 ms.topic: "reference"
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Master Data Services Developer Documentation
 

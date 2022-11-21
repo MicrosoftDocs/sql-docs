@@ -6,7 +6,6 @@ ms.custom:
   - intro-get-started
 ms.date: 09/01/2020
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1

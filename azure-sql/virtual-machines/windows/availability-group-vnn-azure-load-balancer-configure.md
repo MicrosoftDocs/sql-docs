@@ -1,8 +1,8 @@
 ---
 title: Configure load balancer for AG VNN listener
 description: Learn to configure an Azure Load Balancer to route traffic to the virtual network name (VNN) listener for your availability group with SQL Server on Azure VMs for high availability and disaster recovery (HADR).
-author: adbadram
-ms.author: adbadram
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma
 ms.date: 11/10/2021
 ms.service: virtual-machines-sql
@@ -35,7 +35,7 @@ Before you complete the steps in this article, you should already have:
 
 ## Create load balancer
 
-You can create either an internal load balancer or an external load balancer. An internal load balancer can only be from accessed private resources that are internal to the network.  An external load balancer can route traffic from the public to internal resources. When you configure an internal load balancer, use the same IP address as the availability group listener resource for the frontend IP when configuring the load-balancing rules. When you configure an external load balancer, you cannot use the same IP address as the availability group listener as the the listener IP address cannot be a public IP address. As such, to use an external load balancer, logically allocate an IP address in the same subnet as the availability group that does not conflict with any other IP address, and use this address as the frontend IP address for the load-balancing rules. 
+You can create either an internal load balancer or an external load balancer. An internal load balancer can only be from accessed private resources that are internal to the network.  An external load balancer can route traffic from the public to internal resources. When you configure an internal load balancer, use the same IP address as the availability group listener resource for the frontend IP when configuring the load-balancing rules. When you configure an external load balancer, you can't use the same IP address as the availability group listener as the listener IP address can't be a public IP address. As such, to use an external load balancer, logically allocate an IP address in the same subnet as the availability group that doesn't conflict with any other IP address, and use this address as the frontend IP address for the load-balancing rules. 
 
 Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
@@ -51,34 +51,59 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
    - **Resource group**: The resource group that contains your virtual machines.
    - **Name**: A name that identifies the load balancer.
    - **Region**: The Azure location that contains your virtual machines.
-   - **Type**: Either public or private. A private load balancer can be accessed from within the virtual network. Most Azure applications can use a private load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
    - **SKU**: Standard.
-   - **Virtual network**: The same network as the virtual machines.
-   - **IP address assignment**: Static. 
-   - **Private IP address**: The IP address that you assigned to the clustered network resource.
+   - **Type**: Either public or internal. An internal load balancer can be accessed from within the virtual network. Most Azure applications can use an internal load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
+   - **Tier**: Regional.
 
    The following image shows the **Create load balancer** UI:
 
-   ![Set up the load balancer](./media/failover-cluster-instance-premium-file-share-manually-configure/30-load-balancer-create.png)
-   
+     :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the Azure portal, create Load Balancer page":::
+
+1. Select **Next: Frontend IP Configuration**
+
+1. Select **Add a frontend IP Configuration**
+
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of Azure portal, with add a frontend IP configuration selected..":::
+
+1. Set up the frontend IP using the following values:
+
+   - **Name**: A name that identifies the frontend IP configuration
+   - **Virtual network**: The same network as the virtual machines.
+   - **Subnet**: The subnet as the virtual machines.
+   - **IP address assignment**: Static.
+   - **Private IP address**: The IP address that you assigned to the clustered network resource.
+   - **Availability zone**: Optionally choose and availability zone to deploy your IP to.
+
+   The following image shows the **Add frontend IP Configuration** UI:
+
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of Azure portal, add a frontend IP configuration page.":::
+
+1. Select **Add** to create the frontend IP.
+
+1. Choose **Review + Create** to create the load balancer and the frontend IP.
+
 
 ## Configure backend pool
 
 1. Return to the Azure resource group that contains the virtual machines and locate the new load balancer. You might need to refresh the view on the resource group. Select the load balancer.
 
-1. Select **Backend pools**, and then select **Add**.
+1. Select **Backend pools**, and then select **+Add**.
 
-1. Associate the backend pool with the availability set that contains the VMs.
+1. Provide a **Name** for the Backend pool.
 
-1. Under **Target network IP configurations**, select **VIRTUAL MACHINE** and choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the availability group.
+1. Select **NIC** for Backend Pool Configuration.
 
-1. Select **OK** to create the backend pool.
+1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
+
+1. Under **Virtual machine** choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the FCI. Only add the primary IP address of each VM, don't add any secondary IP addresses.
+
+1. Select **Add** to add the virtual machines to the backend pool.
+
+1. Select **Save** to create the backend pool.
 
 ## Configure health probe
 
 1. On the load balancer pane, select **Health probes**.
-
-1. Select **Add**.
 
 1. On the **Add health probe** pane, <span id="probe"> </span> set the following health probe parameters:
 
@@ -86,55 +111,30 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
    - **Protocol**: TCP.
    - **Port**: The port you created in the firewall for the health probe [when preparing the VM](failover-cluster-instance-prepare-vm.md#uninstall-sql-server-1). In this article, the example uses TCP port `59999`.
    - **Interval**: 5 Seconds.
-   - **Unhealthy threshold**: 2 consecutive failures.
-
-1. Select **OK**.
-
-## Set load-balancing rules
-
-Set the load-balancing rules for the load balancer. 
-
-# [Private load balancer](#tab/ilb)
-
-1. On the load balancer pane, select **Load-balancing rules**.
 
 1. Select **Add**.
 
+## Set load-balancing rules
+
+Set the load-balancing rules for the load balancer.
+
+1. On the load balancer pane, select **Load-balancing rules**.
+1. Select **Add**.
 1. Set the load-balancing rule parameters:
 
    - **Name**: A name for the load-balancing rules.
-   - **Frontend IP address**: The IP address for the AG listener's clustered network resource.
+   - **Frontend IP address**: The IP address set when configuring the frontend IP.
+   - **Backend pool**: Select the backend pool containing the virtual machines targeted for the load balancer.
+   - **HA Ports**: Enables load balancing on all ports for TCP and UDP protocols.
+   - **Protocol**: Choose TCP.
    - **Port**: The SQL Server TCP port. The default instance port is 1433.
    - **Backend port**: The same port as the **Port** value when you enable **Floating IP (direct server return)**.
-   - **Backend pool**: The backend pool name that you configured earlier.
    - **Health probe**: The health probe that you configured earlier.
    - **Session persistence**: None.
    - **Idle timeout (minutes)**: 4.
    - **Floating IP (direct server return)**: Enabled.
 
-1. Select **OK**.
-
-# [Public load balancer](#tab/elb)
-
-1. On the load balancer pane, select **Load-balancing rules**.
-
-1. Select **Add**.
-
-1. Set the load-balancing rule parameters:
-
-   - **Name**: A name for the load-balancing rules.
-   - **Frontend IP address**: The public IP address that clients use to connect to the public endpoint. 
-   - **Port**: The SQL Server TCP port. The default instance port is 1433.
-   - **Backend port**: The same port used by the listener of the AG. The port is 1433 by default. 
-   - **Backend pool**: The backend pool name that you configured earlier.
-   - **Health probe**: The health probe that you configured earlier.
-   - **Session persistence**: None.
-   - **Idle timeout (minutes)**: 4.
-   - **Floating IP (direct server return)**: Disabled.
-
-1. Select **OK**.
-
----
+1. Select **Save**.
 
 ## Configure cluster probe
 
@@ -214,9 +214,9 @@ Get-ClusterResource $IPResourceName | Get-ClusterParameter
 
 ## Modify connection string 
 
-For clients that support it, add the `MultiSubnetFailover=True` to the connection string. While the MultiSubnetFailover connection option is not required, it does provide the benefit of a faster subnet failover. This is because the client driver will attempt to open up a TCP socket for each IP address in parallel. The client driver will wait for the first IP to respond with success and once it does, will then use it for the connection.
+For clients that support it, add the `MultiSubnetFailover=True` to the connection string. While the MultiSubnetFailover connection option isn't required, it does provide the benefit of a faster subnet failover. This is because the client driver will attempt to open up a TCP socket for each IP address in parallel. The client driver will wait for the first IP to respond with success and once it does, will then use it for the connection.
 
-If your client does not support the MultiSubnetFailover parameter, you can modify the RegisterAllProvidersIP and HostRecordTTL settings to prevent connectivity delays post-failover. 
+If your client doesn't support the MultiSubnetFailover parameter, you can modify the RegisterAllProvidersIP and HostRecordTTL settings to prevent connectivity delays post-failover. 
 
 Use PowerShell to modify the RegisterAllProvidersIp and HostRecordTTL settings: 
 
@@ -250,8 +250,8 @@ Failover succeeds when the replicas switch roles and are both synchronized.
 
 To test connectivity, sign in to another virtual machine in the same virtual network. Open **SQL Server Management Studio** and connect to the availability group listener.
 
->[!NOTE]
->If you need to, you can [download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms).
+> [!NOTE]
+> If you need to, you can [download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## Next steps
 

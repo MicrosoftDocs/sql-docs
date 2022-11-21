@@ -2,9 +2,8 @@
 description: "Change the Word Breaker Used for US English and UK English"
 title: "Change the Word Breaker Used for US English and UK English | Microsoft Docs"
 ms.date: "05/11/2020"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: rwestMSFT

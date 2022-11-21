@@ -3,7 +3,6 @@ title: "Format axis labels as dates or currencies in a paginated report | Micros
 description: Specify a date or time interval for an x-axis by formatting the axis labels and setting the type of axis interval to a valid interval in a paginated report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

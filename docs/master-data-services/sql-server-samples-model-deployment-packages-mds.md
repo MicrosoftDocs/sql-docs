@@ -3,10 +3,9 @@ description: "SQL Server Examples: Model Deployment Packages (MDS)"
 title: Model Deployment Package examples
 ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 keywords: 
   - "master data services"

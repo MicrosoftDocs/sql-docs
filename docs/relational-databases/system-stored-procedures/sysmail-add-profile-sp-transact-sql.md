@@ -3,10 +3,9 @@ description: "The sysmail_add_profile_sp system stored procedure created a new D
 title: "sysmail_add_profile_sp (Transact-SQL)"
 ms.custom: ""
 ms.date: "04/19/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sysmail_add_profile_sp_TSQL"

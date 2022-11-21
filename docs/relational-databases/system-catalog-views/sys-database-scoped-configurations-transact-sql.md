@@ -4,9 +4,8 @@ description: sys.database_scoped_configurations (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/14/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "database_scoped_configurations"

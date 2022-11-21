@@ -3,10 +3,9 @@ description: "Create a Custom Workflow - XML Description"
 title: Custom Workflow XML Description
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 
 ms.topic: "reference"
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e

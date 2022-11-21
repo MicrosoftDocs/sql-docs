@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ---
 # Operate RHEL failover cluster instance (FCI) for SQL Server

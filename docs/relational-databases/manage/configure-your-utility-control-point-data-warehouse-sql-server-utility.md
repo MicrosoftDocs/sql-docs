@@ -3,10 +3,9 @@ title: "Configure Your Utility Control Point Data Warehouse (SQL Server Utility)
 description: Find out about the utility management data warehouse, where instances of SQL Server store data. Learn how to configure its data retention period and directory.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 ms.assetid: c2c6f050-8cdb-4b8e-ad38-4aae0a949847
 author: MikeRayMSFT

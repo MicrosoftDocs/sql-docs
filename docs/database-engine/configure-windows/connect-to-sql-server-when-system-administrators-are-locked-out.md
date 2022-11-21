@@ -4,8 +4,8 @@ description: Learn how to regain access to SQL Server as a system administrator 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/14/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ms.custom: contperf-fy20q4
 helpviewer_keywords:

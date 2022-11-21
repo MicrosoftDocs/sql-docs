@@ -3,10 +3,9 @@ description: "IpAddressName Property (ServerNetworkProtocolIPAddress Class)"
 title: "IpAddressName Property (ServerNetworkProtocolIPAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 apiname: 
   - "IpAddressName Property (ServerNetworkProtocolIPAddress"

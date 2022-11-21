@@ -4,9 +4,8 @@ description: Learn about using XPath queries in SQLXML 4.0 to query the XML view
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "XPath queries [SQLXML]"

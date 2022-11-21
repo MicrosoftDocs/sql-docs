@@ -4,8 +4,8 @@ description: Learn about soft-NUMA in SQL Server 2014 SP2 and newer versions. Se
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/13/2018"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "NUMA"

@@ -3,9 +3,9 @@ title: "MSSQLSERVER_912"
 description: The database script level could not be upgraded to the latest required by the server.
 ms.custom: ""
 ms.date: "10/25/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "912 (Database Engine error)"

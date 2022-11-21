@@ -1,9 +1,8 @@
 ---
 title: "SQL Server Audit Action Groups and Actions"
 description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit. 
-ms.prod: sql
-ms.prod_service: security
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "audit actions [SQL Server]"

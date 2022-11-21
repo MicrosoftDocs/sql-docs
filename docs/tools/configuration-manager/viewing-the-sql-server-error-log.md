@@ -3,10 +3,9 @@ title: "Viewing the SQL Server Error Log"
 description: Get help detecting problems in SQL Server by viewing the current error log, or backups of previous logs, to check whether processes have finished successfully.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cycling SQL Server error log"

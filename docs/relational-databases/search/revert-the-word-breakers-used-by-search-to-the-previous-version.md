@@ -2,9 +2,8 @@
 description: "Revert word breakers used by Search to previous version (SQL Server Search)"
 title: "Revert word breakers used by Search to previous version"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: rwestMSFT

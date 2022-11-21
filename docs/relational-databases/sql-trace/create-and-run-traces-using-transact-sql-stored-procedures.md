@@ -3,10 +3,9 @@ description: "Create and Run Traces Using Transact-SQL Stored Procedures"
 title: "Create and Run Traces Using Transact-SQL Stored Procedures"
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: "MashaMSFT"

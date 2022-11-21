@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Logging) (AccessToSQL)"
 title: "Global Settings (Logging) (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: cpichuka 

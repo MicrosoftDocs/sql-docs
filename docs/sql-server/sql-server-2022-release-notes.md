@@ -2,9 +2,9 @@
 title: "SQL Server 2022 Release Notes"
 description: Find information about SQL Server 2022 (16.x) limitations, known issues, help resources, and other release notes.
 ms.date: 11/01/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: "article"
 ms.custom:
 - event-tier1-build-2022

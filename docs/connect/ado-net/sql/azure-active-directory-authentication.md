@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
 ms.date: 12/14/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"

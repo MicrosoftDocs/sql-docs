@@ -3,10 +3,9 @@ description: "Hadoop Connection Manager"
 title: "Hadoop Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoopconn.f1"

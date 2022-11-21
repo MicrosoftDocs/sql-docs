@@ -4,8 +4,8 @@ description: Learn how an OLE DB Driver for SQL Server consumer application work
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "updating data [SQL Server]"

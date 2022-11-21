@@ -4,9 +4,8 @@ description: Learn about out-of-memory situations in SQL Server In-Memory OLTP, 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 ---

@@ -3,10 +3,9 @@ description: "View the Table Definition"
 title: "View the Table Definition"
 ms.custom: ""
 ms.date: "04/12/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "showing table properties"

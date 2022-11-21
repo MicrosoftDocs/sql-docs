@@ -4,8 +4,7 @@ description: Manage Partition Wizard
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 f1_keywords:
   - "sql13.swb.managepartition.createjob.f1"

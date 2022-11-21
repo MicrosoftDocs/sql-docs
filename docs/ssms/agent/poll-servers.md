@@ -4,9 +4,8 @@ description: "Poll servers control how frequently the target server connects to 
 title: "Poll Servers"
 ms.custom: seo-lt-2019
 ms.date: 04/18/2022
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "target servers [SQL Server], polling interval"

@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT"
 title: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: WilliamDAssafMSFT

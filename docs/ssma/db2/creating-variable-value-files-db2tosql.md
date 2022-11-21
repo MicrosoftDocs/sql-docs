@@ -1,11 +1,11 @@
 ---
 description: "Creating Variable Value Files (DB2ToSQL)"
 title: "Creating Variable Value Files (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: cpichuka 

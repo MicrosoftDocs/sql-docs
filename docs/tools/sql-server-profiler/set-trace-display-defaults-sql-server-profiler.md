@@ -2,10 +2,9 @@
 title: Set Trace Display Defaults
 titleSuffix: SQL Server Profiler
 description: Explore the tool options that SQL Server Profiler uses by default in traces, such as the font type, size, and style, and learn how to adjust them.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: markingmyname

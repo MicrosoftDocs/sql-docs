@@ -4,8 +4,8 @@ description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/09/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_os_buffer_pool_extension_configuration"

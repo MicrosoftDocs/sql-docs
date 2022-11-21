@@ -3,9 +3,9 @@ description: "MSSQLSERVER_9017"
 title: "MSSQLSERVER_9017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "9017 (Database Engine error)"

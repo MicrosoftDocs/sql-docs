@@ -3,10 +3,9 @@ description: "CircularString"
 title: "CircularString | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA

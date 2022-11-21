@@ -3,9 +3,9 @@ description: "Finding More SQL Server Native Client Information"
 title: "Finding More Information"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLNCLI, additional resources"

@@ -3,8 +3,8 @@ description: "Parameter Data Types"
 title: "Parameter Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2017
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "data types [ODBC], parameters"

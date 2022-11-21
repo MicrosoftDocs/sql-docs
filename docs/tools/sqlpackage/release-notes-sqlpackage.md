@@ -3,9 +3,8 @@ title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
 ms.custom: "tools|sos"
 ms.date: 11/9/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: "llali"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier

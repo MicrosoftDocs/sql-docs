@@ -3,10 +3,9 @@ description: "System-Versioned Temporal Tables with Memory-Optimized Tables"
 title: "System-Versioned Temporal Tables with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname

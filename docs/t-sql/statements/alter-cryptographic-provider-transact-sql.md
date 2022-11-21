@@ -4,9 +4,8 @@ description: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "04/20/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_CRYPTOGRAPHIC_PROVIDER_TSQL"

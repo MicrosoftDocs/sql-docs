@@ -4,9 +4,8 @@ description: Clustered and nonclustered indexes described
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/25/2021
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 ms.custom: FY22Q2Fresh
 helpviewer_keywords:

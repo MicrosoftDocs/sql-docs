@@ -3,10 +3,9 @@ title: "Strategies for Backing Up and Restoring Snapshot and Transactional Repli
 description: Learn about considerations for designing a backup and restore strategy for snapshot and transactional replication in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backups [SQL Server replication], snapshot replication"

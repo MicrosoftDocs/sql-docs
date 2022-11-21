@@ -3,7 +3,6 @@ title: "Aggregate functions reference for paginated reports | Microsoft Docs"
 description: Use built-in aggregate functions in expressions in Report Builder to include aggregated values in your paginated report. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

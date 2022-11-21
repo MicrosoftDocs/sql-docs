@@ -4,8 +4,8 @@ description: Learn about the database-level health detection feature available f
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 01/19/2019
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

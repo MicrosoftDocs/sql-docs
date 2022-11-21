@@ -3,10 +3,9 @@ title: "SQL Server, Locks object"
 description: Learn about the SQLServer:Locks object, which provides information about SQL Server locks on individual resource types. 
 ms.custom: ""
 ms.date: "07/13/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Locks object"

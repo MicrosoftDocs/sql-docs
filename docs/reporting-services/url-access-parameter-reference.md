@@ -4,7 +4,6 @@ description: Use the parameters in this article as part of a URL to configure th
 ms.date: 05/22/2020
 
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 

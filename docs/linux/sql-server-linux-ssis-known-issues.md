@@ -6,8 +6,8 @@ ms.author: lle
 ms.reviewer: maghan
 ms.date: 06/06/2018
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Limitations and known issues for SSIS on Linux
 

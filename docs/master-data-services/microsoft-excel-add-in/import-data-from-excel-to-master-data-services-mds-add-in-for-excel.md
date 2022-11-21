@@ -3,10 +3,9 @@ description: "Import Data from Excel to Master Data Services (MDS Add-in for Exc
 title: Import Data from Excel
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: CordeliaGrey

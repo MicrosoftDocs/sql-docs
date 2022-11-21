@@ -4,8 +4,8 @@ description: "Using Visual C++ Extensions"
 author: rothja
 ms.author: jroth
 ms.date: 11/08/2018
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "Visual C++ [ADO], using VC++ extensions"

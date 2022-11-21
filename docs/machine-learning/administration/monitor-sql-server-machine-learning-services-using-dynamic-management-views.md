@@ -1,8 +1,8 @@
 ---
 title: Monitor scripts using DMVs
 description: Use dynamic management views (DMVs) to monitor Python and R external script execution in SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 10/14/2019
 ms.topic: how-to
 author: WilliamDAssafMSFT

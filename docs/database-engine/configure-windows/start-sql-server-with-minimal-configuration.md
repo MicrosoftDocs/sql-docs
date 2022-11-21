@@ -4,8 +4,8 @@ description: Become familiar with the minimal configuration startup option in SQ
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "minimal configuration [SQL Server]"

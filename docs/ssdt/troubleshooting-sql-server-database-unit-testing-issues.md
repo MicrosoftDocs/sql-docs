@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting SQL Server Database Unit Testing Issues
 description: View troubleshooting tips for issues that you might see with SQL Server unit tests, such as timeout failures and database deployment to unexpected targets.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname

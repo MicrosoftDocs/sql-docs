@@ -4,7 +4,6 @@ description: "Reporting Services is implemented as a single service that contain
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 08/17/2022 

@@ -4,9 +4,8 @@ description: Learn how srv_paramsetoutput in the Extended Stored Procedure API s
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 helpviewer_keywords:

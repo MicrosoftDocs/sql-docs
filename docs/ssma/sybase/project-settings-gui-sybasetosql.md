@@ -3,9 +3,9 @@ description: "Project Settings (GUI) (SybaseToSQL)"
 title: "Project Settings (GUI) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: cpichuka 

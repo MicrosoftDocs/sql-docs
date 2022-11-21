@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Dialogs) (DB2ToSQL)"
 title: "Global Settings (Dialogs) (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: cpichuka 

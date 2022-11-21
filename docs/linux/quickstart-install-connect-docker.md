@@ -5,9 +5,8 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 07/18/2022
-ms.prod: sql
-ms.prod_service: linux
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: quickstart
 ms.custom:
   - intro-quickstart

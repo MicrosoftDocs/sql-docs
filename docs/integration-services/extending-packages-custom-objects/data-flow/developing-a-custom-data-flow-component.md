@@ -3,10 +3,9 @@ description: "Developing a Custom Data Flow Component"
 title: "Developing a Custom Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"

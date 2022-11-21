@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sp_updatestats_TSQL"

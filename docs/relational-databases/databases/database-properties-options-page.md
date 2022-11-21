@@ -3,10 +3,9 @@ title: "Database Properties (Options Page)"
 description: "Learn how to use the Options tab in the Database Properties dialog box to view or modify a database's collation, recovery model, and other settings."
 ms.custom: ""
 ms.date: "12/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"

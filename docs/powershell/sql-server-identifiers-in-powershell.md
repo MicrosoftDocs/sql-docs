@@ -1,8 +1,8 @@
 ---
 title: SQL Server Identifiers in PowerShell
 description: Learn about the paths that Windows PowerShell providers use to expose data hierarchies, and about the need to encode certain characters not supported by PowerShell in these paths. 
-ms.prod: sql
-ms.technology: sql-server-powershell
+ms.service: sql
+ms.subservice: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Cmdlets [SQL Server], Encode-Sqlname"

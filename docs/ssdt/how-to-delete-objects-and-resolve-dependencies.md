@@ -1,8 +1,8 @@
 ---
 title: Delete Objects and Resolve Dependencies
 description: Find out how to rename or delete database objects. See which dependent objects SSDT automatically updates, and which dependencies you need to update.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog"

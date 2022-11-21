@@ -1,9 +1,8 @@
 ---
 title: "Table Element for Schema (DTA)"
 description: In the dta utility, the Table element for Schema specifies the table for tuning. This article describes that element.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"

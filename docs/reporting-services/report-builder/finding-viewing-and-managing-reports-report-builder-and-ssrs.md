@@ -3,7 +3,6 @@ title: "Find, View, & Manage Reports (Report Builder & SSRS ) | Microsoft Docs"
 description: In Report Builder and Report Designer, you can browse to find paginated reports, shared data sources, models, and other related report items.
 ms.date: 12/16/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-builder   
 
 

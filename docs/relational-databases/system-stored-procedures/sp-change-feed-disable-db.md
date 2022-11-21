@@ -5,7 +5,6 @@ ms.custom:
 - event-tier1-build-2022
 ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: "reference"
 f1_keywords: 

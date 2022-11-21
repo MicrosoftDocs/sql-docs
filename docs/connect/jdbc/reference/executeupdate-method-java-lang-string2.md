@@ -4,8 +4,8 @@ description: "executeUpdate Method (java.lang.String)"
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/07/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 apilocation: "sqljdbc.jar"
 apiname: "SQLServerPreparedStatement.executeUpdate (java.lang.String)"

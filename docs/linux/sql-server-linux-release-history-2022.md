@@ -22,13 +22,18 @@ The following table lists the release history for [!INCLUDE[ssSQL22](../includes
 | --------------------- | ------------- | ------------ |
 | [GA](#GA)          | 16.0.1000.6    | 2022-11-16   |
 
-## <a id="GA"></a> General availability (November 2022)
+## <a id="GA"></a> GA (November 2022)
 
-This is the general availability (GA) release of [!INCLUDE[ssSQL22](../includes/sssql22-md.md)]. This is a pre-release version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 16.0.1000.6.
+This is the General Availability (GA) release of [!INCLUDE[ssSQL22](../includes/sssql22-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 16.0.1000.6.
 
 ### Package details
 
-For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+Package details and download locations for the RPM and Debian packages are listed in the following table. You don't need to download these packages directly if you use the steps in the following installation guides:
+
+- [Install SQL Server package](sql-server-linux-setup.md)
+- [Install Full-Text Search package](sql-server-linux-setup-full-text-search.md)
+- [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
+- [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
@@ -50,3 +55,4 @@ Go back to the [release history](#release-history).
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+

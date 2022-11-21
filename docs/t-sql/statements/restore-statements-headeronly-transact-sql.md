@@ -4,9 +4,8 @@ description: RESTORE Statements - HEADERONLY (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/30/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "HEADERONLY"
@@ -42,6 +41,7 @@ FROM <backup_device>
 --Backup Set Options  
    FILE = { backup_set_file_number | @backup_set_file_number }   
  | PASSWORD = { password | @password_variable }   
+ | [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { database_name | @database_name_variable } ]
   
 --Media Set Options  
  | MEDIANAME = { media_name | @media_name_variable }   

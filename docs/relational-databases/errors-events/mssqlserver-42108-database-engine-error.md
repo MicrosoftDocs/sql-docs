@@ -3,9 +3,9 @@ description: "MSSQLSERVER_42108"
 title: "MSSQLSERVER_42108 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "42108 (Database Engine error)"

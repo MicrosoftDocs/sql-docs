@@ -4,8 +4,8 @@ description: Learn how Extended Protection uses service binding and channel bind
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/11/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "spoofing attacks"

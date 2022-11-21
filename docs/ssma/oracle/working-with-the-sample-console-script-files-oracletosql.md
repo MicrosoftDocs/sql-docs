@@ -1,11 +1,11 @@
 ---
 description: "Working with the Sample Console Script Files (OracleToSQL)"
 title: "Working with the Sample Console Script Files (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Sample Console Script Files, ServersConnectionFileSample.xml"
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Working with the Sample Console Script Files (OracleToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

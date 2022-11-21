@@ -1,9 +1,8 @@
 ---
 description: "The sp_change_feed_create_table_group system stored procedure enables the creation of new change feed table group within the current database"
 title: "sp_change_feed_create_table_group (Transact-SQL)"
-ms.date: 11/04/2022
+ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 
@@ -65,7 +64,7 @@ The credential name to access the landing zone.
 
 ## Permissions  
 
- Only a member of the sysadmin server role or db_owner database role can execute this procedure.
+  Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
 
 ## See also  
 

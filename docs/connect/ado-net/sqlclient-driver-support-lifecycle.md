@@ -4,8 +4,8 @@ description: Product support lifecycle information for the Microsoft.Data.SqlCli
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 10/24/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"

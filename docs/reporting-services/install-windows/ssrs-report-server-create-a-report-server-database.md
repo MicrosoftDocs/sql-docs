@@ -4,7 +4,6 @@ description: "SQL Server Reporting Services native mode uses two SQL Server rela
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/04/2021

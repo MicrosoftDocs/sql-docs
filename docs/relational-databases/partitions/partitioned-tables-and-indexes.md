@@ -5,7 +5,7 @@ description: "With partitioned tabled and indexes, the data can be divided into 
 author: VanMSFT
 ms.author: vanto
 ms.date: "8/17/2022"
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "partitioned tables [SQL Server], about partitioned tables"
@@ -54,7 +54,7 @@ A range type (either LEFT or RIGHT), specifies how the boundary values of the pa
 - A LEFT range specifies that the boundary value belongs to the left side of the boundary value interval when interval values are sorted by the database engine in ascending order from left to right. In other words, the highest bounding value will be included within a partition.
 - A RIGHT range specifies that the boundary value belongs to the right side of the boundary value interval when interval values are sorted by the database engine in ascending order from left to right. In other words, the lowest bounding value will be included in each partition.
 
-If LEFT or RIGHT not specified, LEFT range is the default.
+If LEFT or RIGHT is not specified, LEFT range is the default.
 
 For example, the following partition function partitions a table or index into 12 partitions, one for each month of a year's worth of values in a **datetime** column. A RIGHT range is used, indicating that boundary values will serve as lower bounding values in each partition. RIGHT ranges are often simpler to work with when partitioning a table based on a column of **datetime** or **datetime2** data types, as rows with a value of midnight will be stored in the same partition as rows with later values on the same day. Similarly, if using the data type of **date** and  using partitions of a month or more, a RIGHT range keeps the first day of the month in the same partition as later days in that month. This aids in precise [Partition elimination](#partition-elimination) when querying an entire day's worth of data.
 

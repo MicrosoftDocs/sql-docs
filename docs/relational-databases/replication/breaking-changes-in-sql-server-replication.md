@@ -3,10 +3,9 @@ description: "Breaking Changes in SQL Server Replication"
 title: "Breaking Changes in SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], what's new"

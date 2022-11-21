@@ -3,7 +3,6 @@ title: "Controlling the tablix data region display on a paginated report page | 
 description: Learn about the properties that enable you to change how a paginated report appears when you view a table, matrix, or list data region in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

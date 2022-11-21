@@ -4,8 +4,8 @@ description: sys.trusted_assemblies (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/14/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "trusted_assemblies_TSQL"

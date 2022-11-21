@@ -3,7 +3,6 @@ title: "Configure a Native Mode Report Server for Local Administration | Microso
 description: Learn how to configure the report server for local administration, if you install a Reporting Services report server in certain environments.
 ms.date: 05/28/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 

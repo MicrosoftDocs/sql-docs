@@ -4,9 +4,8 @@ description: Learn about the implementation of SQL Server In-memory OLTP technol
 author: "kevin-farlee"
 ms.author: "kfarlee"
 ms.date: "09/14/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44

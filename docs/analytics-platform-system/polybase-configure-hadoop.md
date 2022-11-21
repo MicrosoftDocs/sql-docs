@@ -5,8 +5,8 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
 ms.date: 10/04/2022
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
 ms.custom:
   - seo-dt-2019
@@ -35,7 +35,7 @@ First, configure APS to use your specific Hadoop provider.
    ```sql
    -- Values map to various external data sources.
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 and 3.0 - 3.1 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure blob storage
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 

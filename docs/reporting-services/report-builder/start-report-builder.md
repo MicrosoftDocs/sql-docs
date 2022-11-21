@@ -4,7 +4,6 @@ description: Report Builder is a stand-alone report authoring environment. The f
 
 ms.date: 08/15/2022
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 

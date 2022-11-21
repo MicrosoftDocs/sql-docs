@@ -4,8 +4,8 @@ description: Discover how to use the Windows ODBC Data Source Administrator to c
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/07/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "driver version number [ODBC]"

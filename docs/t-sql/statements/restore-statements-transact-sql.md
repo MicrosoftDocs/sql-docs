@@ -4,8 +4,8 @@ description: RESTORE Statements restore SQL database backups taken using the BAC
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -185,6 +185,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 --Backup Set Options
  | FILE = { backup_set_file_number | @backup_set_file_number }
  | PASSWORD = { password | @password_variable }
+ | [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { database_name | @database_name_variable } ]
 
 --Media Set Options
  | MEDIANAME = { media_name | @media_name_variable }
@@ -478,6 +479,7 @@ The RESTORE examples include the following:
 - I. [Restoring using FILE and FILEGROUP syntax](#restoring_using_FILE_n_FG)
 - J. [Reverting from a database snapshot](#reverting_from_db_snapshot)
 - K. [Restoring from the Microsoft Azure Blob Storage](#Azure_Blob)
+- L. [Restore from a snapshot backup](#snapshot_backup)
 
 > [!NOTE]  
 > For additional examples, see the restore how-to topics that are listed in [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
@@ -733,6 +735,41 @@ RESTORE DATABASE Sales
   WITH MOVE 'Sales_Data1' to 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_Data1.mdf',
   MOVE 'Sales_log' to 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_log.ldf',
   STATS = 10;
+```
+
+### <a id="snapshot_backup"></a> L. Restore from snapshot backup
+
+Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
+
+**L1. Restore a full backup**
+
+```sql
+RESTORE DATABASE Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
+  WITH METADATA_ONLY;
+```
+
+**L2. Restore a backup and apply a transaction log**
+
+```sql
+RESTORE DATABASE Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
+  WITH METADATA_ONLY,
+  NORECOVERY;
+
+RESTORE LOG Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesLog.trn'
+  WITH RECOVERY;
+```
+
+**L3. Restore from a snapshot backup and place database and log files in a new location**
+
+```sql
+RESTORE DATABASE Sales
+  FROM DISK = 'D:\MSSQL\Backup\SalesSnapshotFull.bkm'
+  WITH METADATA_ONLY,
+  MOVE Sales_Data TO 'D:\MSSQL\Sales.mdf',
+  MOVE Sales_Log TO 'D:\MSSQL\Sales_log.ldf;
 ```
 
 [&#91;Top of examples&#93;](#examples)

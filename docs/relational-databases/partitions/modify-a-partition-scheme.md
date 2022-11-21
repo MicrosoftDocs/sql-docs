@@ -5,7 +5,7 @@ description: Modify a partition scheme
 author: VanMSFT
 ms.author: vanto
 ms.date: "4/22/2022"
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

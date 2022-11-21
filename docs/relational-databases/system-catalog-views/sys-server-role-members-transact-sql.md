@@ -4,9 +4,8 @@ description: sys.server_role_members (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/15/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_role_members"

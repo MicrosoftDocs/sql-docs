@@ -3,9 +3,9 @@ description: "Set or change the database collation"
 title: "Set or change the database collation"
 ms.custom: ""
 ms.date: "02/03/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collations [SQL Server], database"

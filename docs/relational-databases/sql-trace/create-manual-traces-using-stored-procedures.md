@@ -3,10 +3,9 @@ description: "Create Manual Traces using Stored Procedures"
 title: "Create Manual Traces using Stored Procedures"
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: "MashaMSFT"

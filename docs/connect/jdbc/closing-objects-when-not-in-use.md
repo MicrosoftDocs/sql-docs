@@ -4,8 +4,8 @@ description: In JDBC programming, it's important to close objects when the aren'
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Closing objects when not in use

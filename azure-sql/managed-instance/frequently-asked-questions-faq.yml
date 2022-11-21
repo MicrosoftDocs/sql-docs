@@ -59,7 +59,7 @@ sections:
           
           ### Can I increase the number of databases limit (100) on my managed instance on demand?
           
-          No, and currently there are no committed plans to increase the number of databases on SQL Managed Instance. 
+          The limit of 100 databases per SQL Managed Instance is a hard limit that cannot be changed.
           
           ### Where can I migrate if I have more than 16 TB of data?
           You can consider migrating to other Azure flavors that suit your workload: [Azure SQL Database Hyperscale](../database/service-tier-hyperscale.md) or [SQL Server on Azure Virtual Machines](../virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview.md).
@@ -182,14 +182,12 @@ sections:
       - question: |
           Switch hardware configuration
         answer: |
-          ### Can I switch my managed instance hardware between Gen4 and Gen5 online?
+          ### Can I switch the hardware generation for my managed instance online?
           
-          Automated online switching from Gen4 to Gen5 is possible if Gen5 hardware is available in the region where your managed instance is provisioned. In this case, you can check [vCore model overview page](../database/service-tiers-vcore.md) explaining how to switch between hardware configurations.
+          Automated online switching from Standard Series to Premium Series or Premium Series Memory-Optimized is possible if the chosen hardware is available in the region where your managed instance is provisioned. In this case, you can check [vCore model overview page](../database/service-tiers-vcore.md) explaining how to switch between hardware configurations.
           
           This is a long-running operation as a new managed instance will be provisioned in the background and databases automatically transferred between the old and new instance with a quick failover at the end of the process.
-          
-          Note: Gen4 hardware is being retired and is no longer available for new deployments. All new databases must be deployed on later hardware configurations. Switching from Gen5 to Gen4 is also not available.
-          
+                    
       - question: |
           Performance 
         answer: |
@@ -281,7 +279,7 @@ sections:
           
           ### How can I see when automated backups are made on my managed instance?
           
-          To track when automated backups have been performed on a managed instance, see [How to track the automated backup for an Azure SQL Managed Instance](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-128-how-to-track-the-automated-backup-for-an/ba-p/1442355).
+          To track when automated backups have been performed on a managed instance, review [Monitor backup activity](backup-activity-monitor.md).
           
           ### Is on-demand backup supported?
           
@@ -290,7 +288,11 @@ sections:
           ### Is native restore (from .bak files) to SQL Managed Instance supported?
           
           Yes, it is supported and available for SQL Server 2005+ versions.  To use native restore, upload your .bak file to Azure blob storage and execute T-SQL commands. For more information, see [Native restore from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
-          
+
+          ### Is native restore from SQL Managed Instance to SQL Server supported?           
+         
+          Yes, but only to SQL Server 2022, during the [mainstream support period of SQL Server 2022](https://learn.microsoft.com/lifecycle/products/sql-server-2022). It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in.
+
       - question: |
           Business continuity
         answer: |
@@ -303,7 +305,7 @@ sections:
         answer: |
           ### What are the current inbound/outbound NSG constraints on the managed instance subnet?
           
-          The required NSG and UDR rules are documented [here](connectivity-architecture-overview.md#mandatory-inbound-security-rules-with-service-aided-subnet-configuration), and automatically set by the service.
+          The required NSG and UDR rules are documented [here](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration), and automatically set by the service.
           Please keep in mind that these rules are just the ones we need for maintaining the service. To connect to managed instance and use different features you will need to set additional, feature specific rules, that you need to maintain.
           
           ### How can I set inbound NSG rules on management ports?
@@ -376,21 +378,11 @@ sections:
           
           ### Does SQL Managed Instance have a public endpoint?
           
-          Yes. A managed instance has a public endpoint that is by default used only for Azure Service Management, but a customer may enable it for data access as well. For more information, see [Use SQL Managed Instance with public endpoints](./public-endpoint-overview.md). To configure public endpoint, go to [Configure public endpoint in SQL Managed Instance](public-endpoint-configure.md).
-          
-          ### How does SQL Managed Instance control access to the public endpoint?
-          
-          SQL Managed Instance controls access to the public endpoint at both the network and application level.
-          
-          Management and deployment services connect to a managed instance by using a [management endpoint](./connectivity-architecture-overview.md#management-endpoint) that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the managed instance's management components use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP ranges. Certificates mutually authenticate all communication between management components and the management plane. For more information, see [Connectivity architecture for SQL Managed Instance](./connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture).
-          
-          ### Could I use the public endpoint to access the data in SQL Managed Instance databases?
-          
-          Yes. The customer will need to enable public endpoint data access from [Azure portal](public-endpoint-configure.md#enabling-public-endpoint-for-a-managed-instance-in-the-azure-portal) / [PowerShell](public-endpoint-configure.md#enabling-public-endpoint-for-a-managed-instance-using-powershell) / ARM and configure NSG to lock down access to the data port (port number 3342). For more information, see [Configure public endpoint in Azure SQL Managed Instance](public-endpoint-configure.md) and [Use Azure SQL Managed Instance securely with public endpoint](public-endpoint-overview.md). 
+          Yes, a public endpoint can be enabled to enable inbound traffic from the Internet to reach SQL Managed Instance. For more information, see [Use SQL Managed Instance with public endpoints](./public-endpoint-overview.md) and [Configure public endpoint in SQL Managed Instance](public-endpoint-configure.md).
           
           ### Can I specify a custom port for SQL data endpoint(s)?
           
-          No, this option is not available. For private data endpoint, SQL Managed Instance uses default port number 1433 and for public data endpoint, SQL Managed Instance uses default port number 3342.
+          No, using a custom port is not available. For VNet-local endpoint, SQL Managed Instance uses default port number 1433 and for public data endpoint, SQL Managed Instance uses default port number 3342.
           
           ### What is the recommended way to connect managed instances placed in different regions?
           
@@ -418,6 +410,7 @@ sections:
           - Configure JIT jumpbox access for the sysadmin account.
           - Turn on [SQL auditing](/sql/relational-databases/security/auditing/sql-server-audit-database-engine), and integrate it with alerting mechanisms.
           - Turn on [Threat Detection](../database/threat-detection-configure.md) from the [Microsoft Defender for SQL](../database/azure-defender-for-sql.md) suite.
+          - Apply a [service endpoint policy](./service-endpoint-policies-configure.md) to the subnet to control outbound traffic to Azure Storage.
           
       - question: |
           DNS
@@ -601,3 +594,30 @@ sections:
           ### How can I create Azure support request?
           
           To learn how to create Azure support request, see [How to create Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+
+      - question: |
+          November 2022 feature wave
+        answer: |
+          ### What Azure offers and subscription types are enrolled in the November 2022 Feature Wave?
+          
+          Initially, only [Azure Dev/Test offers](/azure/devtest/offer/) and subscriptions designated for Dev/Test workloads are enrolled in the feature wave. The supported offer types include: 
+
+          - [Enterprise Dev/Test - MS-AZR-0148P](https://azure.microsoft.com/offers/ms-azr-0148p/)
+          - [Pay-as-you-go Dev/Test - MS-AZR-0023P](https://azure.microsoft.com/offers/ms-azr-0023p/)
+          - [Visual Studio Test Professional Credit - MS-AZR-0060P](https://azure.microsoft.com/offers/ms-azr-0060p/) - May need to [Request a quota increase](../database/quota-increase-request.md)
+          - Other Offer IDs that are eligible for DevTest workload types 
+
+          You can check the offer type for your subscription on the **Overview** page for your subscription in the [Azure portal](https://portal.azure.com). 
+          
+          ### How can I onboard a subscription that is not part of the already enabled subscription types?
+          
+          Support for other subscription types, including subscriptions designated for Production workloads, will continue to roll out over the course of several months. Unsupported subscription types cannot be enabled individually. 
+                    
+          ### How can I onboard using a region that is not yet supported?
+          
+          Most Azure public regions already support the November 2022 feature wave, with support for the remaining ones coming soon.  Azure Government and sovereign clouds are currently unsupported. 
+
+
+
+          
+                    

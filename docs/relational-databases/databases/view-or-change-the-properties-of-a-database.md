@@ -3,10 +3,9 @@ title: "View or Change the Properties of a Database | Microsoft Docs"
 description: Learn how to view or change the properties of a database in SQL Server by using SQL Server Management Studio or Transact-SQL. 
 ms.custom: ""
 ms.date: "01/05/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying databases"

@@ -2,10 +2,9 @@
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
 ms.custom: "tools|sos"
-ms.date: 09/22/2022
-ms.prod: sql
+ms.date: 11/9/2022
+ms.service: sql
 ms.reviewer: "llali"
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
@@ -16,6 +15,42 @@ ms.author: drskwier
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
+## 161.6374.0 SqlPackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215400)|November 9, 2022|161.6374.0|16.1.6374.0|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2215326)|November 9, 2022|161.6374.0|16.1.6374.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215401)|November 9, 2022|161.6374.0|16.1.6374.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215501)|November 9, 2022|161.6374.0|16.1.6374.0|
+
+> [!IMPORTANT]
+> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters.  For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Platform|Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default.  For more information, see [this dedicated article](https://aka.ms/dacfx-connection).|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.1) v5.0.1|
+|Platform|SqlPackage is now available for [installation](sqlpackage-download.md) as a `dotnet tool` for Windows, macOS, and Linux platforms.|
+|Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|
+|Connectivity|Adds support for TDS 8.0 and parameters for `/SourceHostNameInCertificate` and `/TargetHostNameInCertificate` to SqlPackage operations.|
+|Replication|Adds support for [sp_addpublication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) with peer-to-peer replication.|
+|ScriptDOM|Adds support for IS NOT DISTINCT FROM syntax with predicate subqueries.|
+|Server-level roles|Adds support for additional [fixed server roles](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022): MS_DatabaseConnector, MS_LoginManager, MS_DatabaseManager, MS_ServerStateManager, MS_ServerStateReader, MS_ServerPerformanceStateReader, MS_ServerSecurityStateReader, MS_DefinitionReader, MS_PerformanceDefinitionReader, MS_SecurityDefinitionReader.|
+|SQL Server 2022|Adds support for [T-SQL function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): GREATEST(), LEAST(), STRING_SPLIT(), DATETRUNC(), LTRIM(), RTRIM(), and TRIM().|
+|SQL Server 2022|Adds support for [JSON function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): ISJSON(), JSON_PATH_EXISTS(), JSON_OBJECT(), and JSON_ARRAY().|
+|SQL Server 2022|Adds support for [bit manipulation functions associated with SQL Server 2022](../../t-sql/functions/bit-manipulation-functions-overview.md): LEFT_SHIFT(), RIGHT_SHIFT(), BIT_COUNT(), GET_BIT(), and SET_BIT().|
+|SQL Server 2022|Adds support for [time series function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): DATE_BUCKET(), GENERATE_SERIES(), FIRST_VALUE(), and LAST_VALUE().|
+|Statistics|Adds support for [STATISTICS AUTO_DROP option](../../t-sql/statements/create-statistics-transact-sql.md).|
+|XML compression|Adds support for XML compression on [XML indexes](../../relational-databases/xml/xml-indexes-sql-server.md#xml-compression).|
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 ## 19.2 SqlPackage
 
@@ -168,7 +203,7 @@ This article lists the features and fixes delivered by the released versions of 
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Fixed an issue where external user deployment to Managed Instance would fail |
+| Deployment | Fixed an issue where external user deployment to Azure SQL Managed Instance would fail |
 | Deployment | Fix for deployment order involving temporal tables to drop dependencies before turning system versioning off |
 | Deployment | Fix for Always Encrypted deployment bug with error "Invalid object name '#tmpErrors'"  |
 | Export | Validation for SqlPackage parameters ExcludeObjectType(s) and DoNotDropObjectType(s) |
@@ -327,7 +362,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Add Azure Synapse Analytics support for ordered clustered column store index |
 | Deployment | Add support for External Data Source (Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
 | Deployment | Add SQL Database Edge Instance as supported edition |
-| Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
+| Deployment | Support Azure SQL Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
 | Deployment | Add support for copy command in Azure Synapse Analytics |
 | Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure Synapse Analytics |
 | .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of SqlPackage |
@@ -389,7 +424,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Platform | SqlPackage .NET Core generally available for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
-| Deployment | Add Managed Instance support for Azure Active Directory user and groups. |
+| Deployment | Add Azure SQL Managed Instance support for Azure Active Directory user and groups. |
 | Deployment | Support the /AccessToken parameter for SqlPackage on .NET Core. |
 
 ### Known Issues 
@@ -512,7 +547,7 @@ Build: &nbsp; 15.0.4200.1
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Added support for database compatibility level 150. | 
-| Deployment | Added support for Managed Instances. | 
+| Deployment | Added support for Azure SQL Managed Instances. | 
 | Performance | Added MaxParallelism command-line parameter to specify the degree of parallelism for database operations. | 
 | Security | Added AccessToken command-line parameter to specify an authentication token when connecting to SQL Server. | 
 | Import | Added support to stream BLOB/CLOB data types for imports. | 

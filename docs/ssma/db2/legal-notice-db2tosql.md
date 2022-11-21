@@ -1,11 +1,11 @@
 ---
 description: "Legal Notice (DB2toSQL)"
 title: "Legal Notice (DB2toSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: cpichuka 

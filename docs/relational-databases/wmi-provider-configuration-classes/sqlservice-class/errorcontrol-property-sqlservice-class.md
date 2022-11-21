@@ -3,10 +3,9 @@ description: "ErrorControl Property (SqlService Class)"
 title: "ErrorControl Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 apiname: 
   - "ErrorControl Property (SqlService Class)"

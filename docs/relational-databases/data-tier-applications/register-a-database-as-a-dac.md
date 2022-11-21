@@ -3,8 +3,8 @@ description: "Register a Database As a DAC"
 title: "Register a Database As a DAC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology:
+ms.service: sql
+ms.subservice:
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.registerdacwizard.summary.f1"

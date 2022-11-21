@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 08/12/2020
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 

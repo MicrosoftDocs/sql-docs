@@ -4,8 +4,8 @@ description: "SQL Server defines extended events that are specific to Always On 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "01/27/2022"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom:
   - ag-guide

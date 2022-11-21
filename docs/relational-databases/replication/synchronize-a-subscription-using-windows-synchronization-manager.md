@@ -3,10 +3,9 @@ title: "Synchronize subscription (Windows Synchronization Manager)"
 description: Learn how to synchronize subscriptions using the Windows Synchronization Manager. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "synchronization [SQL Server replication], Windows Synchronization Manager"

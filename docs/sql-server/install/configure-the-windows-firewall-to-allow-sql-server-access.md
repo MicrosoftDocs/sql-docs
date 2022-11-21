@@ -4,8 +4,8 @@ description: Learn how to configure the Windows firewall to allow access to an i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/17/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: contperf-fy21q3
 helpviewer_keywords:

@@ -3,10 +3,9 @@ description: "catalog.executions (SSISDB Database)"
 title: "catalog.executions (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "executions view [Integration Services]"

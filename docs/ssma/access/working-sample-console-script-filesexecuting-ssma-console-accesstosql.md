@@ -1,11 +1,11 @@
 ---
 description: "Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL)"
 title: "Work with Sample Console Script FilesExecuting the SSMA Console | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: cpichuka 

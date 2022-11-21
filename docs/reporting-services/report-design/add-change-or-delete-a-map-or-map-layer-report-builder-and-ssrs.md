@@ -3,7 +3,6 @@ title: "Add, change, or delete a map or map layer in a paginated report | Micros
 description: Learn how to add, remove, or change map options manually or by using the map layer wizard in a paginated report in Report Builder.
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

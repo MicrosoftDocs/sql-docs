@@ -3,7 +3,6 @@ title: "Gauges in a paginated report | Microsoft Docs"
 description: Display key performance indicators in a paginated report to illustrate values or to compare data by using a radial or linear gauge in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

@@ -3,10 +3,9 @@ description: "Modify Data Through a View"
 title: "Modify Data Through a View | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data modifications [SQL Server], views"

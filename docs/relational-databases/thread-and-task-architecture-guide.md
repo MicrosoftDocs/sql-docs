@@ -4,10 +4,9 @@ description: Learn about thread and task architecture in SQL Server, including t
 ms.custom:
 - event-tier1-build-2022
 ms.date: "09/23/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, thread and task architecture"

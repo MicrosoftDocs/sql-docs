@@ -4,8 +4,8 @@ description: This article discusses issues when you use the Microsoft JDBC Drive
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 07/26/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connect to an Azure SQL database

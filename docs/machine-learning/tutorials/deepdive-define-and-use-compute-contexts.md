@@ -1,8 +1,8 @@
 ---
 title: Use RevoScaleR compute contexts
 description: "Learn about the RxInSqlServer function, which lets you define a compute context for a remote SQL Server."
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial

@@ -3,10 +3,9 @@ title: "Creating a Valid Connection String Using TCP IP"
 description: Learn how to create a valid connection string when using TCP/IP to connect to an instance of SQL Server. View examples of valid strings.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection strings [Database Engine]"

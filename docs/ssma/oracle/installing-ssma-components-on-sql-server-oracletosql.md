@@ -1,12 +1,12 @@
 ---
 title: "Installing SSMA components on SQL Server (OracleToSQL) | Microsoft Docs"
 description: Learn how to install the SSMA extension pack and Oracle providers on the computer that runs SQL Server to support Oracle database conversion.
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-installation
 ms.date: "04/29/2021"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Installing the extension pack"

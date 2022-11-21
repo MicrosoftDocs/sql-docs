@@ -4,8 +4,8 @@ description: Learn about the cost threshold for parallelism option. See how its 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "cost threshold for parallelism option"

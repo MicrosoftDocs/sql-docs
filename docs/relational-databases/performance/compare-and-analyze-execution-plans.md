@@ -3,10 +3,9 @@ title: "Compare and Analyze Execution Plans | Microsoft Docs"
 description: Learn how to compare and analyze execution plans by using SQL Server Management Studio. Execution plans display data retrieval methods of the Query Optimizer.
 ms.custom: ""
 ms.date: "11/21/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: "wiassaf"
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan results"
@@ -18,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Compare and Analyze Execution Plans
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

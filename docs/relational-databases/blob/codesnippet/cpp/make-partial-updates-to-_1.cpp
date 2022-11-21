@@ -1,7 +1,7 @@
 #include <windows.h>
 #include<sqlext.h>
 #include <stdio.h>
-#include <sqlncli.h>
+#include <msodbcsql.h>
 #include <tchar.h>
 #include <strsafe.h>
 

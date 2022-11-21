@@ -4,10 +4,9 @@ description: This article provides an overview of installation of Master Data Se
 ms.custom:
   - intro-installation
 ms.date: "03/24/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: CordeliaGrey

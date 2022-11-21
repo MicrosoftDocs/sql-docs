@@ -4,8 +4,8 @@ description: "Learn how to retrieve date and time types as strings using the SQL
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/11/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "date and time types, retrieving as strings"

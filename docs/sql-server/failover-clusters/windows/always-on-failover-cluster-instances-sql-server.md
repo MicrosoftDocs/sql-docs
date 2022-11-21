@@ -5,9 +5,9 @@ ms.custom:
   - seo-lt-2019
   - intro-overview
 ms.date: "01/18/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.subservice: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords:
   - "clustering [SQL Server]"

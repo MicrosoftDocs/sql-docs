@@ -4,8 +4,8 @@ description: See how to use the index create memory option to set the maximum am
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/24/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "index create memory option"

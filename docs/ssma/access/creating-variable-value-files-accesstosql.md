@@ -1,11 +1,11 @@
 ---
 description: "Creating Variable Value Files (AccessToSQL)"
 title: "Creating Variable Value Files (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: cpichuka 

@@ -4,8 +4,8 @@ description: Learn how to read a FILESTREAM column to a file using the IBCPSessi
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Read a FILESTREAM Column to File Using IBCPSession (OLE DB)

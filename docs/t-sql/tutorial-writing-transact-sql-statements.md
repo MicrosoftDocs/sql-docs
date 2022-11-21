@@ -1,8 +1,8 @@
 ---
 title: "T-SQL Tutorial: Writing Transact-SQL Statements"
 description: "Tutorial: Writing Transact-SQL Statements"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: quickstart
 helpviewer_keywords:
   - "Transact-SQL statements, tutorials"

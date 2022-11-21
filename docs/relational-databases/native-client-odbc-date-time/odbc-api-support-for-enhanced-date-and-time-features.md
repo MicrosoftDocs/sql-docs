@@ -3,10 +3,9 @@ description: "ODBC API Support for Enhanced Date and Time Features"
 title: "ODBC API for Date Time"
 ms.custom: ""
 ms.date: 12/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], API support"

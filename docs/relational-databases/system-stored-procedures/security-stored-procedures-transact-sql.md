@@ -4,10 +4,9 @@ title: "Security Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom:
 - event-tier1-build-2022
 ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -87,86 +86,87 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         [sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) (Deprecated) 
     :::column-end:::
     :::column:::
+        [sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (Deprecated)
     :::column-end:::
 :::row-end:::
 :::row:::
-    :::column:::
-        [sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (Deprecated)
-    :::column-end:::
     :::column:::
         [sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_copy_data_in_batches](../../relational-databases/system-stored-procedures/sys-sp-copy-data-in-batches-transact-sql.md) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (Deprecated)
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) (Deprecated)
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_dropalias](./system-stored-procedures-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_dropapprole](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_dropremotelogin](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md) (Deprecated) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md) (Deprecated) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) (Deprecated) 
     :::column-end:::
-:::row-end:::
-:::row:::
     :::column:::
         [sp_dropserver](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) 
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column:::
         [sp_dropsrvrolemember](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md) (Deprecated) 
+    :::column-end:::
+    :::column:::
+        [sp_dropuser](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md) (Deprecated) 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_dropuser](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md) (Deprecated) 
+        [sp_generate_database_ledger_digest](../../relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md) 
     :::column-end:::
     :::column:::
-        [sp_generate_database_ledger_digest](../../relational-databases/system-stored-procedures/sys-sp-generate-database-ledger-digest-transact-sql.md) 
+        [sp_external_policy_refresh](../../relational-databases/system-stored-procedures/sp-external-policy-refresh-transact-sql.md)      
     :::column-end:::
 :::row-end:::
 :::row:::

@@ -2,10 +2,9 @@
 title: Modify a Filter
 titleSuffix: SQL Server Profiler
 description: Learn how to modify a trace filter in SQL Server Profiler so you can gather the information you need. Read about how trace filters affect database performance.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: markingmyname

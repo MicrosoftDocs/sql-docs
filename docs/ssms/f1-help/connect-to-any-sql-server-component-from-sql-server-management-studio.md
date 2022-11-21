@@ -1,9 +1,8 @@
 ---
 title: Connect to Any SQL Server Component
 description: "Connect to Any SQL Server Component from SQL Server Management Studio"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "connections [SQL Server], SQL Server Management Studio"

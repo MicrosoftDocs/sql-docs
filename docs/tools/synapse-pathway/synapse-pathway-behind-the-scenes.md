@@ -3,8 +3,8 @@ title: Azure Synapse Pathway behind the scenes.
 description: Technical deep dive into how Azure Synapse Pathway translates your code. 
 author: WilliamDAssafMSFT 
 ms.author: wiassaf 
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual 
 ms.date: 02/11/2022
 monikerRange: "=azure-sqldw-latest"

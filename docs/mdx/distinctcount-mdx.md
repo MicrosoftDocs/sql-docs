@@ -2,8 +2,8 @@
 description: "DistinctCount (MDX)"
 title: "DistinctCount (MDX) | Microsoft Docs"
 ms.date: 01/12/2021
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.custom: mdx
 ms.topic: reference
 ms.author: owend

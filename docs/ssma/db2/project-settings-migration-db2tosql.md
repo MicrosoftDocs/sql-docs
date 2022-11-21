@@ -1,12 +1,12 @@
 ---
 description: "Project Settings (Migration) (DB2ToSQL)"
 title: "Project Settings (Migration) (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 author: cpichuka 

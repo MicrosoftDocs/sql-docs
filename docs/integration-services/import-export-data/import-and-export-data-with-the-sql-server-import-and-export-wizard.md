@@ -3,9 +3,9 @@ description: "Import and Export Data with the SQL Server Import and Export Wizar
 title: "Import and Export Data with the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"

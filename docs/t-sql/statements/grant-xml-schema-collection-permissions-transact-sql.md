@@ -5,9 +5,8 @@ description: Grants permissions on an XML schema collection.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: seo-lt-2019
 helpviewer_keywords:

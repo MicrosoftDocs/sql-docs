@@ -3,7 +3,6 @@ description: "SharePoint Site and List Permission Reference for Report Server It
 title: "SharePoint Site and List Permission Reference for Report Server Items | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 

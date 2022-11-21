@@ -5,8 +5,8 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.topic: overview
 ms.date: 02/10/2022
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom:
   - template-overview

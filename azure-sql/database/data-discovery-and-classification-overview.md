@@ -150,6 +150,7 @@ An important aspect of the classification is the ability to monitor access to se
 These are the activities that are actually auditable with sensitivity information:
 - ALTER TABLE ... DROP COLUMN
 - BULK INSERT
+- SELECT
 - DELETE
 - INSERT
 - MERGE

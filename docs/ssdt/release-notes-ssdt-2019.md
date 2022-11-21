@@ -41,19 +41,19 @@ Follow the below steps to install this product in an offline environment:
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
- **Version 0.1**
-    1. Target sever version supported: SQL server 2019 and SQL server 2022 
-    2. Cannot design Dimension Processing and Partition Processing.
-    3. Cannot design DQS related component.
-    4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
-    5. Side by side, localization and globalization are not supported.
-    6. SSIS extension is disabled after reinstallation. Workaround steps:
-        a. Open Visual Studio Extension Manager
-        b. Enable SSIS extension
-        c. Close Visual Studio
-        d. Execute devenv /updateconfiguration to restart
+**Version 0.1**
+  1. Target sever version supported: SQL server 2019 and SQL server 2022 
+  2. Cannot design Dimension Processing and Partition Processing.
+  3. Cannot design DQS related component.
+  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  5. Side by side, localization and globalization are not supported.
+  6. SSIS extension is disabled after reinstallation. Workaround steps:
+      a. Open Visual Studio Extension Manager
+      b. Enable SSIS extension
+      c. Close Visual Studio
+      d. Execute devenv /updateconfiguration to restart
 
- ## Download issues
+## Download issues
 If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed and enable "SQL Server Integration Services Project". And relaunch VS
 
 If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log.You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 

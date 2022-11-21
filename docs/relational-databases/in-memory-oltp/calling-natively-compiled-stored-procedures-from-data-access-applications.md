@@ -4,9 +4,8 @@ description: Find guidance for calling natively compiled stored procedures from 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/10/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8

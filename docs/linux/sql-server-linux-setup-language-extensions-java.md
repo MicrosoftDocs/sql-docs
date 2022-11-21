@@ -5,8 +5,8 @@ description: Learn how to install SQL Server Java Language Extension on Red Hat,
 author: rothja
 ms.author: jroth
 ms.topic: how-to
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 ms.custom:
 - intro-installation
 - event-tier1-build-2022

@@ -5,9 +5,8 @@ author: "kevin-farlee"
 ms.author: "kfarlee"
 ms.reviewer: wiassaf, randolphwest
 ms.date: 04/26/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 dev_langs:
   - "TSQL"

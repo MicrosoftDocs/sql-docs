@@ -4,8 +4,8 @@ description: Learn how to model, train, and use partitioned data that is created
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/02/2022
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: tutorial
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"

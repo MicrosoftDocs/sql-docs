@@ -5,11 +5,11 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
 ms.date: 09/28/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ---
-# <a id="release-history"></a> Release history for 2017 on Linux
+# <a id="release-history"></a> Release history for SQL Server 2017 on Linux
 
 [!INCLUDE [sqlserver2017-linux](../includes/applies-to-version/sqlserver2017-linux.md)]
 
@@ -769,3 +769,4 @@ Go back to the [release history](#release-history).
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+

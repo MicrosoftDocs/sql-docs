@@ -4,8 +4,8 @@ description: CLR integration with SQL Server allows you to implement some functi
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/21/2021"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 ms.custom: "seo-lt-2019"
 helpviewer_keywords:

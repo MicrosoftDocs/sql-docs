@@ -3,10 +3,9 @@ title: "TRUSTWORTHY Database Property | Microsoft Docs"
 description: Learn about the TRUSTWORTHY database property, which indicates whether the instance of SQL Server trusts the database and its contents. The default is OFF.
 ms.custom: ""
 ms.date: 08/24/2022
-ms.prod: sql
-ms.prod_service: security
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TRUSTWORTHY database property"

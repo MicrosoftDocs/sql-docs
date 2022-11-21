@@ -1,11 +1,11 @@
 ---
 description: "Mapping DB2 and SQL Server Data Types (DB2ToSQL)"
 title: "Mapping DB2 and SQL Server Data Types (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: cpichuka 

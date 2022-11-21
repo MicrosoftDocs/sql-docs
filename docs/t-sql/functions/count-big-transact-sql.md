@@ -4,8 +4,8 @@ description: "COUNT_BIG (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "COUNT_BIG_TSQL"

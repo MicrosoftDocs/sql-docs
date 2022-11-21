@@ -3,10 +3,9 @@ title: "Distributor and Publisher Information Script | Microsoft Docs"
 description: Use this script to answer commonly asked questions about objects at the Distributor and Publisher in SQL Server.
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Publishers [SQL Server replication], information scripts"

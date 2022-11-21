@@ -4,8 +4,8 @@ description: Learn about database mirroring, which is a solution for increasing 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/16/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "partners [SQL Server]"

@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
 ms.date: 09/29/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ---
 # Release notes for SQL Server 2022 on Linux
@@ -30,11 +30,11 @@ Most existing client tools that target [!INCLUDE[ssNoVersion](../includes/ssnove
 
 ## Latest versions for all packages
 
-This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022. The following table shows the most recent release, which is the general availability (**GA**). For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022](sql-server-linux-release-history-2022.md).
+This section lists the latest versions of each package per distribution, for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022. The following table shows the most recent release, which is **GA**. For full release history, see [Release history for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2022](sql-server-linux-release-history-2022.md).
 
 | Version | Release | Date | Build | KB article |
 | --- | --- | --- | --- | --- |
-| [!INCLUDE[ssSQL22](../includes/sssql22-md.md)] | GA | 2022-11-16 | 16.0.1000.6-26 | |
+| [!INCLUDE[ssSQL22](../includes/sssql22-md.md)] | GA | 2022-11-16 | 16.0.1000.6 | |
 
 
 - The **mssql-server-is** package isn't supported on SUSE in this release. See [SQL Server Integration Services (SSIS)](#ssis) for more information.
@@ -97,3 +97,4 @@ The following table lists the release history for [!INCLUDE[ssSQL22](../includes
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+

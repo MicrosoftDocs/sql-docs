@@ -4,8 +4,8 @@ description: Use the mssql extension for Visual Studio Code to edit and run Tran
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: dzsquared
 ms.author: drskwier

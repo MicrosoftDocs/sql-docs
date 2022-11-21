@@ -4,8 +4,8 @@ description: Learn how the JDBC Driver for SQL Server caches prepared statements
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Prepared statement metadata caching for the JDBC driver

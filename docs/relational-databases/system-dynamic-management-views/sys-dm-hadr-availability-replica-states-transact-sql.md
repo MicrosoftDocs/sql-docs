@@ -4,8 +4,8 @@ description: sys.dm_hadr_availability_replica_states (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/16/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_hadr_availability_replica_states"

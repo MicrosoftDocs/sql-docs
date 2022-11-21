@@ -4,8 +4,8 @@ description: Learn about the different cursor types you can use for your applica
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/22/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Understanding cursor types

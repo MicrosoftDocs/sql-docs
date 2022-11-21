@@ -1,9 +1,8 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL)
 description: "sp_describe_undeclared_parameters (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_describe_undeclared_parameters"

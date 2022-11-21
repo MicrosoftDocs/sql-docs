@@ -1,11 +1,11 @@
 ---
 description: "Assessment Report (DB2ToSQL)"
 title: "Assessment Report (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
 author: cpichuka 

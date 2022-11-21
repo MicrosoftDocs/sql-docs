@@ -2,8 +2,8 @@
 title: "PolyBase errors and possible solutions"
 description: PolyBase reference for errors and suggested solutions.
 ms.date: 03/22/2021
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 dev_langs: 
 -  "TSQL"

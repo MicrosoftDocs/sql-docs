@@ -1,11 +1,11 @@
 ---
 description: "Running Test Cases (OracleToSQL)"
 title: "Running Test Cases (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "04/29/2021"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: cpichuka 

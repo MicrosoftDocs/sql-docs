@@ -1,9 +1,8 @@
 ---
 title: go-sqlcmd utility (preview)
 description: The go-sqlcmd utility lets you enter Transact-SQL statements, system procedures, and script files using different modes.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier

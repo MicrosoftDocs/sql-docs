@@ -3,10 +3,9 @@ description: "Use the Copy Database Wizard"
 title: "Use the Copy Database Wizard"
 ms.custom: ""
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.cdw.packageconfiguration.f1"

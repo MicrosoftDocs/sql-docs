@@ -1,11 +1,11 @@
 ---
 description: "Connect to SQL Server  (OracleToSQL)"
 title: "Connect to SQL Server  (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: cpichuka 

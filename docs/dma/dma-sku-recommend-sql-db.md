@@ -4,8 +4,8 @@ description: Learn how to use Data Migration Assistant to identify the right Azu
 author: aciortea
 ms.author: aciortea
 ms.date: "06/08/2021"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"

@@ -1,11 +1,11 @@
 ---
 description: "Mapping DB2 Schemas to SQL Server Schemas (DB2ToSQL)"
 title: "Mapping DB2 Schemas to SQL Server Schemas (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: cpichuka 

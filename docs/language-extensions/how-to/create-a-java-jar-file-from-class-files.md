@@ -5,8 +5,8 @@ author: rothja
 ms.author: jroth 
 ms.date: 11/05/2019
 ms.topic: how-to
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Create a Java jar file from class files

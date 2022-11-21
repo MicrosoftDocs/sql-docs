@@ -3,10 +3,9 @@ title: Models
 description: A model defines the structure of data in your master data management solution. Models are the highest level of data organization in Master Data Services.
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], about models"

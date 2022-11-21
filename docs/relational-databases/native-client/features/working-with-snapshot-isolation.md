@@ -3,9 +3,9 @@ description: "Working with Snapshot Isolation in SQL Server Native Client"
 title: "Working with Snapshot Isolation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], snapshot isolation"

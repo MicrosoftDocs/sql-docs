@@ -4,8 +4,8 @@ description: Find out about the backup checksum default option. See how to use i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/31/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 

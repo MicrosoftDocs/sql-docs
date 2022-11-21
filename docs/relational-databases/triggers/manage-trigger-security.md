@@ -3,9 +3,9 @@ description: "Manage Trigger Security"
 title: "Manage Trigger Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2020"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], security"

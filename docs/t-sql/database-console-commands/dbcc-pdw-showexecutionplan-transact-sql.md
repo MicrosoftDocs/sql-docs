@@ -4,8 +4,8 @@ description: "DBCC PDW_SHOWEXECUTIONPLAN displays the execution plan for a query
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/14/2022
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "language-reference"
 dev_langs:
   - "TSQL"

@@ -115,7 +115,7 @@
           href: database/transparent-data-encryption-tde-overview.md
         - name: Bring Your Own Key (BYOK)
           href: database/transparent-data-encryption-byok-overview.md
-        - name: Managed identities with BYOK
+        - name: Managed identities with CMK
           href: database/transparent-data-encryption-byok-identity.md
 
     - name: Business continuity

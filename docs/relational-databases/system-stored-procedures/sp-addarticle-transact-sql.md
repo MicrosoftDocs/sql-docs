@@ -3,10 +3,9 @@ title: "sp_addarticle (Transact-SQL) | Microsoft Docs"
 description: Creates an article and adds it to a publication. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

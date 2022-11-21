@@ -3,10 +3,9 @@ title: "Use Nested FOR XML Queries"
 description: Learn how to use nested FOR XML queries.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML clause, nested FOR XML queries"

@@ -3,7 +3,6 @@ title: "Report and group variables collections references in a paginated report 
 description: Create a variable with a unique name when you have a complex calculation that you use in a paginated report more than once. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

@@ -3,10 +3,9 @@ description: "Add Attributes to a Change Tracking Group (Master Data Services)"
 title: Add Attributes to Change Tracking Group
 ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking groups [Master Data Services]"

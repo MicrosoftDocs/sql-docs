@@ -3,9 +3,9 @@ title: "SQL Server documentation include files"
 description: Explanation of SQL Server includes files for versioning and applies-to.
 ms.custom: ""
 ms.date: 01/19/2019
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 author: MashaMSFT
 ms.author: mathoma
 ms.topic: conceptual

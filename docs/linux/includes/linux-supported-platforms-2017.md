@@ -3,8 +3,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 07/29/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: include
 ---
 | Platform | File System | Installation Guide |

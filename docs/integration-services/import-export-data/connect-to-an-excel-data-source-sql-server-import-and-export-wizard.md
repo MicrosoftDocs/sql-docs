@@ -3,9 +3,9 @@ description: "Connect to an Excel Data Source (SQL Server Import and Export Wiza
 title: "Connect to an Excel Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: chugugrace

@@ -1,9 +1,8 @@
 ---
 description: "Add Related Tables to Diagrams (Visual Database Tools)"
 title: Add Related Tables to Diagrams
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting tables"

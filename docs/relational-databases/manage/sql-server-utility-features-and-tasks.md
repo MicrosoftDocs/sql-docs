@@ -3,10 +3,9 @@ title: "SQL Server Utility Features and Tasks | Microsoft Docs"
 description: Get acquainted with the SQL Server Utility. Learn about its features and find out how you can use it to monitor a SQL Server environment.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server utility [SQL Server]"

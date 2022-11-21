@@ -1,9 +1,8 @@
 ---
 description: "Arrange Tables in Diagrams (Visual Database Tools)"
 title: Arrange Tables in Diagrams
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "organizing database diagram objects [SQL Server]"

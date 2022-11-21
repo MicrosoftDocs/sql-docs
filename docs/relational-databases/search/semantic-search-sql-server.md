@@ -2,9 +2,8 @@
 description: "Semantic Search (SQL Server)"
 title: "Semantic Search (SQL Server) | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server]"

@@ -1,11 +1,11 @@
 ---
 description: "Command-line options in the SSMA Console (AccessToSQL)"
 title: "Command Line Options in SSMA Console (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: cpichuka 

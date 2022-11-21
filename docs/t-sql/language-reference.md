@@ -3,8 +3,8 @@ title: Transact-SQL Reference (Database Engine)
 description: Transact-SQL Reference (Database Engine)
 ms.custom: ""
 ms.date: "04/29/2020"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "sql13.tsqlref.f1"

@@ -3,10 +3,9 @@ description: "STX (geometry Data Type)"
 title: "STX (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/23/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "STX (geometry Data Type)"

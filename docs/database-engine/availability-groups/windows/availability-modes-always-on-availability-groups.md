@@ -4,8 +4,8 @@ description: "Learn the three different availability modes for an Always On avai
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "10/16/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

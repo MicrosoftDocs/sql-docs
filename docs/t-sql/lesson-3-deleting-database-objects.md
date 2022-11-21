@@ -1,8 +1,8 @@
 ---
 title: "T-SQL Tutorial: Delete database objects"
 description: "T-SQL Tutorial: Delete database objects"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords: 
   - "deleting database objects"

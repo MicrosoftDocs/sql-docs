@@ -4,9 +4,8 @@ description: Use the Transaction Performance Analysis report in SQL Server Manag
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/02/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 helpviewer_keywords:

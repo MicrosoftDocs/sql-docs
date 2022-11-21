@@ -4,9 +4,8 @@ description: Learn the general differences between client-side and server-side X
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 ms.custom: "seo-lt-2019"
 helpviewer_keywords:

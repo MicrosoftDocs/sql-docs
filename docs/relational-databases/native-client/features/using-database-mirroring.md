@@ -3,9 +3,9 @@ description: "Using Database Mirroring in SQL Server Native Client"
 title: "Using Database Mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"

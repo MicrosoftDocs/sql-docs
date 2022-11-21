@@ -1,11 +1,11 @@
 ---
 description: "Advanced Object Selection (DB2ToSQL)"
 title: "Advanced Object Selection (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: cpichuka 

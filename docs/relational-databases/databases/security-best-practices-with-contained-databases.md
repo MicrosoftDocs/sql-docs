@@ -3,9 +3,8 @@ title: "Security Best Practices with Contained Databases | Microsoft Docs"
 description: Understand and mitigate the unique threats to contained databases, including those related to the USER WITH PASSWORD authentication process in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, threats"

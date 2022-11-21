@@ -5,7 +5,6 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18

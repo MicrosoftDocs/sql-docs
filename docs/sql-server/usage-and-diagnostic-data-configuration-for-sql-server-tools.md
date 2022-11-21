@@ -3,9 +3,9 @@ title: "Configure usage and diagnostic data collection for SQL Server tools (CEI
 description: "Learn about the information that CEIP collects from users to improve products. See how to opt in or out of the program in SQL Server Data Tools (SSDT)."
 ms.custom: ""
 ms.date: "10/21/2016"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssdt
+ms.subservice: ssdt
 ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: "MikeRayMSFT"

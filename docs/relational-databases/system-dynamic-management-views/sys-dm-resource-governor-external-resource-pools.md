@@ -4,8 +4,8 @@ description: sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/06/2020"
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_resource_governor_external_resource_pools_TSQL"

@@ -2,9 +2,9 @@
 description: "Configure Data Collection Parameters (Transact-SQL)"
 title: "Configure Data Collection Parameters (T-SQL)"
 ms.date: 06/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data collection [SQL Server]"

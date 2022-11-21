@@ -4,8 +4,8 @@ description: This lists the system requirements for the ODBC Driver for SQL Serv
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "prerequisites"

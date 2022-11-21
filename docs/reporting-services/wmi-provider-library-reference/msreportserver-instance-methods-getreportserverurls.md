@@ -3,7 +3,6 @@ description: "GetReportServerUrls Method (WMI MSReportServer_Instance)"
 title: "GetReportServerUrls Method (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.date: 06/09/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 

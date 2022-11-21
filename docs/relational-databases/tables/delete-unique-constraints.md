@@ -3,10 +3,9 @@ description: "Delete Unique Constraints"
 title: "Delete Unique Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing constraints"

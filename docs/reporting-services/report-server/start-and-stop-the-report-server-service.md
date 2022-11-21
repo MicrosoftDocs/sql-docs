@@ -3,7 +3,6 @@ title: "Start and Stop the Report Server Service | Microsoft Docs"
 description: Learn how to start and stop the Windows service that contains the Report Server Web service, the web portal, and a background processing application.
 ms.date: 03/22/2021
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 

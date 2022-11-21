@@ -2,9 +2,8 @@
 description: "Manage and Monitor Full-Text Search for a Server Instance"
 title: "Manage & monitor Full-Text Search for a SQL Server instance"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], about"

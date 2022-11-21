@@ -4,9 +4,8 @@ description: Learn how the adoption of In-Memory OLTP features in SQL Server aff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "01/28/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e

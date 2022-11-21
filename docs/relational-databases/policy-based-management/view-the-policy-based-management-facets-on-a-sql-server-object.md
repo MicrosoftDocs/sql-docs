@@ -3,10 +3,9 @@ title: "View Policy-Based Management facets on an object"
 description: Describes how to view all of the Policy-Based Management facts applied to a specific SQL Server object in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, view facets"

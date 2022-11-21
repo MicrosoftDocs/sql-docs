@@ -3,9 +3,8 @@ title: "Change Font Color, Size, and Style"
 description: Learn how to change font color, size, and style for the SQL Server Management Studio editors. The color can be different for different text types (such as comments and statements).
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

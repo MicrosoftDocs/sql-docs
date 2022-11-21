@@ -3,10 +3,9 @@ title: "Use Utility Explorer to Manage the SQL Server Utility | Microsoft Docs"
 description: See various ways of using Utility Explorer to manage SQL Server instances, such as adjusting policy definitions and viewing CPU and storage volume utilization.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT

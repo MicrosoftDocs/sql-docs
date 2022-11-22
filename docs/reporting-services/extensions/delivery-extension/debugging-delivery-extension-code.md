@@ -2,8 +2,8 @@
 title: "Debugging Delivery Extension Code | Microsoft Docs"
 description: Discover how to use Microsoft .NET Framework debugging tools to analyze your delivery extension code and locate errors in it.
 ms.date: 03/16/2017
-ms.service: reporting-services
-ms.subservice: extensions
+ms.product: reporting-services
+ms.technology: extensions
 
 
 ms.topic: reference

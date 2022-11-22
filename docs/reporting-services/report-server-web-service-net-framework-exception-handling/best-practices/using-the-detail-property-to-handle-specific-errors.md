@@ -2,8 +2,8 @@
 title: "Using the Detail Property to Handle Specific Errors | Microsoft Docs"
 description: Learn how access the inner text of the Message child element by using the Detail property to handle specific errors.
 ms.date: 03/16/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service-net-framework-exception-handling
+ms.product: reporting-services
+ms.technology: report-server-web-service-net-framework-exception-handling
 
 
 ms.topic: reference

@@ -2,8 +2,8 @@
 title: "Handling Exceptions in Reporting Services | Microsoft Docs"
 description: Learn how to handle exceptions that occur in Reporting Services so you can determine the next appropriate action to take in your applications.
 ms.date: 03/14/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service-net-framework-exception-handling
+ms.product: reporting-services
+ms.technology: report-server-web-service-net-framework-exception-handling
 
 
 ms.topic: reference

@@ -2,8 +2,8 @@
 title: "How to install custom security extensions | Microsoft Docs"
 description: Learn about the new web portal that Reporting Services 2016 introduced. See how the resulting changes affect the implementation of custom security extensions.
 ms.date: 07/10/2017
-ms.service: reporting-services
-ms.subservice: extensions
+ms.product: reporting-services
+ms.technology: extensions
 
 
 ms.topic: reference

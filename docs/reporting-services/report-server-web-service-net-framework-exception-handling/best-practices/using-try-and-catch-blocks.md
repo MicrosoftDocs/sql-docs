@@ -2,8 +2,8 @@
 title: "Using Try and Catch Blocks | Microsoft Docs"
 description: Learn how to provide another layer of protection against requests that are not valid by applying adequate exception handling through the use of try/catch blocks.
 ms.date: 03/06/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service-net-framework-exception-handling
+ms.product: reporting-services
+ms.technology: report-server-web-service-net-framework-exception-handling
 
 
 ms.topic: reference

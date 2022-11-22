@@ -2,8 +2,8 @@
 title: "Using Reporting Services Security Policy Files | Microsoft Docs"
 description: Learn about the configuration files that Reporting Services uses to store security policy information for code assemblies. Find out how to modify them.
 ms.date: 03/06/2017
-ms.service: reporting-services
-ms.subservice: extensions
+ms.product: reporting-services
+ms.technology: extensions
 
 
 ms.topic: reference

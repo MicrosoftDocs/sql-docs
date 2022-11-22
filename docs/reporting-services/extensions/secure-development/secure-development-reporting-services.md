@@ -2,8 +2,8 @@
 title: "Secure Development (Reporting Services) | Microsoft Docs"
 description: Learn about the code access security system that Reporting Services uses, which runs code in tightly constrained, administrator-defined security contexts.
 ms.date: 03/14/2017
-ms.service: reporting-services
-ms.subservice: extensions
+ms.product: reporting-services
+ms.technology: extensions
 
 
 ms.topic: reference

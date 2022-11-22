@@ -2,8 +2,8 @@
 title: "Implementing the IRenderingExtension Interface | Microsoft Docs"
 description: Learn how to implement the IRenderingExtension interface, which transforms report data into output formats that viewers, printers, and other targets consume.
 ms.date: 03/16/2017
-ms.service: reporting-services
-ms.subservice: extensions
+ms.product: reporting-services
+ms.technology: extensions
 
 
 ms.topic: reference

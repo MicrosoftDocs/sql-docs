@@ -35,7 +35,7 @@ ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 |**audit_file_size**|**bigint**|Approximate size of the audit file, in bytes. Only populated for file audits.|  
   
 ## Permissions  
- Principals must have the **VIEW SERVER STATE** permission.  
+ Principals must have the **VIEW SERVER SECURITY STATE** permission.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

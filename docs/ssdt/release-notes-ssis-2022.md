@@ -33,7 +33,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   5. Side by side, localization and globalization are not supported.
   6. To design packages using Oracle and Teradata connectors is not supportted yet.
      
-## Download issues
+## Installation issues
 If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". 
   1. Open Visual Studio -> Extension -> Manage Extensions -> Installed
   2. Enable SSIS extension

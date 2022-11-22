@@ -70,8 +70,11 @@ Follow the below steps to install this product in an offline environment:
     3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
 Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
 
-## Download issues
-If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed and enable "SQL Server Integration Services Project". And relaunch VS
+## Installation issues
+If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". 
+  1. Open Visual Studio -> Extension -> Manage Extensions -> Installed
+  2. Enable SSIS extension
+  3. Relaunch Visual Studio
 
 If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log.You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
 - If the error is "The file {filefullpath} already exists." 

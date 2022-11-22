@@ -8,7 +8,7 @@ ms.date: 09/30/2021
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
-ms.prod: sql
+ms.service: sql
 ---
 # Connect your SQL Server to Azure Arc
 
@@ -60,7 +60,9 @@ az provider register --namespace 'Microsoft.AzureArcData'
 If the machine with SQL Server is already connected to Azure Arc, you can connect the SQL Server instances on that machine by installing *Azure extension for SQL Server*. The SQL Server extension for Azure Arc Server can be found in the extension manager as **SQL Server Extension - Azure Arc**.  Once installed, Azure extension for SQL Server will recognize all the installed SQL Server instances and connect them with Azure Arc. The extension will run continuously to detect changes of the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, it will be automatically registered with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]
->The Azure resource with type `SQL Server - Azurde Arc` representing the SQL Server instance installed installed on the machine machine will use the same region and the resource group as the Azure resources for Arc-enabled servers.
+>
+> - The Managed System Identity used by the Azure connected machine agent must have the *Azure Connected SQL Server Onboarding* role at resource group level.
+> - The Azure resource with type `SQL Server - Azure Arc` representing the SQL Server instance installed on the machine machine will use the same region and resource group as the Azure resources for Arc-enabled servers.
 
 # [Azure portal](#tab/azure)
 

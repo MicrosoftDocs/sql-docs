@@ -4,8 +4,8 @@ description: Filestream and FileTable Dynamic Management Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "FileTables [SQL Server], dynamic management views"

@@ -2,9 +2,8 @@
 description: "Improve the Performance of Full-Text Queries"
 title: "Improve the Performance of Full-Text Queries | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: rwestMSFT

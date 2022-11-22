@@ -4,9 +4,8 @@ description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATABASE SCOPED CREDENTIAL"
@@ -53,6 +52,7 @@ Specifies the name of the database scoped credential being created. *credential_
 Specifies the name of the account to be used when connecting outside the server. 
 
 - To import a file from Azure Blob Storage or Azure Data Lake Storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).
+- To import a file from Azure Blob Storage using a managed identity, the identity name must be `MANAGED IDENTITY`.
 - To load data into Azure Synapse Analytics, any valid value can be used for identity. 
 - When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY argument. It should just be the account name.
 - When on SQL Server, if creating a database scoped credential with a Storage Access Key used as the SECRET, IDENTITY is ignored.

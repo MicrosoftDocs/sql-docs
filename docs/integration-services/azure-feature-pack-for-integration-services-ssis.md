@@ -3,10 +3,9 @@ description: "Azure Feature Pack for Integration Services (SSIS)"
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SSIS.AZURE.F1"

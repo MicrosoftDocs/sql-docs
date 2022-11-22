@@ -1,9 +1,8 @@
 ---
 title: Connect to Server (Login Page) Database Engine
 description: "Connect to Server (Login Page) Database Engine"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.connecttosqlserver.login.f1"

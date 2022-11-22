@@ -4,8 +4,7 @@ description: SQLXML Is Not Installed in SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: "reference"
 ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

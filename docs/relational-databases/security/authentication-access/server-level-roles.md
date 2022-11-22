@@ -4,10 +4,9 @@ description: SQL Server provides server-level roles. These security principals g
 ms.custom:
 - event-tier1-build-2022
 ms.date: "07/25/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.Security.NT_AUTHORITY.SYSTEM"

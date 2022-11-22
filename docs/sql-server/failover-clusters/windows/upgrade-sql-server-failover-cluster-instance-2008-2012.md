@@ -5,8 +5,8 @@ ms.date: "06/15/2020"
 ms.custom:
   - seo-lt-2019
   - intro-migration
-ms.prod: sql
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords:
   - "upgrading failover clusters"

@@ -4,9 +4,8 @@ description: dm_db_xtp_memory_consumers returns data on database-level memory co
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_xtp_memory_consumers"

@@ -3,10 +3,9 @@ description: "sp_syscollector_create_collector_type (Transact-SQL)"
 title: "sp_syscollector_create_collector_type (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_syscollector_create_collector_type"

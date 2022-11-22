@@ -7,9 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/20/2018
 ms.topic: article
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 titleSuffix: SQL Server on Linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---

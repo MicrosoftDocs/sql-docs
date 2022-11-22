@@ -3,10 +3,9 @@ description: "sp_addlinkedserver (Transact-SQL)"
 title: "sp_addlinkedserver (Transact-SQL)"
 ms.custom: ""
 ms.date: "11/16/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_addlinkedserver_TSQL"
@@ -45,17 +44,17 @@ Is the name of the linked server to create. The argument *server* is **sysname**
 Is the product name of the OLE DB data source to add as a linked server. The value *product_name* is **nvarchar(128)**, with a default of NULL. If the value is **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* do not have to be specified.  
   
 #### [ @provider = ] *\'provider_name\'*          
-Is the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. The *provider_name* must be unique for the specified OLE DB provider installed on the current computer. The value *provider_name* is **nvarchar(128)**, with a default of NULL; however, if *provider_name* is omitted, SQLNCLI is used. 
+Is the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. The *provider_name* must be unique for the specified OLE DB provider installed on the current computer. The value *provider_name* is **nvarchar(128)**.  
 
-> [!NOTE]
-> Using SQLNCLI will redirect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. The OLE DB provider is expected to be registered with the specified PROGID in the registry.
+- Prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], if `@provider` is omitted, SQLNCLI is used. Using SQLNCLI will redirect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. The OLE DB provider is expected to be registered with the specified PROGID in the registry. Instead of SQLNCLI, MSOLEDBSQL is recommended.
+- Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you must specify a provider name. MSOLEDBSQL is recommended.
 
 > [!IMPORTANT] 
-> The previous Microsoft OLE DB Provider for SQL Server (SQLOLEDB) and SQL Server Native Client OLE DB provider (SQLNCLI) remain deprecated and it is not recommended to use either for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
   
 #### [ @datasrc = ] *\'data_source\'*          
  Is the name of the data source as interpreted by the OLE DB provider. The value *data_source* is **nvarchar(**4000**)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.  
-  
+
 #### [ @location = ] *\'location\'*          
  Is the location of the database as interpreted by the OLE DB provider. The value *location* is **nvarchar(**4000**)**, with a default of NULL. The argument *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.  
   

@@ -3,7 +3,6 @@ title: "Configure Available Memory for Report Server Applications | Microsoft Do
 description: Learn about the configuration settings for memory usage in Reporting Services and how a server responds when memory pressure is a factor in processing requests.
 ms.date: 05/30/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 

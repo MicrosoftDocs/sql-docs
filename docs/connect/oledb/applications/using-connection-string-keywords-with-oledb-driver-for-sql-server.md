@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: "vanto"
 ms.date: 10/26/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "conceptual"
 f1_keywords:
   - "sql13.swb.connecttoserver.options.registeredservers.f1"

@@ -3,9 +3,9 @@ description: "Audit Add Login to Server Role Event Class"
 title: "Audit Add Login to Server Role Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Audit Add Login to Server Role event class"

@@ -3,7 +3,6 @@ title: "URL Reservations & Registration (Configuration Manager) | Microsoft Docs
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
 ms.date: 01/16/2020
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual

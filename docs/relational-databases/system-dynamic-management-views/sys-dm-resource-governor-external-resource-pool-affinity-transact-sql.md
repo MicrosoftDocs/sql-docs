@@ -4,8 +4,8 @@ description: sys.dm_resource_governor_external_resource_pool_affinity (Transact-
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/13/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_resource_governor_external_resource_pool_affinity"

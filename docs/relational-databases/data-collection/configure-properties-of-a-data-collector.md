@@ -3,9 +3,9 @@ description: "Configure Properties of a Data Collector"
 title: "Configure Properties of a Data Collector | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dc.datacollectionprop.general.f1"

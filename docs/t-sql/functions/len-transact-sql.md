@@ -4,8 +4,8 @@ description: "LEN (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/03/2015"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "LEN"

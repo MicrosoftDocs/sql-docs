@@ -3,9 +3,9 @@ title: "Create & test classifier user-defined function - Resource Governor"
 description: Learn how to create and test a classifier user-defined function which involves running Transact-SQL statements in the SQL Server Management Studio Query Editor.
 ms.custom: seo-dt-2019
 ms.date: "07/11/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, classifier function create"

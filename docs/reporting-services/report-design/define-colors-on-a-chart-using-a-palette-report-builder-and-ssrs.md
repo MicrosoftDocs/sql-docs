@@ -3,7 +3,6 @@ title: "Define colors on a paginated report chart using a palette | Microsoft Do
 description: Change the color palette for a paginated report chart by selecting a pre-defined palette or by defining a custom palette. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

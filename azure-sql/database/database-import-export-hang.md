@@ -31,6 +31,8 @@ The Azure SQL Database Import/Export service provides a limited number of comput
 
 Additionally, as the Import/Export service performs a logical backup of the database the time to complete is more dependent on the number of objects in the database than a traditional physical database backup.
 
+> [!NOTE]
+> After resources are assigned and a request starts to process, the service automatically cancels the request after two days.
 
 ## Recommended solutions
 
@@ -45,7 +47,7 @@ If your database exports are used only for recovery from accidental data deletio
 
 ## Things to consider when you export or import a database
 
-* All the methods discussed in this article use up the Database Transaction Unit (DTU) quota, which causes throttling by the Azure SQL Database service. You can [view the DTU stats for the database on the Azure portal](./monitor-tune-overview.md#azure-sql-database-and-azure-sql-managed-instance-resource-monitoring). If the database has reached its resource limits, [upgrade the service tier](./scale-resources.md) to add more resources.
+* All the methods discussed in this article consume Database Transaction Units (DTUs) or CPU quota, which causes throttling by the Azure SQL Database service. You can [view the DTU stats for the database on the Azure portal](./monitor-tune-overview.md#azure-sql-database-and-azure-sql-managed-instance-resource-monitoring). If the database has reached its resource limits, [upgrade the service tier](./scale-resources.md) to add more resources.
 * Ideally, you should run client applications (like the sqlpackage utility or your custom DAC application) from a VM in the same region as your database. Otherwise, you might experience performance issues related to network latency.
 * Exporting large tables without clustered indexes can be very slow or even cause failure. This behavior occurs because the table can't be split up and exported in parallel. Instead, it must be exported in a single transaction, and that causes slow performance and potential failure during export, especially for large tables.
 

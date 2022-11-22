@@ -6,8 +6,8 @@ ms.author: lle
 ms.reviewer: maghan
 ms.date: 01/09/2018
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.custom:
   - intro-installation
 ---

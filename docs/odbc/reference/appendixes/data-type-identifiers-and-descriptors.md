@@ -3,10 +3,9 @@ description: "Data Type Identifiers and Descriptors"
 title: "Data Type Identifiers and Descriptors | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2019"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "data types [ODBC], identifiers"

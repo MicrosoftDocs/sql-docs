@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 02/24/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server Configuration Manager, start and stop services"

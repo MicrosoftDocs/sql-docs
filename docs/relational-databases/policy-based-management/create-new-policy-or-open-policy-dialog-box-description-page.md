@@ -3,10 +3,9 @@ title: "'Description' page of 'Create New Policy' or 'Open Policy' dialog box"
 description: Describes the 'Description' page of the 'Create New Policy' or 'Open Policy' dialog box for Policy-Based Management for SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT

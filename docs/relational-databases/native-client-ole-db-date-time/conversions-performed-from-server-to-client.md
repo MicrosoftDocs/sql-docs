@@ -2,10 +2,9 @@
 description: "SQL Server Native Client Conversions Performed from Server to Client"
 title: "Conversions Performed from Server to Client"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 helpviewer_keywords: 

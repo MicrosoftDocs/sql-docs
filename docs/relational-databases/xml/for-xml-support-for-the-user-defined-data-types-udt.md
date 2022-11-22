@@ -2,10 +2,9 @@
 title: "FOR XML support for user-defined data types (UDT)"
 description: Learn about support for user-defined data types (UDT) when using the FOR XML clause.
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "UDTs [SQL Server], XML"

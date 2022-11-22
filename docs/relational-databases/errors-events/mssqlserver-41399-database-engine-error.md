@@ -3,9 +3,9 @@ description: "MSSQLSERVER_41399"
 title: "MSSQLSERVER_41399 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "41399 (Database Engine error)"

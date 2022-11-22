@@ -1,8 +1,8 @@
 ---
 title: Python language extension
 description: Learn about the Python extension for running external Python scripts with SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: conceptual
 author: WilliamDAssafMSFT

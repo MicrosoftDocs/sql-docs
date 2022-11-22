@@ -3,9 +3,9 @@ title: "View & read failover cluster instance diagnostic log"
 description: Learn how to view and read the running diagnostic log produced by a SQL Server failover cluster instance.
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT

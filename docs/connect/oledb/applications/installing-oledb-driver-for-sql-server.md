@@ -4,8 +4,8 @@ description: Installing and uninstalling OLE DB Driver for SQL Server. To instal
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/30/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ms.custom: intro-installation
 helpviewer_keywords:

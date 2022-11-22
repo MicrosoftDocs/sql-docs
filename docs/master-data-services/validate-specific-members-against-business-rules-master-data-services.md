@@ -3,10 +3,9 @@ description: "Validate Specific Members against Business Rules (Master Data Serv
 title: Validate Specific Members against Business Rules
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "applying business rules [Master Data Services]"

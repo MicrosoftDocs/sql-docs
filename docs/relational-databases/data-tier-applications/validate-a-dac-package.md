@@ -3,8 +3,8 @@ description: "Validate a DAC Package"
 title: "Validate a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: 7/12/2022
-ms.prod: sql
-ms.technology:
+ms.service: sql
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data-tier application [SQL Server], validate"

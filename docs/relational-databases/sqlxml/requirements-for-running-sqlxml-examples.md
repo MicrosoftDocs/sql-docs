@@ -4,9 +4,8 @@ description: Learn the requirements for creating working samples using the examp
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "examples [SQLXML]"

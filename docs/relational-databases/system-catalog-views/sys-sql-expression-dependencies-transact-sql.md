@@ -4,9 +4,8 @@ description: sys.sql_expression_dependencies (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sql_expression_dependencies"

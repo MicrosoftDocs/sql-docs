@@ -3,7 +3,6 @@ title: "Performance Counters MSRS 2016 SharePoint Mode, Performance Objects | Mi
 description: Learn about performance counters for the MSRS 2016 Web Service SharePoint Mode and MSRS 2016 Windows Service SharePoint Mode performance objects.
 ms.date: 02/17/2021
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 

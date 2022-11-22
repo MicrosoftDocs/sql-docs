@@ -3,9 +3,9 @@ description: "Project Settings (Migration) (SybaseToSQL)"
 title: "Project Settings (Migration) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: cpichuka 

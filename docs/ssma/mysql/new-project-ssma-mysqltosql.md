@@ -1,11 +1,11 @@
 ---
 description: "New Project (SSMA) (MySQLToSQL)"
 title: "New Project (SSMA) (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: cpichuka 

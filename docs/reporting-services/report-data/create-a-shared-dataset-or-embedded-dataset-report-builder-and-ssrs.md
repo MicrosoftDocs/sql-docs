@@ -4,7 +4,6 @@ description: Learn how to create embedded datasets and shared datasets for use i
 
 ms.date: 05/10/2021
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 

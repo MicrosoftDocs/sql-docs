@@ -1,9 +1,8 @@
 ---
 description: "Combine Conditions When AND Has Precedence (Visual Database Tools)"
 title: Combine Conditions When AND Has Precedence
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search conditions [SQL Server], combining"

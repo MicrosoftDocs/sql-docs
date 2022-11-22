@@ -3,10 +3,9 @@ description: "Get Information About Event Notifications"
 title: "Get Information About Event Notifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], metadata"

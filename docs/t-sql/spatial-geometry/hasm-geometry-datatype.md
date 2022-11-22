@@ -3,10 +3,9 @@ description: "HasM (geometry DataType)"
 title: "HasM (geometry DataType) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"

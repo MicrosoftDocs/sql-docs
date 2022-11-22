@@ -1,11 +1,11 @@
 ---
 description: "Save Metadata  (OracleToSQL)"
 title: "Save Metadata  (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: cpichuka 

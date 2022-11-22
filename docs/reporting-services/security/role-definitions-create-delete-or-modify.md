@@ -3,7 +3,6 @@ description: "Create, Delete, or Modify a Role (Management Studio)"
 title: "Create, Delete, or Modify a Role (Management Studio) | Microsoft Docs"
 ms.date: 05/07/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 

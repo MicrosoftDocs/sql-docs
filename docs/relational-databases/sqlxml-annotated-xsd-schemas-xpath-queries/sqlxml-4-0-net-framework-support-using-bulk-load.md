@@ -4,9 +4,8 @@ description: Learn how to use the SQLXML 4.0 Bulk Load COM object in the .NET en
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 helpviewer_keywords:
   - "SQLXML, XML Bulk Load"

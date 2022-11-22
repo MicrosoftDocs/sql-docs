@@ -5,7 +5,6 @@ ms.custom:
 - event-tier1-build-2022
 ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: "reference"
 f1_keywords: 
@@ -68,4 +67,4 @@ The last changes published and synchronized to Azure Synapse cannot be guarantee
 ## Next steps
 
 - [Manage Azure Synapse Link for SQL Server and Azure SQL Database](../../sql-server/synapse-link/synapse-link-sql-server-change-feed-manage.md)
-- [Get started with Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)
+- [Get started with Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022)

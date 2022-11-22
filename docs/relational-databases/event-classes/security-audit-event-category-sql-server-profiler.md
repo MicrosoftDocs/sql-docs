@@ -2,9 +2,9 @@
 description: "Security Audit Event Category (SQL Server Profiler)"
 title: "Security Audit Event Category - Profiler"
 ms.date: 06/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Security Audit event category [SQL Server]"

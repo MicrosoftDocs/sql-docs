@@ -4,8 +4,8 @@ description: "Returns a description of the built in permissions hierarchy of the
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "fn_builtin_permissions"

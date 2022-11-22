@@ -3,10 +3,9 @@ description: "Create a Publication from an Oracle Database"
 title: "Create a Publication from an Oracle Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], Oracle databases"

@@ -4,9 +4,8 @@ description: This article describes the prefix field, which encodes the length o
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/28/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

@@ -3,9 +3,9 @@ description: "Using Test Repositories (SybaseToSQL)"
 title: "Using Test Repositories (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/29/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Test Repositories"

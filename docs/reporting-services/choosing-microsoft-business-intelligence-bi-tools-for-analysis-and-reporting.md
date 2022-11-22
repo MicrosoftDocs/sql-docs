@@ -6,7 +6,6 @@ ms.author: maggies
 ms.reviewer: ""
 ms.prod: reporting-services
 ms.technology: reporting-services
-ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020

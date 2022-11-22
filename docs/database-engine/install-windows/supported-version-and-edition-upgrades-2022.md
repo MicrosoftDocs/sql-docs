@@ -1,11 +1,11 @@
 ---
-title: "Supported version and edition upgrades (SQL Server 2022 Preview)"
-description: The supported version and edition upgrades for SQL Server 2022 Preview.
+title: "Supported version and edition upgrades (SQL Server 2022)"
+description: The supported version and edition upgrades for SQL Server 2022.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/25/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "cross-language support"
 monikerRange: ">=sql-server-2017"
 ---
-# Supported version and edition upgrades (SQL Server 2022 Preview)
+# Supported version and edition upgrades (SQL Server 2022)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 

@@ -3,10 +3,9 @@ description: "Load-Balancing Packages on Remote Servers by Using SQL Server Agen
 title: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "load-balancing [Integration Services]"

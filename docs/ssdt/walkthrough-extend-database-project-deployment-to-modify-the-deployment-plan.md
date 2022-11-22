@@ -1,8 +1,8 @@
 ---
 title: Extend Database Project Deployment to Modify the Deployment Plan
 description: Create a deployment contributor of type DeploymentPlanModifier that programs the deployment script batches to rerun if errors occur during execution.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname

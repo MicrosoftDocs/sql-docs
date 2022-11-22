@@ -4,9 +4,8 @@ description: sys.remote_service_bindings (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.remote_service_bindings_TSQL"

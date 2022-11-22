@@ -3,10 +3,9 @@ title: "sp_dropsubscription (Transact-SQL) | Microsoft Docs"
 description: Drops subscriptions to an article, publication, or subscriptions on the Publisher. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

@@ -2,10 +2,9 @@
 description: "CompoundCurve"
 title: "CompoundCurve | Microsoft Docs"
 ms.date: "07/16/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA

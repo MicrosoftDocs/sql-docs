@@ -4,8 +4,8 @@ description: Here you can find compliance and legal information for version 4.x 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # JDBC specification compliance

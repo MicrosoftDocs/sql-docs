@@ -4,8 +4,8 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 11/09/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.custom: intro-installation
 helpviewer_keywords:
@@ -42,12 +42,12 @@ curl -O https://download.microsoft.com/download/8/6/8/868e5fc4-7bfe-494d-8f9d-11
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
 gpg --verify msodbcsql18_18.1.2.1-1_amd64.sig msodbcsql18_18.1.2.1-1_amd64.apk
-gpg --verify mssql-tools18_18.1.2.1-1_amd64.sig mssql-tools18_18.1.2.1-1_amd64.apk
+gpg --verify mssql-tools18_18.1.1.1-1_amd64.sig mssql-tools18_18.1.1.1-1_amd64.apk
 
 
 #Install the package(s)
 sudo apk add --allow-untrusted msodbcsql18_18.1.2.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools18_18.1.2.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools18_18.1.1.1-1_amd64.apk
 ```
 
 > [!NOTE]

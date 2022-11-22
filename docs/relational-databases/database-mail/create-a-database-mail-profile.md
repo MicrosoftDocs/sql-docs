@@ -3,10 +3,9 @@ description: "Create a Database Mail Profile"
 title: "Create a Database Mail Profile | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], public profiles"

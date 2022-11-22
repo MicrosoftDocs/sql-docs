@@ -5,8 +5,8 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan, randolphwest
 ms.date: 11/03/2022
-ms.prod: sql
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 ---
 # Validate SQL Server Integration Services (SSIS) packages deployed to Azure

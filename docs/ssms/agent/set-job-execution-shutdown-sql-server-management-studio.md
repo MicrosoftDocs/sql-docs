@@ -1,9 +1,8 @@
 ---
 description: "Set Job Execution Shutdown"
 title: Set Job Execution Shutdown
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], stopping"

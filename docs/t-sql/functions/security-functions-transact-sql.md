@@ -5,9 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: ""
 helpviewer_keywords:

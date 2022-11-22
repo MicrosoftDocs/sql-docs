@@ -1,11 +1,11 @@
 ---
 description: "Working with the Sample Console Script Files (OracleToSQL)"
 title: "Working with the Sample Console Script Files (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Sample Console Script Files, ServersConnectionFileSample.xml"

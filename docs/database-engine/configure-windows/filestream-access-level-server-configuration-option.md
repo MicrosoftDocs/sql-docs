@@ -4,8 +4,8 @@ description: "Become familiar with the filestream_access_level option. See how i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "FILESTREAM [SQL Server], access level"

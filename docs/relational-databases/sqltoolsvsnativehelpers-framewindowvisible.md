@@ -3,10 +3,9 @@ description: "SqlToolsVSNativeHelpers - FrameWindowVisible"
 title: "FrameWindowVisible | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: "reference"
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 author: WilliamDAssafMSFT

@@ -3,10 +3,9 @@ description: "SQL Statements"
 title: "SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
 author: David-Engel

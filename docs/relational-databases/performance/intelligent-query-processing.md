@@ -1,9 +1,8 @@
 ---
 title: "Intelligent query processing"
 description: "Intelligent query processing features to improve query performance in SQL Server, Azure SQL Managed Instance, and Azure SQL Database."
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
 author: "MikeRayMSFT"

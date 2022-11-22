@@ -4,8 +4,8 @@ description: "Constants (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "09/09/2020"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "uniqueidentifier data type"

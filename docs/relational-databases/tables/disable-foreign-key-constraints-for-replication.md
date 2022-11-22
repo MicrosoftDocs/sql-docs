@@ -3,10 +3,9 @@ description: "Disable Foreign Key Constraints for Replication"
 title: "Disable Foreign Key Constraints for Replication"
 ms.custom: ""
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "constraints [SQL Server], foreign keys"

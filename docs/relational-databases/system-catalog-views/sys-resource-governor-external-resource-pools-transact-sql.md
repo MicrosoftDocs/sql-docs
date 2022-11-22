@@ -4,9 +4,8 @@ description: sys.resource_governor_external_resource_pools (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/13/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_governor_external_resource_pools"

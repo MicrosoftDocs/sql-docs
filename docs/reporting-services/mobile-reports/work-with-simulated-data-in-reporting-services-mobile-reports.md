@@ -3,7 +3,6 @@ title: "Work with simulated data in Reporting Services mobile reports | Microsof
 description: When you place a gallery element on the design surface, Mobile Report Publisher generates simulated data for it. Design your prototypes with the simulated data.
 ms.date: 07/21/2022
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
 
 ms.topic: conceptual

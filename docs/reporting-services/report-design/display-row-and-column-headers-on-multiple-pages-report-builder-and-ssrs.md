@@ -4,7 +4,6 @@ description: Learn how to control repeating row and column headers on every page
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019

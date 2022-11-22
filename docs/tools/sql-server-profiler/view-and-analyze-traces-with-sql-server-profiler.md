@@ -1,9 +1,8 @@
 ---
 title: View and Analyze Traces
 description: Find out how to use SQL Server Profiler to view trace data, find specific events, display object names, and troubleshoot problems.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: profiler
+ms.service: sql
+ms.subservice: profiler
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan

@@ -3,7 +3,6 @@ title: "Indicators in a paginated report| Microsoft Docs"
 description: Learn about indicators, the small gauges that convey the state of a single data value in paginated reports in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

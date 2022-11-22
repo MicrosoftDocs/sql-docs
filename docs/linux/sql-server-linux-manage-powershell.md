@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 12/16/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Use PowerShell on Windows to manage SQL Server on Linux
 

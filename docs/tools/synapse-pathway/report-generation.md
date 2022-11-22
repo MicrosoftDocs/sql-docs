@@ -4,8 +4,8 @@ description: Azure Synapse Pathway provides comprehensive reporting on scripts t
 author: WilliamDAssafMSFT 
 ms.author: wiassaf 
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: tools-other 
+ms.service: sql
+ms.subservice: tools-other 
 ms.date: 09/09/2021
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-tutorial 

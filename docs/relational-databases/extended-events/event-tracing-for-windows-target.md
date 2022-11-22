@@ -4,9 +4,8 @@ description: Learn how to use Event Tracing for Windows (ETW) as a target. Use E
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: conceptual
 helpviewer_keywords:
   - "event tracing for windows target"

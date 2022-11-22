@@ -5,8 +5,8 @@ author: "bluefooted"
 ms.author: "pamela"
 ms.reviewer: "wiassaf"
 ms.date: "02/10/2021"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_spinlock_stats_TSQL"
@@ -58,6 +58,8 @@ GO
   
 ## Spinlocks  
  A spinlock is a lightweight synchronization object used to serialize access to data structures which are typically held for a short period of time. When a thread attempts to access a resource protected by a spinlock which is being held by another thread, the thread will execute a loop, or "spin" and try accessing the resource again, rather than immediately yielding the scheduler as with a latch or other resource wait. The thread will continue spinning until the resource is available, or the loop completes, at which point the thread will yield the scheduler and go back into the runnable queue. This practice helps reduce excessive thread context switching, but when contention for a spinlock is high, significant CPU utilization may be observed.
+
+ Internal adjustments to the Database Engine introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] make spinlocks more efficient.
 
 > [!NOTE]  
 >  If you have a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on Intel Skylake processors please review [this article](https://support.microsoft.com/topic/kb4538688-fix-severe-spinlock-contention-occurs-in-sql-server-2019-43faea65-fdcb-6835-f7fe-93abdb235837) to apply the required update and enable the trace flag 8101.

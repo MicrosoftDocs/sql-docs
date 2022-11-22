@@ -1,9 +1,8 @@
 ---
 title: SQL Server Configuration Manager
 description: Utilizing the SQL Server Configuration Manager client
-ms.prod: sql
-ms.prod_service: database-engine
-ms.technology:
+ms.service: sql
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protocols [SQL Server], managing"

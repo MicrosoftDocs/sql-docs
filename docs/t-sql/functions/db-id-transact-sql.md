@@ -4,8 +4,8 @@ description: "DB_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/13/2019"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DB_ID_TSQL"

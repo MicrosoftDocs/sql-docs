@@ -1,9 +1,8 @@
 ---
 title: "Database-Level Roles"
 description: SQL Server provides several roles that are security principals that group other principals to manage the permissions in your databases.
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, azure-synapse, pdw"
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.roleproperties.database.f1"
@@ -71,7 +70,7 @@ For a list of all the permissions, see the [Database Engine Permissions](https:/
 |**db_accessadmin**|Members of the **db_accessadmin** fixed database role can add or remove access to the database for Windows logins, Windows groups, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins.|  
 |**db_backupoperator**|Members of the **db_backupoperator** fixed database role can back up the database.|  
 |**db_ddladmin**|Members of the **db_ddladmin** fixed database role can run any Data Definition Language (DDL) command in a database. Members of this role can potentially elevate their privileges by manipulating code that may get executed under high privileges and their actions should be monitored.|  
-|**db_datawriter**|Members of the **db_datawriter** fixed database role can add, delete, or change data in all user tables.|  
+|**db_datawriter**|Members of the **db_datawriter** fixed database role can add, delete, or change data in all user tables. In most use cases this role will be combined with **db_datareader** membership to allow reading the data that is to be modified.|  
 |**db_datareader**|Members of the **db_datareader** fixed database role can read all data from all user tables and views. User objects can exist in any schema except *sys* and *INFORMATION_SCHEMA*. |  
 |**db_denydatawriter**|Members of the **db_denydatawriter** fixed database role cannot add, modify, or delete any data in the user tables within a database.|  
 |**db_denydatareader**|Members of the **db_denydatareader** fixed database role cannot read any data from the user tables and views within a database.|  

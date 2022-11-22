@@ -2,8 +2,8 @@
 title: "Tutorials for SQL Server | Microsoft Docs"
 description: Use these SQL Server tutorials to learn new technologies and features. Tutorials for earlier versions of SQL Server usually work with more recent versions.
 ms.date: "11/01/2017"
-ms.prod: sql
-ms.technology:
+ms.service: sql
+ms.subservice:
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: MikeRayMSFT

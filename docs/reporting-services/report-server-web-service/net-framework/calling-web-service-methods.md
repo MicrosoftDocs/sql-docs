@@ -2,8 +2,8 @@
 title: "Calling Web Service Methods | Microsoft Docs"
 description: Call methods of a proxy class to perform reporting operations on the report server. Web service methods have public access and require appropriate arguments.
 ms.date: 03/14/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service
+ms.prod: reporting-services
+ms.technology: report-server-web-service
 
 
 ms.topic: reference

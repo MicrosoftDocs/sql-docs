@@ -2,8 +2,8 @@
 title: "Reporting Services Properties | Microsoft Docs"
 description: A report server defines global system properties and individual item properties. Applications can add user-defined properties to system and item properties.
 ms.date: 03/14/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service
+ms.prod: reporting-services
+ms.technology: report-server-web-service
 
 
 ms.topic: reference

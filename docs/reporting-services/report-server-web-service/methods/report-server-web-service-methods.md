@@ -2,8 +2,8 @@
 title: "Report Server Web Service Methods | Microsoft Docs"
 description: Report Server Web services include methods based on component features provided through Web service endpoints which are exposed through generated classes.
 ms.date: 03/14/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service
+ms.prod: reporting-services
+ms.technology: report-server-web-service
 
 
 ms.topic: reference

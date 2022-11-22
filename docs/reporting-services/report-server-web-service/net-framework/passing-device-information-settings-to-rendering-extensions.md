@@ -2,8 +2,8 @@
 title: "Passing Device Information Settings to Rendering Extensions | Microsoft Docs"
 description: Rendering parameters are passed a rendering extension. Specify device information settings by the Render method, as URL parameter, or in configuration files.
 ms.date: 03/16/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service
+ms.prod: reporting-services
+ms.technology: report-server-web-service
 
 
 ms.topic: reference

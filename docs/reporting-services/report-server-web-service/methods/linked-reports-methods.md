@@ -2,8 +2,8 @@
 title: "Linked Reports Methods | Microsoft Docs"
 description: These methods add linked items to a database, get the name of an item for a linked item, get items linked to an item, and set a catalog item for a linked item.
 ms.date: 03/06/2017
-ms.service: reporting-services
-ms.subservice: report-server-web-service
+ms.prod: reporting-services
+ms.technology: report-server-web-service
 
 
 ms.topic: reference

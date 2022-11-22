@@ -3,7 +3,7 @@ title: "CountDistinct function in a paginated report | Microsoft Docs"
 description: Get a count of all distinct non-null values that are specified by an expression in a paginated report in the context of a given scope. 
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

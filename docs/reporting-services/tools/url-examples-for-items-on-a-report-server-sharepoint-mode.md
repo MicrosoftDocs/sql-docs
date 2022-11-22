@@ -3,7 +3,7 @@ title: "URL Examples for Items on a Report Server - SharePoint Mode | Microsoft 
 description: View examples of using URLs that specify locations in a SharePoint site Web hierarchy on a report server.
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 
 
 ms.topic: conceptual

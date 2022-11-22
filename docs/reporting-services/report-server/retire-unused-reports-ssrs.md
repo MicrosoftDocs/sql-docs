@@ -4,7 +4,7 @@ description: You don't want to migrate unused reports to the Power BI service. A
 ms.date: 11/21/2022
 ms.service: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.technology: report-server
+ms.subservice: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies

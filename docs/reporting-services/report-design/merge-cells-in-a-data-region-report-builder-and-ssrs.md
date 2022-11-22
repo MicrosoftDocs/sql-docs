@@ -3,7 +3,7 @@ title: "Merge cells in a data region in a paginated report | Microsoft Docs"
 description: Discover how to merge cells in a data region in a paginated report to combine cells, improve data region appearance, or provide spanning labels for column and row groups in Report Builder.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

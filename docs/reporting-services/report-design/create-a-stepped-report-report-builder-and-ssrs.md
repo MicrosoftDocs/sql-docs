@@ -3,7 +3,7 @@ title: "Create a stepped paginated report | Microsoft Docs"
 description: Discover how to show detail rows or child groups indented under a parent group in the same column in a Report Builder paginated report.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

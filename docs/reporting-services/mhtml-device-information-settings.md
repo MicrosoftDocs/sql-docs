@@ -3,7 +3,7 @@ title: "MHTML Device Information Settings | Microsoft Docs"
 description: Learn about the various device information settings for rendering reports in Web archive (MHTML) format. 
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

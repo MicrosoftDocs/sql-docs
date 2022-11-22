@@ -2,7 +2,7 @@
 title: "Configure Report Builder Access | Microsoft Docs"
 description: Configure Report Builder, a report design tool to use with a SQL Server Reporting Services report server. It uses either native or SharePoint integration mode.
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies

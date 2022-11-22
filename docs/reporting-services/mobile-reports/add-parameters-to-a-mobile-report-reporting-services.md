@@ -3,7 +3,7 @@ title: "Add parameters to a mobile report | Reporting Services | Microsoft Docs"
 description: Reporting Services mobile report can have parameters, so report readers can filter your reports. Such a report can also be the target of a drillthrough.
 ms.date: 07/21/2022
 ms.service: reporting-services
-ms.technology: mobile-reports
+ms.subservice: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6

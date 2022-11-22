@@ -3,7 +3,7 @@ title: "Release Notes for Report Viewer controls"
 description: The release notes for the Report Viewer controls of WebForms and WinForms, related to Reporting Services.
 ms.date: 08/30/2022
 ms.service: reporting-services
-ms.technology: application-integration
+ms.subservice: application-integration
 ms.custom: seo-lt-2019
 
 ms.topic: reference

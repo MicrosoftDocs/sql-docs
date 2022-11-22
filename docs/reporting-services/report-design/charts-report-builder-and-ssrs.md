@@ -3,7 +3,7 @@ title: "Charts in a paginated report | Microsoft Docs"
 description: Use chart data regions to help readers of your paginated reports understand large volumes of aggregated data at a glance in Report Builder.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

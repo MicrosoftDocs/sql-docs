@@ -3,7 +3,7 @@ title: "Max function in a paginated report | Microsoft Docs"
 description: Learn about the Max function in a paginated report, which returns the maximum value of all non-null numeric values specified by the expression in Report Builder.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "ATOM Device Information Settings | Microsoft Docs"
 description: Learn about device information settings for the Atom rendering extension that supports submittal of the Atom feed name and which character encoding to use.
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "RGDI Device Information Settings | Microsoft Docs"
 description: Learn about the RGDI device information settings that are available for rendering in RGDI format.
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

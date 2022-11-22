@@ -3,7 +3,7 @@ title: "First function in a paginated report | Microsoft Docs"
 description: Use the First function in a paginated report to return the first value in the given scope of the specified expression in Report Builder.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "Align the data in a paginated report chart in a table or matrix | Micros
 description: Discover uses for paginated report sparklines and data bars in Report Builder. These small, simple charts convey a lot of information with the minimum amount of detail.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

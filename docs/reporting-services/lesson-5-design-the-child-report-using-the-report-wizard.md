@@ -3,7 +3,7 @@ title: "Lesson 5: Design the Child Report using the Report Wizard | Microsoft Do
 description: Learn how to design the child report using the Report Wizard in Report Designer after you create a data connection and data table for your child report.
 ms.date: 05/18/2016
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da

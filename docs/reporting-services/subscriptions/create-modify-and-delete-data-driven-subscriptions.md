@@ -3,7 +3,7 @@ title: "Create, Modify, and Delete Data-Driven Subscriptions | Microsoft Docs"
 description: In this article, learn how to create, modify, and delete a data-driven subscription. Also learn tips on defining a query to retrieve subscription information.
 ms.date: 06/12/2019
 ms.service: reporting-services
-ms.technology: subscriptions
+ms.subservice: subscriptions
 
 
 ms.topic: conceptual

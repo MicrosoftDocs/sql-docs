@@ -3,7 +3,7 @@ title: "Report Datasets | Microsoft Docs"
 description: Learn about report datasets, for example that a dataset contains the information that is needed to retrieve a specific set of data from a data source. 
 ms.date: 10/14/2022
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "RS.exe Utility | Microsoft Docs"
 description: Learn about the commands and syntax for the rs.exe utility that processes scripts used to automate report server deployment and administration tasks.
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 
 
 ms.topic: conceptual

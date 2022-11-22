@@ -4,7 +4,7 @@ description: Learn about Reporting Services graphical query designers for buildi
 
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

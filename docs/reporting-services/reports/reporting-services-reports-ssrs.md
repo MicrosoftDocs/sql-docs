@@ -3,7 +3,7 @@ title: "Reporting Services Reports | Microsoft Docs"
 description: Learn details about Reporting Services reports, including the benefits of the reports, how to create paginated reports, and how to view reports.
 ms.date: 06/19/2019
 ms.service: reporting-services
-ms.technology: reports
+ms.subservice: reports
 
 
 ms.topic: conceptual

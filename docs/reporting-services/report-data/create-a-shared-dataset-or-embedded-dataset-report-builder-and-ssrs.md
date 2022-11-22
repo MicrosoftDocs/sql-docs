@@ -4,7 +4,7 @@ description: Learn how to create embedded datasets and shared datasets for use i
 
 ms.date: 05/10/2021
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

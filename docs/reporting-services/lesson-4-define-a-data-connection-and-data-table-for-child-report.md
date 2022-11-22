@@ -3,7 +3,7 @@ title: "Lesson 4: Define a Data Connection and Data Table for Child Report | Mic
 description: Learn how to use Reporting Services to create a data connection and a data table for the child report.
 ms.date: 05/18/2016
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e

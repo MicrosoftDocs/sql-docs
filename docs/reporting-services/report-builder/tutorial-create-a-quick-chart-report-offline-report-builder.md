@@ -3,7 +3,7 @@ title: "Tutorial: Create a Quick Chart Report Offline (Report Builder) | Microso
 description: In this tutorial, you create a pie chart in a Reporting Services paginated report in Report Builder. Then you add percentages and modify the pie chart.
 ms.date: 05/30/2017
 ms.service: reporting-services
-ms.technology: report-builder
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

@@ -4,7 +4,7 @@ description: Use the parameters in this article as part of a URL to configure th
 ms.date: 05/22/2020
 
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

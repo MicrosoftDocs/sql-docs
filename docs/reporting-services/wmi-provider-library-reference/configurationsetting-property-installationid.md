@@ -3,7 +3,7 @@ description: "InstallationID Property (WMI MSReportServer_ConfigurationSetting)"
 title: "InstallationID Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: wmi-provider-library-reference
+ms.subservice: wmi-provider-library-reference
 ms.topic: conceptual
 apiname: "InstallationID Property"
 apilocation: "reportingservices.mof"

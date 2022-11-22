@@ -3,7 +3,7 @@ title: "Lesson 3: Define a Dataset for the Table Report | Microsoft Docs"
 description: In this lesson, learn how to define a dataset for the Table Report in SQL Server Reporting Services (SSRS).
 ms.date: 05/01/2019
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350

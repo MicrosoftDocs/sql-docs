@@ -3,7 +3,7 @@ title: "Add or delete a group in a paginated report chart | Microsoft Docs"
 description: Find out how to add or delete groups, and how to create groups or nested groups in a paginated report by dragging dataset fields in Report Builder.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

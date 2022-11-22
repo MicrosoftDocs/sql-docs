@@ -3,7 +3,7 @@ title: "Collect small slices on a paginated report pie chart | Microsoft Docs"
 description: Learn about collecting many small slices in a pie chart into one single slice in Report Builder paginated reports. 
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

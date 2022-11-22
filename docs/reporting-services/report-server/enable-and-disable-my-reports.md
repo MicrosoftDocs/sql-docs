@@ -3,7 +3,7 @@ title: "Enable and Disable My Reports | Microsoft Docs"
 description: Learn how to enable and disable the My Reports feature in Reporting Services. My Reports provides storage in the report server database for users.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

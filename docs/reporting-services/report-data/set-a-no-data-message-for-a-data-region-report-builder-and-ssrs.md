@@ -3,7 +3,7 @@ title: "Set a No Data Message for a Data Region (Report Builder) | Microsoft Doc
 description: Learn how to set a no data message to show in a rendered report in place of a data region that has no data.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

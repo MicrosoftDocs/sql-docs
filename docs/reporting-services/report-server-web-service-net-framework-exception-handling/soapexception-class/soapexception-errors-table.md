@@ -3,7 +3,7 @@ title: "SoapException Errors Table | Microsoft Docs"
 description: Learn about the errors that are accessible from methods through a SoapException in the Report Server Web service.
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: report-server-web-service-net-framework-exception-handling
+ms.subservice: report-server-web-service-net-framework-exception-handling
 
 
 ms.topic: reference

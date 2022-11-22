@@ -3,7 +3,7 @@ title: "Script Deployment and Administrative Tasks | Microsoft Docs"
 description: Learn about the tools, technologies and strategies for automating routine installation, deployment, and administrative tasks for a report server.
 ms.date: 05/30/2017
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "Multilookup function in a paginated report | Microsoft Docs"
 description: The Multilookup Function returns the set of first-match values for the specified set of names from a dataset that contains name/value pairs in a paginated report in Report Builder.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

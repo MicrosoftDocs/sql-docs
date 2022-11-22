@@ -3,7 +3,7 @@ description: "Use Built-in Security in Windows SharePoint Services for Report Se
 title: "Use Built-in Security in Windows SharePoint Services for Report Server Items | Microsoft Docs"
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: security
+ms.subservice: security
 
 
 ms.topic: conceptual

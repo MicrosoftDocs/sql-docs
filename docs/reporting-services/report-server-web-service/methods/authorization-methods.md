@@ -3,7 +3,7 @@ title: "Authorization Methods | Microsoft Docs"
 description: In Reporting Services, you can use these authorization methods to manage tasks, roles, and policies on the report server.
 ms.date: 03/06/2017
 ms.service: reporting-services
-ms.technology: report-server-web-service
+ms.subservice: report-server-web-service
 
 
 ms.topic: reference

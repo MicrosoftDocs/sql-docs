@@ -3,7 +3,7 @@ title: "Caching Reports | Microsoft Docs"
 description: Learn about caching reports in Report Manager, which speeds up viewing for a processed report while it remains cached. 
 ms.date: 05/14/2019
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

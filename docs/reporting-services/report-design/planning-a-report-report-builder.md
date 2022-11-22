@@ -3,7 +3,7 @@ title: "Planning a paginated report | Microsoft Docs"
 description: Plan and create paginated reports with richly formatted text that shows sales data, marketing trends, operational reports, or dashboards in Report Builder.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

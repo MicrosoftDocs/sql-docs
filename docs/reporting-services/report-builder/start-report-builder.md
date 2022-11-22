@@ -4,7 +4,7 @@ description: Report Builder is a stand-alone report authoring environment. The f
 
 ms.date: 08/15/2022
 ms.service: reporting-services
-ms.technology: report-builder
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

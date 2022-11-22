@@ -4,7 +4,7 @@ description: Use the Advanced Server Properties page to set system properties on
 author: maggiesMSFT
 ms.author: maggies
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 ms.topic: conceptual
 ms.date: 10/17/2022
 monikerRange: ">=sql-server-2016"

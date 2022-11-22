@@ -3,7 +3,7 @@ title: "Use an Office Data Connection (.odc) with Reports | Microsoft Docs"
 description: Learn how to use an existing Office Data Connection (.odc) file to provide connection information to a Reporting Services report.
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

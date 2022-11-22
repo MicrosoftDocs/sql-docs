@@ -3,7 +3,7 @@ title: "Register a Service Principal Name (SPN) for a Report Server | Microsoft 
 description: Learn how to create an SPN for the Report Server service if it runs as a domain user, if your network uses Kerberos for authentication.
 ms.date: 09/24/2020
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

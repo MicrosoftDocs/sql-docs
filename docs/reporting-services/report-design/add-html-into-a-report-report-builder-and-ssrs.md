@@ -3,7 +3,7 @@ title: "Add HTML into a paginated report | Microsoft Docs"
 description: Find out how to import HTML using a placeholder from a field in your dataset to use in your paginated report in Report Builder.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

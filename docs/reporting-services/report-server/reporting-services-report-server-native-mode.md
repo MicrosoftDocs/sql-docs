@@ -3,7 +3,7 @@ title: "Reporting Services Report Server (Native Mode) | Microsoft Docs"
 description: Learn about Report Server configured for native mode, including managing content, managing a resource, and referencing an image resource from a report.
 ms.date: 04/21/2020
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

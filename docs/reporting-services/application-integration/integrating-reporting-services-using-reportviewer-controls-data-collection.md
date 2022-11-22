@@ -6,7 +6,7 @@ ms.author: maggies
 ms.custom: seo-lt-2019
 ms.reviewer: ""
 ms.service: reporting-services
-ms.technology: application-integration
+ms.subservice: application-integration
 ms.topic: reference
 ms.date: 06/03/2020
 ---

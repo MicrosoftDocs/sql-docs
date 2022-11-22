@@ -3,7 +3,7 @@ title: "Reports, Report Parts, and Report Definitions (Report Builder) | Microso
 description: Discover the terms used to describe reports in different states in Report Builder. These states include the initial definition and the published report.
 ms.date: 05/24/2018
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

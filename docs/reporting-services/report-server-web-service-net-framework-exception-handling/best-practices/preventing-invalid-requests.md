@@ -3,7 +3,7 @@ title: "Preventing Invalid Requests | Microsoft Docs"
 description: Learn how to prevent invalid requests by analyzing your application flow and ensuring that the requests being sent to the report server are valid.
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: report-server-web-service-net-framework-exception-handling
+ms.subservice: report-server-web-service-net-framework-exception-handling
 
 
 ms.topic: reference

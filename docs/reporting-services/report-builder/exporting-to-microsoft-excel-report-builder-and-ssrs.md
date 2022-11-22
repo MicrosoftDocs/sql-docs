@@ -3,7 +3,7 @@ title: "Export a paginated report to Microsoft Excel (Report Builder) | Microsof
 description: In Report Builder, the Excel rendering extension renders a paginated report to the Office Open XML format to use with Microsoft Excel.
 ms.date: 09/02/2021
 ms.service: reporting-services
-ms.technology: report-builder
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

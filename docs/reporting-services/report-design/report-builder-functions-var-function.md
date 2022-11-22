@@ -3,7 +3,7 @@ title: "Var function in a paginated report | Microsoft Docs"
 description: Use the Var function to return the variance of all non-null numeric values in a paginated report specified by the expression in Report Builder.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

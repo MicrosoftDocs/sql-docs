@@ -3,7 +3,7 @@ title: "Add sparklines and data bars in a paginated report | Microsoft Docs"
 description: "Add sparklines and data bars in a paginated report."
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

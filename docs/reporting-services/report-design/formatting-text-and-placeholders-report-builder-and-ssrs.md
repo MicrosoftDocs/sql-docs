@@ -3,7 +3,7 @@ title: "Format text and placeholders in paginated reports | Microsoft Docs"
 description: Improve readability of your paginated reports with format choices for fonts, styles, colors, and alignment within text or a data region in Report Builder.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

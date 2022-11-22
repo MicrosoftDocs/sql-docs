@@ -3,7 +3,7 @@ title: "Reporting Services Concepts | Microsoft Docs"
 description: Learn about SQL Server Reporting Services (SSRS) concepts, including scheduling reports, roles and permissions, and report subscriptions and delivery.
 ms.date: 10/25/2016
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

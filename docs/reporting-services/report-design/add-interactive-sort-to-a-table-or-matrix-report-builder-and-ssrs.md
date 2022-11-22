@@ -3,7 +3,7 @@ title: "Add interactive sort to a table or matrix in paginated reports | Microso
 description: Enable users to change the sort order of rows and columns in tables and matrices in paginated reports using interactive sort buttons in Report Builder.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "Set parameters on a published paginated report - SharePoint Integrated M
 description: Learn how to set parameters and run a parameterized paginated report, in the report definition or after the report is published, in Report Builder.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

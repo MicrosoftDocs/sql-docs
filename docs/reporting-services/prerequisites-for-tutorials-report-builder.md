@@ -3,7 +3,7 @@ title: "Prerequisites for Tutorials (Report Builder) | Microsoft Docs"
 description: Learn about the prerequisites that you must have in place to complete the Report Builder tutorials.
 ms.date: 05/30/2017
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d

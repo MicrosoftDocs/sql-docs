@@ -3,7 +3,7 @@ title: "Schedule Properties (Reports Page) | Microsoft Docs"
 description: Learn about the Reporting Services schedule properties page in SQL Server Management Studio that lists all reports for a specific shared schedule.
 ms.date: 06/30/2016
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 
 
 ms.topic: conceptual

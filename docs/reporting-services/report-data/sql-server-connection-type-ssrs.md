@@ -3,7 +3,7 @@ title: "SQL Server Connection Type | Microsoft Docs"
 description: Learn about the SQL Server connection type and including data from a SQL Server database in your report.
 ms.date: 08/17/2018
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "Rectangles and lines in a paginated report | Microsoft Docs"
 description: Discover how to create visual effects within a paginated report in Report Builder. Add features such as color or an image, a tooltip, or a bookmark.   
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

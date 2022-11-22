@@ -3,7 +3,7 @@ title: "SAP NetWeaver BI Query Designer User Interface | Microsoft Docs"
 description: Learn about the graphical query designer for building Multidimensional Expression (MDX) queries for a SAP NetWeaver Business Intelligence data source.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

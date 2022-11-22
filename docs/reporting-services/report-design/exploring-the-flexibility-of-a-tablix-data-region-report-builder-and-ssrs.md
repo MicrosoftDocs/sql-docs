@@ -3,7 +3,7 @@ title: "Exploring the flexibility of a tablix data region in a paginated report 
 description: Discover the flexibility of a paginated report in Report Builder when you add a table, matrix, or list data region.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

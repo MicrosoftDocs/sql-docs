@@ -3,7 +3,7 @@ description: "Securable Items"
 title: "Securable Items | Microsoft Docs"
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: security
+ms.subservice: security
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "Tutorial: Add a Column Chart to Your Report (Report Builder) | Microsoft
 description: Learn how to create a Reporting Services paginated report with a column chart displaying a series as a set of vertical bars grouped by category.
 ms.date: 09/02/2016
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6

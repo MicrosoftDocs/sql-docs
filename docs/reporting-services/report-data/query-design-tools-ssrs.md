@@ -3,7 +3,7 @@ title: "Query Design Tools | Microsoft Docs"
 description: Learn about query design tools and also learn the type of data source each query design tool supports.
 ms.date: 03/20/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

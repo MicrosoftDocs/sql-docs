@@ -3,7 +3,7 @@ description: "Create and Manage Role Assignments"
 title: "Create and Manage Role Assignments | Microsoft Docs"
 ms.date: 05/07/2017
 ms.service: reporting-services
-ms.technology: security
+ms.subservice: security
 
 
 ms.topic: conceptual

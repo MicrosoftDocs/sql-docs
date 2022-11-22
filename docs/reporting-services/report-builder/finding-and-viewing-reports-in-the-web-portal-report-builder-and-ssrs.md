@@ -3,7 +3,7 @@ title: "Finding and Viewing Reports in the web portal (Report Builder) | Microso
 description: Report Manager is a Web-based tool that includes features for viewing and managing reports. It's part of a report server installation.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-builder
+ms.subservice: report-builder
 ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT

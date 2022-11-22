@@ -3,7 +3,7 @@ title: "Add, change, or delete default values for a paginated report parameter |
 description: Use these steps to customize your reports with added, changed, or deleted  default values for paginated report parameters.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "Create data connection strings - Report Builder & SSRS | Microsoft Docs"
 description: Learn how to create data connection strings and learn important information related to data source credentials.
 ms.date: 12/02/2021
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

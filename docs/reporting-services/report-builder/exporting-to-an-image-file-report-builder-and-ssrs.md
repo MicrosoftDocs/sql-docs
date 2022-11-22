@@ -3,7 +3,7 @@ title: "Export a paginated report to an Image File (Report Builder) | Microsoft 
 description: In Report Builder, the Image rendering extension renders a paginated report to a bitmap or metafile. The default is a TIFF file viewable in multiple pages.
 ms.date: 09/02/2021
 ms.service: reporting-services
-ms.technology: report-builder
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ description: "Reporting Services WMI Provider Library Reference (SSRS)"
 title: "Reporting Services WMI Provider Library Reference | Microsoft Docs"
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: wmi-provider-library-reference
+ms.subservice: wmi-provider-library-reference
 
 
 ms.topic: conceptual

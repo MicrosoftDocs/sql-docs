@@ -3,7 +3,7 @@ description: "Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions"
 title: "Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions | Microsoft Docs"
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: security
+ms.subservice: security
 
 
 ms.topic: conceptual

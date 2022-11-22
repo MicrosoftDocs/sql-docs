@@ -4,7 +4,7 @@ description: Use the documentation to understand Reporting Services features and
 author: maggiesMSFT
 ms.author: maggies
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 ms.topic: reference
 helpviewer_keywords: 
   - "developer's guide [Reporting Services]"

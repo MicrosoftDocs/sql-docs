@@ -3,7 +3,7 @@ title: "Add bevel, emboss, and texture styles to a paginated report chart | Micr
 description: Learn how to specify a drawing effect, such as bevels, embossing, or textures, to increase the visual impact of your paginated report chart in Report Builder. 
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

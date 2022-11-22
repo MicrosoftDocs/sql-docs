@@ -5,7 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018

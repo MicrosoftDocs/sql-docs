@@ -3,7 +3,7 @@ title: "Report Parameters Methods | Microsoft Docs"
 description: These methods get and set parameter properties for an item and validate parameter values, get supported parameter states, and get parameter types.
 ms.date: 03/06/2017
 ms.service: reporting-services
-ms.technology: report-server-web-service
+ms.subservice: report-server-web-service
 
 
 ms.topic: reference

@@ -3,7 +3,7 @@ title: "Rename a Report Server Computer | Microsoft Docs"
 description: Learn how to reconfigure a report server after a computer name change. SQL Server Reporting Services might not be accessible after a computer name change.
 ms.date: 06/19/2019
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

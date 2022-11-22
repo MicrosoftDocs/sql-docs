@@ -3,7 +3,7 @@ title: "XML Connection Type | Microsoft Docs"
 description: Learn about the XML connection type to connect to and retrieve data from XML documents, Web services, or XML that is embedded in the query.
 ms.date: 03/17/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

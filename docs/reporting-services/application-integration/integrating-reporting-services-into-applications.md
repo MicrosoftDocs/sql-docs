@@ -4,7 +4,7 @@ description: Reporting Services is an open and extensible reporting platform des
 ms.custom: seo-lt-2019
 ms.date: 05/14/2019
 ms.service: reporting-services
-ms.technology: application-integration
+ms.subservice: application-integration
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies

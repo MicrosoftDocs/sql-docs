@@ -3,7 +3,7 @@ title: "Configure the web portal | Microsoft Docs"
 description: Learn how to configure the web portal application, used to view reports, manage report server content, and grant user access to a native mode report server.
 ms.date: 05/10/2017
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -3,7 +3,7 @@ title: "Connect to a Report Server in Management Studio | Microsoft Docs"
 description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
 ms.date: 05/07/2019
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 
 
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "E-Mail Delivery in Reporting Services | Microsoft Docs"
 description: In this article, learn to use the e-mail delivery extension, which provides a way to e-mail a report to individual users or groups.
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: subscriptions
+ms.subservice: subscriptions
 
 
 ms.topic: conceptual

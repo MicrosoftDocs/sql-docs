@@ -3,7 +3,7 @@ title: "Data Alert Messages | Microsoft Docs"
 description: "Learn how SQL Server Reporting Services data alerts deliver two types of data alert messages by email: messages with data alert results and messages with error descriptions."
 ms.date: 07/02/2017
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

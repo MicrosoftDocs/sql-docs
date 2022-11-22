@@ -4,7 +4,7 @@ description: In Report Builder, you can publish a report to a report server. Oth
 
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-builder
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

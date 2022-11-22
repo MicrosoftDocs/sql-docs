@@ -3,7 +3,7 @@ title: "Publish a Shared Data Source to a SharePoint Library | Microsoft Docs"
 description: Learn how to publish a shared data source to a report server that is running in SharePoint integrated mode.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: reports
+ms.subservice: reports
 
 
 ms.topic: conceptual

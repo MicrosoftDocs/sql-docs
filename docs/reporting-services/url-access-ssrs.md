@@ -3,7 +3,7 @@ title: "URL Access | Microsoft Docs"
 description: Learn how URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

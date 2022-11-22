@@ -3,7 +3,7 @@ title: "Formatting axis labels on a paginated report chart | Microsoft Docs"
 description: Learn how to format axis labels on a paginated report chart using a dialog box or by using the properties pane to categorize and display relationships in Report Builder.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

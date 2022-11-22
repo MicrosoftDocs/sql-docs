@@ -4,7 +4,7 @@ description: Find out how choosing colors for a shape chart in a paginated repor
 
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

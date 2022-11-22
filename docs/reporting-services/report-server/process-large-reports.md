@@ -3,7 +3,7 @@ title: "Process Large Reports | Microsoft Docs"
 description: Find out how to run large reports properly in Report Server by following configuration, rendering, deployment, and distribution recommendations.
 ms.date: 06/10/2019
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

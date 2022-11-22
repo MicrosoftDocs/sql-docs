@@ -3,7 +3,7 @@ description: "Tasks and Permissions - Item-Level Tasks"
 title: "Item-Level Tasks | Microsoft Docs"
 ms.date: 02/04/2021
 ms.service: reporting-services
-ms.technology: security
+ms.subservice: security
 
 
 ms.topic: conceptual

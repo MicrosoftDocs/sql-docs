@@ -3,7 +3,7 @@ description: "Configure the Web Portal to Pass Custom Authentication Cookies"
 title: "Configure the Web Portal to Pass Custom Authentication Cookies | Microsoft Docs"
 ms.date: 04/18/2017
 ms.service: reporting-services
-ms.technology: security
+ms.subservice: security
 
 
 ms.topic: conceptual

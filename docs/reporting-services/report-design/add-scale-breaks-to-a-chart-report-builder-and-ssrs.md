@@ -3,7 +3,7 @@ title: "Add scale breaks to a paginated report chart | Microsoft Docs"
 description: Find out about using a scale break to display two distinct ranges in the same paginated report chart area in Report Builder.
 ms.date: 05/30/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

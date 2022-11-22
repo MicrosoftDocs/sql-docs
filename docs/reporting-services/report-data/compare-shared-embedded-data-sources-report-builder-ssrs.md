@@ -3,7 +3,7 @@ description: "Compare shared and embedded data sources - Report Builder & Report
 title: "Compare shared and embedded  data sources - Report Builder & Reporting Services | Microsoft Docs"
 ms.date: 11/18/2019
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

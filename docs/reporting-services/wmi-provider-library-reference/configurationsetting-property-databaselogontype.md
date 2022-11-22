@@ -3,7 +3,7 @@ description: "DatabaseLogonType Property (WMI MSReportServer_ConfigurationSettin
 title: "DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: wmi-provider-library-reference
+ms.subservice: wmi-provider-library-reference
 
 
 ms.topic: conceptual

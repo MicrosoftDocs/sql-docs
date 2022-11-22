@@ -2,7 +2,7 @@
 title: "Add Data from External Data Sources | Microsoft Docs"
 description: Learn about adding data to reports from external data sources and how reports work with data access technologies.
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies

@@ -3,7 +3,7 @@ title: "Preview View | Microsoft Docs"
 description: Learn about the Preview view of the Reporting Services Report Designer where you view a display of your rendered report.
 ms.date: 05/30/2016
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 
 
 ms.topic: conceptual

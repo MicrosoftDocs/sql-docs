@@ -3,7 +3,7 @@ title: "Work Around the Excel 2003 Row Limitation | Microsoft Docs"
 description: You can work around the Excel 2003 row limitation when you export paginated reports to Excel by forcing a page break after a certain number of rows.
 ms.date: 03/16/2017
 ms.service: reporting-services
-ms.technology: report-builder
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

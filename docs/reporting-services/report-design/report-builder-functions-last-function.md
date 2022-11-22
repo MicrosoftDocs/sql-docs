@@ -3,7 +3,7 @@ title: "Last function in a paginated report | Microsoft Docs"
 description: The Last function returns the final value in a set of data in a paginated report after all sorting and filtering have been applied at the specified scope in Report Builder.
 ms.date: 03/07/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

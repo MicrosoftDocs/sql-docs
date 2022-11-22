@@ -3,7 +3,7 @@ title: "Browse for Report Parts and Set a Default Folder (Report Builder) | Micr
 description: Learn how to add existing report parts, such as tables and charts, to your report from the Report Part Gallery in Report Builder.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

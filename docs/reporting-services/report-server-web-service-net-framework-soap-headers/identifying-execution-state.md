@@ -3,7 +3,7 @@ title: "Identifying Execution State | Microsoft Docs"
 description: Learn to use Reporting Services to identify the execution state so that you can interact with the report in several ways.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: report-server-web-service-net-framework-soap-headers
+ms.subservice: report-server-web-service-net-framework-soap-headers
 
 
 ms.topic: reference

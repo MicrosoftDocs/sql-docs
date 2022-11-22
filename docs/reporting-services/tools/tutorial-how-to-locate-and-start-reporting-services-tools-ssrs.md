@@ -3,7 +3,7 @@ title: "Tutorial: Locate & Start Reporting Services Tools | Microsoft Docs"
 description: Learn tools used to configure a report server, manage report server content & operations, and create and publish paginated & mobile Reporting Services reports.
 ms.date: 12/09/2019
 ms.service: reporting-services
-ms.technology: tools
+ms.subservice: tools
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords: 

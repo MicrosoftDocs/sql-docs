@@ -3,7 +3,7 @@ title: "SharePoint List Query Designer (Report Builder) | Microsoft Docs"
 description: Learn to use the SharePoint List query designer to explore the SharePoint list metadata, interactively build a query, and view the results of your query.
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

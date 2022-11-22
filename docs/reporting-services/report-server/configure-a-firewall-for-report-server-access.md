@@ -3,7 +3,7 @@ title: "Configure a Firewall for Report Server Access | Microsoft Docs"
 description: Learn how to configure Windows Firewall to allow access to Report Server applications and published reports that are accessed through URLs.
 ms.date: 05/14/2019
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

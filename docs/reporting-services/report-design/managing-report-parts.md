@@ -3,7 +3,7 @@ title: "Managing Report Parts | Microsoft Docs"
 description: Organize report parts for multiple users and reports, with choices of flexible options for publishing, permissions, and security.
 ms.date: 03/14/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

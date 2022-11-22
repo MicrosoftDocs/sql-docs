@@ -3,7 +3,7 @@ title: "Cells, rows, & columns in a tablix in a paginated report | Microsoft Doc
 description: Understand how to specify rows and columns in a paginated report for data, labels, and totals, enabling you to control the display in a SQL Server report. 
 ms.date: 12/16/2019
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

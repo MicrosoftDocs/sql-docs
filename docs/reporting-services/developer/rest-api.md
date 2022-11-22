@@ -4,7 +4,7 @@ description: The REST API provides programmatic access to the objects in a SQL S
 author: maggiesMSFT
 ms.author: maggies
 ms.service: reporting-services
-ms.technology: developer
+ms.subservice: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018

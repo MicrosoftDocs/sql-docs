@@ -4,7 +4,7 @@ description: The Azure SQL Connection data extension supports multivalued parame
 author: maggiesMSFT
 ms.author: maggies
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: ">= sql-server-2016"

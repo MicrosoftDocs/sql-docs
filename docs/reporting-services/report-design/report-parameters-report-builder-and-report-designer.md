@@ -2,7 +2,7 @@
 title: "Paginated report parameters | Microsoft Docs"
 description: This topic describes the common uses for Reporting Services paginated report parameters, the properties you can set, and much more.
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 ms.custom: seodec18
 ms.topic: conceptual
 author: maggiesMSFT

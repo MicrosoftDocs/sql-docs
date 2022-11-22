@@ -3,7 +3,7 @@ title: "Change the text of a legend item in a paginated report | Microsoft Docs"
 description: Find out how to change the text of a legend item in a paginated report to show more information about the individual data points in Report Builder.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

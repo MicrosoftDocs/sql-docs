@@ -3,7 +3,7 @@ title: "Breaking changes in SQL Server Reporting Services in SQL Server 2016 | M
 description: Learn about changes in Reporting Services that might break applications, scripts, or functionalities based on earlier versions of SQL Server.
 ms.date: 07/02/2017
 ms.service: reporting-services
-ms.technology: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -3,7 +3,7 @@ title: "Set Credential & Connection Information for Report Data Sources | Micros
 description: A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. 
 ms.date: 12/09/2019
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

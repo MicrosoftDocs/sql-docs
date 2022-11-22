@@ -3,7 +3,7 @@ title: "Associate a Query Parameter with a Report Parameter (Report Builder) | M
 description: Learn uses for Reporting Services report parameters, the properties you can set, and how to associate a dataset query parameter with a report parameter.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

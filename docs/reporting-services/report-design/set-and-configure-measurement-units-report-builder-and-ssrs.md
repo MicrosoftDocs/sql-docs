@@ -3,7 +3,7 @@ title: "Set and configure measurement units in a paginated report | Microsoft Do
 description: Learn how to set and configure measurement units in a paginated report using expressions in Report Builder.
 ms.date: 03/01/2017
 ms.service: reporting-services
-ms.technology: report-design
+ms.subservice: report-design
 
 
 ms.topic: conceptual

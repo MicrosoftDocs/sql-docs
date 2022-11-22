@@ -3,7 +3,7 @@ description: "Authentication with the Report Server"
 title: "Authentication with the Report Server | Microsoft Docs"
 ms.date: 05/30/2017
 ms.service: reporting-services
-ms.technology: security
+ms.subservice: security
 
 
 ms.topic: conceptual

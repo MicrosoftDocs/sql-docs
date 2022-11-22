@@ -3,7 +3,7 @@ title: "Performance Counters MSRS 2016 Native Mode, Performance Objects | Micros
 description: Learn about performance counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service performance objects.
 ms.date: 02/17/2021
 ms.service: reporting-services
-ms.technology: report-server
+ms.subservice: report-server
 
 
 ms.topic: conceptual

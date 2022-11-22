@@ -3,7 +3,7 @@ title: "Manage Report Data Sources | Microsoft Docs"
 description: Learn about managing report data sources, including how to connect to external data sources that are referenced in a report.
 ms.date: 05/24/2018
 ms.service: reporting-services
-ms.technology: report-data
+ms.subservice: report-data
 
 
 ms.topic: conceptual

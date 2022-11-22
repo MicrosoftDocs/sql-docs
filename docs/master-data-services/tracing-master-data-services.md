@@ -47,7 +47,7 @@ The numbers *nnn* in the path correspond to the version of SQL Server being in
 
 ### SQL Server 2016 and later versions
 
-The *Web.config* file contains a tracing section, as shown below. This section is new in [!INCLUDE [sssql15-md](../includes/sssql16-md.md)] [!INCLUDE [ssMDSshort](../includes/ssmdsshort-md.md)].
+The *Web.config* file contains a tracing section, as shown below. This section is introduced in [!INCLUDE [sssql15-md](../includes/sssql16-md.md)] [!INCLUDE [ssMDSshort](../includes/ssmdsshort-md.md)].
   
 ```XML
 <sources>  
@@ -152,7 +152,7 @@ To enable logging, change `switchValue` to `All` or another valid value as descr
 |ActivityTracing |start and stop events only |
 |All|"Verbose" and "ActivityTracing" |
 
-#### File name and path
+##### File name and path
 
 The `initializeData` value is the name of the log file. This may be modified to another name or to include a desired path. If the path isn't specified, the file will default to the web application directory path (where *Web.config* resides).
 

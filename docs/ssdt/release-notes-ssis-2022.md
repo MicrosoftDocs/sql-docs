@@ -22,7 +22,6 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
-- To design packages using Oracle and Teradata connectors is not supportted yet.
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
@@ -32,13 +31,13 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
   3. Cannot design DQS related component.
   4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
   5. Side by side, localization and globalization are not supported.
-  6. SSIS extension is disabled after reinstallation. Workaround steps:
-      a. Open Visual Studio Extension Manager
-      b. Enable SSIS extension
-      c. Close Visual Studio
-
+  6. To design packages using Oracle and Teradata connectors is not supportted yet.
+     
 ## Download issues
-If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed, and enable "SQL Server Integration Services Project". 
+If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". 
+  1. Open Visual Studio -> Extension -> Manage Extensions -> Installed
+  2. Enable SSIS extension
+  3. Relaunch Visual Studio
 
 If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log.You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
 - If the error is "The file {filefullpath} already exists." 
@@ -46,14 +45,13 @@ If you get an error during installation, and find **"Bundle action failed: Inval
       cd C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE
       rm CommonExtensions\Microsoft\SSIS\* 
       rm PublicAssemblies\SSIS\* 
-      rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"*
-      ```
+      rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"* 
    2. Repair the vs2022
    3. Restart and reinstall
-- If the error is "System.NullReferenceException: Object reference not set to an instance of an object."
-    - delete the broken instance folder: “%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
+- If the error is "Object reference not set to an instance of an object."
+  - delete the broken instance folder: “%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
 - If the error is "Error 0x80091007: Failed to verify hash of payload"
-    - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
+  - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
 - If it is not above error in ISVsix.log, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
 ## Offline installation

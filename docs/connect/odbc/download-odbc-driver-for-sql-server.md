@@ -46,21 +46,21 @@ Microsoft ODBC Driver 18.1.2.1 for SQL Server (x86):
 
 ## Version 17
 
-Version 17.10.1 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.1 upgrades it to 17.10.1.
+Version 17.10.2 is the latest general availability (GA) version of the 17.x driver. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.10.2 upgrades it to 17.10.2.
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2200731)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2200732)**  
+(TO DO: UPDATE LINKS) :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2200731)**  
+(TO DO: UPDATE LINKS) :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2200732)**  
 
-- Release number: 17.10.1.1
-- Released: June 30, 2022
+- Release number: 17.10.2.1
+- Released: November 25, 2022
 
 This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
 
-Microsoft ODBC Driver 17.10.1.1 for SQL Server (x64):  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x40a)
+Microsoft ODBC Driver 17.10.2.1 for SQL Server (x64):  
+(TO DO: UPDATE LINKS) [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2200731&clcid=0x40a)
 
-Microsoft ODBC Driver 17.10.1.1 for SQL Server (x86):  
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x40a)
+Microsoft ODBC Driver 17.10.2.1 for SQL Server (x86):  
+(TO DO: UPDATE LINKS)[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2200732&clcid=0x40a)
 
 ### Release notes for Windows
 

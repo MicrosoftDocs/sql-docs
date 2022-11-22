@@ -3,7 +3,7 @@ title: "Custom Report Item Class Libraries | Microsoft Docs"
 description: Learn about the custom report item class libraries and use code samples to understand how to use these classes.
 ms.date: 03/03/2017
 ms.service: reporting-services
-ms.technology: custom-report-items
+ms.subservice: custom-report-items
 
 
 ms.topic: reference

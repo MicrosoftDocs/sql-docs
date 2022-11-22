@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
 ---
-# <a id="release-history"></a> Release history for 2019 on Linux
+# <a id="release-history"></a> Release history for SQL Server 2019 on Linux
 
 [!INCLUDE [sqlserver2019-linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
@@ -424,3 +424,4 @@ Go back to the [release history](#release-history).
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+

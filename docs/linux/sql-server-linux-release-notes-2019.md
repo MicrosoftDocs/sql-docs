@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver2019-linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-The following release notes apply to [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each cumulative update (CU) or general distribution release (GDR) has a link to a support article describing the CU changes as well as links to the Linux package downloads.
+The following release notes apply to [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] running on Linux. This article is broken into sections for each release. Detailed supportability and known issues are listed at the end of the article. Each release has a link to a support article describing the changes as well as links to the Linux package downloads.
 
 These release notes are specifically for [!INCLUDE[ssSQL19](../includes/sssql19-md.md)] releases. For release notes on other editions, see the following articles:
 
@@ -123,3 +123,4 @@ The following table lists the release history for [!INCLUDE[ssSQL19](../includes
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+

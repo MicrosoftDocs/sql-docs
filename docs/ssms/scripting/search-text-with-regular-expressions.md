@@ -1,18 +1,11 @@
 ---
 title: Search Text with Regular Expressions
-<<<<<<< HEAD
 description: Learn how to use a regular expression in the Find what field of a Find and Replace dialog box to specify a pattern to be matched.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: maghan
-ms.date: 11/17/2022
-ms.prod: sql
-ms.technology: ssms
-=======
-description: Learn how to use a regular expression in the "Find what" field of a Find and Replace dialog box to specify a pattern to be matched.
+ms.date: 11/22/2022
 ms.service: sql
 ms.subservice: ssms
->>>>>>> fe87a3b289cbc1affa286635fb6470d55601c3d0
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 f1_keywords:
@@ -41,7 +34,6 @@ Regular expressions are a concise and flexible notation for finding and replacin
 
 The following table describes the regular expressions available in the **Reference List**.
 
-<<<<<<< HEAD
 | Expression | Syntax | Description |
 | --- | --- | --- |
 | Any character | . | Matches any single character except a line break. |
@@ -55,33 +47,12 @@ The following table describes the regular expressions available in the **Referen
 | Any one character in the set | [] | Matches any one of the characters within the []. To specify a range of characters, list the starting and ending character separated by a dash (-), as in [a-z]. |
 | Any one character not in the set | [^...] | Matches any character not in the set of characters following the ^. |
 | Or | &#124; | Matches either the expression before or the one after the OR symbol (&#124;). Mostly used within a group. For example, (sponge&#124;mud) bath matches "sponge bath" and "mud bath." |
-| Escape | \| Matches the character that follows the backslash (\\) as a literal. This allows you to find the characters used in regular expression notation, such as { and ^. For example, \\^ Searches for the ^ character. |
+| Escape | \\ | Matches the character that follows the backslash (\\) as a literal. This allows you to find the characters used in regular expression notation, such as { and ^. For example, \\^ Searches for the ^ character. |
 | Tagged expression | {} | Matches text tagged with the enclosed expression. |
 | C/C++ Identifier | :i | Matches the expression ([a-zA-Z_$][a-zA-Z0-9_$]*). |
 | Quoted string | :q | Matches the expression (("[^"]*")&#124;('[^']\*')). |
 | Space or Tab | :b | Matches either space or tab characters. |
 | Integer | :z | Matches the expression ([0-9]+). |
-=======
-|Expression|Syntax|Description|
-|----------------|------------|-----------------|
-|Any character|.|Matches any single character except a line break.|
-|Zero or more|*|Matches zero or more occurrences of the preceding expression, making all possible matches.|
-|One or more|+|Matches at least one occurrence of the preceding expression.|
-|Beginning of line|^|Anchors the match string to the beginning of a line.|
-|End of line|$|Anchors the match string to the end of a line.|
-|Beginning of word|\<|Matches only when a word begins at this point in the text.|
-|End of word|>|Matches only when a word ends at this point in the text.|
-|Line break|\n|Matches a platform-independent line break. In a Replace expression, inserts a line break.|
-|Any one character in the set|[]|Matches any one of the characters within the []. To specify a range of characters, list the starting and ending character separated by a dash (-), as in [a-z].|
-|Any one character not in the set|[^...]|Matches any character not in the set of characters following the ^.|
-|Or|&#124;|Matches either the expression before or the one after the OR symbol (&#124;). Mostly used within a group. For example, (sponge&#124;mud) bath matches "sponge bath" and "mud bath."|
-|Escape| \\ |Matches the character that follows the backslash (\\) as a literal. This allows you to find the characters used in regular expression notation, such as { and ^. For example, \\^ Searches for the ^ character.|
-|Tagged expression|{}|Matches text tagged with the enclosed expression.|
-|C/C++ Identifier|:i|Matches the expression ([a-zA-Z_$][a-zA-Z0-9_$]*).|
-|Quoted string|:q|Matches the expression (("[^"]*")&#124;('[^']\*')).|
-|Space or Tab|:b|Matches either space or tab characters.|
-|Integer|:z|Matches the expression ([0-9]+).|
->>>>>>> fe87a3b289cbc1affa286635fb6470d55601c3d0
 
 The list of all regular expressions that are valid in **Find and Replace** operations is longer than can be displayed in the **Reference List**. You can also insert any of the following regular expressions into a **Find what** string:
 

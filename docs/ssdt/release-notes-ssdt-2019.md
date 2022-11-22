@@ -1,6 +1,6 @@
 ---
-title: SSIS Projects extension for VS2022 troubleshooting guide
-description: "View the release notes for all versions of SSIS that work with Visual Studio 2022 and earlier Visual Studio versions."
+title: SSIS Projects extension for VS2019 troubleshooting guide
+description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2019 and earlier Visual Studio versions."
 ms.service: sql
 ms.subservice: ssdt
 ms.topic: conceptual
@@ -8,7 +8,7 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
 ms.custom: seo-lt-2019
-ms.date: 11/21/2022
+ms.date: 07/26/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # SSIS Projects extension for VS2019 troubleshooting guide
@@ -23,9 +23,12 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 ## Offline installation
 Follow the below steps to install this product in an offline environment:
 1. Refer to the instructions in [Create an offline installation package of Visual Studio for local installation](/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019&preserve-view=true), and make sure the following prerequisites are included:
-    - Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[17.0,)" DisplayName="C# and Visual Basic"
-    - Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,)" DisplayName="Visual Studio core editor"
-    - Prerequisite Id="Microsoft.Net.Component.4.7.TargetingPack" Version="[17.0,)" DisplayName=".NET Framework 4.7 targeting pack"
+    - Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[16.0,)" DisplayName="C# and Visual Basic"
+    - Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,)" DisplayName="Visual Studio core editor"
+    - Prerequisite Id="Microsoft.VisualStudio.Component.SQL.SSDT" Version="[16.0,)" DisplayName="SQL Server Data Tools"
+    - Prerequisite Id="Microsoft.Net.Component.4.TargetingPack" Version="[16.0,)" DisplayName=".NET Framework 4 targeting pack"
+    - Prerequisite Id="Microsoft.Net.Component.4.5.TargetingPack" Version="[16.0,)" DisplayName=".NET Framework 4.5 targeting pack"
+    - Prerequisite Id="Microsoft.Net.Component.4.7.TargetingPack" Version="[16.0,)" DisplayName=".NET Framework 4.7 targeting pack"
 
 1. Launch the installer of this product and perform the installation, or you can run the installer in quiet mode. Launch the installer with "/?" argument to get more details of the arguments list of the installer.
 
@@ -33,25 +36,39 @@ Follow the below steps to install this product in an offline environment:
 
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
-- Sometimes SSIS or Visual Studio Tools for Applications 2022 may be deleted during Visual studio instance upgrade.  We've reported this issue to VS team. Sorry for any inconvenience.
-    - If your existing SSIS projects cannot be loaded, try to repair SSIS via control panel. 
-    - If VS doesn't pop up when clicking on "Edit Script", try to repair VSTA 2022 via control panel.
-- To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
+
+- SQL Server Integration Services Projects extension doesn't support Visual Studio 2022 yet. 
+
+- In the latest general availability (GA) version, to design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
+  - [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
+  - [Microsoft Connector Version 4.0 for Oracle and Teradata by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)
+  - [Microsoft Connector Version 3.0 for Oracle and Teradata by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)
+  - [Microsoft Connector Version 2.0 for Oracle and Teradata by Attunity targeting SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283)
+
+- Sometimes this product or Visual Studio Tools for Applications 2019 may be somehow deleted during VS instance upgrade. If your existing SSIS projects cannot be loaded, try to repair this product via control panel. If VS doesn't pop up when clicking on "Edit Script", try to repair VSTA 2019 via control panel. We've reported this issue to VS team. Sorry for any inconvenience.
 
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
-**Version 0.1**
-  1. Target sever version supported: SQL server 2019 and SQL server 2022 
-  2. Cannot design Dimension Processing and Partition Processing.
-  3. Cannot design DQS related component.
-  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
-  5. Side by side, localization and globalization are not supported.
-  6. SSIS extension is disabled after reinstallation. Workaround steps:
-      a. Open Visual Studio Extension Manager
-      b. Enable SSIS extension
-      c. Close Visual Studio
-      d. Execute devenv /updateconfiguration to restart
+**Version 4.3**
+- Known issues:
+    1. **Cannot design Oracle and Teradata Components.**
+ 
+**Version 4.2**
+- Known issues:
+    1. **Cannot design Oracle and Teradata Components.**
+ 
+**Version 4.1**
+- Known issues:
+    1. **Cannot design Oracle and Teradata Components.**
+    2. **Due to a limitation of VS marketplace, the version 4.1.2 does not introduce new binaries to download. Version 4.1 contains the latest binaries.**
+    
+**Version 4.0 preview:**
+- Known issues:
+    1. **Cannot design Oracle and Teradata Components.**
+    2. CDC source component in target [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] can't do preview.
+    3. **When executing SSIS project targeting SqlServer 2019 on the environment that SQL Server 2019 are also installed**, the execution will fail with error "Unable to cast COM object of type System._ComObject to interface type Microsoft.SqlServer.Dts.Runtime.Wrapper.Sql2019.IDTSApplication160".
+Workaround: Solution Explorer -> right click project ->properties->debugging->Run64bitRuntime->set to false.
 
 ## Download issues
 If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed and enable "SQL Server Integration Services Project". And relaunch VS
@@ -64,7 +81,7 @@ If you get an error during installation, and find **"Bundle action failed: Inval
       rm PublicAssemblies\SSIS\* 
       rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"*
       ```
-   2. Repair the vs2019 
+   2. Repair the vs2022
    3. Restart and reinstall
 - If the error is "System.NullReferenceException: Object reference not set to an instance of an object."
     - delete the broken instance folder: “%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"

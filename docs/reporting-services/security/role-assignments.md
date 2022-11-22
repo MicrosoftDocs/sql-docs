@@ -3,7 +3,6 @@ description: "Role Assignments"
 title: "Role Assignments | Microsoft Docs"
 ms.date: 05/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 

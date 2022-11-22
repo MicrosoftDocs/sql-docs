@@ -3,7 +3,6 @@ title: "Interactive sort, document maps, and links in a paginated report | Micro
 description: Enable your users to change the sort order of values in a paginated report, show or hide items, or select links to other reports or Web pages in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

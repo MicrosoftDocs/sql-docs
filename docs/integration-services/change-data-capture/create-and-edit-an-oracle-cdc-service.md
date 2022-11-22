@@ -1,8 +1,8 @@
 ---
 title: Create and Edit an Oracle CDC Service
 description: "Create and Edit an Oracle CDC Service"
-ms.prod: sql
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "createSrv"

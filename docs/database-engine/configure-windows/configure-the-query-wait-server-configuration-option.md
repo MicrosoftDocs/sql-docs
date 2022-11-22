@@ -4,8 +4,8 @@ description: Learn about the query wait option. See how to use it to specify the
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "queries [SQL Server], timing out"

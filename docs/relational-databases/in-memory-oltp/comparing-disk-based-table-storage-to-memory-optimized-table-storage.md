@@ -4,9 +4,8 @@ description: Learn to compare disk-based and memory-optimized table storage in t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4

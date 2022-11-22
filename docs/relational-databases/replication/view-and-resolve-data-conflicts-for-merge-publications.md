@@ -3,10 +3,9 @@ title: "View & resolve data conflicts (Merge)"
 description: Learn how to view and resolve data conflicts for a Merge Publication for SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication conflict resolution [SQL Server replication], viewing conflicts"

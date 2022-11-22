@@ -3,9 +3,9 @@ title: "OLE Automation Objects in Transact-SQL"
 description: Learn how OLE Automation objects that are executed through stored procedures run in the address space of an instance of the SQL Server Database Engine.
 ms.custom: ""
 ms.date: "03/10/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: conceptual
 helpviewer_keywords: 
   - "triggers [SQL Server], OLE Automation"

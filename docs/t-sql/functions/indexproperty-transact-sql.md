@@ -4,8 +4,8 @@ description: "INDEXPROPERTY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: 06/26/2019
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "INDEXPROPERTY"

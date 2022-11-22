@@ -3,9 +3,8 @@ description: "Create and Manage Full-Text Indexes"
 title: "Create and Manage Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/31/2020"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], about"

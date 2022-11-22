@@ -3,10 +3,9 @@ title: "Replication conflict viewer & resolver"
 description: A reference for articles that explain the Microsoft Replication Conflict Viewer and Microsoft Replication Interactive Conflict Resolver for SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication conflict viewer [SQL Server]"

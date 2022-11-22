@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
 ms.date: 08/10/2017
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 dev_langs:

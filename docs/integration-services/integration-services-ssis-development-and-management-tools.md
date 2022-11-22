@@ -5,8 +5,8 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "studio environments [Integration Services]"

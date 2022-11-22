@@ -4,8 +4,8 @@ description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL"

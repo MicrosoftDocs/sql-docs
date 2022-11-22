@@ -3,10 +3,9 @@ description: "Device Not Ready Error"
 title: "Device Not Ready Error | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"

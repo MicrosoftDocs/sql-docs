@@ -3,10 +3,9 @@ description: "The sys.fn_xe_file_target_read_file system function reads files th
 title: "sys.fn_xe_file_target_read_file (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/21/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "fn_xe_file_target_read_file_TSQL"

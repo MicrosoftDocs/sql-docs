@@ -1,11 +1,11 @@
 ---
 description: "Testing Migrated Database Objects (OracleToSQL)"
 title: "Testing Migrated Database Objects (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "04/29/2021"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 author: cpichuka 

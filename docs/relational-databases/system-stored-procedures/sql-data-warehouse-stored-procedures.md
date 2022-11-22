@@ -3,8 +3,7 @@ description: "Azure Synapse Analytics Stored Procedures"
 title: "Azure Synapse Analytics Stored Procedures"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
 ms.topic: "reference"
 dev_langs: 

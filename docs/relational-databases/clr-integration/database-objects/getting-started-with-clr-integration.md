@@ -4,8 +4,8 @@ description: This article describes the namespaces and libraries required to com
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: quickstart
 ms.custom: intro-quickstart
 helpviewer_keywords:

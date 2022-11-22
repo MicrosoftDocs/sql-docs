@@ -3,10 +3,9 @@ description: "Create the Function to Retrieve the Change Data"
 title: "Create the Function to Retrieve the Change Data"
 ms.custom: ""
 ms.date: "07/26/2021"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: "wiassaf"
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],creating function"

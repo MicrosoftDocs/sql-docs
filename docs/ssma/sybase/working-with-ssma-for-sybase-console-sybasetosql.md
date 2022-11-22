@@ -3,9 +3,9 @@ description: "Working with SSMA for Sybase Console (SybaseToSQL)"
 title: "Working with SSMA for Sybase Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: cpichuka 

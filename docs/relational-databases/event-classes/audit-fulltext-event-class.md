@@ -3,9 +3,9 @@ description: "Audit Fulltext Event Class"
 title: "Audit Fulltext Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: WilliamDAssafMSFT

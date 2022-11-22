@@ -1,9 +1,8 @@
 ---
 description: "Import Registered Server Information (SQL Server Management Studio)"
 title: Import Registered Server Information
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.importregisteredservers.f1"

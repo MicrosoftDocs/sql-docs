@@ -4,7 +4,6 @@ description: Learn how you can easily measure status and performance by using KP
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 01/06/2022

@@ -3,10 +3,9 @@ description: "SetNumericalValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetNumericalValue Method (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: wmi
+ms.subservice: wmi
 ms.topic: "reference"
 apiname: 
   - "SetNumericalValue Method (SqlServiceAdvancedProperty Class)"

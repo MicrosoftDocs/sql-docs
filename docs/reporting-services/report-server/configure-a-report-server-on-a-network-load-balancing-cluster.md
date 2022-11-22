@@ -4,7 +4,6 @@ description: Learn how to configure a report server scale-out to run on an NLB. 
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 03/23/2021

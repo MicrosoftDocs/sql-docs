@@ -6,8 +6,8 @@ author: rothja
 ms.author: jroth
 ms.date: 05/11/2020
 ms.topic: how-to
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ms.custom:
   - intro-installation

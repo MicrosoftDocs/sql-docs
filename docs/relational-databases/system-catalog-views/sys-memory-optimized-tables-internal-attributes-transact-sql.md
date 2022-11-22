@@ -4,9 +4,8 @@ description: sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 author: "kevin-farlee"
 ms.author: "kfarlee"
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.memory_optimized_tables_internal_attributes"

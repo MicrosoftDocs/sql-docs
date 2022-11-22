@@ -4,8 +4,8 @@ description: "DBCC CHECKDB (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/14/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "CHECKDB_TSQL"

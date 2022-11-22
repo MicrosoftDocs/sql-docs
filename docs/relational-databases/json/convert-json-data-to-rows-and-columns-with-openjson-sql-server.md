@@ -2,8 +2,8 @@
 description: "Parse and Transform JSON Data with OPENJSON (SQL Server)"
 title: "Parse and Transform JSON Data with OPENJSON"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON"

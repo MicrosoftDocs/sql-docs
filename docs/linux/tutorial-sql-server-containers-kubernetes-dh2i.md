@@ -6,8 +6,8 @@ ms.author: amitkh
 ms.reviewer: amitkh, vanto
 ms.date: 04/01/2022
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.custom:
   - intro-deployment
 ---

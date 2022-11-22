@@ -4,9 +4,8 @@ description: sys.dm_db_xtp_gc_cycle_stats returns the current state of committed
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_xtp_gc_cycle_stats_TSQL"

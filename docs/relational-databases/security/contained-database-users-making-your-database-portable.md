@@ -3,10 +3,9 @@ title: "Contained user access to contained databases"
 description: Learn how to configure contained user access for contained databases, and the differences between a traditional login/user model. 
 ms.custom: seo-lt-2019
 ms.date: "01/28/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, users"

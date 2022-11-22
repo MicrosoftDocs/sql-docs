@@ -2,10 +2,9 @@
 title: SQL Server Profiler Templates and Permissions
 titleSuffix: SQL Server Profiler
 description: Learn how SQL Server Profiler works, how to use it to trace events, and where to find more information on its features.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 author: markingmyname

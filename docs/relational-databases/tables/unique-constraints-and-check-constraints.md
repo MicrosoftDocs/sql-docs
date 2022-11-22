@@ -3,10 +3,9 @@ description: "Unique Constraints and Check Constraints"
 title: "Unique Constraints and Check Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "constraints [SQL Server], Visual Database Tools"

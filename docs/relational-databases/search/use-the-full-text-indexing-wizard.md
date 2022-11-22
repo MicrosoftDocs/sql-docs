@@ -2,9 +2,8 @@
 description: "Use the Full-Text Indexing Wizard"
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.fulltextindexingwizard.welcome.f1"

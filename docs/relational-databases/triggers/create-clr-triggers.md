@@ -3,9 +3,9 @@ description: "Create CLR Triggers"
 title: "Create CLR Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CRL triggers"

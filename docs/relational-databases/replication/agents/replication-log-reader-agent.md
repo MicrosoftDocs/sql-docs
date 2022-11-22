@@ -3,10 +3,9 @@ title: "Replication Log Reader Agent | Microsoft Docs"
 description: The Replication Log Reader Agent monitors SQL Server databases configured for transactional replication and copies transactions to the distribution database.
 ms.custom: ""
 ms.date: "10/29/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Log Reader Agent, executables"

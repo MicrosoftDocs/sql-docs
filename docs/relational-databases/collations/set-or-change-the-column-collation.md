@@ -3,9 +3,9 @@ description: "Set or Change the Column Collation"
 title: "Set or Change the Column Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/05/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tempdb database [SQL Server], collations"

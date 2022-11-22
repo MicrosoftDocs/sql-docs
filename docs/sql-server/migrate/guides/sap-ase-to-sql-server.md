@@ -1,9 +1,9 @@
 ---
 title: "SAP ASE to SQL Server: Migration guide"
 description: 'This guide teaches you how to migrate your SAP ASE databases to Microsoft SQL Server by using SQL Server Migration Assistant for SAP ASE (SSMA for SAP ASE).'
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: migration-guide
+ms.subservice: migration-guide
 ms.custom:
   - intro-migration
 ms.devlang: 

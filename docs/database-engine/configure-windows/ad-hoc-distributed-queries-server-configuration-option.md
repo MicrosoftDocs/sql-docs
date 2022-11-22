@@ -4,8 +4,8 @@ description: Find out how to enable ad hoc distributed queries in SQL Server. Yo
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/18/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "OPENROWSET function, ad hoc distributed queries option"

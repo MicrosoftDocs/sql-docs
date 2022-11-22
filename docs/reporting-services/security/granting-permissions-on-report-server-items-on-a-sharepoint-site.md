@@ -3,7 +3,6 @@ description: "Granting Permissions on Report Server Items on a SharePoint Site"
 title: "Granting Permissions on Report Server Items on a SharePoint Site | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 

@@ -1,9 +1,8 @@
 ---
 title: sp_cursorprepare (Transact-SQL)
 description: "sp_cursorprepare (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_cursor_prepare_TSQL"

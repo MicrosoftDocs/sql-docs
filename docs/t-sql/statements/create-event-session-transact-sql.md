@@ -4,9 +4,8 @@ description: CREATE EVENT SESSION creates an Extended Events session that identi
 author: markingmyname
 ms.author: maghan
 ms.date: "03/25/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EVENT SESSION"

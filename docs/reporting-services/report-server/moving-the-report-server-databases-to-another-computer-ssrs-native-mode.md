@@ -3,7 +3,6 @@ title: "Move Report Server Databases to Another Computer (Native Mode) | Microso
 description: "You can move the report server databases that are used in an installation of SQL Server Database Engine to an instance that is on a different computer."
 ms.date: 12/16/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 ms.topic: conceptual

@@ -2,9 +2,8 @@
 description: "Linked Servers (Database Engine)"
 title: "Linked Servers (Database Engine)"
 ms.date: "11/15/2021"
-ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
+ms.service: sql
+ms.subservice: 
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

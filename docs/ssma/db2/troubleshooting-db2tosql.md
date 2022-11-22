@@ -1,11 +1,11 @@
 ---
 description: "Troubleshooting (DB2ToSQL)"
 title: "Troubleshooting (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: cpichuka 

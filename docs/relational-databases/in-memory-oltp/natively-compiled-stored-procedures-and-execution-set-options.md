@@ -4,9 +4,8 @@ description: The SET options of a session do not affect a stored procedure execu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7

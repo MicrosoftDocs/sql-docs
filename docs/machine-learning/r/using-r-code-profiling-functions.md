@@ -1,8 +1,8 @@
 ---
 title: Improve performance by using R code profiling function
 description: Collect useful information to improve performance and get faster results on R computations on SQL Server by using R profiling functions. The *rprof* function collects and returns information about internal function calls.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 
 ms.date: 10/30/2020 
 ms.topic: how-to

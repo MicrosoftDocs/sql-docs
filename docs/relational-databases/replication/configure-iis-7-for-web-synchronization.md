@@ -3,10 +3,9 @@ description: "Configure IIS 7 for Web Synchronization"
 title: "Configure IIS 7 for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IIS 7 server configuration [SQL Server replication]"

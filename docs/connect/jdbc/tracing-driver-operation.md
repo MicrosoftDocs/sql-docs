@@ -4,8 +4,8 @@ description: Learn how to use tracing to log details and resolve issues and prob
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 11/03/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Tracing driver operation

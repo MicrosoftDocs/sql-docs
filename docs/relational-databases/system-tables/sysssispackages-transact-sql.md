@@ -4,9 +4,8 @@ description: sysssispackages (Transact-SQL)
 author: lrtoyou1223
 ms.author: lle
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysdtspackages90_TSQL"

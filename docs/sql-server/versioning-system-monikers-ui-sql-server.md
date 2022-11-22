@@ -2,8 +2,8 @@
 description: "Versioning system for SQL documentation"
 title: Versioning system SQL docs
 ms.date: 08/12/2020
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray

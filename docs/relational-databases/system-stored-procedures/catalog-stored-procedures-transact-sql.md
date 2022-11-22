@@ -3,10 +3,9 @@ description: "An index of catalog stored procedures in SQL Server Transact-SQL."
 title: "Catalog Stored Procedures (Transact-SQL)"
 ms.custom: ""
 ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

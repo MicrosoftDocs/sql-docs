@@ -4,8 +4,8 @@ description: Learn about creating applications that use the Microsoft ODBC Drive
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 02/15/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Microsoft ODBC Driver for SQL Server on Windows

@@ -4,8 +4,8 @@ description: Learn how SQL Server compresses data streams for availability group
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "06/22/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ---
 # Tune compression for availability group

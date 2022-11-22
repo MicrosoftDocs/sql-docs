@@ -6,8 +6,8 @@ ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 09/27/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 
 # Performance best practices and configuration guidelines for SQL Server on Linux

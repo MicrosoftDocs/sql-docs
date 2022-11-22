@@ -1,11 +1,11 @@
 ---
 description: "Loading Converted Database Objects into SQL Server (MySQLToSQL)"
 title: "Loading Converted Database Objects into SQL Server (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: cpichuka 

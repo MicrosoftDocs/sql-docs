@@ -4,9 +4,9 @@ description: 'This guide teaches you how to migrate your Db2 databases to Micros
 ms.custom:
   - intro-migration
 ms.date: 10/05/2021
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: migration-guide
+ms.subservice: migration-guide
 ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma

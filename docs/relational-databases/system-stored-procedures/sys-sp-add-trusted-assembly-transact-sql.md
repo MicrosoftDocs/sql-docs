@@ -3,8 +3,8 @@ description: "sys.sp_add_trusted_assembly (Transact-SQL)"
 title: "sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_add_trusted_assembly_TSQL"

@@ -4,9 +4,8 @@ description: sys.routes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/07/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "routes"

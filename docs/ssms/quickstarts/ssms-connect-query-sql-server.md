@@ -1,8 +1,8 @@
 ---
 title: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)
 description: Connect to a SQL Server instance in SSMS. Create and query a SQL Server database in SSMS running basic Transact-SQL (T-SQL) queries.
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: quickstart
 author: markingmyname
 ms.author: maghan

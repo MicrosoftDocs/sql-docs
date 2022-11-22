@@ -4,9 +4,8 @@ description: ALTER DATABASE Database Mirroring (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "02/21/2019"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "witness [SQL Server], establishing"

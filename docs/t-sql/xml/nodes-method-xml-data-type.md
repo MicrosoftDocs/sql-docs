@@ -1,8 +1,8 @@
 ---
 title: nodes() Method (xml Data Type)
 description: "nodes() Method (xml Data Type)"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"

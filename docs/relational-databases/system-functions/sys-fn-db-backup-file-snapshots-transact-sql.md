@@ -3,10 +3,9 @@ description: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
 title: "sys.fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

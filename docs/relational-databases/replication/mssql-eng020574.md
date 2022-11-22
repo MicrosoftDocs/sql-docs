@@ -3,9 +3,9 @@ description: "MSSQL_ENG020574"
 title: "MSSQL_ENG020574 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG02574 error"

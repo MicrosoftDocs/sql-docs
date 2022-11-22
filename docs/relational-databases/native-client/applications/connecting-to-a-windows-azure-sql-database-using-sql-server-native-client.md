@@ -4,8 +4,8 @@ title: "Connect to Azure SQL Database"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
-ms.prod: sql
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: markingmyname

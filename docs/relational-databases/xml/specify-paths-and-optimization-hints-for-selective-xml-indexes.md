@@ -2,10 +2,9 @@
 title: "Paths and optimization hints for selective XML indexes"
 description: Learn how to specify node paths and optimization hints when you create or alter selective XML indexes.
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray

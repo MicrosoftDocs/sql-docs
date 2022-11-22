@@ -3,9 +3,9 @@ description: "MSSQLSERVER_5512"
 title: "MSSQLSERVER_5512 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "5512 (Database Engine error)"

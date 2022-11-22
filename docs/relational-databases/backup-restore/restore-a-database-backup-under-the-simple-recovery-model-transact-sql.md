@@ -3,10 +3,9 @@ title: "Restore database: simple recovery model (Transact-SQL)"
 description: This article explains how to restore a full SQL Server database backup under the simple recovery model using Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full backups [SQL Server]"

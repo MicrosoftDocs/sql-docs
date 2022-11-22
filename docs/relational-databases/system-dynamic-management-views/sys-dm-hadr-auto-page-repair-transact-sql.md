@@ -4,8 +4,8 @@ description: sys.dm_hadr_auto_page_repair (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/05/2019"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_hadr_auto_page_repair_TSQL"

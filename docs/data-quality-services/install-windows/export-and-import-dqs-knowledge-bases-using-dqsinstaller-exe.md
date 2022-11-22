@@ -4,8 +4,8 @@ description: Learn how to use the DQSInstaller.exe to export and import DQS Know
 author: swinarko
 ms.author: sawinark
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 ---

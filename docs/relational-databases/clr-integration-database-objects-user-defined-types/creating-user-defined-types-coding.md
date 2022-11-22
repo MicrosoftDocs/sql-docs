@@ -4,8 +4,8 @@ description: This example shows how to implement a UDT to use in a SQL Server da
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "validation [CLR integration]"

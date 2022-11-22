@@ -3,10 +3,9 @@ title: "Row Compression Implementation"
 description: Learn how the SQL Server Database Engine implements row compression to help you plan the storage space that you need for your data.
 ms.custom: ""
 ms.date: "03/27/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compression [SQL Server], row"

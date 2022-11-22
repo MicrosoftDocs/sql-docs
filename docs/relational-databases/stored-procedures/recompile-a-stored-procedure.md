@@ -3,8 +3,8 @@ title: "Recompile a Stored Procedure | Microsoft Docs"
 description: Learn details about how to recompile a stored procedure in SQL Server 2019 (15.x) by using Transact-SQL.
 ms.custom: ""
 ms.date: "10/28/2019"
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

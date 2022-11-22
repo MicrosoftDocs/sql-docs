@@ -46,6 +46,7 @@ If you get an error during installation, and find **"Bundle action failed: Inval
       rm CommonExtensions\Microsoft\SSIS\* 
       rm PublicAssemblies\SSIS\* 
       rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"* 
+      ```
    2. Repair the vs2022
    3. Restart and reinstall
 - If the error is "Object reference not set to an instance of an object."

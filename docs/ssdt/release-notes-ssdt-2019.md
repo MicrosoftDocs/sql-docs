@@ -81,7 +81,7 @@ If you get an error during installation, and find **"Bundle action failed: Inval
       rm PublicAssemblies\SSIS\* 
       rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"*
       ```
-   2. Repair the vs2022
+   2. Repair the vs2019
    3. Restart and reinstall
 - If the error is "System.NullReferenceException: Object reference not set to an instance of an object."
     - delete the broken instance folder: “%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"

@@ -66,14 +66,14 @@ Restoring a point-in-time restore backup across subscriptions has the following 
 - Both subscriptions must be in the same region.
 - Both subscriptions must be in the same tenant.
 - The subscription type must be either EA, CSP, MCA, or PayGo.
-- You can do a restore operation only only on the primary instance.
+- You can do a restore operation only on the primary instance.
 - Geo-replicated backups aren't currently supported for cross-subscription point-in-time restore.
 - The user performing the restore must either be part of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**.
 - If you're bringing your own key (BYOK), then the key must be present in both subscriptions.
 
 ## Restore an existing database
 
-Restore an existing database in the same subscription by using the Azure portal, PowerShell, or the Azure CLI. If you're restoring to a different instance in the same subscription and using PowerShell or the Azure CLI, be sure to specify the properties for the target SQL Managed Instance or the database will be restored to the same instance by default.
+Restore an existing database in the same subscription by using the Azure portal, PowerShell, or the Azure CLI. If you're restoring to a different instance in the same subscription and using PowerShell or the Azure CLI, be sure to specify the properties for the target SQL Managed Instance resource or the database is restored to the same instance by default.
 
 Restoring your database to an instance in a different subscription is currently only possible by using the Azure portal. If you're restoring to a different subscription, the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) API call underlying the restore action must contain `restorePointInTime`, `crossSubscriptionTargetManagedInstanceId`, and `crossSubscriptionSourceDatabaseId` *or* `crossSubscriptionRestorableDroppedDatabaseId`.
 
@@ -83,7 +83,7 @@ Restoring your database to an instance in a different subscription is currently 
 1. In SQL Managed Instance, go to your source managed instance.
 1. In **Managed Instance databases**, select the database you want to restore.
 
-   :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot of the Azure portal, SQL Managed Instance overview blade, with a database selected. ":::
+   :::image type="content" source="media/point-in-time-restore/choose-database-to-restore.png" alt-text="Screenshot of the Azure portal, SQL Managed Instance overview pane, with a database selected. ":::
 
 1. Select **Restore** on the database page to open the **Create Azure SQL Managed Database** page:
 
@@ -92,7 +92,7 @@ Restoring your database to an instance in a different subscription is currently 
 1. On the **Basics** tab under **Project details**, select the target destination subscription and resource group that contains the managed instance you want to restore the database to.
 1. Under **Database details**, provide the new name your restored database will use, and the target SQL Managed Instance you want to restore the database to.
 1. On the **Data source** tab, select **Continuous backup**, and then choose the subscription and resource group from the source database you want to restore.
-1. Once you provide the source subscription and resource group, choose the database you want to restore from the **Managed Database** dropdown and then select the point in time restore point you want to restore the database from.
+1. Once you provide the source subscription and resource group, choose the database you want to restore from the **Managed Database** dropdown, and then select the point in time restore point you want to restore the database from.
 1. On the **Additional settings** tab, you can check the box if you want your restored database to inherit the retention settings of the source database, or you can uncheck the box and specify a new retention policy by selecting **Configure retention**.
 1. Select **Review + Create**  to validate your database restore settings and then select **Create** to restore your database. This action starts the restore process, which creates a new database and populates it with data from the original database at the specified point in time. For more information about the recovery process, see [Recovery time](../database/recovery-using-backups.md#recovery-time).
 

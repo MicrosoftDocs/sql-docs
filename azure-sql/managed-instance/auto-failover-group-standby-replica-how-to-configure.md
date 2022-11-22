@@ -102,14 +102,14 @@ From the **Compute + storage** page of your *secondary managed instance*, confir
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot of the Azure portal, Compute and storage page, with failover rights highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png":::
 
-If you don't have Failover rights activated, and you qualify for the benefit, you'll also see the following recommendation on the **Overview** blade for either instance. Selecting it will take you to the **Edit configurations** page so you can activate the benefit:
+If you don't have failover rights activated and you qualify for the benefit, you'll also see the following recommendation on the **Overview** blade for either instance. Selecting it will take you to the **Edit configurations** page so you can activate the benefit:
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot of the Azure portal, SQL MI overview page, recommendations showing Failover rights are not used." :::
+:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot of the Azure portal, SQL MI overview page, recommendations showing failover rights are not used." :::
 
 ## Next steps
 
 - For a detailed tutorial, see [Add a SQL Managed Instance to a failover group](failover-group-add-instance-tutorial.md).
-- For a sample script, see: [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
+- For a sample script, see [Use PowerShell to create an auto-failover group on a SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
 - For a business continuity overview and scenarios, see [Business continuity overview](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - To learn about automated backups, see [SQL Database automated backups](../database/automated-backups-overview.md).
 - To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).

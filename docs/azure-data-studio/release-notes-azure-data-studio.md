@@ -22,6 +22,8 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ### November 2022 (hotfix)
 
+Azure Data Studio 1.41 is the latest general availability (GA) release.
+
 - Release number: 1.40.1
 - Release date: November 23, 2022
 

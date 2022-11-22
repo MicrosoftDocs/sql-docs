@@ -22,11 +22,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
-- Sometimes SSIS or Visual Studio Tools for Applications 2022 may be deleted during Visual studio instance upgrade.  We've reported this issue to VS team. Sorry for any inconvenience.
-    - If your existing SSIS projects cannot be loaded, try to repair SSIS via control panel. 
-    - If VS doesn't pop up when clicking on "Edit Script", try to repair VSTA 2022 via control panel.
-- To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
-
+- To design packages using Oracle and Teradata connectors is not supportted yet.
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
@@ -40,10 +36,9 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
       a. Open Visual Studio Extension Manager
       b. Enable SSIS extension
       c. Close Visual Studio
-      d. Execute devenv /updateconfiguration to restart
 
 ## Download issues
-If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed and enable "SQL Server Integration Services Project". And relaunch VS
+If you install successfully, but the solution shows **"incompatible"** and "The application is not installed". Please go to Extensions -> Manage Extensions -> Installed, and enable "SQL Server Integration Services Project". 
 
 If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log.You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log. 
 - If the error is "The file {filefullpath} already exists." 
@@ -61,10 +56,9 @@ If you get an error during installation, and find **"Bundle action failed: Inval
     - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
 - If it is not above error in ISVsix.log, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.
 
-
 ## Offline installation
 Follow the below steps to install this product in an offline environment:
-1. Refer to the instructions in [Create an offline installation package of Visual Studio for local installation](/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019&preserve-view=true), and make sure the following prerequisites are included:
+1. Refer to the instructions in [Create an offline installation package of Visual Studio for local installation](/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2022&preserve-view=true), and make sure the following prerequisites are included:
     - Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[17.0,)" DisplayName="C# and Visual Basic"
     - Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,)" DisplayName="Visual Studio core editor"
     - Prerequisite Id="Microsoft.Net.Component.4.7.TargetingPack" Version="[17.0,)" DisplayName=".NET Framework 4.7 targeting pack"

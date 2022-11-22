@@ -7,7 +7,7 @@ ms.topic: include
 ---
 The availability group listener is an IP address and network name that the SQL Server availability group listens on. To create the availability group listener, do the following:
 
-1. <a name="getnet"></a>Get the name of the cluster network resource.
+1. <a name="getnet"></a>Get the name of the cluster network resource:
 
     a. Use RDP to connect to the Azure virtual machine that hosts the primary replica. 
 
@@ -17,7 +17,8 @@ The availability group listener is an IP address and network name that the SQL S
 
     :::image type="content" source="./media/virtual-machines-ag-listener-configure/90-cluster-network-name.png" alt-text="Screenshot that shows a cluster network name in Failover Cluster Manager.":::
 
-1. <a name="addcap"></a>Add the client access point.  
+1. <a name="addcap"></a>Add the client access point.
+
     The client access point is the network name that applications use to connect to the databases in an availability group. Create the client access point in Failover Cluster Manager:
 
     a. Expand the cluster name, and then select **Roles**.
@@ -45,7 +46,7 @@ The availability group listener is an IP address and network name that the SQL S
 
    :::image type="content" source="./media/virtual-machines-ag-listener-configure/96-ip-resource.png" alt-text="Screenshot of Failover Cluster Manager that shows the selection of an IP address.":::
     
-1. <a name = "dependencyGroup"></a>Make the SQL Server availability group dependent on the client access point.
+1. <a name = "dependencyGroup"></a>Make the SQL Server availability group dependent on the client access point:
 
     a. In Failover Cluster Manager, select **Roles**, and then select your availability group.
 
@@ -57,7 +58,7 @@ The availability group listener is an IP address and network name that the SQL S
 
     d. Select **OK**.
 
-1. <a name="listname"></a>Make the client access point dependent on the IP address.
+1. <a name="listname"></a>Make the client access point dependent on the IP address:
 
     a. In Failover Cluster Manager, select **Roles**, and then select your availability group.
 
@@ -65,9 +66,9 @@ The availability group listener is an IP address and network name that the SQL S
 
    :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-dependencies.png" alt-text="Screenshot of Failover Cluster Manager that shows the Properties menu option for the listener's name.":::
 
-    c. Select the **Dependencies** tab. Verify that the IP address is a dependency. If it isn't, set a dependency on the IP address. If there are multiple resources listed, verify that the IP addresses have **OR**, not **AND**, dependencies. Select **OK**.
+    c. Select the **Dependencies** tab. Verify that the IP address is a dependency. If it isn't, set a dependency on the IP address. If multiple resources are listed, verify that the IP addresses have **OR**, not **AND**, dependencies. Select **OK**.
 
-   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-properties-dependencies.png" alt-text="Screenshot of the Dependencies tab that shows an IP resource for the availability group.":::
+   :::image type="content" source="./media/virtual-machines-ag-listener-configure/98-properties-dependencies.png" alt-text="Screenshot of the Dependencies tab that shows an IP resource for an availability group.":::
 
     >[!TIP]
     >You can validate that the dependencies are correctly configured. In Failover Cluster Manager, go to **Roles**, right-click the availability group, select **More Actions**, and then select **Show Dependency Report**. When the dependencies are correctly configured, the availability group is dependent on the network name, and the network name is dependent on the IP address.
@@ -128,7 +129,7 @@ If necessary, repeat the preceding steps to set the cluster parameters for the I
 
    b. Set the cluster parameters by running the PowerShell script on one of the cluster nodes.  
 
-If any SQL resource is configured to use a port between 49152 and 65536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Such resources might include the SQL Server database engine, Always On availability group listener, failover cluster instance's health probe, database mirroring endpoint, and cluster core IP resource. Adding an exclusion will prevent other system processes from being dynamically assigned to the same port. For this scenario, configure the following exclusions in all cluster nodes:
+If any SQL resource is configured to use a port between 49152 and 65536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip)), add an exclusion for each port. Such resources might include the SQL Server database engine, Always On availability group listener, health probe for the failover cluster instance, database mirroring endpoint, and cluster core IP resource. Adding an exclusion will prevent other system processes from being dynamically assigned to the same port. For this scenario, configure the following exclusions on all cluster nodes:
 
 - `netsh int ipv4 add excludedportrange tcp startport=58888 numberofports=1 store=persistent`
 - `netsh int ipv4 add excludedportrange tcp startport=59999 numberofports=1 store=persistent`

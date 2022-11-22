@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Configure a SQL Server Always On availability group across different regions"
+title: "Tutorial: Configure a SQL Server Always On availability group across regions"
 description: "This tutorial explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region."
 author: tarynpratt
 ms.author: tarynpratt
@@ -13,157 +13,158 @@ editor: monicar
 tags: azure-service-management
 ---
 
-# Configure a SQL Server Always On availability group across different Azure regions
+# Configure a SQL Server Always On availability group across Azure regions
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This tutorial explains how to configure a SQL Server Always On availability group replica on Azure virtual machines in a remote Azure location. Use this configuration to support disaster recovery.
+This tutorial explains how to configure a SQL Server Always On availability group replica on Azure virtual machines (VMs) in a remote Azure location. Use this configuration to support disaster recovery.
 
-This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). Mentions of the local region in this article refers to the virtual machines and availability group already configured in a single region, whereas the remote region is the new infrastructure being added in this tutorial.
+This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). Mentions of the local region in this article refer to the virtual machines and availability group already configured in a single region. The remote region is the new infrastructure that this tutorial is adding.
 
 > [!NOTE]  
 > You can use the same steps in this article to extend your on-premises availability group to Azure.
-
 
 ## Overview
 
 The following image shows a common deployment of an availability group on Azure virtual machines:
 
-:::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic.png" alt-text="Diagram that shows the Azure load balancer and the Availability set with a Windows Server Failover Cluster and Always On Availability Group":::
+:::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic.png" alt-text="Diagram that shows an Azure load balancer and an aailability set with a Windows Server failover cluster and Always On availability group.":::
 
-In this deployment, all virtual machines are in one Azure region. The availability group replicas can have synchronous commit with automatic failover on SQL-1 and SQL-2. To build this architecture, see [Availability Group template or tutorial](availability-group-overview.md).
+In this deployment, all virtual machines are in one Azure region. The availability group replicas can have synchronous commit with automatic failover on SQL-1 and SQL-2. To build this architecture, see the [availability group template or tutorial](availability-group-overview.md).
 
 This architecture is vulnerable to downtime if the Azure region becomes inaccessible. To overcome this vulnerability, add a replica in a different Azure region. The following diagram shows how the new architecture would look:
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic-dr.png" alt-text="Diagram of an Availability Group disaster recovery scenario.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic-dr.png" alt-text="Diagram of a disaster recovery scenario for an availability group.":::
 
-The previous diagram shows a new virtual machine called SQL-3. SQL-3 is in a different Azure region. SQL-3 is added to the Windows Server Failover Cluster. SQL-3 can host an availability group replica. Finally, notice that the Azure region for SQL-3 has a new Azure load balancer. In this architecture, the replica in the remote region is normally configured with asynchronous commit availability mode and manual failover mode.
+The previous diagram shows a new virtual machine called SQL-3. SQL-3 is in a different Azure region. It's added to the Windows Server failover cluster and can host an availability group replica. 
+
+The Azure region for SQL-3 has a new Azure load balancer. In this architecture, the replica in the remote region is normally configured with asynchronous commit availability mode and manual failover mode.
 
 > [!NOTE]
-> An Azure availability set is required when more than one virtual machine is in the same region. If only one virtual machine is in the region, then the availability set is not required. You can only place a virtual machine in an availability set at creation time. If the virtual machine is already in an availability set, you can add a virtual machine for an additional replica later.
+> An Azure availability set is required when more than one virtual machine is in the same region. If only one virtual machine is in the region, the availability set is not required.
+>
+> You can place a virtual machine in an availability set only at creation time. If the virtual machine is already in an availability set, you can add a virtual machine for an additional replica later.
 
-When availability group replicas are on Azure virtual machines in different Azure regions, then you can connect the Virtual Networks using the recommended [Virtual Network Peering](/azure/virtual-network/virtual-network-peering-overview) or [Site to Site VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+When availability group replicas are on Azure virtual machines in different Azure regions, you can connect the virtual networks by using [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) or a [site-to-site VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
 > [!IMPORTANT]
-> This architecture incurs outbound data charges for data replicated between Azure regions. See [Bandwidth Pricing](https://azure.microsoft.com/pricing/details/bandwidth/).  
-
-
+> This architecture incurs outbound data charges for data replicated between Azure regions. See [Bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/).  
 
 ## Create the network and subnet
 
-Before creating a virtual network and subnet in a new region, decide the address space, subnet starting address, Cluster IP, and AG listener IP addresses you'll use for the remote region. 
+Before you create a virtual network and subnet in a new region, decide the address space, subnet network, cluster IP, and AG listener IP addresses that you'll use for the remote region. 
 
-The following table lists details for the local (current) region and what will be set up in the new remote region for easy reference.
+The following table lists details for the local (current) region and what will be set up in the new remote region.
 
-| Type | Local | Remote Region
+| Type | Local | Remote region
 | ----- | ----- | ----------
-| Address Space | 192.168.0.0/16 | 10.36.0.0/16
-| Subnet Network | 192.168.15.0/24 | 10.36.1.0/24
+| Address space | 192.168.0.0/16 | 10.36.0.0/16
+| Subnet network | 192.168.15.0/24 | 10.36.1.0/24
 | Cluster IP | 192.168.15.200 | 10.36.1.200
-| AG Listener IP | 192.168.15.201 | 10.36.1.201
+| AG listener IP | 192.168.15.201 | 10.36.1.201
 
 To create a [virtual network and subnet in the new region](/azure/virtual-network/manage-virtual-network#create-a-virtual-network) in the Azure portal, follow these steps:
 
 1. Go to your resource group in the [Azure portal](https://portal.azure.com) and select **+ Create**.
-1. Search for **virtual network** in the **Marketplace** search box and choose the **virtual network** tile from Microsoft. Select **Create** on the **Virtual network** page.  
-1. On the **Create virtual network** page, enter the following information on the **Basics** tab:
-    1. Under **Project details**, choose the appropriate Azure **Subscription**, and the **Resource group** you created previously, such as **SQL-HA-RG**.
-    1. Under **Instance details**, provide a name for your virtual network, such as **remote_HAVNET**, and choose a new remote region.
+1. Search for **virtual network** in the **Marketplace** search box, and then choose the **virtual network** tile from Microsoft. 
+1. On the **Create virtual network** page, select **Create**. Then enter the following information on the **Basics** tab:
+    1. Under **Project details**, for **Subscription**, select the appropriate Azure subscription. For **Resource group**, select the resource group that you created previously, such as **SQL-HA-RG**.
+    1. Under **Instance details**, provide a name for your virtual network, such as **remote_HAVNET**. Then choose a new remote region.
 
-     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-create-vnet-basics.png" alt-text="Screenshot the Azure portal, Create virtual network page, showing creating virtual network in remote region.":::
+     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-create-vnet-basics.png" alt-text="Screenshot of the Azure portal that shows selections for creating a virtual network in a remote region.":::
 
-1. On the **IP addresses** tab, select the "..." next to **+ Add a subnet** and select **Delete address space** to remove the existing address space, if you need a different address range.
+1. On the **IP addresses** tab, select the ellipsis (**...**) next to **+ Add a subnet**. Select **Delete address space** to remove the existing address space, if you need a different address range.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png" alt-text="Screenshot the Azure portal, Create virtual network page, showing how to delete the existing address space in a virtual network." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png" alt-text="Screenshot of the Azure portal that shows selections for deleting the existing address space in a virtual network." lightbox="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/04-delete-address-space.png":::
 
-1. Select **Add an IP address space** to open the blade to create the address space you need. For this tutorial, the address space of the remote region is **10.36.0.0/16** is being used.  Select **Add**.
+1. Select **Add an IP address space** to open the pane to create the address space that you need. This tutorial uses the address space of the remote region: **10.36.0.0/16**. Select **Add**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-add-address-space.png" alt-text="Screenshot the Azure portal, Add an IP address space page, showing how to add the address space for a virtual network." lightbox="./media/availability-group-manually-configure-multiple-regions/multi-region-add-address-space.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-add-address-space.png" alt-text="Screenshot of the Azure portal that shows selections for adding an address space for a virtual network." lightbox="./media/availability-group-manually-configure-multiple-regions/multi-region-add-address-space.png":::
 
-1. Select **+ Add a subnet**
-   1. Provide a value for the **Subnet name**, such as **Admin**
+1. Select **+ Add a subnet**, and then:
+   1. Provide a value for the **Subnet name**, such as **Admin**.
    1. Provide a unique subnet address range within the virtual network address space.
-      - For example, if your address range is *10.36.0.0/16*, enter the IP address range `10.36.1.0/24` for the **Admin** subnet.
+      
+      For example, if your address range is 10.36.0.0/16, enter the IP address range **10.36.1.0/24** for the **Admin** subnet.
    1. Select **Add** to add your new subnet.
 
-     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-configure-virtual-network.png" alt-text="Screenshot the Azure portal, Add a subnet page, showing how to add the subnet to a virtual network." lightbox="./media/availability-group-manually-configure-multiple-regions/multi-region-configure-virtual-network.png":::
+     :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/multi-region-configure-virtual-network.png" alt-text="Screenshot of the Azure portal that shows selections for adding a subnet to a virtual network." lightbox="./media/availability-group-manually-configure-multiple-regions/multi-region-configure-virtual-network.png":::
 
-## Connect the Virtual Networks in the two Azure Regions
+## Connect the virtual networks in the two Azure Regions
 
 After you've create the new virtual network and subnet, you're ready to connect the two regions so they can communicate with each other. There are two methods to do this:
 
-- [Virtual Network Peering - Connect virtual networks with virtual network peering using the Azure portal](/azure/virtual-network/tutorial-connect-virtual-networks-portal) (Recommended)
+- [Connect virtual networks with virtual network peering by using the Azure portal](/azure/virtual-network/tutorial-connect-virtual-networks-portal) (recommended)
 
-  In some cases, you may have to use PowerShell to create the VNet-to-VNet connection. For example, if you use different Azure accounts you cannot configure the connection in the portal. In this case, review  [Configure a VNet-to-VNet connection using the Azure portal](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps).
+  In some cases, you might have to use PowerShell to create the connection between virtual networks. For example, if you use different Azure accounts, you can't configure the connection in the portal. In this case, review [Configure a network-to-network connection by using the Azure portal](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps).
 
-- [Site to Site VPN Gateway - Configure a VNet-to-VNet connection using the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal).
+- [Configure a site-to-site VPN gateway connection by using the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal).
 
-This tutorial uses virtual network peering. 
+This tutorial uses virtual network peering. To configure virtual network peering, follow these steps: 
 
-To configure virtual network peering, follow these steps: 
+1. In the search box at the top of the Azure portal, type **autoHAVNET**, which is the virtual network in your local region. When **autoHAVNET** appears in the search results, select it.
 
+1. Under **Settings**, select **Peerings**, and then select **+ Add**.
 
-1. In the search box at the top of the Azure portal, look for *autoHAVNET* the virtual network in your local region. When **autoHAVNET** appears in the search results, select it.
-
-1. Under **Settings**, select **Peerings**, and then select **+ Add**, as shown in the following picture:
-
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-peering.png" alt-text="Screenshot of the Azure portal, Peerings page, showing how to add the virtual network peering.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-peering.png" alt-text="Screenshot of the Azure portal that shows selections for adding a virtual network peering.":::
 
 1. Enter or select the following information, accept the defaults for the remaining settings, and then select **Add**.
 
     | Setting | Value |
     | --- | --- |
     | **This virtual network** | |
-    | Peering link name | Enter *autoHAVNET-remote_HAVNET* for the name of the peering from **autoHAVNET** to the remote virtual network. |
+    | Peering link name | Enter **autoHAVNET-remote_HAVNET** for the name of the peering from **autoHAVNET** to the remote virtual network. |
     | **Remote virtual network** | |
-    | Peering link name | Enter *remote_HAVNET-autoHAVNET* for the name of the peering from the remote virtual network to **autoHAVNET**. |
+    | Peering link name | Enter **remote_HAVNET-autoHAVNET** for the name of the peering from the remote virtual network to **autoHAVNET**. |
     | Subscription | Select your subscription of the remote virtual network. |
     | Virtual network  | Select **remote_HAVNET** for the name of the remote virtual network. The remote virtual network can be in the same region of **autoHAVNET** or in a different region. |
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-settings-bidirectional.png" alt-text="Screenshot the Azure portal, Peerings page for the virtual network, showing peering settings." lightbox="./media/availability-group-manually-configure-multiple-regions/peering-settings-bidirectional.png" :::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-settings-bidirectional.png" alt-text="Screenshot of the Azure portal that shows peering settings." lightbox="./media/availability-group-manually-configure-multiple-regions/peering-settings-bidirectional.png" :::
 
-   On the **Peerings** page, the **Peering status** is **Connected**, as shown in the following picture:
+   On the **Peerings** page, **Peering status** is **Connected**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-status.png" alt-text="Screenshot of the Azure portal, Peerings page, showing connected status of the virtual network peering." lightbox="./media/availability-group-manually-configure-multiple-regions/peering-status.png":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/peering-status.png" alt-text="Screenshot of the Azure portal that shows a Connected status for virtual network peering." lightbox="./media/availability-group-manually-configure-multiple-regions/peering-status.png":::
 
    If you don't see a **Connected** status, select the **Refresh** button.
 
-## Create Domain Controller
+## Create a domain controller
 
-A domain controller in the new region is necessary to provide authentication is the primary site is not available. To create the [domain controller in the new region](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100), follow these steps:
+A domain controller in the new region is necessary to provide authentication if the primary site is not available. To create the [domain controller in the new region](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100), follow these steps:
 
 1. Return to the **SQL-HA-RG** resource group.
 1. Select **+ Create**.
-1. Type **Windows Server 2016 Datacenter**.
-1. Select **Windows Server 2016 Datacenter**. In **Windows Server 2016 Datacenter**, verify that the deployment model is **Resource Manager**, and then select **Create**.
+1. Type **Windows Server 2016 Datacenter**, and then select the **Windows Server 2016 Datacenter** result.
+1. In **Windows Server 2016 Datacenter**, verify that the deployment model is **Resource Manager**, and then select **Create**.
 
 The following table shows the settings for these two machines:
 
 | **Field** | Value |
 | --- | --- |
-| **Name** |Remote domain controller: *ad-remote-dc*.|
-| **VM disk type** |SSD |
-| **User name** |DomainAdmin |
-| **Password** |Contoso!0000 |
-| **Subscription** |*Your subscription* |
-| **Resource group** |SQL-HA-RG |
-| **Location** |*Your location* |
-| **Size** |DS1_V2 |
-| **Storage** | **Use managed disks** - **Yes** |
-| **Virtual network** |remote_HAVNET |
-| **Subnet** |admin |
-| **Public IP address** |*Same name as the VM* |
-| **Network security group** |*Same name as the VM* |
+| **Name** |Remote domain controller: **ad-remote-dc**.|
+| **VM disk type** |**SSD** |
+| **User name** |**DomainAdmin** |
+| **Password** |**Contoso!0000** |
+| **Subscription** |Your subscription |
+| **Resource group** |**SQL-HA-RG** |
+| **Location** |Your location |
+| **Size** |**DS1_V2** |
+| **Storage** | **Use managed disks**: **Yes** |
+| **Virtual network** |**remote_HAVNET** |
+| **Subnet** |**admin** |
+| **Public IP address** |Same name as the VM |
+| **Network security group** |Same name as the VM |
 | **Diagnostics** |Enabled |
-| **Diagnostics storage account** |*Automatically created* |
+| **Diagnostics storage account** |Automatically created |
 
 Azure creates the virtual machines.
 
-After the virtual machines are created, configure the domain controller.
-
 ### Configure the domain controller
 
-In the following steps, configure the **ad-remote-dc** machine as a domain controller for corp.contoso.com. In the portal, open the **SQL-HA-RG** resource group and select the **ad-remote-dc** machine. On **ad-remote-dc**, select **Connect** to open an RDP file for remote desktop access.
+In the following steps, configure the **ad-remote-dc** machine as a domain controller for corp.contoso.com:
+
+1. In the portal, open the **SQL-HA-RG** resource group and select the **ad-remote-dc** machine. 
+
+1. On **ad-remote-dc**, select **Connect** to open a Remote Desktop Protocol (RDP) file for remote desktop access.
 
 1. Sign in to the VM by using your configured administrator account (**BUILTIN\DomainAdmin**) and password (**Contoso!0000**).
 
@@ -171,45 +172,44 @@ In the following steps, configure the **ad-remote-dc** machine as a domain contr
 
 1. In **Network and Sharing Center**, select the network interface.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/26-network-interface.png" alt-text="Screenshot of the Networking and Sharing center on a VM, with the ethernet2 connection selected..":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/26-network-interface.png" alt-text="Screenshot of the Networking and Sharing Center on a VM, with an Ethernet connection selected.":::
 
 1. Select **Properties**.
-1. Select **Internet Protocol Version 4 (TCP/IPv4)** and then select **Properties**.
-1. Select **Use the following DNS server addresses** and then specify the address of the primary domain controller in **Preferred DNS server**.
-1. Select **OK**, and then **Close** to commit the changes. You are now able to join the VM to **corp.contoso.com**.
+1. Select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
+1. Select **Use the following DNS server addresses**, and then specify the address of the primary domain controller in **Preferred DNS server**.
+1. Select **OK**, and then select **Close** to commit the changes. You can now join the VM to corp.contoso.com.
 
    > [!IMPORTANT]
-   > If you lose the connection to your remote desktop after changing the DNS setting, go to the Azure portal and restart the virtual machine.
+   > If you lose the connection to your remote desktop after you change the DNS setting, go to the Azure portal and restart the virtual machine.
 
-1. From the remote desktop to the secondary domain controller, open **Server Manager Dashboard**.
-1. Select the **Add roles and features** link on the dashboard.
+1. From the remote desktop to the secondary domain controller, open the Server Manager dashboard.
+1. Select the **Add roles and features** link.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the Server Manger on a VM, with Select the Add roles and features link on the dashboard highlighted.":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the Server Manager dashboard that shows a link for adding roles and features.":::
 
 1. Select **Next** until you get to the **Server Roles** section.
-1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any additional features that are required by these roles.
-1. After the features finish installing, return to the **Server Manager** dashboard.
-1. Select the new **AD DS** option on the left-hand pane.
+1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any features that these roles require.
+1. After you finish installing features, return to the Server Manager dashboard.
+1. Select the new **AD DS** option on the left pane.
 1. Select the **More** link on the yellow warning bar.
 1. In the **Action** column of the **All Server Task Details** dialog, select **Promote this server to a domain controller**.
 1. Under **Deployment Configuration**, select **Add a domain controller to an existing domain**.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/28-deployment-config.png" alt-text="Screenshot of the Active Directory Services Configuration Manager, showing the deployment configuration on a VM.":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/28-deployment-config.png" alt-text="Screenshot of the Active Directory Domain Services Configuration Wizard that shows the deployment configuration on a VM.":::
 
-1. Select **Select**.
+1. Choose **Select**.
 1. Connect by using the administrator account (**CORP.CONTOSO.COM\domainadmin**) and password (**Contoso!0000**).
 1. In **Select a domain from the forest**, choose your domain and then select **OK**.
-1. In **Domain Controller Options**, use the default values and set a DSRM password.
+1. In **Domain Controller Options**, use the default values and set a Directory Services Restore Mode (DSRM) password.
 
     >[!NOTE]
     >The **DNS Options** page might warn you that a delegation for this DNS server can't be created. You can ignore this warning in non-production environments.
-    >
 
 1. Select **Next** until the dialog reaches the **Prerequisites** check. Then select **Install**.
 
 After the server finishes the configuration changes, restart the server.
 
-## Create SQL Server VM
+## Create a SQL Server VM
 
 After the domain controller restarts, the next step is to [create a SQL Server virtual machine in the new region](./create-sql-vm-portal.md).
 

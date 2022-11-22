@@ -70,11 +70,9 @@ For instructions to create a new failover group, review the [how to guide](auto-
 
 To update the failover rights for an existing failover group by using the Azure portal:
 
-To update the failover rights:
-
 1. In the [Azure portal](https://portal.azure.com), go to your SQL Managed Instance resource.
 1. In the left menu under **Data management**, select **Failover groups**.
-1. In the command menu, select **Edit configurations**.
+1. In the command bar, select **Edit configurations**.
 
    :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/update-failover-group-configuration.png" alt-text="Screenshot of the Azure portal, Failover groups page, selecting Edit Configurations. ":::
 

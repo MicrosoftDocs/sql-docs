@@ -249,7 +249,7 @@ Use one of the following methods to connect to the database in your managed inst
 
 # [Portal](#tab/azure-portal)
 
-In the Azure portal, select the database in your your managed instance. In the menu bar, select **Delete**.
+In the Azure portal, select the database in your managed instance. In the command bar, select **Delete**.
 
 :::image type="content" source="./media/point-in-time-restore/delete-database-from-mi.png" alt-text="Screenshot that shows how to delete a database by using the Azure portal.":::
 

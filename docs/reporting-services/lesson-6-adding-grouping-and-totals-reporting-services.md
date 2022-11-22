@@ -2,7 +2,7 @@
 title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
 description: Learn how to add grouping and totals to your Reporting Services report to organize and summarize your data.
 ms.date: 04/18/2019
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 ms.topic: conceptual

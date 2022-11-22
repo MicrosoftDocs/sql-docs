@@ -2,7 +2,7 @@
 title: "Set synchronization scope in a paginated report | Microsoft Docs"
 description: Set synchronization scope in a paginated report with indicators to convey data values by synchronizing across the range of indicator values in Report Builder.
 ms.date: 03/07/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

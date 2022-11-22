@@ -2,7 +2,7 @@
 title: "Add a page break to a paginated report | Microsoft Docs"
 description: Discover how to add a page break to rectangles, data regions, or groups within data regions in Report Builder to control the information on each page.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

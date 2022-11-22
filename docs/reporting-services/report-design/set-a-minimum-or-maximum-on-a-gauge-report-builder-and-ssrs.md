@@ -2,7 +2,7 @@
 title: "Set a minimum or maximum on a gauge in a paginated report | Microsoft Docs"
 description: Learn how the gauge differs from the charts in a paginated report. In Report Builder, you define the minimum and maximum of the scale.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

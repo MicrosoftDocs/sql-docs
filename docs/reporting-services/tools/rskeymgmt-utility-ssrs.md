@@ -2,7 +2,7 @@
 title: "rskeymgmt Utility | Microsoft Docs"
 description: Learn about the reskeymgmt utility that manages the symmetric key that protects sensitive report server data against unauthorized access.
 ms.date: 03/20/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: tools
 
 

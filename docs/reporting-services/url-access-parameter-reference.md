@@ -3,7 +3,7 @@ title: "URL access parameter reference | Microsoft Docs"
 description: Use the parameters in this article as part of a URL to configure the look and feel of your Reporting Services reports.
 ms.date: 05/22/2020
 
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 

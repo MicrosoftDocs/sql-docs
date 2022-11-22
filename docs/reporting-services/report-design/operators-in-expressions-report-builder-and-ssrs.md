@@ -2,7 +2,7 @@
 title: "Operators in expressions in a paginated report | Microsoft Docs"
 description: Choose from categories of operators in a paginated report that are supported in an expression to represents actions applied to terms in an expression in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

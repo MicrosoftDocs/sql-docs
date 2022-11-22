@@ -2,7 +2,7 @@
 title: "Convert Data Sources (Report Builder) | Microsoft Docs"
 description: Learn how to convert your data sources in Report Builder and Report Designer by using options in the Report Data pane. 
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-data
 
 

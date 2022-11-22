@@ -3,7 +3,7 @@ title: Working with KPIs in Reporting Services | Microsoft Docs
 description: Learn how you can easily measure status and performance by using KPIs in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 01/06/2022

@@ -2,7 +2,7 @@
 title: "Specify a chart area for a series in a paginated report | Microsoft Docs"
 description: Find out about the chart area as a top-level container in a paginated report that includes the outer border, the chart title, and the legend in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

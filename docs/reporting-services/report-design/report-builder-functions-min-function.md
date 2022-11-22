@@ -2,7 +2,7 @@
 title: "Min function in a paginated report | Microsoft Docs"
 description: Learn about the Min function in a paginated report, which returns the minimum value of all non-null numeric values specified by an expression in Report Builder.
 ms.date: 03/07/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

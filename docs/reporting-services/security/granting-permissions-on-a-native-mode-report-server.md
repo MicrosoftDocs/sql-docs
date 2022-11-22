@@ -2,7 +2,7 @@
 description: "Grant permissions on a native mode report server"
 title: "Grant permissions on a native mode report server | Microsoft Docs"
 ms.date: 05/14/2019
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: security
 
 

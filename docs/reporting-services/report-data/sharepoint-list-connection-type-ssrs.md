@@ -2,7 +2,7 @@
 title: "SharePoint List Connection Type | Microsoft Docs"
 description: Use the information in this article about the SharePoint List connection type to learn how to build a data source.
 ms.date: 05/10/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-data
 
 

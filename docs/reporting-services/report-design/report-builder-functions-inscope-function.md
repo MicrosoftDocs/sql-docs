@@ -2,7 +2,7 @@
 title: "InScope function in a paginated report | Microsoft Docs"
 description: The InScope function in a paginated report indicates whether the current instance of an item is in the specified scope in Report Builder.
 ms.date: 03/08/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

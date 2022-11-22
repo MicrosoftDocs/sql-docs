@@ -5,7 +5,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.custom: seo-lt-2019
 ms.reviewer: ""
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 06/03/2020

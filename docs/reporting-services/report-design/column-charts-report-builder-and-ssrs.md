@@ -2,7 +2,7 @@
 title: "Column charts in a paginated report | Microsoft Docs"
 description: Show comparisons or data changes over a period of time with a paginated report column chart in Report Builder. Display a series as a set of vertical bars grouped by category.
 ms.date: 03/03/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

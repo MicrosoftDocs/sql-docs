@@ -2,7 +2,7 @@
 title: "Data regions and maps in a paginated report | Microsoft Docs"
 description: Explore the types and characteristics of data regions and maps to design the display from your paginated report datasets in Report Builder.  
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

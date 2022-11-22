@@ -2,7 +2,7 @@
 title: "Report Parts and Datasets in Report Builder | Microsoft Docs"
 description: Learn about report parts you can add in the Report Builder Report Part Gallery. Also learn about the datasets that the reports depend on.
 ms.date: 09/16/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-data
 
 

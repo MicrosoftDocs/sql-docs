@@ -2,7 +2,7 @@
 title: "SQL Server Parallel Data Warehouse Connection Type | Microsoft Docs"
 description: Use the information in this article about the SQL Server Parallel Data Warehouse connection type to learn how to build a data source.
 ms.date: 05/30/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-data
 
 

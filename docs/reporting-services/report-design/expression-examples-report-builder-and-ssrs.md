@@ -2,7 +2,7 @@
 title: "Expression examples in paginated reports | Microsoft Docs"
 description: Control content and paginated report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
 ms.date: 04/06/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

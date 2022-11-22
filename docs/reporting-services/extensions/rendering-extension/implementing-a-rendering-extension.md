@@ -2,7 +2,7 @@
 title: "Implementing a Rendering Extension | Microsoft Docs"
 description: Find out how to transform Reporting Services report data and layout information into device-specific formats by implementing rendering extensions.
 ms.date: 03/16/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: extensions
 
 

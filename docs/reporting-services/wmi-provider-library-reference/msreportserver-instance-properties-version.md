@@ -2,7 +2,7 @@
 description: "Version Property (WMI MSReportServer_Instance)"
 title: "Version Property (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: wmi-provider-library-reference
 
 

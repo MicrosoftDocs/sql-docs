@@ -2,7 +2,7 @@
 title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
 description: Learn how to use the web portal to select a report that will be delivered to recipients and also how to modify the Report Data Source properties.
 ms.date: 05/23/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 ms.topic: conceptual

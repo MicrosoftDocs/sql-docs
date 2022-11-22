@@ -2,7 +2,7 @@
 title: "Format paginated report items | Microsoft Docs"
 description:  Discover how formatting enhances readability and makes your paginated reports more attractive in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

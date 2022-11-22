@@ -2,7 +2,7 @@
 description: "Set Permissions for Report Server Items on a SharePoint Site"
 title: "Set Permissions for Report Server Items on a SharePoint Site | Microsoft Docs"
 ms.date: 03/07/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: security
 
 

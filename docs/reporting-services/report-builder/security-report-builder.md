@@ -2,7 +2,7 @@
 title: "Security (Report Builder) | Microsoft Docs"
 description: Report Builder security features relate to publishing locations, published reports, external data sources and models based on them, and interactive features.
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-builder
 
 

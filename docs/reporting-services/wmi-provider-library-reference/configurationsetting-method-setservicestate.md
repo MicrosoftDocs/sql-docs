@@ -2,7 +2,7 @@
 description: "SetServiceState Method (WMI MSReportServer_ConfigurationSetting)"
 title: "SetServiceState Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/17/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: wmi-provider-library-reference
 
 

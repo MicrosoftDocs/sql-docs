@@ -2,7 +2,7 @@
 title: "Publish and Republish Report Parts (Report Builder) | Microsoft Docs"
 description: Learn how to publish a report part with edited metadata with default settings in a default location in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

@@ -1,7 +1,7 @@
 ---
 title: "What's new in Reporting Services | Microsoft Docs"
 description: Learn about what's new in the different versions of SQL Server Reporting Services, including changes to the major feature areas.
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT

@@ -2,7 +2,7 @@
 title: "Set the locale for a paginated report or text box | Microsoft Docs"
 description: Use the Language property on a text box to provide the locale setting for formats in a paginated report that display data that differ by language and region in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

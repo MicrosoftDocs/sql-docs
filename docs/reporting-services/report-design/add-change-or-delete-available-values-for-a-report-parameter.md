@@ -2,7 +2,7 @@
 title: "Add, change, or delete available values for a paginated report parameter | Microsoft Docs"
 description: Customize the list of choices a user can make in a paginated report for a parameter in Report Builder by specifying a list of available values to display to the user.
 ms.date: 03/07/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

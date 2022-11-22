@@ -2,7 +2,7 @@
 title: "Working with subscriptions (web portal) | Microsoft Docs"
 description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services. 
 ms.date: 01/24/2022
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 ms.topic: conceptual

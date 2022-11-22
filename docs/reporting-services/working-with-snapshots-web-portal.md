@@ -2,7 +2,7 @@
 title: "Working with snapshots (web portal) | Microsoft Docs"
 description: Create a cache snapshot to allow for faster loading of specific execution properties. You can also work with history snapshots to capture points in time.
 ms.date: 07/02/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 ms.topic: conceptual

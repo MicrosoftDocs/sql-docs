@@ -2,7 +2,7 @@
 title: "Setting Time-out Values for Report and Shared Dataset Processing | Microsoft Docs"
 description: In Reporting Services, you can specify time-out values to set limits on how system resources are used.
 ms.date: 01/16/2020
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server
 
 

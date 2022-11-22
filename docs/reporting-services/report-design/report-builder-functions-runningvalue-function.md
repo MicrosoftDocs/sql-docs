@@ -2,7 +2,7 @@
 title: "RunningValue function in a paginated report | Microsoft Docs"
 description: Get acquainted with the RunningValue function, which returns a running aggregate of all non-null numeric values in a paginated report specified by the expression in Report Builder.
 ms.date: 03/07/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

@@ -2,7 +2,7 @@
 title: "Understanding groups in a paginated report | Microsoft Docs"
 description: Gain an understanding of how a group organizes a view of a report dataset in a paginated report in Report Builder. 
 ms.date: 03/07/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

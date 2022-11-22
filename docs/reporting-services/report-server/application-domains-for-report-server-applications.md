@@ -2,7 +2,7 @@
 title: "Application Domains for Report Server Applications | Microsoft Docs"
 description: Learn about events that cause an application domain to recycle for Reporting Services applications for troubleshooting.
 ms.date: 03/20/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server
 
 

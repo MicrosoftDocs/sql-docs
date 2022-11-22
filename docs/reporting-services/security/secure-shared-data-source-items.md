@@ -2,7 +2,7 @@
 description: "Secure Shared Data Source Items"
 title: "Secure Shared Data Source Items | Microsoft Docs"
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: security
 
 

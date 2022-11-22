@@ -1,7 +1,7 @@
 ---
 title: "Treemap and sunburst charts in a paginated report in SQL Server Reporting Services | Microsoft Docs"
 description: Discover how to visually represent hierarchical data in a paginated report using a treemap or sunburst chart in Report Builder.
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 ms.topic: conceptual
 author: maggiesMSFT 

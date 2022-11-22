@@ -2,7 +2,7 @@
 title: "Add a border to a paginated report | Microsoft Docs"
 description: Define areas of a paginated report by adding borders to the headers, footers, and report body in Report Builder. 
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

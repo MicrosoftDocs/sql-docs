@@ -2,7 +2,7 @@
 title: "Lesson 1: Creating a Sample Subscriber Database | Microsoft Docs"
 description: Learn how to create a small "subscriber" database to store subscription data that will be used by a data-driven subscription.
 ms.date: 05/30/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 ms.topic: conceptual

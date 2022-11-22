@@ -2,7 +2,7 @@
 title: "Pie charts in a paginated report | Microsoft Docs"
 description:  Learn about displaying data as a proportion of the whole with the use of pie charts and doughnut charts in Report Builder. 
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

@@ -2,7 +2,7 @@
 description: "RSWindowsExtendedProtectionLevel Property"
 title: "RSWindowsExtendedProtectionLevel Property | Microsoft Docs"
 ms.date: 03/20/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: wmi-provider-library-reference
 
 

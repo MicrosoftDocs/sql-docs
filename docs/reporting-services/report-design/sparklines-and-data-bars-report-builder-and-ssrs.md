@@ -2,7 +2,7 @@
 title: "Sparklines and data bars in a paginated report | Microsoft Docs"
 description: Discover the benefits of using sparklines and data bars in a paginated report in Report Builder. These compact charts convey much information in very little space. 
 ms.date: 03/07/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

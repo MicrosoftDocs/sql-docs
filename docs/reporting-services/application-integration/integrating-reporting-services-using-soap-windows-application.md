@@ -2,7 +2,7 @@
 title: "Use SOAP API in Windows Applications"
 description: You can access functionality of the report server with the Reporting Services SOAP API. Access the Web service in a Windows app by making calls to the service. 
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: application-integration
 
 ms.custom: seo-lt-2019

@@ -2,7 +2,7 @@
 title: "Retain date formatting for Analysis Services in mobile reports | Reporting Services | Microsoft Docs"
 description: In Mobile Report Publisher, add a measure to a shared dataset in Report Builder so that dates in Analysis Services data sources retain their data type.
 ms.date: 07/21/2022
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: mobile-reports
 
 ms.topic: conceptual

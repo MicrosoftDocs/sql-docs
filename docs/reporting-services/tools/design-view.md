@@ -2,7 +2,7 @@
 title: "Design View | Microsoft Docs"
 description: Learn how to use the Design view in the Reporting Services Report Designer to arrange report items in a report.
 ms.date: 05/31/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: tools
 
 

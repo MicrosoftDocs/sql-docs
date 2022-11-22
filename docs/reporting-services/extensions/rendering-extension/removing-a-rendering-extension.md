@@ -2,7 +2,7 @@
 title: "Removing a Rendering Extension | Microsoft Docs"
 description: Find out how to remove a rendering extension from Reporting Services so that it is no longer available to the report server and Report Designer.
 ms.date: 03/18/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: extensions
 
 

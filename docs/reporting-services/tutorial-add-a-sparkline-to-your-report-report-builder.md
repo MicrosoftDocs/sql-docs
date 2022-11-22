@@ -2,7 +2,7 @@
 title: "Tutorial: Add a Sparkline to Your Report (Report Builder) | Microsoft Docs"
 description: Learn how to use the Report Builder to create a basic table with a sparkline chart in a Reporting Services paginated report.
 ms.date: 05/30/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 ms.topic: conceptual

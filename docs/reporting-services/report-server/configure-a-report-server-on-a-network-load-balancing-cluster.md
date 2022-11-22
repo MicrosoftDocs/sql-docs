@@ -3,7 +3,7 @@ title: "Configure a Report Server on a Network Load Balancing Cluster | Microsof
 description: Learn how to configure a report server scale-out to run on an NLB. Implement an NLB cluster solution to support a Reporting Services scale-out deployment.
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 03/23/2021

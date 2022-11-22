@@ -2,7 +2,7 @@
 title: "Server Properties (Execution Page) | Microsoft Docs"
 description: Learn how to use the options on the Server Properties Execution page to set a timeout value for report execution.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: tools
 
 

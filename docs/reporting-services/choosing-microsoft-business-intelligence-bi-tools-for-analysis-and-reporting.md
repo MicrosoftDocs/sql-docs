@@ -4,7 +4,7 @@ description: Learn about the workloads mapped for data analysis and reporting, a
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18

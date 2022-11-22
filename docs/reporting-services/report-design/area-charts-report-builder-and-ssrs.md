@@ -2,7 +2,7 @@
 title: "Area charts in a paginated report | Microsoft Docs"
 description: Learn how to use area charts in a paginated report. Area charts display a series as a set of points connected by a line, with all the area filled in below the line in Report Builder.
 ms.date: 03/03/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

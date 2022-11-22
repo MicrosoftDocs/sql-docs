@@ -2,7 +2,7 @@
 title: "Cache a Report (Report Manager) | Microsoft Docs"
 description: Learn how to schedule the expiration of a cached report in Report Manager. Caching a report speeds up viewing while it remains cached.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server
 
 

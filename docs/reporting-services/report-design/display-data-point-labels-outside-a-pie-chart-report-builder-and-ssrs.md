@@ -2,7 +2,7 @@
 title: "Display data point labels outside a pie chart in a paginated report | Microsoft Docs"
 description: Discover how displaying the labels outside a pie chart in a paginated report might create more room for longer data labels in Report Builder.
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

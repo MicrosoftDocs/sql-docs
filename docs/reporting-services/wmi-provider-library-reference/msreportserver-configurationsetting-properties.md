@@ -2,7 +2,7 @@
 description: "MSReportServer_ConfigurationSetting Properties"
 title: "MSReportServer_ConfigurationSetting Properties | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: wmi-provider-library-reference
 
 

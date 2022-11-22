@@ -2,7 +2,7 @@
 description: "Reporting Services Security and Protection"
 title: "Reporting Services Security and Protection | Microsoft Docs"
 ms.date: 08/26/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: security
 
 

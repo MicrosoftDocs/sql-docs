@@ -2,7 +2,7 @@
 title: "Troubleshoot Data Retrieval issues with Reporting Services Reports"
 description: In this article, diagnose and fix problems that occur when you retrieve report data by previewing a report locally or running a report on the report server.
 ms.date: 02/27/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: troubleshooting
 
 

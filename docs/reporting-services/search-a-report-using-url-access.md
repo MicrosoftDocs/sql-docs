@@ -2,7 +2,7 @@
 title: "Search a Report Using URL Access | Microsoft Docs"
 description: "Learn how to search a report using URL access. For example, set the rc:FindString parameter on the URL equal to the text for which you want to search."
 ms.date: 03/01/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 

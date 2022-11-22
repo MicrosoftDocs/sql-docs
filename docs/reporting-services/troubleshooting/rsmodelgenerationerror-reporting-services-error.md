@@ -2,7 +2,7 @@
 title: "rsModelGenerationError - Reporting Services Error | Microsoft Docs"
 description: "In this error reference page, learn about event ID 'rsModelGenerationError': An error occurred while generating model."
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: troubleshooting
 
 

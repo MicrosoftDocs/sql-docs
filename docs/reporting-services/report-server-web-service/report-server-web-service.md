@@ -2,7 +2,7 @@
 title: "Report Server Web Service | Microsoft Docs"
 description: Reporting Services provides functionality of the report server with Report Server Web service, a SOAP service endpoints for report execution and management.
 ms.date: 03/14/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server-web-service
 
 

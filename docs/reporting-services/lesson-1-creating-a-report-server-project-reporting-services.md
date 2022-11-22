@@ -2,7 +2,7 @@
 title: "Lesson 1: Create a Report Server Project | Microsoft Docs"
 description: "In this lesson, you create a report server project and a report definition (.rdl) file using Report Designer."
 ms.date: 12/09/2019
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 
 ms.topic: conceptual

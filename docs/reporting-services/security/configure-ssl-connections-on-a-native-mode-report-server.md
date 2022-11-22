@@ -2,7 +2,7 @@
 description: "Configure TLS Connections on a Native Mode Report Server"
 title: "Configure TLS Connections on a Native Mode Report Server | Microsoft Docs"
 ms.date: 09/27/2020
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: security
 
 

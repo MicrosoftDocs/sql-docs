@@ -2,7 +2,7 @@
 title: "Customize the Parameters pane in a paginated report | Microsoft Docs"
 description: Learn how to customize the Parameters pane when creating paginated reports with parameters in Report Builder.
 ms.date: 06/15/2020
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 ms.topic: conceptual

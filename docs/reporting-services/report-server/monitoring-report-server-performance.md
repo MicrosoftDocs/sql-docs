@@ -2,7 +2,7 @@
 title: "Monitoring Report Server Performance | Microsoft Docs"
 description: Learn how to monitor report server performance to evaluate server activity, watch trends, diagnose bottlenecks, and gather data about system configuration.
 ms.date: 02/12/2021
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-server
 
 

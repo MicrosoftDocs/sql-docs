@@ -2,7 +2,7 @@
 title: "Specify an axis interval in a paginated report | Microsoft Docs"
 description: Find out how to change the number of labels and tick marks on the category (x) axis in a chart in a paginated report by setting the axis interval in Report Builder.
 ms.date: 09/02/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-design
 
 

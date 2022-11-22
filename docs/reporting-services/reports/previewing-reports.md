@@ -4,7 +4,7 @@ description: Learn how to preview reports in SQL Server Reporting Services befor
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18

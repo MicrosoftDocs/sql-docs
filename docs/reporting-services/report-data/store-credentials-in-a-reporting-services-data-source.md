@@ -1,7 +1,7 @@
 ---
 title: "Store Credentials in a Reporting Services Data Source | Microsoft Docs"
 description: Learn how to configure stored credentials for both Native mode and SharePoint mode report servers.
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT

@@ -4,7 +4,7 @@ description: Learn about the extensions that are readily available in Reporting 
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18

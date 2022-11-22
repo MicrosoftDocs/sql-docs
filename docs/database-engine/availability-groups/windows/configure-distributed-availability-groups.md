@@ -314,8 +314,8 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 There are two different sets of instructions to fail over to a secondary availability group. Use the instructions appropriate for your version and configuration.
 
-* On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. If this setting is configured, follow the instructions for [Fail over to a secondary availability group (SQL Server 2022 and later)](configure-distributed-availability-groups.md?view=?view=sql-server-ver16&preserve-view=true#failover).
-* If REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is not set, including versions of SQL Server that do not support this setting, follow the instructions under [Fail over to secondary (prior to SQL Server 2022)](configure-distributed-availability-groups.md?view=?view=sql-server-ver15&preserve-view=true#failover).
+* On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. If this setting is configured, follow the instructions for [Fail over to a secondary availability group (SQL Server 2022 and later)](configure-distributed-availability-groups.md?view=sql-server-ver16&preserve-view=true#failover).
+* If REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is not set, including versions of SQL Server that do not support this setting, follow the instructions under [Fail over to secondary (prior to SQL Server 2022)](configure-distributed-availability-groups.md?view=sql-server-ver15&preserve-view=true#failover).
 
 ::: moniker range="<=sql-server-ver15"
 

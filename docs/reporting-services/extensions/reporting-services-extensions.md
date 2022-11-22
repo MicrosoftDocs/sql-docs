@@ -2,7 +2,7 @@
 title: "Reporting Services Extensions | Microsoft Docs"
 description: Find out how to extend data processing capabilities in Reporting Services by customizing report data, notification mechanisms, and security systems.
 ms.date: 03/14/2017
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: extensions
 
 

@@ -2,7 +2,7 @@
 title: "Custom Report Items | Microsoft Docs"
 description: Learn about custom report items and how they consist of a run-time component and a design-time component.
 ms.date: 03/03/2017
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: custom-report-items
 
 

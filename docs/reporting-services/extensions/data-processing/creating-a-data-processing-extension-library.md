@@ -2,7 +2,7 @@
 title: "Creating a Data Processing Extension Library | Microsoft Docs"
 description: Learn how to create a Reporting Services data processing extension. View sample code, and see which namespace and library file requirements you need to meet.
 ms.date: 03/14/2017
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: extensions
 
 

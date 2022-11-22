@@ -2,7 +2,7 @@
 title: "Using Custom Assemblies with Reports | Microsoft Docs"
 description: Develop a custom code assembly using the Microsoft .NET Framework so you can reference the assembly from within your report definition files.
 ms.date: 03/14/2017
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: custom-assemblies
 
 

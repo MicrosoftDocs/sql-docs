@@ -2,7 +2,7 @@
 title: "Initializing Custom Assembly Objects | Microsoft Docs"
 ms.date: 03/03/2017
 description: Learn to initialize custom classes with values available to you from the report's global object collections.
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: custom-assemblies
 
 

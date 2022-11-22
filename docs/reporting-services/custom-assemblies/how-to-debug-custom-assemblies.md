@@ -2,7 +2,7 @@
 title: "How to: Debug Custom Assemblies | Microsoft Docs"
 description: Learn how to use Microsoft .NET Framework debugging tools to help you analyze your custom assembly code and locate errors in it.
 ms.date: 03/14/2017
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: custom-assemblies
 
 

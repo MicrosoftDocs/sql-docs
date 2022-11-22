@@ -2,7 +2,7 @@
 title: "Security Extensions Overview | Microsoft Docs"
 description: Find out about security extensions in Reporting Services. See the situations in which custom authentication and authorization is appropriate.
 ms.date: 05/24/2018
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: extensions
 
 

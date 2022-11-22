@@ -2,7 +2,7 @@
 title: "Implementing a Security Extension | Microsoft Docs"
 description: Accommodate custom security by using the Reporting Services API development platform to extend the Reporting Services security system.
 ms.date: 05/25/2022
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: extensions
 
 

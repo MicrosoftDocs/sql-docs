@@ -2,7 +2,7 @@
 title: "Implementing a DataReader Class for a Data Processing Extension | Microsoft Docs"
 description: Increase application performance and reduce system overhead by implementing a DataReader class for a data processing extension.
 ms.date: 03/06/2017
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: extensions
 
 

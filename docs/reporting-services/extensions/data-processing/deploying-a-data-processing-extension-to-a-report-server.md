@@ -2,7 +2,7 @@
 title: "How to: Deploy a Data Processing Extension to a Report Server | Microsoft Docs"
 description: Find out how to deploy a data processing extension to a report server by learning which entries to add to which configuration files.
 ms.date: 03/06/2017
-ms.product: reporting-services
+ms.prod: reporting-services
 ms.technology: extensions
 ms.topic: reference
 helpviewer_keywords:

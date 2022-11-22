@@ -317,6 +317,8 @@ There are two different sets of instructions to fail over to a secondary availab
 * On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. If this setting is configured, follow the instructions for [Fail over to a secondary availability group (SQL Server 2022 and later)](#failover_2022).
 * If REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is not set, including versions of SQL Server that do not support this setting, follow the instructions under [Fail over to secondary (prior to SQL Server 2022)](#fail-over-to-secondary-prior-to-sql-server-2022).
 
+::: moniker range="<=sql-server-ver15"
+
 ### Fail over to secondary (prior to SQL Server 2022)
 
 Only manual failover is supported at this time. To manually fail over a distributed availability group:
@@ -426,7 +428,11 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
     After this step, the distributed availability group is available.
 
 After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT. 
-  
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver16"
+
 ### <a name="failover_2022"></a> Fail over to a secondary availability group (SQL Server 2022 and later)
 
 The steps in this section are designed to guarantee no data loss during when a distributed availability group fails over. The steps include setting REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. This setting is introduced in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
@@ -558,8 +564,10 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
      SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 0);
    ```
 
-After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT. 
-  
+After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT.
+
+::: moniker-end  
+
 ## Remove a distributed availability group
  The following Transact-SQL statement removes a distributed availability group named `distributedag`:  
   

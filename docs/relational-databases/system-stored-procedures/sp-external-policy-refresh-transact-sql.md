@@ -20,7 +20,10 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Force immediate download of latest published policies.
+Forces immediate download of latest published policies for the whole instance (for every database).
+
+> [!NOTE]  
+>  If there are any ongoing pull requests by the background task or by another user, the request waits until the former task is finished and starts a new pull. – This ensures that the result of calling this proc explicitly always results in a refreshed cache.
 
 ## Syntax  
   
@@ -44,11 +47,11 @@ sp_external_policy_refresh  [ @type = ] 'type'
  The following example downloads complete set of policies.  
   
 ```  
-EXEC sp_external_policy_refresh reload
+EXEC sp_external_policy_refresh @type = 'reload'
 ```  
   
 ### B. Incremental policy refresh
- The following example downloads incremental policy.  
+ The following example downloads policies incrementally by using the default type 'update'.  
   
 ```  
 EXEC sp_external_policy_refresh

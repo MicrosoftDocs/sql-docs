@@ -2,8 +2,8 @@
 title: "Convert CRI Dialog Box (Report Builder) | Microsoft Docs"
 description: Report Builder prompts you to convert some custom report items, which have unsupported features, to the new report definition format.
 ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 ms.topic: reference
 f1_keywords: 
   - "10008"

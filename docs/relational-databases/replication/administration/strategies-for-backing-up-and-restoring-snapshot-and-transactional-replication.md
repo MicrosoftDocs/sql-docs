@@ -67,9 +67,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
     >   
     > Setting the sync with backup option on distribution database is not compatible when publisher database is part of availability group. This could lead to following error when log reader agent runs post failover - 
     >   
-    >*The process could not execute 'sp_repldone/sp_replcounters' on 'machinename\instance'. (Source: MSSQL_REPL, Error number: MSSQL_REPL20011)
-    >Get help: http://help/MSSQL_REPL20011
-    >Possible inconsistent state in the distribution database: dist_backup_lsn {nnnnnnnn:nnnnnnnn:nnnn}, dist_last_lsn {nnnnnnnn:nnnnnnnn:nnnn}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. (Source: MSSQLServer, Error number: 18846)*
+    >   *The process could not execute 'sp_repldone/sp_replcounters' on 'machinename\instance'. (Source: MSSQL_REPL, Error number: MSSQL_REPL20011)
+    >   Get help: http://help/MSSQL_REPL20011
+    >   Possible inconsistent state in the distribution database: dist_backup_lsn {nnnnnnnn:nnnnnnnn:nnnn}, dist_last_lsn {nnnnnnnn:nnnnnnnn:nnnn}. Execute "sp_repldone NULL, NULL, 0, 0, 1", and then execute sp_replflush. Reinitialize all subscriptions to the publication. (Source: MSSQLServer, Error number: 18846)*
 
  
   

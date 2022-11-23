@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 11/16/2022
+ms.date: 11/23/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 
@@ -48,6 +48,11 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 ::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
+
+## 16.0.8361.39598, 2022/11/23
+*(Product Version: 16.0.1113.11)*
+
+-  Fixed issue where some SQL Server 2022 product keys were not working with SQL Server 2022 Reporting Services.
 
 ## 16.0.8353.8096, 2022/11/16
 *(Product Version: 16.0.1112.48)*

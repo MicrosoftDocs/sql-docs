@@ -16,10 +16,14 @@ ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: markingmyname
 ms.author: maghan
 ---
+
 # Change Data Capture Stored Procedures (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Change data capture makes available in a convenient relational format the historical record of Data Manipulation Language (DML) activity that occurred on enabled tables. The following stored procedures are used to configure change data capture, manage the change data capture Agent jobs, and supply current meta data to change data consumers.  
+[!INCLUDE[synapse-analytics-severless-sql-pools-tsql](Includes/synapse-analytics-severless-sql-pools-tsql.md)]
+
+Change data capture makes available in a convenient relational format the historical record of Data Manipulation Language (DML) activity that occurred on enabled tables. The following stored procedures are used to configure change data capture, manage the change data capture Agent jobs, and supply current meta data to change data consumers.  
 
 :::row:::
     :::column:::

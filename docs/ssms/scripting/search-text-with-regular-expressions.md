@@ -1,3 +1,22 @@
+---
+title: Search Text with Regular Expressions
+description: Learn how to use a regular expression in the Find what field of a Find and Replace dialog box to specify a pattern to be matched.
+author: markingmyname
+ms.author: maghan
+ms.date: 11/22/2022
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "vs.regularexpressionbuilder"
+helpviewer_keywords:
+  - "regular expressions [SQL Server Management Studio]"
+  - "Query Editor [SQL Server Management Studio], regular expression searches"
+  - "searches [SQL Server Management Studio], regular expressions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+---
+
 # Search Text with Regular Expressions
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

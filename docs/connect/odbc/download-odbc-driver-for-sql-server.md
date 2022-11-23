@@ -52,7 +52,7 @@ Version 17.10.2 is the latest general availability (GA) version of the 17.x driv
 (TO DO: UPDATE LINKS) :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2200732)**  
 
 - Release number: 17.10.2.1
-- Released: November 25, 2022
+- Released: November 28, 2022
 
 This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
 

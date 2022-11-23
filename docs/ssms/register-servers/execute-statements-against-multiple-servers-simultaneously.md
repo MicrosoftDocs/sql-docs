@@ -42,7 +42,7 @@ The results returned by the query can be combined into a single results pane, or
     ```  
     USE master  
     GO  
-    SELECT * FROM sysdatabases;  
+    SELECT * FROM sys.databases;  
     GO  
     ```  
   

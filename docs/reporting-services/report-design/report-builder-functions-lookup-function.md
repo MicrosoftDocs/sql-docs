@@ -2,8 +2,8 @@
 title: "Lookup function in a paginated report | Microsoft Docs"
 description:  Use the Lookup function in a paginated report to return the first matching value for the specified name from a dataset that contains name or value pairs.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

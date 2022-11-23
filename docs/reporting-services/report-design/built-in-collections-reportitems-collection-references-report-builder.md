@@ -2,8 +2,8 @@
 title: "ReportItems collection references in a paginated report | Microsoft Docs"
 description: Discover the ReportItems collection in a paginated report. These text boxes in Report Builder are in the current scope of a page header, page footer, or report body.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

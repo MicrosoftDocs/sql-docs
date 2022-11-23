@@ -2,8 +2,8 @@
 title: "Excel Device Information Settings | Microsoft Docs"
 description: Learn details about the various device information settings for rendering in Microsoft Excel format.
 ms.date: 01/23/2020
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

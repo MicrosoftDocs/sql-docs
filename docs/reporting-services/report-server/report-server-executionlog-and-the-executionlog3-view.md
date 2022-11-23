@@ -2,8 +2,8 @@
 title: "Report Server ExecutionLog and the ExecutionLog3 View | Microsoft Docs"
 description: Learn about the report server execution log in Reporting Services, which contains information about reports on servers in native mode or a SharePoint farm.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual

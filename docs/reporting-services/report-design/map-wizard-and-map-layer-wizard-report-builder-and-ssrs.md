@@ -2,8 +2,8 @@
 title: "Map Wizard and Map Layer Wizard (Report Builder) | Microsoft Docs"
 description: Find out how to automate creating a map, adding a map layer, or changing map layer options with the Map Wizards or Map Layer Wizard in Report Builder.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: reference

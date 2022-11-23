@@ -1,9 +1,9 @@
 ---
 title: "Generate Data Feeds from a Report (Report Builder) | Microsoft Docs"
 description: You can generate Atom-compliant data feeds from paginated reports. Use the feeds in applications, such as Power Pivot, or Power BI, that can consume data feeds.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.technology: report-builder
+ms.service: reporting-services
+ms.date: 11/21/2022
+ms.subservice: report-builder
 
 
 ms.topic: conceptual
@@ -27,15 +27,13 @@ You can generate Atom-compliant data feeds from paginated reports, and then use 
   
 ### To generate an Atom service document  
   
-1.  on the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, navigate to the report for which you want to generate data feeds.  
+1.  On the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, navigate to the report for which you want to generate data feeds.  
   
-2.  Click the report.  
+2.  Click the report so the report is run.  
   
-     The report is run.  
+3.  On the toolbar, click the **Export** button and choose the **Data Feed** option.  
   
-3.  On the toolbar, click the **Export to Data Feed** icon.  
-  
-     A message appears asking you if you want to save or open the atom document that contains the data feed.  
+     A message appears asking you if you want to save or open the atomsvc document that contains the data feed.  
   
 4.  Click **Save** to save the document to the file system, or click **Open** to view the document content before saving. **By default, the document opens in a browser.**  
   
@@ -52,13 +50,13 @@ You can generate Atom-compliant data feeds from paginated reports, and then use 
   
 ### To view an Atom-compliant data feed  
   
-1.  If the Atom service document is not already open, locate it and open it in a browser such as Internet Explorer.  
+1.  If the Atom service document is not already open, locate it and open it in a browser such as Microsoft Edge.  
   
 2.  Copy the URL of the data feed that you want to view from the Atom service document to the browser.  
   
      The format of the URL is the following:  
   
-     `https://<server name>/ReportServer?%2f<ReportName>rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=<Identifier>`  
+     `https://<server name>/ReportServer?/<ReportName>&rs:Command=Render&rs:Format=ATOM&rc:ItemPath=Tablix1`  
   
 3.  Press ENTER.  
   

@@ -2,8 +2,8 @@
 title: "Manage a Running Process | Microsoft Docs"
 description: Learn how to manage a running process, such as a user job or a system job. You can view a job, cancel a job, or manage a job programmatically.
 ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.technology: subscriptions
+ms.service: reporting-services
+ms.subservice: subscriptions
 
 
 ms.topic: conceptual

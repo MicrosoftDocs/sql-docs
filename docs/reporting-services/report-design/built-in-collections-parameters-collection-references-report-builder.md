@@ -2,8 +2,8 @@
 title: "Parameters collection references in a paginated report | Microsoft Docs"
 description: Discover how to use parameters in an expression to customize paginated report data and appearance based on user choices in Report Builder. 
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

@@ -3,8 +3,8 @@ title: "Change map legends-color scale-associated rules in a paginated report | 
 
 description: Learn how to change map legends in a paginated report to help users interpret the data visualization on maps in Report Builder. 
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

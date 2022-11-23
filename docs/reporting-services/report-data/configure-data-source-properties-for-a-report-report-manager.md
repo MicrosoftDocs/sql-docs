@@ -2,8 +2,8 @@
 title: "Configure Data Source Properties for a Paginated Report - SSRS | Microsoft Docs"
 description: Learn to configure data source properties in Reporting Services for a paginated report. Also set the properties to vary the data source connection information.
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual

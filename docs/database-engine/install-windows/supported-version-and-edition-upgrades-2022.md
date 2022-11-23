@@ -4,8 +4,8 @@ description: The supported version and edition upgrades for SQL Server 2022.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/25/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:

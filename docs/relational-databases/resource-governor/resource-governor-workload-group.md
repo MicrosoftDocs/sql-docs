@@ -3,9 +3,9 @@ title: "Resource Governor Workload Group | Microsoft Docs"
 description: In the SQL Server Resource Governor, a workload group is a container for session requests that have similar classification criteria. 
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, workload group"

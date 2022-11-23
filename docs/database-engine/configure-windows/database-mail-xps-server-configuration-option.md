@@ -4,8 +4,8 @@ description: "Learn about the DatabaseMail XPs option. View different ways of tu
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/27/2018"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Database Mail XPs option"

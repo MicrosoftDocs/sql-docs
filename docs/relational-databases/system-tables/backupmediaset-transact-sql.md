@@ -4,8 +4,8 @@ description: Reference for backupmediaset, which contains one row for each backu
 author: VanMSFT
 ms.author: vanto
 ms.date: "11/16/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "backupmediaset"

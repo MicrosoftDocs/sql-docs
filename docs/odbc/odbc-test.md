@@ -3,10 +3,9 @@ description: ODBC Test is an ODBC-enabled application that you can use to test O
 title: ODBC Test
 ms.custom: ""
 ms.date: 09/01/2020
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC test [ODBC]"

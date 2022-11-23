@@ -4,8 +4,8 @@ description: "sp_query_store_unforce_plan (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: 09/30/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SP_QUERY_STORE_UNFORCE_PLAN_TSQL"

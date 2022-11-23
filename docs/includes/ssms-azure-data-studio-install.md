@@ -4,8 +4,8 @@ description: Message that explains Azure Data Studio is included in SSMS install
 author: markingmyname
 ms.author: maghan
 ms.date: 10/20/2020
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: include
 ---
 

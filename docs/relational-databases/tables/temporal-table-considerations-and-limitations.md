@@ -3,10 +3,9 @@ title: "Temporal table considerations and limitations"
 description: "Considerations and limitations to be aware of when working with temporal tables."
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.date: 11/22/2022
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -61,7 +60,7 @@ There are some considerations and limitations to be aware of when working with t
 
   - **Change data capture and change tracking:** Supported only on the current table
 
-  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. `ValidFrom` and `ValidTo` are populated to the begin time of the first transaction that distribution agent starts. It may be preferable to run the distribution agent on a schedule rather than the default behavior of running it continuously, if having `ValidFrom` and `ValidTo` populated with a time that is close to the current system time is important to your application or organization. Use of multiple subscribers isn't supported as this may lead to inconsistent temporal data due to dependency on local system clock.
+  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled, and *one* subscriber with temporal enabled. Use of multiple subscribers isn't supported as this may lead to inconsistent temporal data due to dependency on the local system clock. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including `AS OF` querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. `ValidFrom` and `ValidTo` are populated to the begin time of the first transaction that distribution agent starts. It may be preferable to run the distribution agent on a schedule rather than the default behavior of running it continuously, if having `ValidFrom` and `ValidTo` populated with a time that is close to the current system time is important to your application or organization. For more information, see [Temporal table usage scenarios](temporal-table-usage-scenarios.md).
 
   - **Merge replication:** Not supported for temporal tables
 

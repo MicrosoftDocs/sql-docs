@@ -3,10 +3,9 @@ description: "Add Steps to a SQL Server Agent Master Job"
 title: "Add Steps to a SQL Server Agent Master Job"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: "markingmyname"

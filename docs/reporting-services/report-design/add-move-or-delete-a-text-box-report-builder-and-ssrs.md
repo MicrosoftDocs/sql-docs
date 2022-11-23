@@ -2,9 +2,8 @@
 title: "Add, move, or delete a text box in a paginated report | Microsoft Docs"
 description: Add a text box to the paginated report body to display information such as titles, parameter choices, built-in fields, and dates in Report Builder. 
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

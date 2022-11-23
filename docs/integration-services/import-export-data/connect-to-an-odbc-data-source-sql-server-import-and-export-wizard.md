@@ -3,9 +3,9 @@ title: "Connect to an ODBC Data Source (SQL Server Import and Export Wizard) | M
 description: How to configure an ODBC DSN or create an ODBC connection string to use with SQL Server Import and Export Wizard
 ms.custom: ""
 ms.date: 06/29/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: "vanto"
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace

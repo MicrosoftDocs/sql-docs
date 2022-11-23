@@ -4,9 +4,8 @@ description: Learn which items in SQL Server Management Objects (SMO) support In
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a

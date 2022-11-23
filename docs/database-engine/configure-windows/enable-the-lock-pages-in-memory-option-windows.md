@@ -4,8 +4,8 @@ description: "Learn how to turn on the Lock Pages in Memory option. See how it c
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/03/2022"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Lock Pages in Memory option"

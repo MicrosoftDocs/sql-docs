@@ -1,11 +1,11 @@
 ---
 description: "Connecting to SQL Server (DB2ToSQL)"
 title: "Connecting to SQL Server (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "11/16/2020"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: cpichuka 

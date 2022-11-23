@@ -1,9 +1,9 @@
 ---
 title: "MSSQLSERVER_10061"
 description: The server did not respond to the client request in SQL Server. See an explanation of the error and possible resolutions.
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "10061"

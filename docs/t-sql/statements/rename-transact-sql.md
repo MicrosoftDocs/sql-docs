@@ -5,8 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "WilliamDAssafMSFT"
 ms.date: 08/24/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"

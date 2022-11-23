@@ -3,10 +3,9 @@ title: "Piecemeal restore: simple recovery model"
 description: This example shows a piecemeal restore in SQL Server of a database to a new computer using the simple recovery model.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "piecemeal restores [SQL Server], simple recovery model"

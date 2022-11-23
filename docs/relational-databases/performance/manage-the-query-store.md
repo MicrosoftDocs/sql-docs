@@ -4,8 +4,8 @@ description: Learn best practices for managing the SQL Server Query Store, inclu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:

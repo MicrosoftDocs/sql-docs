@@ -4,8 +4,8 @@ description: "Microsoft OLE DB Provider for Oracle Overview"
 author: rothja
 ms.author: jroth
 ms.date: 11/08/2018
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "providers [ADO], OLE DB provider for Oracle"

@@ -3,10 +3,9 @@ title: "SQL Server Integration Services Properties (Log On Tab)"
 description: Learn about the Log On tab of the SQL Server Integration Services Properties dialog box. See how to specify an account and start or stop the service.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname

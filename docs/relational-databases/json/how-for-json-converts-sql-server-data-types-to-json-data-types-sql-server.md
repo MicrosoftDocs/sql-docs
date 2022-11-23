@@ -2,8 +2,8 @@
 description: "How FOR JSON converts SQL Server data types to JSON data types (SQL Server)"
 title: "How FOR JSON converts SQL Server data types to JSON data types"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON, data type conversion"

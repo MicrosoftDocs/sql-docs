@@ -4,8 +4,8 @@ description: Learn about using the OUTPUT clause in an INSERT, UPDATE, DELETE, o
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server

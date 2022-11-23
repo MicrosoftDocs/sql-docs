@@ -1,10 +1,9 @@
 ---
 title: SELECT (Transact-SQL)
 description: SELECT (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "SELECT_TSQL"

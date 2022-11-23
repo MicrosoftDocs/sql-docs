@@ -1,9 +1,8 @@
 ---
 description: "Add Table Dialog Box (Database Designer) (Visual Database Tools)"
 title: Add Table Dialog Box (Database Designer)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65555"

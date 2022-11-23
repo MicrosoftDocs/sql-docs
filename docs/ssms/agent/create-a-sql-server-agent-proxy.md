@@ -3,9 +3,8 @@ description: "Create a SQL Server Agent Proxy in SQL Server Management Studio"
 title: "Create a SQL Server Agent Proxy"
 ms.custom: seo-lt-2019
 ms.date: "05/03/2022"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "proxies [SQL Server Agent], creating"

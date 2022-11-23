@@ -3,10 +3,9 @@ description: "Name Not Found Dialog Box"
 title: "Name Not Found Dialog Box"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.namenotfound.f1"

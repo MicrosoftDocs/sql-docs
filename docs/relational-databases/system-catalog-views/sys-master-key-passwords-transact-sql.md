@@ -4,9 +4,8 @@ description: sys.master_key_passwords (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/06/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.master_key_passwords_TSQL"

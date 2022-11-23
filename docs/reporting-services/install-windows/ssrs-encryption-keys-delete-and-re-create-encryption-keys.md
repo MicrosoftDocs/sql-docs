@@ -2,8 +2,7 @@
 title: "Delete and Recreate Encryption Keys (Configuration Manager) | Microsoft Docs"
 description: "Deleting and recreating encryption keys are activities that fall outside of routine encryption key maintenance."
 ms.date: 12/04/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
+ms.service: reporting-services
 ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual

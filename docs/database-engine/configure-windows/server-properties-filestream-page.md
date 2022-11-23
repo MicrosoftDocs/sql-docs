@@ -4,8 +4,8 @@ description: Get acquainted with FILESTREAM settings in SQL Server. Learn how to
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.serverproperties.filestream.f1"

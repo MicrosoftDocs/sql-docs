@@ -4,8 +4,8 @@ description: "setDate Method setDate Method to date value - string"
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 apilocation: "sqljdbc.jar"
 apiname: "SQLServerCallableStatement.setDate (java.lang.String, java.sql.Date)"

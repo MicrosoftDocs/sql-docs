@@ -11482,6 +11482,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-18483-database-engine-error.md
         - name: 18752
           href: relational-databases/errors-events/mssqlserver-18752-database-engine-error.md
+      - name: Errors 19,000 to 19,999
+        items:
+        - name: 19407
+          href: relational-databases/errors-events/mssqlserver-19407-database-engine-error.md
       - name: Errors 20,000 to 34,000
         items:
         - name: 20557

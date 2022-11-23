@@ -3,9 +3,9 @@ description: "Viewing Test Case Reports (SybaseToSQL)"
 title: "Viewing Test Case Reports (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Test Case Reports"

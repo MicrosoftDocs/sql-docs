@@ -3,10 +3,9 @@ description: "catalog.grant_permission (SSISDB Database)"
 title: "catalog.grant_permission (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "grant_permission stored procedure [Integration Services]"

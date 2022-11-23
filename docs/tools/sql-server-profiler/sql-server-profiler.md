@@ -2,9 +2,8 @@
 title: SQL Server Profiler
 titleSuffix: SQL Server Profiler
 description: Explore the features of SQL Server Profiler. Get help troubleshooting problems by using this tool to create traces and analyze and replay trace results.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: profiler
+ms.service: sql
+ms.subservice: profiler
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan

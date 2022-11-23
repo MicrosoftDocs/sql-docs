@@ -4,8 +4,8 @@ description: Download page for ADO.NET and Microsoft SqlClient Data Provider for
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 07/26/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"

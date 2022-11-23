@@ -3,9 +3,9 @@ description: "Set a Session Language"
 title: "Set a Session Language | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server], international considerations"

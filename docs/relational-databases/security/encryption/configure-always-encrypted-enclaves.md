@@ -4,10 +4,9 @@ description: Learn how to configure and use Always Encrypted with secure enclave
 ms.custom:
 - event-tier1-build-2022
 ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: "vanto"
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas

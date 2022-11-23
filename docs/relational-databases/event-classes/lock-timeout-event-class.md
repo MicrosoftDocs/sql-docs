@@ -3,9 +3,9 @@ title: "Lock:Timeout Event Class | Microsoft Docs"
 description: "The Lock:Timeout event class indicates that a request for a lock on a resource has timed out because of a blocking lock on the resource in SQL Server."
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Timeout event class"

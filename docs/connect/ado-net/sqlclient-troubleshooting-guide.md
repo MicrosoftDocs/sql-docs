@@ -4,8 +4,8 @@ description: "Page that provides resolutions to commonly observed problems."
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/03/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"

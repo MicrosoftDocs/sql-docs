@@ -1,9 +1,8 @@
 ---
 title: Release notes for (SSMS) 19 (Preview)
 description: Release notes for SQL Server Management Studio (SSMS) 19 (Preview)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022

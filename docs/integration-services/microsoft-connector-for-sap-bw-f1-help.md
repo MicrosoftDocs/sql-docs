@@ -3,10 +3,9 @@ description: "Microsoft Connector for SAP BW F1 Help"
 title: "Microsoft Connector for SAP BW F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.dts.designer.sapbw.f1"

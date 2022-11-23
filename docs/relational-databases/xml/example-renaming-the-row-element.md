@@ -3,10 +3,9 @@ title: "Example: Renaming the &lt;row&gt; Element"
 description: View an example of renaming an XML row element by specifying an optional argument to RAW mode in the FOR XML clause.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "RAW mode, renaming <row> example"

@@ -1,9 +1,8 @@
 ---
 description: "Proxy Account Properties (References Tab)"
 title: Proxy Account Properties (References Tab)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.proxy.references.f1"

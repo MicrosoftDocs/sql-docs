@@ -1,8 +1,8 @@
 ---
 title: "What's new in SQL Server 2022"
 description: Learn about new features for SQL Server 2022 (16.x), which gives you choices of development languages, data types, environments, and operating systems.
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray

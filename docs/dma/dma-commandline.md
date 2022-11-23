@@ -4,8 +4,8 @@ description: Learn how to run Data Migration Assistant from the command line to 
 author: rajeshsetlem
 ms.author: rajpo
 ms.date: "05/06/2019"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

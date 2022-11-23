@@ -4,9 +4,8 @@ description: Learn about transactions for memory-optimized tables and natively c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "01/16/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

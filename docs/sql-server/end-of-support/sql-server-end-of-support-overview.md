@@ -2,8 +2,8 @@
 title: "End of support options"
 description: Learn about the different options available for SQL Server products that have reached end of support, including SQL Server 2008, SQL Server 2008 R2, and 2012.
 ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest

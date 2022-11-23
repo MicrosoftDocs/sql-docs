@@ -1,9 +1,8 @@
 ---
 description: "Change a Server&#39;s Registration (SQL Server Management Studio)"
 title: Change a Server's Registration
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 author: markingmyname

@@ -3,9 +3,9 @@ description: "Editions and supported features of [!INCLUDE[sssql19-md](../includ
 title: "Editions and supported features of SQL Server 2019"
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"

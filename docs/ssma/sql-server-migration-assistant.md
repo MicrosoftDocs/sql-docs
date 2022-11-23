@@ -3,9 +3,9 @@ title: "SQL Server Migration Assistant | Microsoft Docs"
 description: Learn about SQL Server Migration Assistant, a tool that automates database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and SAP ASE.
 ms.custom: ""
 ms.date: "10/10/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: cpichuka 

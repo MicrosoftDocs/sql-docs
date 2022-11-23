@@ -4,9 +4,8 @@ description: ALTER MASTER KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "02/21/2019"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: fasttrack-edit
 f1_keywords:

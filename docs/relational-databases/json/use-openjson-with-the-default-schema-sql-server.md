@@ -2,8 +2,8 @@
 description: "Use OPENJSON with the Default Schema"
 title: "Use OPENJSON with the Default Schema"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON, with default schema"

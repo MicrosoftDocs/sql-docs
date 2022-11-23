@@ -3,8 +3,8 @@ description: "Create Synonyms"
 title: "Create Synonyms"
 ms.custom: ""
 ms.date: "02/01/2022"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.synonym.general.f1"

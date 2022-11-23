@@ -5,8 +5,8 @@ author: lilgreenbird
 ms.author: "v-susanh"
 ms.reviewer: v-davidengel
 ms.date: 03/31/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

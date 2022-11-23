@@ -4,8 +4,8 @@ description: "Provides download links for modules, which enable connection to Mi
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/06/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: article
 ---
 # Connection modules for Microsoft SQL Database

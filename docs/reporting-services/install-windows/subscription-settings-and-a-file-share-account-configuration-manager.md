@@ -2,7 +2,7 @@
 title: "Subscription Settings & File Share Account (Configuration Manager) | Microsoft Docs"
 description: "Use the Subscription Settings page of the Report Server Configuration Manager to configure a file share account for Native mode report servers and file share subscriptions."
 ms.date: 09/15/2022
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 title: "High availability in SQL Server Reporting Services | Microsoft Docs"
 description: Learn about the best way to ensure the availability of Reporting Services functionality in SQL Server.
 ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.technology: report-server-sharepoint
+ms.service: reporting-services
+ms.subservice: report-server-sharepoint
 
 
 ms.topic: conceptual

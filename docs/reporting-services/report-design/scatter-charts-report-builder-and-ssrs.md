@@ -2,8 +2,8 @@
 title: "Scatter charts in a paginated report | Microsoft Docs"
 description:  Find out how to use scatter charts in a paginated report, with values represented by point positions on a chart, to compare aggregated data across categories in Report Builder.
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

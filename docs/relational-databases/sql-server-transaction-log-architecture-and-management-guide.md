@@ -160,11 +160,13 @@ Log truncation is essential to keep the log from filling. Log truncation deletes
 
 The following illustrations show a transaction log before and after truncation. The first illustration shows a transaction log that has never been truncated. Currently, four virtual log files are in use by the logical log. The logical log starts at the front of the first virtual log file and ends at virtual log 4. The MinLSN record is in virtual log 3. Virtual log 1 and virtual log 2 contain only inactive log records. These records can be truncated. Virtual log 5 is still unused and isn't part of the current logical log.
 
-:::image type="content" source="media/sql-server-transaction-log-architecture-and-management-guide/transaction-log-before-truncate.png" alt-text="Illustrates how a transaction log appears before it's truncated.":::
+:::image type="content" source="media/sql-server-transaction-log-architecture-and-management-guide/transaction-log-before-truncate.png" alt-text="Illustration that shows how a transaction log appears before it's truncated.":::
+
 
 The second illustration shows how the log appears after being truncated. Virtual log 1 and virtual log 2 have been freed for reuse. The logical log now starts at the beginning of virtual log 3. Virtual log 5 is still unused, and it isn't part of the current logical log.
 
-:::image type="content" source="media/sql-server-transaction-log-architecture-and-management-guide/transaction-log-after-truncate.png" alt-text="Illustrates how a transaction log appears after it's truncated.":::
+:::image type="content" source="media/sql-server-transaction-log-architecture-and-management-guide/transaction-log-after-truncate.png" alt-text="Illustration that shows how a transaction log appears after it's truncated.":::
+
 
 Log truncation occurs automatically after the following events, except when delayed for some reason:
 

@@ -13,7 +13,7 @@ editor: monicar
 tags: azure-service-management
 ---
 
-# Tutorial: Manually configure an availability group (SQL Server on Azure VMs)
+# Tutorial: Manually configure a SQL Server Always On availability group on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]
@@ -267,7 +267,8 @@ You're now ready to configure an availability group by doing the following tasks
 
 ### Create the availability group
 
-1. Connect to your SQL Server VM by using remote desktop, and open  SQL Server Management Studio (SSMS). In Object Explorer in SSMS, right-click **Always On High Availability** and select **New Availability Group Wizard**.
+1. Connect to your SQL Server VM by using remote desktop, and open SQL Server Management Studio (SSMS). 
+1. In Object Explorer in SSMS, right-click **Always On High Availability** and select **New Availability Group Wizard**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/56-new-availability-group-wizard.png" alt-text="Screenshot of Object Explorer in SSMS, with the shortcut command for starting the New Availability Group Wizard.":::
 
@@ -310,9 +311,11 @@ You're now ready to configure an availability group by doing the following tasks
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/72-validation.png" alt-text="Screenshot of the page that shows the results of validation in the New Availability Group Wizard in SSMS.":::
 
     >[!NOTE]
-    >There' a warning for the listener configuration because you haven't configured an availability group listener. You can ignore this warning because on Azure virtual machines, you create the listener after you create the Azure load balancer.
+    >There's a warning for the listener configuration because you haven't configured an availability group listener. You can ignore this warning because on Azure virtual machines, you create the listener after you create the Azure load balancer.
 
-1. On the **Summary** page, select **Finish**, and then wait while the wizard configures the new availability group. On the **Progress** page, you can select **More details** to view the detailed progress. After the wizard finishes the configuration, inspect the **Results** page to verify that the availability group is successfully created.
+1. On the **Summary** page, select **Finish**, and then wait while the wizard configures the new availability group. On the **Progress** page, you can select **More details** to view the detailed progress. 
+
+   After the wizard finishes the configuration, inspect the **Results** page to verify that the availability group is successfully created.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/74-results.png" alt-text="Screenshot that shows successful completion of the New Availability Group Wizard in SSMS.":::
 
@@ -328,7 +331,7 @@ You're now ready to configure an availability group by doing the following tasks
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/78-availability-group-dashboard.png" alt-text="Screenshot of the availability group dashboard in SSMS.":::
 
-   You can see the replicas, the failover mode of each replica, and the synchronization state.
+   The dashboard shows the replicas, the failover mode of each replica, and the synchronization state.
 
 1. In Failover Cluster Manager, select your cluster. Select **Roles**. 
 

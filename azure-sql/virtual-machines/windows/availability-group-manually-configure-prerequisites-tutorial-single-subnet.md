@@ -154,20 +154,20 @@ The following table shows the settings for these two machines:
 
 | **Field** | Value |
 | --- | --- |
-| **Name** |First domain controller: ad-primary-dc</br>Second domain controller: ad-secondary-dc |
-| **VM disk type** |SSD |
-| **User name** |DomainAdmin |
-| **Password** |Contoso!0000 |
+| **Name** |First domain controller: **ad-primary-dc**</br>Second domain controller: **ad-secondary-dc** |
+| **VM disk type** |**SSD** |
+| **User name** |**DomainAdmin** |
+| **Password** |**Contoso!0000** |
 | **Subscription** |Your subscription |
-| **Resource group** |SQL-HA-RG |
+| **Resource group** |**SQL-HA-RG** |
 | **Location** |Your location |
-| **Size** |DS1_V2 |
-| **Storage** | Use managed disks - Yes |
-| **Virtual network** |autoHAVNET |
-| **Subnet** |admin |
+| **Size** |**DS1_V2** |
+| **Storage** | **Use managed disks** - **Yes** |
+| **Virtual network** |**autoHAVNET** |
+| **Subnet** |**admin** |
 | **Public IP address** |Same name as the VM |
 | **Network security group** |Same name as the VM |
-| **Availability set** |adavailabilityset </br>Fault domains: 3 </br>Update domains: 5|
+| **Availability set** |**adavailabilityset** </br>**Fault domains**: **3** </br>**Update domains**: **5**|
 | **Diagnostics** |Enabled |
 | **Diagnostics storage account** |Automatically created |
 
@@ -211,8 +211,8 @@ In the following steps, configure the **ad-primary-dc** machine as a domain cont
 
     | **Page** | Setting |
     | --- | --- |
-    | **Deployment Configuration** |**Add a new forest**<br/> **Root domain name** = corp.contoso.com |
-    | **Domain Controller Options** |**DSRM Password** = Contoso!0000<br/>**Confirm Password** = Contoso!0000 |
+    | **Deployment Configuration** |**Add a new forest**<br/> **Root domain name** = **corp.contoso.com** |
+    | **Domain Controller Options** |**DSRM Password** = **Contoso!0000**<br/>**Confirm Password** = **Contoso!0000** |
 
 1. Select **Next** to go through the other pages in the wizard. On the **Prerequisites Check** page, verify that the following message appears: "All prerequisite checks passed successfully." You can review any applicable warning messages, but it's possible to continue with the installation.
 1. Select **Install**. The **ad-primary-dc** virtual machine automatically restarts.
@@ -509,25 +509,19 @@ The solution requires the following TCP ports to be open in the firewall:
 - **Load balancer IP address health probe for cluster core**: Any available port. Examples frequently use 58888.
 - **Database mirroring endpoint**: Any available port. Examples frequently use 5022.
 
-The firewall ports need to be open on both SQL Server VMs.
-
-### Open a TCP port in the firewall
-
-The method of opening the ports depends on the firewall solution that you use. The following steps show how to open the ports in Windows Firewall:
+The firewall ports need to be open on both SQL Server VMs. The method of opening the ports depends on the firewall solution that you use. The following steps show how to open the ports in Windows Firewall:
 
 1. On the first SQL Server **Start** screen, open **Windows Firewall with Advanced Security**.
 1. On the left pane, select **Inbound Rules**. On the right pane, select **New Rule**.
 1. For **Rule Type**, select **Port**.
 1. For the port, specify **TCP** and enter the appropriate port numbers. The following screenshot shows an example.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/35-tcp-ports.png" alt-text="Screenshot of the New Inbound Rule Wizard for the SQL firewall, showing specific local ports.":::
+   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/35-tcp-ports.png" alt-text="Screenshot of the New Inbound Rule Wizard for a firewall, showing specific local ports.":::
 
 1. Select **Next**.
 1. On the **Action** page, keep **Allow the connection** selected, and then select **Next**.
 1. On the **Profile** page, accept the default settings, and then select **Next**.
 1. On the **Name** page, specify a rule name (such as **Azure LB Probe**) in the **Name** box, and then select **Finish**.
-
-Repeat these steps on the second SQL Server VM.
 
 ## Next steps
 

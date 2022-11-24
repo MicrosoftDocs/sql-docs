@@ -75,26 +75,8 @@
       - name: Dynamic data masking
         href: database/dynamic-data-masking-overview.md
       - name: SQL Vulnerability Assessment
-        items:
-        - name: Get started
-          displayName: database
-          href: /azure/defender-for-cloud/defender-for-sql-introduction?toc=/azure/azure-sql/toc.json
-        - name: Enable vulnerability assessment
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable?toc=/azure/azure-sql/toc.json
-        - name: Manage vulnerability assessments
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-manage?toc=/azure/azure-sql/toc.json
-        - name: Find and remediate threats
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
-        - name: Investigate threats
-          href: threat-detection-overview
-        - name: Review sensitive data
-          href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
-        - name: Vulnerability Assessment rules
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules?toc=/azure/azure-sql/toc.json
-        - name: Vulnerability Assessment rules changelog
-          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
-        - name: Store vulnerability scans in storage
-          href: sql-database-vulnerability-assessment-storage.md
+        displayName: database
+        href: /azure/defender-for-cloud/defender-for-sql-introduction?toc=/azure/azure-sql/toc.json
       - name: Logins, user accounts, roles, and permissions
         href: database/logins-create-manage.md
       - name: Azure AD Authentication
@@ -674,6 +656,24 @@
       items: 
       - name: Audit to storage account behind VNet or firewall
         href: database/audit-write-storage-account-behind-vnet-firewall.md
+      - name: Vulnerability assessment
+        items:
+        - name: Enable vulnerability assessment
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable?toc=/azure/azure-sql/toc.json
+        - name: Manage vulnerability assessments
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-manage?toc=/azure/azure-sql/toc.json
+        - name: Find and remediate threats
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
+        - name: Investigate threats
+          href: threat-detection-overview.md
+        - name: Review sensitive data
+          href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability Assessment rules
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability Assessment rules changelog
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
+        - name: Store vulnerability scans in storage
+          href: sql-database-vulnerability-assessment-storage.md
       - name: Configure threat detection
         href: database/threat-detection-configure.md
       - name: Configure dynamic data masking

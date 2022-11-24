@@ -39,7 +39,7 @@ For more information, see [Compare and Synchronize Data in One or More Tables wi
   
 #### To compare data by using the New Data Comparison Wizard  
   
-1.  On the **SQL** menu, point to **Data Compare**, and then click **New Data Comparison**.  
+1.  1.  In Visual Studio 2019, on the **SQL** menu, point to **Data Compare**, and then click **New Data Comparison**.  In Visual Studio 2022, on the **Tools** menu, point to **SQL Server**, and then click **New Data Comparison**.
   
     The New Data Comparison wizard appears. Also, the Data Compare window opens, and Visual Studio automatically assigns it a name such as DataCompare1.  
   

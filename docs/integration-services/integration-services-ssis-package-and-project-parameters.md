@@ -3,10 +3,9 @@ description: "Integration Services (SSIS) Package and Project Parameters"
 title: "Package and Project Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.parameter.f1"

@@ -4,9 +4,8 @@ description: Learn about hardware considerations for In-Memory OLTP performance 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/28/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---

@@ -4,8 +4,8 @@ description: sys.dm_broker_connections returns a row for each Service Broker net
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/03/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_broker_connections"

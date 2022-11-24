@@ -2,10 +2,9 @@
 title: Replay a Trace File
 titleSuffix: SQL Server Profiler
 description: Get help troubleshooting problems by replaying trace files in SQL Server Profiler. Learn about replay capabilities and options.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: markingmyname

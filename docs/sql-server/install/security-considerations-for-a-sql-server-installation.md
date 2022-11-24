@@ -3,9 +3,9 @@ title: "Security Considerations"
 description: This article discusses some security best practices that you should consider both before and after you install SQL Server.
 ms.custom: ""
 ms.date: "11/22/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "firewall systems [SQL Server]"

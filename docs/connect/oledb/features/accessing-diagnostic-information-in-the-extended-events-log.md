@@ -4,8 +4,8 @@ description: "Tracing OLE DB Driver for SQL Server and accessing diagnostic info
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Accessing Diagnostic Information in the Extended Events Log

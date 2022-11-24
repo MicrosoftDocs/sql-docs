@@ -4,8 +4,8 @@ description: Learn how to change the server authentication mode in SQL Server. Y
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/17/2021
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ms.custom: FY22Q2Fresh
 helpviewer_keywords:

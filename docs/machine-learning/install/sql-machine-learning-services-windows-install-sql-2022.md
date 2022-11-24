@@ -1,8 +1,8 @@
 ---
 title: Install SQL Server 2022 Machine Learning Services on Windows
 description: Learn how to install SQL Server 2022 Machine Learning Services on Windows to run Python, R, or Java scripts in-database.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 09/26/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
@@ -76,7 +76,9 @@ If you encounter any installation errors during setup, check the summary log in 
 
 Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java are no longer shipped or installed with SQL Server setup. Instead, use the following sections to install your custom runtimes and packages. 
 
-### Install R
+### Setup R support
+
+#### Install R runtime
 
 1. Download and install the most recent version of [R 4.2 for Windows](https://cran.r-project.org/bin/windows/base/).
 
@@ -97,6 +99,8 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
 
     install.packages("https://aka.ms/sqlml/r4.2/windows/RevoScaleR_10.0.1.zip", repos=NULL)
     ```
+
+#### Configure R runtime with SQL Server
 
 1. Configure the installed R runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in an R application folder that depends on the installation. Usually, it's in `%ProgramFiles%\R\R-4.2.0\library\RevoScaleR\rxLibs\x64`.
 
@@ -130,7 +134,9 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     GO
     ```
 
-### Install Python
+### Setup Python support
+
+#### Install Python runtime
 
 1. Download the most recent version of [Python 3.10 for Windows](https://www.python.org/downloads/). Install it by using the following options:
     
@@ -147,6 +153,8 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes f
     cd "C:\Program Files\Python310\"
     python -m pip install https://aka.ms/sqlml/python3.10/windows/revoscalepy-10.0.1-py3-none-any.whl
     ```
+
+#### Configure Python runtime with SQL Server
 
 1. Configure the installed Python runtime with SQL Server. You can change the default version by using the `RegisterRext.exe` command-line utility. The utility is in the custom installation location (for example, `C:\Program Files\Python310\Lib\site-packages\revoscalepy\rxLibs`).
 
@@ -237,6 +245,10 @@ The Python and R solutions that you create for SQL Server can call:
 Packages that you want to use from SQL Server must be installed in the default library that the instance uses. If you have a separate installation of Python or R on the computer, or if you installed packages to user libraries, you can't use those packages from T-SQL.
 
 To install and manage additional packages, you can set up user groups to share packages on a per-database level. Or you can configure database roles to enable users to install their own packages. For more information, see [Install Python packages](../package-management/install-additional-python-packages-on-sql-server.md) and [Install new R packages](../package-management/install-additional-r-packages-on-sql-server.md).
+
+### Standalone RevoScale packages for Python and R runtime
+
+RevoScale packages are also supported as a standalone package with Python and R runtimes. In order to setup Python or R runtime for the standalone scenario, follow the instructions in the [Install Python runtime](#install-python-runtime) and [Install R runtime](#install-r-runtime) sections respectively.
 
 ## Next steps
 

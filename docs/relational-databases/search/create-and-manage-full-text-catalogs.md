@@ -2,9 +2,8 @@
 title: Create and Manage Full-Text Catalogs
 description: "Create and Manage Full-Text Catalogs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 f1_keywords:
   - sql13.swb.fulltextsearch.ftcatalog.general.f1

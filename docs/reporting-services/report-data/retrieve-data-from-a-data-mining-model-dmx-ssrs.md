@@ -2,9 +2,8 @@
 title: "Retrieve Data from a Data Mining Model (DMX) | Microsoft Docs"
 description: Learn how to use the data from a SQL Server Analysis Services (SSAS) data mining model in your report.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual

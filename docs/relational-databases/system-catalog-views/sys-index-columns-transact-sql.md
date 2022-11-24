@@ -4,8 +4,8 @@ description: "sys.index_columns contains one row per column that is part of an i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.index_columns"

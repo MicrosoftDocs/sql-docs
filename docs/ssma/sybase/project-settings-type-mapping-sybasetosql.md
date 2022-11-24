@@ -3,9 +3,9 @@ description: "Project Settings (Type Mapping) (SybaseToSQL)"
 title: "Project Settings (Type Mapping) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: cpichuka 

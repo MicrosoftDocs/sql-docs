@@ -3,10 +3,9 @@ description: "Debug a Script by Setting Breakpoints in a Script Task and Script 
 title: "Debug a Script by Setting Breakpoints in a Script Task and Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "breakpoints [Integration Services]"

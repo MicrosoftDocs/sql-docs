@@ -1,8 +1,8 @@
 ---
 title: Using Test Conditions in SQL Server Unit Tests
 description: Learn about test conditions in SQL Server unit tests. See how to use predefined conditions and negative testing, and view information on custom conditions.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.testconditions"

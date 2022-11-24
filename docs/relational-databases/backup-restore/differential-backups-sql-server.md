@@ -3,10 +3,9 @@ title: "Differential Backups (SQL Server)"
 description: In SQL Server, a differential backup captures only data that has changed since the last full backup, which is the base of the differential backup.
 ms.custom: ""
 ms.date: 05/10/2022
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
   - "differential backups"

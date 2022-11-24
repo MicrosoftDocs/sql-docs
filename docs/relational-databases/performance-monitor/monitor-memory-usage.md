@@ -3,10 +3,9 @@ title: "Monitor Memory Usage"
 description: "Monitor a SQL Server instance to confirm that memory usage is within typical ranges. Use the Memory: Available Bytes and Memory: Pages/sec counters."
 ms.custom: ""
 ms.date: "07/13/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tuning databases [SQL Server], memory"

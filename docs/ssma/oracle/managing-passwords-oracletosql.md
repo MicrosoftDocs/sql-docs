@@ -1,11 +1,11 @@
 ---
 description: "Managing Passwords (OracleToSQL)"
 title: "Managing Passwords (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: 07/07/2020
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Managing Passwords in Oracle, Exporting or Importing Encrypted Password"

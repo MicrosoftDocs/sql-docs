@@ -3,9 +3,8 @@ title: "Insert Transact-SQL Snippets"
 description: Learn how to choose, insert, and modify a Transact-SQL code snippet that can serve as a starting point when writing new Transact-SQL statements in the Database Engine Query Editor.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

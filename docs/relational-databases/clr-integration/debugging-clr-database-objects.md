@@ -4,8 +4,8 @@ description: SQL Server provides support for debugging Transact-SQL and CLR obje
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/06/2020"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: how-to
 helpviewer_keywords:
   - "database objects [CLR integration], debugging"

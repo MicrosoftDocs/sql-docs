@@ -4,9 +4,8 @@ description: Learn how to find potential performance issues and recommended fixe
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: "03/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_tuning_recommendations"

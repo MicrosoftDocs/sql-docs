@@ -6,8 +6,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: rahul.ajmera
 ms.date: 02/11/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: reference
 ---
 # SQL Server Big Data Clusters Configuration Properties

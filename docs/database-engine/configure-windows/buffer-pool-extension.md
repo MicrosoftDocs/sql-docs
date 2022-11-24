@@ -4,8 +4,8 @@ description: Learn about buffer pool extension and its benefits, which include i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 # Buffer pool extension

@@ -4,8 +4,8 @@ description: Learn about various techniques for improving application performanc
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/12/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

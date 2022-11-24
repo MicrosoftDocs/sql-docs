@@ -4,9 +4,8 @@ description: Learn how to monitor the performance of natively compiled stored pr
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "04/03/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf

@@ -3,10 +3,9 @@ title: "Manage Transaction Log File Size | Microsoft Docs"
 description: Learn how to monitor SQL Server transaction log size, shrink the log, enlarge a log, optimize the tempdb log growth rate, and control transaction log growth.
 ms.custom: ""
 ms.date: 11/10/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction logs [SQL Server], size management"

@@ -4,8 +4,8 @@ description: This article discusses Microsoft JDBC Driver for SQL Server support
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/26/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

@@ -4,8 +4,8 @@ description: "Find out about the max full-text crawl range option. See how it op
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "crawls [full-text search]"

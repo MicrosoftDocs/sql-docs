@@ -8,7 +8,7 @@ ms.date: 09/30/2021
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
-ms.prod: sql
+ms.service: sql
 ---
 # Connect your SQL Server to Azure Arc
 

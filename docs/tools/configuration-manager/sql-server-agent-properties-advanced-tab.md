@@ -3,10 +3,9 @@ title: "SQL Server Agent Properties (Advanced Tab)"
 description: Learn about the options on the Advanced tab in the SQL Server Agent Properties dialog box, such as the dump directory and the instance ID.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: markingmyname

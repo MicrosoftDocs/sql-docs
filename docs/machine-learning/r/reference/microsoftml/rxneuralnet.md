@@ -4,9 +4,8 @@ description: "Neural networks for regression modeling and for Binary and multi-c
 author: "rothja"
 ms.author: "jroth"
 ms.date: 07/15/2019
-ms.prod: sql
-ms.service: ""
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
 ms.custom: ""
 keywords: (MicrosoftML), rxNeuralNet, classification, dnn, models, network, neural, regression

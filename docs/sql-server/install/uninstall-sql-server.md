@@ -3,9 +3,9 @@ title: "Uninstall SQL Server | Microsoft Docs"
 description: Use these resources to uninstall an instance of SQL Server 2019 completely and prepare the system so that you can reinstall SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: install
+ms.subservice: install
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: rwestMSFT

@@ -3,9 +3,9 @@ description: "MSSQLSERVER_5120"
 title: MSSQLSERVER_5120
 ms.custom: ""
 ms.date: 07/25/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "5120 (Database Engine error)"

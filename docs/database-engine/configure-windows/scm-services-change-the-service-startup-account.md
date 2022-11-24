@@ -4,8 +4,8 @@ description: Learn how to change the service accounts that SQL Server and many o
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/06/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server services, startup account changes"

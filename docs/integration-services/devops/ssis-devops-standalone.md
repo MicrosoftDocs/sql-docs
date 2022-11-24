@@ -3,10 +3,9 @@ title: "Standalone SQL Server Integration Services (SSIS) DevOps Tools | Microso
 description: Learn how to build SSIS CICD with standalone SSIS DevOps Tools.
 ms.date: "10/16/2020"
 ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.custom: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
 ---

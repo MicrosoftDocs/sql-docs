@@ -1,9 +1,8 @@
 ---
 description: "bcp_bind"
 title: "bcp_bind | Microsoft Docs"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
 apiname: 
   - "bcp_bind"

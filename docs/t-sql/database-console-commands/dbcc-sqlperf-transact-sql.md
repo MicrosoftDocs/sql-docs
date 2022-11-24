@@ -4,8 +4,8 @@ description: "DBCC SQLPERF (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/07/2018"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "SQLPERF"

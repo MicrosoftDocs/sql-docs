@@ -3,10 +3,9 @@ title: Utility Explorer F1 Help
 description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility. Learn about views, the dashboard, and the Utility Administration tabs.
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.ue.navigation.f1"

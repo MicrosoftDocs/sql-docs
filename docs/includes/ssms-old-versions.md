@@ -2,8 +2,8 @@
 author: markingmyname
 ms.author: maghan
 ms.date: 11/12/2019
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: include
 ---
 

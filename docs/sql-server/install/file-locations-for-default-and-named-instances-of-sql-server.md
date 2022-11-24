@@ -3,9 +3,9 @@ title: "File Locations"
 description: A SQL Server instance has its own program and data files. It can share common files with other instances of SQL Server. This article includes file locations.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: install
+ms.subservice: install
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest

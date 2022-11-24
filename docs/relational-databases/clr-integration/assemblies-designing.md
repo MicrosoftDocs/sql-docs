@@ -4,8 +4,8 @@ description: This article describes factors to consider when you design an assem
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/24/2020"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "designing assemblies [SQL Server]"

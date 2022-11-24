@@ -3,10 +3,8 @@ title: "Transaction Log Architecture and Management Guide"
 description: "SQL Server Transaction Log Architecture and Management Guide"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
 ms.date: 11/24/2022
-ms.prod: sql
-ms.topic: conceptual
+ms.service: sql
 helpviewer_keywords:
   - "transaction log architecture guide"
   - "guide, transaction log architecture"

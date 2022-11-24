@@ -4,8 +4,8 @@ description: "@@FETCH_STATUS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "@@FETCH_STATUS"

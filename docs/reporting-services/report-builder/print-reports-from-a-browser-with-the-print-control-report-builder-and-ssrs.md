@@ -2,9 +2,8 @@
 title: "Print Reports from a Browser with the Print Control (Report Builder) | Microsoft Docs"
 description: To improve the print quality of reports viewed in a browser and to print multiple pages, use the client-side print features in SQL Server Reporting Services.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

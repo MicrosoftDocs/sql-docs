@@ -4,9 +4,9 @@ description: Learn about installation prerequisites for SQL Server Migration Ass
 ms.custom:
   - intro-installation
 ms.date: "07/14/2020"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: cpichuka 

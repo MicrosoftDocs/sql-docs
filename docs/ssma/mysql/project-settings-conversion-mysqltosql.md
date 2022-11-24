@@ -1,11 +1,11 @@
 ---
 description: "Project Settings (Conversion) (MySQLToSQL)"
 title: "Project Settings (Conversion) (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: cpichuka 

@@ -4,8 +4,8 @@ description: "prepareStatement Method (java.lang.String, int, int)"
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 apilocation: "sqljdbc.jar"
 apiname: "SQLServerConnection.prepareStatement (java.lang.String, int, int)"

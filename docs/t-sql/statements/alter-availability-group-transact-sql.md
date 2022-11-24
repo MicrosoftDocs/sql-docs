@@ -4,9 +4,8 @@ description: ALTER AVAILABILITY GROUP (Transact-SQL)
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.date: "01/02/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_AVAILABILITY_GROUP_TSQL"

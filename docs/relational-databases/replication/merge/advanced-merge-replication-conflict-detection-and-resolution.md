@@ -3,10 +3,9 @@ title: "Advanced conflict detection & resolution (Merge)"
 description: Learn advanced methods of conflict detection and resolution with Merge Replication.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication conflict resolution [SQL Server replication], about conflict resolution"

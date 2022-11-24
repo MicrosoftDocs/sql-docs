@@ -4,8 +4,8 @@ description: Use ALTER ASSEMBLY to update assemblies registered in SQL Server. Y
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "assemblies [CLR integration], modifying"

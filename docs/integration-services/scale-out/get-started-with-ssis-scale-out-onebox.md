@@ -5,8 +5,8 @@ ms.custom:
   - performance
   - intro-get-started
 ms.date: "12/13/2017"
-ms.prod: sql
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"

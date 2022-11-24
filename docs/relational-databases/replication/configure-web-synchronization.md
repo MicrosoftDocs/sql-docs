@@ -3,10 +3,9 @@ description: "Configure Web Synchronization"
 title: "Configure Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1"

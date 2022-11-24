@@ -4,8 +4,8 @@ description: "This topic lists the options that are permitted in the associative
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connection Options

@@ -4,9 +4,9 @@ description: "Register the SQL Server computer with the Host Guardian Service fo
 ms.custom:
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu

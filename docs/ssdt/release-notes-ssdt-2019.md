@@ -1,9 +1,8 @@
 ---
 title: SSIS Projects extension for VS2019 troubleshooting guide
 description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2019 and earlier Visual Studio versions."
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu

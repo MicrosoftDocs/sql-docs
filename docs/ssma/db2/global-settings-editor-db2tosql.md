@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Editor) (DB2ToSQL)"
 title: "Global Settings (Editor) (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
 author: cpichuka 

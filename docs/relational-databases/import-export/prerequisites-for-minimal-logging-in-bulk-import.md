@@ -4,9 +4,8 @@ description: In a simple recovery or bulk-logged recovery model, minimal logging
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
   - "minimal logging [SQL Server]"

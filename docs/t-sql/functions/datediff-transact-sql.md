@@ -4,8 +4,8 @@ description: "Transact-SQL reference for the DATEDIFF function. Returns the nume
 author: markingmyname
 ms.author: maghan
 ms.date: "07/18/2019"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATEDIFF_TSQL"

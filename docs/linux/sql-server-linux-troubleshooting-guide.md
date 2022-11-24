@@ -6,8 +6,8 @@ ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 02/24/2022
 ms.topic: troubleshooting
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux
 

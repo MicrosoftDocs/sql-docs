@@ -3,10 +3,9 @@ description: "Lesson 1-1: Create a new Integration Services project"
 title: "Step 1: Create a new Integration Services project | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace

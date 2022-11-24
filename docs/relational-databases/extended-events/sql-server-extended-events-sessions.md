@@ -4,9 +4,8 @@ description: A SQL Server Extended Events session is created in the SQL Server p
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/26/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: conceptual
 helpviewer_keywords:
   - "xe"

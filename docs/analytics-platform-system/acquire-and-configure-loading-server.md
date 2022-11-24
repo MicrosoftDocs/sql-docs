@@ -32,13 +32,13 @@ The loading system can be designed as one or more loading servers that perform c
   
 The system requirements for a loading server depend almost completely on your own workload. Use the [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help determine your capacity requirements.  
   
-## <a name="Step2"></a>Step 2: Acquire the sServer  
+## <a name="Step2"></a>Step 2: Acquire the Server  
 Now that you better understand your capacity requirements, you can plan the servers and networking components that you will need to purchase or provision. Incorporate the following list of requirements into your purchasing plan, and then purchase your server or provision an existing server.  
   
 ### <a name="R"></a>Software Requirements  
 Supported Operating Systems:  
   
--   Windows Server 2012 or Windows Server 2012 R2. These operating systems require the FDR network adapter.  
+-   Windows Server 2012, Windows Server 2012 R2 or beyond. These operating systems require the FDR network adapter.  
   
 -   Windows Server 2008 R2. This OS requires the DDR network adapter.  
   

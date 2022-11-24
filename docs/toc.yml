@@ -8596,6 +8596,8 @@ items:
       href: ssdt/alter-dacfx-used-by-ssdt.md
     - name: SSIS Projects extension for VS2019 troubleshooting guide
       href: ssdt/release-notes-ssdt-2019.md
+    - name: SSIS Projects extension for VS2022 troubleshooting guide
+      href: ssdt/release-notes-ssis-2022.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS

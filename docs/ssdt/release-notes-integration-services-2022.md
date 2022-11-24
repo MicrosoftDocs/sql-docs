@@ -26,7 +26,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Known issues
 **Version 0.1**
-  1. Target sever version supported: SQL server 2019 and SQL server 2022 
+  1. Target server version supported: SQL server 2019 and SQL server 2022 
   1. Can't design Dimension Processing and Partition Processing.
   1. Can't design DQS related component.
   1. Project name in Solution Explorer UI doesn’t show target server version as suffix.
@@ -36,13 +36,13 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Installation issues
 
-If you install successfully, but the solution shows **"incompatible"** and "The application isn't installed":
+If you install successfully, but the solution shows **"incompatible"**, and "The application isn't installed":
 1. Open Visual Studio -> Extension -> Manage Extensions -> Installed
 1. Enable SSIS extension
 1. Relaunch Visual Studio
 
 If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log. You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timstamp}_ISVsix.log:
-- When the error is "The file {filefullpath} already exists.": 
+- When the error is "The file {filefullpath} already exists.":
    1. ```
       cd C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE
       rm CommonExtensions\Microsoft\SSIS\* 

@@ -21,14 +21,14 @@ Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnover
   
 |Synonym|SQL Server system data type|  
 |---|---|
-|**Binary varying**|**varbinary**|  
+|**binary varying**|**varbinary**|  
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
 |**character(**_n_**)**|**char(n)**|  
 |**character varying(**_n_**)**|**varchar(n)**|  
-|**Dec**|**decimal**|  
-|**Double precision**|**float**|  
+|**dec**|**decimal**|  
+|**double precision**|**float**|  
 |**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
 |**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  

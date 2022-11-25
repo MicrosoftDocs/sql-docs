@@ -5,8 +5,8 @@ ms.custom:
   - seo-lt-2019
   - intro-get-started
 ms.date: 09/01/2020
-ms.prod: reporting-services
-ms.technology: application-integration
+ms.service: reporting-services
+ms.subservice: application-integration
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT

@@ -2,8 +2,8 @@
 description: "Role Definitions"
 title: "Role Definitions | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: security
+ms.service: reporting-services
+ms.subservice: security
 
 
 ms.topic: conceptual

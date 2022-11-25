@@ -2,8 +2,8 @@
 title: "Upload Files to a Folder | Microsoft Docs"
 description: Learn what happens when you upload different file types from the file system and store them as managed items in a report server database in Reporting Services. 
 ms.date: 06/17/2019
-ms.prod: reporting-services
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual  

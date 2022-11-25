@@ -69,7 +69,7 @@ Restoring a PITR backup across subscriptions has the following limitations:
 - The subscription type has to be either EA, CSP, MCA, or PayGo. 
 - The restore operation can only be performed on the primary instance. 
 - Geo-replicated backups aren't currently supported for cross-subscription point-in-time restore. 
-- The user performing the restore must either be part of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles.md#sql-managed-instance-contributor) role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
+- The user performing the restore must either be part of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role or have the following explicit permissions: **crossSubscription/action**, **readBackups/action**. 
 - If you're bringing your own key (BYOK), then the key must be present in both subscriptions. 
 
 

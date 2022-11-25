@@ -2,7 +2,7 @@
 description: "SSRS Encryption Keys - Back Up and Restore Encryption Keys"
 title: "Back Up and Restore Reporting Services Encryption Keys | Microsoft Docs"
 ms.date: 05/31/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 
 ms.topic: conceptual
 helpviewer_keywords: 

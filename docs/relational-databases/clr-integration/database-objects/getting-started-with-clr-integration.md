@@ -42,7 +42,7 @@ The `System.Data.dll` assembly contains the following namespaces, which are requ
 - `System.Data.SqlTypes`
 
 > [!TIP]  
-> Loading CLR database objects on Linux is supported, but they must be built with the .NET Framework (SQL Server CLR integration does not support .NET Core, or .NET 5 or later versions). Also, CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set are not supported on Linux.
+> Loading CLR database objects on Linux is supported, but they must be built with the .NET Framework (SQL Server CLR integration does not support .NET Core, or .NET 5 and later versions). Also, CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set are not supported on Linux.
 
 ## Write a "Hello World" stored procedure
 

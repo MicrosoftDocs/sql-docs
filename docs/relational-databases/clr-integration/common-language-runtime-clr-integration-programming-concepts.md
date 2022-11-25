@@ -24,15 +24,19 @@ Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!
 
 You can write stored procedures, triggers, user-defined types, user-defined functions, user-defined aggregates, and streaming table-valued functions, using any .NET Framework language, including Visual Basic and C#.
 
-> [!IMPORTANT]  
-> You can load CLR database objects for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions on Linux, but they must be built with the .NET Framework. Also, CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set are not supported on Linux. SQL Server CLR integration does not support .NET Core, or .NET 5 and later versions.
+## Remarks
 
-By default, the .NET Framework *runtime* is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the .NET Framework SDK is not. To install the latest version of the .NET Framework SDK, see [Download .NET Framework Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework).
+- SQL Server CLR integration doesn't support .NET Core, or .NET 5 and later versions.
 
-The `Microsoft.SqlServer.Server` namespace includes core functionality for CLR programming in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For documentation on the `Microsoft.SqlServer.Server` namespace, see [Microsoft.SqlServer.Server Namespace (.NET Framework 4.8)](/dotnet/api/microsoft.sqlserver.server?view=netframework-4.8&preserve-view=true).
+- You can load CLR database objects for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions on Linux, but they must be built with the .NET Framework. Also, CLR assemblies with the `EXTERNAL_ACCESS` or `UNSAFE` permission set aren't supported on Linux.
 
-> [!NOTE]  
-> CLR functionality, such as CLR user functions, are *not* supported for Azure SQL Database.
+- By default, the .NET Framework *runtime* is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the .NET Framework SDK is not. To install the latest version of the .NET Framework SDK, see [Download .NET Framework Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework).
+
+- The `Microsoft.SqlServer.Server` namespace includes core functionality for CLR programming in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For documentation on the `Microsoft.SqlServer.Server` namespace, see [Microsoft.SqlServer.Server Namespace (.NET Framework 4.8)](/dotnet/api/microsoft.sqlserver.server?view=netframework-4.8&preserve-view=true).
+
+- CLR functionality, such as CLR user functions, aren't supported for Azure SQL Database.
+
+## In this section
 
 The following table lists the articles in this section.
 

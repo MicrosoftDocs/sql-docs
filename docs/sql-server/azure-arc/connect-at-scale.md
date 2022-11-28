@@ -83,7 +83,7 @@ To do this,
 1. Check the **I accept the terms in the agreement** checkbox. 
 1. Select 'Enable'. 
 
-These steps create a new Azure Policy assigment of the *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed* policy definition to the selected subscription and, optionally, a specific resource group scope. A new system assigned managed identity is created and granted the required permissions to onboard Arc-enabled SQL Servers. This new managed identity is used by the policy remediation to install the Azure extension for SQL Server.
+These steps create a new Azure Policy assignment of the *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed* policy definition to the selected subscription and, optionally, a specific resource group scope. A new system assigned managed identity is created and granted the required permissions to onboard Arc-enabled SQL Servers. This new managed identity is used by the policy remediation to install the Azure extension for SQL Server.
 
 ### Connect at-scale using Azure Policy assignment
 

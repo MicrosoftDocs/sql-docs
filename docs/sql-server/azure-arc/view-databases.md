@@ -7,7 +7,7 @@ ms.reviewer: mikeray
 ms.date: 11/03/2022
 ms.topic: conceptual
 ms.custom:
-ms.prod: sql
+ms.service: sql
 ---
 
 # View SQL Server databases - Azure Arc

@@ -160,7 +160,7 @@ GO
 
 ### D. Resetting the identity value on an empty table
 
- The following example forces the current identity value in the `ErrorLogID` column in the `ErrorLog` table to a value of 1, after deleting all records from table. Because the table has no existing rows, the next row inserted will use 1 as the value, that is, the new current identity value, without adding the increment value defined for the column.  
+ The following example assumes a table identity of `(1,1)` and forces the current identity value in the `ErrorLogID` column in the `ErrorLog` table to a value of 1, after deleting all records from table. Because the table has no existing rows, the next row inserted will use 1 as the value. That is, the new current identity value without adding the increment value defined for the column after TRUNCATE, or adding the increment value after DELETE.  
   
 ```sql
 USE AdventureWorks2012;  
@@ -168,7 +168,11 @@ GO
 TRUNCATE TABLE dbo.ErrorLog
 GO
 DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 1);  
-GO  
+GO
+DELETE FROM dbo.ErrorLog
+GO
+DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 0);  
+GO 
 ```  
   
 ## See Also

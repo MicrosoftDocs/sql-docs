@@ -5,7 +5,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: hanqin, maghan
 ms.date: 11/24/2020
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: seodec18
 ---

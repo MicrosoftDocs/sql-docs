@@ -47,6 +47,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------- | :------ |
+| Fix custom action DLL signing | :------ |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.1.2

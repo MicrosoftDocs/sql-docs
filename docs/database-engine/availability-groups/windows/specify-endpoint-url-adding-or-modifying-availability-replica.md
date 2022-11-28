@@ -61,7 +61,10 @@ helpviewer_keywords:
     ```  
   
      Find the row whose **type_desc** value is "DATABASE_MIRRORING," and use the corresponding port number.  
-  
+
+> [!NOTE]
+> To use Kerberos authentication for the communication between Availability Group endpoints, [register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) for the HADR/mirroring endpoints.
+
 ### Examples  
   
 #### A. Using a system name  

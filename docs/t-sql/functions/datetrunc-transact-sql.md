@@ -18,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 # DATETRUNC (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], this function returns an input *date* truncated to a specified *datepart*.
 

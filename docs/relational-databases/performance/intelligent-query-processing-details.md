@@ -1,9 +1,8 @@
 ---
 title: "Intelligent query processing details"
 description: "Intelligent query processing features described in detail."
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
 author: "MikeRayMSFT"
@@ -12,7 +11,7 @@ ms.reviewer: "wiassaf"
 ms.custom:
 - seo-dt-2019
 - event-tier1-build-2022
-ms.date: 07/26/2022
+ms.date: 11/01/2022
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -234,14 +233,24 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 Parameter Sensitivity Plan (PSP) optimization is part of the Intelligent query processing family of features. It addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. This is the case with non-uniform data distributions. For more information on PSP optimization, see [Parameter Sensitive Plan optimization](parameter-sensitivity-plan-optimization.md). For more information on surrounding topics of parameterization and parameter sensitivity, see [Parameter Sensitivity](../query-processing-architecture-guide.md#parameter-sensitivity) and [Parameters and Execution Plan Reuse](../query-processing-architecture-guide.md#parameters-and-execution-plan-reuse).
 
 ## Approximate query processing
+Approximate query processing is a new feature family. It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a `COUNT(DISTINCT())` across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical.
+
+### Approximate Count Distinct
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Approximate query processing is a new feature family. It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. In this case, absolute precision isn't important, but responsiveness is critical. The new **APPROX_COUNT_DISTINCT** aggregate function returns the approximate number of unique non-null values in a group.
+The new **APPROX_COUNT_DISTINCT** aggregate function returns the approximate number of unique non-null values in a group.
 
 This feature is available starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], regardless of the compatibility level.
 
 For more information, see [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md).
+
+### Approximate Percentile
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+These aggregate functions compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions.
+
+For more information, see [APPROX_PERCENTILE_DISC (Transact-SQL)](../../t-sql/functions/approx-percentile-disc-transact-sql.md) and [APPROX_PERCENTILE_CONT (Transact-SQL)](../../t-sql/functions/approx-percentile-cont-transact-sql.md) 
 
 ## Batch mode on rowstore
 

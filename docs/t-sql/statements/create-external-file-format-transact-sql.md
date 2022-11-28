@@ -4,9 +4,9 @@ description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) Creates an external fil
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/09/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 10/05/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL FILE FORMAT"
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "PolyBase, external file format"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
 Creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with external streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table. To create an External Table, see [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md).
 
@@ -31,11 +31,12 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Does not apply to Azure Synapse Analytics.
+  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  
 
 - **Hive ORC**
 
-  Does not apply to Azure Synapse Analytics.
+  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
 
 - **Parquet**
 
@@ -45,7 +46,7 @@ The following file formats are supported:
 
 - **Delta**
 
-  Applies to the [serverless SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-delta-lake-format) and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+  Applies only to [serverless SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-delta-lake-format) and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Syntax
 
@@ -61,7 +62,6 @@ WITH (
     [ , FORMAT_OPTIONS ( <format_options> [ ,...n  ] ) ]
     [ , DATA_COMPRESSION = {
            'org.apache.hadoop.io.compress.GzipCodec'
-         | 'org.apache.hadoop.io.compress.DefaultCodec'
         }
      ]);
 
@@ -75,7 +75,7 @@ WITH (
     | Encoding = {'UTF8' | 'UTF16'}
 }
 ```
-
+<!---'org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 ### [RC](#tab/rc)
 
 ```syntaxsql
@@ -139,7 +139,7 @@ WITH (
 ### [Delta table](#tab/delta)
 
 ```syntaxsql
--- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]).
+-- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and SQL Server 2022).
 CREATE EXTERNAL FILE FORMAT file_format_name
 WITH (
          FORMAT_TYPE = DELTA
@@ -162,7 +162,7 @@ Specifies the format of the external data.
 
   Specifies a Parquet format.
 
-- ORC  
+- ORC
 
   Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
 
@@ -196,10 +196,10 @@ To work properly, Gzip compressed files must have the ".gz" file extension.
 
 #### [Delimited text](#tab/delimited)
 
-The DELIMITEDTEXT format type supports these compression methods:
+The DELIMITEDTEXT format type supports this compression method:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
 - DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+<!--- - DATA COMPRESSION ='org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 
 #### [RC](#tab/rc)
 
@@ -357,7 +357,7 @@ Details:
 
  Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. The default value is FALSE.
 
-- TRUE  
+- TRUE
 
   When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:
 

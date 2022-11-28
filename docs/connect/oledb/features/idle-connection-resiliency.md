@@ -5,8 +5,8 @@ author: a-gazin
 ms.author: v-angazi
 ms.reviewer: v-davidengel
 ms.date: "06/04/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Idle connection resiliency in the OLE DB Driver

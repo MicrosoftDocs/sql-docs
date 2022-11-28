@@ -4,8 +4,8 @@ description: Learn about the locks option. See how to use it to limit the amount
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "locks option [SQL Server]"

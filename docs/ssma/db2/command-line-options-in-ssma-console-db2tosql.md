@@ -1,11 +1,11 @@
 ---
 description: "Command Line Options in SSMA Console (DB2ToSQL)"
 title: "Command Line Options in SSMA Console (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: cpichuka 

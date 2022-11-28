@@ -3,11 +3,10 @@ title: "Server Properties Advanced Page | Microsoft Docs"
 description: Use the Advanced Server Properties page to set system properties on the report server. This tool provides a graphical user interface so that you can set properties without writing code.
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-ms.date: 09/23/2022
+ms.date: 10/17/2022
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -61,7 +60,7 @@ Specifies the number of seconds the results of the preflight request can be cach
 
 *Power BI Report Server, Reporting Services 2017 and later only* 
 
-Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix aren't required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
+Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix aren't required to be included. Default is "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
 ### CustomHeaders 
 
@@ -136,8 +135,8 @@ Branding option to add a custom hyperlink. Default values are **empty**.
 
 |Values |Description  |
 |---------|---------|
-| CustomUrlLabel | It defines what string will be shown as URL label in the top left of subnavbar. |
-| CustomUrlValue  | Defines the URL. | 
+| CustomUrlLabel | Defines the text shown as the URL label in the top right navigation bar in the web portal (for example, `Go to Contoso`) |
+| CustomUrlValue  | Defines the URL (for example, `http://www.contoso.com`) | 
 
 ### EditSessionCacheLimit
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  
@@ -192,17 +191,6 @@ Enable Power BI Report Server data export from Power BI visuals. Values are True
 *Power BI Report Server only* 
 
 Indicates whether or not a customer can export underlying data from Power BI visuals on Power BI Report Server. A value of True indicates that the feature is enabled.
-
-### EnablePowerBIReportMigrate  
-
-*Power BI Report Server, Reporting Services 2022 and later only*
-
-Enables .rdl report migrations to Power BI using the publish feature in the web portal. The default is **false**. The valid values are as follows:
-
-|Values |Description  |
-|---------|---------|
-|**True** | Migrate RDL reports is on |
-| **False** | Migrate RDL reports is off |
 
 ### EnableRemoteErrors
 Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
@@ -269,12 +257,6 @@ Set for how long you want the office access token to expire in seconds. *Default
 
 Set the address of your Office Online Server instance for viewing Excel Workbooks.
 
-### PowerBIMigrateUrl  
-
-*Power BI Report Server, Reporting Services 2022 and later only*
-
-URL used to define the Power BI cloud endpoint to use. Default is `https://app.powerbi.com`.
-
 ### RDLXReportTimetout
 RDLX report *(Power View reports in a SharePoint Server)* processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.
 
@@ -333,7 +315,7 @@ Specifies the maximum number of parameter values that can be stored by the repor
 
 *Power BI Report Server January 2019, Reporting Services 2019 and later only* 
 
-Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http, https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
+Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or "&ast;" to enable all hyperlink schemes. For example, setting "http, https" would allow hyperlinks to "https://www. contoso.com", but would remove hyperlinks to "mailto:bill@contoso.com" or "javascript:window.open('www.contoso.com', '_blank')". Default is "&ast;".
 
 ### SystemReportTimeout
 The default report processing timeout value, in seconds, for all reports managed in the report server namespace. This value can be overridden at the report level. If this property is set, the report server attempts to stop the processing of a report when the specified time has expired. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, reports in the namespace don't time out during processing. The default value is **1800**.  

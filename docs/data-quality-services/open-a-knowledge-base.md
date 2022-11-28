@@ -4,8 +4,8 @@ description: "Open a Knowledge Base"
 author: swinarko
 ms.author: sawinark
 ms.date: "06/04/2013"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 f1_keywords:
   - "sql13.dqs.kb.openkb.f1"

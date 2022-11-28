@@ -4,8 +4,8 @@ description: "Learn about OLE DB Driver for SQL Server support for high availabi
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery

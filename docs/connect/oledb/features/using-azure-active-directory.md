@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
 ms.date: 02/18/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using Azure Active Directory
@@ -27,7 +27,7 @@ Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.
 Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following authentication methods:
 
 - Azure Active Directory interactive authentication
-- Azure Active Directory Managed Identity authentication
+- Azure Active Directory Managed Identity authentication (only from within an [Azure Virtual Machine configured for Managed Identity](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm))
 
 Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
 

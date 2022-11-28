@@ -4,8 +4,8 @@ description: sys.pdw_materialized_view_mappings (Transact-SQL)
 author: XiaoyuMSFT
 ms.author: xiaoyul
 ms.date: "07/03/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

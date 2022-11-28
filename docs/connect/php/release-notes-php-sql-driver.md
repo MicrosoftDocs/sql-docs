@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
 ms.date: 06/16/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
@@ -67,6 +67,10 @@ Fixed issues in 5.10.1:
 | Adjusted connection keyword and value validation for more flexibility. | &nbsp; |
 
 <sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
+
+### Known issues
+
+- If string parameters are bound as short string and later reused to bind longer strings, a string truncation error will occur.
 
 ## Previous releases
 

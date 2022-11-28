@@ -3,10 +3,9 @@ title: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 description: sys.pdw_nodes_column_store_segments (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-manager: jrj
 ms.date: "03/28/2018"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:

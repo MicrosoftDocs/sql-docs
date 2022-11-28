@@ -3,10 +3,9 @@ description: "sp_sequence_get_range (Transact-SQL)"
 title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_sequence_get_range"

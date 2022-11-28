@@ -9,8 +9,8 @@ ms.custom:
   - intro-deployment
 ms.date: 02/22/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 zone_pivot_groups: cs1-command-shell
 # As a DBA, I want to deploy SQL Server in a Docker container so that I can connect to it.

@@ -35,17 +35,17 @@ klist get MSSQLSvc/<miname>.<dnszone>.database.windows.net:1433
 
 The following are some well-known error codes:
 
-- **0x6fb: SQL SPN not found** - Check that you’ve entered a valid SPN. If you've implemented the incoming trust-based authentication flow, revisit steps to [create and configure the Azure AD Kerberos Trusted Domain Object](winauth-azuread-setup-incoming-trust-based-flow.md#create-and-configure-the-azure-ad-kerberos-trusted-domain-object) to validate that you’ve performed all the configuration steps.
+- **0x6fb: SQL SPN not found** - Check that you've entered a valid SPN. If you've implemented the incoming trust-based authentication flow, revisit steps to [create and configure the Azure AD Kerberos Trusted Domain Object](winauth-azuread-setup-incoming-trust-based-flow.md#create-and-configure-the-azure-ad-kerberos-trusted-domain-object) to validate that you've performed all the configuration steps.
 - **0x51f** - This error is likely related to a conflict with the Fiddler tool. Turn on Fiddler to mitigate the issue.
 
 ## Investigate message flow failures
 
-Use Wireshark, or the network traffic analyzer of your choice, to monitor traffic between the client and on-prem Kerberos Key Distribution Center (KDC).
+Use Wireshark, or the network traffic analyzer of your choice, to monitor traffic between the client and on-premises Kerberos Key Distribution Center (KDC).
 
 When using Wireshark the following is expected:
 
-- AS-REQ: Client => on-prem KDC => returns on-prem TGT.
-- TGS-REQ: Client => on-prem KDC => returns referral to `kerberos.microsoftonline.com`.
+- AS-REQ: Client => on-premises KDC => returns on-premises TGT.
+- TGS-REQ: Client => on-premises KDC => returns referral to `kerberos.microsoftonline.com`.
 
 ## Next steps
 

@@ -4,8 +4,8 @@ description: You can delete, or drop, an assembly in SQL Server when it’s no l
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "removing assemblies"

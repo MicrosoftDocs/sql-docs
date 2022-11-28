@@ -3,10 +3,9 @@ description: "Creating, Altering, and Removing User-Defined Functions"
 title: "Creating, Altering, and Removing User-Defined Functions"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 helpviewer_keywords: 

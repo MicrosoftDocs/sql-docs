@@ -1,26 +1,25 @@
 ---
 title: "Automatic tuning"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
-ms.custom:
-- fasttrack-edit
-- event-tier1-build-2022
-ms.date: "09/20/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: wiassaf
+ms.date: 10/14/2022
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom:
+  - fasttrack-edit
+  - event-tier1-build-2022
+helpviewer_keywords:
   - "performance tuning [SQL Server]"
   - "automatic tuning"
   - "aprc"
   - "automatic plan regression correction"
   - "last known good plan"
-author: "jovanpop-msft"
-ms.author: "jovanpop"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Automatic tuning
+
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
@@ -29,9 +28,9 @@ Automatic tuning, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitors the queries that are executed on the database and automatically improves performance of the workload. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] has a built-in intelligence mechanism that can automatically tune and improve performance of your queries by dynamically adapting the database to your workload. There are two automatic tuning features that are available:
 
--    **Automatic plan correction** identifies problematic query execution plans, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) issues, and fixes query execution plan-related performance problems by forcing the last known good plan before the regression occurred. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+-  **Automatic plan correction** identifies problematic query execution plans, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) issues, and fixes query execution plan-related performance problems by forcing the last known good plan before the regression occurred. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
--    **Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+-  **Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## Why automatic tuning?
 
@@ -41,7 +40,7 @@ Three of the main tasks in classic database administration are monitoring the wo
 
 Automatic tuning is a continuous monitoring and analysis process that constantly learns about the characteristics of your workload and identifies potential issues and improvements.
 
-![Automatic tuning process](./media/tuning-process.png)
+:::image type="content" source="media/automatic-tuning/tuning-process.png" alt-text="Automatic tuning process.":::
 
 This process enables the database to dynamically adapt to your workload by finding what indexes and plans might improve the performance of your workloads and what indexes affect your workloads. Based on these findings, automatic tuning applies tuning actions that improve the performance of your workload. In addition, automatic tuning continuously monitors the performance of the database after implementing any changes to ensure that it improves performance of your workload. Any action that didn't improve performance is automatically reverted. This verification process is a key feature that ensures any change made by automatic tuning does not decrease the overall performance of your workload.
 
@@ -49,54 +48,54 @@ This process enables the database to dynamically adapt to your workload by findi
 
 Automatic plan correction is an automatic tuning feature that identifies **execution plan choice regression** and automatically fixes the issue by forcing the last known good plan. For more information about query execution plans and the Query Optimizer, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md).
 
-> [!IMPORTANT]
-> Automatic plan correction depends on Query Store being enabled in the database for workload tracking. 
+> [!IMPORTANT]  
+> Automatic plan correction depends on Query Store being enabled in the database for workload tracking.
 
 ### What is execution plan choice regression?
 
-The [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion-md.md)] may use different execution plans to execute the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries. Query plans depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query might change over time depending on changes in these factors. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) related issue. 
+The [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion-md.md)] may use different execution plans to execute the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries. Query plans depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query might change over time depending on changes in these factors. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#parameter-sensitivity) related issue.
 
- ![Query execution plan choice regression](media/plan-choice-regression.png "Query execution plan choice regression") 
+ :::image type="content" source="media/automatic-tuning/plan-choice-regression.png" alt-text="Query execution plan choice regression.":::
 
 Whenever you notice a plan choice regression has occurred, you should find a previous good plan and force it to be used instead of the current one. This can be done by using the `sp_query_store_force_plan` procedure. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] provides information about regressed plans and recommended corrective actions. Additionally, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enables you to fully automate this process and let [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fix any problem found related to the plan change.
 
-> [!IMPORTANT]
-> Automatic plan correction should be used in the scope of a database compatibility level upgrade, after a baseline has been captured, to automatically mitigate workload upgrade risks. For more information about this use case, see [Keep performance stability during the upgrade to newer SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
+> [!IMPORTANT]  
+> Automatic plan correction should be used in the scope of a database compatibility level upgrade, after a baseline has been captured, to automatically mitigate workload upgrade risks. For more information about this use case, see [Keep performance stability during the upgrade to newer SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
 ### Automatic plan choice correction
 
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can automatically switch to the last known good plan whenever a plan choice regression is detected.
 
-![Query execution plan choice correction](media/force-last-good-plan.png "Query execution plan choice correction") 
+:::image type="content" source="media/automatic-tuning/force-last-good-plan.png" alt-text="Query execution plan choice correction.":::
 
 The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically detects any potential plan choice regression, including the plan that should be used instead of the wrong plan. The resulting execution plan forced by automatic plan correction will be the same or similar to the last known good plan. Because the resulting plan may not be identical to the last know good plan, the performance of forced plan may vary. In rare cases, the performance difference may be significant and negative; in this case, automatic plan correction will automatically stop attempting to force the replacement plan.
 
 When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies the last known good plan before the regression occurred, it automatically monitors the performance of the forced plan. If the forced plan is not better than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan. If the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifies that the forced plan is better than the regressed plan, the forced plan will be retained. It will be retained until a recompile occurs (for example, on the next statistics update or schema change). For more information about plan forcing and types of plans that can be forced, see [Plan forcing limitations](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md#plan-forcing-limitations).
 
-> [!NOTE]
+> [!NOTE]  
 > If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is restarted before a plan forcing action is verified, that plan will be automatically unforced. Otherwise, plan forcing is persisted on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts.
 
-### Enabling automatic plan choice correction
+### Enable automatic plan choice correction
 
 You can enable automatic tuning per database and specify that the last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using the following command:
 
-```sql   
+```sql
 ALTER DATABASE <yourDatabase>
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
+SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 ```
 
 Once you enable this option, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will automatically force any recommendation where the estimated CPU gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
 
 ### Alternative - manual plan choice correction
 
-Without automatic tuning, users must periodically monitor the system and look for the queries that have regressed. If any plan has regressed, the user should find a previous good plan and force it instead of the current one by using `sp_query_store_force_plan` procedure. The best practice would be to force the last known good plan because older plans might be invalid due to statistic or index changes. The user who forces the last known good plan should monitor performance of the query that is executed using the forced plan and verify that forced plan works as expected. Depending on the results of monitoring and analysis, the plan should be forced or the user should find another way to optimize the query, such as rewriting it. Manually forced plans should not be forced forever, because the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] should be able to apply optimal plans. The user or DBA should eventually unforce the plan using `sp_query_store_unforce_plan` procedure, and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find the optimal plan. 
+Without automatic tuning, users must periodically monitor the system and look for the queries that have regressed. If any plan has regressed, the user should find a previous good plan and force it instead of the current one by using `sp_query_store_force_plan` procedure. The best practice would be to force the last known good plan because older plans might be invalid due to statistic or index changes. The user who forces the last known good plan should monitor performance of the query that is executed using the forced plan and verify that forced plan works as expected. Depending on the results of monitoring and analysis, the plan should be forced or the user should find another way to optimize the query, such as rewriting it. Manually forced plans should not be forced forever, because the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] should be able to apply optimal plans. The user or DBA should eventually unforce the plan using `sp_query_store_unforce_plan` procedure, and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find the optimal plan.
 
-> [!TIP]
+> [!TIP]  
 > Alternatively, use the **Queries With Forced Plans** Query Store view to locate and unforce plans.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides all necessary views and procedures required to monitor performance and fix problems in Query Store.
 
-In [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], you can find plan choice regressions using Query Store system views. Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV. The DMV shows information about the problem, the importance of the issue, and details such as the identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] statement that can be executed to fix the problem.
+In [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], you can find plan choice regressions using Query Store system views. Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended actions that should be applied in the [sys.dm_db_tuning_recommendations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV. The DMV shows information about the problem, the importance of the issue, and details such as the identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] statement that can be executed to fix the problem.
 
 | type | description | datetime | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
@@ -112,7 +111,7 @@ Some columns from this view are described in the following list:
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
 
-```sql   
+```sql
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -133,7 +132,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
           ) AS planForceDetails;
 ```
 
-[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]
 
 | reason | score | script | query\_id | current plan\_id | recommended plan\_id | estimated\_gain | error\_prone
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -143,8 +142,8 @@ The column `estimated_gain` represents the estimated number of seconds that woul
 
 Although the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides all the information required to identify plan choice regressions, continuous monitoring and fixing performance issues might become a tedious process. Automatic tuning makes this process much easier.
 
-> [!NOTE]
-> Data in the `sys.dm_db_tuning_recommendations` DMV is not persisted after a restart of the database engine. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
+> [!NOTE]  
+> Data in the `sys.dm_db_tuning_recommendations` DMV is not persisted after a restart of the database engine. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.
 
 ## Automatic index management
 
@@ -175,22 +174,24 @@ Actions required to create necessary indexes in [!INCLUDE[ssazure_md](../../incl
 
 ### Alternative - manual index management
 
-Without automatic index management, a user or DBA would need to manually query the [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) view or use the Performance Dashboard report in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] to find indexes that might improve performance, create indexes using the details provided in this view, and manually monitor the performance of the query. In order to find the indexes that should be dropped, users should monitor operational usage statistics of the indexes to find rarely used indexes.
+Without automatic index management, a user or DBA would need to manually query the [sys.dm_db_missing_index_details (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) view or use the Performance Dashboard report in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] to find indexes that might improve performance, create indexes using the details provided in this view, and manually monitor the performance of the query. In order to find the indexes that should be dropped, users should monitor operational usage statistics of the indexes to find rarely used indexes.
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifies this process. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](/azure/sql-database/sql-database-advisor-portal).
 
-## See also  
- [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
- [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
- [JSON functions](../json/json-data-sql-server.md)    
- [Execution Plans](../../relational-databases/performance/execution-plans.md)    
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)    
+## Next steps
+
+- [ALTER DATABASE SET AUTOMATIC_TUNING (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [sys.database_automatic_tuning_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
+- [sys.dm_db_tuning_recommendations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
+- [sys.dm_db_missing_index_details (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)
+- [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
+- [sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)
+- [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.dm_os_sys_info  (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [JSON functions](../json/json-data-sql-server.md)
+- [Execution Plans](../../relational-databases/performance/execution-plans.md)
+- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
+- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
+- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

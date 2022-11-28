@@ -2,7 +2,7 @@
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 08/30/2021
-ms.prod: sql
+ms.service: sql
 ms.topic: include
 ---
 

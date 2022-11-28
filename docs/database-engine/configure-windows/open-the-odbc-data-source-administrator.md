@@ -4,8 +4,8 @@ description: Find out how to open the ODBC Data Source Administrator on various 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/07/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "ODBC Data Source Administrator"

@@ -4,8 +4,8 @@ description: The supported version and edition upgrades for SQL Server 2016.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/27/2016"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"

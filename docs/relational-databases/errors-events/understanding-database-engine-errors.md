@@ -3,10 +3,9 @@ title: "Understanding Database Engine Errors | Microsoft Docs"
 description: Learn about the attributes of errors raised by the SQL Server Database Engine and how to access all system and user-defined error messages from sys.messages.
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "errors [SQL Server], about errors"

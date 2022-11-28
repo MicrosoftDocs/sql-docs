@@ -4,8 +4,8 @@ description: Lists of third-party partners with solutions to  provide high avail
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017    
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---
@@ -62,7 +62,7 @@ To learn more about additional partners, see [monitoring][mon_partners], [manage
 [hpe]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
 [necec_datasheet]: https://www.necam.com/docs/?id=0d9ef7a7-f935-4909-b6bb-20a47b3
 [azure_datasheet]: /azure/site-recovery/vmware-physical-azure-support-matrix
-[sios_datasheet]: https://us.sios.com/solutions/high-availability-cluster-software-cloud/
+[sios_datasheet]: https://us.sios.com/solutions/cloud-high-availability/azure/
 
 <!--Marketplace Links -->
 [azure_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps?search=site%20recovery&page=1

@@ -4,10 +4,9 @@ title: "Disable check constraints with INSERT and UPDATE statements"
 
 ms.custom: ""
 ms.date: "11/24/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CHECK constraints, disabling"

@@ -4,9 +4,8 @@ description: BACKUP (Transact-SQL) backs up a SQL database.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 08/17/2022
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -77,7 +76,7 @@ Backs up a complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da
 ## Syntax
 
 ```syntaxsql
---Backing Up a Whole Database
+--Back up a whole database
 BACKUP DATABASE { database_name | @database_name_var }
   TO <backup_device> [ ,...n ]
   [ <MIRROR TO clause> ] [ next-mirror-to ]
@@ -85,7 +84,7 @@ BACKUP DATABASE { database_name | @database_name_var }
            | <general_WITH_options> [ ,...n ] } ]
 [;]
 
---Backing Up Specific Files or Filegroups
+--Back up specific files or filegroups
 BACKUP DATABASE { database_name | @database_name_var }
  <file_or_filegroup> [ ,...n ]
   TO <backup_device> [ ,...n ]
@@ -93,7 +92,7 @@ BACKUP DATABASE { database_name | @database_name_var }
   [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]
 [;]
 
---Creating a Partial Backup
+--Create a partial backup
 BACKUP DATABASE { database_name | @database_name_var }
  READ_WRITE_FILEGROUPS [ , <read_only_filegroup> [ ,...n ] ]
   TO <backup_device> [ ,...n ]
@@ -101,12 +100,40 @@ BACKUP DATABASE { database_name | @database_name_var }
   [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]
 [;]
 
---Backing Up the Transaction Log (full and bulk-logged recovery models)
+--Back up the transaction log (full and bulk-logged recovery models)
 BACKUP LOG
   { database_name | @database_name_var }
   TO <backup_device> [ ,...n ]
   [ <MIRROR TO clause> ] [ next-mirror-to ]
   [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]
+[;]
+
+--Back up all the databases on an instance of SQL Server (a server)
+
+ALTER SERVER CONFIGURATION
+SET SUSPEND_FOR_SNAPSHOT_BACKUP ON
+[;]
+
+BACKUP SERVER
+  TO <backup_device> [ ,...n ]
+  [ <MIRROR TO clause> ] [ next-mirror-to ]
+  [ WITH { METADATA_ONLY
+           | <general_WITH_options> [ ,...n ] } ]
+[;]
+
+--Back up a group of databases
+ALTER DATABASE <database>
+SET SUSPEND_FOR_SNAPSHOT_BACKUP ON
+
+ALTER DATABASE <...>
+SET SUSPEND_FOR_SNAPSHOT_BACKUP ON
+...
+
+BACKUP GROUP {<database> [,... ]}
+  TO <backup_device> [ ,...n ]
+  [ <MIRROR TO clause> ] [ next-mirror-to ]
+  [ WITH { METADATA_ONLY
+           | <general_WITH_options> [ ,...n ] } ]
 [;]
   
 <backup_device>::=
@@ -141,6 +168,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  | FILE_SNAPSHOT
  | { EXPIREDATE = { 'date' | @date_var }
         | RETAINDAYS = { days | @days_var } }
+ | { METADATA_ONLY | SNAPSHOT }
 
 --Media Set Options
    { NOINIT | INIT }
@@ -194,6 +222,26 @@ You can restore a log backup to a specific time or transaction within the backup
 
 > [!NOTE]
 > After a typical log backup, some transaction log records become inactive, unless you specify `WITH NO_TRUNCATE` or `COPY_ONLY`. The log is truncated after all the records within one or more virtual log files become inactive. If the log is not being truncated after routine log backups, something might be delaying log truncation. For more information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
+
+#### GROUP (\<database>,...n)
+
+Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+
+Back up a group of databases. Uses snapshot backup. Requires WITH METADATA_ONLY. See [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
+
+#### SERVER
+
+Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+
+Back up all databases on an instance of SQL Server. Uses snapshot backup. Requires WITH METADATA_ONLY. See [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
+
+#### METADATA_ONLY
+
+Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+
+Required for snapshot backup.  `BACKUP SERVER`, or `BACKUP GROUP...` See [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
+
+METADATA_ONLY is synonymous with SNAPSHOT. Virtual device interface (VDI) uses SNAPSHOT. For information about VDI, see [Virtual device interface (VDI) reference](../../relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md).
 
 #### { _database\_name_ | **@**_database\_name\_var_ }    
 Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.
@@ -303,6 +351,7 @@ Specifies options to be used with a backup operation.
 Used only when creating a backup to the Microsoft Azure Blob Storage.
 
 #### FILE_SNAPSHOT    
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]).
 
 Used to create an Azure snapshot of the database files when all of the SQL Server database files are stored using the Azure Blob Storage. For more information, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup takes Azure snapshots of the database files (data and log files) at a consistent state. A consistent set of Azure snapshots make up a backup and are recorded in the backup file. The only difference between `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` and `BACKUP LOG TO URL WITH FILE_SNAPSHOT` is that the latter also truncates the transaction log while the former does not. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup, after the initial full backup that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to establish the backup chain, only a single transaction log backup is required to restore a database to the point in time of the transaction log backup. Furthermore, only two transaction log backups are required to restore a database to a point in time between the time of the two transaction log backups.
@@ -369,7 +418,7 @@ Explicitly enables backup compression.
 NO_COMPRESSION    
 Explicitly disables backup compression.
 
-[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. The default is `MS_XPRESS`. If you have configured [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel&reg; QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md, the following example completes the back up with the accelerator solution, with QATzip library using `QZ_DEFLATE` with the compression level 1.
+[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces `ALGORITHM`, which identifies a compression algorithm for the operation. The default is `MS_XPRESS`. If you have configured [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md), you can use an accelerator provided by the solution. For example, if you have configured [Intel&reg; QuickAssist Technology (QAT) for SQL Server](../../relational-databases/integrated-acceleration/use-integrated-acceleration-and-offloading.md), the following example completes the back up with the accelerator solution, with QATzip library using `QZ_DEFLATE` with the compression level 1.
 
 ```sql
 BACKUP DATABASE <database_name> TO DISK WITH COMPRESSION (ALGORITHM = QAT_DEFLATE) 
@@ -409,6 +458,12 @@ For information about how to specify **datetime** values, see [Date and Time Typ
 
 RETAINDAYS **=** { *days* | **@**_days\_var_ }    
 Specifies the number of days that must elapse before this backup media set can be overwritten. If supplied as a variable (**@**_days\_var_), it must be specified as an integer.
+
+#### { METADATA_ONLY | SNAPSHOT }
+
+**Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**
+
+METADATA_ONLY and SNAPSHOT are synonyms.
 
 ### Media Set Options
 
@@ -466,7 +521,7 @@ Specifying FORMAT implies `SKIP`; `SKIP` does not need to be explicitly stated.
 Specifies the free-form text description, maximum of 255 characters, of the media set.
 
 #### MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }    
-Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
+Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters. If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.
 
 #### BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }    
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.
@@ -951,9 +1006,10 @@ WITH STATS = 5;
 ```
 
 ### J. Backing up to S3-compatible object storage
+
 **Applies to: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]**
 
-This example performs a full backup database of the `Sales` database to an S3-compatible object storage platform. The name of the credential is not required in the statement or to match the exact URL path, but will perform a lookup for the proper credential on the URL provided. For more information, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).
+This example performs a full backup database of the `Sales` database to S3-compatible object storage platform. The name of the credential is not required in the statement or to match the exact URL path, but will perform a lookup for the proper credential on the URL provided. For more information, see [SQL Server backup and restore with S3-compatible object storage preview](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage.md).
 
 ```sql
 BACKUP DATABASE Sales

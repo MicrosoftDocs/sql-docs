@@ -5,8 +5,8 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 09/30/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom:
   - contperf-fy21q1
@@ -98,7 +98,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" --cap-add 
 You can start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] with a custom user and group. In this example, the mounted volume has permissions configured for the user or group on the host machine.
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):$(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ## <a id="storagepermissions"></a> Configure persistent storage permissions for non-root containers
@@ -124,7 +124,7 @@ chmod -R g=u <database file dir>
 
 #### Set the non-root user as the owner of the files
 
-This can be the default non-root user, or any other non-root user you’d like to specify. In this example, we set UID 10001 as the non-root user.
+This can be the default non-root user, or any other non-root user you'd like to specify. In this example, we set UID 10001 as the non-root user.
 
 ```bash
 chown -R 10001:0 <database file dir>

@@ -2,9 +2,8 @@
 title: "Lesson 9: Build and Run the Application | Microsoft Docs"
 description: Learn how to build and run the website application after you create a data filter for the data table.
 ms.date: 05/18/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587

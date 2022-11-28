@@ -6,12 +6,10 @@ description: "Machine Learning Fast Tree"
 keywords: "models, classification, regression" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
+ms.service: sql
+ms.subservice: "machine-learning-services" 
 ms.assetid: "" 
  
 # optional metadata 
@@ -160,7 +158,7 @@ is too small, training takes longer to converge to the best solution.
 
 Minimum number of training instances required to form a
 leaf. That is, the minimal number of documents allowed in a leaf of a
-regression tree, out of the sub-sampled data. A ‘split’ means that features
+regression tree, out of the sub-sampled data. A 'split' means that features
 in each level of the tree (node) are randomly divided. The default value is
 10. Only the number of instances is counted even if instances are weighted.
 
@@ -195,7 +193,7 @@ in its own bin.  If there are more values, the algorithm creates
 
 The feature first use penalty coefficient. This is a
 form of regularization that incurs a penalty for using a new feature when
-creating the tree. Increase this value to create trees that don’t use many
+creating the tree. Increase this value to create trees that don't use many
 features. The default value is 0.
 
 
@@ -301,7 +299,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenv is used instead.
 
 

@@ -4,9 +4,9 @@ description: Learn about new SQL Server 2016 security features, querying capabil
 ms.custom:
   - intro-whats-new
 ms.date: "07/22/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 keywords:
   - "new sql server"

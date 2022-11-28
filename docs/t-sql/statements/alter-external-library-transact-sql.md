@@ -3,10 +3,9 @@ title: "ALTER EXTERNAL LIBRARY (Transact-SQL)"
 description: ALTER EXTERNAL LIBRARY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-manager: cgronlund
 ms.date: 08/26/2020
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: reference
 f1_keywords:
   - "ALTER EXTERNAL LIBRARY"

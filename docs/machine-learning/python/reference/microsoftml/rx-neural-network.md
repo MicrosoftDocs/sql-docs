@@ -6,12 +6,10 @@ description: "Neural networks for regression modeling and for Binary and multi-c
 keywords: "models, classification, regression, neural network, dnn" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
+ms.service: sql
+ms.subservice: "machine-learning-services" 
 ms.assetid: "" 
  
 # optional metadata 
@@ -175,7 +173,7 @@ neural networks as well as in cases where training produces unbounded weights.
 ### acceleration
 
 Specifies the type of hardware acceleration to use.
-Possible values are “sse_math” and “gpu_math”.
+Possible values are "sse_math" and "gpu_math".
 For GPU acceleration, it is recommended to use a miniBatchSize
 greater than one. If you want to use the GPU acceleration, there are
 additional manual setup steps are required:
@@ -298,7 +296,7 @@ no packages outside `RxOptions.get_option("transform_packages")` are preloaded.
 
 NOT SUPPORTED. A user-defined environment to serve as a parent to all
 environments developed internally and used for variable data transformation.
-If `transform_environment = None`, a new “hash” environment with parent
+If `transform_environment = None`, a new "hash" environment with parent
 revoscalepy.baseenvis used instead.
 
 

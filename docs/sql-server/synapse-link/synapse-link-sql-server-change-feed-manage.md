@@ -2,9 +2,9 @@
 title: "Manage Azure Synapse Link for SQL Server and Azure SQL Database"
 description: Learn about managing the Azure Synapse Link change feed with T-SQL.
 ms.date: 05/24/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: data-movement
+ms.subservice: data-movement
 ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -24,8 +24,8 @@ This article provides details on monitoring and managing [Azure Synapse Link for
     - [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
     - [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link).
 - To get started quickly, see: 
-    - [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
-    - [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
+    - [Get started with Azure Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
+    - [Get started with Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
 
 The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
@@ -33,11 +33,14 @@ For SQL Server, the landing zone is customer-managed and visible, but it is not 
 
 Currently, only a member of the sysadmin server role in SQL Server or the db_owner database role can execute these procedures. 
 
-The SQL Server or the Azure SQL Database will maintain metadata specific to each table group. 
+The SQL Server or the Azure SQL Database will maintain metadata specific to each table group.
+
+> [!NOTE]
+> Enabling Azure Synapse Link for SQL will create a `changefeed` database user, a `changefeed` schema, and several tables within the `changefeed` schema in your source database. Please do not alter any of these objects - they are system-managed.
 
 ## Monitor Azure Synapse Link for SQL Server and Azure SQL Database
 
-The following system objects allow for querying the state of the Synapse Link feature from the source database.
+The following system objects allow for querying the state of the Azure Synapse Link for SQL feature from the source database.
 
 ### View configuration
 

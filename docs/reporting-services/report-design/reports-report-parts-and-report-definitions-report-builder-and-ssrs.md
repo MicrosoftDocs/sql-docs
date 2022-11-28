@@ -2,9 +2,8 @@
 title: "Reports, Report Parts, and Report Definitions (Report Builder) | Microsoft Docs"
 description: Discover the terms used to describe reports in different states in Report Builder. These states include the initial definition and the published report.
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual
@@ -21,7 +20,7 @@ ms.author: maggies
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 >
-> Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019. 
+> Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server. 
   
 ## Report Definition (.rdl) Files  
  A report definition is a file that you create in Report Builder or Report Designer. It provides a complete description of data source connections, queries used to retrieve data, expressions, parameters, images, text boxes, tables, and any other design-time elements that you might include in a report. Although report definitions can be complex, at a minimum they specify a query and other report content, report properties, and a report layout.  

@@ -1,9 +1,8 @@
 ---
 title: SQL Trace
 description: SQL Trace
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT

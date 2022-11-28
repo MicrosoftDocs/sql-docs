@@ -1,8 +1,8 @@
 ---
 title: Configure security for disaster recovery
 description: Learn the security considerations for configuring and managing security after a database restore or a failover to a secondary server.
-author: rajeshsetlem
-ms.author: rsetlem
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma, vanto
 ms.date: 12/18/2018
 ms.service: sql-database
@@ -93,7 +93,7 @@ SID = 0x1234 /*replace 0x1234 with the desired login SID*/
 > ALTER LOGIN [<login name>] DISABLE
 > ```
 >
-> DISABLE doesn’t change the password, so you can always enable it if needed.
+> DISABLE doesn't change the password, so you can always enable it if needed.
 
 ## Next steps
 

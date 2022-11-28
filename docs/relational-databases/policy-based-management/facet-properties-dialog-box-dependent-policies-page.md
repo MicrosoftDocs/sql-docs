@@ -3,10 +3,9 @@ title: "'Dependent Policies' page of 'Facet Properties' dialog box"
 description: Describes the 'Dependent Policies' page of the 'Facet Properties' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.facet.dependentpolicies.f1"

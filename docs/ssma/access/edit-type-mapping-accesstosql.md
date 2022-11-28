@@ -1,11 +1,11 @@
 ---
 description: "Edit Type Mapping (AccessToSQL)"
 title: "Edit Type Mapping (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: cpichuka 

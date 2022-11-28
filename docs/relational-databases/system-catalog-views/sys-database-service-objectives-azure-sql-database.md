@@ -6,7 +6,6 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/25/2022
 ms.service: sql-database
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 f1_keywords:

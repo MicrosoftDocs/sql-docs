@@ -57,7 +57,7 @@ Use the **Configure** page of the SQL virtual machine resource to change your SQ
 
 
 
-![Change the version and edition of SQL Server VM metadata in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-license-edition.png)
+![Screenshot of the Azure portal, SQL virtual machines resource, showing where to change the version and edition of SQL Server VM metadata. ](./media/manage-sql-vm-portal/sql-vm-license-edition.png)
 
 You can also modify the edition of SQL Server from the **Configure** page as well, such as **Enterprise**, **Standard**, or **Developer**. 
 
@@ -69,7 +69,7 @@ Use the **Storage Configuration** page of the SQL virtual machines resource to e
 
 For example, you can extend your storage: 
 
-![Extend storage in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-storage-configuration.png)
+![Screenshot of the Azure portal, SQL virtual machines resource, showing where to extend storage.](./media/manage-sql-vm-portal/sql-vm-storage-configuration.png)
 
 It's also possible to modify your tempdb settings using the **Storage configuration** page, such as the number of tempdb files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page. 
 
@@ -85,39 +85,37 @@ Restart your SQL Server service to apply your changes.
 Use the **Patching** page of the SQL virtual machines resource to enable auto patching of your VM and automatically install Windows and SQL Server updates marked as Important. You can also configure a maintenance schedule here, such as running patching daily, as well as a local start time for maintenance, and a maintenance window. 
 
 
-![Configure automated patching and schedule in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-automated-patching.png)
+![Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure automated patching and schedule.](./media/manage-sql-vm-portal/sql-vm-automated-patching.png)
 
 
 To learn more, see, [Automated patching](automated-patching.md). 
-
-
 
 ## Backups
 
 Use the **Backups** page of the SQL virtual machines resource to configure your automated backup settings, such as the retention period, which storage account to use, encryption, whether or not to back up system databases, and a backup schedule. 
 
-![Configure automated backup and schedule in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-automated-backup.png)
+![Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure automated backup and schedule.](./media/manage-sql-vm-portal/sql-vm-automated-backup.png)
 
 To learn more, see, [Automated patching](automated-backup.md). 
 
+## Additional features
+
+Manage additional features of SQL Server on the **Additional features** tab, such as enabling [R Services (Advanced analytics)](/sql/machine-learning/r/sql-server-r-services) or [least privilege mode](sql-server-iaas-agent-extension-automate-management.md). 
 
 ## High availability (Preview)
 
-Use the **High Availability** page of the SQL virtual machines resource to create a Windows Server Failover Cluster, and configure an Always On availability group, availability group listener, and Azure Load Balancer. Configuring high availability using Azure portal is currently in preview. 
+Once you've configured your [availability group by using the Azure portal](availability-group-azure-portal-configure.md), use the **High Availability** page of the SQL virtual machines resource to monitor the health of your existing Always On availability group. 
 
-
-![Configure a Windows Server Failover Cluster and an Always On availability group in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-high-availability.png)
-
-
-To learn more, see [Configure availability group by using the Azure portal](availability-group-azure-portal-configure.md).
+:::image type="content" source="media/availability-group-az-portal-configure/healthy-availability-group.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to check the status of your availability group from the high availability page.":::
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as which port to use, whether or not SQL Authentication is enabled, and to enable Azure Key Vault integration. 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as which port to use, or to enable Azure Key Vault integration, or enable authentication methods to connect to your SQL Server instance - such as SQL authentication, or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication (currently in preview)](security-considerations-best-practices.md#azure-ad-authentication-preview). 
 
-![Configure SQL Server security in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-security-configuration.png)
+![Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.](./media/manage-sql-vm-portal/sql-vm-security-configuration.png)
 
 To learn more, see the [Security best practices](security-considerations-best-practices.md).
+
 
 <a name="security-center"></a>
 
@@ -125,7 +123,7 @@ To learn more, see the [Security best practices](security-considerations-best-pr
 
 Use the **Defender for SQL** page of the SQL virtual machine's resource to view Defender for Cloud recommendations directly in the SQL virtual machine blade. Enable [Microsoft Defender for SQL](/azure/security-center/defender-for-sql-usage) to leverage this feature. 
 
-![Configure SQL Server Defender for Cloud settings in the Azure portal using the SQL virtual machines resource](./media/manage-sql-vm-portal/sql-vm-security-center.png)
+![Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure SQL Server Defender for Cloud settings.](./media/manage-sql-vm-portal/sql-vm-security-center.png)
 
 ## SQL best practices assessment
 

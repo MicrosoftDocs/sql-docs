@@ -4,8 +4,8 @@ description: Become familiar with SQL Server Express LocalDB. Developers can use
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/09/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "user instances"

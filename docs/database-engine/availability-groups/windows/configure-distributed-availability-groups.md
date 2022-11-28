@@ -4,8 +4,8 @@ description: "Learn how to configure a distributed availability group by using a
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "01/28/2020"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
 ---

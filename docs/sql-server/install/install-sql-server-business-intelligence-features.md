@@ -5,14 +5,13 @@ ms.custom:
   - seo-lt-2019
   - intro-installation
 ms.date: "12/13/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: install
+ms.subservice: install
 ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ---
 
 # Install SQL Server Business Intelligence Features

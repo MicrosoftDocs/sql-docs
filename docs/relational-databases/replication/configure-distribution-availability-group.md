@@ -3,9 +3,9 @@ title: "Configure distribution database in availability group"
 description: Configure the distribution database for SQL Server replication with an Always On availability group. 
 ms.custom: seo-lt-2019
 ms.date: "01/16/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], distribution"

@@ -4,8 +4,8 @@ description: Get acquainted with the service accounts that are used to start and
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/10/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: reference
 ms.custom: contperf-fy20q4
 ---

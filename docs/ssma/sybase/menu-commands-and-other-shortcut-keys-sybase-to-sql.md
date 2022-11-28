@@ -3,9 +3,9 @@ description: "Menu commands and other shortcut keys (Sybase To SQL)"
 title: "Menu commands and other shortcut keys (Sybase To SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: cpichuka 

@@ -3,9 +3,9 @@ title: "MSSQLSERVER_17132 | Microsoft Docs"
 description: The SQL Server computer was unable to process the client login packet. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "17132 (Database Engine error)"

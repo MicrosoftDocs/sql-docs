@@ -3,10 +3,9 @@ description: "systranschemas (Transact-SQL)"
 title: "systranschemas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords: 
   - "systranschemas"

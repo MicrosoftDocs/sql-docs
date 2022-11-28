@@ -4,10 +4,9 @@ title: "sp_query_store_clear_hints (Transact-SQL)"
 ms.custom:
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_query_store_clear_hints_TSQL"
@@ -24,7 +23,7 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # sp_query_store_clear_hints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
   Removes all [Query Store hints](../performance/query-store-hints.md) for a given query_id.
   

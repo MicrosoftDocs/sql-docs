@@ -1,11 +1,11 @@
 ---
 description: "Working with SSMA Projects (DB2ToSQL)"
 title: "Working with SSMA Projects (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: cpichuka 

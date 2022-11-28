@@ -1,8 +1,8 @@
 ---
 title: Previous releases of SQL Server Data Tools (SSDT)
 description: Find out which versions of SSDT and SSDT-BI work with which versions of Visual Studio. See how to install different versions of SSDT and SSDT-BI.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 author: dzsquared
@@ -103,13 +103,13 @@ This release of **SSDT for VS 2017** can be installed in the following languages
 
 ### Considerations and limitations
 
-* You can’t install the community version offline
+* You can't install the community version offline
 
 * To upgrade SSDT, you need to follow the same path used to install SSDT. For example, if you added SSDT using the VSIX extensions, then you must upgrade via the VSIX extensions. If you installed SSDT via a separate install, then you need to upgrade using that method.
 
 ### Offline install
 
-To install SSDT when you’re not connected to the internet, follow the steps in this section. For more information, see [Create a network installation of Visual Studio 2017](/visualstudio/install/create-a-network-installation-of-visual-studio).
+To install SSDT when you're not connected to the internet, follow the steps in this section. For more information, see [Create a network installation of Visual Studio 2017](/visualstudio/install/create-a-network-installation-of-visual-studio).
 
 First, complete the following steps while **online**:
 
@@ -171,7 +171,7 @@ First, complete the following steps while **online**:
 For available options, run `SSDT-Setup-ENU.exe /help`
 
 > [!NOTE]
-> If using a full version of Visual Studio 2017, create an offline folder for SSDT only, and run `SSDT-Setup-ENU.exe` from this newly created folder (don’t add SSDT to another Visual Studio 2017 offline layout). If you add the SSDT layout to an existing Visual Studio offline layout, the necessary runtime (.exe) components are not created there.
+> If using a full version of Visual Studio 2017, create an offline folder for SSDT only, and run `SSDT-Setup-ENU.exe` from this newly created folder (don't add SSDT to another Visual Studio 2017 offline layout). If you add the SSDT layout to an existing Visual Studio offline layout, the necessary runtime (.exe) components are not created there.
 
 
 ## Previous SSDT releases

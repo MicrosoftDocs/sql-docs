@@ -2,9 +2,8 @@
 title: "Monitor Reporting Services Subscriptions | Microsoft Docs"
 description: Learn to use the UI, PowerShell, or log files to track Reporting Services subscriptions. Monitoring options depend on the report server mode you're running.
 ms.date: 06/12/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
+ms.service: reporting-services
+ms.subservice: subscriptions
 
 
 ms.topic: conceptual

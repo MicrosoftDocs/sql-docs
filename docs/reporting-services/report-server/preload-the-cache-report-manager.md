@@ -2,9 +2,8 @@
 title: "Preload the Cache (SSRS)| Microsoft Docs"
 description: Learn how to preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset in a Reporting Services report server.
 ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual
@@ -137,7 +136,7 @@ ms.author: maggies
      Or, to create a custom schedule, select **On a schedule created for this subscription** and then select **Next**. Configure the schedule and then select **Finish**.  
   
     > [!NOTE]  
-    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see the [web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.md  "The web portal of a report server").  
+    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see the [web portal of a report server (SSRS Native Mode)](../web-portal-ssrs-native-mode.md).
   
 16. Configure the Execution options for the report as follows. On the report page, select the **Properties** tab.  
   

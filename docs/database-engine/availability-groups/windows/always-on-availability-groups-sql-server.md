@@ -4,8 +4,8 @@ description: "Always On availability groups are a SQL Server high-availability a
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 04/23/2019
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seodec18
 helpviewer_keywords:

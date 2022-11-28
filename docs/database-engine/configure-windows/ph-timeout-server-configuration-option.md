@@ -4,8 +4,8 @@ description: "Learn about the PH timeout option. See how it limits the time that
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/12/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "time limit for protocol handler wait [SQL Server]"

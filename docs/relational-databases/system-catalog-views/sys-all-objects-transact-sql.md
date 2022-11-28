@@ -4,8 +4,8 @@ description: sys.all_objects (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/20/2020"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.all_objects"

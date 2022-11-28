@@ -6,12 +6,12 @@ summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Databas
 metadata:
   title: Azure Data Studio
   summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
-  ms.prod: azure-data-studio
+  ms.service: azure-data-studio
   ms.topic: landing-page
+  ms.custom: ignite-2022
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-
 landingContent:
   - title: About Azure Data Studio
     linkLists:
@@ -36,6 +36,8 @@ landingContent:
             url: quickstart-sql-database.md
           - text: Connect and query data in Azure Synapse Analytics
             url: quickstart-sql-dw.md
+          - text: Connect and query data in MySQL
+            url: quickstart-mysql.md
           - text: Connect and query data in  PostgreSQL
             url: quickstart-postgres.md
 
@@ -81,6 +83,8 @@ landingContent:
             url:  extensions/notebook-extension.md
           - text: Azure SQL migration extension
             url:  extensions/azure-sql-migration-extension.md
+          - text: MySQL extension
+            url:  extensions/mysql-extension.md
           - text: PostgreSQL extension
             url:  extensions/postgres-extension.md
           - text: PowerShell Editor Support

@@ -6,8 +6,8 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: machine-learning-bdc
+ms.service: sql
+ms.subservice: machine-learning-bdc
 ms.topic: conceptual
 ---
 

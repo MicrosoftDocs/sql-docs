@@ -1,11 +1,11 @@
 ---
 description: "Creating the Server Connection Files (OracleToSQL)"
 title: "Creating the Server Connection Files (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Server Connection File Creation"
@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Creating the Server Connection Files (OracleToSQL)
 Server information can be specified either in the servers section of the script file or in a separate server connection file. The command line parameter for the server connection file is, `-c <serverconnectionfile>`. If the same server id is present in both the script file and server connection file, then the server definition in the script file is considered.  

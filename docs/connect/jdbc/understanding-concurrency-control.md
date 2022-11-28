@@ -4,8 +4,8 @@ description: "Learn about concurrency control and how to preserve database integ
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "12/08/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Understanding concurrency control

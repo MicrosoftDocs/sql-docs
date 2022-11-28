@@ -1,8 +1,8 @@
 ---
 title: Create table using rxDataStep
 description: "Learn how to move data between in-memory data frames, the SQL Server context, and local files by using rxDataStep."
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial

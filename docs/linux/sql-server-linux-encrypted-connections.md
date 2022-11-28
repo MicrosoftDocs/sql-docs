@@ -6,8 +6,8 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 helpviewer_keywords: 
   - "Linux, encrypted connections"
 ---

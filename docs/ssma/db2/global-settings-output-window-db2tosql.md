@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Output Window) (DB2ToSQL)"
 title: "Global Settings (Output Window) (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
 author: cpichuka 

@@ -3,10 +3,9 @@ title: "Publication Properties - Dialog box"
 description: Describes the pages found within the 'Publication Properties" Dialog Box in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.pubproperties.agentsecurity.f1"

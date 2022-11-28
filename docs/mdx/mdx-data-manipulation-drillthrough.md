@@ -2,8 +2,8 @@
 description: "MDX Data Manipulation - DRILLTHROUGH"
 title: "DRILLTHROUGH Statement (MDX) | Microsoft Docs"
 ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.custom: mdx
 ms.topic: reference
 ms.author: owend
@@ -73,7 +73,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Returns the unary operator of the specified attribute member.  
   
 ## Example  
- The following example specifies cell for the month of July, 2007 for the reseller sales amount measure (the default measure) for the country of Australia. The RETURN clause specifies that the date of each sale, the product model name, the employee name, the sales amount, the tax amount and the product cost values that underlie this cell be returned.  
+ The following example specifies cell for the month of July, 2007 for the reseller sales amount measure (the default measure) for Australia. The RETURN clause specifies that the date of each sale, the product model name, the employee name, the sales amount, the tax amount and the product cost values that underlie this cell be returned.  
   
 ```  
 DRILLTHROUGH  

@@ -1,9 +1,8 @@
 ---
 title: "Basic navigation in DTA"
 description: Database Engine Tuning Advisor (DTA) provides a graphical user interface (GUI) based way to view tuning sessions and tuning recommendation reports.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], tutorials"

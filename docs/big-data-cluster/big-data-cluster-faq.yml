@@ -3,12 +3,9 @@ metadata:
   title: SQL Server Big Data Clusters FAQ
   titleSuffix: SQL Server Big Data Clusters
   description: FAQ on SQL Server Big Data Clusters concepts, capabilities, deployment, supportability, and tools
-  services: sql-database
-  ms.service: sql
-  ms.subservice: 
   ms.topic: conceptual
-  ms.prod: sql
-  ms.technology: big-data-cluster
+  ms.service: sql
+  ms.subservice: big-data-cluster
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: 
@@ -110,7 +107,7 @@ sections:
           Yes, replication factor is one of the available configurations for HDFS. For more information see [Configure Persistent Volumes](concept-data-persistence.md#configure-persistent-volumes).
       - question: Does Big Data Cluster overlap with Synapse in terms of functionality and integration?
         answer: |
-          It depends on your use cases and requirements. Big Data Cluster provides a full SQL Server surface area in addition to Microsoft-supported Spark and HDFS, on-premise. Big Data Cluster enables the SQL Server customer to be able to integrate into analytics/big data. Azure Synapse is purely an analytical platform offering a first class experience for customers as a managed service in the cloud, with a focus on scale out analytics. Azure Synapse is not targeting an operational workload as part of that. Big Data Cluster is aiming to provide in database analytical scenarios, much closer to the operational store.
+          It depends on your use cases and requirements. Big Data Cluster provides a full SQL Server surface area in addition to Microsoft-supported Spark and HDFS, on-premises. Big Data Cluster enables the SQL Server customer to be able to integrate into analytics/big data. Azure Synapse is purely an analytical platform offering a first class experience for customers as a managed service in the cloud, with a focus on scale out analytics. Azure Synapse is not targeting an operational workload as part of that. Big Data Cluster is aiming to provide in database analytical scenarios, much closer to the operational store.
       - question: Is SQL Server using HDFS as its storage in SQL Server Big Data Clusters?
         answer: |
           The SQL Server instance's database files are not stored in HDFS, however, SQL Server can query HDFS using external table interface.

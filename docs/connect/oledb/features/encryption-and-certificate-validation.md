@@ -3,9 +3,9 @@ title: Encryption and certificate validation
 description: Learn about encryption and certificate validation for SQL Server connections. The OLE DB Driver for SQL Server supports encryption and certificate validation.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 02/18/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 10/26/2022
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], encryption"
@@ -63,6 +63,9 @@ The following table describes the resulting encryption and validation:
 
 > [!CAUTION]
 > The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption (for server-side configuration, see [Configure Server for Forced Encryption](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md#configure-server)). Also ensure that the server has a verifiable certificate, and that the **`TrustServerCertificate`** setting on the client is set to FALSE.
+
+> [!NOTE]
+> Starting from version 19.2 of the OLE DB driver, TDS 8.0 connections can be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../../relational-databases/security/networking/tds-8-and-tls-1-3.md).
 
 ### Major version 18 with new authentication methods
 

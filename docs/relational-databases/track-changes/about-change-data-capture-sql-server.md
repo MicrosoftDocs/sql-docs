@@ -5,10 +5,9 @@ ms.custom:
   - seo-dt-2019
   - intro-overview
 ms.date: "03/04/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: "vanto"
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords:
   - "change data capture, about"
@@ -45,7 +44,7 @@ The performance impact from enabling change data capture on Azure SQL Database i
 - Space available in the source database, since CDC artifacts (e.g. CT tables, cdc_jobs etc.) are stored in the same database 
 - Whether the database is single or pooled. For databases in elastic pools, in addition to considering the number of tables that have CDC enabled, pay attention to the number of databases those tables belong to. Databases in a pool share resources among them (such as disk space), so enabling CDC on multiple databases runs the risk of reaching the max size of the elastic pool disk size. Monitor resources such as CPU, memory and log throughput. 
 
-To provide more specific performance optimization guidance to customers, more details are needed on each customer’s workload. However, below is some additional general guidance, based on performance tests ran on TPCC workload:
+To provide more specific performance optimization guidance to customers, more details are needed on each customer's workload. However, below is some additional general guidance, based on performance tests ran on TPCC workload:
 
 - Consider increasing the number of vCores or shift to a higher database tier (e.g. Hyperscale) to ensure the same performance level as before CDC was enabled on your Azure SQL Database.
 
@@ -53,7 +52,7 @@ To provide more specific performance optimization guidance to customers, more de
 
 - Monitor log generation rate. To learn more [here](/azure/azure-sql/database/resource-limits-logical-server#resource-consumption-by-user-workloads-and-internal-processes). 
 
-- Scan/cleanup are part of user workload (user’s resources are used). Performance impact can be substantial since entire rows are added to change tables and for updates operations pre-image is also included.  
+- Scan/cleanup are part of user workload (user's resources are used). Performance impact can be substantial since entire rows are added to change tables and for updates operations pre-image is also included.  
 
 - Elastic Pools - Number of CDC-enabled databases should not exceed the number of vCores of the pool, in order to avoid latency increase. Learn more about resource management in dense Elastic Pools [here](/azure/azure-sql/database/elastic-pool-resource-management). 
 
@@ -199,18 +198,18 @@ For Change data capture (CDC) to function properly, you shouldn't manually modif
 Any objects in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md) with `is_ms_shipped` property set to `1` shouldn't be modified.
 
 ```sql
-SELECT	name AS object_name   
-		,SCHEMA_NAME(schema_id) AS schema_name  
-		,type_desc  
-		,is_ms_shipped  
+SELECT    name AS object_name   
+        ,SCHEMA_NAME(schema_id) AS schema_name  
+        ,type_desc  
+        ,is_ms_shipped  
 FROM sys.objects 
 WHERE is_ms_shipped= 1 AND SCHEMA_NAME(schema_id) = 'cdc'
 
 ```
 
-## Limitations
+## Known limitations and issues
 
-Change data capture has the following limitations: 
+This is the list of known limitations and issue with Change data capture (CDC). 
 
 **Linux**   
 CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
@@ -241,9 +240,7 @@ If you create a database in Azure SQL Database as a Microsoft Azure Active Direc
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work.
 
 **Aggressive log truncation**  
-While enabling change data capture (CDC) on your Azure SQL Database, please be aware that aggressive log truncation is disabled (the CDC scan uses the database transaction log).
-
-Enabling change data capture (CDC) on a database disables aggressive log truncation behavior. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log getting full and the database going into read-only mode.
+While enabling change data capture (CDC) on Azure SQL Database or SQL Server, please be aware that the aggressive log truncation feature of Accelerated Database Recovery (ADR) is disabled. This is because the CDC scan accesses the database transaction log. Active transactions will continue to hold the transaction log truncation until the transaction commits and CDC scan catches up, or transaction aborts. This might result in the transaction log filling up more than usual and should be monitored so that the transaction log does not fill.
 
 **CDC fails after ALTER COLUMN to VARCHAR and VARBINARY**  
 When the datatype of a column on a CDC-enabled table is changed from `TEXT` to `VARCHAR` or `IMAGE` to `VARBINARY` and an existing row is updated to an off-row value. After the update, the CDC scan will result in errors.
@@ -261,6 +258,21 @@ ALTER AUTHORIZATION ON DATABASE::[<restored_db_name>] TO [<azuread_admin_login_n
 
 EXEC sys.sp_cdc_enable_db
 ```
+
+**Attempt to enable CDC will fail if the custom schema or user named `cdc` pre-exist in database**  
+When you enable CDC on database, it creates a new schema and user named `cdc`. So, it's not recommended to manually create custom schema or user named `cdc`, as it's reserved for system use.  
+If you've manually defined a custom schema or user named `cdc` in your database that isn't related to CDC, the system stored procedure `sys.sp_cdc_enable_db` will fail to enable CDC on the database with below error message.
+
+> The database `<database_name>` cannot be enabled for Change Data Capture because a database user named 'cdc' or a schema named 'cdc' already exists in the current database. These objects are required exclusively by Change Data Capture. Drop or rename the user or schema and retry the operation.
+
+To resolve this issue:
+
+- Manually drop the empty `cdc` schema and `cdc` user. Then, CDC can be enabled successfully on the database.
+
+**Import database using data-tier Import/Export and Extract/Publish operations**  
+For CDC enabled SQL databases, when you use SqlPackage, SSDT, or other SQL tools to Import/Export or Extract/Publish, the `cdc` schema and user get excluded in the new database. Additional CDC objects not included in Import/Export and Extract/Deploy operations include the tables marked as `is_ms_shipped=1` in sys.objects.
+
+Even if CDC isn't enabled and you've defined a custom schema or user named `cdc` in your database that will also be excluded in Import/Export and Extract/Deploy operations to import/setup a new database.
 
 ## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

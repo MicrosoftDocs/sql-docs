@@ -4,8 +4,8 @@ description: "There are several points to note when you execute the code example
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # About Code Examples in the Documentation

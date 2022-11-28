@@ -3,10 +3,9 @@ description: "Advanced Merge Replication Conflict - COM-Based Custom Resolvers"
 title: "COM-Based Custom Resolvers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "COM-based resolvers [SQL Server replication]"

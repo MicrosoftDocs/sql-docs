@@ -1,9 +1,8 @@
 ---
 title: Release notes for SQL Server Data Tools (SSDT) in VS2017
 description: "View the release notes for all versions of SQL Server Data Tools (SSDT) that work with Visual Studio 2017 and earlier Visual Studio versions."
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
@@ -157,7 +156,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Fixed an issue that this production can't be uninstalled if the VS instance has been uninstalled. |
 | Integration Services (SSIS) | Fixed an issue that a script component copied from another one in the same package can't be correctly loaded during debugging when target server version is lower than SQL Server 2019. |
 | Integration Services (SSIS) | Fixed an accessibility issue that luminosity ratios for the component connector lines are less than 3:1 under package designer window. |
-| Integration Services (SSIS) | Fixed an accessibility issue that luminosity ratio is less than 3:1 for “Fit View to window” control present under package designer window. |
+| Integration Services (SSIS) | Fixed an accessibility issue that luminosity ratio is less than 3:1 for "Fit View to window" control present under package designer window. |
 | Integration Services (SSIS) | Fixed an issue that Transfer Database Task doesn't work when a database has filegroups that contain a filestream. |
 | Integration Services (SSIS) | Fixed an issue that when using ODBC components in Foreach Loop component, the ODBC component will meet 'Function sequence error' in the second loop during package execution. |
 | Integration Services (SSIS) | Fixed an issue that Rebuild Index Task UI will be cut off in low-resolution mode. |
@@ -186,7 +185,7 @@ _SSDT for Visual Studio 2017._
 | New Item | Details |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Integration Services (SSIS) | Fixed an issue that VS may crash when moving control flow constraint lines inside a container. |
-| Integration Services (SSIS) | Fixed an issue that maintenance plan tasks’ UI can't list ADO.NET connection managers created outside of the task UI. |
+| Integration Services (SSIS) | Fixed an issue that maintenance plan tasks' UI can't list ADO.NET connection managers created outside of the task UI. |
 | Integration Services (SSIS) | Fixed an issue that Azure interactive sign in page doesn't show up when deploying an SSAS project, which belongs to a solution also having SSIS projects loaded. |
 | Integration Services (SSIS) | Fixed an issue that clicking on MSOLAP driver properties button makes DTS wizard crash when SQL Server isn't installed. |
 | Integration Services (SSIS) | Fixed an issue that MSOLEDBSQL driver doesn't support Azure AD auth in DTS Wizard. |
@@ -252,7 +251,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Add AzureEnabled feature. Enable packages of the project to be run on SSIS Platform-as-a-Service (PaaS) in Azure Data Factory |
 | Integration Services (SSIS) | Fix an issue that Oracle connector properties aren't able to be set from variable expression |
 | Integration Services (SSIS) | Fix an issue that Oracle connector has VS_NEEDSNEWMETATDATA error when debugging packages targeted to pre-SQL Server 2019 |
-| Integration Services (SSIS) | Fix an issue that Oracle connector failed to upgrade/downgrade package/project if the package/project uses expressions for connection manager’s properties |
+| Integration Services (SSIS) | Fix an issue that Oracle connector failed to upgrade/downgrade package/project if the package/project uses expressions for connection manager's properties |
 | Integration Services (SSIS) | Fix an issue that Download WSDL button of Web Service Task Editor doesn't support TLS 1.1 & 1.2 protocol (target is SQL Server 2019) |
 | Integration Services (SSIS) | Fix an issue that packages containing DQS connection manager can't be loaded again after saving |
 
@@ -278,11 +277,11 @@ _SSDT for Visual Studio 2017._
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Integration Services (SSIS) | Fix an issue that package part can't be correctly persisted when targeting to previous SQL Server version. |
 | Integration Services (SSIS) | Fix an issue that can't add expression to precedence constraint when using package part. |
-| Integration Services (SSIS) | Fix an issue that the “Help” button of Power Query Source & Connection Manager doesn’t link to the correct document. |
+| Integration Services (SSIS) | Fix an issue that the "Help" button of Power Query Source & Connection Manager doesn't link to the correct document. |
 | Integration Services (SSIS) | ix an issue that SSIS build version isn't displayed in VS help window. |
-| Integration Services (SSIS) | Add the property “ConnectByProxy” for Ole DB and Flat File connection manager, which can enable access on-premise data with Self-hosted IR in Azure-SSIS IR. |
+| Integration Services (SSIS) | Add the property "ConnectByProxy" for Ole DB and Flat File connection manager, which can enable access on-premises data with Self-hosted IR in Azure-SSIS IR. |
 | Integration Services (SSIS) | Fix an issue that ODBC components map to DT_DBDATE data type incorrectly. |
-| Integration Services (SSIS) | Add the property “ConnectUsingManagedIdentity” for ADO.NET and OLE DB connection manager, which enable managed identity authentication to connect to data source in Azure-SSIS IR. |
+| Integration Services (SSIS) | Add the property "ConnectUsingManagedIdentity" for ADO.NET and OLE DB connection manager, which enable managed identity authentication to connect to data source in Azure-SSIS IR. |
 
 ### Known issues
 
@@ -307,7 +306,7 @@ _SSDT for Visual Studio 2017._
 | Integration Services (SSIS) | Add Power Query Source (Preview) for SSIS in ADF 2017. |
 | Integration Services (SSIS) | Add back the support for SQL Server 2012. |
 | Integration Services (SSIS) | Add Oracle source and destination for SQL Server 2019. |
-| Integration Services (SSIS) | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT. <br/></br> To design package targeting server version 2017 or below, download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/></br> [Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017 ](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016 ](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014 ](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012 ](https://www.microsoft.com/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT.<br/><br/>To design package targeting server version 2017 or below, download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine.<br/><br/>[Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)<br/>[Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52950)<br/>[Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=44582)<br/>[Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29283) |
 | Integration Services (SSIS) | Fix an issue that Script Task/Component can't be loaded when migrating from earlier SSIS versions. |
 | Integration Services (SSIS) | Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. |
 | Integration Services (SSIS) | Fix an issue that, in some cases, saving the package causes Visual Studio to crash. |

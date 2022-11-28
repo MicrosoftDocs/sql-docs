@@ -43,7 +43,7 @@ The following table summarizes the prerequisites that you need to complete:
 |:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Failover clustering** | Required for both SQL Server instances |
 |:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Installation domain account** | - Local administrator on each SQL Server instance <br/> - Member of the *sysadmin* fixed server role for each SQL Server instance  |
 
-## <a name="CreateCluster"></a> Create cluster
+## <a name="CreateCluster"></a> Create the cluster
 
 The first task is to create a Windows Server failover cluster that includes two SQL Server instances and a witness server:
 

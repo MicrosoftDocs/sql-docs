@@ -97,7 +97,8 @@ For regions where standard-series (Gen5) is available, see [Standard-series (Gen
 
 - Premium-series hardware takes advantage of the latest Intel Ice Lake CPUs.
 - Memory optimized premium-series hardware offers higher memory to vCore ratio.
-- Hyperscale premium-series hardware offers faster throughout, lower latency, and faster processors. TODO ADD BLOG POST
+- Hyperscale premium-series hardware offers faster throughout, lower latency, and faster processors.
+- For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
 For regions where standard-series (Gen5) is available, see [Premium-series availability](#premium-series-availability).
 
@@ -156,9 +157,10 @@ For information on previous generation hardware, see [Previous generation hardwa
 
 Standard-series (Gen5) hardware is available in all public regions worldwide.
 
-### <a id="premium-series-availability"></a> Premium-series
+#### <a id="premium-series-availability"></a> Premium-series
 
-Premium-series hardware is available in all public regions worldwide. TODO CONFIRM
+Premium-series and premium-series memory-optimized hardware is available in the following regions:
+Canada Central, East US, South Central US, UK South, West US 2.
 
 #### Fsv2-series
 
@@ -170,18 +172,21 @@ Australia Central, Australia Central 2, Australia East, Australia Southeast, Bra
 DC-series is available in the following regions:
 Canada Central, Canada East, East US, North Europe, UK South, West Europe, West US.
 
-If you need DC-series in a currently unsupported region, [submit a support ticket](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
+#### Requesting hardware availability
 
-1. For **Issue type**, select **Technical**.
+If you need hardware in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
+
+1. For **Issue type**, select **Technical**. 
+1. Provide the desired subscription for the hardware. Select **Next**.
 1. For **Service type**, select **SQL Database**.
-1. For **Problem type**, select **Security, Private and Compliance**.
-1. For **Problem subtype**, select **Always Encrypted**.
-
-:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to Request DC-series in a new region." loc-scope="azure-portal":::
+1. For **Resource**, select **General question**.
+1. For **Summary**, provide the desired hardware availability and region.
+1. For **Problem type**, select **Service Tiers or Scaling Resources**.
+1. For **Problem subtype**, select **Purchasing models**.
 
 ## Compute resources (CPU and memory)
 
-The following table compares compute resources in different hardware configurations and compute tiers: 
+The following table compares compute resources in different hardware configurations and compute tiers:
 
 |Hardware configuration  |CPU  |Memory  |
 |:---------|:---------|:---------|

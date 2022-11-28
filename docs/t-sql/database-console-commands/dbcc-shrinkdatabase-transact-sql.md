@@ -109,7 +109,6 @@ The wait at low priority feature reduces lock contention. For more information, 
 
 This feature is similar to the [WAIT_AT_LOW_PRIORITY with online index operations](../statements/alter-table-transact-sql.md#wait_at_low_priority), with some differences.
 
-- You cannot modify MAX_DURATION. The wait duration is 60000 milliseconds (1 minute).
 - You cannot specify ABORT_AFTER_WAIT option NONE.
 
 #### WAIT_AT_LOW_PRIORITY

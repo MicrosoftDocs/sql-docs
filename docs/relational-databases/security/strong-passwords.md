@@ -3,10 +3,9 @@ title: "Strong Passwords | Microsoft Docs"
 description: Learn about passwords in SQL Server and find out what constitutes a strong password to enhance security for your deployment.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server], passwords"

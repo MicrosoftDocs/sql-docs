@@ -3,9 +3,9 @@ title: "Enable or Disable a Plan Guide | Microsoft Docs"
 description: Learn to disable and enable plan guides by using SQL Server Management Studio or Transact-SQL. Disable or enable one or all the plan guides in a database.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "plan guides [SQL Server], disabling"

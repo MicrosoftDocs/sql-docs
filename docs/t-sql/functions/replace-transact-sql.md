@@ -5,9 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 ms.date: "08/23/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "REPLACE_TSQL"

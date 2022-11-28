@@ -4,8 +4,8 @@ description: Use this read-only Database Mirroring Monitor page to view the mirr
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.dbmmonitor.status.f1"

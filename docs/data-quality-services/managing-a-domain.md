@@ -4,8 +4,8 @@ description: "Managing a Domain"
 author: swinarko
 ms.author: sawinark
 ms.date: "07/31/2012"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 ---
 # Managing a Domain

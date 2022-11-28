@@ -3,10 +3,9 @@ title: "Analyze an Actual Execution Plan | Microsoft Docs"
 description: Learn how to analyze actual graphical execution plans, which contain runtime information, by using SQL Server Management Studio Plan Analysis feature.
 ms.custom: ""
 ms.date: 10/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "analyzing execution plans"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Analyze an Actual Execution Plan
 

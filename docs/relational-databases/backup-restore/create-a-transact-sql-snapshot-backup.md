@@ -2,9 +2,8 @@
 title: "Create a Transact-SQL snapshot backup | Microsoft Docs"
 description: This article shows you how to create a Transact-SQL backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom:
 - event-tier1-build-2022
@@ -258,7 +257,7 @@ RESTORE BACKUPSETONLY supports DBNAME parameter if the user wants to output one 
 ```sql
 RESTORE BACKUPSETONLY
 FROM DISK='d:\temp\db.bkm'
-WITH METADATA_ONLY, FILE=3, DBNAME=’testdb2’
+WITH METADATA_ONLY, FILE=3, DBNAME='testdb2'
 ```
 
 ### Dynamic Management Views (DMVs) for seeing the suspend status and locks acquired
@@ -273,7 +272,7 @@ sys.dm_tran_locks (resource_type, resource_database_id, resource_lock_partition,
 ```sql
 SELECT SERVERPROPERTY('SuspendedDatabaseCount')
 SELECT SERVERPROPERTY('IsServerSuspendedForSnapshotBackup')
-SELECT DATABASEPROPERTYEX('db1', 'IsDatabaseSuspendedForSnapshotBackup’)
+SELECT DATABASEPROPERTYEX('db1', 'IsDatabaseSuspendedForSnapshotBackup')
 ```
 
 ### Sample T-SQL troubleshooting script

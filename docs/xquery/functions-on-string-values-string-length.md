@@ -3,10 +3,9 @@ title: "string-length Function (XQuery) | Microsoft Docs"
 description: Learn how to use the XQuery function string-length().
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

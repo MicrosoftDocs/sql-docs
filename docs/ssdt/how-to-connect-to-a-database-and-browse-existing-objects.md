@@ -1,15 +1,14 @@
 ---
 title: Connect to a Database and Browse Existing Objects
 description: Learn how to use SQL Server Object Explorer in Visual Studio to connect to both on-premises and off-premises SQL Server instances.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.connectionpicker.f1"
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

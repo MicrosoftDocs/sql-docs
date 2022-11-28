@@ -2,9 +2,8 @@
 title: "Set default options for Report Builder | Microsoft Docs"
 description: This article describes useful defaults that you can set in Report Builder. These defaults make report authoring easier and faster. 
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

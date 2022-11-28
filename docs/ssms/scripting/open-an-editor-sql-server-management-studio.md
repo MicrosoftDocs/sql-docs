@@ -1,8 +1,8 @@
 ---
 title: "Open an Editor (SQL Server Management Studio)"
 description: Learn how to open the Database Engine Query, MDX, DMX, and XML/A editors in SQL Server Management Studio. 
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname

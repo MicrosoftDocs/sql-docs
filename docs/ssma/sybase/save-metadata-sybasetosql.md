@@ -3,9 +3,9 @@ description: "Save Metadata  (SybaseToSQL)"
 title: "Save Metadata  (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: cpichuka 

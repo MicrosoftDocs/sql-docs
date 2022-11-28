@@ -4,8 +4,8 @@ description: This article provides performance best practices and guidelines for
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 06/30/2020
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 

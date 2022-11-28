@@ -5,8 +5,8 @@ description: This article provide an example of how to configure HDFS tiering wi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 06/29/2020
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 

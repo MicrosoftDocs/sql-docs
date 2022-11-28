@@ -3,10 +3,9 @@ title: "Securables | Microsoft Docs"
 description: Learn about the securable scopes, which the SQL Server Database Engine authorization system uses to regulate access to securables.
 ms.custom: ""
 ms.date: "10/18/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.roleproperties.selectobject.f1"

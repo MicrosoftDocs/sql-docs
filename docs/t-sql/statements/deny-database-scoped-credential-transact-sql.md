@@ -4,9 +4,8 @@ description: DENY Database Scoped Credential (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "12/16/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DENY DATABASE SCOPED CREDENTIAL"

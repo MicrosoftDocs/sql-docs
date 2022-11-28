@@ -3,10 +3,9 @@ description: "Move System Databases"
 title: "Move System Databases"
 ms.custom: ""
 ms.date: "02/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "moving system databases"

@@ -3,9 +3,8 @@ description: "sp_pdw_remove_network_credentials (Azure Synapse Analytics)"
 title: "sp_pdw_remove_network_credentials"
 titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
-ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
-ms.prod: sql
+ms.service: sql
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

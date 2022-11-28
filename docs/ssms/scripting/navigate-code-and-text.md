@@ -1,8 +1,8 @@
 ---
 title: "Navigate Code and Text"
 description: "Learn how to navigate through a document with various techniques: set a bookmark for a location to make it easy to return to that location; search incrementally; use mouse and keyboard; and, use the Go To command to go to a line by specifying its line number."
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], incremental"

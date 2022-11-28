@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: "11/19/2018"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
@@ -73,7 +73,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 #### Specific countries/regions
 
-In Japan and China, the DATEFORMAT of **ymd** is used. The format's parts are in a sensible sequence of largest unit to smallest. So, this format sorts well. This format is considered to be the _international_ format. It's international because the four digits of the year are unambiguous, and no country on Earth uses the archaic format of **ydm**.
+In Japan and China, the DATEFORMAT of **ymd** is used. The format's parts are in a sensible sequence of largest unit to smallest. So, this format sorts well. This format is considered to be the _international_ format. It's international because the four digits of the year are unambiguous, and no country/region on Earth uses the archaic format of **ydm**.
 
 In other countries/regions such as Germany and France, the DATEFORMAT is **dmy**, meaning **'dd-mm-yyyy'**. The **dmy** format doesn't sort well, but it's a sensible sequence of smallest unit to largest.
 

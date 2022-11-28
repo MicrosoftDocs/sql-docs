@@ -1,9 +1,8 @@
 ---
 title: "Intelligent query processing"
 description: "Intelligent query processing features to improve query performance in SQL Server, Azure SQL Managed Instance, and Azure SQL Database."
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
 author: "MikeRayMSFT"
@@ -44,8 +43,9 @@ The following table details all intelligent query processing features, along wit
 | ---------------- | ------- | ------- | ---------------- |
 | [Adaptive Joins (Batch Mode)](intelligent-query-processing-details.md#batch-mode-adaptive-joins) | Yes, starting with database compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] with database compatibility level 140|Adaptive joins dynamically select a join type during runtime based on actual input rows.|
 | [Approximate Count Distinct](intelligent-query-processing-details.md#approximate-query-processing) | Yes| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|Provide approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint. |
+| [Approximate Percentile](intelligent-query-processing-details.md#approximate-query-processing) | Yes, starting with database compatibility level 110| Yes, starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] with compatibility level 110|Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions.|
 | [Batch Mode on Rowstore](intelligent-query-processing-details.md#batch-mode-on-rowstore) | Yes, starting with database compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] with compatibility level 150|Provide batch mode for CPU-bound relational DW workloads without requiring columnstore indexes.  |
-| [Cardinality estimation (CE) feedback](intelligent-query-processing-feedback.md#cardinality-estimation-ce-feedback) | No <!--Yes, starting with database compatibility level 160--> | Yes, starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] with compatibility level 160 | Automatically adjusts cardinality estimates for repeating queries to optimize workloads where inefficient CE assumptions cause poor query performance. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. |
+| [Cardinality estimation (CE) feedback](intelligent-query-processing-feedback.md#cardinality-estimation-ce-feedback) | Yes, in Preview, starting with database compatibility level 160 | Yes, starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] with compatibility level 160 | Automatically adjusts cardinality estimates for repeating queries to optimize workloads where inefficient CE assumptions cause poor query performance. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. |
 | [Degrees of Parallelism (DOP) feedback](intelligent-query-processing-details.md#dop-feedback) | No <!--Yes, starting with database compatibility level 160--> | Yes, starting in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] with compatibility level 160|Automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues. Requires Query Store to be enabled.|
 | [Interleaved Execution](intelligent-query-processing-details.md#interleaved-execution-for-mstvfs) | Yes, starting with database compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] with database compatibility level 140|Uses the actual cardinality of the multi-statement table valued function encountered on first compilation instead of a fixed guess.|
 | [Memory grant feedback (Batch Mode)](intelligent-query-processing-feedback.md#batch-mode-memory-grant-feedback) | Yes, starting with database compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] with database compatibility level 140|If a batch mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant size for consecutive executions.|
@@ -88,6 +88,7 @@ Several of the suite of [intelligent query processing features](intelligent-quer
 | ---------------- | ------- | 
 | [Adaptive Joins (Batch Mode)](intelligent-query-processing-details.md#batch-mode-adaptive-joins) |  No |
 | [Approximate Count Distinct](intelligent-query-processing-details.md#approximate-query-processing) | No |
+| [Approximate Percentile](intelligent-query-processing-details.md#approximate-query-processing) | No |
 | [Batch Mode on Rowstore](intelligent-query-processing-details.md#batch-mode-on-rowstore) | No |
 | [Cardinality estimation (CE) feedback](intelligent-query-processing-feedback.md#cardinality-estimation-ce-feedback) | Yes |
 | [Degrees of Parallelism (DOP) feedback](intelligent-query-processing-details.md#dop-feedback) | Yes | 

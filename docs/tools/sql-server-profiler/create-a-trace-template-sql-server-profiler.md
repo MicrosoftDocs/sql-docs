@@ -2,10 +2,9 @@
 title: Create a Trace Template
 titleSuffix: SQL Server Profiler
 description: Discover how to create a new trace template in SQL Server Profiler. Learn how to add filters to the template and how to add or remove events and data columns.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 author: markingmyname

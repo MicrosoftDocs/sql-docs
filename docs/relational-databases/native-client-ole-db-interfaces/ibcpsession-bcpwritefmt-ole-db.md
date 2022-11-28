@@ -3,10 +3,9 @@ description: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider)"
 title: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 apiname: 
   - "IBCPSession::BCPWriteFmt (OLE DB)"
@@ -20,6 +19,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # IBCPSession::BCPWriteFmt (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
   Writes format information for each column to the format file.  
   

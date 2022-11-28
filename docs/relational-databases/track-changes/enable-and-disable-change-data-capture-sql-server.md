@@ -3,10 +3,9 @@ description: "Enable and Disable change data capture"
 title: "Enable and Disable change data capture"
 ms.custom: seo-dt-2019
 ms.date: "01/02/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture, enabling tables"

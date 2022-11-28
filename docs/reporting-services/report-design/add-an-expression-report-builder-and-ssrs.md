@@ -2,9 +2,8 @@
 title: "Add an expression to a paginated report | Microsoft Docs"
 description: Find out about how to use expressions to define report item properties, filters, and parameter values in Report Builder.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

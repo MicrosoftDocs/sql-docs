@@ -3,10 +3,9 @@ title: "Restore database (General page) | Microsoft Docs"
 description: While restoring a database using SQL Server Management Studio, use the General page to specify information about the target and source databases for a database restore operation.
 ms.custom: ""
 ms.date: "1/05/2022"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoredb.general.f1"

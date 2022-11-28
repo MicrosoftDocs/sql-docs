@@ -3,10 +3,9 @@ description: "sys.sp_cdc_set_scheduler_job (Transact-SQL)"
 title: "sys.sp_cdc_set_scheduler_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_cdc_set_scheduler_job_TSQL"

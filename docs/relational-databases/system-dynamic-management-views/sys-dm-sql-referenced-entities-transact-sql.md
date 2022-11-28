@@ -4,9 +4,8 @@ description: sys.dm_sql_referenced_entities (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/01/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_sql_referenced_entities_TSQL"

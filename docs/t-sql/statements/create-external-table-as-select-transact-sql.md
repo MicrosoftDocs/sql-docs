@@ -4,8 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then
 author: markingmyname
 ms.author: maghan
 ms.date: 08/26/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.service: sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL TABLE AS SELECT"
@@ -76,7 +75,7 @@ CREATE EXTERNAL TABLE {[ [database_name  . [ schema_name ] . ] | schema_name . ]
 
  `prefix://path[:port]` provides the connectivity protocol (prefix), path and optionally the port, to the external data source, where the result of the SELECT statement will write.
   
- If the destination is a S3-compliant object storage a bucket must first exist, but PolyBase can create subfolders if necessary. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compliant object storage. ORC files are not currently supported.
+ If the destination is S3-compatible object storage, a bucket must first exist, but PolyBase can create subfolders if necessary. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports Azure Data Lake Storage Gen2, Azure Storage Account V2, and S3-compatible object storage. ORC files are not currently supported.
 
 #### **DATA_SOURCE = *external_data_source_name***
  specifies the name of the external data source object that contains the location where the external data is stored or will be stored. The location is either a Hadoop cluster or an Azure Blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
@@ -292,19 +291,19 @@ OPTION ( HASH JOIN );
 
  The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database.
 
-The result of the SELECT statement will be saved on an S3-compliant object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
+The result of the SELECT statement will be saved on S3-compatible object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
 
 > [!NOTE]
 > Delta format is currently only supported as read-only.
 
 ```sql  
--- Credential to access the s3-compliant object storage
+-- Credential to access the S3-compatible object storage
 CREATE DATABASE SCOPED CREDENTIAL s3_dsc
 WITH IDENTITY = 'S3 Access Key',
 SECRET = '<accesskeyid>:<secretkeyid>'
 GO
 
--- S3-compliant object storage data source
+-- S3-compatible object storage data source
 CREATE EXTERNAL DATA SOURCE s3_eds
 WITH
 ( LOCATION = 's3://<ip>:<port>'
@@ -325,7 +324,7 @@ WITH
 ### E. Use CREATE EXTERNAL TABLE AS SELECT from delta table to parquet
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
-The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-Compliant object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command.
+The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command.
 
 ```sql
 -- External File Format for PARQUET

@@ -24,7 +24,7 @@ Depending on how you [designed your application for business continuity](busines
 
 ## Geo-restore
 
-To prevent the potential data loss when conducting a disaster recovery drill, perform the drill using a test environment by creating a copy of the production environment and using it to verify the application’s failover workflow.
+To prevent the potential data loss when conducting a disaster recovery drill, perform the drill using a test environment by creating a copy of the production environment and using it to verify the application's failover workflow.
 
 ### Outage simulation
 

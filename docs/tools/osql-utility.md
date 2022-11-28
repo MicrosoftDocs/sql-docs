@@ -1,9 +1,8 @@
 ---
 title: osql Utility
 description: In SQL Server, the osql utility lets you enter Transact-SQL statements, system procedures, and script files. Osql uses ODBC to communicate with the server.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"

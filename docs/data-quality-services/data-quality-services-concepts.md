@@ -4,8 +4,8 @@ description: "Data Quality Services Concepts"
 author: swinarko
 ms.author: sawinark
 ms.date: "01/01/2012"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 ---
 # Data Quality Services Concepts

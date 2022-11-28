@@ -6,8 +6,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/20/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
@@ -201,7 +201,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL,
 1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Red Hat repository configuration file:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-preview.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
    ```
 
    > [!TIP]  

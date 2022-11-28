@@ -2,9 +2,9 @@
 description: "View collection set logs (SQL Server Management Studio)"
 title: "View collection set logs (SSMS)"
 ms.date: 06/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], viewing"

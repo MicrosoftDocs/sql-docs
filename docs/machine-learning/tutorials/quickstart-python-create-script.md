@@ -2,8 +2,8 @@
 title: "Quickstart: Run Python scripts"
 titleSuffix: SQL machine learning
 description: Run a set of simple Python scripts using Machine Learning Services on SQL Server, Big Data Clusters, or Azure SQL Managed Instances. Learn how to use the stored procedure sp_execute_external_script to execute the script.
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.date: 05/24/2022
 ms.topic: quickstart
 author: WilliamDAssafMSFT

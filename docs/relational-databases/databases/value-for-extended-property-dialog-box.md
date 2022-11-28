@@ -3,10 +3,9 @@ description: "Value for Extended Property Dialog Box"
 title: "Value for Extended Property Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.value.f1"

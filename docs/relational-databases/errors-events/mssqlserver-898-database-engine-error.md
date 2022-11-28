@@ -3,9 +3,9 @@ description: "MSSQLSERVER_898"
 title: MSSQLSERVER_898
 ms.custom: ""
 ms.date: 02/15/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, wiassaf
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "898 (Database Engine error)"

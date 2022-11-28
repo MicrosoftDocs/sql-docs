@@ -5,8 +5,8 @@ author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
@@ -101,13 +101,13 @@ The following table lists major classes of permissions and the kinds of securabl
 |Permission|Applies to|
 |----------------|----------------|
 |ALTER|All classes of objects except TYPE.|
-|CONTROL|All classes of objects:<br /><br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|
+|CONTROL|All classes of objects:<br /><br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS,<br /> DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|
 |DELETE|All classes of objects except DATABASE SCOPED CONFIGURATION, SERVER, and TYPE.|
 |EXECUTE|CLR types, external scripts, procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), and synonyms|
 |IMPERSONATE|Logins and users|
 |INSERT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] queues|
-|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT,<br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW, and<br />XML SCHEMA COLLECTION|
+|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIAL (applies to [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] and later),<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT,<br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW, and<br />XML SCHEMA COLLECTION|
 |SELECT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|
 |TAKE OWNERSHIP|All classes of objects except DATABASE SCOPED CONFIGURATION, LOGIN, SERVER, and USER.|
 |UPDATE|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|

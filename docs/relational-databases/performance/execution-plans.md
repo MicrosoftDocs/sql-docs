@@ -3,9 +3,9 @@ title: "Execution Plans | Microsoft Docs"
 description: Learn about execution plans or query plans, which the Query Optimizer creates for the SQL Server Database Engine to run queries. 
 ms.custom: ""
 ms.date: "03/01/2020"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query plans [SQL Server]"
@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 # Execution Plans
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

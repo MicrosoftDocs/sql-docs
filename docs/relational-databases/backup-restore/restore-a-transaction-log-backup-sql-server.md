@@ -3,10 +3,9 @@ title: "Restore a Transaction Log Backup (SQL Server) | Microsoft Docs"
 description: This article describes how to restore a transaction log backup in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoretlog.general.f1"

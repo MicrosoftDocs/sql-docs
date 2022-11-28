@@ -5,8 +5,8 @@ author: ericjulien
 ms.author: ericjulien
 ms.reviewer: randolphwest
 ms.date: 08/09/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ---
 # Configure the time zone on Linux
@@ -294,7 +294,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Kuala_Lumpur                        | Singapore Standard Time                  |
 | Asia/Kuching                             | Singapore Standard Time                  |
 | Asia/Kuwait                              | Arab Standard Time                       |
-| Asia/Macau                               | China Standard Time                      |
+| Asia/Macao                               | China Standard Time                      |
 | Asia/Magadan                             | Magadan Standard Time                    |
 | Asia/Makassar                            | Singapore Standard Time                  |
 | Asia/Manila                              | Singapore Standard Time                  |
@@ -756,7 +756,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Asia/Kuala_Lumpur                        | Singapore Standard Time                  |
 | Asia/Kuching                             | Singapore Standard Time                  |
 | Asia/Kuwait                              | Arab Standard Time                       |
-| Asia/Macau                               | China Standard Time                      |
+| Asia/Macao                               | China Standard Time                      |
 | Asia/Magadan                             | Magadan Standard Time                    |
 | Asia/Makassar                            | Singapore Standard Time                  |
 | Asia/Manila                              | Singapore Standard Time                  |

@@ -3,10 +3,9 @@ description: "SHORTEST_PATH (Transact-SQL)"
 title: "SHORTEST PATH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/01/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: "language-reference"
 f1_keywords:
   - "SHORTEST PATH"
@@ -45,8 +44,8 @@ FOR PATH must be used with any node or edge table name in the FROM clause, which
 ## Arbitrary Length Pattern
 This pattern includes the nodes and edges that must be traversed repeatedly until the desired node is reached or until the maximum number of iterations as specified in the pattern is met. Each time the query is executed, the result of executing this pattern will be an ordered collection of the nodes and edges traversed along the path from the start node to the end node. This is a regular expression style syntax pattern and the following two pattern quantifiers are supported:
 
-* **‘+’**: Repeat the pattern 1 or more times. Terminate as soon as a shortest path is found.
-* **{1,n}**: Repeat the pattern 1 to ‘n’ times. Terminate as soon as a shortest  is found.
+* **'+'**: Repeat the pattern 1 or more times. Terminate as soon as a shortest path is found.
+* **{1,n}**: Repeat the pattern 1 to *n* times. Terminate as soon as a shortest  is found.
 
 ## LAST_NODE
 LAST_NODE() function allows chaining of two arbitrary length traversal patterns. It can be used in scenarios where:

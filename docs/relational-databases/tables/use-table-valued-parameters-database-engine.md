@@ -3,10 +3,9 @@ description: "Use Table-Valued Parameters (Database Engine)"
 title: "Use Table-Valued Parameters (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table-valued parameters"

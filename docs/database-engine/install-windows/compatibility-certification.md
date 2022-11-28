@@ -4,8 +4,8 @@ description: Compatibility certification eliminates risks of application compati
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "compatibility [SQL Server], databases"

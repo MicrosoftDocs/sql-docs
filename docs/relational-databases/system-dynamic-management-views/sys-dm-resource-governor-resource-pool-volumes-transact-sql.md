@@ -4,8 +4,8 @@ description: sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_resource_governor_resource_pool_volumes_TSQL"

@@ -1,8 +1,8 @@
 ---
 title: xml (Transact-SQL)
 description: xml (Transact-SQL)
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "xml_TSQL"
@@ -49,7 +49,7 @@ Is the name of an XML schema collection. To create a typed **xml** column or var
   
 ## Remarks
 
-The stored representation of **xml** data type instances can’t exceed 2 gigabytes (GB) in size.  
+The stored representation of **xml** data type instances can't exceed 2 gigabytes (GB) in size.  
   
 The CONTENT and DOCUMENT facets apply only to typed XML. For more information, see [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   

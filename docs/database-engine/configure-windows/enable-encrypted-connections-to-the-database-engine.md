@@ -4,8 +4,8 @@ description: Encrypt data across communication channels. Enable encrypted connec
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/31/2022"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ms.custom: contperf-fy20q4
 helpviewer_keywords:
@@ -83,10 +83,15 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. This requires a legacy certificate. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
-- The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. When using the host name, the DNS suffix must be specified in the certificate. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
+- The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer or it must match the DNS suffix if using a wildcard certificate. When using the host name, the DNS suffix must be specified in the certificate. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster. 
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates.      
-  - Wildcard certificate can't be selected by using the SQL Server Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
+- As [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only allows one certificate to be installed on the server, if connections are made to the server using multiple domain names, these domains must be covered in the Subject Alternate Name (SAN) of the certificate. The domains in the SAN can also be wildcard domains (for example, `\*.yourcompany.com`).
+
+
+- For stand-alone servers, wildcard certificates can be set using SQL Server Configuration Manager tool. However, in case of a Failover cluster, wildcard certificates cannot be selected in the tooI. To use a wildcard certificate in a Failover cluster, edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.
+
+
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates.        
 
   > [!WARNING]  
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  

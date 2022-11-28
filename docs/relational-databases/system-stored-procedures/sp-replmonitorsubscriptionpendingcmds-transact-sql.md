@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 10/24/2022
-ms.prod: sql
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 ms.custom: seo-lt-2019
 f1_keywords:

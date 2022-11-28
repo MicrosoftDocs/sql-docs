@@ -203,7 +203,7 @@ Now walk through the script process when creating a tenant in its own database:
 
 ## Provision a batch of tenants
 
-This exercise provisions a batch of 17 tenants. It’s recommended you provision this batch of tenants before starting other Wingtip Tickets tutorials so there are more databases to work with.
+This exercise provisions a batch of 17 tenants. It's recommended you provision this batch of tenants before starting other Wingtip Tickets tutorials so there are more databases to work with.
 
 1. In the *PowerShell ISE*, open ...\\Learning Modules\\ProvisionTenants\\*Demo-ProvisionTenants.ps1*  and change the *$DemoScenario* parameter to 4:
    - **$DemoScenario** = **4**, to provision a batch of tenants into a shared database.

@@ -4,7 +4,7 @@ description: Learn to create a three-node cluster on Red Hat, SUSE, or Ubuntu, a
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amvin87
-ms.date: 10/12/2022
+ms.date: 11/28/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual

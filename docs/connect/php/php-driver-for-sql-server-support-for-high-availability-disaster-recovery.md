@@ -4,8 +4,8 @@ description: "Support for High Availability, Disaster Recovery for the Microsoft
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "07/31/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Support for High Availability, Disaster Recovery

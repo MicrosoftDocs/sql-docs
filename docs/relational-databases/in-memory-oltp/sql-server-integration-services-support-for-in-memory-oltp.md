@@ -4,9 +4,8 @@ description: Learn about using natively compiled stored procedures as source and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3

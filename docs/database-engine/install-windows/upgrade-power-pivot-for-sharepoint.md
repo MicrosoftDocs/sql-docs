@@ -3,10 +3,9 @@ title: "Upgrade Power Pivot for SharePoint"
 description: "Upgrade Power Pivot for SharePoint"
 author: "Minewiskan"
 ms.author: "owend"
-manager: erikre
 ms.reviewer: maghan
 ms.date: 10/17/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---

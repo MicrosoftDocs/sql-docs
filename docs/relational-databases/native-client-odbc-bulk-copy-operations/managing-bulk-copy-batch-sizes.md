@@ -3,10 +3,9 @@ title: "Managing Bulk Copy Batch Sizes | Microsoft Docs"
 description: Learn how the batch size for a bulk copy defines the scope of a transaction, which effects error behavior and locking overhead in SQL Server Native Client ODBC.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, bulk copy"

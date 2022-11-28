@@ -3,10 +3,9 @@ title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL)"
 description: ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-manager: cgronlund
 ms.date: "08/06/2020"
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: reference
 f1_keywords:
   - "ALTER_EXTERNAL_RESOURCE_POOL_TSQL"

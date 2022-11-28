@@ -4,8 +4,8 @@ description: sys.stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/13/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.stats"

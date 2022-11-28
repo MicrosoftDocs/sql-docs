@@ -5,8 +5,8 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan
 ms.date: 10/10/2022
-ms.prod: sql
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 ---
 
@@ -78,6 +78,20 @@ To design the SSIS package in SSDT *targeting SQL Server 2017 and below*, you'll
 You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
+
+### Rev. 257
+
+**Bug fixes**
+
+- Memory leak in Teradata Destination.
+- Teradata Destination fails with error message "an error occurred when converting string from source codepage" when consuming empty strings.
+- Under certain circumstances, Data Flow Task reports success despite errors occurred in Teradata Destination.
+- Teradata Destination fails when writing `VARCHAR` values with a very large length.
+
+**Improvements**
+
+- Improved performance of Teradata Destination.
+- Teradata Connection Manager logs error detail for connection failure.
 
 ### Rev. 240
 

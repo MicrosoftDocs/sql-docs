@@ -3,9 +3,9 @@ title: "MSSQLSERVER_912"
 description: The database script level could not be upgraded to the latest required by the server.
 ms.custom: ""
 ms.date: "10/25/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "912 (Database Engine error)"
@@ -69,7 +69,7 @@ To find the cause of the issue, follow these steps:
 1. Select the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in **SQL Server Services**.
 1. Right-click the instance, and then select **Properties**.
 1. Select the **Startup Parameters** tab.
-1. Use the **Specify a startup parameter** field to add the trace flag. Type “-T902” (without quotes) and click **Add**.
+1. Use the **Specify a startup parameter** field to add the trace flag. Type "-T902" (without quotes) and click **Add**.
 1. Select **OK** and close instance properties.
 1. Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.
 

@@ -3,11 +3,10 @@ title: Release Notes for ODBC Driver for SQL Server on Windows
 description: This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows.
 author: v-chojas
 ms.author: v-chojas
-manager: kenvh
 ms.reviewer: v-davidengel
-ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 11/03/2022
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Release Notes for Microsoft ODBC Driver for SQL Server on Windows
@@ -33,6 +32,22 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## 18.1.2
+
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2214634)  
+:::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2214633)  
+
+Version number: 18.1.2.1  
+Released: November 3, 2022  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2214634&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2214633&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.1
 
@@ -73,6 +88,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | TrustedConnection_UseAAD option | Now only Kerberos integrated authentication is enabled when specifying Trusted_Connection=yes. Use the TrustedConnection_UseAAD option to enable the previous behavior of using either Kerberos or Azure Active Directory integrated. |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
+## Previous Releases
+
 ## 18.0
 
 :::image type="icon" source="../../../includes/media/download.svg" border="false"::: [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2186919)  
@@ -93,8 +110,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Support for TDS 8.0 | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Compatibility extensions for SQLGetData | See [Features of the Microsoft ODBC Driver for SQL Server on Windows](features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
-
-## Previous Releases
 
 ## 17.9
 

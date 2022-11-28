@@ -3,10 +3,9 @@ description: "SQLGetFunctions Function"
 title: "SQLGetFunctions Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 apiname: 
   - "SQLGetFunctions"

@@ -5,9 +5,8 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: "09/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.importflatfile.f1"

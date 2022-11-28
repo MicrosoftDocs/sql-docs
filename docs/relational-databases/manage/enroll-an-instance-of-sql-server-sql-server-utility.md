@@ -3,10 +3,9 @@ title: "Enroll an Instance of SQL Server (SQL Server Utility) | Microsoft Docs"
 description: Start monitoring the performance and configuration of an instance of SQL Server by enrolling it into an existing SQL Server Utility.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.makemanaged.agentaccount.F1"

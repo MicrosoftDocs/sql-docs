@@ -4,8 +4,8 @@ description: Look at an example of a subquery, which is a query that is nested i
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 ms.custom: contperf-fy21q4
 helpviewer_keywords:

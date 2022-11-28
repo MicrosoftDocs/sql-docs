@@ -1,11 +1,11 @@
 ---
 description: "Data Migration Report  (MySQLToSQL)"
 title: "Data Migration Report  (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 author: cpichuka 

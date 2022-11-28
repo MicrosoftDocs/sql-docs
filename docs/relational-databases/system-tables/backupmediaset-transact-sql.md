@@ -3,9 +3,9 @@ title: "backupmediaset (Transact-SQL)"
 description: Reference for backupmediaset, which contains one row for each backup media set.
 author: VanMSFT
 ms.author: vanto
-ms.date: "09/07/2021"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "11/16/2022"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "backupmediaset"
@@ -15,10 +15,11 @@ helpviewer_keywords:
   - "backupmediaset system table"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||=azuresqldb-mi-current"
 ---
 # backupmediaset (Transact-SQL)
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Contains one row for each backup media set. This table is stored in the **msdb** database.  
   

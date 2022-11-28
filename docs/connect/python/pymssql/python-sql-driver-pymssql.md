@@ -4,8 +4,8 @@ description: "This guide describes installing Python, the ODBC Driver for SQL Se
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "10/06/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Python SQL Driver - pymssql

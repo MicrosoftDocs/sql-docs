@@ -4,8 +4,8 @@ description: "Dynamic management views and functions return server state informa
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/01/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "database scoped dynamic management objects [SQL Server]"

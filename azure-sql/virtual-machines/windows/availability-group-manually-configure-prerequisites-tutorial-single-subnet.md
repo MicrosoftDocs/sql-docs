@@ -185,7 +185,7 @@ In the following steps, configure the **ad-primary-dc** machine as a domain cont
     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/20-connect-rdp.png" alt-text="Screenshot of the Azure portal that shows selections for connecting to a virtual machine.":::
 
 1. Sign in with your configured administrator account (**\DomainAdmin**) and password (**Contoso!0000**).
-1. By default, the Server Manager dashboard should be displayed. Select the **Add roles and features** link on the dashboard.
+1. By default, the **Server Manager** dashboard should be displayed. Select the **Add roles and features** link on the dashboard.
 
     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the link for adding roles and features on the Server Manager dashboard.":::
 
@@ -200,14 +200,14 @@ In the following steps, configure the **ad-primary-dc** machine as a domain cont
 
 1. Select **Next** until you reach the **Confirmation** section. Select the **Restart the destination server automatically if required** checkbox.
 1. Select **Install**.
-1. After installation of the features finishes, return to the Server Manager dashboard.
+1. After installation of the features finishes, return to the **Server Manager** dashboard.
 1. Select the new **AD DS** option on the left pane.
 1. Select the **More** link on the yellow warning bar.
 
     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/24-ad-ds-more.png" alt-text="Screenshot of a message about configuring a DNS server on the Server Manager dashboard.":::
 
 1. In the **Action** column of the **All Server Task Details** dialog, select **Promote this server to a domain controller**.
-1. In the Active Directory Domain Services Configuration Wizard, use the following values:
+1. In the **Active Directory Domain Services Configuration Wizard**, use the following values:
 
     | **Page** | Setting |
     | --- | --- |
@@ -262,14 +262,14 @@ After the primary domain controller restarts, you can use the following steps to
    >[!IMPORTANT]
    >If you lose the connection to your remote desktop after changing the DNS setting, go to the Azure portal and restart the virtual machine.
 
-1. From the remote desktop to the secondary domain controller, open the Server Manager dashboard.
+1. From the remote desktop to the secondary domain controller, open the **Server Manager** dashboard.
 1. Select the **Add roles and features** link.
 
     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the link for adding roles and features on the Server Manager dashboard.":::
 
 1. Select **Next** until you get to the **Server Roles** section.
 1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any features that these roles require.
-1. After installation of the features finishes, return to the Server Manager dashboard.
+1. After installation of the features finishes, return to the **Server Manager** dashboard.
 1. Select the new **AD DS** option on the left pane.
 1. Select the **More** link on the yellow warning bar.
 1. In the **Action** column of the **All Server Task Details** dialog, select **Promote this server to a domain controller**.
@@ -481,7 +481,7 @@ For SQL Server availability groups, each SQL Server VM needs to run as a domain 
 
 To add failover clustering features, do the following steps on both SQL Server VMs:
 
-1. Connect to the SQL Server virtual machine through RDP by using the **CORP\install** account. Open the Server Manager dashboard.
+1. Connect to the SQL Server virtual machine through RDP by using the **CORP\install** account. Open the **Server Manager** dashboard.
 1. Select the **Add roles and features** link on the dashboard.
 
     :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the link for adding roles and features on the Server Manager dashboard.":::

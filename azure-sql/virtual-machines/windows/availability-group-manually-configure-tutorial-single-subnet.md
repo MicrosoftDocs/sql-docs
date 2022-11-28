@@ -29,7 +29,7 @@ This article manually configures the availability group environment. It's also p
 
 The tutorial assumes that you have a basic understanding of SQL Server Always On availability groups. If you need more information, see [Overview of Always On availability groups (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
-Before you begin the procedures in this tutorial, you need to complete [prerequisites for creating Always On availability groups in Azure virtual machines](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). If you completed these prerequisites already, you can jump to [Create the cluster](#CreateCluster).
+Before you begin the procedures in this tutorial, you need to complete [prerequisites for creating Always On availability groups in Azure virtual machines](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). If you completed these prerequisites already, you can jump to [Create the cluster](#create-the-cluster).
 
 The following table summarizes the prerequisites that you need to complete:
 
@@ -43,7 +43,7 @@ The following table summarizes the prerequisites that you need to complete:
 |:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Failover clustering** | Required for both SQL Server instances |
 |:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Installation domain account** | - Local administrator on each SQL Server instance <br/> - Member of the *sysadmin* fixed server role for each SQL Server instance  |
 
-## <a name="CreateCluster"></a> Create the cluster
+## <a name="create-the-cluster"></a> Create the cluster
 
 The first task is to create a Windows Server failover cluster that includes two SQL Server instances and a witness server:
 
@@ -52,12 +52,12 @@ The first task is to create a Windows Server failover cluster that includes two 
    >[!TIP]
    >In the [prerequisites](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md), you created an account called **CORP\Install**. Use this account.
 
-1. In the Server Manager dashboard, select **Tools**, and then select **Failover Cluster Manager**.
+1. On the **Server Manager** dashboard, select **Tools**, and then select **Failover Cluster Manager**.
 1. On the left pane, right-click **Failover Cluster Manager**, and then select **Create a Cluster**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/40-createcluster.png" alt-text="Screenshot of Failover Cluster Manager and the option for creating a cluster on the shortcut menu.":::
 
-1. In the Create Cluster Wizard, create a one-node cluster by stepping through the pages with the settings in the following table:
+1. In the **Create Cluster Wizard**, create a one-node cluster by stepping through the pages with the settings in the following table:
 
    | Page | Setting |
    | --- | --- |
@@ -92,7 +92,7 @@ The first task is to create a Windows Server failover cluster that includes two 
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/44-add-node.png" alt-text="Screenshot of Failover Cluster Manager that shows selections for adding a node to a cluster.":::
 
-1. In the Add Node Wizard, select **Next**. 
+1. In the **Add Node Wizard**, select **Next**. 
 
 1. On the **Select Servers** page, add the second SQL Server instance. Enter the server name in **Enter server name**, and then select **Add** > **Next**.
 
@@ -103,7 +103,7 @@ The first task is to create a Windows Server failover cluster that includes two 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/46-add-node-confirmation.png" alt-text="Screenshot of the page in the Add Node Wizard that confirms the addition of a node to the cluster.":::
 
    >[!WARNING]
-   >If you don't clear **Add all eligible storage to the cluster**, Windows detaches the virtual disks during the clustering process. As a result, they don't appear in Disk Manager or Object Explorer until the storage is removed from the cluster and reattached via PowerShell.
+   >If you don't clear **Add all eligible storage to the cluster**, Windows detaches the virtual disks during the clustering process. As a result, they don't appear in **Disk Manager** or **Object Explorer** until the storage is removed from the cluster and reattached via PowerShell.
 
 1. Select **Next**.
 
@@ -119,7 +119,7 @@ In this example, the Windows cluster uses a file share to create a cluster quoru
 
 1. Connect to the file share witness server by using a remote desktop session.
 
-1. In Server Manager, select **Tools**. Open **Computer Management**.
+1. In **Server Manager**, select **Tools**. Open **Computer Management**.
 
 1. Select **Shared Folders**.
 
@@ -127,7 +127,7 @@ In this example, the Windows cluster uses a file share to create a cluster quoru
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/48-new-share.png" alt-text="Screenshot that shows selections for creating a new share in Computer Management. ":::
 
-   Use the Create a Shared Folder Wizard to create a share.
+   Use the **Create a Shared Folder Wizard** to create a share.
 
 1. On the **Folder Path** page, select **Browse**. Locate or create a path for the shared folder, and then select **Next**.
 
@@ -158,7 +158,7 @@ In this example, the Windows cluster uses a file share to create a cluster quoru
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/52-configure-quorum.png" alt-text="Screenshot of Failover Cluster Manager that shows selections for configuring cluster quorum settings.":::
 
-1. In the Configure Cluster Quorum Wizard, select **Next**.
+1. In the **Configure Cluster Quorum Wizard**, select **Next**.
 
 1. On the **Select Quorum Configuration Option** page, choose **Select the quorum witness**, and then select **Next**.
 
@@ -216,13 +216,13 @@ Repeat these steps on the second SQL Server instance.
 ## Create a database on the first SQL Server instance
 
 1. Open the RDP file to the first SQL Server instance with a domain account that's a member of *sysadmin* fixed server role.
-1. Open SQL Server Management Studio and connect to the first SQL Server instance.
+1. Open SQL Server Management Studio (SSMS) and connect to the first SQL Server instance.
 1. In **Object Explorer**, right-click **Databases** and select **New Database**.
 1. In **Database name**, enter **MyDB1**, and then select **OK**.
 
 ### <a name="backupshare"></a> Create a backup share
 
-1. On the first SQL Server instance in Server Manager, select **Tools**. Open **Computer Management**.
+1. On the first SQL Server instance in **Server Manager**, select **Tools**. Open **Computer Management**.
 
 1. Select **Shared Folders**.
 
@@ -230,7 +230,7 @@ Repeat these steps on the second SQL Server instance.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/48-new-share.png" alt-text="Screenshot of selections for starting the process of creating a backup share. ":::
 
-   Use the Create a Shared Folder Wizard to create a share.
+   Use the **Create a Shared Folder Wizard** to create a share.
 
 1. On the **Folder Path** page, select **Browse**. Locate or create a path for the database backup's shared folder, and then select **Next**.
 
@@ -252,7 +252,7 @@ Repeat these steps on the second SQL Server instance.
 
 You need to back up the new database to initialize the log chain. If you don't take a backup of the new database, it can't be included in an availability group.
 
-1. In Object Explorer, right-click the database, point to **Tasks**, and then select **Back Up**.
+1. In **Object Explorer**, right-click the database, point to **Tasks**, and then select **Back Up**.
 
 1. Select **OK** to take a full backup to the default backup location.
 
@@ -267,8 +267,8 @@ You're now ready to configure an availability group by doing the following tasks
 
 ### Create the availability group
 
-1. Connect to your SQL Server VM by using remote desktop, and open SQL Server Management Studio (SSMS). 
-1. In Object Explorer in SSMS, right-click **Always On High Availability** and select **New Availability Group Wizard**.
+1. Connect to your SQL Server VM by using remote desktop, and open SQL Server Management Studio. 
+1. In **Object Explorer** in SSMS, right-click **Always On High Availability** and select **New Availability Group Wizard**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/56-new-availability-group-wizard.png" alt-text="Screenshot of Object Explorer in SSMS, with the shortcut command for starting the New Availability Group Wizard.":::
 
@@ -323,7 +323,7 @@ You're now ready to configure an availability group by doing the following tasks
 
 ### Check the availability group
 
-1. In Object Explorer, expand **Always On High Availability**, and then expand **Availability Groups**. You should now see the new availability group in this container. Right-click the availability group and select **Show Dashboard**.
+1. In **Object Explorer**, expand **Always On High Availability**, and then expand **Availability Groups**. You should now see the new availability group in this container. Right-click the availability group and select **Show Dashboard**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/76-show-dashboard.png" alt-text="Screenshot of Object Explorer in SSMS that shows selections for opening a dashboard for an availability group.":::
 

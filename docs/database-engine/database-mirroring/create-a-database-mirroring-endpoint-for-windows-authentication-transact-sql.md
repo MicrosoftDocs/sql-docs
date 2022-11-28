@@ -104,7 +104,7 @@ helpviewer_keywords:
     -   For Windows Authentication, the AUTHENTICATION option is optional, unless you want the endpoint to use only NTLM or Kerberos to authenticate connections. *\<authorizationMethod>* specifies the method used to authenticate connections as one of the following: NTLM, KERBEROS, or NEGOTIATE. The default, NEGOTIATE, causes the endpoint to use the Windows negotiation protocol to choose either NTLM or Kerberos. Negotiation enables connections with or without authentication, depending on the authentication level of the opposite endpoint.  
 
         > [!NOTE]
-        > To use Kerberos authentication for the communication between availability group (AG) endpoints, [register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) for the database mirroring endpoints used by the AG. 
+        > To use Kerberos authentication for the communication between availability group (AG) endpoints, [register a Service Principal Name for Kerberos Connections](../configure-windows/register-a-service-principal-name-for-kerberos-connections.md) for the database mirroring endpoints used by the AG. 
 
     -   ENCRYPTION is set to REQUIRED by default. This means that all connections to this endpoint must use encryption. However, you can disable encryption or make it optional on an endpoint. The alternatives are as follows:  
   

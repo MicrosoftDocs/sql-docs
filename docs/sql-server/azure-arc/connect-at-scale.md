@@ -71,7 +71,7 @@ To create an Azure Policy assignment, you need the `Resource Policy Contributor`
 > [!IMPORTANT]
 > Because Azure extension for SQL Server synchronizes with Azure once an hour, it may take up to one hour before these resources are created after you create the policy assignment.
 
-### Connect at-scale using the Automatic Arc-enabled SQL Server registration method (Recommended)
+### Connect at-scale using the automatic Arc-enabled SQL Server registration method (Recommended)
 
 If you have the `User Access Administrator` and `Resource Policy Contributor` role assignments or have the subscription `Owner` role assignment, you can quickly enable at-scale registration using Azure Policy and a system assigned managed identity at the scope of an entire subscription or a specific resource group.
 

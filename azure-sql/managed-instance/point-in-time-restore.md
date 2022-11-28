@@ -116,7 +116,7 @@ Currently, you can restore your database to a managed instance in a different su
 
 1. Run one of the following code options with your values substituted for the parameters:
 
-   - To restore the database by using PowerShell, run the following code with your values substituted for the parameters:
+   - To restore the database to the same managed instance:
 
      ```powershell-interactive
      $subscriptionId = "<subscription ID>"
@@ -161,7 +161,7 @@ For more information, see [Restore-AzSqlInstanceDatabase](/powershell/module/az.
 
 1. Run one of the following code options with your values substituted for the parameters:
 
-   - To restore the database in the same managed instance:
+   - To restore the database to the same managed instance:
 
      ```azurecli-interactive
      az sql midb restore -g mygroupname --mi myinstancename |

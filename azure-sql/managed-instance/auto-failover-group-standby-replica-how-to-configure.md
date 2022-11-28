@@ -17,7 +17,7 @@ ms.custom:
 
 If you use a secondary Azure SQL Managed Instance deployment as a standby for disaster recovery and the secondary instance doesn't have any read workloads or applications connected to it, you can save on licensing costs by designating the replica as a *standby instance*.
 
-When a secondary instance is designated as a standby instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You are billed for the compute and storage that the secondary instance uses.
+When a secondary instance is designated as a standby instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You'e billed for the compute and storage that the secondary instance uses.
 
 Auto-failover groups for a SQL Managed Instance deployment support only one replica. The replica must be either a readable replica or be designated as a standby replica.
 
@@ -29,7 +29,9 @@ In your designate a replica managed instance as standby, Microsoft doesn't charg
 
 The benefit translates differently between customers who use the pay-as-you-go model and customers who use the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) model. For a pay-as-you-go customer, the vCores are discounted on their invoice. For a customer who uses the Azure Hybrid Benefit for the standby replica, the number of vCores that the secondary replica uses are returned to their licensing pool.
 
-For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance as standby only. In another example, if you have 16 Azure Hybrid Benefit licenses and you deploy two managed instances that have 8 vCores each to a failover group, after you designate the secondary instance as standby, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
+For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance as standby only.
+
+In another example, if you have 16 Azure Hybrid Benefit licenses and you deploy two managed instances that have 8 vCores each to a failover group, after you designate the secondary instance as standby, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
 
 ## Functional capabilities
 
@@ -71,15 +73,15 @@ For more information, see [Configure an auto-failover group](auto-failover-group
 
 ### Existing failover group
 
-To update the failover rights for an existing failover group by using the Azure portal:
+To update the failover rights for an existing failover group:
 
 1. In the [Azure portal](https://portal.azure.com), go to your SQL Managed Instance resource.
 1. In the left menu under **Data management**, select **Failover groups**.
-1. In the command bar, select **Edit configurations**.
+1. In the command bar, select **Edit Configurations**.
 
    :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/update-failover-group-configuration.png" alt-text="Screenshot that shows the Failover groups pane in the portal and Edit Configurations highlighted. ":::
 
-1. In **Edit configuration** for your failover group, for **Failover rights**, select **On**. Select the **I confirm that I will use the secondary instance as a standby replica** checkbox.
+1. In **Edit configurations** for your failover group, for **Failover rights**, select **On**. Select the **I confirm that I will use the secondary instance as a standby replica** checkbox.
 
    :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/update-failover-rights-existing-instance.png" alt-text="Screenshot that shows the Failover groups pane in the portal and Failover rights highlighted." :::
 
@@ -98,20 +100,20 @@ In **Failover groups**, be sure that **Failover rights status** is set to **ON**
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot that shows the Failover groups page, with failover rights on and the license model highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png":::
 
-The default license model indicates the licensing model the instance will revert to if the failover group fails over and the current secondary instance becomes the new primary instance. You might incur charges upon failover, depending on the default license model.
+The default license model indicates the licensing model the instance reverts to if the failover group fails over and the current secondary instance becomes the new primary instance. You might incur charges upon failover, depending on the default license model.
 
 In **Compute + storage** for your *secondary managed instance*, confirm that the **Failover rights** license is activated. Under **Cost summary**, view the failover discount you're currently receiving for that instance.
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot that shows the Compute and storage page, with failover rights highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png":::
 
-If failover rights aren't activated and you qualify for the benefit, you also see the following recommendation in **Overview** for either instance. To activate the benefit, select the recommendation to go to **Edit configurations**.
+If failover rights aren't activated and you qualify for the benefit, you also see the following recommendation in **Overview** for either instance. To activate the benefit, select the recommendation to go to **Edit Configurations**.
 
 :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane, and recommendations showing failover rights aren't used." :::
 
 ## Next steps
 
 - For a detailed tutorial, see [Add a SQL Managed Instance deployment to a failover group](failover-group-add-instance-tutorial.md).
-- For a sample script, see [Use PowerShell to create an auto-failover group on SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
-- For a business continuity overview and scenarios, see [business continuity with Azure SQL Database and Azure SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- For a sample script, see [Use PowerShell to create an auto-failover group in SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
+- For a business continuity overview and scenarios, see [Business continuity with Azure SQL Database and Azure SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - To learn about automated backups, see [SQL Database automated backups](../database/automated-backups-overview.md).
-- To learn about using automated backups for recovery, see [Restore a database from the service-initiated backups](../database/recovery-using-backups.md).
+- To learn about using automated backups for recovery, see [Restore a database from service-initiated backups](../database/recovery-using-backups.md).

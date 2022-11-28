@@ -55,7 +55,10 @@ DBCC SHRINKDATABASE
 ]
        
 < wait_at_low_priority_option > ::= 
- ABORT_AFTER_WAIT = { SELF | BLOCKERS } 
+{
+      WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ],
+      ABORT_AFTER_WAIT = { SELF | BLOCKERS } )
+}
 ```  
 
 ```syntaxsql
@@ -106,13 +109,22 @@ This feature is similar to the [WAIT_AT_LOW_PRIORITY with online index operation
 - You cannot specify ABORT_AFTER_WAIT option NONE.
 
 #### WAIT_AT_LOW_PRIORITY
+Applies to: [!INCLUDEssNoVersion] ([!INCLUDEssSQL22] and later) and [!INCLUDEssSDSfull].
 
-When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requiring schema stability (Sch-S) locks are not blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60000 milliseconds (1 minute) and will exit with no error.
+When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requiring schema stability (Sch-S) locks are not blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will exit with no error.
 
-If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60000 milliseconds (1 minute) and will exit with no error. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
+If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will exit with no error. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
+
+#### MAX_DURATION = time [MINUTES ]
+Applies to: [!INCLUDEssNoVersion] ([!INCLUDEssSQL22] and later) and [!INCLUDEssSDSfull].
+
+This is an optional parameter. The default value when not specified = 1 minute. 
+
+It is the wait time (an integer value specified in minutes) that the shrink operation Sch-M lock request will wait with low priority when executing the command. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed. MAX_DURATION time is always in minutes, and the word MINUTES can be omitted. 
+
 
 #### ABORT_AFTER_WAIT = [ **SELF** | BLOCKERS ]
-
+Applies to: [!INCLUDEssNoVersion] ([!INCLUDEssSQL22] and later) and [!INCLUDEssSDSfull].
 
 SELF
 

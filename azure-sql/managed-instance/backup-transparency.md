@@ -13,9 +13,9 @@ ms.custom:
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Learn how to use backup transparency in Azure SQL Managed Instance.
+In this article, learn how to use backup transparency in Azure SQL Managed Instance to view the backup history of your managed instance. Backup transparency in SQL Managed Instance is available through the [msdb database](/sql/relational-databases/databases/msdb-database), which makes backup history tables queryable.
 
-The [msdb database](/sql/relational-databases/databases/msdb-database) enables backup transparency in Azure SQL Managed Instance by making backup history tables queryable. It's important to know about a few key differences between the backup tables in a traditional SQL Server `msdb` database and the `msdb` database in Azure SQL Managed Instance. The main differences include the information that's visible, supported tables, and the fields you can use.
+It's important to know about a few key differences between the backup tables in a traditional SQL Server `msdb` database and the `msdb` database in SQL Managed Instance. The main differences include the information that's visible, supported tables, and the fields you can use.
 
 ## Visible information
 
@@ -24,15 +24,13 @@ The `msdb` database in SQL Managed Instance displays the following backup inform
 - The type of automated backup taken: full, differential, or log.
 - Metadata about native backups taken manually, although fields like file path and usernames might not be populated. Use the `is_copyonly` column to determine whether a backup was taken manually or automatically.
 - Metadata about the backup, including status, size, time, and location.
-- The replica where the backup was taken, such as the primary or secondary. The ability to take backups from the secondary replica currently is available only on the Business Critical service tier.
+- The replica where the backup was taken, such as the primary or secondary managed instance. The ability to take backups from the secondary replica currently is available only on the Business Critical service tier.
 
-The `msdb` database *doesn't* have information about backups that are stored for long-term retention.
-
-Backups for long-term retention are made by copying files at the storage level. This type of backup isn't visible to the instance.
+The `msdb` database *doesn't* have information about backups that are stored for long-term retention. Backups for long-term retention are made by copying files at the storage level. This type of backup isn't visible to the instance.
 
 ## Supported tables
 
-The `msdb` database in SQL Managed Instance supports the following backup tables:
+The `msdb` database in SQL Managed Instance supports these backup tables:
 
 - [Backupset](/sql/relational-databases/system-tables/backupset-transact-sql)
 - [Backupmediaset](/sql/relational-databases/system-tables/backupmediaset-transact-sql)
@@ -61,6 +59,6 @@ When you review your backup history in the `msdb` database, consider the followi
 
 ## Next steps
 
-- To learn more, review [The msdb database in SQL Server](/sql/relational-database/databases/msdb-database).
-- To learn about backups in Azure SQL Managed Instance, review [Automated backups](automated-backups-overview.md).
+- Learn about the [msdb database in SQL Server](/sql/relational-database/databases/msdb-database).
+- To learn about backups in SQL Managed Instance, review [Automated backups](automated-backups-overview.md).
 - To learn about querying the `msdb`database, review [Monitor backup activity](backup-activity-monitor.md).

@@ -48,18 +48,24 @@ DBCC SHRINKFILE
     }  
 )  
 [ WITH 
-    NO_INFOMSGS ,
-    {     
-         [ WAIT_AT_LOW_PRIORITY 
-            [ ( 
-                  <wait_at_low_priority_option_list>
-             )] 
-         ] 
+  {     
+      [ WAIT_AT_LOW_PRIORITY 
+        [ ( 
+            <wait_at_low_priority_option_list>
+        )] 
+      ] 
+      [ , NO_INFOMSGS]
+  }
 ]
        
-< wait_at_low_priority_option > ::= 
- ABORT_AFTER_WAIT = { SELF | BLOCKERS } 
-```  
+< wait_at_low_priority_option_list > ::=  
+	<wait_at_low_priority_option>
+	| <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
+ 
+< wait_at_low_priority_option > ::=
+	MAX_DURATION = { 'timeout' } [ MINUTES ]
+    | , ABORT_AFTER_WAIT = { SELF | BLOCKERS }
+````  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -115,12 +121,21 @@ This feature is similar to the [WAIT_AT_LOW_PRIORITY with online index operation
 - You cannot specify ABORT_AFTER_WAIT option NONE.
 
 #### WAIT_AT_LOW_PRIORITY
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requiring schema stability (Sch-S) locks are not blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60000 milliseconds (1 minute) and will silently exit.
+When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requiring schema stability (Sch-S) locks are not blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will silently exit.
 
-If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 60,000 milliseconds (1 minute) and will silently exit. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
+If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will silently exit. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
+
+#### MAX_DURATION = 1 [MINUTES]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+This is an optional parameter. The default value when not specified = 1 minute. 
+
+It is the wait time (an integer value specified in minutes) that the shrink operation Sch-M lock request will wait with low priority when executing the command. If the operation is blocked for the duration, the specified ABORT_AFTER_WAIT action will be executed. MAX_DURATION time is always in minutes, and the word MINUTES can be omitted. 
 
 #### ABORT_AFTER_WAIT = [ **SELF** | BLOCKERS ]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 SELF
 

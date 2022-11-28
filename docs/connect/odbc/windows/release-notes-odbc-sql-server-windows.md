@@ -47,7 +47,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------- | :------ |
-| Fix custom action DLL signing | :------ |
+| Fix custom action DLL signing | Fix custom action DLL signing |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.1.2

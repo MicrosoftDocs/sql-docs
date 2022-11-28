@@ -177,7 +177,7 @@ The cluster core resources are configured with a file share witness.
 
 ## Enable availability groups
 
-Next, enable Always On availability groups. Do these steps on both SQL Server instances.
+Next, enable Always On availability groups. Complete these steps on both SQL Server instances.
 
 1. From the **Start** screen, open **SQL Server Configuration Manager**.
 1. In the browser tree, select **SQL Server Services**. Then right-click the **SQL Server (MSSQLSERVER)** service and select **Properties**.

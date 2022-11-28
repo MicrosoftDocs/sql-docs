@@ -282,7 +282,7 @@ After the SQL Server virtual machine restarts as a member of the domain, add **C
 
 ### Create a sign-in on each SQL Server VM for the installation account
 
-Use the installation account (**CORP\Install**) to configure the availability group. This account needs to be a member of the **sysadmin** fixed server role on each SQL Server VM. The following steps create a sign-in for the installation account. Do them on both SQL Server VMs.
+Use the installation account (**CORP\Install**) to configure the availability group. This account needs to be a member of the **sysadmin** fixed server role on each SQL Server VM. The following steps create a sign-in for the installation account. Complete them on both SQL Server VMs.
 
 1. Connect to the server through RDP by using the *\<MachineName\>\DomainAdmin* account.
 
@@ -334,7 +334,7 @@ To create a system account and grant appropriate permissions, complete the follo
 
 ### <a name="setServiceAccount"></a>Set the SQL Server service accounts
 
-On each SQL Server VM, do the following steps to set the SQL Server service account. Use the accounts that you created when you configured the domain accounts.
+On each SQL Server VM, complete the following steps to set the SQL Server service account. Use the accounts that you created when you configured the domain accounts.
 
 1. Open SQL Server Configuration Manager.
 1. Right-click the SQL Server service, and then select **Properties**.
@@ -458,7 +458,7 @@ To configure the load balancer, you need to create a back-end pool, create a pro
 
 ## Add failover clustering to SQL Server VMs
 
-To add failover clustering features, do the following steps on both SQL Server VMs:
+To add failover clustering features, complete the following steps on both SQL Server VMs:
 
 1. Connect to the SQL Server virtual machine through RDP by using the **CORP\Install** account. Open the **Server Manager** dashboard.
 1. Select the **Add roles and features** link on the dashboard.
@@ -591,7 +591,7 @@ The IP address for the listener in the remote region needs to be added to the cl
 
 ## Enable availability groups
 
-Next, enable the Always On availability groups feature. Do these steps on the new SQL Server instance:
+Next, enable the Always On availability groups feature. Complete these steps on the new SQL Server instance:
 
 1. From the **Start** screen, open **SQL Server Configuration Manager**.
 1. In the browser tree, select **SQL Server Services**. Right-click the **SQL Server (MSSQLSERVER)** service, and then select **Properties**.

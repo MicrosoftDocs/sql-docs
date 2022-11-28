@@ -29,7 +29,7 @@ For replicas that are designated as standby, Microsoft doesn't charge you SQL Se
 
 The benefit translates differently between customers who use the pay-as-you-go model and customers who use the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) model. Pay-as-you-go customers see the vCores discounted on their invoice. For customers who use the Azure Hybrid Benefit for the standby replica, the number of vCores that the secondary replica uses are returned to their licensing pool.
 
-For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, you'll see a discount for 16 vCores on your invoice when you designate your secondary instance as standby only. Alternatively, if you have 16 Azure Hybrid Benefit licenses and you deploy two managed instances that have 8 vCores each to a failover group, after you designate the secondary instance for standby, 8 vCores are returned your license pool to use with other Azure SQL deployments.
+For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, you'll see a discount for 16 vCores on your invoice when you designate your secondary instance as standby only. If you have 16 Azure Hybrid Benefit licenses and you deploy two managed instances that have 8 vCores each to a failover group, after you designate the secondary instance as standby, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
 
 ## Functional capabilities
 

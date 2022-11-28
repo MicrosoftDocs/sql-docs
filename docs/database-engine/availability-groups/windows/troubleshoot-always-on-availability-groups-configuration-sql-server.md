@@ -176,6 +176,9 @@ For more information, see [Enable and Disable Always On Availability Groups &#40
 
     For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
+> [!NOTE]
+> To use Kerberos authentication for the communication between Availability Group endpoints, [register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) for the HADR/mirroring endpoints.
+ 
 ##  <a name="NetworkAccess"></a> Network Access  
  Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that don't trust each other (untrusted domains).  Check if you can connect to the endpoints by following these steps:
 

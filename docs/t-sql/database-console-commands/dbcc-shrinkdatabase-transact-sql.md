@@ -44,18 +44,25 @@ DBCC SHRINKDATABASE
      [ , { NOTRUNCATE | TRUNCATEONLY } ]   
 )  
 [ WITH 
-    NO_INFOMSGS ,
+
     {     
          [ WAIT_AT_LOW_PRIORITY 
             [ ( 
                   <wait_at_low_priority_option_list>
              )] 
          ] 
+         
+         [ , NO_INFOMSGS]
     }
 ]
-       
-< wait_at_low_priority_option > ::= 
- ABORT_AFTER_WAIT = { SELF | BLOCKERS } 
+
+< wait_at_low_priority_option_list > ::=  
+	<wait_at_low_priority_option>
+	| <wait_at_low_priority_option_list> , <wait_at_low_priority_option>
+
+< wait_at_low_priority_option > ::=
+	MAX_DURATION = { 'timeout' } [ MINUTES ]
+    | , ABORT_AFTER_WAIT = { SELF | BLOCKERS }
 ```  
 
 ```syntaxsql

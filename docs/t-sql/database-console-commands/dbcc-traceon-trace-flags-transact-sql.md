@@ -4,7 +4,7 @@ description: "Learn how to set specific server characteristics or to alter a par
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf, randolphwest
-ms.date: 09/08/2022
+ms.date: 11/28/2022
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -221,6 +221,7 @@ Trace flag behavior may not be supported in future releases of [!INCLUDE[ssNoVer
 |<a id="tf9576"></a>**9576**|Disables the enhanced error collection for Availability Group failovers introduced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU10, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9. For more information, see [SQL Server Availability Groups – Enhanced Database Level Failover](/archive/blogs/sql_server_team/sql-server-availability-groups-enhanced-database-level-failover).<br /><br />**Scope:** Global only.|
 |<a id="tf9591"></a>**9591**|Disables log block compression in Always On Availability Groups. Log block compression is the default behavior used with both synchronous and asynchronous replicas in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], compression is only used with asynchronous replica.<br /><br />**Scope:** Global or session.|
 |<a id="tf9592"></a>**9592**|Enables log stream compression for synchronous availability groups. This feature is disabled by default on synchronous availability groups because compression adds latency. For more information, see [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Scope:** Global or session.|
+|<a id="tf9708"></a>**9708**|Enables collection of additional extended event metrics. For more information, see [sys.dm_xe_session_events](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-events-transact-sql.md)<br /><br />**Scope:** Global.|
 |<a id="tf9929"></a>**9929**|Reduces the In-Memory checkpoint files to 1 MB each. For more information, see [KB3147012](https://support.microsoft.com/kb/3147012).<br /><br />**Scope:** Global only.|
 |<a id="tf9939"></a>**9939**|Enables parallel plans and parallel scan of memory-optimized tables and table variables in DML operations that reference memory-optimized tables or table variables, as long as they aren't the target of the DML operation in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. For more information, see [KB4013877](https://support.microsoft.com/kb/4013877).<br /><br />**Note:** Trace flag 9939 isn't needed if trace flag 4199 is also explicitly enabled.<br /><br />**Scope:** Global or session or query (QUERYTRACEON).|
 |<a id="tf9944"></a>**9944**|Enables a non-default fix for slow database recovery time when a database has a large number of memory optimized tables or memory optimized table types, and blocking with PREMPTIVE_OS_FINDFILE or PREEMPTIVE_OS_CREATEDIRECTORY wait types may be observed. For more information, see [KB4090789](https://support.microsoft.com/kb/4090789) and [KB4052338](https://support.microsoft.com/kb/4052338).<br /><br />**Scope:** Global only.|

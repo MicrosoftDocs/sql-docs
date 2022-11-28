@@ -2,8 +2,8 @@
 title: "Customize the display of a map or map layer in a paginated report | Microsoft Docs"
 description:  Improve the user experience of data and display in a paginated report with changes to legends, color, labels, and resolution in Report Builder. 
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

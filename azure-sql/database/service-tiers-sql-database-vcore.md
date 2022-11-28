@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma
-ms.date: 11/30/2022
+ms.date: 11/28/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -172,17 +172,17 @@ Australia Central, Australia Central 2, Australia East, Australia Southeast, Bra
 DC-series is available in the following regions:
 Canada Central, Canada East, East US, North Europe, UK South, West Europe, West US.
 
-#### Requesting hardware availability
-
-If you need hardware in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
+If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 
 1. For **Issue type**, select **Technical**. 
 1. Provide the desired subscription for the hardware. Select **Next**.
 1. For **Service type**, select **SQL Database**.
 1. For **Resource**, select **General question**.
 1. For **Summary**, provide the desired hardware availability and region.
-1. For **Problem type**, select **Service Tiers or Scaling Resources**.
-1. For **Problem subtype**, select **Purchasing models**.
+1. For **Problem type**, select **Security, Private and Compliance**.
+1. For **Problem subtype**, select **Always Encrypted**.
+
+:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="Request DC-series in a new region" loc-scope="azure-portal":::
 
 ## Compute resources (CPU and memory)
 

@@ -5,7 +5,7 @@ author: shreyaaithal
 ms.author: shaithal
 ms.reviewer: erinstellato
 ms.date: 10/12/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: quickstart
 ms.custom: intro-quickstart, ignite-2022
 ---

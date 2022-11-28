@@ -5,7 +5,7 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
 ms.date: 11/22/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

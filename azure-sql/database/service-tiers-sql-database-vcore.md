@@ -3,8 +3,8 @@ title: vCore purchasing model
 description: The vCore purchasing model lets you independently scale compute and storage resources, match on-premises performance, and optimize price for Azure SQL Database
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, sashan, moslake, mathoma
-ms.date: 10/12/2022
+ms.reviewer: sashan, moslake, mathoma
+ms.date: 11/28/2022
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -20,7 +20,7 @@ ms.custom:
 > * [Azure SQL Database](service-tiers-sql-database-vcore.md)
 > * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md)
 
-This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). For help choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU purchasing models](purchasing-models.md).
+This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). For help with choosing between the vCore and DTU purchasing models, see the [differences between the vCore and DTU purchasing models](purchasing-models.md).
 
 ## Overview
 
@@ -79,24 +79,33 @@ Compute tier options in the vCore model include the provisioned and [serverless]
 
 ## Hardware configuration
 
-Common hardware configurations in the vCore model include standard-series (Gen5), Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
+Common hardware configurations in the vCore model include standard-series (Gen5), premium-series, Fsv2-series, and DC-series. Hardware configuration defines compute and memory limits and other characteristics that impact workload performance.
 
 Certain hardware configurations such as standard-series (Gen5) may use more than one type of processor (CPU), as described in [Compute resources (CPU and memory)](#compute-resources-cpu-and-memory). While a given database or elastic pool tends to stay on the hardware with the same CPU type for a long time (commonly for multiple months), there are certain events that can cause a database or pool to be moved to hardware that uses a different CPU type. For example, a database or pool can be moved if it is scaled up or down to a different service objective, or if the current infrastructure in a datacenter is approaching its capacity limits, or if the currently used hardware is being decommissioned due to its end of life.
 
-For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance if a database or pool moves to a different CPU type.
+For some workloads, a move to a different CPU type can change performance. SQL Database configures hardware with the goal to provide predictable workload performance even if CPU type changes, keeping performance changes within a narrow band. However, across the wide spectrum of customer workloads running in SQL Database, and as new types of CPUs become available, it is possible to occasionally see more noticeable changes in performance of a database or pool moves to a different CPU type.
 
 Regardless of CPU type used, resource limits for a database or elastic pool, such as the number of cores, memory, max data IOPS, max log rate, and max concurrent workers, remain the same as long as the database stays on the same service objective.
 
-### Gen5
+### Standard-series (Gen5)
 
-- Gen5 hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series.
+- Standard-series (Gen5) hardware provides balanced compute and memory resources, and is suitable for most database workloads that do not have higher memory, higher vCore, or faster single vCore requirements as provided by Fsv2-series.
 
-For regions where Gen5 is available, see [Gen5 availability](#gen5).
+For regions where standard-series (Gen5) is available, see [Standard-series (Gen5) availability](#gen4gen5-1).
+
+### Premium-series
+
+- Premium-series hardware takes advantage of the latest Intel Ice Lake CPUs.
+- Memory optimized premium-series hardware offers higher memory to vCore ratio.
+- Hyperscale premium-series hardware offers faster throughout, lower latency, and faster processors.
+- For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
+ 
+For regions where standard-series (Gen5) is available, see [Premium-series availability](#premium-series-availability).
 
 ### Fsv2-series
 
 - Fsv2-series is a compute optimized hardware configuration delivering low CPU latency and high clock speed for the most CPU demanding workloads.
-- Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Gen5, at lower cost.
+- Depending on the workload, Fsv2-series can deliver more CPU performance per vCore than other types of hardware. For example, the 72 vCore Fsv2 compute size can provide more CPU performance than 80 vCores on Standard-series (Gen5), at lower cost.
 - Fsv2 provides less memory and `tempdb` per vCore than other hardware, so workloads sensitive to those limits may perform better on standard-series (Gen5).
 
 Fsv2-series in only supported in the General Purpose tier. For regions where Fsv2-series is available, see [Fsv2-series availability](#fsv2-series-1).
@@ -128,7 +137,7 @@ On the **Basics** tab, select the **Configure database** link in the **Compute +
 
 Select the desired hardware configuration:
 
-:::image type="content" source="./media/service-tiers-vcore/select-hardware.png" alt-text="A screenshot of the Azure portal on the SQL hardware confiugration page for a SQL database." loc-scope="azure-portal":::
+:::image type="content" source="./media/service-tiers-vcore/select-hardware.png" alt-text="A screenshot of the Azure portal on the SQL hardware configuration page for a SQL database." loc-scope="azure-portal":::
 
 **To change hardware configuration of an existing SQL Database or pool**
 
@@ -136,7 +145,7 @@ For a database, on the Overview page, select the **Pricing tier** link:
 
 :::image type="content" source="./media/service-tiers-vcore/change-hardware.png" alt-text="A screenshot of the Azure portal on the overview page of the adventure-works SQL database. The pricing tier 'General Purpose: Gen4, 1 vCore' is highlighted." loc-scope="azure-portal":::
 
-For a pool, on the Overview page, select **Configure**.
+For a pool, on the **Overview** page, select **Configure**.
 
 Follow the steps to change configuration, and select hardware configuration as described in the previous steps.
 
@@ -144,9 +153,14 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
 
-#### <a id="gen4gen5-1"></a><a id="gen5"></a> Gen5
+#### <a id="gen4gen5-1"></a><a id="gen5"></a> Standard-series (Gen5)
 
 Standard-series (Gen5) hardware is available in all public regions worldwide.
+
+#### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
+ 
+Hyperscale service tier (currently in preview) premium-series and premium-series memory-optimized hardware is available in the following regions:
+Canada Central, East US, South Central US, UK South, West US 2.
 
 #### Fsv2-series
 
@@ -158,18 +172,21 @@ Australia Central, Australia Central 2, Australia East, Australia Southeast, Bra
 DC-series is available in the following regions:
 Canada Central, Canada East, East US, North Europe, UK South, West Europe, West US.
 
-If you need DC-series in a currently unsupported region, [submit a support ticket](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
+If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 
-1. For **Issue type**, select **Technical**.
+1. For **Issue type**, select **Technical**. 
+1. Provide the desired subscription for the hardware. Select **Next**.
 1. For **Service type**, select **SQL Database**.
+1. For **Resource**, select **General question**.
+1. For **Summary**, provide the desired hardware availability and region.
 1. For **Problem type**, select **Security, Private and Compliance**.
 1. For **Problem subtype**, select **Always Encrypted**.
 
-:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to Request DC-series in a new region." loc-scope="azure-portal":::
+:::image type="content" source="./media/service-tiers-vcore/request-dc-series.png" alt-text="A screenshot of the Azure portal form to request DC-series in a new region." loc-scope="azure-portal":::
 
 ## Compute resources (CPU and memory)
 
-The following table compares compute resources in different hardware configurations and compute tiers: 
+The following table compares compute resources in different hardware configurations and compute tiers:
 
 |Hardware configuration  |CPU  |Memory  |
 |:---------|:---------|:---------|
@@ -179,9 +196,9 @@ The following table compares compute resources in different hardware configurati
 |M-series     |- Intel&reg; E7-8890 v3 2.5 GHz and Intel&reg; 8280M 2.7 GHz (Cascade Lake) processors<br>- Provision up to 128 vCores (hyper-threaded)|- 29 GB per vCore<br>- Provision up to 3.7 TB|
 |DC-series     | - Intel&reg; XEON E-2288G processors<br>- Featuring Intel Software Guard Extension (Intel SGX)<br>- Provision up to 8 vCores (physical) | 4.5 GB per vCore |
 
-\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake or AMD Milan).
+\* In the [sys.dm_user_db_resource_governance](/sql/relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database) dynamic management view, hardware generation for databases using Intel&reg; SP-8160 (Skylake) processors appears as Gen6, hardware generation for databases using Intel&reg; 8272CL (Cascade Lake) appears as Gen7, and hardware generation for databases using Intel Xeon&reg; Platinum 8307C (Ice Lake) or AMD&reg; EPYC&reg; 7763v (Milan) appear as Gen8. For a given compute size and hardware configuration, resource limits are the same regardless of CPU type (Intel Broadwell, Skylake, Ice Lake, Cascade Lake, or AMD Milan).
 
-For more information see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
+For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
 
 ## Previous generation hardware
 

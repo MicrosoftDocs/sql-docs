@@ -103,7 +103,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 |Instance options|sp_configure options:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|Now automatically configured. Setting has no effect.|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|
 |Instance options|sp_configure option 'priority boost'|System tables are no longer updatable. Setting has no effect. Use the Windows start /high ... program.exe option instead.|sp_configure 'priority boost'|199|
 |Instance options|sp_configure option 'remote proc trans'|System tables are no longer updatable. Setting has no effect.|sp_configure 'remote proc trans'|37|
-|Linked servers|Specifying the SQLOLEDB provider for linked servers.|SQL Server Native Client (SQLNCLI)|SQLOLEDDB for linked servers|19|
+|Linked servers|Specifying the SQLOLEDB provider for linked servers.|[Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](../connect/oledb/oledb-driver-for-sql-server.md)|SQLOLEDB for linked servers|19|
 |Locking|sp_lock|sys.dm_tran_locks|sp_lock|99|
 |Metadata|FILE_ID<br /><br /> INDEXKEY_PROPERTY|FILE_IDEX<br /><br /> sys.index_columns|FILE_ID<br /><br /> INDEXKEY_PROPERTY|15<br /><br /> 17|
 |Native XML Web Services|The CREATE ENDPOINT or ALTER ENDPOINT statement with the FOR SOAP option.<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|Use Windows Communications Foundation (WCF) or ASP.NET instead.|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|

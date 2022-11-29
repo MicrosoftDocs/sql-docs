@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Database and SQL Managed Instance service
 author: AbdullahMSFT
 ms.author: amamun
 ms.reviewer: wiassaf, mathoma, emlisa
-ms.date: 04/13/2022
+ms.date: 11/28/2022
 ms.service: sql-db-mi
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -17,6 +17,12 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 # High availability for Azure SQL Database and SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
+This article describes high availability in Azure SQL Database and Azure SQL Managed Instance. 
+
+Zone-redundant configuration is currently in preview for SQL Managed Instance, and only available for the Business Critical service tier. 
+
+## Overview
 
 The goal of the high availability architecture in Azure SQL Database and SQL Managed Instance is to guarantee that your database is up and running minimum of 99.99% of time without worrying about the impact of maintenance operations and outages. For more information regarding specific SLA for different tiers, refer to [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database) and SLA for [Azure SQL Managed Instance](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/). 
 
@@ -58,13 +64,9 @@ The zone-redundant version of the high availability architecture for the General
 ![Zone redundant configuration for General Purpose](./media/high-availability-sla/zone-redundant-for-general-purpose.png)
 
 > [!IMPORTANT]
-> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central, East US 2 & East US. This is in preview in the following regions: Southeast Asia, Australia East, Japan East, and UK South. 
-
-> [!IMPORTANT]
-> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql&preserve-view=true#azure-region-support). 
-
-> [!NOTE]
-> Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the standard-series (Gen5) hardware is selected.
+> - For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central, East US 2 & East US. This is in preview in the following regions: Southeast Asia, Australia East, Japan East, and UK South. 
+> - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support). 
+> - Zone-redundant configuration is only available in SQL Database when Gen5 hardware is selected. Zone-redundant configuration is currently in preview for SQL Managed Instance, and only available for the Business Critical service tier. 
 
 
 ## Premium and Business Critical service tier locally redundant availability
@@ -91,11 +93,22 @@ The zone-redundant version of the high availability architecture is illustrated 
 ![high availability architecture zone redundant](./media/high-availability-sla/zone-redundant-business-critical-service-tier.png)
 
 > [!IMPORTANT]
-> This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
+> - This feature is currently in preview for SQL Managed Instance, and only available on the Business Critical service tier. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
+> - For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support). 
 
 > [!IMPORTANT]
 > For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql&preserve-view=true#azure-region-support). 
 
+During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions: 
+
+- Brazil South
+- East US
+- Japan East
+- Norway East
+- UAE North
+- South Africa North
+- Australia East
+- Korea Central
 
 ## Hyperscale service tier locally redundant availability
 
@@ -124,13 +137,10 @@ Consider the following limitations:
 - Only standard-series (Gen5) hardware is supported.
 - Named replicas are not currently supported.
 - Zone redundancy cannot currently be specified when migrating an existing database from another Azure SQL Database service tier to Hyperscale.
+- At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
 
 > [!IMPORTANT]
-> At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
-
-> [!IMPORTANT]
-> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql&preserve-view=true#azure-region-support). 
-
+> For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support).
 
 ### Create a zone redundant Hyperscale database
 
@@ -245,7 +255,7 @@ az sql db show --resource-group "myResourceGroup" --server "myServerName" --name
 
 ## Accelerated Database Recovery (ADR)
 
-[Accelerated Database Recovery (ADR)](../accelerated-database-recovery.md) is a new database engine feature that greatly improves database availability, especially in the presence of long running transactions. ADR is currently available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
+[Accelerated Database Recovery (ADR)](../accelerated-database-recovery.md) is a database engine feature that greatly improves database availability, especially in the presence of long running transactions. ADR is currently available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 
 
@@ -259,7 +269,7 @@ A failover can be initiated using PowerShell, REST API, or Azure CLI:
 |:---|:---|:---|:---|
 |Database|[Invoke-AzSqlDatabaseFailover](/powershell/module/az.sql/invoke-azsqldatabasefailover)|[Database failover](/rest/api/sql/databases/failover)|[az rest](/cli/azure/reference-index#az-rest) may be used to invoke a REST API call from Azure CLI|
 |Elastic pool|[Invoke-AzSqlElasticPoolFailover](/powershell/module/az.sql/invoke-azsqlelasticpoolfailover)|[Elastic pool failover](/javascript/api/@azure/arm-sql/elasticpools)|[az rest](/cli/azure/reference-index#az-rest) may be used to invoke a REST API call from Azure CLI|
-|Managed Instance|[Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/Invoke-AzSqlInstanceFailover/)|[Managed Instances - Failover](/rest/api/sql/managed%20instances%20-%20failover/failover)|[az sql mi failover](/cli/azure/sql/mi/#az-sql-mi-failover) may be used to invoke a REST API call from Azure CLI|
+|SQL Managed Instance|[Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/Invoke-AzSqlInstanceFailover/)|[SQL Managed Instance - Failover](/rest/api/sql/managed%20instances%20-%20failover/failover)|[az sql mi failover](/cli/azure/sql/mi/#az-sql-mi-failover) may be used to invoke a REST API call from Azure CLI|
 
 > [!IMPORTANT]
 > The Failover command is not available for readable secondary replicas of Hyperscale databases.

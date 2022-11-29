@@ -2,8 +2,8 @@
 title: "Register a Standard .NET Framework Data Provider | Microsoft Docs"
 description: Register a standard .NET Framework data provider to use a third-party .NET Framework data provider to retrieve data for a Reporting Services report dataset.
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual

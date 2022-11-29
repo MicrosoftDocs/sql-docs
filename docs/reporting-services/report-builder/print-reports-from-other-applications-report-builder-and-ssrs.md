@@ -2,8 +2,8 @@
 title: "Print Reports from Other Applications (Report Builder) | Microsoft Docs"
 description: Report Builder lets you export to view a report in other applications. For printing, export a report if the application has print features that you want to use.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

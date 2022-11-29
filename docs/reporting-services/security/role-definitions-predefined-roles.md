@@ -2,8 +2,8 @@
 description: "Role definitions - predefined roles"
 title: "Role definitions - predefined roles | Microsoft Docs"
 ms.date: 02/04/2021
-ms.prod: reporting-services
-ms.technology: security
+ms.service: reporting-services
+ms.subservice: security
 
 
 ms.topic: conceptual

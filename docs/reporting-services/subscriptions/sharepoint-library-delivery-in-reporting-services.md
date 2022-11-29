@@ -2,8 +2,8 @@
 title: "SharePoint Library Delivery in Reporting Services | Microsoft Docs"
 description: Learn how to use the SharePoint library delivery extension in Reporting Services, using a subscription from an application page on a SharePoint site.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: subscriptions
+ms.service: reporting-services
+ms.subservice: subscriptions
 
 
 ms.topic: conceptual

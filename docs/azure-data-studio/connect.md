@@ -5,7 +5,7 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: "maghan"
 ms.date: 11/15/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: "how-to"
 ms.custom:
 ---

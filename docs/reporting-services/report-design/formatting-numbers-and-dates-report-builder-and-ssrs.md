@@ -3,8 +3,8 @@ title: "Formatting numbers and dates in paginated reports | Microsoft Docs"
 
 description: Learn how to format numbers and dates in Report Builder data regions in a paginated report by selecting a format from the Number page of the data region's Properties dialog box.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 title: "Project Property Pages Dialog Box | Microsoft Docs"
 description: Learn about the options in the Project Property Pages dialog box that allow you to configure deployment properties for a Report Server project.
 ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: reference

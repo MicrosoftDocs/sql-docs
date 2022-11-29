@@ -11,6 +11,7 @@ ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: ignite-fall-2021
 ---
+
 # Overview of the Azure SQL Managed Instance link feature (preview)
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

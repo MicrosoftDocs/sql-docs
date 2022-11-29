@@ -2,7 +2,7 @@
 description: "Add and Remove Encryption Keys for Scale-Out Deployment"
 title: "Add and Remove Encryption Keys for Scale-Out Deployment | Microsoft Docs"
 ms.date: 05/31/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 
 ms.topic: conceptual
 helpviewer_keywords: 

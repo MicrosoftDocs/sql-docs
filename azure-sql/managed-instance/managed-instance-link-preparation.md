@@ -17,14 +17,14 @@ ms.topic: how-to
 This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
-> Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
+> Some functionality of the link is generally available, while some is currently in preview. Review the [prerequisites](managed-instance-link-feature-overview.md#prerequisites) to learn more. 
 
 ## Prerequisites 
 
 To use the link with Azure SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
 
 ## Prepare your SQL Server instance

@@ -225,8 +225,22 @@ Specifies whether distributed transactions are enabled for this Availability Gro
 > [!NOTE]
 > Support for changing the DTC_SUPPORT setting of an Availability Group was introduced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2. This option cannot be used with earlier versions. To change this setting in earlier versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you must DROP and CREATE the availability group again.
  
- REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+
+Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Sets a minimum number of synchronous secondary replicas required to commit before the primary replica commits a transaction. Guarantees that SQL Server transactions wait until the transaction logs are updated on the minimum number of secondary replicas. 
+
+- Default: 0. Provides same behavior as [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. 
+- Minimum: 0.
+- Maximum: Number of replicas minus 1. 
+
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceeds. When the unresponsive database comes back online it will be in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica does not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available, then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT on a distributed availability group. This setting is not supported for CREATE AVAILABILITY GROUP. You can use ALTER AVAILABILITY GROUP to set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. For example:
+
+   ```sql
+   ALTER AVAILABILITY GROUP [<name>] 
+     SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = <integer>);
+   ```
 
  ROLE  
  The only valid parameter is 'SECONDARY', and this SET option is only valid in Distributed Availability Groups.  It is used to fail over a distributed availability group as documented here: [ALTER AVAILABILITY GROUP](../../database-engine/availability-groups/windows/configure-distributed-availability-groups.md) 

@@ -85,7 +85,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
    :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database.":::
 
 1. Select **Apply**. 
-1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose**, **Standard-series (Gen5), 2 vCores, 32 GB storage**.
+1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose**, **DC, 2 vCores, 32 GB storage**.
 1. Select **Next: Networking** at the bottom of the page.
 
    :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database - basics.":::

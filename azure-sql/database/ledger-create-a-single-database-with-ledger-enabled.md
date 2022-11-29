@@ -33,7 +33,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Screenshot that shows adding to Azure SQL.":::
+   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Screenshot of the Azure portal, select Azure SQL deployment page, creating a new single database.":::
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the Azure subscription you want to use.
 

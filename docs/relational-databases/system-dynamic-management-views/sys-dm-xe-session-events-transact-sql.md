@@ -37,8 +37,8 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 |event_fire_min_time|**bigint**|The minimum time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
 |event_fire_max_time|**bigint**|The maximum time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
   
-> NOTE
-> The `event_fire_count` and `event_fire_average_time` columns are populated only if trace flag 9708 is enabled.
+> [!NOTE]
+> The `event_fire_count` and `event_fire_average_time` columns are populated only when trace flag 9708 is enabled.
 
 ## Permissions
 

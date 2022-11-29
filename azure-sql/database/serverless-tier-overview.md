@@ -208,7 +208,7 @@ Creating a new database or moving an existing database into a serverless compute
 1. Specify the service objective. The service objective prescribes the service tier, hardware configuration, and max vCores. For service objective options, see [serverless resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5)
 
 
-2. Optionally, specify the min vCores and auto-pause delay to change their default values. The following table shows the available values for these parameters.
+2. Optionally, specify the min vCores and auto-pause delay to change their default values. The following table shows the available values for these parameters. 
 
    |Parameter|Value choices|Default value|
    |---|---|---|---|

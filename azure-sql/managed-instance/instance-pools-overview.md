@@ -64,7 +64,7 @@ Every instance pool creates a separate virtual cluster underneath. Instances wit
 
 There are several resource limitations regarding instance pools and instances inside pools:
 
-- Instance pools are available only on Gen5 hardware.
+- Instance pools are available only on standard-series (Gen5) hardware.
 - Managed instances within a pool have dedicated CPU and RAM, so the aggregated number of vCores across all instances must be less than or equal to the number of vCores allocated to the pool.
 - All [instance-level limits](resource-limits.md#service-tier-characteristics) apply to instances created within a pool.
 - In addition to instance-level limits, there are also two limits imposed *at the instance pool level*:

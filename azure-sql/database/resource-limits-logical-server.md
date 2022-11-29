@@ -20,7 +20,10 @@ ms.topic: reference
 
 This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes  resource governance mechanisms that are used to enforce these limits.
 
-For specific resource limits per pricing tier (also known as service objective) for single databases, refer to either [DTU-based single database resource limits](resource-limits-dtu-single-databases.md) or [vCore-based single database resource limits](resource-limits-vcore-single-databases.md). For elastic pool resource limits, refer to either [DTU-based elastic pool resource limits](resource-limits-dtu-elastic-pools.md) or [vCore-based elastic pool resource limits](resource-limits-vcore-elastic-pools.md).
+For specific resource limits per pricing tier (also known as service objective) for single databases, refer to either [DTU-based single database resource limits](resource-limits-dtu-single-databases.md) or [vCore-based single database resource limits](resource-limits-vcore-single-databases.md). For elastic pool resource limits, refer to either [DTU-based elastic pool resource limits](resource-limits-dtu-elastic-pools.md) or [vCore-based elastic pool resource limits](resource-limits-vcore-elastic-pools.md). For Azure Synapse Analytics dedicated SQL pool limits, see [capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits) and [memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+
+> [!NOTE]
+> The Gen5 hardware in the vCore purchasing model has been renamed to **standard-series (Gen5)**.
 
 > [!TIP]  
 > For Azure Synapse Analytics dedicated SQL pool limits, see [capacity limits](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits) and [memory and concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).

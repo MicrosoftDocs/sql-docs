@@ -2,8 +2,8 @@
 title: "Reporting Services Configuration Files | Microsoft Docs"
 description: Learn about configuration files where Reporting Services stores component information. You might need to modify the files to add or configure advanced settings.
 ms.date: 05/30/2019
-ms.prod: reporting-services
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual

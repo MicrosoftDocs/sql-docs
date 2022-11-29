@@ -4,8 +4,8 @@ description: This article has release notes for Azure Data Studio.
 author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
-ms.date: 11/16/2022
-ms.prod: azure-data-studio
+ms.date: 11/23/2022
+ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom:
   - seodec18
@@ -19,6 +19,72 @@ This article provides details about updates, improvements, and bug fixes for the
 ## Current Azure Data Studio release
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+### November 2022 (hotfix)
+
+Azure Data Studio 1.41 is the latest general availability (GA) release.
+
+- Release number: 1.40.1
+- Release date: November 23, 2022
+
+#### Bug fixes in 1.40.1
+
+| New Item | Details |
+|----------|---------|
+| Object Explorer | Fixed bug that caused folders in the Servers tree to display incorrect contents. |
+
+## Azure Data Studio feedback
+
+You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues/new/choose) for other known issues and to provide feedback to the product team.
+
+## Previous Azure Data Studio releases and updates
+
+| Azure Data Studio release | Build number | Release date | Hotfix |
+|---------------------------|--------------|--------------|---------|
+| [November 2022](#november-2022) | 1.40.0 | November 16, 2022 |N/A| 
+| [August 2022](#august-2022) | 1.39.1 | August 30, 2022 |[hotfix](#august-2022-hotfix)|
+| [August 2022](#august-2022) | 1.39.0 | August 24, 2022 |N/A|
+| [July 2022](#july-2022) | 1.38.0 | July 27, 2022 |N/A|
+| [June 2022](#june-2022) | 1.37.0 | June 15, 2022 |N/A|
+| [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#may-2022-hotfix)|
+| [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix)|
+| [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
+| [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
+| [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
+| [July 2021](#july-2021) | 1.31.0 | July 21, 2021 | N/A |
+| [June 2021](#june-2021) | 1.30.0 | June 17, 2021 | N/A |
+| [May 2021](#may-2021) | 1.29.0 | May 19, 2021 | N/A |
+| [April 2021](#april-2021) | 1.28.0 | April 15, 2021 | N/A |
+| [March 2021](#march-2021) | 1.27.0 | March 17, 2021 | N/A |
+| [February 2021](#february-2021) | 1.26.0 | February 18, 2021 | N/A |
+| [December 2020](#december-2020) | 1.25.0 | December 9, 2020 | [hotfix](#december-2020-hotfix) |
+| [November 2020](#november-2020) | 1.24.0 | November 12, 2020 | N/A |
+| [October 2020](#october-2020) | 1.23.0 | October 14, 2020 | N/A |
+| [September 2020](#september-2020) | 1.22.0 | September 22, 2020 | [hotfix](#september-2020-hotfix) |
+| [August 2020](#august-2020) | 1.21.0 | August 12, 2020 | N/A |
+| [July 2020](#july-2020) | 1.20.0 | July 15, 2020 | [hotfix](#july-2020-hotfix) |
+| [June 2020](#june-2020) | 1.19.0 | June 15, 2020 | N/A |
+| [May 2020](#may-2020) | 1.18.0 | May 20, 2020 | [hotfix](#may-2020-hotfix) |
+| [April 2020](#april-2020) | 1.17.0 | April 27, 2020 | [hotfix](#april-2020-hotfix) |
+| [March 2020](#march-2020) | 1.16.0 | March 18, 2020 | N/A |
+| [February 2020](#february-2020) | 1.15.0 | February 13, 2020 | [hotfix](#february-hotfix) |
+| [December 2019](#december-2019) | 1.14.0 | December 19, 2019 | [hotfix](#november-2019-hotfix) |
+| [November 2019](#november-2019) | 1.13.0 | November 4, 2019 | [hotfix](#november-2019-hotfix) |
+| [October 2019](#october-2019) | 1.12.0 | October 2, 2019 | [hotfix 1](#october-2019-hotfix) </br> [hotfix 2](#october-2019-hotfix-2) |
+| [September 2019](#september-2019) | 1.11.0 | September 10, 2019 | N/A |
+| [August 2019](#august-2019) | 1.10.0 | August 15, 2019 | N/A |
+| [July 2019](#july-2019) | 1.9.0 | July 11, 2019 | N/A |
+| [June 2019](#june-2019) | 1.8.0 | June 6, 2019 | N/A |
+| [May 2019](#may-2019) | 1.7.0 | May 8, 2019 | N/A |
+| [April 2019](#april-2019)| 1.6.0 | April 18, 2019 | N/A |
+| [March 2019](#march-2019) | 1.5.1 | March 18, 2019 | [hotfix](#march-2019-hotfix) |
+| [February 2019](#february-2019) | 1.4.5 | February 13, 2019 | N/A |
+| [January 2019](#january-2019) | 1.3.8 | January 09, 2019 | [hotfix](#january-2019-hotfix) |
+
+[Download the previous release of Azure Data Studio](https://github.com/microsoft/azuredatastudio/releases).
+
+> [!NOTE]
+> All previous versions of Azure Data Studio are not supported.
 
 ### November 2022
 
@@ -73,58 +139,6 @@ Azure Data Studio 1.40 is the latest general availability (GA) release.
 | Query Plan Viewer | Fixed missing index recommendation T-SQL syntax. |
 | SQL Projects | Fixed bug in SQL Projects that led to extension not using output path when publishing a project. |
 | SQL Projects | Fixed bug that caused .NET install to not be found when using the SQL Projects extension on Linux platforms. |
-
-## Azure Data Studio feedback
-
-You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues/new/choose) for other known issues and to provide feedback to the product team.
-
-## Previous Azure Data Studio releases and updates
-
-| Azure Data Studio release | Build number | Release date | Hotfix |
-|---------------------------|--------------|--------------|---------|
-| [August 2022](#august-2022) | 1.39.1 | August 30, 2022 |[hotfix](#august-2022-hotfix)|
-| [August 2022](#august-2022) | 1.39.0 | August 24, 2022 |N/A|
-| [July 2022](#july-2022) | 1.38.0 | July 27, 2022 |N/A|
-| [June 2022](#june-2022) | 1.37.0 | June 15, 2022 |N/A|
-| [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#may-2022-hotfix)|
-| [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix)|
-| [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
-| [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
-| [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |
-| [July 2021](#july-2021) | 1.31.0 | July 21, 2021 | N/A |
-| [June 2021](#june-2021) | 1.30.0 | June 17, 2021 | N/A |
-| [May 2021](#may-2021) | 1.29.0 | May 19, 2021 | N/A |
-| [April 2021](#april-2021) | 1.28.0 | April 15, 2021 | N/A |
-| [March 2021](#march-2021) | 1.27.0 | March 17, 2021 | N/A |
-| [February 2021](#february-2021) | 1.26.0 | February 18, 2021 | N/A |
-| [December 2020](#december-2020) | 1.25.0 | December 9, 2020 | [hotfix](#december-2020-hotfix) |
-| [November 2020](#november-2020) | 1.24.0 | November 12, 2020 | N/A |
-| [October 2020](#october-2020) | 1.23.0 | October 14, 2020 | N/A |
-| [September 2020](#september-2020) | 1.22.0 | September 22, 2020 | [hotfix](#september-2020-hotfix) |
-| [August 2020](#august-2020) | 1.21.0 | August 12, 2020 | N/A |
-| [July 2020](#july-2020) | 1.20.0 | July 15, 2020 | [hotfix](#july-2020-hotfix) |
-| [June 2020](#june-2020) | 1.19.0 | June 15, 2020 | N/A |
-| [May 2020](#may-2020) | 1.18.0 | May 20, 2020 | [hotfix](#may-2020-hotfix) |
-| [April 2020](#april-2020) | 1.17.0 | April 27, 2020 | [hotfix](#april-2020-hotfix) |
-| [March 2020](#march-2020) | 1.16.0 | March 18, 2020 | N/A |
-| [February 2020](#february-2020) | 1.15.0 | February 13, 2020 | [hotfix](#february-hotfix) |
-| [December 2019](#december-2019) | 1.14.0 | December 19, 2019 | [hotfix](#november-2019-hotfix) |
-| [November 2019](#november-2019) | 1.13.0 | November 4, 2019 | [hotfix](#november-2019-hotfix) |
-| [October 2019](#october-2019) | 1.12.0 | October 2, 2019 | [hotfix 1](#october-2019-hotfix) </br> [hotfix 2](#october-2019-hotfix-2) |
-| [September 2019](#september-2019) | 1.11.0 | September 10, 2019 | N/A |
-| [August 2019](#august-2019) | 1.10.0 | August 15, 2019 | N/A |
-| [July 2019](#july-2019) | 1.9.0 | July 11, 2019 | N/A |
-| [June 2019](#june-2019) | 1.8.0 | June 6, 2019 | N/A |
-| [May 2019](#may-2019) | 1.7.0 | May 8, 2019 | N/A |
-| [April 2019](#april-2019)| 1.6.0 | April 18, 2019 | N/A |
-| [March 2019](#march-2019) | 1.5.1 | March 18, 2019 | [hotfix](#march-2019-hotfix) |
-| [February 2019](#february-2019) | 1.4.5 | February 13, 2019 | N/A |
-| [January 2019](#january-2019) | 1.3.8 | January 09, 2019 | [hotfix](#january-2019-hotfix) |
-
-[Download the previous release of Azure Data Studio](https://github.com/microsoft/azuredatastudio/releases).
-
-> [!NOTE]
-> All previous versions of Azure Data Studio are not supported.
 
 ### August 2022 (hotfix)
 

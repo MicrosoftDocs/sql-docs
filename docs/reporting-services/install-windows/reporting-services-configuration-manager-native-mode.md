@@ -2,7 +2,7 @@
 description: "Report Server Configuration Manager (Native Mode)"
 title: "Report Server Configuration Manager (Native Mode) | Microsoft Docs"
 ms.date: 09/20/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -5,7 +5,7 @@ ms.date: 04/11/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.custom:

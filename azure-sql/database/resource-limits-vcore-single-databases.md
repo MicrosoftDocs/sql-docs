@@ -23,7 +23,7 @@ This article provides the detailed resource limits for single databases in Azure
 * For more information regarding the different purchasing models, see [Purchasing models and service tiers](purchasing-models.md).
 
 > [!IMPORTANT]
-> - Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).\
+> - Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 > - For scaling guidance and considerations, see [Scale a single database](single-database-scale.md).
 
 Each read-only replica of a database has its own resources, such as vCores, memory, data IOPS, `tempdb`, workers, and sessions. Each read-only replica is subject to the resource limits detailed later in this article.

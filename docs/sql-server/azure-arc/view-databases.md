@@ -1,6 +1,6 @@
 ---
-title: View SQL Server databases
-description: View databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to help manage SQL Server databases centrally, as Arc-enabled resources.
+title: Inventory SQL Server databases
+description: Inventory databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to help manage SQL Server databases centrally, as Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
@@ -10,9 +10,9 @@ ms.custom:
 ms.service: sql
 ---
 
-# View SQL Server databases - Azure Arc
+# Inventory SQL Server databases - Azure Arc
 
-You can view SQL Server databases in Azure.
+You can inventory SQL Server databases in Azure.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Before you begin, verify that the SQL Server instance that hosts the databases:
 * Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
 * Is connected to the internet directly or through a proxy server.
 
-## View databases
+## Inventory databases
 
 1. Locate the Azure Arc-enabled SQL Server instance in Azure portal
 1. **Select** the SQL Server resource.

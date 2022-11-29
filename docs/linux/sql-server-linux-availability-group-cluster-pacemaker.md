@@ -635,7 +635,7 @@ The steps to create an availability group on Linux servers for high availability
 1. Install Pacemaker packages. On all nodes, run the following commands:
 
    ```bash
-   sudo apt-get install -y pacemaker pacemaker-cli-utils crmsh resource-agents fence-agents csync2 python3-azure
+   sudo apt-get install -y pacemaker pacemaker-cli-utils crmsh resource-agents fence-agents corosync python3-azure
    ```
 
 1. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes.

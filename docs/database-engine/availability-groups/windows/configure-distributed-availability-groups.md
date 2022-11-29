@@ -314,7 +314,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 There are two different sets of instructions to fail over to a secondary availability group. Use the instructions appropriate for your version and configuration.
 
-::: moniker range="<=sql-server-ver16"
+::: moniker range=">=sql-server-ver16"
 
 The instructions below apply to [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later, if REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is set.
 

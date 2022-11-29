@@ -2,8 +2,8 @@
 title: "Planning for Reporting Services | Microsoft Docs"
 description: Learn how to install and configure the SQL Server Reporting Services (SSRS) environment to best fit your needs.
 ms.date: 09/12/2016
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

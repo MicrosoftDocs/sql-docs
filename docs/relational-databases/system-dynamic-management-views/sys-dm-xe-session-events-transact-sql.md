@@ -3,7 +3,7 @@ title: "sys.dm_xe_session_events (Transact-SQL)"
 description: sys.dm_xe_session_events (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/30/2022"
+ms.date: "11/28/2022"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -32,7 +32,14 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 |event_name|**nvarchar(256)**|The name of the event that an action is bound to. Is not nullable.|  
 |event_package_guid|**uniqueidentifier**|The GUID for the package containing the event. Is not nullable.|  
 |event_predicate|**nvarchar(3072)**|An XML representation of the predicate tree that is applied to the event. Is nullable.|  
+|event_fire_count|**bigint**|The number of times the event has fired (was published) since the session was started. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
+|event_fire_average_time|**bigint**|The average time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
+|event_fire_min_time|**bigint**|The minimum time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
+|event_fire_max_time|**bigint**|The maximum time taken to publish the event, in microseconds. Is not nullable. Applies to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later.|  
   
+> [!NOTE]
+> The `event_fire_count` and `event_fire_average_time` columns are populated only when trace flag 9708 is enabled.
+
 ## Permissions
 
 Requires VIEW SERVER STATE permission on the server.  

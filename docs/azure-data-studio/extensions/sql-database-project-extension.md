@@ -5,7 +5,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.date: 05/24/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

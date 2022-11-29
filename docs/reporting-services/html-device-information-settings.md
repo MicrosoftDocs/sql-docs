@@ -2,8 +2,8 @@
 title: "HTML Device Information Settings | Microsoft Docs"
 description: Learn about the various device information settings that are available for rendering in HTML format.
 ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

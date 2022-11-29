@@ -57,7 +57,7 @@ The following sources are supported:
 
 Building a custom solution to migrate databases to the cloud with LRS requires several orchestration steps, as shown in the diagram and table later in this section.
 
-Migration consists of taking database backups on a SQL Server instance, and copying backup files to a Azure Blob Storage account. Full, log, and differential backups are supported. You then use the LRS cloud service to restore backup files from the Azure Blob Storage account to the SQL Managed Instance deployment. The Blob Storage account serves as intermediary storage for backup files between your SQL Server instance and your SQL Managed Instance deployment.
+Migration consists of taking database backups on a SQL Server instance, and copying backup files to an Azure Blob Storage account. Full, log, and differential backups are supported. You then use the LRS cloud service to restore backup files from the Azure Blob Storage account to the SQL Managed Instance deployment. The Blob Storage account serves as intermediary storage for backup files between your SQL Server instance and your SQL Managed Instance deployment.
 
 LRS monitors your Blob Storage account for any new differential or log backups that are added after the full backup has been restored. LRS then automatically restores these new files. You can use the service to monitor the progress of backup files that are being restored to the SQL Managed Instance deployment, and stop the process if necessary.
 
@@ -110,12 +110,12 @@ Use continuous mode migration when you don't have the entire backup chain in adv
 
 If you're migrating large databases of several terabytes in size, consider the following:
 - A single LRS job can run for a maximum of 30 days. When this period expires, the job is automatically canceled.
-- In the case of long-running jobs, system updates will interrupt and prolong migration jobs. We highly recommend that you use a [maintenance window]( ../database/maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
+- For long-running jobs, system updates will interrupt and prolong migration jobs. We highly recommend that you use a [maintenance window]( ../database/maintenance-window.md) to schedule planned system updates. Plan your migration around the scheduled maintenance window.
 - Migration jobs that are interrupted by system updates are automatically suspended and resumed for General Purpose managed instances, and they're restarted for Business Critical managed instances. These updates will affect the timeframe of your migration.
-- To increase the upload speed of your SQL Server backup files to the Blob Storage account, provided that there is sufficient network bandwidth from your infrastructure, consider using parallelization with multiple threads.
+- To increase the upload speed of your SQL Server backup files to the Blob Storage account, if your infrastructure has sufficient network bandwidth, consider using parallelization with multiple threads.
 
 
-## Starting the migration
+## Start the migration
 
 You start the migration by starting LRS. You can start the service in either autocomplete or continuous mode. For specific details, review [Migrate with LRS](log-replay-service-migrate.md). 
 

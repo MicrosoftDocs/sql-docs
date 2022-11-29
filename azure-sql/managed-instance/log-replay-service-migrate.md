@@ -42,12 +42,12 @@ Make sure that you meet the following requirements for SQL Server:
 - A full backup of databases (one or multiple files).
 - A differential backup (one or multiple files).
 - A log backup (not split for a transaction log file).
-- For SQL Server versions 2008 to 2016, take a backup locally and [manually upload](#copy-existing-backups-to-blob-storage) it to Azure Blob Storage. 
+- For SQL Server versions 2008 to 2016, take a backup locally and [manually upload](#copy-existing-backups-to-blob-storage) it to your Azure Blob Storage account. 
 - For SQL Server 2016 and later, you can [take your backup directly](#take-backups-directly-to-blob-storage) to your Azure Blob Storage account. 
 - For SQL Server 2022, you can choose to use a managed identity instead of a shared access signature (SAS) token to authenticate to your Azure Blob Storage account. 
 
 
-While having `CHECKSUM` enabled for backups is not required, it is highly recommended for faster restore operations. 
+Although having `CHECKSUM` enabled for backups isn't required, we highly recommend it for faster restore operations. 
 
 ### Azure 
 
@@ -92,7 +92,7 @@ System updates on a SQL Managed Instance deployment take precedence over databas
 
 If you're migrating multiple databases by using the same Azure Blob Storage container, you must place backup files for different databases in separate folders inside the container. All backup files for a single database must be placed in a flat-file structure inside a database folder, and the folders can't be nested. Nesting folders inside database folders isn't supported. 
 
-Here is an example of a folder structure inside an Azure Blob Storage container, a structure that's required to migrate multiple databases by using LRS.
+Here's an example of a folder structure inside an Azure Blob Storage container, a structure that's required to migrate multiple databases by using LRS.
 
 ```URI
 -- Place all backup files for database 1 in a separate "database1" folder in a flat-file structure.
@@ -116,7 +116,7 @@ You use an Azure Blob Storage account as intermediary storage for backup files b
 1. [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
 1. [Create a blob container](/azure/storage/blobs/storage-quickstart-blobs-portal) inside the storage account.
 
-## Authenticate to Blob Storage
+## Authenticate to your Blob Storage account
 
 Use either an SAS token or a managed identity to access your Azure Blob Storage account. 
 
@@ -243,7 +243,7 @@ WITH IDENTITY = 'MANAGED IDENTITY'
 
 ## Upload backups from your SQL Server instance to your Blob Storage account
 
-When your blob container is ready and you've confirmed that your managed instance can access the container, you can start to upload your backups to Blob Storage. You can either copy your backups to your Blob Storage account or, if your environment allows it, starting with SQL Server versions 2012 SP1 CU2 and SQL Server 2014, you can take backups from your SQL Server instance directly to your Blob Storage account by using the [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) command. 
+When your blob container is ready and you've confirmed that your managed instance can access the container, you can begin uploading your backups to your Blob Storage account. You can either copy your backups to your Blob Storage account or, if your environment allows it, starting with SQL Server versions 2012 SP1 CU2 and SQL Server 2014, you can take backups from your SQL Server instance directly to your Blob Storage account by using the [BACKUP TO URL](/sql/relational-databases/backup-restore/sql-server-backup-to-url) command. 
 
 
 
@@ -263,7 +263,7 @@ SET RECOVERY FULL
 GO
 ```
 
-To manually make full, differential, and log backups of your database to local storage, use the following sample T-SQL scripts. `CHECKSUM` is not required, but recommended. 
+To manually make full, differential, and log backups of your database to local storage, use the following sample T-SQL scripts. `CHECKSUM` isn't required, but we do recommend it. 
 
 
 The following example takes a full database backup to the local disk: 

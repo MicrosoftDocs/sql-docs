@@ -2,8 +2,8 @@
 title: "Tutorial: Introducing Expressions | Microsoft Docs"
 description: Learn to use expressions with common functions and operators to create powerful and flexible Reporting Services paginated reports.
 ms.date: 09/16/2016
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc

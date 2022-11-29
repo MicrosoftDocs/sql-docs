@@ -2,8 +2,8 @@
 title: "Report design tips for paginated reports | Microsoft Docs"
 description: Identify visual design methods for better data display in Report Builder. Customize your reports with charts, databars, indicators, sparklines, tables, and maps in a paginated report.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

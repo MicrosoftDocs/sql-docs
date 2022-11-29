@@ -1,7 +1,7 @@
 ---
 title: Overview of the Azure SQL Managed Instance link feature (preview)
 titleSuffix: Azure SQL Managed Instance
-description: This article describes the link feature of Azure SQL Managed Instance, which you can use to replicate data continuously from SQL Server to the cloud or migrate your SQL Server databases with minimal downtime.
+description: This article describes the link feature of Azure SQL Managed Instance, which you can use to replicate data continuously from a SQL Server instance to the cloud or migrate your SQL Server databases with minimal downtime.
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
@@ -11,11 +11,12 @@ ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: ignite-fall-2021
 ---
+
 # Overview of the Azure SQL Managed Instance link feature (preview)
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of the SQL Managed Instance link feature, which enables near real-time data replication from SQL Server to your Azure SQL Managed Instance deployment. The link provides hybrid flexibility and database mobility as it unlocks a number of scenarios, such as scaling read-only workloads, offloading analytics and reporting to Azure, and migrating to the cloud. And, with SQL Server 2022, the SQL Managed Instance link feature enables disaster recovery. 
+This article provides an overview of the SQL Managed Instance link feature, which enables near real-time data replication from a SQL Server instance to an Azure SQL Managed Instance deployment. The link provides hybrid flexibility and database mobility as it unlocks several scenarios, such as scaling read-only workloads, offloading analytics and reporting to Azure, and migrating to the cloud. And, with SQL Server 2022, the SQL Managed Instance link feature enables disaster recovery. 
 
 If you have product improvement suggestions or comments, or you want to report issues, contact our team through [SQL Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
 
@@ -27,8 +28,8 @@ The link supports single node SQL Server instances without existing availability
 
 The link feature currently offers the following functionality:
 
-- **One-way replication (SQL Server versions 2017 to 2019)**: Use the link feature to replicate data one way from SQL Server to your Azure SQL Managed Instance deployment. Although you can manually fail over to your managed instance in the event of a disaster, doing so breaks the link, and failing back is not supported. 
-- **Disaster recovery (SQL Server 2022)**: Use the link feature to replicate data from SQL Server 2022 to your Azure SQL Managed Instance deployment, manually fail over to your managed instance in the event of a disaster, and fail back to SQL Server after the disaster is mitigated.  
+- **One-way replication (SQL Server versions 2017 to 2019)**: Use the link feature to replicate data one way from a SQL Server instance to your managed instance. Although you can manually fail over to your managed instance if there's a disaster, doing so breaks the link, and failing back isn't supported. 
+- **Disaster recovery (SQL Server 2022)**: Use the link feature to replicate data from a SQL Server 2022 instance to your managed instance, manually fail over to your managed instance during a disaster, and fail back to SQL Server after you've mitigated the disaster.  
 
     This feature is currently in limited public preview. [You must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup) so that the product group can configure your environment for the preview. 
 
@@ -72,7 +73,7 @@ The underlying technology behind the link feature for SQL Managed Instance creat
 
 Secure connectivity, such as a VPN or Azure ExpressRoute is used between an on-premises network and Azure. If SQL Server is hosted on an Azure VM, the internal Azure backbone can be used between the VM and managed instance – such as, for example, virtual network peering. The trust between the two systems is established using certificate-based authentication, in which SQL Server and SQL Managed Instance exchange their public keys.
 
-There could exist up to 100 links from the same, or various SQL Server sources to a single SQL Managed Instance. This limit is governed by the number of databases that could be hosted on a managed instance at this time. Likewise, a single SQL Server can establish multiple parallel database replication links with several managed instances in different Azure regions in a 1 to 1 relationship between a database and a managed instance. 
+There can be up to 100 links from the same or various SQL Server sources to a single SQL Managed Instance deployment. This limit is governed by the number of databases that can be hosted on a managed instance at the same time. Likewise, a single SQL Server instance can establish multiple parallel database replication links with several managed instances in different Azure regions in a one-to-one relationship between a database and a managed instance. 
 
 ## Supported scenarios
 
@@ -91,18 +92,18 @@ Use the link feature to take advantage of Azure services by using SQL Server dat
 
 ### Offload workloads to Azure 
 
-You can also use the link feature to offload workloads to Azure. For example, an application could use SQL Server for read/write workloads, while it offloads read-only workloads to your SQL Managed Instance deployment in any Azure region worldwide. After the link is established, the primary database on SQL Server is read/write accessible, while replicated data to your managed instance in Azure is read-only accessible. This allows for various scenarios where replicated databases on your managed instance can be used for read scale-out and offloading read-only workloads to Azure. Your SQL Managed Instance deployment, in parallel, can also host independent read/write databases. This allows for copying the replicated database to another read/write database on the same managed instance for further data processing.
+You can also use the link feature to offload workloads to Azure. For example, an application could use SQL Server for read/write workloads, while it offloads read-only workloads to SQL Managed Instance deployments in any Azure region worldwide. After the link is established, the primary database on SQL Server is read/write accessible, while replicated data to your managed instance in Azure is read-only accessible. This arrangement allows for various scenarios where replicated databases on your managed instance can be used for read scale-out and offloading read-only workloads to Azure. Your managed instance, in parallel, can also host independent read/write databases. This allows for copying the replicated database to another read/write database on the same managed instance for further data processing.
 
-The link is database scoped (one link per one database), allowing for consolidation and deconsolidation of workloads in Azure. For example, you can replicate databases from multiple SQL Server instances to a single SQL Managed Instance deployment in Azure (consolidation), or you can replicate databases from a single SQL Server instance to multiple managed instances via a 1-to-1 relationship between a database and a managed instance, to any Azure region worldwide (deconsolidation). The latter option provides you with an efficient way to quickly bring your workloads closer to your customers in any region worldwide, which you can use as read-only replicas.
+The link is database scoped (one link per one database), allowing for consolidation and deconsolidation of workloads in Azure. For example, you can replicate databases from multiple SQL Server instances to a single SQL Managed Instance deployment in Azure (consolidation), or you can replicate databases from a single SQL Server instance to multiple managed instances via a one-to-one relationship between a database and a managed instance, to any Azure region worldwide (deconsolidation). The latter option provides you with an efficient way to quickly bring your workloads closer to your customers in any region worldwide, which you can use as read-only replicas.
 
 ### Migrate to Azure 
 
 The link feature also facilitates migrating from SQL Server to your SQL Managed Instance deployment, enabling: 
 
 - The most performant, minimal downtime migration, compared to all other solutions available today.
-- True online migration to a SQL Managed Instance in any service tier. 
+- True online migration to a SQL Managed Instance deployment in any service tier. 
 
-Because the link feature enables minimal downtime migration, you can migrate to your managed instance while maintaining your primary workload online. Although online migration was possible to achieve previously with other solutions during migrations to the General Purpose service tier, the link feature now also allows for true online migrations to the Business Critical service tier as well. 
+Because the link feature enables minimal downtime migration, you can migrate to your managed instance as you maintain your primary workload online. Although online migration was possible to achieve previously, via other solutions during migrations to the *General Purpose* service tier, the link feature now also allows for true online migrations to the *Business Critical* service tier as well. 
 
 ### Automated backups 
 
@@ -143,9 +144,9 @@ Consider the following limitations when you're using the link.
 
 * Version supportability limitations include: 
 
-  - Client Windows versions 10 and 11 can't be used to host your SQL Server instance, because it's not possible to enable the Always On availability group feature that's required for the link. The SQL Server instance must be hosted on Windows Server 2012 or later.
+  - You can't use client Windows versions 10 and 11 to host your SQL Server instance, because it's not possible to enable the Always On availability group feature that's required for the link. The SQL Server instance must be hosted on Windows Server 2012 or later.
 
-  - SQL Server versions 2008 to 2014 aren't supported by the link feature, because the SQL engine of these releases doesn't have built-in support for the distributed availability groups that are required for the link. Upgrade to a later version of SQL Server to use the link.
+  - The link feature doesn't support SQL Server versions 2008 to 2014, because the SQL engine of these releases doesn't have built-in support for the distributed availability groups that are required for the link. Upgrade to a later version of SQL Server to use the link.
 
 
 * Data replication limitations include: 
@@ -172,15 +173,15 @@ Consider the following limitations when you're using the link.
 
 * Feature limitations include: 
 
-  - [Auto failover group](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance deployments can't be used in parallel while you're operating the SQL Managed Instance link with the SQL Server instance.
+  - You can't use [Auto failover group](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance deployments in parallel while you're operating the SQL Managed Instance link with the SQL Server instance.
 
-  - If you're using Change Data Capture (CDC), log shipping, or a service broker with databases that are replicated on the SQL Server instance, when the database is migrated to a SQL Managed Instance deployment, during a failover to Azure, clients will need to connect using the instance name of the current global primary replica. These settings should be manually reconfigured. 
+  - If you're using Change Data Capture (CDC), log shipping, or a service broker with databases that are replicated on the SQL Server instance, when the database is migrated to a SQL Managed Instance deployment, during a failover to Azure, clients need to connect by using the instance name of the current global primary replica. These settings should be manually reconfigured. 
 
   - If you're using transactional replication with a database on a SQL Server instance in a migration scenario, during failover to Azure, the transactional replication on the SQL Managed Instance deployment will fail and should be manually reconfigured. 
 
-  - If distributed transactions are used with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
+  - If you're using distributed transactions with a database that's replicated from the SQL Server instance and, in a migration scenario, on the cutover to the cloud, Distributed Transaction Coordinator capabilities won't be transferred. It's not possible for the migrated database to get involved in distributed transactions with the SQL Server instance, because the SQL Managed Instance deployment doesn't support distributed transactions with SQL Server at this time. For reference, SQL Managed Instance today supports distributed transactions only between other managed instances. For more information, see [Distributed transactions across cloud databases](../database/elastic-transactions-overview.md#transactions-for-sql-managed-instance).
 
-  - The link can't be established between the SQL Server instance and the SQL Managed Instance deployment if the functionality that's used on the SQL Server instance isn't supported on the managed instance. For example: 
+  - You can't establish a link between the SQL Server instance and the SQL Managed Instance deployment if the functionality that's used on the SQL Server instance isn't supported on the managed instance. For example: 
 
     - File tables and file streams aren't supported for replication, because SQL Managed Instance doesn't support them.
 

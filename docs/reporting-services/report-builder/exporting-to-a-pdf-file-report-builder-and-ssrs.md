@@ -2,8 +2,8 @@
 title: "Export a paginated report to a PDF File (Report Builder) | Microsoft Docs"
 description: In Report Builder, the PDF rendering extension renders paginated reports to files that can be opened in Adobe Acrobat and other third-party PDF viewers.
 ms.date: 03/29/2022
-ms.prod: reporting-services
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual

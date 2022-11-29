@@ -2,8 +2,8 @@
 title: "Plan for report design and report deployment | Reporting Services | Microsoft Docs"
 description:  Learn how to plan a report authoring and report server environment that work together using Reporting Services.
 ms.date: 09/12/2016
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

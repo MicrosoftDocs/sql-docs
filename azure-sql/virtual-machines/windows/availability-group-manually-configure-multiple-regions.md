@@ -419,7 +419,7 @@ To configure the load balancer, you need to create a back-end pool, create a pro
 
 ### Set the probe
 
-1. Select the load balancer, choose **Health probes**, and then select **+Add**.
+1. In the Azure portal, select the load balancer, select **Health probes**, and then select **+Add**.
 
 1. Set the listener health probe as follows:
 
@@ -434,7 +434,7 @@ To configure the load balancer, you need to create a back-end pool, create a pro
 
 ### Set the load-balancing rules
 
-1. Select the load balancer, choose **Load balancing rules**, and then select **+Add**.
+1. In the Azure portal, select the load balancer, select **Load balancing rules**, and then select **+Add**.
 
 1. Set the listener load-balancing rules as follows:
 

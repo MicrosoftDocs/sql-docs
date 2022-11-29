@@ -41,7 +41,7 @@ The following table summarizes the prerequisites that you need to complete:
 |:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **SQL Server Agent service account** | Domain account |  
 |:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Firewall ports open** | - SQL Server: **1433** for a default instance <br/> - Database mirroring endpoint: **5022** or any available port <br/> - Load balancer IP address health probe for an availability group: **59999** or any available port <br/> - Load balancer IP address health probe for cluster core: **58888** or any available port |
 |:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Failover clustering** | Required for both SQL Server instances |
-|:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Installation domain account** | - Local administrator on each SQL Server instance <br/> - Member of the *sysadmin* fixed server role for each SQL Server instance  |
+|:::image type="icon" source="./media/availability-group-manually-configure-tutorial-single-subnet/square.png" border="false":::   **Installation domain account** | - Local administrator on each SQL Server instance <br/> - Member of the **sysadmin** fixed server role for each SQL Server instance  |
 
 ## <a name="create-the-cluster"></a> Create the cluster
 
@@ -53,7 +53,7 @@ The first task is to create a Windows Server failover cluster that includes two 
    >In the [prerequisites](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md), you created an account called **CORP\Install**. Use this account.
 
 1. On the **Server Manager** dashboard, select **Tools**, and then select **Failover Cluster Manager**.
-1. On the left pane, right-click **Failover Cluster Manager**, and then select **Create a Cluster**.
+1. On the left pane, right-click **Failover Cluster Manager**, and then select **Create Cluster**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/40-createcluster.png" alt-text="Screenshot of Failover Cluster Manager and the option for creating a cluster on the shortcut menu.":::
 
@@ -61,8 +61,8 @@ The first task is to create a Windows Server failover cluster that includes two 
 
    | Page | Setting |
    | --- | --- |
-   | **Before You Begin** |Use defaults |
-   | **Select Servers** |Type the first SQL Server name in **Enter server name**, and then select **Add**. |
+   | **Before You Begin** |Use defaults. |
+   | **Select Servers** |Enter the first SQL Server name in **Enter server name**, and then select **Add**. |
    | **Validation Warning** |Select **No. I do not require support from Microsoft for this cluster, and therefore do not want to run the validation tests. When I select Next, continue Creating the cluster**. |
    | **Access Point for Administering the Cluster** |In **Cluster Name**, enter a cluster name (for example, **SQLAGCluster1**).|
    | **Confirmation** |Use defaults unless you're using Storage Spaces. |
@@ -72,7 +72,7 @@ The first task is to create a Windows Server failover cluster that includes two 
 > [!NOTE]
 > On Windows Server 2019, the cluster creates a **Distributed Server Name** value instead of the **Cluster Network Name** value. If you're using Windows Server 2019, skip any steps that refer to the cluster core name in this tutorial. You can create a cluster network name by using [PowerShell](failover-cluster-instance-storage-spaces-direct-manually-configure.md#create-windows-failover-cluster). For more information, review the blog post [Failover Cluster: Cluster Network Object](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-server-2019-insider-preview-build-17733/#W0YAxO8BfwBRbkzG.97).
 
-1. In Failover Cluster Manager, scroll down to **Cluster Core Resources** and expand the cluster details. You should see both the **Name** and the **IP Address** resources in the **Failed** state. 
+1. In **Failover Cluster Manager**, scroll down to **Cluster Core Resources** and expand the cluster details. Both the **Name** and **IP Address** resources should be in the **Failed** state. 
 
    The IP address resource can't be brought online because the cluster is assigned the same IP address as the machine itself. It's a duplicate address.
 
@@ -109,7 +109,7 @@ The first task is to create a Windows Server failover cluster that includes two 
 
 1. Select **Finish**.
 
-   Failover Cluster Manager shows that your cluster has a new node and lists it in the **Nodes** container.
+   **Failover Cluster Manager** shows that your cluster has a new node and lists it in the **Nodes** container.
 
 1. Sign out of the remote desktop session.
 
@@ -154,7 +154,7 @@ In this example, the Windows cluster uses a file share to create a cluster quoru
 
 1. Connect to the first cluster node by using a remote desktop session.
 
-1. In Failover Cluster Manager, right-click the cluster, point to **More Actions**, and then select **Configure Cluster Quorum Settings**.
+1. In **Failover Cluster Manager**, right-click the cluster, point to **More Actions**, and then select **Configure Cluster Quorum Settings**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/52-configure-quorum.png" alt-text="Screenshot of Failover Cluster Manager that shows selections for configuring cluster quorum settings.":::
 
@@ -189,8 +189,6 @@ Next, enable Always On availability groups. Complete these steps on both SQL Ser
 
 1. Restart the SQL Server service.
 
-Repeat these steps on the other SQL Server instance.
-
 <!-----------------
 ## <a name="endpoint-firewall"></a>Open a firewall for the database mirroring endpoint
 
@@ -206,16 +204,15 @@ On both SQL Server instances, open the firewall for the TCP port for the databas
    >[!NOTE]
    >The example in this tutorial uses TCP port 5022. You can use any available port.
 
-5. On the **Action** page, keep **Allow the connection** selected and then select **Next**.
+5. On the **Action** page, keep **Allow the connection** selected and select **Next**.
 6. On the **Profile** page, accept the default settings and select **Next**.
 7. On the **Name** page, in the **Name** box, specify a rule name such as **Default Instance Mirroring Endpoint**. Then select **Finish**.
 
-Repeat these steps on the second SQL Server instance.
 -------------------------->
 
 ## Create a database on the first SQL Server instance
 
-1. Open the RDP file to the first SQL Server instance with a domain account that's a member of *sysadmin* fixed server role.
+1. Open the RDP file to the first SQL Server instance with a domain account that's a member of **sysadmin** fixed server role.
 1. Open SQL Server Management Studio (SSMS) and connect to the first SQL Server instance.
 1. In **Object Explorer**, right-click **Databases** and select **New Database**.
 1. In **Database name**, enter **MyDB1**, and then select **OK**.
@@ -256,7 +253,7 @@ You need to back up the new database to initialize the log chain. If you don't t
 
 1. Select **OK** to take a full backup to the default backup location.
 
-## Create the availability group
+## Configure an availability group
 
 You're now ready to configure an availability group by doing the following tasks:
 
@@ -333,17 +330,19 @@ You're now ready to configure an availability group by doing the following tasks
 
    The dashboard shows the replicas, the failover mode of each replica, and the synchronization state.
 
-1. In Failover Cluster Manager, select your cluster. Select **Roles**. 
+1. In **Failover Cluster Manager**, select your cluster. Select **Roles**. 
 
    The availability group name that you used is a role on the cluster. That availability group doesn't have an IP address for client connections because you didn't configure a listener. You'll configure the listener after you create an Azure load balancer.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/80-cluster-manager.png" alt-text="Screenshot of an availability group in Failover Cluster Manager.":::
 
    > [!WARNING]
-   > Do not try to fail over the availability group from Failover Cluster Manager. All failover operations should be performed on the availability group dashboard in SSMS. [Learn more about restrictions on using Failover Cluster Manager with availability groups](/sql/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server).
+   > Don't try to fail over the availability group from Failover Cluster Manager. All failover operations should be performed on the availability group dashboard in SSMS. [Learn more about restrictions on using Failover Cluster Manager with availability groups](/sql/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server).
     >
 
-At this point, you have an availability group with replicas on two instances of SQL Server. You can move the availability group between instances. You can't connect to the availability group yet because you don't have a listener. In Azure virtual machines, the listener requires a load balancer. The next step is to create the load balancer in Azure.
+At this point, you have an availability group with replicas on two instances of SQL Server. You can move the availability group between instances. You can't connect to the availability group yet because you don't have a listener. 
+
+In Azure virtual machines, the listener requires a load balancer. The next step is to create the load balancer in Azure.
 
 ## <a name="configure-internal-load-balancer"></a> Create an Azure load balancer
 
@@ -354,7 +353,7 @@ On Azure virtual machines, a SQL Server availability group requires a load balan
 A load balancer in Azure can be either *standard* or *basic*. A standard load balancer has more features than the basic load balancer. For an availability group, the standard load balancer is required if you use an availability zone (instead of an availability set). For details on the difference between the SKUs, see [Azure Load Balancer SKUs](/azure/load-balancer/skus).
 
 1. In the Azure portal, go to the resource group that contains your SQL Server instances and select **+ Add**.
-1. Search for **Load Balancer**. Choose the load balancer that Microsoft publishes.
+1. Search for **load balancer**. Choose the load balancer that Microsoft publishes.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/82-azure-load-balancer.png" alt-text="Screenshot that shows selecting a Microsoft-published load balancer.":::
 
@@ -374,9 +373,9 @@ A load balancer in Azure can be either *standard* or *basic*. A standard load ba
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the Azure portal that shows selected parameters for a load balancer." lightbox="./media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png":::
 
-1. Select **Next: Frontend IP Configuration**.
+1. Select **Next: Frontend IP configuration**.
 
-1. Select **Add a frontend IP Configuration**.
+1. Select **+ Add a frontend IP configuration**.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the button for creating a front-end IP configuration in the Azure portal.":::
 
@@ -393,11 +392,11 @@ A load balancer in Azure can be either *standard* or *basic*. A standard load ba
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the dialog for front-end IP configuration.":::
 
-1. Select **Add** to create the front-end IP address.
+1. Select **Add**.
 
 1. Choose **Review + Create** to validate the configuration. Then select  **Create** to create the load balancer and the front-end IP address.
 
-To configure the load balancer, you need to create a back-end pool, create a probe, and set the load-balancing rules. Do these tasks in the Azure portal.
+To configure the load balancer, you need to create a back-end pool, create a probe, and set the load-balancing rules. 
 
 ### Add a back-end pool for the availability group listener
 
@@ -424,7 +423,7 @@ To configure the load balancer, you need to create a back-end pool, create a pro
 
 ### Set the probe
 
-1. Select the load balancer, select **Health probes**, and then select **+Add**.
+1. In the Azure portal, select the load balancer, select **Health probes**, and then select **+Add**.
 
 1. Set the listener health probe as follows:
 
@@ -439,7 +438,7 @@ To configure the load balancer, you need to create a back-end pool, create a pro
 
 ### Set the load balancing rules
 
-1. Select the load balancer, choose **Load balancing rules**, and then select **+Add**.
+1. In the Azure portal, select the load balancer, select **Load balancing rules**, and then select **+Add**.
 
 1. Set the listener's load-balancing rules as follows:
 
@@ -518,7 +517,7 @@ In SQL Server Management Studio, set the listener port:
 
 1. Open SQL Server Management Studio and connect to the primary replica.
 
-1. Go to **Always On High Availability** > **availability groups** > **availability group Listeners**.
+1. Go to **Always On High Availability** > **Availability groups** > **Availability group listeners**.
 
 1. Right-click the listener name that you created in Failover Cluster Manager, and then select **Properties**.
 

@@ -42,8 +42,8 @@ Make sure that you meet the following requirements for SQL Server:
 - A full backup of databases (one or multiple files).
 - A differential backup (one or multiple files).
 - A log backup (not split for a transaction log file).
-- For SQL Server versions 2008 to 2016, take a backup locally and [manually upload](#copy-existing-backups-to-blob-storage) it to your Azure Blob Storage account. 
-- For SQL Server 2016 and later, you can [take your backup directly](#take-backups-directly-to-blob-storage) to your Azure Blob Storage account. 
+- For SQL Server versions 2008 to 2016, take a backup locally and [manually upload](#copy-existing-backups-to-your-blob-storage-account) it to your Azure Blob Storage account. 
+- For SQL Server 2016 and later, you can [take your backup directly](#take-backups-directly-to-your-blob-storage-account) to your Azure Blob Storage account. 
 - For SQL Server 2022, you can choose to use a managed identity instead of a shared access signature (SAS) token to authenticate to your Azure Blob Storage account. 
 
 

@@ -1,7 +1,7 @@
 ---
 title: Deploy and connect to SQL Server Docker containers
 description: Explore how SQL Server can be deployed on Docker containers and learn about various tools to connect to SQL Server from inside and outside the container
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.custom:

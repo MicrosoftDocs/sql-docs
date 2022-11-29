@@ -314,8 +314,21 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 There are two different sets of instructions to fail over to a secondary availability group. Use the instructions appropriate for your version and configuration.
 
-* On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. If this setting is configured, follow the instructions for [Fail over to a secondary availability group (SQL Server 2022 and later)](configure-distributed-availability-groups.md?view=sql-server-ver16&preserve-view=true#failover).
-* If REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is not set, including versions of SQL Server that do not support this setting, follow the instructions under [Fail over to secondary (prior to SQL Server 2022)](configure-distributed-availability-groups.md?view=sql-server-ver15&preserve-view=true#failover).
+::: moniker range="<=sql-server-ver16"
+
+The instructions below apply to [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later, if REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is set.
+
+For other configurations, see [Fail over to secondary (prior to SQL Server 2022)](configure-distributed-availability-groups.md?view=sql-server-ver15&preserve-view=true#failover).
+
+::: moniker-end
+
+::: moniker range="<=sql-server-ver15"
+
+The instructions below apply if REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is not set for the distributed availability group. This includes versions before [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] because this setting is not supported for distributed availability groups.
+
+On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. If this setting is configured, follow the instructions for [Fail over to a secondary availability group (SQL Server 2022 and later)](configure-distributed-availability-groups.md?view=sql-server-ver16&preserve-view=true#failover).
+
+::: moniker-end
 
 ::: moniker range="<=sql-server-ver15"
 
@@ -435,7 +448,7 @@ After completing the steps above, the distributed availability group fails over 
 
 ### <a name="failover_2022"></a> Fail over to a secondary availability group (SQL Server 2022 and later)
 
-The steps in this section are designed to guarantee no data loss during when a distributed availability group fails over. The steps include setting REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. This setting is introduced in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]
+The steps in this section are designed to guarantee no data loss when a distributed availability group fails over. The steps include setting REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. Support for this setting for distributed availability groups begins with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)].
 
 Only manual failover is supported at this time. To manually fail over a distributed availability group:
 

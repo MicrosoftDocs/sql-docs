@@ -3,8 +3,8 @@ title: Configure a Pacemaker cluster for SQL Server availability groups
 description: Learn to create a three-node cluster on Red Hat, SUSE, or Ubuntu, and add a previously created availability group resource to the cluster.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: amvin87
-ms.date: 10/12/2022
+ms.reviewer: amitkh-msft
+ms.date: 11/28/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -145,7 +145,7 @@ To update the property value to `2 minutes` run:
 sudo pcs property set cluster-recheck-interval=2min
 ```
 
-If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to failover to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid and the setting needs to be reverted back to its default value of `true`.
+If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
 Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
 
@@ -437,7 +437,7 @@ To update the property value to `2 minutes` run:
 crm configure property cluster-recheck-interval=2min
 ```
 
-If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to failover to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid and the setting needs to be reverted back to its default value of `true`.  
+If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.  
 
 Additionally, the AG resource needs to be updated to include the `failover-timeout` property.  
 
@@ -626,7 +626,7 @@ The steps to create an availability group on Linux servers for high availability
    sudo ufw reload
    ```
 
-   Alternatively, you can just disable the firewall:
+   Alternatively, you can disable the firewall, but this isn't recommended in a production environment:
 
    ```bash
    sudo ufw disable
@@ -635,7 +635,7 @@ The steps to create an availability group on Linux servers for high availability
 1. Install Pacemaker packages. On all nodes, run the following commands:
 
    ```bash
-   sudo apt-get install pacemaker pcs fence-agents resource-agents
+   sudo apt-get install -y pacemaker pacemaker-cli-utils crmsh resource-agents fence-agents corosync python3-azure
    ```
 
 1. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes.
@@ -662,49 +662,97 @@ pacemaker Default-Start contains no runlevels, aborting.
 
 The error is harmless, and cluster configuration can continue.
 
+You can also try the following command instead:
+
+```bash
+sudo systemctl start pacemaker
+```
+
 ### Create the cluster
 
-1. Remove any existing cluster configuration from all nodes.
+1. Prior to creating a cluster, you must create an authentication key on the primary server, and copy it to the other servers participating in the AG.
 
-   Running `sudo apt-get install pcs` installs **pacemaker**, **corosync**, and **pcs** at the same time and starts running all 3 of the services.  Starting **corosync** generates a template `/etc/cluster/corosync.conf` file.  To have next steps succeed, this file shouldn't exist, so the workaround is to stop **pacemaker** or **corosync** and delete `/etc/cluster/corosync.conf`, and then next steps complete successfully. The command `pcs cluster destroy` does the same thing, and you can use it as a one time initial cluster setup step.
-
-   The following command removes any existing cluster configuration files and stops all cluster services, permanently destroying the cluster. Run it as a first step in a pre-production environment. Note that `pcs cluster destroy` disables the Pacemaker service and needs to be reenabled. Run the following command on all nodes.
-
-   > [!WARNING]  
-   >  
-   > The command destroys any existing cluster resources.
+   Use the following script to create an authentication key on the primary server:
 
    ```bash
-   sudo pcs cluster destroy
-   sudo systemctl enable pacemaker
+   sudo corosync-keygen
    ```
 
-1. Create the cluster.
-
-   Starting the cluster (`pcs cluster start`) may fail with following error, because the log file configured in `/etc/corosync/corosync.conf`, which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to `/var/log/corosync/corosync.log`. Alternatively you can create the `/var/log/cluster/corosync.log` file yourself.
-
-   ```Error
-   Job for corosync.service failed because the control process exited with error code.
-   See "systemctl status corosync.service" and "journalctl -xe" for details.
-   ```
-
-   The following command creates a three-node cluster. Before you run the script, replace the values between `< ... >`. Run the following command on the primary node.
+   You can use `scp` to copy the generated key to other servers:
 
    ```bash
-   sudo pcs host auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup <clusterName> <node1> <node2> <node3>
-   sudo pcs cluster start --all
-   sudo pcs cluster enable --all
+   sudo scp /etc/corosync/authkey dbadmin@server-02:/etc/corosync
+   sudo scp /etc/corosync/authkey dbadmin@server-03:/etc/corosync
    ```
 
-   In the current implementation of the SQL Server resource agent, the node name must match the `ServerName` property from your instance. For example, if your node name is `node1`, make sure `SERVERPROPERTY('ServerName')` returns `node1` in your SQL Server instance. If there's a mismatch, your replicas will go into a resolving state after the Pacemaker resource is created.
+2. To create the cluster, edit the `/etc/corosync/corosync.conf` file on the primary server:
 
-   A scenario where this rule is important is when using fully qualified domain names (FQDN). For example, if you use `node1.yourdomain.com` as the node name during cluster setup, make sure `SERVERPROPERTY('ServerName')` returns `node1.yourdomain.com`, and not just `node1`. The possible workarounds for this problem are:
+   ```bash
+   sudo vim /etc/corosync/corosync.conf
+   ```
 
-   - Rename your host name to the FQDN, and use the `sp_dropserver` and `sp_addserver` stored procedures to ensure the metadata in SQL Server matches the change.
-   - Use the `addr` option in the `pcs cluster auth` command to match the node name to the `SERVERPROPERTY('ServerName')` value and use a static IP as the node address.
+   The `corosync.conf` file should look similar to the following example:
 
-   If you previously configured a cluster on the same nodes, you need to use the `--force` option when running `pcs cluster setup`. This is equivalent to running `pcs cluster destroy`, and the Pacemaker service needs to be reenabled using `sudo systemctl enable pacemaker`.
+   ```text
+   totem {
+       version: 2
+       cluster_name: agclustername
+       transport: udpu
+       crypto_cipher: none
+       crypto_hash: none
+   }
+   logging {
+       fileline: off
+       to_stderr: yes
+       to_logfile: yes
+       logfile: /var/log/corosync/corosync.log
+       to_syslog: yes
+       debug: off
+       logger_subsys {
+           subsys: QUORUM
+           debug: off
+       }
+   }
+   quorum {
+       provider: corosync_votequorum
+   }
+   nodelist {
+       node {
+           name: server-01
+           nodeid: 1
+           ring0_addr: 10.0.0.4
+       }
+       node {
+           name: server-02
+           nodeid: 2
+           ring0_addr: 10.0.0.5
+       }
+           node {
+           name: server-03
+           nodeid: 3
+           ring0_addr: 10.0.0.6
+       }
+   }
+   ```
+
+   Replace the `corosync.conf` file on other nodes:
+
+   ```bash
+   sudo scp /etc/corosync/corosync.conf dbadmin@server-02:/etc/corosync
+   sudo scp /etc/corosync/corosync.conf dbadmin@server-03:/etc/corosync
+   ```
+
+   Restart the `pacemaker` and `corosync` services:
+
+   ```bash
+   sudo systemctl restart pacemaker corosync
+   ```
+
+   Confirm the status of cluster and verify the configuration:
+
+   ```bash
+   sudo crm status
+   ```
 
 [!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
 
@@ -721,7 +769,7 @@ For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.
 Because the node level fencing configuration depends heavily on your environment, we disable it for this tutorial (it can be configured at a later time). Run the following script on the primary node:
 
 ```bash
-sudo pcs property set stonith-enabled=false
+sudo crm configure property stonith-enabled=false
 ```
 
 In this example, disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Contact the operating system vendor for information about fencing agents for any specific distribution.
@@ -733,23 +781,23 @@ The `cluster-recheck-interval` property indicates the polling interval at which 
 To update the property value to `2 minutes` run:
 
 ```bash
-sudo pcs property set cluster-recheck-interval=2min
+sudo crm configure property cluster-recheck-interval=2min
 ```
 
-If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`
+If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
 Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
 
 To update the property value to `true` run:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=true
+sudo crm configure property start-failure-is-fatal=true
 ```
 
 Update your existing AG resource property `failure-timeout` to `60s` run (replace `ag1` with the name of your availability group resource):
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+sudo crm configure meta failure-timeout=60s
 ```
 
 ### Install SQL Server resource agent for integration with Pacemaker
@@ -766,10 +814,30 @@ sudo apt-get install mssql-server-ha
 
 ### Create availability group resource
 
-To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` primary/replica type resource for availability group with name `ag1`.
+To create the availability group resource, use the `sudo crm configure` command to set the resource properties. The following example creates a primary/replica type resource `ocf:mssql:ag` for an availability group with name `ag1`.
 
-```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s promotable notify=true
+```console
+~$ sudo crm
+
+configure
+
+primitive ag1_cluster \
+ocf:mssql:ag \
+params ag_name="ag1" \
+meta failure-timeout=60s \
+op start timeout=60s \
+op stop timeout=60s \
+op promote timeout=60s \
+op demote timeout=10s \
+op monitor timeout=60s interval=10s \
+op monitor timeout=60s on-fail=demote interval=11s role="Master" \
+op monitor timeout=60s interval=12s role="Slave" \
+op notify timeout=60s
+ms ms-ag1 ag1_cluster \
+meta master-max="1" master-node-max="1" clone-max="3" \
+clone-node-max="1" notify="true"
+
+commit
 ```
 
 [!INCLUDE [required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -779,7 +847,9 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Before you run the script, replace the values between `< ... >` with a valid IP address.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
+sudo crm configure primitive virtualip \
+ocf:heartbeat:IPaddr2 \
+params ip=10.128.16.240
 ```
 
 There's no virtual server name equivalent in Pacemaker. To use a connection string that points to a string server name and not use the IP address, register the IP resource address and desired virtual server name in DNS. For DR configurations, register the desired virtual server name and IP address with the DNS servers on both primary and DR site.
@@ -793,7 +863,7 @@ Use constraints to configure the decisions of the cluster. Constraints have a sc
 To ensure that primary replica and the virtual ip resource are on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node.
 
 ```bash
-sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY
+sudo crm configure colocation ag-with-listener INFINITY: virtualip-group ms-ag1:Master
 ```
 
 ### Add ordering constraint
@@ -817,10 +887,10 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 To add an ordering constraint, run the following command on one node:
 
 ```bash
-sudo pcs constraint order promote ag_cluster-clone then start virtualip
+sudo crm configure order ag-before-listener Mandatory: ms-ag1:promote virtualip-group:start
 ```
 
-After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The SQL Server service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu, you should use `pcs`.
+After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The SQL Server service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools.
 
 ### Next steps
 

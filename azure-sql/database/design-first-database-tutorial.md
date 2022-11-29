@@ -52,7 +52,7 @@ Follow these steps to create a blank database.
 1. On the Azure portal menu or from the **Home** page, select **Create a resource**.
 1. On the **New** page, select **Databases** in the Azure Marketplace section, and then click **SQL Database** in the **Featured** section.
 
-   :::image type="content" source="./media/design-first-database-tutorial/create-empty-database.png" alt-text="create empty-database":::
+   :::image type="content" source="./media/design-first-database-tutorial/create-empty-database.png" alt-text="Screenshot of the Azure portal, selecting a SQL Database from Azure Marketplace.":::
 
 1. Fill out the **SQL Database** form with the following information, as shown on the preceding image:
 
@@ -63,7 +63,7 @@ Follow these steps to create a blank database.
     | **Resource group** | *yourResourceGroup* | For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
     | **Select source** | Blank database | Specifies that a blank database should be created. |
 
-1. Choose a server from the drop-down to to use an existing server or select **Create new** to create and configure a new server. Either select an existing server or click **Create a new server** and fill out the **New server** form with the following information:
+1. Choose a server from the drop-down to use an existing server or select **Create new** to create and configure a new server. Either select an existing server or click **Create a new server** and fill out the **New server** form with the following information:
 
     | Setting       | Suggested value | Description |
     | ------------ | ------------------ | ------------------------------------------------- |
@@ -72,7 +72,7 @@ Follow these steps to create a blank database.
     | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: upper case characters, lower case characters, numbers, and non-alphanumeric characters. |
     | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
 
-    :::image type="content" source="./media/design-first-database-tutorial/create-database-server.png" alt-text="create database-server":::
+    :::image type="content" source="./media/design-first-database-tutorial/create-database-server.png" alt-text="Screenshot of the Azure portal, creating a logical server for Azure. ":::
 
 1. Click **Select**.
 1. Click **Pricing tier** to specify the service tier, the number of DTUs or vCores, and the amount of storage. You may explore the options for the number of DTUs/vCores and storage that is available to you for each service tier.
@@ -98,13 +98,13 @@ Azure SQL Database creates an IP firewall at the server-level. This firewall pre
 
 1. Select *yourDatabase* on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified **Server name** (such as `contosodatabaseserver01.database.windows.net`) and provides options for further configuration.
 
-   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="server name":::
+   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="Screenshot of the Azure portal, database overview page with the server name highlighted.":::
 
 1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
 1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="server-level IP firewall rule":::
+   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule.":::
 
 1. Select **Add your client IPv4** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
@@ -132,17 +132,17 @@ Use [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) 
    | **Login** | The server admin account | The account that you specified when you created the server. |
    | **Password** | The password for your server admin account | The password that you specified when you created the server. |
 
-   :::image type="content" source="./media/design-first-database-tutorial/connect.png" alt-text="connect to server":::
+   :::image type="content" source="./media/design-first-database-tutorial/connect.png" alt-text="Screenshot of the connect to server dialog box in SQL Server Management Studio (SSMS).":::
 
 3. Click **Options** in the **Connect to server** dialog box. In the **Connect to database** section, enter *yourDatabase* to connect to this database.
 
-    :::image type="content" source="./media/design-first-database-tutorial/options-connect-to-db.png" alt-text="connect to db on server":::  
+    :::image type="content" source="./media/design-first-database-tutorial/options-connect-to-db.png" alt-text="Screenshot of the options tab of the connect to server dialog box in SQL Server Management Studio (SSMS). ":::  
 
 4. Click **Connect**. The **Object Explorer** window opens in SSMS.
 
 5. In **Object Explorer**, expand **Databases** and then expand *yourDatabase* to view the objects in the sample database.
 
-   :::image type="content" source="./media/design-first-database-tutorial/connected.png" alt-text="database objects":::  
+   :::image type="content" source="./media/design-first-database-tutorial/connected.png" alt-text="Screenshot of SQL Server Management Studio (SSMS) showing database objects in object explorer.":::  
 
 ## Create tables in your database
 
@@ -158,7 +158,7 @@ The following diagram shows how these tables are related to each other. Some of 
 > [!NOTE]
 > You can also use the [table designer in SQL Server Management Studio](/sql/ssms/visual-db-tools/design-database-diagrams-visual-database-tools) to create and design your tables.
 
-:::image type="content" source="./media/design-first-database-tutorial/tutorial-database-tables.png" alt-text="Table relationships":::
+:::image type="content" source="./media/design-first-database-tutorial/tutorial-database-tables.png" alt-text="Screenshot of the table designer in SQL Server Management Studio (SSMS) showing the table relationships.":::
 
 1. In **Object Explorer**, right-click *yourDatabase* and select **New Query**. A blank query window opens that is connected to your database.
 
@@ -209,7 +209,7 @@ The following diagram shows how these tables are related to each other. Some of 
 
 3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
 
-   :::image type="content" source="./media/design-first-database-tutorial/ssms-tables-created.png" alt-text="ssms tables-created":::
+   :::image type="content" source="./media/design-first-database-tutorial/ssms-tables-created.png" alt-text="Screenshot of Query editor in SQL Server Management Studio (SSMS) with successful create table query.":::
 
 ## Load data into the tables
 

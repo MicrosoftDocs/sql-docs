@@ -61,7 +61,7 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. If you aren't already signed in to the Azure portal, sign in when prompted.
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Add to Azure SQL":::
+   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Screenshot of Azure portal, showing the Add to Azure SQL deployment option.":::
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**.
 1. For **Resource group**, select **Create new**, enter a name for your resource group, and select **OK**.
@@ -78,17 +78,17 @@ In this step, you'll create a new Azure SQL Database logical server and a new da
 1. Leave **Want to use SQL elastic pool** set to **No**.
 1. Under **Compute + storage**, select **Configure database**, and select **Change configuration**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Configure database" lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-database.png" alt-text="Screenshot of Azure portal, hardware configuration, where to configure database." lightbox="./media/always-encrypted-enclaves/portal-configure-database.png":::
 
 1. Select the **DC-series** hardware configuration, and then select **OK**.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database.png" alt-text="Configure DC-series database":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database.":::
 
 1. Select **Apply**. 
 1. Back on the **Basics** tab, verify **Compute + storage** is set to **General Purpose**, **Standard-series (Gen5), 2 vCores, 32 GB storage**.
 1. Select **Next: Networking** at the bottom of the page.
 
-   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Configure DC-series database - basics":::
+   :::image type="content" source="./media/always-encrypted-enclaves/portal-configure-dc-series-database-basics.png" alt-text="Screenshot of Azure portal, showing Configure DC-series database - basics.":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.

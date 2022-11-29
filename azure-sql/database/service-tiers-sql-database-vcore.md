@@ -100,7 +100,7 @@ For regions where standard-series (Gen5) is available, see [Standard-series (Gen
 - Hyperscale premium-series hardware offers faster throughout, lower latency, and faster processors.
 - For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
-For regions where standard-series (Gen5) is available, see [Premium-series availability](#premium-series-availability).
+For regions where standard-series (Gen5) is available, see [Premium-series availability](#hyperscale-premium-series-availability).
 
 ### Fsv2-series
 

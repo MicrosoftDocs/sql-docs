@@ -151,7 +151,7 @@ az sql db import --resource-group "<resourceGroup>" --server "<server>" --name "
 ## Cancel the import request
 
 Use the [Database Operations - Cancel API](/rest/api/sql/databaseoperations/cancel)
-or the PowerShell [Stop-AzSqlDatabaseActivity command](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity), here an example of powershell command.
+or the [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity) PowerShell command, as in the following example: 
 
 ```cmd
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId

@@ -168,7 +168,7 @@ With Private Link, customers can enable cross-premises access to the private end
 
 Clients can connect to the Private endpoint from the same virtual network, peered virtual network in same region, or via virtual network to virtual network connection across regions. Additionally, clients can connect from on-premises using ExpressRoute, private peering, or VPN tunneling. Below is a simplified diagram showing the common use cases.
 
-:::image type="content" source="media/private-endpoint/pe-connect-overview.png" alt-text="Diagram of connectivity option" lightbox="media/private-endpoint/pe-connect-overview.png":::
+:::image type="content" source="media/private-endpoint/pe-connect-overview.png" alt-text="Diagram of connectivity option." lightbox="media/private-endpoint/pe-connect-overview.png":::
 
 In addition, services that are not running directly in the virtual network but are integrated with it (for example, App Service web apps or Functions) can also achieve private connectivity to the database. For more information on this specific use case, see the [Web app with private connectivity to Azure SQL database](/azure/architecture/example-scenario/private-web-app/private-web-app) architecture scenario.
 

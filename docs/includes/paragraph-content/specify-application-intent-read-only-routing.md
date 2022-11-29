@@ -1,13 +1,12 @@
 ---
- title: include file
- description: include file
- services: sql-database
- author: rothja
- ms.service: sql-database
- ms.topic: include
- ms.date: 04/05/2018
- ms.author: jroth
- ms.custom: include file
+title: include file
+description: include file
+author: rothja
+ms.author: jroth
+ms.date: 04/05/2018
+ms.service: sql-database
+ms.topic: include
+ms.custom: include file
 ---
 ## Specify application intent
 

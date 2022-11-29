@@ -4,8 +4,8 @@ description: Learn about how SQL Server returns result sets to consumers and def
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB rowsets, cursors"

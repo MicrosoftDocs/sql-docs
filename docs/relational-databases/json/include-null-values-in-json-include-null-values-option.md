@@ -2,8 +2,8 @@
 description: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option"
 title: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "INCLUDE_NULL_VALUES (FOR JSON)"

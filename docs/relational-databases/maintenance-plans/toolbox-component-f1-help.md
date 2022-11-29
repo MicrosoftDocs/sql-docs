@@ -4,9 +4,8 @@ description: Toolbox Component F1 Help
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords:
   - "Toolbox [SQL Server Management Studio]"

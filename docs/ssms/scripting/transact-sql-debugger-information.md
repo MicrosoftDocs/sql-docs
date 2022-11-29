@@ -2,8 +2,8 @@
 title: Transact-SQL Debugger Information
 description: Learn how to view Transact-SQL debugger output, which includes information such as call stacks, threads, breakpoints, code, variables, and commands.
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, Locals Window"
@@ -101,10 +101,9 @@ In debugger mode, the debugger opens two windows at the bottom of the main SQL S
 ## See Also  
  [Locals Window](./transact-sql-debugger-locals-window.md)   
  [Watch Window](./transact-sql-debugger-watch-window.md)   
- [QuickWatch Dialog Box](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [QuickWatch Dialog Box](/sql/ssms/scripting/transact-sql-debugger-information)   
  [Breakpoints Window](./transact-sql-debugger-breakpoints-window.md)   
  [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
  [Threads Window](./transact-sql-debugger-threads-window.md)   
  [Output Window](./transact-sql-debugger-output-window.md)   
  [Transact-SQL Debugger](./transact-sql-debugger.md)  
-  

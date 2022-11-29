@@ -4,8 +4,7 @@ description: Adding an Extended Stored Procedure to SQL Server
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "extended stored procedures [SQL Server], adding"

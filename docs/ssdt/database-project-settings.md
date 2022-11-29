@@ -1,8 +1,8 @@
 ---
 title: Database Project Settings
 description: Learn about database project settings. See how to use these settings to control aspects of your database, debugging, and build configurations.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.DebugProperties"
@@ -37,7 +37,6 @@ dev_langs:
   - "TSQL"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ---

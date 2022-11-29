@@ -3,10 +3,9 @@ description: "catalog.set_customized_logging_level_value"
 title: "catalog.set_customized_logging_level_value | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace

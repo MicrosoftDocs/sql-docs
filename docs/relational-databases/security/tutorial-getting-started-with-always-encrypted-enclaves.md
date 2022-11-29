@@ -6,11 +6,10 @@ ms.custom:
 - intro-get-started
 - event-tier1-build-2022
 ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: vanto
 ms.suite: "sql"
-ms.technology: security
+ms.subservice: security
 ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: jaszymas
@@ -167,7 +166,7 @@ In this step, you'll enable the functionality of Always Encrypted using enclaves
     1. Select **Options >>** and select the **Always Encrypted** tab.
     1. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
-          ![Connect to server without Always Encrypted](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
+       :::image type="content" source="./encryption/media/always-encrypted-database-engine/always-encrypted-ssms-connect-disabled.png" alt-text="Screenshot of the SSMS connection option for Always Encrypted disabled.":::
 
     1. Select **Connect**.
 
@@ -281,9 +280,12 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     1. Start a new instance of SSMS.
     1. In the **Connect to Server** dialog, specify your server name, select an authentication method and specify your credentials.
     1. Select **Options >>** and select the **Always Encrypted** tab.
-    1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
+    1. Select the **Enable Always Encrypted (column encryption)** checkbox.
+    1. Select **Enable secure enclaves**. (This step applies to SSMS 19 or later.)
+    1. Set **Protocol** to **Host Guardian Service**. (This step applies to SSMS 19 or later.)
+    1. Specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
 
-          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/column-encryption-setting.png)
+          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/ssms-connect-hgs.png)
 
     1. Select **Connect**.
     1. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.

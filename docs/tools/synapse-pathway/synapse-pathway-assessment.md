@@ -3,8 +3,8 @@ title: Azure Synapse Pathway assessment.
 description: Perform a data warehouse code translation with Azure Synapse Pathway 
 author: WilliamDAssafMSFT 
 ms.author: wiassaf 
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: tutorial 
 ms.date: 03/02/2021
 monikerRange: "=azure-sqldw-latest"

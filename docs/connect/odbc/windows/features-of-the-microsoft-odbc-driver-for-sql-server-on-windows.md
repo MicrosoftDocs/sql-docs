@@ -4,8 +4,8 @@ description: Learn about the different features supported by the Microsoft ODBC 
 author: v-makouz
 ms.author: v-davidengel
 ms.date: 02/15/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Features of the Microsoft ODBC Driver for SQL Server on Windows

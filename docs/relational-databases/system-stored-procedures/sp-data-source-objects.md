@@ -3,10 +3,9 @@ description: "sp_data_source_objects returns list of table objects that are avai
 title: "sp_data_source_objects"
 ms.custom: ""
 ms.date: 06/06/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"

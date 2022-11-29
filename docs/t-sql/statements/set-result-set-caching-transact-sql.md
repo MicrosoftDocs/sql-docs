@@ -5,9 +5,8 @@ author: mstehrani
 ms.author: emtehran
 ms.reviewer: wiassaf
 ms.date: 04/16/2020
-ms.prod: sql
-ms.prod_service: "synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"

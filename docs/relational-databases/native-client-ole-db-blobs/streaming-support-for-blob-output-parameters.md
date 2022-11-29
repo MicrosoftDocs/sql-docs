@@ -3,10 +3,9 @@ description: "Streaming Support for BLOB Output Parameters in SQL Server Native 
 title: Streaming support for BLOB output parameters (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client OLE DB provider, BLOBs"

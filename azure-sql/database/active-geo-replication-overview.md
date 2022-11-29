@@ -1,10 +1,10 @@
 ---
 title: Active geo-replication
 description: Use active geo-replication to create readable secondary databases of individual databases in Azure SQL Database in the same or different regions.
-author: rajeshsetlem
-ms.author: rsetlem
+author: AbdullahMSFT
+ms.author: amamun
 ms.reviewer: wiassaf, mathoma
-ms.date: 4/14/2022
+ms.date: 10/04/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -14,13 +14,12 @@ ms.custom: sqldbrb=1
 # Active geo-replication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Active geo-replication is a feature that lets you to create a continuously synchronized readable secondary database for a primary database. The readable secondary database may be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary databases are also known as geo-secondaries, or geo-replicas.
+Active geo-replication is a feature that lets you create a continuously synchronized readable secondary database for a primary database. The readable secondary database may be in the same Azure region as the primary, or, more commonly, in a different region. This kind of readable secondary database is also known as a geo-secondary or geo-replica.
 
 Active geo-replication is designed as a business continuity solution that lets you perform quick disaster recovery of individual databases in case of a regional disaster or a large scale outage. Once geo-replication is set up, you can initiate a geo-failover to a geo-secondary in a different Azure region. The geo-failover is initiated programmatically by the application or manually by the user.
 
-
 > [!NOTE]
-> Active geo-replication is not supported by Azure SQL Managed Instance. For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](auto-failover-group-sql-db.md).
+> For geographic failover of instances of SQL Managed Instance, use [Auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md). For more information, [Compare geo-replication with failover groups](business-continuity-high-availability-disaster-recover-hadr-overview.md#compare-geo-replication-with-failover-groups). Active geo-replication is not supported by Azure SQL Managed Instance. 
 
 > [!NOTE]
 > To migrate SQL databases from Azure Germany using active geo-replication, see [Migrate SQL Database using active geo-replication](/azure/germany/germany-migration-databases#migrate-sql-database-using-active-geo-replication).
@@ -83,7 +82,7 @@ To achieve full business continuity, adding database regional redundancy is only
 
 - **Unplanned geo-failover**
 
-  Unplanned, or forced, geo-failover immediately switches the geo-secondary to the primary role without any synchronization with the primary. Any transactions committed on the primary but not yet replicated to the secondary are lost. This operation is designed as a recovery method during outages when the primary is not accessible, but database availability must be quickly restored. When the original primary is back online, it will be automatically re-connected, reseeded using the current primary data, and become a new geo-secondary.
+  Unplanned, or forced, geo-failover immediately switches the geo-secondary to the primary role without any synchronization with the primary. Any transactions committed on the primary but not yet replicated to the secondary are lost. This operation is designed as a recovery method during outages when the primary is not accessible, but database availability must be quickly restored. When the original primary is back online, it will be automatically reconnected, reseeded using the current primary data, and become a new geo-secondary.
 
   > [!IMPORTANT]
   > After either planned or unplanned geo-failover, the connection endpoint for the new primary changes because the new primary is now located on a different logical server.
@@ -135,9 +134,9 @@ To create a geo-secondary in a subscription different from the subscription of t
    select client_net_address from sys.dm_exec_connections where session_id = @@SPID;
    ``` 
 
-   For more information see, [Configure firewall](firewall-configure.md).
+   For more information, see [Configure firewall](firewall-configure.md).
 
-2. In the master database on the **primary** server, create a SQL authentication login dedicated to active geo-replication setup. Adjust login name and password as needed.
+2. In the `master` database on the **primary** server, create a SQL authentication login dedicated to active geo-replication setup. Adjust login name and password as needed.
 
    ```sql
    create login geodrsetup with password = 'ComplexPassword01';
@@ -156,7 +155,7 @@ To create a geo-secondary in a subscription different from the subscription of t
    select sid from sys.sql_logins where name = 'geodrsetup';
    ```
 
-5. Connect to the **primary** database (not the master database), and create a user for the same login.
+5. Connect to the **primary** database (not the `master` database), and create a user for the same login.
 
    ```sql
    create user geodrsetup for login geodrsetup;
@@ -192,13 +191,13 @@ To create a geo-secondary in a subscription different from the subscription of t
 > [!NOTE]
 > Cross-subscription geo-replication operations including setup and geo-failover are only supported using REST API & T-SQL commands.
 > 
-> Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, public access can be [denied](connectivity-settings.md#deny-public-network-access).
+> Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, [public network access can be denied](connectivity-settings.md#deny-public-network-access).
 > 
 > Creating a geo-secondary on a logical server in a different Azure tenant is not supported when [Azure Active Directory only](https://techcommunity.microsoft.com/t5/azure-sql/azure-active-directory-only-authentication-for-azure-sql/ba-p/2417673) authentication for Azure SQL is active (enabled) on either primary or secondary logical server.
 
 ## <a name="keeping-credentials-and-firewall-rules-in-sync"></a> Keep credentials and firewall rules in sync
 
-When using public network access for connecting to the database, we recommend using [database-level IP firewall rules](firewall-configure.md) for geo-replicated databases. These rules are replicated with the database, which ensures that all geo-secondaries have the same IP firewall rules as the primary. This approach eliminates the need for customers to manually configure and maintain firewall rules on servers hosting the primary and secondary databases. Similarly, using [contained database users](logins-create-manage.md) for data access ensures both primary and secondary databases always have the same authentication credentials. This way, after a geo-failover, there is no disruptions due to authentication credential mismatches. If you are using logins and users (rather than contained users), you must take extra steps to ensure that the same logins exist for your secondary database. For configuration details see [How to configure logins and users](active-geo-replication-security-configure.md).
+When using public network access for connecting to the database, we recommend using [database-level IP firewall rules](firewall-configure.md) for geo-replicated databases. These rules are replicated with the database, which ensures that all geo-secondaries have the same IP firewall rules as the primary. This approach eliminates the need for customers to manually configure and maintain firewall rules on servers hosting the primary and secondary databases. Similarly, using [contained database users](logins-create-manage.md) for data access ensures both primary and secondary databases always have the same authentication credentials. This way, after a geo-failover, there are no disruptions due to authentication credential mismatches. If you are using logins and users (rather than contained users), you must take extra steps to ensure that the same logins exist for your secondary database. For configuration details, see [How to configure logins and users](active-geo-replication-security-configure.md).
 
 ## <a name="upgrading-or-downgrading-primary-database"></a> Scale primary database
 
@@ -279,7 +278,6 @@ As discussed previously, active geo-replication can also be managed programmatic
 | [Get Replication Link](/rest/api/sql/replicationlinks/get) |Gets a specific replication link for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. **This option is not supported for SQL Managed Instance.**|
 | [Replication Links - List By Database](/rest/api/sql/replicationlinks/listbydatabase) | Gets all replication links for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. |
 | [Delete Replication Link](/rest/api/sql/replicationlinks/delete) | Deletes a database replication link. Cannot be done during failover. |
-
 
 ## Next steps
 

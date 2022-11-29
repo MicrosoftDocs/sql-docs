@@ -2,9 +2,8 @@
 title: "Report Design View (Report Builder) | Microsoft Docs"
 description: This article describes the controls in the Report Builder window used to add, select, and organize your report resources, and change report item properties.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-builder
+ms.service: reporting-services
+ms.subservice: report-builder
 
 
 ms.topic: conceptual
@@ -112,7 +111,7 @@ ms.author: maggies
 > [!NOTE]  
 >  To view the Report Part Gallery, you need to be connected to a server.  
 >
->Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+>Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
  You can view the search results either as thumbnails or as a list, and sort the search results by name, created and modified dates, and creator. For more information, see [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)..  
   

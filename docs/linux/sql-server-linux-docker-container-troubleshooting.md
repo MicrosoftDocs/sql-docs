@@ -7,8 +7,8 @@ ms.reviewer: vanto
 ms.custom: contperf-fy21q1
 ms.date: 03/31/2022
 ms.topic: troubleshooting
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017"
 zone_pivot_groups: cs1-command-shell
 ---

@@ -2,9 +2,8 @@
 title: "Set the Language for Report Parameters in a URL | Microsoft Docs"
 description: "Learn how to set the language for report parameters in a URL by using the rs:ParameterLanguage URL access parameter."
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

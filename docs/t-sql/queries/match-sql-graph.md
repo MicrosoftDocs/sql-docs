@@ -3,9 +3,9 @@ description: "MATCH (Transact-SQL)"
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "MATCH"
@@ -129,7 +129,7 @@ Specifies the nodes and edges that must be traversed repeatedly until the desire
 *al_pattern_quantifier*   
 The arbitrary length pattern takes regular expression style pattern quantifiers in order to specify the number of times a given search pattern is repeated. The supported search pattern quantifiers are:   
 * **+**: Repeat the pattern 1 or more times. Terminate as soon as a shortest path is found.    
-* **{1,n}**: Repeat the pattern 1 to ‘n’ times. Terminate as soon as a shortest path is found.     
+* **{1,n}**: Repeat the pattern 1 to *n* times. Terminate as soon as a shortest path is found.     
 
 ## Remarks  
 The node names inside MATCH can be repeated.  In other words, a node can be traversed an arbitrary number of times in the same query.  

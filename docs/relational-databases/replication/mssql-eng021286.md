@@ -3,10 +3,9 @@ description: "MSSQL_ENG021286"
 title: "MSSQL_ENG021286 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG021286 error"

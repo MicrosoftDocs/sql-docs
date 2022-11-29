@@ -1,9 +1,8 @@
 ---
 title: "Rename a Database"
 description: "Rename a Database"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [SQL Server], renaming"

@@ -2,9 +2,8 @@
 description: "Full-Text Search DDL, Functions, Stored Procedures, and Views"
 title: "Full-Text Search DDL, functions, stored procedures, & views"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 author: rwestMSFT

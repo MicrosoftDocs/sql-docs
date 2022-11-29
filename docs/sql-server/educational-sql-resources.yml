@@ -6,7 +6,7 @@ summary: Tutorials, quickstarts, and other educational resources meant to teach 
 metadata:
   title: Educational SQL resources 
   description: A collection of tutorials and quickstarts meant to teach you to use SQL Server and Azure SQL Database. 
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
@@ -52,7 +52,7 @@ landingContent:
         url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
       - text: Backup & restore on-premises
         url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
-      - text: Backup & restore to Azure blob storage
+      - text: Backup & restore to Azure Blob Storage
         url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
     - linkListType: tutorial
       links:
@@ -66,7 +66,7 @@ landingContent:
         url: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
       - text: Sign stored procedure with certificate
         url: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
-      - text: Azure Blob storage service
+      - text: Azure Blob Storage
         url: ../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
       - text: Database tuning advisor 
         url: ../tools/dta/tutorial-database-engine-tuning-advisor.md

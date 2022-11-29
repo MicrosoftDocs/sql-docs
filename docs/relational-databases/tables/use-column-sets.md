@@ -3,10 +3,9 @@ description: "Use Column Sets to designate a column set to return all sparse col
 title: "Use Column Sets"
 ms.custom: ""
 ms.date: "04/25/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sparse columns, column sets"

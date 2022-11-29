@@ -1,9 +1,8 @@
 ---
 description: "Set CPU Idle Time and Duration"
 title: Set CPU Idle Time and Duration
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CPU [SQL Server], idle conditions"

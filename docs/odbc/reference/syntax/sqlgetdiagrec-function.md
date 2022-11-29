@@ -3,10 +3,9 @@ description: "SQLGetDiagRec Function"
 title: "SQLGetDiagRec Function | Microsoft Docs"
 ms.custom: ""
 ms.date: 12/08/2021
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 apiname: 
   - "SQLGetDiagRec"

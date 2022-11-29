@@ -2,8 +2,8 @@
 title: Advanced Threat Protection
 titleSuffix: Azure SQL Database, SQL Managed Instance, & Azure Synapse Analytics
 description: Advanced Threat Protection detects anomalous database activities indicating potential security threats in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
-author: davidtrigano
-ms.author: datrigan
+ms.author: cesanu
+author: CESANU
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 06/09/2021
 ms.service: sql-db-mi
@@ -43,7 +43,7 @@ You receive an email notification upon detection of anomalous database activitie
 
 1. Click a specific alert to get additional details and actions for investigating this threat and remediating future threats.
 
-   For example, SQL injection is one of the most common Web application security issues on the Internet that is used to attack data-driven applications. Attackers take advantage of application vulnerabilities to inject malicious SQL statements into application entry fields, breaching or modifying data in the database. For SQL Injection alerts, the alert’s details include the vulnerable SQL statement that was exploited.
+   For example, SQL injection is one of the most common Web application security issues on the Internet that is used to attack data-driven applications. Attackers take advantage of application vulnerabilities to inject malicious SQL statements into application entry fields, breaching or modifying data in the database. For SQL Injection alerts, the alert's details include the vulnerable SQL statement that was exploited.
 
    ![Specific alert](./media/threat-detection-overview/specific_alert.png)
 

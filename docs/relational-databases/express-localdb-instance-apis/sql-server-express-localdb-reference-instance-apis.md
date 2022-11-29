@@ -3,10 +3,9 @@ description: "SQL Server Express LocalDB Reference - Instance APIs"
 title: "SQL Server Express LocalDB Instance API Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6

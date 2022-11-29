@@ -4,7 +4,7 @@ description: Learn how to troubleshoot, diagnose, and prevent a SQL connection e
 author: ramakoni1
 ms.author: ramakoni
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 01/14/2020
+ms.date: 07/10/2022
 ms.service: sql-database
 ms.subservice: development
 ms.topic: troubleshooting
@@ -124,7 +124,7 @@ To make this test practical, your program recognizes a runtime parameter that ca
 
 ## .NET SqlConnection parameters for connection retry
 
-If your client program connects to your database in SQL Database by using the .NET Framework class **System.Data.SqlClient.SqlConnection**, use .NET 4.6.1 or later (or .NET Core) so that you can use its connection retry feature. For more information on the feature, see [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true).
+If your client program connects to your database in Azure SQL Database by using the .NET Framework class **System.Data.SqlClient.SqlConnection**, use .NET 4.6.1 or a later version (or .NET Core) so that you can use its connection retry feature. For more information about this feature, see [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true).
 
 <!--
 2015-11-30, FwLink 393996 points to dn632678.aspx, which links to a downloadable .docx related to SqlClient and SQL Server 2014.
@@ -132,13 +132,68 @@ If your client program connects to your database in SQL Database by using the .N
 
 When you build the [connection string](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) for your **SqlConnection** object, coordinate the values among the following parameters:
 
-- **ConnectRetryCount**:&nbsp;&nbsp;Default is 1. Range is 0 through 255.
-- **ConnectRetryInterval**:&nbsp;&nbsp;Default is 10 seconds. Range is 1 through 60.
-- **Connection Timeout**:&nbsp;&nbsp;Default is 15 seconds. Range is 0 through 2147483647.
+- **ConnectRetryCount**:&nbsp;&nbsp;Default is **1**. The range is **0** through **255**.
+- **ConnectRetryInterval**:&nbsp;&nbsp;Default is **10** seconds. The range is **1** through **60**.
+- **Connection Timeout**:&nbsp;&nbsp;Default is **15** seconds. The range is **0** through **2147483647**.
+- **Command Timeout**:&nbsp;&nbsp;Default is **30** seconds. The range is **0** through **2147483647**.
 
-Specifically, your chosen values should make the following equality true: Connection Timeout = ConnectRetryCount * ConnectionRetryInterval
+The connection retry settings (**ConnectRetryCount** and **ConnectRetryInterval**) apply to connection resiliency. Connection resiliency includes the following distinct types:
 
-For example, if the count equals 3 and the interval equals 10 seconds, a timeout of only 29 seconds doesn't give the system enough time for its third and final retry to connect: 29 < 3 * 10.
+- Open connection resiliency refers to the initial **SqlConnection.Open** or **OpenAsync()** method. The first connection attempt is counted as try zero. **ConnectRetryCount** applies to subsequent retries. Therefore, if connection zero fails (this might not occur immediately), **ConnectRetryInterval** is applied first followed by subsequent **ConnectRetryCount** (and **ConnectRetryInterval**) attempts. To take advantage of all retry attempts, the **Connection Timeout** property must provide time for all attempts.
+
+- Idle connection resiliency refers to the automatic detection and reconnection of existing idle connections that were broken. The first attempt to reconnect a broken idle connection is counted as the first retry attempt. To take advantage of all retry attempts, the **Command Timeout** must provide time for all attempts.
+
+Example:
+Assume the following values for the **ConnectRetryCount** and **ConnectRetryInterval** parameters:
+
+**ConnectRetryCount**: 3
+**ConnectRetryInterval**: 10 seconds
+
+See how these values are used in the following scenarios:
+
+**Scenario: New connection**
+
+4:10:00 - Connection.Open() - zero attempt
+
+4:10:01 - Connection failure detected
+
+4:10:11 - Retry 1 --> First retry occurs after **ConnectRetryInterval**
+
+4:10:21 - Retry 2
+
+4:10:31 - Retry 3  
+
+For this scenario your chosen values should satisfy the following condition:  
+`Connection Timeout > = ConnectRetryCount * ConnectionRetryInterval`
+
+For example, if the count is 3 and the interval is 10 seconds, a timeout of only 29 seconds doesn't provide enough time for the system's third and final retry to connect:
+
+29 < 3 * 10
+
+**Scenario: Idle connection**
+
+**ConnectRetryCount**: 3
+**ConnectRetryInterval**: 10 seconds
+
+4:10:00 - Broken connection detected on command execution
+
+4:10:00 - Retry 1 -->First retry occurs immediately
+
+4:10:10 - Retry 2
+
+4:10:20 - Retry 3
+
+This isn't the initial connection. Therefore, **Connection Timeout** doesn't apply. However, because the connection recovery occurs during command execution, the **Command Timeout** setting does apply. The **Command Timeout** default is 30 seconds. Although, connection recovery is fast in typical circumstances, an intermittent outage, could cause the recovery to take some of the command execution time.
+
+For this scenario, if you want to take full advantage of idle connection recovery retries, your chosen values should satisfy the following condition:  
+`Command Timeout > (ConnectRetryCount - 1) * ConnectionRetryInterval`
+
+For example, if the count is 3 and the interval is 10 seconds, a command timeout value lower than 20 seconds wouldn't give enough time for the third and final retry to connect: (3 - 1) * 10 = 20`
+
+Also, consider that the command itself requires time to execute after the connection is recovered.
+
+> [!NOTE]
+> The duration values that are provided in these scenarios are for demonstration only. The actual detection times in both scenarios depend on the underlying infrastructure.
 
 <a id="connection-versus-command" name="connection-versus-command"></a>
 

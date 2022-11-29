@@ -3,10 +3,9 @@ description: "Loop through Excel Files and Tables with a Foreach Loop Container"
 title: "Loop through Excel Files and Tables with a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2018"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Integration Services], Excel"

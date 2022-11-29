@@ -3,9 +3,9 @@ title: "Supported version and edition upgrades (SQL Server 2019)"
 description: The supported version and edition upgrades for SQL Server 2019.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: install
+ms.date: 10/20/2022
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
@@ -43,7 +43,7 @@ You can upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUD
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 or later
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 or later
-- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 or later
+- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] RTM or later
 - [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 The following table lists the supported upgrade scenarios from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].

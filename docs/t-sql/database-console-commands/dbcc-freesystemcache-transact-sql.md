@@ -4,8 +4,8 @@ description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/08/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "FREESYSTEMCACHE_TSQL"

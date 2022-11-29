@@ -2,8 +2,8 @@
 description: "JSON Path Expressions (SQL Server)"
 title: "JSON Path Expressions"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JSON, path expressions"

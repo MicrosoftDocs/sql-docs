@@ -4,8 +4,8 @@ description: Using Microsoft Visual Studio, you can develop CLR database objects
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 ms.custom: intro-deployment
 helpviewer_keywords:

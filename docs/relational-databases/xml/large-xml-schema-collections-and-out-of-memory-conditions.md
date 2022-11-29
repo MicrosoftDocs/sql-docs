@@ -2,10 +2,9 @@
 title: "Out-of-memory with large XML schema collections"
 description: Learn about solutions for handling out-of-memory conditions when loading or dropping a large XML schema collection.
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "out-of-memory conditions"

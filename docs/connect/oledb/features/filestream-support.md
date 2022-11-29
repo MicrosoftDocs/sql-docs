@@ -4,8 +4,8 @@ description: SQL Server supports the enhanced FILESTREAM feature, which lets you
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "09/13/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "FILESTREAM [SQL Server], OLE DB Driver for SQL Server"

@@ -4,8 +4,8 @@ description: This article describes upgrade paths for the Database Engine in SQL
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/08/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
@@ -19,7 +19,7 @@ There are several approaches to consider when you are planning to upgrade the [!
 
 ## Download
 
-- To download [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.
+- To download [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], visit the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2022)**.
 
 - Have an Azure account? Then go to the **[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition already installed.
 

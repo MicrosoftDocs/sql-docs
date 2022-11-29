@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/24/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux
@@ -38,9 +38,9 @@ The steps to create an AG on Linux servers for high availability are different f
    
    The way to configure a cluster resource manager depends on the specific Linux distribution. See the following links for distribution specific instructions: 
 
-   * [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
-   * [SUSE](sql-server-linux-availability-group-cluster-sles.md)
-   * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
+   * [RHEL](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel)
+   * [SUSE](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles)
+   * [Ubuntu](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu)
 
    >[!IMPORTANT]
    >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
@@ -53,17 +53,17 @@ The steps to create an AG on Linux servers for high availability are different f
 
    The way to add the AG as a resource in the cluster depends on the Linux distribution. See the following links for distribution specific instructions: 
 
-   * [RHEL](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)
-   * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
-   * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)
+   * [RHEL](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel#create-availability-group-resource)
+   * [SLES](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles#configure-the-cluster-resources-for-sql-server)
+   * [Ubuntu](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu#create-availability-group-resource)
 
 ### Considerations for multiple Network Interfaces (NICs)
 
 For information on setting up an availability group for servers with multiple NICs, see the relevant sections for:
 
-- [RHEL](sql-server-linux-availability-group-cluster-rhel.md#considerations-for-multiple-network-interfaces-nics)
-- [SLES](sql-server-linux-availability-group-cluster-sles.md#considerations-for-multiple-network-interfaces-nics)
-- [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#considerations-for-multiple-network-interfaces-nics)
+- [RHEL](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel#considerations-for-multiple-network-interfaces-nics)
+- [SLES](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles#considerations-for-multiple-network-interfaces-nics)
+- [Ubuntu](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu#considerations-for-multiple-network-interfaces-nics)
 
 [!INCLUDE [Create Prerequisites](includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -203,7 +203,7 @@ You can also configure an AG with `CLUSTER_TYPE=EXTERNAL` using SQL Server Manag
 
 ### Join secondary replicas to the AG
 
-The pacemaker user requires `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant permissions, run the following Transact-SQL script after the availability group is created on the primary replica and each secondary replica immediately after they are added to the availability group. Before you run the script, replace `<pacemakerLogin>` with the name of the pacemaker user account. If you do not have a login for pacemaker, [create a sql server login for pacemaker](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
+The Pacemaker user requires `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant permissions, run the following Transact-SQL script after the availability group is created on the primary replica and each secondary replica immediately after they are added to the availability group. Before you run the script, replace `<pacemakerLogin>` with the name of the Pacemaker user account. If you do not have a login for Pacemaker, [create a sql server login for Pacemaker](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu#create-a-sql-server-login-for-pacemaker).
 
 ```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
@@ -235,8 +235,8 @@ If you followed the steps in this document, you have an AG that is not yet clust
 
 ## Next steps
 
-[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)
+[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel)
 
-[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-sles.md)
+[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles)
 
-[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu)

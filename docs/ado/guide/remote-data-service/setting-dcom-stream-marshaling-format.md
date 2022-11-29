@@ -4,8 +4,8 @@ description: "Setting DCOM Stream Marshaling Format"
 author: rothja
 ms.author: jroth
 ms.date: 11/09/2018
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "dcom stream marshaling format in rds [ADO]"

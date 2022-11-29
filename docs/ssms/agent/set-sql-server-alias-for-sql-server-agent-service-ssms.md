@@ -1,9 +1,8 @@
 ---
 description: "Set a SQL Server Alias for the SQL Server Agent Service"
 title: Set a SQL Server Alias for the SQL Server Agent Service
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "aliases [SQL Server], creating"

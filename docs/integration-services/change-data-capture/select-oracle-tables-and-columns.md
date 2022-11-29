@@ -3,10 +3,9 @@ description: "Select Oracle Tables and Columns"
 title: "Select Oracle Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "selTabCol"
@@ -15,9 +14,6 @@ author: chugugrace
 ms.author: chugu
 ---
 # Select Oracle Tables and Columns
-
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   Use the Select Oracle Tables and Columns page to select the tables from the Oracle source database where changes are captured. This page has the following elements:  
   

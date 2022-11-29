@@ -6,8 +6,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf
 ms.date: 04/24/2020
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 ms.metadata: seo-lt-2019
 ---
@@ -23,9 +23,9 @@ SQL Server Big Data Clusters can virtualize data from CSV files in HDFS. This pr
 - [A deployed big data cluster](deployment-guidance.md)
 - [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
-## Select or upload a CSV file for data virtualization 
+## Select or upload a CSV file for data virtualization
 
-In Azure Data Studio (ADS) [connect to the SQL Server master instance](connect-to-big-data-cluster.md#master) of your Big Data Cluster. Once connected, expand the HDFS elements in the object explorer to locate the CSV file(s) you would like to data virtualize. 
+In Azure Data Studio (ADS) [connect to the SQL Server master instance](connect-to-big-data-cluster.md#master) of your Big Data Cluster. Once connected, expand the HDFS elements in the object explorer to locate the CSV file(s) you would like to data virtualize.
 
 For the purposes of this tutorial, create a new directory named **Data**.
 

@@ -4,9 +4,8 @@ description: Create indexes with included columns
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "index size [SQL Server]"
@@ -44,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 -   The order of nonkey columns in the index definition does not impact the performance of queries that use the index.
 
--   Avoid very wide nonclustered indexes where the included columns don’t represent a narrow enough subset of the underlying table columns. If adding wide indexes, always verify if the cost of updating one extra wide index offsets the cost of reading directly from the table.
+-   Avoid very wide nonclustered indexes where the included columns don't represent a narrow enough subset of the underlying table columns. If adding wide indexes, always verify if the cost of updating one extra wide index offsets the cost of reading directly from the table.
   
 ###  <a name="Restrictions"></a> Limitations and restrictions  
   

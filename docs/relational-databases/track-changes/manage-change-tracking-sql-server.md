@@ -3,10 +3,9 @@ description: "Manage Change Tracking (SQL Server)"
 title: "Manage Change Tracking"
 ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tracking data changes [SQL Server]"

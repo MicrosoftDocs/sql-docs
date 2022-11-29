@@ -4,8 +4,8 @@ description: "This topic describes how to send and retrieve ASCII data in Linux 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/16/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "retrieving data, ASCII data"

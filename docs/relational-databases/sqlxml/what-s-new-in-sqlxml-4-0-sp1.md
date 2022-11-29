@@ -4,9 +4,8 @@ description: View a summary of the updates and enhancements in SQLXML 4.0 SP1 wi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 ms.custom: intro-whats-new
 helpviewer_keywords:
@@ -102,6 +101,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 -   [Examples of Bulk Loading XML Documents](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced the **Date, Time**, **DateTime2**, and **DateTimeOffset** data types. SQLXML 4.0 SP1 will enable these four new data types as built-in scalar types when used with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider (SQLNCLI11), which ships in [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)].  
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
   
 ## XML Bulk Load Changes for SQLXML 4.0 SP1  
   

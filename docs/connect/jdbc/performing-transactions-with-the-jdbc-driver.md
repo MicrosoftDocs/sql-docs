@@ -4,8 +4,8 @@ description: Learn how the JDBC Driver for SQL Server supports transactions incl
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Performing transactions with the JDBC driver

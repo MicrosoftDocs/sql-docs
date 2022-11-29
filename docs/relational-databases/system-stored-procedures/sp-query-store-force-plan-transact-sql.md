@@ -1,11 +1,11 @@
 ---
 title: "sp_query_store_force_plan (Transact-SQL)"
-description: "sp_query_store_force_plan (Transact-SQL)"
+description: "The sp_query_store_force_plan stored procedure forces a plan in the Query Store."
 author: markingmyname
 ms.author: maghan
-ms.date: 09/30/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.date: 10/14/2022
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -56,7 +56,7 @@ sp_query_store_force_plan
 
 #### [ @force_plan_scope = ] replica_group_id
 
- You can force plans on a secondary replica when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled. Execute `sp_query_store_force_plan` and `sp_query_store_unforce_plan` on the secondary replica. The optional *force_plan_scope* argument defaults only to the local replica (primary or secondary), but you can optionally specify a `replica_group_id` referencing [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
+ You can force plans on a secondary replica when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. Execute `sp_query_store_force_plan` and `sp_query_store_unforce_plan` on the secondary replica. The optional *force_plan_scope* argument defaults only to the local replica (primary or secondary), but you can optionally specify a `replica_group_id` referencing [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md). 
 
 ## Return code values
 
@@ -64,7 +64,9 @@ sp_query_store_force_plan
 
 ## Remarks
 
-  The resulting execution plan forced by this feature will be the same or similar to the plan being forced. Because the resulting plan may not be identical to the plan specified by `sp_query_store_force_plan`, the performance of the plans may vary. In rare cases, the performance difference may be significant and negative; in that case, the administrator must remove the forced plan.
+  The resulting execution plan forced by this feature will be the same or similar to the plan being forced. Because the resulting plan may not be identical to the plan specified by `sys.sp_query_store_force_plan`, the performance of the plans may vary. In rare cases, the performance difference may be significant and negative; in that case, the administrator must remove the forced plan.
+
+Review forced plans on secondary replicas with [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md).
 
 ## Permissions
 
@@ -89,12 +91,25 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_force_plan @query_id = 3, @plan_id = 3;
 ```
 
+Use [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md), joined with [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md), to retrieve [Query Store plans forced on all secondary replicas](../performance/query-store-for-secondary-replicas.md).
+
+```sql
+SELECT query_plan 
+FROM sys.query_store_plan AS qsp
+    INNER JOIN sys.query_store_plan_forcing_locations AS pfl 
+        ON pfl.query_id = qsp.query_id 
+    INNER JOIN sys.query_store_replicas AS qsr
+        ON qsr.replica_group_id = qsp.replica_group_id
+WHERE qsr.replica_name = 'yourSecondaryReplicaName';
+```
+
 ## Next steps
 
 Learn more about related concepts in the following articles:
 
+- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sys.query_store_replicas (Transact-SQL)](../system-catalog-views/sys-query-store-replicas.md)
-- [sys.plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-plan-forcing-locations.md)
+- [sys.query_store_plan_forcing_locations (Transact-SQL)](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md)
 - [sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
 - [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
 - [sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)

@@ -2,9 +2,9 @@
 title: "Pushdown computations in PolyBase"
 titlesuffix: SQL Server
 description: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 10/14/2021
-ms.prod: sql
-ms.technology: polybase
+ms.date: 10/07/2022
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
@@ -40,13 +40,15 @@ This table summarizes pushdown computation support on different external data so
 | **Oracle**       | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**   | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
-| **MongoDB\***  | **No** | Yes         | No          | No       | Yes        |
+| **MongoDB\***  | **No** | Yes         | Yes\*\*\*          | Yes\*\*\*       | Yes        |
 | **Hadoop**     | **No** | Yes         | Some\*\*      | Some\*\*  | Yes        |  
 | **Azure Blob Storage** | No | No | No | No | Yes |
 
 \* Azure Cosmos DB pushdown support is enabled via the Azure Cosmos DB API for MongoDB. 
 
 \*\* See [Pushdown computation and Hadoop providers](#pushdown-computation-and-hadoop-providers).
+
+\*\*\* Pushdown support for aggregations and filters for the MongoDB ODBC connector for SQL Server 2019 was introduced with SQL Server 2019 CU18.
 
 > [!NOTE]
 > Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).
@@ -79,7 +81,7 @@ With PolyBase pushdown computation, you can delegate computation tasks to extern
 
 ### Pushdown of joins
 
-In many cases, PolyBase can facilitate pushdown of the join operator which will greatly improve performance.  
+In many cases, PolyBase can facilitate pushdown of the join operator, which will greatly improve performance.  
 
 If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
 
@@ -204,7 +206,7 @@ To achieve pushdown of the variable, you need to enable query optimizer hotfixes
 - Instance Level: Enable trace flag 4199 as a startup parameter for the instance
 - Database Level: In the context of the database that has the PolyBase external objects, execute ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON
 - Query level: 
-		Use query hint OPTION (QUERYTRACEON 4199) or OPTION (USE HINT ('ENABLE_QUERY_OPTIMIZER_HOTFIXES'))
+        Use query hint OPTION (QUERYTRACEON 4199) or OPTION (USE HINT ('ENABLE_QUERY_OPTIMIZER_HOTFIXES'))
 
 This limitation applies to execution of [sp_executesql](../system-stored-procedures/sp-executesql-transact-sql.md). 
 

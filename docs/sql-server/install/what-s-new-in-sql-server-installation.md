@@ -4,9 +4,9 @@ description: This article summarizes some changes to the SQL Server installation
 ms.custom:
   - intro-whats-new
 ms.date: "08/23/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: install
+ms.subservice: install
 ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: rwestMSFT

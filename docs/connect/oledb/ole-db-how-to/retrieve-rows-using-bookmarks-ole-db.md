@@ -4,8 +4,8 @@ description: Learn how consumers can retrieve rows by using bookmarks in OLE DB 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "bookmarks [OLE DB]"

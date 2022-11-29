@@ -6,8 +6,8 @@ ms.date: 05/20/2021
 author: WilliamDassafMSFT
 ms.author: wiassaf
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ---
 # How to tell if external pushdown occurred
 

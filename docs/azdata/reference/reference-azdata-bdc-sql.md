@@ -6,8 +6,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: reference
 ---
 

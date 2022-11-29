@@ -2,10 +2,9 @@
 description: "Creating, Altering, and Removing Schemas"
 title: "Creating, Altering, and Removing Schemas"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 helpviewer_keywords: 

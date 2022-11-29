@@ -1,21 +1,60 @@
 ---
-title: SQL Server on Azure Arc-enabled servers - Release notes
+title: Azure Arc-enabled SQL Server - Release notes
 description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/07/2022
-ms.prod: sql
+ms.date: 11/05/2022
+ms.service: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
 
+## November 2022
+
+This release is published November 12, 2022
+
+### Extension version
+
+`1.1.2132.21`
+
+> [!IMPORTANT]
+> Billing for this extension will not be enabled until December 1, 2022.
+
+### Azure extension for SQL Server
+
+- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). 
+- [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] includes the pay-as-you-go activation option, that forces the installation of Azure extension for SQL Server during set up.
+- Billing meters are introduced to support pay-as-you-go billing through Azure
+
+### Other changes
+
+The *LicenseType* property of `SQL Server - Azure Arc` has been extended to provide more granular license information. The values now include:
+
+| **Value** | **Description** |
+|:--|:--|
+|Paid|SQL Server instance is installed using a product key with Software Assurance or SQL subscription|
+|LicenseOnly|SQL Server instance is installed using a product key without Software Assurance or SQL subscription|
+|PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]|
+|Free|Indicates that the instance uses Evaluation or Developer edition of SQL Server|
+|HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it may not require a license. For more information, see [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
+|||
+
+### Known issues and limitations
+
+- Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
+- The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+- Azure extension for SQL Server is not supported in the following environments:
+  - SQL Server in Linux containers
+  - SQL Server on VMware clusters or on Azure VMware Solution
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms.md).
+
 ## September 2022
 
 This release is published September 13, 2022
 
-### Image tag
+### Extension version
 
 `1.1.2082.9`
 
@@ -33,7 +72,7 @@ This release is published September 13, 2022
 
 This release is published July 26, 2022
 
-### Image tag
+### Extension version
 
 `v1.0.2019.2`
 
@@ -63,7 +102,7 @@ The introduction of SQL Server extension requires that the user accounts have mo
 
 ### Other changes
 
-This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connecting-at-scale-using-azure-policy).
+This release includes a new Azure policy *Configure Arc-enabled machines running SQL Server to have SQL Server extension installed*. It enables automatic registration of all SQL Server instances after their hosting server is connected to Azure Arc. For details of using this policy, see [At scale registration from Azure](connect-at-scale.md#connect-at-scale-using-azure-policy).
 
 ## April 2021
 
@@ -82,13 +121,13 @@ A new property *LicenseType* has been added to the **SQL Server - Azure Arc** re
 |HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it may not require a license. For more information, see [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).
 
 > [!NOTE]
-> For the existing **SQL Server - Azure Arc** resources, this property will show a *Null* value. It will be automatically updated with the correct value after SQL Server on Azure Arc-enabled servers becomes generally available.
+> For the existing **SQL Server - Azure Arc** resources, this property will show a *Null* value. It will be automatically updated with the correct value after Azure Arc-enabled SQL Server becomes generally available.
 
 ## December 2020
 
 ### Breaking change
 
-This release introduces an updated [resource provider](/azure/azure-resource-manager/management/azure-services-resource-providers) called `Microsoft.AzureArcData`. Before you can continue using SQL Server on Azure Arc-enabled servers, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
+This release introduces an updated [resource provider](/azure/azure-resource-manager/management/azure-services-resource-providers) called `Microsoft.AzureArcData`. Before you can continue using Azure Arc-enabled SQL Server, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
 
 If you have existing SQL Server - Azure Arc resources, use these steps to migrate them to Microsoft.AzureArcData namespace.
 
@@ -125,7 +164,7 @@ If you have existing SQL Server - Azure Arc resources, use these steps to migrat
 
 The October update includes the following improvements:
 
-- The register SQL Server on Azure Arc-enabled servers pane now includes the **Tags** tab. The tags are included in the registration script and are reflected in the **SQL Server - Azure Arc** resource(s). For details, see [Connect your SQL Server to Azure Arc](connect.md).
+- The register Azure Arc-enabled SQL Server pane now includes the **Tags** tab. The tags are included in the registration script and are reflected in the **SQL Server - Azure Arc** resource(s). For details, see [Connect your SQL Server to Azure Arc](connect.md).
 
 - The **Environment Health** entry now supports activation of **SQL Assessment** from the Portal by deploying a *CustomScriptExtension*. For details, see [Configure SQL Assessment](assess.md#run-on-demand-sql-assessment).
 
@@ -137,18 +176,18 @@ The following issues apply to the October release:
 
 ## September 2020
 
-SQL Server on Azure Arc-enabled servers is released for public preview. SQL Server on Azure Arc-enabled servers extends Azure services to SQL Server instances hosted outside of Azure in the customer's datacenter, on the edge or in a multi-cloud environment.
+Azure Arc-enabled SQL Server is released for public preview. Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure in the customer's datacenter, on the edge or in a multicloud environment.
 
-For details, see [SQL Server on Azure Arc-enabled servers Overview](overview.md)
+For details, see [Azure Arc-enabled SQL Server Overview](overview.md)
 
 ### Known issues
 
 The following issues apply to the September release:
 
-- The **Register SQL Server on Azure Arc-enabled servers** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
+- The **Register Azure Arc-enabled SQL Server** pane doesn't support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
 
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [Required permissions](overview.md#required-permissions).
 
 ## Next steps
 
-**Just want to try things out?**  Get started quickly with [SQL Server on Azure Arc-enabled servers Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).
+**Just want to try things out?**  Get started quickly with [Azure Arc-enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).

@@ -4,8 +4,8 @@ description: Find out how to enable or disable a secure enclave for Always Encry
 author: jaszymas
 ms.author: jaszymas
 ms.date: "01/15/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 monikerRange: ">= sql-server-ver15"
 ---

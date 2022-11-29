@@ -3,10 +3,9 @@ description: "managed_backup.fn_is_master_switch_on (Transact-SQL)"
 title: "managed_backup.fn_is_master_switch_on (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "fn_is_master_switch_on"

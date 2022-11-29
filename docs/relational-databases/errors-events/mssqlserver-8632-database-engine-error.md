@@ -3,9 +3,9 @@ description: "MSSQLSERVER_8632"
 title: MSSQLSERVER_8632
 ms.custom: ""
 ms.date: 10/27/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "8632 (Database Engine error)"

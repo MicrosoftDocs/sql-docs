@@ -3,10 +3,9 @@ description: "sp_kill_filestream_non_transacted_handles (Transact-SQL)"
 title: "sp_kill_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_kill_filestream_non_transacted_handles_TSQL"

@@ -6,12 +6,10 @@ description: "Stochastic gradient descent optimizer."
 keywords: "optimizer, sgd" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
+ms.service: sql
+ms.subservice: "machine-learning-services" 
 ms.assetid: "" 
  
 # optional metadata 
@@ -69,7 +67,7 @@ Momentum Term (settings).
 
 ### nag
 
-Use Nesterov’s accelerated gradient (settings).
+Use Nesterov's accelerated gradient (settings).
 
 
 ### weight_decay

@@ -3,9 +3,9 @@ description: "Create DML Triggers"
 title: "Create DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], DML triggers"

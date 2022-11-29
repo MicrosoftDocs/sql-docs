@@ -3,10 +3,9 @@ title: "Application Roles | Microsoft Docs"
 description: Use application roles to enable access to data only for those users who connect through a specific application in SQL Server. 
 ms.custom: ""
 ms.date: "08/06/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "application roles [SQL Server], about application roles"

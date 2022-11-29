@@ -3,9 +3,8 @@ title: "Upgrade Analysis Services"
 description: "Upgrade Analysis Services"
 author: "Minewiskan"
 ms.author: "owend"
-manager: erikre
 ms.date: "12/09/2020"
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "upgrading databases"

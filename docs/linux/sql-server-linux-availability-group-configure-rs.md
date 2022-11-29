@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto, randolphwest
 ms.date: 04/11/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Configure a SQL Server Availability Group for read-scale on Linux
 

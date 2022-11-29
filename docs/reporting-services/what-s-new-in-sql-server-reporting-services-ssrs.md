@@ -1,9 +1,8 @@
 ---
 title: "What's new in Reporting Services | Microsoft Docs"
 description: Learn about what's new in the different versions of SQL Server Reporting Services, including changes to the major feature areas.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -37,7 +36,7 @@ The web portal received a face lift.
 
 ### Deprecated features
 
-In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-sql-server-2019-reporting-services-ssrs.md). These features will be removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and will no longer be supported. Only the last three releases, SQL Server 2016, SQL Server 2017, and SQL Server 2019, will be supported in maintenance mode until EOL (End of Life) for existing customers.
+In 2020, we announced the upcoming deprecation of Report Server features [Pin to Power BI, Mobile Reports, and Mobile Report Publisher](deprecated-features-in-sql-server-reporting-services-ssrs.md). These features will be removed from versions of SQL Server starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] and will no longer be supported. Only the last three releases, SQL Server 2016, SQL Server 2017, and SQL Server 2019, will be supported in maintenance mode until EOL (End of Life) for existing customers.
 
 When we mark a feature as deprecated, it means:
 
@@ -204,7 +203,7 @@ For more information on browser support, see [Browser Support for Reporting Serv
 
 **Tree Map and Sunburst Charts:** Enhance your reports with Tree Map ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") and Sunburst ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") charts, great ways to display hierarchical data. For more information, see [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Report embedding:** You can now embed mobile and paginated reports in other web pages, and applications by using an iframe, along with URL parameters.  
+**Report embedding:** You can now embed mobile and paginated reports in other web pages, and applications by using an IFrame, along with URL parameters.  
 
 **Pin Report Items to a Power BI Dashboard:** While viewing a report in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], you can select report items and pin them to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard.   The items you can pin are charts, gauge panels, maps, and images. You can:
 

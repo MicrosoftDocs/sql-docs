@@ -2,8 +2,8 @@
 title: Native scoring with T-SQL PREDICT
 titleSuffix: SQL machine learning
 description: Learn how to use native scoring with the PREDICT T-SQL function to generate prediction values for new data inputs in near-real-time. 
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.date: 05/27/2021
 ms.topic: how-to
 author: WilliamDAssafMSFT

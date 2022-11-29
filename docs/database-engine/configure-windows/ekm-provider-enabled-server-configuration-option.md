@@ -4,8 +4,8 @@ description: "Learn about the EKM provider enabled option. It controls Extensibl
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "external encryption provider"

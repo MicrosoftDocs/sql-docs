@@ -4,8 +4,8 @@ description: "Install Data Quality Services"
 author: swinarko
 ms.author: sawinark
 ms.date: "09/11/2017"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 ms.custom: intro-installation
 ---

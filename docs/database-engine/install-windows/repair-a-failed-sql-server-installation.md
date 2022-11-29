@@ -4,8 +4,8 @@ description: "Repair a Failed SQL Server Installation"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/08/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---

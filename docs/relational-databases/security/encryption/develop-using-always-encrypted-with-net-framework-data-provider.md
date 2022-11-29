@@ -2,11 +2,10 @@
 title: "Always Encrypted with .NET Framework Data Provider"
 description: Learn how to develop .NET applications using the Always Encrypted feature for SQL Server. 
 ms.custom: seo-lt-2019
-ms.date: "01/15/2021"
-ms.prod: sql
-ms.prod_service: "security, sql-database"
+ms.date: "11/15/2022"
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
@@ -22,7 +21,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Prerequisites
 
-- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](always-encrypted-tutorial-getting-started.md).
 - If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) for additional prerequisites.
 - Ensure .NET Framework version 4.6.1 or higher is installed on your development machine. For details, see [.NET Framework 4.6](/dotnet/framework/). You also need to ensure .NET Framework version 4.6 or higher is configured as the target .NET Framework version in your development environment. If you're using Visual Studio, please refer to [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
 
@@ -592,5 +591,4 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## See Also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

@@ -1,11 +1,11 @@
 ---
 title: Customer-managed transparent data encryption (TDE)
-titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance & Azure Synapse Analytics
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) with Azure Key Vault for SQL Database and Azure Synapse Analytics. TDE with BYOK overview, benefits, how it works, considerations, and recommendations.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/18/2022
+ms.date: 11/21/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -30,7 +30,7 @@ For Azure SQL Database and Azure Synapse Analytics, the TDE protector is set at 
 > For those using service-managed TDE who would like to start using customer-managed TDE, data remains encrypted during the process of switching over, and there is no downtime nor re-encryption of the database files. Switching from a service-managed key to a customer-managed key only requires re-encryption of the DEK, which is a fast and online operation.
 
 > [!NOTE]
-> <a id="doubleencryption"></a> To provide Azure SQL customers with two layers of encryption of data at rest, infrastructure encryption (using AES-256 encryption algorithm) with platform managed keys is being rolled out. This provides an addition layer of encryption at rest along with TDE with customer-managed keys, which is already available. For Azure SQL Database and Managed Instance, all databases, including the master database and other system databases, will be encrypted when infrastructure encryption is turned on. At this time, customers must request access to this capability. If you are interested in this capability, contact AzureSQLDoubleEncryptionAtRest@service.microsoft.com.
+> <a id="doubleencryption"></a> To provide Azure SQL customers with two layers of encryption of data at rest, infrastructure encryption (using AES-256 encryption algorithm) with platform managed keys is being rolled out. This provides an addition layer of encryption at rest along with TDE with customer-managed keys, which is already available. For Azure SQL Database and Azure SQL Managed Instance, all databases, including the master database and other system databases, will be encrypted when infrastructure encryption is turned on. At this time, customers must request access to this capability. If you are interested in this capability, contact AzureSQLDoubleEncryptionAtRest@service.microsoft.com.
 
 ## Benefits of the customer-managed TDE
 
@@ -79,7 +79,7 @@ Auditors can use Azure Monitor to review key vault AuditEvent logs, if logging i
 - Grant the server or managed instance access to the key vault (*get*, *wrapKey*, *unwrapKey*) using its Azure Active Directory identity. The server identity can be a system-assigned managed identity or a user-assigned managed identity assigned to the server. When using the Azure portal, the Azure AD identity gets automatically created when the server is created. When using PowerShell or Azure CLI, the Azure AD identity must be explicitly created and should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md) and [Configure TDE with BYOK for SQL Managed Instance](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md) for detailed step-by-step instructions when using PowerShell.
     - Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
 
-- When using firewall with AKV, you must enable option *Allow trusted Microsoft services to bypass the firewall*.
+- When using a firewall with AKV, you must enable the option **Allow trusted Microsoft services to bypass the firewall**. For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
 
 ### Enable soft-delete and purge protection for AKV
 
@@ -126,7 +126,7 @@ Azure Key Vault Managed HSM is a fully managed, highly available, single-tenant,
 - Link each server with two key vaults that reside in different regions and hold the same key material, to ensure high availability of encrypted databases. Mark the key from one of the key vaults as the TDE protector. System will automatically switch to the key vault in the second region with the same key material, if there's an outage affecting the key vault in the first region.
 
 > [!NOTE]
-> To allow greater flexibility in configuring customer-managed TDE, Azure SQL Database server and Managed Instance in one region can now be linked to key vault in any other region. The server and key vault do not have to be co-located in the same region. 
+> To allow greater flexibility in configuring customer-managed TDE, Azure SQL Database and Azure SQL Managed Instance in one region can now be linked to key vault in any other region. The server and key vault do not have to be co-located in the same region. 
 
 ### Recommendations when configuring TDE protector
 
@@ -148,12 +148,9 @@ Rotating the TDE protector for a server means to switch to a new asymmetric key 
 
 [Rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md) can either be done manually or by using the automated rotation feature.
 
-Automated rotation of the TDE protector can be enabled when configuring the TDE protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.
+[Automated rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation) can be enabled when configuring the TDE protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.
 
 When used with [automated key rotation in Azure Key Vault](/azure/key-vault/keys/how-to-configure-key-rotation), this feature enables end-to-end zero-touch rotation for the TDE protector on Azure SQL Database and Azure SQL Managed Instance.
-
-> [!NOTE]
-> Automated rotation of the TDE protector feature is currently in public preview for SQL Database and Managed Instance.
 
 ### Geo-replication considerations when configuring automated rotation of the TDE protector
 
@@ -201,23 +198,23 @@ Learn more about [the common causes for database to become inaccessible](/sql/re
 
 ### Blocked connectivity between SQL Managed Instance and Key Vault
 
-On SQL Managed Instance, network errors while trying to access TDE protector in Azure Key Vault may not cause the databases to change its state to *Inaccessible* but will render the instance unavailable afterwards. This happens mostly when the key vault resource exists but it's endpoint cannot be reached from the managed instance. All scenarios where the key vault endpoint can be reached but connection is denied, missing permissions, etc., will cause the databases to change its state to *Inaccessible*.
+On SQL Managed Instance, network errors while trying to access TDE protector in Azure Key Vault may not cause the databases to change its state to *Inaccessible* but will render the instance unavailable afterwards. This happens mostly when the key vault resource exists but its endpoint can't be reached from the managed instance. All scenarios where the key vault endpoint can be reached but connection is denied, missing permissions, etc., will cause the databases to change its state to *Inaccessible*.
 
 The most common causes for lack of networking connectivity to Key Vault are:
 
-- Key Vault is exposed via private endpoint and the private IP address of the AKV service is not allowed in the outbound rules of the Network Security Group (NSG) associated with the managed instance subnet.
-- Bad DNS resolution, like when the key vault FQDN is not resolved or resolves to an invalid IP address.
+- Key Vault is exposed via private endpoint and the private IP address of the AKV service isn't allowed in the outbound rules of the Network Security Group (NSG) associated with the managed instance subnet.
+- Bad DNS resolution, like when the key vault FQDN isn't resolved or resolves to an invalid IP address.
 
-[Test the connectivity](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-test-tcp-connectivity-from-a-sql-managed-instance/ba-p/3058458) from Managed Instance to the Key Vault hosting the TDE protector.
+[Test the connectivity](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-test-tcp-connectivity-from-a-sql-managed-instance/ba-p/3058458) from SQL Managed Instance to the Key Vault hosting the TDE protector.
 
 - The endpoint is your vault FQDN, like *<vault_name>.vault.azure.net* (without the https://).
 - The port to be tested is 443.
 - The result for RemoteAddress should exist and be the correct IP address
-- The result for TCP test should be *TcpTestSucceeded : True*.
+- The result for TCP test should be *TcpTestSucceeded: True*.
 
-In case the test returns *TcpTestSucceeded : False*, review the networking configuration:
+In case the test returns *TcpTestSucceeded: False*, review the networking configuration:
 
-- Check the resolved IP address, confirm it's valied. A missing value means there's issues with DNS resolution.
+- Check the resolved IP address, confirm it's valid. A missing value means there's issues with DNS resolution.
     - Confirm that the network security group on the managed instance has an **outbound** rule that covers the resolved IP address on port 443, especially when the resolved address belongs to the key vault's private endpoint.
     - Check other networking configurations like route table, existence of virtual appliance and its configuration, etc.
 
@@ -271,7 +268,7 @@ To avoid issues while establishing or during geo-replication due to incomplete k
 
 To test a failover, follow the steps in [Active geo-replication overview](active-geo-replication-overview.md). Testing failover should be done regularly to validate that SQL Database has maintained access permission to both key vaults.
 
-**Azure SQL Database server and Managed Instance in one region can now be linked to key vault in any other region.** The server and key vault don't have to be co-located in the same region. With this, for simplicity, the primary and secondary servers can be connected to the same key vault (in any region). This will help avoid scenarios where key material may be out of sync if separate key vaults are used for both the servers. Azure Key Vault has multiple layers of redundancy in place to make sure that your keys and key vaults remain available in case of service or region failures. [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance)
+**Azure SQL Database server and SQL Managed Instance in one region can now be linked to key vault in any other region.** The server and key vault don't have to be co-located in the same region. With this, for simplicity, the primary and secondary servers can be connected to the same key vault (in any region). This will help avoid scenarios where key material may be out of sync if separate key vaults are used for both the servers. Azure Key Vault has multiple layers of redundancy in place to make sure that your keys and key vaults remain available in case of service or region failures. [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance)
 
 ## Azure Policy for customer-managed TDE
 
@@ -282,7 +279,7 @@ For more information on Azure Policy, see [What is Azure Policy?](/azure/governa
 
 The following two built-in policies are supported for customer-managed TDE in Azure Policy:
 - SQL servers should use customer-managed keys to encrypt data at rest
-- SQL managed instances should use customer-managed keys to encrypt data at rest
+- Managed instances should use customer-managed keys to encrypt data at rest
 
 The customer-managed TDE policy can be managed by going to the [Azure portal](https://portal.azure.com), and searching for the **Policy** service. Under **Definitions**, search for customer-managed key.
 

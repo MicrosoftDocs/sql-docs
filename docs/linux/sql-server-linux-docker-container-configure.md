@@ -5,8 +5,8 @@ author: amvin87
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 05/30/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: troubleshooting
 ms.custom: contperf-fy21q1
 zone_pivot_groups: cs1-command-shell
@@ -409,7 +409,7 @@ It's a good practice to keep your `tempdb` database separate from your user data
 
 ## <a id="changefilelocation"></a> Change the default file location
 
-Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker run` command, then mount a volume to that location that your container’s user has access to.
+Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker run` command, then mount a volume to that location that your container's user has access to.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

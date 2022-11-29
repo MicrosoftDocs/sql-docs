@@ -200,6 +200,8 @@ The following table compares compute resources in different hardware configurati
 
 For more information, see resource limits for [single databases](resource-limits-vcore-single-databases.md) and [elastic pools](resource-limits-vcore-elastic-pools.md).
 
+For Hyperscale database compute resources and specification, see [Hyperscale compute resources](service-tier-hyperscale.md#compute-resources).
+
 ## Previous generation hardware
 
 ### Gen4

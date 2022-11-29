@@ -4,8 +4,8 @@ description: Learn about the interoperability of using database snapshots with d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "database mirroring [SQL Server], interoperability"

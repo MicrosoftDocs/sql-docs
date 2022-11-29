@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 09/10/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.objects_TSQL"

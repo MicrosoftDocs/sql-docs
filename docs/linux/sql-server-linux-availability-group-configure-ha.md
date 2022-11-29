@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/24/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux

@@ -3,10 +3,9 @@ title: "SQL Injection | Microsoft Docs"
 description: Learn how SQL injection attacks work. Mitigate such attacks by validating input and reviewing code for SQL injection in SQL Server.
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Injection"
@@ -27,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following script shows a simple SQL injection. The script builds an SQL query by concatenating hard-coded strings together with a string entered by the user:  
   
 ```csharp
-var Shipcity;  
+var ShipCity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
 ```  

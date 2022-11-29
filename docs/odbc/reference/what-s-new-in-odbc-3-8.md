@@ -4,10 +4,9 @@ title: "What&#39;s New in ODBC 3.8 | Microsoft Docs"
 ms.custom:
   - intro-whats-new
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel

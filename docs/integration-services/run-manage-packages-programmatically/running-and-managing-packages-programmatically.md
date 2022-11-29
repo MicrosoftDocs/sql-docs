@@ -3,10 +3,9 @@ description: "Running and Managing Packages Programmatically"
 title: "Running and Managing Packages Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace

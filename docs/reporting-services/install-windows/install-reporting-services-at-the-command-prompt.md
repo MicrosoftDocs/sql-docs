@@ -2,8 +2,7 @@
 description: "Install Reporting Services 2016 at the Command Prompt - SSRS"
 title: "Install Reporting Services 2016 at the Command Prompt - SSRS | Microsoft Docs"
 ms.date: 01/09/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
+ms.service: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "command line"

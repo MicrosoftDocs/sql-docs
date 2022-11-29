@@ -5,8 +5,8 @@ author: aashnabafna-ms
 ms.author: aashnabafna
 ms.reviewer: derekw, maghan, randolphwest
 ms.date: 09/13/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATETRUNC_TSQL"
@@ -18,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 # DATETRUNC (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], this function returns an input *date* truncated to a specified *datepart*.
 

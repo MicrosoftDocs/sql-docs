@@ -3,10 +3,9 @@ description: "Replication Queue Reader Agent"
 title: "Replication Queue Reader Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/29/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "agents [SQL Server replication], Queue Reader Agent"

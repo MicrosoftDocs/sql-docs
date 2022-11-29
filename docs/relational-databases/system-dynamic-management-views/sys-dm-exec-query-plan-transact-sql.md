@@ -4,8 +4,8 @@ description: sys.dm_exec_query_plan (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_query_plan_TSQL"

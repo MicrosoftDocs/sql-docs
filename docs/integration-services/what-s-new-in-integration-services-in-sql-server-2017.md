@@ -4,10 +4,9 @@ title: "What&#39;s New in Integration Services in SQL Server 2017 | Microsoft Do
 ms.custom:
   - intro-whats-new
 ms.date: "09/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace

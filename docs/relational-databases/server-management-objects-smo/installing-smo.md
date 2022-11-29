@@ -4,10 +4,9 @@ title: "Installing SMO | Microsoft Docs"
 ms.custom:
   - intro-installation
 ms.date: "08/06/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.prod_service: "database-engine"
-ms.technology: 
+ms.subservice: 
 ms.topic: "reference"
 helpviewer_keywords:
   - "installing SMO"

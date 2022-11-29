@@ -4,8 +4,8 @@ description: sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/21/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_memory_cache_clock_hands_TSQL"

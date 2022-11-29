@@ -1,9 +1,8 @@
 ---
 description: "Operator Properties - New Operator (Notifications Page)"
 title: New Operator (Notifications Page)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.operator.notifications.f1"

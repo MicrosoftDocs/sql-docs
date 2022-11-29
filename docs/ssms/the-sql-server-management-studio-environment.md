@@ -1,9 +1,8 @@
 ---
 title: "The SQL Server Management Studio Environment"
 description: "The SQL Server Management Studio Environment"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], about SQL Server Management Studio"

@@ -4,8 +4,8 @@ description: "View information on the XPs Server configuration option. This opti
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Replication XPs option"

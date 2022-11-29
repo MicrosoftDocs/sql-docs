@@ -4,8 +4,8 @@ description: "Data Type Functions (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "07/29/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"

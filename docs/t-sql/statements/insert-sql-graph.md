@@ -4,9 +4,8 @@ description: Learn about the syntax, permissions, and arguments for the INSERT s
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.date: "05/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "INSERT statement [SQL Server], SQL graph"

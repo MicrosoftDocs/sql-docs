@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 10/20/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
 ms.custom: sqlfreshmay19
 helpviewer_keywords:

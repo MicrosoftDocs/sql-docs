@@ -1,11 +1,11 @@
 ---
 description: "Creating the Server Connection Files (AccessToSQL)"
 title: "Creating the Server Connection Files (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: cpichuka 

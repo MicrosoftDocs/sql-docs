@@ -3,9 +3,8 @@ description: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
 title: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
-ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
+ms.service: sql
+ms.subservice: 
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""

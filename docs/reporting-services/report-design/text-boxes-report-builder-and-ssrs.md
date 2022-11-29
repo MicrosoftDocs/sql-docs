@@ -2,9 +2,8 @@
 title: "Text boxes in paginated reports | Microsoft Docs"
 description: Find out about cells in a table or matrix in a paginated report that also contain a text box, which you can format the same way as stand-alone text boxes in Report Builder.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

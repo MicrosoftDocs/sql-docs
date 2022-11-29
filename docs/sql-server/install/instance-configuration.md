@@ -4,9 +4,9 @@ description: Specify whether to create a default instance or a named instance of
 ms.custom:
   - intro-installation
 ms.date: 08/16/2019
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: install
+ms.subservice: install
 ms.topic: conceptual
 f1_keywords:
   - "instance configuration, Setup"

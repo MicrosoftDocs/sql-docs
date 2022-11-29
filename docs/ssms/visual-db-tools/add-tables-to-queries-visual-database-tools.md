@@ -1,9 +1,8 @@
 ---
 description: "Add Tables to Queries (Visual Database Tools)"
 title: Add Tables to Queries
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting tables"

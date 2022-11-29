@@ -4,8 +4,8 @@ description: Get acquainted with services that are available in SQL Server. See 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server Configuration Manager, accessing"

@@ -1,8 +1,8 @@
 ---
 title: "Manage Code Formatting"
 description: Learn about the three styles of text indenting and how to use them, and learn how to create clickable URLs.
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indenting code [SQL Server]"

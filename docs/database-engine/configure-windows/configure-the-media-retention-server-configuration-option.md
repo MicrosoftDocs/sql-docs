@@ -4,8 +4,8 @@ description: Learn about the media retention option. See how to use it to specif
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "backup retention duration [SQL Server]"

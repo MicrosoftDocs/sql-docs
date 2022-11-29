@@ -5,9 +5,8 @@ author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: mikeray
 ms.date: 10/02/2016
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "extended events [SQL Server], system health session"

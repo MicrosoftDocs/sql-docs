@@ -3,10 +3,9 @@ description: "How to Manage a CDC Instance"
 title: "How to Manage a CDC Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: chugugrace

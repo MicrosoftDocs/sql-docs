@@ -4,9 +4,8 @@ description: CREATE SYNONYM (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "02/01/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_SYNONYM_TSQL"

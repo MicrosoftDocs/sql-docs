@@ -3,10 +3,9 @@ description: "Using Data Files and Format Files"
 title: "Using Data Files and Format Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [ODBC], file formats"

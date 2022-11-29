@@ -3,9 +3,9 @@ description: "WITH XMLNAMESPACES"
 title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "WITH_XMLNAMESPACES_TSQL"

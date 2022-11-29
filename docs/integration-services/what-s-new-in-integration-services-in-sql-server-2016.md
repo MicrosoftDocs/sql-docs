@@ -5,10 +5,9 @@ ms.custom:
   - SQL2016_New_Updated
   - intro-whats-new
 ms.date: "09/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "Integration Services, what's new"

@@ -3,10 +3,9 @@ title: "Transactions in ODBC | Microsoft Docs"
 description: ODBC manages transactions at the connection level, committing or rolling back all work completed, either in autocommit or manual-commit mode.
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, transactions"

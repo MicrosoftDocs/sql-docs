@@ -1,9 +1,8 @@
 ---
 title: SSMS Options page - Query Execution
 description: SSMS Options (Query Execution)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - VS.ToolsOptionsPages.Query_Execution.Sql_Server.General

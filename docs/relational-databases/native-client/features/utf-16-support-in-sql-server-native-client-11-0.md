@@ -3,9 +3,9 @@ title: "UTF-16 Support"
 description: Learn about support for UTF-16 in a fixed-length buffer in SQL Server Native Client, beginning with SQL Server 2012.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: f2520424-8ef4-409f-8147-d83da5076e96
 author: markingmyname

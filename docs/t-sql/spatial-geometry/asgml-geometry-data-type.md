@@ -1,9 +1,8 @@
 ---
 title: "AsGml (geometry Data Type)"
 description: "AsGml (geometry Data Type)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "AsGml_(geometry_Data_Type)_TSQL"

@@ -3,10 +3,9 @@ title: "sys.dm_user_db_resource_governance (Transact-SQL)"
 description: sys.dm_user_db_resource_governance (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 08/19/2022
-ms.prod: sql
-ms.prod_service: sql-database
-ms.technology: system-objects
+ms.date: 11/28/2022
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_governance"

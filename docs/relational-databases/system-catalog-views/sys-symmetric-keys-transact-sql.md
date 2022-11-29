@@ -4,9 +4,8 @@ description: sys.symmetric_keys (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "symmetric_keys"

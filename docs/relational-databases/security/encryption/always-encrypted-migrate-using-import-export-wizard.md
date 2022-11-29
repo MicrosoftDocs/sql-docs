@@ -4,9 +4,9 @@ title: "Migrate data to or from columns using Always Encrypted with SQL Server I
 ms.custom:
   - intro-migration
 ms.date: 10/31/2019
-ms.prod: sql
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords:
   - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"

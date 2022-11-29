@@ -3,10 +3,9 @@ title: "Merge Replication | Microsoft Docs"
 description: Merge replication uses a snapshot of the publication database objects and data, and then tracks modifications at the Publisher and Subscribers with triggers.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "merge replication [SQL Server replication], about merge replication"

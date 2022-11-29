@@ -4,8 +4,8 @@ description: "DBCC CHECKCATALOG (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/14/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "DBCC_CHECKCATALOG_TSQL"

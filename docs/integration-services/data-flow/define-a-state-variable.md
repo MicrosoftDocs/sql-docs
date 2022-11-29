@@ -3,10 +3,9 @@ description: "Define a State Variable"
 title: "Define a State Variable | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace

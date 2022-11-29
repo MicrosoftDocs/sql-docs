@@ -3,10 +3,9 @@ title: "Activity Monitor"
 description: Learn how to use Activity Monitor in SQL Server Management Studio to display information about SQL Server processes and how these processes affect the current instance of SQL Server.
 ms.custom: ""
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Activity Monitor [SQL Server]"

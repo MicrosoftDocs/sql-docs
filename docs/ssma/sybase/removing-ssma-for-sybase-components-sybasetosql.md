@@ -3,9 +3,9 @@ description: "Removing SSMA for Sybase Components (SybaseToSQL)"
 title: "Removing SSMA for Sybase Components (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: cpichuka 

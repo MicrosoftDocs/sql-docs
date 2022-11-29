@@ -4,7 +4,6 @@ title: "sp_create_openrowset_statistics (Transact-SQL)"
 ms.custom: ""
 ms.date: "04/13/2022"
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: "reference"
 f1_keywords: 

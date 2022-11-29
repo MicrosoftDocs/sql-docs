@@ -2,8 +2,8 @@
 title: "Tutorial: Prepare data to train a predictive model in R"
 titleSuffix: SQL machine learning
 description: In part two of this four-part tutorial series, you'll prepare the data to train a predictive model in R with SQL machine learning.
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf

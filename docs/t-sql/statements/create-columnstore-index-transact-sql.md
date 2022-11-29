@@ -4,8 +4,8 @@ description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered 
 author: markingmyname
 ms.author: maghan
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_COLUMNSTORE_INDEX_TSQL"

@@ -1,11 +1,11 @@
 ---
 description: "Using Test Repositories (OracleToSQL)"
 title: "Using Test Repositories (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "04/29/2021"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Test Cases Repository"

@@ -4,8 +4,8 @@ description: "Find out how to register a Service Principal Name (SPN) with Activ
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/12/2020
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "connections [SQL Server], SPNs"

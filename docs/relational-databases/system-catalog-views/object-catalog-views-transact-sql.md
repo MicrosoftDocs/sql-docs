@@ -4,9 +4,8 @@ description: Object Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 01/19/2019
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "object catalog views [SQL Server]"

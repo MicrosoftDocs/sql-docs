@@ -1,9 +1,8 @@
 ---
 title: Alter DacFx used by SQL Server Data Tools (SSDT)
 description: "Learn how to manually change the DacFx version used by SQL Server Data Tools (SSDT)."
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 keywords: "ssdt dacfx"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361

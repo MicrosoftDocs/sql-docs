@@ -1,8 +1,8 @@
 ---
 title: "T-SQL Tutorial: Configure permissions on db objects"
 description: "Lesson 2: Configure permissions on database objects"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords: 
   - "database permissions"

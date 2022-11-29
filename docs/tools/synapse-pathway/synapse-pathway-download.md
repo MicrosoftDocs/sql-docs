@@ -1,8 +1,8 @@
 ---
 title: Azure Synapse Pathway download
 description: Learn how to get download Azure Synapse Pathway
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
     -  "Azure Synapse Pathway, download"

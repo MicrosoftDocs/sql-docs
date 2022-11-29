@@ -4,9 +4,8 @@ description: For In-Memory OLTP tables, sys.dm_db_xtp_hash_index_stats helps you
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_xtp_hash_index_stats"

@@ -5,8 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: garye, jroth
 ms.date: 03/04/2021
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "how-to"
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---

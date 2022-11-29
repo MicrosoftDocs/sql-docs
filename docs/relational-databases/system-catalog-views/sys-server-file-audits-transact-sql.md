@@ -4,9 +4,8 @@ description: sys.server_file_audits (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_file_audits_TSQL"

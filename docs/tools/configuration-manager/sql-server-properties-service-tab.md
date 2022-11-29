@@ -3,10 +3,9 @@ title: "SQL Server Properties (Service Tab)"
 description: Learn about the options on the Service tab of the MSSQLSERVER Properties dialog box, such as the binary path, the host name, and the start mode.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname

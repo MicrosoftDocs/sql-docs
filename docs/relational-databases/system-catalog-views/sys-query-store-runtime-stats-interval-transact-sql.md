@@ -4,9 +4,8 @@ description: sys.query_store_runtime_stats_interval (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/23/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "QUERY_STORE_RUNTIME_STATS_INTERVAL"

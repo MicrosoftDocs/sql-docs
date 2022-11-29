@@ -3,9 +3,9 @@ title: "Using Large Value Types | Microsoft Docs"
 description: Learn how SQL Server Native Client deals with large value data types that previously required special handling.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large value data types"

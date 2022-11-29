@@ -3,10 +3,9 @@ description: "SQL Data Types in ODBC"
 title: "SQL Data Types in ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
 author: David-Engel

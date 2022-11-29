@@ -4,8 +4,8 @@ description: "table (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "11/27/2019"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "table data type [SQL Server]"

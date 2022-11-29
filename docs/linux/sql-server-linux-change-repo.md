@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer:
 ms.date: 08/22/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 zone_pivot_groups: ld2-linux-distribution
 ---
@@ -27,7 +27,7 @@ This article describes how to configure the correct repository for [!INCLUDE [ss
 ::: zone-end
 
 > [!TIP]  
-> [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] is now available! To try it, use this article to configure the new `mssql-server-preview` repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).
+> [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] is now available! To try it, use this article to configure the `mssql-server-2022` repository. Then install using the instructions in the [installation guide](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Repositories
 
@@ -35,7 +35,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 
 | Repository | Name | Description |
 |---|---|---|
-| **Preview** | `mssql-server-preview` | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] repository. |
+| **2022** | `mssql-server-2022` | [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] repository. |
 | **2019** | `mssql-server-2019` | [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] Cumulative Update (CU) repository. |
 | **2017** | `mssql-server-2017` | [!INCLUDE [sssql17-md](../includes/sssql17-md.md)] Cumulative Update (CU) repository. |
 
@@ -129,7 +129,7 @@ If necessary, remove the old repository. Use one of the following commands based
 
 | Repository | Command to remove |
 |---|---|
-| **Preview** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
+| **2022** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2022'` |
 | **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
 | **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
 
@@ -147,7 +147,7 @@ If necessary, remove the old repository. Use one of the following commands based
 
 | Repository | Command to remove |
 |---|---|
-| **Preview** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-preview focal main'` |
+| **2022** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022 focal main'` |
 | **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019 focal main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017 bionic main'` |
 
@@ -168,7 +168,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview** | 2022 (Preview) | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-preview.repo` |
+| **2022** | 2022 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo` |
 | **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo` |
 
@@ -180,7 +180,7 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview** | 2022 (Preview) | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-preview.repo` |
+| **Preview** | 2022 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo` |
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2019.repo` |
 | **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 
@@ -206,7 +206,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
    | Repository | Version | Command |
    |---|---|---|
-   | **Preview** | 2022 (Preview) | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-preview.list)"` |
+   | **2022** | 2022 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"` |
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"` |
 

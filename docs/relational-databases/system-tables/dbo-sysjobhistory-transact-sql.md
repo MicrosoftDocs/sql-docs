@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/11/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysjobhistory_TSQL"

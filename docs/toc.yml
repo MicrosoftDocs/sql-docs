@@ -8596,6 +8596,8 @@ items:
       href: ssdt/alter-dacfx-used-by-ssdt.md
     - name: SSIS Projects extension for VS2019 troubleshooting guide
       href: ssdt/release-notes-ssdt-2019.md
+    - name: SSIS Projects extension for VS2022 troubleshooting guide
+      href: ssdt/release-notes-integration-services-2022.md
   - name: SQL Server Management Studio (SSMS)
     items:
     - name: Download SSMS
@@ -10380,6 +10382,8 @@ items:
       href: sql-server/azure-arc/connect-at-scale.md
     - name: Assess
       href: sql-server/azure-arc/assess.md
+    - name: View databases
+      href: sql-server/azure-arc/view-databases.md
     - name: Configure advanced data Security
       href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: Billing through Microsoft Azure
@@ -11480,6 +11484,10 @@ items:
           href: relational-databases/errors-events/mssqlserver-18483-database-engine-error.md
         - name: 18752
           href: relational-databases/errors-events/mssqlserver-18752-database-engine-error.md
+      - name: Errors 19,000 to 19,999
+        items:
+        - name: 19407
+          href: relational-databases/errors-events/mssqlserver-19407-database-engine-error.md
       - name: Errors 20,000 to 34,000
         items:
         - name: 20557

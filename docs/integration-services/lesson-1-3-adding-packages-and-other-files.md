@@ -3,10 +3,9 @@ description: "Lesson 1-3 - Adding Packages and Other Files"
 title: "Step 3: Adding Packages and Other Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace

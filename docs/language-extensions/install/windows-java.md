@@ -3,8 +3,8 @@ title: Install Java Language Extension on Windows
 titleSuffix: SQL Server Language Extensions
 description: Learn how to install the SQL Server Java Language Extension feature on Windows.
 ms.topic: how-to
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 author: rothja
 ms.author: jroth
 ms.custom:

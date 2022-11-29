@@ -4,9 +4,8 @@ description: ALTER QUEUE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "05/01/2016"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_QUEUE_TSQL"

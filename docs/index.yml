@@ -6,7 +6,7 @@ metadata:
    title: Microsoft SQL documentation | Microsoft Docs
    description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
    ms.topic: hub-page
-   ms.prod: sql
+   ms.service: sql
    ms.custom: FY22Q2Fresh
    date: 03/15/2022
 

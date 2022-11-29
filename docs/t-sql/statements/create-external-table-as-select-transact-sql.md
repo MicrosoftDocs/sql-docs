@@ -4,8 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then
 author: markingmyname
 ms.author: maghan
 ms.date: 08/26/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.service: sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL TABLE AS SELECT"

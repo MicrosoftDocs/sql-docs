@@ -3,10 +3,9 @@ description: "Database Engine Stored Procedures (Transact-SQL)"
 title: "Database Engine Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/02/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

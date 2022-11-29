@@ -4,8 +4,8 @@ description: Learn how to use Data Migration Assistant to migrate an on-premises
 author: rajeshsetlem
 ms.author: rajpo
 ms.date: 06/29/2020
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom:
   - seo-lt-2019

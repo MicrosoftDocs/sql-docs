@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: 10/13/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"

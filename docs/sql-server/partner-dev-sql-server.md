@@ -4,8 +4,8 @@ description: Lists of third-party partners with development solutions for Server
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017    
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---

@@ -1,9 +1,8 @@
 ---
 title: "TuningTimeInMin Element (DTA)"
 description: In the dta utility, the TuningTimeInMin element specifies the maximum length of a tuning session in minutes.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"

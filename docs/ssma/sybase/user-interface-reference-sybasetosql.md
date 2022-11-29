@@ -3,9 +3,9 @@ description: "User Interface Reference (SybaseToSQL)"
 title: "User Interface Reference (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: cpichuka 

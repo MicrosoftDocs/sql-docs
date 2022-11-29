@@ -3,9 +3,9 @@ description: "MSSQLSERVER_3043"
 title: "MSSQLSERVER_3043 | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "3043 (Database Engine error)"

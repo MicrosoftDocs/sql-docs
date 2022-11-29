@@ -4,8 +4,8 @@ description: Learn about supporting XML data and the built-in types you can use 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Supporting XML data

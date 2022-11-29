@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: drskwier, matteot
 ms.date: 12/17/2020
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.serverproperties.processor.f1"

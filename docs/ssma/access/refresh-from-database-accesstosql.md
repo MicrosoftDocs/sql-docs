@@ -1,11 +1,11 @@
 ---
 description: "Refresh from Database (AccessToSQL)"
 title: "Refresh from Database (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: cpichuka 

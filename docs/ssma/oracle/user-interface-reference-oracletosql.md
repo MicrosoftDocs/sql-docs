@@ -1,11 +1,11 @@
 ---
 description: "User Interface Reference (OracleToSQL)"
 title: "User Interface Reference (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: cpichuka 

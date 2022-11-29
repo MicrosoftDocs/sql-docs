@@ -4,8 +4,8 @@ description: This article discusses design choices for Microsoft SQL Server inte
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], performance"

@@ -4,9 +4,8 @@ description: SET CONTEXT_INFO (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET_CONTEXT_INFO_TSQL"

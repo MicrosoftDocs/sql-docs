@@ -3,10 +3,9 @@ description: "Changesets (Master Data Services)"
 title: Changesets
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: CordeliaGrey

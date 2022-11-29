@@ -1,11 +1,11 @@
 ---
 description: "Legal Notice (MySQLToSql)"
 title: "Legal Notice (MySQLToSql) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: cpichuka 

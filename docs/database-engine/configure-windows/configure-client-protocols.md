@@ -4,8 +4,8 @@ description: Learn various ways of configuring the protocols that client applica
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/27/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "default protocols"

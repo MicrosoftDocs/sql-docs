@@ -4,10 +4,9 @@ title: "Deploy Packages with SSIS | Microsoft Docs"
 ms.custom:
   - intro-quickstart
 ms.date: "08/20/2018"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: quickstart
 helpviewer_keywords:
   - "deployment tutorial [Integration Services]"

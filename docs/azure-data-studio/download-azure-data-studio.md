@@ -68,6 +68,14 @@ We recommend the *user installer*, which simplifies installations and updates an
 
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`.
 
+**winget package**
+
+You can install Azure Data Studio using the `winget` tool:
+
+```console
+winget install Microsoft.AzureDataStudio
+```
+
 #### Unattended installation for Windows
 
 You can also install Azure Data Studio by using a command prompt script.

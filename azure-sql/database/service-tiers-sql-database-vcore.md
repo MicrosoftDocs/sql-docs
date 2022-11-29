@@ -41,7 +41,7 @@ The vCore purchasing model used by Azure SQL Database provides several benefits 
 
 ## Service tiers
 
-Service tier options in the vCore purchasing model include General Purpose, Business Critical, and Hyperscale. The service tier generally service tier defines hardware, storage type and IOPS, high availability and disaster recovery options, and other features like memory-optimized object types.
+Service tier options in the vCore purchasing model include General Purpose, Business Critical, and Hyperscale. The service tier generally service tier defines hardware, storage type and IOPS, high availability and disaster recovery options, and other features like memory optimized object types.
 
 For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
 
@@ -161,7 +161,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 #### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
  
-Hyperscale service tier (currently in preview) premium-series and premium-series memory-optimized hardware is available in the following regions:
+Hyperscale service tier (currently in preview) premium-series and premium-series memory optimized hardware is available in the following regions:
 Canada Central, East US, South Central US, UK South, West US 2.
 
 #### Fsv2-series

@@ -5,7 +5,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: erinstellato
 ms.date: "10/03/2019"
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

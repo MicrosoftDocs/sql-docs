@@ -90,7 +90,7 @@ Because the zone-redundant databases have replicas in different datacenters with
 
 The zone-redundant version of the high availability architecture is illustrated by the following diagram:
 
-![high availability architecture zone redundant](./media/high-availability-sla/zone-redundant-business-critical-service-tier.png)
+![Diagram of the zone-redundant high availability architecture.](./media/high-availability-sla/zone-redundant-business-critical-service-tier.png)
 
 > [!IMPORTANT]
 > - This feature is currently in preview for SQL Managed Instance, and only available on the Business Critical service tier. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).

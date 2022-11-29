@@ -45,7 +45,7 @@ Follow these steps to create a blank database.
 1. Click **Create a resource** in the upper left-hand corner of the Azure portal.
 2. On the **New** page, select **Databases** in the Azure Marketplace section, and then click **SQL Database** in the **Featured** section.
 
-   :::image type="content" source="./media/design-first-database-csharp-tutorial/create-empty-database.png" alt-text="create empty-database":::
+   :::image type="content" source="./media/design-first-database-csharp-tutorial/create-empty-database.png" alt-text="Screenshot of the Azure portal, selecting SQL Database from Azure Marketplace.":::
 
 3. Fill out the **SQL Database** form with the following information, as shown on the preceding image:
 
@@ -65,7 +65,7 @@ Follow these steps to create a blank database.
     | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: uppercase characters, lowercase characters, numbers, and non-alphanumeric characters. |
     | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
 
-    :::image type="content" source="./media/design-first-database-tutorial/create-database-server.png" alt-text="create database-server":::
+    :::image type="content" source="./media/design-first-database-tutorial/create-database-server.png" alt-text="Screenshot of the Azure portal, showing the logical server for Azure deployment page.":::
 
 5. Click **Select**.
 6. Click **Pricing tier** to specify the service tier, the number of DTUs or vCores, and the amount of storage. You may explore the options for the number of DTUs/vCores and storage that is available to you for each service tier.
@@ -91,11 +91,11 @@ SQL Database creates an IP firewall at the server-level. This firewall prevents 
 
 1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
-   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="server name":::
+   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted.":::
 
 1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="server-level IP firewall rule":::
+   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule.":::
 
 1. Click **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 

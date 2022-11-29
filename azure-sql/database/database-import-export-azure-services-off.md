@@ -42,7 +42,7 @@ The following steps show you how to connect to your virtual machine using a remo
 
    A Remote Desktop Protocol file (.rdp file) form appears with the public IP address and port number for the virtual machine.
 
-   :::image type="content" source="./media/database-import-export-azure-services-off/rdp.png" alt-text="RDP form":::
+   :::image type="content" source="./media/database-import-export-azure-services-off/rdp.png" alt-text="Screenshot of Azure portal, connect to VM, with download RDP highlighted.":::
 
 3. Select **Download RDP File**.
 
@@ -73,11 +73,11 @@ The following steps create a server-level IP firewall rule for your virtual mach
 
 2. Copy this fully qualified server name to use when connecting to your server and its databases.
 
-   :::image type="content" source="./media/database-import-export-azure-services-off/server-name.png" alt-text="server name":::
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted.":::
 
 3. Select **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
 
-   :::image type="content" source="./media/database-import-export-azure-services-off/server-firewall-rule.png" alt-text="server-level IP firewall rule":::
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, showing the firewall page, with server-level IP firewall rule highlighted.":::
 
 4. Choose **Add client IP** on the toolbar to add your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
@@ -137,7 +137,7 @@ The .BACPAC file can be stored in [Azure Blobs](/azure/storage/blobs/storage-blo
 
 To achieve the best performance, use Azure Files. SqlPackage operates with the filesystem so it can access Azure Files directly.
 
-To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the the blob and the local file system before the import or export operation. As a result the process will take longer.
+To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the blob and the local file system before the import or export operation. As a result the process will take longer.
 
 To upload or download .BACPAC files, see [Transfer data with AzCopy and Blob storage](/azure/storage/common/storage-use-azcopy-v10#transfer-data), and [Transfer data with AzCopy and file storage](/azure/storage/common/storage-use-azcopy-files).
 

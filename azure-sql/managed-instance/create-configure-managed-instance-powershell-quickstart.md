@@ -50,7 +50,7 @@ $edition = "General Purpose"
 $vCores = 4
 $maxStorage = 128
 $computeGeneration = "Gen5"
-$license = "LicenseIncluded" #"BasePrice" or LicenseIncluded if you have don't have SQL Server licence that can be used for AHB discount
+$license = "LicenseIncluded" #"BasePrice" or LicenseIncluded if you have don't have SQL Server license that can be used for AHB discount
 ```
 
 ## Create resource group 

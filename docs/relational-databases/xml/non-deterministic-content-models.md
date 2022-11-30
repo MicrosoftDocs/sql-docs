@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Non-Deterministic content models
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Non-deterministic content models are accepted in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the occurrence constraints are 0, 1, or unbounded.
 

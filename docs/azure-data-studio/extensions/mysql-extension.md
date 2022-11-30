@@ -5,7 +5,7 @@ author: shreyaaithal
 ms.author: shaithal
 ms.reviewer: erinstellato
 ms.date: 10/12/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: ignite-2022
 ---
@@ -37,9 +37,6 @@ If you don't already have Azure Data Studio installed, see its [install instruct
 2. Search for the **MySQL** and select it.
 
 3. Select **Install**. Once installed, select **Reload** to activate the extension in Azure Data Studio.
-
-> [!NOTE]
-> The extension is currently available in [Azure Data Studio (ADS) insider build](../download-azure-data-studio.md#download-the-insiders-build-of-azure-data-studio) only. It will be available in the next ADS stable build soon.
 
 ## Next steps
 

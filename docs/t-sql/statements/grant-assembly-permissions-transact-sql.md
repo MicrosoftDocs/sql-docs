@@ -15,7 +15,7 @@ dev_langs:
   - "TSQL"
 ---
 # GRANT Assembly Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Grants permissions on an assembly.  
   

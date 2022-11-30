@@ -4,7 +4,7 @@ description: An overview of monitoring and performance tuning capabilities and m
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
-ms.date: 07/29/2022
+ms.date: 11/30/2022
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
@@ -84,27 +84,6 @@ Azure SQL Database includes [database advisors](database-advisor-implement-perfo
 Starting in September 2020, databases with extremely low usage may show in the portal with less than actual usage. Due to the way telemetry is emitted when converting a double value to the nearest integer certain usage amounts less than 0.5 will be rounded to 0, which causes a loss in granularity of the emitted telemetry.
 
 For example: Consider a 1-minute window with the following four data points: 0.1, 0.1, 0.1, 0.1, these low values are rounded down to 0, 0, 0, 0 and present an average of 0. If any of the data points are greater than 0.5, for example: 0.1, 0.1, 0.9, 0.1, they are rounded to 0, 0, 1, 0 and show an avg of 0.25.
-
-Affected database metrics:
-- cpu_percent
-- log_write_percent
-- workers_percent
-- sessions_percent
-- physical_data_read_percent
-- dtu_consumption_percent2
-- xtp_storage_percent
-
-Affected elastic pool metrics:
-- cpu_percent
-- physical_data_read_percent
-- log_write_percent
-- memory_usage_percent
-- data_storage_percent
-- peak_worker_percent
-- peak_session_percent
-- xtp_storage_percent
-- allocated_data_storage_percent
-
 
 ## Generate intelligent assessments of performance issues
 

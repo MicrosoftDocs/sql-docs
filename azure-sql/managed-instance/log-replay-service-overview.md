@@ -1,6 +1,6 @@
 ---
-title: Log Replay Service overview
-description: Learn about the Log Replay Service with Azure SQL Managed Instance
+title: Overview of Log Replay Service with Azure SQL Managed Instance
+description: Learn about Log Replay Service with Azure SQL Managed Instance
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
@@ -13,7 +13,7 @@ ms.custom:
   - devx-track-azurepowershell
 ---
 
-# Log Replay Service with Azure SQL Managed Instance
+# Overview of Log Replay Service with Azure SQL Managed Instance
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
@@ -159,7 +159,7 @@ Consider the following limitations of LRS:
 - A single LRS job can run for a maximum of 30 days, after which it will be automatically canceled.
 
 > [!TIP]
-> If you require a database to be read-only accessible during the migration, with a much longer time frame for performing the migration and with minimal downtime, consider using the [SQL Managed Instance link](managed-instance-link-feature-overview.md) feature as a recommended migration solution.
+> If you require a database to be read-only accessible during the migration, with a much longer time frame for performing the migration and with minimal downtime, consider using the [Azure SQL Managed Instance link](managed-instance-link-feature-overview.md) feature as a recommended migration solution.
 >
 
 

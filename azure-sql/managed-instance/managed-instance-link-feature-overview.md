@@ -1,5 +1,5 @@
 ---
-title: Overview of the Azure SQL Managed Instance link feature (preview)
+title: Overview of the Managed Instance link feature (preview)
 titleSuffix: Azure SQL Managed Instance
 description: This article describes the link feature of Azure SQL Managed Instance, which you can use to replicate data continuously from a SQL Server instance to the cloud or migrate your SQL Server databases with minimal downtime.
 author: danimir
@@ -12,17 +12,17 @@ ms.topic: conceptual
 ms.custom: ignite-fall-2021
 ---
 
-# Overview of the Azure SQL Managed Instance link feature (preview)
+# Overview of the Managed Instance link feature (preview)
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of the SQL Managed Instance link feature, which enables near real-time data replication from a SQL Server instance to an Azure SQL Managed Instance deployment. The link provides hybrid flexibility and database mobility as it unlocks several scenarios, such as scaling read-only workloads, offloading analytics and reporting to Azure, and migrating to the cloud. And, with SQL Server 2022, the SQL Managed Instance link feature enables disaster recovery. 
+This article provides an overview of the Azure SQL Managed Instance link feature, which enables near real-time data replication from a SQL Server instance to an Azure SQL Managed Instance deployment. The link provides hybrid flexibility and database mobility as it unlocks several scenarios, such as scaling read-only workloads, offloading analytics and reporting to Azure, and migrating to the cloud. And, with SQL Server 2022, the Managed Instance link feature enables disaster recovery. 
 
-If you have product improvement suggestions or comments, or you want to report issues, contact our team through [SQL Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
+If you have product improvement suggestions or comments, or you want to report issues, contact our team through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
 
 ## Overview
 
-The SQL Managed Instance link feature uses distributed availability groups to extend your SQL Server on-premises availability group hosted anywhere to Azure SQL Managed Instance in a safe and secure manner, replicating data in near real-time. 
+The Managed Instance link feature uses distributed availability groups to extend your SQL Server on-premises availability group hosted anywhere to Azure SQL Managed Instance in a safe and secure manner, replicating data in near real-time. 
 
 The link supports single node SQL Server instances without existing availability groups, and also multiple-node SQL Server instances with existing availability groups. Through the link, you can use the latest benefits of Azure without migrating your entire SQL Server data estate to the cloud.
 
@@ -59,11 +59,11 @@ You'll also need the following tooling:
 
 | Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  | Notes  | 
 | --- | --- |
-| [SSMS 19.0](/sql/ssms/download-sql-server-management-studio-ssms) or later | SQL Server Management Studio (SSMS) is the easiest way to use the SQL Managed Instance link. It provides graphical wizards for automated link setup for SQL Server versions 2016, 2019, and 2022. The ability to use SSMS to fail back from your managed instance to SQL Server 2022 is available only in limited public preview. [Sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup). |
+| [SSMS 19.0](/sql/ssms/download-sql-server-management-studio-ssms) or later | SQL Server Management Studio (SSMS) is the easiest way to use the Managed Instance link. It provides graphical wizards for automated link setup for SQL Server versions 2016, 2019, and 2022. The ability to use SSMS to fail back from your managed instance to SQL Server 2022 is available only in limited public preview. [Sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup). |
 | [Az.SQL 3.9.0](https://www.powershellgallery.com/packages/Az.Sql) or later | PowerShell module is required for manual configuration steps. |
 
 > [!NOTE]
-> The SQL Managed Instance link feature is available in all public Azure regions and national or government clouds.
+> The Managed Instance link feature is available in all public Azure regions and national or government clouds.
 
 ## How the link feature works
 
@@ -84,7 +84,7 @@ Databases that are replicated through the link feature from a SQL Server instanc
 - Migrating to Azure
 - Disaster recovery with SQL Server 2022 (currently in limited public preview)
 
-:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-main-scenario.png" alt-text="Diagram that illustrates the main SQL Managed Instance link scenario.":::
+:::image type="content" source="./media/managed-instance-link-feature-overview/mi-link-main-scenario.png" alt-text="Diagram that illustrates the main Managed Instance link scenario.":::
 
 ### Use Azure services 
 
@@ -111,7 +111,7 @@ After your databases are replicated to your managed instance, they're automatica
 
 ### Disaster recovery 
 
-If you're running SQL Server 2022, you can use the SQL Managed Instance link for disaster recovery, where, in the event of a disaster, you can manually fail over your workload to your Azure SQL Managed Instance deployment. After the disaster is mitigated, you can fail back to your SQL Server 2022 instance. 
+If you're running SQL Server 2022, you can use the Managed Instance link for disaster recovery, where, in the event of a disaster, you can manually fail over your workload to your Azure SQL Managed Instance deployment. After the disaster is mitigated, you can fail back to your SQL Server 2022 instance. 
 
 This feature is currently in limited public preview. [You must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup) so that the product group can configure your environment for the preview.  
 
@@ -162,18 +162,18 @@ Consider the following limitations when you're using the link.
 
   - If there are multiple SQL Server instances on a server, it's possible to configure a link with each instance, but each instance must be configured to use a separate database-mirroring endpoint, with a dedicated port per instance. Only the default instance should use port 5022 for the database-mirroring endpoint. 
 
-  - Only one database can be placed into a single availability group per one SQL Managed Instance link.
+  - Only one database can be placed into a single availability group per one Managed Instance link.
 
-  - A SQL Managed Instance link can replicate a database of any size if it fits into the chosen storage size of the target SQL Managed Instance deployment.
+  - A Managed Instance link can replicate a database of any size if it fits into the chosen storage size of the target SQL Managed Instance deployment.
 
-  - SQL Managed Instance link authentication between a SQL Server instance and a SQL Managed Instance deployment is certificate-based, available only through an exchange of certificates. Using Windows authentication to establish the link between the SQL Server instance and the managed instance isn't supported.
+  - Managed Instance link authentication between a SQL Server instance and a SQL Managed Instance deployment is certificate-based, available only through an exchange of certificates. Using Windows authentication to establish the link between the SQL Server instance and the managed instance isn't supported.
 
   - A private endpoint (VPN/virtual network) is supported to establish a link with a SQL Managed Instance deployment. A public endpoint can't be used to establish the link with the managed instance.
 
 
 * Feature limitations include: 
 
-  - You can't use [Auto failover group](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance deployments in parallel while you're operating the SQL Managed Instance link with the SQL Server instance.
+  - You can't use [Auto failover group](auto-failover-group-sql-mi.md) replication to secondary SQL Managed Instance deployments in parallel while you're operating the Managed Instance link with the SQL Server instance.
 
   - If you're using Change Data Capture (CDC), log shipping, or a service broker with databases that are replicated on the SQL Server instance, when the database is migrated to a SQL Managed Instance deployment, during a failover to Azure, clients need to connect by using the instance name of the current global primary replica. These settings should be manually reconfigured. 
 
@@ -193,14 +193,14 @@ Consider the following limitations when you're using the link.
 
 For more information about the link feature, see:
 
-- [SQL Managed Instance link: Connecting SQL Server to Azure reimagined](https://aka.ms/mi-link-techblog).
-- [Prepare for SQL Managed Instance link](./managed-instance-link-preparation.md).
-- [Use SQL Managed Instance link via SSMS to replicate a database](./managed-instance-link-use-ssms-to-replicate-database.md).
-- [Use SQL Managed Instance link via SSMS to migrate a database](./managed-instance-link-use-ssms-to-failover-database.md).
+- [Managed Instance link: Connecting SQL Server to Azure reimagined](https://aka.ms/mi-link-techblog).
+- [Prepare for the Managed Instance link](./managed-instance-link-preparation.md).
+- [Use a Managed Instance link via SSMS to replicate a database](./managed-instance-link-use-ssms-to-replicate-database.md).
+- [Use a Managed Instance link via SSMS to migrate a database](./managed-instance-link-use-ssms-to-failover-database.md).
 
 For other replication and migration scenarios, consider: 
 
 - [Transactional replication with SQL Managed Instance](replication-transactional-overview.md)
 - [Log Replay Service (LRS)](log-replay-service-overview.md)
 
-If you have product improvement suggestions or comments, or you want to report issues, contact our team through [SQL Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
+If you have product improvement suggestions or comments, or you want to report issues, contact our team through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).

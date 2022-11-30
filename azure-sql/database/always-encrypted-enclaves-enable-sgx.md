@@ -19,7 +19,7 @@ ms.topic: conceptual
 Configuring the DC-series hardware to enable Intel SGX enclaves is the responsibility of the Azure SQL Database administrator. See [Roles and responsibilities when configuring SGX enclaves and attestation](always-encrypted-enclaves-plan.md#roles-and-responsibilities-when-configuring-sgx-enclaves-and-attestation).
 
 > [!NOTE]
-> Intel SGX is not available in hardware configurations other than DC-series. For example, Intel SGX is not available for Gen5 hardware, and it is not available for databases using the [DTU model](service-tiers-dtu.md).
+> Intel SGX is not available in hardware configurations other than DC-series. For example, Intel SGX is not available for standard-series (Gen5) hardware, and it is not available for databases using the [DTU model](service-tiers-dtu.md).
 
 > [!IMPORTANT]
 > Before you configure the DC-series hardware for your database, check the regional availability of DC-series and make sure you understand its performance limitations. For more information, see [DC-series](service-tiers-sql-database-vcore.md#dc-series).

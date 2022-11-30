@@ -1,14 +1,13 @@
 ---
 title: Overview of SQL Server on Linux
 description: This article describes how SQL Server runs on Linux and provides information on how to learn more.
-author: VanMSFT 
+author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/08/2022
-ms.topic: conceptual
+ms.date: 11/29/2022
 ms.service: sql
 ms.subservice: linux
-ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
+ms.topic: conceptual
 ---
 # SQL Server on Linux
 
@@ -30,6 +29,7 @@ Starting with [!INCLUDE [sssql17-md](../includes/sssql17-md.md)], SQL Server run
 
 ::: moniker range=">= sql-server-ver16 || >= sql-server-linux-ver16"
 [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] runs on Linux. It's the same SQL Server database engine, with many similar features and services regardless of your operating system. To find out more about this release, see [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](../sql-server/what-s-new-in-sql-server-2022.md).
+
 ::: moniker-end
 
 ## Install
@@ -49,12 +49,15 @@ The SQL Server container images are published and available on the Microsoft Con
 - For RHEL-based SQL Server container images, see [SQL Server Red Hat Containers](https://catalog.redhat.com/software/containers/mssql/rhel/server/61f2f612f385723914ed60bc).
 - For Ubuntu-based SQL Server images, see [SQL Server on Docker Hub](https://hub.docker.com/_/microsoft-mssql-server).
 
+> [!NOTE]  
+> Containers will only be published to MCR for the *most recent* Linux distributions. If you create your own custom SQL Server container image for an older supported distribution, it will still be supported. For more information, see [Upcoming updates to SQL Server container images on Microsoft Artifact Registry aka (MCR)](https://techcommunity.microsoft.com/t5/sql-server-blog/upcoming-updates-to-sql-server-container-images-on-microsoft/ba-p/3573013).
+
 ## Connect
 
 After installation, connect to the SQL Server instance on your Linux machine. You can connect locally or remotely and with various tools and drivers. The quickstarts demonstrate how to use the [sqlcmd](sql-server-linux-setup-tools.md) command-line tool. Other tools include the following:
 
 | Tool | Tutorial |
-|-----|-----|
+| --- | --- |
 | Visual Studio Code (VS Code) | [Use VS Code with SQL Server on Linux](../tools/visual-studio-code/sql-server-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-manage-ssms.md) |
 | SQL Server Data Tools (SSDT) | [Use SSDT with SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
@@ -75,7 +78,7 @@ Then look at what's new:
 - [What's new for SQL Server 2019 on Linux](../sql-server/what-s-new-in-sql-server-2019.md#sql-server-on-linux)
 - [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](../sql-server/what-s-new-in-sql-server-2022.md)
 
-> [!TIP]
+> [!TIP]  
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

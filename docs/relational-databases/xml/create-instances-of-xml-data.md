@@ -21,7 +21,7 @@ ms.author: mikeray
 ---
 # Create instances of XML data
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to generate XML instances.
 

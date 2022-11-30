@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Grant permissions on an XML schema collection
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can grant permissions to create an XML schema collection and also grant permissions on an XML schema collection object.
 
@@ -212,7 +212,7 @@ GO
 GRANT SELECT TO TestLogin1;
 GO
 -- TestLogin1 already has EXECUTE permission on the schema (granted before inserting a record in the table).
-SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo"; /telephone[1]')
 FROM MyTestTable;
 GO
 -- To show that the user must have EXECUTE permission to query, revoke the
@@ -224,7 +224,7 @@ GO
 -- Now TestLogin1 cannot execute the query.
 SETUSER 'TestLogin1';
 GO
-SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo"; /telephone[1]')
 FROM MyTestTable;
 GO
 -- Final cleanup

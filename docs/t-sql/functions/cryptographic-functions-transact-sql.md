@@ -110,7 +110,7 @@ These functions support digital signing, digital signature validation, encryptio
         [SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)
     :::column-end:::
     :::column:::
-        [VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)
+        [VERIFYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::

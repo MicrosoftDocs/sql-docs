@@ -27,7 +27,7 @@ LocalDB installation copies a minimal set of files necessary to start the [!INCL
 
 LocalDB is a feature you select during SQL Server Express installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package. 
 
-- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
+- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658) : For Visual Studio 2019 through 2022
 - [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
 - [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 

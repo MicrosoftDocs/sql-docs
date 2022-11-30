@@ -23,8 +23,6 @@ ms.author: maghan
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[synapse-analytics-severless-sql-pools-tsql](Includes/synapse-analytics-severless-sql-pools-tsql.md)]
-
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.  
 
 :::row:::

@@ -666,8 +666,6 @@
           href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-manage?toc=/azure/azure-sql/toc.json
         - name: Find and remediate threats
           href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
-        - name: Investigate threats
-          href: threat-detection-overview.md
         - name: Review sensitive data
           href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
         - name: Vulnerability Assessment rules
@@ -675,7 +673,7 @@
         - name: Vulnerability Assessment rules changelog
           href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
         - name: Store vulnerability scans in storage
-          href: sql-database-vulnerability-assessment-storage.md
+          href: database/sql-database-vulnerability-assessment-storage.md
       - name: Configure threat detection
         href: database/threat-detection-configure.md
       - name: Configure dynamic data masking

@@ -121,6 +121,12 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 3. To make Azure Data Studio available in Launchpad, drag the *Azure Data Studio.app* file to the *Applications* folder.
 
+> [!NOTE]
+> For Apple Silicon users please make sure you have Rosetta 2 installed, some backend services are yet to be converted to native ARM64 binaries. You can run the following command in a Terminal window to install Rosetta 2.
+> ```bash
+> /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+> ```
+  
 ### Linux installation
 
 #### Install with a .deb file

@@ -60,7 +60,7 @@ Create your failover group and add your single database to it using the Azure po
 
 # [PowerShell](#tab/azure-powershell)
 
-Create your failover group and add your database to it using PowerShell.
+Create your failover group and add your database to it using PowerShell. 
 
    ```powershell-interactive
    $subscriptionId = "<SubscriptionID>"

@@ -21,7 +21,7 @@ ms.topic: conceptual
 Intel SGX is a hardware-based trusted execution environment technology. Intel SGX is available for databases that use the [vCore model](service-tiers-sql-database-vcore.md) and [DC-series](service-tiers-sql-database-vcore.md?#dc-series) hardware. Therefore, to ensure you can use Always Encrypted with secure enclaves in your database, you need to either select the DC-series hardware when you create the database, or you can update your existing database to use the DC-series hardware.
 
 > [!NOTE]
-> Intel SGX is not available in hardware other than DC-series. For example, Intel SGX is not available for Gen5 hardware, and it is not available for databases using the [DTU model](service-tiers-dtu.md).
+> Intel SGX is not available in hardware other than DC-series. For example, Intel SGX is not available for standard-series (Gen5) hardware, and it is not available for databases using the [DTU model](service-tiers-dtu.md).
 
 > [!IMPORTANT]
 > Before you configure the DC-series hardware for your database, check the regional availability of DC-series and make sure you understand its performance limitations. For details, see [DC-series](service-tiers-sql-database-vcore.md#dc-series).

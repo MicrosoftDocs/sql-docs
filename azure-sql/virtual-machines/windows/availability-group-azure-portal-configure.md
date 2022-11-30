@@ -64,7 +64,7 @@ Use Azure Marketplace to choose one of several preconfigured images from the vir
 
 1. Select **+ Create** to open the **Select SQL deployment option** pane.  
 
-1. Under **SQL Virtual Machines**, select the **High availability** checkbox, and then select the **Image** dropdown list box. Enter the version of SQL Server that you're interested in (such as **2019**), and then choose a SQL Server image (such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**). 
+1. Under **SQL virtual machines**, select the **High availability** checkbox. In the **Image** box, type the version of SQL Server that you're interested in (such as **2019**), and then choose a SQL Server image (such as **Free SQL Server License: SQL 2019 Developer on Windows Server 2019**). 
 
    After you select the **High availability** checkbox, the portal displays the supported SQL Server versions, starting with SQL Server 2016. 
 
@@ -118,7 +118,7 @@ On the **Networking** tab, configure your network options:
 
 1. Each virtual machine that you create has to be in its own subnet. 
 
-   Under **Create subnets**, select **Manage subnet configuration** to open the **Subnets** page for the virtual network. Then, either create a subnet (**+Subnet**) for each virtual machine or validate that a subnet is available for each virtual machine that you want to create for the availability group. 
+   Under **Create subnets**, select **Manage subnet configuration** to open the **Subnets** pane for the virtual network. Then, either create a subnet (**+Subnet**) for each virtual machine or validate that a subnet is available for each virtual machine that you want to create for the availability group. 
 
    When you're done, use the **X** to close the subnet management pane and go back to the page for availability group deployment.
 
@@ -164,7 +164,7 @@ For the deployment to work, all the accounts need to already be present in the A
 
 ## Choose disk settings
 
-On the **Disks** tab, configure your disk options for both the virtual machines and the SQL Server storage configuration.
+On the **Disks** tab, configure your disk options for both the virtual machines and the SQL Server storage configuration:
 
 1. Under **OS disk type**, select the type of disk that you want for your operating system. We recommend Premium for production systems, but it isn't available for a Basic VM. To use a Premium SSD, change the virtual machine size.
 
@@ -249,7 +249,7 @@ Add databases to your availability group after deployment finishes. The followin
 
 1. In **Object Explorer**, expand **Always On High Availability**.
 
-1. Expand **Availability Groups**, right-click your availability group, and then select **Add database**.
+1. Expand **Availability Groups**, right-click your availability group, and then select **Add Database**.
 
     :::image type="content" source="media/availability-group-az-portal-configure/add-database.png" alt-text="Screenshot of SQL Server Management Studio that shows selections for adding a database to an availability group.":::
 

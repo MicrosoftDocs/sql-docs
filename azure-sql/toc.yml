@@ -658,6 +658,8 @@
         href: database/audit-write-storage-account-behind-vnet-firewall.md
       - name: Vulnerability assessment
         items:
+        - name: Overview
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?toc=/azure/azure-sql/toc.json
         - name: Enable vulnerability assessment
           href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable?toc=/azure/azure-sql/toc.json
         - name: Manage vulnerability assessments

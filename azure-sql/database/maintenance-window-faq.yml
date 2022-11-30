@@ -56,7 +56,7 @@ sections:
   
       - question: Can my application become resiliant to reconfiguration events?
         answer: |
-          Yes, for becoming resiliant on reconfigurations that are result of [Gateway maintenance](maintenance-window.md#gateway-maintenance), make sure your client applications are using the redirect connection policy. For becoming resiliant on reconfiguration of SQL process, leverage the [retry logic](planned-maintenance.md) concept.
+          Yes, for application resilience during [Gateway maintenance](maintenance-window.md#gateway-maintenance), make sure your client applications use the redirect connection policy. For resilience during reconfiguration, leverage [retry logic](planned-maintenance.md) concepts.
 
       - question: Are there any prerequisites for configuring maintenance window?
         answer: |

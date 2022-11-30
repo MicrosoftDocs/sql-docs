@@ -46,11 +46,11 @@ Complete the following steps to enable a notification.
 
 4. In the **Actions** section, select the existing action group or create a new one. 
 
-    :::image type="content" source="media/advance-notifications/add-action-group.png" alt-text="A screenshot of the Azurel portal page where you add or create action groups.":::
+    :::image type="content" source="media/advance-notifications/add-action-group.png" alt-text="A screenshot of the Azure portal page where you add or create action groups.":::
 
 5. In the **Details** section, define the name for your alert and specify resource group where it should be deployed.
 
-    :::image type="content" source="media/advance-notifications/define-alert-details.png" alt-text="A screenshot of the Azurel portal page where you define alert details.":::
+    :::image type="content" source="media/advance-notifications/define-alert-details.png" alt-text="A screenshot of the Azure portal page where you define alert details.":::
 
 6. Select **Review + create** and your alert will be created.
 

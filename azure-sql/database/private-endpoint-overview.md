@@ -38,25 +38,29 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
     - (1) Select the Private endpoint connections in the left pane
     - (2) Shows a list of all Private Endpoint Connections (PECs)
     - (3) Corresponding Private Endpoint (PE) created
-![Screenshot of all PECs][3]
+    
+   :::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot of all PECs." lightbox="media/private-endpoint/pec-list-before.png":::
 
 1. Select an individual PEC from the list by selecting it.
-![Screenshot selected PEC][6]
+
+   :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot selected PEC." lightbox="media/private-endpoint/pec-select.png":::
 
 1. The SQL admin can choose to approve or reject a PEC and optionally add a short text response.
-![Screenshot of PEC approval][4]
+
+   :::image type="content" source="media/private-endpoint/pec-approve.png" alt-text="Screenshot of PEC approval." lightbox="media/private-endpoint/pec-approve.png":::
 
 1. After approval or rejection, the list will reflect the appropriate state along with the response text.
-![Screenshot of all PECs after approval][5]
 
-1. Finally clicking on the private endpoint name 
-   ![Screenshot of PEC details][7]   
+   :::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot of all PECs after approval." lightbox="media/private-endpoint/pec-list-after.png":::
+
+1. Finally selecting the private endpoint name 
+   :::image type="content" source="media/private-endpoint/pec-click.png" alt-text="Screenshot of PEC details." lightbox="media/private-endpoint/pec-click.png":::   
 
    leads to the Network Interface details
-   ![Screenshot of NIC details][8]
+   :::image type="content" source="media/private-endpoint/pec-nic-click.png" alt-text="Screenshot of NIC details." lightbox="media/private-endpoint/pec-nic-click.png":::
 
    which finally leads to the IP address for the private endpoint
-   ![Screenshot of Private IP][9]
+   :::image type="content" source="media/private-endpoint/pec-ip-display.png" alt-text="Screenshot of Private IP." lightbox="media/private-endpoint/pec-ip-display.png":::
 
 > [!IMPORTANT]
 > When you add a private endpoint connection, public routing to your logical server isn't blocked by default. In the **Firewall and virtual networks** pane, the setting **Deny public network access** is not selected by default. To disable public network access, ensure that you select **Deny public network access**.
@@ -70,7 +74,7 @@ First, ensure that your private endpoint connections are enabled and configured.
 1. Go to the **Networking** page of your logical server.
 1. Select the **Deny public network access** checkbox.
 
-![Screenshot that shows selecting the Deny public network access option.](./media/private-endpoint/pec-deny-public-access.png)
+   :::image type="content" source="./media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows selecting the Deny public network access option." lightbox="./media/private-endpoint/pec-deny-public-access.png":::
 
 ## Test connectivity to SQL Database from an Azure VM in same virtual network
 
@@ -96,9 +100,10 @@ Open a Command Prompt window after you have installed Telnet. Run the Telnet com
 
 When Telnet connects successfully, you'll see a blank screen at the command window like the below image:
 
- ![Diagram of telnet][2]
+:::image type="content" source="media/private-endpoint/telnet-result.png" alt-text="Diagram of telnet." lightbox="media/private-endpoint/telnet-result.png":::
 
 Use PowerShell command to check the connectivity
+
 ```
 Test-NetConnection -computer myserver.database.windows.net -port 1433
 ```
@@ -163,7 +168,7 @@ With Private Link, customers can enable cross-premises access to the private end
 
 Clients can connect to the Private endpoint from the same virtual network, peered virtual network in same region, or via virtual network to virtual network connection across regions. Additionally, clients can connect from on-premises using ExpressRoute, private peering, or VPN tunneling. Below is a simplified diagram showing the common use cases.
 
- ![Diagram of connectivity options][1]
+:::image type="content" source="media/private-endpoint/pe-connect-overview.png" alt-text="Diagram of connectivity option." lightbox="media/private-endpoint/pe-connect-overview.png":::
 
 In addition, services that are not running directly in the virtual network but are integrated with it (for example, App Service web apps or Functions) can also achieve private connectivity to the database. For more information on this specific use case, see the [Web app with private connectivity to Azure SQL database](/azure/architecture/example-scenario/private-web-app/private-web-app) architecture scenario.
 

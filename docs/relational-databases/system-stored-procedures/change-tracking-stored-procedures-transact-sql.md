@@ -16,6 +16,7 @@ ms.assetid:
 author: JetterMcTedder
 ms.author: bspendolini
 ---
+
 # Change Tracking stored procedures (Transact-SQL)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

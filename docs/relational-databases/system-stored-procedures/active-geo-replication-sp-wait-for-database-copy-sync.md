@@ -25,7 +25,7 @@ ms.custom: seo-dt-2019
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the **sp_wait_for_database_copy_sync** causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run **sp_wait_for_database_copy_sync** on only the primary database.
-  
+
 ||  
 |-|  
 |**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
@@ -37,43 +37,47 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
      , [ @target_database = ] 'database_name'  
 ```  
   
-## Arguments  
- [ @target_server = ] 'server_name'  
+## Arguments
+
+[ @target_server = ] 'server_name'  
  The name of the SQL Database server that hosts the active secondary database. server_name is sysname, with no default.  
   
- [ @target_database = ] 'database_name'  
+[ @target_database = ] 'database_name'  
  The name of the active secondary database. database_name is sysname, with no default.  
   
-## Return Code Values  
- Returns 0 for success or an error number for failure.  
+## Return Code Values
+
+Returns 0 for success or an error number for failure.  
   
- The most likely error conditions are as follows:  
+The most likely error conditions are as follows:  
   
--   The server name or database name is missing.  
+- The server name or database name is missing.  
   
--   The link cannot be found to the specified server name or database.  
+- The link cannot be found to the specified server name or database.  
   
--   Interlink connectivity is lost. **sp_wait_for_database_copy_sync** will return after the connection timeout.  
+- Interlink connectivity is lost. **sp_wait_for_database_copy_sync** will return after the connection timeout.  
   
-## Permissions  
- Any user in the primary database can call this system stored procedure. The login must be a user in both the primary and active secondary databases.  
+## Permissions
+
+Any user in the primary database can call this system stored procedure. The login must be a user in both the primary and active secondary databases.  
   
-## Remarks  
- All transactions committed before a **sp_wait_for_database_copy_sync** call are sent to the active secondary database.  
+## Remarks
+
+All transactions committed before a **sp_wait_for_database_copy_sync** call are sent to the active secondary database.  
   
-## Examples  
- The following example invokes **sp_wait_for_database_copy_sync** to ensure that all transactions are committed to the primary database, db0, get sent to its active secondary database on the target server ubfyu5ssyt.  
+## Examples
+
+The following example invokes **sp_wait_for_database_copy_sync** to ensure that all transactions are committed to the primary database, db0, get sent to its active secondary database on the target server ubfyu5ssyt.  
   
-```  
+```sql
 USE db0;  
 GO  
 EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target_database = N'db0';  
 GO  
 ```  
   
-## See Also  
- [sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Geo-Replication Dynamic Management Views (DMVs) and Functions &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
-  
-  
+## See Also
+
+- [sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+- [Geo-Replication Dynamic Management Views (DMVs) and Functions &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+- [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)

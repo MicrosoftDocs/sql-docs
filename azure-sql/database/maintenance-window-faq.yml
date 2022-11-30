@@ -42,9 +42,13 @@ sections:
         answer: |
           The maintenance event may contain updates for hardware, firmware, operating system, satellite software components, or the SQL database engine. They're typically combined into a single batch to minimize the incidence of maintenance events. In case of SQL Managed Instance, updates are combined in two batches, one focused on physical infrastructure, and another one focused on SQL engine and logical infrastructure.
 
+      - question: How frequent the updates are?
+        answer: |
+          Planned maintenance updates occur once every 35 days on average, which means customer can expect approximately one planned maintenance event per month per Azure SQL Database. In case of Azure SQL Managed Instance, customers can expect approximately two planned maintenance updates per month, but these updates can result with more than one maintenance event.
+      
       - question: What can I expect during a maintenance event?
         answer: |
-          During a maintenance update, databases are fully available and accessible but some of the maintenance updates require a reconfiguration as Azure takes SQL Databases offline for a short time to apply the maintenance updates (generally a few seconds in duration), and only during the maintenance window slots selected by the customer. Planned maintenance updates occur once every 35 days on average, which means customer can expect approximately one planned maintenance event per month per Azure SQL Database. In case of Azure SQL Managed Instance, customers can expect approximately two planned maintenance events per month.
+          Maintenance event represents a period during which the updates are applied on the resource. Maintenance event happens inside the defined maintenance window. During a maintenance event, databases are **fully available** and accessible but some of the maintenance updates require a reconfiguration as Azure takes SQL Databases **offline for a short time** to apply the maintenance updates (generally a few seconds in duration), and only during the maintenance window slots selected by the customer. In case of SQL Managed Instance, one update may result with multiple maintenance events. Depending on the configured maintenance window and start day of the update, the update events might complete within one wekk or overflow to the next week. However, planned maintenance events are never executed outside of defined maintenance windows.
 
       - question: How many reconfigurations can I expect during a maintenance event?
         answer: |
@@ -92,7 +96,7 @@ sections:
 
       - question: What happens when a maintenance event fails?
         answer: |
-          Although rare, failures or interruptions during a maintenance event can occur.  In the event of a failure, changes are rolled back and the maintenance will be rescheduled to another time.    
+          Although rare, failures or interruptions during a maintenance event can occur. In the event of a failure, changes are rolled back and the maintenance will be rescheduled to another time.    
 
       - question: How do I validate that my databases are set up for maintenance window?
         answer: |

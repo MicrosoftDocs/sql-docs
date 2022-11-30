@@ -10139,8 +10139,6 @@ items:
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
     - name: Create & configure availability groups
       href: linux/sql-server-linux-create-availability-group.md
-    - name: Deploy availability group with DH2i on AKS
-      href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md
   - name: Concepts
@@ -10240,8 +10238,9 @@ items:
       - name: Schedule SSIS packages
         href: linux/sql-server-linux-schedule-ssis-packages.md
     - name: Configure business continuity
-      href: linux/sql-server-linux-business-continuity-dr.md
       items:
+      - name: Overview
+        href: linux/sql-server-linux-business-continuity-dr.md
       - name: Availability basics
         href: linux/sql-server-linux-ha-basics.md
       - name: Backup & restore
@@ -10298,6 +10297,8 @@ items:
         items:
         - name: Configure a container in Kubernetes
           href: linux/quickstart-sql-server-containers-kubernetes.md
+        - name: Deploy availability group with DH2i on AKS
+          href: linux/tutorial-sql-server-containers-kubernetes-dh2i.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:

@@ -102,7 +102,7 @@ These functions support digital signing, digital signature validation, encryptio
         [SIGNBYASYMKEY](../../t-sql/functions/signbyasymkey-transact-sql.md)
     :::column-end:::
     :::column:::
-        [VERIFYSIGNEDBYASMKEY](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)
+        [VERIFYSIGNEDBYASYMKEY](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::

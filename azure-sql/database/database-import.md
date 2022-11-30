@@ -43,19 +43,19 @@ To migrate a database into an [Azure SQL Managed Instance](../managed-instance/s
 
 1. To import from a BACPAC file into a new single database using the Azure portal, open the appropriate server page and then, on the toolbar, select **Import database**.  
 
-   ![Database import1](./media/database-import/sql-server-import-database.png)
+   :::image type="content" source="./media/database-import/sql-server-import-database.png" alt-text="Screenshot of the Azure portal, logical server overview page, with database import selected.":::
 
-1. Select the storage account and the container for the BACPAC file and then select the BACPAC file from which to import.
+1. Select **Select backup**. Choose the storage account hosting your database, and then select the BACPAC file from which to import.
 
 1. Specify the new database size (usually the same as origin) and provide the destination SQL Server credentials. For a list of possible values for a new database in Azure SQL Database, see [Create Database](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).
 
-   ![Database import2](./media/database-import/sql-server-import-database-settings.png)
+   :::image type="content" source="./media/database-import/sql-server-import-database-settings.png" alt-text="Screenshot of the Azure portal, Database import page.":::
 
 1. Click **OK**.
 
 1. To monitor an import's progress, open the database's server page, and, under **Settings**, select **Import/Export history**. When successful, the import has a **Completed** status.
 
-   ![Database import status](./media/database-import/sql-server-import-database-history.png)
+   :::image type="content" source="./media/database-import/sql-server-import-database-history.png" alt-text="Screenshot of the Azure portal, server overview page, showing the database import status.":::
 
 1. To verify the database is live on the server, select **SQL databases** and verify the new database is **Online**.
 
@@ -151,7 +151,7 @@ az sql db import --resource-group "<resourceGroup>" --server "<server>" --name "
 ## Cancel the import request
 
 Use the [Database Operations - Cancel API](/rest/api/sql/databaseoperations/cancel)
-or the PowerShell [Stop-AzSqlDatabaseActivity command](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity), here an example of powershell command.
+or the [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/Stop-AzSqlDatabaseActivity) PowerShell command, as in the following example: 
 
 ```cmd
 Stop-AzSqlDatabaseActivity -ResourceGroupName $ResourceGroupName -ServerName $ServerName -DatabaseName $DatabaseName -OperationId $Operation.OperationId

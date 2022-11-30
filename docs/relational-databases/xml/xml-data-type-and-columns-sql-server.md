@@ -12,7 +12,7 @@ ms.author: mikeray
 ---
 # xml data type and columns (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article discusses the advantages and the limitations of the **xml** data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and helps you to choose how to store XML data.
 

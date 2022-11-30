@@ -1,6 +1,6 @@
 ---
-title: Inventory SQL Server databases
-description: Inventory databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to help manage SQL Server databases centrally, as Arc-enabled resources.
+title: Manage SQL Server databases
+description: Manage databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
@@ -10,9 +10,9 @@ ms.custom:
 ms.service: sql
 ---
 
-# Inventory SQL Server databases - Azure Arc
+# Manage SQL Server databases - Azure Arc
 
-You can inventory SQL Server databases in Azure.
+You can manage SQL Server databases in Azure.
 
 ## Prerequisites
 

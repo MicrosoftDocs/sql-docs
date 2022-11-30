@@ -68,7 +68,6 @@ Stored procedures for certain platforms only as specified, including Azure Synap
 
 
 
-## See also  
- - [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+## See also
+
+- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

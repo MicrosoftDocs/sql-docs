@@ -48,7 +48,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
     :::image type="content" source="media/hyperscale-database-create-quickstart/create-database-select-hyperscale-service-tier.png" alt-text="Screenshot of the service and compute tier configuration page for a new database in Azure SQL Database. The Hyperscale service tier has been selected." lightbox="media/hyperscale-database-create-quickstart/create-database-select-hyperscale-service-tier.png":::
 
-1. Under **Compute Hardware**, select **Change configuration**. Review the available hardware configurations and select the most appropriate configuration for your database. For this example, we will select the **Gen5** configuration.
+1. Under **Compute Hardware**, select **Change configuration**. Review the available hardware configurations and select the most appropriate configuration for your database. For this example, we will select the **Standard-series (Gen5)** configuration.
 1. Select **OK** to confirm the hardware generation.
 1. Under **Save money**, review if you qualify to use Azure Hybrid Benefit for this database. If so, select **Yes** and then confirm you have the required license.
 1. Optionally, adjust the **vCores** slider if you would like to increase the number of vCores for your database. For this example, we will select 2 vCores.
@@ -148,7 +148,7 @@ Create a database in the [Hyperscale service tier](service-tier-hyperscale.md) w
 
 When creating a Hyperscale database, carefully consider the setting for `backup-storage-redundancy`. Storage redundancy can only be specified during the database creation process for Hyperscale databases. You may choose locally redundant (preview), zone-redundant (preview), or geo-redundant storage. The selected storage redundancy option will be used for the lifetime of the database for both [data storage redundancy](hyperscale-architecture.md#azure-storage) and [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). Existing databases can migrate to different storage redundancy using [database copy](database-copy.md) or point in time restore. Allowed values for the `backup-storage-redundancy` parameter are: `Local`, `Zone`, `Geo`. Unless explicitly specified, databases will be configured to use geo-redundant backup storage.
 
-Run the following command to create a Hyperscale database populated with AdventureWorksLT sample data. The database uses Gen5 hardware with 2 vCores. Geo-redundant backup storage is used for the database. The command also creates one [High Availability (HA) replica](service-tier-hyperscale-replicas.md#high-availability-replica).
+Run the following command to create a Hyperscale database populated with AdventureWorksLT sample data. The database uses standard-series (Gen5) hardware with 2 vCores. Geo-redundant backup storage is used for the database. The command also creates one [High Availability (HA) replica](service-tier-hyperscale-replicas.md#high-availability-replica).
 
 ```azurecli
 az sql db create \
@@ -248,10 +248,10 @@ Create a single database with the [New-AzSqlDatabase](/powershell/module/az.sql/
 
 When creating a Hyperscale database, carefully consider the setting for `BackupStorageRedundancy`. Storage redundancy can only be specified during the database creation process for Hyperscale databases. You may choose locally redundant (preview), zone-redundant (preview), or geo-redundant storage. The selected storage redundancy option will be used for the lifetime of the database for both [data storage redundancy](hyperscale-architecture.md#azure-storage) and [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). Existing databases can migrate to different storage redundancy using [database copy](database-copy.md) or point in time restore. Allowed values for the `BackupStorageRedundancy` parameter are: `Local`, `Zone`, `Geo`. Unless explicitly specified, databases will be configured to use geo-redundant backup storage.
 
-Run the following command to create a Hyperscale database populated with AdventureWorksLT sample data. The database uses Gen5 hardware with 2 vCores. Geo-redundant backup storage is used for the database. The command also creates one [High Availability (HA) replica](service-tier-hyperscale-replicas.md#high-availability-replica).
+Run the following command to create a Hyperscale database populated with AdventureWorksLT sample data. The database uses standard-series (Gen5) hardware with 2 vCores. Geo-redundant backup storage is used for the database. The command also creates one [High Availability (HA) replica](service-tier-hyperscale-replicas.md#high-availability-replica).
 
 ```azurepowershell-interactive
-   Write-host "Creating a gen5 2 vCore Hyperscale database..."
+   Write-host "Creating a standard-series (Gen5) 2 vCore Hyperscale database..."
    $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
       -ServerName $serverName `
       -DatabaseName $databaseName `

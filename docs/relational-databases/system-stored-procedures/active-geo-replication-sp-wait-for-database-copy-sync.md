@@ -26,9 +26,6 @@ ms.custom: seo-dt-2019
 
 This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the `sys.sp_wait_for_database_copy_sync` causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run `sys.sp_wait_for_database_copy_sync` on only the primary database.
 
-
-||  
-|-|  
 |**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
@@ -58,7 +55,6 @@ The most likely error conditions are as follows:
   
 - Interlink connectivity has been lost, and `sys.sp_wait_for_database_copy_sync` will return after the connection timeout.  
 
-  
 ## Permissions
 
 Any user in the primary database can call this system stored procedure. The login must be a user in both the primary and active secondary databases.  

@@ -66,17 +66,17 @@ To enroll an existing instance in the feature wave by using the Azure portal:
 1. In the [Azure portal](https://portal.azure.com), go to **Overview** for your instance of SQL Managed Instance.
 1. In the left menu or in the instance information box, select **November 2022 feature wave**.
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/existing-instance-overview-page.png" alt-text="Screenshot of the Azure portal showing the MI overview page, with November 2022 feature wave info highlighted." lightbox="media/november-2022-feature-wave-enroll/existing-instance-overview-page.png":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/existing-instance-overview-page.png" alt-text="Screenshot that shows the managed instance overview pane, with November 2022 feature wave information highlighted." lightbox="media/november-2022-feature-wave-enroll/existing-instance-overview-page.png":::
 
 1. In **November 2022 feature wave status**, if the existing instance is eligible, select the **Open Virtual network** option that appears:
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/feature-wave-details.png" alt-text="Screenshot of the Azure portal showing the November 2022 feature wave info page.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/feature-wave-details.png" alt-text="Screenshot that shows the November 2022 feature wave information pane.":::
 
    If your subscription is eligible but your instance isn't, select the **Create new instance** option to go to the instance deployment page. Skip to the [Enroll new instances](#enroll-a-new-instance) section.
 
 1. In **Virtual network / subnet**, either select **Create new** to create a new subnet, or choose an existing eligible subnet from the dropdown under **Ready for November 2022 feature wave**. Select **Save** to move your managed instance to the chosen subnet.
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/virtual-network-subnet.png" alt-text="Screenshot of the Azure portal, virtual network / subnet page, with a subnet selected in the dropdown.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/virtual-network-subnet.png" alt-text="Screenshot that shows the virtual network / subnet pan, with a subnet selected in the dropdown.":::
 
 1. When the subnet update is finished, the message **November 2022 feature wave is ready to use for this instance** message appears. Your instance is now enrolled in the feature wave, and it has access to all the benefits and features.
 
@@ -100,23 +100,23 @@ To confirm that your new instance is enrolled in the feature wave during deploym
 
    In a qualified subscription, the message **This subscription is ready to opt-in to November 2022 feature wave** appears in the **Create Azure SQL Managed Instance** pane:
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/create-new-instance-opt-in.png" alt-text="Screenshot of the Azure portal, Create Azure SQL Managed Instance page, with November 2022 feature dialog selected. ":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/create-new-instance-opt-in.png" alt-text="Screenshot that shows the Create Azure SQL Managed Instance pane, with the November 2022 feature dialog selected. ":::
 
 1. Use the **Subscription** dropdown to choose a subscription that's listed under **Ready for November 2022 feature wave**.
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/choose-subscription-from-drop-down.png" alt-text="Screenshot of the Azure portal, create new MI page, basics tab, choosing a ready for feature wave subscription from the dropdown.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/choose-subscription-from-drop-down.png" alt-text="Screenshot that shows the create a new managed instance pane and choosing a subscription that's ready for the feature wave.":::
 
 1. Use the **Region** dropdown to choose a region that's listed under **Ready for November 2022 feature wave**.
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/ready-region-drop-down.png" alt-text="Screenshot of the Azure portal, create new MI page, basics tab, showing choosing a ready for feature wave region from the drop-down.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/ready-region-drop-down.png" alt-text="Screenshot that shows the create a new managed instance pane and choosing a region that's ready for the feature wave.":::
 
 1. On the **Networking** tab, select an eligible subnet from the dropdown under **Ready for November 2022 Feature Wave**:
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/create-instance-subnet.png" alt-text="Screenshot of the Azure portal, create new MI page, networking tab, with a subnet selected from the drop-down that's ready for the feature wave." lightbox="media/november-2022-feature-wave-enroll/create-instance-subnet.png":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/create-instance-subnet.png" alt-text="Screenshot that shows the create a new managed instance pane and a subnet that's ready for the feature wave selected." lightbox="media/november-2022-feature-wave-enroll/create-instance-subnet.png":::
 
 1. Select **Review + Create** to validate your settings. Check the **Nov 2022 feature wave** section to confirm that all configuration options are compatible with the feature wave:
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/review-and-create.png" alt-text="Screenshot of the Azure portal, Review + create page for SQL MI, showing the Nov 22 feature wave options.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/review-and-create.png" alt-text="Screenshot that shows the Review + create pane in the Azure portal, with the November 22 feature wave options highlighted.":::
 
 ## Known issues
 
@@ -124,11 +124,11 @@ For specifics, check out the [Frequently asked questions](frequently-asked-quest
 
 **I don't see the feature wave option when I open the overview page for my instance**
 
-This is likely because your subscription hasn't been enrolled in the feature wave yet. Check back soon.
+If your subscription isn't enrolled in the feature wave yet, you might not see the feature wave option for your managed instance. Check back soon.
 
 **I don't see the feature wave enabled when I create a new instance**
 
-This is likely because you've selected a subscription, region, or subnet type that is ineligible for the feature wave. Update these parameters and try again.
+If you selected a subscription, region, or subnet type that's not eligible for the feature wave, you might not see the feature wave enabled for a new managed instance. Update these parameters and try again.
 
 ## Next steps
 

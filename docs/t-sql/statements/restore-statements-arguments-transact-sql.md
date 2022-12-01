@@ -217,7 +217,7 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
   
  Specifies that the restore operation loads the information into the `msdb` history tables. The LOADHISTORY option loads information, for the single backup set being verified, about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups stored on the media set to the backup and restore history tables in the `msdb` database. For more information about history tables, see [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
  
-Be aware that using LOADHISTORY for backups which already exist in the `msdb` history tables will add the same information with a new backup_set_id.  Further, if you use LOADHISTORY to recreate backup history in `msdb`, either on a different server or after it was deleted from the original server, it is recommended to run the restore commands for the backups in the order in which they were taken.  This ensures the LSN chain remains intact and the SSMS restore wizard will correctly read the backup history to generate the correct restore sequence.  Use of LOADHISTORY with backup history recreated out of order can result in an error when trying to restore (“Unable to create restore plan due to break in the LSN chain. (Microsoft.SqlServer.SmoExtended)”).
+Be aware that using LOADHISTORY for backups which already exist in the `msdb` history tables will add the same information with a new backup_set_id.  Further, if you use LOADHISTORY to recreate backup history in `msdb`, either on a different server or after it was deleted from the original server, it is recommended to run the restore commands for the backups in the order in which they were taken.  This ensures the LSN chain remains intact and the SSMS restore wizard will correctly read the backup history to generate the correct restore sequence.  Use of LOADHISTORY with backup history recreated out of order can result in an error when trying to restore ("Unable to create restore plan due to break in the LSN chain. (Microsoft.SqlServer.SmoExtended)").
 
   
 ### \<general_WITH_options> [ ,...n ]  
@@ -308,7 +308,15 @@ Be aware that using LOADHISTORY for backups which already exist in the `msdb` hi
   
 > [!IMPORTANT]  
 >  This password provides only weak protection for the media set. For more information, see the Permissions section for the relevant statement.  
-  
+
+#### [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { \<database_name> | @database_name_variable } ]
+
+Introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+
+Required to restore from snapshot backup. `BACKUP SERVER`, or `BACKUP GROUP...` See [Create a Transact-SQL snapshot backup](../../relational-databases/backup-restore/create-a-transact-sql-snapshot-backup.md).
+
+METADATA_ONLY is synonymous with SNAPSHOT. Virtual device interface (VDI) uses SNAPSHOT. For information about VDI, see [Virtual device interface (VDI) reference](../../relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md).
+
 #### Media Set Options  
  These options operate on the media set as a whole.  
   

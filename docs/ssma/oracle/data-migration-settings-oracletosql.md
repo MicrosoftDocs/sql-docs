@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Data Migration Settings (OracleToSQL)
   

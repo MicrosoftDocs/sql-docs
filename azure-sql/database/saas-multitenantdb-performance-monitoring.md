@@ -39,7 +39,7 @@ Managing database performance consists of compiling and analyzing performance da
 
 ### Performance management strategies
 
-* To avoid having to manually monitor performance, it’s most effective to **set alerts that trigger when databases stray out of normal ranges**.
+* To avoid having to manually monitor performance, it's most effective to **set alerts that trigger when databases stray out of normal ranges**.
 * To respond to short-term fluctuations in the compute size of a database, the **DTU level can be scaled up or down**. If this fluctuation occurs on a regular or predictable basis, **scaling the database can be scheduled to occur automatically**. For example, scale down when you know your workload is light, maybe overnight, or during weekends.
 * To respond to longer-term fluctuations, or changes in the tenants, **individual tenants can be moved into other database**.
 * To respond to short-term increases in *individual* tenant load, **individual tenants can be taken out of a database and assigned an individual compute size**. Once the load is reduced, the tenant can then be returned to the multi-tenant database. When this is known in advance, tenants can be moved preemptively to ensure the database always has the resources it needs, and to avoid impact on other tenants in the multi-tenant database. If this requirement is predictable, such as a venue experiencing a rush of ticket sales for a popular event, then this management behavior can be integrated into the application.
@@ -138,7 +138,7 @@ Monitor the increased database DTU usage on the upper chart. It takes a few minu
 1. Adjust the **DTU** setting to **100**. 
 1. Click **Apply** to submit the request to scale the database.
 
-Go back to **tenants1** > **Overview** to view the monitoring charts. Monitor the effect of providing the database with more resources (although with few tenants and a randomized load it’s not always easy to see conclusively until you run for some time). While you are looking at the charts bear in mind that 100% on the upper chart now represents 100 DTUs, while on the lower chart 100% is still 50 DTUs.
+Go back to **tenants1** > **Overview** to view the monitoring charts. Monitor the effect of providing the database with more resources (although with few tenants and a randomized load it's not always easy to see conclusively until you run for some time). While you are looking at the charts bear in mind that 100% on the upper chart now represents 100 DTUs, while on the lower chart 100% is still 50 DTUs.
 
 Databases remain online and fully available throughout the process. Application code should always be written to retry dropped connections, and so will reconnect to the database.
 
@@ -153,7 +153,7 @@ If you already provisioned a new tenant in its own database, skip the next few s
 1. Set **$Scenario** = **2**, _Provision a tenant in a new single-tenant database_
 1. Press **F5** to run the script.
 
-The script will provision this tenant in a separate database, register the database and the tenant with the catalog, and then open the tenant’s Events page in the browser. Refresh the Events Hub page and you will see "Salix Salsa" has been added as a venue.
+The script will provision this tenant in a separate database, register the database and the tenant with the catalog, and then open the tenant's Events page in the browser. Refresh the Events Hub page and you will see "Salix Salsa" has been added as a venue.
 
 ## Manage performance of an individual database
 

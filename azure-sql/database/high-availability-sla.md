@@ -40,7 +40,7 @@ The Basic, Standard, and General Purpose service tiers use the standard availabi
 The standard availability model includes two layers:
 
 - A stateless compute layer that runs the `sqlservr.exe` process and contains only transient and cached data, such as TempDB, model databases on the attached SSD, and plan cache, buffer pool, and columnstore pool in memory. This stateless node is operated by Azure Service Fabric that initializes `sqlservr.exe`, controls health of the node, and performs failover to another node if necessary.
-- A stateful data layer with the database files (.mdf/.ldf) that are stored in Azure Blob storage. Azure blob storage has built-in data availability and redundancy feature. It guarantees that every record in the log file or page in the data file will be preserved even if `sqlservr.exe` process crashes.
+- A stateful data layer with the database files (.mdf/.ldf) that are stored in Azure Blob Storage. Azure Blob Storage has built-in data availability and redundancy feature. It guarantees that every record in the log file or page in the data file will be preserved even if `sqlservr.exe` process crashes.
 
 Whenever the database engine or the operating system is upgraded, or a failure is detected, Azure Service Fabric will move the stateless `sqlservr.exe` process to another stateless compute node with sufficient free capacity. Data in Azure Blob storage is not affected by the move, and the data/log files are attached to the newly initialized `sqlservr.exe` process. This process guarantees 99.99% availability, but a heavy workload may experience some performance degradation during the transition since the new `sqlservr.exe` process starts with cold cache.
 
@@ -58,7 +58,10 @@ The zone-redundant version of the high availability architecture for the General
 ![Zone redundant configuration for General Purpose](./media/high-availability-sla/zone-redundant-for-general-purpose.png)
 
 > [!IMPORTANT]
-> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central and East US 2. This is in preview in the following regions: East US, Southeast Asia, Australia East, Japan East, and UK South. 
+> For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central, East US 2 & East US. This is in preview in the following regions: Southeast Asia, Australia East, Japan East, and UK South. 
+
+> [!IMPORTANT]
+> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql#azure-region-support). 
 
 > [!NOTE]
 > Zone-redundant configuration is not available in SQL Managed Instance. In SQL Database this feature is only available when the Gen5 hardware is selected.
@@ -80,12 +83,15 @@ By default, the cluster of nodes for the premium availability model is created i
 
 Because the zone-redundant databases have replicas in different datacenters with some distance between them, the increased network latency may increase the commit time and thus impact the performance of some OLTP workloads. You can always return to the single-zone configuration by disabling the zone-redundancy setting. This process is an online operation similar to the regular service tier upgrade. At the end of the process, the database or pool is migrated from a zone-redundant ring to a single zone ring or vice versa.
 
-> [!IMPORTANT]
-> This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
-
 The zone-redundant version of the high availability architecture is illustrated by the following diagram:
 
 ![high availability architecture zone redundant](./media/high-availability-sla/zone-redundant-business-critical-service-tier.png)
+
+> [!IMPORTANT]
+> This feature is not available in SQL Managed Instance. In SQL Database, when using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
+
+> [!IMPORTANT]
+> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql#azure-region-support). 
 
 
 ## Hyperscale service tier locally redundant availability
@@ -118,6 +124,9 @@ Consider the following limitations:
 
 > [!IMPORTANT]
 > At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.
+
+> [!IMPORTANT]
+> For zone redundant availability, choosing a [maintenance window](/azure/azure-sql/database/maintenance-window) other than the default is currently available in [select regions](/azure/azure-sql/database/maintenance-window?view=azuresql#azure-region-support). 
 
 
 ### Create a zone redundant Hyperscale database
@@ -160,7 +169,7 @@ Specify the `-ZoneRedundant` parameter to enable zone redundancy for your Hypers
 To create your zone redundant database using Azure PowerShell, use the following example command: 
 
 ```powershell
-New-AzSqlDatabaseSecondary -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -PartnerResourceGroupName "myPartnerResourceGroup" -PartnerServerName $targetserver -PartnerDatabaseName "zoneRedundantCopyOfMySampleDatabase” -ZoneRedundant -BackupStorageRedundancy Zone -HighAvailabilityReplicaCount 1
+New-AzSqlDatabaseSecondary -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -PartnerResourceGroupName "myPartnerResourceGroup" -PartnerServerName $targetserver -PartnerDatabaseName "zoneRedundantCopyOfMySampleDatabase" -ZoneRedundant -BackupStorageRedundancy Zone -HighAvailabilityReplicaCount 1
 ```
 
 
@@ -187,7 +196,7 @@ Specify the `-ZoneRedundant` parameter to enable zone redundancy for your Hypers
 To create your zone redundant database using Azure PowerShell, use the following example command: 
 
 ```powershell
-New-AzSqlDatabaseCopy -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -CopyResourceGroupName "myCopyResourceGroup" -CopyServerName $copyserver -CopyDatabaseName "zoneRedundantCopyOfMySampleDatabase” -ZoneRedundant -BackupStorageRedundancy Zone 
+New-AzSqlDatabaseCopy -ResourceGroupName "myResourceGroup" -ServerName $sourceserver -DatabaseName "databaseName" -CopyResourceGroupName "myCopyResourceGroup" -CopyServerName $copyserver -CopyDatabaseName "zoneRedundantCopyOfMySampleDatabase" -ZoneRedundant -BackupStorageRedundancy Zone 
 ```
 
 

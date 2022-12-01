@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 f1_keywords: 
   - "ssma.oracle.connectmssqlform.f1"
 

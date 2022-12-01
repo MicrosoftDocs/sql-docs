@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts.
+This document describes a step-by-step process on how to set up Azure Active Directory (Azure AD) authentication for SQL Server, and how to use different Azure AD authentication methods. This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview).
 
 In this tutorial, you learn how to:
 
@@ -105,7 +105,7 @@ Select the newly created application, and on the left side menu, select **API Pe
    > [!NOTE]
    > This does not need to be done on the SQL Server host. Rather, any client that will access the Azure portal for the next step.
 
-1. In the Azure portal, navigate to the app registration created above and select **Certificates & secrets**
+1. In the Azure portal, navigate to the app registration created above and select **Certificates** list
 
    1. Select **upload certificate**.
    1. Select the public key (.cer file) downloaded in the last step.
@@ -158,7 +158,7 @@ Select the newly created application, and on the left side menu, select **API Pe
    The Azure AD admin login is listed in `sys.server_principals`, but is not part of the `sysadmin` role. To grant the Azure AD admin the `sysadmin` role, use the [sp_addsrvrolemember](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql) stored procedure.
 
    ```sql
-   EXEC sp_addsrvrolemember @loginame='aadadmin@contoso.com', @rolename='sysadmin';
+   ALTER SERVER ROLE sysadmin ADD MEMBER [aadadmin@contoso.com]
    GO
    ```
 

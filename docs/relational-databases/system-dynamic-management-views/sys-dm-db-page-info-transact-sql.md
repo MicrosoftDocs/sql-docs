@@ -3,7 +3,6 @@ title: "sys.dm_db_page_info (Transact-SQL)"
 description: sys.dm_db_page_info (Transact-SQL)
 author: bluefooted
 ms.author: "pamela"
-manager: amitban
 ms.date: "09/18/2018"
 ms.prod: sql
 ms.technology: system-objects

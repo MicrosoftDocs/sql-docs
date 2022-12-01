@@ -4,7 +4,7 @@ description: Get notification before planned maintenance for Azure SQL Database.
 author: scott-kim-sql
 ms.author: scottkim
 ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 04/04/2022
+ms.date: 12/01/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: how-to
@@ -35,15 +35,15 @@ Complete the following steps to enable a notification.
     
 2. In the **Scope** section, select subscription. 
 
-    :::image type="content" source="media/advance-notifications/select-subscription.png" alt-text="A screenshot of the Azurel portal page where you select the subscription where you will be configuring the health alert.":::
+    :::image type="content" source="media/advance-notifications/select-subscription.png" alt-text="A screenshot of the Azure portal page where you select the subscription where you will be configuring the health alert.":::
 
 3. In the **Condition** section, configure service(s) to be alerted for, region(s) and criteria. For more generic alert, select all values. To narrow down, select Azure SQL Database or Azure SQL Managed Instance as a service, region(s) where you have those services deployed, and **Planned maintenance** for the event type.
 
-    :::image type="content" source="media/advance-notifications/define-condition-services.png" alt-text="A screenshot of the Azurel portal page where you define conditions for the health alert and define services to be notified for.":::
+    :::image type="content" source="media/advance-notifications/define-condition-services.png" alt-text="A screenshot of the Azure portal page where you define conditions for the health alert and define services to be notified for.":::
     
-    :::image type="content" source="media/advance-notifications/define-condition-regions.png" alt-text="A screenshot of the Azurel portal page where you define conditions for the health alert and define regions to be notified for.":::
+    :::image type="content" source="media/advance-notifications/define-condition-regions.png" alt-text="A screenshot of the Azure portal page where you define conditions for the health alert and define regions to be notified for.":::
     
-    :::image type="content" source="media/advance-notifications/define-condition-event-types.png" alt-text="A screenshot of the Azurel portal page where you define conditions for the health alert and define event types to be notified for.":::
+    :::image type="content" source="media/advance-notifications/define-condition-event-types.png" alt-text="A screenshot of the Azure portal page where you define conditions for the health alert and define event types to be notified for.":::
     
 > [!IMPORTANT]
 > Service health is rolling out new experiencs in phases. Some users will see the updated experience, others will still see the classic Service Health portal experience. In case that you still see the classic Service Health portal, for **Region** don't select Global as an option, but rather the specific region or all regions.

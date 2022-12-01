@@ -4,7 +4,7 @@ description: Understand how the Azure SQL Database and managed instance maintena
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil
-ms.date: 11/02/2022
+ms.date: 12/01/2022
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual

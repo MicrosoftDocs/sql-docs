@@ -128,7 +128,7 @@ In addition to the standard Unicode character properties, the following other pr
 | Katakana | :Ka | Matches katakana characters. |
 | Ideographic/Han/Kanji | :Id | Matches ideographic characters, such as Han and Kanji. |
 
-## See also
+## Next steps
 
 - [Search and Replace](./search-and-replace.md)
 - [Search Text with Wildcards](./search-text-with-wildcards.md)

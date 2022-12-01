@@ -24,7 +24,8 @@ ms.custom: seo-dt-2019
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the **sp_wait_for_database_copy_sync** causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run **sp_wait_for_database_copy_sync** on only the primary database.
+This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the `sys.sp_wait_for_database_copy_sync` causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run `sys.sp_wait_for_database_copy_sync` on only the primary database.
+
 
 ||  
 |-|  
@@ -55,7 +56,8 @@ The most likely error conditions are as follows:
   
 - The link cannot be found to the specified server name or database.  
   
-- Interlink connectivity is lost. **sp_wait_for_database_copy_sync** will return after the connection timeout.  
+- Interlink connectivity has been lost, and `sys.sp_wait_for_database_copy_sync` will return after the connection timeout.  
+
   
 ## Permissions
 

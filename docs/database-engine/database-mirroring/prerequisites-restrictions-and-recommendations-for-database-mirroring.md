@@ -27,7 +27,7 @@ helpviewer_keywords:
   
   
 ##  <a name="DbmSupport"></a> Support For Database Mirroring  
- For information about support for database mirroring in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see   [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+ For information about support for database mirroring in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see   [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Note that database mirroring works with any supported database compatibility level. For information about the supported compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   

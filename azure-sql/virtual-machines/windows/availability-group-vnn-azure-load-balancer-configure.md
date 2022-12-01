@@ -70,8 +70,8 @@ To create the load balancer:
    - **Name**: A name that identifies the front-end IP configuration.
    - **Virtual network**: The same network as the virtual machines.
    - **Subnet**: The same subnet as the virtual machines.
-   - **IP address assignment**: **Static**.
-   - **Private IP address**: The IP address that you assigned to the clustered network resource.
+   - **Assignment**: **Static**.
+   - **IP address**: The IP address that you assigned to the clustered network resource.
    - **Availability zone**: An optional availability zone to deploy your IP address to.
 
    :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the page for configuring a front-end IP address.":::
@@ -139,7 +139,7 @@ Set the cluster probe's port parameter in PowerShell.
 
 # [Private load balancer](#tab/ilb)
 
-To set the cluster probe's port parameter, update the variables in the following script with values from your environment. Remove the angle brackets (`<` and `>`) from the script.
+Update the variables in the following script with values from your environment. Remove the angle brackets (`<` and `>`) from the script.
 
 ```powershell
 $ClusterNetworkName = "<Cluster Network Name>"
@@ -170,7 +170,7 @@ Get-ClusterResource $IPResourceName | Get-ClusterParameter
 
 # [Public load balancer](#tab/elb)
 
-To set the cluster probe's port parameter, update the variables in the following script with values from your environment. Remove the angle brackets (`<` and `>`) from the script.
+Update the variables in the following script with values from your environment. Remove the angle brackets (`<` and `>`) from the script.
 
 ```powershell
 $ClusterNetworkName = "<Cluster Network Name>"
@@ -217,7 +217,7 @@ Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProviders
 Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300 
 ```
 
-To learn more, see the SQL Server [listener connection timeout](/troubleshoot/sql/availability-groups/listener-connection-times-out) documentation. 
+To learn more, see the [documentation about listener connection timeout in SQL Server](/troubleshoot/sql/availability-groups/listener-connection-times-out). 
 
 > [!TIP]
 > - Set the `MultiSubnetFailover parameter` to `true` in the connection string, even for HADR solutions that span a single subnet. This setting supports future spanning of subnets without the need to update connection strings.  

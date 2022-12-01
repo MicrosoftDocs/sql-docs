@@ -29,7 +29,7 @@ Restoring databases from managed instances to SQL Server 2022 instances unlocks 
 The ability to restore copy-only full backups of databases from a SQL Managed Instance deployment to a SQL Server 2022 instance is available by default in all existing and any new deployed managed instances.
 
 > [!IMPORTANT]
-> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](../lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
+> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](../../lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
 
 ## Take a backup of your managed instance 
 

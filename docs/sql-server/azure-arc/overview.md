@@ -37,11 +37,11 @@ To learn more about these capabilities, you can also refer to this Data Exposed 
 
 ### Supported SQL versions and operating systems
 
-Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
+Azure Arc-enabled SQL Server supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
 
 - Windows Server 2012 R2 and higher
-- Ubuntu 16.04 and 18.04 (x64)
-- Red Hat Enterprise Linux (RHEL) 7 (x64) 
+- Ubuntu 20.04 (x64)
+- Red Hat Enterprise Linux (RHEL) 8 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 > [!NOTE]

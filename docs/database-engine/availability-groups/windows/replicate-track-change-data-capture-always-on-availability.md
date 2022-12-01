@@ -207,13 +207,15 @@ If Change Data Capture needs to be disabled on a database that is part of an Alw
 |Replication|Publisher|Distributor<sup>1</sup>|Subscriber|  
 |-|-|-|-|  
 |**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes|
-|**Peer-to-peer**<sup>2</sup>|Yes|No|Yes|  
+|**Peer-to-peer**<sup>2</sup>|Yes|Yes<sup>3</sup>|Yes|  
 |**Merge**|Yes|No|No|  
 |**Snapshot**|Yes|No|Yes|
   
 <sup>1</sup> The Distributor database is not supported for use with database mirroring.
 
 <sup>2</sup> Requires SQL Server 2019 CU 13 or later.
+
+<sup>3</sup> Requires SQL Server 2019 CU 17 or later.
   
 ### Considerations  
   

@@ -233,7 +233,7 @@ You also can add entries to the route table to route traffic that has on-premise
 
 ## [Architecture before November 2022](#tab/before-feature-wave)
 
-The routes that are described in the following table are necessary to ensure that management traffic is routed directly to a destination.
+The routes that are described in the following table are necessary to ensure that management traffic is routed directly to a destination:
 
 |Name|Address prefix|Next hop <sup>2</sup>|
 |----|--------------|-------|
@@ -275,4 +275,4 @@ The following virtual network features are currently *not supported* with SQL Ma
   - From the [Azure portal](instance-create-quickstart.md).
   - By using [PowerShell](scripts/create-configure-managed-instance-powershell.md).
   - By using [an Azure Resource Manager template](https://azure.microsoft.com/resources/templates/sqlmi-new-vnet/).
-  - By using [an Azure Resource Manager template with JumpBox and SSMS](https://azure.microsoft.com/resources/templates/sqlmi-new-vnet-w-jumpbox/).
+  - By using [an Azure Resource Manager template with a jumpbox and SQL Server Management Studio](https://azure.microsoft.com/resources/templates/sqlmi-new-vnet-w-jumpbox/).

@@ -74,9 +74,9 @@ To enroll an existing instance in the feature wave by using the Azure portal:
 
    If your subscription is eligible but your instance isn't, select the **Create new instance** option to go to the instance deployment page. Skip to the [Enroll new instances](#enroll-a-new-instance) section.
 
-1. In **Virtual network / subnet**, either select **Create new** to create a new subnet, or choose an existing eligible subnet from the dropdown under **Ready for November 2022 feature wave**. Select **Save** to move your managed instance to the chosen subnet.
+1. In **Virtual network / subnet**, either select **Create new** to create a new subnet, or choose an existing eligible subnet from the dropdown under **Ready for November 2022 feature wave**. Select **Save** to move your managed instance to the subnet you selected.
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/virtual-network-subnet.png" alt-text="Screenshot that shows the virtual network / subnet pan, with a subnet selected in the dropdown.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/virtual-network-subnet.png" alt-text="Screenshot that shows the virtual network / subnet pane, with a subnet selected in the dropdown.":::
 
 1. When the subnet update is finished, the message **November 2022 feature wave is ready to use for this instance** message appears. Your instance is now enrolled in the feature wave, and it has access to all the benefits and features.
 

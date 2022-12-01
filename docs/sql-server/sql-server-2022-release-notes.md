@@ -83,6 +83,16 @@ An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if t
 
 **Applies to**: [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] RTM
 
+### Availability group replica manager
+
+**Error 35221** states that the Always On availability groups replica manager is disabled. This error may be encountered when attempting to add a file to a FILESTREAM filegroup or a memory-optimized filegroup, or when attempting to add additional transaction log files to a database.
+
+**Applies to**: [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] RTM
+
+The fix for this issue will be released in Cumulative Update 1 for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
+
+To work around this issue, you can use Trace Flag 12342 as either as startup trace flag, or at the session level (using `DBCC TRACEON`).
+
 ## Build number
 
 | Preview build | Version number | Date |

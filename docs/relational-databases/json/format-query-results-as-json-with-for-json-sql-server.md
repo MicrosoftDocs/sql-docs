@@ -5,7 +5,7 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth, randolphwest
 ms.date: 08/09/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ms.custom:
   - seo-dt-2019

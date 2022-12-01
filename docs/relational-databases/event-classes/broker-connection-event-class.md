@@ -3,9 +3,9 @@ description: "Broker:Connection Event Class"
 title: "Broker:Connection Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Broker:Connection event class"

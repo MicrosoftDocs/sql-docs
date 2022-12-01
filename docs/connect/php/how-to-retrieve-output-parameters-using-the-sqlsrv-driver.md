@@ -4,8 +4,8 @@ description: "Learn how to use and retrieve output parameters in a stored proced
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "04/11/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "stored procedure support"

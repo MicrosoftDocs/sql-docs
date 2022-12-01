@@ -4,8 +4,8 @@ description: "A description for how to manually prepare a secondary database to 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "07/25/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seodec18
 f1_keywords:

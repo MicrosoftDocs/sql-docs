@@ -5,10 +5,9 @@ ms.custom:
   - seo-dt-2019
   - intro-quickstart
 ms.date: "06/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: quickstart
 helpviewer_keywords:
   - "tutorials [connecting]"

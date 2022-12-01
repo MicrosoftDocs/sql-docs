@@ -5,7 +5,7 @@ author: lucyzhang929
 ms.author: luczhan
 ms.reviewer: erinstellato
 ms.date: 07/02/2021
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: how-to
 ms.custom: intro-installation
 ---

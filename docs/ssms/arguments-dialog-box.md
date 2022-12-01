@@ -1,9 +1,8 @@
 ---
 title: "Arguments Dialog Box"
 description: "Arguments Dialog Box"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "Arguments dialog box"

@@ -1,9 +1,8 @@
 ---
 description: "Add Table Dialog Box (Query and View Designers) (Visual Database Tools)"
 title: Add Table Dialog Box (Query and View Designers)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.query.addtable"

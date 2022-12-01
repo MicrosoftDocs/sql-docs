@@ -3,10 +3,9 @@ description: "Setting Properties for Master Data Services Add-in for Excel"
 title: Setting Properties
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: CordeliaGrey

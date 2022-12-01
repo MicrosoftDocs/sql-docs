@@ -1,8 +1,8 @@
 ---
 title: Load data using rxImport
 description: "Learn how to get data from SQL Server, and then use the rxImport function to put the data of interest into a local file."
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial

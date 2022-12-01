@@ -1,12 +1,12 @@
 ---
 title: "Migrating DB2 Data into SQL Server (DB2ToSQL) | Microsoft Docs"
 description: Learn how to migrate data from a DB2 database to SQL Server or Azure SQL Database, after you synchronize the converted objects.
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: cpichuka 

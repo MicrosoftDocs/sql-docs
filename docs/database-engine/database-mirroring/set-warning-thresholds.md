@@ -4,8 +4,8 @@ description: Learn how to use the Set Warning Thresholds dialog box to enable an
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.dbmmonitor.setwarningthreshold.f1"

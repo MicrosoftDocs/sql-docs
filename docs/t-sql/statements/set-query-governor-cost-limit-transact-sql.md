@@ -4,9 +4,8 @@ description: SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET QUERY_GOVERNOR_COST_LIMIT"
@@ -22,7 +21,7 @@ dev_langs:
   - "TSQL"
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Overrides the currently configured **query governor cost limit** value for the current connection.  
   

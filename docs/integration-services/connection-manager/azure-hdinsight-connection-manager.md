@@ -3,10 +3,9 @@ description: "Azure HDInsight Connection Manager"
 title: "Azure HDInsight Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPHDICM.F1"

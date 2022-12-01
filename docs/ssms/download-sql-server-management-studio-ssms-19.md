@@ -1,9 +1,8 @@
 ---
 title: Download SQL Server Management Studio (SSMS) 19
 description: Download the latest version of SQL Server Management Studio (SSMS) 19.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 keywords: 
   - "install ssms, download ssms, latest ssms"

@@ -3,10 +3,9 @@ title: "Example: Specifying the HIDE Directive"
 description: View an example of using the HIDE directive in an SQL query.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "HIDE directive"
@@ -15,7 +14,7 @@ ms.author: mikeray
 ---
 # Example: Specify the HIDE directive
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This example illustrates the use of the **HIDE** directive. This directive is useful when you want the query to return an attribute for ordering the rows in the universal table that is returned by the query, but you don't want that attribute in the final resulting XML document.
 
@@ -52,10 +51,10 @@ SELECT  2 as Tag,
         ProductModelID,
         Name,
         CatalogDescription.value('
-         declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";
+         declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";
        (/PD:ProductDescription/@ProductModelID)[1]', 'int'),
         CatalogDescription.query('
-         declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";
+         declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";
          /pd:ProductDescription/pd:Summary')
 FROM    Production.ProductModel
 WHERE   CatalogDescription is not null

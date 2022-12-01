@@ -3,10 +3,9 @@ description: "Lesson 5-3: Modify the Directory property configuration value"
 title: "Step 3: Modify the Directory property configuration value | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace

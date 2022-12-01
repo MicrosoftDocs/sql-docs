@@ -3,10 +3,9 @@ title: "Debug business logic handler (Replication Programming)"
 description: Learn how to use a business logic handler to invoke custom business logic when a Merge Subscription is synchronized. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 dev_langs: 
   - "VB"

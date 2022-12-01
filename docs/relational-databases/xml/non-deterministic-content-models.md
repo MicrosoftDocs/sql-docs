@@ -3,10 +3,9 @@ title: "Non-Deterministic Content Models"
 description: View an example of using an XML schema with a non-deterministic content model.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "non-deterministic content models"
@@ -16,7 +15,7 @@ ms.author: mikeray
 ---
 # Non-Deterministic content models
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Non-deterministic content models are accepted in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the occurrence constraints are 0, 1, or unbounded.
 

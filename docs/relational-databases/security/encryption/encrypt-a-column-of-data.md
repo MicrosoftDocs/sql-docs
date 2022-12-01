@@ -4,10 +4,9 @@ description: Learn how to encrypt a column of data by using symmetric encryption
 ms.custom: ""
 titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
 ms.date: 03/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], columns"

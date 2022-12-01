@@ -4,9 +4,8 @@ description: sys.server_permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/20/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.server_permissions_TSQL"

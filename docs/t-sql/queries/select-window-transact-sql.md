@@ -4,9 +4,8 @@ title: "WINDOW (Transact-SQL) | Microsoft Docs"
 ms.custom:
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "WINDOW"

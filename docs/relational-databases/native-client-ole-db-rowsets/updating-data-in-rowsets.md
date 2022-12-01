@@ -3,10 +3,9 @@ description: "Updating Data in Rowsets in SQL Server Native Client"
 title: Updating data in rowsets (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "updating data [SQL Server]"

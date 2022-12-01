@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/06/2019
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid:
 ---
 # Operate failover cluster instance - SQL Server on Linux

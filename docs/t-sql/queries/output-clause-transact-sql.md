@@ -3,10 +3,9 @@ description: "OUTPUT Clause (Transact-SQL)"
 title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/14/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "OUTPUT_TSQL"

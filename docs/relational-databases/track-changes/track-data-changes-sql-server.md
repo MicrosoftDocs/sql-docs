@@ -5,7 +5,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 09/20/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 helpviewer_keywords:

@@ -4,8 +4,8 @@ description: "Step 6: Changes are Sent to the Server (RDS Tutorial)"
 author: rothja
 ms.author: jroth
 ms.date: 11/09/2018
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "RDS tutorial [ADO], changes sent to server"

@@ -3,9 +3,9 @@ description: "EXPLAIN returns the query plan for a Microsoft Azure Synapse Analy
 title: "EXPLAIN (Transact-SQL)"
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: data-warehouse
+ms.subservice: data-warehouse
 ms.topic: conceptual
 author: mstehrani
 ms.author: emtehran

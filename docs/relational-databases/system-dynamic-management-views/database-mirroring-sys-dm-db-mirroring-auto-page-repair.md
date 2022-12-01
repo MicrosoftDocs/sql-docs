@@ -4,8 +4,8 @@ description: Database Mirroring - sys.dm_db_mirroring_auto_page_repair
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_mirroring_auto_page_repair_TSQL"

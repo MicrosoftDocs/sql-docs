@@ -3,10 +3,9 @@ title: "Revoke Permissions on an XML Schema Collection"
 description: Learn how to revoke permissions on an XML schema collection.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "revoking permissions [SQL Server]"
@@ -15,7 +14,7 @@ ms.author: mikeray
 ---
 # Revoke permissions on an XML schema collection
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The permission to create an XML schema collection can be revoked by using one of the following:
 

@@ -3,10 +3,9 @@ description: "Registered Servers F1 Help"
 title: "Registered Servers F1 Help"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], Help"

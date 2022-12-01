@@ -2,9 +2,8 @@
 title: "Create a Data Alert in Data Alert Designer | Microsoft Docs"
 description: Learn how to create data alert definitions in Data Alert Designer. Also, learn about editing the alerts and saving the edits when you're finished.
 ms.date: 08/17/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT

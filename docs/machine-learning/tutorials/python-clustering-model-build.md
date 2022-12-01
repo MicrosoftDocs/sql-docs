@@ -2,8 +2,8 @@
 title: "Python tutorial: Build cluster model"
 titleSuffix: SQL machine learning
 description: In part three of this four-part tutorial series, you'll build a K-Means model to perform clustering in Python with SQL machine learning.
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.devlang: python
 ms.date: 05/21/2020
 ms.topic: tutorial

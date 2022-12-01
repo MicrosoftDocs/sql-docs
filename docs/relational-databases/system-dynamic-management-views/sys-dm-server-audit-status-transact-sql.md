@@ -4,8 +4,8 @@ description: sys.dm_server_audit_status (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_server_audit_status_TSQL"
@@ -35,7 +35,7 @@ ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 |**audit_file_size**|**bigint**|Approximate size of the audit file, in bytes. Only populated for file audits.|  
   
 ## Permissions  
- Principals must have the **VIEW SERVER STATE** permission.  
+ Principals must have the **VIEW SERVER SECURITY STATE** permission.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

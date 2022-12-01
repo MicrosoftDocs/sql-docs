@@ -1,11 +1,11 @@
 ---
 description: "Creating the Server Connection Files (MySQLToSQL)"
 title: "Creating the Server Connection Files (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Server connection file validation"

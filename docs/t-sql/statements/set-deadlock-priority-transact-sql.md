@@ -4,8 +4,8 @@ description: SET DEADLOCK_PRIORITY (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/15/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET DEADLOCK_PRIORITY"

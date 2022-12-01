@@ -3,9 +3,8 @@ title: "Reporting Services Developer Documentation | Microsoft Docs"
 description: Use the documentation to understand Reporting Services features and capabilities to build custom reporting and management tools into Web sites and Windows applications.
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: reference
 helpviewer_keywords: 
   - "developer's guide [Reporting Services]"

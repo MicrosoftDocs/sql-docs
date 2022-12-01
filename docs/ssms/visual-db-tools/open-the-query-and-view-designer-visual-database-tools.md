@@ -1,9 +1,8 @@
 ---
 title: Open the Query and View Designer
 description: Open the Query and View Designer (Visual Database Tools)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "opening View Designer"
@@ -20,7 +19,7 @@ ms.date: 01/19/2017
 
 # Open the Query and View Designer (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The Query and View Designer opens when you open the definition of a view, show the results for a query or view, or create or open a query. It consists of four separate panes:  
   

@@ -4,8 +4,8 @@ description: "DBCC DBREINDEX (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/16/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "DBCC DBREINDEX"

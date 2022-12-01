@@ -3,10 +3,9 @@ title: "sys.dm_user_db_resource_governance (Transact-SQL)"
 description: sys.dm_user_db_resource_governance (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "11/17/2019"
-ms.prod: sql
-ms.prod_service: sql-database
-ms.technology: system-objects
+ms.date: 11/28/2022
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.resource_governance"
@@ -68,6 +67,8 @@ Returns actual configuration and capacity settings used by resource governance m
 |**primary_group_max_io**|int|Maximum IOPS for the user workload group. Resource governance will not allow IOPS above this value.|
 |**primary_group_min_cpu**|float|Minimum CPU percent for the user workload group level. Resource governance will not attempt to reduce CPU utilization below this value.|
 |**primary_group_max_cpu**|float|Maximum CPU percent for the user workload group level. Resource governance will not allow CPU utilization above this value.|
+|**primary_group_max_outbound_connection_workers**|int|Outbound connection worker thread limit for the primary user workload group.|
+|**primary_pool_max_outbound_connection_workers**|int|Outbound connection worker thread limit for the user workload resource pool.|
 |**primary_log_commit_fee**|int|Log rate governance commit fee for the user workload group, in bytes. A commit fee increases the size of each log IO by a fixed value for the purposes of log rate accounting only. Actual log IO to storage is not increased.|
 |**primary_pool_max_workers**|int|Worker thread limit for the user workload resource pool.|
 |**pool_max_io**|int|Maximum IOPS limit for the user workload resource pool.|
@@ -96,7 +97,7 @@ For description of resource governance in Azure SQL Database, see [SQL Database 
 
 The following query, executed in the context of a user database, returns maximum log rate and maximum IOPS at the user workload group and resource pool level. For a single database, one row is returned. For a database in an elastic pool, a row is returned for each database in the pool.
 
-```
+```sql
 SELECT database_name,
        primary_group_id,
        primary_max_log_rate,
@@ -106,7 +107,7 @@ FROM sys.dm_user_db_resource_governance
 ORDER BY database_name;  
 ```
 
-## See Also
+## Next steps
 
 - [Resource Governor](../resource-governor/resource-governor.md)
 - [sys.dm_resource_governor_resource_pools (Transact-SQL)](./sys-dm-resource-governor-resource-pools-transact-sql.md)
@@ -116,3 +117,4 @@ ORDER BY database_name;
 - [Transaction log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Single database DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [Single database vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
+- [Elastic pool vCore resource limits](/azure/sql-database/resource-limits-vcore-elastic-pools)

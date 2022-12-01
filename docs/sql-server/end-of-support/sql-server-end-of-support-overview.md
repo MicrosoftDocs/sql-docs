@@ -2,8 +2,8 @@
 title: "End of support options"
 description: Learn about the different options available for SQL Server products that have reached end of support, including SQL Server 2008, SQL Server 2008 R2, and 2012.
 ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
@@ -77,17 +77,20 @@ What's new in:
 - [SQL Server 2016](../what-s-new-in-sql-server-2016.md)
 - [SQL Server 2017](../what-s-new-in-sql-server-2017.md)
 - [SQL Server 2019](../what-s-new-in-sql-server-2019.md)
+- [SQL Server 2022](../what-s-new-in-sql-server-2022.md)
 
 Hardware requirements:
 
 - [SQL Server 2017 and prior](../install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-2019.md)
+- [SQL Server 2022](../install/hardware-and-software-requirements-for-installing-sql-server-2022.md)
 
 Supported version and edition upgrades:
 
 - [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true)
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md)
+- [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2022.md)
 
 Tools:
 
@@ -276,19 +279,20 @@ Azure table storage has the following benefits:
 
 ## Lifecycle dates
 
-The following table provides an approximation of lifecycle dates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) page.
+The following table provides an approximation of lifecycle dates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](/lifecycle/products/?terms=sql%20server) page.
 
 | **Version** | **Release year** | **Mainstream Support end year** | **Extended Support end year** |
 |:---|:---|:---|:---|
-| [SQL Server 2019](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202019) | 2019 | 2025 | 2030 |
-| [SQL Server 2017](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202017) | 2017 | 2022 | 2027 |
-| [SQL Server 2016](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202016) | 2016 | 2021 | 2026 |
-| [SQL Server 2014](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202014) | 2014 | 2019 | 2024 |
-| [SQL Server 2012](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202012) | 2012 | 2017 | 2022 |
-| [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search??terms=SQL%20Server%202008%20R2) | 2010 | 2012 | 2019 |
-| [SQL Server 2008](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202008) | 2008 | 2012 | 2019 |
-| [SQL Server 2005](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202005) | 2006 | 2011 | 2016 |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?terms=SQL%20Server%202000) | 2000 | 2005 | 2013 |
+| [SQL Server 2022](/lifecycle/products/?terms=sql%20server%202022) | 2022 | 2028 |2033 |
+| [SQL Server 2019](/lifecycle/products/?terms=SQL%20Server%202019) | 2019 | 2025 | 2030 |
+| [SQL Server 2017](/lifecycle/products/?terms=SQL%20Server%202017) | 2017 | 2022 | 2027 |
+| [SQL Server 2016](/lifecycle/products/?terms=SQL%20Server%202016) | 2016 | 2021 | 2026 |
+| [SQL Server 2014](/lifecycle/products/?terms=SQL%20Server%202014) | 2014 | 2019 | 2024 |
+| [SQL Server 2012](/lifecycle/products/?terms=SQL%20Server%202012) | 2012 | 2017 | 2022 |
+| [SQL Server 2008 R2](/lifecycle/products/??terms=SQL%20Server%202008%20R2) | 2010 | 2012 | 2019 |
+| [SQL Server 2008](/lifecycle/products/?terms=SQL%20Server%202008) | 2008 | 2012 | 2019 |
+| [SQL Server 2005](/lifecycle/products/?terms=SQL%20Server%202005) | 2006 | 2011 | 2016 |
+| [SQL Server 2000](/lifecycle/products/?terms=SQL%20Server%202000) | 2000 | 2005 | 2013 |
 
 > [!TIP]  
 > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
@@ -298,7 +302,7 @@ The following table provides an approximation of lifecycle dates for [!INCLUDE[s
 
 ## Next steps
 
-- [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
+- [SQL Server 2022](https://www.microsoft.com/sql-server/sql-server-2022)
 - [Extended Security Updates (ESU) overview](sql-server-extended-security-updates.md)
 - [Free Extended Security Updates (ESUs) for migrating to Azure as-is](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support)
 - [SQL Server on Azure VM overview](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)

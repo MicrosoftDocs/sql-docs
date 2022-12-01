@@ -4,8 +4,8 @@ description: Become familiar with SQL Server Database Engine startup options. Vi
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/01/2019"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "single-user mode [SQL Server], startup option"

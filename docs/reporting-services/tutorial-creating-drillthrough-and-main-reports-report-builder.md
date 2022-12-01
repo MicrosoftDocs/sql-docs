@@ -2,9 +2,8 @@
 title: "Tutorial: Creating Drillthrough and Main Reports (Report Builder) | Microsoft Docs"
 description: "Learn how to create two kinds of Reporting Services paginated reports: a drillthrough report and a main report."
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71

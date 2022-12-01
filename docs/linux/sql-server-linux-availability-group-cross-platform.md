@@ -6,8 +6,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/31/2018
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 
 monikerRange: ">= sql-server-2017"
 ---

@@ -1,13 +1,13 @@
 ---
 title: Deploy availability group with DH2i cluster on Azure Kubernetes Services (AKS)
 description: This tutorial shows how to deploy a SQL Server Always On availability group with DH2i Clustering solution for SQL Server containers on Azure Kubernetes Service (AKS).
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: amitkh, vanto
 ms.date: 04/01/2022
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.custom:
   - intro-deployment
 ---

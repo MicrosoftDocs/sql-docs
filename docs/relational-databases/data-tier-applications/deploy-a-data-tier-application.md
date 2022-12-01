@@ -4,9 +4,9 @@ title: "Deploy a Data-tier Application | Microsoft Docs"
 ms.custom:
   - intro-deployment
 ms.date: "01/31/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.deploydacwizard.introduction.f1"

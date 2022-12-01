@@ -4,8 +4,8 @@ description: Become familiar with SQL Server network configuration tasks. View i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/27/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Named Pipes [SQL Server], configuring"

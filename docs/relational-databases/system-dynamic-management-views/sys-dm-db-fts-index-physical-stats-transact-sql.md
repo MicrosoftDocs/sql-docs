@@ -4,9 +4,8 @@ description: sys.dm_db_fts_index_physical_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_fts_index_physical_stats_TSQL"

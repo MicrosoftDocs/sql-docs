@@ -1,8 +1,8 @@
 ---
 title: "T-SQL Tutorial: Create & query database objects"
 description: "T-SQL Tutorial: Create & query database objects"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray

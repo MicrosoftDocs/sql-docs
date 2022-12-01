@@ -1,9 +1,8 @@
 ---
 description: "View Registered Servers in SQL Server Management Studio"
 title: View Registered Servers
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 author: markingmyname

@@ -4,8 +4,8 @@ description: Learn how to use Windows Authentication for connecting the database
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "Windows authentication [SQL Server]"

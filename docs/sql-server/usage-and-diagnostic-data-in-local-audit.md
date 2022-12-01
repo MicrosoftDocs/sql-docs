@@ -3,10 +3,9 @@ title: "Local audit usage and diagnostic data collection"
 description: Learn about the local audit used by SQL Server to collect and send usage and diagnostic data to Microsoft.
 ms.custom: seo-lt-2019
 ms.date: 04/12/2022
-ms.prod: sql
-ms.prod_service: security
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Local Audit"

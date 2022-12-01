@@ -4,8 +4,7 @@ description: "Scalar UDF Inlining feature to improve performance of queries that
 author: "s-r-k"
 ms.author: "karam"
 ms.date: 06/28/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15"
 ---

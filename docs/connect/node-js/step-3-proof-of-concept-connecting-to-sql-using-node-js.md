@@ -4,8 +4,8 @@ description: "This example should be considered a proof of concept showing how t
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "07/23/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js

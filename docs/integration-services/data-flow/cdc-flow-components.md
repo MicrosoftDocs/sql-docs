@@ -3,10 +3,9 @@ description: "CDC Flow Components"
 title: "CDC Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
@@ -200,8 +199,6 @@ A message is displayed after you install the components. Click **Yes** when prom
 -   [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## Related Content  
-  
--   Blog entry, [CDC in SSIS for SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/), on mattmasson.com.  
   
 -   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://sqlblog.iridule.net/index.php/2013/04/15/sql-server-2012-cdc-for-oracle-a-review-of-one-implementation/), on blogs.msdn.com.  
   

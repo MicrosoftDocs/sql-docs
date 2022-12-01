@@ -3,10 +3,9 @@ description: "Rotate Always Encrypted keys using PowerShell"
 title: "Rotate Always Encrypted keys using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
-ms.prod: sql
-ms.prod_service: security, sql-database"
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT

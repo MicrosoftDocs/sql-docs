@@ -5,8 +5,8 @@ description: This article describes the controller of a SQL Server big data clus
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 11/04/2019
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 

@@ -4,8 +4,8 @@ description: Bitwise operators perform bit manipulations between two expressions
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/26/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "bitwise"

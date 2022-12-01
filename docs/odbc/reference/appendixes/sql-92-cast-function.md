@@ -3,10 +3,9 @@ description: "SQL-92 CAST Function"
 title: "SQL-92 CAST Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "functions [ODBC], SQL-92 functions"

@@ -3,7 +3,6 @@ title: "Reporting Services SoapException Class | Microsoft Docs"
 description: Learn how to address specific Reporting Services SoapException class errors that you know might happen.
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service-net-framework-exception-handling
 
 

@@ -2,9 +2,8 @@
 title: "Specify Connections for Custom Data Processing Extensions | Microsoft Docs"
 description: Use this information to learn how to specify connections for third-party custom data processing extensions. 
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual

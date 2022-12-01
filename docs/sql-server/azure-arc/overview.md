@@ -5,7 +5,7 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/12/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ms.custom: references_regions
 ---
@@ -15,6 +15,8 @@ ms.custom: references_regions
 Azure Arc-enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure; in your datacenter, on the edge, or in a multi-cloud environment.
 
 To enable Azure services, you must onboard a running SQL Server instance to Azure Arc. The onboarding will install a *Azure  extension for SQL Server* to the [Connected Machine agent](/azure/azure-arc/servers/agent-overview), which in turn will create an Azure resource for each SQL Server instance.  You can see all the Arc-enabled SQL Server resources in the Azure portal under __Azure Arc > SQL Server__. The properties of this resource reflect a subset of the SQL Server configuration settings.
+
+Azure Arc-enabled SQL Server doesn't store any customer data.
 
 ## Architecture
 
@@ -35,11 +37,11 @@ To learn more about these capabilities, you can also refer to this Data Exposed 
 
 ### Supported SQL versions and operating systems
 
-Azure Arc-enabled SQL Server  supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
+Azure Arc-enabled SQL Server supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
 
 - Windows Server 2012 R2 and higher
-- Ubuntu 16.04 and 18.04 (x64)
-- Red Hat Enterprise Linux (RHEL) 7 (x64) 
+- Ubuntu 20.04 (x64)
+- Red Hat Enterprise Linux (RHEL) 8 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 > [!NOTE]

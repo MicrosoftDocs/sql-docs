@@ -3,8 +3,8 @@ title: "Monitor and troubleshoot PolyBase"
 titlesuffix: SQL Server
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
 ms.date: 05/20/2021
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 dev_langs: 
 -  "TSQL"

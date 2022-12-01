@@ -3,10 +3,9 @@ description: "Mixed Cursors"
 title: "Mixed Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mixed cursors [ODBC]"

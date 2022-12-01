@@ -1,11 +1,11 @@
 ---
 description: "Selecting and Configuring Affected Objects (OracleToSQL)"
 title: "Selecting and Configuring Affected Objects (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Columns Comparison Settings"
@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # Selecting and Configuring Affected Objects (OracleToSQL)
 At this page you can select tables and foreign keys, changes in which should be compared when SSMA verifies the results of execution for the objects chosen in the previous step. Also, you can customize the verification parameters.  

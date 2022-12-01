@@ -3,10 +3,9 @@ description: "Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication"
 title: "Conflict Detection in Peer-to-Peer Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/05/2021
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, peer-to-peer replication"

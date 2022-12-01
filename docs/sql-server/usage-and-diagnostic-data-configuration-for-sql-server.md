@@ -5,9 +5,9 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 08/26/2021
 ms.topic: conceptual
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
-ms.technology: configuration
+ms.subservice: configuration
 ---
 # Configure usage and diagnostic data collection for SQL Server (CEIP)
 

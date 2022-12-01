@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -44,7 +44,7 @@ Is the value to be returned. *scalar_expression* can be a column, subquery, or o
 
 #### [ IGNORE NULLS | RESPECT NULLS ]
 
-**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
+**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
 
 IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.
 

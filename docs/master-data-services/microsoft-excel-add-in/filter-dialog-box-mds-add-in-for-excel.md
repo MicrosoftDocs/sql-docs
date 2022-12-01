@@ -3,10 +3,9 @@ description: "Filter Dialog Box (MDS Add-in for Excel)"
 title: Filter Dialog Box
 ms.custom: microsoft-excel-add-in
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: CordeliaGrey

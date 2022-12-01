@@ -3,10 +3,9 @@ title: "Save an Execution Plan in XML Format | Microsoft Docs"
 description: Learn how to use SQL Server Management Studio to save execution plans in XML format and to open them for viewing. You must have appropriate permissions.
 ms.custom: ""
 ms.date: "08/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XML query plans [SQL Server]"

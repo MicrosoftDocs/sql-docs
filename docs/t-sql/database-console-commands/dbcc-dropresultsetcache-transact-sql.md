@@ -5,8 +5,8 @@ author: mstehrani
 ms.author: emtehran
 ms.reviewer: wiassaf
 ms.date: "07/03/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "language-reference"
 dev_langs:
   - "TSQL"

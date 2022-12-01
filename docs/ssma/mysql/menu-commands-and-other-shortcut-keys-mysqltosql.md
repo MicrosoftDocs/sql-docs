@@ -1,11 +1,11 @@
 ---
 title: "Menu commands and other shortcut keys (MySQLToSQL) | Microsoft Docs"
 description: Learn about keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of the SSMA for MySQL application.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: cpichuka 

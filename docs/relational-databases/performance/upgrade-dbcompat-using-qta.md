@@ -3,9 +3,9 @@ title: "Upgrade databases using Query Tuning Assistant"
 description: Learn how the Query Tuning Assistant guides you through the recommended workflow to keep performance stability during upgrades to newer SQL Server versions.
 ms.custom: seo-dt-2019
 ms.date: "02/13/2019"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 f1_keywords: 
   - sql13.swb.querytuning.f1
@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ---
 
 # Upgrading Databases by using the Query Tuning Assistant

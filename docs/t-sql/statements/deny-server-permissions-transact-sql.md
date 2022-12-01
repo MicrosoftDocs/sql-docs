@@ -4,9 +4,8 @@ description: DENY Server Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "permissions [SQL Server], servers"
@@ -17,7 +16,7 @@ dev_langs:
   - "TSQL"
 ---
 # DENY Server Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on a server.  
   

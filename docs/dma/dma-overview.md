@@ -5,8 +5,8 @@ author: rajeshsetlem
 ms.author: rajpo
 ms.reviewer: randolphwest
 ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Data Migration Assistant, overview"

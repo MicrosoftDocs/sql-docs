@@ -1,8 +1,8 @@
 ---
 title: Real-time scoring using sp_rxPredict
 description: Learn how to perform real-time scoring with the sp_rxPredict system stored procedure in SQL Server for high-performance predictions or scores in forecasting workloads.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 04/05/2021
 ms.topic: how-to
 author: WilliamDAssafMSFT

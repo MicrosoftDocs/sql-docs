@@ -183,6 +183,18 @@ Alternatively you can also onboard your SQL Servers to Azure Arc by directly usi
    ```powershell
    '& "$env:ProgramW6432\AzureExtensionForSQLServer\AzureExtensionForSQLServer.exe" --subId  <subscriptionid>--resourceGroup <resourceGroupName> --location <AzureLocation> --tenantid <TenantId>  --proxy  <proxy> --tags ""'
    ```
+> [!IMPORTANT]
+> MICROSOFT SOFTWARE LICENSE TERMS
+>
+>MICROSOFT Azure Arc Enabled SQL Server
+>
+>This software is licensed to you as part of your or your company's subscription
+>license for Microsoft Azure Services. You may only use the software with
+>Microsoft Azure Services and subject to the terms and conditions of the
+>agreement under which you obtained Microsoft Azure Services. If you do not have
+>an active subscription license for Microsoft Azure Services, you may not use the
+>software.  Microsoft Azure Legal Information: [Microsoft Azure Legal Information](https://azure.microsoft.com/en-us/support/legal/) and [Microsoft Privacy Statement](https://azure.microsoft.com/en-us/support/legal/)
+
 ## Validate your Arc-enabled SQL Server resources
 
 Go __Azure Arc > SQL Server__ and open the newly registered Arc-enabled SQL Server resource  to validate.

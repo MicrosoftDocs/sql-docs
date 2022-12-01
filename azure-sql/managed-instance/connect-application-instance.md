@@ -13,6 +13,7 @@ ms.custom: sqldbrb=1
 ---
 
 # Connect your application to Azure SQL Managed Instance
+
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 Today you have multiple choices when deciding how and where you host your application.
@@ -21,17 +22,16 @@ You may choose to host application in the cloud by using Azure App Service or so
 
 Whatever choice you make, you can connect it to Azure SQL Managed Instance.
 
-This article describes how to connect an application to Azure SQL Managed Instance in a number of different application scenarios from inside the virtual network. 
+This article describes how to connect an application to Azure SQL Managed Instance in a number of different application scenarios from inside the virtual network.
 
 > [!IMPORTANT]
-> You can also enable data access to your managed instance from outside a virtual network. You are able to access your managed instance from multi-tenant Azure services like Power BI, Azure App Service, or an on-premises network that are not connected to a VPN by using the public endpoint on a managed instance. You will need to enable public endpoint on the managed instance and allow public endpoint traffic on the network security group associated with the managed instance subnet. See more important details on [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md). 
+> You can also enable data access to your managed instance from outside a virtual network. You are able to access your managed instance from multi-tenant Azure services like Power BI, Azure App Service, or an on-premises network that are not connected to a VPN by using the public endpoint on a managed instance. You will need to enable public endpoint on the managed instance and allow public endpoint traffic on the network security group associated with the managed instance subnet. See more important details on [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
 ![High availability](./media/connect-application-instance/application-deployment-topologies.png)
 
-
 ## Connect inside the same VNet
 
-Connecting an application inside the same virtual network as SQL Managed Instance is the simplest scenario. Virtual machines inside the virtual network can connect to each other directly even if they are inside different subnets. That means that all you need to connect an application inside App Service Environment or a virtual machine is to configure the connection string to target [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) of the SQL Managed Instance.
+Connecting an application inside the same virtual network as SQL Managed Instance is the simplest scenario. Virtual machines inside the virtual network can connect to each other directly even if they are inside different subnets. That means that all you need to connect an application inside App Service Environment or a virtual machine is to configure the connection string to target [VNet-local endpoint](connectivity-architecture-overview.md#virtual-network-local-endpoint) of the SQL Managed Instance.
 
 ## Connect inside a different VNet
 
@@ -44,9 +44,9 @@ There are two options for connecting virtual networks:
 
 Peering is preferable because it uses the Microsoft backbone network, so from the connectivity perspective, there is no noticeable difference in latency between virtual machines in a peered virtual network and in the same virtual network. Virtual network peering is supported between the networks in the same region. Global virtual network peering is [supported for instances hosted in subnets created starting 9/22/2020](frequently-asked-questions-faq.yml#does-sql-managed-instance-support-global-vnet-peering).
 
-## Connect from on-premises 
+## Connect from on-premises
 
-You can connect your on-premises application to the [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint) of your SQL Managed Instance. In order to access it from on-premises, you need to make a site-to-site connection between the application and the SQL Managed Instance virtual network. For data access to your managed instance from outside a virtual network see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
+You can connect your on-premises application to the [VNet-local endpoint](connectivity-architecture-overview.md#virtual-network-local-endpoint) of your SQL Managed Instance. In order to access it from on-premises, you need to make a site-to-site connection between the application and the SQL Managed Instance virtual network. For data access to your managed instance from outside a virtual network see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
 There are two options for how to connect on-premises to an Azure virtual network:
 
@@ -72,9 +72,9 @@ Once you have the basic infrastructure set up, you need to modify some settings 
 1. In the virtual network that hosts the VPN gateway, go to **Peerings**, go to the peered virtual network connection for SQL Managed Instance, and then click **Allow Gateway Transit**.
 2. In the virtual network that hosts SQL Managed Instance, go to **Peerings**, go to the peered virtual network connection for the VPN gateway, and then click **Use remote gateways**.
 
-## Connect Azure App Service 
+## Connect Azure App Service
 
-You can also connect an application that's hosted by Azure App Service. In order to access it from Azure App Service via virtual network, you first need to make a connection between the application and the SQL Managed Instance virtual network. See [Integrate your app with an Azure virtual network](/azure/app-service/overview-vnet-integration). For data access to your managed instance from outside a virtual network see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md). 
+You can also connect an application that's hosted by Azure App Service. In order to access it from Azure App Service via virtual network, you first need to make a connection between the application and the SQL Managed Instance virtual network. See [Integrate your app with an Azure virtual network](/azure/app-service/overview-vnet-integration). For data access to your managed instance from outside a virtual network see [Configure public endpoint in Azure SQL Managed Instance](./public-endpoint-configure.md).
 
 For troubleshooting Azure App Service access via virtual network, see [Troubleshooting virtual networks and applications](/azure/app-service/overview-vnet-integration#troubleshooting).
 

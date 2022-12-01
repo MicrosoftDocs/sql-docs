@@ -45,11 +45,11 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 :::image type="content" source="media/connectivity-architecture-overview/1-connectivity-architecture-diagram-entities.png" border="false" alt-text="Diagram that shows entities in the connectivity architecture for Azure SQL Managed Instance.":::
 
-SQL Managed Instance is a single-tenant, platform as a service (PaaS) offering that operates in two planes: a data plane and a control plane.
+SQL Managed Instance is a single-tenant, platform as a service offering that operates in two planes: a data plane and a control plane.
 
 The *data plane* is deployed inside the customer's subnet for compatibility, connectivity, and network isolation. The data plane typically is accessed through its [virtual network-local endpoint](#vnet-local-endpoint). The data plane depends on Azure services like Azure Storage, Azure Active Directory (Azure AD) for authentication, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
 
-The *control plane* carries the deployment, management, and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol (RDP) to access those hosts. All control plane communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
+The *control plane* carries the deployment, management, and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All control plane communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
 ## [Architecture before November 2022](#tab/before-feature-wave)
 
@@ -57,9 +57,9 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 :::image type="content" source="media/connectivity-architecture-overview/01-connectivity-architecture-entities.png" border="false" alt-text="Diagram showing entities in connectivity architecture for SQL Managed Instance.":::
 
-SQL Managed Instance is a single-tenant, PaaS offering. Its compute and networking elements are deployed inside the customer's subne. SQL Managed Instance typically is accessed via its [virtual network-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services like Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, and Azure Event Hubs, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
+SQL Managed Instance is a single-tenant, platform as a service offering. Its compute and networking elements are deployed inside the customer's subne. SQL Managed Instance typically is accessed via its [virtual network-local endpoint](connectivity-architecture-overview.md#virtual-network-local-endpoint). SQL Managed Instance depends on Azure services like Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Azure Event Hubs, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
 
-Deployment, management, and core service maintenance operations are carried out via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol (RDP) to access those hosts. All internal communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
+Deployment, management, and core service maintenance operations are carried out via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All internal communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
 ---
 

@@ -72,7 +72,7 @@ To enroll an existing instance in the feature wave by using the Azure portal:
 
    :::image type="content" source="media/november-2022-feature-wave-enroll/feature-wave-details.png" alt-text="Screenshot of the Azure portal showing the November 2022 feature wave info page.":::
 
-   If your subscription is eligible but your instance isn't, select the **Create new instance** option to go to the instance deployment page. Skip to the [Enroll new instances](#enroll-new-instances) section.
+   If your subscription is eligible but your instance isn't, select the **Create new instance** option to go to the instance deployment page. Skip to the [Enroll new instances](#enroll-a-new-instance) section.
 
 1. In **Virtual network / subnet**, either select **Create new** to create a new subnet, or choose an existing eligible subnet from the dropdown under **Ready for November 2022 feature wave**. Select **Save** to move your managed instance to the chosen subnet.
 
@@ -96,15 +96,15 @@ To confirm that your new instance is enrolled in the feature wave during deploym
 
 1. In the [Azure portal](https://portal.azure.com), go to [Azure SQL](https://ms.portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Sql%2Fazuresql).
 1. In the command bar, select **Create**.
-1. In **Select SQL deployment option**, in the **SQL managed instances** dropdown, select **Single instance**. Select **Create**. 
+1. In **Select SQL deployment option**, in the **SQL managed instances** dropdown, select **Single instance**. Select **Create**.
 
-   In a qualified subscription, the message **This subscription is ready to opt-in to November 2022 feature wave** appears on the **Create Azure SQL Managed Instance** pane:
+   In a qualified subscription, the message **This subscription is ready to opt-in to November 2022 feature wave** appears in the **Create Azure SQL Managed Instance** pane:
 
    :::image type="content" source="media/november-2022-feature-wave-enroll/create-new-instance-opt-in.png" alt-text="Screenshot of the Azure portal, Create Azure SQL Managed Instance page, with November 2022 feature dialog selected. ":::
 
 1. Use the **Subscription** dropdown to choose a subscription that's listed under **Ready for November 2022 feature wave**.
 
-   :::image type="content" source="media/november-2022-feature-wave-enroll/choose-subscription-from-drop-down.png" alt-text="Screenshot of the Azure portal, create new MI page, basics tab, choosing a ready for feature wave subscription from the drop-down.":::
+   :::image type="content" source="media/november-2022-feature-wave-enroll/choose-subscription-from-drop-down.png" alt-text="Screenshot of the Azure portal, create new MI page, basics tab, choosing a ready for feature wave subscription from the dropdown.":::
 
 1. Use the **Region** dropdown to choose a region that's listed under **Ready for November 2022 feature wave**.
 

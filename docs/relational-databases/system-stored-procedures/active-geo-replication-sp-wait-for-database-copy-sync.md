@@ -56,7 +56,8 @@ The most likely error conditions are as follows:
   
 - The link cannot be found to the specified server name or database.  
   
-- Interlink connectivity is lost. **sp_wait_for_database_copy_sync** will return after the connection timeout.  
+- Interlink connectivity has been lost, and `sys.sp_wait_for_database_copy_sync` will return after the connection timeout.  
+
   
 ## Permissions
 

@@ -7,4 +7,4 @@ ms.topic: include
 ---
 
 > [!IMPORTANT]
-> Some aspects of the Transact-SQL language, such as stored procedures, aren't supported in Serverless SQL Pools. For more information, visit [T-SQL support](/azure/synapse-analytics/sql/on-demand-workspace-overview#t-sql-support).
+> Some system objects and Transact-SQL syntax aren't supported in serverless SQL pools in Azure Synapse Analytics, including this article. For more information, visit [T-SQL support](/azure/synapse-analytics/sql/on-demand-workspace-overview#t-sql-support).

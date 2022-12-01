@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # TYPE directive in FOR XML queries
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for the [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) data type enables you to optionally request that the result of a FOR XML query be returned as **xml** by specifying the TYPE directive. This allows you to process the result of a FOR XML query on the server. For example, you can specify an XQuery against it, assign the result to an **xml** type variable, or write [Nested FOR XML queries](../../relational-databases/xml/use-nested-for-xml-queries.md).
 

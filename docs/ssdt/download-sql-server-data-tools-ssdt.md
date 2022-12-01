@@ -47,10 +47,8 @@ To modify the installed Visual Studio workloads to include SSDT, use the Visual 
 For Analysis Services or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects2022)
+* [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio2022)
-
-The extension for Integration Services projects is not available for Visual Studio 2022 at this time.
-
 
 ### Supported SQL versions
 
@@ -58,6 +56,7 @@ The extension for Integration Services projects is not available for Visual Stud
 |-------------------|--------------------|
 |Relational databases| [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2019|
+|Integration Services packages| SQL Server 2019 - SQL Server 2022 |
 
 
 ## SSDT for Visual Studio 2019

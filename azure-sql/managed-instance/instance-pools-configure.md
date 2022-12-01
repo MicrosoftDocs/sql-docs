@@ -90,7 +90,7 @@ After completing the previous steps, you are ready to create an instance pool.
 
 The following restrictions apply to instance pools:
 
-- Only General Purpose and Gen5 are available in public preview.
+- Only General Purpose and standard-series (Gen5) are available in public preview.
 - The pool name can contain only lowercase letters, numbers and hyphens, and can't start with a hyphen.
 - If you want to use Azure Hybrid Benefit, it is applied at the instance pool level. You can set the license type during pool creation or update it anytime after creation.
 

@@ -3,9 +3,9 @@ description: "MSSQLSERVER_19407"
 title: "MSSQLSERVER_19407 | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/04/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "19407 (Database Engine error)"

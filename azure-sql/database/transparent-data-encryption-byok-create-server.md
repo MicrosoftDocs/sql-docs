@@ -49,8 +49,6 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
     - **Password**: Enter a password that meets the password requirements, and enter it again in the **Confirm password** field.
     - **Location**: Select a location from the dropdown list
 
-        :::image type="content" source="media/transparent-data-encryption-byok-create-server/create-server.png" alt-text="Create sql server menu in Azure portal":::
-    
 8. Select **Next: Networking** at the bottom of the page.
 
 9. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.

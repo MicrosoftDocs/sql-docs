@@ -67,7 +67,7 @@ If you install successfully, but the solution shows **"incompatible"**, and "The
 If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log. You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timestamp}_ISVsix.log:
 - When the error is "The file {filefullpath} already exists.":
    1. ```
-      cd C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE
+      cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE
       rm CommonExtensions\Microsoft\SSIS\* 
       rm PublicAssemblies\SSIS\* 
       rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"* 

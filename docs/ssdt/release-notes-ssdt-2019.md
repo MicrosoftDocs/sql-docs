@@ -75,7 +75,7 @@ If you get an error during installation, and find **"Bundle action failed: Inval
    1. Repair the VS2019
    1. Restart and reinstall
 - When the error is "Object reference not set to an instance of an object.":
-  - delete the broken instance folder “%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
+  - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
 - When the error is "Error 0x80091007: Failed to verify hash of payload":
   - delete C:\ProgramData\Package Cache\15160B731819F56D87A626F9A2777550340022D7 and retry.
 - When it isn't above error in ISVsix.log, you can zip %temp%\SsdtisSetup and send the logs to ssistoolsfeedbacks@microsoft.com for troubleshooting.

@@ -166,7 +166,7 @@ Additionally you can also perform an edition upgrade between [!INCLUDE[sssql15-m
   
 ## See Also  
 
-[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)     
+[Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)     
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
 [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)    
   

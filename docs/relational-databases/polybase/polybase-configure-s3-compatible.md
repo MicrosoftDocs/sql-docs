@@ -73,7 +73,7 @@ The following sample script creates a database scoped credential `s3-dc` in the 
 ```sql
 USE [database_name];
 GO
-IF NOT EXISTS(SELECT * FROM sys.credentials WHERE name = 's3_dc')
+IF NOT EXISTS(SELECT * FROM sys.database_scoped_credentials WHERE name = 's3_dc')
 BEGIN
  CREATE DATABASE SCOPED CREDENTIAL s3_dc
  WITH IDENTITY = 'S3 Access Key',

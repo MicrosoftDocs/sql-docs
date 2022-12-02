@@ -22,7 +22,7 @@ This article shows how to deploy an Azure SQL Managed Instance
 in a virtual network (vNet) and a subnet associated with a route table and a network security group
 using Terraform.
 
-[!INCLUDE [Terraform abstract](~/azure-dev-docs-pr/articles/terraform/includes/abstract.md)]
+[!INCLUDE [Terraform abstract](~/../azure-dev-docs-prarticles/terraform/includes/abstract.md)]
 
 In this article, you learn how to:
 
@@ -36,7 +36,7 @@ In this article, you learn how to:
 
 ## Prerequisites
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](~/azure-dev-docs-pr/articles/includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](~/../azure-dev-docs-prarticles/includes/open-source-devops-prereqs-azure-subscription.md)]
 
 - [Install and configure Terraform](/azure/developer/terraform/quickstart-configure)
 
@@ -64,26 +64,26 @@ All Terraform procedural articles (quickstart, tutorial) should have a minimum o
 1. Create a directory in which to test and run the sample Terraform code and make it the current directory.
 
 2. Create a file named `providers.tf` and insert the following code:
-   [!code-terraform[master](https://github.com/Azure/terraform/blob/master/quickstart/101-managed-instance/providers.tf)]
+   [!code-terraform[master](~/../terraform_scripts/blob/master/quickstart/101-managed-instance/providers.tf)]
 
 3. Create a file named `main.tf` and insert the following code:
-   [!code-terraform[master](https://github.com/Azure/terraform/blob/master/quickstart/101-managed-instance/main.tf)]
+   [!code-terraform[master](~/../terraform_scripts/blob/master/quickstart/101-managed-instance/main.tf)]
 
 4. Create a file named `variables.tf` and insert the following code:
-   [!code-terraform[master](https://github.com/Azure/terraform/blob/master/quickstart/101-managed-instance/variables.tf)]
+   [!code-terraform[master](~/../terraform_scripts/blob/master/quickstart/101-managed-instance/variables.tf)]
    
 
 ## Initialize Terraform
 
-[!INCLUDE [terraform-init.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-init.md)]
+[!INCLUDE [terraform-init.md](~/../azure-dev-docs-prarticles/terraform/includes/terraform-init.md)]
 
 ## Create a Terraform execution plan
 
-[!INCLUDE [terraform-plan.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-plan.md)]
+[!INCLUDE [terraform-plan.md](~/../azure-dev-docs-prarticles/terraform/includes/terraform-plan.md)]
 
 ## Apply a Terraform execution plan
 
-[!INCLUDE [terraform-apply-plan.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-apply-plan.md)]
+[!INCLUDE [terraform-apply-plan.md](~/../azure-dev-docs-prarticles/terraform/includes/terraform-apply-plan.md)]
 
 ## Verify the results
 
@@ -93,7 +93,7 @@ opened filter by status)
 
 ## Clean up resources
 
-[!INCLUDE [terraform-plan-destroy.md](~/azure-dev-docs-pr/articles/terraform/includes/terraform-plan-destroy.md)]
+[!INCLUDE [terraform-plan-destroy.md](~/../azure-dev-docs-prarticles/terraform/includes/terraform-plan-destroy.md)]
 
 ## Troubleshoot Terraform on Azure
 

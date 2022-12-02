@@ -154,38 +154,50 @@ ms.author: wiassaf
   
 ##  <a name="CreateMSDB"></a> Create a New msdb Database  
 
- If the **msdb** database is damaged and you do not have a backup of the **msdb** database, you can create a new **msdb** by using the **instmsdb** script.  
+ If the **msdb** database is damaged or suspect and you do not have a backup of the **msdb** database, you can create a new **msdb** by using the **instmsdb** script.  
   
 > [!WARNING]  
 >  Rebuilding the **msdb** database using the **instmsdb** script will eliminate all the information stored in **msdb** such as jobs, alert, operators, maintenance plans, backup history, Policy-Based Management settings, Database Mail, Performance Data Warehouse, etc.  
   
-1.  Stop all services connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as data store.  
+1. Stop all services connecting to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], and all applications using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as data store.  
   
-2.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command line using the command: `NET START MSSQLSERVER /T3608`  
+1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command line using the command: 
+   
+   ```console 
+   NET START MSSQLSERVER /T3608
+   ```
+     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md). Also for information on trace flag 3608, see [TF3608](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf3608)
   
-     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+1. In another command line window, detach the **msdb** database by executing the following command, replacing *\<servername>* with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 
+
+   ```console
+   SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"
+   ```  
   
-3.  In another command line window, detach the **msdb** database by executing the following command, replacing *\<servername>* with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+1.  Using the Windows Explorer, rename the **msdb** database files. By default these are in the DATA sub-folder for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
-4.  Using the Windows Explorer, rename the **msdb** database files. By default these are in the DATA sub-folder for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+1.  Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, stop and restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service normally with no additional trace flags.  
   
-5.  Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, stop and restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service normally.  
+1.  In a Command Line window, connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute the command: 
+   
+   ```console
+   SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQLXX.INSTANCE_NAME\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"
+   ```
   
-6.  In a command line window, connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and execute the command: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+     Replace *\<servername>* with the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use the file system path of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Also, replace `MSSQLXX.INSTANCE_NAME` with the directory that corresponds to your version and instance.
   
-     Replace *\<servername>* with the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use the file system path of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Using the Windows Notepad, open the **instmsdb.out** file and check the output for any errors.  
   
-7.  Using the Windows Notepad, open the **instmsdb.out** file and check the output for any errors.  
+1. Re-apply any CUs that are installed on the instance. This will upgrade your MSDB database to the current CU level
   
-8.  Re-apply any hotfix installed on the instance.  
+1. Recreate the user content stored in the **msdb** database, such as jobs, alert, etc.  
   
-9. Recreate the user content stored in the **msdb** database, such as jobs, alert, etc.  
-  
-10. Backup the **msdb** database.  
+1. Backup the **msdb** database.  
+
 
 ##  <a name="RebuildTempdb"></a> Rebuild the tempdb Database  
 
-If the **tempdb** database is damaged and the database engine fails to start, you can rebuild  **tempdb** without the need to rebuild all system databases.
+If the **tempdb** database is damaged or suspect and the database engine fails to start, you can rebuild  **tempdb** without the need to rebuild all system databases.
   
 1. Rename the current tempdb.mdf and templog.ldf files, if not missing. 
 1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a Command Prompt by using the following command. 

@@ -26,8 +26,6 @@ ms.custom: seo-dt-2019
 
 This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the `sys.sp_wait_for_database_copy_sync` causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run `sys.sp_wait_for_database_copy_sync` on only the primary database.
 
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
 ## Syntax  
   
 ```sql

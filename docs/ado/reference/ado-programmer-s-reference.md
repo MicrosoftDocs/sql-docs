@@ -1,6 +1,6 @@
 ---
-title: "ADO Programmer&#39;s Reference"
-description: "ADO Programmer&#39;s Reference"
+title: "ADO Programmer's Reference"
+description: "ADO Programmer's Reference"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
@@ -10,7 +10,7 @@ ms.topic: reference
 helpviewer_keywords:
   - "ADO, reference"
 ---
-# ADO Programmer&#39;s Reference
+# ADO Programmer's Reference
 This section contains the following topics.  
   
 -   [ADO API Reference](./ado-api/ado-api-reference.md)  

@@ -11,7 +11,7 @@ ms.topic: conceptual
 ---
 # SQL samples
 
-[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 

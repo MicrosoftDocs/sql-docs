@@ -66,7 +66,7 @@ sections:
         answer: | 
           For a list of available regions, see [Maintenance window availability](maintenance-window.md#feature-availability).
       
-      - question: I don’t see my region in the available regions list, what can I do? 
+      - question: I don't see my region in the available regions list, what can I do? 
         answer: |
           Contact [azsqlcmfeedback@microsoft.com](mailto:azsqlcmfeedback@microsoft.com) to share the feedback and check the plans for your region. 
       

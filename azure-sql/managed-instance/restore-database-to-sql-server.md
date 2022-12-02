@@ -12,6 +12,7 @@ ms.topic: how-to
 ms.custom: 
 ---
 # Restore database to SQL Server from Azure SQL Managed Instance
+
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article teaches you to restore your database backup from Azure SQL Managed Instance to SQL Server 2022. 
@@ -29,9 +30,9 @@ Restoring databases from SQL Managed Instance to SQL Server 2022 unlocks the fol
 The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed instances.
 
 > [!IMPORTANT]
-> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of the [mainstream support for SQL Server 2022](https://learn.microsoft.com/lifecycle/products/sql-server-2022). Upon the expiry of this period, ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server, following the SQL Server 2022 version.
+> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of the [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022). Upon the expiry of this period, ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server, following the SQL Server 2022 version.
 
-## Take backup on SQL Managed Instance 
+## Take backup on SQL Managed Instance
 
 First, create a credential to access the storage account from SQL Managed Instance, and then take a copy-only backup of your database. 
 
@@ -68,7 +69,7 @@ WITH COPY_ONLY
 ```
 
 
-## Restore to SQL Server 
+## Restore to SQL Server
 
 Restore the database to SQL Server by using the `WITH MOVE` option of the RESTORE DATABASE T-SQL command, and providing explicit file paths for your files on the destination server.
 
@@ -85,7 +86,6 @@ MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 
 > [!NOTE]
 > To restore databases that are encrypted at-rest (by using [Transparent Data Encryption - TDE](../database/transparent-data-encryption-tde-overview.md)), the destination instance of SQL Server must have access to the same key used to protect the source database through the SQL Server Connector for Azure Key Vault. For details, review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
-
 
 ## Considerations
 

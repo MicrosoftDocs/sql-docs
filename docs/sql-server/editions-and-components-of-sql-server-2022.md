@@ -4,7 +4,7 @@ description: "Editions and supported features of SQL Server 2022"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/30/2022
+ms.date: 12/01/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -39,7 +39,7 @@ monikerRange: ">= sql-server-2016"
 
 This article provides details of features supported by the various editions of [!INCLUDE[sssql22-md](../includes/sssql22-md.md)].
 
-For information about older versions, see:
+For information about other versions, see:
 
 - [SQL Server 2019](editions-and-components-of-sql-server-2019.md)
 - [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
@@ -106,7 +106,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 | Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] | Operating System Maximum | 128&nbsp;GB | 64&nbsp;GB | 1410&nbsp;MB | 1410&nbsp;MB |
 | Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] | Unlimited memory | 32&nbsp;GB | 16&nbsp;GB | 352&nbsp;MB | 352&nbsp;MB |
 | Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] | Unlimited memory | 32&nbsp;GB | 16&nbsp;GB | 352&nbsp;MB | 352&nbsp;MB |
-| Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] | Operating System Maximum | 16&nbsp;GB <sup>2</sup> <br /><br />64&nbsp;GB <sup>3</sup> | N/A | N/A | N/A |
+| Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] | Operating System Maximum | 16&nbsp;GB <sup>2</sup><br /><br />64&nbsp;GB <sup>3</sup> | N/A | N/A | N/A |
 | Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Operating System Maximum | 64&nbsp;GB | 64&nbsp;GB | 4&nbsp;GB | N/A |
 | Maximum relational database size | 524&nbsp;PB | 524&nbsp;PB | 524&nbsp;PB | 10&nbsp;GB | 10&nbsp;GB |
 
@@ -376,7 +376,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 
 <sup>2</sup> Advanced integration can use all available cores for parallel processing of data sets at any size subject to hardware limits.
 
-<sup>3</sup> Client only
+<sup>3</sup> Client only.
 
 ## Integration Services
 
@@ -426,7 +426,7 @@ For information about the Business Intelligence Client features supported by the
 
 ## Next steps
 
-- [What's new in [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)]](what-s-new-in-sql-server-2022.md)
+- [What's new in SQL Server 2022](what-s-new-in-sql-server-2022.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

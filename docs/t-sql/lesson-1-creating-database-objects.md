@@ -178,50 +178,50 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
 
 1. Type and execute the following statements to read the data in the `Products` table.
 
-  ```sql
-  -- The basic syntax for reading data from a single table
-  SELECT ProductID, ProductName, Price, ProductDescription
-      FROM dbo.Products
-  GO
-  ```
+   ```sql
+   -- The basic syntax for reading data from a single table
+   SELECT ProductID, ProductName, Price, ProductDescription
+       FROM dbo.Products
+   GO
+   ```
 
 1. You can use an asterisk (`*`) to select all the columns in the table. The asterisk is for ad hoc queries. In permanent code, provide the column list so that the statement returns the predicted columns, even if a new column is added to the table later.
 
-  ```sql
-  -- Returns all columns in the table
-  -- Does not use the optional schema, dbo
-  SELECT * FROM Products
-  GO
-  ```
+   ```sql
+   -- Returns all columns in the table
+   -- Does not use the optional schema, dbo
+   SELECT * FROM Products
+   GO
+   ```
 
 1. You can omit columns that you don't want to return. The columns will be returned in the order that they are listed.
 
-  ```sql
-  -- Returns only two of the columns from the table
-  SELECT ProductName, Price
-      FROM dbo.Products
-  GO
-  ```
+   ```sql
+   -- Returns only two of the columns from the table
+   SELECT ProductName, Price
+       FROM dbo.Products
+   GO
+   ```
 
 1. Use a `WHERE` clause to limit the rows that are returned to the user.
 
-  ``` sql
-  -- Returns only two of the records in the table
-  SELECT ProductID, ProductName, Price, ProductDescription
-      FROM dbo.Products
-      WHERE ProductID < 60
-  GO
-  ```
+   ``` sql
+   -- Returns only two of the records in the table
+   SELECT ProductID, ProductName, Price, ProductDescription
+       FROM dbo.Products
+       WHERE ProductID < 60
+   GO
+   ```
 
 1. You can work with the values in the columns as they are returned. The following example performs a mathematical operation on the `Price` column. Columns that have been changed in this way won't have a name unless you provide one by using the `AS` keyword.
 
-  ```sql
-  -- Returns ProductName and the Price including a 7% tax
-  -- Provides the name CustomerPays for the calculated column
-  SELECT ProductName, Price * 1.07 AS CustomerPays
-      FROM dbo.Products
-  GO
-  ```
+   ```sql
+   -- Returns ProductName and the Price including a 7% tax
+   -- Provides the name CustomerPays for the calculated column
+   SELECT ProductName, Price * 1.07 AS CustomerPays
+       FROM dbo.Products
+   GO
+   ```
 
 ### Useful functions in a SELECT statement
 

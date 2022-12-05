@@ -157,7 +157,7 @@ Contact your hardware vendors before you perform additional debugging actions. T
 
 ### System performance and query plan actions
 
-Overall, system performance can play a key role in I/O processing. You should consider the general health of the system while investigating reports of stalled or stuck I/O operations. Excessive loads can cause the overall system to be slow, including the I/O processing. The behavior of the system when the problem occurs can be a key factor in determining the root cause of the problem. For example, if the CPU usage becomes high or remains high while the problem occurs, this may indicate that a process on the system is using so much CPU that other processes are being adversely affected.
+Overall, system performance can play a key role in I/O processing. You should consider the general health of the system while investigating reports of stalled or stuck I/O operations. Excessive loads can cause the overall system to be slow, including the I/O processing. The behavior of the system when the problem occurs can be a key factor in determining the root cause of the problem. For example, if the CPU usage increases or remains high while the problem occurs, it may indicate that a system process is using so much CPU that other processes are being adversely affected.
 
 **Performance counters**
 
@@ -184,7 +184,7 @@ Frequently, bursts of I/O occur because an index is missing. This behavior can s
 
 ### Practical examples from SQL Server Support
 
-The following examples have been handled by SQL Server Support and Windows Escalation Support. These examples are intended to provide a frame of reference and help set your expectations about stalled and stuck I/O situations and about how a system may be affected or may respond.  No specific hardware or set of drivers pose any specific risk or increased risk over another. All systems are the same in this respect.
+The following examples have been handled by SQL Server Support and Windows Escalation Support. These examples are intended to provide a frame of reference and help set your expectations about stalled and stuck I/O situations. They also provide a framework for understanding how a system may be affected or may respond. No specific hardware or set of drivers pose any specific risk or increased risk over another. All systems are the same in this respect.
 
 **Example 1: A log write that is stuck for 45 seconds**
 

@@ -72,15 +72,15 @@ The informational message indicates that the current load may be experiencing on
 - Performance issue at the operating system level.
 - Filter driver intervention in the I/O process or storage path of database files. For example, antivirus program.
 
-SQL Server records the time it initiated an I/O request and records the time the I/O was completed. If that difference is 15 seconds or longer, this condition is detected. It also means that SQL Server is not the cause of the delayed I/O condition that this message describes and reports. This condition is known as stalled I/O. Most disk requests occur within the typical speed of the disk. This typical disk speed is frequently known as disk seek time. Disk seek time for most standard disks occurs in 10 milliseconds or less. Therefore, 15 seconds is a long time for the system I/O path to return to SQL Server. For more details, see the More Information section.
+SQL Server records the time it initiated an I/O request and records the time the I/O was completed. If that difference is 15 seconds or longer, this condition is detected. It also means that SQL Server isn't the cause of the delayed I/O condition that this message describes and reports. This condition is known as stalled I/O. Most disk requests occur within the typical speed of the disk. This typical disk speed is frequently known as disk seek time. Disk seek time for most standard disks occurs in 10 milliseconds or less. Therefore, 15 seconds is a long time for the system I/O path to return to SQL Server. For more details, see the [More Information](#more-information) section.
   
-## User Action  
+## User Action
 Troubleshoot this error by performing the following steps:
 
 1. Examine the system event log for hardware-related error messages. 
 1. Examine hardware-specific logs if they are available.  Use the necessary methods and techniques to determine the cause of the delay in the operating system, the drivers, or the I/O hardware.
 1. Update all device drivers and firmware or perform other diagnostics that're associated with your I/O subsystem.
-1. Disk access can be slowed by filter drivers, for example, an antivirus program. To increase access speed, exclude the SQL Server data files that're specified in the error message from the active virus scans. For more information, see How to choose antivirus software to run on computers that are running SQL Server (microsoft.com).
+1. Disk access can be slowed by filter drivers, for example, an antivirus program. To increase access speed, exclude the SQL Server data files that're specified in the error message from the active virus scans. For more information, see [How to choose antivirus software to run on computers that are running SQL Server (microsoft.com)](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b).
     - Use the [fltmc.exe command line utility](/windows-hardware/drivers/ifs/development-and-testing-tools) to query all the filter drivers installed on the system and to understand the functions it performs on the storage path to the database files.
 1. Use the Performance Monitor to examine the following counters:
     - **Average Disk Sec/Transfer**
@@ -89,9 +89,9 @@ Troubleshoot this error by performing the following steps:
 1. You can also use facilities like [Storport ETW logging](/archive/blogs/ntdebugging/storport-etw-logging-to-measure-requests-made-to-a-disk-unit) to measure the latency of requests that're made to a disk unit. Another similar disk I/O troubleshooting kit is available as a built-in profile of [Windows Performance Recorder](/windows-hardware/test/wpt/introduction-to-wpr).
 1. Monitor [sys.dm_io_virtual_file_stats](../system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) and choose the appropriate storage tier and IOPS for your storage throughput.
 
-For a guided walk-through for diagnosing and troubleshooting SQL Server performance issues that occur because of I/O issues, see [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance)
+For a guided walk-through for diagnosing and troubleshooting SQL Server performance issues that occur because of I/O issues, see [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance).
 
-## More Information
+## More information
 
 ### Stuck I/O and Stalled I/O
 
@@ -171,7 +171,7 @@ For example, the Average Disk Sec/Transfer time on a computer that's running SQL
 
 Be careful while using the performance counters because SQL Server takes full advantage of asynchronous I/O capabilities that heavily push the disk queue lengths. Therefore, longer disk queue lengths alone don't indicate a problem.
 
-In Windows System Monitor, you can review the counter "Physical Disk: Disk Bytes/sec" for each affected disk and compare the rate of activity against the counters "Process: IO Data Bytes/Sec" and "Process: IO Other Bytes/sec" for each process. You do this to identify whether a specific set of processes is generating excessive I/O requests. Various other I/O-related counters in the Process object reveal more granular information. If you determine that a SQL Server instance is responsible for excessive IO load on the server, see the next section on Indexes and Parallelism. For a detailed discussion on detecting and resolving I/O bottlenecks, see [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance).
+In Windows System Monitor, you can review the counter "Physical Disk: Disk Bytes/sec" for each affected disk and compare the rate of activity against the counters "Process: IO Data Bytes/Sec" and "Process: IO Other Bytes/sec" for each process. You do this to identify whether a specific set of processes is generating excessive I/O requests. Various other I/O-related counters in the Process object reveal more granular information. If you determine that a SQL Server instance is responsible for excessive I/O load on the server, see the next section on Indexes and Parallelism. For a detailed discussion on detecting and resolving I/O bottlenecks, see [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance).
 
 **Indexes and parallelism**
 

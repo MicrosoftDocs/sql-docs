@@ -54,7 +54,7 @@ SELECT @g.AsGml();
  This method returns the description as a `LineString` instance.  
   
 ```xml
-<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
+<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
 ## See Also  

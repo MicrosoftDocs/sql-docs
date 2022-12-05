@@ -14,6 +14,7 @@ ms.custom:
   - "sqldbrb=2"
   - "devx-track-python"
   - "mode-api"
+  - "py-fresh-zinc"
 ms.devlang: python
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

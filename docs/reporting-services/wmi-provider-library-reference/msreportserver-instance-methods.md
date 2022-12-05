@@ -2,8 +2,8 @@
 description: "MSReportServer_Instance Methods"
 title: "MSReportServer_Instance Methods | Microsoft Docs"
 ms.date: 06/09/2016
-ms.prod: reporting-services
-ms.technology: wmi-provider-library-reference
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
 
 
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 title: "Add dataset filters, data region filters, and group filters to a paginated report | Microsoft Docs"
 description: Find out how filters can help you control which data is displayed and processed in your paginated reports in Report Builder.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

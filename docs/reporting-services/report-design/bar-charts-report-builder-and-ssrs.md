@@ -2,8 +2,8 @@
 title: "Bar charts in a paginated report | Microsoft Docs"
 description: Display data horizontally with a bar chart to represent data in a paginated report with a finite start and end date in Report Builder.
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 title: "Troubleshoot Reporting Services Subscriptions and Delivery"
 description: In this article, diagnose and fix problems found when you work with report subscriptions, schedules, and delivery in SQL Server Reporting Services.
 ms.date: 05/31/2016
-ms.prod: reporting-services
-ms.technology: troubleshooting
+ms.service: reporting-services
+ms.subservice: troubleshooting
 
 
 ms.topic: conceptual

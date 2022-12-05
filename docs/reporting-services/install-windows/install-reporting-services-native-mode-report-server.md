@@ -2,7 +2,7 @@
 description: "Install Reporting Services 2016 native mode report server"
 title: "Install Reporting Services 2016 native mode report server | Microsoft Docs"
 ms.date: 12/20/2017
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "default configuration [Reporting Services]"

@@ -2,8 +2,8 @@
 description: "Configure Basic Authentication on the Report Server"
 title: "Configure Basic Authentication on the Report Server | Microsoft Docs"
 ms.date: 02/10/2021
-ms.prod: reporting-services
-ms.technology: security
+ms.service: reporting-services
+ms.subservice: security
 
 
 ms.topic: conceptual

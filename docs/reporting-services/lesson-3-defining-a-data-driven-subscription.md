@@ -2,8 +2,8 @@
 title: "Lesson 3: Defining a Data-Driven Subscription | Microsoft Docs"
 description: Use the Reporting Services web portal's data-driven subscription pages to connect to a subscription data source and build a query that retrieves subscription data.
 ms.date: 06/06/2019
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b

@@ -2,8 +2,8 @@
 title: "Relational Query Designer User Interface (Report Builder) | Microsoft Docs"
 description: Learn to use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual

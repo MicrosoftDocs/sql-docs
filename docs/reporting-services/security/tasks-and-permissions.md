@@ -2,8 +2,8 @@
 description: "Tasks and Permissions"
 title: "Tasks and Permissions | Microsoft Docs"
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.technology: security
+ms.service: reporting-services
+ms.subservice: security
 
 
 ms.topic: conceptual

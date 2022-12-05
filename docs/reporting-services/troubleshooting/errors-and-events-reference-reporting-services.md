@@ -1,8 +1,8 @@
 ---
 title: "Errors and Events Reference (Reporting Services)"
 description: View the ID, type, category, source, and description for different report server events. These events include error, warning, and information types.
-ms.prod: reporting-services
-ms.technology: troubleshooting
+ms.service: reporting-services
+ms.subservice: troubleshooting
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies

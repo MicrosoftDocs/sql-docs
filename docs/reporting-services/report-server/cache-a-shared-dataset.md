@@ -2,8 +2,8 @@
 title: "Cache a Shared Dataset | Microsoft Docs"
 description: Learn how to schedule the expiration of a cached shared dataset in Report Manager. Caching shared datasets improves performance.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual

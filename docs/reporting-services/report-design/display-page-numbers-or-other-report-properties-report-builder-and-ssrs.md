@@ -2,8 +2,8 @@
 title: "Display page numbers or other paginated report properties | Microsoft Docs"
 description:  Add properties of your paginated report including page numbers, filenames, and titles, for display in page headers or footers. 
 ms.date: 01/18/2022
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

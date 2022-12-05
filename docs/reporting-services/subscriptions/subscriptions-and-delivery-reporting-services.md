@@ -2,8 +2,8 @@
 title: "Subscriptions and Delivery (Reporting Services) | Microsoft Docs"
 description: In this article, learn about Reporting Services subscriptions, which delivers a report at a specific time or in response to an event.
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: subscriptions
+ms.service: reporting-services
+ms.subservice: subscriptions
 
 
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 title: "Report Server HTTP Log | Microsoft Docs"
 description: Learn how to enable the Report Server HTTP log after you install Reporting Services. This feature logs every HTTP request and response a report server handles.
 ms.date: 06/12/2019
-ms.prod: reporting-services
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual

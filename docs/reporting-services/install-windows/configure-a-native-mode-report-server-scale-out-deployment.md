@@ -2,7 +2,7 @@
 description: "Configure a Native Mode Report Server Scale-Out Deployment"
 title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
 ms.date: 08/26/2021
-ms.prod: reporting-services
+ms.service: reporting-services
 
 ms.topic: conceptual
 helpviewer_keywords: 

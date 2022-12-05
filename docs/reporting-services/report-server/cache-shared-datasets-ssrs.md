@@ -2,8 +2,8 @@
 title: "Cache Shared Datasets | Microsoft Docs"
 description: Learn about caching shared datasets in SQL Server Report Manager, which improves response time and provides consistent data for reports that use the dataset.
 ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.technology: report-server
+ms.service: reporting-services
+ms.subservice: report-server
 
 
 ms.topic: conceptual

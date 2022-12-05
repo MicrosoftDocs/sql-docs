@@ -4,8 +4,8 @@ description: Learn introductory information about report data in SQL Server Repo
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
-ms.prod: reporting-services
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019

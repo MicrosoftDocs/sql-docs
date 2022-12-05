@@ -2,8 +2,8 @@
 title: "Troubleshoot  Reporting Services Report Issues"
 description: In this article, troubleshoot issues with report design, preview, export, and publishing to or viewing on a report server in native or SharePoint mode.
 ms.date: 02/27/2016
-ms.prod: reporting-services
-ms.technology: troubleshooting
+ms.service: reporting-services
+ms.subservice: troubleshooting
 
 
 ms.topic: conceptual

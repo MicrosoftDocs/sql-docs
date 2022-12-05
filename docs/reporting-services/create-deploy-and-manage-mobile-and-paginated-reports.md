@@ -2,8 +2,8 @@
 title: "What is SQL Server Reporting Services | Microsoft Docs"
 description: "Learn about tools and services for Reporting Services reports on premises."
 ms.date: 09/16/2022
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "reports [Reporting Services]"

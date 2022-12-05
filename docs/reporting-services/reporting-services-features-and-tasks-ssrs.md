@@ -2,8 +2,8 @@
 title: "Reporting Services Features and Tasks | Microsoft Docs"
 description: Learn how Reporting Services foundational content is organized by reports and report features, report server features, and Reporting Services product features.
 ms.date: 12/18/2015
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 title: "Troubleshoot Server & Database Connection Problems"
 description: "In this article, diagnose and fix problems you experience when you're connecting to a report server. Also learn about 'Unexpected error' messages."
 ms.date: 12/16/2019
-ms.prod: reporting-services
-ms.technology: troubleshooting
+ms.service: reporting-services
+ms.subservice: troubleshooting
 ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT

@@ -2,8 +2,8 @@
 title: "Lesson 2: Specify Connection Information (Reporting Services) | Microsoft Docs"
 description: "In this lesson, you define a data source: connection information the report uses to access data from a relational database or other sources."
 ms.date: 12/09/2019
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e

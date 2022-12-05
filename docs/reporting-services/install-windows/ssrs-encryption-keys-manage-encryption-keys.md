@@ -2,7 +2,7 @@
 title: "Configure and Manage Encryption Keys (Configuration Manager) | Microsoft Docs"
 description: "Reporting Services uses encryption keys to secure credentials and connection information that is stored in a report server database."
 ms.date: 12/04/2019
-ms.prod: reporting-services
+ms.service: reporting-services
 ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual

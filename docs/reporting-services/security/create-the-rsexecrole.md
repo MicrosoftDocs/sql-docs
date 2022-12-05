@@ -2,8 +2,8 @@
 description: "Create the RSExecRole"
 title: "Create the RSExecRole | Microsoft Docs"
 ms.date: 06/12/2019
-ms.prod: reporting-services
-ms.technology: security
+ms.service: reporting-services
+ms.subservice: security
 
 
 ms.topic: conceptual

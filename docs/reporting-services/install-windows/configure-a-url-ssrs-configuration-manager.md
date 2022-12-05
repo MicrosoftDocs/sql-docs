@@ -2,7 +2,7 @@
 description: "Configure a URL  (Report Server Configuration Manager)"
 title: "Configure a URL  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/26/2016
-ms.prod: reporting-services
+ms.service: reporting-services
 
 ms.topic: conceptual
 helpviewer_keywords: 

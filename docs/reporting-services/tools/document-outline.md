@@ -2,8 +2,8 @@
 title: "Document Outline | Microsoft Docs"
 description: Learn about the Document Outline window where you view the hierarchy of report items in a report.
 ms.date: 05/31/2016
-ms.prod: reporting-services
-ms.technology: tools
+ms.service: reporting-services
+ms.subservice: tools
 
 
 ms.topic: conceptual

@@ -2,8 +2,8 @@
 description: "ConfigurationSetting Method - GetDatabaseVersionDisplayName"
 title: "GetDatabaseVersionDisplayName Method (WMI) | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.technology: wmi-provider-library-reference
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
 
 
 ms.topic: conceptual

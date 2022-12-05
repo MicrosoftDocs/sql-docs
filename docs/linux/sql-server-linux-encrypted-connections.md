@@ -2,7 +2,7 @@
 title: Encrypting Connections to SQL Server on Linux
 description: SQL Server on Linux uses TLS to encrypt data that's transmitted across a network between a client application and an instance of SQL Server.
 ms.date: 06/29/2020
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto
 ms.topic: conceptual

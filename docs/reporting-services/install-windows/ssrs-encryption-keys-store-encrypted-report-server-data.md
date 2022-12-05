@@ -2,7 +2,7 @@
 description: "Store Encrypted Report Server Data (Configuration Manager)"
 title: "Store Encrypted Report Server Data (Configuration Manager) | Microsoft Docs"
 ms.date: 10/24/2019
-ms.prod: reporting-services
+ms.service: reporting-services
 
 ms.topic: conceptual
 helpviewer_keywords: 

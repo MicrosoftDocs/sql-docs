@@ -2,8 +2,8 @@
 title: "Bind a Report to a Shared Data Source | Microsoft Docs"
 description: Learn how to bind a report to a shared data source on a report server that is running in native mode or SharePoint integrated mode.
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual

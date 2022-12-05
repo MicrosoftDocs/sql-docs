@@ -2,8 +2,8 @@
 title: "Commonly used filters in a paginated report | Microsoft Docs"
 description: Consider these examples of filters in a paginated report along with the filter equations you specify to create the filter in Report Builder.
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

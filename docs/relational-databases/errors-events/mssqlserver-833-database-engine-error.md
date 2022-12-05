@@ -53,7 +53,7 @@ When an I/O operation has been pending for 15 seconds or longer, SQL Server perf
 
 1. Detects that an operation has been pending.
 1. Writes an informational message to the SQL Server error log as outlined in the Details section.\
-    The log message resembles the following:
+    The log message resembles the following format:
 
 | Message text | Description |
 |---|---|
@@ -62,7 +62,7 @@ When an I/O operation has been pending for 15 seconds or longer, SQL Server perf
 | Handle | The operating system handle of the file. You can use the operating system handle with debuggers or other utilities to help track I/O request packet (IRP) requests. |
 | Offset | The offset of the last stuck I/O operation or the last stalled I/O operation. You can use the offset with debuggers or other utilities to help track IRP requests. <br/><br/> **Note**: </br> When the informational message is written to the SQL Server error log, the I/O operation may no longer be stuck or stalled. |
 
-### Possible Causes  
+### Possible Causes
 The informational message indicates that the current load may be experiencing one of the following conditions:
 
 - The workload exceeds the I/O path capabilities either because of misconfiguration of the I/O subsystem (SAN, NAS, and direct attached) or because the hardware capacity has been reached.
@@ -72,7 +72,7 @@ The informational message indicates that the current load may be experiencing on
 - Performance issue at the operating system level.
 - Filter driver intervention in the I/O process or storage path of database files. For example, antivirus program.
 
-SQL Server records the time it initiated an I/O request and records the time the I/O was completed. If that difference is 15 seconds or longer, this condition is detected. It also means that SQL Server is not the cause of the delayed I/O condition that this message describes and reports. This condition is known as stalled I/O. Most disk requests occur within the typical speed of the disk. This typical disk speed is frequently known as disk seek time. Disk seek time for most standard disks occurs in 10 milliseconds or less. Therefore, 15 seconds is a very long time for the system I/O path to return to SQL Server. For more details, see the More Information section.
+SQL Server records the time it initiated an I/O request and records the time the I/O was completed. If that difference is 15 seconds or longer, this condition is detected. It also means that SQL Server is not the cause of the delayed I/O condition that this message describes and reports. This condition is known as stalled I/O. Most disk requests occur within the typical speed of the disk. This typical disk speed is frequently known as disk seek time. Disk seek time for most standard disks occurs in 10 milliseconds or less. Therefore, 15 seconds is a long time for the system I/O path to return to SQL Server. For more details, see the More Information section.
   
 ## User Action  
 Troubleshoot this error by performing the following steps:
@@ -180,7 +180,7 @@ Frequently, bursts of I/O occur because an index is missing. This behavior can s
 - A reduction is made in the physical I/O that's required to complete the action that directly creates performance benefits for the query.
 - Fewer pages in the data cache must be turned over. Therefore, those pages that're in the data cache remain relevant to active queries.
 - Sorts and hashes are used because an index may be missing or because statistics are out of date. You may reduce tempdb use and contention by adding one or more indexes.
-- A reduction is made in resources, parallel operations, or both. Because SQL Server does not guarantee parallel query execution, and  the load on the system is considered, it's best to optimize all queries for serial execution. To optimize a query, open Query Analyzer and set the sp_configure value of the max degree of parallelism option to **1**. If all the queries are tuned to run promptly as a serial operation, parallel execution is often just a better result. However, parallel execution is often selected because the amount of data is just large. For a missing index, a large sort may have to occur. Multiple workers that are performing the sort operation will create a quicker response. However, this action can dramatically increase the pressure on the system. Large read requests from many workers can cause an I/O burst together with increased CPU usage. A query can often be tuned to run faster and use fewer resources if an index is added or if another tuning action occurs.
+- A reduction is made in resources, parallel operations, or both. Because SQL Server does not guarantee parallel query execution, and  the load on the system is considered, it's best to optimize all queries for serial execution. To optimize a query, open Query Analyzer and set the sp_configure value of the max degree of parallelism option to **1**. If all the queries are tuned to run promptly as a serial operation, parallel execution is often just a better result. However, parallel execution is often selected because the amount of data is large. For a missing index, a large sort may have to occur. Multiple workers that are performing the sort operation will create a quicker response. However, this action can dramatically increase the pressure on the system. Large read requests from many workers can cause an I/O burst together with increased CPU usage. A query can often be tuned to run faster and use fewer resources if an index is added or if another tuning action occurs.
 
 ### Practical examples from SQL Server Support
 
@@ -190,7 +190,7 @@ The following examples have been handled by SQL Server Support and Windows Escal
 
 An attempt to write a SQL Server log file periodically gets stuck for approximately 45 seconds. The log write doesn't complete in a timely manner. This behavior creates a blocking condition that causes 30 seconds client time-outs.
 
-The application submitted a commit to SQL Server, and the commit gets stuck as a log write pending. This behavior causes the query to continue holding locks and block incoming requests from other clients. Then, other clients start to time out. This compounds the problem because the application does not roll back open transactions when a query time-out occurs. This creates hundreds of open transactions that are holding locks. Therefore, a severe blocking situation occurs.
+The application submitted a commit to SQL Server, and the commit gets stuck as a log write pending. This behavior causes the query to continue holding locks and block incoming requests from other clients. Then, other clients start to time out. This compounds the problem because the application doesn't roll back open transactions when a query time-out occurs. This creates hundreds of open transactions that are holding locks. Therefore, a severe blocking situation occurs.
 
 For more information about transaction handling and blocking, see the following Microsoft Knowledge Base article:
 [224453 Understanding and resolving SQL Server blocking problems](https://support.microsoft.com/help/224453)
@@ -225,19 +225,17 @@ To resolve this problem, restart the SQL Server. However, sometimes you need to 
 
 **Example 4: Remote storage, mirroring, and raid drives**
 
-Many systems use mirroring or adopt similar steps to prevent data loss. Some systems that use mirroring are software-based, and some are hardware-based. The situation that is typically discovered by Microsoft Support for these systems is increased latency. 
+Many systems use mirroring or adopt similar steps to prevent data loss. Some systems that use mirroring are software-based, and some are hardware-based. The situation that is typically discovered by Microsoft Support for these systems is increased latency.
 
-An increase in the overall I/O time occurs when the I/O must finish before it is considered complete. For remote mirror installations, network retries can become involved. When drive failures occur, and the raid system is being rebuilt, the I/O pattern can also be interrupted.
+An increase in the overall I/O time occurs when the I/O must finish before it's considered complete. For remote mirror installations, network retries can become involved. When drive failures occur, and the raid system is being rebuilt, the I/O pattern can also be interrupted.
 
 **Resolution**
 
 Strict configuration settings are required to reduce latency to mirrors or to raid rebuild operations.
 
-For more information, see the Requirements for SQL Server to support remote mirroring of user databases.
-
 **Example 5: Compression**
 
-Microsoft does not support SQL Server data files and log files on compressed drives. NTFS compression isn't safe for SQL Server because NTFS compression breaks Write Ahead Logging (WAL) protocol. NTFS compression also requires increased processing for each I/O operation. Compression creates "one at a time" like behavior that causes severe performance issues to occur.
+Microsoft doesn't support SQL Server data files and log files on compressed drives. NTFS compression isn't safe for SQL Server because NTFS compression breaks Write Ahead Logging (WAL) protocol. NTFS compression also requires increased processing for each I/O operation. Compression creates "one at a time" like behavior that causes severe performance issues to occur.
 
 **Resolution**
 

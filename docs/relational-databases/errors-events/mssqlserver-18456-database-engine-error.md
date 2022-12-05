@@ -14,6 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_18456
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
@@ -27,66 +28,133 @@ ms.author: mathoma
 |Symbolic Name|LOGON_FAILED|  
 |Message Text|Login failed for user '%.*ls'.%.\*ls|  
   
-## Explanation  
-When a connection attempt is rejected because of an authentication failure that involves a bad password or user name, a message similar to the following is returned to the client:  "Login failed for user '<user_name>'. (Microsoft SQL Server, Error: 18456)".  
-  
-Additional information returned to the client includes the following:  
-  
-"Login failed for user '<user_name>'. (.Net SqlClient Data Provider)"  
-  
------------------------------\-  
-  
-"Server Name: <computer_name>"  
-  
-"Error Number: 18456"  
-  
-"Severity: 14"  
-  
-"State: 1"  
-  
-"Line Number: 65536"  
-  
-The following message might also be returned:  
-  
-"Msg 18456, Level 14, State 1, Server <computer_name>, Line 1"  
-  
-"Login failed for user '<user_name>'."  
-  
-## Additional Error Information  
+## Explanation
+
+You get this error message when a connection attempt is rejected because of an authentication failure. User logins can fail for many reasons, such as invalid credentials, password expiration, and enabling the wrong authentication mode. In many cases, error codes include descriptions.
+
+## User action
+
+The following examples are some of the common login failures. Select the exact error that you're experiencing to troubleshoot the issue:
+
+- Login failed for user '\<username>' or login failed for user '\<domain>\\\<username>'
+
+- Login failed for user 'NT AUTHORITY\ANONYMOUS' LOGON
+
+- Login failed for user 'empty'
+
+- Login failed for user '(null)'
+
+## Login failed for user '\<username>' or login failed for user '\<domain>\\\<username>'
+
+If the domain name isn't specified, the problem is a failing SQL Server login attempt. If the domain name is specified, the problem is a failing Windows user account login. For potential causes and suggested resolution, see:
+
+|Potential cause |Suggested resolution|
+|-|-|
+|You're trying to use SQL Server authentication, but the SQL server instance is configured for Windows Authentication Mode |Verify that SQL Server is configured to use SQL Server and Windows Authentication mode. You can review and change authentication mode for your SQL server instance using Security page under Properties for the corresponding instance in SQL Server Management Studio (SSMS). For more information, see [Change Server Authentication Mode](/sql/database-engine/configure-windows/change-server-authentication-mode). Alternately, you can change your application to use Windows authentication to connect to SQL server.<br/>**Note**: You can see a message like the following one in the SQL Server Error log for this scenario:<br/>Login failed for user 'userx'. Reason: An attempt to login using SQL authentication failed. Server is configured for Windows authentication only.|
+|Login doesn't exist on the SQL Server you're trying to connect to.|Verify that SQL Server login exists and that you've spelled it properly. If the login doesn't exist, create it. If it's present but misspelled, correct that in the application connection string. The SQL Server Errorlog will have one of the following messages:<br/><li>Login failed for user 'username'. Reason: Could not find a login matching the name provided.</li><li>Login failed for user 'Domain\username'. Reason: Could not find a login matching the name provided.</li><br/>This can be a common issue if deploying an application that used a DEV or QA server into production and failed to update the connection string. To resolve this issue, validate the server you're connecting to is the intended server. If not, correct the connection string. If yes, then add the login to the database or, if a windows login, add to a local group or domain group that is allowed to connect to the database. For more information, see [Create a Login](/sql/relational-databases/security/authentication-access/create-a-login)|
+|You're using SQL authentication, but the password you specified for SQL Server login is incorrect.|Check SQL error log for messages like "*Reason: Password did not match that for the login provided*" to confirm the cause. To fix the issue, use the correct password in your application or use a different account if you can't remember the password. Alternately, work with your SQL Server administrator to reset the password for the account.<br/>If the application is SQL Server Integration Services (SSIS), there may be multiple levels of Configuration file for the job, which may override the Connection Manager settings for the package.<br/>If the application was written by your company and the connection string is programmatically generated, engage the development team to resolve the issue. As a temporary workaround, hard-code the connection string and test. Use a [UDL file](/troubleshoot/sql/connect/test-oledb-connectivity-use-udl-file) or a script to prove a connection is possible with a hard-coded connection string.|
+|Server name is incorrect|Ensure you're connecting to the correct server.|
+|You're trying to connect using Windows authentication but are logged into an incorrect domain.|Verify that you're properly logged into the correct domain. The error message usually displays the domain name.|
+|You aren't running your application (for example, SSMS) as an administrator.|If you're trying to connect using your administrator credentials, start your application by using the **Run as Administrator** option. When connected, add your Windows user as an individual login.|
+|Login was deleted after migration to a contained database user.|If the Database Engine supports contained databases, confirm that the login wasn't deleted after migration to a contained database user. For more information, see [Contained Database Authentication: Introduction](https://techcommunity.microsoft.com/t5/sql-server-blog/contained-database-authentication-introduction/ba-p/383696).|
+|Login's default database is offline or otherwise not available|Check with your SQL Server administrator and resolve issues related to database availability. If the login has permissions to other databases on the server and you do not need to access the currently configured default database in your application, use one of the following options:<br/><li>Request administrator to change the default database for the login using ALTER LOGIN statement or using SSMS</li><li>Explicitly specify a different database in your connection string or use the Connection Properties tab in SSMS to specify a database that is currently available.</li><br/>Applications like SSMS may show an error message like the following one:<br/>*Cannot open user default database. Login failed.*<br/>*Login failed for user \<user name\>. (Microsoft SQL Server, Error: 4064)*<br/>SQL Server Errorlog will have an error message like the following one:<br/>*Login failed for user '\<user name\>'. Reason: Failed to open the database '\<dbname\>' specified in the login properties [CLIENT: \<ip address\>]*<br/> For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error?view=sql-server-ver16).|
+|The database explicitly specified in the connection string or in SSMS is either incorrectly spelled or is offline or otherwise not available.|<li>Fix the database name in the connection string.</li><li>If the database name is correct, check with your SQL Server administrator and resolve issues related to database availability. Check if the database is offline, not recovered, etc.</li><li>If the login has permissions to other databases on the server and you don't need to access the currently configured database in your application, explicitly specify a different database in your connection string or use the **Connection Properties** tab in SSMS to specify a database that is currently available.<br/>SQL Server Errorlog will have an error message like the following one:<br/>*Login failed for user \<UserName\>. Reason: Failed to open the explicitly specified database 'dbname'. [CLIENT: \<ip address\>]*<br/>**Note**: If the login's default database is available, SQL server allows the connection to succeed. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error)|
+|The user doesn't have permissions to the requested database.|<li>Try connecting as another user that has sysadmin rights to see if connectivity can be established.</li><li>Grant the login access to the database by creating the corresponding user (e.g. CREATE USER [John] FOR LOGIN [John]) |
+
+Also, check the extensive list of error codes at [Troubleshooting Error 18456](https://sqlblog.org/2020/07/28/troubleshooting-error-18456).
+
+For more troubleshooting help, see [Troubleshooting SQL Client / Server Connectivity Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0000-Troubleshooting-Workflows).
+
+## Login failed for user NT AUTHORITY\ANONYMOUS LOGON
+
+There are at least four scenarios for this issue. In the following table, examine each applicable potential cause, and use the appropriate resolution.
+
+|Potential causes|Suggested resolutions|
+|-|-|
+|There are double-hop scenarios on the same computer. You're trying to do a double hop, but New Technology LAN Manager (NTLM) credentials are being used instead of Kerberos.|For double-hop scenarios on the same computer, add the [DisableLoopbackCheck or BackConnectionHostNames](/troubleshoot/windows-server/networking/accessing-server-locally-with-fqdn-cname-alias-denied) registry entries.|
+|There are double-hop scenarios across multiple computers. The error could occur if the Kerberos connection is failing because of Service Principal Names (SPN) issues.|Run SQLCheck on each SQL Server or on the web server and on the SQL Server. Use the troubleshooting guides: [0600 Credential Delegation Issue](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0600-Credential-Delegation-Issue) and [0650 SQL Server Linked Server Delegation Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0650-SQL-Server-Linked-Server-Delegation-Issues).|
+|No double-hop is involved.|If no double-hop is involved, this could mean that there are Duplicate SPNs, and the client is running as LocalSystem or another machine account that gets NTLM credentials instead of Kerberos credentials. Use SQLCheck or Setspn.exe to diagnose and fix any SPN-related issues. For more information, see [Overview of the Kerberos Configuration Manager for SQL Server](/troubleshoot/sql/connect/using-kerberosmngr-sqlserver).|
+|Windows Local Security policy might have been configured to prevent the use of the machine account for remote authentication requests.|Navigate to **Local Security Policy** > **Local Policies** > **Security Options** > **Network security: Allow Local System to use computer identity for NTLM**, select the **Enabled** option if the setting is disabled, and then select **OK**.<br/>**Note**: As detailed on the **Explain** tab, this policy is enabled in Windows 7 and later versions by default.|
+
+## Login failed for user (empty)
+
+This error occurs when a user tries unsuccessfully to log in. This error might occur if your computer isn't connected to the network. For example, you may receive an error message that resembles the following example:
+
+```Output
+Source: NETLOGON
+Date: 8/12/2012 8:22:16 PM
+Event ID: 5719
+Task Category: None
+Level: Error 
+Keywords: Classic
+User: N/A
+Computer: <computer name>
+Description: This computer was not able to set up a secure session with a domain controller in domain due to the following: The remote procedure call was cancelled. This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.
+```
+
+An empty string means that SQL Server tried to hand off the credentials to LSASS but couldn't because of some problem. Either LSASS wasn't available or the domain controller couldn't be contacted.
+
+Check the event logs on the client and the server for any network-related or Active Directory-related messages that were logged around the time of the failure. If you find any, work with your domain administrator to fix the issues.
+
+## Login failed for user '(null)'
+
+An indication of "null" could mean that the Local Security Authority Subsystem Service (LSASS) can't decrypt the security token by using the SQL Server service account credentials. The main reason for this condition is that the SPN is associated with the wrong account.
+
+To fix the issue:
+
+1. Use the SQLCheck or Setspn.exe to diagnose and fix SPN-related issues.
+
+1. Use SQLCheck to check whether the SQL Service account is trusted for delegation. If the output indicates that the account isn't trusted for delegation, work with your Active Directory administrator to enable delegation for the account.
+
+1. Diagnose and fix (DNS) name resolution issues (use the NSLookup or PowerShell example):
+
+    ping -a <your_target_machine> (use -4 and -6 for IPv4 and IPv6 specifically)
+
+    ping -a <your_remote_IPAddress>
+
+    nslookup (enter your local and remote computer name and IP address multiple times)
+
+1. Look for any discrepancies and mismatches in the returned results. The accuracy of the DNS configuration on the network is important for a successful SQL Server connection. An incorrect DNS entry could cause numerous connectivity issues later.
+
+1. Make sure that firewalls or other network devices don't block a client from connecting to the domain controller. SPNs are stored in Active Directory. If the clients can't communicate with the directory, the connection can't succeed.
+
+## Additional error information
+
 To increase security, the error message that is returned to the client deliberately hides the nature of the authentication error. However, in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, a corresponding error contains an error state that maps to an authentication failure condition. Compare the error state to the following list to determine the reason for the login failure.  
   
 |State|Description|  
 |---------|---------------|  
-|1|Error information is not available. This state usually means you do not have permission to receive the error details. Contact your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator for more information.|  
-|2|User ID is not valid.|  
-|5|User ID is not valid.|  
+|1|Error information isn't available. This state usually means you don't have permission to receive the error details. Contact your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator for more information.|  
+|2|User ID isn't valid.|  
+|5|User ID isn't valid.|  
 |6|An attempt was made to use a Windows login name with SQL Server Authentication.|  
 |7|Login is disabled, and the password is incorrect.|  
 |8|The password is incorrect.|  
-|9|Password is not valid.|  
-|11|Login is valid, but server access failed. One possible cause of this error is when the Windows user has access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the local administrators group, but Windows is not providing administrator credentials. To connect, start the connecting program using the **Run as administrator** option, and then add the Windows user to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a specific login.|  
+|9|Password isn't valid.|  
+|11|Login is valid, but server access failed. One possible cause of this error is when the Windows user has access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the local administrators' group, but Windows isn't providing administrator credentials. To connect, start the connecting program using the **Run as administrator** option, and then add the Windows user to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a specific login.|  
 |12|Login is valid login, but server access failed.|  
 |18|Password must be changed.|  
-|38, 46|Could not find database requested by user.|
-|58| When SQL Server is set to use Windows Authentication only, and a client attempts to log in using SQL authentication. Another cause is when SIDs do not match.|
+|38, 46|Couldn't find database requested by user.|
+|58| When SQL Server is set to use Windows Authentication only, and a client attempts to log in using SQL authentication. Another cause is when SIDs don't match.|
 |102 - 111|AAD failure.|
 |122 - 124|Failure due to empty user name or password.|
-|126|Database requested by user does not exist.|
+|126|Database requested by user doesn't exist.|
 |132 - 133|AAD failure.|
   
 Other error states exist and signify an unexpected internal processing error.  
   
-**An additional unusual possible cause**  
-  
+**An additional unusual possible cause**
+
 The error reason **An attempt to login using SQL authentication failed. Server is configured for Windows authentication only.** can be returned in the following situations.  
   
--   When the server is configured for mixed mode authentication, and an ODBC connection uses the TCP protocol, and the connection does not explicitly specify that the connection should use a trusted connection.  
+- When the server is configured for mixed mode authentication, and an ODBC connection uses the TCP protocol, and the connection doesn't explicitly specify that the connection should use a trusted connection.  
   
--   When the server is configured for mixed mode authentication, and an ODBC connection uses named pipes, and the credentials the client used to open the named pipe are used to automatically impersonate the user, and the connection does not explicitly specify that the connection should use a trusted connection.  
+- When the server is configured for mixed mode authentication, and an ODBC connection uses named pipes, and the credentials the client used to open the named pipe are used to automatically impersonate the user, and the connection doesn't explicitly specify that the connection should use a trusted connection.  
   
 To resolve this issue, include **TRUSTED_CONNECTION = TRUE** in the connection string.  
   
-## Examples  
+## Examples
+
 In this example, the authentication error state is 8. This indicates that the password is incorrect.  
   
 |Date|Source|Message|  
@@ -97,17 +165,6 @@ In this example, the authentication error state is 8. This indicates that the pa
 > [!NOTE]  
 > When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed using Windows Authentication mode and is later changed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication mode, the **sa** login is initially disabled. This causes the state 7 error: "Login failed for user 'sa'." To enable the **sa** login, see [Change Server Authentication Mode](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
-## User Action  
-If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured in Mixed Authentication Mode. For more information on changing SQL Server authentication mode review [Change server authentication mode](../../database-engine/configure-windows/change-server-authentication-mode.md)
-  
-If you are trying to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, verify that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login exists and that you have spelled it properly.  
-  
-If you are trying to connect using Windows Authentication, verify that you are properly logged into the correct domain.  
-  
-If your error indicates state 1, contact your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator.  
-  
-If you are trying to connect using your administrator credentials, start you application by using the **Run as Administrator** option. When connected, add your Windows user as an individual login.  
-  
-If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] supports contained databases, confirm that the login was not deleted after migration to a contained database user.  
-  
-When connecting locally to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], connections from services running under **NT AUTHORITY\NETWORK SERVICE** must authenticate using the computers fully qualified domain name. For more information, see [How To: Use the Network Service Account to Access Resources in ASP.NET](/previous-versions/msp-n-p/ff647402(v=pandp.10))
+## See also
+
+[0420 Reasons for Consistent Auth Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0420-Reasons-for-Consistent-Auth-Issues)

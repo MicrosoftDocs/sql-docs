@@ -45,7 +45,7 @@ Returns a row for each column of an object that has columns, such as views or ta
 |column_id|**int**|ID of the column. Is unique within the object.<br /><br /> Column IDs might not be sequential.|  
 |system_type_id|**tinyint**|ID of the system type of the column.|  
 |user_type_id|**int**|ID of the type of the column as defined by the user.<br /><br /> To return the name of the type, join to the [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) catalog view on this column.|  
-|max_length|**smallint**|Maximum length of the column in bytes, , or in byte-pairs for [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) types. <br /><br /> -1 = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br /> For **text**, **ntext**, and **image** columns, the max_length value will be 16 (representing the 16-byte pointer only) or the value set by sp_tableoption 'text in row'.|  
+|max_length|**smallint**|Maximum length of the column in bytes, or in byte-pairs for [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) types. <br /><br /> -1 = Column data type is **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**.<br /><br /> For **text**, **ntext**, and **image** columns, the max_length value will be 16 (representing the 16-byte pointer only) or the value set by sp_tableoption 'text in row'.|  
 |precision|**tinyint**|Precision of the column if numeric-based; otherwise, 0.|  
 |scale|**tinyint**|Scale of column if numeric-based; otherwise, 0.|  
 |collation_name|**sysname**|Name of the collation of the column if character-based; otherwise `NULL`.|  

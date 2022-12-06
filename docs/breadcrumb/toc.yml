@@ -81,6 +81,10 @@
       topicHref: /sql/sql-server/index
 
     - name: SQL Server
+      tocHref: /sql/sql-server/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
       tocHref: /sql/ssdt/
       topicHref: /sql/sql-server/index
 

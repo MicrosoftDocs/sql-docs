@@ -986,6 +986,8 @@
       - name: Bicep
         displayName: ARM, Resource Manager, Template
         href: managed-instance/create-bicep-quickstart.md
+      - name: Terraform
+        href: managed-instance/instance-create-terraform.md
       - name: ARM template
         displayName: Resource Manager
         href: managed-instance/create-template-quickstart.md

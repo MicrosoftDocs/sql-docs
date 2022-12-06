@@ -96,7 +96,7 @@ On the **Basics** tab, select the subscription, resource group, and provide deta
 
 1. Under **Licensing** you have the option to check the box and enable the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to use your own Windows Server License and save on licensing costs.
 
-1. **SQL Server License**: If you’re a Software Assurance customer, you can use the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to bring your own SQL Server license and save on resources. Select **Yes** to enable the Azure Hybrid Benefit, and then confirm that you have Software Assurance by selecting the checkbox. This option is grayed out if you selected one of the free SQL Server images, such as the developer edition. 
+1. **SQL Server License**: If you're a Software Assurance customer, you can use the [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to bring your own SQL Server license and save on resources. Select **Yes** to enable the Azure Hybrid Benefit, and then confirm that you have Software Assurance by selecting the checkbox. This option is grayed out if you selected one of the free SQL Server images, such as the developer edition. 
 
    :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-license.png" alt-text="Screenshot of the Azure portal, basics tab of the Create Always On availability group for SQL Server on Azure Virtual Machines page, showing SQL Server License section.":::
 

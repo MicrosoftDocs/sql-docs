@@ -77,7 +77,7 @@
       topicHref: /sql/sql-server/index
       
     - name: SQL Server
-      tocHref: /sql/powershell/
+      tocHref: /sql/relational-databases/
       topicHref: /sql/sql-server/index
 
     - name: SQL Server

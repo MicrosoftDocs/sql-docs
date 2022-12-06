@@ -52,7 +52,7 @@ Follow [What's new in columnstore indexes](../../relational-databases/indexes/co
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ WITH ( < with_option> [ ,...n ] ) ]
-    [ ON <on_option> ] | [ ORDER <on_option> ]
+    [ ON <on_option> ] | [ ORDER <order_option> ]
     
 [ ; ]
   

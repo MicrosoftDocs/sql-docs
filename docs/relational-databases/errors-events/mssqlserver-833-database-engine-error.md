@@ -52,7 +52,8 @@ These I/O problems may cause the following behavior to occur:
 When an I/O operation has been pending for 15 seconds or longer, SQL Server performs the following steps:
 
 1. Detects that an operation has been pending.
-1. Writes an informational message to the SQL Server error log as outlined in the Details section.\
+1. Writes an informational message to the SQL Server error log as outlined in the Details section.
+
     The log message resembles the following format:
 
 | Message text | Description |

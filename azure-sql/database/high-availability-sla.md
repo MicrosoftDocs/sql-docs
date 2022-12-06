@@ -64,7 +64,7 @@ The zone-redundant version of the high availability architecture for the General
 ![Zone redundant configuration for General Purpose](./media/high-availability-sla/zone-redundant-for-general-purpose.png)
 
 > [!IMPORTANT]
-> - For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central, East US 2 & East US. This is in preview in the following regions: Southeast Asia, Australia East, Japan East, and UK South. 
+> - For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: West Europe, North Europe, West US 2, France Central, East US 2, East US & Southeast Asia. This is in preview in the following regions: Australia East, Japan East, and UK South. 
 > - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-region-support). 
 > - Zone-redundant configuration is only available in SQL Database when Gen5 hardware is selected. Zone-redundant configuration is currently in preview for SQL Managed Instance, and only available for the Business Critical service tier. 
 

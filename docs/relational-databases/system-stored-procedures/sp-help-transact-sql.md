@@ -2,7 +2,7 @@
 description: "sp_help (Transact-SQL)"
 title: "sp_help (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2016"
+ms.date: "12/06/2022"
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: system-objects
@@ -59,7 +59,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar(**128**)**|Data type name.|  
     |**Storage_type**|**nvarchar(**128**)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type name.|  
-    |**Length**|**smallint**|Physical length of the data type (in bytes).|  
+    |**Length**|**smallint**|Physical length of the data type in bytes, or in byte-pairs for [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) types.|  
     |**Prec**|**int**|Precision (total number of digits).|  
     |**Scale**|**int**|Number of digits to the right of the decimal.|  
     |**Nullable**|**varchar(**35**)**|Indicates whether NULL values are allowed: Yes or No.|  

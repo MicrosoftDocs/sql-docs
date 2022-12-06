@@ -147,7 +147,7 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
     var TYPES = require('tedious').TYPES;  
   
     function executeStatement1() {  
-        request = new Request("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES (@Name, @Number, @Cost, @Price, CURRENT_TIMESTAMP);", function(err) {  
+        var request = new Request("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES (@Name, @Number, @Cost, @Price, CURRENT_TIMESTAMP);", function(err) {  
          if (err) {  
             console.log(err);}  
         });  

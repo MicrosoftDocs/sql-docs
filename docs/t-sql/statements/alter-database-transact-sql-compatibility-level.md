@@ -1,6 +1,6 @@
 ---
 title: "ALTER DATABASE compatibility level (Transact-SQL)"
-description: ALTER DATABASE compatibility level (Transact-SQL)
+description: Sets Transact-SQL and query processing behaviors to be compatible with the specified version of the Database Engine.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
@@ -169,7 +169,7 @@ The fundamental plan-affecting changes added only to the default compatibility l
 
     To enable Query Optimizer fixes, you can use the following methods:
 
-    - At the server level, with [trace flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
+    - At the server level, with [trace flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf4199).
     - At the database level, with the `QUERY_OPTIMIZER_HOTFIXES` option in [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
     - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) by modifying the query.
     - At the query level, with the `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` without code changes, using the [Query Store hint (Preview)](../../relational-databases/performance/query-store-hints.md) feature.
@@ -244,7 +244,7 @@ This section describes new behaviors introduced with compatibility level 140.
 | The `sp_execute_external_script` UDX operator can only run in row mode. | The `sp_execute_external_script` UDX operator is eligible for batch mode execution. |
 | Multi-statement table-valued functions (TVFs) don't have interleaved execution | Interleaved execution for multi-statement TVFs to improve plan quality. |
 
-Fixes that were under trace flag 4199 in earlier versions of SQL Server prior to SQL Server 2017 are now enabled by default. With compatibility mode 140. Trace flag 4199 will still be applicable for new query optimizer fixes that are released after SQL Server 2017. For information about Trace Flag 4199, see [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
+Fixes that were under trace flag 4199 in earlier versions of SQL Server prior to SQL Server 2017 are now enabled by default. With compatibility mode 140. Trace flag 4199 will still be applicable for new query optimizer fixes that are released after SQL Server 2017. For information about Trace Flag 4199, see [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf4199).
 
 ## Differences between compatibility level 120 and level 130
 
@@ -264,7 +264,7 @@ This section describes new behaviors introduced with compatibility level 130.
 | | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] includes improvements in some data types conversions and some (mostly uncommon) operations. For details see [SQL Server 2016 improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon). |
 | The `STRING_SPLIT` function isn't available. | The `STRING_SPLIT` function is available under compatibility level 130 or above. If your database compatibility level is lower than 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] won't be able to find and execute `STRING_SPLIT` function. |
 
-Fixes that were under trace flag 4199 in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] are now enabled by default. With compatibility mode 130. Trace flag 4199 will still be applicable for new query optimizer fixes that are released after [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. To use the older query optimizer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] you must select compatibility level 110. For information about Trace Flag 4199, see [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).
+Fixes that were under trace flag 4199 in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] are now enabled by default. With compatibility mode 130. Trace flag 4199 will still be applicable for new query optimizer fixes that are released after [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. To use the older query optimizer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] you must select compatibility level 110. For information about Trace Flag 4199, see [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf4199).
 
 ## Differences between lower compatibility levels and level 120
 

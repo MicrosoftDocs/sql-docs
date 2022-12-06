@@ -27,7 +27,7 @@ ms.author: mikeray
 ---
 # Use XML data in applications
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the options that are available to you for working with the **xml** data type in your application. The article includes information about the following:
 

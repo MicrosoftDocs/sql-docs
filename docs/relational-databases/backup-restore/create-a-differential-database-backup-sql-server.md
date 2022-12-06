@@ -76,7 +76,7 @@ ms.author: mathoma
 5.  In the **Backup type** list box, select **Differential**.  
   
     > [!IMPORTANT]  
-    >  When you select**Differential** , verify that the **Copy Only Backup** check box is cleared.  
+    >  When you select **Differential** , verify that the **Copy Only Backup** check box is cleared.  
   
 6.  For **Backup component**, click **Database**.  
   

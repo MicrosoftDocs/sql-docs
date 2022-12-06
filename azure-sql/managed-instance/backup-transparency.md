@@ -17,16 +17,20 @@ In this article, learn how to use backup transparency in Azure SQL Managed Insta
 
 It's important to know about a few key differences between the backup tables in a traditional SQL Server `msdb` database and the `msdb` database in SQL Managed Instance. The main differences include the information that's visible, supported tables, and the fields you can use.
 
-## Visible information
+The [msdb database](/sql/relational-databases/databases/msdb-database) enables backup transparency in Azure SQL Managed Instance by making backup history tables queryable. However, there are a few key differences between the backup tables in a traditional SQL Server `msdb` database, and the `msdb` database in Azure SQL Managed Instance, such as what information is visible, what tables are supported, and what fields are available.
+
+## Included information
 
 The `msdb` database in SQL Managed Instance displays the following backup information:
 
-- The type of automated backup taken: full, differential, or log.
+- The type of automated backup taken, such as full, differential, or log.
 - Metadata about native backups taken manually, although fields like file path and usernames might not be populated. Use the `is_copyonly` column to determine whether a backup was taken manually or automatically.
 - Metadata about the backup, including status, size, time, and location.
 - The replica where the backup was taken, such as the primary or secondary managed instance. The ability to take backups from the secondary replica currently is available only on the Business Critical service tier.
 
-The `msdb` database *doesn't* have information about backups that are stored for long-term retention. Backups for long-term retention are made by copying files at the storage level. This type of backup isn't visible to the instance.
+The `msdb` database *does not* have the following information:
+
+- Backups that are stored for long-term retention. Backups for long-term retention are made by copying files at the storage level. This type of backup isn't visible to the instance.
 
 ## Supported tables
 
@@ -61,4 +65,4 @@ When you review your backup history in the `msdb` database, consider the followi
 
 - Learn about the [msdb database in SQL Server](/sql/relational-database/databases/msdb-database).
 - To learn about backups in SQL Managed Instance, review [Automated backups](automated-backups-overview.md).
-- To learn about querying the `msdb`database, review [Monitor backup activity](backup-activity-monitor.md).
+- To learn about querying the `msdb` database, review [Monitor backup activity](backup-activity-monitor.md).

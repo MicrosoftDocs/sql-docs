@@ -1,7 +1,7 @@
 ---
 title: "Monitor backup activity"
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to monitor Azure SQL Managed Instance backup activity by querying the **msdb** database, and by using extended events.
+description: Learn how to monitor Azure SQL Managed Instance backup activity by querying the `msdb` database, and by using extended events.
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: mathoma, nvraparl
@@ -14,17 +14,17 @@ ms.custom: mode-other
 # Monitor backup activity for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to monitor backup activity for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) by either querying the **msdb** database or by configuring extended event (XEvent) sessions.
+This article teaches you how to monitor backup activity for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) by either querying the `msdb` database or by configuring extended event (XEvent) sessions.
 
 ## Overview
 
-Azure SQL Managed Instance stores backup information in the [msdb database](backup-transparency.md) and also emits events (also known as [Extended Events or XEvents](../database/xevent-db-diff-from-svr.md)) during backup activity for the purpose of reporting. Configure an XEvent session to track information such as backup status, backup type, size, time, and location within the **msdb** database. This information can be integrated with backup monitoring software and also used for the purpose of Enterprise Audit. 
+Azure SQL Managed Instance stores backup information in the [msdb database](backup-transparency.md) and also emits events (also known as [Extended Events or XEvents](../database/xevent-db-diff-from-svr.md)) during backup activity for the purpose of reporting. Configure an XEvent session to track information such as backup status, backup type, size, time, and location within the `msdb` database. This information can be integrated with backup monitoring software and also used for the purpose of Enterprise Audit. 
 
 Enterprise Audits may require proof of successful backups, time of backup, and duration of the backup.
 
 ## Query msdb database
 
-To view backup activity, query the **msdb** database: 
+To view backup activity, query the `msdb` database: 
 
 ```sql
 SELECT TOP (30) bs.machine_name, bs.server_name, DB_NAME(DB_ID(bs.database_name)) AS [Database Name], bs.recovery_model,

@@ -1,6 +1,6 @@
 ---
-description: "Change a User&#39;s Email Address (Master Data Services)"
-title: Change a User&#39;s Email Address
+description: "Change a User's Email Address (Master Data Services)"
+title: Change a User's Email Address
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.service: sql
@@ -13,7 +13,7 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: CordeliaGrey
 ms.author: jiwang6
 ---
-# Change a User&#39;s Email Address (Master Data Services)
+# Change a User's Email Address (Master Data Services)
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 

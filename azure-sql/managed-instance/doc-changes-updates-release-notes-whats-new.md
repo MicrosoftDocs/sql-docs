@@ -92,6 +92,15 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 
+### December 2022
+
+| Changes | Details |
+| --- | --- |
+|**Terraform** | Deploy a managed instance by using [Terraform](instance-create-terraform.md). | 
+
+### November 2022
+
+
 | Changes | Details |
 | --- | --- |
 |**Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the `msdb` database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 

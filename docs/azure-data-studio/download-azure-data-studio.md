@@ -25,9 +25,9 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.41 is the latest general availability (GA) version.
+Azure Data Studio 1.40.1 is the latest general availability (GA) version.
 
-- Release number: 1.41
+- Release number: 1.40.1
 - Release date: November 23, 2022
 
 |Platform |Type             |Download |
@@ -121,6 +121,12 @@ For Windows, install Azure Data Studio in the background without prompts by doin
 
 3. To make Azure Data Studio available in Launchpad, drag the *Azure Data Studio.app* file to the *Applications* folder.
 
+> [!NOTE]
+> For Apple Silicon users, please make sure you have Rosetta 2 installed. Some backend services are yet to be converted to native ARM64 binaries. You can run the following command in a Terminal window to install Rosetta 2.
+> ```bash
+> /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+> ```
+  
 ### Linux installation
 
 #### Install with a .deb file

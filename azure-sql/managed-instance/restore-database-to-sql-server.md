@@ -5,13 +5,15 @@ description: Learn how to restore a database to a SQL Server 2022 instance from 
 author: mladjoa
 ms.author: mlandzic
 ms.reviewer: mathoma, danil
-ms.date: 11/16/2022
+ms.date: 12/02/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
 ms.custom: 
 ---
+
 # Restore a database to a SQL Server instance from a managed instance
+
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article describes how to restore a database backup from an Azure SQL Managed Instance deployment to a SQL Server 2022 instance. 
@@ -29,17 +31,31 @@ Restoring databases from managed instances to SQL Server 2022 instances unlocks 
 The ability to restore copy-only full backups of databases from a SQL Managed Instance deployment to a SQL Server 2022 instance is available by default in all existing and any new deployed managed instances.
 
 > [!IMPORTANT]
-> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](https://learn.microsoft.com/lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
+> The ability to restore copy-only full backups of databases from a SQL Managed Instance deployment to a SQL Server 2022 instance will be available until the end of [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
 
 ## Take a backup of your managed instance 
 
-First, create a credential to access the storage account from your managed instance, and then take a copy-only backup of your database. 
+First, create a credential to access the storage account from your managed instance, take a copy-only backup of your database, and then store it. 
 
 You can create your credential by using a shared access signature (SAS) token or a managed identity. 
 
 ### [SAS token](#tab/sas-token)
 
-To create a credential by using a [shared access signature token](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016), run the following sample T-SQL command: 
+A *managed identity* is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Azure AD, the system-assigned managed identity. 
+
+You can use this identity to authorize requests for data access to other Azure resources, including storage accounts. Services such as Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more [user-assigned managed identities](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests.
+
+Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to managed identity to write the data. Granting permissions to the managed identity of the managed instance is done the same way as granting permissions to any other Azure AD user. For example:
+
+1. In the Azure portal, on the **Access Control (IAM)** pane of a storage account, select **Add role assignment**.  
+1. Select the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role. This provides read/write access to the managed identity for the necessary Azure Blob Storage containers.
+   
+    Instead of granting the managed identity the Storage Blob Data Contributor Azure RBAC role, you can grant more granular permissions. To learn more, see [Set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl.md).
+1. On the next page, for **Assign access to**, select **Managed identity**. 
+1. Click **Select members** and then, in the **Managed identity** dropdown list, select the desired managed identity. For more information, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+1. Now, creating the database-scoped credential for managed identity authentication is simple. 
+
+   In the following example, note that `Managed Identity` is a hard-coded string, and you need to replace the generic storage account name with the actual name of the storage account: 
 
 ```sql
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
@@ -84,7 +100,6 @@ MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 
 > [!NOTE]
 > To restore databases that are encrypted at rest by using [Transparent Data Encryption (TDE)](../database/transparent-data-encryption-tde-overview.md), the destination managed instance of SQL Server must have access to the same key that's used to protect the source database through the SQL Server Connector for Azure Key Vault. For details, review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
-
 
 ## Considerations
 

@@ -54,7 +54,8 @@ When an I/O operation has been pending for 15 seconds or longer, SQL Server perf
 1. Detects that an operation has been pending.
 1. Writes an informational message to the SQL Server error log as outlined in the Details section.
 
-    The log message resembles the following format:
+   Explanation to different sections of this informational message is given below:
+
 
 | Message text | Description |
 |---|---|

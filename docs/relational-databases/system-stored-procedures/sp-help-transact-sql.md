@@ -87,7 +87,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(**128**)**|Column name.|  
         |**Type**|**nvarchar(**128**)**|Column data type.|  
         |**Computed**|**varchar(**35**)**|Indicates whether the values in the column are computed: Yes or No.|  
-        |**Length**|**int**|Column length in bytes.<br /><br /> Note: If the column data type is a large value type (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**), the value will display as -1.|  
+        |**Length**|**int**|Column length in bytes, or in byte-pairs for [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) types.<br /><br /> Note: If the column data type is a large value type (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml**), the value will display as -1.|  
         |**Prec**|**char(**5**)**|Column precision.|  
         |**Scale**|**char(**5**)**|Column scale.|  
         |**Nullable**|**varchar(**35**)**|Indicates whether NULL values are allowed in the column: Yes or No.|  
@@ -148,7 +148,7 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar(**128**)**|Stored procedure parameter name.|  
         |**Type**|**nvarchar(**128**)**|Data type of the stored procedure parameter.|  
-        |**Length**|**smallint**|Maximum physical storage length, in bytes.|  
+        |**Length**|**smallint**|Maximum physical storage length in bytes, or in byte-pairs for [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) types.|  
         |**Prec**|**int**|Precision or total number of digits.|  
         |**Scale**|**int**|Number of digits to the right of the decimal point.|  
         |**Param_order**|**smallint**|Order of the parameter.|  

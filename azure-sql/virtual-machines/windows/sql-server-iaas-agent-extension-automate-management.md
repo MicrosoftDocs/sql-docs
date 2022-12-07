@@ -69,7 +69,7 @@ The following table details these benefits:
 [!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-feature-benefits.md)]
 
 
-## Permission models
+## Permissions models
 
 There are two permission models for the SQL Server IaaS agent extension - either full sysadmin rights, or the principle of least privilege. The least privileged permission model grants the minimum permissions required for each feature used by the extension that a customer enables. Each feature that a customer uses is assigned a custom role, and the custom role only has the required permissions to perform actions related to the feature. 
 

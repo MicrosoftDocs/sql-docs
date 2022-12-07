@@ -22,7 +22,7 @@ monikerRange: ">= sql-server-2016"
 
 The following video introduces [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
-> [!VIDEO https://channel9.msdn.com/Shows/data-exposed/introduction-to-sql-server-2022-ep1/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://channel9.msdn.com/shows/data-exposed/sql-server-2022-introducing-sql-server-2022-general-availability-ep-1-data-exposed?WT.mc_id=dataexposed-c9-niner]
 
 For additional video content, see:
 

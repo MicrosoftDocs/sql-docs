@@ -32,7 +32,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
 1. You may be prompted to upgrade your Python packages when your packages need updating.
 
-   :::image type="content" source="media/notebooks-kqlmagic/install-python-yes.png" alt-text="Screenshot of the result - yes.":::n
+   :::image type="content" source="media/notebooks-kqlmagic/install-python-yes.png" alt-text="Screenshot of the result - yes.":::
 
 1. Install Kqlmagic:
 
@@ -121,7 +121,6 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
    ```python
    %kql StormEvents | summarize count() by State | sort by count_ | limit 10
-
    ```
 
    If you're familiar with the Kusto Query Language (KQL), you can type the query after `%kql`.
@@ -136,7 +135,19 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
    | render timechart title= 'Daily Storm Events'
    ```
 
-   :::image type="content" source="media/notebooks-kqlmagic/ade-visualize-timechart.png" alt-text="Screenshot of the visualiz 
+   :::image type="content" source="media/notebooks-kqlmagic/ade-visualize-timechart.png" alt-text="Screenshot of the visualize a timechart.":::
+
+3. Multiline Query sample using `%%kql`.
+
+   ```python
+   %%kql
+   StormEvents
+   | summarize count() by State
+   | sort by count_
+   | limit 10
+   | render columnchart title='Top 10 States by Storm Event count'
+   ```
+
    ```python
    %%kql
    StormEvents

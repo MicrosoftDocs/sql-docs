@@ -46,6 +46,7 @@ To register your SQL Server VM with the extension, you'll need:
 
 - An [Azure subscription](https://azure.microsoft.com/free/).
 - An Azure Resource Model [Windows Server 2008 (or greater) virtual machine](/azure/virtual-machines/windows/quick-create-portal) with [SQL Server 2008 (or greater)](https://www.microsoft.com/sql-server/sql-server-downloads) deployed to the public or Azure Government cloud.
+- The client credentials used to register the virtual machine exists in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
 - The latest version of [Azure CLI](/cli/azure/install-azure-cli) or [Azure PowerShell (5.0 minimum)](/powershell/azure/install-az-ps).
 - A minimum of .NET Framework 4.5.1 or later.
 

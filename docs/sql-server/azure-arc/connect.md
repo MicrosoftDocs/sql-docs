@@ -4,7 +4,7 @@ description: Connect an instance of SQL Server to Azure Arc. Allows you to manag
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, maghan
-ms.date: 12/06/2022
+ms.date: 12/07/2022
 ms.service: sql
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
@@ -179,17 +179,17 @@ Alternatively, you can also onboard your SQL Servers to Azure Arc by directly us
 1. Open powershell console in admin mode and execute the following commands.
 
 =======
-2. Double click on AzureExtensionForSQLServer.msi.  This will install the necessary packages for onboarding SQL Servers to Azure Arc.
-3. Open powershell console in admin mode and execute the following commands.
-   
->>>>>>> 6f9ee966207d425e16efaf6724e091d69c152b65
+1. Double select on AzureExtensionForSQLServer.msi.  This will install the necessary packages for onboarding SQL Servers to Azure Arc.
+1. Open powershell console in admin mode and execute the following commands.
+
+> >>>>>> 6f9ee966207d425e16efaf6724e091d69c152b65
    If you use Azure Active Directory service principal to authenticate execute the command below on the target SQL Server.
 =======
 1. Double-select on AzureExtensionForSQLServer.msi.  This installs the necessary packages for onboarding SQL Servers to Azure Arc.
 1. Open PowerShell console in admin mode and execute the following commands.
 
    If you use Azure Active Directory service principal to authenticate, execute the command below on the target SQL Server.
->>>>>>> 302b26de8a7a84cd5614ffb8e0fee3b6ca799319
+> >>>>>> 302b26de8a7a84cd5614ffb8e0fee3b6ca799319
 
    ```powershell
    '& "$env:ProgramW6432\AzureExtensionForSQLServer\AzureExtensionForSQLServer.exe" --subId <subscriptionid> --resourceGroup <resourceGroupName> --location <AzureLocation> --tenantid <TenantId> --service-principal-app-id <servicePrincipalAppId> --service-principal-secret <servicePrincipalSecret> --proxy <proxy> --tags ""'

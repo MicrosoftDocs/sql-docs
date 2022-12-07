@@ -114,6 +114,18 @@ SET @myid = 'A972C577-DFB0-064E-1189-0154C99310DAAC12';
 SELECT @myid;  
 GO  
 ```  
+
+  
+### D. Querying Random Data Using the NEWID() Function  
+ With the following example, we are querying a random record from the `Production.Product` table using the `NEWID()` function. We can increase the `TOP` value to query more random records.
+  
+```sql  
+SELECT TOP 1 ProductID, Name, ProductNumber
+FROM Production.Product
+ORDER BY NEWID()
+GO
+```
+
   
 ## See Also  
  [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   

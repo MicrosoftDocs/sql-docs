@@ -124,7 +124,7 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | Auto-scale | Yes, but only in [serverless model](serverless-tier-overview.md). In the non-serverless model, the change of service tier (change of vCore, storage, or DTU) is fast and online. The service tier change requires minimal or no downtime. | No, you need to choose reserved compute and storage. The change of service tier (vCore or max storage) is online and requires minimal or no downtime. |
 | [Automatic backups](automated-backups-overview.md) | Yes. Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. | Yes. Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. |
 | [Automatic tuning (indexes)](/sql/relational-databases/automatic-tuning/automatic-tuning)| [Yes](automatic-tuning-overview.md)| No |
-| [Availability Zones](/azure/availability-zones/az-overview) | Yes | No |
+| [Availability Zones](/azure/availability-zones/az-overview) | Yes | In preview (BC only) |
 | [Azure Resource Health](/azure/service-health/resource-health-overview) | Yes | No |
 | [Short-term backup retention](automated-backups-overview.md#short-term-retention) | Yes. 7 days default, max 35 days. | Yes. 7 days default, max 35 days. |
 | [Data Migration Service (DMS)](/sql/dma/dma-overview) | Yes | Yes |

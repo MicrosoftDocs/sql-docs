@@ -110,4 +110,6 @@ Failed registration errors are stored in `RegistrationErrors.csv` located in the
 
 ## Next steps
 
-Upgrade your manageability mode to [full](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set provided to you by the SQL IaaS Agent extension.
+Upgrade your manageability mode to [full](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set provided to you by the SQL IaaS Agent extension
+
+[Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).

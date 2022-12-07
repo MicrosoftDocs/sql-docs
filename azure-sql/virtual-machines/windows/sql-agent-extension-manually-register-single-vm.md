@@ -369,6 +369,8 @@ Remove-AzSqlVM -ResourceGroupName <resource_group_name> -Name <SQL VM resource n
 
 ## Next steps
 
+[Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
+
 For more information, see the following articles:
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)

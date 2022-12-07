@@ -1544,6 +1544,8 @@
             href: virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md
           - name: Bulk register multiple VMs
             href: virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk.md
+          - name: Known issues and troubleshoot
+            href: virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues.md
       - name: Migrate
         items:
         - name: VM to a new region

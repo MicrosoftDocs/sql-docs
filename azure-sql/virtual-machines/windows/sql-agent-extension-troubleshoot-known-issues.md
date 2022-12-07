@@ -50,15 +50,15 @@ Consider the following:
 
 ## SQL VM resource unavailable in portal 
 
-If the SQL IaaS extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this does not resolve the issue, [repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
+If the SQL IaaS extension is installed, and the VM is online, but the SQL VM resource is unavailable in the Azure portal, verify that your SQL Server and SQL Browser service are started within the VM. If this doesn't resolve the issue, [repair the extension](sql-agent-extension-manually-register-single-vm.md#repair-extension). 
 
 ## Features are grayed out
 
-If you navigate to your [SQL VM resource](manage-sql-vm-portal.md) in the Azure portal, and there are features that are grayed out, verify that that the SQL VM is running, and that you have the extension registered in [Full mode](sql-server-iaas-agent-extension-automate-management.md#management-modes). 
+If you navigate to your [SQL VM resource](manage-sql-vm-portal.md) in the Azure portal, and there are features that are grayed out, verify that the SQL VM is running, and that you have the extension registered in [Full mode](sql-server-iaas-agent-extension-automate-management.md#management-modes). 
 
-Grayed out features are expected if your SQL VM is registered in lightweight mode as the extension does not offer full capability, and many features are [unavailable](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
+Grayed out features are expected if your SQL VM is registered in lightweight mode as the extension doesn't offer full capability, and many features are [unavailable](sql-server-iaas-agent-extension-automate-management.md#feature-benefits). 
 
-Upgrade your extension to full mode to gain access to any unavailable features. Lightweight mode is the default mode for SQL Server instances that participate in a failover cluster instance (FCI) and cannot be upgraded, so some features will always be grayed out. 
+Upgrade your extension to full mode to gain access to any unavailable features. Lightweight mode is the default mode for SQL Server instances that participate in a failover cluster instance (FCI) and can't be upgraded, so some features will always be grayed out. 
 
 ## Automatic registration failed
 
@@ -95,14 +95,14 @@ If your [SQL VM resource](manage-sql-vm-portal.md) displays **Automated backup i
 
 Your SQL IaaS agent extension may get stuck in a transitioning state in the following scenarios:
 
-- You have removed the `NT service\SQLIaaSExtension` service from the SQL Server logins and/or the local administrators group.
+- You've removed the `NT service\SQLIaaSExtension` service from the SQL Server logins and/or the local administrator's group.
 - Either of these two services are stopped in services.msc 
    - Microsoft SQL Server IaaS Agent 
    - Microsoft SQL Server IaaS Query Service 
 
 ## Fails to install on domain controller
 
-Registering your SQL Server instance installed to your domain controller with the SQL IaaS agent extension is not supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user cannot be created on the domain controller, registering this VM with the SQL IaaS agent is not supported. 
+Registering your SQL Server instance installed to your domain controller with the SQL IaaS agent extension isn't supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user can't be created on the domain controller, registering this VM with the SQL IaaS agent isn't supported. 
 
 
 ## Next steps

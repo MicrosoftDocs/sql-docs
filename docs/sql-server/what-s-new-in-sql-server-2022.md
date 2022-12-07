@@ -28,6 +28,7 @@ For additional video content, see:
 
 - [What's new in SQL Server](https://microsoftmechanics.libsyn.com/podcast/whats-new-in-sql-server-2022)
 - [Data Exposed SQL Server 2022 playlist](/users/marisamathews/collections/qep1fr3gw3jqy8)
+- [Video hub](https://techcommunity.microsoft.com/t5/video-hub/bg-p/Video-Hub?audience=&type=&topic=&format=&level=&persona=&product=SQL+Server&tag=&track=&speakers=&location=&onlineEvent=false&dateRange=)
 
 This article summarizes the new features and enhancements for [!INCLUDE[sql-server-2022](../includes/sssql22-md.md)].
 

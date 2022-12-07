@@ -25,6 +25,15 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues
+**Version 0.2**
+  1. Target sever version supported: SQL server 2019 and SQL server 2022
+  2. Cannot design Dimension Processing and Partition Processing.
+  3. Cannot design DQS related component.
+  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  5. Side by side, localization and globalization are not supported.
+  6. Azure-enabled SSIS projects are not supported
+  7. Repair action dose not work. Please reinstall it instead.  
+  
 **Version 0.1**
   1. Target server version supported: SQL server 2019 and SQL server 2022 
   1. Can't design Dimension Processing and Partition Processing.

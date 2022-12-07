@@ -52,7 +52,6 @@
           "folder_relative_path_in_docset": "."
         }
       },
-      "extendBreadcrumb": false,
       "toc_preview": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",

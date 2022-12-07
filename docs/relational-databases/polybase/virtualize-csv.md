@@ -78,7 +78,7 @@ WITH
 )
 ```
 
-## Use OPENROWQUERY to access the data
+## Use OPENROWSET to access the data
 
 In this example the file is named `call_center.csv`, and the data starts on the second row. 
 

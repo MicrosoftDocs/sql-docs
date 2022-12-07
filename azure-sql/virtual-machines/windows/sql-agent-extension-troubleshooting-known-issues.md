@@ -15,6 +15,8 @@ ms.custom:
 
 This article helps you resolve known issues and troubleshoot errors when using the [SQL Server IaaS agent extension](sql-server-iaas-agent-extension-automate-management.md). 
 
+For answers to frequently asked questions about the extension, check out the [FAQ](frequently-asked-questions-faq.yml#sql-server-iaas-agent-extension). 
+
 ## Check prerequisites 
 
 To avoid errors due to unsupported options or limitations, verify the [prerequisites](sql-agent-extension-manually-register-single-vm.md#prerequisites) for the extension. 
@@ -58,15 +60,58 @@ Grayed out features are expected if your SQL VM is registered in lightweight mod
 
 Upgrade your extension to full mode to gain access to any unavailable features. Lightweight mode is the default mode for SQL Server instances that participate in a failover cluster instance (FCI) and cannot be upgraded, so some features will always be grayed out. 
 
+## Automatic registration failed
 
+If you have a few SQL Server VMs that failed to [register automatically](sql-agent-extension-automatic-registration-all-vms.md), check the version of SQL Server on the VMs that failed to register. By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). SQL Server VMs that have versions earlier than 2016 have to be manually registered [individually](sql-agent-extension-manually-register-single-vm.md) or [in bulk](sql-agent-extension-manually-register-vms-bulk.md).
 
+## High resource consumption 
+
+If you notice that the SQL IaaS agent extension is consuming unexpectedly high CPU or memory, verify that Auto Upgrade is enabled for the extension in the Azure portal, and the extension is on the latest version. 
+
+Restart **Microsoft SQL Server IaaS Agent** from services.msc. 
+
+## Error upgrading to full 
+
+If you receive an error when attempting to upgrade your extension mode from lightweight to full, check to see if your SQL Server is installed as a failover cluster instance (FCI). SQL Server FCI only supports registering with the extension in lightweight mode. 
+
+## Can't extend disks 
+
+Extending your disks from the **Storage Configuration** page of the [SQL VM resource](manage-sql-vm-portal.md) is unavailable under the following conditions: 
+
+- If you uninstall and reinstall the SQL IaaS agent extension. 
+- If you uninstall and reinstall your instance of SQL Server. 
+- If you used custom naming conventions for the disk/storage pool name when deploying your SQL Server image from the Azure Marketplace. 
+- If your extension is registered in lightweight mode. 
+
+## Disk configuration grayed out during deployment
+
+If you create your SQL Server VM by using an unmanaged disk, disk configuration is grayed out by design. 
+
+## Automated backup disabled
+
+If your [SQL VM resource](manage-sql-vm-portal.md) displays **Automated backup is currently disabled**, check to see if you have enabled Managed Backups inside SQL Server. To use Automated backups from the Azure portal, disable Managed backups from within SQL Server. 
+
+## Extension stuck in transition 
+
+Your SQL IaaS agent extension may get stuck in a transitioning state in the following scenarios:
+
+- You have removed the `NT service\SQLIaaSExtension` service from the SQL Server logins and/or the local administrators group.
+- Either of these two services are stopped in services.msc 
+   - Microsoft SQL Server IaaS Agent 
+   - Microsoft SQL Server IaaS Query Service 
+
+## Fails to install on domain controller
+
+Registering your SQL Server instance installed to your domain controller with the SQL IaaS agent extension is not supported. Registering with the extension creates the user `NT Service\SQLIaaSExtension` and since this user cannot be created on the domain controller, registering this VM with the SQL IaaS agent is not supported. 
 
 
 ## Next steps
 
+For answers to frequently asked questions about the extension, check out the [FAQ](frequently-asked-questions-faq.yml#sql-server-iaas-agent-extension). 
+
 For more information, see the following articles:
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
+* [Overview of the SQL IaaS agent extension](sql-server-iaas-agent-extension-automate-management.md)
 * [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
 * [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)

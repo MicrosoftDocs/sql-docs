@@ -288,7 +288,11 @@ sections:
           
       - question: |
           What are the prerequisites to register with the SQL IaaS Agent extension?
-        answer:    There are no prerequisites to registering with the SQL IaaS Agent extension other than having SQL Server installed on the VM. 
+        answer:    Check the [prerequisites](sql-agent-extension-manually-register-single-vm.md#prerequisites) for details. 
+      
+      - question: | 
+         What Azure permissions are necessary to register with the extension? 
+        answer: The client credentials used to register the virtual machine should exist in any of the following Azure roles - **Virtual Machine contributor**, **Contributor**, or **Owner**. 
 
       - question: |
           Will registering with the SQL IaaS Agent extension install an agent on my VM?
@@ -300,6 +304,7 @@ sections:
       - question: | 
            What permissions does the SQL Server IaaS agent extension use? 
         answer: October 2022 introduced the least privilege permissions model for the extension, granting minimal permissions necessary for each feature used by the extension. SQL Server VMs deployed after October 2022 via Azure Marketplace have the least privilege permissions model enabled by default. The extension uses sysadmin rights for SQL Server VMs that were deployed prior to October 2022, or self-installed SQL Server VMs, that have not manually enabled the least privilege model in the Azure portal. Review [SQL IaaS agent extension permissions](sql-server-iaas-agent-extension-automate-management.md#permissions) to learn more. 
+      
       - question: |
           Will registering with the SQL IaaS Agent extension restart SQL Server on my VM?
         answer:    Starting in September 2021, restarting the SQL Server service is no longer required when registering with the [SQL IaaS extension](sql-server-iaas-agent-extension-automate-management.md) in [full management mode](sql-agent-extension-manually-register-single-vm.md).  
@@ -310,7 +315,7 @@ sections:
              NoAgent management mode is the only available management mode for SQL Server 2008 and SQL Server 2008 R2 on Windows Server 2008. For all later versions of Windows Server, the two available manageability modes are lightweight and full. 
           
              NoAgent mode requires SQL Server version and edition properties to be set by the customer. Lightweight mode queries the VM to find the version and edition of the SQL Server instance.
-          
+        
       - question: |
           Can I register with the SQL IaaS Agent extension without specifying the SQL Server license type?
         answer:    No. The SQL Server license type is not an optional property when you're registering with the SQL IaaS Agent extension. You have to set the SQL Server license type as pay-as-you-go or Azure Hybrid Benefit when registering with the SQL IaaS Agent extension in all manageability modes (NoAgent, lightweight, and full). If you have any of the free versions of SQL Server installed, such as Developer or Evaluation edition, you must register with pay-as-you-go licensing. Azure Hybrid Benefit is only available for paid versions of SQL Server such as Enterprise and Standard editions.
@@ -333,7 +338,19 @@ sections:
              No. Downgrading the SQL Server IaaS extension manageability mode is not supported. The manageability mode can't be downgraded from full mode to lightweight or NoAgent mode, and it can't be downgraded from lightweight mode to NoAgent mode. 
           
              To change the manageability mode from full manageability, [unregister](sql-agent-extension-manually-register-single-vm.md#unregister-from-extension) the SQL Server VM from the SQL IaaS Agent extension by dropping the SQL virtual machine _resource_ and re-register the SQL Server VM with the SQL IaaS Agent extension again in a different management mode.
-          
+      - question: | 
+          Is there downtime when upgrading the extension?
+        answer: No. There is no downtime when upgrading the extension, and it does not restart the SQL Server service.   
+
+      - question: |
+          Is it possible to register self-deployed SQL Server VMs with the SQL IaaS Agent extension?
+        answer: |
+              Yes. If you deployed SQL Server from your own media, and installed the SQL IaaS extension you can register your SQL Server VM with the extension to get the manageability benefits provided by the SQL IaaS extension.    
+      - question: |
+          Is it possible to repair the SQL IaaS agent extension? 
+        answer: |
+              Yes. Navigate to the **SQL virtual machines** resource for your SQL Server VM, and choose **Repair** under **Support & troubleshooting** to open the [repair](sql-agent-extension-manually-register-single-vm.md#repair-extension) page and repair the extension. 
+
       - question: |
           Can I register with the SQL IaaS Agent extension from the Azure portal?
         answer:    No. Registering with the SQL IaaS Agent extension is not available in the Azure portal. Registering with the SQL IaaS Agent extension is only supported with the Azure CLI or Azure PowerShell. 
@@ -364,8 +381,8 @@ sections:
              There is no impact when using the *NoAgent* and *lightweight* manageability modes. There is minimal impact when using the *full* manageability mode from two services that are installed to the OS. These can be monitored via task manager and seen in the built-in Windows Services console. 
           
              The two service names are:
-             - `SqlIaaSExtensionQuery` (Display name - `Microsoft SQL Server IaaS Query Service`)
              - `SQLIaaSExtension` (Display name - `Microsoft SQL Server IaaS Agent`)
+             - `SqlIaaSExtensionQuery` (Display name - `Microsoft SQL Server IaaS Query Service`)
           
       - question: |
           How do I remove the extension?
@@ -387,15 +404,15 @@ sections:
       - question: |
           What happens to the VM if the extension ('Microsoft.SqlVirtualMachine') resource is dropped?
         answer:     The Microsoft.Compute/VirtualMachine resource is not impacted when the Microsoft.SqlVirtualMachine resource is dropped. However, the licensing changes will default back to the original image source. 
+      
+      - question: |
+          Is the extension necessary to receive Extended Security Updates (ESU)
+        answer: No. [Extended Security Updates (ESU)](/sql/sql-server/end-of-support/sql-server-extended-security-updates) are applied automatically to the VM whether or not your SQL Server VM has registered with the SQL IaaS agent extension. 
+          
 
-      - question: |
-          Is it possible to register self-deployed SQL Server VMs with the SQL IaaS Agent extension?
-        answer: |
-              Yes. If you deployed SQL Server from your own media, and installed the SQL IaaS extension you can register your SQL Server VM with the extension to get the manageability benefits provided by the SQL IaaS extension.    
-      - question: |
-          Is it possible to repair the SQL IaaS agent extension? 
-        answer: |
-              Yes. Navigate to the **SQL virtual machines** resource for your SQL Server VM, and choose **Repair** under **Support & troubleshooting** to open the [repair](sql-agent-extension-manually-register-single-vm.md#repair-extension) page and repair the extension. 
+
+
+
 
 
 

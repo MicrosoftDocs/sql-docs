@@ -94,6 +94,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
+## Install SSDT Standalone
 
 ### Supported SQL versions
 

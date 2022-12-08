@@ -8,7 +8,7 @@ ms.reviewer: wiassaf
 ms.date: 10/06/2021
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.topic: guide
+ms.topic: conceptual
 ms.metadata: seo-lt-2019
 ---
 

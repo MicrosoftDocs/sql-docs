@@ -90,7 +90,7 @@ Supported version and edition upgrades:
 - [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true)
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2019.md)
-- [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-2022.md)
+- [SQL Server 2022](../../database-engine/install-windows/supported-version-and-edition-upgrades-2022.md)
 
 Tools:
 

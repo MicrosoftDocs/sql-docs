@@ -28,8 +28,9 @@ ms.author: mathoma
 |Message Text|Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.|  
   
 ## Explanation  
-SQL Server cannot start the **master** database. If the **master** or **tempdb** cannot be brought online, SQL Server cannot run. This error is usually preceded by other errors. Review error logs to find the root cause.  
-  
+SQL Server cannot start the **master** database. If the **master** or **tempdb** cannot be brought online, SQL Server cannot run. This error is usually preceded by other errors. Review error logs for those errors to find the root cause.  
+This error may be encountered during an upgrade of SQL Server to a Cumulative update or Service Pack. The upgrade scripts may fail due to an underlying issue and may cause the **master** database to not recover. Again the underlying cause is to be found in the latest SQL Server error log prior to this message.
+
 ## User Action  
-Restore backup of the database or repair the database.  
-  
+- [Restore backup of the **master** database](/sql/relational-databases/backup-restore/restore-the-master-database-transact-sql). Or rebuild the [system databases](/sql/relational-databases/databases/rebuild-system-databases#rebuild-system-databases-for-an-instance-of-sql-server) followed by attaching or restoring the remaining databases (**msdb**, user databases, SSISDB, etc.)
+- If you see this error during an upgrade failure, please refer to [Troubleshoot common SQL Server Cumulative Update installation issues](/troubleshoot/sql/install/sqlserver-patching-issues) and error 912 - [MSSQLSERVER_912](mssqlserver-912-database-engine-error)

@@ -44,7 +44,7 @@ ms.author: mathoma
 1. Connect to SQL Server using SQLCMD from another Command Prompt window
 
    ```console
-   SQLCMD -S <instance> -E
+   SQLCMD -S <instance> -E -d master
    ```
 
 1. To restore a full database backup of **master**, use the following [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  

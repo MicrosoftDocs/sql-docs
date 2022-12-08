@@ -134,7 +134,7 @@ XMLLocalName :: =
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="https://www.adventure-works.com">  
+<Customers xmlns="http://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  

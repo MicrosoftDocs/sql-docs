@@ -40,7 +40,7 @@ SQL Managed Instance combines the best features that are available both in Azure
 
 | **PaaS benefits** | **Business continuity** |
 | --- | --- |
-|No hardware purchasing and management <br>No management overhead for managing underlying infrastructure <br>Quick provisioning and service scaling <br>Automated patching and version upgrade <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](../database/high-availability-sla.md) <br>Data protected with [automated backups](../database/automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
+|No hardware purchasing and management <br>No management overhead for managing underlying infrastructure <br>Quick provisioning and service scaling <br>Automated patching and version upgrade <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](../database/high-availability-sla.md) <br> [Hybrid Disaster recovery with failover (preview)](managed-instance-link-feature-overview.md) between SQL Managed Instance and SQL Server 2022. <br>Data protected with [automated backups](../database/automated-backups-overview.md) <<br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
 |**Security and compliance** | **Management**|
 |Isolated environment ([VNet integration](connectivity-architecture-overview.md), single tenant service, dedicated compute and storage) <br>[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)<br>[Azure Active Directory (Azure AD) authentication](../database/authentication-aad-overview.md), single sign-on support <br> [Azure AD server principals (logins)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) <br>[What is Windows Authentication for Azure AD principals (Preview)](winauth-azuread-overview.md) <br>Adheres to compliance standards same as Azure SQL Database <br>[SQL auditing](auditing-configure.md) <br>[Advanced Threat Protection](threat-detection-configure.md) |Azure Resource Manager API for automating service provisioning and scaling <br>Azure portal functionality for manual service provisioning and scaling <br>Data Migration Service
 
@@ -186,13 +186,13 @@ SQL Managed Instance targets user scenarios with mass database migration from on
 
 ### Backup and restore  
 
-The migration approach leverages SQL backups to Azure Blob storage. Backups stored in an Azure storage blob can be directly restored into a managed instance using the [T-SQL RESTORE command](/sql/t-sql/statements/restore-statements-transact-sql?preserve-view=true&view=azuresqldb-mi-current).
+The migration approach leverages SQL backups to Azure Blob storage. Backups stored in Azure Blob Storage can be directly restored into a managed instance using the [T-SQL RESTORE command](/sql/t-sql/statements/restore-statements-transact-sql?preserve-view=true&view=azuresqldb-mi-current).
 
 - For a quickstart showing how to restore the Wide World Importers - Standard database backup file, see [Restore a backup file to a managed instance](restore-sample-database-quickstart.md). This quickstart shows that you have to upload a backup file to Azure Blob Storage and secure it using a shared access signature (SAS).
 - For information about restore from URL, see [Native RESTORE from URL](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md#backup-and-restore).
 
 > [!IMPORTANT]
-> Backups from a managed instance can only be restored to another managed instance. They cannot be restored to a SQL Server instance or to Azure SQL Database.
+> Backups from a managed instance can only be restored to other managed instances, or to SQL Server 2022. They cannot be restored to other versions of SQL Server, or to Azure SQL Database.
 
 ### Database Migration Service
 

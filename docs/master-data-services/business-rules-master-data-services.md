@@ -3,10 +3,9 @@ title: Business Rules
 description: Learn about business rules in Master Data Services, which can update data, send email, or start a business process or workflow.
 ms.custom: ""
 ms.date: "03/18/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "business rules [Master Data Services], about business rules"

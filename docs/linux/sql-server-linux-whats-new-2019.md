@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 11/22/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.custom:
   - intro-whats-new
 ---

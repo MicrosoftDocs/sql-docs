@@ -3,10 +3,9 @@ title: "SQL Server and Azure SQL index architecture and design guide"
 description: Learn about designing efficient indexes in SQL Server and Azure SQL to achieve good database and application performance. Read about index architecture and best practices.
 ms.custom: ""
 ms.date: 01/19/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "index design guide" 
@@ -393,7 +392,7 @@ Rowstore indexes are organized as B+ trees. Each page in an index B+ tree is cal
 ##  <a name="Nonclustered"></a> Nonclustered index design guidelines  
  A disk-based rowstore nonclustered index contains the index key values and row locators that point to the storage location of the table data. You can create multiple nonclustered indexes on a table or indexed view. Generally, nonclustered indexes should be designed to improve the performance of frequently used queries that are not covered by the clustered index.  
   
- Similar to the way you use an index in a book, the query optimizer searches for a data value by searching the nonclustered index to find the location of the data value in the table and then retrieves the data directly from that location. This makes nonclustered indexes the optimal choice for exact match queries because the index contains entries describing the exact location in the table of the data values being searched for in the queries. For example, to query the `HumanResources. Employee` table for all employees that report to a specific manager, the query optimizer might use the nonclustered index `IX_Employee_ManagerID`; this has `ManagerID` as its key column. The query optimizer can quickly find all entries in the index that match the specified `ManagerID`. Each index entry points to the exact page and row in the table, or clustered index, in which the corresponding data can be found. After the query optimizer finds all entries in the index, it can go directly to the exact page and row to retrieve the data.  
+ Similar to the way you use an index in a book, the query optimizer searches for a data value by searching the nonclustered index to find the location of the data value in the table and then retrieves the data directly from that location. This makes nonclustered indexes the optimal choice for exact match queries because the index contains entries describing the exact location in the table of the data values being searched for in the queries. For example, to query the `HumanResources.Employee` table for all employees that report to a specific manager, the query optimizer might use the nonclustered index `IX_Employee_ManagerID`; this has `ManagerID` as its key column. The query optimizer can quickly find all entries in the index that match the specified `ManagerID`. Each index entry points to the exact page and row in the table, or clustered index, in which the corresponding data can be found. After the query optimizer finds all entries in the index, it can go directly to the exact page and row to retrieve the data.  
   
 ### Nonclustered index architecture  
 

@@ -1,7 +1,6 @@
 ---
 author: dbradish-microsoft
 ms.author: dbradish
-manager: barbkess
 ms.date: 09/10/2020
 ms.service: azure-cli
 ms.technology: azure-cli

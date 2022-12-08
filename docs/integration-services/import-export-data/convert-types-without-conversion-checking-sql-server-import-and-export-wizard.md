@@ -3,9 +3,9 @@ description: "Convert Types without Conversion Checking (SQL Server Import and E
 title: "Convert Types no Conversion Checking (SQL Server Import-Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.nomappingfile.f1"

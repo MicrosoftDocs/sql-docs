@@ -4,8 +4,8 @@ description: You can view or modify properties for an assembly hosted on SQL Ser
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 f1_keywords:
   - "sql13.swb.assemblies.general.f1"

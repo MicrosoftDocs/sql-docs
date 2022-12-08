@@ -3,10 +3,9 @@ description: "WRITETEXT (Transact-SQL)"
 title: "WRITETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "WRITETEXT_TSQL"

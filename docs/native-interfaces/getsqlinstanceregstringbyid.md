@@ -3,7 +3,7 @@ description: "GetSQLInstanceRegStringByID() "
 title: "GetSQLInstanceRegStringByID()  | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/18/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
 apiname: 
   - "GetSQLInstanceRegStringByID"

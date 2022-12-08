@@ -4,9 +4,8 @@ description: Learn how to create a single or multiserver maintenance plan using 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "06/20/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.ag.maintwiz.integrity.f1"

@@ -4,9 +4,8 @@ description: sys.dm_db_task_space_usage returns page allocation and deallocation
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/03/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_task_space_usage_TSQL"

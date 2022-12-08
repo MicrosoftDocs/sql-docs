@@ -4,9 +4,8 @@ description: This code sample demonstrates the fast performance of memory-optimi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc

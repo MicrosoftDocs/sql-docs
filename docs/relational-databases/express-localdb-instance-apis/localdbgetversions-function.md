@@ -3,10 +3,9 @@ description: "LocalDBGetVersions Function"
 title: "LocalDBGetVersions Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetVersions"
@@ -21,7 +20,7 @@ ms.author: maghan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Returns all SQL Server Express LocalDB versions available on the computer.  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

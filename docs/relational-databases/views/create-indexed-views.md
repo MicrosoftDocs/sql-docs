@@ -5,8 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.date: 10/04/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "indexed views [SQL Server], creating"

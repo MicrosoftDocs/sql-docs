@@ -3,10 +3,9 @@ title: "Handling Namespaces in XQuery | Microsoft Docs"
 description: View examples of handling namespaces in an XQuery that include how to declare new and default namespaces.
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

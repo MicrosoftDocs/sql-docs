@@ -4,8 +4,7 @@ description: Database Engine Extended Stored Procedures - Programming
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "gateway applications [SQL Server]"

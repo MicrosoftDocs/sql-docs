@@ -3,9 +3,8 @@ title: "Find and Replace"
 description: Learn how to use the Find and Replace dialog box to find and replace text.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

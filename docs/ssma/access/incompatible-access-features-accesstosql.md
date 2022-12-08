@@ -1,11 +1,11 @@
 ---
 title: "Incompatible Access Features (AccessToSQL) | Microsoft Docs"
 description: Learn about possible migration issues with Access database features that are not compatible with SQL Server, and how to address them.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Access databases"

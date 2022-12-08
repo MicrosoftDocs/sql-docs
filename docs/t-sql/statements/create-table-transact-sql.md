@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 09/06/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -49,7 +49,7 @@ dev_langs:
 ---
 # CREATE TABLE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 

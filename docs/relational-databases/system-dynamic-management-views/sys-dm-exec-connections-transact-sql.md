@@ -4,9 +4,8 @@ description: sys.dm_exec_connections returns information about the connections e
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "6/03/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_connections_TSQL"

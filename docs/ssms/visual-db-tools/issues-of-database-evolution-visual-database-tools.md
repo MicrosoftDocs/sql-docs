@@ -3,9 +3,8 @@ description: "Issues of Database Evolution (Visual Database Tools)"
 title: Issues of Database Evolution
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [SQL Server], multuser database changes"

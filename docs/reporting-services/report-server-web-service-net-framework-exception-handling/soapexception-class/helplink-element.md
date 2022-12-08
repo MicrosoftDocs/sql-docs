@@ -3,7 +3,6 @@ title: "HelpLink Element | Microsoft Docs"
 description: Learn the details about the HelpLink element of the Detail property, including the the arguments of the HelpLink URL.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service-net-framework-exception-handling
 
 

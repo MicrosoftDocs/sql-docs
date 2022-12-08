@@ -4,9 +4,8 @@ description: sys.column_store_row_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/28/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.column_store_row_groups_TSQL"

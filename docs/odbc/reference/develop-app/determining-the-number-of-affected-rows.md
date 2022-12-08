@@ -3,10 +3,9 @@ description: "Determining the Number of Affected Rows"
 title: "Determining the Number of Affected Rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating data [ODBC], number of rows affected"

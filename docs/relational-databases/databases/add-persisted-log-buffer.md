@@ -3,9 +3,8 @@ description: "Explains how to add a persisted log buffer to a database in SQL Se
 title: "Add persisted log buffer to a database"
 ms.custom: ""
 ms.date: "10/30/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PMEM"

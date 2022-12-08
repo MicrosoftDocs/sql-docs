@@ -3,9 +3,9 @@ description: "MSSQLSERVER_7911"
 title: "MSSQLSERVER_7911 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "7911 (Database Engine error)"

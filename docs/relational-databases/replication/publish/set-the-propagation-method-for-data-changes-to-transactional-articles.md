@@ -3,10 +3,9 @@ title: "Set propagation method for changes to articles (Transactional)"
 description: Describes how to set the propagation method for data changes to transactional articles for Transactional Replication using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
 ms.custom: seo-lt-2019
 ms.date: "12/16/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, propagation methods"

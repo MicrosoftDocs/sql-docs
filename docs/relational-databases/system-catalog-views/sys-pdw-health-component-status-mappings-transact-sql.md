@@ -4,8 +4,8 @@ description: sys.pdw_health_component_status_mappings (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/12/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: reference
 dev_langs:
   - "TSQL"

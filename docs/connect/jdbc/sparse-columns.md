@@ -4,8 +4,8 @@ description: Sparse columns are ordinary columns that have an optimized storage 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 

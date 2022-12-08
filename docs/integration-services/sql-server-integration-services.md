@@ -1,9 +1,8 @@
 ---
 title: SQL Server Integration Services
 description: Learn about SQL Server Integration Services, Microsoft's platform for building enterprise-level data integration and data transformations solutions.
-ms.prod: sql
-ms.prod_service: integration-services
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: overview
 keywords: 
   - "SSIS"

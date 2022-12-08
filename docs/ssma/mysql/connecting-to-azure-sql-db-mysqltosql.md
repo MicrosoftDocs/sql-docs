@@ -1,11 +1,11 @@
 ---
 description: "Connecting to Azure SQL Database (MySQLToSQL)"
 title: "Connecting to Azure SQL Database (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "11/16/2020"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to Azure SQL Database, SQL Azure permissions"

@@ -4,8 +4,8 @@ description: Find out how to use sp_configure to display or change global config
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "09/18/2022"
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: reference
 helpviewer_keywords:
   - "PolyBase"

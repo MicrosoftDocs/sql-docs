@@ -2,8 +2,8 @@
 title: "PolyBase query scenarios | Microsoft Docs"
 description: See examples of queries using the PolyBase feature of SQL Server, including SELECT, JOIN external with local tables, import/export data, and new catalog views.
 ms.date: 04/23/2019
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 keywords: 
   - "PolyBase"
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "PolyBase, import and export"
   - "Hadoop, import with PolyBase"
   - "Hadoop, export with PolyBase"
-  - "Azure blob storage, import with PolyBase"
-  - "Azure blob storage, export with PolyBase"
+  - "Azure Blob Storage, import with PolyBase"
+  - "Azure Blob Storage, export with PolyBase"
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: MikeRayMSFT
 ms.author: mikeray

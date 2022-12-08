@@ -3,9 +3,9 @@ title: "When to Use"
 description: Decide whether to use SQL Server Native Client, which is one of several technologies that you can use to access data in a SQL Server database.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, about SQL Server Native Client ODBC driver"
@@ -18,6 +18,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # When to Use SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is one technology that you can use to access data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  For a discussion of the different data-access technologies, see [Data Access Technologies Road Map](../../connect/connect-history.md)  
   

@@ -1,11 +1,11 @@
 ---
 description: "Setting Conversion and Migration Options (AccessToSQL)"
 title: "Setting Conversion and Migration Options (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "conversion, setting options"

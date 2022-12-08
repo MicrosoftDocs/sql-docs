@@ -1,8 +1,8 @@
 ---
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for DB2 (DB2ToSQL) for each release.
-ms.prod: sql
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
 author: cpichuka
 ms.author: cpichuka
@@ -13,6 +13,11 @@ ms.date: "04/29/2021"
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v9.2
+
+The v9.2 release of SSMA for DB2 contains minor performance improvements, bug fixes and enhanced get help experience.
+
 ## SSMA v9.1
 
 The v9.1 release of SSMA for DB2 contains minor performance improvements, bug fixes and enhanced get help experience.

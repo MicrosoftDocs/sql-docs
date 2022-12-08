@@ -1,8 +1,8 @@
 ---
 title: Create multiple models with rxExecBy
 description: Use the rxExecBy function from RevoScaleR library to build multiple mini models over machine data stored in SQL Server.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 05/28/2021
 ms.topic: how-to
 author: WilliamDAssafMSFT

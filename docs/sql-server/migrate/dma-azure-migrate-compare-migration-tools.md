@@ -3,10 +3,9 @@ title: "Compare SQL data migration tools"
 titleSuffix: SQL Server
 description: "Compare SQL data migration tools to determine which tool best suits your business needs, such as Data Migration Assistant (DMA), Azure Migrate, Azure Database Migration Service, SQL Server Migration Assistant (SSMA), Database Experimentation Assistant (DEA). "
 ms.date: "03/15/2021"
-ms.prod: sql
-ms.prod_service: "dma"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: dma
+ms.subservice: dma
 ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 

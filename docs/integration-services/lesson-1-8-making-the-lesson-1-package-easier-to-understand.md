@@ -3,10 +3,9 @@ description: "Lesson 1-8: Annotate and format the Lesson 1 package"
 title: "Step 8: Annotate and format the Lesson 1 package | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace

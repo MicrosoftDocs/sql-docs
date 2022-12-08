@@ -3,10 +3,9 @@ title: "SQL Server managed backup to Microsoft Azure | Microsoft Docs"
 description: SQL Server Managed Backup to Microsoft Azure manages and automates SQL Server backups to Microsoft Azure Blob storage. 
 ms.custom: ""
 ms.date: 10/05/2021
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MashaMSFT
@@ -27,7 +26,7 @@ ms.author: mathoma
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] can be configured at the database level or at the SQL Server instance level. When configuring at the instance level, any new databases are also backed up automatically. Settings at the database level can be used to override instance level defaults on an individual case.  
   
- You can also encrypt the backups for additional security, and you can set up a custom schedule to control when the backups are taken. For more details on the benefits of using Microsoft Azure Blob storage for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+ You can also encrypt the backups for additional security, and you can set up a custom schedule to control when the backups are taken. For more details on the benefits of using Microsoft Azure Blob storage for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 ##  <a name="Prereqs"></a> Prerequisites  
  Microsoft Azure Storage is used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to store the backup files. The following prerequisites are required:  
@@ -35,7 +34,7 @@ ms.author: mathoma
 |Prerequisite|Description|  
 |------------------|-----------------|  
 |**Microsoft Azure Account**|You can get started with Azure with a [free trial](https://azure.microsoft.com/pricing/free-trial/) before exploring [purchase options](https://azure.microsoft.com/pricing/purchase-options/).|  
-|**Azure Storage Account**|The backups are stored in Azure blob storage associated with an Azure storage account. For step-by-step instructions to create a storage account, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create).|  
+|**Azure Storage Account**|The backups are stored in Azure Blob Storage associated with an Azure storage account. For step-by-step instructions to create a storage account, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create).|  
 |**Blob Container**|Blobs are organized in containers. You specify the target container for the backup files. You can create a container in the [Azure Management Portal](https://portal.azure.com/), or you use the **New-AzureStorageContainer**[Azure PowerShell](/powershell/azure/) command.|  
 |**Shared Access Signature (SAS)**|Access to the target container is controlled by a Shared Access Signature (SAS). For an overview of SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview). You can create a SAS token in code or with the **New-AzureStorageContainerSASToken** PowerShell command. For a PowerShell script that simplifies this process, see [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell). The SAS token can be stored in a **SQL Credential** for use with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|SQL Server Agent must be running for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to work. Consider setting the startup option to automatic.|  
@@ -115,7 +114,7 @@ ms.author: mathoma
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agent only supports database full and log backups. File backup automation is not supported.  
   
--   The Microsoft Azure Blob Storage service is the only supported backup storage option. Backups to disk or tape are not supported.  
+-   The Microsoft Azure Blob Storage is the only supported backup storage option. Backups to disk or tape are not supported.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses the Backup to Block Blob feature. The maximum size of a block blob is 200 GB. But by utilizing striping, the maximum size of an individual backup can be up to 12 TB. If your backup requirements exceed this, consider using compression, and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Microsoft Azure storage using **BACKUP TO URL** Transact-SQL statement. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   

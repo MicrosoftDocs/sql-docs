@@ -3,10 +3,9 @@ title: "Database Lifecycle Management | Microsoft Docs"
 description: Learn how to use database lifecycle management in SQL Server to manage databases and data assets for performance, protection, availability, and cost.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data sync"

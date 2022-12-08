@@ -16,7 +16,7 @@ ms.custom:
 
 # Azure SQL Database and Azure Synapse Analytics network access controls
 
-When you create a logical SQL server from the [Azure portal](single-database-create-quickstart.md) for Azure SQL Database and Azure Synapse Analytics, the result is a public endpoint in the format, *yourservername.database.windows.net*.
+When you create a logical server from the [Azure portal](single-database-create-quickstart.md) for Azure SQL Database and Azure Synapse Analytics, the result is a public endpoint in the format, *yourservername.database.windows.net*.
 
 You can use the following network access controls to selectively allow access to a database via the public endpoint:
 
@@ -26,7 +26,7 @@ You can use the following network access controls to selectively allow access to
 You can also allow private access to the database from [virtual networks](/azure/virtual-network/virtual-networks-overview) via:
 
 - Virtual network firewall rules: Use this feature to allow traffic from a specific virtual network within the Azure boundary
-- Private Link: Use this feature to create a private endpoint for [logical SQL server](logical-servers.md) within a specific virtual network
+- Private Link: Use this feature to create a private endpoint for [logical server in Azure](logical-servers.md) within a specific virtual network
 
 > [!IMPORTANT]
 > This article does *not* apply to **SQL Managed Instance**. For more information about the networking configuration, see [connecting to Azure SQL Managed Instance](../managed-instance/connect-application-instance.md) .
@@ -37,9 +37,9 @@ See the below video for a high-level explanation of these access controls and wh
 
 ## Allow Azure services
 
-By default during creation of a new logical SQL server [from the Azure portal](single-database-create-quickstart.md), this setting is set to **OFF**. This setting appears when connectivity is allowed using public service endpoint.
+By default during creation of a new logical server [from the Azure portal](single-database-create-quickstart.md), this setting is set to **OFF**. This setting appears when connectivity is allowed using public service endpoint.
 
-You can also change this setting via the firewall pane after the logical SQL server is created as follows.
+You can also change this setting via the **Networking** setting after the logical server is created as follows: 
   
 ![Screenshot of manage server firewall][2]
 
@@ -101,7 +101,7 @@ You can now add these as distinct firewall rules and then set **Allow Azure serv
 
 ## IP firewall rules
 
-Ip based firewall is a feature of the logical SQL server in Azure that prevents all access to your server until you explicitly [add IP addresses](firewall-create-server-level-portal-quickstart.md) of the client machines.
+Ip based firewall is a feature of the logical server in Azure that prevents all access to your server until you explicitly [add IP addresses](firewall-create-server-level-portal-quickstart.md) of the client machines.
 
 ## Virtual network firewall rules
 

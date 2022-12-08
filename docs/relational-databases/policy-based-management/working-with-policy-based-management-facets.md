@@ -3,10 +3,9 @@ description: "Working with Policy-Based Management Facets"
 title: "Working with Policy-Based Management Facets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing Policy-Based Management facets"

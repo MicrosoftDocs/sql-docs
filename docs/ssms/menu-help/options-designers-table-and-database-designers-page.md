@@ -3,10 +3,9 @@ description: "Options (Designers - Table and Database Designers Page)"
 title: "Options (Designers - Table and Database Designers Page)"
 ms.custom: seo-lt-2019
 ms.date: "12/08/2021"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.Table_Designer"

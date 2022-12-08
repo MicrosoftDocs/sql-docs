@@ -1,9 +1,8 @@
 ---
 title: "Understand SQL Server Management Studio Windows Management"
 description: "Understand SQL Server Management Studio Windows Management"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "autohide [SQL Server Management Studio]"

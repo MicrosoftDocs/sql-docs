@@ -3,10 +3,9 @@ description: "Events Logged by an Integration Services Package"
 title: "Events Logged by an Integration Services Package | Microsoft Docs"
 ms.custom: supportability
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "package [Integration Services], events"

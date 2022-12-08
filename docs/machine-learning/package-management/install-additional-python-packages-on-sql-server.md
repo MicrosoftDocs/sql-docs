@@ -1,8 +1,8 @@
 ---
 title: Install Python packages with sqlmlutils
 description: Learn how to use Python pip to install new Python packages on an instance of SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.date: 08/26/2020
 ms.topic: how-to
 author: WilliamDAssafMSFT

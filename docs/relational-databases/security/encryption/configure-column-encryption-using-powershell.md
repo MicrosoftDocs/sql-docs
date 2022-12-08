@@ -3,10 +3,9 @@ description: "Configure column encryption using Always Encrypted with PowerShell
 title: "Configure column encryption using Always Encrypted with PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: vanto
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas

@@ -3,10 +3,9 @@ description: "sp_db_selective_xml_index (Transact-SQL)"
 title: "sp_db_selective_xml_index (Transact-SQL)"
 ms.custom: ""
 ms.date: "02/11/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_db_selective_xml_index_TSQL"

@@ -5,7 +5,6 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/09/2022
 ms.service: sql-database
-ms.prod_service: sql-database
 ms.topic: "reference"
 helpviewer_keywords:
   - "Azure SQL Database catalog views"

@@ -1,9 +1,8 @@
 ---
 title: "Drag and Drop Text"
 description: Learn how to drag text from an editor or Object Explorer and then drop it in an editor location or the Recycle Bin.
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dragging and dropping text"

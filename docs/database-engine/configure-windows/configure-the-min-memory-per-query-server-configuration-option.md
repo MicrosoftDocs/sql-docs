@@ -4,8 +4,8 @@ description: Learn how to use the min memory per query option to specify the min
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/24/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "memory [SQL Server], queries"

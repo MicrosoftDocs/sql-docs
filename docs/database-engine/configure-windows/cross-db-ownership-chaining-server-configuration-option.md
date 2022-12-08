@@ -4,8 +4,8 @@ description: "Learn how to use the cross db ownership chaining option in SQL Ser
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/15/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "cross-database ownership chaining"

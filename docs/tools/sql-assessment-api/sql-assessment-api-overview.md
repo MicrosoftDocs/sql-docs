@@ -1,8 +1,8 @@
 ---
 title: SQL Server Assessment API
 description: Learn about the SQL Assessment API that provides a mechanism to evaluate the configuration of your SQL Server for best practices.
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan

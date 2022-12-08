@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: ""
 helpviewer_keywords:
@@ -125,7 +124,7 @@ GO
   
  The expression `1+2` evaluates to `3` in each row in the result set. Although the expression `ProductID` generates a unique value in each result set row, each row only has one value for `ProductID`.  
  
-- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] allocates a fixed maximum amount of memory to each thread so no thread can use up all the memory.  Some of this memory is used for storing queries’ expressions.  If a query has too many expressions and its required memory exceeds the internal limit, the engine will not execute it.  To avoid this problem, users can change the query into multiple queries with smaller number of expressions in each. For example, you have a query with a long list of expressions in the WHERE clause: 
+- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] allocates a fixed maximum amount of memory to each thread so no thread can use up all the memory.  Some of this memory is used for storing queries' expressions.  If a query has too many expressions and its required memory exceeds the internal limit, the engine will not execute it.  To avoid this problem, users can change the query into multiple queries with smaller number of expressions in each. For example, you have a query with a long list of expressions in the WHERE clause: 
 
 ```sql
 DELETE FROM dbo.MyTable 

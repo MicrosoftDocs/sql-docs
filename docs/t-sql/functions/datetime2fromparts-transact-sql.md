@@ -4,8 +4,8 @@ description: "DATETIME2FROMPARTS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "01/29/2021"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DATETIME2FROMPARTS_TSQL"

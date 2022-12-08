@@ -3,10 +3,9 @@ title: "Database Properties (Filegroups Page) | Microsoft Docs"
 description: "Learn how to use the Filegroups tab in the Database Properties dialog box to view the filegroups of a database or to add a new filegroup."
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.filegroups.f1"

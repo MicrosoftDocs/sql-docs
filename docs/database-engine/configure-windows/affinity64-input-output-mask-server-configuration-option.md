@@ -4,8 +4,8 @@ description: Learn about the affinity64 I/O mask option. See when to use it to b
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "processor affinity [SQL Server]"

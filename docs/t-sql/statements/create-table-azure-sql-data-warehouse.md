@@ -5,8 +5,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
 ms.date: 09/12/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"

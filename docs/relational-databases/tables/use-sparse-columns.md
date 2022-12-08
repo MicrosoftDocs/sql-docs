@@ -3,10 +3,9 @@ description: "Use Sparse Columns"
 title: "Use Sparse Columns"
 ms.custom: ""
 ms.date: "07/09/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sparse columns, described"

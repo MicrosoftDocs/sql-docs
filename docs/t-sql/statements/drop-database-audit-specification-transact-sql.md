@@ -4,9 +4,8 @@ description: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_DATABASE_AUDIT_SPECIFICATION_TSQL"

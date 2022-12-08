@@ -3,10 +3,9 @@ title: "sqlps Utility"
 description: The sqlps utility starts a Windows PowerShell session with the SQL Server PowerShell provider and cmdlets loaded and registered.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sqlps utility"

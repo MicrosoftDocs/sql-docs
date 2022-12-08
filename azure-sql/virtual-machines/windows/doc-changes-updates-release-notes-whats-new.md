@@ -1,6 +1,6 @@
 ---
-title: Documentation changes for SQL Server on Azure Virtual Machines
-description: Learn about the new features and improvements for different releases of SQL Server on Azure Virtual Machines.
+title: What's new? 
+description: Learn about the new features for and improvements to SQL Server on Azure Virtual Machines.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
@@ -11,11 +11,17 @@ ms.topic: reference
 ms.custom: ignite-2022
 tags: azure-service-management
 ---
-# Documentation changes for SQL Server on Azure Virtual Machines
+# What's new with SQL Server on Azure Virtual Machines?
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
+
+## November 2022
+
+| Changes | Details |
+| --- | --- |
+| **Configure AG from Azure portal** | There is a new experience to deploy an Always On availability group to multiple subnets by using the Azure portal. The new availability group deployment method replaces the previous deployment through the SQL virtual machines resource. This feature is currently in preview. To learn more, review [Configure availability group through the Azure portal](availability-group-azure-portal-configure.md). | 
 
 
 ## October 2022

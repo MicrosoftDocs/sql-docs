@@ -8,8 +8,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure replication snapshot folder with shares

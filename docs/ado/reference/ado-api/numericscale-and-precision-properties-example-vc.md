@@ -4,8 +4,8 @@ description: "NumericScale and Precision Properties Example (VC++)"
 author: rothja
 ms.author: jroth
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "NumericScale property [ADO], VC++ example"

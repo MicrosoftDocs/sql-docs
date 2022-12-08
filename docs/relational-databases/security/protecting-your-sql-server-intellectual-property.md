@@ -3,10 +3,9 @@ title: "Protecting Your SQL Server Intellectual Property | Microsoft Docs"
 description: Understand your options for protecting the intellectual property in a SQL Server data application that is distributed to customers. 
 ms.custom: ""
 ms.date: "01/31/2017"
-ms.prod: sql
-ms.prod_service: security
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protecting intellectual property"

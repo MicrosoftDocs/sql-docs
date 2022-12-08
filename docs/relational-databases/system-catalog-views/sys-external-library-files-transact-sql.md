@@ -3,10 +3,9 @@ title: "sys.external_library_files (Transact-SQL)"
 description: sys.external_library_files (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-manager: cgronlun
 ms.date: "06/25/2020"
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
 f1_keywords:
   - "external_library_files"

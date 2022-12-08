@@ -4,10 +4,9 @@ title: "Tutorial: Using the hierarchyid Data Type | Microsoft Docs"
 ms.custom:
   - intro-quickstart
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: quickstart
 helpviewer_keywords:
   - "tutorials [hierarchyid]"

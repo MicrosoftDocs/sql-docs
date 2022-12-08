@@ -4,9 +4,8 @@ description: Learn about maintenance plans, which create a workflow to ensure th
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.AG.MAINTPLAN.LEGACY.F1"

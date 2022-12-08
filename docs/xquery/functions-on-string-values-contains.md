@@ -3,10 +3,9 @@ title: "contains Function (XQuery) | Microsoft Docs"
 description: Learn about using the contains function in an XQuery to determine whether a specified string value contains the specified substring value.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

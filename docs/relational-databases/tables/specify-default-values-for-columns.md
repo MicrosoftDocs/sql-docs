@@ -1,9 +1,8 @@
 ---
 title: "Specify Default Values for Columns"
 description: "Specify Default Values for Columns"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], defaults"

@@ -4,9 +4,8 @@ description: Find out how to use Transact-SQL statements to bulk import data fro
 author: markingmyname
 ms.author: maghan
 ms.date: "09/25/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: seo-lt-2019, FY22Q2Fresh
 helpviewer_keywords:

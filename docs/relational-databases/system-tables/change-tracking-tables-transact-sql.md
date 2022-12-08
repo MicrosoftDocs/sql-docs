@@ -4,9 +4,8 @@ description: Change Tracking tables (Transact-SQL)
 author: JetterMcTedder
 ms.author: bspendolini
 ms.date: "10/20/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

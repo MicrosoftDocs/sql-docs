@@ -5,9 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "wiassaf"
 ms.date: 11/04/2019
-ms.prod: sql
-ms.prod_service: "synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "WORKLOAD CLASSIFIER"

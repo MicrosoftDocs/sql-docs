@@ -4,8 +4,8 @@ description: Learn how to manage the results of a query by using result sets in 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/12/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Managing result sets with the JDBC driver

@@ -4,8 +4,8 @@ description: "Learn how to connect to, select, and insert data in a SQL Database
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "10/06/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Ruby Driver for SQL Server

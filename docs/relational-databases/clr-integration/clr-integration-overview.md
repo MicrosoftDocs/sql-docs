@@ -4,8 +4,8 @@ description: Microsoft SQL Server hosting CLR is called CLR integration. Authori
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/19/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], about CLR integration"

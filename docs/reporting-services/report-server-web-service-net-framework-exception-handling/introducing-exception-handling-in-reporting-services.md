@@ -3,7 +3,6 @@ title: "Introducing Exception Handling in Reporting Services | Microsoft Docs"
 description: Learn how to handle exceptions thrown by the Report Server Web service so you can return useful information to users when errors occur. 
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service-net-framework-exception-handling
 
 

@@ -6,11 +6,11 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 02/01/2022
 ms.topic: conceptual
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - sqlfreshmay19
   - intro-installation
-ms.technology: linux
+ms.subservice: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---
 # Install the SQL Server command-line tools sqlcmd and bcp on Linux

@@ -3,10 +3,9 @@ title: "false Function (XQuery) | Microsoft Docs"
 description: Learn about the false() function that returns the boolean value False.
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

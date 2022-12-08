@@ -4,8 +4,8 @@ description: The CLR provides a mechanism to annotate managed APIs in the .NET F
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 ms.custom: "seo-lt-2019"
 helpviewer_keywords:

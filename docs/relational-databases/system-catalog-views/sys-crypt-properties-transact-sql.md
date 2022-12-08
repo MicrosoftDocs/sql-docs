@@ -4,9 +4,8 @@ description: sys.crypt_properties (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "crypt_properties"

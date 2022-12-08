@@ -5,8 +5,8 @@ author: kendalvandyke
 ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 07/28/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -20,7 +20,7 @@ dev_langs:
 ---
 # GENERATE_SERIES (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user.
 

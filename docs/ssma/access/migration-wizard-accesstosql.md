@@ -1,12 +1,12 @@
 ---
 description: "Migration Wizard (AccessToSQL)"
 title: "Migration Wizard (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-migration
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Migration Wizard dialog box"

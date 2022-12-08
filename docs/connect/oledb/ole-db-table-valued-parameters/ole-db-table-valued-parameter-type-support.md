@@ -4,8 +4,8 @@ description: Learn how to create a specialized rowset object for table-valued pa
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (OLE DB)"

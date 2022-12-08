@@ -4,9 +4,8 @@ description: sys.query_context_settings (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/29/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "QUERY_CONTEXT_SETTINGS_TSQL"

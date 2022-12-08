@@ -6,7 +6,6 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/11/2022
 ms.service: sql-database
-ms.prod_service: "sql-database"
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 f1_keywords:

@@ -4,8 +4,8 @@ description: Learn how to configure how java.sql.Time values are sent to the ser
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Configuring how java.sql.Time values are sent

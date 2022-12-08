@@ -4,9 +4,8 @@ description: There are system views of Extended Events in SQL Server and Azure S
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 ms.custom: seo-lt-2019
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec

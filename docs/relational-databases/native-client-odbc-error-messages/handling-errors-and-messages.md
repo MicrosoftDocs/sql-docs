@@ -3,10 +3,9 @@ title: "Handling Errors and Messages | Microsoft Docs"
 description: Learn about what diagnostic information is returned when an application calls an ODBC function, including success or failure and detailed information.
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC error handling, about error handling"

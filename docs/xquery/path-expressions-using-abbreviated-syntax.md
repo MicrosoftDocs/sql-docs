@@ -3,10 +3,9 @@ title: "Using Abbreviated Syntax in a Path Expression | Microsoft Docs"
 description: Learn how to use abbreviated syntax in XQuery path expressions.
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

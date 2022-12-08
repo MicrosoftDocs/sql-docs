@@ -1,9 +1,8 @@
 ---
 title: "Modify Columns (Database Engine)"
 description: "Modify Columns (Database Engine)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying data types"

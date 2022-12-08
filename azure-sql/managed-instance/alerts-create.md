@@ -84,7 +84,7 @@ The following managed instance metrics are available for alerting configuration:
     |Field |Description |
    |---------|---------|
    | Check every | Choose how often the alert rule will check if the condition is met. |
-   | Lookback period | Choose the lookback period, which is the time period to look back at each time the data is checked. For example, every 1 minute you’ll be looking at the past 5 minutes. |
+   | Lookback period | Choose the lookback period, which is the time period to look back at each time the data is checked. For example, every 1 minute you'll be looking at the past 5 minutes. |
 
    In the example shown in the screenshot, value of 1840876 MB is used representing a threshold value of 1.8 TB. As the operator in the example is set to greater than, the alert will be created if the storage space consumption on the managed instance goes over 1.8 TB. Note that the threshold value for storage space metrics must be expressed in MB.
 
@@ -172,7 +172,7 @@ To view, suspend, activate, modify and delete existing alerts:
 
 1. Search for Alerts using Azure portal search. Click on Alerts.
 
-   :::image type="content" source="./media/alerts-create/mi-manage-alerts-browse-smaller-annotated.png" lightbox="./media/alerts-create/mi-manage-alerts-browse-smaller-annotated.png" alt-text="Screenshot of the search box in the Azure portal. The “alerts” search term and Alerts service in the search results are highlighted.":::
+   :::image type="content" source="./media/alerts-create/mi-manage-alerts-browse-smaller-annotated.png" lightbox="./media/alerts-create/mi-manage-alerts-browse-smaller-annotated.png" alt-text="Screenshot of the search box in the Azure portal. The 'alerts' search term and Alerts service in the search results are highlighted.":::
 
    Alternatively, you could also click on Alerts on the Azure navigation bar, if you have it configured.
 

@@ -4,7 +4,6 @@ title: "sp_set_database_firewall_rule"
 titleSuffix: Azure SQL Database
 ms.date: "08/04/2017"
 ms.service: sql-database
-ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "reference"
 f1_keywords: 

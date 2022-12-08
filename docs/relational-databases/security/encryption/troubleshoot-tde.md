@@ -8,8 +8,8 @@ helpviewer_keywords:
   - "tde troubleshooting"
 author: rwestMSFT
 ms.author: randolphwest
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 03/04/2022
@@ -183,7 +183,7 @@ Status: Started
 Description: Database { database_name} on managed server {server_name} has lost access to Azure Key Vault Key and is now transitioning to inaccessible state.
 
 
-**Event when the issue wasn’t resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
+**Event when the issue wasn't resolved within 30 minutes and Azure Key Vault key access has to be validated manually** 
 
 **Azure SQL Database**
   

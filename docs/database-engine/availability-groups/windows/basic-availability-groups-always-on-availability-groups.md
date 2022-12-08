@@ -4,8 +4,8 @@ description: "Describes the differences between a regular and basic Always On av
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "02/01/2018"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
 ---

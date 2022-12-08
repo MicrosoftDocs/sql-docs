@@ -1,11 +1,11 @@
 ---
 description: "Refresh from Database (DB2ToSQL)"
 title: "Refresh from Database (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: cpichuka 

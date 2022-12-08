@@ -2,10 +2,9 @@
 title: Pause a Trace
 titleSuffix: SQL Server Profiler
 description: Find out how to pause a trace so that SQL Server Profiler stops capturing event data, and see which properties you can change while the trace is paused.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 author: markingmyname

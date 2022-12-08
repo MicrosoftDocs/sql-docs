@@ -4,9 +4,8 @@ description: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "02/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP DATABASE SCOPED CREDENTIAL"

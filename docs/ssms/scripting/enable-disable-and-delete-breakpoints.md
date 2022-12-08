@@ -2,9 +2,8 @@
 title: Enable, Disable, and Delete Breakpoints
 description: Learn how to use the Breakpoints window to view, delete, disable, and enable breakpoints.
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: markingmyname

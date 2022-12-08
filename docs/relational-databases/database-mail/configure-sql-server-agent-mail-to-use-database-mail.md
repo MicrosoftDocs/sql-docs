@@ -2,9 +2,9 @@
 description: "Configure SQL Server Agent mail to use Database Mail"
 title: "Configure SQL Server Agent mail to use Database Mail"
 ms.date: "04/19/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], SQL Server Agent Mail"

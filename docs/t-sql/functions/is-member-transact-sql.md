@@ -4,8 +4,8 @@ description: "IS_MEMBER (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/29/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IS_MEMBER"

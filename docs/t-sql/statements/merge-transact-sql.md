@@ -5,9 +5,8 @@ author: mstehrani
 ms.author: emtehran
 ms.reviewer: wiassaf
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -412,7 +411,7 @@ MERGE is a fully reserved keyword when the database compatibility level is set t
 
 ::: moniker range="=azure-sqldw-latest"
 ### Troubleshooting
-In certain scenarios, a MERGE statement may result in the error `“CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns.”`, even when neither Target nor Source table has 1024 columns. This scenario can arise when all the below conditions are met:
+In certain scenarios, a MERGE statement may result in the error `"CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns."`, even when neither Target nor Source table has 1024 columns. This scenario can arise when all the below conditions are met:
 - Multiple columns are specified in an UPDATE SET or INSERT operation within MERGE (not specific to any WHEN [NOT] MATCHED clause)
 - Any column in the JOIN condition has a Non-Clustered Index (NCI)
 

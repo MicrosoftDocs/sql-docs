@@ -4,8 +4,8 @@ description: sys.pdw_loader_run_stages (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

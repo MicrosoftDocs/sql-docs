@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/20/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom:
   - seo-lt-2019
@@ -199,7 +199,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 1. Register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-preview.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"
    ```
 
    > [!TIP]  

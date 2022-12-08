@@ -3,10 +3,9 @@ description: "You can view the foreign key attributes of a relationship with SQL
 title: "View Foreign Key Properties"
 ms.custom: ""
 ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "foreign keys [SQL Server], attributes"

@@ -4,8 +4,8 @@ description: Learn about the OLE DB Driver for SQL Server components, including 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/30/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], components"

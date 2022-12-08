@@ -4,9 +4,8 @@ description: "Troubleshoot common issues for Always Encrypted with secure enclav
 ms.custom: ""
 ms.date: 01/15/2021
 ms.reviewer: vanto
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas

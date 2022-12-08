@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: 06/11/2020
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "default affinity mask option"

@@ -89,8 +89,8 @@ Beginning with SQL Server 2012 SP1 CU2, you can back up and restore directly to 
 
 | 2016 enhancement | Details |
 | --- | --- |
-| **Striping** |When backing up to Microsoft Azure blob storage, SQL Server 2016 supports backing up to multiple blobs to enable backing up large databases, up to a maximum of 12.8 TB. |
-| **Snapshot Backup** |Through the use of Azure snapshots, SQL Server File-Snapshot Backup provides nearly instantaneous backups and rapid restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. File-snapshot backup also supports point in time restore. For more information, see [Snapshot Backups for Database Files in Azure](/sql/relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure). |
+| **Striping** |When backing up to Microsoft Azure Blob Storage, SQL Server 2016 supports backing up to multiple blobs to enable backing up large databases, up to a maximum of 12.8 TB. |
+| **Snapshot Backup** |Through the use of Azure snapshots, SQL Server File-Snapshot Backup provides nearly instantaneous backups and rapid restores for database files stored using Azure Blob Storage. This capability enables you to simplify your backup and restore policies. File-snapshot backup also supports point in time restore. For more information, see [Snapshot Backups for Database Files in Azure](/sql/relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure). |
 
 For more information, see the one of the following articles based on your version of SQL Server:
 

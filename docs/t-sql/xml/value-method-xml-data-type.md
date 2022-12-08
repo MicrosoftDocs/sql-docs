@@ -3,9 +3,9 @@ description: "value() Method (xml Data Type)"
 title: value() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"

@@ -3,10 +3,9 @@ title: "id Function (XQuery) | Microsoft Docs"
 description: Learn how to use the XQuery id function to return a sequence of elements in the XML instance, in document order, with the supplied xs:IDREF values.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

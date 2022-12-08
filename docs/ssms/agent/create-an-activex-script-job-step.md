@@ -3,9 +3,8 @@ description: "Create an ActiveX Script Job Step"
 title: "Create an ActiveX Script Job Step"
 ms.custom: seo-lt-2019
 ms.date: 10/06/2020
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ActiveX scripting jobs [SQL Server]"

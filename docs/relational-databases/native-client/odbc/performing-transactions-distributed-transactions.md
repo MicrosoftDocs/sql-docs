@@ -3,10 +3,9 @@ title: "Create a distributed transactions | Microsoft Docs"
 description: Applications can use MSDTC to extend or distribute a transaction across several instances of SQL Server. A .NET class can also distribute a transaction.
 ms.custom: ""
 ms.date: "05/13/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MS DTC, performing distributed transactions"
@@ -27,6 +26,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 The following includes .md file is Empty, as of long before 2019/May/13.
 /includes/snac-deprecated.md
 -->
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
 
 A distributed transaction can be created for different Microsoft SQL systems in different ways.

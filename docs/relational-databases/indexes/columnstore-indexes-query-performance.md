@@ -4,8 +4,8 @@ description: "Columnstore index query performance recommendations for achieving 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -62,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 - Columnstore indexes compress data by columns instead of by rows, achieving high compression rates and reducing the size of the data stored on disk. Each column is compressed and stored independently.  Data within a column always has the same data type and tends to have similar values. Data compression techniques are very good at achieving higher compression rates when values are similar.
 
-- For example, if a fact table stores customer addresses and has a column for country, the total number of possible values is fewer than 200. Some of those values will be repeated many times. If the fact table has 100 million rows, the country column will compress easily and require very little storage. Row-by-row compression is not able to capitalize on the similarity of column values in this way and will use more bytes to compress the values in the country column.
+- For example, if a fact table stores customer addresses and has a column for country/region, the total number of possible values is fewer than 200. Some of those values will be repeated many times. If the fact table has 100 million rows, the country/region column will compress easily and require very little storage. Row-by-row compression is not able to capitalize on the similarity of column values in this way and will use more bytes to compress the values in the country/region column.
 
 ### Column elimination
 

@@ -3,10 +3,9 @@ description: "Get Information About a View"
 title: "Get Information About a View"
 ms.custom: ""
 ms.date: "08/19/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.viewproperties.general.f1"

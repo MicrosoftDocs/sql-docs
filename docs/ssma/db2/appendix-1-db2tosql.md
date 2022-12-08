@@ -1,11 +1,11 @@
 ---
 description: "Appendix - 1 (DB2ToSQL)"
 title: "Appendix - 1 (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: cpichuka 

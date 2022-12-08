@@ -59,7 +59,7 @@ Import-Export Private Link can be configured via Azure portal, PowerShell or usi
 
 ##### Approve Private End Point connection on Azure SQL Database
 1.  Go to the server that hosts the database.
-2.  Open the ‘Private endpoint connections’ page in security section on the left.
+2.  Open the **Private endpoint connections** page in security section on the left.
 3.  Select the private endpoint you want to approve.
 4.  Select Approve to approve the connection.
 
@@ -67,7 +67,7 @@ Import-Export Private Link can be configured via Azure portal, PowerShell or usi
 
 ##### Approve Private End Point connection on Azure Storage
 1.  Go to the storage account that hosts the blob container that holds BACPAC file. 
-2.  Open the ‘Private endpoint connections’ page in security section on the left.
+2.  Open the **Private endpoint connections** page in security section on the left.
 3.  Select the Import-Export private endpoints you want to approve.
 4.  Select Approve to approve the connection. 
 

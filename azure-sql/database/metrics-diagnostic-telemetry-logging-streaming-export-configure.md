@@ -4,7 +4,7 @@ description: Learn how to configure streaming export of metrics and resource log
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 3/10/2022
+ms.date: 11/2/2022
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: how-to
@@ -201,7 +201,7 @@ You can set up an instance database resource to collect the following diagnostic
 
 | Resource | Monitoring telemetry |
 | :------------------- | ------------------- |
-| **Instance database** | [ResourceUsageStats](#resource-usage-stats-for-managed-instances) contains vCores count, average CPU percentage, IO requests, bytes read/written, reserved storage space, and used storage space. |
+| **Instance database** | [Query Store Runtime Statistics](#query-store-runtime-statistics) and [Query Store Wait Statistics](#query-store-wait-statistics) contain [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store.md) data for the database. [SQL Insights](intelligent-insights-use-diagnostics-log.md) contains Intelligent Insights data for the database. [Errors](#errors-dataset) contains the errors data for this database.|
 
 To enable streaming of diagnostic telemetry for an instance database, follow these steps:
 

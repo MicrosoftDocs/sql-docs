@@ -437,7 +437,7 @@ A federated domain user account that is imported into a managed domain as an ext
 
 ## Connect to the database using SSMS or SSDT  
 
-To confirm the Azure AD administrator is properly set up, connect to the **master** database using the Azure AD administrator account.
+To confirm the Azure AD administrator is properly set up, connect to the `master` database using the Azure AD administrator account.
 To provision an Azure AD-based contained database user (other than the server administrator that owns the database), connect to the database with an Azure AD identity that has access to the database.
 
 > [!IMPORTANT]

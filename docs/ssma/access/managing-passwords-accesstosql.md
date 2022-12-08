@@ -1,11 +1,11 @@
 ---
 description: "Managing Passwords (AccessToSQL)"
 title: "Managing Passwords (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: 07/01/2020
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: cpichuka 

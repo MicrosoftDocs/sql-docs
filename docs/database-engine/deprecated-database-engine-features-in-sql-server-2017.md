@@ -6,8 +6,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:
@@ -203,7 +203,7 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Specifying the SQLOLEDB provider for linked servers. | SQL Server Native Client (SQLNCLI) | SQLOLEDDB for linked servers |
+| Specifying the SQLOLEDB provider for linked servers. | [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](../connect/oledb/oledb-driver-for-sql-server.md)  | SQLOLEDB for linked servers |
 
 ### Metadata
 

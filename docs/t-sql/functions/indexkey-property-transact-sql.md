@@ -4,8 +4,8 @@ description: "INDEXKEY_PROPERTY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "INDEXKEY_PROPERTY_TSQL"

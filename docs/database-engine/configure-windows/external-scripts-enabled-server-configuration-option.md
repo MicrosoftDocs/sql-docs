@@ -4,8 +4,8 @@ description: Learn about the external scripts enabled option in SQL Server. Afte
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "06/30/2020"
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
   - "external scripts enabled"

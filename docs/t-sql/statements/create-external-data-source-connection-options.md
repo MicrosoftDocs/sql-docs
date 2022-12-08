@@ -4,8 +4,8 @@ description: The CREATE EXTERNAL DATA SOURCE CONNECTION_OPTIONS argument can var
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/14/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CONNECTION_OPTIONS"

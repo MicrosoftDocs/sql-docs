@@ -4,9 +4,8 @@ description: Natively compiled T-SQL modules support CASE expressions in some ve
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768

@@ -5,8 +5,8 @@ author: DavidEngel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
 ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using Always Encrypted with secure enclaves with the JDBC driver

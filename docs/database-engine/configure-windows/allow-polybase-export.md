@@ -4,8 +4,8 @@ description: Set `allow polybase export` configuration option in SQL Server sett
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "07/10/2020"
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 ---
 

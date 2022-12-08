@@ -6,8 +6,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/28/2021
 ms.topic: overview
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ms.custom:
   - intro-overview

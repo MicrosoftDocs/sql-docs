@@ -1,9 +1,8 @@
 ---
 title: "Create Element (DTA)"
 description: In the dta utility, the Create element contains information about the indexes, statistics, or heap structures in a user-specified configuration.  
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"

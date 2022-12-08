@@ -3,10 +3,9 @@ description: "Disable Foreign Key Constraints with INSERT and UPDATE Statements"
 title: Disable Foreign Key Constraints in INSERT and UPDATE Statements
 ms.custom: "seo-lt-2019"
 ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "constraints [SQL Server], foreign keys"

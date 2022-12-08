@@ -4,8 +4,8 @@ description: The SQL Server discovery report can be used to verify the version o
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "validating installations [SQL Server]"

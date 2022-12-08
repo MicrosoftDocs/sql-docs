@@ -1,8 +1,8 @@
 ---
 title: revoscalepy Python package
 description: revoscalepy is a Python package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 07/14/2020
 ms.topic: how-to
 author: WilliamDAssafMSFT

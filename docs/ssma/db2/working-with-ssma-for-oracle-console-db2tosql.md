@@ -1,11 +1,11 @@
 ---
 description: "Working with SSMA for Oracle Console (DB2ToSQL)"
 title: "Working with SSMA for Oracle Console (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: cpichuka 

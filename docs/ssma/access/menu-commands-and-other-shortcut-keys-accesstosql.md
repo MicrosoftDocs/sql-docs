@@ -1,11 +1,11 @@
 ---
 description: "Menu commands and other shortcut keys (AccessToSQL)"
 title: "Menu commands and other shortcut keys (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: cpichuka 

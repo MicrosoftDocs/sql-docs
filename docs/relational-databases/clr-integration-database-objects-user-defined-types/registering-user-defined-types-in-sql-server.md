@@ -4,8 +4,8 @@ description: You must register a UDT before you install it in SQL Server. You mu
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "UDTs [CLR integration], maintaining"

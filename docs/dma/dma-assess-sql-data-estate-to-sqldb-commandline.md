@@ -5,8 +5,8 @@ description: "Learn how to use Data Migration Assistant command line tool (DMACM
 author: rajeshsetlem
 ms.author: rajpo
 ms.date: "10/02/2020"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"

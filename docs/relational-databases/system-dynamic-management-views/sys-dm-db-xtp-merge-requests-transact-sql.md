@@ -4,8 +4,8 @@ description: sys.dm_db_xtp_merge_requests tracks database merge requests for tab
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2022"
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: reference
 f1_keywords:
   - "dm_db_xtp_merge_requests_TSQL"

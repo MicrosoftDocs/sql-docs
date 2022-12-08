@@ -4,9 +4,8 @@ description: sys.master_files (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.master_files"
@@ -57,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |redo_target_lsn|**numeric(25,0)**|LSN at which the online roll forward on this file can stop.<br /><br /> Is NULL unless state = RESTORING or state = RECOVERY_PENDING.|  
 |redo_target_fork_guid|**uniqueidentifier**|The recovery fork on which the container can be recovered. Paired with redo_target_lsn.|  
 |backup_lsn|**numeric(25,0)**|The LSN of the most recent data or differential backup of the file.|  
-|credential_id|**int**|The `credential_id` from `sys.credentials` used for storing the file. For example, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on an Azure Virtual Machine and the database files are stored in Azure blob storage, a credential is configured with the access credentials to the storage location.|  
+|credential_id|**int**|The `credential_id` from `sys.credentials` used for storing the file. For example, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on an Azure Virtual Machine and the database files are stored in Azure Blob Storage, a credential is configured with the access credentials to the storage location.|  
   
 > [!NOTE]  
 >  When you drop or rebuild large indexes, or drop or truncate large tables, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by sys.master_files immediately after dropping or truncating a large object may not reflect the actual disk space available.  

@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 10/05/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL FILE FORMAT"
@@ -139,7 +139,7 @@ WITH (
 ### [Delta table](#tab/delta)
 
 ```syntaxsql
--- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]).
+-- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and SQL Server 2022).
 CREATE EXTERNAL FILE FORMAT file_format_name
 WITH (
          FORMAT_TYPE = DELTA

@@ -4,8 +4,8 @@ description: Describes the options of the Results page of the Always On Availabi
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.failoverwizard.results.f1"

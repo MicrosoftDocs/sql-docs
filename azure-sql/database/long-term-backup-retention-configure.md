@@ -326,7 +326,7 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 - LTR in the Hyperscale service tier is in limited public preview
 
 > [!NOTE]
-> LTR can be enabled for Hyperscale databases created or migrated from other service tiers after June 2022. LTR support for all other Hyperscale databases will be added over the next several weeks. If you attempt to enable LTR for a Hyperscale database where it is not yet supported, you will receive the following error: “Long Term Retention is not supported: Long-term retention on Hyperscale is currently in limited preview and cannot be enabled as yet for your database. To enable long-term retention please reach out to Microsoft support.” Please create a support ticket to resolve this, or wait until LTR support is enabled for your database.
+> LTR can be enabled for Hyperscale databases created or migrated from other service tiers after June 2022. LTR support for all other Hyperscale databases will be added over the next several weeks. If you attempt to enable LTR for a Hyperscale database where it is not yet supported, you will receive the following error: "Long Term Retention is not supported: Long-term retention on Hyperscale is currently in limited preview and cannot be enabled as yet for your database. To enable long-term retention please reach out to Microsoft support." Please create a support ticket to resolve this, or wait until LTR support is enabled for your database.
 
 
 

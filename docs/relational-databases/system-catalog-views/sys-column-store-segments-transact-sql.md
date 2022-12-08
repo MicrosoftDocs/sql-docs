@@ -4,8 +4,8 @@ description: "sys.column_store_segments returns one row for each column segment 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "column_store_segments"

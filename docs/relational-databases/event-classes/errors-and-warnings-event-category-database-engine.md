@@ -2,9 +2,9 @@
 description: "Errors and Warnings Event Category (Database Engine)"
 title: "Errors and Warnings Event Category"
 ms.date: 06/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Errors and Warnings event category [SQL Server]"

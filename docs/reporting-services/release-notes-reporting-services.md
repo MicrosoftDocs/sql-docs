@@ -1,10 +1,9 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 08/31/2022
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.technology: reporting-services
+ms.date: 11/23/2022
+ms.service: reporting-services
+ms.subservice: reporting-services
 
 ms.topic: conceptual
 ms.reviewer: maggies
@@ -46,7 +45,32 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+::: moniker range="=sql-server-ver16"
 ## SQL Server 2022 Reporting Services
+
+## 16.0.8361.39598, 2022/11/23
+*(Product Version: 16.0.1113.11)*
+
+-  Fixed issue where some SQL Server 2022 product keys were not working with SQL Server 2022 Reporting Services.
+
+## 16.0.8353.8096, 2022/11/16
+*(Product Version: 16.0.1112.48)*
+
+Initial release.
+
+- Major changes from SQL Server 2019 Reporting Services:
+    - New portal experience with performance improvements using Angular
+    - Accessibility fixes to many parts of the portal
+    - New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal
+    - Ability to turn off size calculation for snapshots via configuration property **EnableListHistorySnapshotsSize** if History Snapshots page loads slow due to a large number of snapshots
+    - Security enhancements
+    - Bug fixes
+- [Deprecated features](/sql/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs): 
+    - Report Parts support 
+- [Discontinued features](/sql/reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server): 
+    - Pin to PowerBI functionality
+    - Mobile Reports functionality (.rsmobile) and Mobile Report Publisher
 
 ## 15.0.8264.8408, 2022/08/19
 *(Product Version: 15.0.1111.106)*
@@ -57,8 +81,9 @@ Release Candidate 0 (RC0)
 - Accessibility fixes to many parts of the Portal.
 - Security enhancements.
 - Bug fixes.
-- Deprecation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
+- Discontinuation of several features: Pin to Power BI, Mobile Reports, and Mobile Report Publisher.
 
+::: moniker-end
 
 ## SQL Server 2019 Reporting Services
 
@@ -176,7 +201,7 @@ Initial release.
 | Paginated reports didn't work properly with filter parameters when snapshot is enabled  | &nbsp; |
 | Users with Browser role and default settings didn't have permissions to download Excel files  | &nbsp; |
 | Upgrading to Power BI Report Server from SQL Server 2016 Reporting Services failed during upgrade | &nbsp; |
-| After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with “An invalid character was found in the mail header: ','” message | &nbsp; |
+| After you upgrade from SQL Server 2012 Reporting Services, subscriptions failed with "An invalid character was found in the mail header: ','" message | &nbsp; |
 | Configuration tool: canceling modal windows in Database section would restart the Reporting Services service | &nbsp; |
 | BorderStyle property expression of Textbox controls weren't rendered to Excel format  | &nbsp; |
 | Pagination issue that could get certain reports stuck with rendering the same page without ever reaching the last page of the report | &nbsp; |
@@ -228,7 +253,7 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Textbox inside Rectangle causes the rectangle to not grow vertically when rc:Toolbar=False and it has long text. | &nbsp; |
-| Text size isn't scaling if pageHeight is less than 0.5 inches. | &nbsp; |
+| Text size isn't scaling if pageHeight is less than 0.5 inch. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
 | Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |

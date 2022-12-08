@@ -1,9 +1,8 @@
 ---
 title: Connect to Server (Connection Properties Page) Database Engine
 description: "Connect to Server (Connection Properties Page) Database Engine"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 f1_keywords: 
   - "sql13.swb.connecttoce.connectionproperties.f1"

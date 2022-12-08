@@ -4,8 +4,8 @@ description: Learn how to set options that the SQL Server Database Engine uses w
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/23/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "parameters [SQL Server], startup options"

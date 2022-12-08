@@ -4,8 +4,8 @@ description: This C / C++ sample application demonstrates how to use the ODBC AP
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/11/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # C / C++ ODBC example application accesses an SQL database

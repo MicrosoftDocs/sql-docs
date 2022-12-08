@@ -3,10 +3,9 @@ title: "last Function (XQuery) | Microsoft Docs"
 description: Learn about the XQuery last() function that returns the integer index of the last item in a sequence.
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

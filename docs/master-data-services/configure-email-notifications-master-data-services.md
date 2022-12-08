@@ -3,10 +3,9 @@ description: "Configure Email Notifications (Master Data Services)"
 title: Configure Email Notifications
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "e-mail [Master Data Services], configuring"

@@ -34,7 +34,7 @@ Any performance issues on the source SQL Server should be addressed prior to mig
 
 After you have defined a baseline, compare similar workload performance on the target SQL Managed Instance. For accuracy, it is important that the SQL Managed Instance environment is comparable to the SQL Server environment as much as possible. 
 
-There are SQL Managed Instance infrastructure differences that make matching performance exactly unlikely. Some queries may run faster than expected, while others may be slower. The goal of this comparison is to verify that workload performance in the managed instance matches the performance on SQL Server (on average) and to identify any critical queries with performance that don’t match your original performance. 
+There are SQL Managed Instance infrastructure differences that make matching performance exactly unlikely. Some queries may run faster than expected, while others may be slower. The goal of this comparison is to verify that workload performance in the managed instance matches the performance on SQL Server (on average) and to identify any critical queries with performance that don't match your original performance. 
 
 Performance comparison is likely to result in the following outcomes: 
 

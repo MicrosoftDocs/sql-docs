@@ -1,11 +1,11 @@
 ---
 description: "Connect to SQL Server (AccessToSQL)"
 title: "Connect to SQL Server (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: cpichuka 

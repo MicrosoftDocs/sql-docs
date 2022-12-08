@@ -4,8 +4,8 @@ description: Learn how to use Azure Arc to get extended security updates for you
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/01/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
@@ -118,7 +118,12 @@ This example shows you how to manually add your SQL Server instances in a discon
    - [Create an Azure account with pay-as-you-go pricing](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)
    - [Create a free Azure account](https://azure.microsoft.com/free/)
 
-1. Assign the `Azure Connected SQL Server Onboarding` role on the [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal) that you are using to register your SQL Server instances. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
+1. The user creating disconnected Arc-enabled SQL Server resources must have the following permissions:
+
+   - `Microsoft.AzureArcData/sqlServerInstances/read`
+   - `Microsoft.AzureArcData/sqlServerInstances/write`
+
+   Users can be assigned to the `Azure Connected SQL Server Onboarding` role to get those specific permissions, or they can be assigned to built-in roles such as Contributor or Owner that have these permissions. See [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) for more information.
 
 1. Register the `Microsoft.AzureArcData` resource provider in your Azure subscription:
 
@@ -395,7 +400,7 @@ Yes, customers with active Software Assurance or equivalent Server Subscriptions
 
 Not at this stage. Refer to the [Supported regions](#supported-regions) for more information.
 
-Government customers with a support plan that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
+Government customers that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
 
 #### Can customers get free Extended Security Updates on Azure Stack?
 
@@ -421,7 +426,7 @@ Registering provides access to offers via the Azure portal, including ESUs, for 
 
 If there is a critical security patch for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], customers will need to download the patch from the Azure portal following these [step-by-step instructions](#download-esus), and then apply the patch to their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
 
-Government customers with a support plan that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
+Government customers that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. Review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd) for more information.
 
 ## See also
 

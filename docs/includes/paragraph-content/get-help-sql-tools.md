@@ -2,7 +2,7 @@
 author: rothja
 ms.author: jroth
 ms.date: 05/21/2019
-ms.prod: sql
+ms.service: sql
 ms.topic: include
 ---
 

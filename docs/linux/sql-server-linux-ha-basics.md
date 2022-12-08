@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/19/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 ---
@@ -20,9 +20,9 @@ Starting with [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnov
 
 Besides backup and restore, the same three availability features are available on Linux as for Windows-based deployments:
 
-- Always On availability groups (AGs)
-- Always On failover cluster instances (FCIs)
-- [Log shipping](sql-server-linux-use-log-shipping.md)
+- [Availability groups - SQL Server on Linux](sql-server-linux-availability-group-overview.md)
+- [Failover Cluster Instances - SQL Server on Linux](sql-server-linux-shared-disk-cluster-concepts.md)
+- [Log shipping - SQL Server on Linux](sql-server-linux-use-log-shipping.md)
 
 On Windows, FCIs always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. A WSFC doesn't exist in Linux. Clustering implementation in Linux is discussed in [Pacemaker for availability groups and failover cluster instances on Linux](sql-server-linux-pacemaker-basics.md).
 

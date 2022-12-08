@@ -5,8 +5,8 @@ author: "uc-msft"
 ms.author: "umajay"
 ms.reviewer: randolphwest
 ms.date: 08/09/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 dev_langs:

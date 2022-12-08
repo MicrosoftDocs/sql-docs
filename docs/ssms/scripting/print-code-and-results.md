@@ -1,8 +1,8 @@
 ---
 title: "Print Code and Results"
 description: Learn how to specify the coloration of text when printed. The colors can differ from those used for display. Learn also how to control whether line numbers appear in the listing.
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio], printing"

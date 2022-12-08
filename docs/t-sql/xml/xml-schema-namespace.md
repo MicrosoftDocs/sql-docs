@@ -3,9 +3,9 @@ description: "xml_schema_namespace"
 title: xml_schema_namespace (Transact-SQL)
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "xml_schema_namespace_TSQL"

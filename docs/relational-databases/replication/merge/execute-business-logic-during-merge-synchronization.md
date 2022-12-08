@@ -3,10 +3,9 @@ title: "Business logic for Merge synchronization"
 description: Learn about writing managed assembly code tor the business logic used for synchronization for Merge Replication. 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "custom error resolution [SQL Server replication]"
@@ -44,7 +43,7 @@ ms.author: "mathoma"
   
 -   Reject the data  
   
-     This is useful for applications that do not want changes propagated to or from a given Subscriber. For example, an administrator could filter out inserts that do not belong in the Subscriber’s partition, or possibly reject deletes performed at a Subscriber. As another example, an application could reject an order entered at a Subscriber because the inventory is no longer available.  
+     This is useful for applications that do not want changes propagated to or from a given Subscriber. For example, an administrator could filter out inserts that do not belong in the Subscriber's partition, or possibly reject deletes performed at a Subscriber. As another example, an application could reject an order entered at a Subscriber because the inventory is no longer available.  
   
 -   Accept the data  
   

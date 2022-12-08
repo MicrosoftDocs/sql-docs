@@ -4,8 +4,8 @@ description: "Find out how to hide an instance of the SQL Server Database Engine
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/19/2015"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Database Engine [SQL Server], hiding instances"

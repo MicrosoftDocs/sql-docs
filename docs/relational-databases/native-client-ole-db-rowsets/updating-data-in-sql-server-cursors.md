@@ -3,10 +3,9 @@ description: "Updating Data in SQL Server Cursors in SQL Server Native Client"
 title: Update data in cursors (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "updating data [SQL Server]"

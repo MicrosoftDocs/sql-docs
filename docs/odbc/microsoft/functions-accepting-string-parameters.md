@@ -3,10 +3,9 @@ description: "Functions Accepting String Parameters"
 title: "Functions Accepting String Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], string parameters"

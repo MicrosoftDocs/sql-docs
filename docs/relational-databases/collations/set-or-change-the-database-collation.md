@@ -3,9 +3,9 @@ description: "Set or change the database collation"
 title: "Set or change the database collation"
 ms.custom: ""
 ms.date: "02/03/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collations [SQL Server], database"
@@ -23,9 +23,9 @@ This article describes how to set or change the database collation by using [SQL
   
 ## <a name="Restrictions"></a> Limitations and restrictions
   
-- Windows Unicode-only collations can only be used with [the COLLATE clause](../../t-sql/statements/collations.md) to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column level and expression-level data. They can’t be used with the COLLATE clause to change the collation of a database or server instance.  
+- Windows Unicode-only collations can only be used with [the COLLATE clause](../../t-sql/statements/collations.md) to apply collations to the **nchar**, **nvarchar**, and **ntext** data types on column level and expression-level data. They can't be used with the COLLATE clause to change the collation of a database or server instance.  
   
-- If the specified collation or the collation used by the referenced object uses a code page that isn’t supported by Windows, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error.
+- If the specified collation or the collation used by the referenced object uses a code page that isn't supported by Windows, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays an error.
 
 - Server-level collation in Azure SQL Managed Instance can be specified when the instance is created and cannot be changed later. Learn more in [Set or change the server collation](set-or-change-the-server-collation.md#setting-the-server-collation-in-managed-instance).
 
@@ -82,7 +82,7 @@ When a database collation is changed, only new tables will inherit the new datab
   
 1. In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expand that instance, and then expand **Databases**.  
   
-1. If you are creating a new database, right-click **Databases** and then select **New Database**. If you don’t want the default collation, select the **Options** page, and select a collation from the **Collation** drop-down list.  
+1. If you are creating a new database, right-click **Databases** and then select **New Database**. If you don't want the default collation, select the **Options** page, and select a collation from the **Collation** drop-down list.  
   
      Alternatively, if the database already exists, right-click the database that you want and select **Properties**. Select the **Options** page, and select a collation from the **Collation** drop-down list.  
   

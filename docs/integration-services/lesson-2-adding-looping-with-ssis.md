@@ -3,10 +3,9 @@ description: "Lesson 2: Add looping with SSIS"
 title: "Lesson 2: Add looping with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace

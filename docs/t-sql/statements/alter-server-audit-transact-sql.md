@@ -4,9 +4,8 @@ description: ALTER SERVER AUDIT  (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_SERVER_AUDIT_TSQL"
@@ -73,7 +72,7 @@ ALTER SERVER AUDIT audit_name
  Determines the location of the audit target. The options are a binary file, the Windows application log, or the Windows security log.  
 
 > [!IMPORTANT]
-> In Azure SQL Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
+> In Azure SQL Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure Blob Storage.
   
  FILEPATH **= '**_os\_file\_path_**'**  
  The path of the audit trail. The file name is generated based on the audit name and audit GUID.  

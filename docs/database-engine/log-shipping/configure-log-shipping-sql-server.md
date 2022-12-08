@@ -4,8 +4,8 @@ description: Learn how to configure log shipping by using SQL Server Management 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
 helpviewer_keywords:
   - "log shipping [SQL Server], enabling"

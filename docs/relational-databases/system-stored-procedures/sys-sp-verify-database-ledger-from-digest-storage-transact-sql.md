@@ -4,9 +4,9 @@ title: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL) | Micro
 ms.custom:
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -41,7 +41,7 @@ A JSON document containing a list of ledger digests locations:
 
 |Column name|JSON data type|Description|  
 |-----------------|---------------|-----------------|
-|**path**|**string**|The location of storage digests. For example, a path for a container in Azure blob storage.|
+|**path**|**string**|The location of storage digests. For example, a path for a container in Azure Blob Storage.|
 |**last_digest_block_id**|**int**|The block ID for the last digest uploaded.|
 |**is_current**|**boolean**|Indicates whether this is the current path or a path used in the past.|
 
@@ -52,7 +52,7 @@ The name of the ledger table you want to verify. This is an optional argument, i
 Example of the input JSON document:
 
 ```json
-[{"path": “https://mystorage.blob.core.windows.net/sqldbledgerdigests/serverName/DatabaseName/2020-1-1 00:00:00Z”, “last_digest_block_id”:42, "is_current:true"} , … ]
+[{"path": "https://mystorage.blob.core.windows.net/sqldbledgerdigests/serverName/DatabaseName/2020-1-1 00:00:00Z", "last_digest_block_id":42, "is_current:true"} , … ]
 ```
 
 ## Return code values

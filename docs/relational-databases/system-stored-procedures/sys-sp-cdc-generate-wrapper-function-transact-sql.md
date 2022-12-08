@@ -3,10 +3,9 @@ description: "sys.sp_cdc_generate_wrapper_function (Transact-SQL)"
 title: "sys.sp_cdc_generate_wrapper_function (Transact-SQL)"
 ms.custom: ""
 ms.date: "07/26/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: "wiassaf"
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_cdc_generate_wrapper_function_TSQL"

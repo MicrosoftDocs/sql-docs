@@ -4,9 +4,8 @@ description: Security Catalog Views (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:

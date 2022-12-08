@@ -4,9 +4,8 @@ description: Use the SQL Server PowerShell provider to manage SQL Server Extende
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "PowerShell [SQL Server], xevent"

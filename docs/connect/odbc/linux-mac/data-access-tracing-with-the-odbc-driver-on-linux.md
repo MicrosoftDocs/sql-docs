@@ -4,8 +4,8 @@ description: Learn how to enable tracing on Linux and macOS with the Microsoft O
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 09/01/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "data access tracing"

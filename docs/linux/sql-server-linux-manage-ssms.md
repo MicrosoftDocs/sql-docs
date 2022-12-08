@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 03/31/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ---
 # Use SQL Server Management Studio on Windows to manage SQL Server on Linux

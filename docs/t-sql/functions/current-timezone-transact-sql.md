@@ -4,8 +4,8 @@ description: "CURRENT_TIMEZONE (Transact-SQL)"
 author: MladjoA
 ms.author: mlandzic
 ms.date: "05/28/2020"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CURRENT_TIMEZONE"

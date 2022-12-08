@@ -5,7 +5,7 @@ author: ninarn
 ms.author: ninarn
 ms.reviewer: erinstellato
 ms.date: 10/14/2020
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: tutorial
 ms.custom: intro-deployment
 ---

@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 helpviewer_keywords:

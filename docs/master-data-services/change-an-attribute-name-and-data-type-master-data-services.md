@@ -3,17 +3,15 @@ description: "Change an Attribute Name and Data Type (Master Data Services)"
 title: Change an Attribute Name and Data Type
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], changing name"
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: CordeliaGrey
 ms.author: jiwang6
-manager: erikre
 ---
 # Change an Attribute Name and Data Type (Master Data Services)
 

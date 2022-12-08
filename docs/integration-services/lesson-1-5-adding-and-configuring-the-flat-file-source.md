@@ -3,10 +3,9 @@ description: "Lesson 1-5: Add and configure the Flat File source"
 title: "Step 5: Add and configure the Flat File source | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace

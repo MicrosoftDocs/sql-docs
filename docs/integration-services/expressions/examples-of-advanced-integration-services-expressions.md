@@ -3,10 +3,9 @@ description: "Examples of Advanced Integration Services Expressions"
 title: "Examples of Advanced Integration Services Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "functions [Integration Services]"

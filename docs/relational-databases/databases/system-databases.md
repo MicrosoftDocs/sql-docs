@@ -1,9 +1,8 @@
 ---
 title: System Databases
 description: System Databases
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system databases [SQL Server]"

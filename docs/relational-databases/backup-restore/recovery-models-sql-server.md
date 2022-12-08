@@ -3,10 +3,9 @@ title: "Recovery Models (SQL Server) | Microsoft Docs"
 description: In SQL Server, a recovery model controls how to log transactions, whether the transaction log requires backing up, and what restore operations are available.
 ms.custom: ""
 ms.date: "07/16/2016"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database backups [SQL Server], recovery models"

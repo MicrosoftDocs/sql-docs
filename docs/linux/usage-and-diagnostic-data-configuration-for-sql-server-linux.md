@@ -6,8 +6,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Configure usage & diagnostic data collection for SQL Server on Linux
 

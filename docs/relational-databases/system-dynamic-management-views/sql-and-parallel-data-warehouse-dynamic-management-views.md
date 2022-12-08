@@ -4,8 +4,8 @@ description: SQL and Parallel Data Warehouse Dynamic Management Views
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 05/28/2021
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 ms.custom: seo-dt-2019
 dev_langs:

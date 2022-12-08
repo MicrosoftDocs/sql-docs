@@ -1,9 +1,8 @@
 ---
 title: "Lesson 1: Connecting to the Database Engine"
 description: "Lesson 1: Connecting to the Database Engine"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: quickstart
 author: MashaMSFT
 ms.author: mathoma

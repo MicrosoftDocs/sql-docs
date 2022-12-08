@@ -5,8 +5,8 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: ""
 ms.date: 10/17/2022
-ms.prod: sql
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords:
   - "clusters [SQL Server], preinstallation checklist"

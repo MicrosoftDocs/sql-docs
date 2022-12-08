@@ -3,10 +3,9 @@ description: "FILESTREAM Support (OLE DB)"
 title: "FILESTREAM Support (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB [FILESTREAM support]"
@@ -17,6 +16,9 @@ ms.author: maghan
 ---
 # FILESTREAM Support (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-only.md)]
 
   Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, OLE DB supports the enhanced FILESTREAM feature. For more information about this feature, see [FILESTREAM Support](../../../relational-databases/native-client/features/filestream-support.md). For samples, see [Filestream and OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
   

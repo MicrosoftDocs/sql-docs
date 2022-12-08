@@ -4,9 +4,8 @@ description: sys.dm_db_session_space_usage (Transact-SQL) returns the number of 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/03/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_session_space_usage_TSQL"

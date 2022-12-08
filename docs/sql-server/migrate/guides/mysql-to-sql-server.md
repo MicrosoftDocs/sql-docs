@@ -1,9 +1,9 @@
 ---
 title: "MySQL to SQL Server: Migration guide"
 description: 'This guide teaches you how to migrate your MySQL databases to Microsoft SQL Server by using SQL Server Migration Assistant for MySQL (SSMA for MySQL).'
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: migration-guide
+ms.subservice: migration-guide
 ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma

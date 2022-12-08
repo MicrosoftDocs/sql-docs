@@ -3,10 +3,9 @@ title: "SQL Server, Broker Statistics object"
 description: Learn about the SQLServer:Broker Statistics performance object, which contains performance counters that report Service Broker information for Database Engine.
 ms.custom: ""
 ms.date: "07/14/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Broker Statistics"

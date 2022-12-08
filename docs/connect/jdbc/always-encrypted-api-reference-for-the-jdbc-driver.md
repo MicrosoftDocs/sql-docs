@@ -4,8 +4,8 @@ description: Learn about the Always Encrypted APIs in the JDBC driver and how yo
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/29/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Always Encrypted API reference for the JDBC driver

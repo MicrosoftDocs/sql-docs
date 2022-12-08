@@ -5,10 +5,10 @@ description: Learn how to prepare your environment for using a Managed Instance 
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 10/20/2022
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
@@ -17,7 +17,7 @@ ms.topic: guide
 This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
-> The link is a feature of Azure SQL Managed Instance and is currently in preview. 
+> Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
 
 ## Prerequisites 
 
@@ -50,11 +50,12 @@ SELECT @@VERSION as 'SQL Server version'
 
 Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
 
-| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+| SQL Server Version  |  Operating system (OS) | Servicing update requirement |
 |---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Windows Server & Linux | SQL Server 2022 RTM | 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server |  [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] | N/A | Not supported | 
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Windows Server |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
@@ -237,23 +238,30 @@ We will use SQL Agent on SQL Server to run connectivity tests from SQL Server to
    ```sql
    SELECT 'DECLARE @serverName NVARCHAR(512) = N'''+ value + ''''
    FROM sys.dm_hadr_fabric_config_parameters
-   WHERE PARAMETER_NAME = 'DnsRecordName'
+   WHERE parameter_name = 'DnsRecordName'
    UNION
-   SELECT 'DECLARE @node NVARCHAR(512) = N'''+ NodeName + '.' + CLUSTER + ''''
-   FROM
-     (SELECT REPLACE(fr.node_name, '.', '') AS NodeName, JoinCol = 1
-      FROM sys.dm_hadr_fabric_partitions fp
-      JOIN sys.dm_hadr_fabric_replicas fr ON fp.partition_id = fr.partition_id
-      JOIN sys.dm_hadr_fabric_nodes fn ON fr.node_name = fn.node_name
-      WHERE service_name like '%ManagedServer%' AND replica_role = 2) t1
+   SELECT 'DECLARE @node NVARCHAR(512) = N'''+ NodeName + '.' + Cluster + ''''
+   FROM 
+   (SELECT SUBSTRING(replica_address,0, CHARINDEX('\', replica_address)) as NodeName
+   , RIGHT(service_name,CHARINDEX('/', REVERSE(service_name))-1) AppName, JoinCol = 1
+   FROM sys.dm_hadr_fabric_partitions fp
+   JOIN sys.dm_hadr_fabric_replicas fr ON fp.partition_id = fr.partition_id
+   JOIN sys.dm_hadr_fabric_nodes fn ON fr.node_name = fn.node_name
+   WHERE service_name like '%ManagedServer%' and replica_role = 2) t1
    LEFT JOIN
-     (SELECT value AS CLUSTER, JoinCol = 1
-      FROM sys.dm_hadr_fabric_config_parameters
-      WHERE PARAMETER_NAME = 'ClusterName') t2 ON (t1.JoinCol = t2.JoinCol)
+   (SELECT value as Cluster, JoinCol = 1
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE parameter_name  = 'ClusterName') t2
+   ON (t1.JoinCol = t2.JoinCol)
+   INNER JOIN
+   (SELECT [value] AS AppName
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE section_name = 'SQL' and parameter_name = 'InstanceName') t3 
+   ON (t1.AppName = t3.AppName)
    UNION
    SELECT 'DECLARE @port NVARCHAR(512) = N'''+ value + ''''
    FROM sys.dm_hadr_fabric_config_parameters
-   WHERE PARAMETER_NAME = 'HadrPort';
+   WHERE parameter_name = 'HadrPort';
    ```
 
    You will get something like:
@@ -489,11 +497,26 @@ If you're migrating a SQL Server database protected by Transparent Data Encrypti
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use the Managed Instance link. [Download SSMS version 19.0, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-database-context-menu-managed-instance-link.png" alt-text="Screenshot that shows the Azure SQL Managed Instance link option on the context menu.":::
+
+## Configure SSMS for government cloud 
+
+If you want to deploy your SQL Managed Instance to a government cloud, you'll need to modify your SQL Server Management Studio (SSMS) settings to use the correct cloud. If you're not deploying your SQL Managed Instance to a government cloud, skip this step. 
+
+To update your SSMS settings, follow these steps: 
+
+1. Open SSMS. 
+1. From the menu, select **Tools** and then choose **Options**. 
+1. Expand **Azure Services** and select **Azure Cloud**. 
+1. Under **Select an Azure Cloud**, use the drop-down to choose **AzureUSGovernment**, or another government cloud: 
+
+  :::image type="content" source="media/managed-instance-link-preparation/ssms-for-government-cloud.png" alt-text="Screenshot of SSMS UI, options page, Azure services, with Azure cloud highlighted. ":::
+
+
 
 ## Next steps
 

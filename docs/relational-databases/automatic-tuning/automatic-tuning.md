@@ -5,7 +5,7 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: wiassaf
 ms.date: 10/14/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ms.custom:
   - fasttrack-edit

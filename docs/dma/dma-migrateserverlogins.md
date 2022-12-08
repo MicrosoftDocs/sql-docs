@@ -4,8 +4,8 @@ description: Migrate SQL Server logins with Data Migration Assistant, including 
 author: rajeshsetlem
 ms.author: rajpo
 ms.date: "10/22/2019"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom:
   - seo-lt-2019

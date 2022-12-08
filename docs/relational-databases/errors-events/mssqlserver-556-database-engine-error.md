@@ -3,9 +3,9 @@ description: "MSSQLSERVER_556"
 title: "MSSQLSERVER_556 | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/15/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "556 (Database Engine error)"

@@ -4,9 +4,9 @@ description: Learn how Row-Level Security uses group membership or execution con
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/16/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: "security"
+ms.subservice: "security"
 ms.topic: conceptual
 helpviewer_keywords:
   - "access control predicates"

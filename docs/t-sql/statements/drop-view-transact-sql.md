@@ -4,9 +4,8 @@ description: DROP VIEW (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "01/19/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_VIEW_TSQL"

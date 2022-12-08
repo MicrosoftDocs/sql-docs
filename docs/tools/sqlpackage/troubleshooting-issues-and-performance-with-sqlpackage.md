@@ -1,9 +1,8 @@
 ---
 title: Troubleshooting issues and performance with SqlPackage
 description: Learn how to troubleshoot with SqlPackage.exe.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
@@ -74,6 +73,21 @@ sqlpackage.exe /at:$AccessToken
 # OR
 sqlpackage.exe /at:$($AccessToken_Object.Token) 
 ```
+
+### Connection
+
+If SqlPackage is failing to connect, the server may not have encryption enabled or the configured certificate may not be issued from a trusted certificate authority (such as a self-signed certificate).  You can change the SqlPackage command to either connect without encryption or to trust the server certificate.  The [best practice](../../relational-databases/security/securing-sql-server.md) is to ensure that a trusted encrypted connection to the server can be established.
+- Connect without encryption: /SourceEncryptConnection=False or /TargetEncryptConnection=False
+- Trust server certificate: /SourceTrustServerCertificate=True or /TargetTrustServerCertificate=True
+
+You may see any of the following warning messages when connecting to a SQL instance, indicating that command line parameters may require changes to connect to the server:
+
+```bash
+The settings for connection encryption or server certificate trust may lead to connection failure if the server is not properly configured.
+The connection string provided contains encryption settings which may lead to connection failure if the server is not properly configured.
+```
+
+More information about the connection security changes in SqlPackage is available in this [blog post](https://aka.ms/dacfx-connection).
 
 ## Diagnostics
 Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.

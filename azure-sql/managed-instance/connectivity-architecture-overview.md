@@ -44,7 +44,7 @@ Applications can connect to SQL Managed Instance via three types of endpoints. T
 - [Public endpoint](#public-endpoint)
 - [Private endpoints](#private-endpoint-preview) (in preview)
 
-![](./media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png)
+![Diagram of the three types of endpoints in Azure SQL Managed Instance.](./media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png)
 
 ### VNet-local endpoint
 

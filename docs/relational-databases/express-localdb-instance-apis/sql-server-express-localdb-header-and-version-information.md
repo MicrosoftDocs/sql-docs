@@ -2,10 +2,9 @@
 description: "SQL Server Express LocalDB Header and Version Information"
 title: "SQL Server Express LocalDB header & version information"
 ms.date: 11/10/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: "reference"
 apilocation: 
   - "sqluserinstance.dll"

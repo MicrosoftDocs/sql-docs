@@ -2,8 +2,8 @@
 description: "Item (Tuple) (MDX)"
 title: "Item (Tuple) (MDX) | Microsoft Docs"
 ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.custom: mdx
 ms.topic: reference
 ms.author: owend

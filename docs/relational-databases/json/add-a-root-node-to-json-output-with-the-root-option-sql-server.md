@@ -2,8 +2,8 @@
 description: "Add a Root Node to JSON Output with the ROOT Option (SQL Server)"
 title: "Add a Root Node to JSON Output with the ROOT Option"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ROOT (FOR JSON)"

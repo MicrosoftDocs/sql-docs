@@ -4,8 +4,8 @@ description: When you bulk import to a SQL Server table or bulk export from a ta
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/29/2022
-ms.prod: sql
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

@@ -2,8 +2,8 @@
 description: "Operators (MDX Syntax)"
 title: "Operators (MDX Syntax) | Microsoft Docs"
 ms.date: 11/08/2021
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.custom: mdx
 ms.topic: reference
 ms.author: owend

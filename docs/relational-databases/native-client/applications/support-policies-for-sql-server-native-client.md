@@ -2,10 +2,10 @@
 title: Support Policies
 description: Learn about SQL Server Native Client supported SQL Server versions, operating systems, and support policies for ADO, BCP, ODBC, and OLE DB.
 ms.date: 09/06/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname

@@ -4,8 +4,8 @@ description: "Learn how IBCPSession::BCPControl sets the options for a bulk-copy
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/04/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "BCPControl method"

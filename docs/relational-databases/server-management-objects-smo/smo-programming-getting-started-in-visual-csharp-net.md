@@ -4,8 +4,8 @@ title: "Getting Started in Visual C# .NET | Microsoft Docs"
 ms.custom:
   - intro-quickstart
 ms.date: "08/02/2016"
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: quickstart
 helpviewer_keywords:
   - "Visual C# [SMO]"

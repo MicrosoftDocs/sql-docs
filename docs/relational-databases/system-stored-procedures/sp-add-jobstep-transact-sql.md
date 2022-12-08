@@ -1,10 +1,9 @@
 ---
 description: "sp_add_jobstep (Transact-SQL)"
 title: sp_add_jobstep (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

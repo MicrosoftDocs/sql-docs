@@ -5,9 +5,8 @@ author: im-microsoft
 ms.author: imotiwala
 ms.reviewer: wiassaf
 ms.date: 11/07/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "changfeed.change_feed_tables"

@@ -4,8 +4,8 @@ description: "This page provides instructions for loading the Microsoft Drivers 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/11/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "loading the driver"

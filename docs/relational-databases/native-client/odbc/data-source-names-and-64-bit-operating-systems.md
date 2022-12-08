@@ -3,10 +3,9 @@ title: "Data Source Names and 64-Bit Operating Systems | Microsoft Docs"
 description: Learn how to build and run an application as a 32-bit application on a 64-bit operating system by creating the ODBC data source with the ODBC Administrator.
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: c2f86810-2775-4ddd-8df7-e8373785a7fc
 author: markingmyname

@@ -4,8 +4,8 @@ description: Find out how to create and delete an alias, an alternate name you c
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/14/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "server alias"

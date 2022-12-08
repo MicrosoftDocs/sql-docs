@@ -3,7 +3,6 @@ description: "The sp_change_feed_create_table_group system stored procedure enab
 title: "sp_change_feed_create_table_group (Transact-SQL)"
 ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 

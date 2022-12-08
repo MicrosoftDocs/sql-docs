@@ -4,9 +4,8 @@ description: Indexes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "12/21/2016"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "index types [SQL Server]"

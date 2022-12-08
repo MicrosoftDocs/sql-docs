@@ -4,9 +4,9 @@ title: "sys.sp_verify_database_ledger_from_digest_storage (Transact-SQL) | Micro
 ms.custom:
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

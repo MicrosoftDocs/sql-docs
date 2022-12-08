@@ -3,10 +3,9 @@ description: "Large CLR User-Defined Types in SQL Server Native Client (OLE DB)"
 title: "Large CLR User-Defined Types (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large CLR user-defined types [OLE DB]"

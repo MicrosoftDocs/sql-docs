@@ -3,10 +3,9 @@ description: "Database Mail Log and Audits"
 title: "Database Mail Log and Audits | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [SQL Server]"

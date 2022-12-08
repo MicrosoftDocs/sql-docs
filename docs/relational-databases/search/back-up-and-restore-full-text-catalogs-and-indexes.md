@@ -2,9 +2,8 @@
 description: "Back Up and Restore Full-Text Catalogs and Indexes"
 title: "Back up & restore Full-Text catalogs & indexes"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], backing up"

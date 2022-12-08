@@ -3,10 +3,9 @@ title: "SQLSetConnectAttr | Microsoft Docs"
 description: Learn about connection attributes in SQLSetConnectAttr, including when they are set and possible values in the SQL Server Native Client ODBC driver.
 ms.custom: ""
 ms.date: 01/09/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 

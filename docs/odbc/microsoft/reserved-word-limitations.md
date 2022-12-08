@@ -3,10 +3,9 @@ description: "Reserved Keyword Limitations"
 title: "Reserved Word Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2018"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC]"

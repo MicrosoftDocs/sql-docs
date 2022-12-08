@@ -3,9 +3,9 @@ description: "ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory
 title: "ConnectionValidSharedMemory dbmslpcn.dll"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
 author: markingmyname

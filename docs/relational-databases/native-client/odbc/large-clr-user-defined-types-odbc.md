@@ -3,10 +3,9 @@ description: "Large CLR User-Defined Types (ODBC)"
 title: "Large CLR User-Defined Types (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ODBC, large user-defined types"

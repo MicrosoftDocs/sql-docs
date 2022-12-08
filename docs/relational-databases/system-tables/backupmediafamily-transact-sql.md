@@ -4,9 +4,8 @@ description: Reference for backupmediafamily, which contains one row for each me
 author: VanMSFT
 ms.author: vanto
 ms.date: "11/16/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "backupmediafamily"

@@ -3,10 +3,9 @@ description: "Change an Explicit Hierarchy Name (Master Data Services)"
 title: Change an Explicit Hierarchy Name
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "explicit hierarchies, changing name"

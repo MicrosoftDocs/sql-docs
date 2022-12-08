@@ -4,9 +4,8 @@ description: "The sys.dm_db_log_space_usage dynamic management view returns spac
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/20/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_db_log_space_usage"

@@ -3,10 +3,9 @@ description: "Building Packages Programmatically"
 title: "Building Packages Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services 
+ms.subservice: integration-services 
 ms.topic: "reference"
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace

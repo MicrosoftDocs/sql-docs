@@ -4,9 +4,8 @@ description: Use these procedures to create an Extended Events session equivalen
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 ms.custom: seo-lt-2019
 helpviewer_keywords:

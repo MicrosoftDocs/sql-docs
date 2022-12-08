@@ -3,11 +3,10 @@ description: "Microsoft Connectors for Oracle and Teradata by Attunity for Integ
 title: "Microsoft Connectors for Oracle and Teradata by Attunity | Microsoft Docs"
 
 ms.date: "08/16/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
 ms.custom: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 
 author: chugugrace

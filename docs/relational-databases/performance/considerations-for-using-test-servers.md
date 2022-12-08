@@ -3,9 +3,9 @@ title: "Considerations for Using Test Servers | Microsoft Docs"
 description: Learn how to use a test server to tune a database on a production server. This is an important benefit of Database Engine Tuning Advisor.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "overhead [Database Engine Tuning Advisor]"

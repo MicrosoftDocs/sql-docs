@@ -5,8 +5,8 @@ author: "savjani"
 ms.author: "pariks"
 ms.reviewer: wiassaf
 ms.date: 06/20/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_db_log_info"

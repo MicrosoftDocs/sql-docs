@@ -3,9 +3,9 @@ title: "Execute a Stored Procedure"
 description: Learn how to execute a stored procedure by using SQL Server Management Studio or Transact-SQL.
 ms.custom: FY22Q2Fresh
 ms.date: "11/11/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.executeprocedure.general.f1"

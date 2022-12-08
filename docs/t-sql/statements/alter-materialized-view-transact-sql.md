@@ -5,9 +5,8 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 ms.reviewer: wiassaf
 ms.date: "07/03/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: reference
 f1_keywords:
   - "ALTER_VIEW_TSQL"

@@ -4,8 +4,8 @@ title: "SSIS How to Create an ETL Package | Microsoft Docs"
 ms.custom:
   - intro-quickstart
 ms.date: "03/24/2022"
-ms.prod: sql
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: quickstart
 helpviewer_keywords:
   - "SSIS, tutorials"

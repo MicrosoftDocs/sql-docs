@@ -4,9 +4,8 @@ description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DIALOG CONVERSATION"

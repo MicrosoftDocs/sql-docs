@@ -1,12 +1,11 @@
 ---
-description: "Declaring the Application&#39;s ODBC Version"
-title: "Declaring the Application&#39;s ODBC Version | Microsoft Docs"
+description: "Declaring the Application's ODBC Version"
+title: "Declaring the Application's ODBC Version | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "declaring ODBC version [ODBC]"
@@ -19,7 +18,7 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: David-Engel
 ms.author: v-davidengel
 ---
-# Declaring the Application&#39;s ODBC Version
+# Declaring the Application's ODBC Version
 Before an application allocates a connection, it must set the SQL_ATTR_ODBC_VERSION environment attribute. This attribute states that the application follows the ODBC *2.x* or ODBC *3.x* specification when using the following items:  
   
 -   **SQLSTATEs**. Many SQLSTATE values are different in ODBC *2.x* and ODBC *3.x*.  

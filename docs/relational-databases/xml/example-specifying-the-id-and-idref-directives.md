@@ -3,10 +3,9 @@ title: "Example: Specifying the ID and IDREF Directives"
 description: View an example of how to specify the ID and IDREF directives in an SQL query.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "IDREF directive"
@@ -16,7 +15,7 @@ ms.author: mikeray
 ---
 # Example: Specify the ID and IDREF directives
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This example is almost the same as the [Specifying the ELEMENTXSINIL Directive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) example. The only difference is that the query specifies the **ID** and **IDREF** directives. These directives overwrite the types of the **SalesPersonID** attribute in the `<OrderHeader>` and `<OrderDetail>` elements, and form intra-document links. You need the schema to see the overwritten types. Therefore, the query specifies the **XMLDATA** option in the FOR XML clause to retrieve the schema.
 

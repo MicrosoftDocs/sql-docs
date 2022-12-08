@@ -5,13 +5,13 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 10/20/2022
-ms.prod: sql
-ms.technology: samples
+ms.service: sql
+ms.subservice: samples
 ms.topic: conceptual
 ---
 # SQL samples
 
-[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 
@@ -39,7 +39,7 @@ AdventureWorks databases can be found on the [installation](adventureworks-insta
 
 ## Azure samples and templates
 
-There are several Azure code samples and examples available on GitHub in .NET, Java, Python, Node.js, PHP and Ruby. Additionally, Azure Resource Manager allows you to provision your applications using a declarative template. In a single template, you can deploy multiple services along with their dependencies. You use the same template to repeatedly deploy your application during every stage of the application lifecycle.
+There are several Azure code samples and examples available on GitHub in .NET, Java, Python, Node.js, PHP and Ruby. Additionally, Azure Resource Manager allows you to configure your applications using a declarative template. In a single template, you can deploy multiple services along with their dependencies. You use the same template to repeatedly deploy your application during every stage of the application lifecycle.
 
 - [Azure samples](https://github.com/Azure-Samples)
 - [Azure Quickstart Templates](https://azure.microsoft.com/resources/templates/)

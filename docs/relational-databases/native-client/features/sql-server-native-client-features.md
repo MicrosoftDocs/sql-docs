@@ -3,9 +3,9 @@ title: "Features"
 description: In addition to exposing features of the Windows Data Access Components, SQL Server Native Client implements other features to expose SQL Server functionality.
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "MDAC [SQL Server]"

@@ -3,10 +3,9 @@ title: "Initialize subscription from backup (Transactional)"
 description: Learn how to use replication stored procedures to initialize a Transactional publication from a backup in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"

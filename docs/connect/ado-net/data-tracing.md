@@ -4,8 +4,8 @@ description: Describes how Microsoft SqlClient Data Provider for SQL Server prov
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "12/04/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Data tracing in SqlClient

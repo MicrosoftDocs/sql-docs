@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 09/09/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -101,7 +101,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 
 - `RESTORE VERIFYONLY FROM <backup_device> WITH LOADHISTORY` populates the column of the `backupmediaset` table with the appropriate values from the media-set header.  
 - To reduce the number of rows in this table and in other backup and history tables, execute the [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  
-- For SQL Managed Instance, backupset table only shows the backup history for user-initiated [Copy-Only backups](../../relational-databases/backup-restore/copy-only-backups-sql-server.md). The backupset table does not show backup history for automatic backups performed by the service.
+- For SQL Managed Instance, see [backup transparency](/azure/azure-sql/managed-instance/backup-transparency) and how to [monitor backups](/azure/azure-sql/managed-instance/backup-activity-monitor).
 
 ## Examples
 

@@ -3,8 +3,8 @@ description: "System Requirements for SQL Server Native Client"
 title: "System Requirements"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "system requirements [SQL Server Native Client]"

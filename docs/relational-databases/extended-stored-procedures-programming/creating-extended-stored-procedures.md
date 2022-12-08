@@ -4,8 +4,7 @@ description: Create Extended Stored Procedures
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "warnings [SQL Server]"

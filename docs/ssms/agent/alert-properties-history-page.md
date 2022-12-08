@@ -1,9 +1,8 @@
 ---
 title: "Alert Properties (History Page)"
 description: "Alert Properties (History Page)"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.alert.history.f1"

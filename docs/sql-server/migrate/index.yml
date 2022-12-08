@@ -7,7 +7,7 @@ summary: Technical documentation to help you migrate to SQL Server on-premises a
 metadata:
   title: SQL Server migration documentation 
   description: Choose the SQL Server migration path you're interested in. 
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: cawrites
   ms.author: chadam

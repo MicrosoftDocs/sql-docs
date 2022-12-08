@@ -3,10 +3,9 @@ title: "SQL Server Integration Services Properties (Advanced Tab)"
 description: Find out about the Advanced tab in the SQL Server Integration Services Properties dialog box, where you can view custom property values.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 author: markingmyname

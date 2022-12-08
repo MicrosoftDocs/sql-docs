@@ -3,8 +3,8 @@ description: "Unpack a DAC Package"
 title: "Unpack a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology:
+ms.service: sql
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "wizard [DAC], unpack"

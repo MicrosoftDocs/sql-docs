@@ -4,9 +4,8 @@ description: This article describes index maintenance concepts, and a recommende
 author: dimitri-furman
 ms.author: dfurman
 ms.date: "04/16/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, pdw"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.index.rebuild.f1"

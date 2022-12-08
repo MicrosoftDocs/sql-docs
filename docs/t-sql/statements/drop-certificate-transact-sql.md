@@ -4,9 +4,8 @@ description: DROP CERTIFICATE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/18/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP CERTIFICATE"

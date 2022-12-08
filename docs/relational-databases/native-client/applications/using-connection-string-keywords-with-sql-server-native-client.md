@@ -3,9 +3,9 @@ title: "Using connection string keywords"
 description: Some SQL Server Native Client APIs use connection strings to specify connection attributes. Connection strings are keyword/value pairs.
 ms.custom: ""
 ms.date: "02/15/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.connecttoserver.options.registeredservers.f1"

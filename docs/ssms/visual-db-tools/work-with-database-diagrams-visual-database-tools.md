@@ -1,9 +1,8 @@
 ---
 title: Work with Database Diagrams
 description: "Work with Database Diagrams (Visual Database Tools)"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.workingwithsql2000diagrams"

@@ -4,8 +4,8 @@ description: "The IIF logical function Returns one of two values, depending on w
 author: markingmyname
 ms.author: maghan
 ms.date: "03/11/2022"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IIF_TSQL"

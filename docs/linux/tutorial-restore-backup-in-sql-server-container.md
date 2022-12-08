@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 03/31/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 ms.custom:
   - intro-migration

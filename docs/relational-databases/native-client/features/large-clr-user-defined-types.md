@@ -4,8 +4,8 @@ title: "Large CLR User-Defined Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.reviewer: ""
-ms.prod: sql
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large CLR user-defined types"

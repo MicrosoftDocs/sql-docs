@@ -1,9 +1,8 @@
 ---
 title: Select an Account for the SQL Server Agent Service
 description: Select an Account for the SQL Server Agent Service
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan

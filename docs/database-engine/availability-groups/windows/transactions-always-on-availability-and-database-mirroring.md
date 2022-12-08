@@ -4,8 +4,8 @@ description: "Transactions - availability groups and database mirroring"
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "12/11/2018"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

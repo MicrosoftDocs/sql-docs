@@ -5,7 +5,7 @@ author: "Minewiskan"
 ms.author: "owend"
 ms.reviewer: maghan
 ms.date: 10/17/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
@@ -100,7 +100,7 @@ monikerRange: ">=sql-server-2016"
 
     1. At startup, the configuration tool checks the upgrade status of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] farm solution and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web application solutions. If older versions of these solutions are detected, you'll see the message "**Newer versions of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution files have been detected. Please select the upgrade option to upgrade your farm**." Select **OK** to close the system validation message.
 
-    1. Select **Upgrade Features, Services, Applications and Solutions**, and thenselectk **OK**.
+    1. Select **Upgrade Features, Services, Applications and Solutions**, and then select **OK**.
 
     1. Review the actions in the left pane task list and exclude any that you don't want the tool to perform. All actions are included by default. To remove an action, select it in the left task list, and then on the **Parameters** page, clear the **Include this action in the task list** checkbox.
 
@@ -115,7 +115,7 @@ monikerRange: ">=sql-server-2016"
         > [!IMPORTANT]  
         >  The first action, **Upgrade Farm Solution**, must always be processed first. It registers the PowerShell cmdlets that are used to configure the server. If you get an error on this action, do not continue. Instead, use the information provided by the error to diagnose and resolve the problem before processing additional actions in the task list.
 
-    1. Select **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When youselectk **Run**, the following warning appears, reminding you that actions are processed in batch mode: "**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?**"
+    1. Select **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you select **Run**, the following warning appears, reminding you that actions are processed in batch mode: "**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?**"
 
     1. Select **Yes** to continue.
 
@@ -169,7 +169,7 @@ monikerRange: ">=sql-server-2016"
 
     1. At startup, the configuration tool checks the upgrade status of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] farm solution and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] web application solutions. If older versions of these solutions are detected, you'll see the message "Newer versions of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution files have been detected. elect the upgrade option to upgrade your farm." Select **OK** to close the message.
 
-    1. Select **Upgrade Features, Services, Applications and Solutions**, and thenselectk **OK** to continue.
+    1. Select **Upgrade Features, Services, Applications and Solutions**, and then select **OK** to continue.
 
     1. The following warning appears: "Workbooks in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?"
 
@@ -192,7 +192,7 @@ monikerRange: ">=sql-server-2016"
         > [!IMPORTANT]  
         >  The first action, **Upgrade Farm Solution**, must always be processed first. It registers the PowerShell cmdlets that are used to configure the server. If you get an error on this action, do not continue. Instead, use the information provided by the error to diagnose and resolve the problem before processing additional actions in the task list.
 
-    1. Select **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When youselectk **Run**, the following warning appears, reminding you that actions are processed in batch mode: "All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?"
+    1. Select **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you select **Run**, the following warning appears, reminding you that actions are processed in batch mode: "All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?"
 
     1. Select **Yes** to continue.
 
@@ -334,7 +334,7 @@ Get-PowerPivotSystemService
 
 1. Start the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool.
 
-1. Select **Upgrade Features, Services, Applications and Solutions**, and thenselectk **OK**.
+1. Select **Upgrade Features, Services, Applications and Solutions**, and then select **OK**.
 
 1. Review the actions that are included in the upgrade task, and then select **Validate**.
 
@@ -365,5 +365,5 @@ Get-PowerPivotSystemService
 
 ## See also
 
-- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
+- [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 - [Power Pivot for SharePoint 2010 Installation](https://sharepointgeorge.com/2012/installing-sql-server-powerpivot-sharepointstep-step-guide/)

@@ -3,10 +3,9 @@ title: "Metadata Visibility Configuration"
 description: Learn how to configure metadata visibility for securables that a user owns or has been granted permission to in SQL Server.
 ms.custom: ""
 ms.date: "08/19/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subcomponents visibility [SQL Server]"

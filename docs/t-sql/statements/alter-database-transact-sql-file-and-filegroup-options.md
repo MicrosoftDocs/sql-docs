@@ -5,9 +5,8 @@ description: Update a database's files and filegroups using Transact-SQL.
 author: markingmyname
 ms.author: maghan
 ms.date: "09/15/2021"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: seo-lt-2019
 f1_keywords:

@@ -5,8 +5,8 @@ author: "MashaMSFT"
 ms.author: mathoma
 ms.reviewer: wiassaf
 ms.date: 11/11/2022
-ms.prod: sql
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords:
   - "delayed durability"

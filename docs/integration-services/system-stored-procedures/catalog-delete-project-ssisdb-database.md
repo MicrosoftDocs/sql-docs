@@ -3,10 +3,9 @@ description: "catalog.delete_project (SSISDB Database)"
 title: "catalog.delete_project (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace

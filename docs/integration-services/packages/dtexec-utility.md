@@ -3,10 +3,9 @@ description: "dtexec Utility"
 title: "dtexec Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace

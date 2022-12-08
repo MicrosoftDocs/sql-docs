@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 10/21/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ---
 # How to get started developing applications for SQL Server on Linux

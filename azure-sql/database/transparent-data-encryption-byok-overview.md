@@ -5,7 +5,7 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 10/17/2022
+ms.date: 11/21/2022
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -79,7 +79,7 @@ Auditors can use Azure Monitor to review key vault AuditEvent logs, if logging i
 - Grant the server or managed instance access to the key vault (*get*, *wrapKey*, *unwrapKey*) using its Azure Active Directory identity. The server identity can be a system-assigned managed identity or a user-assigned managed identity assigned to the server. When using the Azure portal, the Azure AD identity gets automatically created when the server is created. When using PowerShell or Azure CLI, the Azure AD identity must be explicitly created and should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md) and [Configure TDE with BYOK for SQL Managed Instance](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md) for detailed step-by-step instructions when using PowerShell.
     - Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
 
-- When using firewall with AKV, you must enable option *Allow trusted Microsoft services to bypass the firewall*.
+- When using a firewall with AKV, you must enable the option **Allow trusted Microsoft services to bypass the firewall**. For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
 
 ### Enable soft-delete and purge protection for AKV
 
@@ -198,21 +198,21 @@ Learn more about [the common causes for database to become inaccessible](/sql/re
 
 ### Blocked connectivity between SQL Managed Instance and Key Vault
 
-On SQL Managed Instance, network errors while trying to access TDE protector in Azure Key Vault may not cause the databases to change its state to *Inaccessible* but will render the instance unavailable afterwards. This happens mostly when the key vault resource exists but it's endpoint cannot be reached from the managed instance. All scenarios where the key vault endpoint can be reached but connection is denied, missing permissions, etc., will cause the databases to change its state to *Inaccessible*.
+On SQL Managed Instance, network errors while trying to access TDE protector in Azure Key Vault may not cause the databases to change its state to *Inaccessible* but will render the instance unavailable afterwards. This happens mostly when the key vault resource exists but its endpoint can't be reached from the managed instance. All scenarios where the key vault endpoint can be reached but connection is denied, missing permissions, etc., will cause the databases to change its state to *Inaccessible*.
 
 The most common causes for lack of networking connectivity to Key Vault are:
 
-- Key Vault is exposed via private endpoint and the private IP address of the AKV service is not allowed in the outbound rules of the Network Security Group (NSG) associated with the managed instance subnet.
-- Bad DNS resolution, like when the key vault FQDN is not resolved or resolves to an invalid IP address.
+- Key Vault is exposed via private endpoint and the private IP address of the AKV service isn't allowed in the outbound rules of the Network Security Group (NSG) associated with the managed instance subnet.
+- Bad DNS resolution, like when the key vault FQDN isn't resolved or resolves to an invalid IP address.
 
 [Test the connectivity](https://techcommunity.microsoft.com/t5/azure-sql-blog/how-to-test-tcp-connectivity-from-a-sql-managed-instance/ba-p/3058458) from SQL Managed Instance to the Key Vault hosting the TDE protector.
 
 - The endpoint is your vault FQDN, like *<vault_name>.vault.azure.net* (without the https://).
 - The port to be tested is 443.
 - The result for RemoteAddress should exist and be the correct IP address
-- The result for TCP test should be *TcpTestSucceeded : True*.
+- The result for TCP test should be *TcpTestSucceeded: True*.
 
-In case the test returns *TcpTestSucceeded : False*, review the networking configuration:
+In case the test returns *TcpTestSucceeded: False*, review the networking configuration:
 
 - Check the resolved IP address, confirm it's valid. A missing value means there's issues with DNS resolution.
     - Confirm that the network security group on the managed instance has an **outbound** rule that covers the resolved IP address on port 443, especially when the resolved address belongs to the key vault's private endpoint.

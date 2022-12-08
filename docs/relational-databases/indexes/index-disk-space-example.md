@@ -4,9 +4,8 @@ description: Index Disk Space Example
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "online index disk space"

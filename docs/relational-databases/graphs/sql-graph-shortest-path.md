@@ -3,10 +3,9 @@ description: "SHORTEST_PATH (Transact-SQL)"
 title: "SHORTEST PATH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/01/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: "language-reference"
 f1_keywords:
   - "SHORTEST PATH"

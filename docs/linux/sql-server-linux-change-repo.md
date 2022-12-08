@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer:
 ms.date: 08/22/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 zone_pivot_groups: ld2-linux-distribution
 ---

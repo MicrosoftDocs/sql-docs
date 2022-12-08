@@ -4,8 +4,8 @@ description: Reference documentation to explain sys.dm_server_suspend_status (Tr
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "09/29/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_server_suspend_status_TSQL"

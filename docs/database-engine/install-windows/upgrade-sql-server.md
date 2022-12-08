@@ -4,8 +4,8 @@ description: This article provides links to resources that contain upgrade infor
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 06/30/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: quickstart
 ms.custom: intro-quickstart
 helpviewer_keywords:

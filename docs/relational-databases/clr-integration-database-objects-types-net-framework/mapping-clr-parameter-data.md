@@ -4,8 +4,8 @@ description: This article lists Microsoft SQL Server data types, equivalents in 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "SqlBinary data type"

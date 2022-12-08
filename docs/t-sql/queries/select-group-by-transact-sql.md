@@ -1,8 +1,8 @@
 ---
 title: GROUP BY (Transact-SQL)
 description: "SELECT - GROUP BY- Transact-SQL"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "GROUP"

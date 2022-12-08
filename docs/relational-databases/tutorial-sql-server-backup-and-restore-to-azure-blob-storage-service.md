@@ -5,9 +5,8 @@ ms.custom:
   - seo-dt-2019
   - intro-quickstart
 ms.date: "12/21/2020"
-ms.prod: sql
-ms.technology: backup-restore
-ms.prod_service: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.reviewer: ""
 ms.topic: quickstart
 author: rwestMSFT

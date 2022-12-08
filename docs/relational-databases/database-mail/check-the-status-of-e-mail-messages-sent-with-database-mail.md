@@ -2,10 +2,9 @@
 description: "Check the Status of E-Mail Messages Sent With Database Mail"
 title: "Status of E-Mail Messages Sent With Database Mail"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "e-mail [SQL Server], status information"

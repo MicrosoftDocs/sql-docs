@@ -1,8 +1,8 @@
 ---
 title: Convert Visual Studio 2010 Database Projects to SQL Server Database Projects
 description: Convert Visual Studio 2010 database projects to SQL Server projects, and retarget them to different platforms. View objects that SSDT can and cannot convert.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.projectconversion.dialog"

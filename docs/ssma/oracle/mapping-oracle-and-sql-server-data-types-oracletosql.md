@@ -1,11 +1,11 @@
 ---
 title: "Mapping Oracle and SQL Server Data Types (OracleToSQL) | Microsoft Docs"
 description: Learn how to customize SSMA for Oracle mappings between Oracle data types and SQL Server or accept the default.
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Type Mapping Inheritance"

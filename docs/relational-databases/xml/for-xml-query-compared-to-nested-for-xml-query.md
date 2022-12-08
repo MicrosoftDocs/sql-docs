@@ -3,10 +3,9 @@ title: "FOR XML Query Compared to Nested FOR XML Query"
 description: Learn about the benefits of nested FOR XML queries by viewing an example that compares a single-level FOR XML query to a nested FOR XML query.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML query"

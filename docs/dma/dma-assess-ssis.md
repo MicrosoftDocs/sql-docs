@@ -4,8 +4,8 @@ description: Learn how to use Data Migration Assistant to assess an on-premises 
 author: chugugrace
 ms.author: chugu
 ms.date: "09/16/2022"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

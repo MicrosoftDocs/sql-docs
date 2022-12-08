@@ -4,8 +4,8 @@ description: Learn about asynchronous programming in the Microsoft SqlClient Dat
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 12/04/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Asynchronous programming

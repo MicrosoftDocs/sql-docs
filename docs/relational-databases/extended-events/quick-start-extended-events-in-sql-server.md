@@ -5,9 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: maghan
 ms.date: "04/16/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: quickstart
 ms.custom: intro-quickstart
 f1_keywords:

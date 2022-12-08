@@ -1,11 +1,11 @@
 ---
 description: "Executing the SSMA Console (AccessToSQL)"
 title: "Executing the SSMA Console (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: cpichuka 

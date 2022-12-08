@@ -4,9 +4,8 @@ description: Use SQL Server Management Studio to manage memory-optimized tables,
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff

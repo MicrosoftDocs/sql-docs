@@ -3,10 +3,9 @@ description: "sp_change_users_login (Transact-SQL)"
 title: "sp_change_users_login (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/13/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_change_users_login"

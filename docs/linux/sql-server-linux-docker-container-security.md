@@ -1,12 +1,12 @@
 ---
 title: Secure SQL Server Linux containers
 description: Understand the different ways to secure SQL Server Linux containers and how you can run containers as different non-root user on the host
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
 ms.date: 09/30/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom:
   - contperf-fy21q1

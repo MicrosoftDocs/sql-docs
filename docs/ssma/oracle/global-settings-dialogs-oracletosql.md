@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Dialogs)  (OracleToSQL)"
 title: "Global Settings (Dialogs)  (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: cpichuka 

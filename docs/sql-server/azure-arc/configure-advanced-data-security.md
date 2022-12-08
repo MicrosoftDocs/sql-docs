@@ -6,7 +6,7 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/12/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ---
 # Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud 

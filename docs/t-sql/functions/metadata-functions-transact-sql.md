@@ -4,8 +4,8 @@ description: "Metadata Functions (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "metadata [SQL Server], functions"

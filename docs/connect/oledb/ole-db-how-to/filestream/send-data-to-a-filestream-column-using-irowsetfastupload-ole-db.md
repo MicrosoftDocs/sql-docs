@@ -4,8 +4,8 @@ description: Learn how to use the IRowsetFastUpload interface to send between 4M
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)

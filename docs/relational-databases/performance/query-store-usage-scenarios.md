@@ -4,10 +4,9 @@ description: Learn how Query Store can be used to track and ensure predictable w
 ms.custom:
 - event-tier1-build-2022
 ms.date: 03/07/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, usage scenarios"

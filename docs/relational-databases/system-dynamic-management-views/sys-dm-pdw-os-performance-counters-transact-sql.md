@@ -4,8 +4,8 @@ description: sys.dm_pdw_os_performance_counters (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

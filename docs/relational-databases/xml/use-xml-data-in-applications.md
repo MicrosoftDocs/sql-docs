@@ -3,10 +3,9 @@ title: "Use XML Data in Applications"
 description: Learn about the options that are available for working with the xml data type in your applications.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "parameters [XML in SQL Server]"
@@ -28,7 +27,7 @@ ms.author: mikeray
 ---
 # Use XML data in applications
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the options that are available to you for working with the **xml** data type in your application. The article includes information about the following:
 

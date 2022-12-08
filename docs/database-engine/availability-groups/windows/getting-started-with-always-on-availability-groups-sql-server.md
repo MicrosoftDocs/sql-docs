@@ -4,8 +4,8 @@ description: "Learn the steps to configure instances of SQL Server to support Al
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: reference
 ms.custom:
   - seodec18

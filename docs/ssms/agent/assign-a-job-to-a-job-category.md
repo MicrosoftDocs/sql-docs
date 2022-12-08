@@ -1,9 +1,8 @@
 ---
 description: "Assign a Job to a Job Category"
 title: "Assign a Job to a Job Category"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], assigning"

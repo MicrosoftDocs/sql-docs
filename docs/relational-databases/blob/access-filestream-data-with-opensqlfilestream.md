@@ -3,10 +3,9 @@ title: "Access FILESTREAM Data with OpenSqlFilestream | Microsoft Docs"
 description: Find out how to access FILESTREAM data with OpenSqlFilestream. View examples demonstrating how to use this API to obtain a Win32 handle.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: filestream
+ms.subservice: filestream
 ms.topic: conceptual
 apiname: 
   - "OpenSqlFilestream"

@@ -3,9 +3,9 @@ description: "MSSQLSERVER_3056"
 title: "MSSQLSERVER_3056 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "3056 (Database Engine error)"

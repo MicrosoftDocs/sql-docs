@@ -3,10 +3,9 @@ title: "Create a Server Role | Microsoft Docs"
 description: Create a server role in SQL Server by using SQL Server Management Studio or Transact-SQL. Review limitations, restrictions, and necessary permissions.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.SERVERROLE.GENERAL.F1"

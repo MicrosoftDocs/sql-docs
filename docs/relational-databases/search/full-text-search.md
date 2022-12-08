@@ -2,9 +2,8 @@
 description: "Full-Text Search"
 title: "Full-Text Search | Microsoft Docs"
 ms.date: "12/29/2020"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"

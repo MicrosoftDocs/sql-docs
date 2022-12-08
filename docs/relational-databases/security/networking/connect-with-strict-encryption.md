@@ -1,8 +1,8 @@
 ---
 title: Connect to SQL Server with strict encryption
 description: This article describes how to connect to SQL Server using the strict encryption type
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: how-to
 ms.custom:
 - event-tier1-build-2022

@@ -4,8 +4,8 @@ description: Learn about the Microsoft.Data.SqlClient namespace and how it's the
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 07/26/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Introduction to Microsoft.Data.SqlClient namespace

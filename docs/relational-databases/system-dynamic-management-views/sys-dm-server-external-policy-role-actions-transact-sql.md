@@ -4,8 +4,8 @@ description: Reference documentation to explain sys.dm_server_external_policy_ro
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.date: "11/07/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_server_external_policy_role_actions_TSQL"
@@ -22,7 +22,7 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists the links between the roles and actions, could be used to join the two. 
+Lists the links between the roles and actions and can be used to join the two DMVs *sys.dm_server_external_policy_roles* and *sys.dm_server_external_policy_actions*. 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,6 +35,8 @@ Principals must have the **VIEW SERVER SECURITY STATE** permission.
 
 ## See also
 
+ [sys.dm_server_external_policy_principal_assigned_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-external-policy-principal-assigned-actions-transact-sql.md)  
+ 
 - [Provision access by data owner for Azure SQL Database](/azure/purview/how-to-policies-data-owner-azure-sql-db)
 
 - [Provision access by data owner for SQL Server on Azure Arc-enabled servers](/azure/purview/how-to-policies-data-owner-arc-sql-server)

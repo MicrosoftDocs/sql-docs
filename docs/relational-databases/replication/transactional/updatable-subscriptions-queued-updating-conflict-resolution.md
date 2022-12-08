@@ -3,10 +3,9 @@ description: "Updatable Subscriptions - Queued Updating Conflict Resolution"
 title: "Queued Updating Conflict Detection and Resolution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "conflict resolution [SQL Server replication], queued updating subscriptions"

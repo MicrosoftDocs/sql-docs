@@ -4,8 +4,8 @@ description: See how Hybrid Buffer Pool makes persistent memory devices accessib
 author: briancarrig
 ms.author: brcarrig
 ms.date: 10/19/2021
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 # Hybrid Buffer Pool

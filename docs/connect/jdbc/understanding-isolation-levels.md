@@ -4,8 +4,8 @@ description: Learn about how to control transaction isolation levels in the JDBC
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/06/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Understanding isolation levels

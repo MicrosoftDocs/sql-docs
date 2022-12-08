@@ -4,8 +4,8 @@ description: Learn how to discard backup/restore history, SQL Server Agent Job h
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/14/2017
-ms.prod: sql
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.maint.historycleanup.f1"

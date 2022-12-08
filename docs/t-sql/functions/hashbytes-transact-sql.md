@@ -4,8 +4,8 @@ description: "HASHBYTES (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/29/2016"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "HASHBYTES_TSQL"

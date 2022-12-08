@@ -4,8 +4,8 @@ description: Reference documentation to explain sp_external_policy_refresh (Tran
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.date: "11/07/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sp_external_policy_refresh_TSQL"
@@ -20,7 +20,10 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Force immediate download of latest published policies.
+Forces immediate download of latest published policies for the whole instance (for every database).
+
+> [!NOTE]  
+>  If there are any ongoing pull requests by the background task or by another user, the request waits until the former task is finished and starts a new pull. – This ensures that the result of calling this proc explicitly always results in a refreshed cache.
 
 ## Syntax  
   
@@ -44,11 +47,11 @@ sp_external_policy_refresh  [ @type = ] 'type'
  The following example downloads complete set of policies.  
   
 ```  
-EXEC sp_external_policy_refresh reload
+EXEC sp_external_policy_refresh @type = 'reload'
 ```  
   
 ### B. Incremental policy refresh
- The following example downloads incremental policy.  
+ The following example downloads policies incrementally by using the default type 'update'.  
   
 ```  
 EXEC sp_external_policy_refresh

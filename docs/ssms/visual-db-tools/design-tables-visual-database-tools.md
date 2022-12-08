@@ -1,9 +1,8 @@
 ---
 description: "Create and update database tables"
 title: Create and Update Tables
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], Table Designer"

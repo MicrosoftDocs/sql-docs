@@ -3,10 +3,9 @@ title: "SQL Server Agent Properties (Log On Tab)"
 description: Find out about the Log On tab of the SQL Server Agent Properties dialog box. See how to use this tab to specify an account and to start or stop the service.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: markingmyname

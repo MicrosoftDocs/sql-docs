@@ -4,8 +4,8 @@ description: sys.dm_database_replica_states (Azure SQL Database)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/22/2019"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_database_replica_states_TSQL"

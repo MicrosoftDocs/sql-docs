@@ -1,9 +1,8 @@
 ---
 title: "Filegroup Element for Index (DTA)"
 description: In the dta utility, the Filegroup element for Index specifies the filegroup on which the index is to be created for a user-specified configuration.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"

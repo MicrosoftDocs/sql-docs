@@ -4,8 +4,8 @@ description: "uniqueidentifier (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "12/01/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 f1_keywords:
   - "uniqueidentifier"

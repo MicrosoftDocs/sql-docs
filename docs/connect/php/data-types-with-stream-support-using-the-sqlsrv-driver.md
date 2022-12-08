@@ -4,8 +4,8 @@ description: "This topic lists the SQL Server data types which can be retrieved 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "streaming data"

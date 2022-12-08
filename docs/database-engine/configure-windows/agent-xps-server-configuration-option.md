@@ -4,8 +4,8 @@ description: Discover how to use the Agent XPs option to enable SQL Server Agent
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Agent XPs option"

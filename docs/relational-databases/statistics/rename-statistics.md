@@ -3,9 +3,9 @@ title: "Rename Statistics | Microsoft Docs"
 description: Learn how to rename a statistics object in SQL Server by using Transact-SQL. You must have ALTER permission on the table or view.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "renaming statistics"

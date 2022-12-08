@@ -3,10 +3,9 @@ description: "sp_addlinkedserver (Transact-SQL)"
 title: "sp_addlinkedserver (Transact-SQL)"
 ms.custom: ""
 ms.date: "11/16/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: wiassaf
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_addlinkedserver_TSQL"

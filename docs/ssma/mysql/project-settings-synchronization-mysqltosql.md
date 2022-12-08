@@ -1,11 +1,11 @@
 ---
 description: "Project Settings (Synchronization) (MySQLToSQL)"
 title: "Project Settings (Synchronization) (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: cpichuka 

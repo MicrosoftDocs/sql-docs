@@ -3,10 +3,9 @@ title: "sp_replmonitorhelpmergesessiondetail (T-SQL)"
 description: Describes the sp_replmonitorhelpmergesessiondetail stored procedure which returns detailed article-level information about a specific replication Merge Agent session. 
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

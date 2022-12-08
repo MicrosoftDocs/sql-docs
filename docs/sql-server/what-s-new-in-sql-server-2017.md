@@ -4,9 +4,9 @@ description: Find out what's new for SQL Server 2017, which brings the power of 
 ms.custom:
   - intro-whats-new
 ms.date: "10/20/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray

@@ -1,9 +1,8 @@
 ---
 title: F1 Help for Server Connections
 description: "F1 Help for Server Connections (SQL Server Management Studio)"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: ui-reference
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], Help"

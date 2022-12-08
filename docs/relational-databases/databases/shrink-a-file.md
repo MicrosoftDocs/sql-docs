@@ -4,10 +4,9 @@ description: Learn how to shrink a data or log file in SQL Server by using SQL S
 ms.custom:
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.shrinkfile.f1"

@@ -3,10 +3,9 @@ description: "Associate a Query with a Connection in a Project"
 title: "Associate a Query with a Connection in a Project"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server Management Studio], query associations"

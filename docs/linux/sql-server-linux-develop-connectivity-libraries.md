@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server

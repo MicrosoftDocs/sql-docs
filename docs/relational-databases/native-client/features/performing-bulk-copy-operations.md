@@ -3,9 +3,9 @@ description: "Performing Bulk Copy Operations in SQL Server Native Client"
 title: "Performing Bulk Copy Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [SQL Server Native Client]"

@@ -3,9 +3,9 @@ description: "MSSQLSERVER_1204"
 title: "MSSQLSERVER_1204 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "1204 (Database Engine error)"

@@ -3,9 +3,9 @@ description: "Degree of Parallelism (7.0 Insert) Event Class"
 title: "Degree of Parallelism (7.0 Insert) Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "Degree of Parallelism event class"

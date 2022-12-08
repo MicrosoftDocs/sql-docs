@@ -5,8 +5,8 @@ author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
 ms.date: 6/22/2022
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: overview
 ms.custom: kr2b-contr-experiment
 ---

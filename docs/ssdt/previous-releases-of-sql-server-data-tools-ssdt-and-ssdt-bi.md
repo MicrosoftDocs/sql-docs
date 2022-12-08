@@ -1,8 +1,8 @@
 ---
 title: Previous releases of SQL Server Data Tools (SSDT)
 description: Find out which versions of SSDT and SSDT-BI work with which versions of Visual Studio. See how to install different versions of SSDT and SSDT-BI.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 author: dzsquared

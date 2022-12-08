@@ -4,9 +4,8 @@ description: 'Download and Install SqlPackage for Windows, macOS, or Linux'
 ms.custom:
   - tools|sos
   - intro-installation
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"

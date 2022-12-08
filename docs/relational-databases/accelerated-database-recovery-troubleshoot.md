@@ -2,9 +2,8 @@
 description: "Troubleshoot accelerated database recovery"
 title: "Troubleshoot accelerated database recovery"
 ms.date: 07/14/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "accelerated database recovery [SQL Server], recovery-only"

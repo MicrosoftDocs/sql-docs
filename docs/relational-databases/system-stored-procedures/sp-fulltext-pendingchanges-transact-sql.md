@@ -3,10 +3,9 @@ description: "sp_fulltext_pendingchanges (Transact-SQL)"
 title: "sp_fulltext_pendingchanges (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_fulltext_pendingchanges_TSQL"

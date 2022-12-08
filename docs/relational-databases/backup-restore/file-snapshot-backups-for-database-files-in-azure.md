@@ -3,10 +3,9 @@ title: "File-Snapshot Backups for Database Files in Azure | Microsoft Docs"
 description: SQL Server file-snapshot backup uses Azure snapshots to provide fast backups & quicker restores for database files stored using Azure Blob Storage.
 ms.custom: ""
 ms.date: "05/23/2016"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MashaMSFT

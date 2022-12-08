@@ -4,8 +4,8 @@ description: "Learn about performing bulk copy operations using OLE DB Driver fo
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "bulk copy [OLE DB Driver for SQL Server]"

@@ -4,8 +4,8 @@ description: Learn how a consumer in OLE DB Driver for SQL Server executes a com
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "commands [OLE DB Driver for SQL Server]"

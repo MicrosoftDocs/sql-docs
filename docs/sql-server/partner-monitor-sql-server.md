@@ -4,8 +4,8 @@ description: Lists of third-party partners with solutions to monitor your SQL Se
 ms.topic: conceptual
 ms.custom: ""
 ms.date: 11/02/2017 
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---

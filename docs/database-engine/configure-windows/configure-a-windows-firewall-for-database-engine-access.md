@@ -4,8 +4,8 @@ description: Find out how to configure a Windows firewall so that client compute
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/16/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "connections [SQL Server], firewall systems"

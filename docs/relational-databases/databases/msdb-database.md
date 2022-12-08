@@ -3,10 +3,9 @@ description: "msdb Database"
 title: "msdb Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: "andreas.wolter"
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, msdb database"

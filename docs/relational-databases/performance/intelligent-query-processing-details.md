@@ -1,9 +1,8 @@
 ---
 title: "Intelligent query processing details"
 description: "Intelligent query processing features described in detail."
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
 author: "MikeRayMSFT"

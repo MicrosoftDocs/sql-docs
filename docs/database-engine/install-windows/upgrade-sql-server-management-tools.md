@@ -4,8 +4,8 @@ description: This article describes support for upgrading SQL Server Management 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "management tools, upgrading"

@@ -1,9 +1,8 @@
 ---
 title: "Name Element for Table (DTA)"
 description: In the dta utility, the Name element for Table specifies a table name for tuning. This article describes that element.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 dev_langs: 
   - "XML"

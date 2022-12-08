@@ -1,9 +1,8 @@
 ---
 description: "Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)"
 title: Set the Service Startup Account
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, service accounts"

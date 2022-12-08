@@ -3,10 +3,9 @@ description: "Command-Line Management Tool: SqlLocalDB.exe"
 title: "Command-Line Management Tool: SqlLocalDB.exe | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 apilocation: 

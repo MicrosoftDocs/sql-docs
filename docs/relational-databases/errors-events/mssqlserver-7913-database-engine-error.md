@@ -3,9 +3,9 @@ description: "MSSQLSERVER_7913"
 title: "MSSQLSERVER_7913 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "7913 (Database Engine error)"

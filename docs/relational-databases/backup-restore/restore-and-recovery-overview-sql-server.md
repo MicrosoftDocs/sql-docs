@@ -5,8 +5,8 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 10/19/2022
-ms.prod: sql
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:

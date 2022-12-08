@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: "wiassaf"
 ms.date: 01/24/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "WORKLOAD CLASSIFIER"

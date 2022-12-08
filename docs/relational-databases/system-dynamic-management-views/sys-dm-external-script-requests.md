@@ -4,8 +4,8 @@ description: sys.dm_external_script_requests
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/26/2020"
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_external_script_requests"

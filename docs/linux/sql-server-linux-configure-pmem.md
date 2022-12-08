@@ -6,8 +6,8 @@ author: briancarrig
 ms.author: brcarrig
 ms.date: 09/21/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15"
 ---
 # Configure persistent memory (PMEM) for SQL Server on Linux

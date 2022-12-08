@@ -2,8 +2,8 @@
 description: "Optimize JSON processing with in-memory OLTP"
 title: "Optimize JSON processing with in-memory OLTP"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft

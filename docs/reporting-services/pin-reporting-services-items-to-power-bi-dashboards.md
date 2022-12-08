@@ -1,9 +1,8 @@
 ---
 title: "Pin paginated report items to Power BI dashboards - Reporting Services | Microsoft Docs"
 ms.date: 10/14/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
+ms.service: reporting-services
+ms.subservice: reporting-services
 description: You can pin on-premises Reporting Services paginated report items to a dashboard in the Power BI service, as a new tile.
 ms.topic: conceptual
 helpviewer_keywords: 

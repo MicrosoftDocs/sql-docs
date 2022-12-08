@@ -2,8 +2,8 @@
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/15/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: include
 ---
 ## Prerequisites

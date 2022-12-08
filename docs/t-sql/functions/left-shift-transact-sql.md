@@ -5,8 +5,8 @@ author: thesqlsith
 ms.author: derekw
 ms.reviewer: randolphwest
 ms.date: 07/26/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "LEFT_SHIFT"

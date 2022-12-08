@@ -3,9 +3,9 @@ title: "MSSQLSERVER_53 | Microsoft Docs"
 description: The SQL Server client cannot connect to the server. See an explanation of error 53 and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 f1_keywords: 
   - "53"

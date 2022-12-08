@@ -3,10 +3,9 @@ description: "Monitor Running Packages and Other Operations"
 title: "Monitor Running Packages and Other Operations | Microsoft Docs"
 ms.custom: supportability
 ms.date: 06/04/2018
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.isoperations.executions.f1"

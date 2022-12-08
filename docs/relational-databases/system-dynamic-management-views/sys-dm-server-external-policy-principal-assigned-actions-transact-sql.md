@@ -4,8 +4,8 @@ description: Reference documentation to explain sys.dm_server_external_policy_pr
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.date: "11/07/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_server_external_policy_principal_assigned_actions_TSQL"
@@ -22,7 +22,10 @@ dev_langs:
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
-Lists Azure AD principals, joined with roles, joined with their data actions. 
+Lists Azure AD principals, joined with roles, joined with their data actions.
+
+> [!NOTE]  
+>  This view returns one record per assignment. If the same action has been assigned at multiple scopes (like via different role-assignments or different scopes), there will be multiple rows with the same action name in the result set.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

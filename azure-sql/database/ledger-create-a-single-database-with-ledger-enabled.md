@@ -33,7 +33,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   ![Screenshot that shows adding to Azure SQL.](./media/single-database-create-quickstart/select-deployment.png)
+   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="Screenshot of the Azure portal, select Azure SQL deployment page, creating a new single database.":::
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the Azure subscription you want to use.
 
@@ -56,7 +56,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
 1. This quickstart uses a serverless database, so select **Serverless**, and then select **Apply**. 
 
-      ![Screenshot that shows configuring a serverless database.](./media/single-database-create-quickstart/configure-database.png)
+      :::image type="content" source="./media/single-database-create-quickstart/configure-database.png" alt-text="Screenshot that shows configuring a serverless database.":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.

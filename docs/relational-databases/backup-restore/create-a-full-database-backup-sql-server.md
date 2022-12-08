@@ -3,9 +3,8 @@ title: "Create a Full Database Backup | Microsoft Docs"
 description: This article shows you how to create a full database backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
 ms.custom: "contperf-fy21q4-portal"
 ms.date: "05/12/2021"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [SQL Server], full backups"

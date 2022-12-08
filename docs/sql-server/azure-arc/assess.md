@@ -5,7 +5,7 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 09/12/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: conceptual
 ---
 # Configure SQL Assessment | Azure Arc-enabled SQL Server
@@ -92,3 +92,4 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 
 - To obtain comprehensive support of the on-demand SQL Assessment feature, a Premier or Unified support subscription is required. For details, see [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
 
+- [View SQL Server databases - Azure Arc](view-databases.md)

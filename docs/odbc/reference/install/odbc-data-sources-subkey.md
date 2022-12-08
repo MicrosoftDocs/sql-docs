@@ -3,10 +3,9 @@ description: "ODBC Data Sources subkey"
 title: "ODBC Data Sources subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/23/2019"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "subkeys [ODBC], for data sources"

@@ -3,10 +3,9 @@ description: "ISSCommandWithParameters::SetParameterProperties in SQL Server Nat
 title: "ISSCommandWithParameters::SetParameterProperties (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 apiname: 
   - "ISSCommandWithParameters::SetParameterProperties (OLE DB)"

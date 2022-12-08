@@ -3,7 +3,6 @@ description: "The sp_help_change_feed system stored procedure monitors the curre
 title: "sp_help_change_feed (Transact-SQL)"
 ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 

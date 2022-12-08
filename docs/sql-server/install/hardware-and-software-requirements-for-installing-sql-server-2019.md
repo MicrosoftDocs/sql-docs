@@ -3,9 +3,9 @@ title: "SQL Server 2019: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2019. 
 ms.custom: sqlfreshmay19
 ms.date: 09/16/2021
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Setup [SQL Server], software"

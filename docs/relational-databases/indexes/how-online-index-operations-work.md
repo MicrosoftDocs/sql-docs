@@ -4,9 +4,8 @@ description: How Online Index Operations Work
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/17/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "online index operations"

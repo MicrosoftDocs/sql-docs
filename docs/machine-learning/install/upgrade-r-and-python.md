@@ -1,8 +1,8 @@
 ---
 title: Upgrade Python and R runtimes (binding)
 description: Upgrade Python and R runtimes in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 09/30/2020
 ms.topic: how-to
 author: WilliamDAssafMSFT

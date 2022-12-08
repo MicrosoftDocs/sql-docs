@@ -3,9 +3,9 @@ description: "Updating an Application from SQL Server 2005 Native Client"
 title: "Update from SQL 2005"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, updating applications"

@@ -1,9 +1,8 @@
 ---
 title: sp_data_source_table_columns
 description: sp_data_source_table_columns (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords: 
   - sp_data_source_table_columns_TSQL

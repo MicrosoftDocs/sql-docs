@@ -4,8 +4,8 @@ description: Learn how to use the Data Migration Assistant to assess the data ac
 author: rajeshsetlem
 ms.author: rajpo
 ms.date: 05/18/2022
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: how-to
 ms.custom:
   - "seo-lt-2019"

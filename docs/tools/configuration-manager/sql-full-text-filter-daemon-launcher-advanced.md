@@ -3,10 +3,9 @@ title: "SQL Full-text Filter Daemon Launcher (Advanced)"
 description: Find out about the SQL Full-text Filter Daemon Launcher, which SQL Server full-text search uses. Learn about the Advanced tab of its Properties dialog box.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: tools-other
+ms.subservice: tools-other
 ms.topic: conceptual
 ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
 author: markingmyname

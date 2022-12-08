@@ -3,10 +3,9 @@ description: "CollectionAggregate (geography Data Type)"
 title: "CollectionAggregate (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs: 
   - "TSQL"

@@ -4,8 +4,8 @@ description: "Columnstore index query performance recommendations for achieving 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

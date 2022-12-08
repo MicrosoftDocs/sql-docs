@@ -1,9 +1,8 @@
 ---
 title: Download SQL Server extended features and tools
 description: This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 keywords: feature pack
 author: markingmyname

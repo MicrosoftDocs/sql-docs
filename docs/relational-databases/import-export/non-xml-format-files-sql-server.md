@@ -4,8 +4,8 @@ description: SQL Server 2019 supports non-XML format files and XML format files 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/29/2022
-ms.prod: sql
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
   - "non-XML format files"

@@ -3,10 +3,9 @@ description: "Revert a Database to a Database Snapshot"
 title: "Revert a Database to a Database Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database snapshots [SQL Server], reverting to"

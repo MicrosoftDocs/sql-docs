@@ -3,10 +3,9 @@ description: "Use Table-Valued Parameters in SQL Server Native Client (OLE DB)"
 title: Use table-valued parameters (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname

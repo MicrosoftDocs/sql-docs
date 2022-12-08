@@ -3,9 +3,9 @@ title: "Performing Asynchronous Operations | Microsoft Docs"
 description: Allow applications to perform asynchronous database operations with the SQL Server Native Client OLD DB provider.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "initialization [SQL Server Native Client]"

@@ -4,8 +4,8 @@ description: "ALTER DATABASE SCOPED CREDENTIAL changes the properties of a datab
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/09/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER DATABASE SCOPED CREDENTIAL"

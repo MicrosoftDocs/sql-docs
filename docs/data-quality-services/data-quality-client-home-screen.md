@@ -4,8 +4,8 @@ description: "Data Quality Client Home Screen"
 author: swinarko
 ms.author: sawinark
 ms.date: "02/29/2012"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 f1_keywords:
   - "sql13.dqs.clienthome.f1"

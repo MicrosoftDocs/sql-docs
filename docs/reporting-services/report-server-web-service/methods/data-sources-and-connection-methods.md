@@ -3,7 +3,6 @@ title: "Data Sources and Connection Methods | Microsoft Docs"
 description: In Report Services, you can use these methods to set and manage data source connections and credentials.
 ms.date: 03/06/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
 
 

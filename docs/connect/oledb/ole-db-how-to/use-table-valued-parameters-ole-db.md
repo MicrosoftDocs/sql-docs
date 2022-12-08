@@ -4,8 +4,8 @@ description: Learn how to creates table-valued parameters in OLE DB Driver for S
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Use Table-Valued Parameters (OLE DB)

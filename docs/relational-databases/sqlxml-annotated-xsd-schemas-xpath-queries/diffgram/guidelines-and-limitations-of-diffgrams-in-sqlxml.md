@@ -4,8 +4,7 @@ description: Guidelines and Limitations of DiffGrams in SQLXML
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "DiffGrams [SQLXML], about DiffGrams"

@@ -1,11 +1,11 @@
 ---
 description: "Project Settings (Type Mapping) (MySQLToSQL)"
 title: "Project Settings (Type Mapping) (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: cpichuka 

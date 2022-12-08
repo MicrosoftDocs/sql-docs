@@ -4,8 +4,8 @@ description: Learn what happens if an Always On availability group containing a 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "08/08/2019"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

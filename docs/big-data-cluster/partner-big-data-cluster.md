@@ -4,9 +4,8 @@ description: Lists of third-party partners for implementing SQL Server 2019 Big 
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 05/03/2022
-ms.prod: sql
-ms.technology: big-data-cluster
-ms.prod_service: "database-engine"
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.author: wiassaf
 ms.reviewer: hudequei
 author: WilliamDAssafMSFT

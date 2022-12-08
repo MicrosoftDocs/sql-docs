@@ -1,9 +1,8 @@
 ---
 title: Securing SQL Server
 description: Use these articles to create and implement an effective security plan in SQL Server. Learn about the platform, authentication, objects, and applications.
-ms.prod: sql
-ms.prod_service: security
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "Security [SQL Server]"

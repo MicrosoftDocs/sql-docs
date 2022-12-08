@@ -4,9 +4,8 @@ description: sys.sql_logins (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "01/20/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sql_logins_TSQL"

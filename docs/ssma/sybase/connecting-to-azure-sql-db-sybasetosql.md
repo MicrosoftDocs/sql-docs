@@ -3,9 +3,9 @@ description: "Connecting to Azure SQL Database (SybaseToSQL)"
 title: "Connecting to Azure SQL Database (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2020"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: cpichuka 

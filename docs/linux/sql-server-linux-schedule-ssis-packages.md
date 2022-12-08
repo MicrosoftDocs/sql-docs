@@ -6,8 +6,8 @@ ms.author: lle
 ms.reviewer: maghan
 ms.date: 10/02/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Schedule SQL Server Integration Services package execution on Linux with cron
 

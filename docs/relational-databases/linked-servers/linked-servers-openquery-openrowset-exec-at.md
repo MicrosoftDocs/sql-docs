@@ -2,9 +2,8 @@
 description: "Compares OPENROWSET, OPENQUERY, EXECUTE AT as options for remote execution"
 title: "Query remote servers (Database Engine)"
 ms.date: "12/02/2021"
-ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
+ms.service: sql
+ms.subservice: 
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

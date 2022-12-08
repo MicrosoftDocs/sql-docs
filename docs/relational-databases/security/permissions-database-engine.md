@@ -5,8 +5,8 @@ author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"

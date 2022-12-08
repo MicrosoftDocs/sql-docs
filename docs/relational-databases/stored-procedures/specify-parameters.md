@@ -3,8 +3,8 @@ title: "Specify Parameters | Microsoft Docs"
 description: Learn how to pass values into parameters and about how each of the parameter attributes is used during a procedure call.
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

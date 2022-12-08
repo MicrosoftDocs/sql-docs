@@ -4,8 +4,8 @@ description: Use this read-only Database Mirroring Monitor page to view warnings
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.dbmmonitor.warningsandalerts.f1"

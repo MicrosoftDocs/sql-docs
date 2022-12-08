@@ -3,9 +3,9 @@ description: "Sparse Columns Support in SQL Server Native Client"
 title: "Sparse columns support"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sparse columns, ODBC"

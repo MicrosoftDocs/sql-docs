@@ -125,7 +125,7 @@ To download and install SSDT for Visual Studio 2017, or an older version of SSDT
 
 ## Next steps
 
-After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
+After installation of SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
 
 * [Project-Oriented Offline Database Development](project-oriented-offline-database-development.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Configure public endpoint - Azure SQL Managed Instance
+title: Configure public endpoint for Azure SQL Managed Instance
 description: "Learn how to configure a public endpoint for Azure SQL Managed Instance"
 author: srdan-bozovic-msft
 ms.author: srbozovi

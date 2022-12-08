@@ -36,7 +36,31 @@ The November 2022 feature wave introduced the following changes to the connectiv
 * Mandatory Network Security Group rules no longer include outbound to AzureCloud on port 443.
 * Simplified Route table (reduced mandatory routes from 13 to 5).
 
+### How applications connect to Azure SQL Managed Instance
 
+Applications can connect to SQL Managed Instance via three types of endpoints. These endpoints serve different scenarios and exhibit distinct network properties and behaviors.
+
+- [VNet-local endpoint](#vnet-local-endpoint)
+- [Public endpoint](#public-endpoint)
+- [Private endpoints](#private-endpoint-preview) (in preview)
+
+![](./media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png)
+
+### VNet-local endpoint
+
+The VNet-local endpoint is the default means to connect to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
+
+### Public endpoint
+
+The public endpoint is an optional domain name of the form `<mi_name>.public.<dns_zone>.database.windows.net` that resolves to a public IP address reachable from the Internet. Public endpoint allows TDS traffic only to reach SQL Managed Instance on port 3442 and cannot be used for integration scenarios, such as failover groups, Managed Instance Link, and similar.
+
+Learn how to set up a public endpoint in [Configure public endpoint for Azure SQL Managed Instance](public-endpoint-configure.md).
+
+### Private endpoint (preview)
+
+A [private endpoint](private-endpoint-overview.md) is an optional fixed IP address in another virtual network that conducts traffic to Azure SQL Managed Instance. One Azure SQL Managed Instance can have multiple private endpoints in multiple virtual networks. Private endpoints allow TDS traffic only to reach SQL Managed Instance on port 1433 and cannot be used for integration scenarios, such as failover groups, Managed Instance Link, and similar.
+
+Learn more about private endpoints and how to configure them in [Azure Private Link for Azure SQL Managed Instance](#private-endpoint-preview).
 
 ## Communication overview
 
@@ -79,16 +103,6 @@ Customer applications can connect to SQL Managed Instance and can query and upda
 
 ![Diagram showing the connectivity architecture for Azure SQL Managed Instance.](./media/connectivity-architecture-overview/2-connectivity-architecture-diagram-sql-managed-instance.png)
 
-To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: **VNet-local endpoint** and **public endpoint**.
-
-### VNet-local endpoint
-
-The VNet-local endpoint is the default means to connect to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
-
-### Public endpoint
-
-The [public endpoint](public-endpoint-configure.md) is an optional domain name of the form `<mi_name>.public.<dns_zone>.database.windows.net` that resolves to a public IP address reachable from the Internet. This endpoint allows only TDS traffic to reach SQL Managed Instance and cannot be used for integration scenarios (such as failover groups, Managed Instance link, and other similar technologies).
-
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
 At a high level, SQL Managed Instance is a set of service components hosted on a dedicated set of isolated virtual machines joined to a virtual cluster. Service components are deployed inside the customer's virtual network subnet.
@@ -99,29 +113,9 @@ Customer applications can connect to SQL Managed Instance and can query and upda
 
 ![Diagram showing the connectivity architecture of Azure SQL Managed Instance.](./media/connectivity-architecture-overview/02-connectivity-architecture-sql-managed-instance.png)
 
-To facilitate connectivity with customer applications, SQL Managed Instance offers two types of endpoints: **VNet-local endpoint** and **public endpoint**.
-
-### VNet-local endpoint
-
-The VNet-local endpoint is the default means to connect to SQL Managed Instance. It is a domain name of the form `<mi_name>.<dns_zone>.database.windows.net` that resolves to an IP address from the subnet's address pool; hence "VNet-local", or an endpoint that is local to the virtual network. VNet-local endpoint can be used to connect a SQL Managed Instance in all standard connectivity scenarios.
-
-### Public endpoint
-
-The [public endpoint](public-endpoint-configure.md) is an optional domain name of the form `<mi_name>.public.<dns_zone>.database.windows.net` that resolves to a public IP address reachable from the Internet. This endpoint allows only TDS traffic to reach SQL Managed Instance and cannot be used for integration scenarios (such as failover groups, Managed Instance link, and other similar technologies).
-
-### Management endpoint
-
 To facilitate the communication between the control plane and components deployed inside the customer's subnet, Azure SQL Managed Instances not participating in the November 2022 Feature Wave employ a management endpoint. This means that elements of the virtual network's infrastructure can harm management traffic by making the instance fail and become unavailable.  Management and deployment services connect to SQL Managed Instance's management endpoint that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the management components of SQL Managed Instance use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP ranges. Certificates mutually authenticate all communication between management components and the management plane.
 
-> [!NOTE]
-> Traffic that goes to Azure services that are inside the SQL Managed Instance region is optimized and for that reason not NATed to the public IP address for the management endpoint. For that reason if you need to use IP-based firewall rules, most commonly for storage, the service needs to be in a different region from SQL Managed Instance.
-
-The Azure SQL Managed Instance [mandatory inbound security rules](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration) require management ports 9000, 9003, 1438, 1440, and 1452 to be open from **Any source** on the Network Security Group (NSG) that protects SQL Managed Instance. Although these ports are open at the NSG level, they are protected at the network level by the built-in firewall.
-
-The management endpoint is protected by a built-in firewall on the network level. On the application level, it is protected by mutual certificate verification. When connections start inside SQL Managed Instance (as with backups and audit logs), traffic appears to start from the management endpoint's public IP address. 
-
 ---
-
 
 ## Virtual cluster connectivity architecture
 
@@ -133,7 +127,7 @@ Let's take a deeper dive into connectivity architecture for SQL Managed Instance
 
 Clients connect to SQL Managed Instance by using a host name that has the form `<mi_name>.<dns_zone>.database.windows.net`. This host name resolves to a private IP address, although it's registered in a public Domain Name System (DNS) zone and is publicly resolvable. The `zone-id` is automatically generated when you create the cluster. If a newly created cluster hosts a secondary managed instance, it shares its zone ID with the primary cluster. For more information, see [Use auto failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-mi.md#terminology-and-capabilities).
 
-This private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to the SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name to redirect traffic to the correct SQL engine service.
+This private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to a SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name as seen in the connection string to redirect traffic to the correct SQL engine service
 
 ## [Architecture prior to November 2022](#tab/before-feature-wave)
 
@@ -145,8 +139,18 @@ Clients connect to SQL Managed Instance by using a host name that has the form `
 
 This private IP address belongs to the internal load balancer for SQL Managed Instance. The load balancer directs traffic to the SQL Managed Instance gateway. Because multiple managed instances can run inside the same cluster, the gateway uses the SQL Managed Instance host name to redirect traffic to the correct SQL engine service.
 
----
+#### Management endpoint
 
+To facilitate the communication between the control plane and components deployed inside the customer's subnet, Azure SQL Managed Instances not participating in the November 2022 Feature Wave employ a management endpoint. This means that elements of the virtual network's infrastructure can harm management traffic by making the instance fail and become unavailable. Management and deployment services connect to SQL Managed Instance's management endpoint that maps to an external load balancer. Traffic is routed to the nodes only if it's received on a predefined set of ports that only the management components of SQL Managed Instance use. A built-in firewall on the nodes is set up to allow traffic only from Microsoft IP ranges. Certificates mutually authenticate all communication between management components and the management plane.
+
+> [!NOTE]
+> Traffic that goes to Azure services that are inside the SQL Managed Instance region is optimized and for that reason not NATed to the public IP address for the management endpoint. For that reason if you need to use IP-based firewall rules, most commonly for storage, the service needs to be in a different region from SQL Managed Instance.
+
+The Azure SQL Managed Instance [mandatory inbound security rules](connectivity-architecture-overview.md#mandatory-security-rules-with-service-aided-subnet-configuration) require management ports 9000, 9003, 1438, 1440, and 1452 to be open from **Any source** on the Network Security Group (NSG) that protects SQL Managed Instance. Although these ports are open at the NSG level, they are protected at the network level by the built-in firewall.
+
+The management endpoint is protected by a built-in firewall on the network level. On the application level, it is protected by mutual certificate verification. When connections start inside SQL Managed Instance (as with backups and audit logs), traffic appears to start from the management endpoint's public IP address. 
+
+---
 
 ## Service-aided subnet configuration
 

@@ -1,5 +1,5 @@
 ---
-title: "Restore the master Database (Transact-SQL) | Microsoft Docs"
+title: "Restore the master database (Transact-SQL)"
 description: This article shows you how to restore the master database in SQL Server from a full database backup by using Transact-SQL.
 ms.custom: ""
 ms.date: "12/07/2022"
@@ -13,31 +13,33 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Restore the master Database (Transact-SQL)
+# Restore the master database (Transact-SQL)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This article explains how to restore the **master** database from a full database backup.
+  This article explains how to restore the `master` database from a full database backup.
 
 > [!WARNING]
-> In the event of disaster recovery, the instance where the master database is being restored to should be as close to an exact match to the original as possible. At a minimum, this recovery instance should be the same version, edition, and patch level, and it should have the same selection of features and the same external configuration (hostname, cluster membership, and so on) as the original instance. Doing otherwise might result in undefined SQL Server instance behavior, with inconsistent feature support, and is not guaranteed to be viable.
+> In the event of disaster recovery, the instance where the `master` database is being restored to should be as close to an exact match to the original as possible. At a minimum, this recovery instance should be the same version, edition, and patch level, and it should have the same selection of features and the same external configuration (hostname, cluster membership, and so on) as the original instance. Doing otherwise might result in undefined SQL Server instance behavior, with inconsistent feature support, and is not guaranteed to be viable.
   
 ### To restore the `master` database
   
 1. Start the server instance in single-user mode.  
   
-   You can start SQL Server by either using the `-m*` or `-f` startup parameters. For information about on startup parameter, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  Use Command Prompt for this operation:
+   You can start SQL Server by either using the `-m` or `-f` startup parameters. For more information about startup parameters, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+   
+   From a command prompt, run the following commands, and make sure you replace `MSSQLXX.instance` with the appropriate folder name:
   
    ```console
    cd C:\Program Files\Microsoft SQL Server\MSSQLXX.instance\MSSQL\Binn
    sqlservr -c -f -s <instance> -mSQLCMD
    ```
 
-   - The `-mSQLCMD` ensure only SQLCMD can connect to SQL Server.
+   - The `-mSQLCMD` parameter ensures that only **sqlcmd** can connect to SQL Server.
    - For a default instance name, use `-s MSSQLSERVER`
    - `-c` starts SQL Server as an application to bypass Service Control Manager to shorten startup time
   
-   If the SQL Server can't start due to a damaged **master** database, you have to rebuild the system database first. See [Rebuild system databases](../databases/rebuild-system-databases.md)
+   If the SQL Server instance can't start due to a damaged `master` database, you must rebuild the system databases first. For more information, see [Rebuild system databases](../databases/rebuild-system-databases.md).
 
 1. Connect to SQL Server using SQLCMD from another Command Prompt window
 
@@ -84,5 +86,5 @@ C:\> sqlcmd
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
+- [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
   

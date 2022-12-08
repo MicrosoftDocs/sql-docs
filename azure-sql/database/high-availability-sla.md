@@ -101,14 +101,15 @@ The zone-redundant version of the high availability architecture is illustrated 
 
 During preview, zone redundancy for SQL Managed Instance is available in the Business Critical service tier and supported in the following regions: 
 
+- Australia East
 - Brazil South
 - East US
 - Japan East
-- Norway East
-- UAE North
-- South Africa North
-- Australia East
 - Korea Central
+- Norway East
+- South Africa North
+- Sweden Central
+- UAE North
 
 ## Hyperscale service tier locally redundant availability
 

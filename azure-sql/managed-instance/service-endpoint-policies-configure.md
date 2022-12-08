@@ -38,7 +38,7 @@ Configuring Virtual network Azure Storage service endpoint policies for your Azu
 
 Enabling service endpoint policies for your Azure SQL Managed Instance has the following limitations:
 
-- While in preview, placing a service endpoint policy on a subnet prevents [point-in-time restores (PITR)](point-in-time-restore.md) from instances in different subnets.
+- While in preview, placing a service endpoint policy on a subnet will interfere with the ability of instances in that subnet to perform [point-in-time restores (PITR)](point-in-time-restore.md) from an instance in another subnet. A service endpoint policy does not, however, prevent instances in other subnets from restoring backups from that subnet.
 - While in preview, this feature is available in all Azure regions where SQL Managed Instance is supported except for **China East 2**, **China North 2**,  **Central US EUAP**, **East US 2 EUAP**, **US Gov Arizona**, **US Gov Texas**, **US Gov Virginia**, and **West Central US**.
 - The feature is available only to virtual networks deployed through the Azure Resource Manager deployment model.
 - The feature is available only in subnets that have [service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) for Azure Storage enabled.

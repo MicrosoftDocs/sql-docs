@@ -94,10 +94,12 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
-### Install SSDT Standalone
+### Offline Installation
+For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation.  Two approaches are available:
+- For a single machine, [Download All, then install](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-download-all-then-install-feature)
+- For installation on one or more machines, [use the Visual Studio bootstrapper from the command line](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-command-line-to-create-a-local-layout)
 
-Sometimes online access is problematic. For example, you might have an unreliable internet connection or your internet connection may have low bandwidth. For situations like these, we've made other methods available for acquiring SSDT in Visual Studio. You can use the Download all, then install feature from the Visual Studio Installer to download an installation package on the local machine before you install, or you can use the command line to create a local installation package to install later. 
-For more details you can follow the [Step-by-Step Guidelines for Offline Installation](https://learn.microsoft.com/visualstudio/install/create-an-offline-installation-of-visual-studio?)
+For more details you can follow the [Step-by-Step Guidelines for Offline Installation](/visualstudio/install/create-an-offline-installation-of-visual-studio)
 
 
 ### Supported SQL versions

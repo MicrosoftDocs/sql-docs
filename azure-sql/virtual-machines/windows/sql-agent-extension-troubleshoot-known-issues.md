@@ -43,6 +43,7 @@ Consider the following:
 - Migrated your VM from one subscription to the other.
 - Changed the locale or collation of SQL Server. 
 - Changed the version of your SQL Server instance. 
+- Changed the edition of your SQL Server instance. 
 
 ## Provisioning failed 
 
@@ -60,15 +61,23 @@ Grayed out features are expected if your SQL VM is registered in lightweight mod
 
 Upgrade your extension to full mode to gain access to any unavailable features. Lightweight mode is the default mode for SQL Server instances that participate in a failover cluster instance (FCI) and can't be upgraded, so some features will always be grayed out. 
 
+## Changing service account
+
+Changing the service accounts for either of the two services associated with the extension can cause the extension to fail or behave unpredictably. 
+
+The two services should run under the following accounts:
+
+- **Microsoft SQL Server IaaS agent** is the main service for the SQL IaaS agent extension and should run under the **Local System** account. 
+- **Microsoft SQL Server IaaS Query Service** is a helper service that helps the extension run queries within SQL Server and should run under the **NT Service** account `NT Service\SqlIaaSExtensionQuery`. 
+
+
 ## Automatic registration failed
 
 If you have a few SQL Server VMs that failed to [register automatically](sql-agent-extension-automatic-registration-all-vms.md), check the version of SQL Server on the VMs that failed to register. By default, Azure VMs with SQL Server 2016 or later are automatically registered with the SQL IaaS agent extension when detected by the [CEIP service](/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server). SQL Server VMs that have versions earlier than 2016 have to be manually registered [individually](sql-agent-extension-manually-register-single-vm.md) or [in bulk](sql-agent-extension-manually-register-vms-bulk.md).
 
 ## High resource consumption 
 
-If you notice that the SQL IaaS agent extension is consuming unexpectedly high CPU or memory, verify that Auto Upgrade is enabled for the extension in the Azure portal, and the extension is on the latest version. 
-
-Restart **Microsoft SQL Server IaaS Agent** from services.msc. 
+If you notice that the SQL IaaS agent extension is consuming unexpectedly high CPU or memory, verify the extension is on the latest version. If so, restart **Microsoft SQL Server IaaS Agent** from services.msc. 
 
 ## Error upgrading to full 
 
@@ -89,7 +98,7 @@ If you create your SQL Server VM by using an unmanaged disk, disk configuration 
 
 ## Automated backup disabled
 
-If your [SQL VM resource](manage-sql-vm-portal.md) displays **Automated backup is currently disabled**, check to see if you have enabled Managed Backups inside SQL Server. To use Automated backups from the Azure portal, disable Managed backups from within SQL Server. 
+If your [SQL VM resource](manage-sql-vm-portal.md) displays **Automated backup is currently disabled**, check to see if your SQL Server instance has [managed backups](/sql/relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure) enabled. To use Automated backups from the Azure portal, disable managed backups in SQL Server. 
 
 ## Extension stuck in transition 
 

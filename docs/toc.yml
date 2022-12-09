@@ -4681,8 +4681,20 @@ items:
         href: database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md
       - name: Configure a Server to Listen on an Alternate Pipe
         href: database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md
-      - name: Enable Encrypted Connections to the Database Engine
-        href: database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md
+      - name: Encrypt connections to SQL Server
+        items:
+        - name: Certificate overview
+          href: database-engine/configure-windows/certificate-overview.md
+        - name: Certificate requirements for SQL Server
+          href: database-engine/configure-windows/certificate-requirements.md
+        - name: Configure SQL Server for encryption
+          href: database-engine/configure-windows/configure-sql-server-encryption.md
+        - name: Special cases for encrypting connections to SQL Server
+          href: database-engine/configure-windows/special-cases-for-encrypting-connections-sql-server.md
+        - name: Certificate procedures
+          href: database-engine/configure-windows/certificate-procedures.md
+        - name: SQL Server and client encryption summary
+          href: database-engine/configure-windows/sql-server-and-client-encryption-summary.md
       - name: Connect to SQL Server Through a Proxy Server
         href: database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md
       - name: Configure a Windows Firewall for Database Engine Access

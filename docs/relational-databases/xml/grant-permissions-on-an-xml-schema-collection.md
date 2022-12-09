@@ -203,7 +203,7 @@ GO
 SETUSER 'TestLogin1';
 GO
 INSERT INTO MyTestTable VALUES('
-<telephone xmlns="https://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>
+<telephone xmlns="http://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>
 ');
 GO
 -- To query the table, TestLogin1 must have permissions: SELECT on the table and EXECUTE on the XML schema collection.
@@ -297,7 +297,7 @@ GO
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"
+            xmlns="http://schemas.adventure-works.com/Additional/ContactInfo"
 elementFormDefault="qualified">
 <xsd:element name="pager" type="xsd:string"/>
 </xsd:schema>';

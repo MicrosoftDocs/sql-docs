@@ -587,7 +587,7 @@ The second method is to create a targets file containing the required contributo
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
   
-    <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
+    <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
       <PropertyGroup>  
     <DeploymentContributors>$(DeploymentContributors);MyDeploymentContributor.DeploymentUpdateReportContributor</DeploymentContributors>  
     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments); DeploymentUpdateReportContributor.GenerateUpdateReport=true;</ContributorArguments>  

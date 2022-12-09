@@ -8,7 +8,7 @@ ms.reviewer: mathoma, danil
 ms.date: 08/30/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: conceptual
 ---
 # Replicate a database by using the link feature in SSMS - Azure SQL Managed Instance
 

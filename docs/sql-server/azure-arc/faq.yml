@@ -1,0 +1,36 @@
+### YamlMime:FAQ
+metadata:
+  title: Azure Arc-enabled SQL Server FAQ | Microsoft Docs
+  description: Provides questions and answers frequently asked about Azure Arc-enabled SQL Server.
+  ms.service: sql
+  ms.topic: faq
+  services: azure-arc
+  ms.date: 12/09/2022
+  ms.author: mikeray
+  author: MikeRayMSFT
+title: Azure Arc-enabled SQL Server FAQ
+summary: |
+
+sections:
+
+  - name: General FAQ
+    questions:
+      - question: Can I exclude instances when I onboard with Azure Policy with Azure Arc-enabled SQL Server? 
+        answer: |
+          Yes, you can set the `excludedInstances` setting in the Azure Policy.  
+          
+          For example, if you have standby instances, perhaps you don't want to see them in the portal. When you use Azure Policy to onboard, you can exclude instances based on a pattern in the name. 
+
+          1. Create a copy of the definition that we provide in Azure so that you can create a custom definition.
+          1. Set the value for excluded instances in the custom definition.
+          1. Target the subscription and resource group.
+
+      - question: Is data from my instance of SQL Server sent to Azure.
+        answer: |
+           No. Microsoft only captures metadata and information to help troubleshoot. This does not include user data or how SQL Server is being utilized.
+
+additionalContent: |
+
+     ## Next steps
+
+     [Billing FAQ](billing.md#faq)

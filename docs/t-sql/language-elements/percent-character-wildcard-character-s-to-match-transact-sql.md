@@ -25,18 +25,18 @@ dev_langs:
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.  
-  
+Matches any string of zero or more characters. This wildcard character can be used as a prefix, a suffix, or in the middle of the string. The pattern string can contain more than one % wildcard.  
+
 ## Examples  
  The following example returns all the first names of people in the `Person` table of `AdventureWorks2012` that start with `Dan`.  
-  
-```syntaxsql  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName  
-FROM Person.Person  
-WHERE FirstName LIKE 'Dan%';  
-GO  
+
+```syntaxsql
+-- Uses AdventureWorks
+
+SELECT FirstName, LastName
+FROM Person.Person
+WHERE FirstName LIKE 'Dan%';
+GO
 ```  
   
 ## See Also  

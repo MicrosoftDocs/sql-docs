@@ -92,6 +92,13 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
+### Offline Installation
+For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation.  Two approaches are available:
+- For a single machine, [Download All, then install](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-download-all-then-install-feature)
+- For installation on one or more machines, [use the Visual Studio bootstrapper from the command line](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-command-line-to-create-a-local-layout)
+
+For more details you can follow the [Step-by-Step Guidelines for Offline Installation](/visualstudio/install/create-an-offline-installation-of-visual-studio)
+
 
 ### Supported SQL versions
 
@@ -118,7 +125,7 @@ To download and install SSDT for Visual Studio 2017, or an older version of SSDT
 
 ## Next steps
 
-After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
+After installation of SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
 
 * [Project-Oriented Offline Database Development](project-oriented-offline-database-development.md)
 

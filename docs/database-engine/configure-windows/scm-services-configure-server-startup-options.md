@@ -41,7 +41,8 @@ Configuring server startup options is restricted to users who can change the rel
 
 ## <a id="SSMSProcedure"></a> Use SQL Server Configuration Manager
 
-#### Configure startup options
+### Configure startup options
+
 
 1. Select the **Start** button, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then select **SQL Server Configuration Manager**.
 

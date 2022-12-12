@@ -109,7 +109,7 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
     > If you are using your own ADX cluster, you must include the region in the connection string as follows:
 
     ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
-   You use Device Login to authenticate. Copy the code from the output and select **authenticate** which opens a browser where you need to paste the code. Once you authenticate successfully, you can come back to Azure Data Studio to continue with the rest of the script.
+   You use device sign-in to authenticate. Copy the code from the output and select **authenticate** which opens a browser where you need to paste the code. Once you authenticate successfully, you can come back to Azure Data Studio to continue with the rest of the script.
 
    :::image type="content" source="media/notebooks-kqlmagic/ade-auth.png" alt-text="Screenshot of the Azure Data Explorer authentication.":::
 
@@ -125,7 +125,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
    If you're familiar with the Kusto Query Language (KQL), you can type the query after `%kql`.
 
-   :::image type="content" source="media/notebooks-kqlmagic/ade-analyze-storm-events.png" alt-text="Analyze storm events.":::
+   :::image type="content" source="media/notebooks-kqlmagic/ade-analyze-storm-events.png" alt-text="Screenshot of the analyze storm events.":::
 
 2. Visualize a timeline chart:
 
@@ -135,7 +135,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
    | render timechart title= 'Daily Storm Events'
    ```
 
-   :::image type="content" source="media/notebooks-kqlmagic/ade-visualize-timechart.png" alt-text="Screenshot of the visualize a timechart.":::
+   :::image type="content" source="media/notebooks-kqlmagic/ade-visualize-timechart.png" alt-text="Screenshot of a time chart.":::
 
 3. Multiline Query sample using `%%kql`.
 
@@ -238,7 +238,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
    %kql loganalytics://workspace='DEMO_WORKSPACE';appkey='DEMO_KEY';alias='myworkspace'
    ```
 
-   :::image type="content" source="media/notebooks-kqlmagic/aml-auth.png" alt-text="Screenshot of the log analytics authentication":::
+   :::image type="content" source="media/notebooks-kqlmagic/aml-auth.png" alt-text="Screenshot of the log analytics authentication.":::
 
 ### Query and visualize for Azure Monitor Logs
 
@@ -262,6 +262,6 @@ Learn more about notebooks and Kqlmagic:
 - [Kusto (KQL) extension for Azure Data Studio (Preview)](../extensions/kusto-extension.md)
 - [Create and run a Kusto (KQL) notebook (Preview)](./notebooks-kusto-kernel.md)
 - [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
-- [Extension (Magic) to Jupyter Notebook and Jupyter lab](https://github.com/Microsoft/jupyter-Kqlmagic), that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data.
+- [Extension (Magic) to Jupyter Notebook and Jupyter lab](https://github.com/Microsoft/jupyter-Kqlmagic) that enable notebook experience working with Kusto Application Insights, and LogAnalytics data.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)

@@ -90,7 +90,7 @@ New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupNam
 To install *Azure extension for SQL Server* for Windows Operating System, run:
 
 ```azurecli
-   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resomsiurce group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
+   az connectedmachine extension create --machine-name "{your machine name}" --location "{azure region}" --name "WindowsAgent.SqlServer" --resource-group "{your resource group name}" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{\"SqlManagement\":{\"IsEnabled\":true},  \"excludedSqlInstances\":[]}'
 ```
 
 To install *Azure extension for SQL Server* for Linux operating system, run:

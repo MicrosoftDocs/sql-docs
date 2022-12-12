@@ -233,6 +233,8 @@ Copy the full script and save it as `RegisterSqLVMs.psm1`.
 
 ## Next steps
 
+[Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
+
 For more information, see the following articles: 
 
 * [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)

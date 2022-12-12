@@ -59529,6 +59529,35 @@
       "source_path": "docs/relational-databases/system-tables/cdc-change-feed-settings.md",
       "redirect_url": "/sql/relational-databases/system-tables/changefeed-change-feed-settings",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-neg2-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/timeout-expired-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-1-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-2-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/errors-events/mssqlserver-53-database-engine-error.md",
+      "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+    },
+    {
+      "source_path": "azure-sql/database/sql-vulnerability-assessment.md",
+      "redirect_url": "/defender-for-cloud/sql-azure-vulnerability-assessment-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md",
+      "redirect_url": "/sql/database-engine/configure-windows/configure-sql-server-encryption",
+      "redirect_document_id": false
     }
   ]
 }

@@ -69,7 +69,7 @@ The following table details these benefits:
 [!INCLUDE [SQL VM feature benefits](../../includes/sql-vm-feature-benefits.md)]
 
 
-## Permissions
+## Permissions models
 
 There are two permission models for the SQL Server IaaS agent extension - either full sysadmin rights, or the principle of least privilege. The least privileged permission model grants the minimum permissions required for each feature used by the extension that a customer enables. Each feature that a customer uses is assigned a custom role, and the custom role only has the required permissions to perform actions related to the feature. 
 
@@ -114,7 +114,6 @@ You can view the current mode of your SQL Server IaaS agent by using Azure Power
   $sqlvm.SqlManagementType
   ```
 
-
 ## Installation
 
 Register your SQL Server VM with the SQL Server IaaS Agent extension to create the [**SQL virtual machine** _resource_](manage-sql-vm-portal.md) within your subscription, which is a _separate_ resource from the virtual machine resource. Unregistering your SQL Server VM from the extension will remove the **SQL virtual machine** _resource_ from your subscription but will not drop the actual virtual machine.
@@ -124,6 +123,7 @@ Deploying a SQL Server VM Azure Marketplace image through the Azure portal autom
 Registering the extension in lightweight mode copies binaries but does not install the agent to the VM. The agent is installed to the VM when the extension is installed in full management mode. 
 
 There are three ways to register with the extension: 
+
 - [Automatically for all current and future VMs in a subscription](sql-agent-extension-automatic-registration-all-vms.md)
 - [Manually for a single VM](sql-agent-extension-manually-register-single-vm.md)
 - [Manually for multiple VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md)
@@ -196,8 +196,8 @@ When using SQL Server on Azure VMs and the SQL IaaS extension, consider the foll
 
 ## Next steps
 
-To install the SQL Server IaaS extension to SQL Server on Azure VMs, see the articles for [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md), [Single VMs](sql-agent-extension-manually-register-single-vm.md), or [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md).
+To install the SQL Server IaaS extension to SQL Server on Azure VMs, see the articles for [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md), [Single VMs](sql-agent-extension-manually-register-single-vm.md), or [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md). For problem resolution, read [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
 
 For more information about running SQL Server on Azure Virtual Machines, see the [What is SQL Server on Azure Virtual Machines?](sql-server-on-azure-vm-iaas-what-is-overview.md).
 
-To learn more, see [frequently asked questions](frequently-asked-questions-faq.yml).
+To learn more, read [frequently asked questions](frequently-asked-questions-faq.yml).

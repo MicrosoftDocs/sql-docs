@@ -61,6 +61,7 @@ az provider register --namespace 'Microsoft.AzureArcData'
 If the machine with SQL Server is already connected to Azure Arc, you can connect the SQL Server instances by installing *Azure extension for SQL Server*. The SQL Server extension for Azure Arc Server can be found in the extension manager as **SQL Server Extension - Azure Arc**. Once installed, the Azure extension for SQL Server will recognize all the installed SQL Server instances and connect them with Azure Arc. The extension will run continuously to detect changes in the SQL Server configuration. For example, if a new SQL Server instance is installed on the machine, it will be automatically registered with Azure Arc. See [virtual machine extension management](/azure/azure-arc/servers/manage-vm-extensions) for instructions on how to install and uninstall extensions to [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) using the Azure portal, Azure PowerShell or Azure CLI.
 
 > [!IMPORTANT]  
+>
 > - The Managed System Identity used by the Azure connected machine agent must have the *Azure Connected SQL Server Onboarding* role at the resource group level.
 > - The Azure resource with type `SQL Server - Azure Arc` representing the SQL Server instance installed on the machine uses the same region and resource group as the Azure resources for Arc-enabled servers.
 
@@ -105,6 +106,7 @@ To install *Azure extension for SQL Server* for Linux operating system, run:
 > [!NOTE]  
 > The specified resource group must match the resource group where the corresponding connected server is registered. Otherwise, the command will fail.
  an
+
 ## When the machine isn't connected to an Arc-enabled Server
 
 If the server that runs your SQL Server instance isn't yet connected to Azure, you can initiate the connection from the target machine using the onboarding script. This script will connect the server to Azure and install the Azure extension for SQL Server.
@@ -203,7 +205,7 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 To delete your Arc-enabled SQL Server resource, go to **Azure Arc > SQL Server**, open the Arc-enabled SQL Server resource for that instance, and select the **Delete** button.
 
 > [!IMPORTANT]  
-> Because multiple SQL Server instances could be installed on the same machine, the *Delete* button will not uninstall the Azure extension for SQL Server on that machine. To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
+> Because multiple SQL Server instances could be installed on the same machine, the *Delete* button doesn't uninstall the Azure extension for SQL Server on that machine. To uninstall it, follow the [uninstall extension](/azure/azure-arc/servers/manage-vm-extensions-portal#uninstall-extension) steps.
 
 ## Restore a deleted Arc-enabled SQL Server resource
 
@@ -218,7 +220,7 @@ If you accidentally deleted your Arc-enabled SQL Server resource, you can restor
    > [!IMPORTANT]  
    > The location property must match the location of the Arc-enabled SQL Server resource for the server specified by the `--machine-name` parameter.
 
-1. Check to make sure your instance is in the exclusion list (see the value of the _excludedSqlInstances_ property).
+1. Check to make sure your instance is in the exclusion list (see the value of the *excludedSqlInstances* property).
 
     ```azurecli
         az connectedmachine extension show --machine-name "{your machine name}" --resource-group "{your resource group name}" -n WindowsAgent.SqlServer

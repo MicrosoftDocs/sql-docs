@@ -59548,6 +59548,10 @@
     {
       "source_path": "docs/relational-databases/errors-events/mssqlserver-53-database-engine-error.md",
       "redirect_url": "/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+    },
+    {
+      "source_path": "azure-sql/database/sql-vulnerability-assessment.md",
+      "redirect_url": "/defender-for-cloud/sql-azure-vulnerability-assessment-overview",
       "redirect_document_id": false
     }
   ]

@@ -48,7 +48,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 - Azure extension for SQL Server is not supported in the following environments:
   - SQL Server in Linux containers
   - SQL Server on VMware clusters or on Azure VMware Solution
-  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms.md).
+  - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. The customers need to [remove the Azure extension for SQL Server](connect.md#delete-your-arc-enabled-sql-server-resource) and [enable automatic registration with SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-automatic-registration-all-vms).
 
 ## September 2022
 

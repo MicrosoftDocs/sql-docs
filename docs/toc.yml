@@ -10395,7 +10395,7 @@ items:
       href: sql-server/azure-arc/connect-at-scale.md
     - name: Assess
       href: sql-server/azure-arc/assess.md
-    - name: Manage databases
+    - name: View databases
       href: sql-server/azure-arc/view-databases.md
     - name: Configure advanced data Security
       href: sql-server/azure-arc/configure-advanced-data-security.md

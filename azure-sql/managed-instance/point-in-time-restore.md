@@ -48,7 +48,7 @@ Point-in-time restore of a whole SQL Managed Instance isn't possible. This artic
 
 Limitations differ if you're restoring your database to an instance in the same subscription, or to a different subscription. 
 
-When [service endpoint policies](/service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet, prevents point-in-time restores (PITR) from instances in different subnets. 
+When [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet, prevents point-in-time restores (PITR) from instances in different subnets. 
 
 
 > [!WARNING]

@@ -18,8 +18,6 @@ ms.custom: intro-installation
 
 ## Find latest version
 
-The list of files for the latest version is always available at [https://aka.ms/azdata](https://aka.ms/azdata).
-
 To find your installed version and see if you need to update, run `azdata --version`.
 
 ## OS specific instructions

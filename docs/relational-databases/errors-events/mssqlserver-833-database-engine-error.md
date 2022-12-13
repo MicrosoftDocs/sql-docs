@@ -62,7 +62,8 @@ When an I/O operation has been pending for 15 seconds or longer, SQL Server perf
 | <**Number**> occurrence(s) | The number of I/O requests that didn't complete the read or write operation in less than 15 seconds. |
 | File information | The complete file name, database name, and database identification (DBID) number. |
 | Handle | The operating system handle of the file. You can use the operating system handle with debuggers or other utilities to help track I/O request packet (IRP) requests. |
-| Offset | The offset of the last stuck I/O operation or the last stalled I/O operation. You can use the offset with debuggers or other utilities to help track IRP requests. <br/><br/> > [!NOTE] </br> > When the informational message is written to the SQL Server error log, the I/O operation may no longer be stuck or stalled. |
+| Offset | The offset of the last stuck I/O operation or the last stalled I/O operation. You can use the offset with debuggers or other utilities to help track IRP requests. <br/><br/> **Note**:
+ </br> When the informational message is written to the SQL Server error log, the I/O operation may no longer be stuck or stalled. |
 
 ### Possible causes
 

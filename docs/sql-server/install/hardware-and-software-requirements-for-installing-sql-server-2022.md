@@ -101,12 +101,12 @@ The following table shows which editions of [!INCLUDE [sssql22-md](../../include
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ |
 | Windows Server 2022 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2022 Datacenter: Azure Edition|    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2022 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2022 Standard <sup>*</sup> |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Standard <sup>*</sup> |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
-| Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Standard <sup>*</sup> |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows 11 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 11 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
@@ -116,6 +116,8 @@ The following table shows which editions of [!INCLUDE [sssql22-md](../../include
 | Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
 | Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+
+<sup>*</sup> Includes Windows Server Essentials.
 
 ### Server Core support
 

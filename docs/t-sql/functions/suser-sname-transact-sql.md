@@ -57,7 +57,8 @@ SUSER_SNAME ( [ server_user_sid ] )
  When called without an argument, SUSER_SNAME returns the name of the current security context. When called without an argument within a batch that has switched context by using EXECUTE AS, SUSER_SNAME returns the name of the impersonated context. When called from an impersonated context, ORIGINAL_LOGIN returns the name of the original context.  
   
 ## [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Remarks  
- SUSER_SNAME always return the login name for the current security context.  
+ SUSER_NAME always return the login name for the current security context.  
+
 
   
  The SUSER_SNAME statement does not support execution using an impersonated security context through EXECUTE AS.  

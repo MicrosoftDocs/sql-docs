@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then exports, in parallel, the results of a T-SQL SELECT statement."
 author: markingmyname
 ms.author: maghan
-ms.date: 08/26/2022
+ms.date: 12/13/2022
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "PolyBase, create table as select"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest>=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/sqlserver2022-asa-pdw](../../includes/applies-to-version/sqlserver2022-asa-pdw.md)]
@@ -168,7 +168,7 @@ You cannot specify any other column options such as data types, collation, or nu
 
  The CREATE EXTERNAL TABLE AS SELECT statement always creates a nonpartitioned table, even if the source table is partitioned.
 
- For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the option `allow polybase export` must be enabled on `sp_configure`. For more information, see [Set `allow polybase export` configuration option](../../database-engine/configure-windows/allow-polybase-export.md).
+ For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the option `allow polybase export` must be enabled by using `sp_configure`. For more information, see [Set `allow polybase export` configuration option](../../database-engine/configure-windows/allow-polybase-export.md).
 
  For query plans in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], created with EXPLAIN, the database uses these query plan operations for external tables: External shuffle move, External broadcast move, External partition move.
 

@@ -497,7 +497,7 @@ You can do this in one of two ways:
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
   
-        <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
+        <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
           <PropertyGroup>  
             <BuildContributors>$(BuildContributors);ExampleContributors.ModelStatistics</BuildContributors>  
             <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;</ContributorArguments>  

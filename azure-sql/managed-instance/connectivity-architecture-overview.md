@@ -183,9 +183,10 @@ The subnet in which SQL Managed Instance is deployed must meet the following cha
 
 These rules are necessary to ensure inbound management traffic flow. They are enforced by the network intent policy and don't need to be deployed by the customer. See the previous [high level connectivity architecture](#high-level-connectivity-architecture) section for more information on connectivity architecture and management traffic.
 
-|Name        |Port                        |Protocol|Source           |Destination|Action|
-|------------|----------------------------|--------|-----------------|-----------|------|
-|internal-in |Any                         |Any     |_subnet_         |_subnet_   |Allow |
+|Name          |Port                        |Protocol|Source           |Destination|Action|
+|--------------|----------------------------|--------|-----------------|-----------|------|
+|healthprobe-in|Any                         |Any     |AzureLoadBalancer|_subnet_   |Allow |
+|internal-in   |Any                         |Any     |_subnet_         |_subnet_   |Allow |
 
 These rules are necessary to ensure outbound management traffic flow. See the [paragraph above](#high-level-connectivity-architecture) for more information on connectivity architecture and management traffic.
 

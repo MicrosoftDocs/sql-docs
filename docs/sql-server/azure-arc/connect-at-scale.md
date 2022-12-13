@@ -265,4 +265,4 @@ Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcD
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 
-- Learn how to [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+- Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)

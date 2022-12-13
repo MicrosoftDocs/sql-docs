@@ -1,6 +1,6 @@
 ---
-title: Manage SQL Server databases
-description: Manage databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
+title: View SQL Server databases
+description: View databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
@@ -10,18 +10,20 @@ ms.custom:
 ms.service: sql
 ---
 
-# Manage SQL Server databases - Azure Arc
+# View SQL Server databases - Azure Arc
 
-You can manage SQL Server databases in Azure.
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+You can inventory and view SQL Server databases in Azure.
 
 ## Prerequisites
 
-Before you begin, verify that the SQL Server instance that hosts the databases:
+Before you begin, verify that the SQL Server instance that hosts the databases is:
 
-* Is hosted on a physical or virtual machine running Windows operating system.
-* Is [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], or [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
-* Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
-* Is connected to the internet directly or through a proxy server.
+* Hosted on a physical or virtual machine running Windows operating system.
+* [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
+* Connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
+* Connected to the internet directly or through a proxy server.
 
 ## Inventory databases
 
@@ -43,6 +45,6 @@ After you create, modify, or delete a database, changes are visible in Azure por
 
 ## Next steps
 
-* [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+* [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
 
-* [Configure on-demand SQL assessment for your SQL Server instance](assess.md)
+* [Configure SQL Assessment | Azure Arc-enabled SQL Server](assess.md)

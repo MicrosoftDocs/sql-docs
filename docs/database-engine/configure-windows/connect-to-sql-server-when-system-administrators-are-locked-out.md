@@ -93,7 +93,7 @@ For step-by-step instructions about how to start [!INCLUDE[ssNoVersion](../../in
    If you have a default instance, use `MSSQLSERVER` without an instance name.
 
    ```powershell
-   net start $service_name /mSQLCMD
+   net start $service_name /f /mSQLCMD
    ```
 
 1. Using **sqlcmd** execute a CREATE LOGIN command followed by ALTER SERVER ROLE command. This step assumes you've logged into Windows with an account that is a member of the Local Administrators group. This assumes you've replaced the domain and login names with the credentials you want to give sysadmin membership.

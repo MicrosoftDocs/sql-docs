@@ -67,7 +67,7 @@ CREATE [ NONCLUSTERED ]  COLUMNSTORE INDEX index_name
 [ ; ]
 
 <with_option> ::=
-      DROP_EXISTING = { ON | **OFF** } -- default is OFF
+      DROP_EXISTING = { ON | OFF } -- default is OFF
     | MAXDOP = max_degree_of_parallelism
     | ONLINE = { ON | OFF }
     | COMPRESSION_DELAY  = { 0 | delay [ MINUTES ] }
@@ -90,7 +90,7 @@ Syntax for Azure Synapse Analytics, Parallel Data Warehouse, [!INCLUDE [sssql22-
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ORDER (column [ , ...n ] ) ]
-    [ WITH ( DROP_EXISTING = { ON | **OFF** } ) ] -- default is OFF
+    [ WITH ( DROP_EXISTING = { ON | OFF } ) ] -- default is OFF
 [;]
 ```
 
@@ -131,9 +131,9 @@ Use the `column_store_order_ordinal` column in [sys.index_columns](../../relatio
 
 To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index. Use the `DROP_EXISTING` option.
 
-LOB data types (the (max) length data types) cannot be the key of an ordered clustered columnstore index.
+LOB data types (the (max) length data types) can't be the key of an ordered clustered columnstore index.
 
-When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting with the `CREATE INDEX` statement, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, do not limit MAXDOP, and use all the parallel threading the server can provide. The highest quality of compression and sorting could aid queries on the columnstore index.
+When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting with the `CREATE INDEX` statement, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, don't limit MAXDOP, and use all the parallel threading the server can provide. The highest quality of compression and sorting could aid queries on the columnstore index.
 
 When an ordered clustered columnstore index is created, the key columns are indicated by the `column_store_order_ordinal` column in `sys.index_columns`.
 
@@ -208,7 +208,7 @@ WITH ( ONLINE = ON );
 
 With these options, you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option isn't specified, the index uses the settings partition or filegroup settings of the existing table.
 
-*partition_scheme_name* **(** _column_name_ **)** specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).
+*partition_scheme_name* ( *column_name* ) specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).
 
 *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.
 
@@ -318,7 +318,7 @@ Specifies a filegroup name on which to create the index. If *filegroup_name* isn
 
 Creates the specified index on the default filegroup.
 
-The term default, in this context, isn't a keyword. It's an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session, which is the default setting. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+The term default, in this context, isn't a keyword. It's an identifier for the default filegroup and must be delimited, as in `ON "default"` or `ON [default]`. If `"default"` is specified, the QUOTED_IDENTIFIER option must be ON for the current session, which is the default setting. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 ## Permissions
 
@@ -517,7 +517,7 @@ CREATE INDEX nc2_simple ON dbo.SimpleTable (DueDateKey);
 GO
 ```
 
-Note that only for [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], you must drop the nonclustered indexes in order to create the columnstore index.
+Only for [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], you must drop the nonclustered indexes in order to create the columnstore index.
 
 ```sql
 DROP INDEX dbo.SimpleTable.nc1_simple;
@@ -603,7 +603,7 @@ WITH ( DROP_EXISTING = ON );
 
 ### F. Convert a columnstore table to a rowstore heap
 
-To convert a columnstore table to a rowstore heap, simply drop the clustered columnstore index. This isn't typically recommended, but can some have narrow uses. For more information about heaps, see [Heaps (tables without clustered indexes)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md).
+To convert a columnstore table to a rowstore heap, drop the clustered columnstore index. This isn't typically recommended, but can some have narrow uses. For more information about heaps, see [Heaps (tables without clustered indexes)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md).
 
 ```sql
 DROP INDEX [IDX_CL_MyFactTable]
@@ -657,7 +657,7 @@ ON dbo.SimpleTable (OrderDateKey, DueDateKey, ShipDateKey);
 GO
 ```
 
-### B. Create a simple, nonclustered columnstore index by using all options
+### B. Create a basic nonclustered columnstore index by using all options
 
 The following example demonstrates the syntax of creating a nonclustered columnstore index on the DEFAULT filegroup, specifying the maximum degrees of parallelism (MAXDOP) as 2.
 

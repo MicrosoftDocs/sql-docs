@@ -18,12 +18,13 @@ You can inventory and view SQL Server databases in Azure.
 
 ## Prerequisites
 
-Before you begin, verify that the SQL Server instance that hosts the databases is:
+Before you begin, verify that the SQL Server instance that hosts the databases:
 
-* Hosted on a physical or virtual machine running Windows operating system.
-* [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
-* Connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
-* Connected to the internet directly or through a proxy server.
+* Is hosted on a physical or virtual machine running Windows operating system.
+* Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
+* Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
+* Is connected to the internet directly or through a proxy server.
+* Has `NT AUTHORITY\SYSTEM` in the `sysadmin` role.
 
 ## Inventory databases
 

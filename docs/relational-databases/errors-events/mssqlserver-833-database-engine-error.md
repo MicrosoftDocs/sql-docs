@@ -40,11 +40,11 @@ This message indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 These I/O problems may cause the following behavior to occur:
 
-1. Blocking.
-1. Latch contention and time-outs.
-1. Slow response time.
-1. Stretching of resource boundaries.
-1. You may also notice other symptoms associated with this message, such as:
+- Blocking.
+- Latch contention and time-outs.
+- Slow response time.
+- Stretching of resource boundaries.
+- You may also notice other symptoms associated with this message, such as:
     - High wait times for PAGEIOLATCH waits.
     - Warnings or errors in the system event log.
     - Indications of disk latency issues in system monitor counters.
@@ -62,9 +62,10 @@ When an I/O operation has been pending for 15 seconds or longer, SQL Server perf
 | <**Number**> occurrence(s) | The number of I/O requests that didn't complete the read or write operation in less than 15 seconds. |
 | File information | The complete file name, database name, and database identification (DBID) number. |
 | Handle | The operating system handle of the file. You can use the operating system handle with debuggers or other utilities to help track I/O request packet (IRP) requests. |
-| Offset | The offset of the last stuck I/O operation or the last stalled I/O operation. You can use the offset with debuggers or other utilities to help track IRP requests. <br/><br/> **Note**: </br> When the informational message is written to the SQL Server error log, the I/O operation may no longer be stuck or stalled. |
+| Offset | The offset of the last stuck I/O operation or the last stalled I/O operation. You can use the offset with debuggers or other utilities to help track IRP requests. <br/><br/> > [!NOTE] </br> > When the informational message is written to the SQL Server error log, the I/O operation may no longer be stuck or stalled. |
 
-### Possible Causes
+### Possible causes
+
 The informational message indicates that the current load may be experiencing one of the following conditions:
 
 - The workload exceeds the I/O path capabilities either because of misconfiguration of the I/O subsystem (SAN, NAS, and direct attached) or because the hardware capacity has been reached.
@@ -76,10 +77,11 @@ The informational message indicates that the current load may be experiencing on
 
 SQL Server records the time it initiated an I/O request and records the time the I/O was completed. If that difference is 15 seconds or longer, this condition is detected. It also means that SQL Server isn't the cause of the delayed I/O condition that this message describes and reports. This condition is known as stalled I/O. Most disk requests occur within the typical speed of the disk. This typical disk speed is frequently known as disk seek time. Disk seek time for most standard disks occurs in 10 milliseconds or less. Therefore, 15 seconds is a long time for the system I/O path to return to SQL Server. For more details, see the [More Information](#more-information) section.
   
-## User Action
+## User action
+
 Troubleshoot this error by performing the following steps:
 
-1. Examine the system event log for hardware-related error messages. 
+1. Examine the system event log for hardware-related error messages.
 1. Examine hardware-specific logs if they are available.  Use the necessary methods and techniques to determine the cause of the delay in the operating system, the drivers, or the I/O hardware.
 1. Update all device drivers and firmware or perform other diagnostics that're associated with your I/O subsystem.
 1. Disk access can be slowed by filter drivers, for example, an antivirus program. To increase access speed, exclude the SQL Server data files that're specified in the error message from the active virus scans. For more information, see [How to choose antivirus software to run on computers that are running SQL Server (microsoft.com)](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b).
@@ -250,7 +252,7 @@ For more information, see [Support for databases on compressed volumes](/trouble
 PAGEIOLATCH_* and writelog waits in sys.dm_os_wait_stats dynamic management views (DMV) are key indicators to investigate I/O path performance. If you see significant PAGEIOLATCH waits, it means that SQL Server is waiting on the I/O subsystem. A certain amount of PAGEIOLATCH waits is typical and expected behavior. However, if the average PAGEIOLATCH wait times are consistently greater than 10 milliseconds, you should investigate why the I/O subsystem is under pressure. For more information, see the following documents:
 
 - [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance)
-- [sys.dm_os_waiting_tasks (Transact-SQL)](https://msdn.microsoft.com/library/ms188743.aspx)
+- [sys.dm_os_waiting_tasks (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)
 - [sys.dm_exec_requests](https://msdn.microsoft.com/library/ms177648.aspx)
 - [The SQL Server Wait Type Repository](https://blogs.msdn.com/b/psssql/archive/2009/11/03/the-sql-server-wait-type-repository.aspx)
 

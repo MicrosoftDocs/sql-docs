@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-`allow polybase export` server configuration option  allows `INSERT` into a Hadoop external table. 
+`allow polybase export` server configuration option  allows `INSERT` into an external table. 
 
 This feature does not support insert into other external data sources.
 
@@ -36,7 +36,7 @@ sp_configure 'show advanced options', 1;
 GO
 RECONFIGURE;
 GO
-sp_configure 'allow polybase export', 0;
+sp_configure 'allow polybase export', 1;
 GO
 RECONFIGURE;
 GO

@@ -344,13 +344,13 @@ The SET options in the required value column are required whenever any of the fo
 | --- | --- | --- | --- | --- |
 | ANSI_NULLS | ON | ON | ON | OFF |
 | ANSI_PADDING | ON | ON | ON | OFF |
-| ANSI_WARNINGS* | ON | ON | ON | OFF |
+| ANSI_WARNINGS <sup>1</sup> | ON | ON | ON | OFF |
 | ARITHABORT | ON | ON | OFF | OFF |
 | CONCAT_NULL_YIELDS_NULL | ON | ON | ON | OFF |
 | NUMERIC_ROUNDABORT | OFF | OFF | OFF | OFF |
 | QUOTED_IDENTIFIER | ON | ON | ON | OFF |
 
-*Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON when the database compatibility level is set to 90 or later. If the database compatibility level is set to 80 or earlier, you must explicitly set the ARITHABORT option to ON.
+<sup>1</sup> Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON when the database compatibility level is set to 90 or later. If the database compatibility level is set to 80 or earlier, you must explicitly set the ARITHABORT option to ON.
 
 If the SET options are incorrect, the following conditions can occur:
 
@@ -366,33 +366,37 @@ For more information about filtered indexes, see [Create filtered indexes](../..
 
 Each column in a columnstore index must be of one of the following common business data types:
 
-- datetimeoffset [ ( *n* ) ]
-- datetime2 [ ( *n* ) ]
-- datetime
-- smalldatetime
-- date
-- time [ ( *n* ) ]
-- float [ ( *n* ) ]
-- real [ ( *n* ) ]
-- decimal [ ( *precision* [ *, scale* ] ) ]
-- numeric [ ( *precision* [ *, scale* ] ) ]
-- money
-- smallmoney
-- bigint
-- int
-- smallint
-- tinyint
-- bit
-- nvarchar [ ( *n* ) ]
-- nvarchar(max) (Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Premium tier, Standard tier [S3 and above], and all vCore offerings tiers, in clustered columnstore indexes only.)
-- nchar [ ( *n* ) ]
-- varchar [ ( *n* ) ]
-- varchar(max) (Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Premium tier, Standard tier [S3 and above], and all vCore offerings tiers, in clustered columnstore indexes only.)
-- char [ ( *n* ) ]
-- varbinary [ ( *n* ) ]
-- varbinary (max) (Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database at Premium tier, Standard tier [S3 and above], and all vCore offerings tiers, in clustered columnstore indexes only.)
-- binary [ ( *n* ) ]
-- uniqueidentifier (Applies to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.)
+- **datetimeoffset** [ ( *n* ) ]
+- **datetime2** [ ( *n* ) ]
+- **datetime**
+- **smalldatetime**
+- **date**
+- **time** [ ( *n* ) ]
+- **float** [ ( *n* ) ]
+- **real** [ ( *n* ) ]
+- **decimal** [ ( *precision* [ *, scale* ] ) ]
+- **numeric** [ ( *precision* [ *, scale* ] ) ]
+- **money**
+- **smallmoney**
+- **bigint**
+- **int**
+- **smallint**
+- **tinyint**
+- **bit**
+- **nvarchar** [ ( *n* ) ]
+- **nvarchar(max)** <sup>1</sup>
+- **nchar** [ ( *n* ) ]
+- **varchar** [ ( *n* ) ]
+- **varchar(max)** <sup>1</sup>
+- **char** [ ( *n* ) ]
+- **varbinary** [ ( *n* ) ]
+- **varbinary(max)** <sup>1</sup>
+- **binary** [ ( *n* ) ]
+- **uniqueidentifier** <sup>2</sup>
+
+<sup>1</sup> Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and Azure SQL Database at Premium tier, Standard tier (S3 and above), and all vCore offerings tiers, in clustered columnstore indexes only.
+
+<sup>2</sup> Applies to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later versions.
 
 If the underlying table has a column of a data type that isn't supported for columnstore indexes, you must omit that column from the nonclustered columnstore index.
 
@@ -400,13 +404,17 @@ Large object (LOB) data greater than 8 kilobytes is stored in off-row, LOB stora
 
 Columns that use any of the following data types can't be included in a columnstore index:
 
-- ntext, text, and image
-- nvarchar(max), varchar(max), and varbinary(max) (Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and prior versions, and nonclustered columnstore indexes.)
-- rowversion (and timestamp)
-- sql_variant
-- CLR types (hierarchyid and spatial types)
-- xml
-- uniqueidentifier (Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].)
+- **ntext**, **text**, and **image**
+- **nvarchar(max)**, **varchar(max)**, and **varbinary(max)** <sup>1</sup>
+- **rowversion** (and **timestamp**)
+- **sql_variant**
+- CLR types (**hierarchyid** and spatial types)
+- **xml**
+- **uniqueidentifier** <sup>2</sup>
+
+<sup>1</sup> Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and prior versions, and nonclustered columnstore indexes.
+
+<sup>2</sup> Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
 **Nonclustered columnstore indexes:**
 

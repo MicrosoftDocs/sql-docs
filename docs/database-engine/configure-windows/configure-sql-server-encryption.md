@@ -1,6 +1,6 @@
 ---
 title: Configure SQL Server Database Engine for encryption
-description: This article describes how to configure a SQL Server instance to use a certificate.
+description: This article describes how to configure a SQL Server instance to enable encrypted connections.
 author: sevend2
 ms.author: v-sidong
 ms.reviewer: ramakoni1, randolphwest
@@ -10,7 +10,7 @@ ms.subservice: configuration
 ms.topic: conceptual
 ---
 
-# Configure SQL Server Database Engine for encryption
+# Configure SQL Server Database Engine for encrypting connections
 
 You can encrypt all incoming connections to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or enable encryption for just a specific set of clients. For either of these scenarios, you first have to configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to use a certificate that meets [Certificate requirements for SQL Server](certificate-requirements.md) before taking additional steps on the server computer or client computers to encrypt data.
 

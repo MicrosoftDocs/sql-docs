@@ -115,7 +115,7 @@ SELECT @myid;
 GO  
 ```  
  
-### D. Query random data with the NEWID() Function
+### D. Query random data with the NEWID() function
 
 The following example queries a random record from the `Production.Product` table using the `NEWID()` function. To query more records radomly, increase the `TOP` value.
   

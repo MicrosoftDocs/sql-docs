@@ -3484,7 +3484,7 @@ You can determine the status of this option in the `is_numeric_roundabort_on` co
 
   Double quotation marks can be used to enclose delimited identifiers.
 
-  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a single quotation mark (') is part of the literal string, it can be represented by double quotation marks (").
+  All strings delimited by double quotation marks are interpreted as object identifiers. Quoted identifiers don't have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be keywords and can include characters not allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. If a double quotation mark (") is part of the literal string, it can be represented by two double quotation marks ("").
 
 - OFF
 

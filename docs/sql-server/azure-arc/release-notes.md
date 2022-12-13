@@ -11,6 +11,19 @@ ms.topic: conceptual
 
 # Release notes - Azure Arc-enabled SQL Server
 
+## December 2022
+
+This release is published December 13, 2022
+
+### Extension version
+
+`1.1.2132.21`
+
+### Azure extension for SQL Server
+
+- Support to view databases as a resource added for [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)], and [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. See [View SQL Server databases - Azure Arc](view-databases.md).
+- Support for Web and Express editions.
+
 ## November 2022
 
 This release is published November 12, 2022
@@ -39,7 +52,6 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 |PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]|
 |Free|Indicates that the instance uses Evaluation or Developer edition of SQL Server|
 |HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it may not require a license. For more information, see [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
-|||
 
 ### Known issues and limitations
 

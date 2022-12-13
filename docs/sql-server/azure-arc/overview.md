@@ -46,6 +46,7 @@ Azure Arc-enabled SQL Server supports SQL Server 2012 or higher running on one o
 
 > [!NOTE]
 > Azure Arc-enabled SQL Server does not support the following configurations currently:
+>
 > - SQL Server running in containers.
 > - SQL Server Failover Cluster Instances (FCI).
 > - SQL Server roles other than the Database Engine, such as Analysis Services (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).

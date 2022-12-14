@@ -3,7 +3,7 @@ title: Release notes
 description: This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 11/30/2022
+ms.date: 12/13/2022
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -85,8 +85,15 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 ## <a id="102"></a> 10.2
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2195718)**  
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.1 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2195832)**
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2195718)**  
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft JDBC Driver 10.2.2 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2195832)**
+
+Release number: 10.2.2 
+Released: Dec 13, 2022
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195718&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2195832&clcid=0x40a)
 
 Release number: 10.2.1  
 Released: May 12, 2022
@@ -104,6 +111,18 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Compatible with Java Development Kit (JDK) version 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 10.2 for SQL Server is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
 
 ### 10.2 Releases
+
+Release number: 10.2.2  
+Released: Dec 13, 2022
+
+Fixed issues in 10.2.2:
+
+- Clear prepared statement cache on idle connection resiliency reconnections
+- Fix for setting KeepAlive extended options 
+- Fixed issue where the driver may assert when canceling a statement
+- Fixed callable statement index out of bounds error
+- Fixed issue not checking for DONE token errors so exceptions are ignored
+- Fixed query cancellation bug
 
 Release number: 10.2.1  
 Released: May 12, 2022

@@ -32,7 +32,7 @@ landingContent:
       - text: SQL Server on Azure Linux VMs
         url: /azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview
       - text: Azure Synapse Analytics
-        url: /azure/synapse-analytics
+        url: /azure/synapse-analytics/overview-what-is
       - text: Azure Database Migration Service
         url: /azure/dms/dms-overview
 

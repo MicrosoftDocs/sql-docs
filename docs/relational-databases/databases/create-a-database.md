@@ -57,7 +57,7 @@ ms.author: wiassaf
 5.  To change the owner name, select (**...**) to select another owner.  
   
     > [!NOTE]  
-    >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], all user databases are full-text enabled.  
+    >  The **Use full-text indexing** option is always checked and dimmed because, beginning in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], all user databases are full-text enabled.  
   
 6.  To change the default values of the primary data and transaction log files, in the **Database files** grid, select the appropriate cell and enter the new value. For more information, see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   

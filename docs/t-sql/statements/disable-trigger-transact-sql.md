@@ -57,7 +57,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
  ALL SERVER  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   

@@ -94,7 +94,7 @@ The following fields can be found in a trace log:
 
 ## Previous versions
 
-In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions:
+In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], there were multiple trace log files, one for each application. The following files are obsolete and are no longer created in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions:
 + ReportServerWebApp_*\<timestamp>*.log
 + ReportServer_*\<timestamp>*.log
 + ReportServerService_main_*\<timestamp>*.log

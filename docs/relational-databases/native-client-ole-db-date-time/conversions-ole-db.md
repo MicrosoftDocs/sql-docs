@@ -61,10 +61,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## In This Section  
  [Conversions Performed from Client to Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)  
- Describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later).  
+ Describes date/time conversions performed between a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later).  
   
  [Conversions Performed from Server to Client](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
- Describes date/time conversions performed between [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
+ Describes date/time conversions performed between [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later) and a client application written with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ## See Also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

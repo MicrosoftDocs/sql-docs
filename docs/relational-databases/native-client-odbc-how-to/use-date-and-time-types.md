@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Use Date and Time Types
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This sample shows how to initialize the date/time data structures that were added in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. It then prepares the input values, binds parameters, and executes the query. For more information about using these types, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  This sample shows how to initialize the date/time data structures that were added in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. It then prepares the input values, binds parameters, and executes the query. For more information about using these types, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## Example  
  You will need an ODBC data source called DateTime. The default database for DateTime should be tempdb. This data source must be based on the ODBC driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

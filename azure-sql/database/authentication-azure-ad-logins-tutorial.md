@@ -148,13 +148,13 @@ In order to grant one of the special database roles to a user, the user must exi
 To add a user to a role, you can run the following query:
 
 ```sql
-ALTER ROLE [dbamanger] ADD MEMBER [AzureAD_object] 
+ALTER ROLE [dbmanager] ADD MEMBER [AzureAD_object] 
 ```
 
 To remove a user from a role, run the following query:
 
 ```sql
-ALTER ROLE [dbamanger] DROP MEMBER [AzureAD_object] 
+ALTER ROLE [dbmanager] DROP MEMBER [AzureAD_object] 
 ```
 
 `AzureAD_object` can be an Azure AD user, group, or service principal in Azure AD.
@@ -164,7 +164,7 @@ In our example, we created the user `bob@contoso.com`. Let's give the user the *
 1. Run the following query:
 
    ```sql
-   ALTER ROLE [dbamanger] ADD MEMBER [bob@contoso.com] 
+   ALTER ROLE [dbmanager] ADD MEMBER [bob@contoso.com] 
    ALTER ROLE [loginmanager] ADD MEMBER [bob@contoso.com] 
    ```
 

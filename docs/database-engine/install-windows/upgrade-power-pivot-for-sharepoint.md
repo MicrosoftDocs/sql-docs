@@ -60,7 +60,7 @@ monikerRange: ">=sql-server-2016"
 
  **SQL Server:**
 
-- If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].
+- If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] Service Pack 2 (SP2) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].
 
 - If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].
 
@@ -302,7 +302,7 @@ Get-PowerPivotSystemService
 
 1. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).
 
- MSOLAP.4 is described as the Microsoft OLE DB Provider for OLAP Services 10.0. This version might be the default version from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] that is installed with Excel Services, or it might be the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version. The default version that SharePoint installs doesn't support [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access. You must have the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version or later to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks on SharePoint. To verify you have the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] version, use the instructions in the previous section that explain how to verify the version by viewing file properties.
+ MSOLAP.4 is described as the Microsoft OLE DB Provider for OLAP Services 10.0. This version might be the default version from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] that is installed with Excel Services, or it might be the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version. The default version that SharePoint installs doesn't support [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access. You must have the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version or later to connect to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks on SharePoint. To verify you have the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] version, use the instructions in the previous section that explain how to verify the version by viewing file properties.
 
 ### Verify the ADOMD.NET Data Provider Version
 

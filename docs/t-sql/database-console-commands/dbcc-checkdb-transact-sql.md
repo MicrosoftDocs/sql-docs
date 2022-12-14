@@ -127,7 +127,7 @@ Displays all reported errors per object. All error messages are displayed by def
 
 #### EXTENDED_LOGICAL_CHECKS
 
-If the compatibility level is 100, introduced in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], this option performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.
+If the compatibility level is 100, introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], this option performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.
 
 For more information, see [Perform logical consistency checks on indexes](#perform-logical-consistency-checks-on-indexes) later in this article.
 
@@ -197,7 +197,7 @@ Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Serv
 
 Logical consistency checking on indexes varies according to the compatibility level of the database, as follows:
 
-- If the compatibility level is at least 100 (introduced in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)]):
+- If the compatibility level is at least 100 (introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]):
 - Unless `NOINDEX` is specified, `DBCC CHECKDB` performs both physical and logical consistency checks on a single table and on all its nonclustered indexes. However, on XML indexes, spatial indexes, and indexed views only physical consistency checks are performed by default.
 - If `WITH EXTENDED_LOGICAL_CHECKS` is specified, logical checks are performed on an indexed view, XML indexes, and spatial indexes, where present. By default, physical consistency checks are performed before the logical consistency checks. If `NOINDEX` is also specified, only the logical checks are performed.
 

@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 # GRANT Server Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql_asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Grants permissions on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   

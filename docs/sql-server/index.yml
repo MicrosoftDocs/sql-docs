@@ -27,9 +27,9 @@ landingContent:
         url: /azure/azure-sql/database/sql-database-paas-overview
       - text: Azure SQL Managed Instance
         url: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
-      - text: SQL Server on an Azure Windows VM
+      - text: SQL Server on Azure Windows VMs
         url:  /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
-      - text: SQL Server on an Azure Linux VM
+      - text: SQL Server on Azure Linux VMs
         url: /azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview
       - text: Azure Synapse Analytics
         url: /azure/synapse-analytics

@@ -47,8 +47,8 @@ In this portion of the task, do the following steps:
 > If the SQL Server instances are in multiple resource groups and regions, perform each step twice, once in each resource group.
 >
 
->[!Important]
->On September 30, 2025, Basic Load Balancer will be retired. For more information, see the [official announcement](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). If you are currently using Basic Load Balancer, make sure to upgrade to Standard Load Balancer prior to the retirement date. This [article](/azure/load-balancer/load-balancer-basic-upgrade-guidance) will help guide you through the upgrade process.
+> [!IMPORTANT]
+> On September 30, 2025, the Basic SKU for the Azure Load Balancer will be retired. For more information, see the [official announcement](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). If you're currently using Basic Load Balancer, upgrade to Standard Load Balancer prior to the retirement date.  For guidance, review [upgrade load balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance).
 
 ### Step 1: Create the load balancer and configure the IP address
 

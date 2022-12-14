@@ -358,8 +358,8 @@ On Azure virtual machines, a SQL Server availability group requires a load balan
 
 A load balancer in Azure can be either a Standard Load Balancer or a Basic Load Balancer. Standard Load Balancer has more features than the Basic Load Balancer. For an availability group, the Standard Load Balancer is required if you use an Availability Zone (instead of an Availability Set). For details on the difference between the load balancer SKUs, see [Load Balancer SKU comparison](/azure/load-balancer/skus).
 
->[!Important]
->On September 30, 2025, Basic Load Balancer will be retired. For more information, see the [official announcement](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). If you are currently using Basic Load Balancer, make sure to upgrade to Standard Load Balancer prior to the retirement date. This [article](/azure/load-balancer/load-balancer-basic-upgrade-guidance) will help guide you through the upgrade process.
+> [!IMPORTANT]
+> On September 30, 2025, the Basic SKU for the Azure Load Balancer will be retired. For more information, see the [official announcement](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). If you're currently using Basic Load Balancer, upgrade to Standard Load Balancer prior to the retirement date.  For guidance, review [upgrade load balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance).
 
 1. In the Azure portal, go to the resource group where your SQL Servers are and select **+ Create**.
 1. Search for **Load Balancer**. Choose the load balancer published by Microsoft.

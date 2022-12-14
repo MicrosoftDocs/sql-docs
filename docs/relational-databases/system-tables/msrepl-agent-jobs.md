@@ -19,7 +19,7 @@ ms.assetid: 50ca9254-a0d8-45fb-8cfd-e96ad8aca613
 # MSrepl_agent_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  The **MSrepl_agent_jobs** table contains information about Replication agent jobs to sync between primary and secondary replicas when the Distribution database is in AG.
+  The **MSrepl_agent_jobs** table contains information about Replication agent jobs to sync between primary and secondary replicas when the Distribution database is part of an availability group. 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

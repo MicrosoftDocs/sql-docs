@@ -4,7 +4,7 @@ description: "This article describes how to create indexes on a view."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/04/2022
+ms.date: 12/14/2022
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -247,7 +247,7 @@ ORDER BY OrderDate ASC;
 
 For more information, see [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).
 
-## See also
+## Next steps
 
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)

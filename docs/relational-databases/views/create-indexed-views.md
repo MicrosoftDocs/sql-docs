@@ -107,53 +107,48 @@ The following requirements must also be met, in addition to the SET options and 
 - If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it does not satisfy these `GROUP BY` restrictions.
 - If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
 
-- The SELECT statement in the view definition must not contain the following Transact-SQL elements:
+- The SELECT statement in the view definition must not contain the following Transact-SQL syntax:
 
-   | Transact-SQL function                                                         | Possible alternatives                                           |
-   |-------------------------------------------------------------------------------|-----------------------------------------------------------------|
-   | `COUNT`                                                                       | Use `COUNT_BIG`                                                 |
-   | ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, and `OPENXML`) |                                                                 |
-   | Arithmetic mean `AVG`                                                         | Use `COUNT_BIG` and `SUM` as separate columns                   |
-   | Statistical aggregate functions (`STDEV`, `STDEVP`, `VAR`, and `VARP`)        |                                                                 |
-   | `SUM` function that references a nullable expression                          | Use `ISNULL` inside `SUM()` to make the expression non-nullable |
-   | Other aggregate functions (`MIN`, `MAX`, `CHECKSUM_AGG`, and `STRING_AGG`)    |                                                                 |
-   | User-defined aggregate functions (SQL CLR)                                    |                                                                 |
+   | Disallowed Transact-SQL functions                      |
+   |--------------------------------------------------------|
+   | [Relational operators](../../t-sql/language-elements/relational-operators-transact-sql.md) `OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, and `OPENXML` |
+   | [Aggregate functions](../../t-sql/functions/aggregate-functions-transact-sql.md) `AVG`, `CHECKSUM_AGG`, `COUNT`, `MIN`, `MAX`, `STDEV`, `STDEVP`, `STRING_AGG`, `VAR`, `VARP` |
+   | `SUM` function that references a nullable expression   |
+   | User-defined aggregate functions (SQL CLR)             |
 
+   | Disallowed Transact-SQL elements                                     | 
+   |----------------------------------------------------------------------|
+   | Common table expressions (CTE) `WITH`                                |
+   | Subqueries                                                           |
+   | `SELECT [<table>.]*`                                                 |
+   | `SELECT DISTINCT`                                                    | 
+   | `SELECT TOP`                                                         | 
+   | `OVER` clause, which includes ranking or aggregate window functions  | 
+   | `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, `FULL OUTER JOIN`             | 
+   | `OUTER APPLY` or `CROSS APPLY`                                       | 
+   | Derived tables (for example, using `SELECT` in the `FROM` clause)    | 
+   | Self-joins                                                           | 
+   | Table variables, inline table-valued function (TVF), or multi-statement table-valued function (MSTVF) | 
+   | `PIVOT`, `UNPIVOT`                                                   | 
+   | `TABLESAMPLE`                                                        | 
+   | Temporal queries that use `FOR SYSTEM_TIME`                          | 
+   | Full-text predicates `CONTAINS`, `FREETEXT`, `CONTAINSTABLE`, `FREETEXTTABLE`  |
+   | Grouping operations `CUBE`, `ROLLUP`, or `GROUPING SETS`             |  
+   | `UNION`, `UNION ALL`, `EXCEPT`, `INTERSECT`                          |  
+   | `HAVING`                                                             |
+   | `ORDER BY`                                                           |  
+   | `OFFSET`                                                             |  
 
-   | `SELECT` clause  | Transact-SQL element                                                 | Possible alternative                       |
-   |------------------|----------------------------------------------------------------------|--------------------------------------------|
-   | `WITH cte AS`    | Common table expressions (CTE) `WITH`                                |                                            |
-   | `SELECT`         | Subqueries                                                           |                                            |
-   | `SELECT`         | `SELECT [<table>.]*`                                                 | Explicitly name columns                    |
-   | `SELECT`         | `SELECT DISTINCT`                                                    | Use `GROUP BY`                             |
-   | `SELECT`         | `SELECT TOP`                                                         |                                            |
-   | `SELECT`         | `OVER` clause, which includes ranking or aggregate window functions  |                                            |
-   | `FROM`           | `LEFT OUTER JOIN`                                                    |                                            |
-   | `FROM`           | `RIGHT OUTER JOIN`                                                   |                                            |
-   | `FROM`           | `FULL OUTER JOIN`                                                    |                                            |
-   | `FROM`           | `OUTER APPLY`                                                        |                                            |
-   | `FROM`           | `CROSS APPLY`                                                        |                                            |
-   | `FROM`           | Derived table expressions (i.e. using `SELECT` in the `FROM` clause) |                                            |
-   | `FROM`           | Self-joins                                                           |                                            |
-   | `FROM`           | Table variables                                                      |                                            |
-   | `FROM`           | Inline table-valued function                                         |                                            |
-   | `FROM`           | Multi-statement table-valued function                                |                                            |
-   | `FROM`           | `PIVOT`, `UNPIVOT`                                                   |                                            |
-   | `FROM`           | `TABLESAMPLE`                                                        |                                            |
-   | `FROM`           | `FOR SYSTEM_TIME`                                                    | Query the temporal history table directly  |
-   | `WHERE`          | Full-text predicates (`CONTAINS`, `FREETEXT`, `CONTAINSTABLE`, `FREETEXTTABLE`) |                                 |
-   | `GROUP BY`       | `CUBE`, `ROLLUP`, or `GROUPING SETS` operators                       | Define separate indexed views for each combination of `GROUP BY` columns |
-   | `GROUP BY`       | `HAVING`                                                             |                                            |
-   | Set operators    | `UNION`, `UNION ALL`, `EXCEPT`, `INTERSECT`                          | Use `OR`, `AND NOT`, and `AND` in the `WHERE` clause respectively|
-   | `ORDER BY`       | `ORDER BY`                                                           |                                            |
-   | `ORDER BY`       | `OFFSET`                                                             |                                            |
+   | Disallowed Transact-SQL data types                               |  
+   |------------------------------------------------------------------|
+   | Deprecated large value column types `text`, `ntext`, and `image` |
+   | `xml`                                                            |
+   | `filestream`                                                     |
+   | Sparse column sets                                               |
+   | `float`<sup>1</sup>                                              |
 
-   | Source column type                                               |  Possible alternative                                                                  |
-   |------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-   | Deprecated large value column types `text`, `ntext`, and `image` | Migrate columns to `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` respectively. |
-   | `xml`, or `filestream` columns                                   |                                                                                        |
-   | `float` columns in index key                                     |                                                                                        |
-   | Sparse column sets                                               |                                                                                        |
+<sup>1</sup> The indexed view can contain float columns; however, such columns cannot be included in the clustered index key.
+                                                                                   |
 
 
 ## Datetime/smalldatetime recommendations

@@ -194,7 +194,7 @@ Enables this feature.
  To set this property, use the ALTER DATABASE statement.  
   
  **VarDecimal Storage Format Enabled**  
- This option is read-only starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. When **True**, this database is enabled for the vardecimal storage format. Vardecimal storage format cannot be disabled while any tables in the database are using it. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, all databases are enabled for the vardecimal storage format. This option uses [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
+ This option is read-only starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. When **True**, this database is enabled for the vardecimal storage format. Vardecimal storage format cannot be disabled while any tables in the database are using it. In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions, all databases are enabled for the vardecimal storage format. This option uses [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
 ## Recovery  
  **Page Verify**  

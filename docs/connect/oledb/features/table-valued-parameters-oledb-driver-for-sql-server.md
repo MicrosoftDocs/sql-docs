@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Table-valued parameters were introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide functionality similar to parameter arrays, but they offer more flexibility and closer integration with [!INCLUDE[tsql](../../../includes/tsql-md.md)], and can frequently improve performance. Table-valued parameters can also participate in set-based operations, whereas parameter arrays cannot.  
+  Table-valued parameters were introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide functionality similar to parameter arrays, but they offer more flexibility and closer integration with [!INCLUDE[tsql](../../../includes/tsql-md.md)], and can frequently improve performance. Table-valued parameters can also participate in set-based operations, whereas parameter arrays cannot.  
   
   
  For information about table-valued parameters and OLE DB, see [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  

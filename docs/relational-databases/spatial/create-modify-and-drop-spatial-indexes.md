@@ -60,7 +60,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
      When creating an index on a **geometry** type column, you must specify the **(**_X-min_**,**_Y-min_**)** and **(**_X-max_**,**_Y-max_**)** coordinates of the bounding box. For an index on a **geography** type column, the bounding-box fields become read-only after you specify the **Geography grid** tessellation scheme, because geography grid tessellation does not use a bounding box.  
   
-     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or 8 for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+     Optionally, you can specify nondefault values for the **Cells Per Object** field and for the grid density at any level of the tessellation scheme. The default number of cells per object is 16 for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or 8 for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or higher, and the default grid density is **Medium** for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
      You can select GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID for tessellation scheme in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID is selected, then Level 1, Level 2, Level 3, and Level 4 grid density options are disabled.  
   
@@ -145,7 +145,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  An index build can use available process parallelism.  
   
 ### Version Restrictions  
- Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] databases is a requirement.  
+ Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] databases is a requirement.  
   
   
 ## See Also  

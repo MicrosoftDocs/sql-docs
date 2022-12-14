@@ -418,7 +418,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100** = [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   

@@ -78,27 +78,27 @@ permission | ALL [ PRIVILEGES ]
  Specifies a database role.  
   
  *Application_role*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies a database user mapped to a Windows group.  
   
  *Database_user_mapped_to_certificate*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies a database user mapped to a certificate.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies a database user mapped to an asymmetric key.  
   
@@ -200,7 +200,7 @@ permission | ALL [ PRIVILEGES ]
 ### A. Revoking permission to create certificates  
  The following example revokes `CREATE CERTIFICATE` permission on the `AdventureWorks2012` database from user `MelanieK`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql  
 USE AdventureWorks2012;  
@@ -211,7 +211,7 @@ GO
 ### B. Revoking REFERENCES permission from an application role  
  The following example revokes `REFERENCES` permission on the `AdventureWorks2012` database from application role `AuditMonitor`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```sql  
 USE AdventureWorks2012;  

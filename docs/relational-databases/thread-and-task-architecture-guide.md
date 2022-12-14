@@ -196,7 +196,7 @@ If you are running multiple instances of [!INCLUDE[ssNoVersion](../includes/ssno
 
 
 ## Hot add CPU
-Hot add CPU is the ability to dynamically add CPUs to a running system. Adding CPUs can occur physically by adding new hardware, logically by online hardware partitioning, or virtually through a virtualization layer. Starting with [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports hot add CPU.
+Hot add CPU is the ability to dynamically add CPUs to a running system. Adding CPUs can occur physically by adding new hardware, logically by online hardware partitioning, or virtually through a virtualization layer. Starting with [!INCLUDE[sql2008-md](../includes/sql2008-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports hot add CPU.
 
 Requirements for hot add CPU:  
 * Requires hardware that supports hot add CPU.

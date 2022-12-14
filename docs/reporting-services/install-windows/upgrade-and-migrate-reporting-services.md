@@ -57,7 +57,7 @@ ms.date: 05/06/2021
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+-   [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
  For more information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the following:  
 

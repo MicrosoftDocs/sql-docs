@@ -97,7 +97,7 @@ ms.author: maggies
  For more information about maps, see [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). For step-by-step instructions to add a map to a report, see [Tutorial: Map Report &#40;Report Builder&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
   
 ##  <a name="SpatialDataSource"></a> Choose a source of spatial data  
- On this page, specify the spatial data source and which spatial data to include. Spatial data can come from the map gallery, an ESRI Shapefile, or a dataset query that specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data from a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later version database.  
+ On this page, specify the spatial data source and which spatial data to include. Spatial data can come from the map gallery, an ESRI Shapefile, or a dataset query that specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data from a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later version database.  
   
  You can use the same source or a different source of spatial data for each layer, but you must specify the source every time you add a layer. When the spatial data is from the map gallery or an ESRI Shapefile, the spatial data source is not a separate report item. It does not appear in the Report Data pane.  
   

@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   This sample creates a table with three columns: a sparse column, a column that is not a sparse column, and a columnset column. The sample then displays OLE DB flags showing the column and catalog metadata for the non-sparse column and the columnset column.  
   
- This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ This sample works with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  

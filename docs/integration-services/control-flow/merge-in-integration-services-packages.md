@@ -33,10 +33,10 @@ ms.author: chugu
   
   
 ## Using MERGE  
- Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  
+ Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  
   
 ### MERGE with Incremental Loads  
- The change data capture functionality that is new in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] makes it easier to perform incremental loads reliably to a data warehouse. As an alternative to using parameterized OLE DB Command transformations to perform the inserts and the updates, you can use the MERGE statement to combine both operations.  
+ The change data capture functionality that is new in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] makes it easier to perform incremental loads reliably to a data warehouse. As an alternative to using parameterized OLE DB Command transformations to perform the inserts and the updates, you can use the MERGE statement to combine both operations.  
   
  For more information, see [Apply the Changes to the Destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   

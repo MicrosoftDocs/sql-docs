@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|Address of the memory object. Is not nullable.|  
 |**parent_address**|**varbinary(8)**|Address of the parent memory object. Is nullable.|  
-|**pages_allocated_count**|**int**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Number of pages that are allocated by this object. Is not nullable.|  
+|**pages_allocated_count**|**int**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Number of pages that are allocated by this object. Is not nullable.|  
 |**pages_in_bytes**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Amount of memory in bytes that is allocated by this instance of the memory object. Is not nullable.|  
 |**creation_options**|**int**|Internal use only. Is nullable.|  
 |**bytes_used**|**bigint**|Internal use only. Is nullable.|  
@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**name**|**varchar(128)**|Internal use only. Nullable.|  
 |**memory_node_id**|**smallint**|ID of a memory node that is being used by this memory object. Is not nullable.|  
 |**creation_time**|**datetime**|Internal use only. Is nullable.|  
-|**max_pages_allocated_count**|**int**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Maximum number of pages allocated by this memory object. Is not nullable.|  
+|**max_pages_allocated_count**|**int**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Maximum number of pages allocated by this memory object. Is not nullable.|  
 |**page_size_in_bytes**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Size of pages in bytes allocated by this object. Is not nullable.|  
 |**max_pages_in_bytes**|**bigint**|Maximum amount of memory  ever used by this memory object. Is not nullable.|  
 |**page_allocator_address**|**varbinary(8)**|Memory address of page allocator. Is not nullable. For more information, see [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  

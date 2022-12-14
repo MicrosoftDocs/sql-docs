@@ -196,13 +196,13 @@ FROM { <table_source> [ ,...n ] }
  Specifies that the query optimizer use an optimization or locking strategy with this table and for this statement. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 *rowset_function*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md).  
   
  Using the OPENROWSET and OPENQUERY functions to specify a remote object depends on the capabilities of the OLE DB provider that accesses the object.  
   
  *bulk_column_alias*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
  Is an optional alias to replace a column name in the result set. Column aliases are allowed only in SELECT statements that use the OPENROWSET function with the BULK option. When you use *bulk_column_alias*, specify an alias for every table column in the same order as the columns in the file.  
   
 > [!NOTE]  
@@ -212,7 +212,7 @@ Specifies one of the rowset functions, such as OPENROWSET, that returns an objec
  Specifies a table-valued function.  
   
 OPENXML \<openxml_clause>  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Provides a rowset view over an XML document. For more information, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  

@@ -71,7 +71,7 @@ Specifies a database user.
 Specifies a database role.
 
 *Application_role*
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 Specifies an application role.
 
@@ -196,7 +196,7 @@ GO
 
 The following example denies `REFERENCES` permission on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to application role `AuditMonitor`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ```sql
 USE AdventureWorks2012;

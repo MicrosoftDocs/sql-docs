@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**max_used_memory_kb**|**bigint**|Maximum physical memory used up to this moment in kilobytes.|  
 |**query_cost**|**float**|Estimated query cost.|  
 |**timeout_sec**|**int**|Time-out in seconds before this query gives up the memory grant request.|  
-|**resource_semaphore_id**|**smallint**|Non-unique ID of the resource semaphore on which this query is waiting.<br /><br /> **Note:** This ID is unique in versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. This change can affect troubleshooting query execution. For more information, see the "Remarks" section later in this article.|  
+|**resource_semaphore_id**|**smallint**|Non-unique ID of the resource semaphore on which this query is waiting.<br /><br /> **Note:** This ID is unique in versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. This change can affect troubleshooting query execution. For more information, see the "Remarks" section later in this article.|  
 |**queue_id**|**smallint**|ID of waiting queue where this query waits for memory grants. NULL if the memory is already granted.|  
 |**wait_order**|**int**|Sequential order of waiting queries within the specified `queue_id`. This value can change for a given query if other queries get memory grants or time out. NULL if memory is already granted.|  
 |**is_next_candidate**|**bit**|Candidate for next memory grant.<br /><br /> 1 = Yes<br /><br /> 0 = No<br /><br /> NULL = Memory is already granted.|  
@@ -69,7 +69,7 @@ On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requires the `VIEW DAT
 
  Queries that use dynamic management views that include `ORDER BY` or aggregates may increase memory consumption and thus contribute to the problem they are troubleshooting.  
   
- The Resource Governor feature enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools. Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], each pool behaves like a small independent server instance and requires two semaphores. The number of rows that are returned from `sys.dm_exec_query_resource_semaphores` can be up to 20 times more than the rows that are returned in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ The Resource Governor feature enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools. Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], each pool behaves like a small independent server instance and requires two semaphores. The number of rows that are returned from `sys.dm_exec_query_resource_semaphores` can be up to 20 times more than the rows that are returned in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
 
 ## Examples 
 

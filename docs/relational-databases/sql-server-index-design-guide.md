@@ -79,7 +79,7 @@ An index is an on-disk or in-memory structure associated with a table or view th
 
 2. Understand the characteristics of the most frequently used queries. For example, knowing that a frequently used query joins two or more tables will help you determine the best type of indexes to use.  
   
-3. Understand the characteristics of the columns used in the queries. For example, an index is ideal for columns that have an integer data type and are also unique or nonnull columns. For columns that have well-defined subsets of data, you can use a filtered index in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and higher versions. For more information, see [Filtered Index Design Guidelines](#Filtered) in this guide.  
+3. Understand the characteristics of the columns used in the queries. For example, an index is ideal for columns that have an integer data type and are also unique or nonnull columns. For columns that have well-defined subsets of data, you can use a filtered index in [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and higher versions. For more information, see [Filtered Index Design Guidelines](#Filtered) in this guide.  
   
 4. Determine which index options might enhance performance when the index is created or maintained. For example, creating a clustered index on an existing large table would benefit from the `ONLINE` index option. The ONLINE option allows for concurrent activity on the underlying data to continue while the index is being created or rebuilt. For more information, see [Set Index Options](../relational-databases/indexes/set-index-options.md).  
   

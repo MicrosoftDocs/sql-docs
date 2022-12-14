@@ -110,9 +110,9 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
  However, there are some restrictions on importing and exporting a package between different versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   On an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], you can import packages from an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], but you cannot export packages to an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+-   On an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], you can import packages from an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], but you cannot export packages to an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
--   On an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you cannot import packages from, or export packages to, an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+-   On an instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you cannot import packages from, or export packages to, an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
  The following procedures describe how to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to import or export a package.  
   

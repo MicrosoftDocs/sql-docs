@@ -24,7 +24,7 @@ For example, let's consider the case of an availability group with three synchro
 A user can choose to override the default behavior, and configure the availability group resource to not set `REQUIRED_COPIES_TO_COMMIT` automatically as above.
 
 > [!IMPORTANT]  
->When `REQUIRED_COPIES_TO_COMMIT` is 0 there is risk of data loss. In the case of an outage of the primary, the resource agent will not automatically trigger a failover. The user has to decide if they want to wait for primary to recover or manually fail over.
+> When `REQUIRED_COPIES_TO_COMMIT` is 0 there is risk of data loss. In the case of an outage of the primary, the resource agent will not automatically trigger a failover. The user has to decide if they want to wait for primary to recover or manually fail over.
 
 To set `REQUIRED_COPIES_TO_COMMIT` to 0, run:
 
@@ -45,7 +45,7 @@ sudo pcs resource update <ag_cluster> required_copies_to_commit=
 ```
 
 > [!NOTE]  
->Updating resource properties causes all replicas to stop and restart. This means primary will temporarily be demoted to secondary, then promoted again which will cause temporary write unavailability. The new value for REQUIRED_COPIES_TO_COMMIT will only be set once replicas are restarted, so it won't be instantaneous with running the pcs command.
+> Updating resource properties causes all replicas to stop and restart. This means primary will temporarily be demoted to secondary, then promoted again which will cause temporary write unavailability. The new value for REQUIRED_COPIES_TO_COMMIT will only be set once replicas are restarted, so it won't be instantaneous with running the pcs command.
 
 ## Balance high availability and data protection
 
@@ -64,17 +64,17 @@ The tables below describes the outcome of an outage for primary or secondary rep
 
 ### Availability group - 2 sync replicas
 
-| |Primary outage |One secondary replica outage
-|:---|:--- |:--- |
-|`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER.<br />Might have data loss.<br />New primary is R/W |Primary is R/W, running exposed to data loss
-|`REQUIRED_COPIES_TO_COMMIT=1` <sup>1</sup> |Cluster will automatically issue FAILOVER<br />No data loss.<br />New primary will reject all connections until former primary recovers and joins availability group as secondary. |Primary will reject all connections until secondary recovers.
+| Configuration | Primary outage | One secondary replica outage |
+| :--- | :--- | :--- |
+| `REQUIRED_COPIES_TO_COMMIT=0` | User has to issue a manual FAILOVER.<br />Might have data loss.<br />New primary is R/W | Primary is R/W, running exposed to data loss |
+| `REQUIRED_COPIES_TO_COMMIT=1` <sup>1</sup> | Cluster will automatically issue FAILOVER<br />No data loss.<br />New primary will reject all connections until former primary recovers and joins availability group as secondary. | Primary will reject all connections until secondary recovers. |
 
 <sup>1</sup> SQL Server resource agent for Pacemaker default behavior.
 
 ### Availability group - 3 sync replicas
 
-| |Primary outage |One secondary replica outage
-|:---|:--- |:--- |
+| Configuration |Primary outage |One secondary replica outage
+| :--- | :--- | :--- |
 |`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER.<br />Might have data loss.<br />New primary is R/W |Primary is R/W
 |`REQUIRED_COPIES_TO_COMMIT=1` <sup>1</sup> |Cluster will automatically issue FAILOVER.<br />No data loss.<br />New primary is RW |Primary is R/W
 

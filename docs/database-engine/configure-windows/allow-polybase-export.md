@@ -16,10 +16,10 @@ ms.topic: conceptual
 
 The `allow polybase export` server configuration option allows the export of data out of SQL Server. The functionality of this configuration option is different starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] compared to previous versions:
 
-- Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md) (CETAS) statement requires the option `allow polybase export` to be enabled by using `sp_configure`. This allows for data to be exported to a CSV or Parquet file.
+- Introduced in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md) (CETAS) statement requires the option `allow polybase export` to be enabled by using `sp_configure`. This allows for data to be exported to a CSV or Parquet file. For examples, see [Use CREATE EXTERNAL TABLE AS SELECT exporting data as parquet](../../t-sql/statements/create-external-table-as-select-transact-sql.md#d-use-create-external-table-as-select-exporting-data-as-parquet).
 - In previous versions of SQL Server, enabling `allow polybase export` allows HADOOP to export data out of SQL Server to an external table. For more information, see [PolyBase connectors](../../relational-databases/polybase/polybase-guide.md#polybase-connectors) and [Export data](../../relational-databases/polybase/polybase-queries.md#export-data).
 
- The possible values are described in the following table: 
+The possible values are described in the following table:
 
 | Value | Meaning                                |
 |-------|----------------------------------------|

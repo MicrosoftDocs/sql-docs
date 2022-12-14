@@ -119,11 +119,12 @@ When the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser service 
   
 3.  In the **Server name** box, type **tcp:** to specify the protocol, followed by the computer name, a comma, and the port number. To connect to the default instance, the port 1433 is implied and can be omitted; therefore, type **tcp:**_<computer_name>_. In our example for a named instance, type **tcp:**_<computer_name>_**,49172**.  
   
-    > [!NOTE]  
-    > If you omit **tcp:** from the **Server name** box, then the client will attempt all protocols that are enabled, in the order specified in the client configuration.  
+    > [!IMPORTANT]  
 
-    > [!IMPORTANT]
-    > If an attempt is made to establish a connection with the instance name while connecting to the remote server, the [SQL Server Browser](../tools/configuration-manager/sql-server-browser-service.md) service must be running on the remote server. Instance name port mapping does not work if the SQL Server Browser service is not running.
+    > - If you omit **tcp:** from the **Server name** box, then the client will attempt all protocols that are enabled, in the order specified in the client configuration.  
+    > - If an attempt is made to establish a connection with the instance name while connecting to the remote server, the [SQL Server Browser](../tools/configuration-manager/sql-server-browser-service.md) service must be running on the remote server. Instance name port mapping does not work if the SQL Server Browser service is not running.
+
+
 
   
 4.  In the **Authentication** box, confirm **Windows Authentication**, and then click **Connect**.  

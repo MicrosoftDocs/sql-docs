@@ -289,7 +289,7 @@ OPTION ( HASH JOIN );
 ### D. Use CREATE EXTERNAL TABLE AS SELECT exporting data as parquet
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
- The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database.
+ The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database. Note that the [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 The result of the SELECT statement will be saved on S3-compatible object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
 
@@ -324,7 +324,7 @@ WITH
 ### E. Use CREATE EXTERNAL TABLE AS SELECT from delta table to parquet
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
-The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command.
+The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command. Note that the [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 ```sql
 -- External File Format for PARQUET

@@ -64,12 +64,12 @@ The following tips and tools can help you plan and implement your migration.
 
   Databases with a compatibility level of `90`, including backups taken on [!INCLUDE [ssversion2005-md](../../includes/ssversion2005-md.md)], are automatically upgraded to a compatibility level of `100` when restored to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
-- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP3 or later, or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] SP2 or later, and the secondary is running [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+- **Log shipping.** Log shipping is supported if the primary is running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP3 or later, or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] SP2 or later, and the secondary is running [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
    > [!WARNING]
-   > If an automatic or manual failover happens and the [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] instance becomes primary, [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] instance becomes secondary and cannot receive changes from primary.
+   > If an automatic or manual failover happens and the [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] instance becomes primary, [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] instance becomes secondary and cannot receive changes from primary.
 
-- Bulk load: Tables can be bulk copied from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)] to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+- Bulk load: Tables can be bulk copied from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## See also
 

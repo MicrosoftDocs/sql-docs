@@ -71,7 +71,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ## Remarks  
  Reading large result sets by executing `sys.fn_xe_file_target_read_file` in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] may result in an error. Use the **Results to File** mode (in SSMS, **Ctrl+Shift+F**) to export large result sets to a human-readable file, to  read the file with another tool instead.  
 
- [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accept trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only support trace results in XEL format. We recommend that you use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to read trace results in XEL format.    
+ [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] accept trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only support trace results in XEL format. We recommend that you use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to read trace results in XEL format.    
   
 ### Azure SQL
 

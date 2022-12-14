@@ -22,9 +22,9 @@ This article includes and describes a sample [!INCLUDE[ssRSnoversion](../../incl
  Download the script from the GitHub site [Reporting Services RS.exe migration script](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss) to a local folder. For more information, see the section [How to use the script](#bkmk_how_to_use_the_script) in this article.  
   
 ##  <a name="bkmk_supported_scenarios"></a> Supported Scenarios  
- The script supports both SharePoint mode and Native mode report servers. The script supports the report server versions [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later, and Power BI Report Server.  
+ The script supports both SharePoint mode and Native mode report servers. The script supports the report server versions [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] and later, and Power BI Report Server.  
   
-The script can be used to copy content between report servers of the same mode or different modes. For example, you can run the script to copy content from a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] native mode report server to a [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint mode report server. You can run the script from any server where RS.exe is installed. For example, in the following deployment, you can:  
+The script can be used to copy content between report servers of the same mode or different modes. For example, you can run the script to copy content from a [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] native mode report server to a [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint mode report server. You can run the script from any server where RS.exe is installed. For example, in the following deployment, you can:  
   
 -   Run RS.exe and the script **ON** Server A.  
   

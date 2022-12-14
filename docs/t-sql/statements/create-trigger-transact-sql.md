@@ -218,7 +218,7 @@ Specifies the data modification statements that activate the DML trigger when it
 For INSTEAD OF triggers, you can't use the DELETE option on tables that have a referential relationship, specifying a cascade action ON DELETE. Similarly, the UPDATE option isn't allowed on tables that have a referential relationship, specifying a cascade action ON UPDATE.  
   
 WITH APPEND  
-**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)].  
   
 Specifies that an additional trigger of an existing type should be added. WITH APPEND can't be used with INSTEAD OF triggers or if an AFTER trigger is explicitly stated. For backward compatibility, only use WITH APPEND when FOR is specified, without INSTEAD OF or AFTER. You can't specify WITH APPEND if using EXTERNAL NAME (that is, if the trigger is a CLR trigger).  
   

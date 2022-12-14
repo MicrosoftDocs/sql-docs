@@ -99,7 +99,7 @@ ms.custom: "seo-lt-2019"
   
 2.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
+3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -145,7 +145,7 @@ ms.custom: "seo-lt-2019"
   
 3.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] into the Binn folder of the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
+4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] into the Binn folder of the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  

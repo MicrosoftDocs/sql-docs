@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-You can upgrade instances of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql16-md.md)], [!INCLUDE[sssql17](../../includes/sssql17-md.md)], or [!INCLUDE[sssql19](../../includes/sssql19-md.md)] directly to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], you'll either need to do a side-by-side upgrade, or a migration, to move to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] as there's no common overlap between a supported mainstream operating system. Before running setup to upgrade, review the following articles about the upgrade process and the release notes.  
+You can upgrade instances of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql16-md.md)], [!INCLUDE[sssql17](../../includes/sssql17-md.md)], or [!INCLUDE[sssql19](../../includes/sssql19-md.md)] directly to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], you'll either need to do a side-by-side upgrade, or a migration, to move to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] as there's no common overlap between a supported mainstream operating system. Before running setup to upgrade, review the following articles about the upgrade process and the release notes.  
 
 Check out what's new in each version of the product:
 
@@ -27,7 +27,7 @@ Check out what's new in each version of the product:
 
 Support for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] ended on July 12, 2022. For new end of support options, see [New options for SQL Server 2012 and Windows Server 2012 End of Support](/lifecycle/announcements/sql-server-2012-windows-server-2012-end-of-support).
 
-If you're upgrading from an end-of-support version of SQL Server, such as [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [sskilimanjaro-md](../../includes/sskilimanjaro-md.md)], and [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], see the [end of support options](../../sql-server/end-of-support/sql-server-end-of-support-overview.md).
+If you're upgrading from an end-of-support version of SQL Server, such as [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)], and [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], see the [end of support options](../../sql-server/end-of-support/sql-server-end-of-support-overview.md).
 
 ## Upgrade documentation
 

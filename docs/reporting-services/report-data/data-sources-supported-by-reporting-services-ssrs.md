@@ -254,9 +254,9 @@ This data source has been deprecated. Use the SQL Server data source type to con
 |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|6.20|12.00.01|  
 |[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|13.00|13.0.0.1|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|12.00|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|6.20|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|13.00|13.0.0.1|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|12.00|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|6.20|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|13.00|13.0.0.1|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|6.20|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|13.00|13.0.0.1|  

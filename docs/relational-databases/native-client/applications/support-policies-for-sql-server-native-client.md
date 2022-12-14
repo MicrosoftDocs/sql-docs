@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   This topic discusses how various data-access components can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SNAC).  
   
 ## Server Support  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supports connections to, [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supports connections to, [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
   
 ## Supported Operating System Versions  
  The following table lists which operating systems support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 or later<br /><br /> Microsoft Windows Server 2003 or later<br /><br /> Microsoft Windows XP Service Pack 1 or later<br /><br /> Microsoft Windows Vista (requires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2, or later)<br /><br /> Microsoft Windows Server 2008 R2 (requires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2, or later)|  
 |SQL Server Native Client 10.0 ([!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)])|Microsoft Windows Server 2003 Service Pack 2, or later<br /><br /> Microsoft Windows XP Service Pack 2, or later<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  
-|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 Service Pack 2, or later<br /><br /> Microsoft Windows XP Service Pack 2 or later<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
+|SQL Server Native Client 10.5 ([!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)])|Microsoft Windows Server 2003 Service Pack 2, or later<br /><br /> Microsoft Windows XP Service Pack 2 or later<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7|  
 |SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7<br /><br /> Microsoft Windows 8<br /><br /> Microsoft Windows Server 2012|  
   
 ## ADO Support Policies  

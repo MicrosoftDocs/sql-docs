@@ -80,7 +80,7 @@ After the query completes, right-click **Databases,** and select **Refresh** to 
 1. Paste the following SQL statement into the query editor and select **Run**.
 
    > [!NOTE]  
-   > You can either append this or overwrite the existing query in the editor. Selecting **Run** executes only the query that is highlighted. If nothing is highlighted,selectking **Run** executes all queries in the editor.
+   > You can either append this or overwrite the existing query in the editor. Selecting **Run** executes only the query that is highlighted. If nothing is highlighted, selecting **Run** executes all queries in the editor.
 
    ```sql
    -- Drop the table if it already exists

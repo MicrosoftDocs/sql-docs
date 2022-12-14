@@ -7,7 +7,7 @@ ms.reviewer: wiassaf, mathoma
 ms.date: 06/30/2021
 ms.service: sql-db-mi
 ms.subservice: deployment-configuration
-ms.topic: guide
+ms.topic: conceptual
 ms.custom: overview-samples sqldbrb=2
 ---
 
@@ -26,7 +26,6 @@ The following table includes links to Azure Resource Manager templates for Azure
 | [Server](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-logical-server) | This Azure Resource Manager template creates a server for Azure SQL Database. |
 | [Elastic pool](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-elastic-pool-create) | This template allows you to deploy an elastic pool and to assign databases to it. |
 | [Failover groups](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-with-failover-group) | This template creates two servers, a single database, and a failover group in Azure SQL Database.|
-| [Threat Detection](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-threat-detection-db-policy-multiple-databases) | This template allows you to deploy a server and a set of databases with Threat Detection enabled, with an email address for alerts for each database. Threat Detection is part of the SQL Advanced Threat Protection (ATP) offering and provides a layer of security that responds to potential threats over servers and databases.|
 | [Auditing to Azure Blob storage](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-auditing-server-policy-to-blob-storage) | This template allows you to deploy a server with auditing enabled to write audit logs to a Blob storage. Auditing for Azure SQL Database tracks database events and writes them to an audit log that can be placed in your Azure storage account, OMS workspace, or Event Hubs.|
 | [Auditing to Azure Event Hub](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-auditing-server-policy-to-eventhub) | This template allows you to deploy a server with auditing enabled to write audit logs to an existing event hub. In order to send audit events to Event Hubs, set auditing settings with `Enabled` `State`, and set `IsAzureMonitorTargetEnabled` as `true`. Also, configure Diagnostic Settings with the `SQLSecurityAuditEvents` log category on the `master` database (for server-level auditing). Auditing tracks database events and writes them to an audit log that can be placed in your Azure storage account, OMS workspace, or Event Hubs.|
 | [Azure Web App with SQL Database](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.web/web-app-sql-database) | This sample creates a free Azure web app and a database in Azure SQL Database at the "Basic" service level.|

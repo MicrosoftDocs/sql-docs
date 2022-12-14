@@ -45,17 +45,18 @@ A *managed identity* is a feature of Azure Active Directory (Azure AD) that prov
 
 You can use this identity to authorize requests for data access to other Azure resources, including storage accounts. Services such as Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more [user-assigned managed identities](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests.
 
-Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to managed identity to write the data. Granting permissions to the managed identity of the managed instance is done the same way as granting permissions to any other Azure AD user. For example:
+Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to the managed identity to write the data. Granting permissions to the managed identity of the managed instance is done the same way as granting permissions to any other Azure AD user. For example:
 
 1. In the Azure portal, on the **Access Control (IAM)** pane of a storage account, select **Add role assignment**.  
 1. Select the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role. This provides read/write access to the managed identity for the necessary Azure Blob Storage containers.
    
     Instead of granting the managed identity the Storage Blob Data Contributor Azure RBAC role, you can grant more granular permissions. To learn more, see [Set ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-explorer-acl.md).
 1. On the next page, for **Assign access to**, select **Managed identity**. 
-1. Click **Select members** and then, in the **Managed identity** dropdown list, select the desired managed identity. For more information, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
-1. Now, creating the database-scoped credential for managed identity authentication is simple. 
+1. Choose **Select members** and then, in the **Managed identity** dropdown list, select the appropriate managed identity. For more information, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
-   In the following example, note that `Managed Identity` is a hard-coded string, and you need to replace the generic storage account name with the actual name of the storage account: 
+Now, creating the database-scoped credential for managed identity authentication is simple. 
+
+In the following example, note that `Managed Identity` is a hard-coded string, and you need to replace the generic storage account name with the name of the actual storage account: 
 
 ```sql
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 

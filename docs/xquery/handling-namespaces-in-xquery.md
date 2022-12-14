@@ -60,7 +60,7 @@ where ProductModelID=7
  This is the result  
   
 ```  
-<step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
+<step xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
 ...  
 ```  
   
@@ -86,7 +86,7 @@ where ProductModelID=19
 ```  
   
       <myNS:Result xmlns:myNS="uri:SomeNamespace">  
-  <Summary xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  <Summary xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
    <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
      Our top-of-the-line competition mountain bike. Performance-enhancing   
      options include the innovative HL Frame, super-smooth front   

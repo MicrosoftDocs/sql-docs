@@ -56,7 +56,7 @@ You can add your own Transact-SQL code snippets to the set of pre-defined snippe
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  

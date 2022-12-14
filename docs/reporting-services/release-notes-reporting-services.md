@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 11/23/2022
+ms.date: 12/5/2022
 ms.service: reporting-services
 ms.subservice: reporting-services
 
@@ -87,7 +87,7 @@ Release Candidate 0 (RC0)
 
 ## SQL Server 2019 Reporting Services
 
-## 15.0.8276.32713, 2022/08/31
+## 15.0.8270.42049, 2022/08/31
 *(Product Version: 15.0.1102.1002)*
 
 - Fixed issue with certain parameters causing connection error to certain data sources.

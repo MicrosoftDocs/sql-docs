@@ -4,8 +4,8 @@ description: The supported version and edition upgrades for SQL Server 2017.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:
@@ -172,7 +172,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
 ## See Also  
 
- [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+ [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
  
  [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  

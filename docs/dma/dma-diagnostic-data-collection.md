@@ -4,8 +4,8 @@ description: Learn how to enable and disable usage and diagnostic data collectio
 author: aciortea
 ms.author: "aciortea"
 ms.date: "04/23/2021"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: how-to
 ---
 

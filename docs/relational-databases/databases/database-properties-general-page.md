@@ -3,9 +3,9 @@ title: "Database Properties (General Page) | Microsoft Docs"
 description: "Learn how to use the General tab in the Database Properties dialog box to view or modify the properties of a database."
 ms.custom: ""
 ms.date: "10/27/2015"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.general.f1"

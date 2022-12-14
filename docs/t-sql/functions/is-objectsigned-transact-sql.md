@@ -4,8 +4,8 @@ description: "IS_OBJECTSIGNED (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/10/2016"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IS_OBJECTSIGNED"

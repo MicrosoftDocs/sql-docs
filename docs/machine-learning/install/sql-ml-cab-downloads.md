@@ -4,8 +4,8 @@ description: Download Python and R CAB files for SQL Server Machine Learning Ser
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/21/2022
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.topic: how-to
 ms.custom:
   - seo-lt-2019

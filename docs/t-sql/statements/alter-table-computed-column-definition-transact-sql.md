@@ -4,9 +4,8 @@ description: "ALTER TABLE computed_column_definition specifies the properties of
 author: markingmyname
 ms.author: maghan
 ms.date: 07/26/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "ALTER TABLE statement"

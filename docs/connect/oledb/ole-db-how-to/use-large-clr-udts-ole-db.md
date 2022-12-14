@@ -4,8 +4,8 @@ description: Learn how to fetch rows with large user-defined types from a result
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Use Large CLR UDTs (OLE DB)

@@ -1,9 +1,8 @@
 ---
 description: "View Information About an Alert"
 title: "View Information About an Alert"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, alerts"

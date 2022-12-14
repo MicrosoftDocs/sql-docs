@@ -4,8 +4,8 @@ description: "OPENROWSET (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "09/19/2022"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "OPENROWSET_TSQL"
@@ -156,7 +156,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the data_file can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the data_file can be in Azure Blob Storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
@@ -168,7 +168,7 @@ Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, th
 
 The error file is created at the start of the command execution. An error will be raised if the file already exists. Additionally, a control file that has the extension .ERROR.txt is created. This file references each row in the error file and provides error diagnostics. After the errors have been corrected, the data can be loaded.
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `error_file_path` can be in Azure blob storage.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the `error_file_path` can be in Azure Blob Storage.
 
 ##### ERRORFILE_DATA_SOURCE_NAME
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
@@ -274,7 +274,7 @@ A format file is required to define column types in the result set. The only exc
 For information about format files, see [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
 **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
-Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the format_file_path can be in Azure blob storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, the format_file_path can be in Azure Blob Storage. For examples, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 ##### FIELDQUOTE
 `FIELDQUOTE` **=** 'field_quote'
@@ -567,11 +567,11 @@ SINGLE_CLOB
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-### L. Use OPENROWSET to access several parquet files using an S3-Compliant Object Storage
+### L. Use OPENROWSET to access several parquet files using S3-compatible object storage
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] 
 
-The following example uses access several parquet files from different location, all stored on an S3-Compliant Object Storage:
+The following example uses access several parquet files from different location, all stored on S3-compatible object storage:
 
 ```sql
 

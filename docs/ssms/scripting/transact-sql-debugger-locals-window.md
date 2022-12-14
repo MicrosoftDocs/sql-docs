@@ -2,8 +2,8 @@
 title: Locals Window
 description: Learn how to use the Locals window of the Transact-SQL debugger to display and modify expressions from the current call stack frame.
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Locals Window [Transact-SQL]"

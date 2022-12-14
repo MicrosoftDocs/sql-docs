@@ -6,12 +6,10 @@ description: "The Batch class is for SQL Machine Learning Services and Machine L
 keywords: "" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf 
-manager: "cgronlun" 
 ms.date: 07/15/2019
 ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
+ms.service: sql
+ms.subservice: "machine-learning-services" 
 ms.assetid: "" 
  
 # optional metadata 
@@ -21,7 +19,7 @@ ms.devlang: "Python"
 ms.reviewer: "" 
 ms.suite: "" 
 ms.tgt_pltfrm: "" 
-#ms.technology: "" 
+#ms.subservice: "" 
 ms.custom: ""
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
  

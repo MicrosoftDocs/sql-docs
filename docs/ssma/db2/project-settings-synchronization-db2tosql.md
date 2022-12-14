@@ -1,11 +1,11 @@
 ---
 description: "Project Settings(Synchronization) (DB2ToSQL)"
 title: "Project Settings(Synchronization) (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: cpichuka 

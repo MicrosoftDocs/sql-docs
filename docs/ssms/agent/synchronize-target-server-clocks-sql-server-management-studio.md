@@ -1,9 +1,8 @@
 ---
 description: "Synchronize Target Server Clocks"
 title: Synchronize Target Server Clocks
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, target servers"

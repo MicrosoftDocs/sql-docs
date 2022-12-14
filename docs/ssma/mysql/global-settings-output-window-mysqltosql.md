@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Output Window) (MySQLToSQL)"
 title: "Global Settings (Output Window) (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 author: cpichuka 

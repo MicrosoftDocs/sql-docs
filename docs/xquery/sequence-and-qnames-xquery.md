@@ -3,10 +3,9 @@ title: "Sequence and QNames (XQuery) | Microsoft Docs"
 description: Learn about the fundamental concepts of sequences and QNames in XQuery.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

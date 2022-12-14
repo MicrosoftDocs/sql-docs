@@ -5,9 +5,8 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, Templates
 author: MashaMSFT
 ms.author: mathoma
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: ssms
-ms.prod_service: sql-tools
+ms.service: sql
+ms.subservice: ssms
 ms.reviewer: 
 helpviewer_keywords: 
   - "templates [SQL Server], SQL Server Management Studio"

@@ -4,9 +4,8 @@ description: sys.dm_exec_cached_plans (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_exec_cached_plans"

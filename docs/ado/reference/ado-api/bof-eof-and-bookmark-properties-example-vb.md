@@ -4,8 +4,8 @@ description: "BOF, EOF, and Bookmark Properties Example (VB)"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "BOF property [ADO], Visual Basic example"

@@ -6,8 +6,8 @@ author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto, randolphwest
 ms.date: 09/27/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ---
 # Join SQL Server on a Linux host to an Active Directory domain

@@ -3,10 +3,9 @@ title: "Specifying Node Test in a Path Expression Step | Microsoft Docs"
 description: Learn how to specify a node test in the axis step of an XQuery path expression.
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

@@ -3,9 +3,8 @@ description: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
 title: "Tutorial: Use Azure Blob Storage with SQL Server 2016"
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
-ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
+ms.service: sql
+ms.subservice: 
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
@@ -43,7 +42,7 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 
 ## 1 - Create stored access policy and shared access storage
 
-In this section, you will use an [Azure PowerShell](/powershell/azure/) script to create a shared access signature on an Azure Blob container using a stored access policy.  
+In this section, you will use an [Azure PowerShell](/powershell/azure/) script to create a shared access signature on an Azure Blob Storage container using a stored access policy.  
   
 > [!NOTE]  
 > This script is written using Azure PowerShell 5.0.10586.  
@@ -54,7 +53,7 @@ You can create a stored access policy and a shared access signature by using Azu
   
 -   Resource group   
 -   Storage account  
--   Azure blob container   
+-   Azure Blob Storage container   
 -   SAS policy    
 
 This script starts by declaring a number of variables to specify the names for the above resources and the names of the following required input values:  
@@ -131,9 +130,9 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
 
 ## 2 - Create a SQL Server credential using a shared access signature
 
-In this section, you will create a credential to store the security information that will be used by SQL Server to write to and read from the Azure container that you created in the previous step.  
+In this section, you will create a credential to store the security information that will be used by SQL Server to write to and read from the Azure Blob Storage container that you created in the previous step.  
   
-A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. The credential stores the URI path of the storage container and the shared access signature for this container.  
+A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. The credential stores the URI path of the Azure Blob Storage container and the shared access signature for this container.  
 
 To create a SQL Server credential, follow these steps:  
   
@@ -172,14 +171,14 @@ To create a SQL Server credential, follow these steps:
   
 6.  In the new query window, paste the CREATE CREDENTIAL statement with the shared access signature from section 1 and execute that script.  
   
-7.  Repeat steps 5 and 6 for any additional SQL Server instances that you wish to have access to the Azure container.  
+7.  Repeat steps 5 and 6 for any additional SQL Server instances that you wish to have access to the container.  
 
 ## 3 - Database backup to URL
 
-In this section, you will back up the AdventureWorks2016 database in your on-premises SQL Server 2016 instance to the Azure container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
+In this section, you will back up the AdventureWorks2016 database in your on-premises SQL Server 2016 instance to the container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) to backup to URL using the WITH CREDENTIAL syntax.  
+> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this container, you can use the deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) to backup to URL using the WITH CREDENTIAL syntax.  
   
 To back up a database to Blob Storage, follow these steps:  
   
@@ -201,7 +200,7 @@ To back up a database to Blob Storage, follow these steps:
     ```  
   
 4.  Open Object Explorer and connect to Azure storage using your storage account and account key. 
-    1.  Expand Containers,  expand the container that you created in section 1 and verify that the backup from step 3 above appears in this container.  
+    1.  Expand Containers, expand the container that you created in section 1 and verify that the backup from step 3 above appears in this container.  
   
    ![Connect to Azure Storage account](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/connect-to-azure-storage.png)
 
@@ -233,7 +232,7 @@ To restore the AdventureWorks2016 database from Azure Blob Storage to your SQL S
 4.  Open Object Explorer and connect to your Azure SQL Server 2016 instance.   
 5.  In Object Explorer, expand the Databases node and verify that the AdventureWorks2016 database has been restored (refresh the node as necessary)    
     1. Right-click AdventureWorks2016, and select Properties.
-    1. Select Files and verify that the paths for the two database files are URLs pointing to blobs in your Azure blog container(select Cancel when done).
+    1. Select Files and verify that the paths for the two database files are URLs pointing to blobs in your Azure Blob Storage container (select Cancel when done).
     
      ![AdventureWorks db on Azure VM](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/adventureworks-on-azure-vm.png)
 
@@ -279,7 +278,7 @@ To back up the AdventureWorks2016 database using file-snapshot backup, follow th
   
 6.  In Object Explorer, in your SQL Server 2016 instance in your Azure virtual machine, expand the Databases node and verify that the AdventureWorks2016 database has been restored to this instance (refresh the node as necessary).  
 7.  In Object Explorer, connect to Azure storage.   
-8.  Expand Containers,  expand the container that you created in section 1 and verify that the AdventureWorks2016_Azure.bak from step 4 above appears in this container, along with the backup file from section 3 and the database files from section 4 (refresh the node as necessary).  
+8.  Expand Containers, expand the container that you created in section 1 and verify that the AdventureWorks2016_Azure.bak from step 4 above appears in this container, along with the backup file from section 3 and the database files from section 4 (refresh the node as necessary).  
   
     ![Snapshot back up on Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
@@ -427,7 +426,7 @@ To restore a database to a new database from a transaction log backup using file
 In this section, you will delete a backup set using the [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) system stored procedure. This system stored procedure deletes the backup file and the file snapshot on each database file associated with this backup set.  
   
 > [!NOTE]  
-> If you attempt to delete a backup set by simply deleting the backup file from the Azure Blob container, you will only delete the backup file itself - the associated file snapshots will remain. If you find yourself in this scenario, use the [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) system function to identify the URL of the orphaned file snapshots and use the [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) system stored procedure to delete each orphaned file snapshot. For more information, see  [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+> If you attempt to delete a backup set by simply deleting the backup file from the Azure Blob Storage container, you will only delete the backup file itself - the associated file snapshots will remain. If you find yourself in this scenario, use the [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) system function to identify the URL of the orphaned file snapshots and use the [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) system stored procedure to delete each orphaned file snapshot. For more information, see  [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 To delete a file-snapshot backup set, follow these steps:  
   

@@ -3,10 +3,9 @@ title: "Password Policy | Microsoft Docs"
 description: Windows password policy mechanisms apply to a login that uses SQL Server authentication and to a contained database user with a password.
 ms.custom: ""
 ms.date: "08/15/2022"
-ms.prod: sql
-ms.prod_service: security
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ALTER LOGIN statement"

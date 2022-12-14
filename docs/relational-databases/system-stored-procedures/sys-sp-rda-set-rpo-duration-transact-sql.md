@@ -3,9 +3,9 @@ title: "sys.sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs"
 description: Learn about sys.sp_rda_set_rpo_duration. Use this stored procedure to set the number of hours of migrated data that SQL Server retains in a staging table.
 ms.custom: ""
 ms.date: 07/25/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: stored-procedures
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_rda_set_rpo_duration"

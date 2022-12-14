@@ -2,9 +2,8 @@
 title: "Element Path Syntax for XML Report Data | Microsoft Docs"
 description: Learn about the element path syntax and conventions used to define the path for XML report data in Report Designer.
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
+ms.service: reporting-services
+ms.subservice: report-data
 
 
 ms.topic: conceptual
@@ -135,7 +134,7 @@ XMLLocalName :: =
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="https://www.adventure-works.com">  
+<Customers xmlns="http://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  

@@ -4,9 +4,8 @@ description: ALTER FULLTEXT STOPLIST (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER FULLTEXT STOPLIST"

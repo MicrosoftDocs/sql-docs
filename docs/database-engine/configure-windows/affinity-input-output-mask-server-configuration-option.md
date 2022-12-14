@@ -4,8 +4,8 @@ description: Learn about the affinity I/O mask option. Use it to enhance the per
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/06/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "affinity I/O mask option"

@@ -4,9 +4,8 @@ description: sys.edge_constraint_clauses (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "09/17/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.edge_constraint_clauses"

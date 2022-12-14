@@ -3,10 +3,9 @@ description: "Enhanced Date and Time Type Behavior with Previous SQL Server Vers
 title: "Date Time in SQL versions (ODBC)"
 ms.custom: ""
 ms.date: 12/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], enhanced behavior with earlier SQL Server versions"

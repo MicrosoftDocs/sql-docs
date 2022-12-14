@@ -4,8 +4,8 @@ description: "Steps to create an availability group that uses a Workgroup Cluste
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "09/25/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
 helpviewer_keywords:

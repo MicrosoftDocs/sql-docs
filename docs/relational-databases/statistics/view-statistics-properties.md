@@ -3,9 +3,9 @@ title: "View Statistics Properties | Microsoft Docs"
 description: Learn how to display current query optimization statistics for a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.statistics.details.f1"

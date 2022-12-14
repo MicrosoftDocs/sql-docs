@@ -3,8 +3,8 @@ description: "Monitor Data-tier Applications"
 title: "Monitor Data-tier Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology:
+ms.service: sql
+ms.subservice:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring [SQL Server], data-tier applications"

@@ -4,9 +4,9 @@ description: Learn how to save Showplan XML Statistics Profile events captured i
 titleSuffix: SQL Server Profiler
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan XML events"

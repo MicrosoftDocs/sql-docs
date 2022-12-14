@@ -3,11 +3,10 @@ title: "SQL Server Integration Services migration to Azure overview| Microsoft D
 description: This article highlights process and tools to migrate SQL Server Integration Services migration to Azure.
 ms.date: "04/10/2020"
 ms.topic: conceptual
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.custom:
   - intro-migration
-ms.technology: integration-services
+ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
 ---

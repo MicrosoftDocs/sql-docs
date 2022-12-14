@@ -4,8 +4,8 @@ description: Learn about memory management architecture in SQL Server, including
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/25/2022
-ms.prod: sql
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords:
   - "guide, memory management architecture"

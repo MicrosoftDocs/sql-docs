@@ -4,8 +4,8 @@ description: Learn the options and commands available in the sqlcmd utility, ava
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 02/15/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "sqlcmd"

@@ -3,10 +3,9 @@ description: "System Information Schema Views (Transact-SQL)"
 title: "System Information Schema Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

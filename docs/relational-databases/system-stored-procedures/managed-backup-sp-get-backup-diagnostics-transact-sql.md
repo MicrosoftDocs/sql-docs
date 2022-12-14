@@ -3,10 +3,9 @@ description: "managed_backup.sp_get_backup_diagnostics (Transact-SQL)"
 title: "managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_get_backup_diagnostics_TSQL"

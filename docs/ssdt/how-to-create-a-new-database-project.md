@@ -1,8 +1,8 @@
 ---
 title: Create a New Database Project
 description: Find out how to create a new database project. See how to import the schema from an existing database into the new project.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.dbprojectwizard.importschema"

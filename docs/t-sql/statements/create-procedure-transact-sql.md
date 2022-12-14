@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 08/04/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "PROC"
@@ -74,7 +73,7 @@ Transact-SQL syntax for stored procedures in SQL Server and Azure SQL Database:
 CREATE [ OR ALTER ] { PROC | PROCEDURE }
     [schema_name.] procedure_name [ ; number ]
     [ { @parameter_name [ type_schema_name. ] data_type }
-        [ VARYING ] [ = default ] [ OUT | OUTPUT | [READONLY]
+        [ VARYING ] [ NULL ] [ = default ] [ OUT | OUTPUT | [READONLY]
     ] [ ,...n ]
 [ WITH <procedure_option> [ ,...n ] ]
 [ FOR REPLICATION ]

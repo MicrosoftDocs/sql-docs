@@ -38,15 +38,13 @@ By default, Azure VMs with SQL Server 2016 or later installed will be automatica
 > The SQL IaaS Agent extension collects data for the express purpose of giving customers optional benefits when using SQL Server within Azure Virtual Machines. Microsoft will not use this data for licensing audits without the customer's advance consent. See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
 
 
-
-
 ## Prerequisites
 
 To register your SQL Server VM with the extension, you'll need: 
 
 - An [Azure subscription](https://azure.microsoft.com/free/) and, at minimum, [contributor role](/azure/role-based-access-control/built-in-roles#all) permissions.
 - An Azure Resource Model [Windows Server 2008 R2 (or later) virtual machine](/azure/virtual-machines/windows/quick-create-portal) with [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) deployed to the public or Azure Government cloud. Windows Server 2008 is not supported. 
-
+- The client credentials used to register the virtual machines exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**. 
 
 ## Enable
 
@@ -112,4 +110,6 @@ Failed registration errors are stored in `RegistrationErrors.csv` located in the
 
 ## Next steps
 
-Upgrade your manageability mode to [full](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set provided to you by the SQL IaaS Agent extension.
+Upgrade your manageability mode to [full](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full) to take advantage of the full feature set provided to you by the SQL IaaS Agent extension
+
+[Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).

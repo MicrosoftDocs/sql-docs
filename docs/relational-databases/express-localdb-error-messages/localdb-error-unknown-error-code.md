@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_UNKNOWN_ERROR_CODE"
 title: "LOCALDB_ERROR_UNKNOWN_ERROR_CODE | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: WilliamDAssafMSFT

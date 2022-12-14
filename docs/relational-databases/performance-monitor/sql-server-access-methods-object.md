@@ -3,10 +3,9 @@ title: "SQL Server, Access Methods object"
 description: Learn about the Access Method counters that can also be used to monitor the amount of data, indexes, and free space within a database in SQL Server.
 ms.custom: ""
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Access Methods object"

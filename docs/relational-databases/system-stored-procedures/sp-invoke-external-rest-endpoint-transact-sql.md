@@ -5,7 +5,7 @@ author: yorek
 ms.author: damauri
 ms.reviewer: randolphwest
 ms.date: 10/21/2022
-ms.prod: sql
+ms.service: sql
 ms.topic: "reference"
 f1_keywords:
   - "sp_invoke_external_rest_endpoint_TSQL"

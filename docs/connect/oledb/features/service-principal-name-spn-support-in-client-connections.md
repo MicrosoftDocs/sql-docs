@@ -4,8 +4,8 @@ description: Learn about how SQL Server supports Service Principal Name in clien
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB Driver for SQL Server, SPNs"

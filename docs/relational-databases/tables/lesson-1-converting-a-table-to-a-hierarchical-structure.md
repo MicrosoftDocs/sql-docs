@@ -3,10 +3,9 @@ description: "Lesson 1: Converting a Table to a Hierarchical Structure"
 title: "Lesson 1: Converting a Table to a Hierarchical Structure | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HierarchyID"

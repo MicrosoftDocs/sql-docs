@@ -118,7 +118,7 @@ To perform a minimal downtime migration using Azure Data Studio, follow the high
 1. Launch the Migrate to Azure SQL wizard in the extension in Azure Data Studio.
 1. Select databases for assessment and view migration readiness or issues (if any). Additionally, collect performance data and get right-sized Azure recommendation.
 1. Select your Azure account and your target SQL Server on Azure Machine from your subscription.
-1. Select the location of your database backups. Your database backups can either be located on an on-premises network share or in an Azure storage blob container.
+1. Select the location of your database backups. Your database backups can either be located on an on-premises network share or in an Azure Blob Storage container.
 1. Create a new Azure Database Migration Service using the wizard in Azure Data Studio. If you have previously created a Azure Database Migration Service using Azure Data Studio, you can reuse the same if desired.
 1. *Optional*: If your backups are on an on-premises network share, download and install [self-hosted integration runtime](https://www.microsoft.com/download/details.aspx?id=39717) on a machine that can connect to source SQL Server and the location containing the backup files.
 1. Start the database migration and monitor the progress in Azure Data Studio. You can also monitor the progress under the Azure Database Migration Service resource in Azure portal.

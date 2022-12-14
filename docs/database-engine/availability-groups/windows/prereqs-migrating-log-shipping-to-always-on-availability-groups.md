@@ -4,8 +4,8 @@ description: "A description of the prerequisites necessary to convert log shippi
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom:
   - seodec18

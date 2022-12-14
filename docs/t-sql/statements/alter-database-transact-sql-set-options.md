@@ -5,8 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 11/04/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 helpviewer_keywords:
@@ -106,6 +106,7 @@ SET
   | <service_broker_option>
   | <snapshot_option>
   | <sql_option>
+  | <suspend_for_snapshot_backup>
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
@@ -287,6 +288,9 @@ SET
   | QUOTED_IDENTIFIER { ON | OFF }
   | RECURSIVE_TRIGGERS { ON | OFF }
 }
+
+<suspend_for_snapshot_backup> ::=
+    SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | OFF } [ ( MODE = COPY_ONLY ) ]
 
 <target_recovery_time_option> ::=
     TARGET_RECOVERY_TIME = target_recovery_time { SECONDS | MINUTES }
@@ -1420,6 +1424,20 @@ You can determine this option's status by examining the `is_quoted_identifier_on
 > Only direct recursion is prevented when RECURSIVE_TRIGGERS is set to OFF. To disable indirect recursion, you must also set the nested triggers server option to 0.
 
 You can determine this option's status by examining the `is_recursive_triggers_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsRecursiveTriggersEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
+
+#### \<suspend_for_snapshot_backup> ::=
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)])
+
+Suspends databases for snapshot backup. May define a group of one or more databases. May designate copy only mode.
+
+#### SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | **OFF** }
+
+Suspends, or un-suspends databases. Default OFF.
+
+####  MODE = COPY_ONLY
+
+Optional. Uses COPY_ONLY mode.
 
 #### \<target_recovery_time_option> ::=
 
@@ -3650,6 +3668,8 @@ SET QUERY_STORE = ON
       )
     );
 ```
+
+
 
 ## See also
 

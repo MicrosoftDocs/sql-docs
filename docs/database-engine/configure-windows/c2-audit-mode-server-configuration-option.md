@@ -4,8 +4,8 @@ description: Get acquainted with C2 audit mode, a SQL Server configuration optio
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "auditing [SQL Server]"

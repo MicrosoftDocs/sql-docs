@@ -4,7 +4,7 @@ description: Getting Information About Assemblies
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/06/2017"
-ms.prod: sql
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "assemblies [CLR integration], metadata"

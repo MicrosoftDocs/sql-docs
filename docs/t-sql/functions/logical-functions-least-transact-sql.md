@@ -4,8 +4,8 @@ description: "The LEAST logical functions returns the minimum value from a list 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/11/2022"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:

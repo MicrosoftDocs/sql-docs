@@ -3,10 +3,9 @@ title: Validation
 description: Data is validated to ensure its accuracy, either automatically or based on business rules that you create in Master Data Services.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: CordeliaGrey

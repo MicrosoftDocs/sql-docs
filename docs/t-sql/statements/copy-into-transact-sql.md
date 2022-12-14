@@ -6,9 +6,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: wiassaf
 ms.date: 01/04/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: language-reference
 f1_keywords:
   - "COPY_TSQL"
@@ -140,7 +139,7 @@ Multiple file locations can only be specified from the same storage account and 
 
 |                          |                CSV                |                      Parquet                       |                        ORC                         |
 | :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
-|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+|  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
 1: The .blob endpoint (**.blob**.core.windows.net) in your external location path is required for this authentication method.
@@ -333,7 +332,7 @@ The default values of the COPY command are:
 
 ### B. Load authenticating via Share Access Signature (SAS)
 
-The following example loads files that use the line feed as a row terminator such as a UNIX output. This example also uses a SAS key to authenticate to Azure blob storage.
+The following example loads files that use the line feed as a row terminator such as a UNIX output. This example also uses a SAS key to authenticate to Azure Blob Storage.
 
 ```sql
 COPY INTO test_1

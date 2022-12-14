@@ -3,10 +3,9 @@ description: "Oracle Publishing Overview"
 title: "Oracle Publishing Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing [SQL Server replication], Oracle publishing"

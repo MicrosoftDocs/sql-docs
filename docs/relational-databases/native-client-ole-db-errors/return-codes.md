@@ -3,10 +3,9 @@ title: Return codes (Native Client OLE DB provider)
 description: Learn about return codes supported for SQL Server Native Client OLE DB, including the commonly encountered DB_S_ERRORSOCCURRED HRESULT value.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB error handling, return codes"

@@ -2,8 +2,8 @@
 title: Subqueries
 description: Subqueries in Azure Synapse Analytics and Parallel Data Warehouse
 titleSuffix: "Azure Synapse Analytics"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 author: MikeRayMSFT
 ms.author: mikeray

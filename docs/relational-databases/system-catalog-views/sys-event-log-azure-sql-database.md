@@ -5,7 +5,6 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/18/2022"
 ms.service: sql-database
-ms.prod_service: "sql-database"
 ms.topic: "reference"
 f1_keywords:
   - "event_log"

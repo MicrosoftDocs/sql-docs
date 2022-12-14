@@ -4,9 +4,8 @@ description: COLLATE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "08/30/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "COLLATE"

@@ -35,7 +35,7 @@ Before you complete the steps in this article, you should already have:
 
 ## Create load balancer
 
-You can create either an internal load balancer or an external load balancer. An internal load balancer can only be from accessed private resources that are internal to the network.  An external load balancer can route traffic from the public to internal resources. When you configure an internal load balancer, use the same IP address as the availability group listener resource for the frontend IP when configuring the load-balancing rules. When you configure an external load balancer, you cannot use the same IP address as the availability group listener as the the listener IP address cannot be a public IP address. As such, to use an external load balancer, logically allocate an IP address in the same subnet as the availability group that does not conflict with any other IP address, and use this address as the frontend IP address for the load-balancing rules. 
+You can create either an internal load balancer or an external load balancer. An internal load balancer can only be from accessed private resources that are internal to the network.  An external load balancer can route traffic from the public to internal resources. When you configure an internal load balancer, use the same IP address as the availability group listener resource for the frontend IP when configuring the load-balancing rules. When you configure an external load balancer, you can't use the same IP address as the availability group listener as the listener IP address can't be a public IP address. As such, to use an external load balancer, logically allocate an IP address in the same subnet as the availability group that doesn't conflict with any other IP address, and use this address as the frontend IP address for the load-balancing rules. 
 
 Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
@@ -52,18 +52,18 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
    - **Name**: A name that identifies the load balancer.
    - **Region**: The Azure location that contains your virtual machines.
    - **SKU**: Standard.
-   - **Type**: Either public or internal. An internal load balancer can be accessed from within the virtual network. Most Azure applications can use a internal load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
+   - **Type**: Either public or internal. An internal load balancer can be accessed from within the virtual network. Most Azure applications can use an internal load balancer. If your application needs access to SQL Server directly over the internet, use a public load balancer.
    - **Tier**: Regional.
 
    The following image shows the **Create load balancer** UI:
 
-     :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-createloadbalancer.png" alt-text="Screenshot of the create Load Balancer UI.":::
+     :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/84-create-load-balancer.png" alt-text="Screenshot of the Azure portal, create Load Balancer page":::
 
 1. Select **Next: Frontend IP Configuration**
 
 1. Select **Add a frontend IP Configuration**
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of add a frontend IP configuration.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of Azure portal, with add a frontend IP configuration selected..":::
 
 1. Set up the frontend IP using the following values:
 
@@ -76,7 +76,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
    The following image shows the **Add frontend IP Configuration** UI:
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of add a frontend IP configuration details blade.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of Azure portal, add a frontend IP configuration page.":::
 
 1. Select **Add** to create the frontend IP.
 
@@ -95,7 +95,7 @@ Use the [Azure portal](https://portal.azure.com) to create the load balancer:
 
 1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
 
-1. Under **Virtual machine** choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the FCI. Only add the primary IP address of each VM, do not add any secondary IP addresses.
+1. Under **Virtual machine** choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the FCI. Only add the primary IP address of each VM, don't add any secondary IP addresses.
 
 1. Select **Add** to add the virtual machines to the backend pool.
 
@@ -214,9 +214,9 @@ Get-ClusterResource $IPResourceName | Get-ClusterParameter
 
 ## Modify connection string 
 
-For clients that support it, add the `MultiSubnetFailover=True` to the connection string. While the MultiSubnetFailover connection option is not required, it does provide the benefit of a faster subnet failover. This is because the client driver will attempt to open up a TCP socket for each IP address in parallel. The client driver will wait for the first IP to respond with success and once it does, will then use it for the connection.
+For clients that support it, add the `MultiSubnetFailover=True` to the connection string. While the MultiSubnetFailover connection option isn't required, it does provide the benefit of a faster subnet failover. This is because the client driver will attempt to open up a TCP socket for each IP address in parallel. The client driver will wait for the first IP to respond with success and once it does, will then use it for the connection.
 
-If your client does not support the MultiSubnetFailover parameter, you can modify the RegisterAllProvidersIP and HostRecordTTL settings to prevent connectivity delays post-failover. 
+If your client doesn't support the MultiSubnetFailover parameter, you can modify the RegisterAllProvidersIP and HostRecordTTL settings to prevent connectivity delays post-failover. 
 
 Use PowerShell to modify the RegisterAllProvidersIp and HostRecordTTL settings: 
 
@@ -250,8 +250,8 @@ Failover succeeds when the replicas switch roles and are both synchronized.
 
 To test connectivity, sign in to another virtual machine in the same virtual network. Open **SQL Server Management Studio** and connect to the availability group listener.
 
->[!NOTE]
->If you need to, you can [download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms).
+> [!NOTE]
+> If you need to, you can [download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## Next steps
 

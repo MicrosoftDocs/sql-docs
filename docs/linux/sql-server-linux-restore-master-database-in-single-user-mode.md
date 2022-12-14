@@ -4,9 +4,8 @@ description: "Learn how to restore the master database using single-user mode in
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/09/2022
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: how-to
 helpviewer_keywords:
   - "starting SQL Server on Linux, single-user mode"

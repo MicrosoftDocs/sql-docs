@@ -4,8 +4,8 @@ description: "DENSE_RANK (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DENSE_RANK_TSQL"

@@ -2,9 +2,8 @@
 description: "Upgrade Full-Text Search"
 title: "Upgrade Full-Text Search | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], installing"

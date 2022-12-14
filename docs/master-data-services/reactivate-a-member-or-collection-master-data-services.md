@@ -3,10 +3,9 @@ description: "Reactivate a Member or Collection (Master Data Services)"
 title: Reactivate a Member or Collection
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collections [Master Data Services], reactivating"

@@ -4,8 +4,8 @@ description: This article describes the log files that SQL Server Setup creates.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/09/2016"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 helpviewer_keywords:
   - "viewing logs"

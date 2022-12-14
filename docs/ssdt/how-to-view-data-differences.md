@@ -1,8 +1,8 @@
 ---
 title: View Data Differences
 description: Find out how to compare two databases and then see how their database objects differ. See how to view records within objects and how to filter the view.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datacompare.f1"

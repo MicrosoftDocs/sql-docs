@@ -4,8 +4,8 @@ description: Discover the four scenarios for upgrading Microsoft SQL Server Mast
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/21/2017"
-ms.prod: sql
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---

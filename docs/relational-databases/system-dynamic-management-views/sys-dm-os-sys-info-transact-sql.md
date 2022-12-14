@@ -4,9 +4,8 @@ description: sys.dm_os_sys_info (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/27/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_os_sys_info_TSQL"

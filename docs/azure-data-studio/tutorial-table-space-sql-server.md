@@ -5,7 +5,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: erinstellato
 ms.date: 09/10/2019
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: "tutorial"
 ms.custom: seodec18; seo-lt-2019
 ---

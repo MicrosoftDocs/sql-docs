@@ -3,10 +3,9 @@ description: "SQLGetStmtOption (Visual FoxPro ODBC Driver)"
 title: "SQLGetStmtOption (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], Visual FoxPro ODBC Driver"

@@ -4,9 +4,9 @@ description: Use these articles to install, upgrade, and uninstall SQL Server Mi
 ms.custom:
   - intro-installation
 ms.date: "11/29/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 author: cpichuka 

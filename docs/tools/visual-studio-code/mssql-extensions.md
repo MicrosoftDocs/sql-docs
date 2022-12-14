@@ -2,8 +2,8 @@
 title: Overview of Visual Studio Code mssql extensions
 description: Develop with the mssql extension for Visual Studio Code
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan

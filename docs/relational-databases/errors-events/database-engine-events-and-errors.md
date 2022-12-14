@@ -1,15 +1,15 @@
 ---
-title: "Database engine events and errors"
+title: "Database Engine events and errors"
 description: Consult this MSSQL error code list to find explanations for error messages for SQL Server database engine events.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/19/2022
-ms.prod: sql
-ms.technology: supportability
+ms.date: 12/08/2022
+ms.service: sql
+ms.subservice: supportability
 ms.topic: reference
 ---
-# Database engine errors
+# Database Engine events and errors
 
 The table contains error message numbers and the description, which is the text of the error message from the `sys.messages` catalog view. Where applicable, the error number is a link to further information.
 
@@ -27,9 +27,9 @@ WHERE language_id = 1040 /* replace 1040 with the desired language ID, such as 1
 ORDER BY message_id;
 ```
 
-## Errors -2 to 999
+## Errors 0 to 999
 
-[!INCLUDE [database-engine-events-and-errors-2-999](../../includes/errorcodes/database-engine-events-and-errors-2-999.md)]
+[!INCLUDE [database-engine-events-and-errors-0-999](../../includes/errorcodes/database-engine-events-and-errors-0-999.md)]
 
 ## Errors 1,000 to 1,999
 

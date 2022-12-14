@@ -1,10 +1,9 @@
 ---
 title: "Add an External Tool to the Tools Menu"
 description: "Add an External Tool to the Tools Menu (SQL Server Management Studio)"
-ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssms
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tools [SQL Server], external"

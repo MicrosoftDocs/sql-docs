@@ -4,9 +4,8 @@ description: CREATE CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/25/2019"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREDENTIAL_TSQL"
@@ -135,7 +134,7 @@ DECLARE @AuthClientSecret varchar(200) = 'SECRET_DBEngine';
 DECLARE @pwd varchar(max) = REPLACE(CONVERT(varchar(36), @AuthClientId) , '-', '') + @AuthClientSecret;
 
 EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
-    WITH IDENTITY = 'ContosoKeyVault', SECRET = ''' + @PWD + '''
+    WITH IDENTITY = ''ContosoKeyVault'', SECRET = ''' + @PWD + '''
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;');
 ```
 

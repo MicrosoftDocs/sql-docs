@@ -1,9 +1,8 @@
 ---
 title: "Configure Editors (SQL Server Management Studio)"
 description: Learn how to customize the operation of the SQL Server Management Studio editors by setting options in the Options dialog.
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname

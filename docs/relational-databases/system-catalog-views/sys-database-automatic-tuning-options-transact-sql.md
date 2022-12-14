@@ -5,8 +5,8 @@ author: "danimir"
 ms.author: "danil"
 ms.reviewer: randolphwest
 ms.date: 11/04/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_automatic_tuning_options_tsql"

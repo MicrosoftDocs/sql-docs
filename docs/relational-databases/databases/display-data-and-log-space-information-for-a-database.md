@@ -2,10 +2,9 @@
 title: "Display data & log space info for a database"
 description: Learn how to display the data and log space information for a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.date: "06/16/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], space"

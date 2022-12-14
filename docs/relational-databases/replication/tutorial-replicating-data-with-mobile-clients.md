@@ -5,10 +5,9 @@ ms.custom:
   - seo-lt-2019
   - intro-quickstart
 ms.date: "04/03/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: quickstart
 helpviewer_keywords:
   - "replication [SQL Server], tutorials"

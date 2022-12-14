@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 titleSuffix: SQL Server on Linux
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---

@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED"
 title: "LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 author: WilliamDAssafMSFT

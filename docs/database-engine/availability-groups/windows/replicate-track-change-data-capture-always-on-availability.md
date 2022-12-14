@@ -4,8 +4,8 @@ description: Learn about the interoperability of replication, change tracking, a
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:
@@ -157,7 +157,7 @@ helpviewer_keywords:
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
-    @provider=N'SQLNCLI11',   
+    @provider=N'MSOLEDBSQL',   
     @datasrc=N'AG_Listener_Name',   
     @provstr=N'ApplicationIntent=ReadOnly',   
     @catalog=N'MY_DB_NAME';  

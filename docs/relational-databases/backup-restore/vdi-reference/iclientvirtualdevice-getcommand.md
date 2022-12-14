@@ -3,9 +3,8 @@ title: IClientVirtualDevice::GetCommand
 titlesuffix: SQL Server VDI reference
 description: This article provides reference for the IClientVirtualDevice::GetCommand command.
 ms.date: 08/30/2019
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma

@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Logging) (DB2ToSQL)"
 title: "Global Settings (Logging) (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: cpichuka 

@@ -5,8 +5,8 @@ author: SrinivasSQLMS
 ms.author: skandi
 ms.reviewer: hristins
 ms.date: 06/14/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ---
 

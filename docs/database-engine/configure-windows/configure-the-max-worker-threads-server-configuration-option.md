@@ -4,8 +4,8 @@ description: Find out how to use the max worker threads option to configure the 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/14/2020"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ms.custom: contperf-fy20q4
 helpviewer_keywords:

@@ -5,8 +5,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ms.reviewer: randolphwest
 ms.date: 09/28/2022
-ms.prod: sql
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords:
   - "transactional replication, backward compatibility"

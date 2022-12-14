@@ -1,9 +1,8 @@
 ---
 title: "AsGml (geography Data Type)"
 description: "AsGml (geography Data Type)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "AsGml_(geography_Data_Type)_TSQL"
@@ -55,7 +54,7 @@ SELECT @g.AsGml();
  This method returns the description as a `LineString` instance.  
   
 ```xml
-<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
+<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
 ## See Also  

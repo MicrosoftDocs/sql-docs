@@ -4,9 +4,8 @@ description: MSrepl_agent_jobs (Transact-SQL)
 author: briancarrig
 ms.author: brcarrig
 ms.date: "10/06/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSrepl_agent_jobs_TSQL"

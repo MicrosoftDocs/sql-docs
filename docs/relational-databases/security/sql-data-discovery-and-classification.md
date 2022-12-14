@@ -5,7 +5,6 @@ documentationcenter: ''
 ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
-ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
 ms.date: 03/09/2022

@@ -2,9 +2,8 @@
 description: "Configure & manage word breakers & stemmers for search (SQL Server)"
 title: "Configure & manage word breakers & stemmers for search"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"

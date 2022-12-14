@@ -6,7 +6,7 @@ summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Databas
 metadata:
   title: Azure Data Studio
   summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
-  ms.prod: azure-data-studio
+  ms.service: azure-data-studio
   ms.topic: landing-page
   ms.custom: ignite-2022
   author: markingmyname

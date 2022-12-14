@@ -1,9 +1,8 @@
 ---
 description: "The sp_help_change_feed system stored procedure monitors the current Azure Synapse Link configuration."
 title: "sp_help_change_feed (Transact-SQL)"
-ms.date: 11/04/2022
+ms.date: 11/09/2022
 ms.service: synapse-analytics
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: wiassaf
 ms.topic: "reference"
 f1_keywords: 
@@ -55,7 +54,7 @@ EXECUTE sys.sp_help_change_feed;
  
 ## Permissions  
 
-Currently, a user must be a member of the sysadmin server role or db_owner database role.
+ Currently, only a member of the sysadmin server role or db_owner role, or a user with CONTROL database permissions can execute this procedure.
 
 ## See also  
 

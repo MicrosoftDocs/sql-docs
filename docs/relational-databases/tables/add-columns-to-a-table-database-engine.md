@@ -3,10 +3,9 @@ description: "Add Columns to a Table (Database Engine)"
 title: "Add Columns to a Table (Database Engine)"
 ms.custom: ""
 ms.date: "01/28/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: table-view-index
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting columns"

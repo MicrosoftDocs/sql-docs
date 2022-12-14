@@ -4,8 +4,8 @@ description: This article describes upgrade paths for the Database Engine in SQL
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/08/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---

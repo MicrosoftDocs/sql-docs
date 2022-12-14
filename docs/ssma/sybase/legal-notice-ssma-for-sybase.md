@@ -3,9 +3,9 @@ description: "Legal Notice (SSMA for Sybase)"
 title: "Legal Notice (SSMA for Sybase) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: cpichuka 

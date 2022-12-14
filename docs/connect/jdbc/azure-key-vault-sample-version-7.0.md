@@ -4,8 +4,8 @@ description: This article provides sample code for using JDBC driver version 7.0
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Azure Key Vault sample versions 7.0, 8.0

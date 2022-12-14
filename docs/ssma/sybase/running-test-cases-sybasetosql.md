@@ -3,9 +3,9 @@ description: "Running Test Cases (SybaseToSQL)"
 title: "Running Test Cases (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/29/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Execution Steps"

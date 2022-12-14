@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/13/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
 ms.custom: intro-installation
 ---
@@ -192,7 +192,7 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] SLES repository configuration file:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/15/mssql-server-2022.repo
    ```
 
    > [!TIP]  
@@ -271,4 +271,4 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    source ~/.bashrc
    ```
 
-[!INCLUDE [Connect, create, and query data](includes/sql-linux-quickstart-connect-query.md)]
+[!INCLUDE [Connect, create, and query data](includes/quickstart-connect-query.md)]

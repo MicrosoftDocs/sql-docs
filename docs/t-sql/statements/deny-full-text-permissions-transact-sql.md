@@ -4,9 +4,8 @@ description: DENY Full-Text Permissions (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "full-text search [SQL Server], permissions"

@@ -2,10 +2,9 @@
 description: "Known errors and resolutions with change data capture for Oracle by Attunity"
 title: "Known errors and resolutions with change data capture for Oracle by Attunity | Microsoft Docs"
 ms.date: "07/23/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma

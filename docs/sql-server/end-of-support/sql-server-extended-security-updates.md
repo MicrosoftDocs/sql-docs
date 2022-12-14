@@ -4,8 +4,8 @@ description: Learn how to use Azure Arc to get extended security updates for you
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 11/01/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: references_regions
 monikerRange: ">=sql-server-2016"

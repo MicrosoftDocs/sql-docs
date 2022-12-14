@@ -1,9 +1,8 @@
 ---
 title: "Wide World Importers - Sample database for SQL | Microsoft Docs"
 description: Learn how the WideWorldImporters sample databases support the workflows of the fictitious WideWorldImporters company.
-ms.prod: sql
-ms.prod_service: sql
-ms.technology: samples
+ms.service: sql
+ms.subservice: samples
 ms.custom: ""
 ms.date: "04/04/2018"
 ms.reviewer: ""

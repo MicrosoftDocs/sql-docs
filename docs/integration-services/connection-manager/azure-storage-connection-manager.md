@@ -3,10 +3,9 @@ title: "Azure Storage connection manager | Microsoft Docs"
 description: The Azure Storage connection manager enables an SSIS package to connect to an Azure Storage account.
 ms.custom: ""
 ms.date: "07/19/2021"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpstorageconn.f1"

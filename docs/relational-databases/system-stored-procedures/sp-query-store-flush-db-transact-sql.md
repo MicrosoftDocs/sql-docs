@@ -4,8 +4,8 @@ description: "sp_query_store_flush_db (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: 09/30/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 ms.custom: event-tier1-build-2022
 f1_keywords:

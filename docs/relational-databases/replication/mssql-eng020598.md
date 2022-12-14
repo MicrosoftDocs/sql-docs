@@ -3,10 +3,9 @@ description: "MSSQL_ENG020598"
 title: "MSSQL_ENG020598 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG020598 error"

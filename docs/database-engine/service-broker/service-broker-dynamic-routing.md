@@ -5,8 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 
@@ -31,7 +31,7 @@ Requests for routes use the message type `https://schemas.microsoft.com/SQL/Serv
 For example, the following message is a request for a route to the service http://Adventure-Works.com/Elsewhere:
 
 ```xml
-    <MissingRoute xmlns="https://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRoute">
+    <MissingRoute xmlns="http://schemas.microsoft.com/SQL/ServiceBroker/BrokerConfigurationNotice/MissingRoute">
       <SERVICE_NAME>http://Adventure-Works.com/Elsewhere</SERVICE_NAME>
     </MissingRoute>
 ```

@@ -4,8 +4,8 @@ description: "This topic walks you through a complete configuration of a cluster
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "09/24/2021"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
 ms.custom: seodec18
 monikerRange: ">=sql-server-2016"

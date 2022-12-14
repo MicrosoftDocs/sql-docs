@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: tbd
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux

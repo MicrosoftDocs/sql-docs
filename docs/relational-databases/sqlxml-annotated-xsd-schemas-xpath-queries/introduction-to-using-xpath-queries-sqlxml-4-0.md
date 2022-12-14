@@ -4,9 +4,8 @@ description: Learn the basics of using XPath queries in SQLXML 4.0.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
 ms.custom: "seo-lt-2019"
 helpviewer_keywords:

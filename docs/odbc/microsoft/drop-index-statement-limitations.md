@@ -3,10 +3,9 @@ description: "DROP INDEX Statement Limitations"
 title: "DROP INDEX Statement Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords: 
   - "DROP INDEX statement limitations [ODBC]"

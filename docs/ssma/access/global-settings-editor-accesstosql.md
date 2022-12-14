@@ -1,11 +1,11 @@
 ---
 description: "Global Settings (Editor) (AccessToSQL)"
 title: "Global Settings (Editor) (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: cpichuka 

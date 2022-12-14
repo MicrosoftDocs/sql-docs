@@ -2,10 +2,9 @@
 description: "Spatial Indexes Overview"
 title: "Spatial Indexes Overview | Microsoft Docs"
 ms.date: "09/17/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "spatial indexes [SQL Server]"

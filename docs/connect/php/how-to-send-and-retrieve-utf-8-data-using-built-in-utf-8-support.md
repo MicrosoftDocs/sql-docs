@@ -4,8 +4,8 @@ description: "Learn how to send and retrieve UTF-8 encoded data using UTF-8 supp
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/23/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "retrieving data, UTF-8 encoded data"

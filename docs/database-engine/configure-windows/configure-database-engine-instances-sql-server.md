@@ -4,8 +4,8 @@ description: Get acquainted with SQL Server configuration tasks so that you can 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 # Configure Database Engine Instances (SQL Server)

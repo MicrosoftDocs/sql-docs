@@ -3,10 +3,9 @@ description: "sp_execute_external_script (Transact-SQL)"
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 08/06/2020
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: machine-learning-services
+ms.subservice: machine-learning-services
 ms.topic: "reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"

@@ -1,9 +1,8 @@
 ---
 title: "Primary and Foreign Key Constraints"
 description: "Primary and Foreign Key Constraints"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "foreign keys [SQL Server], cascading referential integrity"

@@ -3,10 +3,9 @@ title: "XQuery Expressions | Microsoft Docs"
 description: View information about XQuery expressions that includes descriptions of each type of expression and how to use them.
 ms.custom: ""
 ms.date: "08/10/2016"
-ms.prod: sql
-ms.prod_service: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: xml
+ms.subservice: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"

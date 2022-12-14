@@ -3,10 +3,9 @@ description: "sp_refresh_parameter_encryption (Transact-SQL)"
 title: "sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"

@@ -4,10 +4,9 @@ title: "PREDICT (Transact-SQL)"
 titleSuffix: SQL machine learning
 ms.custom: ""
 ms.date: "04/18/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.subservice: machine-learning
 ms.topic: reference
 f1_keywords: 
   - "PREDICT"

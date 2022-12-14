@@ -4,8 +4,8 @@ description: Learn how to create a connection to a database from Linux or macOS 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "connect to linux"

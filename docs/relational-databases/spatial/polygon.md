@@ -2,10 +2,9 @@
 description: "Polygon"
 title: "Polygon | Microsoft Docs"
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry subtypes [SQL Server]"

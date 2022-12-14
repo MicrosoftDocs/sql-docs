@@ -5,8 +5,8 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
 ms.date: 10/20/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] introduces support for [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication), on both Windows and Linux.
+[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] introduces support for [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication), on both Windows and Linux on-premises, and [SQL Server on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview).
 
 ## Overview
 
@@ -29,7 +29,7 @@ You can now connect to SQL Server using the following authentication methods usi
 
 The current authentication modes, such as [SQL authentication and Windows authentication](../choose-an-authentication-mode.md) remain unchanged.
 
-As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services. Azure AD authentication is supported for Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics, and SQL Server. For more information, see [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) and [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services. Azure AD authentication is supported for Azure SQL Database, Azure SQL Managed Instance, SQL Server on Windows Azure VMs, Azure Synapse Analytics, and SQL Server. For more information, see [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview) and [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 If your Windows Server Active Directory is federated with Azure AD, users can authenticate with SQL Server using their Windows credentials, either as a Windows logins or an Azure AD login. Azure AD doesn't support all AD features, such as service accounts or complex networking forest architecture that is supported for Windows Server Active Directory.
 

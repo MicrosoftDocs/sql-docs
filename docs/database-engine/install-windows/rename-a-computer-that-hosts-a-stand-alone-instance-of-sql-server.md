@@ -4,8 +4,8 @@ description: When you rename a computer that hosts an instance of SQL Server, up
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/28/2022
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 helpviewer_keywords:

@@ -1,8 +1,8 @@
 ---
 title: Transact-SQL Editor Options
 description: Become familiar with Transact-SQL Editor options. Learn about query execution properties and query results properties, and see how to adjust the values.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.SqlExecutionAdvancedSettingsOption"

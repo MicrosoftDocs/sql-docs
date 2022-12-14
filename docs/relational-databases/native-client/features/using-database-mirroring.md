@@ -3,9 +3,9 @@ description: "Using Database Mirroring in SQL Server Native Client"
 title: "Using Database Mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -27,6 +27,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] instead.  
   
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
+
+
  Database mirroring, introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], is a solution for increasing database availability and data redundancy. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client provides implicit support for database mirroring, so the developer does not need to write any code or take any other action once it has been configured for the database.  
   
  Database mirroring, which is implemented on a per-database basis, keeps a copy of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] production database on a standby server. This server is either a hot or warm standby server, depending on the configuration and state of the database mirroring session. A hot standby server supports rapid failover with no loss of committed transactions, and a warm standby server supports forcing service (with possible data loss).  

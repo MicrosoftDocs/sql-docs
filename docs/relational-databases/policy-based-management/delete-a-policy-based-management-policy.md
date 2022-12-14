@@ -3,10 +3,9 @@ description: "Delete a Policy-Based Management Policy"
 title: "Delete a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, delete policies"

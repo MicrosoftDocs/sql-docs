@@ -4,9 +4,9 @@ description: Learn about plan guides, which let you optimize the performance of 
 ms.custom:
 - event-tier1-build-2022
 ms.date: 08/01/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TEMPLATE plan guide"

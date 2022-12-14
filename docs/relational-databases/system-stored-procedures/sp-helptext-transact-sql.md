@@ -3,10 +3,9 @@ description: "sp_helptext (Transact-SQL)"
 title: "sp_helptext (Transact-SQL)"
 ms.custom: ""
 ms.date: "08/19/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_helptext"

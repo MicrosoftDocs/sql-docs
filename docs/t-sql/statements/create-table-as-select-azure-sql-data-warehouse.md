@@ -5,8 +5,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: vanto, xiaoyul
 ms.date: 09/12/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
+ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
@@ -436,10 +435,10 @@ Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPD
 
 To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is the same as the syntax for selecting data from a regular table.  
   
- The following example defines an external table on data in an Azure blob storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure blob storage text-delimited files and stores the data into a new [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table.  
+ The following example defines an external table on data in an Azure Blob Storage account. It then uses CREATE TABLE AS SELECT to select from the external table. This imports the data from Azure Blob Storage text-delimited files and stores the data into a new [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] table.  
   
 ```sql  
---Use your own processes to create the text-delimited files on Azure blob storage.  
+--Use your own processes to create the text-delimited files on Azure Blob Storage.  
 --Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
     url VARCHAR(50),  
@@ -452,7 +451,7 @@ WITH (
     FILE_FORMAT = TextFileFormat)  
 ;  
   
---Use CREATE TABLE AS SELECT to import the Azure blob storage data into a new   
+--Use CREATE TABLE AS SELECT to import the Azure Blob Storage data into a new   
 --Synapse Analytics table called ClickStreamData  
 CREATE TABLE ClickStreamData   
 WITH  

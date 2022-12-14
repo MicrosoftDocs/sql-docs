@@ -3,11 +3,10 @@ title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
-manager: cgronlun
 ms.reviewer: rothja
 ms.date: 03/15/2021
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 ms.topic: language-reference
 dev_langs:
   - "TSQL"

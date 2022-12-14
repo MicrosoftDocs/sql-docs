@@ -4,8 +4,8 @@ description: "API reference for the sqlsrv_prepare function in the Microsoft SQL
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "04/11/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "executing queries"

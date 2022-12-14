@@ -3,10 +3,9 @@ description: "Configure Dialog Security for Event Notifications"
 title: "Configure Dialog Security for Event Notifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "event notifications [SQL Server], security"

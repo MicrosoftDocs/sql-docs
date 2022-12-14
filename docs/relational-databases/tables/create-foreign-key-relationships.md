@@ -1,9 +1,8 @@
 ---
 title: "Create Foreign Key Relationships"
 description: "Create Foreign Key Relationships"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "relationships [SQL Server], creating"

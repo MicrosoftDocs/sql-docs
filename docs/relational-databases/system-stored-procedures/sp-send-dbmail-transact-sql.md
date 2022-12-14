@@ -3,10 +3,9 @@ description: "sp_send_dbmail (Transact-SQL)"
 title: "sp_send_dbmail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sendmail_sp_TSQL"

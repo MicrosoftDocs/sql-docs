@@ -3,8 +3,8 @@ description: "Customize Menus and Shortcut Keys"
 title: "Customize Menus and Shortcut Keys"
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], shortcuts"

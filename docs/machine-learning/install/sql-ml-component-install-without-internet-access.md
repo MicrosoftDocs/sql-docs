@@ -1,8 +1,8 @@
 ---
 title: Offline install without internet access
 description: Offline install SQL Server Machine Learning Services with Python and R on computers isolated behind a network firewall.
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 05/24/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT

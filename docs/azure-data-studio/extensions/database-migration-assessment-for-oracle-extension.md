@@ -5,7 +5,7 @@ author: nilabjaball
 ms.author: niball
 ms.reviewer: maghan, randolphwest
 ms.date: 10/24/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

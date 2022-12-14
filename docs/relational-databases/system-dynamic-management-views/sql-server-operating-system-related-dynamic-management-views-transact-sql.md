@@ -4,8 +4,8 @@ description: SQL Server Operating System Related Dynamic Management Views (Trans
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/17/2018"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "operating systems [SQL Server], dynamic management objects"

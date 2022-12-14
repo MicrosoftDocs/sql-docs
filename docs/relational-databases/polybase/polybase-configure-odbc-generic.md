@@ -3,8 +3,8 @@ title: "Access external data: ODBC generic types - PolyBase"
 description: PolyBase in SQL Server allows you to connect to compatible data sources through the ODBC connector. Install the ODBC driver and create external tables.
 ms.date: 07/01/2022
 ms.custom: seo-lt-2019
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray

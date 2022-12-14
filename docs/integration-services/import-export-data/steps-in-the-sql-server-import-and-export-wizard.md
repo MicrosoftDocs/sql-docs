@@ -3,9 +3,9 @@ description: "Steps in the SQL Server Import and Export Wizard"
 title: "Steps in the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace

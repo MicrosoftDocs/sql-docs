@@ -3,11 +3,10 @@ description: "Run an SSIS package from the command prompt with DTExec.exe"
 title: "Run an SSIS package from the command prompt | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.custom:
   - intro-quickstart
-ms.technology: integration-services
+ms.subservice: integration-services
 author: chugugrace
 ms.author: chugu
 ---

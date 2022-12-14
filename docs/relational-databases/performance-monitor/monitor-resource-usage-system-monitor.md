@@ -3,10 +3,9 @@ title: "Monitor Resource Usage (Performance Monitor)"
 description: Use Performance Monitor to measure the performance of SQL Server objects, performance counters, and the behavior of other objects, such as processors and memory.
 ms.custom: ""
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server], resource usage"

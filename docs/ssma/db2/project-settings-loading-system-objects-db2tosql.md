@@ -1,11 +1,11 @@
 ---
 description: "Project Settings(Loading System objects) (DB2ToSQL)"
 title: "Project Settings(Loading System objects) (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: cpichuka 

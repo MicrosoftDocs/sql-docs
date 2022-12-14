@@ -3,10 +3,9 @@ description: "Database Object Security (Master Data Services)"
 title: Database Object Security
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database [Master Data Services], object security"

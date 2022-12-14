@@ -3,10 +3,9 @@ description: "sys.fn_get_audit_file (Transact-SQL)"
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "fn_get_audit_file_TSQL"

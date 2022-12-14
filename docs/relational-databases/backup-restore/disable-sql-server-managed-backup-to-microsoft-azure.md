@@ -3,10 +3,9 @@ title: "Disable managed back up to Azure Blob Storage"
 description: This article shows you how to disable or pause SQL Server Managed Backup to Microsoft Azure at both the database and instance levels using Transact-SQL.
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MashaMSFT

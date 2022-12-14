@@ -2,8 +2,8 @@
 description: "Use FOR JSON output in SQL Server and in client apps (SQL Server)"
 title: "Use FOR JSON output in SQL Server and in client apps"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON, using in client apps"

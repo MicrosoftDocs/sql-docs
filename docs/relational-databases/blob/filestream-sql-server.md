@@ -3,10 +3,9 @@ title: "FILESTREAM (SQL Server) | Microsoft Docs"
 description: Learn about FILESTREAM, a SQL Server feature that stores data in the file system. Read about how it stores, secures, and provides access to data.
 ms.custom: ""
 ms.date: "01/11/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: filestream
+ms.subservice: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server]"

@@ -3,10 +3,9 @@ title: "Backup Device (Media Contents Page) | Microsoft Docs"
 description: Use the Backup Device dialog box to view the backup information. This information describes the device, the media, the media set, and the backup set or sets.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.backupdevice.contents.f1"

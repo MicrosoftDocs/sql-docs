@@ -3,7 +3,6 @@ title: "The Role of SOAP in Reporting Services | Microsoft Docs"
 description: The Report Server Web service uses SOAP over HTTP. Report Manager provides an interface to the report server database which stores reports and related content.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
 ms.technology: report-server-web-service
 
 
@@ -29,7 +28,7 @@ ms.author: maggies
 ```  
 <soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItem xmlns="https://www.microsoft.com/sql/ReportingServer">  
+        <DeleteItem xmlns="http://www.microsoft.com/sql/ReportingServer">  
             <item>/Samples/Report1</item>  
         </DeleteItem>  
     </soap:Body>  
@@ -47,7 +46,7 @@ public void DeleteItem(string item);
 ```  
 <soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItemResponse xmlns="https://www.microsoft.com/sql/ReportingServer" />  
+        <DeleteItemResponse xmlns="http://www.microsoft.com/sql/ReportingServer" />  
     </soap:Body>  
 </soap:Envelope>  
 ```  

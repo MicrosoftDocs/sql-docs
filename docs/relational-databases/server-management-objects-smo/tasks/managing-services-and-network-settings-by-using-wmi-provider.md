@@ -3,10 +3,9 @@ description: "Managing Services and Network Settings by Using WMI Provider"
 title: "Managing Services and Network Settings by Using WMI Provider"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 
 ms.topic: "reference"
 helpviewer_keywords: 

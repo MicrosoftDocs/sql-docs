@@ -6,9 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: big-data-cluster
-ms.topic: guide
+ms.service: sql
+ms.subservice: big-data-cluster
+ms.topic: conceptual
 ms.metadata: seo-lt-2019
 ---
 

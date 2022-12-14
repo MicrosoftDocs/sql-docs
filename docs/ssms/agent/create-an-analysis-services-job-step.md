@@ -1,9 +1,8 @@
 ---
 description: "Create an Analysis Services Job Step"
 title: "Create an Analysis Services Job Step"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords:
   - sql13.swb.asquery.execgeneral.f1
@@ -122,7 +121,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
             N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
-            N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
+            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  

@@ -1,14 +1,13 @@
 ---
-description: "What&#39;s New in Integration Services in SQL Server 2016"
-title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
+description: "What's New in Integration Services in SQL Server 2016"
+title: "What's New in Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom:
   - SQL2016_New_Updated
   - intro-whats-new
 ms.date: "09/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "Integration Services, what's new"
@@ -17,7 +16,7 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ---
-# What&#39;s New in Integration Services in SQL Server 2016
+# What's New in Integration Services in SQL Server 2016
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -371,4 +370,4 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 
 ## See Also  
  [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Editions and Supported Features for SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)
+ [Editions and supported features of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

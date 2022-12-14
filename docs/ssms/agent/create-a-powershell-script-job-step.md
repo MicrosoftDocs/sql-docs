@@ -3,9 +3,8 @@ description: "Create a PowerShell Script Job Step"
 title: "Create a PowerShell Script Job Step"
 ms.custom: seo-lt-2019
 ms.date: "01/20/2017"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], job steps"

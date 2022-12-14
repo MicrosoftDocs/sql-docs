@@ -3,10 +3,9 @@ title: "'General Page of 'Create New Condition' or 'Open Condition' dialog box"
 description: Describes the 'General Page' of the 'Create New Condition' or 'Open Condition" dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.condition.f1"

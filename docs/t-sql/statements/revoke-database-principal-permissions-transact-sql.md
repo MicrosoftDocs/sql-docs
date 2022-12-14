@@ -5,9 +5,8 @@ description: Revoke permissions on a database user, database role, or applicatio
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: seo-lt-2019
 helpviewer_keywords:

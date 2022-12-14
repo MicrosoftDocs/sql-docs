@@ -2,9 +2,8 @@
 title: "Add or remove margins from a paginated report chart | Microsoft Docs"
 description: Add or remove margins from a column or scatter chart in Report Builder. Improve readability or appearance of paginated reports. 
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
+ms.service: reporting-services
+ms.subservice: report-design
 
 
 ms.topic: conceptual

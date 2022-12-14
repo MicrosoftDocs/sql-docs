@@ -4,9 +4,8 @@ description: This article shows a method of finding which query holds a lock. Da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/18/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "queries [SQL Server], extended events"

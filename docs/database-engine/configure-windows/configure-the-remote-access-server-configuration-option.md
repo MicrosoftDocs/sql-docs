@@ -4,8 +4,8 @@ description: Learn about alternatives to the deprecated remote access option. Vi
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/28/2022"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "remote servers [SQL Server], stored procedure execution"

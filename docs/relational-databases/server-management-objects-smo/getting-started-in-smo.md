@@ -4,10 +4,9 @@ title: "Getting Started in SMO | Microsoft Docs"
 ms.custom:
   - intro-get-started
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server Management Objects, about SQL Server Management Objects"

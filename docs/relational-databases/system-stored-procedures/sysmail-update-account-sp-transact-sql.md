@@ -3,10 +3,9 @@ description: "sysmail_update_account_sp (Transact-SQL)"
 title: "sysmail_update_account_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sysmail_update_account_sp"

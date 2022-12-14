@@ -7,8 +7,8 @@ ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 

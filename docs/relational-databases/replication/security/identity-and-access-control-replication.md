@@ -3,10 +3,9 @@ description: "Identity and Access Control (Replication)"
 title: "Identity and Access Control (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "access controls [SQL Server replication]"

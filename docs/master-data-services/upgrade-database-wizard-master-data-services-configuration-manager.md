@@ -3,10 +3,9 @@ description: "Upgrade Database Wizard (Master Data Services Configuration Manage
 title: Upgrade Database Wizard
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: CordeliaGrey

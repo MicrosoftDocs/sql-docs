@@ -1,8 +1,8 @@
 ---
 title: Collation and Unicode support
 description: Learn about collation and Unicode support in SQL Server.
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "binary collations [SQL Server]"

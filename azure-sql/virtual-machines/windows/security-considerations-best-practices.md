@@ -202,7 +202,7 @@ You don't want attackers to easily guess account names or passwords. Use the fol
 
 ## Auditing and reporting
 
-[Auditing with Log Analytics](/azure/azure-monitor/agents/data-sources-windows-events#configuring-windows-event-logs) documents events and writes to an audit log in a secure Azure BLOB storage account. Log Analytics can be used to decipher the details of the audit logs. Auditing gives you the ability to save data to a separate storage account and create an audit trail of all events you select. You can also leverage Power BI against the audit log for quick analytics of and insights about your data, as well as to provide a view for regulatory compliance. To learn more about auditing at the VM and Azure levels, see [Azure security logging and auditing](/azure/security/fundamentals/log-audit). 
+[Auditing with Log Analytics](/azure/azure-monitor/agents/data-sources-windows-events#configuring-windows-event-logs) documents events and writes to an audit log in a secure Azure Blob Storage account. Log Analytics can be used to decipher the details of the audit logs. Auditing gives you the ability to save data to a separate storage account and create an audit trail of all events you select. You can also leverage Power BI against the audit log for quick analytics of and insights about your data, as well as to provide a view for regulatory compliance. To learn more about auditing at the VM and Azure levels, see [Azure security logging and auditing](/azure/security/fundamentals/log-audit). 
 
 ## Virtual Machine level access
 

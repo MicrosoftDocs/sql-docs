@@ -4,8 +4,8 @@ description: "sp_query_store_remove_plan (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: 09/19/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "SYS.SP_QUERY_STORE_REMOVE_PLAN_TSQL"

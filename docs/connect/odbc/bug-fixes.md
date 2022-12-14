@@ -3,11 +3,10 @@ title: List of bugs fixed
 description: This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server.
 author: v-chojas
 ms.author: v-chojas
-manager: kenvh
 ms.reviewer: v-davidengel
-ms.date: 11/03/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 11/28/2022
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "driver"
@@ -38,6 +37,13 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix use of XADTC with Azure SQL Managed Instance.
 - Fix loss of Azure Active Directory authentication mode when reconnecting an idle connection.
 - Fix an issue with federated authentication when using PingFed.
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix error when retrieving numeric column with Regional=Yes
+- Fix intermittent lack of error when server is stopped during bcp out operation
+- Fix error when stored procedure call contains unquoted string parameter
+- Fix a crash when receiving invalid data from server
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

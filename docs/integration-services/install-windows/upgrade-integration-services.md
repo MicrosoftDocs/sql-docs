@@ -3,10 +3,9 @@ description: "Upgrade Integration Services"
 title: "Upgrade Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, upgrading"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: erikre
 ---
 # Upgrade Integration Services
 

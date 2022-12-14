@@ -4,8 +4,8 @@ description: "Learn about the lightweight pooling option. See how it can provide
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "default lightweight pooling"

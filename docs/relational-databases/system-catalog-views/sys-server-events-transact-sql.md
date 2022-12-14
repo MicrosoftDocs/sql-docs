@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 ---
 # sys.server_events (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each event for which a server-level event-notification or server-level DDL trigger fires. The columns **object_id** and **type** uniquely identify the server event.  
 

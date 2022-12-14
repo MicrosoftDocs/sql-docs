@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Denies permissions on an asymmetric key.  
    

@@ -19,7 +19,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   
-[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-asdbmi.md)]
 
 Returns summary level attributes and information on transaction log files of databases. Use this information for monitoring and diagnostics of transaction log health.   
   

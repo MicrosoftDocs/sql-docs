@@ -6,4 +6,4 @@ ms.service: sql
 ms.topic: include
 ---
 
-[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server 2012](sqlserver2012-and-later.md)] and later [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asmi.md)] 
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server 2012](sqlserver2012-and-later.md)] [!INCLUDE [SQL Managed Instance](../../includes/applies-to-version/_asmi.md)] 

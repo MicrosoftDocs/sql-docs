@@ -47,7 +47,7 @@ productDirectory:
         text: Azure SQL Managed Instance      
       - url: /azure/azure-sql-edge/overview
         text: Azure SQL Edge       
-      - url: /azure/synapse-analytics/overview-what-is/
+      - url: /azure/synapse-analytics/overview-what-is
         text: Azure Synapse Analytics
   - title: SQL Server on Linux
     imageSrc: media/index/linux.svg

@@ -5,6 +5,6 @@
 -- Studio, see the "Executing Replication Scripts" section in the topic
 -- "Programming Replication Using System Stored Procedures".
 USE master
-DECLARE @password nvarchar(50) = “YourLongP@$$w0rdHere”
+DECLARE @password nvarchar(50) = "YourLongP@$$w0rdHere"
 EXEC sp_changedistributor_password @password
 GO

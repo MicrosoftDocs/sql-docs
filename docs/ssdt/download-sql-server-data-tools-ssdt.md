@@ -44,13 +44,11 @@ To modify the installed Visual Studio workloads to include SSDT, use the Visual 
 
    ![Data storage and processing workload 2022](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2022.png)
 
-For Analysis Services or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
+For Analysis Services, Integration Services, or Reporting Services projects, you can install the appropriate [extensions](/visualstudio/ide/finding-and-using-visual-studio-extensions) from within Visual Studio with **Extensions** > **Manage Extensions** or from the [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance).
 
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects2022)
+* [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio2022)
-
-The extension for Integration Services projects is not available for Visual Studio 2022 at this time.
-
 
 ### Supported SQL versions
 
@@ -58,6 +56,7 @@ The extension for Integration Services projects is not available for Visual Stud
 |-------------------|--------------------|
 |Relational databases| [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2019|
+|Integration Services packages| SQL Server 2019 - SQL Server 2022 |
 
 
 ## SSDT for Visual Studio 2019
@@ -93,6 +92,13 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 * [Integration Services](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
+### Offline Installation
+For scenarios where offline installation is required, such as low bandwidth or isolated networks, SSDT is available for offline installation.  Two approaches are available:
+- For a single machine, [Download All, then install](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-download-all-then-install-feature)
+- For installation on one or more machines, [use the Visual Studio bootstrapper from the command line](/visualstudio/install/create-an-offline-installation-of-visual-studio#use-the-command-line-to-create-a-local-layout)
+
+For more details you can follow the [Step-by-Step Guidelines for Offline Installation](/visualstudio/install/create-an-offline-installation-of-visual-studio)
+
 
 ### Supported SQL versions
 
@@ -119,7 +125,7 @@ To download and install SSDT for Visual Studio 2017, or an older version of SSDT
 
 ## Next steps
 
-After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
+After installation of SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT.
 
 * [Project-Oriented Offline Database Development](project-oriented-offline-database-development.md)
 

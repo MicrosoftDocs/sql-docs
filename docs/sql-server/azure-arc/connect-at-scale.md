@@ -71,7 +71,7 @@ To create an Azure Policy assignment, you need the `Resource Policy Contributor`
 > [!IMPORTANT]
 > Because Azure extension for SQL Server synchronizes with Azure once an hour, it may take up to one hour before these resources are created after you create the policy assignment.
 
-### Connect at-scale using the Automatic Arc-enabled SQL Server registration method (Recommended)
+### Connect at-scale using the automatic Arc-enabled SQL Server registration method (Recommended)
 
 If you have the `User Access Administrator` and `Resource Policy Contributor` role assignments or have the subscription `Owner` role assignment, you can quickly enable at-scale registration using Azure Policy and a system assigned managed identity at the scope of an entire subscription or a specific resource group.
 
@@ -248,7 +248,7 @@ This means the machine is no longer recognized as a connected server. [Onboard t
 Check the extension log for the following record:
 `[INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc post request failed with error: Forbidden message: {"ErrorDescription":{"ErrorCode":6,"Message":"The user has no access to the provided Azure resource."},"ResponseUrl":null}`
 
-Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [When machine already connected to Arc-enabled Server](connect.md#when-machine-already-connected-to-arc-enabled-server) role assignment instructions.
+Make sure the machine's managed identity has been assigned the *Azure Connected SQL Server Onboarding* role. See [When machine already connected to Arc-enabled Server](connect.md#when-the-machine-is-already-connected-to-an-arc-enabled-server) role assignment instructions.
 
 ### The user didn't migrate the Arc-enabled SQL Server resource to the new resource provider
 
@@ -265,4 +265,4 @@ Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcD
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 
-- Learn how to [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+- Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)

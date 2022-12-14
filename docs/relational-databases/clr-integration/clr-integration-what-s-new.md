@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: intro-whats-new
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 ---
-# CLR Integration - What&#39;s New
+# CLR Integration - What's New
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following are new features in CLR integration in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]:  
   

@@ -182,16 +182,18 @@ sections:
       - question: |
           Switch hardware configuration
         answer: |
-          ### Can I switch the hardware generation for my managed instance online?
+          ### Can I switch my managed instance hardware between Gen4 and standard-series (Gen5) online?
           
-          Automated online switching from Standard Series to Premium Series or Premium Series Memory-Optimized is possible if the chosen hardware is available in the region where your managed instance is provisioned. In this case, you can check [vCore model overview page](../database/service-tiers-vcore.md) explaining how to switch between hardware configurations.
+          Automated online switching from Gen4 to standard-series (Gen5) is possible if standard-series (Gen5) hardware is available in the region where your managed instance is provisioned. In this case, you can check [vCore model overview page](../database/service-tiers-vcore.md) explaining how to switch between hardware configurations.
           
           This is a long-running operation as a new managed instance will be provisioned in the background and databases automatically transferred between the old and new instance with a quick failover at the end of the process.
-                    
+          
+          Note: Gen4 hardware is being retired and is no longer available for new deployments. All new databases must be deployed on later hardware configurations. Switching from standard-series (Gen5) to Gen4 is also not available.
+          
       - question: |
           Performance 
         answer: |
-          ### How can I compare SQL Managed Instance performance to SQL Server performance?
+          ### How can I compare Azure SQL Managed Instance performance to SQL Server performance?
           
           For a performance comparison between managed instance and SQL Server, a good starting point is [Best practices for performance comparison between Azure SQL Managed Instance and SQL Server](https://techcommunity.microsoft.com/t5/azure-sql-database/the-best-practices-for-performance-comparison-between-azure-sql/ba-p/683210) article.
           
@@ -291,7 +293,7 @@ sections:
 
           ### Is native restore from SQL Managed Instance to SQL Server supported?           
          
-          Yes, but only to SQL Server 2022, during the [mainstream support period of SQL Server 2022](https://learn.microsoft.com/lifecycle/products/sql-server-2022). It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in.
+          Yes, but only to SQL Server 2022, during the [mainstream support period of SQL Server 2022](/lifecycle/products/sql-server-2022). It's possible that, in the future, some features may be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in.
 
       - question: |
           Business continuity
@@ -374,6 +376,8 @@ sections:
           
           In rare but necessary situations, we might need to do an online migration of a managed instance to a new virtual cluster. If needed, this migration is because of changes in our technology stack aimed to improve security and reliability of the service. Migrating to a new virtual cluster results in changing the IP address that is mapped to the managed instance host name. The managed instance service doesn't claim static IP address support and reserves the right to change it without notice as a part of regular maintenance cycles.
           
+          The above holds for both VNet-local and public endpoints. Both should only be accessed via their associated domain names.
+          
           For this reason, we strongly discourage relying on immutability of the IP address as it could cause unnecessary downtime.
           
           ### Does SQL Managed Instance have a public endpoint?
@@ -386,7 +390,7 @@ sections:
           
           ### What is the recommended way to connect managed instances placed in different regions?
           
-          Global virtual network peering (VNet peering) is the recommended method to connect two managed instances in different regions. Express Route circuit peering is an alternative option. If neither option is possible in your environment, the only other connectivity method is a Site-to-Site VPN connection. Configure Site-to-Site VPN by using the [Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), or the [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)
+          Both global virtual network peering (VNet peering) and [Azure virtual WAN](/azure/virtual-wan/virtual-wan-about) are recommended methods to connect two managed instances in different regions. Express Route circuit peering is an alternative option. If neither option is possible in your environment, the only other connectivity method is a Site-to-Site VPN connection. Configure Site-to-Site VPN by using the [Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), or the [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)
           
           ### Does SQL Managed Instance support Global VNet Peering?
           

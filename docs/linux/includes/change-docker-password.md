@@ -1,3 +1,11 @@
+---
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: 12/14/2022
+ms.service: sql
+ms.subservice: linux
+ms.topic: include
+---
 The **SA** account is a system administrator on the SQL Server instance that's created during setup. After you create your SQL Server container, the `MSSQL_SA_PASSWORD` environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your SA password:
 
 1. Choose a strong password to use for the SA user.

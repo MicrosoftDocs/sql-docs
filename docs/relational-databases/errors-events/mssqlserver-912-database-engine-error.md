@@ -2,7 +2,7 @@
 title: "MSSQLSERVER_912"
 description: The database script level could not be upgraded to the latest required by the server.
 ms.custom: ""
-ms.date: "10/25/2022"
+ms.date: "12/01/2022"
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: supportability
@@ -58,8 +58,10 @@ Wait on the Database Engine recovery handle failed. Check the SQL Server error l
 To find the cause of the issue, follow these steps:
 1. Locate and open the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Errorlog](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). 
 1. Examine the log for errors that occurred immediately before error 912 and focus on troubleshooting the error referenced in the messaging of Error 912. 
+1. For some common scenarios that Microsoft customers have reported see, ["Wait on Database Engine recovery handle failed" and "912" and "3417" errors](/troubleshoot/sql/install/sqlserver-patching-issues#wait-on-database-engine-recovery-handle-failed-and-912-and-3417-errors)
 1. In some cases, as part of the process, you may need to start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service with [trace flag 902](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#tf902) (see steps below). Starting the service with T902 allows the service to skip execution of the upgrade scripts during startup. That way, you get a chance to investigate and fix the underlying issue.
 1. Be sure to remove the trace flag once you have resolved the issue so the setup process can restart the upgrade script execution phase.
+
 
 ### Steps to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with trace flag 902 
 

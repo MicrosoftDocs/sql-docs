@@ -390,7 +390,7 @@ sections:
           
           ### What is the recommended way to connect managed instances placed in different regions?
           
-          Global virtual network peering (VNet peering) is the recommended method to connect two managed instances in different regions. Express Route circuit peering is an alternative option. If neither option is possible in your environment, the only other connectivity method is a Site-to-Site VPN connection. Configure Site-to-Site VPN by using the [Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), or the [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)
+          Both global virtual network peering (VNet peering) and [Azure virtual WAN](/azure/virtual-wan/virtual-wan-about) are recommended methods to connect two managed instances in different regions. Express Route circuit peering is an alternative option. If neither option is possible in your environment, the only other connectivity method is a Site-to-Site VPN connection. Configure Site-to-Site VPN by using the [Azure portal](/azure/vpn-gateway/tutorial-site-to-site-portal), [PowerShell](/azure/vpn-gateway/vpn-gateway-create-site-to-site-rm-powershell), or the [Azure CLI](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli)
           
           ### Does SQL Managed Instance support Global VNet Peering?
           

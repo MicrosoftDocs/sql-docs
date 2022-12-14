@@ -54,8 +54,7 @@ When an I/O operation has been pending for 15 seconds or longer, SQL Server perf
 1. Detects that an operation has been pending.
 1. Writes an informational message to the SQL Server error log as outlined in the Details section.
 
-   Explanation to different sections of this informational message is given below:
-
+   Explanation to different sections of this informational message is given in the following table:
 
 | Message text | Description |
 |---|---|
@@ -82,7 +81,7 @@ SQL Server records the time it initiated an I/O request and records the time the
 Troubleshoot this error by performing the following steps:
 
 1. Examine the system event log for hardware-related error messages.
-1. Examine hardware-specific logs if they are available.  Use the necessary methods and techniques to determine the cause of the delay in the operating system, the drivers, or the I/O hardware.
+1. Examine hardware-specific logs if they are available. Use the necessary methods and techniques to determine the cause of the delay in the operating system, the drivers, or the I/O hardware.
 1. Update all device drivers and firmware or perform other diagnostics that're associated with your I/O subsystem.
 1. Disk access can be slowed by filter drivers, for example, an antivirus program. To increase access speed, exclude the SQL Server data files that're specified in the error message from the active virus scans. For more information, see [How to choose antivirus software to run on computers that are running SQL Server (microsoft.com)](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b).
     - Use the [fltmc.exe command line utility](/windows-hardware/drivers/ifs/development-and-testing-tools) to query all the filter drivers installed on the system and to understand the functions it performs on the storage path to the database files.

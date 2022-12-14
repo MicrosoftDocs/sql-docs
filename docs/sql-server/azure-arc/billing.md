@@ -138,6 +138,8 @@ When you run your SQL Server instance on a virtual or physical machine, you are 
 
 Yes, you can change your selection. To change, run Setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**.
 
+See also [Azure Arc-enabled SQL Server FAQ](faq.yml).
+
 ## Next steps
 
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)

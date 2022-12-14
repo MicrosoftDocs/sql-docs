@@ -21,7 +21,7 @@ This topic provides step-by-step instructions for migrating one of the following
   
 * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
-* [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+* [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
 * [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
 ::: moniker-end
@@ -31,7 +31,7 @@ This topic provides step-by-step instructions for migrating one of the following
   
 * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
-* [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+* [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
 * [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
 
@@ -167,7 +167,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
     * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
-    * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+    * [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
     * [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
     ::: moniker-end
@@ -177,7 +177,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
 
     * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-    * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+    * [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
 
     * [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
     ::: moniker-end
@@ -268,7 +268,7 @@ If you modified the RSReportServer.config file or RSWebApplication.config file i
 
 1. Test the report server and [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] virtual directories by opening a browser and typing in the URL address. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
-2. Test reports and verify they contain the data you expect. Review data source information to see whether the data source connection information is still specified. The report server uses the report object model when processing and rendering reports, but it does not replace [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] constructs with new report definition language elements. To learn more about how existing reports run on a new version of your report server, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+2. Test reports and verify they contain the data you expect. Review data source information to see whether the data source connection information is still specified. The report server uses the report object model when processing and rendering reports, but it does not replace [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] constructs with new report definition language elements. To learn more about how existing reports run on a new version of your report server, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
 
 ## <a name="bkmk_remove_unused"></a> Remove Unused Programs and Files
 

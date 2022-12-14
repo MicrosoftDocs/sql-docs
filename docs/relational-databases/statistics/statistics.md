@@ -140,7 +140,7 @@ Marking statistics as out-of-date based on row modifications occurs even when th
   For example if your table contains 2 million rows, then the calculation is the minimum of `500 + (0.20 * 2,000,000) = 400,500` and `SQRT(1,000 * 2,000,000) = 44,721`. This means the statistics will be updated every 44,721 modifications.
 
 > [!IMPORTANT]  
-> In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that  SQL Server  uses a decreasing, dynamic statistics update threshold.
+> In [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that  SQL Server  uses a decreasing, dynamic statistics update threshold.
 
 While recommended for all scenarios, enabling trace flag 2371 is optional. However, you can use the following guidance for enabling the trace flag 2371 in your pre-[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] environment:
 

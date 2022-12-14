@@ -55,7 +55,7 @@ ms.date: 05/06/2021
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
 -   [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
@@ -203,8 +203,8 @@ Cumulative Updates in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.m
   
      If you have a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation integrated with SharePoint 2010, you cannot upgrade in-place the SharePoint server. However you can migrate content databases and service application databases from the SharePoint 2010 farm to a SharePoint 2013/2016 farm.  
   
-### [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] to SQL Server Reporting Services  
- **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+### [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] to SQL Server Reporting Services  
+ **Starting environment:** [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], SharePoint 2010.  
   
  **Ending environment:** SQL Server Reporting Services, SharePoint 2013 or SharePoint 2016.  
  

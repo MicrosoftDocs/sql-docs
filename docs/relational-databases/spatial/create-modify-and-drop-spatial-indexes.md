@@ -145,7 +145,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  An index build can use available process parallelism.  
   
 ### Version Restrictions  
- Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. You must use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] databases is a requirement.  
+ Spatial tessellations introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] cannot be replicated to [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. You must use [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] spatial tessellations for spatial indexes when backward compatibility with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] or [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] databases is a requirement.  
   
   
 ## See Also  

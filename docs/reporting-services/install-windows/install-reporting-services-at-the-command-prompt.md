@@ -72,9 +72,9 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[PID value]" /F
   
  The following example can be used to upgrade a SharePoint Mode installation that is based on the SharePoint shared service architecture. The example uses switch ALLOWUPGRADEFORSSRSSHAREPOINTMODE. The switch is not needed for upgrading older versions that are not based on the shared service architecture:  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+-   [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+-   [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
 ```  
 Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value]" /FTSVCACCOUNT="[ACCOUNT Name]" /FTSVCPASSWORD="[PASSWORD]" /UPDATEENABLED="False" /IACCEPTSQLSERVERLICENSETERMS /ALLOWUPGRADEFORSSRSSHAREPOINTMODE="True"  

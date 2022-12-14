@@ -31,7 +31,7 @@ Defragments indexes of the specified table or view.
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.
 
-**Applies to**: [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later versions
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions
 
 :::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

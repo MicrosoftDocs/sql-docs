@@ -41,10 +41,10 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 |**original_cost**|**int**|Original cost of the entry. This value is an approximation of the number of I/Os incurred, CPU instruction cost, and the amount of memory consumed by entry. The greater the cost, the lower the chance that the item will be removed from the cache. Is not nullable.|  
 |**current_cost**|**int**|Current cost of the cache entry. This value is updated during the process of entry purging. Current cost is reset to its original value on entry reuse. Is not nullable.|  
 |**memory_object_address**|**varbinary(8)**|Address of the associated memory object. Is nullable.|  
-|**pages_allocated_count**|**bigint**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Number of 8-KB pages to store this cache entry. Is not nullable.|  
+|**pages_allocated_count**|**bigint**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)].<br /><br /> Number of 8-KB pages to store this cache entry. Is not nullable.|  
 |**pages_kb**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Amount of memory in kilobytes (KB) used by this cache entry.  Is not nullable.|  
 |**entry_data**|**nvarchar(2048)**|Serialized representation of the cached entry. This information is cache store dependant. Is nullable.|  
-|**pool_id**|**int**|**Applies to**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later.<br /><br /> Resource pool id associated with entry. Is nullable.<br /><br /> not katmai|  
+|**pool_id**|**int**|**Applies to**: [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] and later.<br /><br /> Resource pool id associated with entry. Is nullable.<br /><br /> not katmai|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions 

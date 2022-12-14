@@ -1,6 +1,7 @@
 ---
 title: Maintenance Window
-description: Understand how the Azure SQL Database and managed instance maintenance window can be configured.
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+description: Understand how the Azure SQL Database and Azure SQL Managed Instance maintenance window can be configured.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil

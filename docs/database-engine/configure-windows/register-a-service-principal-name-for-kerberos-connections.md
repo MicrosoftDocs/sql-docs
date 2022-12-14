@@ -61,7 +61,7 @@ When the Database Engine service starts, it attempts to register the Service Pri
 
 ##  <a name="Formats"></a> SPN Formats
 
-Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the SPN format is changed in order to support Kerberos authentication on TCP/IP, named pipes, and shared memory. The supported SPN formats for named and default instances are as follows.  
+Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], the SPN format is changed in order to support Kerberos authentication on TCP/IP, named pipes, and shared memory. The supported SPN formats for named and default instances are as follows.  
   
 **Named instance**  
   

@@ -169,7 +169,7 @@ WHERE name = 'AddressID';
 ### D. Creating a table by specifying columns from a remote data source  
  The following example demonstrates three methods of creating a new table on the local server from a remote data source. The example begins by creating a link to the remote data source. The linked server name, `MyLinkServer,` is then specified in the FROM clause of the first SELECT...INTO statement and in the OPENQUERY function of the second SELECT...INTO statement. The third SELECT...INTO statement uses the OPENDATASOURCE function, which specifies the remote data source directly instead of using the linked server name.  
   
- **Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 ```sql
 USE master;  

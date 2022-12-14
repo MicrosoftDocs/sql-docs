@@ -23,7 +23,7 @@ ms.author: maggies
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
+>  Beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
   
 ## Syntax  
   

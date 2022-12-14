@@ -86,7 +86,7 @@ GRANT permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies an application role.  
   
@@ -182,7 +182,7 @@ GO
 ### C. Granting IMPERSONATE permission on a user to an application role  
  The following example grants `IMPERSONATE` permission on user `HamithaL` to `AdventureWorks2012` application role `AccountsPayable17`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```sql  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  

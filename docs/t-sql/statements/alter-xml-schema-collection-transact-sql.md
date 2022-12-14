@@ -27,7 +27,7 @@ dev_langs:
   - "TSQL"
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql_asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds new schema components to an existing XML schema collection.  
   

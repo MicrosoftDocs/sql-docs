@@ -22,7 +22,7 @@ dev_langs:
   - "TSQL"
 ---
 # DENY Service Broker Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sql_asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Denies permissions on a [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract, message type, remote service binding, route, or service.  
   

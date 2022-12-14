@@ -40,7 +40,7 @@ ms.date: 05/15/2019
   
 4. In the **ErrorLevel**  text box, type the severity of the build issues that are reported as errors. Issues occurring when building reports, data sources, or other project resources with severity levels less than or equal to the value of **ErrorLevel**  are reported as errors; otherwise, the issues are reported as warnings. Any error will cause the build task to fail. The valid severity levels are 0 through 4 inclusive. The default value is 2.  
   
-     **ErrorLevel** can be used to increase or decrease the sensitivity of the build. For example, when a report with a map is built during deployment to a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] report server an error displays by default and building the report fails. If you lower **ErrorLevel** the map is removed from the report, a warning displays, and building the report continues.  
+     **ErrorLevel** can be used to increase or decrease the sensitivity of the build. For example, when a report with a map is built during deployment to a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] report server an error displays by default and building the report fails. If you lower **ErrorLevel** the map is removed from the report, a warning displays, and building the report continues.  
   
 5. In the **StartItem**  list, select a report to display in the preview window or in a browser window when the report project is run.  
   

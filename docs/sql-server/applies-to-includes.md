@@ -26,7 +26,7 @@ SQL Content writers frequently need to include the name of the product and versi
 | SQL Server | ssnoversion-md.md | `[!INCLUDE[ssSQL11](../includes/ssnoversion-md.md)]` | SQL Server |
 | SQL Server 2000 | ssversion2000-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2000-md.md)]` | [!INCLUDE [ssversion2000-md](../includes/ssversion2000-md.md)] |
 | SQL Server 2005 | ssversion2005-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2005-md.md)]` | [!INCLUDE [ssversion2005-md](../includes/ssversion2005-md.md)] |
-| SQL Server 2008 | sql2008-md.md | `[!INCLUDE [sql2008-md](../includes/sql2008-md.md)]` | [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] |
+| SQL Server 2008 | sql2008-md.md | `[!INCLUDE[sql2008-md](../includes/sql2008-md.md)]` | [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] |
 | SQL Server 2008 R2 | sql2008r2-md.md | `[!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]` | [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)] |
 | SQL Server 2012 | sssql11-md.md | `[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]` | SQL Server 2012 (11.x) |
 | SQL Server 2012 SP1 | sssql11sp1-md.md | `[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]` | [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] |

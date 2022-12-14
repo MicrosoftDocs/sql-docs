@@ -97,7 +97,7 @@ Displays an unlimited number of errors. All error messages are displayed by defa
 
 #### EXTENDED_LOGICAL_CHECKS
 
-If the compatibility level is 100, introduced in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
+If the compatibility level is 100, introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
 
 For more information, see *Performing Logical Consistency Checks on Indexes* in the [Remarks](#remarks) section later in this article.
 
@@ -167,7 +167,7 @@ For the specified table, `DBCC CHECKTABLE` checks for the following:
 
 Logical consistency checking on indexes varies according to the compatibility level of the database, as follows:
 
-- If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher:
+- If the compatibility level is 100 ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]) or higher:
 
   - Unless `NOINDEX` is specified, `DBCC CHECKTABLE` performs both physical and logical consistency checks on a single table and on all its nonclustered indexes. However, on XML indexes, spatial indexes, and indexed views only physical consistency checks are performed by default.
 

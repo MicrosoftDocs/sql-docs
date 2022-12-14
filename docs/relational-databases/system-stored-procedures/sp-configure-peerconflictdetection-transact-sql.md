@@ -78,7 +78,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- sp_configure_peerconflictdetection is used in peer-to-peer transactional replication. To use conflict detection, all nodes must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions; and detection must be enabled for all nodes.  
+ sp_configure_peerconflictdetection is used in peer-to-peer transactional replication. To use conflict detection, all nodes must be running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions; and detection must be enabled for all nodes.  
   
 ## Permissions  
  Requires membership in the sysadmin fixed server role or db_owner fixed database role.  

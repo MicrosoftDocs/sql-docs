@@ -93,7 +93,7 @@ sqlps
   
  By default, the **sqlps** utility runs with the scripting execution policy set to **Restricted**. This prevents running any PowerShell scripts. You can use the **Set-ExecutionPolicy** cmdlet to enable running signed scripts, or any scripts. Only run scripts from trusted sources, and secure all input and output files by using the appropriate NTFS permissions. For more information about enabling PowerShell scripts, see [Running Windows PowerShell Scripts](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10)).  
   
- The version of the **sqlps** utility in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] was implemented as a Windows PowerShell 1.0 mini-shell. Mini-shells have certain restrictions, such as not allowing users to load snap-ins other than those loaded by the mini-shell. These restrictions do not apply to the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and higher versions of the utility, which have been changed to use the **sqlps** module.  
+ The version of the **sqlps** utility in [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] was implemented as a Windows PowerShell 1.0 mini-shell. Mini-shells have certain restrictions, such as not allowing users to load snap-ins other than those loaded by the mini-shell. These restrictions do not apply to the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and higher versions of the utility, which have been changed to use the **sqlps** module.  
   
 ## Examples  
  **A. Run the sqlps utility in default, interactive mode without the copyright banner**  

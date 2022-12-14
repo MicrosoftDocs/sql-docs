@@ -45,7 +45,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
- **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+ **100** = [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
  **110** = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   

@@ -149,7 +149,7 @@ If you're not ready to upgrade, and you're not ready to move to the cloud, you h
 
 - **Application support**: This is the best option if your application requires recertification on a newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is common for applications that don't use [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 - **Consistent infrastructure**: You don't have to change your infrastructure in any way.
-- **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from [!INCLUDE[msCoName](../../includes/msconame-md.md)] on your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product. This is the only way to get support for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)].
+- **Technical support**: If you have Software Assurance, or another support plan, you can continue receiving technical support from [!INCLUDE[msCoName](../../includes/msconame-md.md)] on your end-of-support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product. This is the only way to get support for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)].
 - **Time**: This option is available for three years, giving you extra time to certify your applications.
 
 ### Considerations
@@ -173,10 +173,10 @@ Another option is to migrate your workload to an [Azure Virtual Machine running 
 
 ### Benefits
 
-- **Free Extended Security Updates**: If you choose to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as-is, using [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], you can get free Extended Security Updates for three years past the end of support date, even without having Software Assurance.
+- **Free Extended Security Updates**: If you choose to keep your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as-is, using [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], you can get free Extended Security Updates for three years past the end of support date, even without having Software Assurance.
 
   > [!TIP]  
-  > Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+  > Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
 
 - **Cost-saving**: You save the cost of hardware and server software, only paying for hourly usage.
 - **Lift-and-shift**: You can lift-and-shift your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and application infrastructure into the cloud with minimal or no changes.
@@ -295,7 +295,7 @@ The following table provides an approximation of lifecycle dates for [!INCLUDE[s
 | [SQL Server 2000](/lifecycle/products/?terms=SQL%20Server%202000) | 2000 | 2005 | 2013 |
 
 > [!TIP]  
-> Customers on [!INCLUDE[SQL Server 2008](../../includes/ssKatmai-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
+> Customers on [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and [!INCLUDE[SQL Server 2008 R2](../../includes/ssKilimanjaro-md.md)] can migrate to Azure services if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
 
 > [!IMPORTANT]  
 > If any discrepancy exists between this table, and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle page, then the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Lifecycle supersedes this table, as this table is meant to be used as an approximate reference.

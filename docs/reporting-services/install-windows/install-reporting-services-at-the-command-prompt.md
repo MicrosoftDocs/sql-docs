@@ -74,7 +74,7 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[PID value]" /F
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+-   [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]  
   
 ```  
 Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value]" /FTSVCACCOUNT="[ACCOUNT Name]" /FTSVCPASSWORD="[PASSWORD]" /UPDATEENABLED="False" /IACCEPTSQLSERVERLICENSETERMS /ALLOWUPGRADEFORSSRSSHAREPOINTMODE="True"  

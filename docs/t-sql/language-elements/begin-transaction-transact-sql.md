@@ -61,17 +61,17 @@ BEGIN { TRAN | TRANSACTION }
 
 ## Arguments
  *transaction_name*  
- **Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+ **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
  
  Is the name assigned to the transaction. *transaction_name* must conform to the rules for identifiers, but identifiers longer than 32 characters are not allowed. Use transaction names only on the outermost pair of nested BEGIN...COMMIT or BEGIN...ROLLBACK statements. *transaction_name* is always case sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case sensitive.  
   
  @*tran_name_variable*  
- **Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+ **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
  
  Is the name of a user-defined variable containing a valid transaction name. The variable must be declared with a **char**, **varchar**, **nchar**, or **nvarchar** data type. If more than 32 characters are passed to the variable, only the first 32 characters will be used; the remaining characters will be truncated.  
   
  WITH MARK [ '*description*' ]  
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
 Specifies that the transaction is marked in the log. *description* is a string that describes the mark. A *description* longer than 128 characters is truncated to 128 characters before being stored in the msdb.dbo.logmarkhistory table.  
   
@@ -140,7 +140,7 @@ COMMIT TRAN T1;
 ## Examples  
   
 ### A. Using an explicit transaction
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 This example uses AdventureWorks. 
 
@@ -152,7 +152,7 @@ COMMIT;
 ```
 
 ### B. Rolling back a transaction
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 , [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 The following example shows the effect of rolling back a transaction. In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.
@@ -167,7 +167,7 @@ ROLLBACK;
 ```
 
 ### C. Naming a transaction 
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
 The following example shows how to name a transaction.  
   
@@ -185,7 +185,7 @@ GO
 ```  
   
 ### D. Marking a transaction  
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
 The following example shows how to mark a transaction. The transaction `CandidateDelete` is marked.  
   

@@ -32,7 +32,7 @@ In this lesson, you create a table by using the **hierarchyid** data type to rep
 ## Requirements  
 Your system must have the following installed:  
   
--   Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  
+-   Any edition of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later.  
   
 -   Either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express.  
   

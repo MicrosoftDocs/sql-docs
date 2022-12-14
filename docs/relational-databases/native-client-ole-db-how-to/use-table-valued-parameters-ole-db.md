@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Use Table-Valued Parameters in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later. This sample does the following:  
+  This sample works with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later. This sample does the following:  
   
 -   Creates table-valued parameters by using dynamic discovery though IOpenRowset::OpenRowset.  
   

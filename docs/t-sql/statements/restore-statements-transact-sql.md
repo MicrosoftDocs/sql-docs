@@ -296,7 +296,7 @@ For more information, see [Online Restore](../../relational-databases/backup-res
 
 ### Discontinued RESTORE Keywords
 
-The following keywords were discontinued in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:
+The following keywords were discontinued in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]:
 
 |Discontinued keyword|Replaced by...|Example of replacement keyword|
 |--------------------------|------------------|------------------------------------|

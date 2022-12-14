@@ -72,7 +72,7 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
       
 4. On the **Publication Type** page, select **Merge publication**, and then select **Next**.  
    
-5. On the **Subscriber Types** page, ensure that only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later is selected, and then select **Next**: 
+5. On the **Subscriber Types** page, ensure that only [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later is selected, and then select **Next**: 
 
     !["Publication Type" and "Subscriber Types" pages](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   

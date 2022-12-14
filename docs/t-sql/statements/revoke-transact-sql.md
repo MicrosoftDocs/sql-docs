@@ -85,7 +85,7 @@ REVOKE
 >  If the principal has the specified permission without the GRANT option, the permission itself will be revoked.  
   
  ALL  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  This option does not revoke all possible permissions. Revoking ALL is equivalent to revoking the following permissions.  
   

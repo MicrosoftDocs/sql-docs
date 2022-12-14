@@ -121,6 +121,9 @@ When the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser service 
   
     > [!NOTE]  
     > If you omit **tcp:** from the **Server name** box, then the client will attempt all protocols that are enabled, in the order specified in the client configuration.  
+
+    > [!IMPORTANT]
+    > If an attempt is made to establish a connection with the Instance name while connecting to the remote server, the [SQL Server Browser](../tools/configuration-manager/sql-server-browser-service.md) service must be running. Instance name-port mapping will not work if the SQL Server Browser service is not running.
   
 4.  In the **Authentication** box, confirm **Windows Authentication**, and then click **Connect**.  
   

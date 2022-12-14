@@ -3,14 +3,13 @@ description: "Overview: Importing Data from Excel (MDS Add-in for Excel)"
 title: Importing Data from Excel
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Overview: Importing Data from Excel (MDS Add-in for Excel)
 

@@ -3,9 +3,9 @@ title: "System Data Collection Set Reports | Microsoft Docs"
 description: The data collector provides a report for each of the System Data collection sets for monitoring system capacity and system performance in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data collector [SQL Server], server activity"

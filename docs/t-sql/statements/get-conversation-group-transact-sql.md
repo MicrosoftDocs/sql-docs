@@ -4,9 +4,8 @@ description: GET CONVERSATION GROUP (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "GET"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "conversations [Service Broker], groups"
 dev_langs:
   - "TSQL"
-ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

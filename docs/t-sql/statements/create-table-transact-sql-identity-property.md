@@ -4,9 +4,8 @@ description: CREATE TABLE (Transact-SQL) IDENTITY (Property)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IDENTITY_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "autonumbers, identity numbers"
 dev_langs:
   - "TSQL"
-ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)

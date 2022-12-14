@@ -4,9 +4,8 @@ description: Learn how srv_pfield in the Extended Stored Procedure API returns i
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_pfield"
@@ -68,7 +67,6 @@ len
 |SRV_STATUS|The current status of *srvproc*: running or closed|  
 |SRV_TYPE|The connection type of *srvproc*. If server is returned, *srvproc* is from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If client is returned, *srvproc* is from a DB-Library or ODBC client.|  
 |SRV_USER|The user name of the connection.|  
-|||  
   
  *len*  
  Is a pointer to an **int** variable that contains the length of the returned *field* value. If *len* is NULL, the length of the string is not returned.  

@@ -3,18 +3,17 @@ description: "Create a Leaf Member (Master Data Services)"
 title: Create a Leaf Member
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "leaf members [Master Data Services], creating"
   - "creating leaf members [Master Data Services]"
   - "members [Master Data Services], creating leaf members"
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Leaf Member (Master Data Services)
 

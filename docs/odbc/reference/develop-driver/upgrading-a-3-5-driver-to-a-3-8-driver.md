@@ -3,10 +3,9 @@ description: "Upgrading a 3.5 Driver to a 3.8 Driver"
 title: "Upgrading a 3.5 Driver to a 3.8 Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: David-Engel

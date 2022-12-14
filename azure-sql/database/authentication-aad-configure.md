@@ -2,20 +2,18 @@
 title: Configure Azure Active Directory authentication
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: Learn how to connect to SQL Database, SQL Managed Instance, and Azure Synapse Analytics by using Azure Active Directory authentication, after you configure Azure AD.
-services:
-  - "sql-database"
+author: GithubMirek
+ms.author: mireks
+ms.reviewer: wiassaf, vanto, mathoma
+ms.date: 04/09/2022
 ms.service: sql-db-mi
 ms.subservice: security
+ms.topic: how-to
 ms.custom:
   - "azure-synapse"
   - "has-adal-ref"
   - "sqldbrb=2"
   - "devx-track-azurepowershell"
-ms.topic: how-to
-author: GithubMirek
-ms.author: mireks
-ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/09/2022
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
@@ -439,7 +437,7 @@ A federated domain user account that is imported into a managed domain as an ext
 
 ## Connect to the database using SSMS or SSDT  
 
-To confirm the Azure AD administrator is properly set up, connect to the **master** database using the Azure AD administrator account.
+To confirm the Azure AD administrator is properly set up, connect to the `master` database using the Azure AD administrator account.
 To provision an Azure AD-based contained database user (other than the server administrator that owns the database), connect to the database with an Azure AD identity that has access to the database.
 
 > [!IMPORTANT]

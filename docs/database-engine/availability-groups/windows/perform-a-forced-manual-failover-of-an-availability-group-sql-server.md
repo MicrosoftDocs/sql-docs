@@ -1,21 +1,19 @@
 ---
 title: "Manually force a failover of an availability group"
 description: "This topic describes how to perform a forced failover of an Always On availability group (with possible data loss) by using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: seo-lt-2019
+f1_keywords:
   - "sql13.swb.availabilitygroup.forcefailover.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
   - "failover [SQL Server], Always On Availability Groups"
-ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Perform a Forced Manual Failover of an Always On Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

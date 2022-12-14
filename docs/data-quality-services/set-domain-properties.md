@@ -1,17 +1,14 @@
 ---
-description: "Set Domain Properties"
 title: "Set Domain Properties"
-ms.date: "11/08/2011"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dqs.dm.domainproperties.f1"
-ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
+description: "Set Domain Properties"
 author: swinarko
 ms.author: sawinark
+ms.date: "11/08/2011"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dqs.dm.domainproperties.f1"
 ---
 # Set Domain Properties
 

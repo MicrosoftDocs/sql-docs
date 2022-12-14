@@ -4,9 +4,8 @@ description: SET TEXTSIZE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "04/12/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "TEXTSIZE_TSQL"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "text size returned [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TEXTSIZE (Transact-SQL)

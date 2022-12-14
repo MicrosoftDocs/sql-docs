@@ -3,10 +3,9 @@ title: "Invalid Characters and Escape Rules"
 description: Learn how invalid XML characters are handled by the FOR XML clause, and learn the escape rules for characters that are invalid in XML names.
 ms.custom: ""
 ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML clause, invalid characters"

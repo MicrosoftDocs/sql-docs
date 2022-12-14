@@ -4,9 +4,8 @@ description: DENY Assembly Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "assemblies [CLR integration], permissions"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], assemblies"
 dev_langs:
   - "TSQL"
-ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 ---
 # DENY Assembly Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

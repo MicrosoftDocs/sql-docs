@@ -4,9 +4,8 @@ description: ENABLE TRIGGER (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ENABLE TRIGGER"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "ENABLE TRIGGER statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 ---
 # ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -4,9 +4,8 @@ description: CREATE SERVER ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/02/2016"
-ms.prod: sql
-ms.prod_service: "pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SERVER_ROLE_TSQL"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "roles, server"
 dev_langs:
   - "TSQL"
-ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 ---
 # CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

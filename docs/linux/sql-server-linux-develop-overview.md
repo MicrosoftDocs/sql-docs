@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.date: 10/21/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ---
 # How to get started developing applications for SQL Server on Linux
@@ -35,7 +35,7 @@ If you're creating a new application, take a look at a list of the [Connectivity
 
 ## Use existing applications
 
-If you have an existing database application, you can simply change its connection string to target SQL Server on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes.md) in SQL Server on Linux.
+If you have an existing database application, you can simply change its connection string to target SQL Server on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes-2017.md#known-issues) in SQL Server on Linux.
 
 ## Use existing SQL tools on Windows with SQL Server on Linux
 

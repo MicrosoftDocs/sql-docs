@@ -1,17 +1,16 @@
 ---
-title: Use PowerShell to enable transparent data encryption 
+title: Use PowerShell to enable transparent data encryption
 titleSuffix: Azure SQL Managed Instance
 description: Enable transparent data encryption in Azure SQL Managed Instance using PowerShell and your own key.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: kr2b-contr-experiment
-ms.devlang: powershell
-ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: vanto, sstein
+ms.reviewer: vanto
 ms.date: 05/18/2022
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: kr2b-contr-experiment
+ms.devlang: powershell
 ---
 
 # PowerShell script to enable transparent data encryption using your own key

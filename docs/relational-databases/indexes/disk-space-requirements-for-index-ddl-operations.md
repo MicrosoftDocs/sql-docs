@@ -4,9 +4,8 @@ description: Disk Space Requirements for Index DDL Operations
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "disk space [SQL Server], indexes"

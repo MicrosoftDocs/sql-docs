@@ -4,8 +4,8 @@ description: sys.dm_hadr_instance_node_map (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.sys.dm_hadr_instance_node_map_TSQL"

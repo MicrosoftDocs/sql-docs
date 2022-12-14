@@ -1,9 +1,8 @@
 ---
 description: "Proxy Editor - Add Principal"
 title: Proxy Editor - Add Principal
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.proxy.editor.f1"

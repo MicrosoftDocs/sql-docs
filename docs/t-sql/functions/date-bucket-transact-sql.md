@@ -5,12 +5,10 @@ author: kendalvandyke
 ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 05/09/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom:
-  - "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "DATE_BUCKET"
   - "DATE_BUCKET_TSQL"
@@ -22,7 +20,7 @@ dev_langs:
 ---
 # DATE_BUCKET (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asde](../../includes/applies-to-version/sqlserver2022-asde.md)]
+[!INCLUDE [sqlserver2022-asde](../../includes/applies-to-version/sqlserver2022-asdb-asmi-asde.md)]
 
 This function returns the date-time value corresponding to the start of each date-time bucket from the timestamp defined by the `origin` parameter, or the default origin value of `1900-01-01 00:00:00.000` if the origin parameter isn't specified.
 

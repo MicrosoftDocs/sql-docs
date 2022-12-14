@@ -3,9 +3,9 @@ description: "The sys.sp_persistent_version_cleanup system stored procedure manu
 title: "sys.sp_persistent_version_cleanup (Transact-SQL)"
 ms.custom: ""
 ms.date: 07/12/2022
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_persistent_version_cleanup"

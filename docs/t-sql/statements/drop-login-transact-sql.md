@@ -4,9 +4,8 @@ description: DROP LOGIN (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP LOGIN"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "dropping login accounts"
 dev_langs:
   - "TSQL"
-ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP LOGIN (Transact-SQL)

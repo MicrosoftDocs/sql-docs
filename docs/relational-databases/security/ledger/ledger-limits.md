@@ -46,6 +46,7 @@ Consider the following when working with ledger.
 - Change tracking isn't allowed on the history table but is allowed on ledger tables.
 - Change data capture isn't supported for ledger tables.
 - Transactional replication isn't supported for ledger tables.
+- Azure Synapse Link is supported but only for the ledger table, not the history table.
 
 ### Unsupported data types
 
@@ -89,7 +90,7 @@ Updatable ledger tables are based on the technology of [temporal tables](../../t
 
 ### Adding columns
 
-Adding nullable columns is supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger will modify the schema of the ledger and history tables to include the new column, however, this doesn't impact the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
+Adding nullable columns is supported. Adding non-nullable columns is not supported. Ledger is designed to ignore NULL values when computing the hash of a row version. Based on that, when a nullable column is added, ledger will modify the schema of the ledger and history tables to include the new column, however, this doesn't impact the hashes of existing rows. Adding columns in ledger tables is captured in [sys.ledger_column_history](../../system-catalog-views/sys-ledger-column-history-transact-sql.md).
 
 ### Dropping columns and tables
 
@@ -98,6 +99,9 @@ Normally, dropping a column or table completely erases the underlying data from 
 - Dropped ledger tables are marked as dropped by setting `is_dropped_ledger_table` in **sys.tables** and renamed using the following format: `MSSQL_DroppedLedgerTable_<dropped_ledger_table_name>_<GUID>`.
 - Dropped history tables for updatable ledger tables are renamed using the following format: `MSSQL_DroppedLedgerHistory_<dropped_history_table_name>_<GUID>`.
 - Dropped ledger views are marked as dropped by setting `is_dropped_ledger_view` in **sys.views** and renamed using the following format: `MSSQL_DroppedLedgerView_<dropped_ledger_view_name>_<GUID>`.
+
+> [!NOTE]  
+> The name of dropped ledger tables, history tables and ledger views might be truncated if the length of the renamed table or view exceeds 128 characters. 
 
 ### Altering Columns
 

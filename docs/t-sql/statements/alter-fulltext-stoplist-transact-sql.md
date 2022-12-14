@@ -1,12 +1,11 @@
 ---
 title: "ALTER FULLTEXT STOPLIST (Transact-SQL)"
 description: ALTER FULLTEXT STOPLIST (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER FULLTEXT STOPLIST"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 dev_langs:
   - "TSQL"
-ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 ---
 # ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	

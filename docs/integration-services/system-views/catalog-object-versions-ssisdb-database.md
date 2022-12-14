@@ -3,10 +3,9 @@ description: "catalog.object_versions (SSISDB Database)"
 title: "catalog.object_versions (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "language-reference"
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace

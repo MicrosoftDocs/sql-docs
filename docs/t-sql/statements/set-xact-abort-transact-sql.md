@@ -4,9 +4,8 @@ description: SET XACT_ABORT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/03/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "XACT_ABORT_TSQL"
@@ -23,7 +22,6 @@ helpviewer_keywords:
   - "SET XACT_ABORT statement"
 dev_langs:
   - "TSQL"
-ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET XACT_ABORT (Transact-SQL)

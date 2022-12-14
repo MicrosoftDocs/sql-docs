@@ -3,10 +3,9 @@ description: "model Database"
 title: "model Database | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/22/2020
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "template databases [SQL Server]"

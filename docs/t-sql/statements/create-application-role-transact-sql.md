@@ -4,9 +4,8 @@ description: CREATE APPLICATION ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "APPLICATION_ROLE_TSQL"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "application roles [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

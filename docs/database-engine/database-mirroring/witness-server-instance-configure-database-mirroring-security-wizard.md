@@ -1,18 +1,15 @@
 ---
 title: "Configure Security Wizard: Witness Server Instance"
 description: "Describes the 'Witness Server Instance' page of the 'Configure Database Mirroring Security Wizard'. "
-ms.custom: "seo-lt-2019"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
-ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+ms.custom: seo-lt-2019
+f1_keywords:
+  - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

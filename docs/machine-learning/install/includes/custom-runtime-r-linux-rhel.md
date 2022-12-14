@@ -1,6 +1,6 @@
 ---
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 ms.date: 03/18/2021
 ms.topic: include
 author: WilliamDAssafMSFT

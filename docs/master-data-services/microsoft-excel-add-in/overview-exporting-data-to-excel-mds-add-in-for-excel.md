@@ -3,14 +3,13 @@ description: "Overview: Exporting Data to Excel (MDS Add-in for Excel)"
 title: Exporting Data to Excel
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Overview: Exporting Data to Excel (MDS Add-in for Excel)
 

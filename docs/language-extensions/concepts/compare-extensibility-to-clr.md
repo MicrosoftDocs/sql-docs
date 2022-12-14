@@ -6,8 +6,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/21/2021
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: language-extensions
+ms.service: sql
+ms.subservice: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 

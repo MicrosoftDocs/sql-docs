@@ -4,9 +4,8 @@ description: DROP TABLE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/25/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -35,7 +34,6 @@ helpviewer_keywords:
   - "dropping permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP TABLE (Transact-SQL)

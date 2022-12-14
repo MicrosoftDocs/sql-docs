@@ -4,9 +4,8 @@ description: sys.dm_sql_referencing_entities (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_sql_referencing_entities"
@@ -123,7 +122,7 @@ sys.dm_sql_referencing_entities (
   
 -   Requires SELECT permission on sys.dm_sql_referencing_entities. By default, SELECT permission is granted to public.  
   
-### [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later  
   
 -   Requires no permissions on the referenced object. Partial results can be returned if the user has VIEW DEFINITION on only some of the referencing entities.  
   

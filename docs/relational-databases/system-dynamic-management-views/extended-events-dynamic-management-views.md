@@ -4,8 +4,8 @@ description: Extended Events Dynamic Management Views
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "extended events [SQL Server], dynamic management objects"

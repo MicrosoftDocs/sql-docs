@@ -4,9 +4,8 @@ description: RESTORE Statements - FILELISTONLY (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/30/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "RESTORE FILELISTONLY"
@@ -19,12 +18,11 @@ helpviewer_keywords:
   - "listing backed up files"
 dev_langs:
   - "TSQL"
-ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
   Returns a result set containing a list of the database and log files contained in the backup set in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -43,6 +41,7 @@ FROM <backup_device>
 --Backup Set Options  
    FILE = { backup_set_file_number | @backup_set_file_number }   
  | PASSWORD = { password | @password_variable }   
+ | [ METADATA_ONLY | SNAPSHOT ] [ DBNAME = { database_name | @database_name_variable } ]
   
 --Media Set Options  
  | MEDIANAME = { media_name | @media_name_variable }   

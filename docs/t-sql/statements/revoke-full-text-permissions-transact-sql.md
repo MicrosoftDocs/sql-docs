@@ -4,9 +4,8 @@ description: REVOKE Full-Text Permissions (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "REVOKE statement, full-text permissions"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "full-text stoplist [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 ---
 # REVOKE Full-Text Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

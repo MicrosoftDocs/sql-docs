@@ -4,9 +4,8 @@ description: "Learn how applications on remote computers can use the DAC. See ho
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/12/2022
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "administrator connections [SQL Server]"

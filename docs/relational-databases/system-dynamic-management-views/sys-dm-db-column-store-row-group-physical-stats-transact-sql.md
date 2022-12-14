@@ -4,9 +4,8 @@ description: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/05/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_column_store_row_group_physical_stats_TSQL"
@@ -49,7 +48,6 @@ This extends the catalog view [sys.column_store_row_groups &#40;Transact-SQL&#41
 |**generation**|bigint|Row group generation associated with this row group.|  
 |**created_time**|datetime2|Clock time for when this rowgroup was created.<br /><br /> NULL - for a columnstore index on an in-memory table.| 
 |**closed_time**|datetime2|Clock time for when this rowgroup was closed.<br /><br /> NULL - for a columnstore index on an in-memory table.| 
-| &nbsp; | &nbsp; | &nbsp; |
 
 ## Results  
  Returns one row for each rowgroup in the current database.  

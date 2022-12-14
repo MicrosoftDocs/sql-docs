@@ -1,18 +1,16 @@
 ---
 title: "Use contained databases with availability groups"
 description: "Learn about the using a contained database with Always On availability groups in SQL Server 2019 (15.x)."
-ms.custom: "seodec18"
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: how-to
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], interoperability"
-  - "contained database, AlwaysOnAvailabilityGroups"
-ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: how-to
+ms.custom: seodec18
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], interoperability"
+  - "contained database, AlwaysOnAvailabilityGroups"
 ---
 # Use contained databases with Always On availability groups 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

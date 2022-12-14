@@ -2,8 +2,8 @@
 title: Overview of Visual Studio Code mssql extensions
 description: Develop with the mssql extension for Visual Studio Code
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
@@ -26,7 +26,7 @@ The following functionality is available in the mssql extension for VS Code:
 - Access executed [query history](mssql-query-history.md). 
 - Save results to json or csv file format and view in the editor.
 - Customizable extension options including command shortcuts and more.
-- Create Azure Functions with [SQL bindings](/azure/azure-functions/functions-bindings-azure-sql).
+- Create Azure Functions with [SQL binding](create-azure-function-with-mssql.md).
 
 
 ### Compare Azure Data Studio and the mssql extension

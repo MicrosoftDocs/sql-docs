@@ -3,9 +3,9 @@ description: "MSSQLSERVER_832"
 title: MSSQLSERVER_832
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "832 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|B_CONSTPAGECHANGED|
 |Message Text|A page that should have been constant has changed (expected checksum: \<expected value>, actual checksum: \<actual value>, database \<dbid>, file \'\<filename\>', page \<pageno>). This usually indicates a memory failure or other hardware or OS corruption.|
-||
 
 ## Explanation
 

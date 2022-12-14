@@ -1,28 +1,27 @@
 ---
 title: APPROX_PERCENTILE_DISC (Transact-SQL)
 description: A function that returns the value from the set of values in a group based on the provided percentile and sort specification.
-ms.prod: sql
-ms.technology: t-sql
+author: blakhani-msft
+ms.author: blakhani
+ms.reviewer: "maghan"
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "PERCENTILE_DISC"
   - "PERCENTILE_DISC_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PERCENTILE_DISC function"
   - "analytic functions,PERCENTILE_DISC"
-author: blakhani-msft
-ms.author: blakhani 
-ms.reviewer: "maghan"
-ms.custom: ""
-ms.date: 07/25/2022
+dev_langs:
+  - "TSQL"
 monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current"
 ---
 
 # APPROX_PERCENTILE_DISC (Transact-SQL)
 
-[!INCLUDE[SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This function returns the value from the set of values in a group based on the provided percentile and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. As this approximate percentile is based on a discrete distribution of the column values, the output value would be equal to one of the specific values in the column. This function can be used as an alternative to PERCENTILE_DISC for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
@@ -43,7 +42,7 @@ The percentile to compute. The value must range between 0.0 and 1.0. to calculat
 
 *order_by_expression*
 
-Specifies a list of values to sort and compute the percentile over. The default sort order is ascending (ASC).  Only numeric data types are allowed. The expression must evaluate to an supported exact or approximate numeric type, with no other data types allowed. Supported exact numeric types are int, bigint, smallint, tinyint, bit, smallmoney, and money. Supported approximate numeric types are float and real. Decimal and float data types are not supported. 
+Specifies a list of values to sort and compute the percentile over. The default sort order is ascending (ASC).  Only numeric data types are allowed. The expression must evaluate to a supported exact or approximate numeric type, with no other data types allowed. Supported exact numeric types are int, bigint, smallint, tinyint, bit, smallmoney, and money. Supported approximate numeric types are float and real. Decimal and float data types are not supported. 
 
 ## Return types
 

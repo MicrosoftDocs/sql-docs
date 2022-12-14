@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "xml_schema_index_TSQL"

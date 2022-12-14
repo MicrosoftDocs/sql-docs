@@ -3,10 +3,9 @@ title: Create a SQL Server Utility Control Point (SQL Server Utility)
 description: Get help identifying resource use bottlenecks and consolidation opportunities by creating a SQL Server utility control point (UCP).
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.SWB.create.ucp.validation.F1"

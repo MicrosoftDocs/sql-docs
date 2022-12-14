@@ -5,9 +5,8 @@ description: Azure Synapse Analytics and Analytics Platform System (PDW) catalog
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 05/25/2022
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: language-reference
 ms.custom: seo-dt-2019
 dev_langs:

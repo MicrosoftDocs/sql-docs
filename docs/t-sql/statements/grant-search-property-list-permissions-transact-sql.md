@@ -5,11 +5,10 @@ description: Grant permissions on a search property list.
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
+ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "full-text search [SQL Server], permissions"
   - "search property lists [SQL Server], permissions"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "GRANT statement, search property list permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Search Property List Permissions (Transact-SQL)

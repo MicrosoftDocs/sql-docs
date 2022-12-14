@@ -3,10 +3,9 @@ description: "sp_cleanup_log_shipping_history (Transact-SQL)"
 title: "sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_cleanup_log_shipping_history_TSQL"

@@ -4,8 +4,8 @@ description: sys.pdw_table_mappings (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/01/2018"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

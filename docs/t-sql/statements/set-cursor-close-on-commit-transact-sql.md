@@ -4,9 +4,8 @@ description: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CURSOR_CLOSE_ON_COMMIT"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "SET CURSOR_CLOSE_ON_COMMIT statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

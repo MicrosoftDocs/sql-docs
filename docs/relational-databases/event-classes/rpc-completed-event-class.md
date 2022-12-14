@@ -3,9 +3,9 @@ title: "RPC:Completed Event Class | Microsoft Docs"
 description: "The RPC:Completed event class indicates that a remote procedure call has been completed in SQL Server."
 ms.custom: ""
 ms.date: "12/04/2015"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: reference
 helpviewer_keywords: 
   - "RPC:Completed event class"

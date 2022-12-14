@@ -4,9 +4,8 @@ description: GRANT Server Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "GRANT statement, servers"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], servers"
 dev_langs:
   - "TSQL"
-ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 ---
 # GRANT Server Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

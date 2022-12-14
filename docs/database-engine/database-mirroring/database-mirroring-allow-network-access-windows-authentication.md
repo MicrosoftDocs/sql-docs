@@ -1,19 +1,15 @@
 ---
-title: "Database Mirroring - Allow Network Access - Windows Authentication | Microsoft Docs"
+title: "Database Mirroring - Allow Network Access - Windows Authentication"
 description: Learn how to use Windows Authentication for connecting the database mirroring endpoints of two instances of SQL Server, which can require manual configuration.
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Windows authentication [SQL Server]"
-  - "database mirroring [SQL Server], security"
-ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: database-mirroring
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Windows authentication [SQL Server]"
+  - "database mirroring [SQL Server], security"
 ---
 # Database Mirroring - Allow Network Access - Windows Authentication
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

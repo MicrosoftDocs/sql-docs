@@ -1,13 +1,13 @@
-﻿---
+---
 title: Service Broker Transport Security
 description: "Service Broker transport security allows database administrators to restrict network connections to a database and can encrypt messages on the network."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Service Broker Transport Security

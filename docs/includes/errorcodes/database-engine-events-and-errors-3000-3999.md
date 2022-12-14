@@ -43,7 +43,7 @@ ms.topic: include
 |    3040    |    10    |    No    |    An error occurred while informing replication of the backup. The backup will continue, but the replication environment should be inspected.    |
 |    3041    |    16    |    Yes    |    BACKUP failed to complete the command %.*ls. Check the backup application log for detailed messages.    |
 |    3042    |    10    |    No    |    BACKUP WITH CONTINUE_AFTER_ERROR successfully generated a backup of the damaged database. Refer to the SQL Server error log for information about the errors that were encountered.    |
-|    3043    |    16    |    No    |    BACKUP '%ls' detected an error on page (%d:%d) in file '%ls'.    |
+|    [3043](../../relational-databases/errors-events/mssqlserver-3043-database-engine-error.md)    |    16    |    No    |    BACKUP '%ls' detected an error on page (%d:%d) in file '%ls'.    |
 |    3044    |    16    |    No    |    Invalid zero-length device name. Reissue the BACKUP statement with a valid device name.    |
 |    3045    |    16    |    No    |    BACKUP or RESTORE requires the NTFS file system for FILESTREAM and full-text support. The path "%.*ls" is not usable.    |
 |    3046    |    16    |    No    |    Inconsistent metadata has been encountered. The only possible backup operation is a tail-log backup using the WITH CONTINUE_AFTER_ERROR or NO_TRUNCATE option.    |
@@ -53,7 +53,7 @@ ms.topic: include
 |    3051    |    16    |    No    |    BACKUP LOG was unable to maintain mirroring consistency for database '%ls'. Database mirroring has been suspended.    |
 |    3054    |    16    |    No    |    Differential file backups can include only read-only data for databases using the simple recovery model. Consider taking a partial backup by specifying READ_WRITE_FILEGROUPS.    |
 |    3055    |    16    |    No    |    Backup destination "%.*ls" supports a FILESTREAM filegroup. This filegroup cannot be used as a backup destination. Rerun the BACKUP statement with a valid backup destination.    |
-|    3056    |    16    |    No    |    The backup operation has detected an unexpected file in a FILESTREAM container. The backup operation will continue and include file '%ls'.    |
+|    [3056](../../relational-databases/errors-events/mssqlserver-3056-database-engine-error.md)     |    16    |    No    |    The backup operation has detected an unexpected file in a FILESTREAM container. The backup operation will continue and include file '%ls'.    |
 |    3057    |    16    |    No    |    Invalid device name. The length of the device name provided exceeds supported limit (maximum length is:%d). Reissue the BACKUP statement with a valid device name.    |
 |    3058    |    10    |    No    |    File or device name exceeds the supported limit (maximum length is:%d) and will be truncated: %.*ls.    |
 |    3098    |    16    |    No    |    The backup cannot be performed because '%ls' was requested after the media was formatted with an incompatible structure. To append to this media set, either omit '%ls' or specify '%ls'. Alternatively, you can create a new media set by using WITH FORMAT in your BACKUP statement. If you use WITH FORMAT on an existing media set, all its backup sets will be overwritten.    |
@@ -128,7 +128,7 @@ ms.topic: include
 |    3180    |    16    |    No    |    This backup cannot be restored using WITH STANDBY because a database upgrade is needed. Reissue the RESTORE without WITH STANDBY.    |
 |    [3181](../../relational-databases/errors-events/mssqlserver-3181-database-engine-error.md)    |    10    |    No    |    Attempting to restore this backup may encounter storage space problems. Subsequent messages will provide details.    |
 |    3182    |    16    |    No    |    The backup set cannot be restored because the database was damaged when the backup occurred. Salvage attempts may exploit WITH CONTINUE_AFTER_ERROR.    |
-|    3183    |    16    |    No    |    RESTORE detected an error on page (%d:%d) in database "%ls" as read from the backup set.    |
+|    [3183](../../relational-databases/errors-events/mssqlserver-3183-database-engine-error.md)    |    16    |    No    |    RESTORE detected an error on page (%d:%d) in database "%ls" as read from the backup set.    |
 |    3184    |    10    |    No    |    RESTORE WITH CONTINUE_AFTER_ERROR was successful but some damage was encountered. Inconsistencies in the database are possible.    |
 |    3185    |    16    |    No    |    RESTORE cannot apply this backup set because the database is suspect. Restore a backup set that repairs the damage.    |
 |    3186    |    16    |    No    |    The backup set has been damaged. RESTORE will not attempt to apply this backup set.    |

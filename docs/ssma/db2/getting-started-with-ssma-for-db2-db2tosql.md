@@ -1,12 +1,12 @@
 ---
 description: "Getting Started with SSMA for DB2 (DB2ToSQL)"
 title: "Getting Started with SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom:
   - intro-get-started
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: cpichuka 

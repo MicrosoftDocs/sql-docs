@@ -4,9 +4,8 @@ description: GRANT Certificate Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "granting permissions [SQL Server], certificates"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "GRANT statement, certificates"
 dev_langs:
   - "TSQL"
-ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # GRANT Certificate Permissions (Transact-SQL)

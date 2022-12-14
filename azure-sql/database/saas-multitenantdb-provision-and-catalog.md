@@ -1,17 +1,14 @@
 ---
 title: Provision in SaaS multi-tenant
 description: Learn how to provision and catalog new tenants in an Azure SQL Database multi-tenant SaaS app
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scenario
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 09/24/2018
+ms.service: sql-database
+ms.subservice: scenario
+ms.topic: tutorial
+ms.custom: sqldbrb=1
 ---
 # Provision and catalog new tenants in a SaaS application using a sharded multi-tenant Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -206,7 +203,7 @@ Now walk through the script process when creating a tenant in its own database:
 
 ## Provision a batch of tenants
 
-This exercise provisions a batch of 17 tenants. It’s recommended you provision this batch of tenants before starting other Wingtip Tickets tutorials so there are more databases to work with.
+This exercise provisions a batch of 17 tenants. It's recommended you provision this batch of tenants before starting other Wingtip Tickets tutorials so there are more databases to work with.
 
 1. In the *PowerShell ISE*, open ...\\Learning Modules\\ProvisionTenants\\*Demo-ProvisionTenants.ps1*  and change the *$DemoScenario* parameter to 4:
    - **$DemoScenario** = **4**, to provision a batch of tenants into a shared database.

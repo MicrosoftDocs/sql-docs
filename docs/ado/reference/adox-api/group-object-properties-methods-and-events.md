@@ -3,12 +3,12 @@ title: "Group Object Properties, Methods, and Events"
 description: "Group Object Properties, Methods, and Events"
 author: rothja
 ms.author: jroth
-ms.prod: sql
-ms.technology: ado
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "group object [ADOX], members"
-ms.date: "01/19/2017"
 ---
 # Group Object Properties, Methods, and Events
 

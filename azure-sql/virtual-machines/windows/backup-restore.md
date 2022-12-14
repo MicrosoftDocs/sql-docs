@@ -1,21 +1,14 @@
 ---
-title: Backup and restore for SQL Server on Azure VMs | Microsoft Docs
+title: Backup and restore for SQL Server on Azure VMs
 description: Describes backup and restore considerations for SQL Server databases running on Azure Virtual Machines.
-services: virtual-machines-windows
-documentationcenter: na
 author: adbadram
-editor: ''
-tags: azure-resource-management
-ms.assetid: 95a89072-0edf-49b5-88ed-584891c0e066
-ms.service: virtual-machines-sql
-ms.subservice: backup
-
-ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 06/04/2018
 ms.author: adbadram
 ms.reviewer: mathoma
+ms.date: 06/04/2018
+ms.service: virtual-machines-sql
+ms.subservice: backup
+ms.topic: conceptual
+tags: azure-resource-management
 ---
 # Backup and restore for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -40,7 +33,7 @@ The following sections describe each option in more detail. The final section of
 
 Automated Backup provides an automatic backup service for SQL Server Standard and Enterprise editions running on a Windows VM in Azure. This service is provided by the [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md), which is automatically installed on SQL Server Windows virtual machine images in the Azure portal.
 
-All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 30 days.
+All databases are backed up to an Azure storage account that you configure. Backups can be encrypted and retained for up to 90 days.
 
 SQL Server 2016 and higher VMs offer more customization options with Automated Backup v2. These improvements include:
 
@@ -96,8 +89,8 @@ Beginning with SQL Server 2012 SP1 CU2, you can back up and restore directly to 
 
 | 2016 enhancement | Details |
 | --- | --- |
-| **Striping** |When backing up to Microsoft Azure blob storage, SQL Server 2016 supports backing up to multiple blobs to enable backing up large databases, up to a maximum of 12.8 TB. |
-| **Snapshot Backup** |Through the use of Azure snapshots, SQL Server File-Snapshot Backup provides nearly instantaneous backups and rapid restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. File-snapshot backup also supports point in time restore. For more information, see [Snapshot Backups for Database Files in Azure](/sql/relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure). |
+| **Striping** |When backing up to Microsoft Azure Blob Storage, SQL Server 2016 supports backing up to multiple blobs to enable backing up large databases, up to a maximum of 12.8 TB. |
+| **Snapshot Backup** |Through the use of Azure snapshots, SQL Server File-Snapshot Backup provides nearly instantaneous backups and rapid restores for database files stored using Azure Blob Storage. This capability enables you to simplify your backup and restore policies. File-snapshot backup also supports point in time restore. For more information, see [Snapshot Backups for Database Files in Azure](/sql/relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure). |
 
 For more information, see the one of the following articles based on your version of SQL Server:
 
@@ -144,4 +137,4 @@ The following table summarizes the capabilities of each backup and restore optio
 
 If you are planning your deployment of SQL Server on Azure VM, you can find provisioning guidance in the following guide: [How to provision a Windows SQL Server virtual machine in the Azure portal](create-sql-vm-portal.md).
 
-Although backup and restore can be used to migrate your data, there are potentially easier data migration paths to SQL Server on VM. For a full discussion of migration options and recommendations, see [Migrating a Database to SQL Server on Azure VM](migrate-to-vm-from-sql-server.md).
+Although backup and restore can be used to migrate your data, there are potentially easier data migration paths to SQL Server on VM. For a full discussion of migration options and recommendations, see [Migration guide: SQL Server to SQL Server on Azure Virtual Machines](../../migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide.md).

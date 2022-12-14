@@ -3,9 +3,9 @@ title: "SQL Server 2016 & 2017: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017. 
 ms.custom: "seo-lt-2019"
 ms.date: "09/16/2021"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: release-landing
+ms.subservice: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Setup [SQL Server], software"
@@ -46,12 +46,15 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
+
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2016 and SQL Server 2017 on the Windows operating system.  
 
 For hardware and software requirements for other versions of SQL Server, see:
-- [SQL Server 2019](./hardware-and-software-requirements-for-installing-sql-server-2019.md)
+
+- [SQL Server 2022](hardware-and-software-requirements-for-installing-sql-server-2022.md)
+- [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-2019.md)
 - [SQL Server on Linux](../../linux/sql-server-linux-setup.md#system)
 
 ## Hardware requirements
@@ -60,12 +63,12 @@ For hardware and software requirements for other versions of SQL Server, see:
   
 |Component|Requirement|  
 |---------------|-----------------|  
-|Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br/><br/> Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes). <br/><br/> Installing SQL Server on computers with the NTFS or ReFS file formats is recommended. The FAT32 file system is supported but not recommended as it is less secure than the NTFS or ReFS file systems. <br/><br/>  Read-only, mapped, or compressed drives are blocked during installation. |  
+|Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br /><br />Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).<br /><br />Installing SQL Server on computers with the NTFS or ReFS file formats is recommended. The FAT32 file system is supported but not recommended as it is less secure than the NTFS or ReFS file systems.<br /><br />Read-only, mapped, or compressed drives are blocked during installation. |  
 |Drive|A DVD drive, as appropriate, is required for installation from disc.  |  
 |Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|  
 |Internet|Internet functionality requires Internet access (fees may apply).|  
-|Memory \*|**Minimum:**<br/><br/> Express Editions: 512 MB<br/><br/> All other editions: 1 GB<br/><br/> **Recommended:**<br/><br/> Express Editions: 1 GB<br/><br/> All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|  
-|Processor Speed|**Minimum:** x64 Processor: 1.4 GHz<br/><br/> **Recommended:** 2.0 GHz or faster|  
+|Memory \*|**Minimum:**<br /><br />Express Editions: 512 MB<br /><br />All other editions: 1 GB<br /><br />**Recommended:**<br /><br />Express Editions: 1 GB<br /><br />All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|  
+|Processor Speed|**Minimum:** x64 Processor: 1.4 GHz<br /><br />**Recommended:** 2.0 GHz or faster|  
 |Processor Type|x64 Processor: AMD Opteron, AMD Athlon 64, Intel Xeon with Intel EM64T support, Intel Pentium IV with EM64T support|  
   
 > [!NOTE]  
@@ -82,8 +85,8 @@ The following software requirements apply to all installations:
   
 |Component|Requirement|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br/><br/> For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[win81](../../includes/win81-md.md)], and [!INCLUDE[winserver2012r2](../../includes/winserver2012r2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.<br/><br/>**Note:** Support for .NET Framework 4.5.2, 4.6, and 4.6.1 ended on April 26, 2022.<ul><li>SQL Server 2016 (13.x) and later require .NET Framework 4.6 for Database Engine, Master Data Services, or Replication (SQL Server setup automatically installs .NET Framework). You can upgrade to .NET 4.8 Framework or directly install .NET 4.8 Framework. All frameworks with major version 4 do an in-place upgrade, and they are backward compatible. For more information, check [Download .NET Framework 4.8 \| Free official downloads (microsoft.com)](https://dotnet.microsoft.com/download/dotnet-framework/net48).</li><li>SQL Server 2014 and SQL Server 2012 use .Net Framework 3.5 SP1, which is supported till 2029, so this retirement doesn't impact them.</li></ul>|  
-|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br/><br/> **Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br/><br/> **Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br /><br />For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br /><br />[!INCLUDE[win81](../../includes/win81-md.md)], and [!INCLUDE[winserver2012r2](../../includes/winserver2012r2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.<br /><br />**Note:** Support for .NET Framework 4.5.2, 4.6, and 4.6.1 ended on April 26, 2022.<ul><li>SQL Server 2016 (13.x) and later require .NET Framework 4.6 for Database Engine, Master Data Services, or Replication (SQL Server setup automatically installs .NET Framework). You can upgrade to .NET 4.8 Framework or directly install .NET 4.8 Framework. All frameworks with major version 4 do an in-place upgrade, and they are backward compatible. For more information, check [Download .NET Framework 4.8 \| Free official downloads (microsoft.com)](https://dotnet.microsoft.com/download/dotnet-framework/net48).</li><li>SQL Server 2014 and SQL Server 2012 use .NET Framework 3.5 SP1, which is supported till 2029, so this retirement doesn't impact them.</li></ul>|  
+|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br /><br />**Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br /><br />**Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br />For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
   
@@ -199,6 +202,9 @@ Installing SQL Server 2017 on Server Core mode is supported by the following edi
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
+> [!NOTE]  
+> Installing SQL Server on a Windows OS on which case sensitivity is enabled is not supported. For more information review [SQL Server is not supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled)
+
 ## Operating System support for SQL Server 2016
 
 The following table shows which editions of SQL Server 2016 are compatible with which versions of Windows:  
@@ -282,6 +288,9 @@ Installing SQL Server 2016 on Server Core mode is supported by the following edi
 :::row-end:::
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
+> [!NOTE]  
+> Installing SQL Server on a Windows OS on which case sensitivity is enabled is not supported. For more information review [SQL Server is not supported on a Windows operating system on which case sensitivity is enabled](/troubleshoot/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled)
 
 ### WOW64 support
   

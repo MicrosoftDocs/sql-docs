@@ -1,18 +1,14 @@
 ---
-title: "Server Properties (Misc Server Settings Page) | Microsoft Docs"
+title: "Server Properties (Misc Server Settings Page)"
 description: Become familiar with server settings in SQL Server. Learn about options that control the default language for new users, query timeouts, and other behavior.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
-ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.miscserversettings.f1"
 ---
 # Server Properties - Misc Server Settings Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

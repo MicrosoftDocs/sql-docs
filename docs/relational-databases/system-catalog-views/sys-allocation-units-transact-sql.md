@@ -4,9 +4,8 @@ description: sys.allocation_units (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "09/01/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.allocation_units_TSQL"

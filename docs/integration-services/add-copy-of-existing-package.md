@@ -3,10 +3,9 @@ description: "Add Copy of Existing Package"
 title: "Add Copy of Existing Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.addcopyexistingpackage.f1"

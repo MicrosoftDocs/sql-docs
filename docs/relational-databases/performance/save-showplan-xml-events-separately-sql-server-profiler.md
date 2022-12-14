@@ -4,9 +4,9 @@ description: Learn how to save Showplan XML events captured in traces to separat
 titleSuffix: SQL Server Profiler
 ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan XML events"

@@ -1,19 +1,17 @@
 ---
 title: Copy a database
 description: Create a transactionally consistent copy of an existing database in Azure SQL Database on either the same server or a different server.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: data-movement
-ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 6/14/2022
+ms.service: sql-database
+ms.subservice: data-movement
+ms.topic: how-to
+ms.custom:
+  - "sqldbrb=1"
+  - "devx-track-azurepowershell"
+  - "devx-track-azurecli"
 ---
 # Copy a transactionally consistent copy of a database in Azure SQL Database
 
@@ -45,9 +43,9 @@ If you use server level logins for data access and copy the database to a differ
 
 ## Copy using the Azure portal
 
-To copy a database by using the Azure portal, open the page for your database, and then click **Copy**.
+To copy a database by using the Azure portal, open the page for your database, and then choose **Copy** to open the **Create SQL Database - Copy database** page. Fill in the values for the target server where you want to copy your database to. 
 
-   ![Database copy](./media/database-copy/database-copy.png)
+   :::image type="content" source="./media/database-copy/database-copy.png" alt-text="Screenshot of Azure portal, showing Database copy option highlighted on the database overview page.":::
 
 ## Copy using PowerShell or the Azure CLI
 
@@ -65,7 +63,7 @@ New-AzSqlDatabaseCopy -ResourceGroupName "<resourceGroup>" -ServerName $sourcese
     -CopyResourceGroupName "myResourceGroup" -CopyServerName $targetserver -CopyDatabaseName "CopyOfMySampleDatabase"
 ```
 
-The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the the target database using the [Remove-AzSqlDatabase](/powershell/module/az.sql/remove-azsqldatabase) cmdlet.
+The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the target database using the [Remove-AzSqlDatabase](/powershell/module/az.sql/remove-azsqldatabase) cmdlet.
 
 For a complete sample PowerShell script, see [Copy a database to a new server](scripts/copy-database-to-new-server-powershell.md).
 
@@ -76,7 +74,7 @@ az sql db copy --dest-name "CopyOfMySampleDatabase" --dest-resource-group "myRes
     --name "<databaseName>" --resource-group "<resourceGroup>" --server $sourceserver
 ```
 
-The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the the target database using the [az sql db delete](/cli/azure/sql/db#az-sql-db-delete) command.
+The database copy is an asynchronous operation but the target database is created immediately after the request is accepted. If you need to cancel the copy operation while still in progress, drop the target database using the [az sql db delete](/cli/azure/sql/db#az-sql-db-delete) command.
 
 * * *
 

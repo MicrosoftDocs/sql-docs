@@ -4,9 +4,8 @@ description: SET ANSI_PADDING (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/04/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ANSI_PADDING_TSQL"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "trailing blanks"
 dev_langs:
   - "TSQL"
-ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_PADDING (Transact-SQL)

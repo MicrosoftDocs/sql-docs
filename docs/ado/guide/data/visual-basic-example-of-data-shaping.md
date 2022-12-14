@@ -4,8 +4,8 @@ description: "Visual Basic Example of Data Shaping"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "Visual Basic example of data shaping[ADO], about data shaping"

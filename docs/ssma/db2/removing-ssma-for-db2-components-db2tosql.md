@@ -1,11 +1,11 @@
 ---
 description: "Removing SSMA for DB2 Components (DB2ToSQL)"
 title: "Removing SSMA for DB2 Components (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: cpichuka 

@@ -1,12 +1,11 @@
 ---
 title: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
 description: CREATE XML SCHEMA COLLECTION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "11/25/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE XML SCHEMA COLLECTION"
@@ -23,7 +22,6 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -182,7 +180,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
 ```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
-    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
     elementFormDefault="qualified"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
     <xsd:element name="Warranty"  >  
@@ -195,7 +193,7 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
     </xsd:element>  
 </xsd:schema>  
  <xs:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
     elementFormDefault="qualified"   
     xmlns:mstns="https://tempuri.org/XMLSchema.xsd"   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"  

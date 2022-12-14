@@ -4,9 +4,8 @@ description: Transact-SQL reference for the SET IDENTITY_INSERT statement. When 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET IDENTITY_INSERT"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "identity columns [SQL Server], explicit values"
 dev_langs:
   - "TSQL"
-ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)

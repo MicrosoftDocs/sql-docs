@@ -4,9 +4,8 @@ description: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "04/20/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_CRYPTOGRAPHIC_PROVIDER_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "ALTER CRYPTOGRAPHIC PROVIDER"
 dev_langs:
   - "TSQL"
-ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

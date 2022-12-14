@@ -1,9 +1,8 @@
 ---
 title: sp_dropmergefilter (Transact-SQL)
 description: "sp_dropmergefilter (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"

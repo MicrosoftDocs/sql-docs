@@ -3,10 +3,9 @@ title: "Join a Role | Microsoft Docs"
 description: Learn how to assign roles to logins and database users in SQL Server by using SQL Server Management Studio or Transact-SQL. Use roles to manage permissions.
 ms.custom: ""
 ms.date: "07/14/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1"
@@ -62,6 +61,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Requires **ALTER ANY ROLE** permission on the database, **ALTER** permission on the role, or membership in **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+
+> [!NOTE]
+> The two procedures in this section only apply to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].
   
 #### To add a member to a fixed server role  
   

@@ -3,10 +3,9 @@ title: "View backup set data & Log files"
 description: Learn how to view the data and log files in a backup set in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database backups [SQL Server], viewing backup sets"

@@ -1,21 +1,14 @@
 ---
-title: Configure storage for SQL Server VMs | Microsoft Docs
+title: Configure storage for SQL Server VMs
 description: This topic describes how Azure configures storage for SQL Server VMs during provisioning (Azure Resource Manager deployment model). It also explains how you can configure storage for your existing SQL Server VMs.
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-tags: azure-resource-manager
-
-ms.assetid: 169fc765-3269-48fa-83f1-9fe3e4e40947
-ms.service: virtual-machines-sql
-ms.subservice: management
-
-ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 12/21/2021
 ms.author: pamela
 ms.reviewer: mathoma
+ms.date: 12/21/2021
+ms.service: virtual-machines-sql
+ms.subservice: management
+ms.topic: how-to
+tags: azure-resource-manager
 ---
 # Configure storage for SQL Server VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

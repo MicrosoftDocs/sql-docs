@@ -4,9 +4,8 @@ description: DROP SERVER ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP SERVER ROLE"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "DROP SERVER ROLE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP SERVER ROLE (Transact-SQL)

@@ -1,11 +1,11 @@
 ---
 description: "Working with SSMA for MySQL Console (MySQLToSQL)"
 title: "Working with SSMA for MySQL Console (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: cpichuka 

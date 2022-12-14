@@ -1,15 +1,12 @@
 ---
-description: "Export a Knowledge Base to a .dqs File"
 title: "Export a Knowledge Base to a .dqs File"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
+description: "Export a Knowledge Base to a .dqs File"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Export a Knowledge Base to a .dqs File
 

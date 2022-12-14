@@ -4,9 +4,8 @@ description: You can use Transact-SQL, command-line tools, and wizards to import
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

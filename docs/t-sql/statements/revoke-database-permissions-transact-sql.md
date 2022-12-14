@@ -4,9 +4,8 @@ description: REVOKE Database Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "permissions [SQL Server], databases"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "REVOKE statement, databases"
 dev_langs:
   - "TSQL"
-ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE Database Permissions (Transact-SQL)

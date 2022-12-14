@@ -4,9 +4,8 @@ description: ALTER SYMMETRIC KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER SYMMETRIC KEY"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "ALTER SYMMETRIC KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)

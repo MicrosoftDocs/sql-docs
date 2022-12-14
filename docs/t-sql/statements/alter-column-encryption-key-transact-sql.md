@@ -4,9 +4,8 @@ description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 author: jaszymas
 ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER COLUMN ENCRYPTION"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "ALTER COLUMN ENCRYPTION KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 

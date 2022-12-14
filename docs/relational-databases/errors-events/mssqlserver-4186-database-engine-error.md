@@ -3,9 +3,9 @@ description: "MSSQLSERVER_4186"
 title: "MSSQLSERVER_4186 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "4186 (Database Engine error)"

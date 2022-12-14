@@ -4,8 +4,8 @@ description: sys.dm_pdw_component_health_active_alerts (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 dev_langs:

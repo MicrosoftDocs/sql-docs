@@ -3,9 +3,9 @@ description: "LOCALDB_ERROR_INVALID_INSTANCE_NAME"
 title: "LOCALDB_ERROR_INVALID_INSTANCE_NAME | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: "reference"
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: WilliamDAssafMSFT

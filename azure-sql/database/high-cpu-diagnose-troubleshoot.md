@@ -2,17 +2,14 @@
 title: Diagnose and troubleshoot high CPU
 titleSuffix: Azure SQL Database
 description: Learn to diagnose and troubleshoot high CPU problems in Azure SQL Database.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: performance
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 04/06/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: how-to
+ms.custom: sqldbrb=2
 ---
 # Diagnose and troubleshoot high CPU on Azure SQL Database
 
@@ -26,9 +23,9 @@ It's helpful to understand the number of virtual cores (vCores) available to you
 
 ### Identify vCore count in the Azure portal
 
-You can quickly identify the vCore count for a database in the Azure portal if you're using a [vCore-based service tier](service-tiers-vcore.md) with the provisioned compute tier. In this case, the **pricing tier** listed for the database on its **Overview** page will contain the vCore count. For example, a database's pricing tier might be 'General Purpose: Gen5, 16 vCores'. 
+You can quickly identify the vCore count for a database in the Azure portal if you're using a [vCore-based service tier](service-tiers-vcore.md) with the provisioned compute tier. In this case, the **pricing tier** listed for the database on its **Overview** page will contain the vCore count. For example, a database's pricing tier might be 'General Purpose: Standard-series (Gen5), 16 vCores'. 
 
-For databases in the [serverless](serverless-tier-overview.md) compute tier, vCore count will always be equivalent to the max vCore setting for the database. VCore count will show in the **pricing tier** listed for the database on its **Overview** page. For example, a database's pricing tier might be 'General Purpose: Serverless, Gen5, 16 vCores'.
+For databases in the [serverless](serverless-tier-overview.md) compute tier, vCore count will always be equivalent to the max vCore setting for the database. VCore count will show in the **pricing tier** listed for the database on its **Overview** page. For example, a database's pricing tier might be 'General Purpose: Serverless, standard-series (Gen5), 16 vCores'.
 
 If you're using a database under the [DTU-based purchasing model](service-tiers-dtu.md), you will need to use Transact-SQL to query the database's vCore count.
 

@@ -6,8 +6,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ---
 # Configure SLES shared disk cluster for SQL Server
@@ -242,7 +242,7 @@ Full list of resources:
 ## Managing cluster resources
 
 To manage your cluster resources,see the following SUSE topic:
-[Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+[Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm)
 
 ### Manual failover
 

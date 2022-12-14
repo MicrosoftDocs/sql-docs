@@ -1,21 +1,19 @@
 ---
 title: "Configure distributed transactions for an availability group"
 description: "Describes how to configure distributed transactions for databases within an Always On availability group. "
-ms.custom: "seodec18"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "09/16/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-helpviewer_keywords: 
+ms.custom: seodec18
+helpviewer_keywords:
   - "database mirroring [SQL Server], interoperability"
   - "cross-database transactions [SQL Server]"
   - "transactions [database mirroring]"
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
-ms.assetid: 
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Configure distributed transactions for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

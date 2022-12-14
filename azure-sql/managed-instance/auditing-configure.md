@@ -1,18 +1,16 @@
 ---
 title: SQL Managed Instance auditing
 description: Learn how to get started with Azure SQL Managed Instance auditing using T-SQL
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: security
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: how-to
-f1_keywords: 
-  - "mi.azure.sqlaudit.general.f1"
 author: sravanisaluru
 ms.author: srsaluru
-ms.date: "03/25/2022"
 ms.reviewer: vanto
+ms.date: "03/25/2022"
+ms.service: sql-managed-instance
+ms.subservice: security
+ms.topic: how-to
+ms.custom: sqldbrb=1
+f1_keywords:
+  - "mi.azure.sqlaudit.general.f1"
 ---
 # Get started with Azure SQL Managed Instance auditing
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -78,7 +76,7 @@ The following section describes the configuration of auditing on your managed in
 
           - **Allowed services**: Blob
 
-          - **Start date**: to avoid time zone-related issues, use yesterday’s date
+          - **Start date**: to avoid time zone-related issues, use yesterday's date
 
           - **End date**: choose the date on which this SAS token expires
 
@@ -94,7 +92,7 @@ The following section describes the configuration of auditing on your managed in
           ![Copy SAS token](./media/auditing-configure/8_sas_copy.png)
 
           > [!IMPORTANT]
-          > Remove the question mark (“?”) character from the beginning of the token.
+          > Remove the question mark (`?`) character from the beginning of the token.
 
      1. Connect to your managed instance via SQL Server Management Studio or any other supported tool.
 

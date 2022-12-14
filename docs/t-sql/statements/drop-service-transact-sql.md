@@ -4,9 +4,8 @@ description: DROP SERVICE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_SERVICE_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "removing services"
 dev_langs:
   - "TSQL"
-ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 ---
 # DROP SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -4,9 +4,8 @@ description: CREATE COLUMN MASTER KEY (Transact-SQL)
 author: jaszymas
 ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1"
@@ -24,7 +23,6 @@ helpviewer_keywords:
   - "Always Encrypted, create column master key"
 dev_langs:
   - "TSQL"
-ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]

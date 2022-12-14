@@ -4,9 +4,8 @@ description: CLOSE MASTER KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CLOSE MASTER KEY"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "closing Database Master Keys"
 dev_langs:
   - "TSQL"
-ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CLOSE MASTER KEY (Transact-SQL)

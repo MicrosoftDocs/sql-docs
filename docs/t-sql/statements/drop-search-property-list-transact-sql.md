@@ -4,9 +4,8 @@ description: DROP SEARCH PROPERTY LIST (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_SEARCH_PROPERTY_LIST_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "search property lists [SQL Server], deleting"
 dev_langs:
   - "TSQL"
-ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

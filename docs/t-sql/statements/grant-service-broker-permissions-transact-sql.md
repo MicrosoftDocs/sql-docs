@@ -4,9 +4,8 @@ description: GRANT Service Broker Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "granting permissions [SQL Server], Service Broker"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "contracts [Service Broker], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 ---
 # GRANT Service Broker Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

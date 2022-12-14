@@ -4,10 +4,9 @@ description: "JSON_MODIFY (Transact-SQL)"
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 dev_langs:
   - "TSQL"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"

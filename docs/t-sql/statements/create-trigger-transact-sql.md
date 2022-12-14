@@ -1,13 +1,12 @@
 ---
 title: CREATE TRIGGER (Transact-SQL)
 description: Transact-SQL reference for the CREATE TRIGGER statement, which is used to create a DML, DDL, or logon trigger.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: mathoma
 ms.date: "09/05/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE TRIGGER"
@@ -27,12 +26,11 @@ helpviewer_keywords:
   - "database-scoped triggers [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 ---
 
 # CREATE TRIGGER (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	
 
 Creates a DML, DDL, or logon trigger. A trigger is a special type of stored procedure that automatically runs when an event occurs in the database server. DML triggers run when a user tries to modify data through a data manipulation language (DML) event. DML events are INSERT, UPDATE, or DELETE statements on a table or view. These triggers fire when any valid event fires, whether table rows are affected or not. For more information, see [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   

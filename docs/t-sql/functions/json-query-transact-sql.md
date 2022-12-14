@@ -4,10 +4,9 @@ description: "JSON_QUERY (Transact-SQL)"
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "JSON_QUERY"
   - "JSON_QUERY_TSQL"

@@ -1,11 +1,11 @@
 ---
 description: "Connect to SQL Server (MySQLToSQL)"
 title: "Connect to SQL Server (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: cpichuka 

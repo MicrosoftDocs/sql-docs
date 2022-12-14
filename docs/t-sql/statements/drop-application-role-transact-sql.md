@@ -4,9 +4,8 @@ description: DROP APPLICATION ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_APPLICATION_ROLE_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "DROP APPLICATION ROLE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 ---
 # DROP APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

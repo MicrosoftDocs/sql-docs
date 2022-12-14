@@ -3,10 +3,9 @@ description: "Lesson 2: Connecting from Another Computer"
 title: "Lesson 2: Connecting from Another Computer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT

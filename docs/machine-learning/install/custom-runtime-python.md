@@ -1,9 +1,9 @@
 ---
 title: Install Python custom runtime
 description: Learn how to install a Python custom runtime for SQL Server using Language Extensions. The Python custom runtime can run machine learning scripts.
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.date: 11/09/2022
 ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
@@ -28,7 +28,7 @@ The custom runtime can run machine learning scripts and uses the [SQL Server Lan
 
 Use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). 
 
-Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install your desired Python custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ::: zone pivot="platform-windows"
 [!INCLUDE [Python custom runtime - Windows](includes/custom-runtime-python-windows.md)]
@@ -71,11 +71,11 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Verify installation
 
-Use the following SQL script to verify the installation and functionality of the Python custom runtime.
+Use the following SQL script to verify the installation and functionality of the Python custom runtime. In the below sample script, `myPython` is used as the language name because the default language name `Python` cannot be provided for a custom runtime.
 
 ```sql
 EXEC sp_execute_external_script
-@language =N'Python',
+@language =N'myPython',
 @script=N'
 import sys
 print(sys.path)

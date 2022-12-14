@@ -2,8 +2,8 @@
 title: Query history in the mssql extension
 description: Access your recent query history in the mssql extension for VS Code.
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan

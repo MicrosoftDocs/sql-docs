@@ -1,12 +1,11 @@
 ---
 title: "DROP AGGREGATE (Transact-SQL)"
 description: DROP AGGREGATE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_AGGREGATE_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "DROP AGGREGATE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 ---
 # DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

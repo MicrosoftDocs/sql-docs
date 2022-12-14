@@ -3,10 +3,9 @@ description: "Lesson 3: Add Logging with SSIS"
 title: "Lesson 3: Add Logging with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: tutorial
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace

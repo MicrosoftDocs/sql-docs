@@ -4,9 +4,8 @@ description: DROP EXTERNAL TABLE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/02/2021"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"

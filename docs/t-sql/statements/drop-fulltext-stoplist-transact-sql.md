@@ -4,9 +4,8 @@ description: DROP FULLTEXT STOPLIST (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_FULLTEXT_STOPLIST_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 dev_langs:
   - "TSQL"
-ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 ---
 # DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

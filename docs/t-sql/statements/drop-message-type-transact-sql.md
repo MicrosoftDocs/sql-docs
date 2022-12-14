@@ -4,9 +4,8 @@ description: DROP MESSAGE TYPE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_MESSAGE_TYPE_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "removing message types"
 dev_langs:
   - "TSQL"
-ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 ---
 # DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

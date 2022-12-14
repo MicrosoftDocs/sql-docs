@@ -4,16 +4,14 @@ description: REVOKE Assembly Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "REVOKE statement, assemblies"
   - "assemblies [CLR integration], permissions"
 dev_langs:
   - "TSQL"
-ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 ---
 # REVOKE Assembly Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

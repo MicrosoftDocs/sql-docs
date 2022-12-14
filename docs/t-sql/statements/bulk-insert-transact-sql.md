@@ -1,13 +1,12 @@
 ---
 title: "BULK INSERT (Transact-SQL)"
 description: Transact-SQL reference for the BULK INSERT statement.
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.reviewer: randolphwest
 ms.date: 05/12/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "BULK_TSQL"
@@ -28,7 +27,7 @@ dev_langs:
 ---
 # BULK INSERT (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Imports a data file into a database table or view in a user-specified format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -501,7 +500,7 @@ WITH ( CODEPAGE = '65001'
 
 ### F. Import data from a file in Azure Blob Storage
 
-The following example shows how to load data from a CSV file in an Azure Blob Storage location on which you've created a Shared Access Signature (SAS) key. The Azure Blob Storage location is configured as an external data source, which requires a database scoped credential using a SAS key that is encrypted using a master key in the user database.
+The following example shows how to load data from a CSV file in an Azure Blob Storage location on which you've created a Shared Access Signature (SAS). The Azure Blob Storage location is configured as an external data source, which requires a database scoped credential using a SAS key that is encrypted using a master key in the user database.
 
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

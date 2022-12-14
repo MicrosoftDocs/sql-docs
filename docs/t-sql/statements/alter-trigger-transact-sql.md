@@ -1,12 +1,11 @@
 ---
 title: "ALTER TRIGGER (Transact-SQL)"
 description: ALTER TRIGGER (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/08/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER TRIGGER"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "DML triggers, modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 ---
 # ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,17 +1,14 @@
 ---
 title: Set up SQL Data Sync
 description: This tutorial shows you how to set up SQL Data Sync for Azure
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: sql-data-sync
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 07/16/2022
+ms.service: sql-database
+ms.subservice: sql-data-sync
+ms.topic: tutorial
+ms.custom: sqldbrb=1
 ---
 # Tutorial: Set up SQL Data Sync between databases in Azure SQL Database and SQL Server
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

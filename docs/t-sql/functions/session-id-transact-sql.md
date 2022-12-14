@@ -5,9 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
 ms.date: "02/23/2018"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: ""
 dev_langs:

@@ -3,10 +3,9 @@ title: "Attach a Database"
 description: Learn how to attach a database in SQL Server by using SQL Server Management Studio or Transact-SQL. Use this feature to copy, move, or upgrade a database.
 ms.custom: ""
 ms.date: "01/31/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.attachdatabase.f1"
@@ -55,7 +54,6 @@ The following table shows the permissions set on the database and log files afte
 |Detach|No|The SQL Server (MSSQLSERVER) service account and members of the local Windows Administrators group.|
 |Attach|Yes|The SQL Server (MSSQLSERVER) service account and members of the local Windows Administrators group.|
 |Attach|No|The SQL Server (MSSQLSERVER) service account.|
-||||
 
 For more information on file system permissions granted to the per-service SIDs for the SQL Server service, see [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
 

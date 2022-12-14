@@ -4,9 +4,8 @@ description: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP CRYPTOGRAPHIC PROVIDER"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "DROP CRYPTOGRAPHIC PROVIDER statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

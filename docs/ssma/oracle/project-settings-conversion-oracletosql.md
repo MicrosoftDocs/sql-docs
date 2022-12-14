@@ -3,11 +3,11 @@ title: "Project Settings (Conversion) (OracleToSQL) | Microsoft Docs"
 description: Learn how to use the Conversion page of the Project Settings dialog box to customize how SSMA converts Oracle syntax to SQL Server syntax.
 author: cpichuka
 
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "12/17/2020"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 ms.author: cpichuka

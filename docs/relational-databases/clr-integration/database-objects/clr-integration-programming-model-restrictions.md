@@ -4,8 +4,8 @@ description: SQL Server performs code checks on managed database objects when th
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], programming model restrictions"

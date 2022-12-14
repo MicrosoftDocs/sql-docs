@@ -4,9 +4,8 @@ description: CREATE ASYMMETRIC KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/23/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ASYMMETRIC_KEY_TSQL"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)

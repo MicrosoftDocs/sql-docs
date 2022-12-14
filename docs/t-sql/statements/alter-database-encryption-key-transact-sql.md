@@ -4,8 +4,8 @@ description: ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "04/16/2018"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_DATABASE_ENCRYPTION_KEY_TSQL"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "ALTER DATABASE ENCRYPTION KEY"
 dev_langs:
   - "TSQL"
-ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)

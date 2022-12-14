@@ -2,9 +2,8 @@
 description: "Find Similar and Related Documents with Semantic Search"
 title: "Find similar & related documents with Semantic Search"
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], document similarity queries"

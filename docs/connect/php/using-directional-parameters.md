@@ -1,16 +1,12 @@
 ---
 title: Using directional parameters
 description: Learn how to use directional parameters when working with PHP and the SQLSRV and PDO_SQLSRV drivers for SQL Server.
-ms.custom: ""
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Using directional parameters
 

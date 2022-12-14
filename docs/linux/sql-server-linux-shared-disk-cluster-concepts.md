@@ -6,8 +6,8 @@ ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ---
 
 # Failover Cluster Instances - SQL Server on Linux

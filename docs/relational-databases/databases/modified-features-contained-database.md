@@ -3,10 +3,9 @@ description: "Modified Features (Contained Database)"
 title: "Modified Features (Contained Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, modifications to DBs"

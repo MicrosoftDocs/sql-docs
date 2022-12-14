@@ -1,16 +1,12 @@
 ---
 title: "Step 1: Configure environment for PHP"
 description: Step 1 of this getting started guide involves installing PHP, the Microsoft ODBC Driver for SQL Server, and configuring your development environment.
-ms.custom: ""
-ms.date: 03/26/2018
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
-ms.topic: conceptual
-ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
 author: David-Engel
 ms.author: v-davidengel
+ms.date: 03/26/2018
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: conceptual
 ---
 # Step 1: Configure environment for PHP development
 

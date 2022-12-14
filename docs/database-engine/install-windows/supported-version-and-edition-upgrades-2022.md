@@ -1,23 +1,21 @@
 ---
-title: "Supported version and edition upgrades (SQL Server 2022 Preview)"
-description: The supported version and edition upgrades for SQL Server 2022 Preview.
-ms.custom:
-- event-tier1-build-2022
+title: "Supported version and edition upgrades (SQL Server 2022)"
+description: The supported version and edition upgrades for SQL Server 2022.
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 05/25/2022
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
+ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "components [SQL Server], adding to existing installations"
   - "versions [SQL Server], upgrading"
   - "upgrading SQL Server, upgrades supported"
   - "cross-language support"
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2017"
 ---
-# Supported version and edition upgrades (SQL Server 2022 Preview)
+# Supported version and edition upgrades (SQL Server 2022)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
@@ -45,8 +43,8 @@ You can upgrade from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUD
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] supports upgrade from the following versions of SQL Server:
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 or later
-- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 or later
-- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 or later
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3 or later
+- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP3 or later
 - [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 - [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
 

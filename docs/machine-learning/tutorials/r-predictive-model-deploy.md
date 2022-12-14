@@ -2,8 +2,8 @@
 title: "Tutorial: Deploy a predictive model in R"
 titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial, you'll deploy a predictive model in R with SQL machine learning.
-ms.prod: sql
-ms.technology: machine-learning
+ms.service: sql
+ms.subservice: machine-learning
 ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf

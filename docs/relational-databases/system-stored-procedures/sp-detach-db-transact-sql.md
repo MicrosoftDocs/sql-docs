@@ -3,10 +3,9 @@ description: "sp_detach_db (Transact-SQL)"
 title: "sp_detach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2015"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_detach_db"

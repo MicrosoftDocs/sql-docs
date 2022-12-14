@@ -1,11 +1,11 @@
 ---
 title: "DELETE (Transact-SQL)"
 description: DELETE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "11/19/2021"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DELETE"
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "deleting data"
 dev_langs:
   - "TSQL"
-ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)
@@ -504,7 +503,7 @@ SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 
 ### P. Delete based on the result of joining with another table
 
-This example shows how to delete from a table based on the result from joining wiht another table.
+This example shows how to delete from a table based on the result from joining with another table.
 
 ```sql
 CREATE TABLE dbo.Table1   

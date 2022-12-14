@@ -5,14 +5,12 @@ description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Paralle
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019​"
+ms.custom: seo-lt-2019​
 dev_langs:
   - "TSQL"
-ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)

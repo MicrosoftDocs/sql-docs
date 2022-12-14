@@ -1,15 +1,12 @@
 ---
-description: "Grant DQS Roles to Users"
 title: "Grant DQS Roles to Users"
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "data-quality-services"
-ms.reviewer: ""
-ms.technology: data-quality-services
-ms.topic: conceptual
-ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
+description: "Grant DQS Roles to Users"
 author: swinarko
 ms.author: sawinark
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: data-quality-services
+ms.topic: conceptual
 ---
 # Grant DQS Roles to Users
 

@@ -1,19 +1,16 @@
 ---
-title: "Upgrade Database Engine | Microsoft Docs"
+title: "Upgrade Database Engine"
 description: The article provides links to resources that help you upgrade the SQL Server Database Engine from a prior release of SQL Server to SQL Server 2019.
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 11/04/2019
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "compatibility [SQL Server], databases"
   - "compatibility levels [SQL Server], after upgrade"
   - "Database Engine [SQL Server], upgrading"
-ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: ">=sql-server-2016"
 ---
 # Upgrade Database Engine

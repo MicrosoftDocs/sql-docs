@@ -1,9 +1,8 @@
 ---
 title: SqlPackage.exe
 description: Learn how to automate database development tasks with SqlPackage.exe. View examples and available parameters, properties, and SQLCMD variables.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
@@ -129,6 +128,27 @@ For parameter and property information specific to a particular action, use the 
 ```cmd
 sqlpackage.exe /Action:Publish /?
 ```
+
+## Environment variables
+
+### Connection pooling
+
+Connection pooling can be enabled for all connections made by SqlPackage by setting the `CONNECTION_POOLING_ENABLED` environment variable to `True`.  This setting is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling.
+
+
+### Temporary files
+
+During SqlPackage operations the table data is written to temporary files before compression or after decompression. For large databases these temporary files can take up a significant amount of disk space but their location can be specified.  The export and extract operations include an optional property to specify `/p:TempDirectoryForTableData` to override the SqlPackage's default value.
+
+The default value is established by [GetTempPath](/dotnet/api/system.io.path.gettemppath) within SqlPackage.
+
+For Windows, the following environment variables are checked in the following order and the first path that exists is used:
+1. The path specified by the TMP environment variable.
+2. The path specified by the TEMP environment variable.
+3. The path specified by the USERPROFILE environment variable.
+4. The Windows directory.
+
+For Linux and macOS, if the path is not specified in the TMPDIR environment variable, the default path /tmp/ is used.
 
 ## SqlPackage and database users
 

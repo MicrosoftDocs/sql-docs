@@ -3,9 +3,9 @@ description: "SQLNumParams"
 title: "SQLNumParams | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
 author: markingmyname

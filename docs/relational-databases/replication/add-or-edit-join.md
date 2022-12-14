@@ -3,10 +3,9 @@ description: "Add or Edit Join"
 title: "Add or Edit Join | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.addeditjoin.f1"

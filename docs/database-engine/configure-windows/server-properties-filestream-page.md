@@ -1,20 +1,16 @@
 ---
-title: "SQL Server Properties (FILESTREAM Page) | Microsoft Docs"
+title: "SQL Server Properties (FILESTREAM Page)"
 description: Get acquainted with FILESTREAM settings in SQL Server. Learn how to turn on FILESTREAM, and see how to configure remote client access and other properties.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: configuration
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.serverproperties.filestream.f1"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], properties page"
-ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.serverproperties.filestream.f1"
+helpviewer_keywords:
+  - "FILESTREAM [SQL Server], properties page"
 ---
 # Server Properties - FILESTREAM Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

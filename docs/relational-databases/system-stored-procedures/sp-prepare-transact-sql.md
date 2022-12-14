@@ -1,9 +1,8 @@
 ---
 title: sp_prepare (Transact SQL)
 description: "sp_prepare (Transact SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sp_prepare_TSQL"

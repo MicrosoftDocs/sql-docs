@@ -3,15 +3,15 @@ description: "MSSQLSERVER_8623"
 title: "MSSQLSERVER_8623 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: jopilov
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "8623 (Database Engine error)"
 ms.assetid: 
 author: shaunbeasley
-ms.author: mathoma
+ms.author: shaunbe
 ---
 # MSSQLSERVER_8623
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

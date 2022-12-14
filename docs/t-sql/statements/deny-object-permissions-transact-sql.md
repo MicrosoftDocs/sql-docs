@@ -4,16 +4,14 @@ description: DENY Object Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "DENY statement, objects"
   - "table permissions [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 ---
 # DENY Object Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -11,7 +11,7 @@ metadata:
   author: dimitri-furman
   ms.author: dfurman
   ms.reviewer: wiassaf, mathoma
-  ms.date: 08/09/2022
+  ms.date: 09/14/2022
 title: Azure SQL Database Hyperscale FAQ
 summary: |
   [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -19,7 +19,7 @@ summary: |
   This article provides answers to frequently asked questions for customers considering a database in the Azure SQL Database Hyperscale service tier, referred to as just Hyperscale in the remainder of this FAQ. This article describes the scenarios that Hyperscale supports and the features that are compatible with Hyperscale.
   
   - This FAQ is intended for readers who have a brief understanding of the Hyperscale service tier and are looking to have their specific questions and concerns answered.
-  - This FAQ isn’t meant to be a guidebook or answer questions on how to use a Hyperscale database. For an introduction to Hyperscale, we recommend you refer to the [Azure SQL Database Hyperscale](service-tier-hyperscale.md) documentation.
+  - This FAQ isn't meant to be a guidebook or answer questions on how to use a Hyperscale database. For an introduction to Hyperscale, we recommend you refer to the [Azure SQL Database Hyperscale](service-tier-hyperscale.md) documentation.
   
 
 sections:
@@ -103,7 +103,7 @@ sections:
       - question: |
           Can I bring my on-premises or IaaS SQL Server license to Hyperscale?
         answer: |
-          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale. Every SQL Server Standard core can map to 1 Hyperscale vCores. Every SQL Server Enterprise core can map to 4 Hyperscale vCores. You don’t need a SQL license for secondary replicas. The Azure Hybrid Benefit price will be automatically applied to Read Scale-out (secondary) replicas.
+          Yes, [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) is available for Hyperscale. Every SQL Server Standard core can map to 1 Hyperscale vCores. Every SQL Server Enterprise core can map to 4 Hyperscale vCores. You don't need a SQL license for secondary replicas. The Azure Hybrid Benefit price will be automatically applied to Read Scale-out (secondary) replicas.
           
       - question: |
           What kind of workloads is Hyperscale designed for?
@@ -233,7 +233,7 @@ sections:
       - question: |
           Do I lose any functionality or capabilities after migration to the Hyperscale service tier?
         answer: |
-          Yes. Some Azure SQL Database features are not supported in Hyperscale yet, including but not limited to long term backup retention. If some of these features are enabled for your database, migration to Hyperscale may be blocked, or these features will stop working after migration. We expect these limitations to be temporary. For details, see [Known limitations](service-tier-hyperscale.md#known-limitations).
+          Yes. Some Azure SQL Database features are not supported in Hyperscale yet. If some of these features are enabled for your database, migration to Hyperscale may be blocked, or these features will stop working after migration. We expect these limitations to be temporary. For details, see [Known limitations](service-tier-hyperscale.md#known-limitations).
 
       - question: |
           Can I move my on-premises SQL Server database, or my SQL Server database in a cloud virtual machine to Hyperscale?
@@ -284,7 +284,7 @@ sections:
       - question: |
           Does Hyperscale support Availability Zones?
         answer: |
-          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability-preview) in public preview. At least 1 HA secondary replica and the use of zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
+          Yes, Hyperscale supports [zone redundant configuration](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability). At least 1 HA secondary replica and the use of zone-redundant or geo-zone-redundant storage is required for enabling the zone redundant configuration for Hyperscale.
 
       - question: |
           How often are database backups taken?

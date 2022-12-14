@@ -3,10 +3,9 @@ description: "SQLDriverConnect (Paradox Driver)"
 title: "SQLDriverConnect (Paradox Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDriverConnect function [ODBC], Paradox Driver"

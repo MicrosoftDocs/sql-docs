@@ -1,9 +1,8 @@
 ---
 title: sp_readerrorlog (Transact-SQL)
 description: sp_readerrorlog (Transact-SQL)
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sp_readerrorlog_TSQL"
@@ -13,7 +12,7 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_readerrorlog"
 author: pijocoder
-ms.author: maghan
+ms.author: jopilov
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "02/08/2022"

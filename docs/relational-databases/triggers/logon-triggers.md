@@ -3,9 +3,9 @@ description: "Logon Triggers"
 title: "Logon Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/19/2018"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology:
+ms.subservice:
 ms.topic: conceptual
 f1_keywords: 
   - "logon triggers"

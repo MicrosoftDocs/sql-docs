@@ -4,9 +4,8 @@ description: SET ANSI_NULLS (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/24/2020"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET_ANSI_NULLS_TSQL"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "comparison operators [SQL Server], null values"
 dev_langs:
   - "TSQL"
-ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||azuresqldb-current"
 ---
 # SET ANSI_NULLS (Transact-SQL)

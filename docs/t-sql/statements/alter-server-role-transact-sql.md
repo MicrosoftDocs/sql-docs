@@ -4,9 +4,8 @@ description: ALTER SERVER ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "04/16/2020"
-ms.prod: sql
-ms.prod_service: "pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_SERVER_ROLE_TSQL"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "ALTER SERVER ROLE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SERVER ROLE (Transact-SQL)

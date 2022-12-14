@@ -3,9 +3,9 @@ title: "Change Workload Group Settings | Microsoft Docs"
 description: Learn how to change workload group settings of the default and user-defined workload groups by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: performance
+ms.subservice: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "workload groups [SQL Server], alter"

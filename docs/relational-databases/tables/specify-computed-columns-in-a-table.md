@@ -1,9 +1,8 @@
 ---
 title: "Specify Computed Columns in a Table"
 description: "Specify Computed Columns in a Table"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, define"

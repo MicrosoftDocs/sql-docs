@@ -4,9 +4,8 @@ description: OPEN MASTER KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "OPEN MASTER KEY DECRYPTION BY PASSWORD"
@@ -26,7 +25,6 @@ helpviewer_keywords:
   - "database master key [SQL Server], opening"
 dev_langs:
   - "TSQL"
-ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

@@ -4,9 +4,8 @@ description: DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP DATABASE ENCRYPTION KEY"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "DROP DATABASE ENCRYPTION KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP DATABASE ENCRYPTION KEY (Transact-SQL)

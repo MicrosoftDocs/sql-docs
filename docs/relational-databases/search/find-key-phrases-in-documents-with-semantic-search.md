@@ -2,9 +2,8 @@
 description: "Find Key Phrases in Documents with Semantic Search"
 title: "Find key phrases in documents with semantic search"
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], key phrase queries"

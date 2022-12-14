@@ -3,14 +3,13 @@ title: Entity Sync Relationship
 description: Entity sync is a one-way, repeatable synchronization between entity versions, which enables you to share entity data between Master Data Services models.
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Entity Sync Relationship (Master Data Services)
 

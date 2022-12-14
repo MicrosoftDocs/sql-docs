@@ -4,9 +4,8 @@ description: BACKUP CERTIFICATE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom: event-tier1-build-2022
 f1_keywords:
@@ -34,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
   Exports a certificate to a file.
 
 > [!NOTE]
-> In SQL Server 2022, certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format.
+> In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format.
 >
 > The PKCS #12 or PFX format is a binary format for storing the server certificate, any intermediate certificates, and the private key in one file. PFX files usually have extensions such as `.pfx` and `.p12`. This makes it easier for customers to adhere to the current security best practice guidelines and compliance standards that prohibit RC4 encryption, by eliminating the need to use conversion tools such as PVKConverter (for the PVK or DER format).
   
@@ -79,7 +78,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  Specifies the complete path, including file name, of the file in which the certificate is to be saved. This path can be a local path or a UNC path to a network location. If only a file name is specified, the file will be saved in the instance's default user data folder (which may or may not be the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA folder). For SQL Server Express LocalDB, the instance's default user data folder is the path specified by the `%USERPROFILE%` environment variable for the account that created the instance.  
 
  WITH FORMAT = *'PFX'*   
- **Applies to:** SQL Server 2022 or later   
+ **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later   
  Specifies exporting a certificate and its private key to a PFX file. This clause is optional.
 
  WITH PRIVATE KEY

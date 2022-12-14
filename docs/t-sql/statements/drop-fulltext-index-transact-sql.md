@@ -4,9 +4,8 @@ description: DROP FULLTEXT INDEX (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_FULLTEXT_INDEX_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "dropping full-text indexes"
 dev_langs:
   - "TSQL"
-ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 ---
 # DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

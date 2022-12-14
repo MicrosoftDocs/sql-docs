@@ -1,12 +1,11 @@
 ---
 title: "DROP BROKER PRIORITY (Transact-SQL)"
 description: DROP BROKER PRIORITY (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_BROKER_PRIORITY_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "DROP BROKER PRIORITY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 ---
 # DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

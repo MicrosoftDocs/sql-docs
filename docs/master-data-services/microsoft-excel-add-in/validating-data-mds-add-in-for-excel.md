@@ -3,14 +3,13 @@ description: "Validating Data (MDS Add-in for Excel)"
 title: Validating Data
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Validating Data (MDS Add-in for Excel)
 

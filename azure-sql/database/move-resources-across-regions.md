@@ -2,17 +2,14 @@
 title: Move resources to new region
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to move your database or managed instance to another region.
-services:
-  - "sql-database"
-ms.service: sql-db-mi
-ms.subservice: data-movement
-ms.custom:
-  - "sqldbrb=2"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 06/25/2019
+ms.service: sql-db-mi
+ms.subservice: data-movement
+ms.topic: how-to
+ms.custom: sqldbrb=2
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

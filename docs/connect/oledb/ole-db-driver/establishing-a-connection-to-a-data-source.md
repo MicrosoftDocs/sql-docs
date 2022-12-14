@@ -1,12 +1,11 @@
 ---
 title: Establish connection to data source (OLE DB driver)
 description: Learn how a consumer establishes a connection to a data source by using OLE DB Driver for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: 04/20/2021
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "data sources [OLE DB Driver for SQL Server]"
@@ -14,8 +13,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, data source connections"
   - "CoCreateInstance method"
   - "OLE DB data sources [OLE DB Driver for SQL Server]"
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Establishing a Connection to a Data Source
 

@@ -3,9 +3,9 @@ description: "Manage Data Collection"
 title: "Manage Data Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 keywords: 
   - "Data Collection"

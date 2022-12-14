@@ -1,9 +1,8 @@
 ---
 title: Data Transfer of Table-Valued Parameters
 description: Describe Data Transfer of Table-Valued Parameters
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: markingmyname
@@ -44,7 +43,6 @@ No actual data is sent or received for the table-valued parameter itself, but da
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR in APD.|SQL_CA_SS_TYPE_NAME.<br /><br /> This is optional for stored procedure calls, and NULL can be specified if it isn't required. It must be specified for SQL statements that aren't procedure calls.<br /><br /> This parameter also serves as a unique value that the application can use to identify this table-valued parameter when variable row binding is used. For more information, see the "Variable Table-Valued Parameter Row Binding" section, later in this topic.<br /><br /> When a table-valued parameter type name is specified on a call to SQLBindParameter, it must be specified as a Unicode value, even in applications built as ANSI applications. The value used for the parameter *StrLen_or_IndPtr* should be either SQL_NTS or the string length of the name multiplied by size of (WCHAR).|  
 |*BufferLength*|SQL_DESC_OCTET_LENGTH in APD.|The length of the table-valued parameter type name in bytes.<br /><br /> This can be SQL_NTS if the type name is null-terminated, or 0 if the table-valued parameter type name isn't required.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR in APD.|SQL_DESC_OCTET_LENGTH_PTR in APD.<br /><br /> For table-valued parameters, this is a row count rather than a data length.|  
-||||
 
 Two data transfer modes are supported for table-valued parameters: fixed row binding and variable row binding.  
 

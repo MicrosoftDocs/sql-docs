@@ -4,9 +4,8 @@ description: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER SERVER AUDIT SPECIFICATION"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "ALTER SERVER AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 ---
 # ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

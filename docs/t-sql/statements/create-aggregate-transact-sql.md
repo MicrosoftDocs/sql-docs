@@ -1,12 +1,11 @@
 ---
 title: "CREATE AGGREGATE (Transact-SQL)"
 description: CREATE AGGREGATE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_AGGREGATE_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
 dev_langs:
   - "TSQL"
-ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 ---
 # CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

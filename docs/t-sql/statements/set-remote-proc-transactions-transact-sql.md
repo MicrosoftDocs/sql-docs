@@ -4,9 +4,8 @@ description: SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "REMOTE_PROC_TRANSACTIONS_TSQL"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "active transactions"
 dev_langs:
   - "TSQL"
-ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

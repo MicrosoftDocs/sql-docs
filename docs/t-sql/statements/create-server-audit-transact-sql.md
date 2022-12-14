@@ -4,9 +4,8 @@ description: CREATE SERVER AUDIT (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_SERVER_AUDIT_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "audits [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 

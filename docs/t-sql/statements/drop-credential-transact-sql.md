@@ -4,9 +4,8 @@ description: DROP CREDENTIAL (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/19/2015"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP CREDENTIAL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "dropping credentials"
 dev_langs:
   - "TSQL"
-ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 ---
 # DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -4,9 +4,8 @@ description: ALTER CERTIFICATE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "04/22/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_CERTIFICATE_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "certificates [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER CERTIFICATE (Transact-SQL)

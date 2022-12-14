@@ -1,12 +1,11 @@
 ---
- title: include file
- description: include file
- services: 
- author: maggiesMSFT
- ms.service: 
- ms.topic: include
- ms.date: 06/24/2021
- ms.author: maggies 
- ms.custom: include file
+title: include file
+description: include file
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 06/24/2021
+ms.service:
+ms.topic: include
+ms.custom: include file
 ---
 ✔️ Report Builder

@@ -3,10 +3,9 @@ description: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)"
 title: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_hadr_distributed_ag_database_replica"

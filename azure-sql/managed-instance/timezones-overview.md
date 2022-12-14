@@ -1,26 +1,27 @@
 ---
 title: Azure SQL Managed Instance time zones
 description: Learn about the time zone specifics of Azure SQL Managed Instance
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: service-overview
-ms.custom: sqldbrb=1
-ms.devlang: 
-ms.topic: reference
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma
-ms.date: 10/12/2020
+ms.date: 10/19/2022
+ms.service: sql-managed-instance
+ms.subservice: service-overview
+ms.topic: reference
+ms.custom: sqldbrb=1
 ---
 # Time zones in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-Coordinated Universal Time (UTC) is the recommended time zone for the data tier of cloud solutions. Azure SQL Managed Instance also offers a choice of time zones to meet the needs of existing applications that store date and time values and call date and time functions with an implicit context of a specific time zone.
+Coordinated Universal Time (UTC) is the recommended time zone for the data tier of newly developed cloud solutions, as it eliminates ambiguity. Azure SQL Managed Instance also offers a choice of time zones to meet the needs of existing applications that store date and time values and call date and time functions with an implicit context of a specific time zone.
 
 T-SQL functions like [GETDATE()](/sql/t-sql/functions/getdate-transact-sql) or CLR code observe the time zone set on the instance level. SQL Server Agent jobs also follow schedules according to the time zone of the instance.
 
   > [!NOTE]
   > Azure SQL Database does not support time zone settings; it always follows UTC. Use [AT TIME ZONE](/sql/t-sql/queries/at-time-zone-transact-sql) in SQL Database if you need to interpret date and time information in a non-UTC time zone.
+
+  > [!IMPORTANT]
+  > When migrating your existing solutions to Azure SQL Managed Instance, consider carefully the timezone ramifications and as a rule of thumb match your original timezone settings unless you are reimplementing the relevant application logic.
 
 ## Supported time zones
 
@@ -29,6 +30,9 @@ A set of supported time zones is inherited from the underlying operating system 
 [Daylight saving time/time zone changes policy](/troubleshoot/windows-client/system-management-components/daylight-saving-time-help-support) guarantees historical accuracy from 2010 forward.
 
 A list with names of the supported time zones is exposed through the [sys.time_zone_info](/sql/relational-databases/system-catalog-views/sys-time-zone-info-transact-sql) system view.
+
+> [!NOTE]
+> On August 8, 2022, the Chilean government made an official announcement about a Daylight-Saving Time (DST) [time zone change](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290). Starting at 12:00 a.m. Saturday, September 10, 2022, until 12:00 a.m. Saturday, April 1, 2023, the official time will advance 60 minutes. The change affects the following three time zones: **Pacific SA Standard Time**, **Easter Island Standard Time** and **Magallanes Standard Time**. Azure SQL Managed Instances using affected time zones will not reflect the changes [until Microsoft releases an OS update](https://techcommunity.microsoft.com/t5/daylight-saving-time-time-zone/interim-guidance-on-2022-time-zone-updates-for-chile/ba-p/3598290) to support this and Azure SQL Managed Instance service absorbs the update on the OS level. If you need to alter affected time zones for your managed instances, please be aware of the [limitations](#limitations) and follow the guidance from the documentation.
 
 ## Set a time zone
 
@@ -140,7 +144,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | UTC-02 | (UTC-02:00) Coordinated Universal Time-02 |
 | Mid-Atlantic Standard Time | (UTC-02:00) Mid-Atlantic - Old |
 | Azores Standard Time | (UTC-01:00) Azores |
-| Cape Verde Standard Time | (UTC-01:00) Cabo Verde Is. |
+| Cabo Verde Standard Time | (UTC-01:00) Cabo Verde Is. |
 | UTC | (UTC) Coordinated Universal Time |
 | GMT Standard Time | (UTC+00:00) Dublin, Edinburgh, Lisbon, London |
 | Greenwich Standard Time | (UTC+00:00) Monrovia, Reykjavik |
@@ -188,7 +192,7 @@ Using the same time zone across a primary and secondary instance in a failover g
 | India Standard Time | (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi |
 | Sri Lanka Standard Time | (UTC+05:30) Sri Jayawardenepura |
 | Nepal Standard Time | (UTC+05:45) Kathmandu |
-| Central Asia Standard Time | (UTC+06:00) Astana |
+| Central Asia Standard Time | (UTC+06:00) Nur-Sultan |
 | Bangladesh Standard Time | (UTC+06:00) Dhaka |
 | Omsk Standard Time | (UTC+06:00) Omsk |
 | Myanmar Standard Time | (UTC+06:30) Yangon (Rangoon) |

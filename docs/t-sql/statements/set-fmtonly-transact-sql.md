@@ -4,9 +4,8 @@ description: SET FMTONLY (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/03/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "FMTONLY_TSQL"
@@ -19,12 +18,11 @@ helpviewer_keywords:
   - "FMTONLY option"
 dev_langs:
   - "TSQL"
-ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET FMTONLY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   Returns only metadata to the client. Can be used to test the format of the response without actually running the query.  
 

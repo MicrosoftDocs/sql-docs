@@ -4,9 +4,8 @@ description: SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IMPLICIT_TRANSACTIONS"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "IMPLICIT_TRANSACTIONS option"
 dev_langs:
   - "TSQL"
-ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET IMPLICIT_TRANSACTIONS (Transact-SQL)

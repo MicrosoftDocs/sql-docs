@@ -3,10 +3,9 @@ description: "Developing Data Flow Components with Multiple Inputs"
 title: "Developing Data Flow Components with Multiple Inputs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace

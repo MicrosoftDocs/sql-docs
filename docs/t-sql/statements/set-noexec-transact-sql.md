@@ -4,9 +4,8 @@ description: SET NOEXEC (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "NOEXEC_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "NOEXEC option"
 dev_langs:
   - "TSQL"
-ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 ---
 # SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

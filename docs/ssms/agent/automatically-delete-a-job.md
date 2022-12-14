@@ -1,9 +1,8 @@
 ---
 description: "Automatically Delete a Job"
 title: "Automatically Delete a Job"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dropping jobs"

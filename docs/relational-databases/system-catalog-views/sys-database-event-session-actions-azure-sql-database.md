@@ -5,9 +5,8 @@ description: sys.database_event_session_actions (Azure SQL Database and Azure SQ
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/18/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

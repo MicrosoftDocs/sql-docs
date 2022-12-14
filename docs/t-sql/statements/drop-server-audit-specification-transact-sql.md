@@ -4,9 +4,8 @@ description: DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_SERVER_AUDIT_SPECIFICATION_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "DROP SERVER AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 ---
 # DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,9 +1,8 @@
 ---
 description: "Proxy Account Properties - New Proxy Account (Principals Tab)"
 title: New Proxy Account (Principals Tab)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.proxy.permissions.f1"

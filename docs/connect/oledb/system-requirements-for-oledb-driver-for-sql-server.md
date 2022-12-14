@@ -1,20 +1,17 @@
 ---
 title: "System requirements for OLE DB Driver for SQL Server"
 description: Learn about the software prerequisites necessary to use data access features of SQL Server such as MARS in OLE DB Driver for SQL Server.
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "03/18/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "system requirements [OLE DB Driver for SQL Server]"
   - "data access [OLE DB Driver for SQL Server], system requirements"
   - "OLE DB Driver for SQL Server, system requirements"
   - "MSOLEDBSQL, system requirements"
-author: David-Engel
-ms.author: v-davidengel
 ---
 
 # System requirements for OLE DB Driver for SQL Server

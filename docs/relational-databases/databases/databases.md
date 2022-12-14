@@ -3,10 +3,9 @@ title: "Databases | Microsoft Docs"
 description: "Learn about database schemas, tables, filegroups, logins, and roles. See how you can use the SQL Server Management Studio tool to work with databases."
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: configuration
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data warehouse [SQL Server]"

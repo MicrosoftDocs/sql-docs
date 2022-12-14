@@ -3,10 +3,9 @@ description: "Data Sources for [!INCLUDE[ssISnoversion](../../includes/ssisnover
 title: "Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2016"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Integration Services], about data sources"

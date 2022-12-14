@@ -1,16 +1,14 @@
 ---
-title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory 
+title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: deployment-configuration
-ms.devlang: 
-ms.topic: how-to
 author: srdan-bozovic-msft
 ms.author: srbozovi
 ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
 ms.date: 03/01/2022
+ms.service: sql-managed-instance
+ms.subservice: deployment-configuration
+ms.topic: how-to
 ---
 
 # Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory
@@ -25,7 +23,7 @@ The following prerequisites are required to configure a managed instance for Win
 |---------|---------|
 |Az.Sql PowerShell module | This PowerShell module provides management cmdlets for Azure SQL resources.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module -Name Az.Sql`   |
 |Azure Active Directory PowerShell Module  | This module provides management cmdlets for Azure AD administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name AzureAD`  |
-| A managed instance | You may [create a new managed instance](/azure/azure-arc/data/create-sql-managed-instance) or use an existing managed instance. You must [enable Azure AD authentication](../database/authentication-aad-configure.md) on the managed instance. |
+| A managed instance | You may [create a new managed instance](instance-create-quickstart.md) or use an existing managed instance. You must [enable Azure AD authentication](../database/authentication-aad-configure.md) on the managed instance. |
 
 ## Configure Azure AD Authentication for Azure SQL Managed Instance
 
@@ -68,5 +66,5 @@ To test the connection with [SQL Server Management Studio](/sql/ssms/download-sq
 Learn more about implementing Windows Authentication for Azure AD principals on Azure SQL Managed Instance:
 
 - [Troubleshoot Windows Authentication for Azure AD principals on Azure SQL Managed Instance](winauth-azuread-troubleshoot.md)
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance? (Preview)](winauth-azuread-overview.md)
-- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos (Preview)](winauth-azuread-setup.md)
+- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
+- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md)

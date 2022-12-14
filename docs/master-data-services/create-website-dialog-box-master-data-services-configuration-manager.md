@@ -3,16 +3,15 @@ description: "Create Website Dialog Box (Master Data Services Configuration Mana
 title: Create Website Dialog Box
 ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.createsite.f1"
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create Website Dialog Box (Master Data Services Configuration Manager)
 

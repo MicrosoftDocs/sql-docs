@@ -1,12 +1,11 @@
 ---
 title: CREATE ENDPOINT (Transact-SQL)
 description: CREATE ENDPOINT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ENDPOINT"
@@ -29,7 +28,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
 dev_langs:
   - "TSQL"
-ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 ---
 
 # CREATE ENDPOINT (Transact-SQL)
@@ -143,7 +141,7 @@ FOR DATABASE_MIRRORING (
  The following arguments apply only to the TCP protocol option.  
   
  LISTENER_PORT **=**_listenerPort_  
- Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 4022 is used but any number between 1024 and 32767 is valid.  
+ Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 5022 is used but any number between 1024 and 32767 is valid.  
   
  LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Specifies the IP address that the endpoint will listen on. The default is ALL. This means that the listener will accept a connection on any valid IP address.  

@@ -1,9 +1,8 @@
 ---
 title: Create a system-versioned temporal table
 description: "Create a system-versioned temporal table. There are three ways to create a system-versioned temporal table."
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest

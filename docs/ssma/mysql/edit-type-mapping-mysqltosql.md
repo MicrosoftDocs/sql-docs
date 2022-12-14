@@ -1,11 +1,11 @@
 ---
 description: "Edit Type Mapping (MySQLToSQL)"
 title: "Edit Type Mapping (MySQLToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: cpichuka 

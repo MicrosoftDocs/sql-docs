@@ -4,9 +4,8 @@ description: RESTORE Statements - REWINDONLY (Transact-SQL)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "RESTORE_REWINDONLY_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "RESTORE REWINDONLY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

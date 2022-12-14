@@ -4,9 +4,8 @@ description: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_DATABASE_AUDIT_SPECIFICATION_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "ALTER DATABASE AUDIT SPECIFICATION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

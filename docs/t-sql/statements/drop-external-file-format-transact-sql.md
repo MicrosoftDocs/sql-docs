@@ -4,13 +4,11 @@ description: DROP EXTERNAL FILE FORMAT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
-ms.assetid: 8cf9009b-59f9-4aac-bef1-dcf2cf0708b2
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL FILE FORMAT (Transact-SQL)

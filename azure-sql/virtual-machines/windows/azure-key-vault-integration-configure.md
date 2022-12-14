@@ -1,21 +1,14 @@
 ---
-title: Integrate Key Vault with SQL Server on Windows VMs in Azure (Resource Manager) | Microsoft Docs
+title: Integrate Key Vault with SQL Server on Windows VMs in Azure (Resource Manager)
 description: Learn how to automate the configuration of SQL Server encryption for use with Azure Key Vault. This topic explains how to use Azure Key Vault Integration with SQL virtual machines created with Resource Manager.
-services: virtual-machines-windows
-documentationcenter: ''
 author: adbadram
-editor: ''
-tags: azure-service-management
-ms.assetid: cd66dfb1-0e9b-4fb0-a471-9deaf4ab4ab8
-ms.service: virtual-machines-sql
-ms.subservice: security
-
-ms.topic: how-to
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 02/10/2022
 ms.author: adbadram
 ms.reviewer: mathoma
+ms.date: 02/10/2022
+ms.service: virtual-machines-sql
+ms.subservice: security
+ms.topic: how-to
+tags: azure-service-management
 ---
 # Configure Azure Key Vault integration for SQL Server on Azure VMs (Resource Manager)
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
@@ -53,6 +46,8 @@ For a detailed walkthrough of provisioning, see [Provision a SQL virtual machine
 
 For existing SQL virtual machines, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and select **Security** under **Settings**. Select **Enable** to enable Azure Key Vault integration. 
 
+The following screenshot shows how to enable Azure Key Vault in the portal for an existing SQL Server VM (this SQL Server instance uses a non-default port 1401): 
+
 ![SQL Key Vault integration for existing VMs](./media/azure-key-vault-integration-configure/azure-sql-rm-akv-existing-vms.png)
 
 When you're finished, select the **Apply** button on the bottom of the **Security** page to save your changes.
@@ -61,3 +56,7 @@ When you're finished, select the **Apply** button on the bottom of the **Securit
 > The credential name we created here will be mapped to a SQL login later. This allows the SQL login to access the key vault. 
 
 [!INCLUDE [Key Vault integration next steps](../../includes/virtual-machines-sql-server-akv-next-steps.md)]
+
+## Next steps
+
+For more security information, review [Security considerations for SQL Server on Azure VMs](security-considerations-best-practices.md). 

@@ -1,17 +1,14 @@
 ---
 title: Import or export an Azure SQL Database without allowing Azure services to access the server.
 description: Import or export an Azure SQL Database without allowing Azure services to access the server.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: migration
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
 ms.date: 01/08/2020
+ms.service: sql-database
+ms.subservice: migration
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 # Import or export an Azure SQL Database without allowing Azure services to access the server
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -39,13 +36,13 @@ The following steps show you how to connect to your virtual machine using a remo
 
 1. After deployment completes, go to the virtual machine resource.
 
-   ![Screenshot shows a virtual machine Overview page with a Connect button.](./media/database-import-export-azure-services-off/vm.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/vm.png" alt-text="Screenshot shows a virtual machine Overview page with a Connect button.":::
 
 2. Select **Connect**.
 
    A Remote Desktop Protocol file (.rdp file) form appears with the public IP address and port number for the virtual machine.
 
-   ![RDP form](./media/database-import-export-azure-services-off/rdp.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/rdp.png" alt-text="Screenshot of Azure portal, connect to VM, with download RDP highlighted.":::
 
 3. Select **Download RDP File**.
 
@@ -76,11 +73,11 @@ The following steps create a server-level IP firewall rule for your virtual mach
 
 2. Copy this fully qualified server name to use when connecting to your server and its databases.
 
-   ![server name](./media/database-import-export-azure-services-off/server-name.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted.":::
 
 3. Select **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
 
-   ![server-level IP firewall rule](./media/database-import-export-azure-services-off/server-firewall-rule.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, showing the firewall page, with server-level IP firewall rule highlighted.":::
 
 4. Choose **Add client IP** on the toolbar to add your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
@@ -140,7 +137,7 @@ The .BACPAC file can be stored in [Azure Blobs](/azure/storage/blobs/storage-blo
 
 To achieve the best performance, use Azure Files. SqlPackage operates with the filesystem so it can access Azure Files directly.
 
-To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the the blob and the local file system before the import or export operation. As a result the process will take longer.
+To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the blob and the local file system before the import or export operation. As a result the process will take longer.
 
 To upload or download .BACPAC files, see [Transfer data with AzCopy and Blob storage](/azure/storage/common/storage-use-azcopy-v10#transfer-data), and [Transfer data with AzCopy and file storage](/azure/storage/common/storage-use-azcopy-files).
 

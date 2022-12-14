@@ -4,9 +4,8 @@ description: SET Statements (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "locking [SQL Server], SET statements"
 dev_langs:
   - "TSQL"
-ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 monikerRange: "=azure-sqldw-latest||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # SET Statements (Transact-SQL)

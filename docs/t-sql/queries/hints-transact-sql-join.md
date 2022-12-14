@@ -3,10 +3,9 @@ description: "Hints (Transact-SQL) - Join"
 title: "Join Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "Join Hint"
@@ -32,13 +31,13 @@ ms.author: vanto
 > [!CAUTION]  
 >  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.
   
- **Applies to:**  
+#### Applies to
   
- [DELETE](../../t-sql/statements/delete-transact-sql.md)  
+- [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
- [SELECT](../../t-sql/queries/select-transact-sql.md)  
+- [SELECT](../../t-sql/queries/select-transact-sql.md)  
   
- [UPDATE](../../t-sql/queries/update-transact-sql.md)  
+- [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -4,8 +4,8 @@ title: "Changing Passwords Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.reviewer: ""
-ms.prod: sql
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], password expiration"
@@ -25,6 +25,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Changing SQL Server Native Client Passwords Programmatically
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   Before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], when a user's password expired, only an administrator could reset it. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports handling password expiration programmatically through both the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, and through changes to the **SQL Server Login** dialog boxes.  
   

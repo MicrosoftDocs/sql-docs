@@ -1,10 +1,9 @@
 ---
 title: "Security documentation for SQL Server & Azure SQL Database"
 description: A reference of security and protection-related content for SQL Server and Azure SQL Database. 
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: security
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 

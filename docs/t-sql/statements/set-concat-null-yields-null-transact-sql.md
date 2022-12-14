@@ -4,9 +4,8 @@ description: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CONCAT_NULL_YIELDS_NULL_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "SET CONCAT_NULL_YIELDS_NULL statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)

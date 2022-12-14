@@ -1,28 +1,27 @@
 ---
 title: APPROX_PERCENTILE_CONT (Transact-SQL)
 description: A function that returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification.
-ms.prod: sql
-ms.technology: t-sql
+author: blakhani-msft
+ms.author: blakhani
+ms.reviewer: "maghan"
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "PERCENTILE_CONT_TSQL"
   - "PERCENTILE_CONT"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
-author: blakhani-msft
-ms.author: blakhani 
-ms.reviewer: "maghan"
-ms.custom: ""
-ms.date: 07/25/2022
+dev_langs:
+  - "TSQL"
 monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current"
 ---
 
 # APPROX_PERCENTILE_CONT (Transact-SQL)
 
-[!INCLUDE[SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 This function returns an approximate interpolated value from the set of values in a group based on percentile value and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. The percentile value returned by this function is based on a continuous distribution of the column values and the result would be interpolated. Due to this, the output might not be one of values in the data set. One of the common use cases for this function is to avoid the data outliers. This function can be used as an alternative to PERCENTILE_CONT for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 

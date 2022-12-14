@@ -1,11 +1,11 @@
 ---
 description: "Executing the SSMA Console (DB2ToSQL)"
 title: "Executing the SSMA Console (DB2ToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: cpichuka 

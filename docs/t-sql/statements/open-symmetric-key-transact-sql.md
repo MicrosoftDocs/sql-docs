@@ -4,9 +4,8 @@ description: OPEN SYMMETRIC KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "OPEN SYMMETRIC KEY"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "OPEN SYMMETRIC KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)

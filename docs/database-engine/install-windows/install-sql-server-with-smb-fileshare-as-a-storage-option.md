@@ -1,16 +1,13 @@
 ---
-title: "Install SQL Server with SMB fileshare storage | Microsoft Docs"
+title: "Install SQL Server with SMB fileshare storage"
 description: In SQL Server, system databases and Database Engine user databases can be installed with Server Message Block (SMB) file server as a storage option.
-ms.custom:
-  - intro-installation
-ms.date: "09/05/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "09/05/2017"
+ms.service: sql
+ms.subservice: install
+ms.topic: conceptual
+ms.custom: intro-installation
 monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server with SMB fileshare storage
@@ -67,6 +64,8 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
     ```  
     Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="<StrongPassword>" /INSTALLSQLDATADIR="\\FileServer\Share1\" /IACCEPTSQLSERVERLICENSETERMS  
     ```  
+
+    [!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
      To install a single-node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], default instance:  
   

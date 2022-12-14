@@ -4,9 +4,8 @@ description: DROP CERTIFICATE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/18/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP CERTIFICATE"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "deleting certificates"
 dev_langs:
   - "TSQL"
-ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DROP CERTIFICATE (Transact-SQL)

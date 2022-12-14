@@ -1,8 +1,8 @@
 ---
 title: Compare and Synchronize the Data of Two Databases
 description: Find out how to compare and synchronize the data from two databases. See how to set up the comparison, view the differences, and update the target.
-ms.prod: sql
-ms.technology: ssdt
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datacompare.connection.datasources.f1"
@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 03/22/2021
 ---

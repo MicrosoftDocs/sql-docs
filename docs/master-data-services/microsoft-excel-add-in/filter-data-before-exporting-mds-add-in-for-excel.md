@@ -3,14 +3,13 @@ description: "Filter Data before Exporting (MDS Add-in for Excel)"
 title: Filter Data before Exporting
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Filter Data before Exporting (MDS Add-in for Excel)
 

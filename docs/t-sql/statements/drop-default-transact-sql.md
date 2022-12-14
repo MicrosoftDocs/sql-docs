@@ -1,12 +1,11 @@
 ---
 title: "DROP DEFAULT (Transact-SQL)"
 description: DROP DEFAULT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "05/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_DEFAULT_TSQL"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "defaults [SQL Server], removing"
 dev_langs:
   - "TSQL"
-ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 ---
 # DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

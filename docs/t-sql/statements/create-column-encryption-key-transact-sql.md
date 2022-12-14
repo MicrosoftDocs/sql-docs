@@ -4,9 +4,8 @@ description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 author: jaszymas
 ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_COLUMN_ENCRYPTION_KEY_TSQL"
@@ -26,7 +25,6 @@ helpviewer_keywords:
   - "CREATE COLUMN ENCRYPTION KEY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 ---
 # CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 

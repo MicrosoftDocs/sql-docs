@@ -2,10 +2,9 @@
 description: "Spatial Reference Identifiers (SRIDs)"
 title: "Spatial Reference Identifiers (SRIDs) | Microsoft Docs"
 ms.date: "03/29/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Spatial Reference Identifiers (SRIDs)"

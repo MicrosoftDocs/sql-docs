@@ -4,9 +4,8 @@ description: DROP SECURITY POLICY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_SECURITY_POLICY_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "DROP SECURITY POLICY statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 ---
 # DROP SECURITY POLICY (Transact-SQL)
 

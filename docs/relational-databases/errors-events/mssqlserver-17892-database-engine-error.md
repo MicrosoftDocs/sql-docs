@@ -3,9 +3,9 @@ description: "MSSQLSERVER_17892"
 title: MSSQLSERVER_17892
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "17892 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|SRV_LOGON_FAILED_BY_TRIGGER|
 |Message Text|Logon failed for login \<Login Name> due to trigger execution.|
-||
 
 ## Explanation
 

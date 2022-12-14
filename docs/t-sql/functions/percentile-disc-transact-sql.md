@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 ms.date: "10/20/2015"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 ms.custom:
   - "event-tier1-build-2022"
@@ -90,9 +90,8 @@ WHERE dh.EndDate IS NULL;
   
 Here is a partial result set.  
 
-```
+```output
 DepartmentName        MedianCont    MedianDisc
---------------------   ----------   ----------
 Document Control       16.8269      16.8269
 Engineering            34.375       32.6923
 Executive              54.32695     48.5577
@@ -117,12 +116,11 @@ SELECT DISTINCT DepartmentName
        ,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY BaseRate)  
         OVER (PARTITION BY DepartmentName) AS MedianDisc  
 FROM dbo.DimEmployee;  
-  
 ```  
   
- Here is a partial result set.  
+Here is a partial result set.  
 
-```
+```output
 DepartmentName        MedianCont    MedianDisc  
 --------------------   ----------   ----------  
 Document Control       16.826900    16.8269  

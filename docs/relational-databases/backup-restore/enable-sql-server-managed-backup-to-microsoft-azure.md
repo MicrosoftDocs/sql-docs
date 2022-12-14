@@ -3,10 +3,9 @@ title: Use managed backup to Azure
 description: Learn how to enable SQL Server Managed Backup to Microsoft Azure at the database and instance level, and enable notifications and monitor backup activity.
 ms.custom: seo-lt-2019, devx-track-azurecli
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.service: sql
 ms.reviewer: ""
-ms.technology: backup-restore
+ms.subservice: backup-restore
 ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MashaMSFT
@@ -23,7 +22,7 @@ ms.author: mathoma
 > [!IMPORTANT]  
 >  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [ Configure advanced options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## Create the Azure Blob Container
+## Create the Azure Blob Storage container
 
 The process requires an Azure account. If you already have an account, go to the next step. Otherwise, you can get started with a [free trial](https://azure.microsoft.com/pricing/free-trial/) or explore [purchase options](https://azure.microsoft.com/pricing/purchase-options/).
 
@@ -99,7 +98,6 @@ If the URL is included, separate it from the SAS token at the question mark (do 
 |-|-|  
 |**Container URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
 |**SAS token**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
-|||
   
 Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview).  
   

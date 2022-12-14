@@ -3,9 +3,9 @@ description: "MSSQLSERVER_2530"
 title: "MSSQLSERVER_2530 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT

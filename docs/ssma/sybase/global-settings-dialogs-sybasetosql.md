@@ -3,9 +3,9 @@ description: "Global Settings (Dialogs)  (SybaseToSQL)"
 title: "Global Settings (Dialogs)  (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: cpichuka 

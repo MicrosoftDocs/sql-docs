@@ -1,9 +1,9 @@
 ---
 author: bwren
 ms.author: bwren
+ms.date: 01/19/2019
 ms.service: azure-monitor
 ms.topic: include
-ms.date: 01/19/2019
 ---
 
 >[!NOTE]

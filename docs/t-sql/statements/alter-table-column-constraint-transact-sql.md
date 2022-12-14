@@ -4,9 +4,8 @@ description: ALTER TABLE column_constraint (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/05/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "column_constraint"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "column_constraint"
 dev_langs:
   - "TSQL"
-ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 ---
 # ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

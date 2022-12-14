@@ -4,9 +4,8 @@ description: GRANT Assembly Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "granting permissions [SQL Server], assemblies"
@@ -14,10 +13,9 @@ helpviewer_keywords:
   - "GRANT statement, assemblies"
 dev_langs:
   - "TSQL"
-ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 ---
 # GRANT Assembly Permissions (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Grants permissions on an assembly.  
   

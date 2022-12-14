@@ -4,8 +4,8 @@ description: sys.pdw_table_distribution_properties (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/03/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"

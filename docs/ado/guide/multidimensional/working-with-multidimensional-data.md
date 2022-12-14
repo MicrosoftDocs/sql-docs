@@ -4,8 +4,8 @@ description: "Working with Multidimensional Data"
 author: rothja
 ms.author: jroth
 ms.date: 11/08/2018
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "multidimensional data [ADO]"
@@ -23,7 +23,7 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
 -   Salesperson  
   
--   Geography (natural hierarchy) - Continents, Countries, States, and so on  
+-   Geography (natural hierarchy) - Continents, Countries/Regions, States, and so on  
   
 -   Quarters - Quarters, Months, Days  
   

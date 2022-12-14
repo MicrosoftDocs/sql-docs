@@ -2,10 +2,9 @@
 title: Analyze Deadlocks
 titleSuffix: SQL Server Profiler
 description: Identify the cause of a deadlock by replaying and displaying deadlock events for analysis in SQL Server Profiler and by generating wait-for graphs.
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.service: sql
 ms.reviewer: ""
-ms.technology: profiler
+ms.subservice: profiler
 ms.topic: conceptual
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname

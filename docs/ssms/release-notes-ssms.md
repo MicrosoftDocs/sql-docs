@@ -1,9 +1,8 @@
 ---
 title: Release notes for (SSMS)
 description: Release notes for SQL Server Management Studio (SSMS).
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 author: erinstellato-ms
 ms.author: erinstellato
@@ -57,6 +56,7 @@ SSMS 18.12.1 is the latest general availability (GA) release of SSMS. If you nee
 | Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.Net SqlClient Data Provider)". | There is a known problem due to incorrect data in msdb. To resolve, remove backup history. For example `EXEC msdb..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Stretch DB | Unable to stretch an existing table using the Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to stretch an existing table. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error | Use the Azure portal for container deletion. |
 
@@ -103,7 +103,7 @@ Download previous SSMS versions by selecting the download link in the related se
 |----------|---------|
 | Always Encrypted | Updated AE Tools to only show keys with no expiration date. | 
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.36.2. |
-| Compatibility Mode | Added support for compatibility mode 160.  Note that SSMS 19 is the recommended SSMS release for use with SQL Server 2022. Visit [Download SQL Server Management Studio 19](download-sql-server-management-studio-ssms-19.md) to obtain SSMS 19. |
+| Compatibility Mode | Added support for compatibility mode 160.  Note that SSMS 19 is the recommended SSMS release for use with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]. Visit [Download SQL Server Management Studio 19](download-sql-server-management-studio-ssms-19.md) to obtain SSMS 19. |
 | Data Classification | Improvements to Data Classification user interface. |
 | Link feature for Azure SQL Managed Instance | Added the link feature support for SQL Server 2016 for connection and failover wizards. See [Link feature for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/link-feature). |
 | Link feature for Azure SQL Managed Instance | Added failover wizard support to migrate multiple databases at the time from SQL Server to Azure SQL Managed Instance using the link feature. |
@@ -907,7 +907,6 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | Query Execution or Results | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256 K   and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
 | ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqludfs). |
 | SMO | Added support for *SQL Assessment API*. For more information, see [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
-|  |  |
 
 #### Bug fixes in 18.2
 
@@ -1223,7 +1222,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Object Scripting|Omit the graph syntax "as edge" and "as node" when scripting a table on SQL Server 2016 and earlier.|
 |Object Scripting|Fixed an issue where scripting of database objects was failing when connecting to an Azure SQL Database using Azure AD with MFA.|
 |Object Scripting|Fixed an issue where trying to script a spatial index with GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID on an Azure SQL Database was throwing an error.|
-|Object Scripting|Fixed an issue, which was causing the database scripting (of an Azure SQL Database) to always target an on-prem SQL, even if the "Object Explorer" scripting settings were set to match the source.|
+|Object Scripting|Fixed an issue, which was causing the database scripting (of an Azure SQL Database) to always target an on-premises SQL, even if the "Object Explorer" scripting settings were set to match the source.|
 |Object Scripting|Fixed an issue where trying to script a table in a SQL DW database involving clustered and nonclustered indexes was generating incorrect T-SQL statements.|
 |Object Scripting|Fixed an issue where trying to script a table in a SQL DW database with both "Clustered Columnstore Indexes" and "Clustered Indexes" was generating incorrect T-SQL (duplicate statements).|
 |Object Scripting|Fixed Partitioned table scripting with no range values (SQL DW databases).|

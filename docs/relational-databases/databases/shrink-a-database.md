@@ -5,10 +5,9 @@ ms.custom:
 - FY22Q2Fresh
 - event-tier1-build-2022
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.shrinkdatabase.f1"

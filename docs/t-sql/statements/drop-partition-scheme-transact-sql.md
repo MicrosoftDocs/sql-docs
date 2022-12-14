@@ -4,9 +4,8 @@ description: DROP PARTITION SCHEME (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP PARTITION SCHEME"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "partition schemes [SQL Server], removing"
 dev_langs:
   - "TSQL"
-ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 ---
 # DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]

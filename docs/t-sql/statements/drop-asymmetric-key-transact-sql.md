@@ -4,9 +4,8 @@ description: DROP ASYMMETRIC KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP ASYMMETRIC KEY"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # DROP ASYMMETRIC KEY (Transact-SQL)

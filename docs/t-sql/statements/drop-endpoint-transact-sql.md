@@ -1,12 +1,11 @@
 ---
 title: "DROP ENDPOINT (Transact-SQL)"
 description: DROP ENDPOINT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_ENDPOINT_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "dropping endpoints"
 dev_langs:
   - "TSQL"
-ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 ---
 # DROP ENDPOINT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -3,11 +3,10 @@ title: "sys.external_language_files (Transact-SQL) - SQL Server"
 description: sys.external_language_files (Transact-SQL) - SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
-manager: cgronlun
 ms.reviewer: rothja
 ms.date: 05/22/2019
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "external_languages"

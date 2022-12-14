@@ -4,8 +4,8 @@ description: sys.dm_hadr_cluster (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/31/2019"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_hadr_cluster"

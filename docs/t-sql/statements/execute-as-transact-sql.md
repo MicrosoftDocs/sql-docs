@@ -4,9 +4,8 @@ description: EXECUTE AS (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/27/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "EXECUTE AS"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "switching execution context"
 dev_langs:
   - "TSQL"
-ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)

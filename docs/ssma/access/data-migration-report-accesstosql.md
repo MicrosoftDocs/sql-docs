@@ -1,11 +1,11 @@
 ---
 description: "Data Migration Report (AccessToSQL)"
 title: "Data Migration Report (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: cpichuka 

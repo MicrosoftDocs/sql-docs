@@ -1,17 +1,14 @@
 ---
 title: Deploy a split-merge service
 description: Use the split-merge too to move data between sharded databases.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: scale-out
-ms.custom:
-  - "sqldbrb=1"
-ms.topic: how-to
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/04/2018
+ms.service: sql-database
+ms.subservice: scale-out
+ms.topic: how-to
+ms.custom: sqldbrb=1
 ---
 # Deploy a split-merge service to move data between sharded databases
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -1,12 +1,11 @@
 ---
 title: "CREATE DEFAULT (Transact-SQL)"
 description: CREATE DEFAULT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "11/25/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_DEFAULT_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "DEFAULT definition"
 dev_langs:
   - "TSQL"
-ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 ---
 # CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]	

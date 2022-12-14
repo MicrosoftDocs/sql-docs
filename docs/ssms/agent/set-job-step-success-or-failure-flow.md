@@ -3,9 +3,8 @@ description: "Set job step success or failure flow"
 title: "Set job step success or failure flow with SQL Server Agent Jobs"
 ms.custom: seo-lt-2019
 ms.date: 12/16/2021
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, action flow logic"

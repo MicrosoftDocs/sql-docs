@@ -3,10 +3,9 @@ title: "Replication Agents Overview | Microsoft Docs"
 description: Learn about the agents that SQL Server replication uses to carry out tasks associated with tracking changes and distributing data.
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent"

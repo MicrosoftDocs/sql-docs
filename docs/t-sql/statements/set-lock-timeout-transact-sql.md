@@ -4,9 +4,8 @@ description: SET LOCK_TIMEOUT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "09/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "LOCK_TIMEOUT_TSQL"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "wait time for lock releases [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LOCK_TIMEOUT (Transact-SQL)

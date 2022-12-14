@@ -2,13 +2,13 @@
 title: Block T-SQL commands to create or modify Azure SQL resources
 titleSuffix: Block T-SQL commands to create or modify Azure SQL resources
 description: This article details a feature allowing Azure administrators to block T-SQL commands to create or modify Azure SQL resources
-ms.service: sql-database
-ms.subservice: security
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.topic: article
-ms.date: 03/31/2021
 ms.reviewer: wiassaf, mathoma
+ms.date: 03/31/2021
+ms.service: sql-database
+ms.subservice: security
+ms.topic: article
 ROBOTS: NOINDEX
 ---
 

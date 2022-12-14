@@ -2,8 +2,7 @@
 description: "Install Reporting Services 2016 at the Command Prompt - SSRS"
 title: "Install Reporting Services 2016 at the Command Prompt - SSRS | Microsoft Docs"
 ms.date: 01/09/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
+ms.service: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "command line"
@@ -39,9 +38,11 @@ ms.custom:
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-```  
+```console
 Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /UPDATEENABLED="False" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,Adv_SSMS,RS" /RSINSTALLMODE="DefaultNativeMode" /SQLSVCACCOUNT="[DOMAIN\ACCOUNT]" /SQLSVCPASSWORD="[PASSWORD]" /AGTSVCACCOUNT="[DOMAIN\ACCOUNT]" /AGTSVCPASSWORD="[PASSWORD]" /SQLSYSADMINACCOUNTS="[DOMAIN\ACCOUNT]"  
 ```  
+
+[!INCLUDE [sql-eula-link](../../includes/sql-eula-link.md)]
   
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint mode Reporting Services  
   

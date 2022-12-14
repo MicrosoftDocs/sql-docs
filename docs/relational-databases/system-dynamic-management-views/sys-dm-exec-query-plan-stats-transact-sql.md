@@ -3,10 +3,9 @@ title: "sys.dm_exec_query_plan_stats (Transact-SQL)"
 description: sys.dm_exec_query_plan_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-manager: amitban
 ms.date: 05/22/2019
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_exec_query_plan_stats"

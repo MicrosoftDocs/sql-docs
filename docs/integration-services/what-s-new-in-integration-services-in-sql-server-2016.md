@@ -1,14 +1,13 @@
 ---
-description: "What&#39;s New in Integration Services in SQL Server 2016"
-title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
+description: "What's New in Integration Services in SQL Server 2016"
+title: "What's New in Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom:
   - SQL2016_New_Updated
   - intro-whats-new
 ms.date: "09/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
   - "Integration Services, what's new"
@@ -17,7 +16,7 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ---
-# What&#39;s New in Integration Services in SQL Server 2016
+# What's New in Integration Services in SQL Server 2016
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -224,7 +223,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  For more info about this change and about the error column improvement, see the following updated blog post. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
->  (In RC0, this method has been moved to the new <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> interface. For more info, see [New IDTSComponentMetaData130 interface in the API](#CMD130).)  
+>  (In RC 0, this method has been moved to the new <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> interface. For more info, see [New IDTSComponentMetaData130 interface in the API](#CMD130).)  
 
 ####  <a name="ServerLogLevel"></a> Support for server-wide default logging level  
  In SQL Server **Server Properties**, under the **Server logging level** property, you can now select a default server-wide logging level. You can pick from one of the built-in logging levels - basic, none, verbose, performance, or runtime lineage - or you can pick an existing customized logging level. The selected logging level applies to all packages deployed to the SSIS Catalog. It also applies by default to a SQL Agent job step that runs an SSIS package.  
@@ -371,4 +370,4 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 
 ## See Also  
  [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Editions and Supported Features for SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)
+ [Editions and supported features of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

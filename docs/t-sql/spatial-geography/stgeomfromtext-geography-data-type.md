@@ -3,10 +3,9 @@ description: "STGeomFromText (geography Data Type)"
 title: "STGeomFromText (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords: 
   - "STGeomFromText (geography Data Type)"
@@ -52,6 +51,9 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
  The OGC type of the **geography** instance returned by STGeomFromText() is set to the corresponding WKT input.  
   
  This method will throw an **ArgumentException** if the input contains an antipodal edge.  
+
+> [!Note]
+> The order in which the points are listed matters for geography polygons. It determines if the polygon area is to the inside or outside of the given ring. See [Polygon](../../relational-databases/spatial/polygon.md#orientation-of-spatial-data) for more information.
   
 ## Examples  
  The following example uses `STGeomFromText()` to create a `geography` instance.  

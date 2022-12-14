@@ -4,9 +4,8 @@ description: CREATE SECURITY POLICY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SECURITY_POLICY_TSQL"
@@ -23,7 +22,6 @@ helpviewer_keywords:
   - "Row-Level Security"
 dev_langs:
   - "TSQL"
-ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
 

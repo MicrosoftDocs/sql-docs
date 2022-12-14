@@ -4,10 +4,9 @@ description: Learn about thread and task architecture in SQL Server, including t
 ms.custom:
 - event-tier1-build-2022
 ms.date: "09/23/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, thread and task architecture"
@@ -26,7 +25,7 @@ ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Thread and Task Architecture Guide
-[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 ## Operating system task scheduling
 Threads are the smallest units of processing that can be executed by an operating system, and allow the application logic to be separated into several concurrent execution paths. Threads are useful when complex applications have many tasks that can be performed at the same time. 
@@ -69,7 +68,7 @@ In summary, a **request** may spawn one or more **tasks** to carry out units of 
 > -  Worker 2 is doing shorter sub-millisecond tasks and therefore is required to yield before its full quantum is exhausted.     
 >
 > In this scenario and up to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], Worker 1 is allowed to basically monopolize the scheduler by having more overall quantum time.   
-> Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], cooperative scheduling includes Large Deficit First (LDF) scheduling. With LDF scheduling, quantum usage patterns are monitored and one worker thread doesn't monopolize a scheduler. In the same scenario, Worker 2 is allowed to consume repeated quantum’s before Worker 1 is allowed more quantum, therefore preventing Worker 1 from monopolizing the scheduler in an unfriendly pattern.
+> Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], cooperative scheduling includes Large Deficit First (LDF) scheduling. With LDF scheduling, quantum usage patterns are monitored and one worker thread doesn't monopolize a scheduler. In the same scenario, Worker 2 is allowed to consume repeated quantum's before Worker 1 is allowed more quantum, therefore preventing Worker 1 from monopolizing the scheduler in an unfriendly pattern.
 
 ### Scheduling parallel tasks
 Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde_md](../includes/ssde_md.md)]:

@@ -3,10 +3,9 @@ description: "Enhancing an Error Output with the Script Component"
 title: "Enhancing an Error Output with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "transformations [Integration Services], components"

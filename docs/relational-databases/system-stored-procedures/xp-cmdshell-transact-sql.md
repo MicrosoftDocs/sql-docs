@@ -3,10 +3,9 @@ description: "xp_cmdshell (Transact-SQL)"
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "xp_cmdshell"

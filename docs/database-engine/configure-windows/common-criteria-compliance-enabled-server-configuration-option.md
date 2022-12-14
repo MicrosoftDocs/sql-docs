@@ -1,22 +1,20 @@
 ---
 title: Common Criteria Compliance Enabled Configuration
 description: Learn which criteria the common criteria compliance option enables in SQL Server. See how to comply with Common Criteria Evaluation Assurance Level. For EUCC certification approval. A world-wide compliance obligation across regulated industries and authorities.
-ms.prod: sql
-ms.prod_service: high-availability
-ms.technology: configuration
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: wopeter
+ms.date: 04/07/2021
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "common criteria compliance"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CC (common criteria) [Database Engine]"
   - "common criteria compliance [Database Engine]"
   - "Risidual Information Protection [Database Engine]"
   - "RIP (Residual Information Protection)"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: wopeter
-ms.custom: ""
-ms.date: 04/07/2021
 ---
 
 # Common Criteria Compliance Enabled Server Configuration

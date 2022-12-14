@@ -1,12 +1,11 @@
 ---
 title: "ALTER ENDPOINT (Transact-SQL)"
 description: ALTER ENDPOINT (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER ENDPOINT"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "endpoints [SQL Server], modifying"
 dev_langs:
   - "TSQL"
-ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 ---
 # ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

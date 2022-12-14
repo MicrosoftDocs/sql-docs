@@ -4,9 +4,8 @@ description: DROP SERVER AUDIT  (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP SERVER AUDIT"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "DROP SERVER AUDIT statement"
 dev_langs:
   - "TSQL"
-ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 ---
 # DROP SERVER AUDIT  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,11 +1,11 @@
 ---
 title: Auto-failover group overview
-description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for auto-failover groups that overlap between both products. 
-ms.topic: include
+description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for the terminology for auto-failover groups that overlap between both products.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: kendralittle, emlisa, mlandzic
 ms.date: 03/01/2022
+ms.topic: include
 ---
 
 - **Automatic failover policy**
@@ -43,4 +43,4 @@ ms.date: 03/01/2022
 
 - **Grace period with data loss**
 
-  Because the data is replicated to the secondary database using asynchronous replication, an automatic geo-failover may result in data loss. You can customize the automatic failover policy to reflect your application’s tolerance to data loss. By configuring `GracePeriodWithDataLossHours`, you can control how long the system waits before initiating a forced failover, which may result in data loss.
+  Because the data is replicated to the secondary database using asynchronous replication, an automatic geo-failover may result in data loss. You can customize the automatic failover policy to reflect your application's tolerance to data loss. By configuring `GracePeriodWithDataLossHours`, you can control how long the system waits before initiating a forced failover, which may result in data loss.

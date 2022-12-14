@@ -3,10 +3,9 @@ description: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
 title: "sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_get_column_ordinal"

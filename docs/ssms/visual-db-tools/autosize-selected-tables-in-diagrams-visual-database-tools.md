@@ -1,9 +1,8 @@
 ---
 description: "Autosize Selected Tables in Diagrams (Visual Database Tools)"
 title: Autosize Selected Tables in Diagrams
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic database diagram table sizing"

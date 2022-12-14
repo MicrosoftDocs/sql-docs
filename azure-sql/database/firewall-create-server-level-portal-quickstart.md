@@ -1,14 +1,13 @@
 ---
 title: Create an Azure portal server-level firewall rule
 description: Learn how to create a server-level firewall rule with Azure portal
-services: sql-database
-ms.service: sql-database
-ms.subservice: security
-ms.topic: quickstart
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: kendralittle, mathoma, vanto
 ms.date: 07/14/2022
+ms.service: sql-database
+ms.subservice: security
+ms.topic: quickstart
 ms.custom: kr2b-contr-experiment
 ---
 # Quickstart: Create a server-level firewall rule in Azure portal

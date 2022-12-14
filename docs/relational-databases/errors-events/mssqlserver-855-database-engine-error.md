@@ -3,9 +3,9 @@ description: "MSSQLSERVER_855"
 title: MSSQLSERVER_855
 ms.custom: ""
 ms.date: 08/20/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "855 (Database Engine error)"
@@ -26,7 +26,6 @@ ms.author: ramakoni
 |Component|SQLEngine|
 |Symbolic Name|BAD_MEMORY_OUTSIDE_BPOOL|
 |Message Text|Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the Windows event log for more details|
-||
 
 ## Explanation
 

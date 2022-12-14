@@ -1,8 +1,8 @@
 ---
 title: SQL Server Management Studio (SSMS)
 description: Learn details about SQL Server Management Studio (SSMS) and what SMMS can do, including how to manage Analysis Services Solutions.
-ms.prod: sql
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: overview
 author: markingmyname
 ms.author: maghan

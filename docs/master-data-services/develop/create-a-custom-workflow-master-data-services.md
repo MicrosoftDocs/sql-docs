@@ -3,15 +3,14 @@ description: "Create a Custom Workflow (Master Data Services)"
 title: Create a Custom Workflow
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 
 ms.topic: "reference"
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Create a Custom Workflow (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.author: lle
 ## Configure Master Data Services for Custom Workflows  
  Creating a custom workflow requires writing some custom code and configuring [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to pass workflow data to your workflow handler. Follow these steps to enable custom workflow processing:  
   
-1.  Create a .NET assembly that implements [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130).  
+1.  Create a .NET assembly that implements [Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)).  
   
 2.  Configure SQL Server MDS Workflow Integration Service to connect to your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database and to associate a tag with your workflow handler.  
   

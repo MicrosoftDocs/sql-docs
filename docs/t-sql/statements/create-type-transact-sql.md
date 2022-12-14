@@ -1,12 +1,11 @@
 ---
 title: "CREATE TYPE (Transact-SQL)"
 description: CREATE TYPE (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "12/05/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "sql13.swb.sysdatatype.properties.f1"
@@ -24,7 +23,6 @@ helpviewer_keywords:
   - "data types [SQL Server], creating"
 dev_langs:
   - "TSQL"
-ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 ---
 # CREATE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -4,9 +4,8 @@ description: DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 author: jaszymas
 ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP COLUMN ENCRYPTION"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "column encryption key, drop"
 dev_langs:
   - "TSQL"
-ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 

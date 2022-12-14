@@ -2,8 +2,8 @@
 description: "Format JSON Output Automatically with AUTO Mode (SQL Server)"
 title: "Format JSON Output Automatically with AUTO Mode"
 ms.date: 06/03/2020
-ms.prod: sql
-ms.technology: 
+ms.service: sql
+ms.subservice: 
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON AUTO"

@@ -1,11 +1,11 @@
 ---
 description: "User Interface Reference (AccessToSQL)"
 title: "User Interface Reference (AccessToSQL) | Microsoft Docs"
-ms.prod: sql
+ms.service: sql
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reference, user interface"
@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: cpichuka 
 ms.author: cpichuka 
-manager: madhuriy
 ---
 # User Interface Reference (AccessToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access.  

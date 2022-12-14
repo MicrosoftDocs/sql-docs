@@ -1,18 +1,16 @@
 ---
 title: DTU-based purchasing model
 description: Learn about the DTU-based purchasing model for Azure SQL Database and compare compute and storage sizes based on service tiers.
-services:
-  - "sql-database"
-ms.service: sql-database
-ms.subservice: service-overview
-ms.custom:
-  - "references_regions"
-  - "azure-sql-split"
-ms.topic: conceptual
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 04/06/2022
+ms.service: sql-database
+ms.subservice: service-overview
+ms.topic: conceptual
+ms.custom:
+  - "references_regions"
+  - "azure-sql-split"
 ---
 # DTU-based purchasing model overview 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

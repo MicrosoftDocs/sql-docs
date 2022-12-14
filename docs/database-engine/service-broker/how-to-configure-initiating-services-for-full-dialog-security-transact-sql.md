@@ -1,13 +1,13 @@
 ---
-title: 'How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)'
+title: "How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)"
 description: "SQL Server uses dialog security for any conversation to a service for which a remote service binding exists in the database that hosts the initiating service.  If the database that hosts the target service contains a user that corresponds to the user that created the dialog, and the remote service binding does not specify anonymous security, then the dialog uses full security."
-ms.prod: sql
-ms.technology: configuration
-ms.topic: conceptual
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray, maghan
 ms.date: "03/30/2022"
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # How to: Configure Initiating Services for Full Dialog Security (Transact-SQL)

@@ -3,10 +3,9 @@ description: "Call SQLColumns on a Table with Sparse Columns"
 title: "Call SQLColumns on a Table with Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: native-client
+ms.subservice: native-client
 yms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c

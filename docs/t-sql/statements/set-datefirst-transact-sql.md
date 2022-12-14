@@ -4,9 +4,8 @@ description: SET DATEFIRST (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SET DATEFIRST"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "options [SQL Server], date"
 dev_langs:
   - "TSQL"
-ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFIRST (Transact-SQL)

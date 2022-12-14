@@ -3,10 +3,9 @@ title: "Monitoring (Replication) | Microsoft Docs"
 description: Learn about the monitoring tools used to track activity and status of replication in SQL Server replication topology.
 ms.custom: ""
 ms.date: "11/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: replication
+ms.subservice: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], about monitoring replication"

@@ -3,14 +3,14 @@ description: "MSSQLSERVER_9017"
 title: "MSSQLSERVER_9017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2022"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords: 
   - "9017 (Database Engine error)"
 author: pijocoder
-ms.author: mathoma
+ms.author: jopilov
 ---
 # MSSQLSERVER_9017
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -20,7 +20,7 @@ ms.author: mathoma
 | Attribute | Value |  
 | :-------- | :---- |  
 |Product Name|SQL Server|  
-|Event ID|9004|  
+|Event ID|9017|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|LOG_MANY_VLFS|  
@@ -28,7 +28,7 @@ ms.author: mathoma
   
 ## Explanation
 
-During a database startup, SQL Server detects that a database has a large number of [virtual log files](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide#virtual-log-files-vlfs) (VLFs) and logs this error message. The situations where you can encounter the error are:
+During a database startup, SQL Server detects that a database has a large number of [virtual log files](../sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs) (VLFs) and logs this error message. The situations where you can encounter the error are:
 
 - When you start an instance of SQL Server
 - Restore a database
@@ -51,7 +51,7 @@ This problem occurs when you specify small values for the FILEGROWTH parameter f
 The SQL Server Database Engine internally divides each physical log file into several virtual log files (VLFs). SQL Server 2008 R2 Service Pack 2 introduced a new message (9017) that is logged when a database starts (either because of the starting of an instance of SQL Server or because of the attaching or restoring of the database) and has more than 1,000 VLFs in SQL Server 2008 R2 or has more than 10,000 VLFS in SQL Server 2012 and later versions.
 
 >[!NOTE]
->In SQL Server 2012, although this message is logged when the database has 10,000 VLFs, the actual message that is reported in the error log incorrectly states "1000 VLF." The warning does occur after 10,000 VLFs. However, the message reports 1,000 VLFs. This issue is corrected in a later releases.
+>In SQL Server 2012, although this message is logged when the database has 10,000 VLFs, the actual message that is reported in the error log incorrectly states "1000 VLF." The warning does occur after 10,000 VLFs. However, the message reports 1,000 VLFs. This issue is corrected in later releases.
 
 ## User action
 
@@ -67,11 +67,11 @@ To resolve this problem, follow these steps:
    ORDER BY Total_VLF_count DESC
    ```
 
-   For more information, see [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql).
+   For more information, see [sys.dm_db_log_info](../system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md).
 
 1. Reduce your transaction log by using DBCC SHRINKDB/DBCC SHRINKFILE or by using SQL Server Management Studio.
 
-1. Perform a one-time increase of the transaction log file size to a large value. This one-time increase is done to avoid frequent auto growths. For more information, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file#AddOrEnlarge) 
+1. Perform a one-time increase of the transaction log file size to a large value. This one-time increase is done to avoid frequent auto growths. For more information, see [Manage the size of the transaction log file](../logs/manage-the-size-of-the-transaction-log-file.md#AddOrEnlarge).
 
 1. Increase the FILEGROWTH parameter to a larger value than what is currently configured. This should be based on the activity of your database and how frequently your log file is growing.
 

@@ -1,9 +1,8 @@
 ---
 title: "Edit SQLCMD Scripts with Query Editor"
 description: You use SQLCMD scripts when you have to process Windows System commands and Transact-SQL statements in the same script. Learn how to write and edit SQLCMD scripts using the Database Engine Query Editor. 
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [SQL Server], SQLCMD scripts"

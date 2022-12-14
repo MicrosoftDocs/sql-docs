@@ -3,9 +3,9 @@ description: "Start or Stop a Collection Set"
 title: "Start or Stop a Collection Set | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "collection sets [SQL Server], stopping"

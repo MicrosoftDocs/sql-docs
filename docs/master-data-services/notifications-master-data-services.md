@@ -3,10 +3,9 @@ description: "Notifications (Master Data Services)"
 title: Notifications
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: master-data-services
+ms.subservice: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "notifications [Master Data Services]"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "e-mail [Master Data Services]"
   - "e-mail [Master Data Services], about e-mail notifications"
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-author: chugugrace 
-ms.author: lle
+author: CordeliaGrey
+ms.author: jiwang6
 ---
 # Notifications (Master Data Services)
 

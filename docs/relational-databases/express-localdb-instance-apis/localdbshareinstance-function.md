@@ -3,10 +3,9 @@ description: "LocalDBShareInstance Function"
 title: "LocalDBShareInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: "reference"
 apiname: 
   - "LocalDBShareInstance"
@@ -21,7 +20,7 @@ ms.author: maghan
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Shares the specified SQL Server Express LocalDB instance with other users of the computer, using the specified shared name.  
   
- **Header file:** sqlncli.h  
+ **Header file:** msoledbsql.h  
   
 ## Syntax  
   

@@ -4,9 +4,8 @@ description: GRANT (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "GRANT_TSQL"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "permissions [SQL Server], granting"
 dev_langs:
   - "TSQL"
-ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

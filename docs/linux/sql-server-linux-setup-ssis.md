@@ -6,8 +6,8 @@ ms.author: lle
 ms.reviewer: maghan
 ms.date: 01/09/2018
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.custom:
   - intro-installation
 ---
@@ -15,7 +15,7 @@ ms.custom:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Follow the steps in this article to install SQL Server Integration Services (**mssql-server-is**) on Linux. For info about the features that are supported in this release of Integration Services for Linux, see the [Release Notes](sql-server-linux-release-notes.md).
+Follow the steps in this article to install SQL Server Integration Services (**mssql-server-is**) on Linux. For info about the features that are supported in this release of Integration Services for Linux, see the [Release Notes](sql-server-linux-release-notes-2017.md).
 
 You can install SQL Server Integration Services on these platforms:
 
@@ -214,7 +214,6 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 |---|---|
 | ACCEPT_EULA | Accepts the SQL Server license terms when set to any value like "Y".|
 | SSIS_PID | Sets the SQL Server edition or product key. Here are the possible values:<ul><li>Evaluation</li><li>Developer</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>A product key</li></ul>If you specify a product key, it must be in the form *#####*-*#####*-*#####*-*#####*-*#####*, where *#* is a letter or a digit.  |
-| | |
 
 ## Next steps
 

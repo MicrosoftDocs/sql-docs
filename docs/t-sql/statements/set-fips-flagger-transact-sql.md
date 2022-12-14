@@ -4,9 +4,8 @@ description: SET FIPS_FLAGGER (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/29/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "FIPS_FLAGGER"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "FIPS_FLAGGER option"
 dev_langs:
   - "TSQL"
-ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 ---
 # SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

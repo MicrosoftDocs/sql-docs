@@ -3,9 +3,9 @@ description: "Connecting to SQL Server (SybaseToSQL)"
 title: "Connecting to SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2020"
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: ssma
+ms.subservice: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to SQL Server"

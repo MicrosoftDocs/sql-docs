@@ -2,8 +2,8 @@
 title: "Access external data: Hadoop - PolyBase"
 description: The article uses PolyBase on a SQL Server instance with Hadoop. PolyBase is suited for ad-hoc queries of external tables and data import/export.
 ms.date: 06/10/2021
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
@@ -42,7 +42,7 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 

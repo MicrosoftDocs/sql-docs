@@ -2,16 +2,13 @@
 title: The link feature best practices
 titleSuffix: Azure SQL Managed Instance
 description: Learn about best practices when using the link feature for Azure SQL Managed Instance.
-services: sql-database
-ms.service: sql-managed-instance
-ms.subservice: data-movement
-ms.custom: 
-ms.devlang: 
-ms.topic: guide
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, danil
-ms.date: 03/28/2022
+ms.date: 11/16/2022
+ms.service: sql-managed-instance
+ms.subservice: data-movement
+ms.topic: how-to
 ---
 # Best practices with link feature for Azure SQL Managed Instance (preview)
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -19,7 +16,7 @@ ms.date: 03/28/2022
 This article outlines best practices when using the link feature for Azure SQL Managed Instance. The link feature for Azure SQL Managed Instance connects your SQL Servers hosted anywhere to SQL Managed Instance, providing near real-time data replication to the cloud. 
 
 > [!NOTE]
-> The link feature for Azure SQL Managed Instance is currently in preview. 
+> Some functionality of the link is generally available, while some is currently in preview. Review the [requirements](managed-instance-link-feature-overview.md#requirements) to learn more. 
 
 ## Take log backups regularly
 

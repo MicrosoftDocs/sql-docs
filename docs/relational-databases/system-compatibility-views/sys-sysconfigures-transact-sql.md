@@ -3,10 +3,9 @@ description: "sys.sysconfigures (Transact-SQL)"
 title: "sys.sysconfigures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
   - "sys.sysconfigures"

@@ -4,9 +4,8 @@ description: DROP WORKLOAD GROUP (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 01/10/2020
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_WORKLOAD_GROUP_TSQL"
@@ -19,7 +18,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[select-product](../../includes/select-product.md)]
+[!INCLUDE [select-product](../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 

@@ -4,9 +4,8 @@ description: DROP ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/11/2017"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP ROLE"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "dropping roles"
 dev_langs:
   - "TSQL"
-ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP ROLE (Transact-SQL)

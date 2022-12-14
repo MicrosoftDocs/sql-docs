@@ -4,9 +4,8 @@ description: SET ARITHABORT (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ARITHABORT_TSQL"
@@ -24,7 +23,6 @@ helpviewer_keywords:
   - "stopping queries"
 dev_langs:
   - "TSQL"
-ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ARITHABORT (Transact-SQL)

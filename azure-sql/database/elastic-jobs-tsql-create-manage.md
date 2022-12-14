@@ -1,20 +1,18 @@
 ---
 title: Create and manage Elastic Database Jobs (preview) with Transact-SQL (T-SQL)
 description: Run scripts across many databases with Elastic Database Job agent using Transact-SQL (T-SQL).
-services:
-  - "sql-database"
+author: srinia
+ms.author: srinia
+ms.reviewer: wiassaf, mathoma
+ms.date: 05/03/2022
 ms.service: sql-database
 ms.subservice: elastic-jobs
+ms.topic: how-to
 ms.custom:
   - "seo-lt-2019"
   - "sqldbrb=1"
 dev_langs:
   - "TSQL"
-ms.topic: how-to
-author: srinia
-ms.author: srinia
-ms.reviewer: wiassaf, mathoma
-ms.date: 05/03/2022
 ---
 # Use Transact-SQL (T-SQL) to create and manage Elastic Database Jobs (preview)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -678,7 +676,7 @@ If not null, the name of the table that the command's first result set will be w
 Output parameter that will be assigned the new job version number. job_version is int.
 
 [ **\@max_parallelism =** ] max_parallelism OUTPUT  
-The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or is inside a server that is included in the target group. max_parallelism is int.
+The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or to elastic pools inside a server that is included in the target group. max_parallelism is int.
 
 #### Return Code Values
 
@@ -803,7 +801,7 @@ If not null, the name of the table that the command's first result set will be w
 Output parameter that will be assigned the new job version number. job_version is int.
 
 [ **\@max_parallelism =** ] max_parallelism OUTPUT  
-The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or is inside a server that is included in the target group. To reset the value of max_parallelism back to null, set this parameter's value to -1. max_parallelism is int.
+The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or to elastic pools inside a server that is included in the target group. To reset the value of max_parallelism back to null, set this parameter's value to -1. max_parallelism is int.
 
 #### Return Code Values
 

@@ -63,6 +63,9 @@
       ],
       "brand": "azure",
       "toc_preview": true,
+      "manager": {
+        "**/*.md": "jroth"
+      },
       "titleSuffix": "Azure SQL",
       "recommendations": true,
       "_op_documentIdPathDepotMapping": {

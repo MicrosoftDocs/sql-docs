@@ -1,17 +1,14 @@
 ---
-title: "Take an Availability Group Offline (SQL Server) | Microsoft Docs"
+title: "Take an Availability Group Offline (SQL Server)"
 description: Learn how to take an Always On availability group from the ONLINE state to the OFFLINE state by using Transact-SQL in SQL Server.
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: availability-groups
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Availability Groups [SQL Server], take offline"
-ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "05/17/2016"
+ms.service: sql
+ms.subservice: availability-groups
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Availability Groups [SQL Server], take offline"
 ---
 # Take an Availability Group Offline (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

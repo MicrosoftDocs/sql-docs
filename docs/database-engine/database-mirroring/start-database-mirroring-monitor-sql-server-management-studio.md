@@ -1,20 +1,17 @@
 ---
 title: "Start Database Mirroring Monitor (SSMS)"
-description: Describes how to start the Database Mirroring Monitor within the SQL Server Management Studio (SSMS) GUI. 
-ms.custom: seo-lt-2019
+description: Describes how to start the Database Mirroring Monitor within the SQL Server Management Studio (SSMS) GUI.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: high-availability
-ms.reviewer: ""
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: seo-lt-2019
+helpviewer_keywords:
   - "monitoring database mirroring [SQL Server]"
   - "Database Mirroring Monitor [SQL Server], starting"
   - "database mirroring [SQL Server], monitoring"
-ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Start Database Mirroring Monitor (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

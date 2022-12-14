@@ -4,9 +4,8 @@ description: CREATE SYMMETRIC KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/11/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE SYMMETRIC KEY"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)

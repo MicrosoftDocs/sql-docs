@@ -4,9 +4,8 @@ description: SETUSER (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SETUSER_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "user impersonation [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 ---
 # SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

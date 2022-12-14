@@ -4,9 +4,8 @@ description: REVOKE Symmetric Key Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "symmetric keys [SQL Server], permissions"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "REVOKE statement, symmetric keys"
 dev_langs:
   - "TSQL"
-ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 ---
 # REVOKE Symmetric Key Permissions (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

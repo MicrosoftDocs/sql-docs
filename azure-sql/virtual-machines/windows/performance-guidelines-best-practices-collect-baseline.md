@@ -1,20 +1,14 @@
 ---
 title: "Collect baseline: Performance best practices & guidelines"
 description: Provides steps to collect a performance baseline as guidelines to optimize the performance of your SQL Server on Azure Virtual Machine (VM).
-services: virtual-machines-windows
-documentationcenter: na
 author: bluefooted
-editor: ''
-tags: azure-service-management
-ms.assetid: a0c85092-2113-4982-b73a-4e80160bac36
+ms.author: pamela
+ms.reviewer: mathoma
+ms.date: 03/25/2021
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 03/25/2021
-ms.author: pamela
-ms.reviewer: mathoma
+tags: azure-service-management
 ---
 # Collect baseline: Performance best practices for SQL Server on Azure VM
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

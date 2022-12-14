@@ -3,13 +3,10 @@ title: "CERT_ID (Transact-SQL)"
 description: "CERT_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "CERT_ID"
   - "CERT_ID_TSQL"
@@ -31,7 +28,7 @@ This function returns the ID value of a certificate.
 ## Syntax  
   
 ```syntaxsql
-Cert_ID ( 'cert_name' )  
+CERT_ID ( 'cert_name' )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

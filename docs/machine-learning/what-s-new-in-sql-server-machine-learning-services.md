@@ -10,8 +10,8 @@ ms.custom:
 - sqlseattle
 - intro-whats-new
 - event-tier1-build-2022
-ms.prod: sql
-ms.technology: machine-learning-services
+ms.service: sql
+ms.subservice: machine-learning-services
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # What's new in SQL Server Machine Learning Services?
@@ -26,7 +26,7 @@ This articles describes what new capabilities and features are included in each 
 
 ## New in SQL Server 2022
 
- Beginning with SQL Server 2022, runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
+ Beginning with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], runtimes for R, Python, and Java, are no longer installed with SQL Setup. Instead, install any desired custom runtime(s) and packages. For more information, see [Install SQL Server 2022 Machine Learning Services (Python and R) on Windows](install/sql-machine-learning-services-windows-install-sql-2022.md) or [Install SQL Server Machine Learning Services (Python and R) on Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 ::: moniker-end
 

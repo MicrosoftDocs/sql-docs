@@ -1,11 +1,11 @@
 ---
 title: Auto-failover group overview
-description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for an overview of the auto-failover group feature. 
-ms.topic: include
+description: De-duplicating content between SQL Database and SQL Managed Instance, in this case using an include for an overview of the auto-failover group feature.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: kendralittle, emlisa, mlandzic
 ms.date: 03/01/2022
+ms.topic: include
 ---
 
 The auto-failover groups feature allows you to manage the replication and failover of a group of databases on a server or all user databases in a managed instance to another Azure region. It is a declarative abstraction on top of the [active geo-replication](../database/active-geo-replication-overview.md) feature, designed to simplify deployment and management of geo-replicated databases at scale. 

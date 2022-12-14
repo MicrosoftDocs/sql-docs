@@ -1,18 +1,14 @@
 ---
 title: SQL Server IaaS Agent extension for Linux
-description: This article describes how the SQL Server IaaS Agent extension helps automate management specific administration tasks of SQL Server on Linux Azure VMs. 
-services: virtual-machines-windows
-documentationcenter: ''
+description: This article describes how the SQL Server IaaS Agent extension helps automate management specific administration tasks of SQL Server on Linux Azure VMs.
 author: adbadram
-tags: azure-resource-manager
+ms.author: adbadram
+ms.reviewer: mathoma
+ms.date: 10/26/2021
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.tgt_pltfrm: vm-windows-sql-server
-ms.workload: iaas-sql-server
-ms.date: 10/26/2021 
-ms.author: adbadram
-ms.reviewer: mathoma
+tags: azure-resource-manager
 ---
 # SQL Server IaaS Agent extension for Linux
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]

@@ -4,9 +4,8 @@ description: DROP XML SCHEMA COLLECTION (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/25/2015"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP XML SCHEMA COLLECTION"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "DROP XML SCHEMA COLLECTION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

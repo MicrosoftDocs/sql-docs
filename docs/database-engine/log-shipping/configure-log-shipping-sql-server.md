@@ -1,18 +1,15 @@
 ---
-title: "Configure Log Shipping (SQL Server) | Microsoft Docs"
+title: "Configure Log Shipping (SQL Server)"
 description: Learn how to configure log shipping by using SQL Server Management Studio or Transact-SQL in SQL Server.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: log-shipping
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "log shipping [SQL Server], enabling"
-  - "log shipping [SQL Server], configuring"
-ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: log-shipping
+ms.topic: conceptual
+helpviewer_keywords:
+  - "log shipping [SQL Server], enabling"
+  - "log shipping [SQL Server], configuring"
 ---
 # Configure Log Shipping (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

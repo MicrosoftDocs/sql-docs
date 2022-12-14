@@ -1,13 +1,12 @@
 ---
-title: "Connection libraries for Microsoft SQL Database | Microsoft Docs"
+title: "Connection libraries for Microsoft SQL Database"
 description: "Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
 author: David-Engel
-ms.prod: sql
-ms.technology: connectivity
-ms.custom: ""
-ms.topic: article
-ms.date: 03/06/2020
 ms.author: v-davidengel
+ms.date: 03/06/2020
+ms.service: sql
+ms.subservice: connectivity
+ms.topic: article
 ---
 # Connection modules for Microsoft SQL Database
 
@@ -38,7 +37,6 @@ The present article devotes separate sections to these two kinds of connection d
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, install instructions](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Download ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby driver, install instructions](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
-| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -54,7 +52,6 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | Node.js | [Sequelize ORM](https://sequelize.org/)<br/>[Prisma](https://www.prisma.io/) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 

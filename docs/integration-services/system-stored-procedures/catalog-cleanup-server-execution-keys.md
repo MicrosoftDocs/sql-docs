@@ -3,10 +3,9 @@ description: "catalog.cleanup_server_execution_keys"
 title: "catalog.cleanup_server_execution_keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: integration-services
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace

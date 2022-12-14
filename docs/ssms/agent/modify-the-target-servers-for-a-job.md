@@ -1,9 +1,8 @@
 ---
 description: "Modify the Target Servers for a Job"
 title: "Modify the Target Servers for a Job"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying target servers"

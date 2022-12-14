@@ -2,9 +2,9 @@
 description: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
 title: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
 ms.date: 06/03/2020
-ms.prod: sql
+ms.service: sql
 ms.reviewer: ""
-ms.technology: supportability
+ms.subservice: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "T-SQL Query collector type"

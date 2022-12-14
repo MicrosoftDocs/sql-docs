@@ -4,9 +4,8 @@ description: GRANT System Object Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "encryption [SQL Server], system objects"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "GRANT statement, system objects"
 dev_langs:
   - "TSQL"
-ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 ---
 # GRANT System Object Permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -3,10 +3,9 @@ description: "Constructing SQL Statements"
 title: "Constructing SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
+ms.service: sql
 ms.reviewer: ""
-ms.technology: connectivity
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 author: David-Engel

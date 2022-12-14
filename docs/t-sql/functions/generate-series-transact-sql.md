@@ -5,11 +5,10 @@ author: kendalvandyke
 ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 07/28/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, sql-edge, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "event-tier1-build-2022"
+ms.custom: event-tier1-build-2022
 f1_keywords:
   - "GENERATE_SERIES"
   - "GENERATE_SERIES_TSQL"
@@ -21,7 +20,7 @@ dev_langs:
 ---
 # GENERATE_SERIES (Transact-SQL)
 
-[!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022.md)]
+[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user.
 

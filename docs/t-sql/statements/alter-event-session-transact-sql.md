@@ -1,12 +1,11 @@
 ---
 title: "ALTER EVENT SESSION (Transact-SQL)"
 description: ALTER EVENT SESSION (Transact-SQL)
-author: WilliamDAssafMSFT
-ms.author: wiassaf
+author: markingmyname
+ms.author: maghan
 ms.date: "08/07/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER EVENT SESSION"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "ALTER EVENT SESSION statement"
 dev_langs:
   - "TSQL"
-ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 ---
 # ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -2,10 +2,9 @@
 description: "Query Spatial Data for Nearest Neighbor"
 title: "Query Spatial Data for Nearest Neighbor | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.reviewer: ""
-ms.technology: 
+ms.subservice: 
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA

@@ -2,16 +2,13 @@
 title: Types of query performance issues
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance & SQL Server
 description: Learn about types of query performance issues, and how to identify and resolve queries with these issues.
-services: sql-database
-ms.service: sql-database
-ms.subservice: performance
-ms.custom: 
-ms.devlang: 
-ms.topic: troubleshooting
 author: NikaKinska
 ms.author: nnikolic
 ms.reviewer: mathoma, wiassaf
 ms.date: 07/29/2022
+ms.service: sql-database
+ms.subservice: performance
+ms.topic: troubleshooting
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 

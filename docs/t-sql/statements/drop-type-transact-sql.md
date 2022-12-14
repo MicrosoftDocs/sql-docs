@@ -4,9 +4,8 @@ description: DROP TYPE (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP TYPE"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "DROP TYPE statement"
 dev_langs:
   - "TSQL"
-ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 ---
 # DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

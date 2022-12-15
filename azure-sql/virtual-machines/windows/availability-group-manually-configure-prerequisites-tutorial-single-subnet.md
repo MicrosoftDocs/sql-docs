@@ -13,7 +13,7 @@ editor: monicar
 tags: azure-service-management
 ---
 
-# Tutorial: Prerequisites for creating SQL Server Always On availability groups on Azure virtual machines
+# Tutorial: Prerequisites for single-subnet availability groups - SQL Server on Azure VMs
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 

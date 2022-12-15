@@ -22,7 +22,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
-- **SSDT side by side issue**. Method not found: 'SqlWorkbench.Interfaces.IAzureCloudConfiguration Microsoft.SqlServer.Management.UserSettings.AzureCloud.GetAzureCloudConfiguration(System.String, Boolean)'. Work around: download the VS version after VS2022 17.5 preview 2.
+- **SSDT side by side issue**. Method not found: 'SqlWorkbench.Interfaces.IAzureCloudConfiguration Microsoft.SqlServer.Management.UserSettings.AzureCloud.GetAzureCloudConfiguration(System.String, Boolean)'. Workaround: download the VS version after VS2022 17.5 preview 2.
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 
 ## Known issues

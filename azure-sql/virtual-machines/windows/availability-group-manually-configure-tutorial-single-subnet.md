@@ -19,7 +19,7 @@ tags: azure-service-management
 > [!TIP]
 > Eliminate the need for an Azure load balancer for your Always On availability group by creating your SQL Server virtual machines (VMs) in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
 
-This tutorial shows how to create a SQL Server Always On availability group on Azure VMs within a single subnet. The complete tutorial creates an availability group with a database replica on two SQL Server instances.
+This tutorial shows how to create an Always On availability group for SQL Server on Azure VMs within a single subnet. The complete tutorial creates an availability group with a database replica on two SQL Server instances.
 
 This article manually configures the availability group environment. It's also possible to automate the steps by using the [Azure portal](availability-group-azure-portal-configure.md), [PowerShell or the Azure CLI](availability-group-az-commandline-configure.md), or [Azure quickstart templates](availability-group-quickstart-template-configure.md).
 

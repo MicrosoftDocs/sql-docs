@@ -41,7 +41,7 @@ SSMS 19 Preview 4 is the latest preview release of SSMS. If you need an earlier 
 | New Item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.40.1 |
-| General SSMS | Added a settings page in Tools | Output to control what window channels appear in the Output window. |
+| General SSMS | Added a settings page in **Tools > Output** to control what window channels appear in the Output window. |
 | Ledger | Added support for import/export of a bacpac or dacpac created from a database with LEDGER = ON. |
 | Maintenance Plan | The Maintenance Plan node is now available in Object Explorer. |
 | Security | Introduced support for more AAD authentication types. |

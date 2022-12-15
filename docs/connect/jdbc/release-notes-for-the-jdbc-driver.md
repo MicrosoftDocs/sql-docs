@@ -39,11 +39,12 @@ Released: December 15, 2022
 
 Fixed issues in 11.2.2:
 
-- Fix connecting to the wrong SQLServer host 
-- Fixed Idle Connection recovery so that unprocessedResponseCount isn't over decremented and clear cache on recovery 
+- Fixed potential connect to the wrong SQLServer host when multi-threading
+- Fixed Idle Connection Resiliency bug
+- Clear prepared statement handle cache on idle reconnect
 - Fixed callable statement index out of bounds error 
 - Fixed check for DONE token when fetching result sets 
-- Added locks to encrypt/decrypt in truststore password obfuscation 
+- Fixed intermittent error: "Internal error during decryption: Tag mismatch!"
 
 Release number: 11.2.1  
 Released: September 8, 2022

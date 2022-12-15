@@ -31,7 +31,7 @@ The tutorial assumes that you have a basic understanding of SQL Server Always On
 
 Before you begin the procedures in this tutorial, you need to complete [prerequisites for creating Always On availability groups in Azure virtual machines](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). If you completed these prerequisites already, you can jump to [Create the cluster](#create-the-cluster).
 
-The following table summarizes the prerequisites that you need to complete:
+The following table summarizes the prerequisites that you need before you can complete this tutorial:
 
 | Requirement |Description |
 |----- |----- |----- |

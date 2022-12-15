@@ -1,4 +1,4 @@
 INSERT INTO Archive.dbo.Records
-    VALUES (newid (), 2, 
-      CAST ('' as varbinary(max)));
+    VALUES (NEWID(), 2, 
+      CAST ('' AS VARBINARY(MAX)));
 GO

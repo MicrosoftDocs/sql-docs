@@ -13,7 +13,7 @@ editor: monicar
 tags: azure-service-management
 ---
 
-# Configure a SQL Server Always On availability group across Azure regions
+# Configure an availability group across Azure regions - SQL Server on Azure VMs
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 

@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
 -   Database mirroring  
   
--   SOAP (support for SOAP endpoints is present in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] and earlier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions)  
+-   SOAP (support for SOAP endpoints is present in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)] and earlier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions)  
   
 -   Service Broker  
   

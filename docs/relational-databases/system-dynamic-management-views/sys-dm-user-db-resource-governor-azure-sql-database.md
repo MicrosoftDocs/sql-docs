@@ -117,4 +117,4 @@ ORDER BY database_name;
 - [Transaction log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Single database DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [Single database vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
-- [Elastic pool vCore resource limits](/azure/sql-database/resource-limits-vcore-elastic-pools)
+- [Elastic pool vCore resource limits](/azure/azure-sql/database/resource-limits-vcore-elastic-pools)

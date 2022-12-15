@@ -15,12 +15,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Integrated Kerberos Authentication (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This sample shows how to get mutual Kerberos authentication by using OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  
+  This sample shows how to get mutual Kerberos authentication by using OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. This sample works with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later.  
   
  For more information about SPNs and Kerberos authentication, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## Example  
- You must specify a server. In the .cpp file, change "MyServer" to a machine name that has an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later).  
+ You must specify a server. In the .cpp file, change "MyServer" to a machine name that has an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] (or later).  
   
  You will also have to specify a customer-provided SPN. In the .cpp file, change "CPSPN" to a customer-provided SPN.  
   

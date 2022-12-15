@@ -19,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 # SETUSER (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Allows a member of the **sysadmin** fixed server role or the owner of a database to impersonate another user.  
   

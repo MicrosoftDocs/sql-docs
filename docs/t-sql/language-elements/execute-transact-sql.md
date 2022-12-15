@@ -277,7 +277,7 @@ Execute a character string
  A module that has been created in another database can be executed if the user running the module owns the module or has the appropriate permission to execute it in that database. A module can be executed on another server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the user running the module has the appropriate permission to use that server (remote access) and to execute the module in that database. If a server name is specified but no database name is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] looks for the module in the default database of the user.  
   
  ;*number*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Is an optional integer that is used to group procedures of the same name. This parameter is not used for extended stored procedures.  
   
@@ -336,7 +336,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Specifies the context in which the statement is executed.  
   
  LOGIN  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies the context to be impersonated is a login. The scope of impersonation is the server.  
   
@@ -360,7 +360,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Indicates parameters for which values are supplied in the \<arg-list> of pass-through commands that are used in an EXEC('...', \<arg-list>) AT \<linkedsrv> statement.  
   
  AT *linked_server_name*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies that *command_string* is executed against *linked_server_name* and results, if any, are returned to the client. *linked_server_name* must refer to an existing linked server definition in the local server. Linked servers are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -533,7 +533,7 @@ GO
 ### D. Using EXECUTE with a remote stored procedure  
  The following example executes the `uspGetEmployeeManagers` stored procedure on the remote server `SQLSERVER1` and stores the return status that indicates success or failure in `@retstat`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 DECLARE @retstat INT;  
@@ -591,7 +591,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### G. Using EXECUTE with AT linked_server_name  
  The following example passes a command string to a remote server. It creates a linked server `SeattleSales` that points to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and executes a DDL statement (`CREATE TABLE`) against that linked server.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -623,7 +623,7 @@ GO
 ### J. Using EXECUTE to query an Oracle database on a linked server  
  The following example executes several `SELECT` statements at the remote Oracle server. The example begins by adding the Oracle server as a linked server and creating linked server login.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 -- Setup the linked server.  
@@ -666,7 +666,7 @@ GO
 ### L. Using a parameter with EXECUTE and AT linked_server_name  
  The following example passes a command string to a remote server by using a question mark (`?`) placeholder for a parameter. The example creates a linked server `SeattleSales` that points to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and executes a `SELECT` statement against that linked server. The `SELECT` statement uses the question mark as a place holder for the `ProductID` parameter (`952`), which is provided after the statement.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 -- Setup the linked server.  

@@ -121,7 +121,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
             N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
-            N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
+            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  

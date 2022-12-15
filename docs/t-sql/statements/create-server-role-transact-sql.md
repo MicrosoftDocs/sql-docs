@@ -23,7 +23,7 @@ dev_langs:
   - "TSQL"
 ---
 # CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new user-defined server role.  
   

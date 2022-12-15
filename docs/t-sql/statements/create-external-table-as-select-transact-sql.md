@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 description: "CREATE EXTERNAL TABLE AS SELECT creates an external table and then exports, in parallel, the results of a T-SQL SELECT statement."
 author: markingmyname
 ms.author: maghan
-ms.date: 08/26/2022
+ms.date: 12/13/2022
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "PolyBase, create table as select"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest>=sql-server-ver16||>=sql-server-linux-ver16"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/sqlserver2022-asa-pdw](../../includes/applies-to-version/sqlserver2022-asa-pdw.md)]
@@ -168,7 +168,7 @@ You cannot specify any other column options such as data types, collation, or nu
 
  The CREATE EXTERNAL TABLE AS SELECT statement always creates a nonpartitioned table, even if the source table is partitioned.
 
- For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the option `allow polybase export` must be enabled on `sp_configure`. For more information, see [Set `allow polybase export` configuration option](../../database-engine/configure-windows/allow-polybase-export.md).
+ For [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the option `allow polybase export` must be enabled by using `sp_configure`. For more information, see [Set `allow polybase export` configuration option](../../database-engine/configure-windows/allow-polybase-export.md).
 
  For query plans in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssaps-md](../../includes/ssaps-md.md)], created with EXPLAIN, the database uses these query plan operations for external tables: External shuffle move, External broadcast move, External partition move.
 
@@ -289,7 +289,7 @@ OPTION ( HASH JOIN );
 ### D. Use CREATE EXTERNAL TABLE AS SELECT exporting data as parquet
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
- The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database.
+ The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database. Note that the [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 The result of the SELECT statement will be saved on S3-compatible object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
 
@@ -324,7 +324,7 @@ WITH
 ### E. Use CREATE EXTERNAL TABLE AS SELECT from delta table to parquet
 **Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
-The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command.
+The following example creates a new external table named `Delta_to_Parquet`, that uses Delta Table type of data located at an S3-compatible object storage named `s3_delta`, and writes the result in another data source named `s3_parquet` as a parquet file. For that the example makes uses of OPENROWSET command. Note that the [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 ```sql
 -- External File Format for PARQUET

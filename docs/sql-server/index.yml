@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 12/02/2021
+  ms.date: 12/14/2022
   ms.custom:
   - event-tier1-build-2022
   - event-tier1-build-2022
@@ -21,16 +21,18 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
+      - text: Azure SQL 
+        url: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview
       - text: Azure SQL Database
-        url: /azure/sql-database/sql-database-single-database
+        url: /azure/azure-sql/database/sql-database-paas-overview
       - text: Azure SQL Managed Instance
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
+      - text: SQL Server on Azure Windows VMs
+        url:  /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
+      - text: SQL Server on Azure Linux VMs
+        url: /azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview
       - text: Azure Synapse Analytics
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-      - text: SQL Server on a Windows VM
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-      - text: SQL Server on a Linux VM
-        url: ../linux/quickstart-install-connect-clouds.md
+        url: /azure/synapse-analytics/overview-what-is
       - text: Azure Database Migration Service
         url: /azure/dms/dms-overview
 
@@ -58,8 +60,6 @@ landingContent:
         url: ./what-s-new-in-sql-server-2022.md
       - text: SQL Server 2019 
         url: ./what-s-new-in-sql-server-2019.md
-      - text: SQL Server Big Data Clusters
-        url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio
         url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: SQL Server on Linux

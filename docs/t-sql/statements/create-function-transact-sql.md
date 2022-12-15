@@ -334,7 +334,7 @@ ORDER (\<order_clause>)
 Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.
 
 EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later)
 
 Specifies the assembly and method to which the created function name shall refer.
 
@@ -360,7 +360,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
 Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.
 
 *\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] )   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
 
 Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.
 
@@ -383,7 +383,7 @@ EXECUTE AS is required for natively compiled, scalar user-defined functions.
 Specifies that the function will have one or more of the following options.
 
 ENCRYPTION   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later)
 
 Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -764,7 +764,7 @@ GO
 
 The example creates CLR function `len_s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later)
 
 ```sql
 DECLARE @SamplesPath nvarchar(1024);

@@ -16,7 +16,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP BROKER PRIORITY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes a conversation priority from the current database.  
   

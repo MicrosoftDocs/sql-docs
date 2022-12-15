@@ -67,7 +67,7 @@ dev_langs:
 
 ## Arguments
  PAD_INDEX **=** { ON | **OFF** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies index padding. The default is OFF.  
   
@@ -78,7 +78,7 @@ dev_langs:
  The intermediate-level pages are filled to near capacity, leaving enough space for at least one row of the maximum size the index can have, given the set of keys on the intermediate pages.  
   
  FILLFACTOR **=**_fillfactor_  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or alteration. The value specified must be an integer value from 1 to 100. The default is 0.  
   
@@ -110,7 +110,7 @@ dev_langs:
  Automatic statistics updating are enabled.  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies whether row locks are allowed. The default is ON.  
   
@@ -121,7 +121,7 @@ dev_langs:
  Row locks aren't used.  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies whether page locks are allowed. The default is ON.  
   
@@ -138,7 +138,7 @@ dev_langs:
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
  
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies whether to store sort results in **tempdb**. The default is OFF.  
   
@@ -149,7 +149,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
  The intermediate sort results are stored in the same database as the index.  
   
  ONLINE **=** { ON | **OFF** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF. REBUILD can be performed as an ONLINE operation.  
   
@@ -180,7 +180,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
  For more information on enabling and using resumable `ALTER TABLE ADD CONSTRAINT` operations, see [Resumable add table constraints](../../relational-databases/security/resumable-add-table-constraints.md).
 
  MAXDOP **=**_max_degree_of_parallelism_  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Overrides the **max degree of parallelism** configuration option during the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
@@ -196,7 +196,7 @@ Specifies whether or not to optimize for last-page insert contention. The defaul
 >  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  DATA_COMPRESSION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
   
@@ -233,7 +233,7 @@ OFF
 Columns using the **xml** data type aren't compressed.
   
 ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the table isn't partitioned, the ON PARTITIONS argument generates an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned table.  
 

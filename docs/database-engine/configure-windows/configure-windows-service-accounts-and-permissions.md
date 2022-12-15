@@ -509,7 +509,7 @@ This section describes the changes made during upgrade from a previous version o
   - The SQL Server resources remain provisioned to the local SQL Server Windows groups.
   - The local Windows group for services is renamed from `SQLServer2005MSSQLUser$<computer_name>$<instance_name>` to `SQLServerMSSQLUser$<computer_name>$<instance_name>`. File locations for migrated databases has Access Control Entries (ACE) for the local Windows groups. The file locations for new databases has ACEs for the per-service SID.
 
-- During upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL Server Setup preserves the ACEs for the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per-service SID.
+- During upgrade from [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], SQL Server Setup preserves the ACEs for the [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] per-service SID.
 - For a SQL Server failover cluster instance, the ACE for the domain account configured for the service are retained.
 
 ## Appendix

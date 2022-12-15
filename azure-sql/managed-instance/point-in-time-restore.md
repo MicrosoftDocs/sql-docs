@@ -50,7 +50,7 @@ These limitations apply to point-in-time restore in SQL Managed Instance:
 
 - Limitations in point-in-time restore depend on whether you're restoring your database to a managed instance in the same subscription or to a managed instance in a different subscription.
 
-- If you enable [service endpoint policies](/service-endpoint-policies-configure.md) for your managed instance, placing a service endpoint policy on a subnet prevents point-in-time restore from a managed instance that's in a different subnet.
+- When [service endpoint policies](service-endpoint-policies-configure.md) are enabled on Azure SQL Managed Instance, placing a service endpoint policy on a subnet prevents point-in-time restores from instances in different subnets.
 
 > [!WARNING]
 > Be aware of the storage size of your managed instance. Depending on the size of the data to be restored, you might run out of storage for your managed instance. If you don't have enough storage space in your managed instance for the restored data, use a different approach.

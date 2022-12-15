@@ -51,7 +51,7 @@ Returns the minimum database compatibility level that recognizes the **geometry*
  ```  
   
 ### B. Testing LineString type for compatibility with compatibility level 100  
- The following example tests a `LineString` instance for compatibility with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
+ The following example tests a `LineString` instance for compatibility with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]:  
   
 ```sql
  DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)'; 

@@ -76,7 +76,7 @@ Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], use the foll
 > NUMA node in the above table refers to soft-NUMA nodes automatically created by [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and higher versions, or hardware-based NUMA nodes if soft-NUMA has been disabled.
 > Use these same guidelines when you set the max degree of parallelism option for Resource Governor workload groups. For more information, see [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
-From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
+From [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the `max degree of parallelism` server configuration value:
 
 |Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|

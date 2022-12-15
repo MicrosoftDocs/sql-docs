@@ -45,7 +45,7 @@ ms.custom: "seo-lt-2019"
          The alternatives are as follows:  
   
          **Import**  
-         Full-text catalogs are imported. Typically, import is significantly faster than rebuild. For example, when using only one CPU, import runs about 10 times faster than rebuild. However, an imported full-text catalog does not use the new and enhanced word breakers introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], so you might want to rebuild your full-text catalogs eventually.  
+         Full-text catalogs are imported. Typically, import is significantly faster than rebuild. For example, when using only one CPU, import runs about 10 times faster than rebuild. However, an imported full-text catalog does not use the new and enhanced word breakers introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], so you might want to rebuild your full-text catalogs eventually.  
   
         > [!NOTE]  
         >  Rebuild can run in multi-threaded mode, and if more than 10 CPUs are available, rebuild might run faster than import if you allow rebuild to use all of the CPUs.  

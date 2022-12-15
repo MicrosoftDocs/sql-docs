@@ -25,7 +25,7 @@ Copy and paste this sample of an XML input file that specifies a user-specified 
   
 ```  
 <?xml version="1.0" encoding="utf-16" ?>  
-<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
   <DTAInput>  
     <Server>  
       <Name>MyServerName</Name>  

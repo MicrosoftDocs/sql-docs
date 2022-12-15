@@ -13,7 +13,7 @@ ms.topic: "reference"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This sample works with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] or later. This sample does the following:  
+  This sample works with [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions. This sample does the following:  
   
 -   Creates table-valued parameters by using dynamic discovery though IOpenRowset::OpenRowset.  
   

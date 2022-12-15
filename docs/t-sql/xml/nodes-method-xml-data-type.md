@@ -218,7 +218,7 @@ Note the following:
   
 - The `nodes()` method is applied to the Instructions column and returns a rowset, `T (C)`. This rowset contains logical copies of the original manufacturing instructions document with `/root/Location` as the context item.  
   
-- CROSS APPLY applies `nodes()` to each row in the `Instructions` table and returns only the rows that produce a result set.  
+- CROSS APPLY applies `nodes()` to each row in the `ProductModel` table and returns only the rows that produce a result set.  
   
     ```sql  
     SELECT C.query('.') as result  

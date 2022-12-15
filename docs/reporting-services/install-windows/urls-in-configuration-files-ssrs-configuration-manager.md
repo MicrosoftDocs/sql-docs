@@ -41,7 +41,7 @@ ms.author: maggies
 -   **ReportServerExternalUrl** (used by Web Parts)  
   
 > [!NOTE]  
->  Previous versions of Reporting Services included the **ReportServerVirtualDirectory** element. This value is obsolete in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. If you upgraded an existing installation and are using a configuration file that contains this setting, the report server no longer reads this value.  
+>  Previous versions of Reporting Services included the **ReportServerVirtualDirectory** element. This value is obsolete in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions. If you upgraded an existing installation and are using a configuration file that contains this setting, the report server no longer reads this value.  
   
  The following table provides a summary of all the URLs that can be specified in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration file.  
   

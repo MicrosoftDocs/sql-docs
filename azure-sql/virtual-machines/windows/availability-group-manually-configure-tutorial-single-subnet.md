@@ -546,7 +546,7 @@ To test the connection:
 The **sqlcmd** utility automatically connects to whichever instance of SQL Server hosts the primary replica.
 
 > [!TIP]
-> Make sure that the port you specify is open on the firewall of both SQL Server instances. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or edit firewall rules](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)).
+> Make sure that the port you specify is open on the firewall of both SQL Server VMs. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or edit firewall rules](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)).
 >
 
 ## Next steps

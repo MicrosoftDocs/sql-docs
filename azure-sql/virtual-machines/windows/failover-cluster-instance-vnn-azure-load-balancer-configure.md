@@ -10,7 +10,7 @@ ms.subservice: hadr
 ms.topic: how-to
 tags: azure-resource-manager
 ---
-# Configure an Azure load balancer for an FCI VNN
+# Configure an Azure load balancer for an FCI VNN - SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]

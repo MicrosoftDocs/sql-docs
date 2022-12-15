@@ -24,7 +24,7 @@ SQL Server Management Studio provides functionality for managing every component
 
 - An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
 
-- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
+- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
 
 - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
 

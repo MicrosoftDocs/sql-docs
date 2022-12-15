@@ -377,11 +377,11 @@ A load balancer in Azure can be either *standard* or *basic*. A standard load ba
 
 1. Select **+ Add a frontend IP configuration**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the button for creating a front-end IP configuration in the Azure portal.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the button for creating a frontend IP configuration in the Azure portal.":::
 
-1. Set up the front-end IP address by using the following values:
+1. Set up the frontend IP address by using the following values:
 
-   - **Name**: Enter a name that identifies the front-end IP configuration.
+   - **Name**: Enter a name that identifies the frontend IP configuration.
    - **Virtual network**: Select the same network as the virtual machines.
    - **Subnet**: Select the same subnet as the virtual machines.
    - **Assignment**: Select **Static**.
@@ -390,15 +390,15 @@ A load balancer in Azure can be either *standard* or *basic*. A standard load ba
 
    The following image shows the **Add frontend IP configuration** dialog:
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the dialog for front-end IP configuration.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the dialog for frontend IP configuration.":::
 
 1. Select **Add**.
 
-1. Choose **Review + Create** to validate the configuration. Then select  **Create** to create the load balancer and the front-end IP address.
+1. Choose **Review + Create** to validate the configuration. Then select  **Create** to create the load balancer and the frontend IP address.
 
-To configure the load balancer, you need to create a back-end pool, create a probe, and set the load-balancing rules. 
+To configure the load balancer, you need to create a backend pool, create a probe, and set the load-balancing rules. 
 
-### Add a back-end pool for the availability group listener
+### Add a backend pool for the availability group listener
 
 1. In the Azure portal, go to your availability group. You might need to refresh the view to see the newly created load balancer.
 
@@ -406,20 +406,20 @@ To configure the load balancer, you need to create a back-end pool, create a pro
 
 1. Select the load balancer, select **Backend pools**, and then select **+Add**.
 
-1. For **Name**, provide a name for the back-end pool.
+1. For **Name**, provide a name for the backend pool.
 
 1. For **Backend Pool Configuration**, select **NIC**.
 
-1. Select **Add** to associate the back-end pool with the availability set that contains the VMs.
+1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
 
 1. Under **Virtual machine**, choose the virtual machines that will host availability group replicas. Don't include the file share witness server.
 
    >[!NOTE]
    >If both virtual machines are not specified, only connections to the primary replica will succeed.
 
-1. Select **Add** to add the virtual machines to the back-end pool.
+1. Select **Add** to add the virtual machines to the backend pool.
 
-1. Select **Save** to create the back-end pool.
+1. Select **Save** to create the backend pool.
 
 ### Set the probe
 
@@ -446,7 +446,7 @@ To configure the load balancer, you need to create a back-end pool, create a pro
    | --- | --- |---
    | **Name** | Text | **SQLAlwaysOnEndPointListener** |
    | **Frontend IP address** | Choose an address |Use the address that you created when you created the load balancer. |
-   | **Backend pool** | Choose the back-end pool |Select the back-end pool that contains the virtual machines targeted for the load balancer. |
+   | **Backend pool** | Choose the backend pool |Select the backend pool that contains the virtual machines targeted for the load balancer. |
    | **Protocol** | Choose TCP |**TCP** |
    | **Port** | Use the port for the availability group listener | **1433** |
    | **Backend Port** | This field isn't used when a floating IP is set for direct server return | **1433** |
@@ -487,7 +487,7 @@ The IP address for the Windows Server failover cluster also needs to be on the l
    | --- | --- |---
    | **Name** | Text | **WSFCEndPoint** |
    | **Frontend IP address** | Choose an address |Use the address that you created when you configured the IP address for the Windows Server failover cluster. This is different from the listener IP address. |
-   | **Backend pool** | Choose the back-end pool |Select the back-end pool that contains the virtual machines targeted for the load balancer. |
+   | **Backend pool** | Choose the backend pool |Select the backend pool that contains the virtual machines targeted for the load balancer. |
    | **Protocol** | Choose TCP |**TCP** |
    | **Port** | Use the port for the cluster IP address. This is an available port that isn't used for the listener probe port. | **58888** |
    | **Backend Port** | This field isn't used when a floating IP is set for direct server return | **58888** |

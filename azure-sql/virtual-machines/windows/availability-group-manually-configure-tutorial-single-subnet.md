@@ -340,7 +340,7 @@ You're now ready to create and configure an availability group by doing the foll
    > Don't try to fail over the availability group from Failover Cluster Manager. All failover operations should be performed on the availability group dashboard in SSMS. [Learn more about restrictions on using Failover Cluster Manager with availability groups](/sql/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server).
     >
 
-At this point, you have an availability group with replicas on two instances of SQL Server. You can move the availability group between instances. You can't connect to the availability group yet because you don't have a listener. 
+At this point, you have an availability group with two SQL Server replicas. You can move the availability group between instances. You can't connect to the availability group yet because you don't have a listener. 
 
 In Azure virtual machines, the listener requires a load balancer. The next step is to create the load balancer in Azure.
 

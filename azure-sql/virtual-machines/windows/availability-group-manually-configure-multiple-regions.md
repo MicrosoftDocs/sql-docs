@@ -21,7 +21,7 @@ This tutorial explains how to configure an Always On availability group replica 
 
 You can also use the steps in this article to extend an existing on-premises availability group to Azure.
 
-This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). Mentions of the local region in this article refer to the virtual machines and availability group already configured in a single region. The remote region is the new infrastructure that this tutorial is adding.
+This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). Mentions of the local region in this article refer to the virtual machines and availability group already configured in the first region. The remote region is the new infrastructure that's being added in this tutorial. 
 
 > [!NOTE]  
 > You can use the same steps in this article to extend your on-premises availability group to Azure.

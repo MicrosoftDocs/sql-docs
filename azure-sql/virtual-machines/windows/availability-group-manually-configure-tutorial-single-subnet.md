@@ -117,7 +117,7 @@ The first task is to create a Windows Server failover cluster with both SQL Serv
 
 In this example, the Windows cluster uses a file share to create a cluster quorum. This tutorial uses a `NodeAndFileShareMajority` quorum. For more information, see [Configure and manage quorum](/windows-server/failover-clustering/manage-cluster-quorum).
 
-1. Connect to the file share witness server by using a remote desktop session.
+1. Connect to the file share witness server VM by using a remote desktop session.
 
 1. In **Server Manager**, select **Tools**. Open **Computer Management**.
 

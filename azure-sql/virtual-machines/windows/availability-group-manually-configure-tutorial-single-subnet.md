@@ -529,7 +529,7 @@ You now have a SQL Server availability group in Azure virtual machines running i
 
 To test the connection:
 
-1. Use RDP to connect to a SQL Server instance that's in the same virtual network but doesn't own the replica. You can use the other SQL Server instance in the cluster.
+1. Use RDP to connect to a SQL Server VM that's in the same virtual network but doesn't own the replica, such as the other replica.
 
 1. Use the **sqlcmd** utility to test the connection. For example, the following script establishes a **sqlcmd** connection to the primary replica through the listener by using Windows authentication:
 

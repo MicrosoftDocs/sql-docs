@@ -62,7 +62,7 @@ The first task is to create a Windows Server failover cluster with both SQL Serv
    | Page | Setting |
    | --- | --- |
    | **Before You Begin** |Use defaults. |
-   | **Select Servers** |Enter the first SQL Server name in **Enter server name**, and then select **Add**. |
+   | **Select Servers** |Enter the first SQL Server VM name in **Enter server name**, and then select **Add**. |
    | **Validation Warning** |Select **No. I do not require support from Microsoft for this cluster, and therefore do not want to run the validation tests. When I select Next, continue Creating the cluster**. |
    | **Access Point for Administering the Cluster** |In **Cluster Name**, enter a cluster name (for example, **SQLAGCluster1**).|
    | **Confirmation** |Use defaults unless you're using Storage Spaces. |

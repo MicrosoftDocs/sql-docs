@@ -543,7 +543,7 @@ To test the connection:
    sqlcmd -S <listenerName>,1435 -E
    ```
 
-The **sqlcmd** utility automatically connects to whichever instance of SQL Server hosts the primary replica.
+The **sqlcmd** utility automatically connects to whichever SQL Server instance is the current primary replica of the availability group. 
 
 > [!TIP]
 > Make sure that the port you specify is open on the firewall of both SQL Server VMs. Both servers require an inbound rule for the TCP port that you use. For more information, see [Add or edit firewall rules](/previous-versions/orphan-topics/ws.11/cc753558(v=ws.11)).

@@ -92,6 +92,15 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 
+### December 2022
+
+| Changes | Details |
+| --- | --- |
+|**Terraform** | Deploy a managed instance by using [Terraform](instance-create-terraform.md). | 
+
+### November 2022
+
+
 | Changes | Details |
 | --- | --- |
 |**Backup transparency with msdb GA** | For the purpose of backup transparency, it's now possible to query the `msdb` database to explore automated backup history. This feature is generally available. To learn more, review [backup transparency](backup-transparency.md). | 
@@ -135,8 +144,8 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 
 | Changes | Details |
 | --- | --- |
-| **Windows Auth for Azure Active Directory principals** | Kerberos authentication for Azure Active Directory (Azure AD) enables Windows Authentication access to Azure SQL Managed Instance. This feature is now generally available (GA). To learn more, review [Windows Auth for Azure Active Directory principals](winauth-azuread-overview.md). |
-|**Query Store hints**| Use query hints to optimize your query execution via the OPTION clause. This feature is now generally available (GA). To learn more, review, [Query Store hints](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-mi-current&preserve-view=true)| 
+| **Windows Auth for Azure Active Directory principals GA** | Kerberos authentication for Azure Active Directory (Azure AD) enables Windows Authentication access to Azure SQL Managed Instance. This feature is now generally available (GA). To learn more, review [Windows Auth for Azure Active Directory principals](winauth-azuread-overview.md). |
+|**Query Store hints GA**| Use query hints to optimize your query execution via the OPTION clause. This feature is now generally available (GA). To learn more, review, [Query Store hints](/sql/relational-databases/performance/query-store-hints?view=azuresqldb-mi-current&preserve-view=true)| 
 
 ### July 2022
 

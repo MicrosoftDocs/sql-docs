@@ -16,7 +16,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP SERVER AUDIT  (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a Server Audit Object using the SQL Server Audit feature. For more information on SQL Server Audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

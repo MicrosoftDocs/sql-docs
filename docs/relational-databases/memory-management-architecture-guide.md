@@ -83,7 +83,7 @@ Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], Single-Page alloca
 
 The following table indicates whether a specific type of memory allocation is controlled by the **max server memory (MB)** and **min server memory (MB)** configuration options:
 
-|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Single-page allocations|Yes|Yes, consolidated into "any size" page allocations|
 |Multi-page allocations|No|Yes, consolidated into "any size" page allocations|
@@ -113,7 +113,7 @@ Because the "any size" page allocator also handles allocations greater than 8 KB
 
 The following table indicates whether a specific type of memory allocation falls into the **memory_to_reserve** region of the virtual address space for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process:
 
-|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2-md](../includes/sql2008r2-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Single-page allocations|No|No, consolidated into "any size" page allocations|
 |Multi-page allocations|Yes|No, consolidated into "any size" page allocations|

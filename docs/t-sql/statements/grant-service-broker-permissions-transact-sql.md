@@ -19,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 # GRANT Service Broker Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Grants permissions on a Service Broker contract, message type, remote binding, route, or service.  
   

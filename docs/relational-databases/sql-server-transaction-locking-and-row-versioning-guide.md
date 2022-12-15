@@ -775,7 +775,7 @@ Dynamic locking has the following advantages:
 -   Increased performance. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] minimizes system overhead by using locks appropriate to the task.  
 -   Application developers can concentrate on development. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] adjusts locking automatically.  
   
-Starting with [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md). 
+Starting with [!INCLUDE[sql2008-md](../includes/sql2008-md.md)], the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md). 
    
 ## <a name="deadlocks"></a> Deadlocks
 

@@ -38,6 +38,9 @@ You can create either of these types of load balancers:
 
   To use an external load balancer, logically allocate an IP address in the same subnet as the availability group that doesn't conflict with any other IP address. Use this address as the frontend IP address for the load-balancing rules. 
 
+> [!IMPORTANT]
+> On September 30, 2025, the Basic SKU for Azure Load Balancer will be retired. For more information, see the [official announcement](https://azure.microsoft.com/updates/azure-basic-load-balancer-will-be-retired-on-30-september-2025-upgrade-to-standard-load-balancer/). If you're currently using Basic Load Balancer, upgrade to Standard Load Balancer before the retirement date. For guidance, review [Upgrade Load Balancer](/azure/load-balancer/load-balancer-basic-upgrade-guidance).
+
 To create the load balancer:
 
 1. In the [Azure portal](https://portal.azure.com), go to the resource group that contains the virtual machines.

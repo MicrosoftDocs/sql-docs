@@ -74,7 +74,7 @@ ms.author: maggies
   
 -   **Data source** The data types supported by the version of the type of data source to which you are connecting.  
   
-     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100)).  
+     For example, typical data types for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source include **int**, **datetime**, and **varchar**. Data types introduced by [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] added support for **date**, **time**, **datetimetz**, and **datetime2**. For more information, see [Data Types (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100)).  
   
 -   **Data provider or data processing extension** The data types supported by the version of the data provider of the data processing extension you select when you connect to the data source. Data providers based on the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] use data types supported by the CLR. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider data types, see [Data Type Mappings (ADO.NET)](/dotnet/framework/data/adonet/data-type-mappings-in-ado-net) and [Working with Base Types](/dotnet/standard/base-types/common-type-system) on MSDN.  
   
@@ -85,7 +85,7 @@ ms.author: maggies
   
 -   **Report processor** The data types are based on the version of the CLR installed when you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-     For example, the data types the report processor uses for the new date and time types introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] are shown in the following table:  
+     For example, the data types the report processor uses for the new date and time types introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] are shown in the following table:  
   
     |SQL Data Type|CLR Data Type|Description|  
     |-------------------|-------------------|-----------------|  

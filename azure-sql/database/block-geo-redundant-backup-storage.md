@@ -20,7 +20,7 @@ This feature allows Azure administrators to prevent Azure SQL Databases using ge
 
 ## Overview
 
-This feature prevents geo replication of Azure SQL Database backups by blocking all create, update database workflows that use read-access geo-redundant storage (RA-GRS) as the [backup storage redundancy](/azure-sql/database/automated-backups-overview.md#backup-storage-redundancy) option. Azure SQL Database uses read-access geo-redundant storage (RA-GRS) as default backup storage redundancy when you create a new database, which automatically replicates the database backups to [paired region](/azure/availability-zones/cross-region-replication-azure). This feature blocks all the create and update database workflows that set backup storage redundancy to geo-redundant backup storage options like RA-GRS, RA-GZRS via T-SQL, Azure portal, PowerShell, Azure CLI and API. To create or update database successfully, users will have to manually select the backup storage redundancy based on data residency requirements.
+This feature prevents geo replication of Azure SQL Database backups by blocking all create, update database workflows that use read-access geo-redundant storage (RA-GRS) as the [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy) option. Azure SQL Database uses read-access geo-redundant storage (RA-GRS) as default backup storage redundancy when you create a new database, which automatically replicates the database backups to [paired region](/azure/availability-zones/cross-region-replication-azure). This feature blocks all the create and update database workflows that set backup storage redundancy to geo-redundant backup storage options like RA-GRS, RA-GZRS via T-SQL, Azure portal, PowerShell, Azure CLI and API. To create or update database successfully, users will have to manually select the backup storage redundancy based on data residency requirements.
 
 You can register your subscription to this feature via Azure portal, [PowerShell](/powershell/module/az.resources/register-azproviderfeature), or [Azure CLI](/cli/azure/feature#az-feature-register).
 
@@ -50,4 +50,4 @@ To remove the block on geo-redundant backup storage from your subscription, unre
 
 ## Next steps
 
-- [An overview of Azure SQL Database Backup storage redundancy](/azure-sql/database/automated-backups-overview.md#backup-storage-redundancy)
+- [An overview of Azure SQL Database Backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy)

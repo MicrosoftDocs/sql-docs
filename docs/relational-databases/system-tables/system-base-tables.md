@@ -16,7 +16,7 @@ dev_langs:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 ---
 # System Base Tables
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   System base tables are the underlying tables that actually store the metadata for a specific database. The **master** database is special in this respect because it contains some additional tables that are not found in any of the other databases. These tables contain persisted metadata that has server-wide scope.  
   

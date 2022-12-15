@@ -78,7 +78,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SS_IS_SPARSE|**Smallint**|If the column is a sparse column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|If the column is the **column_set** column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
   
- In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and after all columns mandated by ODBC itself.  
+ In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], and after all columns mandated by ODBC itself.  
   
  The result set returned by SQLColumns depends on the setting of SQL_SOPT_SS_NAME_SCOPE. For more information, see [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   

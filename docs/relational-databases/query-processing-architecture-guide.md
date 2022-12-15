@@ -1272,7 +1272,7 @@ For more information on the operators used in this example, see the [Showplan Lo
 The query plans built for the index operations that create or rebuild an index, or drop a clustered index, allow for parallel, multi-worker threaded operations on computers that have multiple microprocessors.
 
 > [!NOTE]  
-> Parallel index operations are only available in Enterprise Edition, starting with [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].
+> Parallel index operations are only available in Enterprise Edition, starting with [!INCLUDE[sql2008-md](../includes/sql2008-md.md)].
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the same algorithms to determine the degree of parallelism (the total number of separate worker threads to run) for index operations as it does for other queries. The maximum degree of parallelism for an index operation is subject to the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option. You can override the max degree of parallelism value for individual index operations by setting the MAXDOP index option in the CREATE INDEX, ALTER INDEX, DROP INDEX, and ALTER TABLE statements.
 
@@ -1334,7 +1334,7 @@ When possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pushes rel
 
 ## Query processing enhancements on partitioned tables and indexes
 
-[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] improved query processing performance on partitioned tables for many parallel plans, changes the way parallel and serial plans are represented, and enhanced the partitioning information provided in both compile-time and run-time execution plans. This article describes these improvements, provides guidance on how to interpret the query execution plans of partitioned tables and indexes, and provides best practices for improving query performance on partitioned objects.
+[!INCLUDE[sql2008-md](../includes/sql2008-md.md)] improved query processing performance on partitioned tables for many parallel plans, changes the way parallel and serial plans are represented, and enhanced the partitioning information provided in both compile-time and run-time execution plans. This article describes these improvements, provides guidance on how to interpret the query execution plans of partitioned tables and indexes, and provides best practices for improving query performance on partitioned objects.
 
 > [!NOTE]  
 > Until [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], partitioned tables and indexes are supported only in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.

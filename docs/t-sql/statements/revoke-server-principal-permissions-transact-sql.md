@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Revokes permissions granted or denied on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   

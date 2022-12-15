@@ -15,7 +15,7 @@ dev_langs:
   - "TSQL"
 ---
 # REVOKE Server Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes server-level GRANT and DENY permissions.  
   

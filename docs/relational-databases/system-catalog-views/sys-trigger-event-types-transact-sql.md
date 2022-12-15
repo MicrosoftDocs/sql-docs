@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 ---
 # sys.trigger_event_types (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each event or event group on which a trigger can fire.  
   

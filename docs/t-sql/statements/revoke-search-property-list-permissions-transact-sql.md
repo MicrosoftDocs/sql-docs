@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 ---
 # REVOKE Search Property List Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Revokes permissions on a search property list.  
   

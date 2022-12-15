@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 ---
 # sys.database_recovery_status (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row per database. If the database is not opened, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tries to start it.  
   

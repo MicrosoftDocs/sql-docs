@@ -22,7 +22,7 @@ dev_langs:
   - "TSQL"
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a specified search property to, or drops it from the specified search property list.  
   

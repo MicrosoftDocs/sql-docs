@@ -645,7 +645,7 @@ In **Object Explorer**, expand **Always On High Availability**, and then expand 
 
 Your availability group dashboard should look similar to the following screenshot, now with another replica:
 
-:::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of the availability group dashboard." lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" :::
+:::image type="content" source="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" alt-text="Screenshot of the availability group dashboard in SSMS." lightbox="./media/availability-group-manually-configure-multiple-regions/ag-health-dashboard.png" :::
 
 The dashboard shows the replicas, the failover mode of each replica, and the synchronization state.
 

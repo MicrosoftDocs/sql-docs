@@ -34,10 +34,10 @@ Before you complete the steps in this article, you should already have:
 
 You can create either of these types of load balancers:
 
-- **Internal**: An internal load balancer can be accessed only from private resources that are internal to the network. When you configure an internal load balancer and its rules, use the same IP address as the availability group listener for the front-end IP address. 
+- **Internal**: An internal load balancer can be accessed only from private resources that are internal to the network. When you configure an internal load balancer and its rules, use the same IP address as the availability group listener for the frontend IP address. 
 - **External**: An external load balancer can route traffic from the public to internal resources. When you configure an external load balancer, you can't use the same IP address as the availability group listener because the listener IP address can't be a public IP address. 
 
-  To use an external load balancer, logically allocate an IP address in the same subnet as the availability group that doesn't conflict with any other IP address. Use this address as the front-end IP address for the load-balancing rules. 
+  To use an external load balancer, logically allocate an IP address in the same subnet as the availability group that doesn't conflict with any other IP address. Use this address as the frontend IP address for the load-balancing rules. 
 
 To create the load balancer:
 
@@ -63,42 +63,42 @@ To create the load balancer:
 
 1. Select **Add a frontend IP configuration**.
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the Azure portal that shows the button for adding a front-end IP configuration.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the Azure portal that shows the button for adding a frontend IP configuration.":::
 
-1. Set up the front-end IP address by using the following values:
+1. Set up the frontend IP address by using the following values:
 
-   - **Name**: A name that identifies the front-end IP configuration.
+   - **Name**: A name that identifies the frontend IP configuration.
    - **Virtual network**: The same network as the virtual machines.
    - **Subnet**: The same subnet as the virtual machines.
    - **Assignment**: **Static**.
    - **IP address**: The IP address that you assigned to the clustered network resource.
    - **Availability zone**: An optional availability zone to deploy your IP address to.
 
-   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the page for configuring a front-end IP address.":::
+   :::image type="content" source="media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the page for configuring a frontend IP address.":::
 
-1. Select **Add** to create the front-end IP address.
+1. Select **Add** to create the frontend IP address.
 
 1. Select **Review + Create** to create the load balancer.
 
-## Configure a back-end pool
+## Configure a backend pool
 
 1. Return to the Azure resource group that contains the virtual machines and locate the new load balancer. You might need to refresh the view on the resource group. Select the load balancer.
 
 1. Select **Backend pools**, and then select **+Add**.
 
-1. For **Name**, provide a name for the back-end pool.
+1. For **Name**, provide a name for the backend pool.
 
 1. For **Backend Pool Configuration**, select **NIC**.
 
-1. Select **Add** to associate the back-end pool with the availability set that contains the VMs.
+1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
 
 1. Under **Virtual machine**, choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the failover cluster instance. 
 
    Add only the primary IP address of each VM. Don't add any secondary IP addresses.
 
-1. Select **Add** to add the virtual machines to the back-end pool.
+1. Select **Add** to add the virtual machines to the backend pool.
 
-1. Select **Save** to create the back-end pool.
+1. Select **Save** to create the backend pool.
 
 ## Configure a health probe
 
@@ -120,8 +120,8 @@ To create the load balancer:
 1. Set these parameters:
 
    - **Name**: A name for the load-balancing rule.
-   - **Frontend IP address**: The IP address that you set when you configured the front end.
-   - **Backend pool**: The back-end pool that contains the virtual machines targeted for the load balancer.
+   - **Frontend IP address**: The IP address that you set when you configured the frontend.
+   - **Backend pool**: The backend pool that contains the virtual machines targeted for the load balancer.
    - **HA Ports**: Enables load balancing on all ports for TCP and UDP protocols.
    - **Protocol**: **TCP**.
    - **Port**: The SQL Server TCP port. The default is **1433**.
@@ -158,7 +158,7 @@ The following table describes the values that you need to update:
 |---------|---------|
 |`ClusterNetworkName`| The name of the Windows Server failover cluster for the network. In **Failover Cluster Manager** > **Networks**, right-click the network and select **Properties**. The correct value is under **Name** on the **General** tab.|
 |`IPResourceName`|The resource name for the IP address of the AG listener. In **Failover Cluster Manager** > **Roles**, under the availability group role, under **Server Name**, right-click the IP address resource and select **Properties**. The correct value is under **Name** on the **General** tab.|
-|`ILBIP`|The IP address of the internal load balancer. This address is configured in the Azure portal as the front-end address of the internal load balancer. This is the same IP address as the availability group listener. You can find it in **Failover Cluster Manager**, on the same properties page where you located the value for `IPResourceName`.|
+|`ILBIP`|The IP address of the internal load balancer. This address is configured in the Azure portal as the frontend address of the internal load balancer. This is the same IP address as the availability group listener. You can find it in **Failover Cluster Manager**, on the same properties page where you located the value for `IPResourceName`.|
 |`ProbePort`|The probe port that you configured in the health probe of the load balancer. Any unused TCP port is valid.|
 |`SubnetMask`| The subnet mask for the cluster parameter. It must be the TCP/IP broadcast address: `255.255.255.255`.| 
 
@@ -189,7 +189,7 @@ The following table describes the values that you need to update:
 |---------|---------|
 |`ClusterNetworkName`| The name of the Windows Server failover cluster for the network. In **Failover Cluster Manager** > **Networks**, right-click the network and select **Properties**. The correct value is under **Name** on the **General** tab.|
 |`IPResourceName`|The resource name for the IP address of the AG listener. In **Failover Cluster Manager** > **Roles**, under the availability group role, under **Server Name**, right-click the IP address resource and select **Properties**. The correct value is under **Name** on the **General** tab.|
-|`ELBIP`|The IP address of the external load balancer. This address is configured in the Azure portal as the front-end address of the external load balancer. It's used to connect to the public load balancer from external resources.|
+|`ELBIP`|The IP address of the external load balancer. This address is configured in the Azure portal as the frontend address of the external load balancer. It's used to connect to the public load balancer from external resources.|
 |`ProbePort`|The probe port that you configured in the health probe of the load balancer. Any unused TCP port is valid.|
 |`SubnetMask`| The subnet mask for the cluster parameter. It must be the TCP/IP broadcast address: `255.255.255.255`.| 
 

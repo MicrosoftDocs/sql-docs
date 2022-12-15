@@ -253,7 +253,7 @@ You need to back up the new database to initialize the log chain. If you don't t
 
 1. Select **OK** to take a full backup to the default backup location.
 
-## Configure an availability group
+## Create an availability group
 
 You're now ready to configure an availability group by doing the following tasks:
 

@@ -219,7 +219,7 @@ On both SQL Server VMs, open the firewall for the TCP port for the database mirr
 
 ### <a name="backupshare"></a> Create a backup share
 
-1. On the first SQL Server instance in **Server Manager**, select **Tools**. Open **Computer Management**.
+1. On the first SQL Server VM in **Server Manager**, select **Tools**. Open **Computer Management**.
 
 1. Select **Shared Folders**.
 

@@ -523,7 +523,7 @@ In SQL Server Management Studio, set the listener port:
 
 1. In the **Port** box, specify the port number for the availability group listener. The default is 1433. Select **OK**.
 
-You now have a SQL Server availability group in Azure virtual machines running in Azure Resource Manager mode.
+You now have an availability group for SQL Server on Azure VMs running in Azure Resource Manager mode.
 
 ## Test the connection to the listener
 

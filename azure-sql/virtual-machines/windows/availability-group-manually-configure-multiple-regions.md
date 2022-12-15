@@ -666,7 +666,7 @@ If you can't modify the connection strings, you can configure name resolution ca
 
 ## Fail over to the remote region
 
-To test listener connectivity to the remote region, you can fail over the replica to the remote region. While the replica is asynchronous, failover is vulnerable to potential data loss. To fail over without data loss, change the availability mode to synchronous and set the failover mode to automatic. Use the following steps:
+To test listener connectivity to the remote region, you can fail the replica over to the remote region. While the replica is asynchronous, failover is vulnerable to potential data loss. To fail over without data loss, change the availability mode to synchronous and set the failover mode to automatic. Use the following steps:
 
 1. In **Object Explorer**, connect to the instance of SQL Server that hosts the primary replica.
 1. Under **Always On Availability Groups**, right-click your availability group and select **Properties**.

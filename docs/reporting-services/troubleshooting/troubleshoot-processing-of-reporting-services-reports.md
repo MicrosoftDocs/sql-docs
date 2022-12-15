@@ -40,7 +40,7 @@ A data type error usually means the default or the specified data type is not su
   
 To eliminate the #Error message, you must rewrite the expression that causes it. To determine more details about the issue, view the detailed error message.   
   
-In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)], view the Output window. On the report server, view the call stack. 
+In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], view the Output window. On the report server, view the call stack. 
   
   
 ## See Also  

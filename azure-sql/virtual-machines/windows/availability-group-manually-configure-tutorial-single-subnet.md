@@ -352,7 +352,7 @@ On Azure virtual machines in a single subnet, a SQL Server availability group re
 
 A load balancer in Azure can be either *standard* or *basic*. A standard load balancer has more features than the basic load balancer. For an availability group, the standard load balancer is required if you use an availability zone (instead of an availability set). For details on the difference between the SKUs, see [Azure Load Balancer SKUs](/azure/load-balancer/skus).
 
-1. In the Azure portal, go to the resource group that contains your SQL Server instances and select **+ Add**.
+1. In the Azure portal, go to the resource group that contains your SQL Server VMs and select **+ Add**.
 1. Search for **load balancer**. Choose the load balancer that Microsoft publishes.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/82-azure-load-balancer.png" alt-text="Screenshot that shows selecting a Microsoft-published load balancer.":::

@@ -70,7 +70,7 @@ SSMS 19 Preview 4 is the latest preview release of SSMS. If you need an earlier 
 | SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.Net SqlClient Data Provider)". | There is a known problem due to incorrect data in msdb. To resolve, remove backup history. For example, `EXEC msdb..sp_delete_backuphistory @oldest_date = '<current date>'`.|
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
-| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 ## Previous SSMS previews
 
@@ -127,7 +127,7 @@ Download previous SSMS previews by selecting the download link in the related se
 | SSIS | Trying to connect to SSIS, or running the upgrade wizard in SSIS, generates an error message. "The 'MSOLEDBSQL19' provider isn't registered on the local machine. (MsDtsSrvr)" | Install the [Microsoft OLE DB Driver 19 for SQL Server (x64)](../connect/oledb/download-oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver 18 for SQL Server (x64)](../connect/odbc/download-odbc-driver-for-sql-server.md) if using SSIS; this will be resolved in a later preview of SSMS 19. |
 | Registered Servers | SSMS 19 can't share a registered servers XML file with SSMS 18.x and earlier. | Don't edit registered servers in SSMS 19, or don't use registered servers in SSMS 18.x and earlier after editing them in SSMS 19. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
-| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 ### 19.0 Preview 2
 
@@ -173,7 +173,7 @@ Download previous SSMS previews by selecting the download link in the related se
 | Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | This will be available in a later preview, use SSMS 18.11.1 to view or edit Maintenance Plans. |
 | SSMS Installer | The original installation of Japanese SSMS wasn't fully localized and removed from the download page. | This is fixed via an updated build, 16.0.19058.0, now available for download. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
-| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 

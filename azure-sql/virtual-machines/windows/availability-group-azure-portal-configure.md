@@ -171,7 +171,7 @@ On the **Disks** tab, configure your disk options for both the virtual machines 
 
 1. Select an **Encryption type** value for the disks.
 
-1. Under **Storage configuration**, select **Change configuration** to open the **Configure storage** pane and specify storage requirements. You can choose to leave the default values, or you can manually change the storage topology to suit your needs for input/output operations per second. For more information, see [Configure storage for SQL Server VMs](storage-configuration.md).
+1. Under **Storage configuration**, select **Change configuration** to open the **Configure storage** pane and specify storage requirements. You can choose to leave the default values, or you can manually change the storage topology to suit your needs for input/output operations per second (IOPS). For more information, see [Configure storage for SQL Server VMs](storage-configuration.md).
 
     :::image type="content" source="./media/availability-group-az-portal-configure/change-sql-server-disk-configuration.png " alt-text="Screenshot of the Azure portal that shows the current storage configuration and the button for changing the configuration.":::
 

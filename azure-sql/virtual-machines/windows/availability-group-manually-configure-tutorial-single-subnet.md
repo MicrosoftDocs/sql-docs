@@ -196,7 +196,7 @@ Each instance of SQL Server that participates in an availability group requires 
 
 On both SQL Server VMs, open the firewall for the TCP port for the database mirroring endpoint:
 
-1. On the **Start** screen for the first SQL Server instance, open **Windows Firewall with Advanced Security**.
+1. On the **Start** screen for the first SQL Server VM, open **Windows Firewall with Advanced Security**.
 2. On the left pane, select **Inbound Rules**. On the right pane, select **New Rule**.
 3. For **Rule Type**, select **Port**.
 1. For the port, specify **TCP** and choose an unused TCP port number. For example, enter *5022*. Then select **Next**.

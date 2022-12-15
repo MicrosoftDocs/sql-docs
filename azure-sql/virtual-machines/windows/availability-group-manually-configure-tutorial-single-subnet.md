@@ -13,7 +13,7 @@ editor: monicar
 tags: azure-service-management
 ---
 
-# Tutorial: Manually configure a SQL Server Always On availability group on Azure VMs
+# Tutorial: Manually configure an availability group - SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]

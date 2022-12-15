@@ -45,7 +45,7 @@ The following table summarizes the prerequisites that you need to complete:
 
 ## <a name="create-the-cluster"></a> Create the cluster
 
-The first task is to create a Windows Server failover cluster that includes two SQL Server instances and a witness server:
+The first task is to create a Windows Server failover cluster with both SQL Server VMs and a witness server:
 
 1. Use Remote Desktop Protocol (RDP) to connect to the first SQL Server instance. Use a domain account that's an administrator on both SQL Server instances and the witness server.
 

@@ -37,7 +37,7 @@ In the same way that solutions contain solution files that manage objects in a s
 |Extension|Project template|  
 |-------------|--------------------|  
 |.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Scripts Project|  
-|.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Scripts Project|  
+|.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripts Project|  
    
 ## Location of Solution-Level Files  
 By default, solution-level files are created in the physical directory of the first project that is created with the solution. You can specify a directory for the solution by creating a solution, or you can specify the directory when you create a new project.  

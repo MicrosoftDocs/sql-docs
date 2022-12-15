@@ -1,5 +1,5 @@
 ---
-description: "Change a Server&#39;s Registration (SQL Server Management Studio)"
+description: "Change a Server's Registration (SQL Server Management Studio)"
 title: Change a Server's Registration
 ms.service: sql
 ms.subservice: ssms
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ---
 
-# Change a Server&#39;s Registration (SQL Server Management Studio)
+# Change a Server's Registration (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 

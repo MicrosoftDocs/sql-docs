@@ -75,15 +75,8 @@
       - name: Dynamic data masking
         href: database/dynamic-data-masking-overview.md
       - name: SQL Vulnerability Assessment
-        items:
-        - name: SQL Vulnerability Assessment
-          href: database/sql-vulnerability-assessment.md
-        - name: Vulnerability Assessment rules
-          href: database/sql-database-vulnerability-assessment-rules.md
-        - name: Vulnerability Assessment rules changelog
-          href: database/sql-database-vulnerability-assessment-rules-changelog.md
-        - name: Store vulnerability scans in storage
-          href: database/sql-database-vulnerability-assessment-storage.md
+        displayName: database
+        href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?toc=/azure/azure-sql/toc.json
       - name: Logins, user accounts, roles, and permissions
         href: database/logins-create-manage.md
       - name: Azure AD Authentication
@@ -663,6 +656,22 @@
       items: 
       - name: Audit to storage account behind VNet or firewall
         href: database/audit-write-storage-account-behind-vnet-firewall.md
+      - name: Vulnerability assessment
+        items:
+        - name: Enable vulnerability assessment
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable?toc=/azure/azure-sql/toc.json
+        - name: Manage vulnerability assessments
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-manage?toc=/azure/azure-sql/toc.json
+        - name: Find and remediate threats
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
+        - name: Review sensitive data
+          href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability Assessment rules
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability Assessment rules changelog
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
+        - name: Store vulnerability scans in storage
+          href: database/sql-database-vulnerability-assessment-storage.md
       - name: Configure threat detection
         href: database/threat-detection-configure.md
       - name: Configure dynamic data masking
@@ -986,6 +995,8 @@
       - name: Bicep
         displayName: ARM, Resource Manager, Template
         href: managed-instance/create-bicep-quickstart.md
+      - name: Terraform
+        href: managed-instance/instance-create-terraform.md
       - name: ARM template
         displayName: Resource Manager
         href: managed-instance/create-template-quickstart.md
@@ -1542,6 +1553,8 @@
             href: virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md
           - name: Bulk register multiple VMs
             href: virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk.md
+          - name: Known issues and troubleshooting
+            href: virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues.md
       - name: Migrate
         items:
         - name: VM to a new region

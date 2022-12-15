@@ -581,7 +581,7 @@ For more information, see [Possible Media Errors During Backup and Restore](../.
 ### Compatibility options
 
 #### RESTART    
-Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], has no effect. This option is accepted by the version for compatibility with previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], has no effect. This option is accepted by the version for compatibility with previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### Monitoring options
 

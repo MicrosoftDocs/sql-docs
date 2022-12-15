@@ -16,7 +16,7 @@ dev_langs:
   - "TSQL"
 ---
 # GRANT Server Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Grants permissions on a server. 
   

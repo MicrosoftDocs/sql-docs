@@ -27,7 +27,7 @@ ms.author: mikeray
 ---
 # Use XML data in applications
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the options that are available to you for working with the **xml** data type in your application. The article includes information about the following:
 
@@ -113,7 +113,7 @@ The results should be similar to the following sample output:
 ```xml
 Row 1
 
-<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
+<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
   <AnnualSales>1500000</AnnualSales>
   <AnnualRevenue>150000</AnnualRevenue>
   <BankName>Primary International</BankName>
@@ -128,7 +128,7 @@ Row 1
 
 Row 2
 
-<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
+<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
   <AnnualSales>300000</AnnualSales>
   <AnnualRevenue>30000</AnnualRevenue>
   <BankName>United Security</BankName>

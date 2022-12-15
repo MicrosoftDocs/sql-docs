@@ -16,7 +16,7 @@ dev_langs:
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 

@@ -9,7 +9,7 @@ ms.custom:
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 08/11/2022
+ms.date: 12/15/2022
 ---
 
 # Release notes for SQL Server Management Studio (SSMS) 19 (Preview)
@@ -24,9 +24,62 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS preview release
 
-:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19](https://go.microsoft.com/fwlink/?linkid=2203303&clcid=0x409)**
+:::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download SQL Server Management Studio (SSMS) 19](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x409)**
 
-SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier preview version of SSMS, see [previous SSMS previews](release-notes-ssms-19.md#previous-ssms-previews).
+SSMS 19 Preview 4 is the latest preview release of SSMS. If you need an earlier preview version of SSMS, see [previous SSMS previews](release-notes-ssms-19.md#previous-ssms-previews).
+
+### 19.0 Preview 4
+
+- Release number: 19.0 Preview 4
+- Build number: 19.0.20179.0
+- Release date: December 15, 2022
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2219772&clcid=0x40a)
+
+#### What's new in 19.0 Preview 4
+
+| New Item | Details |
+|----------|---------|
+| Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.40.1 |
+| General SSMS | Added a settings page in **Tools > Output** to control what window channels appear in the Output window. |
+| Ledger | Added support for import/export of a bacpac or dacpac created from a database with LEDGER = ON. |
+| Maintenance Plan | The Maintenance Plan node is now available in Object Explorer. |
+| Security | Introduced support for more AAD authentication types. |
+| Showplan | Added DOPFeedbackAdjusted query plan attribute. |
+| SqlParser | Added support for TRIM function. |
+
+
+#### Bug fixes in 19.0 Preview 4
+
+| New Item | Details |
+|----------|---------|
+| Backup | Added ability to create a NUL backup device against SQL Server 2017. |
+| Link feature for Azure SQL Managed Instance | Updated display to show Azure login options correctly. |
+| Object Explorer | SSMS no longer crashes when using the Create View UX to create a view that has invalid syntax. |
+| Power BI Datamart | Added ability to connect to a Power BI Datamart. |
+| Security | Added missing database permissions. |
+| Scripting | Added ability to Script as Insert for DW. |
+| SqlParser | Fixed incorrect syntax for DATE_BUCKET function. |
+
+#### Known issues 19.0 Preview 4
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
+| Query Editor | When SSMS opens after double-clicking on a .sql file, the Object Explorer window is displayed as a separate window. |
+| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.Net SqlClient Data Provider)". | There is a known problem due to incorrect data in msdb. To resolve, remove backup history. For example, `EXEC msdb..sp_delete_backuphistory @oldest_date = '<current date>'`.|
+| Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
+| Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
+
+## Previous SSMS previews
+
+Download previous SSMS previews by selecting the download link in the related section.
+
+| SSMS version | Build number | Release date |
+|--------------|--------------|--------------|
+| [19.0 Preview 3](#190-preview-3) | 16.0.19061.0 | August 11, 2022 |
+| [19.0 Preview 2](#190-preview-2) | 16.0.19056.0 | May 24, 2022 |
 
 ### 19.0 Preview 3
 
@@ -70,19 +123,11 @@ SSMS 19 Preview 3 is the latest preview release of SSMS. If you need an earlier 
 | Database Designer | Clicking the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | Ledger | Importing a bacpac or dacpac created from a database with the LEDGER = ON option, into a new database on-premises, fails due to the LEDGER property not being set. | Use backup and restore to create a new database on-premises with the LEDGER property enabled. |
 | Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | Use SSMS 18.11.1 to view or edit Maintenance Plans. |
-| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.Net SqlClient Data Provider)". | There is a known problem due to incorrect data in msdb. To resolve, remove backup history. For example `EXEC msdb..sp_delete_backuphistory @oldest_date = '<current date>'`.|
+| SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.Net SqlClient Data Provider)". | There is a known problem due to incorrect data in msdb. To resolve, remove backup history. For example, `EXEC msdb..sp_delete_backuphistory @oldest_date = '<current date>'`.|
 | SSIS | Trying to connect to SSIS, or running the upgrade wizard in SSIS, generates an error message. "The 'MSOLEDBSQL19' provider isn't registered on the local machine. (MsDtsSrvr)" | Install the [Microsoft OLE DB Driver 19 for SQL Server (x64)](../connect/oledb/download-oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver 18 for SQL Server (x64)](../connect/odbc/download-odbc-driver-for-sql-server.md) if using SSIS; this will be resolved in a later preview of SSMS 19. |
 | Registered Servers | SSMS 19 can't share a registered servers XML file with SSMS 18.x and earlier. | Don't edit registered servers in SSMS 19, or don't use registered servers in SSMS 18.x and earlier after editing them in SSMS 19. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
-| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
-
-## Previous SSMS previews
-
-Download previous SSMS previews by selecting the download link in the related section.
-
-| SSMS version | Build number | Release date |
-|--------------|--------------|--------------|
-| [19.0 Preview 2](#190-preview-2) | 16.0.19056.0 | May 24, 2022 |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 ### 19.0 Preview 2
 
@@ -128,7 +173,7 @@ Download previous SSMS previews by selecting the download link in the related se
 | Maintenance Plan | The Maintenance Plan node isn't available in Object Explorer. | This will be available in a later preview, use SSMS 18.11.1 to view or edit Maintenance Plans. |
 | SSMS Installer | The original installation of Japanese SSMS wasn't fully localized and removed from the download page. | This is fixed via an updated build, 16.0.19058.0, now available for download. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
-| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or an earlier version of SSMS (18.9.1 or below) to use the Stretch DB Wizard. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 

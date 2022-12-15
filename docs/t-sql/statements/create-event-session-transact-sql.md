@@ -22,7 +22,7 @@ dev_langs:
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
 

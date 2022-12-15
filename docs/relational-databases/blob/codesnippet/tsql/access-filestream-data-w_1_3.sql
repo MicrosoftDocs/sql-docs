@@ -1,4 +1,4 @@
 INSERT INTO Archive.dbo.Records
-    VALUES (newid (), 3, 
-      CAST ('Seismic Data' as varbinary(max)));
+    VALUES (NEWID(), 3, 
+      CAST ('Seismic Data' AS VARBINARY(MAX)));
 GO

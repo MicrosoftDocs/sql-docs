@@ -66,7 +66,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Describes how to process errors on table-valued parameter column values.  
   
  [Cross-Version Compatibility](../../relational-databases/native-client-odbc-table-valued-parameters/cross-version-compatibility.md)  
- Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ Describes conflicts that can occur when table-valued parameters are used by a client or server of a version earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
  [ODBC Table-Valued Parameter API Summary](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Lists the ODBC functions that support table-valued parameters.  

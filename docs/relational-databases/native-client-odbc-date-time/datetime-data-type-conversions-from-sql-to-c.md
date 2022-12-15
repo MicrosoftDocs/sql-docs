@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Symbol|Meaning|  
 |------------|-------------|  
 |OK|No conversion issues.|  
-|1|Rules prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] apply.|  
+|1|Rules prior to [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] apply.|  
 |2|Leading and trailing spaces are ignored.|  
 |3|The string is parsed into a date, time, timezone, or timezoneoffset, and allows up to 9 digits for fractional seconds. If a timezoneoffset is parsed, the time is converted to the client timezone. If an error occurs during this conversion, a diagnostic record is generated with SQLSTATE 22018 and the message "Datetime field overflow".|  
 |4|If the value is not a valid date, timestamp, or timestampoffset value, a diagnostic record is generated with SQLSTATE 22018 and the message "Invalid character value for cast specification".|  

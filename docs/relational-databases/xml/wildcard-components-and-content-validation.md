@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Wildcard components and content validation
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Wildcard components are used to increase flexibility in what is allowed to appear in a content model. These components are supported in the XSD language in the following ways:
 
@@ -33,7 +33,7 @@ Both wildcard character elements, `<xsd:any>` and `<xsd:anyAttribute>`, support 
 
 ## Lax validation and xs:anyType elements
 
-The XML Schema specification uses **lax** validation for elements of the **anyType** type. Because [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] didn't support lax validation, strict validation was applied for elements of the **anyType**. Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], lax validation is supported. Content of elements of type **anyType** will be validated using lax validation.
+The XML Schema specification uses **lax** validation for elements of the **anyType** type. Because [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] didn't support lax validation, strict validation was applied for elements of the **anyType**. Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], lax validation is supported. Content of elements of type **anyType** will be validated using lax validation.
 
 The following example illustrates the lax validation. The schema element `e` is of the **anyType** type. The example creates typed **xml** variables and illustrates the lax validation of the element of the **anyType** type.
 

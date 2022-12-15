@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Grant permissions on an XML schema collection
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 You can grant permissions to create an XML schema collection and also grant permissions on an XML schema collection object.
 
@@ -203,7 +203,7 @@ GO
 SETUSER 'TestLogin1';
 GO
 INSERT INTO MyTestTable VALUES('
-<telephone xmlns="https://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>
+<telephone xmlns="http://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>
 ');
 GO
 -- To query the table, TestLogin1 must have permissions: SELECT on the table and EXECUTE on the XML schema collection.
@@ -212,7 +212,7 @@ GO
 GRANT SELECT TO TestLogin1;
 GO
 -- TestLogin1 already has EXECUTE permission on the schema (granted before inserting a record in the table).
-SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo"; /telephone[1]')
 FROM MyTestTable;
 GO
 -- To show that the user must have EXECUTE permission to query, revoke the
@@ -224,7 +224,7 @@ GO
 -- Now TestLogin1 cannot execute the query.
 SETUSER 'TestLogin1';
 GO
-SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo"; /telephone[1]')
 FROM MyTestTable;
 GO
 -- Final cleanup
@@ -297,7 +297,7 @@ GO
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"
+            xmlns="http://schemas.adventure-works.com/Additional/ContactInfo"
 elementFormDefault="qualified">
 <xsd:element name="pager" type="xsd:string"/>
 </xsd:schema>';

@@ -59,5 +59,5 @@ Displays the type of dependency between two objects. Can be one of the following
   
 -   Not available or Unresolved Entity  
   
-    Indicates the dependency type cannot be determined. This occurs only when the selected object is on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+    Indicates the dependency type cannot be determined. This occurs only when the selected object is on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   

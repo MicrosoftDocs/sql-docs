@@ -105,7 +105,7 @@ ms.author: jiwang6
 - <xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingLoad%2A>
 - <xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingProcess%2A>
   
- The following operations are used to import data by using the staging process included in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. These operations should be used only to support existing databases. For new development, use the previously listed operations.  
+ The following operations are used to import data by using the staging process included in [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. These operations should be used only to support existing databases. For new development, use the previously listed operations.  
   
 - <xref:Microsoft.MasterDataServices.ServiceClient.StagingClear%2A>
 - <xref:Microsoft.MasterDataServices.ServiceClient.StagingGet%2A>

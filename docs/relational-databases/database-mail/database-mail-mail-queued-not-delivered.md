@@ -35,7 +35,7 @@ GO
 Then, execute the following statement in the **msdb** database to check the status of the mail queue:
 
 ```sql
-sysmail_help_queue_sp @queue_type = 'Mail' ;
+EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'Mail';
 ```
 
 For a detailed explanation of the columns, see [sysmail_help_queue_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-queue-sp-transact-sql.md#result-set).

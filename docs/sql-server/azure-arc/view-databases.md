@@ -1,29 +1,32 @@
 ---
 title: View SQL Server databases
-description: View databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to help manage SQL Server databases centrally, as Arc-enabled resources.
+description: View databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
 ms.date: 11/03/2022
 ms.topic: conceptual
 ms.custom:
-ms.prod: sql
+ms.service: sql
 ---
 
 # View SQL Server databases - Azure Arc
 
-You can view SQL Server databases in Azure.
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+You can inventory and view SQL Server databases in Azure.
 
 ## Prerequisites
 
 Before you begin, verify that the SQL Server instance that hosts the databases:
 
 * Is hosted on a physical or virtual machine running Windows operating system.
-* Is [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], or [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
+* Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
 * Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
 * Is connected to the internet directly or through a proxy server.
+* Has `NT AUTHORITY\SYSTEM` in the `sysadmin` role.
 
-## View databases
+## Inventory databases
 
 1. Locate the Azure Arc-enabled SQL Server instance in Azure portal
 1. **Select** the SQL Server resource.
@@ -43,6 +46,6 @@ After you create, modify, or delete a database, changes are visible in Azure por
 
 ## Next steps
 
-* [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+* [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
 
-* [Configure on-demand SQL assessment for your SQL Server instance](assess.md)
+* [Configure SQL Assessment | Azure Arc-enabled SQL Server](assess.md)

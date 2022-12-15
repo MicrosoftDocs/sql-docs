@@ -94,7 +94,7 @@ The first task is to create a Windows Server failover cluster with both SQL Serv
 
 1. In the **Add Node Wizard**, select **Next**. 
 
-1. On the **Select Servers** page, add the second SQL Server instance. Enter the server name in **Enter server name**, and then select **Add** > **Next**.
+1. On the **Select Servers** page, add the second SQL Server VM. Enter the VM name in **Enter server name**, and then select **Add** > **Next**.
 
 1. On the **Validation Warning** page, select **No**. (In a production scenario, you should perform the validation tests.) Then, select **Next**.
 

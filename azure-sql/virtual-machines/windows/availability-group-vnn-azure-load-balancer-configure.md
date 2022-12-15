@@ -91,7 +91,7 @@ To create the load balancer:
 
 1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
 
-1. Under **Virtual machine**, choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the failover cluster instance. 
+1. Under **Virtual machine**, choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the availability group. 
 
    Add only the primary IP address of each VM. Don't add any secondary IP addresses.
 

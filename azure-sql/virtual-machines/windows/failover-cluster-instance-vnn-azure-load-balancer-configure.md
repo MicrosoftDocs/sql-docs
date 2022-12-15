@@ -80,25 +80,25 @@ To create the load balancer:
 
 1. Choose **Review + Create** to create the load balancer.
 
-## Configure a back-end pool
+## Configure a backend pool
 
 1. Return to the Azure resource group that contains the virtual machines and locate the new load balancer. You might need to refresh the view on the resource group. Select the load balancer.
 
 1. Select **Backend pools**, and then select **+Add**.
 
-1. For **Name**, provide a name for the back-end pool.
+1. For **Name**, provide a name for the backend pool.
 
 1. For **Backend Pool Configuration**, select **NIC**.
 
-1. Select **Add** to associate the back-end pool with the availability set that contains the VMs.
+1. Select **Add** to associate the backend pool with the availability set that contains the VMs.
 
 1. Under **Virtual machine**, choose the virtual machines that will participate as cluster nodes. Be sure to include all virtual machines that will host the FCI. 
 
    Add only the primary IP address of each VM. Don't add any secondary IP addresses.
 
-1. Select **Add** to add the virtual machines to the back-end pool.
+1. Select **Add** to add the virtual machines to the backend pool.
 
-1. Select **Save** to create the back-end pool.
+1. Select **Save** to create the backend pool.
 
 ## Configure a health probe
 
@@ -120,8 +120,8 @@ To create the load balancer:
 1. Set these parameters:
 
    - **Name**: A name for the load-balancing rule.
-   - **Frontend IP address**: The IP address that you set when you configured the front end.
-   - **Backend pool**: The back-end pool that contains the virtual machines targeted for the load balancer.
+   - **Frontend IP address**: The IP address that you set when you configured the frontend.
+   - **Backend pool**: The backend pool that contains the virtual machines targeted for the load balancer.
    - **HA Ports**: Enables load balancing on all ports for TCP and UDP protocols.
    - **Protocol**: **TCP**.
    - **Port**: The SQL Server TCP port. The default is **1433**.
@@ -158,7 +158,7 @@ The following table describes the values that you need to update:
 |---------|---------|
 |`ClusterNetworkName`| The name of the Windows Server failover cluster for the network. In **Failover Cluster Manager** > **Networks**, right-click the network and select **Properties**. The correct value is under **Name** on the **General** tab.|
 |`IPResourceName`|The resource name for the IP address of the SQL Server FCI. In **Failover Cluster Manager** > **Roles**, under the SQL Server FCI role, under **Server Name**, right-click the IP address resource and select **Properties**. The correct value is under **Name** on the **General** tab.|
-|`ILBIP`|The IP address of the internal load balancer. This address is configured in the Azure portal as the internal load balancer's front-end address. This is also the IP address of the SQL Server FCI. You can find it in **Failover Cluster Manager**, on the same properties page where you located the value for `IPResourceName`.|
+|`ILBIP`|The IP address of the internal load balancer. This address is configured in the Azure portal as the internal load balancer's frontend address. This is also the IP address of the SQL Server FCI. You can find it in **Failover Cluster Manager**, on the same properties page where you located the value for `IPResourceName`.|
 |`ProbePort`|The probe port that you configured in the load balancer's health probe. Any unused TCP port is valid.|
 |`SubnetMask`| The subnet mask for the cluster parameter. It must be the TCP/IP broadcast address: `255.255.255.255`.| 
 
@@ -189,7 +189,7 @@ The following table describes the values that you need to update:
 |---------|---------|
 |`ClusterNetworkName`| The name of the Windows Server failover cluster for the network. In **Failover Cluster Manager** > **Networks**, right-click the network and select **Properties**. The correct value is under **Name** on the **General** tab.|
 |`IPResourceName`|The resource name for the IP address of the SQL Server FCI. In **Failover Cluster Manager** > **Roles**, under the SQL Server FCI role, under **Server Name**, right-click the IP address resource and select **Properties**. The correct value is under **Name** on the **General** tab.|
-|`ELBIP`|The IP address of the external load balancer. This address is configured in the Azure portal as the front-end address of the external load balancer. It's used to connect to the public load balancer from external resources. |
+|`ELBIP`|The IP address of the external load balancer. This address is configured in the Azure portal as the frontend address of the external load balancer. It's used to connect to the public load balancer from external resources. |
 |`ProbePort`|The probe port that you configured in the health probe of the load balancer. Any unused TCP port is valid.|
 |`SubnetMask`| The subnet mask for the cluster parameter. It must be the TCP/IP broadcast address: `255.255.255.255`.| 
 

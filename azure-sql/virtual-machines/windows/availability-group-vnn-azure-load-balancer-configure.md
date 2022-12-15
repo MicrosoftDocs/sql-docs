@@ -107,7 +107,7 @@ To create the load balancer:
 
    - **Name**: A name for the health probe.
    - **Protocol**: **TCP**.
-   - **Port**: The port that you created in the firewall for the health probe [when preparing the VM](failover-cluster-instance-prepare-vm.md#uninstall-sql-server-1). In this article, the example uses TCP port **59999**.
+   - **Port**: The port that you created in the [firewall for the health probe](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md#endpoint-firewall). In this article, the example uses TCP port **59999**.
    - **Interval**: **5 Seconds**.
 
 1. Select **Add**.

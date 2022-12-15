@@ -268,8 +268,6 @@ Transform relational data from your database easily into the JSON format used by
 SQL Server provides a hybrid model for storing and processing both relational and JSON data by using standard Transact-SQL language. You can organize collections of your JSON documents in tables, establish relationships between them, combine strongly typed scalar columns stored in tables with flexible key/value pairs stored in JSON columns, and query both scalar and JSON values in one or more tables by using full Transact-SQL.
 
 JSON text is stored in `VARCHAR` or `NVARCHAR` columns and is indexed as plain text. Any SQL Server feature or component that supports text supports JSON, so there are almost no constraints on interaction between JSON and other SQL Server features. You can store JSON in In-memory or Temporal tables, apply Row-Level Security predicates on JSON text, and so on.
-
-If you have pure JSON workloads where you want to use a query language that's customized for the processing of JSON documents, consider Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).  
   
 Here are some use cases that show how you can use the built-in JSON support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -427,5 +425,7 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
 - [JSON Functions (Transact-SQL)](../../t-sql/functions/json-functions-transact-sql.md)  
   - [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)  
   - [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
+  - [JSON_OBJECT](../../t-sql/functions/json-object-transact-sql.md)
+  - [JSON_ARRAY](../../t-sql/functions/json-array-transact-sql.md)
   - [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
-  - [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
+  - [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)

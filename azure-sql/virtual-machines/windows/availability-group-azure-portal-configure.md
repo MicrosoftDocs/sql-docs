@@ -213,7 +213,7 @@ On the **SQL Server settings** tab, configure specific settings and optimization
 
 1. For **Azure Key Vault integration**, select **Enable** if you want to use Azure Key Vault to store security secrets for encryption. Then, fill in the requested information. To learn more, see [Azure Key Vault integration](create-sql-vm-portal.md#azure-key-vault-integration).
 
-1. Select **Change SQL instance settings** to modify SQL Server configuration options. These options include server collation, maximum degree of parallelism, minimum and maximum memory, and whether you want to optimize for ad hoc workloads.
+1. Select **Change SQL instance settings** to modify SQL Server configuration options. These options include server collation, maximum degree of parallelism (MAXDOP), minimum and maximum memory, and whether you want to optimize for ad hoc workloads.
 
     :::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot of the Azure portal that shows SQL Server instance settings and the button for changing them.":::
 

@@ -348,7 +348,7 @@ In Azure virtual machines, the listener requires a load balancer. The next step 
 
 [!INCLUDE [sql-ag-use-dnn-listener](../../includes/sql-ag-use-dnn-listener.md)]
 
-On Azure virtual machines, a SQL Server availability group requires a load balancer. The load balancer holds the IP addresses for the availability group listeners and the Windows Server failover cluster. This section summarizes how to create the load balancer in the Azure portal.
+On Azure virtual machines in a single subnet, a SQL Server availability group requires a load balancer. The load balancer holds the IP addresses for the availability group listeners and the Windows Server failover cluster. This section summarizes how to create the load balancer in the Azure portal.
 
 A load balancer in Azure can be either *standard* or *basic*. A standard load balancer has more features than the basic load balancer. For an availability group, the standard load balancer is required if you use an availability zone (instead of an availability set). For details on the difference between the SKUs, see [Azure Load Balancer SKUs](/azure/load-balancer/skus).
 

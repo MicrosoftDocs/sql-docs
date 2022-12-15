@@ -42,22 +42,22 @@ The following steps are required to create an indexed view and are critical to t
 
 Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIELDS_NULL` is set to OFF, the same expression produces `'abc'`.
 
-To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required Value** column whenever the following conditions occur:
+To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required value** column whenever the following conditions occur:
 
 - The view and subsequent indexes on the view are created.
 - The base tables referenced in the view at the time the view is created.
 - There is any insert, update, or delete operation performed on any table that participates in the indexed view. This requirement includes operations such as bulk copy, replication, and distributed queries.
 - The indexed view is used by the query optimizer to produce the query plan.
 
-|SET options|Required value|Default server value|Default<br /><br />OLE DB and ODBC value|Default<br /><br />DB-Library value|
+| SET options | Required value | Default server value | Default<br /><br />OLE DB and ODBC value | Default<br /><br />DB-Library value |
 | --- | --- | --- | --- | --- |
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
-|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+| ANSI_NULLS | ON | ON | ON | OFF |
+| ANSI_PADDING | ON | ON | ON | OFF |
+| ANSI_WARNINGS <sup>1</sup> | ON | ON | ON | OFF |
+| ARITHABORT | ON | ON | OFF | OFF |
+| CONCAT_NULL_YIELDS_NULL | ON | ON | ON | OFF |
+| NUMERIC_ROUNDABORT | OFF | OFF | OFF | OFF |
+| QUOTED_IDENTIFIER | ON | ON | ON | OFF |
 
 <sup>1</sup> Setting `ANSI_WARNINGS` to ON implicitly sets `ARITHABORT` to ON.
 
@@ -72,7 +72,7 @@ The definition of an indexed view must be *deterministic*. A view is determinist
 
 To determine whether a view column is deterministic, use the `IsDeterministic` property of the [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) function. To determine if a deterministic column in a view with schema binding is precise, use the `IsPrecise` property of the `COLUMNPROPERTY` function. `COLUMNPROPERTY` returns `1` if `TRUE`, `0` if `FALSE`, and `NULL` for input that isn't valid. This means the column isn't deterministic or not precise.
 
-Even if an expression is deterministic, if it contains float expressions, the exact result may depend on the processor architecture or version of microcode. To ensure data integrity, such expressions can participate only as non-key columns of indexed views. Deterministic expressions that do not contain float expressions are called precise. Only precise deterministic expressions can participate in key columns and in `WHERE` or `GROUP BY` clauses of indexed views.
+Even if an expression is deterministic, if it contains float expressions, the exact result may depend on the processor architecture or version of microcode. To ensure data integrity, such expressions can participate only as non-key columns of indexed views. Deterministic expressions that don't contain float expressions are called *precise*. Only precise deterministic expressions can participate in key columns and in `WHERE` or `GROUP BY` clauses of indexed views.
 
 ## Additional requirements
 
@@ -87,12 +87,12 @@ The following requirements must also be met, in addition to the `SET` options an
 - Common language runtime (CLR) functions can appear in the select list of the view, but can't be part of the definition of the clustered index key. CLR functions can't appear in the WHERE clause of the view or the ON clause of a JOIN operation in the view.
 - CLR functions and methods of CLR user-defined types used in the view definition must have the properties set as shown in the following table.
 
-  |Property|Note|
+  | Property | Note |
   | --- | --- |
-  |DETERMINISTIC = TRUE|Must be declared explicitly as an attribute of the Microsoft .NET Framework method.|
-  |PRECISE = TRUE|Must be declared explicitly as an attribute of the .NET Framework method.|
-  |DATA ACCESS = NO SQL|Determined by setting DataAccess attribute to DataAccessKind.None and SystemDataAccess attribute to SystemDataAccessKind.None.|
-  |EXTERNAL ACCESS = NO|This property defaults to NO for CLR routines.|
+  | `DETERMINISTIC = TRUE` | Must be declared explicitly as an attribute of the Microsoft .NET Framework method. |
+  | `PRECISE = TRUE` | Must be declared explicitly as an attribute of the .NET Framework method. |
+  | `DATA ACCESS = NO SQL` | Determined by setting `DataAccess` attribute to `DataAccessKind.None` and `SystemDataAccess` attribute to `SystemDataAccessKind.None`. |
+  | `EXTERNAL ACCESS = NO` | This property defaults to NO for CLR routines. |
 
 - The view must be created by using the `WITH SCHEMABINDING` option.
 - The view must reference only base tables that are in the same database as the view. The view can't reference other views.
@@ -101,45 +101,45 @@ The following requirements must also be met, in addition to the `SET` options an
 - If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
 - The SELECT statement in the view definition must not contain the following Transact-SQL syntax:
 
-   | Disallowed Transact-SQL functions                      |
-   |--------------------------------------------------------|
-   | [Relational operators](../../t-sql/language-elements/relational-operators-transact-sql.md) `OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, and `OPENXML` |
-   | [Aggregate functions](../../t-sql/functions/aggregate-functions-transact-sql.md) `AVG`, `CHECKSUM_AGG`, `COUNT`, `MIN`, `MAX`, `STDEV`, `STDEVP`, `STRING_AGG`, `VAR`, `VARP` |
-   | `SUM` function that references a nullable expression   |
-   | User-defined aggregate functions (SQL CLR)             |
+  **Disallowed Transact-SQL functions:**
 
-   | Disallowed Transact-SQL elements                                     | 
-   |----------------------------------------------------------------------|
-   | Common table expressions (CTE) `WITH`                                |
-   | Subqueries                                                           |
-   | `SELECT [<table>.]*`                                                 |
-   | `SELECT DISTINCT`                                                    | 
-   | `SELECT TOP`                                                         | 
-   | `OVER` clause, which includes ranking or aggregate window functions  | 
-   | `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, `FULL OUTER JOIN`             | 
-   | `OUTER APPLY` or `CROSS APPLY`                                       | 
-   | Derived tables (for example, using `SELECT` in the `FROM` clause)    | 
-   | Self-joins                                                           | 
-   | Table variables, inline table-valued function (TVF), or multi-statement table-valued function (MSTVF) | 
-   | `PIVOT`, `UNPIVOT`                                                   | 
-   | `TABLESAMPLE`                                                        | 
-   | Temporal queries that use `FOR SYSTEM_TIME`                          | 
-   | Full-text predicates `CONTAINS`, `FREETEXT`, `CONTAINSTABLE`, `FREETEXTTABLE`  |
-   | Grouping operations `CUBE`, `ROLLUP`, or `GROUPING SETS`             |  
-   | `UNION`, `UNION ALL`, `EXCEPT`, `INTERSECT`                          |  
-   | `HAVING`                                                             |
-   | `ORDER BY`                                                           |  
-   | `OFFSET`                                                             |  
+  - [Relational operators](../../t-sql/language-elements/relational-operators-transact-sql.md): `OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, and `OPENXML`
+  - [Aggregate functions](../../t-sql/functions/aggregate-functions-transact-sql.md): `AVG`, `CHECKSUM_AGG`, `COUNT`, `MIN`, `MAX`, `STDEV`, `STDEVP`, `STRING_AGG`, `VAR`, `VARP`
+  - `SUM` functions that reference a nullable expression
+  - User-defined aggregate functions (SQL CLR)
 
-   | Disallowed Transact-SQL data types                               |  
-   |------------------------------------------------------------------|
-   | Deprecated large value column types `text`, `ntext`, and `image` |
-   | `xml`                                                            |
-   | `filestream`                                                     |
-   | Sparse column sets                                               |
-   | `float`<sup>1</sup>                                              |
+  **Disallowed Transact-SQL elements:**
 
-<sup>1</sup> The indexed view can contain float columns; however, such columns cannot be included in the clustered index key.
+  - Common table expressions (CTEs): `WITH`
+  - Subqueries
+  - `SELECT [<table>.]*`
+  - `SELECT DISTINCT`
+  - `SELECT TOP`
+  - `OVER` clause, which includes ranking or aggregate window functions
+  - `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, `FULL OUTER JOIN`
+  - `OUTER APPLY` or `CROSS APPLY`
+  - Derived tables (for example, using `SELECT` in the `FROM` clause)
+  - Self-joins
+  - Table variables, inline table-valued function (TVF), or multi-statement table-valued function (MSTVF)
+  - `PIVOT`, `UNPIVOT`
+  - `TABLESAMPLE`
+  - Temporal queries that use `FOR SYSTEM_TIME`
+  - Full-text predicates: `CONTAINS`, `FREETEXT`, `CONTAINSTABLE`, `FREETEXTTABLE`
+  - Grouping operations: `CUBE`, `ROLLUP`, or `GROUPING SETS`
+  - `UNION`, `UNION ALL`, `EXCEPT`, `INTERSECT`
+  - `HAVING`
+  - `ORDER BY`
+  - `OFFSET`
+
+  **Disallowed Transact-SQL data types:**
+
+  - Deprecated large value column types: **text**, **ntext**, and **image**
+  - **xml**
+  - FILESTREAM
+  - Sparse column sets
+  - **float** <sup>1</sup>
+
+  <sup>1</sup> The indexed view can contain **float** columns; however, such columns can't be included in the clustered index key.
 
 ## datetime and smalldatetime recommendations
 
@@ -249,11 +249,11 @@ For more information, see [CREATE VIEW (Transact-SQL)](../../t-sql/statements/cr
 
 ## Next steps
 
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)
 - [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)
 - [SET ANSI_WARNINGS](../../t-sql/statements/set-ansi-warnings-transact-sql.md)
 - [SET ARITHABORT](../../t-sql/statements/set-arithabort-transact-sql.md)
 - [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [SET NUMERIC_ROUNDABORT](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 - [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)

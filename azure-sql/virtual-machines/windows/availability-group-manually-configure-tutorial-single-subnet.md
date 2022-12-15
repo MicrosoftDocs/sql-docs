@@ -47,7 +47,7 @@ The following table summarizes the prerequisites that you need to complete:
 
 The first task is to create a Windows Server failover cluster with both SQL Server VMs and a witness server:
 
-1. Use Remote Desktop Protocol (RDP) to connect to the first SQL Server instance. Use a domain account that's an administrator on both SQL Server instances and the witness server.
+1. Use Remote Desktop Protocol (RDP) to connect to the first SQL Server VM. Use a domain account that's an administrator on both SQL Server VMs and the witness server.
 
    >[!TIP]
    >In the [prerequisites](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md), you created an account called **CORP\Install**. Use this account.

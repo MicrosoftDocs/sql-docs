@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Configure an availability group across regions"
-description: "This tutorial explains how to configure a SQL Server Always On availability group on Azure virtual machines with a replica in a different region."
+description: "This tutorial explains how to configure an Always On availability group for SQL Server on Azure virtual machines with a replica in a different region from the primary replica."
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest

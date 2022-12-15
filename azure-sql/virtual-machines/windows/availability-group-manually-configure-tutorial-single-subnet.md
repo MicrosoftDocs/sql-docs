@@ -255,7 +255,7 @@ You need to back up the new database to initialize the log chain. If you don't t
 
 ## Create an availability group
 
-You're now ready to configure an availability group by doing the following tasks:
+You're now ready to create and configure an availability group by doing the following tasks:
 
 * Create a database on the first SQL Server instance.
 * Take both a full backup and a transaction log backup of the database.

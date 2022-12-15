@@ -591,7 +591,7 @@ The IP address for the listener in the remote region needs to be added to the cl
 
 ## Enable availability groups
 
-Next, enable the Always On availability groups feature. Complete these steps on the new SQL Server instance:
+Next, enable the Always On availability groups feature. Complete these steps on the new SQL Server VM:
 
 1. From the **Start** screen, open **SQL Server Configuration Manager**.
 1. In the browser tree, select **SQL Server Services**. Right-click the **SQL Server (MSSQLSERVER)** service, and then select **Properties**.

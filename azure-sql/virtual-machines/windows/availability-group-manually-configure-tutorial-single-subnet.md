@@ -194,7 +194,7 @@ Next, enable Always On availability groups. Complete these steps on both SQL Ser
 
 Each instance of SQL Server that participates in an availability group requires a database mirroring endpoint. This endpoint is a TCP port for the instance of SQL Server that's used to synchronize the database replicas in the availability groups on that instance.
 
-On both SQL Server instances, open the firewall for the TCP port for the database mirroring endpoint:
+On both SQL Server VMs, open the firewall for the TCP port for the database mirroring endpoint:
 
 1. On the **Start** screen for the first SQL Server instance, open **Windows Firewall with Advanced Security**.
 2. On the left pane, select **Inbound Rules**. On the right pane, select **New Rule**.

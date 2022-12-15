@@ -17,7 +17,9 @@ tags: azure-service-management
 
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-This tutorial explains how to configure a SQL Server Always On availability group replica on Azure virtual machines (VMs) in a remote Azure location. Use this configuration to support disaster recovery.
+This tutorial explains how to configure an Always On availability group replica for SQL Server on Azure virtual machines (VMs) in an Azure region that is remote to the primary replica. You can use this configuration for the purpose of disaster recovery (DR). 
+
+You can also use the steps in this article to extend an existing on-premises availability group to Azure.
 
 This tutorial builds on the [tutorial to manually deploy an availability group in a single subnet in a single region](availability-group-manually-configure-prerequisites-tutorial-single-subnet.md). Mentions of the local region in this article refer to the virtual machines and availability group already configured in a single region. The remote region is the new infrastructure that this tutorial is adding.
 

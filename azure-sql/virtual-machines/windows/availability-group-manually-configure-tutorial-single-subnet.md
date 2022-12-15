@@ -237,7 +237,7 @@ On both SQL Server VMs, open the firewall for the TCP port for the database mirr
 
 1. In the **Customize Permissions** dialog, select **Add**.
 
-1. Make sure that the SQL Server and SQL Server Agent service accounts for both servers have full control.
+1. Make sure that the accounts for the SQL Server and SQL Server Agent service on both servers have full control.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/68-backup-share-permission.png" alt-text="Screenshot of the Customize Permissions dialog with two SQL Server service accounts that have full control of the share.":::
 

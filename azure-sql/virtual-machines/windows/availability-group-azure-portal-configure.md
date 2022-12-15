@@ -27,7 +27,8 @@ This article describes how to use the [Azure portal](https://portal.azure.com) t
 - An availability group.
 - A listener. 
 
-This deployment method is currently in preview. It supports SQL Server 2016 and later on Windows Server 2016 and later. 
+> [!NOTE]
+> This deployment method is currently in preview. It supports SQL Server 2016 and later on Windows Server 2016 and later. 
 
 Deploying a multiple-subnet availability group through the portal provides an easy end-to-end experience for users. It configures the virtual machines by following the [best practices for high availability and disaster recovery (HADR)](hadr-cluster-best-practices.md).
 

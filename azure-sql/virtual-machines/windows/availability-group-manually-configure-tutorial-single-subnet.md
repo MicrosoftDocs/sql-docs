@@ -212,7 +212,7 @@ On both SQL Server VMs, open the firewall for the TCP port for the database mirr
 
 ## Create a database on the first SQL Server instance
 
-1. Open the RDP file to the first SQL Server instance with a domain account that's a member of **sysadmin** fixed server role.
+1. Open the RDP file to the first SQL Server VM with a domain account that's a member of **sysadmin** fixed server role.
 1. Open SQL Server Management Studio (SSMS) and connect to the first SQL Server instance.
 1. In **Object Explorer**, right-click **Databases** and select **New Database**.
 1. In **Database name**, enter **MyDB1**, and then select **OK**.

@@ -27,7 +27,6 @@ For an alternative connectivity option for customers who are on SQL Server 2019 
 Before you complete the steps in this article, you should already have:
 
 - Decided that Azure Load Balancer is the appropriate [connectivity option for your availability group](hadr-windows-server-failover-cluster-overview.md#virtual-network-name-vnn).
-- Configured your [availability group listener](availability-group-overview.md).
 - Installed the latest version of [PowerShell](/powershell/scripting/install/installing-powershell-core-on-windows). 
 
 ## Create a load balancer

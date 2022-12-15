@@ -20,7 +20,7 @@ dev_langs:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 ---
 # sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each event target for an event session.  
   

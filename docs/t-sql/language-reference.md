@@ -57,7 +57,7 @@ The T-SQL reference articles encompass multiple versions of SQL Server, starting
 
 For example, this article applies to all versions, and has the following label.
 
-[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE[sql-asdb-asa-pdw](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Another example, the following label indicates an article that applies only to Azure Synapse Analytics and Parallel Data Warehouse.
 

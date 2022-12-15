@@ -32,7 +32,7 @@ dev_langs:
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (SQL Graph)
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Creates a new SQL graph table as either a `NODE` or an `EDGE` table. 
   

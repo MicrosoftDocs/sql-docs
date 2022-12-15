@@ -506,7 +506,7 @@ The IP address for the Windows Server failover cluster also needs to be on the l
 The next thing to do is configure an availability group listener on the failover cluster.
 
 > [!NOTE]
-> This tutorial shows how to create a single listener, with one IP address for the internal load balancer. To create listeners by using one or more IP addresses, see [Configure one or more Always On availability group listeners](availability-group-listener-powershell-configure.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+> This tutorial shows how to create a single listener, with one IP address for the internal load balancer. To create listeners by using one or more IP addresses, see [Configure one or more Always On availability group listeners](availability-group-listener-powershell-configure.md).
 >
 
 [!INCLUDE [ag-listener-configure](../../includes/virtual-machines-ag-listener-configure.md)]

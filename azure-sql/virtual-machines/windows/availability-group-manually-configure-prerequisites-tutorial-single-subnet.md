@@ -184,7 +184,7 @@ In the following steps, configure the **ad-primary-dc** machine as a domain cont
 1. Sign in with your configured administrator account (**\DomainAdmin**) and password (**Contoso!0000**).
 1. By default, the **Server Manager** dashboard should be displayed. Select the **Add roles and features** link on the dashboard.
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the link for adding roles and features on the Server Manager dashboard.":::
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the link to add roles and features on the Server Manager dashboard.":::
 
 1. Select **Next** until you get to the **Server Roles** section.
 1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any features that these roles require.

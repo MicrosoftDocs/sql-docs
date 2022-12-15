@@ -32,7 +32,7 @@ The following image shows a common deployment of an availability group on Azure 
 
 In the deployment shown in the diagram, all virtual machines are in one Azure region. The availability group replicas can have synchronous commit with automatic failover on SQL-1 and SQL-2. To build this architecture, see the [availability group template or tutorial](availability-group-overview.md).
 
-This architecture is vulnerable to downtime if the Azure region becomes inaccessible. To overcome this vulnerability, add a replica in a different Azure region. The following diagram shows how the new architecture would look:
+This architecture is vulnerable to downtime if the Azure region becomes inaccessible. To overcome this vulnerability, add a replica in a different Azure region. The following diagram shows how the new architecture looks:
 
    :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/00-availability-group-basic-dr.png" alt-text="Diagram of a disaster recovery scenario for an availability group.":::
 

@@ -350,10 +350,10 @@ The load balancer must:
 
 - Be in the same network and subnet as the new virtual machine.
 - Have a static IP address for the availability group listener.
-- Include a back-end pool that consists of only the virtual machines in the same region as the load balancer.
+- Include a backend pool that consists of only the virtual machines in the same region as the load balancer.
 - Use a TCP port probe that's specific to the IP address.
 - Have a load-balancing rule that's specific to the SQL Server instance in the same region.  
-- Be a standard load balancer if the virtual machines in the back-end pool aren't part of either a single availability set or a virtual machine scale set. For more information, review [What is Azure Load Balancer?](/azure/load-balancer/load-balancer-overview).
+- Be a standard load balancer if the virtual machines in the backend pool aren't part of either a single availability set or a virtual machine scale set. For more information, review [What is Azure Load Balancer?](/azure/load-balancer/load-balancer-overview).
 - Be a standard load balancer if the two virtual networks in two different regions are peered over global virtual network peering. For more information, see [Azure Virtual Network frequently asked questions (FAQ)](/azure/virtual-network/virtual-networks-faq#what-are-the-constraints-related-to-global-vnet-peering-and-load-balancers).
 
 The steps to [create the load balancer](availability-group-manually-configure-tutorial-single-subnet.md#configure-internal-load-balancer) are:
@@ -380,40 +380,40 @@ The steps to [create the load balancer](availability-group-manually-configure-tu
 
 1. Select **Add a frontend IP configuration**.
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the Azure portal that shows the button for adding a front-end IP configuration.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/add-fe-ip-config.png" alt-text="Screenshot of the Azure portal that shows the button for adding a frontend IP configuration.":::
 
-1. Set up the front-end IP address by using the following values:
+1. Set up the frontend IP address by using the following values:
 
-   - **Name**: Use a name that identifies the front-end IP configuration.
+   - **Name**: Use a name that identifies the frontend IP configuration.
    - **Virtual network**: Use the same network as the virtual machines.
    - **Subnet**: Use the same subnet as the virtual machines.
    - **Assignment**: Select **Static**.
    - **IP address**: Use an available address from the subnet. *Use this address for your availability group listener*. This address is different from your cluster IP address.
    - **Availability zone**: Optionally, choose an availability zone to deploy your IP address to.
 
-   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the dialog for adding a front-end IP configuration.":::
+   :::image type="content" source="./media/availability-group-manually-configure-multiple-regions/add-fe-ip-config-details.png" alt-text="Screenshot of the Azure portal that shows the dialog for adding a frontend IP configuration.":::
 
 1. Select **Add**.
 
-1. Select **Review + Create** to validate the configuration, and then select **Create** to create the load balancer and the front-end IP address.
+1. Select **Review + Create** to validate the configuration, and then select **Create** to create the load balancer and the frontend IP address.
 
-To configure the load balancer, you need to create a back-end pool, create a probe, and set the load-balancing rules. 
+To configure the load balancer, you need to create a backend pool, create a probe, and set the load-balancing rules. 
 
-### Add a back-end pool for the availability group listener
+### Add a backend pool for the availability group listener
 
 1. In the Azure portal, go to your availability group. You might need to refresh the view to see the newly created load balancer.
 
 1. Select the load balancer, select **Backend pools**, and then select **+Add**.
 
-1. For **Name**, provide a name for the back-end pool.
+1. For **Name**, provide a name for the backend pool.
 
 1. For **Backend Pool Configuration**, select **NIC**.
 
-1. Select **Add** to associate the back-end pool with the newly created SQL Server VM.
+1. Select **Add** to associate the backend pool with the newly created SQL Server VM.
 
 1. Under **Virtual machine**, choose the virtual machine that will host the availability group replica.
 
-1. Select **Add** to add the virtual machine to the back-end pool.
+1. Select **Add** to add the virtual machine to the backend pool.
 
 1. Select **Save**.
 
@@ -442,7 +442,7 @@ To configure the load balancer, you need to create a back-end pool, create a pro
    | --- | --- |---
    | **Name** | Text | **SQLAlwaysOnEndPointListener** |
    | **Frontend IP address** | Choose an address |Use the address that you created when you created the load balancer. |
-   | **Backend pool** | Choose the back-end pool |Select the back-end pool that contains the virtual machines targeted for the load balancer. |
+   | **Backend pool** | Choose the backend pool |Select the backend pool that contains the virtual machines targeted for the load balancer. |
    | **Protocol** | Choose TCP |**TCP** |
    | **Port** | Use the port for the availability group listener | **1433** |
    | **Backend Port** | This field is not used when you set a floating IP for direct server return | **1433** |

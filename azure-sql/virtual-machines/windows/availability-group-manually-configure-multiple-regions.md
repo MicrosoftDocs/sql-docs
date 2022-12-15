@@ -506,7 +506,7 @@ The new SQL Server VM needs to be [added to the Windows Server failover cluster]
 
 To add the SQL Server VM to the cluster:
 
-1. Use RDP to connect to a SQL Server instance in the existing cluster. Use a domain account that's an administrator on both SQL Server instances and the witness server.
+1. Use RDP to connect to a SQL Server VM in the existing cluster. Use a domain account that's an administrator on both SQL Server VMs and the witness server.
 1. On the **Server Manager** dashboard, select **Tools**, and then select **Failover Cluster Manager**.
 1. On the left pane, right-click **Failover Cluster Manager**, and then select **Connect to Cluster**.
 1. In the **Select Cluster** window, under **Cluster name**, choose **\<Cluster on this server\>**. Then select **OK**.

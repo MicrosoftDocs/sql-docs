@@ -284,7 +284,7 @@ You're now ready to create and configure an availability group by doing the foll
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/62-new-availability-group-add-replica.png" alt-text="Screenshot of the button for adding a replica in the New Availability Group Wizard in SSMS.":::
 
-1. In the **Connect to Server** dialog, for **Server name**, enter the name of the second server. Then select **Connect**.
+1. In the **Connect to Server** dialog, for **Server name**, enter the name of the second SQL Server instance. Then select **Connect**.
 
    Back on the **Specify Replicas** page, you should now see the second server listed under **Availability Replicas**. Configure the replicas as follows.
 

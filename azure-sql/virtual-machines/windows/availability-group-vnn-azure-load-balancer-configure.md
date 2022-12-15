@@ -10,7 +10,7 @@ ms.subservice: hadr
 ms.topic: how-to
 tags: azure-resource-manager
 ---
-# Configure an Azure load balancer for an AG VNN listener
+# Configure an Azure load balancer for an AG VNN listener - SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!TIP]

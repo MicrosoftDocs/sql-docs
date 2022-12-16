@@ -344,4 +344,4 @@ The TRUSTWORHTY database property is used to indicate whether this instance of S
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
  [Migrate to a new installation](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md#migrate-to-a-new-installation) 
- [Migration overview: SQL Server to SQL Server on Azure VMs](https://learn.microsoft.com/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview.md#server-objects) 
+ [Migration overview: SQL Server to SQL Server on Azure VMs](/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-migration-overview#server-objects) 

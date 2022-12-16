@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 06/21/2022
+ms.date: 12/16/2022
 adobe-target: true
 ---
 
@@ -15,7 +15,7 @@ adobe-target: true
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-To view the release notes for SSMS 19 Preview 3, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
+To view the release notes for SSMS 19 Preview 4, visit [SSMS Release Notes 19](release-notes-ssms-19.md).
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 

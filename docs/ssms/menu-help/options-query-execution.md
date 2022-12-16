@@ -14,8 +14,9 @@ ms.date: 01/13/2021
 ---
 
 # Options (Query Execution - General)
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
-Use this page to specify the options for running Microsoft SQL Server queries. To access this dialog box, right-click the body of a Query Editor window, and then select **Query Options** or go to **Tools > Options > Query Execution** from the top menu bar.
+Use this page to specify the options for running Microsoft SQL Server queries. To access this dialog box, right-click the body of a Query Editor window, and then select **Query Options** or on the **Tools** menu,  select **Options**, then the **Query Execution** folder.  
 
 - **SET ROWCOUNT**
     The default value of 0 indicates that SQL Server will wait for results until all results are received. Provide a value greater than 0 if you want SQL Server to halt the query after obtaining the specified number of rows. To turn off this option (so that all rows are returned), specify SET ROWCOUNT 0.

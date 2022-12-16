@@ -74,7 +74,7 @@ ms.author: "mikeray"
   
 -   Installs the [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] files, service, and tools ([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]). When there are multiple instances of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] on the same computer, the first time you upgrade any of the instances to [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)], the [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] files, service, and tools are installed.  
   
--   Upgrades the instance of the [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] to the [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] version.  
+-   Upgrades the instance of the [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] to the [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] version.  
   
 -   Moves data from the [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] or later system tables to the [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] system tables, as follows:  
   
@@ -89,7 +89,7 @@ ms.author: "mikeray"
   
 -   Removes the msdb.sysdts*90 system tables and the stored procedures that are used to access them after moving the data to the new msdb.sysssis\* tables. However, upgrade replaces the sysdtslog90 table with a view that is also named sysdtslog90. This new sysdtslog90 view exposes the new msdb.sysssislog system table. This ensures that reports based on the log table continue to run without interruption.  
   
--   To control access to packages, creates three new fixed database-level roles: db_ssisadmin, db_ssisltduser, and db_ssisoperator. The [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] roles of db_dtsadmin, db_dtsltduser, and db_dtsoperator are not removed, but are made members of the corresponding new roles.  
+-   To control access to packages, creates three new fixed database-level roles: db_ssisadmin, db_ssisltduser, and db_ssisoperator. The [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] roles of db_dtsadmin, db_dtsltduser, and db_dtsoperator are not removed, but are made members of the corresponding new roles.  
   
 -   If the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package store (that is, the file system location managed by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service) is the default location under **\SQL Server\90**, **\SQL Server\100**, **\SQL Server\110**, or **\SQL Server\120** moves those packages to the new default location under **\SQL Server\130**.  
   

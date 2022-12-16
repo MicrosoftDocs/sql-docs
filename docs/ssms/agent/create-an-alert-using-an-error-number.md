@@ -65,7 +65,7 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
   
 #### To create an alert using an error number  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

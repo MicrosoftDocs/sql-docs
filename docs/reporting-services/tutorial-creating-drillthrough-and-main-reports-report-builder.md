@@ -358,7 +358,7 @@ You will add an embedded data source to the main report.
   
 5.  In **Data source**, verify that the data source is **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed.  
+6.  In **Server name**, type the name of a server where an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is installed.  
   
 7.  In **Select or enter a database name**, select the Contoso cube.  
   

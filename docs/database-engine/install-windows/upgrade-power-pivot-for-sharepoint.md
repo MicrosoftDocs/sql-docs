@@ -66,7 +66,7 @@ monikerRange: ">=sql-server-2016"
 
  **SharePoint 2010:**
 
-- If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](/officeupdates/sharepoint-updates#sharepoint-2010-update-history).
+- If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](/officeupdates/sharepoint-updates#sharepoint-2010-update-history).
 
 ## <a id="bkmk_uprgade_sharepoint2013"></a> Upgrade an Existing SharePoint 2013 Farm
 

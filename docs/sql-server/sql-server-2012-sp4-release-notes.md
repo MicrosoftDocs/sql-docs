@@ -159,7 +159,7 @@ For a complete list of bugs and known issues fixed in this service pack, see [th
 **Workaround:**  If you installed [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode before the SharePoint farm was configured, the required work around depends on what other components are installed.  
   
 #### Power View in SharePoint Server 2013 Requires Microsoft.AnalysisServices.SPClient.dll  
-**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
+**Issue:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not install a required component, **Microsoft.AnalysisServices.SPClient.dll**. If you install SharePoint Server 2013 Preview and [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, but do not download and install the PowerPivot for SharePoint 2013 installer package, **spPowerPivot.msi** then Power View will not work and Power View will exhibit the following symptoms.  
   
 **Symptoms:** When you attempt to create a Power View report, you see an error message similar to the following:  
   

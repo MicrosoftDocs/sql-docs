@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
  | Status | Description |
  |--------|-------------|
  | `Active` | Recommendation is active and not yet applied. User can take recommendation script and execute it manually. |
- | `Verifying` | Recommendation is applied by [!INCLUDE[ssde_md](../../includes/ssde_md.md)] and internal verification process compares performance of the forced plan with the regressed plan. |
+ | `Verifying` | Recommendation is applied by [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] and internal verification process compares performance of the forced plan with the regressed plan. |
  | `Success` | Recommendation is successfully applied. |
  | `Reverted` | Recommendation is reverted because there are no significant performance gains. |
  | `Expired` | Recommendation has expired and cannot be applied anymore. |
@@ -70,7 +70,7 @@ JSON document in `state` column contains the reason that describes why is the re
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` option is disabled by the user during verification process. Enable `FORCE_LAST_GOOD_PLAN` option using [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement or force the plan manually using the script in the `details` column. |
 | `UnsupportedStatementType` | Plan cannot be forced on the query. Examples of unsupported queries are cursors and `INSERT BULK` statement. |
 | `LastGoodPlanForced` | Recommendation is successfully applied. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified potential performance regression, but the `FORCE_LAST_GOOD_PLAN` option is not enabled - see [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Apply recommendation manually or enable `FORCE_LAST_GOOD_PLAN` option. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] identified potential performance regression, but the `FORCE_LAST_GOOD_PLAN` option is not enabled - see [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Apply recommendation manually or enable `FORCE_LAST_GOOD_PLAN` option. |
 | `VerificationAborted`| Verification process is aborted due to the restart or Query Store cleanup. |
 | `VerificationForcedQueryRecompile`| Query is recompiled because there is no significant performance improvement. |
 | `PlanForcedByUser`| User manually forced the plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. Database engine will not apply the recommendation if user explicitly decided to force some plan. |
@@ -78,7 +78,7 @@ JSON document in `state` column contains the reason that describes why is the re
 | `UserForcedDifferentPlan` | User manually forced different plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. Database engine will not apply the recommendation if user explicitly decided to force some plan. |
 | `TempTableChanged` | A temporary table that was used in the plan is changed. |
 
- Statistic in the `details` column do not show runtime plan statistics (for example, current CPU time). The recommendation details are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use `regressedPlanId` and `recommendedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
+ Statistic in the `details` column do not show runtime plan statistics (for example, current CPU time). The recommendation details are taken at the time of regression detection and describe why [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] identified performance regression. Use `regressedPlanId` and `recommendedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
 
 ## Examples of using tuning recommendations information  
 
@@ -163,7 +163,7 @@ INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
 INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
 ```
 
-For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../json/json-data-sql-server.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../json/json-data-sql-server.md) in [!INCLUDE[ssDE-md](../../includes/ssde-md.md)].
   
 ## Permissions  
 

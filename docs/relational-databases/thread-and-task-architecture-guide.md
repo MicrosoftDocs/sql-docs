@@ -114,7 +114,7 @@ The Showplan XML shows that 16 worker threads were reserved and used on NUMA nod
 </ThreadStat>
 ```
 
-Thread reservation ensures the [!INCLUDE[ssde_md](../includes/ssde_md.md)] has enough worker threads to carry out all the tasks that will be needed for the request. Threads can be reserved across several NUMA nodes, or be reserved in just one NUMA node. Thread reservation is done at runtime before execution starts, and is dependent on scheduler load. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. Each branch is limited to a number of worker threads that's equal to MaxDOP. In this example there are two concurrent branches and MaxDOP is set to 8, therefore **2 * 8 = 16**.
+Thread reservation ensures the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] has enough worker threads to carry out all the tasks that will be needed for the request. Threads can be reserved across several NUMA nodes, or be reserved in just one NUMA node. Thread reservation is done at runtime before execution starts, and is dependent on scheduler load. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. Each branch is limited to a number of worker threads that's equal to MaxDOP. In this example there are two concurrent branches and MaxDOP is set to 8, therefore **2 * 8 = 16**.
 
 For reference, observe the live execution plan from [Live Query Statistics](../relational-databases/performance/live-query-statistics.md), where one branch has completed and two branches are executing concurrently.
 

@@ -101,7 +101,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed MSRC crashes. | Fixed three crashes reported by MSRC (Microsoft Security Response Center). |
+| Fixed potential crashes. | Fixed potential crashes when invalid metadata is received from the server. |
 
 ## 18.6.4
 

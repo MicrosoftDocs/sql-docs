@@ -175,7 +175,7 @@ For information on setting up Azure SQL Database auditing, see [Get Started with
 
 ## Limitations
 
-Selecting rows from sys.fn_get_audit_file within a Create Table As Select (CTAS) is a limitation and known issue. 
+Selecting rows from `sys.fn_get_audit_file` within a Create Table As Select (CTAS) is a limitation and known issue. 
 
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

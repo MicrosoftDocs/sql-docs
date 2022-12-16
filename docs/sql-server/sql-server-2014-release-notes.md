@@ -13,7 +13,9 @@ ms.author: mikeray
 monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+
 This article describes known issues with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] releases, including related service packs.
 
 ## SQL Server 2014 Service Pack 2 (SP2)

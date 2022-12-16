@@ -115,7 +115,7 @@ The following table contains brief descriptions of some of the most common spinl
 | DBSEEDING_OPERATION | Internal use only. |
 | DBT_HASH | Internal use only. |
 | DBT_IO_LIST | Internal use only. |
-| DBTABLE | Controls access to an in-memory data structure for every database in a [!INCLUDE[ssde_md](../../includes/ssde_md.md)] that contains the properties of that database. For more information, see [Improving Concurrency and Scalability of SQL Server workload by optimizing database containment check in SQL 2014 and SQL 2016](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
+| DBTABLE | Controls access to an in-memory data structure for every database in a [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] that contains the properties of that database. For more information, see [Improving Concurrency and Scalability of SQL Server workload by optimizing database containment check in SQL 2014 and SQL 2016](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
 | DEFERRED_WF_EXT_DROP | Internal use only. |
 | DEK_INSTANCE | Internal use only. |
 | DELAYED_PARTITIONED_STACK | Internal use only. |
@@ -303,7 +303,7 @@ The following table contains brief descriptions of some of the most common spinl
 | SOS_ACTIVEDESCRIPTOR | Internal use only. |
 | SOS_BLOCKALLOCPARTIALLIST | Internal use only. |
 | SOS_BLOCKDESCRIPTORBUCKET | Internal use only. |
-| SOS_CACHESTORE | Synchronizes access to various in-memory caches in the [!INCLUDE[ssde_md](../../includes/ssde_md.md)], such as the plan cache or temp table cache. Heavy contention on this spinlock type can mean many different things depending on the specific cache that is in contention. Contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services for help troubleshooting this spinlock type. |
+| SOS_CACHESTORE | Synchronizes access to various in-memory caches in the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)], such as the plan cache or temp table cache. Heavy contention on this spinlock type can mean many different things depending on the specific cache that is in contention. Contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services for help troubleshooting this spinlock type. |
 | SOS_CACHESTORE_CLOCK | Internal use only. |
 | SOS_CLOCKALG_INTERNODE_SYNC | Internal use only. |
 | SOS_DEBUG_HOOK | Internal use only. |

@@ -47,7 +47,7 @@ To execute this stored procedure, a user must be a member of the **sysadmin** fi
   
 #### To defect a target server from a master server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

@@ -72,7 +72,7 @@ If job steps that use proxy accounts fail when downloading them from the master 
   
 #### To create a master SQL Server Agent job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

@@ -118,7 +118,7 @@ Use the following cmdlets for Azure SQL Database and Azure Synapse:
 
 Manage TDE by using Transact-SQL.
 
-Connect to the database by using a login that is an administrator or member of the **dbmanager** role in the master database.
+Connect to the database by using a login that is an administrator or member of the **dbmanager** role in the `master` database.
 
 | Command | Description |
 | --- | --- |

@@ -20,7 +20,7 @@ ms.custom: seo-dt-2019
 ---
 # Upgrade a database using detach and attach (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. After being attached to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
+This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. After being attached to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
   
  **In this topic**  
   

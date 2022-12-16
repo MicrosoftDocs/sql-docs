@@ -1,10 +1,10 @@
 ---
 description: "sys.fn_get_audit_file (Transact-SQL)"
-title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
+title: "The sys.fn_get_audit_file system function returns information from an audit file created by a server audit in SQL Server."
 ms.custom: ""
-ms.date: "03/23/2022"
+ms.date: "12/16/2022"
 ms.service: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -17,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
-ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: sravanisaluru
 ms.author: srsaluru
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
@@ -31,19 +30,20 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ## Syntax  
   
-```  
+```syntaxsql
 fn_get_audit_file ( file_pattern,   
     { default | initial_file_name | NULL },   
     { default | audit_record_offset | NULL } )  
 ```  
   
 ## Arguments  
- *file_pattern*  
+
+#### file_pattern
  Specifies the directory or path and file name for the audit file set to be read. Type is **nvarchar(260)**. 
  
  - **SQL Server**:
     
-    This argument must include both a path (drive letter or network share) and a file name that can include a wildcard. A single    asterisk (*) can be used to collect multiple files from an audit file set. For example:  
+    This argument must include both a path (drive letter or network share) and a file name that can include a wildcard. A single asterisk (*) can be used to collect multiple files from an audit file set. For example:  
   
     -   **\<path>\\\*** - Collect all audit files in the specified location.  
   
@@ -62,17 +62,17 @@ fn_get_audit_file ( file_pattern,
 > [!NOTE]  
 >  Passing a path without a file name pattern will generate an error.  
   
- *initial_file_name*  
+#### initial_file_name
  Specifies the path and name of a specific file in the audit file set to start reading audit records from. Type is **nvarchar(260)**.  
   
 > [!NOTE]  
->  The *initial_file_name* argument must contain valid entries or must contain either the default | NULL value.  
+>  The *initial_file_name* argument must contain valid entries or must contain either the default or NULL value.  
   
- *audit_record_offset*  
+#### audit_record_offset
  Specifies a known location with the file specified for the initial_file_name. When this argument is used the function will start reading at the first record of the Buffer immediately following the specified offset.  
   
 > [!NOTE]  
->  The *audit_record_offset* argument must contain valid entries or must contain either the default | NULL value. Type is **bigint**.  
+>  The *audit_record_offset* argument must contain valid entries or must contain either the default or NULL value. Type is **bigint**.  
   
 ## Tables Returned  
  The following table describes the audit file content that can be returned by this function.  
@@ -117,13 +117,13 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | Target login of action. Is nullable. Returns NULL if not applicable. |  
 | target_server_principal_sid | **varbinary** | SID of target login. Is nullable. Returns NULL if not applicable. |  
 | transaction_id | **bigint** | **Applies to**: SQL Server only (starting with 2016)<br /><br /> Unique identifier to identify multiple audit events in one transaction |  
-| user_defined_event_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed Instance<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
-| user_defined_information | **nvarchar(4000)** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed Instance<br /><br /> Used to record any extra information the user wants to record in audit log by using the **sp_audit_write** stored procedure. |  
+| user_defined_event_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed Instance<br /><br /> User defined event ID passed as an argument to `sp_audit_write`. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar(4000)** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed Instance<br /><br /> Used to record any extra information the user wants to record in audit log by using the `sp_audit_write` stored procedure. |  
 
   
 ## Remarks  
-- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
-- **fn_get_audit_file** cannot be used when the audit is created with the **APPLICATION_LOG**, **SECURITY_LOG**, or **EXTERNAL_MONITOR** options.
+- If the *file_pattern* argument passed to `fn_get_audit_file` references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
+- `fn_get_audit_file` cannot be used when the audit is created with the **APPLICATION_LOG**, **SECURITY_LOG**, or **EXTERNAL_MONITOR** options.
 
 ## Permissions
 
@@ -139,7 +139,7 @@ fn_get_audit_file ( file_pattern,
 
   This example reads from a file that is named `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
-  ```  
+  ```sql 
   SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
@@ -148,14 +148,14 @@ fn_get_audit_file ( file_pattern,
 
   This example reads from a file that is named `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
   
-  ```  
+  ```sql
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
   GO  
   ```  
 
   This example reads from the same file as above, but with additional T-SQL clauses (**TOP**, **ORDER BY**, and **WHERE** clause for filtering the audit records returned by the function):
   
-  ```  
+  ```sql
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)
   WHERE server_principal_name = 'admin1'
   ORDER BY event_time
@@ -164,7 +164,7 @@ fn_get_audit_file ( file_pattern,
 
   This example reads all audit logs from servers that begin with `Sh`: 
   
-  ```  
+  ```sql
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
   GO  
   ```
@@ -172,7 +172,11 @@ fn_get_audit_file ( file_pattern,
 For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
 For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](/azure/sql-database/sql-database-auditing).
-  
+
+## Limitations
+
+Selecting rows from `sys.fn_get_audit_file` within a Create Table As Select (CTAS) is a limitation and known issue. Although the query completes successfully and no error messages appear, there are no rows present in the table created using CTAS.
+
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

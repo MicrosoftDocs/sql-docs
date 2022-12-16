@@ -35,7 +35,7 @@ The template scripts provided with SQL Server Management Studio contain paramete
   
 Create custom templates for tasks you perform frequently. Organize your custom scripts into the existing folders or create a new folder structure.  
   
-The [!INCLUDE[ssDE](../../includes/ssde_md.md)] Query editor also supports code snippets, which can be inserted at specific locations in a script by right-clicking at that location.  
+The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query editor also supports code snippets, which can be inserted at specific locations in a script by right-clicking at that location.  
   
 ## Related Tasks  
 Use the following topics to get started with templates  

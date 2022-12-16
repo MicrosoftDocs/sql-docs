@@ -1789,7 +1789,7 @@ Location path:
 
 Additional notes and guidance when setting the location:
 
-- The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
+- The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 
 #### CREDENTIAL = *credential_name*
 
@@ -2601,7 +2601,7 @@ Provides the connectivity protocol and path to the external data source.
 | Azure Blob Storage     | `abs`         | `abs://<container>@<storage_account>.blob.core.windows.net/<path>/<file_name>` |
 | Azure Data Lake Service Gen2 | `adls`  | `adls://<container>@<storage_account>.dfs.core.windows.net/<path>/<file_name>` |
 
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
+The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 
 Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 

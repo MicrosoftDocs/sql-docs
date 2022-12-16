@@ -72,8 +72,8 @@
   href: getting-started-with-ssma-for-db2-db2tosql.md
 - name: Data Migration Report
   href: data-migration-report-db2tosql.md
-- name: Working with SSMA for Oracle Console
-  href: working-with-ssma-for-oracle-console-db2tosql.md
+- name: Working with SSMA for DB2 Console
+  href: working-with-ssma-for-db2-console-db2tosql.md
 - name: Command-Line Options in SSMA Console
   href: command-line-options-in-ssma-console-db2tosql.md
 - name: Migrating DB2 Databases to SQL Server

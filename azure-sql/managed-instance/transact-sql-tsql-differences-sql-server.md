@@ -166,7 +166,7 @@ SQL Managed Instance can't access files, so cryptographic providers can't be cre
     - Export a database from SQL Managed Instance and import to SQL Server (version 2012 or later).
       - In this configuration, all Azure AD users are created as SQL Server database principals (users) without logins. The type of users is listed as `SQL` and is visible as `SQL_USER` in `sys.database_principals`). Their permissions and roles remain in the SQL Server database metadata and can be used for impersonation. However, they cannot be used to access and sign in to the SQL Server using their credentials.
 
-- Only the server-level principal login, which is created by the SQL Managed Instance provisioning process, members of the server roles, such as `securityadmin` or `sysadmin`, or other logins with ALTER ANY LOGIN permission at the server level can create Azure AD server principals (logins) in the master database for SQL Managed Instance.
+- Only the server-level principal login, which is created by the SQL Managed Instance provisioning process, members of the server roles, such as `securityadmin` or `sysadmin`, or other logins with ALTER ANY LOGIN permission at the server level can create Azure AD server principals (logins) in the `master` database for SQL Managed Instance.
 - If the login is a SQL principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.
 - The Azure AD login must be a member of an Azure AD within the same directory that's used for Azure SQL Managed Instance.
 - Azure AD server principals (logins) are visible in Object Explorer starting with SQL Server Management Studio 18.0 preview 5.

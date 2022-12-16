@@ -62,7 +62,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To set job step success or failure flow  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, select **New Query**.  
   

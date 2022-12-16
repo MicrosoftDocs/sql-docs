@@ -195,7 +195,7 @@ If you deployed your SQL Server VMs in multiple subnets, skip this step. If you 
 - Only registering with the SQL IaaS Agent extension in [lightweight management mode](sql-server-iaas-agent-extension-automate-management.md#management-modes) is supported. 
 - Database Snapshots are not currently supported with [Azure Files due to sparse files limitations](/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 - Since database snapshots are not supported, CHECKDB for user databases falls back to CHECKDB WITH TABLOCK. TABLOCK limits the checks that are performed - DBCC CHECKCATALOG is not run on the database, and Service Broker data is not validated.
-- CHECKDB on MASTER and MSDB database is not supported. 
+- DBCC CHECKDB on `master` and `msdb` database is not supported. 
 - Databases that use the in-memory OLTP feature are not supported on a failover cluster instance deployed with a premium file share. If your business requires in-memory OLTP, consider deploying your FCI with [Azure shared disks](failover-cluster-instance-azure-shared-disks-manually-configure.md) or [Storage Spaces Direct](failover-cluster-instance-storage-spaces-direct-manually-configure.md) instead.
 
 ## Next steps

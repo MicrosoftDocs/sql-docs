@@ -667,6 +667,22 @@ SELECT @dt1 AS [DATETIME], CAST (@dt1 AS DATE) AS [datetime as date],
    CAST (@dt1 AS TIME) AS [datetime as time];  
 ```  
 
+Ensure the values are within a compatible range when considering a conversion from date to datetime or datetime2, as the example below shows.
+
+```sql
+DECLARE @d1 DATE, @dt1 DATETIME , @dt2 DATETIME2
+
+SET @d1 = '1492-08-03'
+--This is okay; Minimum YYYY for DATE is 0001
+
+SET @dt2 = CAST(@d1 AS DATETIME2)
+--This is okay; Minimum YYYY for DATETIME2 IS 0001
+
+SET @dt1 = CAST(@d1 AS DATETIME)
+--This will error with (Msg 242) "The conversion of a date data type to a datetime data type resulted in an out-of-range value."
+--Minimum YYYY for DATETIME is 1753
+```
+
 ### J. Using CONVERT with datetime data in different formats  
 Starting with `GETDATE()` values, this example uses `CONVERT` to display of all the date and time styles in section [Date and Time styles](#date-and-time-styles) of this article.
 

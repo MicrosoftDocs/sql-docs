@@ -19,7 +19,7 @@ ms.author: "mikeray"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  When you upgrade an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] to the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], your existing [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages are not automatically upgraded to the package format that the current release [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses. You will have to select an upgrade method and manually upgrade your packages.  
+  When you upgrade an instance of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] to the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], your existing [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages are not automatically upgraded to the package format that the current release [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses. You will have to select an upgrade method and manually upgrade your packages.  
   
  For information on upgrading packages when you convert a project to the project deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)
   
@@ -41,9 +41,9 @@ ms.author: "mikeray"
 |Use the <xref:Microsoft.SqlServer.Dts.Runtime.Application.Upgrade%2A> method to upgrade one or more [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.|The package upgrade is permanent.|  
   
 ## Custom Applications and Custom Components  
- [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] custom components will not work with the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] custom components will not work with the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- You can use the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tools to run and manage packages that include [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] custom components. We added four binding redirection rules to the following files to help redirect the runtime assemblies from version 10.0.0.0 ( [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]), version 11.0.0.0 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or version 12.0.0.0 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) to version 15.0.0.0 ( [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]).  
+ You can use the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tools to run and manage packages that include [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] custom components. We added four binding redirection rules to the following files to help redirect the runtime assemblies from version 10.0.0.0 ( [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]), version 11.0.0.0 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or version 12.0.0.0 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) to version 15.0.0.0 ( [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]).  
   
 -   DTExec.exe.config  
   

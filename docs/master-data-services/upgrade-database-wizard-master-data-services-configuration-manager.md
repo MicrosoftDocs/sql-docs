@@ -25,7 +25,7 @@ ms.author: jiwang6
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|**SQL Server instance**|The name of the currently selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] instance.|  
+|**SQL Server instance**|The name of the currently selected [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instance.|  
 |**Master Data Services database**|The name of the currently selected [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.|  
   
 ## Progress and Finish  

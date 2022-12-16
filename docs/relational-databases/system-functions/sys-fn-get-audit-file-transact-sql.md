@@ -1,10 +1,10 @@
 ---
 description: "sys.fn_get_audit_file (Transact-SQL)"
-title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
+title: "The sys.fn_get_audit_file system function returns information from an audit file created by a server audit in SQL Server."
 ms.custom: ""
-ms.date: "03/23/2022"
+ms.date: "12/16/2022"
 ms.service: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords: 
@@ -17,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
-ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: sravanisaluru
 ms.author: srsaluru
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"

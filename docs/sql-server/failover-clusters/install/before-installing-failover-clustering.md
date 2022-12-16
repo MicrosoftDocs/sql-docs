@@ -95,12 +95,12 @@ Before you install a SQL Server failover cluster, you must select the hardware a
 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports mount points.
 
      A mounted volume, or mount point, allows you to use a single drive letter to refer to many disks or volumes. If you have a drive letter D: that refers to a regular disk or volume, you can connect or "mount" additional disks or volumes as directories under drive letter D: without the additional disks or volumes requiring drive letters of their own.
-   SQL Server Setup requires that the base drive of a mounted drive has an associated drive letter. If the base drive of a mounted drive does not have an associated drive letter, the Setup program will assign the next available drive letter to the drive.
+     
+     SQL Server Setup requires that the base drive of a mounted drive has an associated drive letter. If the base drive of a mounted drive does not have an associated drive letter, the Setup program will assign the next available drive letter to the drive.
 > Note: If all the drive letters are already assigned, the Setup program will fail.
 
   SQL Server does not support use of mount volume / mount point root directories for SQL Server databases. For more information review [Permission error occurs when you use a volume mount point in SQL Server Setup](/troubleshoot/sql/install/permission-error-use-volume-mount-point)
      
-
      Additional mount point considerations for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering:
 
   - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup requires that the base drive of a mounted drive has an associated drive letter. For failover cluster installations, this base drive must be a clustered drive. Volume GUIDs aren't supported in this release.

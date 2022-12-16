@@ -144,7 +144,7 @@ $params = @{
 
 1.  Open a new query window.
 
-2.  Connect to the database where you want to change MAXDOP. You cannot change database scoped configurations in the master database.
+2.  Connect to the database where you want to change MAXDOP. You cannot change database scoped configurations in the `master` database.
   
 3.  Copy and paste the following example into the query window and select **Execute**. 
 

@@ -77,7 +77,7 @@ Permissions to execute this procedure default to members of the **sysadmin** fix
   
 #### To make a target server  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

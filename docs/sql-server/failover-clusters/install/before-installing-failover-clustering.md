@@ -101,7 +101,7 @@ Before you install a SQL Server failover cluster, you must select the hardware a
 
   SQL Server does not support use of mount volume / mount point root directories for SQL Server databases. For more information review [Permission error occurs when you use a volume mount point in SQL Server Setup](/troubleshoot/sql/install/permission-error-use-volume-mount-point)
      
-     Additional mount point considerations for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering:
+Additional mount point considerations for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering:
 
   - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup requires that the base drive of a mounted drive has an associated drive letter. For failover cluster installations, this base drive must be a clustered drive. Volume GUIDs aren't supported in this release.
 

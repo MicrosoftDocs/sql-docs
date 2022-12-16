@@ -95,6 +95,11 @@ Before you install a SQL Server failover cluster, you must select the hardware a
 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports mount points.
 
      A mounted volume, or mount point, allows you to use a single drive letter to refer to many disks or volumes. If you have a drive letter D: that refers to a regular disk or volume, you can connect or "mount" additional disks or volumes as directories under drive letter D: without the additional disks or volumes requiring drive letters of their own.
+   SQL Server Setup requires that the base drive of a mounted drive has an associated drive letter. If the base drive of a mounted drive does not have an associated drive letter, the Setup program will assign the next available drive letter to the drive.
+> Note: If all the drive letters are already assigned, the Setup program will fail.
+
+  SQL Server does not support use of mount volume / mount point root directories for SQL Server databases. For more information review [Permission error occurs when you use a volume mount point in SQL Server Setup](/troubleshoot/sql/install/permission-error-use-volume-mount-point)
+     
 
      Additional mount point considerations for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering:
 
@@ -108,6 +113,13 @@ Before you install a SQL Server failover cluster, you must select the hardware a
       >  The 25 instance limit can be overcome by using SMB file share option. If you use SMB file share as the storage option, you can install up to 50 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instances.
 
   - Formatting a drive after mounting additional drives isn't supported.
+  - The SQL Server resource in SQL Server 2005 and later versions depends on the SQL network name resource and on the physical disk resources that hold the data. Mount points and the host drive must be displayed as a cluster physical disk resource. Additionally, the physical disk that has a drive letter and each mounted volume must also be added as a SQL Server dependency.
+  - If you perform a new installation, the correct dependency permissions are set on the physical disks that have an associated drive letter and on the mount points. The dependency permissions are set automatically during setup.
+  - If only the root physical disks dependency is added and the mount points dependency is not added, database corruption will occur on failover. Database corruption may also occur during a SQL Server restart should disk resources go offline and return to online state even without failing over.
+  - Best practices
+     - If you move a mount point from one shared disk to another shared disk, make sure that the shared disks are located in the same group.
+     - Try to use the root (host) volume exclusively for mount points. The root volume is the volume that hosts the mount points. This practice greatly reduces the time that is required to restore access to the mounted volumes if you have to run the Chkdsk.exe tool. This also reduces the time that is required to restore from backup on the host volume.
+     - If you use the root (host) volume exclusively for mount points, the size of the host volume must be at least 5 megabytes (MB). This reduces the probability that the volume will be used for anything other than the mount points.
 
 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the `tempdb` files. Ensure that the path specified for the `tempdb` data and log files is valid on all the cluster nodes. During failover, if the `tempdb` directories aren't available on the failover target node, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource will fail to come online. For more information, see [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) and [Database Engine Configuration - Data Directories](../../../database-engine/install-windows/install-sql-server.md).
 
@@ -270,3 +282,6 @@ Before you install a SQL Server failover cluster, you must select the hardware a
 - [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Check Parameters for the System Configuration Checker](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 - [Failover Cluster Instance Administration and Maintenance](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)
+- [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs.md)
+- [Configure volume mount points on a server cluster in Windows Server](/troubleshoot/windows-server/high-availability/configure-volume-mount-points-server-cluser.md)
+- [Microsoft Windows Failover cluster resource dependencies in SQL Server](/troubleshoot/sql/failover-clusters/windows-failover-cluster-resource-depend.md)

@@ -103,10 +103,10 @@ Report definition (.rdl) files are automatically upgraded in the following ways:
   
 |CRI type|Report Server upgrade action|  
 |--------------|----------------------------------|  
-|Third-party CRIs|Upgrade not performed.<br /><br /> Processed by the [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report processor.|  
+|Third-party CRIs|Upgrade not performed.<br /><br /> Processed by the [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report processor.|  
   
 ###  <a name="OpeningaReport"></a> Opening a Report with CRIs in Report Designer  
- When you open a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report with CRIs in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report will be upgraded to the new report definition schema. Depending on the CRIs contained in the report, one of the following actions will take place:  
+ When you open a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report with CRIs in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report will be upgraded to the new report definition schema. Depending on the CRIs contained in the report, one of the following actions will take place:  
   
 -   Third-party CRIs detected. If the version of the CRI that is installed on the report authoring computer is not compatible with the new RDL schema, the design surface shows a text box with a red X. You must contact your system administrator to install new versions of the CRI from third-party vendors that are compatible with the new RDL schema.  
   

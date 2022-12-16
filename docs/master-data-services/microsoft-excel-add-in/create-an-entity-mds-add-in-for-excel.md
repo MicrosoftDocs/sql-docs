@@ -15,7 +15,7 @@ ms.author: jiwang6
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], administrators can create new entities to store data. When you create an entity you should load at least a sampling of the data you want to store.  
+  In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], administrators can create new entities to store data. When you create an entity you should load at least a sampling of the data you want to store.  
   
 ## Prerequisites  
  To perform this procedure:  

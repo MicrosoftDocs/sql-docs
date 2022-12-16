@@ -50,7 +50,7 @@ An expression that contains the property information to be returned for the serv
 
 | Property | Values returned |
 | -------------- | -------------- |
-| `BuildClrVersion` | Version of the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that was used while building the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **nvarchar(128)** |
+| `BuildClrVersion` | Version of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that was used while building the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **nvarchar(128)** |
 | `Collation` | Name of the default collation for the server.<br /><br />NULL = Input isn't valid, or an error.<br /><br />Base data type: **nvarchar(128)** |
 | `CollationID` | ID of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation.<br /><br />Base data type: **int** |
 | `ComparisonStyle` | Windows comparison style of the collation.<br /><br />Base data type: **int** |

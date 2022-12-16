@@ -41,11 +41,11 @@ Follow the steps below to install the Azure SQL migration extension in Azure Dat
 
 1. You can see the Azure SQL migration extension in the extension list once installed.
 
-    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-icon.png" alt-text="Screenshot showing the Azure SQL migration extension":::
+    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-icon.png" alt-text="Screenshot showing the Azure SQL migration extension.":::
 
 1. You can connect to the SQL Server instance in Azure Data Studio. Right-click the instance name and select **Manage** to see the dashboard and the **Azure SQL Migration** extension landing page.
 
-    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.png" alt-text="Screenshot showing the extension landing page":::
+    :::image type="content" source="media/azure-sql-migration-extension/azure-sql-migration-extension-landing-page.png" alt-text="Screenshot showing the extension landing page.":::
 
 ### Set up auto update for the extension
 
@@ -84,7 +84,7 @@ Azure SQL Database (Preview)| [Offline](/azure/dms/tutorial-sql-server-azure-sql
 You can raise a support request to get Microsoft support assistance if you encounter issues or errors with your database migrations using the Azure SQL Migration extension.
 
 Select the **New support request** button in the upper section of the extension. It will automatically take you to the Azure portal, where you can fill in the details and then submit a support request.
-:::image type="content" source="media/azure-sql-migration-extension/extension-support.png" alt-text="Get help from Microsoft support for the extension":::
+:::image type="content" source="media/azure-sql-migration-extension/extension-support.png" alt-text="Get help from Microsoft support for the extension.":::
 
 You can submit ideas/suggestions for improvement, and other feedback, including bugs, in the [Azure Community forum — Azure Database Migration Service](https://feedback.azure.com/d365community/forum/2dd7eb75-ef24-ec11-b6e6-000d3a4f0da0).
 

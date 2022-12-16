@@ -151,7 +151,7 @@ Depending on the setup in your source SQL Server, there may be additional SQL Se
 - Database Mail
 - Replication
 
-For a complete list of metadata and server objects that you need to move, refer to the detailed information available in [Manage Metadata When Making a Database Available on Another Server](https://learn.microsoft.com/sql/relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server).
+For a complete list of metadata and server objects that you need to move, refer to the detailed information available in [Manage Metadata When Making a Database Available on Another Server](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
 ## Supported versions
 

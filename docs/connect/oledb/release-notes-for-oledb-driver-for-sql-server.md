@@ -3,7 +3,7 @@ title: Release notes for OLE DB Driver
 description: This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 10/26/2022
+ms.date: 12/15/2022
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

@@ -39,7 +39,7 @@ To discover what is preventing log truncation in a given case, refer to  `log_re
 SELECT [name], log_reuse_wait_desc FROM sys.databases;
 ```
 
-For Azure SQL Database, it is recommended to connect to a specific user database, rather than the master database, to execute this query.
+For Azure SQL Database, it is recommended to connect to a specific user database, rather than the `master` database, to execute this query.
 
 The following values of `log_reuse_wait_desc` in `sys.databases` may indicate the reason why the database's transaction log truncation is being prevented:
 

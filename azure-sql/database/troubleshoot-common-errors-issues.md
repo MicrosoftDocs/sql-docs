@@ -227,7 +227,7 @@ You cannot use a DAC connection with Object Explorer.
 
 #### Review your max_worker_percent usage
 
-To find resource consumption statistics for your database for 14 days, query the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) system catalog view. The `max_worker_percent` column shows the percentage of workers used relative to the worker limit for your database. Connect to the master database on your [logical server](logical-servers.md) to query `sys.resource_stats`.
+To find resource consumption statistics for your database for 14 days, query the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) system catalog view. The `max_worker_percent` column shows the percentage of workers used relative to the worker limit for your database. Connect to the `master` database on your [logical server](logical-servers.md) to query `sys.resource_stats`.
 
 ```sql
 SELECT start_time, end_time, database_name, sku, avg_cpu_percent, max_worker_percent, max_session_percent 
@@ -341,7 +341,7 @@ If you repeatedly encounter this error, try to resolve the issue by following th
     ```sql
     SELECT
         r.start_time, DATEDIFF(ms,start_time, SYSDATETIME()) as duration_ms, 
-    	r.session_id, r.request_id, r.blocking_session_id,  
+        r.session_id, r.request_id, r.blocking_session_id,  
         r.status, r.command, DB_NAME(r.database_id) AS database_name,
         i.parameters, i.event_info AS input_buffer,
         r.last_wait_type, r.open_transaction_count, r.total_elapsed_time, r.cpu_time,
@@ -361,7 +361,7 @@ If you repeatedly encounter this error, try to resolve the issue by following th
 
 1. Consider batching your queries. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).
 
-### Error 40551: The session has been terminated because of excessive TEMPDB usage
+### Error 40551: The session has been terminated because of excessive tempdb usage
 
 `40551: The session has been terminated because of excessive TEMPDB usage. Try modifying your query to reduce the temporary table space usage.`
 
@@ -408,7 +408,7 @@ For more information on other out of memory errors and sample queries, see [Trou
 | 40544 |20 |The database has reached its size quota. Partition or delete data, drop indexes, or consult the documentation for possible resolutions. For database scaling, see [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).|
 | 40549 |16 |Session is terminated because you have a long-running transaction. Try shortening your transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).|
 | 40550 |16 |The session has been terminated because it has acquired too many locks. Try reading or modifying fewer rows in a single transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).|
-| 40551 |16 |The session has been terminated because of excessive `TEMPDB` usage. Try modifying your query to reduce the temporary table space usage.<br/><br/>If you are using temporary objects, conserve space in the `TEMPDB` database by dropping temporary objects after they are no longer needed by the session. For more information on tempdb limits in SQL Database, see [Tempdb database in SQL Database](resource-limits-logical-server.md#tempdb-sizes).|
+| 40551 |16 |The session has been terminated because of excessive `tempdb` usage. Try modifying your query to reduce the temporary table space usage.<br/><br/>If you are using temporary objects, conserve space in the `tempdb` database by dropping temporary objects after they are no longer needed by the session. For more information on `tempdb` limits in SQL Database, see [Tempdb database in SQL Database](resource-limits-logical-server.md#tempdb-sizes).|
 | 40552 |16 |The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).<br/><br/>If you perform bulk inserts using the `bcp.exe` utility or the `System.Data.SqlClient.SqlBulkCopy` class, try using the `-b batchsize` or `BatchSize` options to limit the number of rows copied to the server in each transaction. If you are rebuilding an index with the `ALTER INDEX` statement, try using the `REBUILD WITH ONLINE = ON` option. For information on transaction log sizes for the vCore purchasing model, see: <br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md).|
 | 40553 |16 |The session has been terminated because of excessive memory usage. Try modifying your query to process fewer rows.<br/><br/>Reducing the number of `ORDER BY` and `GROUP BY` operations in your Transact-SQL code reduces the memory requirements of your query. For database scaling, see [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md). For more information on out of memory errors and sample queries, see [Troubleshoot out of memory errors with Azure SQL Database](troubleshoot-memory-errors-issues.md).|
 

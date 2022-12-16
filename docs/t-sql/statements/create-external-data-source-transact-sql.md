@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/31/2022
+ms.date: 12/16/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1169,7 +1169,7 @@ WITH
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver16"
+::: moniker range=">=sql-server-ver16||=sql-server-linux-ver16"
 
 
 ## Overview: SQL Server 2022

@@ -82,7 +82,7 @@ In summary, a **request** may spawn one or more **tasks** to carry out units of 
 
 ### Scheduling of parallel tasks
 
-Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
+Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde-md](../includes/ssde-md.md)]:
 
 ```sql
 SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate

@@ -96,7 +96,7 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 
 The execution plan shows a [Hash Join](../relational-databases/performance/joins.md#hash) between two tables, and each of the operators executed in parallel, as indicated by the yellow circle with two arrows. Each Parallelism operator is a different branch in the plan. Therefore, there are three branches in the execution plan below.
 
-:::image type="content" source="media/thread-and-task-architecture-guide/schedule-parallel-query-plan.png" alt-text="Parallel Query Plan.":::
+:::image type="content" source="media/thread-and-task-architecture-guide/schedule-parallel-query-plan.png" alt-text="Diagram that shows a Parallel Query Plan.":::
 
 > [!NOTE]  
 > If you think of an execution plan as a tree, a **branch** is an area of the plan that groups one or more operators between Parallelism operators, also called Exchange Iterators. For more information about plan operators, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
@@ -118,7 +118,7 @@ Thread reservation ensures the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] has e
 
 For reference, observe the live execution plan from [Live Query Statistics](../relational-databases/performance/live-query-statistics.md), where one branch has completed and two branches are executing concurrently.
 
-:::image type="content" source="media/thread-and-task-architecture-guide/schedule-parallel-query-live-plan.png" alt-text="Live Parallel Query Plan.":::
+:::image type="content" source="media/thread-and-task-architecture-guide/schedule-parallel-query-live-plan.png" alt-text="Diagram that shows a Live Parallel Query Plan.":::
 
 The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will assign a worker thread to execute an active task (1:1), which can be observed during query execution by querying the [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) DMV, as seen in the following example:
 

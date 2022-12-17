@@ -82,7 +82,7 @@ In summary, a **request** may spawn one or more **tasks** to carry out units of 
 
 ### Scheduling of parallel tasks
 
-Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
+Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde-md](../includes/ssde-md.md)]:
 
 ```sql
 SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
@@ -161,7 +161,7 @@ ORDER BY parent_task_address, scheduler_id;
 Observe that each of the 16 child tasks has a different worker thread assigned (seen in the `worker_address` column), but all the workers are assigned to the same pool of eight schedulers (0,5,6,7,8,9,10,11), and that the parent task is assigned to a scheduler outside this pool (3).
 
 > [!IMPORTANT]  
-> Once the first set of parallel tasks on a given branch is scheduled, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] will use that same pool of schedulers for any additional tasks on other branches. This means the same set of schedulers will be used for all the parallel tasks in the entire execution plan, only limited by MaxDOP.  
+> Once the first set of parallel tasks on a given branch is scheduled, the [!INCLUDE[ssde-md](../includes/ssde-md.md)] will use that same pool of schedulers for any additional tasks on other branches. This means the same set of schedulers will be used for all the parallel tasks in the entire execution plan, only limited by MaxDOP.  
 > The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will always try to assign schedulers from the same NUMA node for task execution, and assign them sequentially (in round-robin fashion) if schedulers are available. However, the worker thread assigned to the parent task may be placed in a different NUMA node from other tasks.
 
 A worker thread can only remain active in the scheduler for the duration of its quantum (4 ms) and must yield its scheduler after that quantum has elapsed, so that a worker thread assigned to another task may become active. When a worker's quantum expires and is no longer active, the respective task is placed in a FIFO queue in a RUNNABLE state, until it moves to a RUNNING state again, assuming the task won't require access to resources that are not available at the moment, such as a latch or lock, in which case the task would be placed in a SUSPENDED state instead of RUNNABLE, until such time those resources are available.

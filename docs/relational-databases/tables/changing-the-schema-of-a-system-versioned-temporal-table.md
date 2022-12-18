@@ -71,13 +71,13 @@ The following example demonstrates changing the schema where setting **SYSTEM_VE
 ```sql
     BEGIN TRAN
         ALTER TABLE [dbo].[CompanyLocation] SET (SYSTEM_VERSIONING = OFF);
-        ALTER TABLE [CompanyLocation] ADD Cntr INT IDENTITY (1,1);
+        ALTER TABLE [dbo].[CompanyLocation] ADD Cntr INT IDENTITY (1,1);
         ALTER TABLE [dbo].[CompanyLocationHistory] ADD Cntr INT NOT NULL DEFAULT 0;
         ALTER TABLE [dbo].[CompanyLocation]
-    SET
+        SET
          (
             SYSTEM_VERSIONING = ON
-           ( HISTORY_TABLE = [dbo].[CompanyLocationHistory])
+            (HISTORY_TABLE = [dbo].[CompanyLocationHistory])
          );
     COMMIT;
 ```

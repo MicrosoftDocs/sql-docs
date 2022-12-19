@@ -79,6 +79,18 @@ You can uninstall wizard to remove **Microsoft connector for Teradata**.
 
 ## Release Notes
 
+### Rev. 275
+
+**Bug fixes**
+
+- Teradata Destination will crash under certain circumstances.
+- Teradata Destination will report success despite errors occurred under certain circumstances.
+- Teradata Destination will report a larger number of rows written than reality under certain circumstances.
+
+**Improvements**
+
+- When error occurred, Teradata Destination will retain and direct user to TPT error tables for investigation.
+
 ### Rev. 257
 
 **Bug fixes**

@@ -46,7 +46,7 @@ sections:
       - question: Is there a minimum number of cores with pay-as-you-go billing?
         answer: Pay-as-you-go billing doesn't change the licensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
 
-      - question: If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges
+      - question: If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges?
         answer: When you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 
       - question: Can I switch from pay-as-you-go to license and vice versa?

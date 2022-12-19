@@ -2,7 +2,7 @@
 title: "tempdb database"
 description: This article provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 10/28/2021
+ms.date: 12/19/2022
 ms.service: sql
 ms.subservice: 
 ms.topic: conceptual
@@ -161,29 +161,28 @@ Set the file growth increment to a reasonable size to prevent the `tempdb` datab
 To check current size and growth parameters for `tempdb`, use the following query:
 
 ```sql
- SELECT name AS FileName,
-   size*1.0/128 AS FileSizeInMB,
-   CASE max_size
+ SELECT FileName = df.name,
+   current_file_size_MB = df.size*1.0/128,
+   max_size = CASE df.max_size
      WHEN 0 THEN 'Autogrowth is off.'
      WHEN -1 THEN 'Autogrowth is on.'
      ELSE 'Log file grows to a maximum size of 2 TB.'
    END,
-   'GrowthValue'=
+   growth_value =
      CASE
-       WHEN growth = 0 THEN growth
-       WHEN growth > 0 AND is_percent_growth = 0
-         THEN growth*1.0/128
-       ELSE
-         growth
+       WHEN df.growth = 0 THEN df.growth
+       WHEN df.growth > 0 AND df.is_percent_growth = 0
+         THEN df.growth*1.0/128
+       ELSE df.growth
      END,
-   'GrowthIncrementUnit' =
+   growth_increment_unit =
      CASE
-       WHEN growth = 0 THEN 'Size is fixed.'
-       WHEN growth > 0 AND is_percent_growth = 0
+       WHEN df.growth = 0 THEN 'Size is fixed.'
+       WHEN df.growth > 0 AND df.is_percent_growth = 0
          THEN 'Growth value is MB.'
        ELSE 'Growth value is a percentage.'
      END
-FROM tempdb.sys.database_files;
+FROM tempdb.sys.database_files AS df;
 GO
 ```
 

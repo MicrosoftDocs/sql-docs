@@ -104,11 +104,11 @@ After you have configured the subscription, complete the following steps to conf
 
 After you register the subscription, complete the following steps to configure Pacemaker:
 
-[!INCLUDE [ss-linux-cluster-pacemaker-configure-rhel](includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
+[!INCLUDE [ss-linux-cluster-pacemaker-configure-rhel](includes/cluster-pacemaker-configure-rhel.md)]
 
 After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster.
 
-[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
+[!INCLUDE [Considerations for multiple NICs](includes/availability-group-multiple-network-interfaces.md)]
 
 ### Configure fencing (STONITH)
 
@@ -165,7 +165,7 @@ For information on Pacemaker cluster properties, see [Pacemaker Clusters Propert
 
 ### Create a SQL Server login for Pacemaker
 
-[!INCLUDE [ss-linux-cluster-pacemaker-create-login](includes/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [ss-linux-cluster-pacemaker-create-login](includes/cluster-pacemaker-create-login.md)]
 
 ### Create availability group resource
 
@@ -185,7 +185,7 @@ With the availability of **RHEL 8**, the create syntax has changed. If you are u
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
 ```
 
-[!INCLUDE [ss-linux-cluster-required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [ss-linux-cluster-required-synchronized-secondaries-default](includes/cluster-required-synchronized-secondaries-default.md)]
 
 ### <a id="createIP"></a> Create virtual IP resource
 
@@ -320,7 +320,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ### Create a SQL Server login for Pacemaker
 
-[!INCLUDE [ss-linux-cluster-pacemaker-create-login](includes/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [ss-linux-cluster-pacemaker-create-login](includes/cluster-pacemaker-create-login.md)]
 
 ### Configure an availability group
 
@@ -457,7 +457,7 @@ In the text editor, add `meta failure-timeout=60s` after any `param`s and before
 
 For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
+[!INCLUDE [Considerations for multiple NICs](includes/availability-group-multiple-network-interfaces.md)]
 
 ### Configure fencing (STONITH)
 
@@ -528,7 +528,7 @@ Run the command on one of the nodes in the cluster:
    commit
       ```
 
-[!INCLUDE [ss-linux-cluster-required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [ss-linux-cluster-required-synchronized-secondaries-default](includes/cluster-required-synchronized-secondaries-default.md)]
 
 #### Create virtual IP resource
 
@@ -754,7 +754,7 @@ sudo systemctl start pacemaker
    sudo crm status
    ```
 
-[!INCLUDE [Considerations for multiple NICs](includes/sql-server-linux-availability-group-multiple-network-interfaces.md)]
+[!INCLUDE [Considerations for multiple NICs](includes/availability-group-multiple-network-interfaces.md)]
 
 ### <a id="stonith"></a> Configure fencing (STONITH)
 
@@ -810,7 +810,7 @@ sudo apt-get install mssql-server-ha
 
 ### Create a SQL Server login for Pacemaker
 
-[!INCLUDE [ss-linux-cluster-pacemaker-create-login](includes/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [ss-linux-cluster-pacemaker-create-login](includes/cluster-pacemaker-create-login.md)]
 
 ### Create availability group resource
 
@@ -840,7 +840,7 @@ clone-node-max="1" notify="true"
 commit
 ```
 
-[!INCLUDE [required-synchronized-secondaries-default](includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+[!INCLUDE [required-synchronized-secondaries-default](includes/cluster-required-synchronized-secondaries-default.md)]
 
 ### Create virtual IP resource
 

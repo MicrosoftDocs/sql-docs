@@ -139,7 +139,7 @@ If a failover group spans across instances in different Azure subscriptions or r
 
 ### SQL Agent roles need explicit EXECUTE permissions for non-sysadmin logins
 
-If non-sysadmin logins are added to any [SQL Agent fixed database roles](/sql/ssms/agent/sql-server-agent-fixed-database-roles), there exists an issue in which explicit EXECUTE permissions need to be granted to three stored procedures in the master database for these logins to work. If this issue is encountered, the error message "The EXECUTE permission was denied on the object <object_name> (Microsoft SQL Server, Error: 229)" will be shown.
+If non-sysadmin logins are added to any [SQL Agent fixed database roles](/sql/ssms/agent/sql-server-agent-fixed-database-roles), there exists an issue in which explicit EXECUTE permissions need to be granted to three stored procedures in the `master` database for these logins to work. If this issue is encountered, the error message `The EXECUTE permission was denied on the object <object_name> (Microsoft SQL Server, Error: 229)` will be shown.
 
 **Workaround**: Once you add logins to a SQL Agent fixed database role (SQLAgentUserRole, SQLAgentReaderRole, or SQLAgentOperatorRole), for each of the logins added to these roles, execute the below T-SQL script to explicitly grant EXECUTE permissions to the stored procedures listed.
 
@@ -305,9 +305,9 @@ Impersonation using `EXECUTE AS USER` or `EXECUTE AS LOGIN` of the following Azu
 
 If Transactional Replication is enabled on a database in an auto-failover group, the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover to another region occurs. For more information, see [Replication](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication).
 
-### TEMPDB structure and content is re-created
+### Tempdb structure and content is re-created
 
-The `tempdb` database is always split into 12 data files, and the file structure cannot be changed. The maximum size per file can't be changed, and new files cannot be added to `tempdb`. `Tempdb` is always re-created as an empty database when the instance starts or fails over, and any changes made in `tempdb` will not be preserved.
+The `tempdb` database is always split into 12 data files, and the file structure cannot be changed. The maximum size per file can't be changed, and new files cannot be added to `tempdb`. The `tempdb` database is always re-created as an empty database when the instance starts or fails over, and any changes made in `tempdb` will not be preserved.
 
 
 ### Error logs aren't persisted

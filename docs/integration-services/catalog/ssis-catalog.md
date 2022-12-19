@@ -369,7 +369,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 ###  <a name="open_dialog"></a> Open the Catalog Properties Dialog Box  
   
-1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 2.  Connect Microsoft SQL Server Database Engine.  
   

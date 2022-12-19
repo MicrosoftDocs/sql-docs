@@ -199,7 +199,7 @@ Signed **money** expressions:
 ```
   
 ## Enhanced Collations  
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) clause.
+The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) clause.
   
 ## See also
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

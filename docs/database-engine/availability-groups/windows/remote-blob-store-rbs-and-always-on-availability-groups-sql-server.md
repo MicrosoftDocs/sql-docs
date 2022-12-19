@@ -33,7 +33,7 @@ ms.custom: seodec18
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Books Online)  
+-   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)] Books Online)  
   
 -   [Running RBS Maintainer](/archive/blogs/sqlrbs/running-rbs-maintainer) (blog)  
   

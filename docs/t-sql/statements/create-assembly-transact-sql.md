@@ -160,7 +160,7 @@ The following permissions required to create a CLR assembly when `CLR strict sec
   
 ### Example A: Creating an assembly from a dll  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  The following example assumes that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] samples are installed in the default location of the local computer and the HelloWorld.csproj sample application is compiled. For more information, see [Hello World Sample](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130)).  
   
@@ -175,7 +175,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### Example B: Creating an assembly from assembly bits  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Replace the sample bits (which are not complete or valid) with your assembly bits.  
   

@@ -278,7 +278,7 @@ Be aware that using LOADHISTORY for backups which already exist in the `msdb` hi
 #### RESTRICTED_USER  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
- Restricts access for the newly restored database to members of the **db_owner**, **dbcreator**, or **sysadmin** roles.  RESTRICTED_USER replaces the DBO_ONLY option. DBO_ONLY has been discontinued with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ Restricts access for the newly restored database to members of the **db_owner**, **dbcreator**, or **sysadmin** roles.  RESTRICTED_USER replaces the DBO_ONLY option. DBO_ONLY has been discontinued with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   
  Use with the RECOVERY option.  
   

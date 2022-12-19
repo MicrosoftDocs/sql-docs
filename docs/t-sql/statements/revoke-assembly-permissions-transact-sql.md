@@ -14,7 +14,7 @@ dev_langs:
   - "TSQL"
 ---
 # REVOKE Assembly Permissions (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Revokes permissions on an assembly.  
   

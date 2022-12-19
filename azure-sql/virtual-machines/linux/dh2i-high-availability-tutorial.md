@@ -44,7 +44,7 @@ This tutorial consists of the following steps:
 In this tutorial, you create a three node Linux-based cluster running the availability group. Follow the documentation for [SQL Server installation on Linux](/sql/linux/sql-server-linux-overview#install) based on the choice of your Linux platform. We also recommend you install the [SQL Server tools](/sql/linux/sql-server-linux-setup-tools) for this tutorial.
 
 > [!NOTE]
-> Ensure that the Linux OS that you choose is a common distribution that is supported by both [DH2i DxEnterprise, Minimal System Requirements](https://dh2i.com/wp-content/uploads/DxEnterprise-v20-Admin-Guide.pdf) and [Microsoft SQL Server](/sql/linux/sql-server-linux-release-notes-2019#supported-platforms).
+> Ensure that the Linux OS that you choose is a common distribution that is supported by both [DH2i DxEnterprise, Minimal System Requirements](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide) and [Microsoft SQL Server](/sql/linux/sql-server-linux-release-notes-2019#supported-platforms).
 >
 > This tutorial uses Ubuntu 18.04, which is supported by both DH2i DxEnterprise and Microsoft SQL Server.
 
@@ -112,7 +112,7 @@ You could also perform a manual failover by following the following steps:
 1. Expand the virtual host for the availability group.
 1. Right-click on the target node/secondary replica and select **Start Hosting on Member** to initiate the failover.
 
-For more information on more operations within DxEnterprise, See [DxEnterprise Admin Guide](https://dh2i.com/wp-content/uploads/DxEnterprise-v20-Admin-Guide.pdf) and [DxEnterprise DxCLI Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-software-dxcli-guide/).
+For more information on more operations within DxEnterprise, See [DxEnterprise Admin Guide](https://support.dh2i.com/docs/guides/dxenterprise/general/dxe-admin-guide) and [DxEnterprise DxCLI Guide](https://dh2i.com/docs/20-0/dxenterprise/dh2i-dxenterprise-20-software-dxcli-guide/).
 
 ## Next Steps
 

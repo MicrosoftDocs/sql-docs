@@ -54,7 +54,7 @@ By default, members of the **sysadmin** fixed server role can edit information i
   
 #### To disable or reactivate an alert  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

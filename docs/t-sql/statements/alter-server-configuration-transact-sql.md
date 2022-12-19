@@ -328,7 +328,7 @@ Requires:
 - `CONTROL SERVER` permission for the HADR cluster context option.  
 - `ALTER SERVER STATE` permission for the buffer pool extension option.  
   
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   
 ## Examples  
   

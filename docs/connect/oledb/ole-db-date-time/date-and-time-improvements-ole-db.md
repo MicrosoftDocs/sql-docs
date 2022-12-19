@@ -17,7 +17,7 @@ helpviewer_keywords:
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduces new date and time data types. This section describes how these new types are exposed as extensions in OLE DB Driver for SQL Server. For an overview of the OLE DB Driver for SQL Server support for the new date and time data types, see [Date and Time Improvements](../features/date-and-time-improvements.md). For a sample, see [Use Enhanced Date and Time Features &#40;OLE DB&#41;](../ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).
+[!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] introduces new date and time data types. This section describes how these new types are exposed as extensions in OLE DB Driver for SQL Server. For an overview of the OLE DB Driver for SQL Server support for the new date and time data types, see [Date and Time Improvements](../features/date-and-time-improvements.md). For a sample, see [Use Enhanced Date and Time Features &#40;OLE DB&#41;](../ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).
 
 For more general information about date and time data types, see [datetime &#40;Transact-SQL&#41;](../../../t-sql/data-types/datetime-transact-sql.md).
 

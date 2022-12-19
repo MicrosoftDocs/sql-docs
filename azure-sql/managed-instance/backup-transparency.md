@@ -65,7 +65,7 @@ When reviewing your backup history in the `msdb` database, consider the followin
 
 ## Next steps
 
-- To learn more, review [The msdb database in SQL Server](/sql/relational-database/databases/msdb-database). 
+- To learn more, review [The msdb database in SQL Server](/sql/relational-databases/databases/msdb-database). 
 - To learn about backups in Azure SQL Managed Instance, review [Automated backups](automated-backups-overview.md)
 - To learn about querying the `msdb` database, review [monitor backup activity](backup-activity-monitor.md)
 

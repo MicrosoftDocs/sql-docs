@@ -452,7 +452,7 @@ However, for the query optimizer to consider indexed views for matching, or use 
 Also, the NUMERIC_ROUNDABORT option must be set to OFF.
 
  To force the query optimizer to use an index for an indexed view, specify the `NOEXPAND` option. This hint can be used only if the view is also named in the query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doesn't provide a hint to force a particular indexed view to be used in a query that doesn't name the view directly in the FROM clause. However, the query optimizer considers using indexed views, even if they aren't referenced directly in the query. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will only automatically create statistics on an indexed view when a `NOEXPAND` table hint is used. Omitting this hint can lead to execution plan warnings about missing statistics that can't be resolved by creating statistics manually.  
-During query optimization, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will use view statistics that were created automatically or manually when the query references the view directly and the `NOEXPAND` hint is used.
+During query optimization, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] will use view statistics that were created automatically or manually when the query references the view directly and the `NOEXPAND` hint is used.
 
 ## Use a table hint as a query hint
 

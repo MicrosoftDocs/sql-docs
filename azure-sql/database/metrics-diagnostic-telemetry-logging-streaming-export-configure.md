@@ -34,7 +34,7 @@ In addition to streaming the export of the Intelligent Insights log, you can als
 | Diagnostic telemetry for databases | Azure SQL Database support | Azure SQL Managed Instance support |
 | :------------------- | ----- | ----- |
 | [Basic metrics](#basic-metrics): Contains DTU/CPU percentage, DTU/CPU limit, physical data read percentage, log write percentage, Successful/Failed/Blocked by firewall connections, sessions percentage, workers percentage, storage, storage percentage, and XTP storage percentage. | Yes | No |
-| [Instance and App Advanced](#advanced-metrics): Contains tempdb system database data and log file size and tempdb percent log file used. | Yes | No |
+| [Instance and App Advanced](#advanced-metrics): Contains `tempdb` system database data and log file size and `tempdb` percent log file used. | Yes | No |
 | [QueryStoreRuntimeStatistics](#query-store-runtime-statistics): Contains information about the query runtime statistics such as CPU usage and query duration statistics. | Yes | Yes |
 | [QueryStoreWaitStatistics](#query-store-wait-statistics): Contains information about the query wait statistics (what your queries waited on) such are CPU, LOG, and LOCKING. | Yes | Yes |
 | [Errors](#errors-dataset): Contains information about SQL errors on a database. | Yes | Yes |
@@ -454,9 +454,9 @@ Refer to the following table for details about advanced metrics.
 |---|---|---|
 |sqlserver_process_core_percent<sup>1</sup>|SQL process core percent|CPU usage percentage for the SQL process, as measured by the operating system.|
 |sqlserver_process_memory_percent<sup>1</sup> |SQL process memory percent|Memory usage percentage for the SQL  process, as measured by the operating system.|
-|tempdb_data_size<sup>2</sup>| Tempdb Data File Size Kilobytes |Tempdb Data File Size Kilobytes.|
-|tempdb_log_size<sup>2</sup>| Tempdb Log File Size Kilobytes |Tempdb Log File Size Kilobytes.|
-|tempdb_log_used_percent<sup>2</sup>| Tempdb Percent Log Used |Tempdb Percent Log Used.|
+|tempdb_data_size<sup>2</sup>|Tempdb Data File Size Kilobytes |Tempdb Data File Size Kilobytes.|
+|tempdb_log_size<sup>2</sup>|Tempdb Log File Size Kilobytes |Tempdb Log File Size Kilobytes.|
+|tempdb_log_used_percent<sup>2</sup>|Tempdb Percent Log Used |Tempdb Percent Log Used.|
 
 <sup>1</sup> This metric is available for databases using the vCore purchasing model with 2 vCores and higher, or 200 DTU and higher for DTU-based purchasing models.
 

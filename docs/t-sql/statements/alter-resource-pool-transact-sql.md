@@ -16,7 +16,7 @@ dev_langs:
   - "TSQL"
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes an existing Resource Governor resource pool configuration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -19,7 +19,7 @@ This article describes how to stop and start a managed instance to save on billi
 > [!NOTE]
 > The stop and start feature for managed instances is currently in preview and available only for:
 > * Managed instances in the General Purpose service tier.
-> * Managed instances with the November 2022 feature wave enabled. For more information, see [Enroll in the November 2022 feature wave](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/november-2022-feature-wave-enroll). 
+> * Managed instances with the November 2022 feature wave enabled. For more information, see [Enroll in the November 2022 feature wave](november-2022-feature-wave-enroll.md). 
 
 ## Overview
 

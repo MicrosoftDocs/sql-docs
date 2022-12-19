@@ -38,7 +38,7 @@ For more information, see [Database Engine query editor](../../ssms/f1-help/data
 ## Analyze Problem Reports with Report Data Cached on the Client  
 When a report author creates a report in Business Intelligence Development Studio, the authoring client caches data as an .rdl.data file, which is used when you preview a report. Every time the query changes, the cache is updated. To debug report problems, it is sometimes useful to prevent the refresh for report data so that the data does not change when you are debugging.   
   
-To control whether [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)] can only use cached data, add the following section to devenv.exe.config in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio.md)]. The location of the default directory is: `<drive>:Program Files\Microsoft Visual Studio 10.0\Common7\IDE`.   
+To control whether [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] can only use cached data, add the following section to devenv.exe.config in the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. The location of the default directory is: `<drive>:Program Files\Microsoft Visual Studio 10.0\Common7\IDE`.   
   
 ```  
 <system.diagnostics>  

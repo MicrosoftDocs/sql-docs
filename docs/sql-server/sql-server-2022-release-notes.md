@@ -4,7 +4,7 @@ description: Find information about SQL Server 2022 (16.x) limitations, known is
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 12/01/2022
+ms.date: 12/07/2022
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
@@ -91,7 +91,11 @@ An issue in the TDS 8.0 protocol implementation may cause RPC calls to fail if t
 
 The fix for this issue will be released in Cumulative Update 1 for [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
 
-To work around this issue, you can use Trace Flag 12342 as either as startup trace flag, or at the session level (using `DBCC TRACEON`).
+To work around this issue, you can use Trace Flag 12324 as either as startup trace flag, or at the session level (using `DBCC TRACEON`).
+
+### SQL Server services are set to Automatic (Delayed Start) start mode
+
+In [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], setting the **Start Mode** for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service to *Automatic* in Configuration Manager, will configure that service to start in *Automatic (Delayed Start)* mode instead, even though the **Start Mode** shows as *Automatic*.
 
 ## Build number
 

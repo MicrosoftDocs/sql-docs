@@ -285,7 +285,7 @@ LSN 148 is the last record in the transaction log. At the time that the recorded
 
 ### Long-running transactions
 
-The active log must include every part of all uncommitted transactions. An application that starts a transaction and doesn't commit it or roll it back prevents the [!INCLUDE[ssde_md](../includes/ssde_md.md)] from advancing the MinLSN. This can cause two types of problems:
+The active log must include every part of all uncommitted transactions. An application that starts a transaction and doesn't commit it or roll it back prevents the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] from advancing the MinLSN. This can cause two types of problems:
 
 - If the system is shut down after the transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified in the **recovery interval** option.
 - The log might grow very large, because the log can't be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is generally truncated on each automatic checkpoint.

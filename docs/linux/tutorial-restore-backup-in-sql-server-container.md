@@ -171,7 +171,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 ## Change the SA password
 
-[!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
+[!INCLUDE [change-docker-password](includes/change-docker-password.md)]
 
 ## Copy a backup file into the container
 
@@ -232,7 +232,7 @@ The backup file is now located inside the container. Before restoring the backup
 
    You should see an output similar to the following:
 
-   ```
+   ```output
    LogicalName   PhysicalName
    ------------------------------------------
    WWI_Primary   D:\Data\WideWorldImporters.mdf
@@ -257,7 +257,7 @@ The backup file is now located inside the container. Before restoring the backup
 
    You should see an output similar to the following:
 
-   ```
+   ```output
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
    Processed 53096 pages for database 'WideWorldImporters', file 'WWI_UserData' on file 1.
    Processed 33 pages for database 'WideWorldImporters', file 'WWI_Log' on file 1.
@@ -321,7 +321,7 @@ Follow these steps to make a change in the database.
 
    You should see a list of item identifiers and names:
 
-   ```
+   ```output
    StockItemID StockItemName
    ----------- -----------------
              1 USB missile launcher (Green)
@@ -352,7 +352,7 @@ Follow these steps to make a change in the database.
 
    You should see an output similar to the following text:
 
-   ```
+   ```output
    (1 rows affected)
    StockItemID StockItemName
    ----------- ------------------------------------
@@ -379,7 +379,7 @@ After you've restored your database into a container, you might also want to reg
 
    You should see output similar to the following:
 
-   ```
+   ```output
    10 percent processed.
    20 percent processed.
    30 percent processed.

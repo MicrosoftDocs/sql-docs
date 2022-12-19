@@ -38,7 +38,7 @@ SERVERPROPERTY ( 'propertyname' )
 ```
 
 > [!IMPORTANT]  
-> The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are not comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is based on the same code base as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] always has the newest SQL [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bits. Version 12 of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is newer than version 15 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are not comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is based on the same code base as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] always has the newest SQL [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] bits. Version 12 of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is newer than version 15 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -50,7 +50,7 @@ An expression that contains the property information to be returned for the serv
 
 | Property | Values returned |
 | -------------- | -------------- |
-| `BuildClrVersion` | Version of the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that was used while building the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **nvarchar(128)** |
+| `BuildClrVersion` | Version of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) that was used while building the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />NULL = Input isn't valid, an error, or not applicable.<br /><br />Base data type: **nvarchar(128)** |
 | `Collation` | Name of the default collation for the server.<br /><br />NULL = Input isn't valid, or an error.<br /><br />Base data type: **nvarchar(128)** |
 | `CollationID` | ID of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation.<br /><br />Base data type: **int** |
 | `ComparisonStyle` | Windows comparison style of the collation.<br /><br />Base data type: **int** |

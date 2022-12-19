@@ -104,7 +104,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 #### To create an Analysis Services command job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -147,7 +147,7 @@ For more information, see [sp_add_jobstep (Transact-SQL)](../../relational-datab
   
 #### To create an Analysis Services query job step  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

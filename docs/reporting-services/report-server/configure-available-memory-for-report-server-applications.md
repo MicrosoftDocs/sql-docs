@@ -68,7 +68,7 @@ ms.author: maggies
 |**MemorySafetyMargin**|Specifies a percentage of **WorkingSetMaximum** that defines the boundary between medium and low pressure scenarios. This value is the percentage of available memory that is reserved for the system and cannot be used for report server operations. The default value is 80.|  
   
 > [!NOTE]  
->  **MemoryLimit** and **MaximumMemoryLimit** settings are obsolete in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions. If you upgraded an existing installation or using an RSReportServer.config file that includes those settings, the report server no longer reads those values.  
+>  **MemoryLimit** and **MaximumMemoryLimit** settings are obsolete in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions. If you upgraded an existing installation or using an RSReportServer.config file that includes those settings, the report server no longer reads those values.  
   
 #### Example of memory configuration settings  
  The following example shows the configuration settings for a report server computer that uses custom memory configuration values. If you want to add **WorkingSetMaximum** or **WorkingSetMinimum**, you must type the elements and values in the RSReportServer.config file. Both values are integers that express kilobytes of RAM you are allocating to the server applications. The following example specifies that total memory allocation for the report server applications cannot exceed 4 gigabytes. If the default value for **WorkingSetMinimum** (60% of **WorkingSetMaximum**) is acceptable, you can omit it and specify just **WorkingSetMaximum** in the RSReportServer.config file. This example includes **WorkingSetMinimum** to show how it would appear if you wanted to add it:  

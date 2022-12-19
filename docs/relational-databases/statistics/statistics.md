@@ -117,7 +117,7 @@ When the automatic update statistics option, [AUTO_UPDATE_STATISTICS](../../t-sq
 
 Marking statistics as out-of-date based on row modifications occurs even when the AUTO_UPDATE_STATISTICS option is OFF. When the AUTO_UPDATE STATISTICS option is OFF, statistics are not updated, even when they are marked as out-of-date. Plans will continue to use the out-of-date statistics objects. Setting AUTO_UPDATE_STATISTICS to OFF can cause suboptimal query plans and degraded query performance. Setting the AUTO_UPDATE STATISTICS option to ON is recommended.
 
-- Up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses a recompilation threshold based on the number of rows in the table or indexed view at the time statistics were evaluated. The threshold is different whether a table is temporary or permanent.
+- Up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] uses a recompilation threshold based on the number of rows in the table or indexed view at the time statistics were evaluated. The threshold is different whether a table is temporary or permanent.
 
   |Table type|Table cardinality (*n*)|Recompilation threshold (# modifications)|
   |-----------|-----------|-----------|
@@ -128,7 +128,7 @@ Marking statistics as out-of-date based on row modifications occurs even when th
 
   For example if your table contains 20 thousand rows, then the calculation is `500 + (0.2 * 20,000) = 4,500` and the statistics will be updated every 4,500 modifications.
 
-- Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] also uses a decreasing, dynamic statistics recompilation threshold that adjusts according to the table cardinality at the time statistics were evaluated. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] thresholds apply.
+- Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] also uses a decreasing, dynamic statistics recompilation threshold that adjusts according to the table cardinality at the time statistics were evaluated. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] thresholds apply.
 
   |Table type|Table cardinality (*n*)|Recompilation threshold (# modifications)|
   |-----------|-----------|-----------|
@@ -140,7 +140,7 @@ Marking statistics as out-of-date based on row modifications occurs even when th
   For example if your table contains 2 million rows, then the calculation is the minimum of `500 + (0.20 * 2,000,000) = 400,500` and `SQRT(1,000 * 2,000,000) = 44,721`. This means the statistics will be updated every 44,721 modifications.
 
 > [!IMPORTANT]  
-> In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that  SQL Server  uses a decreasing, dynamic statistics update threshold.
+> In [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that  SQL Server  uses a decreasing, dynamic statistics update threshold.
 
 While recommended for all scenarios, enabling trace flag 2371 is optional. However, you can use the following guidance for enabling the trace flag 2371 in your pre-[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] environment:
 

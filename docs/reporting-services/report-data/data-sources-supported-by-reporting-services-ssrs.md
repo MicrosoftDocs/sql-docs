@@ -128,7 +128,7 @@ ms.author: maggies
  The following data processing extensions are automatically installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]. For more information and to verify the installation, see [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) and [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 > [!NOTE]
->  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
+>  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
  For more information about data processing extensions supported by Report Builder, see [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
@@ -251,12 +251,12 @@ This data source has been deprecated. Use the SQL Server data source type to con
   
 |[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Teradata version|.NET Framework Data Provider for Teradata version|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|13.00|13.0.0.1|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|12.00|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|6.20|12.00.01|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|13.00|13.0.0.1|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|12.00|12.00.01|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|6.20|12.00.01|  
+|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|13.00|13.0.0.1|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|12.00|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|6.20|12.00.01|  
+|[!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]|13.00|13.0.0.1|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|6.20|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|13.00|13.0.0.1|  

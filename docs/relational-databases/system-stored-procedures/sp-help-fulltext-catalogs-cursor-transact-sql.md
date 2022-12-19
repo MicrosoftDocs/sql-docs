@@ -53,7 +53,7 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|Full-text catalog identifier.|  
 |**NAME**|**sysname**|Name of the full-text catalog.|  
-|**PATH**|**nvarchar(260)**|Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this clause has no effect.|  
+|**PATH**|**nvarchar(260)**|Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], this clause has no effect.|  
 |**STATUS**|**int**|Full-text index population status of the catalog:<br /><br /> 0 = Idle<br /><br /> 1 = Full population in progress<br /><br /> 2 = Paused<br /><br /> 3 = Throttled<br /><br /> 4 = Recovering<br /><br /> 5 = Shutdown<br /><br /> 6 = Incremental population in progress<br /><br /> 7 = Building index<br /><br /> 8 = Disk is full. Paused<br /><br /> 9 = Change tracking|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|Number of full-text indexed tables associated with the catalog.|  
   

@@ -17,7 +17,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP DEFAULT (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes one or more user-defined defaults from the current database.  
   

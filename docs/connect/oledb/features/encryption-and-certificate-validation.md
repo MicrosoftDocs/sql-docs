@@ -62,7 +62,7 @@ The following table describes the resulting encryption and validation:
 | Strict | N/A | N/A | Encryption occurs only if there's a verifiable server certificate, otherwise the connection attempt fails. |
 
 > [!CAUTION]
-> The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption (for server-side configuration, see [Configure Server for Forced Encryption](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md#configure-server)). Also ensure that the server has a verifiable certificate, and that the **`TrustServerCertificate`** setting on the client is set to FALSE.
+> The preceding table only provides a guide on the system behavior under different configurations. For secure connectivity, ensure that the client and server both require encryption (for server-side configuration, see [Configure encryption settings in SQL Server](../../../database-engine/configure-windows/configure-sql-server-encryption.md#step-2-configure-encryption-settings-in-sql-server)). Also ensure that the server has a verifiable certificate, and that the **`TrustServerCertificate`** setting on the client is set to FALSE.
 
 > [!NOTE]
 > Starting from version 19.2 of the OLE DB driver, TDS 8.0 connections can be configured to use TLS 1.3. For more details, see [TLS 1.3 support](../../../relational-databases/security/networking/tds-8-and-tls-1-3.md).

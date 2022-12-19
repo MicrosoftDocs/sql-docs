@@ -4681,8 +4681,20 @@ items:
         href: database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md
       - name: Configure a Server to Listen on an Alternate Pipe
         href: database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md
-      - name: Enable Encrypted Connections to the Database Engine
-        href: database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md
+      - name: Encrypt connections to SQL Server
+        items:
+        - name: Certificate overview
+          href: database-engine/configure-windows/certificate-overview.md
+        - name: Certificate requirements for SQL Server
+          href: database-engine/configure-windows/certificate-requirements.md
+        - name: Configure SQL Server for encryption
+          href: database-engine/configure-windows/configure-sql-server-encryption.md
+        - name: Special cases for encrypting connections to SQL Server
+          href: database-engine/configure-windows/special-cases-for-encrypting-connections-sql-server.md
+        - name: Certificate procedures
+          href: database-engine/configure-windows/certificate-procedures.md
+        - name: SQL Server and client encryption summary
+          href: database-engine/configure-windows/sql-server-and-client-encryption-summary.md
       - name: Connect to SQL Server Through a Proxy Server
         href: database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md
       - name: Configure a Windows Firewall for Database Engine Access
@@ -6753,8 +6765,8 @@ items:
         href: relational-databases/performance/intelligent-query-processing-details.md
       - name: Query Processing feedback features
         href: relational-databases/performance/intelligent-query-processing-feedback.md
-      - name: Parameter Sensitivity Plan Optimization
-        href: relational-databases/performance/parameter-sensitivity-plan-optimization.md
+      - name: Parameter Sensitive Plan Optimization
+        href: relational-databases/performance/parameter-sensitive-plan-optimization.md
       - name: Performance Center
         href: relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
     - name: How-to
@@ -10363,14 +10375,21 @@ items:
       href: https://www.reddit.com/r/SQLServer  # Note: this Reddit https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
 - name: SQL on Azure
   items:
-  - name: Azure SQL Database >
-    href: /azure/sql-database/
   - name: Azure Synapse Analytics >
-    href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
-  - name: SQL Server on an Azure VM >
-    href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    href: /azure/synapse-analytics/overview-what-is
   - name: Azure Arc-enabled data services >
     href: /azure/azure-arc/data/overview
+  - name: Azure SQL
+    items: 
+    - name: Azure SQL >
+      href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview
+    - name: Azure SQL Database >
+      href: /azure/azure-sql/database/sql-database-paas-overview
+    - name: Azure SQL Managed Instance >
+      href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
+    - name: SQL Server on Azure VMs >
+      href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
+
 - name: Azure Arc-enabled SQL Server
   items:
     - name: Overview
@@ -10383,7 +10402,7 @@ items:
       href: sql-server/azure-arc/connect-at-scale.md
     - name: Assess
       href: sql-server/azure-arc/assess.md
-    - name: Manage databases
+    - name: View databases
       href: sql-server/azure-arc/view-databases.md
     - name: Configure advanced data Security
       href: sql-server/azure-arc/configure-advanced-data-security.md
@@ -10884,23 +10903,16 @@ items:
   - name: Errors & events
     href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
     items:
-    - name: Understanding Database Engine Errors
+    - name: Understanding Database Engine errors
       href: relational-databases/errors-events/understanding-database-engine-errors.md
-    - name: Database Engine Error Severities
+    - name: Database Engine error severities
       href: relational-databases/errors-events/database-engine-error-severities.md
-    - name: MSSQL Errors
-      href: relational-databases/errors-events/database-engine-events-and-errors.md
+    - name: Database Engine errors
       items:
-      - name: Errors -2 to 950
+      - name: Overview
+        href: relational-databases/errors-events/database-engine-events-and-errors.md
+      - name: Errors 0 to 999
         items:
-        - name: "-2"
-          href: relational-databases/errors-events/mssqlserver-neg2-database-engine-error.md
-        - name: "-1"
-          href: relational-databases/errors-events/mssqlserver-1-database-engine-error.md
-        - name: 2
-          href: relational-databases/errors-events/mssqlserver-2-database-engine-error.md
-        - name: 53
-          href: relational-databases/errors-events/mssqlserver-53-database-engine-error.md
         - name: 102
           href: relational-databases/errors-events/mssqlserver-102-database-engine-error.md
         - name: 107
@@ -10971,7 +10983,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-945-database-engine-error.md
         - name: 948
           href: relational-databases/errors-events/mssqlserver-948-database-engine-error.md
-      - name: Errors 1100 to 1950
+      - name: Errors 1,000 to 1,999
         items:
         - name: 1101
           href: relational-databases/errors-events/mssqlserver-1101-database-engine-error.md
@@ -11011,7 +11023,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-1807-database-engine-error.md
         - name: 1904
           href: relational-databases/errors-events/mssqlserver-1904-database-engine-error.md
-      - name: Errors 2000 to 2850
+      - name: Errors 2,000 to 2,999
         items:
         - name: 2020
           href: relational-databases/errors-events/mssqlserver-2020-database-engine-error.md
@@ -11073,7 +11085,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-2596-database-engine-error.md
         - name: 2814
           href: relational-databases/errors-events/mssqlserver-2814-database-engine-error.md
-      - name: Errors 3000 to 4850
+      - name: Errors 3,000 to 4,999
         items:
         - name: 3013
           href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
@@ -11147,7 +11159,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-4214-database-engine-error.md
         - name: 4846
           href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
-      - name: Errors 5000 to 8000
+      - name: Errors 5,000 to 7,999
         items:
         - name: 5009
           href: relational-databases/errors-events/mssqlserver-5009-database-engine-error.md
@@ -11249,7 +11261,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-7988-database-engine-error.md
         - name: 7995
           href: relational-databases/errors-events/mssqlserver-7995-database-engine-error.md
-      - name: Errors 8400 to 9999
+      - name: Errors 8,000 to 9,999
         items:
         - name: 8443
           href: relational-databases/errors-events/mssqlserver-8443-database-engine-error.md
@@ -11313,7 +11325,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-9790-database-engine-error.md
         - name: 9955
           href: relational-databases/errors-events/mssqlserver-9955-database-engine-error.md
-      - name: Errors 10,000 to 12,000
+      - name: Errors 10,000 to 11,999
         items:
         - name: 10001
           href: relational-databases/errors-events/mssqlserver-10001-database-engine-error.md
@@ -11373,7 +11385,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-11001-database-engine-error.md
         - name: 11409
           href: relational-databases/errors-events/mssqlserver-11409-database-engine-error.md
-      - name: Errors 12,300 to 16,999
+      - name: Errors 12,000 to 16,999
         items:
         - name: 12300
           href: relational-databases/errors-events/mssqlserver-12300-database-engine-error.md
@@ -11417,7 +11429,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-16591-database-engine-error.md
         - name: 16594
           href: relational-databases/errors-events/mssqlserver-16594-database-engine-error.md
-      - name: Errors 17,000 to 19,000
+      - name: Errors 17,000 to 18,999
         items:
         - name: 17053
           href: relational-databases/errors-events/mssqlserver-17053-database-engine-error.md
@@ -11491,7 +11503,7 @@ items:
         items:
         - name: 19407
           href: relational-databases/errors-events/mssqlserver-19407-database-engine-error.md
-      - name: Errors 20,000 to 34,000
+      - name: Errors 20,000 to 33,999
         items:
         - name: 20557
           href: relational-databases/errors-events/mssqlserver-20557-database-engine-error.md
@@ -11543,11 +11555,11 @@ items:
           href: relational-databases/errors-events/mssqlserver-33128-database-engine-error.md
         - name: 33129
           href: relational-databases/errors-events/mssqlserver-33129-database-engine-error.md
-      - name: Errors 34,001 to 40,999
+      - name: Errors 34,000 to 40,999
         items:
         - name: 35250
           href: relational-databases/errors-events/mssqlserver-35250-database-engine-error.md
-      - name: Errors 41,000 to 41,400
+      - name: Errors 41,000 to 41,399
         items:
         - name: 41030
           href: relational-databases/errors-events/mssqlserver-41030-database-engine-error.md
@@ -11587,7 +11599,7 @@ items:
           href: relational-databases/errors-events/mssqlserver-42108-database-engine-error.md
         - name: 42109
           href: relational-databases/errors-events/mssqlserver-42109-database-engine-error.md
-      - name: Native Client Error 50000
+      - name: Native client error 50,000
         href: relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md
   - name: Event classes
     href: relational-databases/event-classes/sql-server-event-class-reference.md

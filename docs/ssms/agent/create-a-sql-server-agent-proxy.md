@@ -70,7 +70,7 @@ On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instanc
   
 #### To create a SQL Server Agent proxy  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, select **New Query**.  
   

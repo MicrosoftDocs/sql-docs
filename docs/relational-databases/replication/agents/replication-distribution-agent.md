@@ -285,7 +285,13 @@ distrib [-?]
  Improves the performance of the initial snapshot by causing the Distribution Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots or non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers. If you use this parameter, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the agent (for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) or the ODBC driver loaded by the agent (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is not used.  
   
  **-UseOledbStreaming**  
- When specified, enables the binding of binary large object data as a stream. Use **-OledbStreamThreshold** to specify the size, in bytes, above which a stream will be used. **UseOledbStreaming** is enabled by default. **UseOledbStreaming** writes to the **C:\Program Files\Microsoft SQL Server\\<version\>\COM** folder.  
+ When specified, enables the binding of binary large object data as a stream. Use **-OledbStreamThreshold** to specify the size, in bytes, above which a stream will be used. **UseOledbStreaming** is enabled by default. 
+ 
+> [!Note]
+>   Starting with SQL 2017 CU22 and later versions (including SQL 2019 RTM), **UseOledbStreaming** writes to the **c:\Users\\<DistributionAgentAccount\>\AppData\Temp** folder. 
+> 
+>   Prior to SQL 2017 CU22, **UseOledbStreaming** writes to the **C:\Program Files\Microsoft SQL Server\\<version\>\COM** folder. 
+
   
 ## Remarks  
   

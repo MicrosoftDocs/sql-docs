@@ -102,7 +102,7 @@ Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the tup
 
 - String Predicate pushdown speeds up queries that compare strings of type VARCHAR/CHAR or NVARCHAR/NCHAR. This applies to the common comparison operators and includes operators such as `LIKE` that use bitmap filters. This works with all supported collations. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
 
-- Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
+- Enhancements for batch mode operations by leveraging vector based hardware capabilities. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] detects the level of CPU support for AVX 2 (Advanced Vector Extensions) and SSE 4 (Streaming SIMD Extensions 4) hardware extensions, and uses them if supported. On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this enhancement is reserved for Enterprise edition.
 
 ### Performance for database compatibility level 130
 

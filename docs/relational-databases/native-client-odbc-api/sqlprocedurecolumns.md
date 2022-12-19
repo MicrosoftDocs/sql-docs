@@ -56,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SS_TYPE_CATALOG_NAME|Returns the name of the catalog that contains the table or CLR user-defined type.|  
 |SS_TYPE_SCHEMA_NAME|Returns the name of the schema that contains the table or CLR user-defined type.|  
   
- The SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME columns are available in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions to return the catalog and schema, respectively, for table-valued parameters. These columns are populated for table-valued parameters, and also for CLR user-defined type parameters. (Existing schema and catalog columns for CLR user-defined type parameters are not affected by this additional functionality. They are also populated to maintain backward compatibility).  
+ The SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME columns are available in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions to return the catalog and schema, respectively, for table-valued parameters. These columns are populated for table-valued parameters, and also for CLR user-defined type parameters. (Existing schema and catalog columns for CLR user-defined type parameters are not affected by this additional functionality. They are also populated to maintain backward compatibility).  
   
  In conformance with the ODBC specification, SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME appear before all driver-specific columns added in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and after all columns mandated by ODBC itself.  
   

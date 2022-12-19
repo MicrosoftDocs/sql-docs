@@ -20,7 +20,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP CONTRACT (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops an existing contract from a database.  
   

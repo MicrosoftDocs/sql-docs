@@ -187,7 +187,7 @@ Under **Log storage**, you can choose to use the same drive as the data drive fo
 
 ![Screenshot that shows where you can configure the transaction log storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-log-storage.png)
 
-Configure your tempdb database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, the max number of tempdb files. Currently, during deployment, the max number of tempdb files is 8, but more files can be added after the SQL Server VM is deployed.
+Configure your `tempdb` database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, the max number of `tempdb` files. Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
 
 ![Screenshot that shows where you can configure the tempdb storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png)
 

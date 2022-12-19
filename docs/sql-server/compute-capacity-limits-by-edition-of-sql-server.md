@@ -72,7 +72,7 @@ These limits apply to a single instance of [!INCLUDE[ssNoVersion](../includes/ss
   
 The following table specifies the compute capacity limits for a single instance of each edition of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Maximum compute capacity for a single instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximum compute capacity for a single instance (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Maximum compute capacity for a single instance ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximum compute capacity for a single instance (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: Core-based Licensing\*|Operating system maximum|Operating system maximum|  
 |Developer|Operating system maximum|Operating system maximum|  

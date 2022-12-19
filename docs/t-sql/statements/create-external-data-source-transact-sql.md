@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/31/2022
+ms.date: 12/16/2022
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -395,7 +395,7 @@ Specifies a database-scoped credential for authenticating to the external data s
 Additional notes and guidance when creating a credential:
 
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
-- When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. 
+- When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity.
 - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
 - Note that when connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
 - When `TYPE` = `HADOOP` the credential must be created using the storage account key as the `SECRET`.
@@ -413,7 +413,6 @@ There are multiple ways to create a shared access signature:
   |    ------    |    ----------    |
   |    Read data from a file    |    Read    |
   |    Read data from multiple files and subfolders    |    Read and List    |
-  |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
@@ -770,7 +769,6 @@ There are multiple ways to create a shared access signature:
   |    ------    |    ----------    |
   |    Read data from a file    |    Read    |
   |    Read data from multiple files and subfolders    |    Read and List    |
-  |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Storage into SQL Database](#h-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)
 
@@ -1169,7 +1167,7 @@ WITH
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver16"
+::: moniker range=">=sql-server-ver16||=sql-server-linux-ver16"
 
 
 ## Overview: SQL Server 2022
@@ -1291,7 +1289,6 @@ There are multiple ways to create a shared access signature:
     |    Read data from a file    |    Read    |
     |    Read data from multiple files and subfolders    |    Read and List    |
     |    Use Create External Table as Select (CETAS)    |    Read, Create and Write    |
-
 
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
   - Exclude the leading `?` when configured as the secret.
@@ -1789,7 +1786,7 @@ Location path:
 
 Additional notes and guidance when setting the location:
 
-- The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
+- The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 
 #### CREDENTIAL = *credential_name*
 
@@ -2601,7 +2598,7 @@ Provides the connectivity protocol and path to the external data source.
 | Azure Blob Storage     | `abs`         | `abs://<container>@<storage_account>.blob.core.windows.net/<path>/<file_name>` |
 | Azure Data Lake Service Gen2 | `adls`  | `adls://<container>@<storage_account>.dfs.core.windows.net/<path>/<file_name>` |
 
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
+The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 
 Do not add a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 

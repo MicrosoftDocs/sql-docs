@@ -65,7 +65,7 @@ Only members of the **sysadmin** fixed server role can assign alerts to operator
   
 #### To assign alerts to an operator  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

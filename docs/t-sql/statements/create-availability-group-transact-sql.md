@@ -385,7 +385,7 @@ For more information, see [Active Secondaries: Readable Secondary Replicas &#40;
   
 #### READ_ONLY_ROUTING_URL ='TCP://_system-address_:_port_'  
 
-Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]  listens. Typically, the default instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on TCP port 1433.
+Specifies the URL to be used for routing read-intent connection requests to this availability replica. This is the URL on which the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]  listens. Typically, the default instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on TCP port 1433.
   
 For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   

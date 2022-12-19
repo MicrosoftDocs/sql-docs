@@ -62,7 +62,7 @@ The version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with wh
 | [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] | 12 | 150 | 160, 150, 140, 130, 120, 110, 100 |
 | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 13 | 130 | 130, 120, 110, 100 |
 | [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] | 12 | 120 | 120, 110, 100 |
-| [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] | 11 | 110 | 110, 100, 90 |
+| [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] | 11 | 110 | 110, 100, 90 |
 | [!INCLUDE[sql2008r2-md](../../includes/sql2008r2-md.md)] | 10.5 | 100 | 100, 90, 80 |
 | [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] | 10 | 100 | 100, 90, 80 |
 | [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] | 9 | 90 | 90, 80 |
@@ -77,7 +77,7 @@ For the recommended workflow for upgrading the compatibility level, see [Keep pe
 
 ## Remarks
 
-For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is associated with the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. New databases are set to this level unless the `model` database has a lower compatibility level. For databases attached or restored from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database keeps its existing compatibility level, if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving a database with a compatibility level lower than the allowed level by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically sets the database to the lowest compatibility level allowed. This applies to both system and user databases.
+For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is associated with the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. New databases are set to this level unless the `model` database has a lower compatibility level. For databases attached or restored from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database keeps its existing compatibility level, if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving a database with a compatibility level lower than the allowed level by the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] automatically sets the database to the lowest compatibility level allowed. This applies to both system and user databases.
 
 The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] when a database is attached or restored, and after an in-place upgrade:
 

@@ -42,7 +42,7 @@ Once the login has been created, connect to the primary read-write replica of yo
 create user [third-party-user] from login [third-party-login];
 ```
 
-As an optional step, once the database user has been created, you can drop the server login created in the previous step if there are concerns about the login getting re-enabled in any way. Connect to the master database on the logical server hosting the primary database, and execute the following:
+As an optional step, once the database user has been created, you can drop the server login created in the previous step if there are concerns about the login getting re-enabled in any way. Connect to the `master` database on the logical server hosting the primary database, and execute the following:
 
 ```sql
 drop login [third-party-login];

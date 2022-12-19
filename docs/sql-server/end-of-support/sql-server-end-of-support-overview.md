@@ -250,33 +250,6 @@ Tools:
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## Non-SQL options
-
-For certain types of applications, you may also consider a non-relational or NoSQL solution, such as Azure Cosmos DB or Azure table storage.
-
-### Azure Cosmos DB
-
-Consider Azure Cosmos DB for modern, scalable, mobile, and web applications that use JSON data and require a combination of robust querying and transactional data processing. For more info, see [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/). For info about importing data, see [Import data to Cosmos DB](/azure/cosmos-db/import-data/).
-
-Azure Cosmos DB has the following benefits:
-
-- Your documents are indexed and you can use familiar SQL syntax to query them.
-- The database is schema-free.
-- You can add properties to documents without having to rebuild indexes.
-- You get JSON and JavaScript support right inside the database engine.
-- You get native support for geospatial data and integration with other Azure Services including Azure Search, HDInsight, and Data Factory.
-- You get low latency, high-performance storage with reserved throughput levels.
-
-### Azure table storage
-
-Consider Azure table storage to store petabytes of semi-structured data in a cost-effective solution. For more info, see [Table Storage](https://azure.microsoft.com/services/storage/tables/).
-
-Azure table storage has the following benefits:
-
-- You can evolve your apps and your table schema without taking the data offline.
-- You can scale up without sharding your dataset.
-- You get geo-redundant storage that replicates data across multiple regions.
-
 ## Lifecycle dates
 
 The following table provides an approximation of lifecycle dates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products. For greater details and accuracy, see the [Microsoft Lifecycle Policy](/lifecycle/products/?terms=sql%20server) page.

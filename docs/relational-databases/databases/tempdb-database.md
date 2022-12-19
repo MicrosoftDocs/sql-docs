@@ -162,20 +162,27 @@ To check current size and growth parameters for `tempdb`, use the following quer
 
 ```sql
  SELECT name AS FileName,
-    size*1.0/128 AS FileSizeInMB,
-    CASE max_size
-        WHEN 0 THEN 'Autogrowth is off.'
-        WHEN -1 THEN 'Autogrowth is on.'
-        ELSE 'Log file grows to a maximum size of 2 TB.'
-    END,
-    growth AS 'GrowthValue',
-    'GrowthIncrement' =
-        CASE
-            WHEN growth = 0 THEN 'Size is fixed.'
-            WHEN growth > 0 AND is_percent_growth = 0
-                THEN 'Growth value is in 8-KB pages.'
-            ELSE 'Growth value is a percentage.'
-        END
+   size*1.0/128 AS FileSizeInMB,
+   CASE max_size
+     WHEN 0 THEN 'Autogrowth is off.'
+     WHEN -1 THEN 'Autogrowth is on.'
+     ELSE 'Log file grows to a maximum size of 2 TB.'
+   END,
+   'GrowthValue'=
+     CASE
+       WHEN growth = 0 THEN growth
+       WHEN growth > 0 AND is_percent_growth = 0
+         THEN growth*1.0/128
+       ELSE
+         growth
+     END,
+   'GrowthIncrementUnit' =
+     CASE
+       WHEN growth = 0 THEN 'Size is fixed.'
+       WHEN growth > 0 AND is_percent_growth = 0
+         THEN 'Growth value is MB.'
+       ELSE 'Growth value is a percentage.'
+     END
 FROM tempdb.sys.database_files;
 GO
 ```

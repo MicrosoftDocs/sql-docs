@@ -141,7 +141,7 @@ On the **Networking** tab, configure your network options:
 
 On the **WSFC and Credentials** tab, provide account information to configure and manage the Windows Server failover cluster and SQL Server. 
 
-For the deployment to work, all the accounts need to already be present in the Active Directory instance of the domain controller VM. This deployment process doesn't create any accounts and will fail if you provide an invalid account. For more information about the required permissions, review [Configure cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
+For the deployment to work, all the accounts need to already be present in Active Directory for the domain controller VM. This deployment process doesn't create any accounts and will fail if you provide an invalid account. For more information about the required permissions, review [Configure cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
 
 1. Under **Windows Server Failover Cluster details**, provide the name that you want to use for the failover cluster.  
 

@@ -32,7 +32,7 @@ To complete this quickstart, you need:
   | Action | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
   |:--- |:--- |:---|:---|
   | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  || [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
+  || [CLI](scripts/create-and-configure-database-cli.md) | [Bicep](/azure/azure-sql/managed-instance/create-bicep-quickstart) |
   || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
   | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
   |||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
@@ -45,15 +45,15 @@ To complete this quickstart, you need:
 
   # [macOS](#tab/macos)
 
-  Install Node.js and then install the ODBC driver using the steps on [Install the Microsoft ODBC driver for SQL Server (macOS)](../../docs/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+  Install Node.js and then install the ODBC driver using the steps on [Install the Microsoft ODBC driver for SQL Server (macOS)](/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos).
 
   # [Ubuntu](#tab/ubuntu)
 
-  Install Node.js and then install the ODBC driver using the steps on [Install the Microsoft ODBC driver for SQL Server (Linux)](../../docs/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+  Install Node.js and then install the ODBC driver using the steps on [Install the Microsoft ODBC driver for SQL Server (Linux)](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server).
 
   # [Windows](#tab/windows)
 
-  Install Node.js and then install the ODBC driver using the steps on [Download ODBC Driver for SQL Server](../../docs/connect/odbc/download-odbc-driver-for-sql-server.md).
+  Install Node.js and then install the ODBC driver using the steps on [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
   ---
 

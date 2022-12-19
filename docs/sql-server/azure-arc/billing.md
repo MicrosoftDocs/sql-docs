@@ -108,39 +108,8 @@ One of the benefits of Software Assurance or SQL subscription is free fail-over 
 | Standard | Product key without Software Assurance or SQL subscription| Yes | LicenseOnly | 
 |||
 
-## FAQ
-
-### Does pay-as-you-go billing stop when internet connectivity temporarily down
-
-Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
-
-### Do I get charged if my virtual machine is stopped
-
-When the VM is stopped, the usage data is not collected. Therefore, you will not be charged for the time the VM was stopped.  
-
-### Do I get charged if my SQL Server instance is stopped
-
-The usage data collection requires an active SQL Server instance. Therefore, you will not be charged for the time the SQL Server instance was stopped.  
-
-### Do I get charged if my SQL Server instance was running for less than an hour
-
-The billing granularity is one hour. If your instance was active for less than an hour, you will be billed for the full hour. 
-
-### Is there a minimum number of cores with pay-as-you-go billing 
-
-Pay-as-you-go billing doesn't change the licensing terms of SQL Server. Therefore, it is subject to the four-core limit as defined in the [SQL Server licensing terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS). 
-
-### If the affinity mask is specified for my SQL Server to use a subset of virtual cores, will it reduce the pay-as-you-go-charges
-
-When you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
-
-### Can I switch from pay-as-you-go to license and vice versa
-
-Yes, you can change your selection. To change, run Setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**.
-
-See also [Azure Arc-enabled SQL Server FAQ](faq.yml).
-
 ## Next steps
 
 - [Review SQL Server 2022 Pricing](https://www.microsoft.com/sql-server/sql-server-2022-pricing)
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
+- [Frequently asked questions](faq.yml#billing)

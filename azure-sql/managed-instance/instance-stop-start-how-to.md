@@ -17,7 +17,9 @@ ms.custom:
 This article describes how to stop and start a managed instance to save on billing costs when you're using Azure SQL Managed Instance. You can stop and start your managed instance by using either the Azure portal or Azure PowerShell. 
 
 > [!NOTE]
-> The stop and start feature for managed instances is currently in preview and available only for instances in the General Purpose service tier. 
+> The stop and start feature for managed instances is currently in preview and available only for:
+> * Managed instances in the General Purpose service tier.
+> * Managed instances with the November 2022 feature wave enabled. For more information, see [Enroll in the November 2022 feature wave](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/november-2022-feature-wave-enroll). 
 
 ## Overview
 
@@ -36,7 +38,7 @@ This features introduces three new managed instance states, as the following dia
         <br />- Starting
     :::column-end:::
     :::column:::
-        ![Diagram showing the various states of a SQL Managed Instance deployment.](media/instance-stop-start-how-to/sql-managed-instance-states.png)
+        ![Diagram that shows the various states of a SQL Managed Instance deployment.](media/instance-stop-start-how-to/sql-managed-instance-states.png)
     :::column-end:::
 :::row-end:::
 
@@ -180,15 +182,13 @@ Write-Host "Stop operation ID:`n" $stopInstanceOperationId
 $stopInstanceStatusUri = ($stopInstanceResp.Headers | ConvertTo-Json | ConvertFrom-Json)."Azure-AsyncOperation"
 Write-Host "Instance stop operation unique Get-status URI:`n" $stopInstanceStatusUri
 # Poll the status of the operation (statuses: InProgress, Succeeded, Failed), continue when Succeeded
-$stopInstanceStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject 
-$stopInstanceStatusUri)
+$stopInstanceStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject $stopInstanceStatusUri)
 Write-Host "Status of the managed instance stop operation:`n" $stopInstanceStatusResp
 # Get the operation result URI
 $stopInstanceOperationStatusUri = ($stopInstanceResp.Headers | ConvertTo-Json | ConvertFrom-Json)."Location"
 Write-Host "Instance stop operation result unique URI:`n" $stopInstanceOperationStatus
 # Check the stop operation result
-$stopInstanceOperationStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject 
-$stopInstanceOperationStatusUri)
+$stopInstanceOperationStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject $stopInstanceOperationStatusUri)
 Write-Host "Status of the managed instance stop operation:`n" $stopInstanceOperationStatusResp
 # Get the SQL Managed Instance and check properties
 $getInstanceResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $instanceGetUri
@@ -236,15 +236,13 @@ Write-Host "Stop operation ID:`n" $startInstanceOperationId
 $startInstanceStatusUri = ($startInstanceResp.Headers | ConvertTo-Json | ConvertFrom-Json)."Azure-AsyncOperation"
 Write-Host "Instance start operation unique Get-status URI:`n" $startInstanceStatusUri
 # Poll the status of the operation (statuses: InProgress, Succeeded, Failed), continue when Succeeded
-$startInstanceStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject 
-$startInstanceStatusUri)
+$startInstanceStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject $startInstanceStatusUri)
 Write-Host "Status of the managed instance start operation:`n" $startInstanceStatusResp
 # Get the operation result URI
 $startInstanceOperationStatusUri = ($startInstanceResp.Headers | ConvertTo-Json | ConvertFrom-Json)."Location"
 Write-Host "Instance start operation result unique URI:`n" $startInstanceOperationStatusUri
 # Check the start operation result
-$startInstanceOperationStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject 
-$startInstanceOperationStatusUri)
+$startInstanceOperationStatusResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri (out-string -inputobject $startInstanceOperationStatusUri)
 Write-Host "Status of the managed instance start operation:`n" $startInstanceOperationStatusResp
 # Get the SQL Managed Instance and check properties
 $getInstanceResp = Invoke-WebRequest -Method Get -Headers $authHeader -Uri $instanceGetUri

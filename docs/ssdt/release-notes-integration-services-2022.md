@@ -22,6 +22,7 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Common Issues
 - SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True.
+- Third party components are not supported yet. 
 - **SSDT side by side issue**. Method not found: 'SqlWorkbench.Interfaces.IAzureCloudConfiguration Microsoft.SqlServer.Management.UserSettings.AzureCloud.GetAzureCloudConfiguration(System.String, Boolean)'. The workaround is to download Visual Studio 2022 17.5 Preview 2 or later.
 - [!INCLUDE[snac-removed-oledb-and-odbc](../includes/snac-removed-oledb-and-odbc.md)]
 

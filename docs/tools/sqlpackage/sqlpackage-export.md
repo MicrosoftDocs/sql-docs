@@ -22,6 +22,9 @@ The SqlPackage.exe Export action exports a connected database to a BACPAC file (
 SqlPackage /Action:Export {parameters} {properties}
 ```
 
+> [!NOTE]
+> SqlPackage export performs best for databases under 200GB. For larger databases, you may want to optimize the operation using properties available in this article and tips in [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md).
+
 ### Examples
 
 ```bash

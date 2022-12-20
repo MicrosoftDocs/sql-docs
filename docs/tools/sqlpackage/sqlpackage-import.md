@@ -14,6 +14,10 @@ ms.date: 9/29/2022
 # SqlPackage Import parameters and properties
 The SqlPackage.exe Import action imports the schema and table data from a BACPAC file (.bacpac) into a new or empty database in SQL Server or Azure SQL Database. At the time of the import operation to an existing database the target database cannot contain any user-defined schema objects. Alternatively, a new database can be created by the import action when the authenticated user has [create database permissions](../../t-sql/statements/create-database-transact-sql.md#permissions).
 
+
+> [!NOTE]
+> SqlPackage import performs best for databases under 200GB. For larger databases, you may want to optimize the operation using properties available in this article and tips in [Troubleshooting with SqlPackage](./troubleshooting-issues-and-performance-with-sqlpackage.md).
+
 ## Command-line syntax
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  

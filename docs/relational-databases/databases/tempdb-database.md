@@ -172,7 +172,7 @@ To check current size and growth parameters for `tempdb`, use the following quer
      CASE
        WHEN df.growth = 0 THEN df.growth
        WHEN df.growth > 0 AND df.is_percent_growth = 0 THEN df.growth*1.0/128.0
-	     WHEN df.growth > 0 AND df.is_percent_growth = 1 THEN df.growth
+       WHEN df.growth > 0 AND df.is_percent_growth = 1 THEN df.growth
      END,
    growth_increment_unit =
      CASE

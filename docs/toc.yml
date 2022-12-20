@@ -9856,7 +9856,7 @@ items:
         href: ssms/sql-server-management-studio-telemetry-ssms.md
       - name: Feedback >> 
         href: https://aka.ms/sqlfeedback
-  - name: SqlPackage.exe
+  - name: SqlPackage
     href: tools/sqlpackage/sqlpackage.md
     items:
     - name: Install sqlpackage

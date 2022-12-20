@@ -9344,6 +9344,8 @@ items:
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Query Execution options - Help - General Page)
           href: ssms/menu-help/options-query-execution.md
+        - name: Options (Output Window)
+          href: ssms/menu-help/options-output-window-page.md
         - name: Options (Azure Service - Help - General Page)
           href: ssms/menu-help/options-azure-services.md
         - name: External Tools

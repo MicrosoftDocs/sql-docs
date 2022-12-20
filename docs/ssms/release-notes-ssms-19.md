@@ -70,7 +70,7 @@ SSMS 19 Preview 4 is the latest preview release of SSMS. If you need an earlier 
 | SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression. (.Net SqlClient Data Provider)". | There is a known problem due to incorrect data in msdb. To resolve, remove backup history. For example, `EXEC msdb..sp_delete_backuphistory @oldest_date = '<current date>'`.|
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
-| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL or SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
+| Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 ## Previous SSMS previews
 

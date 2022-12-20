@@ -149,7 +149,7 @@ To uninstall SqlPackage, run the following command:
 This release of SqlPackage includes a standard Windows installer experience, and a .zip: 
 
 1. Download and run the [DacFramework.msi installer for Windows](https://aka.ms/dacfx-msi).
-2. Open a new Command Prompt window, and run SqlPackage.exe
+2. Open a new Command Prompt window, and run SqlPackage
     - SqlPackage is installed to the ```C:\Program Files\Microsoft SQL Server\160\DAC\bin``` folder
 
 ### Uninstall SqlPackage

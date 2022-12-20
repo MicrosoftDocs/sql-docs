@@ -1,6 +1,6 @@
 ---
 title: SqlPackage deploy report and drift report
-description: Learn how to automate database development tasks with SqlPackage.exe Deploy Report and Drift Report. View examples and available parameters, properties, and SQLCMD variables.
+description: Learn how to automate database development tasks with SqlPackage Deploy Report and Drift Report. View examples and available parameters, properties, and SQLCMD variables.
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.date: 11/14/2021
 ---
 
 # SqlPackage deploy report and drift report
-The SqlPackage.exe [DeployReport](#deployreport-action-parameters) action creates an XML report of the changes that would be made by a publish action.
-The SqlPackage.exe [DriftReport](#driftreport-action-parameters) action creates an XML report of the changes that have been made to the registered database since it was last registered.  
+The SqlPackage [DeployReport](#deployreport-action-parameters) action creates an XML report of the changes that would be made by a publish action.
+The SqlPackage [DriftReport](#driftreport-action-parameters) action creates an XML report of the changes that have been made to the registered database since it was last registered.  
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
+**SqlPackage** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
 ```bash
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
@@ -33,7 +33,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
-|**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if SqlPackage.exe should overwrite existing files. Specifying false causes SqlPackage.exe to abort action if an existing file is encountered. Default value is True. |
+|**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if SqlPackage should overwrite existing files. Specifying false causes SqlPackage to abort action if an existing file is encountered. Default value is True. |
 |**/Profile:**|**/pr**|{string}|Specifies the file path to a DAC Publish Profile. The profile defines a collection of properties and variables to use when generating outputs. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#deployreport-action-properties); {PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False. |
@@ -49,7 +49,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/SourceUser:**|**/su**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the source database. |
 |**/TargetFile:**|**/tf**|{string}|Specifies a target file (that is, a .dacpac file) to be used as the target of action instead of a database. If this parameter is used, no other target parameter shall be valid. This parameter shall be invalid for actions that only support database targets.|
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
-|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage.exe Action. |
+|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage Action. |
 |**/TargetEncryptConnection:**|**/tec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
 |**/TargetHostNameInCertificate:**|**/thnic**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
 |**/TargetPassword:**|**/tp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |
@@ -167,10 +167,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
 |**/OutputPath:**|**/op**|{string}|Specifies the file path where the output files are generated. |
-|**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if SqlPackage.exe should overwrite existing files. Specifying false causes SqlPackage.exe to abort action if an existing file is encountered. Default value is True. |
+|**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if SqlPackage should overwrite existing files. Specifying false causes SqlPackage to abort action if an existing file is encountered. Default value is True. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
-|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage.exe Action. |
+|**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage Action. |
 |**/TargetEncryptConnection:**|**/tec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
 |**/TargetHostNameInCertificate:**|**/thnic**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
 |**/TargetPassword:**|**/tp**|{string}|For SQL Server Auth scenarios, defines the password to use to access the target database. |

@@ -9856,7 +9856,7 @@ items:
         href: ssms/sql-server-management-studio-telemetry-ssms.md
       - name: Feedback >> 
         href: https://aka.ms/sqlfeedback
-  - name: SqlPackage.exe
+  - name: SqlPackage
     href: tools/sqlpackage/sqlpackage.md
     items:
     - name: Install sqlpackage
@@ -10408,6 +10408,8 @@ items:
       href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: Billing through Microsoft Azure
       href: sql-server/azure-arc/billing.md
+    - name: FAQ
+      href: sql-server/azure-arc/faq.yml
 - name: Big Data Clusters
   items:
   - name: Big Data Clusters

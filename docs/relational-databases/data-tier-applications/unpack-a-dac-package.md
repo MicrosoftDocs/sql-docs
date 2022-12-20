@@ -34,7 +34,7 @@ Options for examining the content of a dacpac include:
 
 Importing a .dacpac to a SQL project in Visual Studio results in the contents of the .dacpac being transformed into *.sql* files and organized into folders. Following the import, post-deployment scripts and pre-deployment scripts from the .dacpac are visible in the solution explorer.
 
-1. Install [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) as a part of Visual Studio and create a new SQL project.
+1. Install [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md) as a part of Visual Studio and create a new SQL project.
 
 2. In [Solution Explorer](/visualstudio/ide/use-solution-explorer) right-click the empty project and select **Import**, then **from a Data-tier application package**.
 
@@ -88,5 +88,5 @@ Deploying the .dacpac to a test instance results in the contents of the .dacpac 
 - [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)
 - [SqlPackage Publish](../../tools/sqlpackage/sqlpackage-publish.md)
 - [SQL Server dacpac extension in Azure Data Studio](../../azure-data-studio/extensions/sql-server-dacpac-extension.md)
-- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)
 

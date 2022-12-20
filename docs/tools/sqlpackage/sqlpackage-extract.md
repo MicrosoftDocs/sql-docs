@@ -1,6 +1,6 @@
 ---
 title: SqlPackage Extract
-description: Learn how to automate database development tasks with SqlPackage.exe Extract. View examples and available parameters, properties, and SQLCMD variables.
+description: Learn how to automate database development tasks with SqlPackage Extract. View examples and available parameters, properties, and SQLCMD variables.
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -12,11 +12,11 @@ ms.date: 9/29/2022
 ---
 
 # SqlPackage Extract parameters and properties
-The SqlPackage.exe Extract action creates a schema of a connected database in a DACPAC file (.dacpac). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export.md) or use the Extract properties *ExtractAllTableData*/*TableData*. 
+The SqlPackage Extract action creates a schema of a connected database in a DACPAC file (.dacpac). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export.md) or use the Extract properties *ExtractAllTableData*/*TableData*. 
 
 ## Command-line syntax
 
-**SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
+**SqlPackage** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
 ```bash
 SqlPackage /Action:Extract {parameters} {properties}
@@ -62,10 +62,10 @@ $Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Cred
 $AccessToken_Object = (Get-AzAccessToken -Account $Account -Resource "https://database.windows.net/")
 $AccessToken = $AccessToken_Object.Token
 
-sqlpackage.exe /at:$AccessToken /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
+SqlPackage /at:$AccessToken /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 # OR
-sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
+SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\AdventureWorksLT.dacpac" \
     /SourceConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ```
 
@@ -79,7 +79,7 @@ sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifies whether diagnostic logging is output to the console. Defaults to False. |
 |**/DiagnosticsFile:**|**/df**|{string}|Specifies a file to store diagnostic logs. |
 |**/MaxParallelism:**|**/mp**|{int}| Specifies the degree of parallelism for concurrent operations running against a database. The default value is 8. |
-|**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if SqlPackage.exe should overwrite existing files. Specifying false causes SqlPackage.exe to abort action if an existing file is encountered. Default value is True. |
+|**/OverwriteFiles:**|**/of**|{True&#124;False}|Specifies if SqlPackage should overwrite existing files. Specifying false causes SqlPackage to abort action if an existing file is encountered. Default value is True. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-extract-action); {PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False. |
 |**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
@@ -93,7 +93,7 @@ sqlpackage.exe /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\
 |**/SourceUser:**|**/su**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the source database. |
 |**/TargetFile:**|**/tf**|{string}| Specifies a target file (that is, a .dacpac file) in local storage to be used as the target of action instead of a database. If this parameter is used, no other target parameter shall be valid. This parameter shall be invalid for actions that only support database targets.| 
 |**/TenantId:**|**/tid**|{string}|Represents the Azure AD tenant ID or domain name. This option is required to support guest or imported Azure AD users as well as Microsoft accounts such as outlook.com, hotmail.com, or live.com. If this parameter is omitted, the default tenant ID for Azure AD will be used, assuming that the authenticated user is a native user for this AD. However, in this case any guest or imported users and/or Microsoft accounts hosted in this Azure AD are not supported and the operation will fail. <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
-|**/ThreadMaxStackSize:**|**/tmss**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage.exe action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large TSQL statements.|
+|**/ThreadMaxStackSize:**|**/tmss**|{int}|Specifies the maximum size in megabytes for the thread running the SqlPackage action. This option should only be used when encountering stack overflow exceptions that occur when parsing very large TSQL statements.|
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and Azure Synapse Analytics (SSMS support for MFA)](/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
 ## Properties specific to the Extract action

@@ -136,7 +136,7 @@ Azure AD Multi-Factor Authentication helps provides additional security by requi
   - Use Interactive Authentication supported in SQL Server Data Tools (SSDT). See the article, [Azure Active Directory support in SQL Server Data Tools (SSDT)](/sql/ssdt/azure-active-directory?view=azuresqldb-current&preserve-view=true).
   - Use other SQL tools supporting Multi-Factor Authentication.
     - SSMS Wizard support for export/extract/deploy database  
-    - [sqlpackage.exe](/sql/tools/sqlpackage): option '/ua'
+    - [SqlPackage](/sql/tools/sqlpackage): option '/ua'
     - [sqlcmd Utility](/sql/tools/sqlcmd-utility): option -G (interactive)
     - [bcp Utility](/sql/tools/bcp-utility): option -G (interactive)
 

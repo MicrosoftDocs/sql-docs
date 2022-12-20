@@ -108,7 +108,7 @@ Download previous SSMS previews by selecting the download link in the related se
 | Analysis Services | Connection to Analysis Services is now available. |
 | Copy Database Wizard | Fixed the log provider type error, which occurred when copying a database using The SQL Management Object method. |
 | Replication | Fixed error "Merge publications can't be created from this database until the compatibility level is set to 70 or higher." when using the publication wizard to create a new merge publication. |
-| SqlParser | Added missing options for CREATE USER and CREATE sign in. |
+| SqlParser | Added missing options for CREATE USER and CREATE LOGIN. |
 | SSIS | The "Schedule..." menu item is now visible in the Azure SSIS Catalog. |
 | XEvents | Fixed an issue where reading target data for event sessions whose name overlaps with another session name caused data from the incorrect event session to appear in the viewer. |
 

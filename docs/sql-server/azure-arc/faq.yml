@@ -31,8 +31,8 @@ sections:
 
   - name: Billing
     questions:
-      - question: Does pay-as-you-go billing stop when internet connectivity temporarily down?
-        answer: Intermittent internet connectivity does not stop the pay-as-you-go billing. The missed usage will be reported and accounted for by the billing logic when the connectivity is restored.
+      - question: Does pay-as-you-go billing stop charging when connectivity between the SQL Server resource and Azure is temporarily interrupted?
+        answer: Intermittent internet connectivity does not stop the pay-as-you-go billing. The usage will be reported and accounted for by the billing logic when the connectivity is restored.
 
       - question: Do I get charged if my virtual machine is stopped?
         answer: When the VM is stopped, the usage data is not collected. Therefore, you will not be charged for the time the VM was stopped.  

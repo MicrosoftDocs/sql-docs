@@ -30,3 +30,7 @@ Four logging channels are available to provide more information when using SQL S
 | Telemetry | Telemetry is the stream of anonymous feature usage data collected by Microsoft. These events could be useful for your tracking of SSMS usage. It can help you identify what Object Explorer nodes you expand and what commands run during your SSMS session while the Output window is open. Enabled by default. |
 | SQL Client | This channel displays information from the Microsoft.Data.SqlClient data provider. This option requires a restart of SSMS for output to appear. |
 | Azure Activity Directory Interactive authentication | For cases where Azure Active Directory authentication is used, this channel will output information specific to the authentication process. |
+
+## Next steps
+
+- [Query execution options](options-query-execution.md)

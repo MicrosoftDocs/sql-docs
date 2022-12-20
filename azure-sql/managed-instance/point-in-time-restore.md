@@ -1,7 +1,7 @@
 ---
 title: Point-in-time restore
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to restore a database in your Azure SQL Managed Instance deployment to an earlier point in time.
+description: Learn how to restore a database to an earlier point in time for Azure SQL Managed Instance.
 author: MilanMSFT
 ms.author: mlazic
 ms.reviewer: mathoma, nvraparl
@@ -15,12 +15,12 @@ ms.custom: devx-track-azurepowershell
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-You can use point-in-time restore to create a database that's a copy of a database at a specific, earlier point in time. This article describes how to do a point-in-time restore of a database in your Azure SQL Managed Instance deployment.
+You can use point-in-time restore to create a database that's a copy of a database at a specific, earlier point in time. This article describes how to do a point-in-time restore of a database in Azure SQL Managed Instance.
 
 > [!NOTE]
 > The [Create or Update v02.01.2022](/rest/api/sql/2022-02-01-preview/managed-databases/create-or-update) API is deprecated. Beginning January 2022, use the [Create or Update v5.0.2022](/rest/api/sql/2022-05-01-preview/managed-databases/create-or-update) replacement API call for all database restore actions.
 
-## Scenarios
+## Overview
 
 Point-in-time restore is useful in recovery scenarios, like for an incident that's caused by error or failure, when data doesn't load correctly, or if crucial data is deleted. You can also use it simply to test and audit your database deployment. Azure backup files are kept for 7 to 35 days depending on your database settings.
 
@@ -112,11 +112,15 @@ Currently, you can restore your database to a managed instance in a different su
 
 # [PowerShell](#tab/azure-powershell)
 
-1. Open Azure PowerShell. For more information, see [Install the Azure PowerShell module](/powershell/azure/install-az-ps).
+Use Azure PowerShell to restore your database. For more information, see [Install the Azure PowerShell module](/powershell/azure/install-az-ps).
 
-1. Run one of the following code options with your values substituted for the parameters:
+Run one of the following code options with your values substituted for the parameters:
 
-   - To restore the database to the same managed instance:
+To restore the database to the same managed instance:
+
+
+
+To restore the database to the same managed instance:
 
      ```powershell-interactive
      $subscriptionId = "<subscription ID>"
@@ -157,18 +161,20 @@ For more information, see [Restore-AzSqlInstanceDatabase](/powershell/module/az.
 
 # [Azure CLI](#tab/azure-cli)
 
-1. Open the Azure CLI. For more information, see [Install the Azure CLI](/cli/azure/install-azure-cli).
+Use the Azure CLI to restore your database to a point in time. For more information, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
-1. Run one of the following code options with your values substituted for the parameters:
+Run one of the following code options with your values substituted for the parameters:
 
-   - To restore the database to the same managed instance:
+To restore the database to the same managed instance:
+
+
 
      ```azurecli-interactive
      az sql midb restore -g mygroupname --mi myinstancename |
      -n mymanageddbname --dest-name targetmidbname --time "2018-05-20T05:34:22"
      ```
   
-   - To restore the database to a different managed instance, you also specify the names of the target resource group and the managed instance:  
+To restore the database to a different managed instance, you also specify the names of the target resource group and the managed instance:  
 
      ```azurecli-interactive
      az sql midb restore -g mygroupname --mi myinstancename -n mymanageddbname |
@@ -246,16 +252,16 @@ To restore a deleted managed database, run one of the following PowerShell code 
 
 ## Overwrite an existing database
 
-To overwrite an existing database by using any method:
+To overwrite an existing database  you must do the following: 
 
-1. Delete the original database that you want to overwrite.
-2. Rename the point-in-time restore database to the name of the database you deleted.
+1. Drop the original database that you want to overwrite.
+2. Rename the database restored from the point-in-time to the name of the database you dropped.
 
-### Delete the original database
+### Drop the original database
 
-You can delete the database by using the Azure portal, PowerShell, or the Azure CLI.
+You can drop the database by using the Azure portal, PowerShell, or the Azure CLI.
 
-Another option to delete the database is to connect to your managed instance directly, open SQL Server Management Studio, and then use the `DROP` Transact-SQL (T-SQL) command:
+Another option to drop the database is to connect to your managed instance directly, open SQL Server Management Studio, and then use the `DROP` Transact-SQL (T-SQL) command:
 
 ```sql
 DROP DATABASE WorldWideImporters;
@@ -298,7 +304,7 @@ az sql midb delete -g mygroupname --mi myinstancename -n mymanageddbname
 
 ### Change the new database name to match the original database name
 
-Connect directly to your managed instance and start SQL Server Management Studio. Then run the following T-SQL query. The query changes the name of the restored database to the name of the deleted database you intend to overwrite.
+Connect directly to your managed instance and start SQL Server Management Studio. Then run the following T-SQL query. The query changes the name of the restored database to the name of the dropped database you intend to overwrite.
 
 ```sql
 ALTER DATABASE WorldWideImportersPITR MODIFY NAME = WorldWideImporters;

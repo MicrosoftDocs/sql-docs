@@ -1,6 +1,6 @@
 ---
 title: Backup transparency for backup history
-description: Learn how to use backup transparency to view the backup history of your Azure SQL Managed Instance deployment. 
+description: Learn how to use backup transparency to view the backup history of Azure SQL Managed Instance. 
 author: MilanMSFT
 ms.author: mlazic
 ms.date: 11/16/2022
@@ -14,10 +14,11 @@ ms.custom:
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 In this article, learn how to use backup transparency in Azure SQL Managed Instance to view the backup history of your managed instance. Backup transparency in SQL Managed Instance is available through the [msdb database](/sql/relational-databases/databases/msdb-database), which makes backup history tables queryable.
-
-It's important to know about a few key differences between the backup tables in a traditional SQL Server `msdb` database and the `msdb` database in SQL Managed Instance. The main differences include the information that's visible, supported tables, and the fields you can use.
+## Overview
 
 The [msdb database](/sql/relational-databases/databases/msdb-database) enables backup transparency in Azure SQL Managed Instance by making backup history tables queryable. However, there are a few key differences between the backup tables in a traditional SQL Server `msdb` database, and the `msdb` database in Azure SQL Managed Instance, such as what information is visible, what tables are supported, and what fields are available.
+
+It's important to know about a few key differences between the backup tables in a traditional SQL Server `msdb` database and the `msdb` database in SQL Managed Instance. The main differences include the information that's visible, supported tables, and the fields you can use.
 
 ## Included information
 

@@ -1,8 +1,8 @@
 ---
 title: Configure license-free standby replica (preview)
 description: Learn how to save on licensing costs by using a standby Azure SQL Managed Instance replica. 
-author: MladjoA
-ms.author: mlandzic
+author: MilanMSFT
+ms.author: mlazic
 ms.reviewer: mathoma
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
@@ -17,7 +17,7 @@ ms.custom:
 
 If you use a secondary Azure SQL Managed Instance deployment as a standby for disaster recovery and the secondary instance doesn't have any read workloads or applications connected to it, you can save on licensing costs by designating the replica as a *standby instance*.
 
-When a secondary instance is designated as a standby instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You'e billed for the compute and storage that the secondary instance uses.
+When a secondary instance is designated as a standby instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary instance uses.
 
 Auto-failover groups for a SQL Managed Instance deployment support only one replica. The replica must be either a readable replica or be designated as a standby replica.
 
@@ -25,7 +25,7 @@ Currently, the feature to designate a managed instance as standby is in preview.
 
 ## Cost benefit
 
-In your designate a replica managed instance as standby, Microsoft doesn't charge you SQL Server licensing costs for the vCores that the secondary standby replica uses. The instance is billed for the entire hour, even if the state is changed in the middle of the hour.
+If you designate a managed instance replica as standby, Microsoft doesn't charge you SQL Server licensing costs for the vCores that the secondary standby replica uses. However, since the instance is billed for the entire hour, you may still be charged licensing costs for the entire hour if the state change is made in the middle of the hour. 
 
 The benefit translates differently between customers who use the pay-as-you-go model and customers who use the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) model. For a pay-as-you-go customer, the vCores are discounted on their invoice. For a customer who uses the Azure Hybrid Benefit for the standby replica, the number of vCores that the secondary replica uses are returned to their licensing pool.
 
@@ -39,12 +39,12 @@ The following table describes the functional capabilities of a standby secondary
 
 |Functionality  |Description  |
 |---------|---------|
-|Limited read workloads     | After you designate your instance as standby, you can run only a limited number of read workloads on the secondary instance, including read workloads like Dynamic Management Views, backups, and Database Console Commands commands.      |
+|Limited read workloads     | After you designate your instance as standby, you can run only a limited number of read workloads on the secondary instance, such as Dynamic Management Views, backups, and Database Console Commands (DBCC) queries.      |
 |Planned failover | All planned failover scenarios, including recovery drills, relocating databases to different regions, and returning databases to the primary, are supported by the standby replica. When the secondary switches to the primary, it can serve read and write queries. The original primary and new secondary becomes the standby replica and shouldn't be used for read workloads.     |
 |Unplanned failover | During an unplanned failover, after the secondary switches to the primary role, it can serve read and write queries. After the outage is mitigated and the original primary reconnects, it becomes the new secondary standby replica and shouldn't be used for read workloads.   |
 |Backup and restore| The backup and restore behavior in a standby replica and a readable secondary managed instance are the same.         |
 |Monitoring     | All monitoring operations that are supported by a readable secondary replica are supported by the standby replica.         |
-|Recovery Point Object (RPO) and Recovery Time Objective (RTO) | The standby replica provides the same RPO and RTO as a readable secondary replica.          |
+|RPO and RTO | The standby replica provides the same Recovery Point Object (RPO) and Recovery Time Objective (RTO) as a readable secondary replica.          |
 |Removing a failover group  | If the failover group is removed via a method like using the [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup) cmdlet, the standby replica becomes a read/write standalone instance. The licensing model returns to what it was before it was designated as standby (either Azure Hybrid Benefit or pay-as-you-go).  |
 
 The secondary instance must be used only for disaster recovery. No production applications can be connected to the replica. The following lists the only activities that are permitted on the standby replica:
@@ -112,7 +112,7 @@ If failover rights aren't activated and you qualify for the benefit, you also se
 
 ## Next steps
 
-- For a detailed tutorial, see [Add a SQL Managed Instance deployment to a failover group](failover-group-add-instance-tutorial.md).
+- For a detailed tutorial, see [Add SQL Managed Instance to a failover group](failover-group-add-instance-tutorial.md).
 - For a sample script, see [Use PowerShell to create an auto-failover group in SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
 - For a business continuity overview and scenarios, see [Business continuity with Azure SQL Database and Azure SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - To learn about automated backups, see [SQL Database automated backups](../database/automated-backups-overview.md).

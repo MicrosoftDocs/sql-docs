@@ -114,48 +114,44 @@ Currently, you can restore your database to a managed instance in a different su
 
 Use Azure PowerShell to restore your database. For more information, see [Install the Azure PowerShell module](/powershell/azure/install-az-ps).
 
-Run one of the following code options with your values substituted for the parameters:
+Run one of the following code options with your values substituted for the parameters.
 
 To restore the database to the same managed instance:
 
+```powershell-interactive
+$subscriptionId = "<subscription ID>"
+$resourceGroupName = "<resource group name>"
+$managedInstanceName = "<managed instance name>"
+$databaseName = "<source database>"
+$pointInTime = "2018-06-27T08:51:39.3882806Z"
+$targetDatabase = "<name of the new database to create>"
 
+Get-AzSubscription -SubscriptionId $subscriptionId
+Select-AzSubscription -SubscriptionId $subscriptionId
 
-To restore the database to the same managed instance:
+Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
+                              -ResourceGroupName $resourceGroupName `
+                              -InstanceName $managedInstanceName `
+                              -Name $databaseName `
+                              -PointInTime $pointInTime `
+                              -TargetInstanceDatabaseName $targetDatabase `
+```
 
-     ```powershell-interactive
-     $subscriptionId = "<subscription ID>"
-     $resourceGroupName = "<resource group name>"
-     $managedInstanceName = "<managed instance name>"
-     $databaseName = "<source database>"
-     $pointInTime = "2018-06-27T08:51:39.3882806Z"
-     $targetDatabase = "<name of the new database to create>"
+To restore the database to another managed instance, also specify the names of the target resource group and the target managed instance:  
 
-     Get-AzSubscription -SubscriptionId $subscriptionId
-     Select-AzSubscription -SubscriptionId $subscriptionId
+```powershell-interactive
+$targetResourceGroupName = "<resource group of the target managed instance>"
+$targetInstanceName = "<name of the target managed instance>"
 
-     Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
-                                   -ResourceGroupName $resourceGroupName `
-                                   -InstanceName $managedInstanceName `
-                                   -Name $databaseName `
-                                   -PointInTime $pointInTime `
-                                   -TargetInstanceDatabaseName $targetDatabase `
-     ```
-
-   - To restore the database to another managed instance, also specify the names of the target resource group and the target managed instance:  
-
-     ```powershell-interactive
-     $targetResourceGroupName = "<resource group of the target managed instance>"
-     $targetInstanceName = "<name of the target managed instance>"
-
-     Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
-                                   -ResourceGroupName $resourceGroupName `
-                                   -InstanceName $managedInstanceName `
-                                   -Name $databaseName `
-                                   -PointInTime $pointInTime `
-                                   -TargetInstanceDatabaseName $targetDatabase `
-                                   -TargetResourceGroupName $targetResourceGroupName `
-                                   -TargetInstanceName $targetInstanceName 
-     ```
+Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
+                              -ResourceGroupName $resourceGroupName `
+                              -InstanceName $managedInstanceName `
+                              -Name $databaseName `
+                              -PointInTime $pointInTime `
+                              -TargetInstanceDatabaseName $targetDatabase `
+                              -TargetResourceGroupName $targetResourceGroupName `
+                              -TargetInstanceName $targetInstanceName 
+```
 
 For more information, see [Restore-AzSqlInstanceDatabase](/powershell/module/az.sql/restore-azsqlinstancedatabase).
 
@@ -163,25 +159,23 @@ For more information, see [Restore-AzSqlInstanceDatabase](/powershell/module/az.
 
 Use the Azure CLI to restore your database to a point in time. For more information, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
-Run one of the following code options with your values substituted for the parameters:
+Run one of the following code options with your values substituted for the parameters.
 
 To restore the database to the same managed instance:
 
-
-
-     ```azurecli-interactive
-     az sql midb restore -g mygroupname --mi myinstancename |
-     -n mymanageddbname --dest-name targetmidbname --time "2018-05-20T05:34:22"
-     ```
+```azurecli-interactive
+az sql midb restore -g mygroupname --mi myinstancename |
+-n mymanageddbname --dest-name targetmidbname --time "2018-05-20T05:34:22"
+```
   
 To restore the database to a different managed instance, you also specify the names of the target resource group and the managed instance:  
 
-     ```azurecli-interactive
-     az sql midb restore -g mygroupname --mi myinstancename -n mymanageddbname |
-            --dest-name targetmidbname --time "2018-05-20T05:34:22" |
-            --dest-resource-group mytargetinstancegroupname |
-            --dest-mi mytargetinstancename
-     ```
+```azurecli-interactive
+az sql midb restore -g mygroupname --mi myinstancename -n mymanageddbname |
+       --dest-name targetmidbname --time "2018-05-20T05:34:22" |
+       --dest-resource-group mytargetinstancegroupname |
+       --dest-mi mytargetinstancename
+```
 
 For a detailed explanation of available parameters, see the [CLI documentation for restoring a database in SQL Managed Instance](/cli/azure/sql/midb#az-sql-midb-restore).
 
@@ -191,7 +185,7 @@ For a detailed explanation of available parameters, see the [CLI documentation f
 
 You can restore a deleted database by using the Azure portal or PowerShell. Currently, you can't use the Azure CLI to restore a deleted database.
 
-### Portal
+# [Portal](#tab/azure-portal)
 
 To restore a deleted managed database by using the Azure portal:
 
@@ -207,7 +201,7 @@ To restore a deleted managed database by using the Azure portal:
 1. In **Additional settings**, configure retention settings. Select the **Review + create** tab.
 1. In **Review + create**, select **Create** to restore your deleted database.
 
-### PowerShell
+# [PowerShell](#tab/azure-powershell)
 
 To restore a deleted managed database, run one of the following PowerShell code options with your values substituted for the parameters:
 
@@ -250,9 +244,16 @@ To restore a deleted managed database, run one of the following PowerShell code 
        -TargetInstanceName $targetInstanceName 
     ```
 
+# [Azure CLI](#tab/azure-cli)
+
+Currently, you can't restore a deleted database by using the Azure CLI.
+
+---
+
+
 ## Overwrite an existing database
 
-To overwrite an existing database  you must do the following: 
+To overwrite an existing database, you must do the following: 
 
 1. Drop the original database that you want to overwrite.
 2. Rename the database restored from the point-in-time to the name of the database you dropped.

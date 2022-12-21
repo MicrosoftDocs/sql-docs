@@ -39,7 +39,6 @@ Released: December 15, 2022
 
 Fixed issues in 11.2.2:
 
-- Fixed potential connect to the wrong SQLServer host when multi-threading
 - Fixed Idle Connection Resiliency bug
 - Clear prepared statement handle cache on idle reconnect
 - Fixed callable statement index out of bounds error 

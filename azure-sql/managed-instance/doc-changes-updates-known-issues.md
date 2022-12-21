@@ -20,6 +20,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 |Issue  |Date discovered  |Status  |Date resolved  |
 |---------|---------|---------|---------|
+|[msdb table for manual backups does not preserve the username](#msdb-table-for-manual-backups-does-not-preserve-the-username)|Nov 2022|No resolution||
 |[Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile)|Aug 2022|Has Workaround||
 |[Querying external table fails with 'not supported' error message](#querying-external-table-fails-with-not-supported-error-message)|Jan 2022|Resolved|Sep 2022|
 |[When using SQL Server authentication, usernames with '@' are not supported](#when-using-sql-server-authentication-usernames-with--are-not-supported)|Oct 2021|Resolved|Feb 2022|
@@ -274,6 +275,10 @@ using (var scope = new TransactionScope())
 
 
 ## No resolution
+
+### msdb table for manual backups does not preserve the username
+
+We have recently introduced support for auto backups in msdb. Doing so, we removed accidentaly the username from the manual backups. The fix is ready and it will be deployed with the next release.
 
 ### Azure AD logins and users are not supported in SSDT
 

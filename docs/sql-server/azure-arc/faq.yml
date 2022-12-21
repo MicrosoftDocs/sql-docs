@@ -19,7 +19,7 @@ sections:
         answer: |
           Yes, you can use the `excludedInstances` setting in the Azure Policy to indicate the SQL Server instances that you do not want to include in the onboarding process.
           
-          For example, if you have any standby instances,  you may not want to view them in the portal. When you use Azure Policy to onboard, you can exclude such instances based using pattern matching of the Instance name(s). 
+          For example, if you have any standby instances, you may not want to view them in the portal. When you use Azure Policy to onboard, you can exclude such instances based using pattern matching of the instance names. 
 
           1. Create a copy of the definition that we provide in Azure to create a custom definition.
           1. Set the value for excluded instances in the custom definition.

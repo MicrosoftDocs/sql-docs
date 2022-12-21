@@ -50,4 +50,4 @@ To successfully migrate objects and data from Oracle databases to [!INCLUDE[ssNo
 ## See Also  
 [Installing SSMA  for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
 [Getting Started with SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
-  
+[Migration guide: Oracle to Azure SQL Managed Instance](https://learn.microsoft.com/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide?view=azuresql)  

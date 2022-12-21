@@ -19,15 +19,13 @@ ms.author: drskwier
 
 A DAC is a self-contained unit of the entire database model and is portable in an artifact known as a DAC package, or .dacpac.  This article describes several ways to unpack the database model from a .dacpac for Windows, macOS, and Linux.
 
-> [!CAUTION]
+> [!WARNING]
 > We recommend that you do not deploy a DAC package from unknown or untrusted sources. Such DACs could contain malicious code that might execute unintended code or cause errors by modifying the schema. Before you use a DAC from an unknown or untrusted source, deploy it on an isolated test instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], unpack the DAC and examine the code, such as stored procedures or other user-defined code.
 
 
-Use the Unpack Data-tier Application dialog box to unzip the scripts and files from a data-tier application (DAC) package. The scripts and files are placed in a folder where they can be reviewed before the package is used to deploy the DAC into a production system. The contents of one DAC can also be compared with the contents of another package unpacked to another folder.  
-
 Options for examining the content of a dacpac include:
 - importing the .dacpac to a SQL project in Visual Studio
-- decompressing the file to view the xml structures
+- decompressing the file to view the XML contents
 - deploying the .dacpac to a test instance
 
 ## Import the .dacpac to a SQL project in Visual Studio
@@ -39,13 +37,13 @@ Importing a .dacpac to a SQL project in Visual Studio results in the contents of
 2. In [Solution Explorer](/visualstudio/ide/use-solution-explorer) right-click the empty project and select **Import**, then **from a Data-tier application package**.
 
 
-## Decompress the .dacpac to view xml
+## Decompress the .dacpac to view XML contents
 
-Decompressing the .dacpac file results in the raw xml contents being visible in a text editor.  When looking for a specific component within the .dacpac this can be a quick method to access the contents.
+Decompressing the .dacpac file results in the raw XML contents being available for viewing in a text editor.  When looking for a specific component within the .dacpac this can be a quick method to access the contents.
 
 1. Change the file extension on the .dacpac file to `.zip`.
 
-2. Unzip the file using the built-in utility from your OS. To unzip a file from the command line:
+2. Unzip the .zip file using the utility provided by your OS. To unzip a file from the command line:
   ```bash
   unzip AdventureWorks.dacpac
   ```
@@ -78,6 +76,8 @@ Deploying the .dacpac to a test instance results in the contents of the .dacpac 
 
 
 ### Additional tools with .dacpac deployment capabilities
+
+Beyond Azure Data Studio and SqlPackage, many other tools can be used to deploy a .dacpac to a database.  Some examples include:
 
 - SQL Server Management Studio
 - Visual Studio: SQL Server Data Tools

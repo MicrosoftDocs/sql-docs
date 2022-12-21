@@ -58,6 +58,9 @@ To ensure that your backups stay within the same region where your database is d
 
 You can configure backup storage redundancy when you create your instance, and you can update it at a later time at the instance level. The changes that you make to an existing instance apply to future backups only. After you update the backup storage redundancy of an existing instance, it might take up to 24 hours for the changes to be applied. Changes made to backup storage redundancy apply to short-term backups only. Long-term retention policies inherit the redundancy option of short-term backups when the policy is created. The redundancy option persists for long-term backups even if the redundancy option for short-term backups subsequently changes. 
 
+> [!NOTE]
+> Please note that the Backup residency change causes an upgrade step which initiates a failover.
+
 You can choose one of the following storage redundancies for backups:
 
 - **Locally redundant storage (LRS)**: Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive replication option, but we don't recommend it for applications that require high availability or durability.

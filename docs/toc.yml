@@ -9856,7 +9856,7 @@ items:
         href: ssms/sql-server-management-studio-telemetry-ssms.md
       - name: Feedback >> 
         href: https://aka.ms/sqlfeedback
-  - name: SqlPackage.exe
+  - name: SqlPackage
     href: tools/sqlpackage/sqlpackage.md
     items:
     - name: Install sqlpackage
@@ -10375,14 +10375,21 @@ items:
       href: https://www.reddit.com/r/SQLServer  # Note: this Reddit https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
 - name: SQL on Azure
   items:
-  - name: Azure SQL Database >
-    href: /azure/sql-database/
   - name: Azure Synapse Analytics >
-    href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
-  - name: SQL Server on an Azure VM >
-    href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    href: /azure/synapse-analytics/overview-what-is
   - name: Azure Arc-enabled data services >
     href: /azure/azure-arc/data/overview
+  - name: Azure SQL
+    items: 
+    - name: Azure SQL >
+      href: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview
+    - name: Azure SQL Database >
+      href: /azure/azure-sql/database/sql-database-paas-overview
+    - name: Azure SQL Managed Instance >
+      href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
+    - name: SQL Server on Azure VMs >
+      href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
+
 - name: Azure Arc-enabled SQL Server
   items:
     - name: Overview
@@ -10401,6 +10408,8 @@ items:
       href: sql-server/azure-arc/configure-advanced-data-security.md
     - name: Billing through Microsoft Azure
       href: sql-server/azure-arc/billing.md
+    - name: FAQ
+      href: sql-server/azure-arc/faq.yml
 - name: Big Data Clusters
   items:
   - name: Big Data Clusters

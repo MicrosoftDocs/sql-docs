@@ -64,7 +64,7 @@ ms.author: maggies
   
 -   You must be a farm administrator, a server administrator on the Analysis Services instance, and **db_owner** on the farm's configuration database.  
   
--   Use the appropriate version of the configuration tool for the version of SharePoint. Do not use either tool with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] installations.  
+-   Use the appropriate version of the configuration tool for the version of SharePoint. Do not use either tool with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] installations.  
   
 -   Verify that the SharePoint Administration service is running.  
   

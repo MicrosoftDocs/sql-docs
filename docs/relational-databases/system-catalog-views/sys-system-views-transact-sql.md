@@ -19,7 +19,7 @@ dev_langs:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 ---
 # sys.system_views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each system view that is shipped with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. All system views are contained in the schemas named **sys** or **INFORMATION_SCHEMA**.  
   

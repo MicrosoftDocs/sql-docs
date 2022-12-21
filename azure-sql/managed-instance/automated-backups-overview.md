@@ -173,7 +173,7 @@ Backup storage consumption up to the maximum data size for a database is not cha
 - Avoid doing large write operations, like index rebuilds, more frequently than you need to.
 - For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance). Also consider reducing the number of non-clustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
-- Use TempDB instead of permanent tables in your application logic for storing temporary results or transient data.
+- Use `tempdb` instead of permanent tables in your application logic for storing temporary results or transient data.
 - Use locally redundant backup storage whenever possible (for example, dev/test environments).
 
 ## Backup retention

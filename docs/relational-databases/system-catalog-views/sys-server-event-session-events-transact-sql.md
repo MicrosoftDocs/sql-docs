@@ -20,7 +20,7 @@ dev_langs:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 ---
 # sys.server_event_session_events (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sqlserver-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each event in an event session.  
   

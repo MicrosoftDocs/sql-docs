@@ -84,7 +84,7 @@ An auditing policy can be defined for a specific database or as a default [serve
 
 ## <a id="setup-auditing"></a>Set up auditing for your server
 
-The default auditing policy includes all actions and the following set of action groups, which will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
+The default auditing policy includes the following set of action groups, which will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
   
 - BATCH_COMPLETED_GROUP
 - SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP

@@ -9,7 +9,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 05/19/2022
+ms.date: 12/14/2022
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
@@ -55,7 +55,7 @@ For Analysis Services, Integration Services, or Reporting Services projects, you
 |Project Templates|SQL Platforms Supported|
 |-------------------|--------------------|
 |Relational databases| [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] - [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]<br /><br />Azure SQL Database, Managed Instance<br /><br />Azure Synapse Analytics (dedicated pools only)|
-|Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2019|
+|Analysis Services models<br /><br />Reporting Services reports | SQL Server 2016 - SQL Server 2022|
 |Integration Services packages| SQL Server 2019 - SQL Server 2022 |
 
 

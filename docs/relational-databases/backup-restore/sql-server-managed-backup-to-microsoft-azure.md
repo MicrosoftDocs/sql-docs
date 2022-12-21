@@ -2,7 +2,7 @@
 title: "SQL Server managed backup to Microsoft Azure | Microsoft Docs"
 description: SQL Server Managed Backup to Microsoft Azure manages and automates SQL Server backups to Microsoft Azure Blob storage. 
 ms.custom: ""
-ms.date: 10/05/2021
+ms.date: 12/14/2022
 ms.service: sql
 ms.reviewer: ""
 ms.subservice: backup-restore
@@ -92,7 +92,7 @@ ms.author: mathoma
 -   Any time the transaction log backup is lagging behind a full database backup. The goal is to keep the log chain ahead of full backup.  
   
 ## Retention Period Settings  
- When enabling backup you must set the retention period in days: The minimum is 1 day, and maximum is 30 days.  
+ When enabling backup you must set the retention period in days: The minimum is 1 day, and maximum is 90 days.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] based on the retention period settings, assesses the ability to recover to a point in time in the specified time, to determine what backup files to keep and identifying the backup files to delete. The backup_finish_date of the backup is used to determine and match the time specified by the retention period settings.  
   

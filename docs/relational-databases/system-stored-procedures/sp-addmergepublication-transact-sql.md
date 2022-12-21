@@ -201,7 +201,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Value|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
-|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|**100RTM**|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|  
   
 `[ @replicate_ddl = ] replicate_ddl`
  Indicates if schema replication is supported for the publication. *replicate_ddl* is **int**, with a default of 1. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  

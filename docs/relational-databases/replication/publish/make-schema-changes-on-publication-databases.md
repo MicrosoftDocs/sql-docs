@@ -137,7 +137,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
     -   To replicate schema changes, the compatibility level of the publication must be at least 90RTM. If Subscribers are running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or the compatibility level is less than 90RTM you can use [sp_repladdcolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) to add and drop columns. However, these procedures are deprecated.  
   
-    -   If you try to add to an existing article a column with a data type that was introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has the following behavior:  
+    -   If you try to add to an existing article a column with a data type that was introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has the following behavior:  
   
         ||100RTM, native snapshot|100RTM, character snapshot|All other compatibility levels|  
         |-|-----------------------------|--------------------------------|------------------------------------|  

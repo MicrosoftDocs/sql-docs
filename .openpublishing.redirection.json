@@ -42600,7 +42600,7 @@
       "redirect_url": "/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database",
       "redirect_document_id": false
     },
-        {
+    {
       "source_path": "docs/advanced-analytics/r/sql-server-r-services.md",
       "redirect_url": "/sql/machine-learning/r/sql-server-r-services",
       "redirect_document_id": true
@@ -43096,14 +43096,14 @@
       "redirect_document_id": true
     },
     {
-        "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
-        "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
-        "redirect_document_id": false
+      "source_path": "docs/database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md",
+      "redirect_url": "/sql/sql-server/end-of-support/sql-server-end-of-support-overview",
+      "redirect_document_id": false
     },
     {
-        "source_path": "docs/lp/sql-server/load-move-data.md",
-        "redirect_url": "/sql/sql-server/migrate/",
-        "redirect_document_id": true
+      "source_path": "docs/lp/sql-server/load-move-data.md",
+      "redirect_url": "/sql/sql-server/migrate/",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/2014/2014-toc/books-online-for-sql-server-2014.md",
@@ -43784,12 +43784,12 @@
       "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
       "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
       "redirect_document_id": true
-    },    
+    },
     {
       "source_path": "docs/lp/sql-server/install-sql-and-services.md",
       "redirect_url": "/sql/sql-server/",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "docs/lp/sql-server/business-continuity.md",
       "redirect_url": "/sql/sql-server/",
@@ -59156,14 +59156,14 @@
       "redirect_document_id": false
     },
     {
-    "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
-    "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
-    "redirect_document_id": false
+      "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
+      "redirect_document_id": false
     },
     {
-    "source_path": "docs/linux/sql-server-linux-configure-docker.md",
-    "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
-    "redirect_document_id": true
+      "source_path": "docs/linux/sql-server-linux-configure-docker.md",
+      "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/azure-data-studio/azure-sql-managed-instance-extension.md",
@@ -59562,6 +59562,11 @@
     {
       "source_path": "docs/relational-databases/performance/parameter-sensitivity-plan-optimization.md",
       "redirect_url": "/sql/relational-databases/performance/parameter-sensitive-plan-optimization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md",
+      "redirect_url": "/sql/ssma/db2/working-with-ssma-for-db2-console-db2tosql",
       "redirect_document_id": false
     }
   ]

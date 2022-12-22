@@ -4727,13 +4727,16 @@ items:
       - name: Check the ODBC SQL Server Driver Version (Windows)
         href: database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md
   - name: Uninstall SQL Server
-    href: sql-server/install/uninstall-sql-server.md
     items:
     - name: Overview
+      href: sql-server/install/uninstall-sql-server.md
+    - name: Uninstall an existing instance
       href: sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
+    - name: Remove a Cumulative Update
+      href: sql-server/install/uninstall-a-cumulative-update-from-sql-server.md
     - name: Remove Data Quality Server Objects
       href: sql-server/install/remove-data-quality-server-objects.md
-    - name: Uninstall & Remove Master Data Services
+    - name: Uninstall & remove Master Data Services
       href: sql-server/install/uninstall-and-remove-master-data-services.md
     - name: Uninstall Power Pivot for SharePoint
       href: sql-server/install/uninstall-power-pivot-for-sharepoint.md
@@ -9344,6 +9347,8 @@ items:
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Query Execution options - Help - General Page)
           href: ssms/menu-help/options-query-execution.md
+        - name: Options (Output Window)
+          href: ssms/menu-help/options-output-window-page.md
         - name: Options (Azure Service - Help - General Page)
           href: ssms/menu-help/options-azure-services.md
         - name: External Tools

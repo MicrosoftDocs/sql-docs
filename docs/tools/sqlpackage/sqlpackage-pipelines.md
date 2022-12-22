@@ -98,14 +98,13 @@ Adding the `/DiagnosticsFile` parameter to the "arguments" field in the GitHub A
 
 ```yaml
 - name: Azure SQL Deploy
-  uses: Azure/sql-action@v1
+  uses: Azure/sql-action@v2
   with:
-    # Name of the Azure SQL Server name, like Fabrikam.database.windows.net.
-    server-name: ${{ secrets.AZURE_SQL_SERVER }}
     # The connection string, including authentication information, for the Azure SQL Server database.
     connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
     # Path to DACPAC file to deploy
-    dacpac-package: .\DatabaseProjectAdventureWorksLT\bin\Release\DatabaseProjectAdventureWorksLT.dacpac
+    path: .\DatabaseProjectAdventureWorksLT\bin\Release\DatabaseProjectAdventureWorksLT.dacpac
+    action: publish
     # additional SqlPackage arguments
     arguments: /DiagnosticsFile:DatabaseProjectAdventureWorksLT/DiagnosticLog.log
 

@@ -36,9 +36,9 @@ SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
 SqlPackage /a:Publish /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
     /tp:"{your_password}" /sf:"C:\AdventureWorksLT.dacpac" /p:VerifyDeployment=False
 
-# example publish using Azure Active Directory Service Principal
+# example publish using Azure Active Directory Managed Identity
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
-    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Managed Identity;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
 # example publish connecting using Azure Active Directory username and password
 SqlPackage /Action:Publish /SourceFile:"C:\AdventureWorksLT.dacpac" \
@@ -92,7 +92,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\Adve
 |**/ReferencePaths:**|**/rp**|{PropertyName}={Value}|Specifies the additional directories to search for .dacpac references.|
 |**/Secret:**|**/secr**|{string}|Specifies the Client Secret to be used in authenticating against Azure KeyVault, when necessary |
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action instead of a database from local storage. If this parameter is used, no other source parameter shall be valid. |
-|**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
+|**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
 |**/SourceEncryptConnection:**|**/sec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the source database connection. Default value is True. |
 |**/SourceHostNameInCertificate:**|**/shnic**|{string}|Specifies value that is used to validate the source SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
@@ -101,7 +101,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Publish /SourceFile:"C:\Adve
 |**/SourceTimeout:**|**/st**|{int}|Specifies the timeout for establishing a connection to the source database in seconds. |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|Specifies whether to use TLS to encrypt the source database connection and bypass walking the certificate chain to validate trust. Default value is False. |
 |**/SourceUser:**|**/su**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the source database. |
-|**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
+|**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage Action. |
 |**/TargetEncryptConnection:**|**/tec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
 |**/TargetHostNameInCertificate:**|**/thnic**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|

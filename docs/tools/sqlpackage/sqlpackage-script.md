@@ -42,7 +42,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/ReferencePaths:**|**/rp**|{PropertyName}={Value}|Specifies the additional directories to search for .dacpac references.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action. If this parameter is used, no other source parameter shall be valid. |
-|**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid SQL Server/Azure connection string to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
+|**/SourceConnectionString:**|**/scs**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the source database. If this parameter is specified, it shall be used exclusively of all other source parameters. |
 |**/SourceDatabaseName:**|**/sdn**|{string}|Defines the name of the source database. |
 |**/SourceEncryptConnection:**|**/sec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the source database connection. Default value is True. |
 |**/SourceHostNameInCertificate:**|**/shnic**|{string}|Specifies value that is used to validate the source SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|
@@ -52,7 +52,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|Specifies whether to use TLS to encrypt the source database connection and bypass walking the certificate chain to validate trust. Default value is False. |
 |**/SourceUser:**|**/su**|{string}|For SQL Server Auth scenarios, defines the SQL Server user to use to access the source database. |
 |**/TargetFile:**|**/tf**|{string}| Specifies a target file (that is, a .dacpac file) to be used as the target of action instead of a database. If this parameter is used, no other target parameter shall be valid. This parameter shall be invalid for actions that only support database targets.|
-|**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
+|**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage Action. |
 |**/TargetEncryptConnection:**|**/tec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
 |**/TargetHostNameInCertificate:**|**/thnic**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|

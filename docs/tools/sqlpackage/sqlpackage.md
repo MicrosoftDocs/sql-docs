@@ -129,6 +129,31 @@ For parameter and property information specific to a particular action, use the 
 SqlPackage /Action:Publish /?
 ```
 
+## Authentication
+
+SqlPackage authenticates using methods available in [SqlClient](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). Configuring the authentication type can be accomplished via the connection string parameters for each SqlPackage action (`/SourceConnectionString` and `/TargetConnectionString`) or through individual parameters for connection properties. The following authentication methods are supported in a connection string:
+
+- SQL Server authentication
+- Active Directory (Windows) authentication
+- [Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
+    - Username/password
+    - Integrated authentication
+    - Universal authentication
+    - **Managed identity**
+    - Service principal
+
+
+### Managed identity
+
+In automated environments [Azure Active Directory Managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is the recommended authentication method.  This method does not require passing credentials to SqlPackage at runtime.  The managed identity is configured for the environment where the SqlPackage action is run and the SqlPackage action will use that identity to authenticate to Azure SQL.  For more information on configuring Managed identity for your environment, please see the [Managed identity documentation](/azure/active-directory/managed-identities-azure-resources/overview).
+
+An example connection string using system-assigned managed identity is:
+
+```bash
+Server=sampleserver.database.windows.net; Authentication=Active Directory Managed Identity; Database=sampledatabase;
+```
+
+
 ## Environment variables
 
 ### Connection pooling

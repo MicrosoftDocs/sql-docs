@@ -1,6 +1,6 @@
 ---
-title: Overview of the managed instance stop and start feature (preview)
-description: This article describes the managed instance stop and start feature of Azure SQL Managed Instance. 
+title: Stop and start an instance (preview)
+description: This article describes the stop and start feature of Azure SQL Managed Instance. 
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma
@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom:
 ---
 
-# Stop and start a managed instance (preview) overview - Azure SQL Managed Instance 
+# Stop and start an instance (preview) - Azure SQL Managed Instance 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes how to stop and start a managed instance to save on billing costs when you're using Azure SQL Managed Instance. You can stop and start your managed instance by using either the Azure portal or Azure PowerShell. 
+This article describes how to stop and start a managed instance to save on billing costs when you're using Azure SQL Managed Instance. You can stop and start your instance by using either the Azure portal or Azure PowerShell. 
 
 > [!NOTE]
 > The stop and start feature for managed instances is currently in preview and available only for:
@@ -23,7 +23,7 @@ This article describes how to stop and start a managed instance to save on billi
 
 ## Overview
 
-To save on billing costs, you can stop your General Purpose managed instance when you're not using it. Stopping a managed instance is similar to deallocating a virtual machine. When a managed instance is in a stopped state, you're no longer billed for compute and licensing costs while you're being billed for storage and backup storage. 
+To save on billing costs, you can stop your General Purpose managed instance when you're not using it. Stopping an instance is similar to deallocating a virtual machine. When an instance is in a stopped state, you're no longer billed for compute and licensing costs while you're being billed for storage and backup storage. 
 
 Stopping a managed instance clears all cached data. 
 
@@ -43,18 +43,18 @@ This features introduces three new managed instance states, as the following dia
 :::row-end:::
 
 
-After the stop operation is initiated, it typically takes about 5 minutes to stop the managed instance. However, starting a managed instance takes about 20 minutes from the moment the start operation is initiated. 
+After the stop operation is initiated, it typically takes about 5 minutes to stop the instance. However, starting an instance takes about 20 minutes from the moment the start operation is initiated. 
 
-Only managed instances in a ready state can be stopped. After the managed instance is stopped, it stays in a stopped state until a start operation is initiated, either manually or triggered with a defined schedule. Only instances that are in a stopped state can be started.
+Only managed instances in a ready state can be stopped. After the instance is stopped, it stays in a stopped state until a start operation is initiated, either manually or triggered with a defined schedule. Only instances that are in a stopped state can be started.
 
 
 > [!IMPORTANT]
-> As a platform as a service (PaaS) service, SQL Managed Instance is responsible for compliance for every part of the system components. If there's an urgent need for system maintenance that requires the managed instance to be online, Azure can initiate the start operation and keep the managed instance online until the maintenance operation finishes, at which time Azure stops the managed instance. Compute and license charges are applied for the entire time the managed instance is in an online state. 
+> As a platform as a service (PaaS) service, SQL Managed Instance is responsible for compliance for every part of the system components. If there's an urgent need for system maintenance that requires the instance to be online, Azure can initiate the start operation and keep the instance online until the maintenance operation is completed, at which time Azure stops the instance. Compute and license charges are applied for the entire time the instance is in an online state. 
 
 
 ## Action types 
 
-There are two ways to stop and start a managed instance: either manually on demand or by creating a schedule. 
+There are two ways to stop and start an instance: either manually on demand or by creating a schedule. 
 
 ### Manual commands 
 
@@ -62,9 +62,9 @@ You can use manual commands to immediately trigger a stop and start action. Manu
 
 ### Scheduled commands 
 
-You can also create a schedule with one or more multiple points of time when a stop or start action is triggered. Scheduled commands are good for instances that have regular patterns, such as starting a managed instance every weekday at 8 AM, stopping it at 5 PM, and then starting it on weekend days at 7 AM and stopping it at 11 AM. Scheduling your commands eliminates the need for you to create custom solutions or to use Azure Automation to create stop and start schedules.
+You can also create a schedule with one or more multiple points of time when a stop or start action is triggered. Scheduled commands are good for instances that have regular patterns, such as starting an instance every weekday at 8 AM, stopping it at 5 PM, and then starting it on weekend days at 7 AM and stopping it at 11 AM. Scheduling your commands eliminates the need for you to create custom solutions or to use Azure Automation to create stop and start schedules.
 
-Scheduled items represent points in time when stop and start events are initiated, not when the managed instance is up and running. When you're creating a schedule, take the operation duration into account. For example, if you want to have your managed instance up and running at 8 AM, you can define a schedule that initiates the start operation at 7:40 AM.
+Scheduled items represent points in time when stop and start events are initiated, not when the instance is up and running. When you're creating a schedule, take the operation duration into account. For example, if you want to have your instance up and running at 8 AM, you can define a schedule that initiates the start operation at 7:40 AM.
 
 Consider the following rules for a stop and start schedule: 
 
@@ -75,17 +75,17 @@ Consider the following rules for a stop and start schedule:
 
 ## Billing
 
-Stopped instances don't get billed for vCores and the SQL license, they are charged only for storage and backup storage. However, vCores and license billing is charged for every *started* hour. For example, at 12:01, you will be charged for the entire hour, even if the managed instance is stopped within the hour. 
+Stopped instances don't get billed for vCores and the SQL license, they are charged only for storage and backup storage. However, vCores and license billing is charged for every *started* hour. For example, at 12:01, you will be charged for the entire hour, even if the instance is stopped within the hour. 
 
 ### Azure Hybrid Benefit
 
-The [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) is applied per resource. If your managed instance is using the Azure Hybrid Benefit to save on licensing costs, to apply that benefit to another resource when the managed instance is in a stopped state, you must first disable AHB on the managed instance, and then stop the managed instance. Similarly, after you restart the managed instance, you have to reenable AHB on it to apply the licensing benefit. 
+The [Azure Hybrid Benefit (AHB)](../azure-hybrid-benefit.md) is applied per resource. If your instance is using the Azure Hybrid Benefit to save on licensing costs, to apply that benefit to another resource when the instance is in a stopped state, you must first disable AHB on the instance, and then stop the instance. Similarly, after you restart the instance, you have to reenable AHB on it to apply the licensing benefit. 
 
 ### Reserved instance pricing 
 
-[Reserved instance pricing (reserved capacity)](../database/reserved-capacity-overview.md) is applied for the vCores and hours emitted. When a managed instance that's eligible for reserved pricing is stopped, reserved pricing is automatically redirected to another instance, if one exists. You can use the stop and start feature to _overprovision_ reserved instance pricing. 
+[Reserved instance pricing (reserved capacity)](../database/reserved-capacity-overview.md) is applied for the vCores and hours emitted. When an instance that's eligible for reserved pricing is stopped, reserved pricing is automatically redirected to another instance, if one exists. You can use the stop and start feature to _overprovision_ reserved instance pricing. 
 
-For example, let's say that you've purchased a managed instance with a reserved capacity of 16 vCores. You can run two managed instances with 8 vCores each from 1 PM to 2 PM, stop both instances, and then run two different managed instances with 8 vCores each from 2 PM to 3 PM. This approach would consume your 16 vCore limit for each hour, spread among four instances in total. 
+For example, let's say that you've purchased a managed instance with a reserved capacity of 16 vCores. You can run two instances with 8 vCores each from 1 PM to 2 PM, stop both instances, and then run two different instances with 8 vCores each from 2 PM to 3 PM. This approach would consume your 16 vCore limit for each hour, spread among four instances in total. 
 
 Reservation discounts are offered on a ["use it or lose it"](/azure/cost-management-billing/reservations/understand-reservation-charges) basis. That is, if you don't have matching resources for a specified hour, the reservation quantity for that hour is lost. Unused reserved hours can't be carried forward.
 
@@ -97,8 +97,8 @@ Consider the following limitations:
     - Have an ongoing [management operation](management-operations-overview.md) (such as an ongoing restore, vCores scaling, and so on).
     - Are part of a [failover group](auto-failover-group-sql-mi.md). 
     - Use the [Azure SQL Managed Instance link](managed-instance-link-feature-overview.md). 
-- While a managed instance is in a stopped state, it's not possible to change its configuration properties. To change any properties, you must restart the managed instance. 
-- While the managed instance is in a stopped state, it's not possible to take backups. For example, let's say that you have [long-term backups](long-term-backup-retention-configure.md) configured, with yearly backups in place. If you stop the managed instance during the defined yearly backup period, the backup will be skipped. We recommend that you keep the managed instance up and running during the yearly backup period. 
+- While a managed instance is in a stopped state, it's not possible to change its configuration properties. To change any properties, you must start the instance. 
+- While the instance is in a stopped state, it's not possible to take backups. For example, let's say that you have [long-term backups](long-term-backup-retention-configure.md) configured, with yearly backups in place. If you stop the instance during the defined yearly backup period, the backup will be skipped. We recommend that you keep the instance up and running during the yearly backup period. 
 - It's not possible to cancel the stop or start operation after it has been initiated. 
 
 
@@ -152,16 +152,16 @@ $instanceGetUri = $UriPrefix + $SqlMIName + $UriSuffix
 
 ## Stop the managed instance 
 
-You can stop the managed instance by using either the Azure portal or Azure PowerShell. 
+You can stop the instance by using either the Azure portal or Azure PowerShell. 
 
 
 ### [Portal](#tab/azure-portal)
 
-To stop your managed instance by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your managed instance, and then select the **Stop** button, as shown here: 
+To stop your managed instance by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your instance, and then select the **Stop** button, as shown here: 
 
 :::image type="content" source="media/instance-stop-start-how-to/manual-instance-stop.png" alt-text="Screenshot of the managed instance 'Overview' pane in the Azure portal, with the 'Stop' button highlighted. ":::
 
-If your managed instance is already stopped, the **Stop** button is unavailable. 
+If your instance is already stopped, the **Stop** button is unavailable. 
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -206,15 +206,15 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/stop?api-version=
 
 ## Start the managed instance
 
-You can start your managed instance by using either the Azure portal or Azure PowerShell. 
+You can start your instance by using either the Azure portal or Azure PowerShell. 
 
 ### [Portal](#tab/azure-portal)
 
-After your managed instance is stopped, to start your managed instance by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your managed instance, and then select the **Start** button, as shown here: 
+After your managed instance is stopped, to start it by using the [Azure portal](https://portal.azure.com), go to the **Overview** pane of your instance, and then select the **Start** button, as shown here: 
 
 :::image type="content" source="media/instance-stop-start-how-to/manual-instance-start.png" alt-text="Screenshot of the managed instance 'Overview' pane in the Azure portal, with the 'Start' button highlighted. ":::
 
-If your managed instance is already started, the **Start** button is unavailable. 
+If your instance is already started, the **Start** button is unavailable. 
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -264,7 +264,7 @@ You can manage a stop and start schedule by using either the Azure portal or Azu
 
 ### [Portal](#tab/azure-portal)
 
-To manage a stop and start schedule by using the [Azure portal](https://portal.azure.com), go to your managed instance, and then, on the left pane, select **Start/Stop Schedule**. 
+To manage a stop and start schedule by using the [Azure portal](https://portal.azure.com), go to your instance, and then, on the left pane, select **Start/Stop Schedule**. 
 
 :::image type="content" source="media/instance-stop-start-how-to/start-stop-schedule.png" alt-text="Screenshot of the 'Start/Stop schedule' pane of the managed instance." lightbox="media/instance-stop-start-how-to/start-stop-schedule.png":::
 
@@ -358,5 +358,5 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedule
 - For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md).
 - Learn about [connectivity architecture in SQL Managed Instance](connectivity-architecture-overview.md).
 - Learn how to [modify an existing virtual network for SQL Managed Instance](vnet-existing-add-subnet.md).
-- For a tutorial that shows how to create a virtual network, create a managed instance, and restore a database from a database backup, see [Create an Azure SQL Managed Instance deployment (Azure portal)](instance-create-quickstart.md).
+- For a tutorial that shows how to create a virtual network, create an instance, and restore a database from a database backup, see [Create Azure SQL Managed Instance (Azure portal)](instance-create-quickstart.md).
 - For DNS issues, see [Resolve private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).

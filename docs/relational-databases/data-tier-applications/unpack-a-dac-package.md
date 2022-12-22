@@ -27,6 +27,7 @@ Options for examining the content of a dacpac include:
 - importing the .dacpac to a SQL project in Visual Studio
 - decompressing the file to view the XML contents
 - deploying the .dacpac to a test instance
+- invoking the `Unpack()` method from the Microsoft.SqlServer.DacFx .NET API
 
 ## Import the .dacpac to a SQL project in Visual Studio
 
@@ -82,6 +83,39 @@ Beyond Azure Data Studio and SqlPackage, many other tools can be used to deploy 
 - SQL Server Management Studio
 - Visual Studio: SQL Server Data Tools
 - [PowerShell](deploy-a-data-tier-application.md#using-powershell)
+
+## Invoke the `Unpack()` method
+
+The the Microsoft.SqlServer.DacFx .NET API provides a [method to unpack](/dotnet/api/microsoft.sqlserver.dac.dacpackage.unpack) a .dacpac to a folder, which can be used to programmatically unpack a .dacpac to a folder as seen. The example .NET application below takes two arguments, the path to the .dacpac file and the path to the output folder, and the result is the contents of the .dacpac being unpacked to 3 XML files and a single .sql file containing all the database objects.
+
+
+```csharp
+using Microsoft.SqlServer.Dac;
+
+namespace DacUnpack
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var dacpacPath = args[0];
+            var outputPath = args[1];
+
+            if (!Directory.Exists(outputPath))
+            {
+                Directory.CreateDirectory(outputPath);
+            }
+
+            Console.WriteLine("Unpacking {0} to {1}", dacpacPath, outputPath);
+            using(DacPackage dacpac = DacPackage.Load(dacpacPath))
+            {
+                dacpac.Unpack(outputPath);
+            }
+        }
+    }
+}
+```
+
 
 
 ## See Also

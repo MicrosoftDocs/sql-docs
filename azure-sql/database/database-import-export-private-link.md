@@ -31,6 +31,9 @@ This article explains how to import or export an Azure SQL Database using [Priva
 > [!IMPORTANT]
 > Import or Export of a database from [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) using PowerShell isn't currently supported.
 
+> [!IMPORTANT]
+> Import Export Private Link should not be used when the user Database or the Azure Storage account are protected by Resource locks.
+
 ---
 
 ## Configure Import-Export Private Link

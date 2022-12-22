@@ -13,7 +13,7 @@ ms.custom:
   - "sqldbrb=1"
 ---
 
-# Azure SQL Database and Managed Instance Import/Export service takes a long time to import or export a database
+# Azure SQL Database and SQL Managed Instance Import/Export service takes a long time to import or export a database
 
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 

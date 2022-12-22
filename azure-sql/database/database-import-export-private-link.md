@@ -33,7 +33,7 @@ Import/Export Private Link can be configured via Azure portal, PowerShell, or us
 
 #### Create Import private link
 
-1. Go to the **Overview** page of the Azure SQL logical server into which you would like to import the database. Select **Import database** from toolbar.1
+1. Go to the **Overview** page of the Azure SQL logical server into which you would like to import the database. Select **Import database** from toolbar.
 1. In the **Import database** page, select the **Use private link** option checkbox.
    :::image type="content" source="./media/database-import-export-private-link/import-database-private-link.png" alt-text="Screenshot from the Azure portal that shows how to enable Import Private link." lightbox="media/database-import-export-private-link/import-database-private-link.png":::
 1. Enter the storage account, authentication credentials, database details, and select **OK**.

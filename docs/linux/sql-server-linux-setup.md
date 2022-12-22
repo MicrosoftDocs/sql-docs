@@ -1,11 +1,10 @@
 ---
 title: Installation guidance for SQL Server on Linux
-titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 10/27/2022
+ms.date: 12/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -69,8 +68,8 @@ Microsoft also supports deploying and managing [!INCLUDE [ssnoversion-md](../inc
 
 [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] has the following system requirements for Linux:
 
-||Requirement|
-|-----|-----|
+| | Requirement |
+| --- | --- |
 | **Memory** | 2 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, aren't supported) |
 | **Disk space** | 6 GB |
@@ -93,7 +92,7 @@ When you install or upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-m
 You can install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux from the command line. For step-by-step instructions, see one of the following quickstarts:
 
 | Platform | Installation quickstarts |
-|---|---|
+| --- | --- |
 | Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true) \| [2022](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver16&preserve-view=true) |
 | SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true) \| [2022](quickstart-install-connect-suse.md?view=sql-server-linux-ver16&preserve-view=true) |
 | Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017&preserve-view=true) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true) \| [2022](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver16&preserve-view=true) |
@@ -108,10 +107,10 @@ After installing, consider making additional configuration changes for optimal p
 To update the `mssql-server` package to the latest release, use one of the following commands based on your platform:
 
 | Platform | Package update command(s) |
-|-----|-----|
+| --- | --- |
 | RHEL | `sudo yum update mssql-server` |
 | SLES | `sudo zypper update mssql-server` |
-| Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
+| Ubuntu | `sudo apt-get update`<br />`sudo apt-get install mssql-server` |
 
 These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases aren't affected by this operation.
 
@@ -119,22 +118,9 @@ To upgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], first [ch
 
 ## <a id="rollback"></a> Roll back SQL Server
 
-To roll back or downgrade [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to a previous release, use the following steps:
+[!INCLUDE [roll-back-sql-server](includes/roll-back-sql-server.md)]
 
-1. Identify the version number for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] package you want to downgrade to. For a list of package numbers, see the [Release notes](../linux/sql-server-linux-release-notes-2017.md).
-
-1. Downgrade to a previous version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. In the following commands, replace `<version_number>` with the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] version number you identified in step one.
-
-   | Platform | Package update command(s) |
-   |-----|-----|
-   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
-   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
-   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
-
-> [!NOTE]  
-> It is only supported to downgrade to a release within the same major version, such as [!INCLUDE [sssql22-md](../includes/sssql22-md.md)].
-
-## <a id="versioncheck"></a> Check installed [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] version
+## <a id="versioncheck"></a> Check installed SQL Server version
 
 To verify your current version and edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, use the following procedure:
 
@@ -151,7 +137,7 @@ To verify your current version and edition of [!INCLUDE [ssnoversion-md](../incl
 To remove the `mssql-server` package on Linux, use one of the following commands based on your platform:
 
 | Platform | Package removal command(s) |
-|-----|-----|
+| --- | --- |
 | RHEL | `sudo yum remove mssql-server` |
 | SLES | `sudo zypper remove mssql-server` |
 | Ubuntu | `sudo apt-get remove mssql-server` |
@@ -197,7 +183,7 @@ If your Linux machine doesn't have access to the online repositories used in the
 1. **Install the database engine package**. Use one of the following commands based on your platform. Replace the package file name in this example with the exact name you downloaded.
 
    | Platform | Package install command |
-   |-----|-----|
+   | --- | --- |
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `sudo dpkg -i mssql-server_versionnumber_amd64.deb` |
@@ -208,7 +194,7 @@ If your Linux machine doesn't have access to the online repositories used in the
 1. **Resolve missing dependencies**: You might have missing dependencies at this point. If not, you can skip this step. On Ubuntu, if you have access to approved repositories containing those dependencies, the easiest solution is to use the `apt-get -f install` command. This command also completes the installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. To manually inspect dependencies, use the following commands:
 
    | Platform | List dependencies command |
-   |-----|-----|
+   | --- | --- |
    | RHEL | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | Ubuntu | `dpkg -I mssql-server_versionnumber_amd64.deb` |

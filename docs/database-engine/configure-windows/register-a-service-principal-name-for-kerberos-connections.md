@@ -155,7 +155,9 @@ For a named instance, use:
 ```  
 setspn -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
-  
+
+For your Always On availability group configurations please refer to [Listeners and Kerberos (SPNs)](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs).
+
 ##  <a name="Client"></a> Client Connections  
 
 User-specified SPNs are supported in client drivers. However, if an SPN isn't provided, it will be generated automatically based on the type of a client connection. For a TCP connection, an SPN in the format *MSSQLSvc*/*FQDN*:[*port*] is used for both the named and default instances.  

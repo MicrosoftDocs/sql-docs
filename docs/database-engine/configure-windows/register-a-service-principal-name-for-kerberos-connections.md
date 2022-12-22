@@ -156,7 +156,7 @@ For a named instance, use:
 setspn -S MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
 
-For your Always On availability group configurations please refer to [Listeners and Kerberos (SPNs)](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs).
+For more information about Always On availability group configurations, see [Listeners and Kerberos (SPNs)](../availability-groups/windows/listeners-client-connectivity-application-failover.md#SPNs).
 
 ##  <a name="Client"></a> Client Connections  
 

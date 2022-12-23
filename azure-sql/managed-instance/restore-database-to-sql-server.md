@@ -28,14 +28,14 @@ Restoring databases from managed instances to SQL Server 2022 instances unlocks 
 - Provides database copies to customers and other eligible parties. 
 - Refreshes environments outside SQL Managed Instance.
 
-The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed managed instances.
+The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed instances.
 
 > [!IMPORTANT]
 > The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
 
 ## Take a backup on SQL Managed Instance 
 
-First, create a credential to access the storage account from your managed instance, take a copy-only backup of your database, and then store it. 
+First, create a credential to access the storage account from your instance, take a copy-only backup of your database, and then store it. 
 
 You can create your credential by using a managed identity or a shared access signature (SAS) token. 
 
@@ -45,7 +45,7 @@ A *managed identity* is a feature of Azure Active Directory (Azure AD) that prov
 
 You can use this identity to authorize requests for data access to other Azure resources, including storage accounts. Services such as Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more [user-assigned managed identities](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests.
 
-Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to the managed identity to write the data. Granting permissions to the managed identity of the managed instance is done the same way as granting permissions to any other Azure AD user. For example:
+Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to the managed identity to write the data. Granting permissions to the managed identity of the instance is done the same way as granting permissions to any other Azure AD user. For example:
 
 1. In the Azure portal, on the **Access Control (IAM)** pane of a storage account, select **Add role assignment**.  
 1. Select the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role. This provides read/write access to the managed identity for the necessary Azure Blob Storage containers.
@@ -100,14 +100,14 @@ MOVE 'XTP' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\D
 ```
 
 > [!NOTE]
-> To restore databases that are encrypted at rest by using [Transparent Data Encryption (TDE)](../database/transparent-data-encryption-tde-overview.md), the destination managed instance of SQL Server must have access to the same key that's used to protect the source database through the SQL Server Connector for Azure Key Vault. For details, review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+> To restore databases that are encrypted at rest by using [Transparent Data Encryption (TDE)](../database/transparent-data-encryption-tde-overview.md), the destination instance of SQL Server must have access to the same key that's used to protect the source database through the SQL Server Connector for Azure Key Vault. For details, review [Set up SQL Server TDE with AKV](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
 
 ## Considerations
 
-When you're restoring a database to a SQL Server instance, consider the following:
+When you're restoring a database to SQL Server, consider the following:
 
 - You must use the `WITH MOVE` qualifier and provide explicit paths for the data files. 
-- Databases that are encrypted with service-managed TDE keys can't be restored to a SQL Server instance. You can restore an encrypted database to SQL Server only if it was encrypted with a customer-managed key and the destination server has access to the same key that's used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). 
+- Databases that are encrypted with service-managed TDE keys can't be restored to SQL Server. You can restore an encrypted database to SQL Server only if it was encrypted with a customer-managed key and the destination server has access to the same key that's used to encrypt the database. For more information, see [Set up SQL Server TDE with Azure Key Vault](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault). 
 - In the future, some features might be introduced to Azure SQL Managed Instance that require changes to the database format, making backups incompatible with SQL Server 2022. Access to such features will require explicit opt-in. 
 
 ## Next steps

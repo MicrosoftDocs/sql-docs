@@ -1,7 +1,7 @@
 ---
-title: Restore a database to a SQL Server instance
+title: Restore a database to SQL Server
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to restore a database to a SQL Server 2022 instance from an Azure SQL Managed Instance deployment.
+description: Learn how to restore a database to SQL Server 2022 from Azure SQL Managed Instance.
 author: mladjoa
 ms.author: mlandzic
 ms.reviewer: mathoma, danil
@@ -12,11 +12,11 @@ ms.topic: how-to
 ms.custom: 
 ---
 
-# Restore a database to a SQL Server instance from a managed instance
+# Restore a database to SQL Server from Azure SQL Managed Instance
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes how to restore a database backup from an Azure SQL Managed Instance deployment to a SQL Server 2022 instance. 
+This article describes how to restore a database backup from Azure SQL Managed Instance to SQL Server 2022. 
 
 ## Overview
 
@@ -28,18 +28,18 @@ Restoring databases from managed instances to SQL Server 2022 instances unlocks 
 - Provides database copies to customers and other eligible parties. 
 - Refreshes environments outside SQL Managed Instance.
 
-The ability to restore copy-only full backups of databases from a SQL Managed Instance deployment to a SQL Server 2022 instance is available by default in all existing and any new deployed managed instances.
+The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed managed instances.
 
 > [!IMPORTANT]
-> The ability to restore copy-only full backups of databases from a SQL Managed Instance deployment to a SQL Server 2022 instance will be available until the end of [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
+> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
 
-## Take a backup of your managed instance 
+## Take a backup on SQL Managed Instance 
 
 First, create a credential to access the storage account from your managed instance, take a copy-only backup of your database, and then store it. 
 
-You can create your credential by using a shared access signature (SAS) token or a managed identity. 
+You can create your credential by using a managed identity or a shared access signature (SAS) token. 
 
-### [SAS token](#tab/sas-token)
+### [Managed identity](#tab/managed-identity)
 
 A *managed identity* is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Azure AD, the system-assigned managed identity. 
 
@@ -63,9 +63,9 @@ CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<contain
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
 SECRET = '<SAS_TOKEN>';  
 ```
-### [Managed identity](#tab/managed-identity)
+### [SAS token](#tab/sas-token)
 
-To create a credential by using a [managed identity](/azure/active-directory/managed-identities-azure-resources/howto-assign-access-portal), run the following sample T-SQL command: 
+To create a credential using an [SAS token](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016), run the following sample T-SQL command: 
 
 ```sql
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<containername>] 
@@ -84,11 +84,11 @@ WITH COPY_ONLY
 ```
 
 
-## Restore to a SQL Server instance 
+## Restore to SQL Server 
 
-Restore the database to the SQL Server instance by using the `WITH MOVE` option of the RESTORE DATABASE T-SQL command, and then provide explicit file paths for your files on the destination server instance.
+Restore the database to SQL Server by using the `WITH MOVE` option of the RESTORE DATABASE T-SQL command, and then provide explicit file paths for your files on the destination server.
 
-To restore your database to the SQL Server instance, run the following sample T-SQL command with file paths appropriate to your environment: 
+To restore your database to SQL Server, run the following sample T-SQL command with file paths appropriate to your environment: 
 
 ```sql
 RESTORE DATABASE [SampleDB]
@@ -117,5 +117,5 @@ When you're restoring a database to a SQL Server instance, consider the followin
 - For more information about virtual network configuration, see [SQL Managed Instance virtual network configuration](connectivity-architecture-overview.md).
 - For a quickstart that creates a managed instance and restores a database from a backup file, see [Create a managed instance](instance-create-quickstart.md).
 - For a tutorial about using Azure Database Migration Service for migration, see [SQL Managed Instance migration using Database Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance).
-- For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor an Azure SQL Managed Instance deployment by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).
+- For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).
 - For pricing information, see [SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/managed/).

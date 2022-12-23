@@ -14,6 +14,7 @@ ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "08/09/2017"
 ---
+
 # Output Window in SQL Server Management Studio
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -101,7 +101,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 
 ## Examples  
- The following example alters the location and resource manager location of an existing data source.
+ The following example alters the location and Resource Manager location of an existing data source.
 Doesn't apply to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ```sql  

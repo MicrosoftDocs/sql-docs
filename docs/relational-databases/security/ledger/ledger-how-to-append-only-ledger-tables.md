@@ -68,18 +68,18 @@ We'll create a `KeyCardEvents` table with the following schema.
 1. View the contents of your KeyCardEvents ledger view along with the ledger transactions system view to identify who added records into the table.
 
    ```sql
-	SELECT
-	t.[commit_time] AS [CommitTime] 
-	, t.[principal_name] AS [UserName]
-	, l.[EmployeeID]
-	, l.[AccessOperationDescription]
-	, l.[Timestamp]
-	, l.[ledger_operation_type_desc] AS Operation
-	FROM [AccessControl].[KeyCardEvents_Ledger] l
-	JOIN sys.database_ledger_transactions t
-	ON t.transaction_id = l.ledger_transaction_id
-	ORDER BY t.commit_time DESC;
-   ```
+   
+SELECT
+t.[commit_time] AS [CommitTime]
+, t.[principal_name] AS [UserName]
+, l.[EmployeeID]
+, l.[AccessOperationDescription]
+, l.[Timestamp]
+FROM [AccessControl].[KeyCardEvents_Ledger] l
+JOIN sys.database_ledger_transactions t
+ON t.transaction_id = l.ledger_start_transaction_id
+ORDER BY t.commit_time DESC;
+
 
 1. Try to update the `KeyCardEvents` table by changing the `EmployeeID` from `43869` to `34184.`
 

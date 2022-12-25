@@ -61,6 +61,10 @@ CREATE DATABASE Database01
 GO 
 ```
 
+Remark: Its worth stating that when you create a database with flag ledger=ON, you can ONLY create ledger tables within the database system. If you try to create a regular table within the database and specify LEDGER = OFF this will not work and the following error message will be thrown:
+
+LEDGER = OFF cannot be specified for tables in databases that were created with LEDGER = ON.
+
 # [PowerShell](#tab/PowerShell)
 
 ## Enable ledger database using PowerShell

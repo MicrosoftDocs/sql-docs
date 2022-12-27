@@ -162,48 +162,60 @@ Azure creates the virtual machines.
 
 In the following steps, configure the **ad-remote-dc** machine as a domain controller for **corp.contoso.com**:
 
-1. In the portal, open the **SQL-HA-RG** resource group and select the **ad-remote-dc** machine. 
+#### Set preferred DNS server address
 
-1. On **ad-remote-dc**, select **Connect** to open a Remote Desktop Protocol (RDP) file for remote desktop access.
+The preferred DNS server address [should not be updated](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#specify-dns-servers) directly within a VM, it should be edited from the [Azure portal, or Powershell, or Azure CLI](/azure/virtual-network/virtual-network-network-interface?tabs=network-interface-portal#change-dns-servers). The steps below are to make the change inside of the Azure portal:
 
-1. Sign in to the VM by using your configured administrator account (**BUILTIN\DomainAdmin**) and password (**Contoso!0000**).
+1. Sign-in to the [Azure portal](https://portal.azure.com).
 
-1. Change the preferred DNS server address to the [address of the primary domain controller](./availability-group-manually-configure-prerequisites-tutorial-single-subnet.md?#note-the-ip-address-of-the-primary-domain-controller).
+1. In the search box at the top of the portal, enter **Network interface**. Select **Network interfaces** in the search results.
 
-1. In **Network and Sharing Center**, select the network interface.
+1. Select the network interface for the second domain controller that you want to view or change settings for from the list.
 
-   :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/26-network-interface.png" alt-text="Screenshot of the Networking and Sharing Center on a VM, with an Ethernet connection selected.":::
+1. In **Settings**, select **DNS servers**.
 
-1. Select **Properties**.
-1. Select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
-1. Select **Use the following DNS server addresses**, and then specify the address of the primary domain controller in **Preferred DNS server**.
-1. Select **OK**, and then select **Close** to commit the changes. You can now join the VM to **corp.contoso.com**.
+1. Since this domain controller is not in the same virtual network as the primary domain controller select **Custom** and input the IP address of the primary domain controller, such as `192.168.15.4`. The DNS server address you specify is assigned only to this network interface and overrides any DNS setting for the virtual network the network interface is assigned to.
 
-   > [!IMPORTANT]
-   > If you lose the connection to your remote desktop after you change the DNS setting, go to the Azure portal and restart the virtual machine.
+1. Select **Save**.
+1. Return to the virtual machine in the Azure portal and restart the VM. Once the virtual machine has restarted, you can join the VM to the domain.
 
-1. From the remote desktop to the secondary domain controller, open the **Server Manager** dashboard.
-1. Select the **Add roles and features** link.
+### Join the domain
 
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/22-add-features.png" alt-text="Screenshot of the **Server Manager** dashboard that shows a link for adding roles and features.":::
+Next, join the **corp.contoso.com** domain. To do so, follow these steps: 
+
+1. Remotely connect to the virtual machine using the **BUILTIN\DomainAdmin** account.
+1. Open **Server Manager**, and select **Local Server**.
+1. Select **WORKGROUP**.
+1. In the **Computer Name** section, select **Change**.
+1. Select the **Domain** checkbox and type **corp.contoso.com** in the text box. Select **OK**.
+1. In the **Windows Security** popup dialog, specify the credentials for the default domain administrator account (**CORP\DomainAdmin**) and the password (**Contoso!0000**).
+1. When you see the "Welcome to the corp.contoso.com domain" message, select **OK**.
+1. Select **Close**, and then select **Restart Now** in the popup dialog.
+
+#### Configure domain controller 
+
+Once your server has joined the domain, you can configure it as the second domain controller. To do so, follow these steps: 
+
+1. If you're not already connected, open an RDP session to your secondary domain controller, and open **Server Manager Dashboard** (which may be open by default).
+1. Select the **Add roles and features** link on the dashboard.
+
+    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-multi-subnet/09-add-features.png" alt-text="Server Manager - Add roles":::
 
 1. Select **Next** until you get to the **Server Roles** section.
-1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any features that these roles require.
-1. After you finish installing features, return to the **Server Manager** dashboard.
-1. Select the new **AD DS** option on the left pane.
+1. Select the **Active Directory Domain Services** and **DNS Server** roles. When you're prompted, add any additional features that are required by these roles.
+1. After the features finish installing, return to the **Server Manager** dashboard.
+1. Select the new **AD DS** option on the left-hand pane.
 1. Select the **More** link on the yellow warning bar.
 1. In the **Action** column of the **All Server Task Details** dialog, select **Promote this server to a domain controller**.
 1. Under **Deployment Configuration**, select **Add a domain controller to an existing domain**.
-
-    :::image type="content" source="./media/availability-group-manually-configure-prerequisites-tutorial-single-subnet/28-deployment-config.png" alt-text="Screenshot of the Active Directory Domain Services Configuration Wizard that shows the deployment configuration on a virtual machine.":::
-
-1. Choose **Select**.
+1. Click **Select**.
 1. Connect by using the administrator account (**CORP.CONTOSO.COM\domainadmin**) and password (**Contoso!0000**).
-1. In **Select a domain from the forest**, choose your domain, and then select **OK**.
-1. In **Domain Controller Options**, use the default values and set a Directory Services Restore Mode (DSRM) password.
+1. In **Select a domain from the forest**, choose your domain and then select **OK**.
+1. In **Domain Controller Options**, use the default values and set a DSRM password.
 
     >[!NOTE]
     >The **DNS Options** page might warn you that a delegation for this DNS server can't be created. You can ignore this warning in non-production environments.
+    >
 
 1. Select **Next** until the dialog reaches the **Prerequisites** check. Then select **Install**.
 

@@ -1,10 +1,10 @@
 ---
 title: Azure Data Studio release notes
 description: This article has release notes for Azure Data Studio.
-author: tdoshin
-ms.author: timioshin
+author: erinstellato-ms
+ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/23/2022
+ms.date: 12/27/2022
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom:
@@ -20,18 +20,18 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### November 2022 (hotfix)
+### November 2022 (hotfix 2)
 
-Azure Data Studio 1.40.1 is the latest general availability (GA) release.
+Azure Data Studio 1.40.2 is the latest general availability (GA) release.
 
-- Release number: 1.40.1
-- Release date: November 23, 2022
+- Release number: 1.40.2
+- Release date: December 27, 2022
 
-#### Bug fixes in 1.40.1
+#### Bug fixes in 1.40.2
 
 | New Item | Details |
 |----------|---------|
-| Object Explorer | Fixed bug that caused folders in the Servers tree to display incorrect contents. |
+| Terminal | Fixed a security vulnerability that allowed an .exe to be easily run by a user. |
 
 ## Azure Data Studio feedback
 
@@ -41,6 +41,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
+| [November 2022](#hotifx-2022) | 1.40.1 | November 23, 2022 |[hotfix](#november-2022-hotfix)|
 | [November 2022](#november-2022) | 1.40.0 | November 16, 2022 |N/A| 
 | [August 2022](#august-2022) | 1.39.1 | August 30, 2022 |[hotfix](#august-2022-hotfix)|
 | [August 2022](#august-2022) | 1.39.0 | August 24, 2022 |N/A|
@@ -85,6 +86,19 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 > [!NOTE]
 > All previous versions of Azure Data Studio are not supported.
+
+### November 2022 (hotfix)
+
+Azure Data Studio 1.40.1 is the latest general availability (GA) release.
+
+- Release number: 1.40.1
+- Release date: November 23, 2022
+
+#### Bug fixes in 1.40.1
+
+| New Item | Details |
+|----------|---------|
+| Object Explorer | Fixed bug that caused folders in the Servers tree to display incorrect contents. |
 
 ### November 2022
 

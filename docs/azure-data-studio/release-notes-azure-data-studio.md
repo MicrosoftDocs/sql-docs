@@ -20,7 +20,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 :::image type="icon" source="../includes/media/download.svg" border="false"::: **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-### December 2022 (hotfix)
+### November 2022 (hotfix 2)
 
 Azure Data Studio 1.40.2 is the latest general availability (GA) release.
 
@@ -41,7 +41,7 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
-| [November 2022](#august-2022) | 1.40.1 | November 23, 2022 |[hotfix](#november-2022-hotfix)|
+| [November 2022](#hotifx-2022) | 1.40.1 | November 23, 2022 |[hotfix](#november-2022-hotfix)|
 | [November 2022](#november-2022) | 1.40.0 | November 16, 2022 |N/A| 
 | [August 2022](#august-2022) | 1.39.1 | August 30, 2022 |[hotfix](#august-2022-hotfix)|
 | [August 2022](#august-2022) | 1.39.0 | August 24, 2022 |N/A|

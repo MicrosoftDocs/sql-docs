@@ -59556,7 +59556,7 @@
     },
     {
       "source_path": "azure-sql/database/sql-vulnerability-assessment.md",
-      "redirect_url": "/defender-for-cloud/sql-azure-vulnerability-assessment-overview",
+      "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview",
       "redirect_document_id": false
     },
     {
@@ -59572,6 +59572,11 @@
     {
       "source_path": "docs/ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md",
       "redirect_url": "/sql/ssma/db2/working-with-ssma-for-db2-console-db2tosql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure-sql/database/sql-azure-vulnerability-assessment-storage.md",
+      "redirect_url": "azure-sql/database/sql-database-vulnerability-assessment-storage",
       "redirect_document_id": false
     }
   ]

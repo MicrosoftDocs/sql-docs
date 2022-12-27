@@ -464,10 +464,10 @@ If per partition statistics are not supported the option is ignored and a warnin
 Is an option to drop and rebuild the existing clustered or nonclustered index with modified column specifications, and keep the same name for the index. The default is **OFF**.
 
 ON  
-Specifies to `DROP` and `REBUILD` the existing index, which must have the same name as the parameter *index_name*.
+Specifies to drop and rebuild the existing index, which must have the same name as the parameter *index_name*.
 
 OFF  
-Specifies not to `DROP` and `REBUILD` the existing index. SQL Server displays an error if the specified index name already exists.
+Specifies not to drop and rebuild the existing index. SQL Server displays an error if the specified index name already exists.
 
 With `DROP_EXISTING`, you can change:
 

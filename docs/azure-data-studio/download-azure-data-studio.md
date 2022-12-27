@@ -86,7 +86,7 @@ We recommend the *user installer*, which simplifies installations and updates an
 
 You can also install Azure Data Studio by using a command prompt script.
 
-For Windows, install Azure Data Studio in the background without prompts by doing the following:
+For Windows, install Azure Data Studio in the background without prompts using the following steps:
 
 1. Open the command prompt window with elevated permissions.
 
@@ -264,7 +264,7 @@ To apply environment updates offline, [install the latest version](#download-and
 
 ## Move user settings
 
-If you're updating SQL Operations Studio to Azure Data Studio and want to keep your settings, keyboard shortcuts, or code snippets, do the following:
+If you're updating SQL Operations Studio to Azure Data Studio and want to keep your settings, keyboard shortcuts, or code snippets, complete the following steps:
 
 > [!NOTE]
 > If you've already installed Azure Data Studio or you've never installed or customized SQL Operations Studio, you can ignore this section.
@@ -293,7 +293,7 @@ If you installed Azure Data Studio with a .zip file or other archive, delete tha
 
 ## Uninstall Azure Data Studio from macOS
 
-You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-uninstall-other-apps-mh35835/mac) from the internet or disc on Mac by doing the following:
+You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-uninstall-other-apps-mh35835/mac) from the internet or disc on Mac by completeing the following steps:
 
 1. Select the **Finder icon** in the Dock, and then select **Applications** in the **Finder** sidebar.
 

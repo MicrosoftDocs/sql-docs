@@ -219,7 +219,7 @@ Set the preferred DNS server address, join the domain, and then configure the se
 
 #### Set preferred DNS server address
 
-The preferred DNS server address [should not be updated](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#specify-dns-servers) directly within a VM, it should be edited from the [Azure portal, or Powershell, or Azure CLI](azure/virtual-network/virtual-network-network-interface?tabs=network-interface-portal#change-dns-servers). The steps below are to make the change inside of the Azure portal:
+The preferred DNS server address [should not be updated](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#specify-dns-servers) directly within a VM, it should be edited from the [Azure portal, or Powershell, or Azure CLI](/azure/virtual-network/virtual-network-network-interface?tabs=network-interface-portal#change-dns-servers). The steps below are to make the change inside of the Azure portal:
 
 1. Sign-in to the [Azure portal](https://portal.azure.com).
 

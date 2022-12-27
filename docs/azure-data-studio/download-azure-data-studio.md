@@ -28,7 +28,7 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 Azure Data Studio 1.40.2 is the latest general availability (GA) version.
 
 - Release number: 1.40.2
-- Release date: December 22, 2022
+- Release date: December 27, 2022
 
 |Platform |Type             |Download |
 | --------|-----------------|-------- |

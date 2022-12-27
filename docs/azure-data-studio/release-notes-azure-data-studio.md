@@ -41,14 +41,13 @@ You can reference [Azure Data Studio feedback](https://github.com/microsoft/azur
 
 | Azure Data Studio release | Build number | Release date | Hotfix |
 |---------------------------|--------------|--------------|---------|
-| [November 2022](#hotifx-2022) | 1.40.1 | November 23, 2022 |[hotfix](#november-2022-hotfix)|
-| [November 2022](#november-2022) | 1.40.0 | November 16, 2022 |N/A| 
-| [August 2022](#august-2022) | 1.39.1 | August 30, 2022 |[hotfix](#august-2022-hotfix)|
-| [August 2022](#august-2022) | 1.39.0 | August 24, 2022 |N/A|
-| [July 2022](#july-2022) | 1.38.0 | July 27, 2022 |N/A|
-| [June 2022](#june-2022) | 1.37.0 | June 15, 2022 |N/A|
-| [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#may-2022-hotfix)|
-| [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix)|
+| [November 2022](#november-2022) | 1.40.0 | November 16, 2022 | [hotfix](#november-2022-hotfix) |
+| [August 2022](#august-2022) | 1.39.1 | August 30, 2022 | [hotfix](#august-2022-hotfix) |
+| [August 2022](#august-2022) | 1.39.0 | August 24, 2022 | N/A |
+| [July 2022](#july-2022) | 1.38.0 | July 27, 2022 | N/A |
+| [June 2022](#june-2022) | 1.37.0 | June 15, 2022 | N/A |
+| [April 2022](#april-2022) | 1.36.0 | April 20, 2022 |[hotfix](#may-2022-hotfix) |
+| [February 2022](#february-2022) | 1.35.0 | February 24, 2022 |[hotfix](#february-2022-hotfix) |
 | [December 2021](#december-2021) | 1.34.0 | December 15, 2021 | N/A |  
 | [October 2021](#october-2021) | 1.33.0 | October 27, 2021 | N/A |
 | [August 2021](#august-2021) | 1.32.0 | August 18, 2021 | N/A |

@@ -46,7 +46,7 @@ Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], [!INCLUDE [
 
 You can use one of the following methods to check the validity of the certificate for use with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
 
-- **sclcheck tool**: `sqlcheck` is a command-line tool that will examine the current computer and service account settings and produce a text report to the Console window that is useful for troubleshooting various connection errors. The output has the following information regarding certificates:
+- **sqlcheck tool**: `sqlcheck` is a command-line tool that will examine the current computer and service account settings and produce a text report to the Console window that is useful for troubleshooting various connection errors. The output has the following information regarding certificates:
 
   ```Output
   Details for SQL Server Instance: This Certificate row in this section provides more details regarding the certificate being used by SQL Server (Self-generated, hard-coded thumbprint value, etc.).

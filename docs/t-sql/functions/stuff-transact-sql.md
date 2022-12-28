@@ -34,7 +34,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ## Syntax  
   
 ```syntaxsql
-STUFF ( character_expression , start , length , replaceWith_expression )  
+STUFF ( character_expression , start , length , replace_with_expression )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -49,7 +49,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *length*  
  Is an integer that specifies the number of characters to delete. If *length* is negative, a null string is returned. If *length* is longer than the first *character_expression*, deletion occurs up to the last character in the last *character_expression*.  If *length* is zero, insertion occurs at *start* location and no characters are deleted. *length* can be of type **bigint**.
 
- *replaceWith_expression*  
+ *replace_with_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column of either character or binary data. This expression replaces *length* characters of *character_expression* beginning at *start*. Providing `NULL` as the *replaceWith_expression*, removes characters without inserting anything.   
   
 ## Return Types  

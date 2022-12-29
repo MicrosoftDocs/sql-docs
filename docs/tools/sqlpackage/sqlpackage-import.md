@@ -37,9 +37,9 @@ SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
 SqlPackage /a:Import /tsn:"{yourserver}.database.windows.net,1433" /tdn:"AdventureWorksLT" /tu:"sqladmin" \
     /tp:"{your_password}" /sf:"C:\AdventureWorksLT.bacpac"
 
-# example import using Azure Active Directory Service Principal
+# example import using Azure Active Directory Managed Identity
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
-    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Service Principal;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+    /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Authentication=Active Directory Managed Identity;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
 # example import connecting using Azure Active Directory username and password
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
@@ -77,7 +77,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Import /SourceFile:"C:\Adven
 |**/Properties:**|**/p**|{PropertyName}={Value}|Specifies a name value pair for an [action-specific property](#properties-specific-to-the-import-action); {PropertyName}={Value}. |
 |**/Quiet:**|**/q**|{True&#124;False}|Specifies whether detailed feedback is suppressed. Defaults to False.|
 |**/SourceFile:**|**/sf**|{string}|Specifies a source file to be used as the source of action from local storage. If this parameter is used, no other source parameter shall be valid. |
-|**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid SQL Server/Azure connection string to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
+|**/TargetConnectionString:**|**/tcs**|{string}|Specifies a valid [SQL Server/Azure connection string](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) to the target database. If this parameter is specified, it shall be used exclusively of all other target parameters. |
 |**/TargetDatabaseName:**|**/tdn**|{string}|Specifies an override for the name of the database that is the target of SqlPackage Action. |
 |**/TargetEncryptConnection:**|**/tec**|{Optional&#124;Mandatory&#124;Strict&#124;True&#124;False}|Specifies if SQL encryption should be used for the target database connection. Default value is True. |
 |**/TargetHostNameInCertificate:**|**/thnic**|{string}|Specifies value that is used to validate the target SQL Server TLS/SSL certificate when the communication layer is encrypted by using TLS.|

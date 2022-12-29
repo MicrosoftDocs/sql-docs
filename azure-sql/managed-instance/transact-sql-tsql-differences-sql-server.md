@@ -350,8 +350,8 @@ Undocumented DBCC statements that are enabled in SQL Server aren't supported in 
 
 ### Distributed transactions
 
-[T-SQL and .NET based distributed transactions across managed instances](../database/elastic-transactions-overview?view=azuresql#transactions-for-sql-managed-instance) are generally available.
-Additional scenarios, such as XA transactions, distributed transactions between managed instances and other participants and more, are supported with [DTC for Azure SQL Managed Instance](./managed-instance/distributed-transaction-coordinator-dtc?view=azuresql), which is available in public preview.
+[T-SQL and .NET based distributed transactions across managed instances](../database/elastic-transactions-overview#transactions-for-sql-managed-instance) are generally available.
+Additional scenarios, such as XA transactions, distributed transactions between managed instances and other participants and more, are supported with [DTC for Azure SQL Managed Instance](./distributed-transaction-coordinator-dtc), which is available in public preview.
 
 ### Extended Events
 

@@ -20,6 +20,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 |Issue  |Date discovered  |Status  |Date resolved  |
 |---------|---------|---------|---------|
+|[Increased number of logins used for Transactional Replication](#increased-number-of-logins-used-for-transactional-replication)|Dec 2022|No resolution||
 |[msdb table for manual backups does not preserve the username](#msdb-table-for-manual-backups-does-not-preserve-the-username)|Nov 2022|No resolution||
 |[Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile)|Aug 2022|Has Workaround||
 |[Querying external table fails with 'not supported' error message](#querying-external-table-fails-with-not-supported-error-message)|Jan 2022|Resolved|Sep 2022|
@@ -275,6 +276,10 @@ using (var scope = new TransactionScope())
 
 
 ## No resolution
+
+### Increased number of logins used for Transactional Replication
+
+Azure SQL Managed Instance service is creating system login for purposes of Transactional Replication. This login can be found in SSMS (in Object explorer in Security, Logins section) or in system view sys.syslogins. Login name format looks like 'DBxCy\WF-abcde01234QWERT' and login has public server role. Under certain considionts this login is recreated, and due to a fault in the system, previous login is not deleted. This may lead to increased number of logins. These logins do not represent a security threat. They can be safely ignored. These logins should not be deleted because at least one of them is being used for Transactional Replication.
 
 ### msdb table for manual backups does not preserve the username
 
